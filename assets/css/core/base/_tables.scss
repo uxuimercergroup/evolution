@@ -1,0 +1,247 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.5 - Base Tables Partial
+// DATE - June 13, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-tables == true{
+
+	// TABLE OVERFLOW FOR SMALL MEDIAQUERY
+	.mul-table-small-mediaquery		{
+									margin-bottom: $baseMargin;
+									overflow-x: auto;
+									overflow-y: hidden;
+									-ms-overflow-style: -ms-autohiding-scrollbar;
+									-webkit-overflow-scrolling: touch;
+		> table							{
+										margin-bottom: 0;
+										min-width: $tableMinWidth;
+										}
+									}
+
+	// BASIC TABLE STYLES
+	table							{
+									max-width: 100%;
+									background-color: transparent;
+									border-collapse: collapse;
+									border-spacing: 0;
+									}
+
+	// MUL TABLE
+	th, td							{text-align: left;}
+
+	.mul-table						{
+									color:$tableFontColor;
+									margin-bottom:$tableMarginBottom;
+									width: 100%;
+									border-bottom:1px $tableBorderStyle $tableBorderColor;
+									background-color:$tableBackgroundColor;
+		th,
+		td								{
+										font-size: $tableBaseFontSize;
+										padding: 5px 10px;
+										line-height: $tableBaseLineHeight;
+			input[type="checkbox"]			{display: block;}
+			a								{
+				&:link							{@include href-link($baseLinkColor, none);}
+				&:hover							{@include href-link-hover(underline);}
+											}
+										}
+		th								{
+										background-color: $tableThBackgroundColor;
+										border-top:1px solid $tableThBorderColor;
+										border-bottom:1px solid $tableThBorderColor;
+										color:$tableThFontColor;
+										font-family: $proximaNovaSemiBoldStack;
+										vertical-align: bottom;
+			&[class*="col-"]				{
+											float: none;
+											margin: 0;
+											}
+										}
+		caption							{
+										padding:1px 0 5px 0;
+										text-align:left;
+										vertical-align: bottom;
+			.mul-tbl-data-filter			{
+											max-width: $tableDataFilterMaxWidth;
+				input							{
+												height: $tableDataFilterHeight;
+												line-height: $tableDataFilterLineHeight;
+												margin: 0;
+												}
+											}
+										}
+		td								{
+										border-top:1px $tableTdBorderStyle $tableTdBorderColor;
+										vertical-align: top;
+										}
+
+		//SUB HEADER, THIS IS USED TO GROUP SECTIONS IN A TABLE
+		.mul-subheader-row				{
+										background-color: $tableSubHeaderBackgroundColor !important;
+										border: 1px solid $tableSubHeaderBorderColor;
+										color: $tableSubHeaderFontColor;
+										font-family: $proximaNovaSemiBoldStack;
+										}
+
+		// SUBTOTAL AND TOTAL HELPERS
+		.mul-subtotal-row,
+		.mul-total-row					{
+										font-family: $proximaNovaSemiBoldStack;
+			td								{border-top: 1px $tableBorderStyle $tableBorderColor;}
+										}
+		.mul-subtotal-row				{
+			td								{
+											background-color: $tableSubTotalBackgroundColor !important;
+											color: $tableSubTotalFontColor;
+											}
+										}
+		.mul-total-row					{
+			td								{
+											background-color: $tableTotalBackgroundColor !important;
+											color: $tableTotalFontColor;
+											}
+										}
+									}
+
+	// FOOTABLES
+	.mul-footable					{
+		th								{cursor: pointer;}
+
+		// SORTING CLASSES
+		.mul-highlight					{background-color: $tableOddTdSortedBackgroundColor !important;}
+		tbody > tr:nth-child(odd) > .mul-highlight
+										{background-color: $tableOddTdBackgroundColor !important;}
+
+		// IF COLUMN IS NOT SORTABLE TURN OFF POINTER CURSOR
+		th[data-sort-ignore="true"]		{cursor: default;}
+									}
+
+
+	// MUL TABLE BORDERS
+	.mul-table-borders				{
+									border: 1px $tableBorderStyle $tableBorderColor;
+		th								{
+										border-left: 1px solid $tableThBorderColor;
+										border-right: 1px solid $tableThBorderColor;
+										border-top: 1px solid $tableThBorderColor;
+										border-bottom: 1px solid $tableThBorderColor;
+										}
+		td								{border-left: 1px $tableBorderStyle $tableBorderColor;}
+									}
+
+	// MUL TABLE ROW STRIPING
+	.mul-table-striped				{
+		tbody > tr:nth-child(even) > td	{background-color:$tableOddTdBackgroundColor;}
+
+		// FALLBACK ROW STRIPING
+		.mul-even						{
+			td								{
+											background-color:$tableEvenTdBackgroundColor;
+
+				// SORTED COLUMN STYLES - EVEN
+				&[class*="sorting"]				{background-color:$tableEvenTdSortedBackgroundColor;}
+											}
+										}
+		.mul-odd						{
+			td								{
+											background-color:$tableOddTdBackgroundColor;
+
+				// SORTED COLUMN STYLES - ODD
+				&[class*="sorting"]				{background-color:$tableOddTdSortedBackgroundColor;}
+											}
+										}			
+									}
+
+	// MUL TABLE ROW HOVER
+	.mul-table-hover tbody tr:hover > td,
+	.mul-table-hover tbody tr:hover > td[class*="sorting"]
+									{background-color: $tableRowHoverColor;}
+
+
+	// MUL TABLE PAGINATION
+	.mul-table-pagination			{
+		.mul-pagination-row				{
+			td								{
+											border-top:1px solid $tableBorderColor;
+											border-right:1px solid transparent;
+											border-bottom:1px solid transparent;
+											border-left:1px solid transparent;
+											padding: 5px 0 0 0;
+											text-align:left;
+				.mul-pagination					{
+												position: relative;
+												left: -2px;
+												}
+											}
+										}
+									}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
+	@if $use-small-mediaquery == true {
+
+		@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+
+			// MUL TABLE IE8+9 FIXES
+			.ie8,
+			.ie9					{
+				
+				// MUL TABLE
+				.mul-table				{
+					caption					{
+						.mul-tbl-data-filter	{
+							input					{line-height: ($tableDataFilterLineHeight - 4);}
+												}
+											}
+										}
+									}
+
+		}
+
+	}//endif
+
+	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+		
+		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+			// TABLE OVERFLOW FOR SMALL MEDIAQUERY
+			.mul-table-small-mediaquery
+									{
+									width: $tableMinWidthLargeBreakpoint;
+				> table					{min-width: $tableMinWidthLargeBreakpoint;}
+									}
+
+			// MUL TABLE
+			.mul-table				{
+				th,
+				td						{
+										font-size: $tableBaseFontSizeLargeBreakpoint;
+										line-height: $tableBaseLineHeightLargeBreakpoint;
+										}
+				caption					{
+					.mul-tbl-data-filter	{
+											max-width: 100%;
+						input					{
+												height: $tableDataFilterHeightLargeBreakpoint;
+												line-height: $tableDataFilterLineHeightLargeBreakpoint;
+												}
+											}
+										}
+									}
+
+			// MUL TABLE PAGINATION
+			.mul-table-pagination	{
+				.mul-pagination-row		{
+					td						{text-align:right;}
+										}
+									}
+
+		}
+		
+	}// endif
+
+}//endif

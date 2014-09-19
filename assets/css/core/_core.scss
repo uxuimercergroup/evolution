@@ -1,0 +1,110 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.5 - Core SASS Imports Partial
+// DATE - June 13, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+// ==========================================================================================
+// TABLE OF CONTENTS
+// ==========================================================================================
+
+// GLOBAL
+//-------------------------------------------------------------------------------------------
+// COLOR VARIABLES............Global, brand, and other color variables
+// THEME VARIABLES............List of default theme variables that control the default theme of the library
+// VARIABLES..................List of variables that control the library that are not theme variables
+// FUNCTIONS..................Functions used for SASS calculations
+// MIXINS.....................SASS mixins for help with styling
+// NORMALIZE..................Reset all default browser styles to zero
+// HELPERS....................Helper classes to aid in styling, all helper use is class based
+
+// BASE
+//-------------------------------------------------------------------------------------------
+// BOXES......................Global box container styles
+// BUTTONS....................Global button styles
+// FOOTER.....................Global footer and footer object styles
+// FORM.......................Global form and form elements styles
+// GRID.......................Mobile first grid based on 24 column layout
+// HEADER.....................Masthead and masthead object styles
+// HERO BANNER................Hero banner styles
+// ICONS......................Global icon styles
+// LISTS......................Global list styles including horizontal, vertical, and data lists
+// MENUS......................Global menus styles
+// NAV........................Global navigation styles
+// TABLES.....................Global data table styles
+// TYPE.......................Global typography styles, headers, body text, etc.
+
+// OBJECTS
+//-------------------------------------------------------------------------------------------
+// ACCORDION..................Accordion object styles (JQUI)
+// ADVANCED FILTER............Advanced filter object styles (JQUI)
+// ALTERNATE VIEWS BADGE......Alternate views badge object styles (Uses jQuery UI tabs)
+// AUTOCOMPLETE...............Auto suggest object styles (JQUI)
+// CAROUSEL...................Carousel object styles (FlexSlider jQuery Plugin)
+// CONTENT MODAL..............Content modal object styles, (jQuery UI dialog w/jQuery UI tabs)
+// DATEPICKER.................Calendar object styles (JQUI)
+// DIALOG.....................Dialog/Modal object styles (JQUI)
+// LOGIN......................Login Page Layout styles
+// MINI FILTER................Mini Filter object styles
+// PAGINATION.................Pagination object styles
+// PROFILE CONTAINERS.........Profile Entity container styles
+// SCROLL PANE................Scroll pane styles (Malihu Jquery Custom Scrollbar Plugin)
+// SLIDER.....................Slider object styles (JQUI)
+// STEPPER....................Stepper (Horizontal and Vertical) styles
+// SUMMARY CONTAINERS.........Summary Containers styles
+// TABS.......................Tabs object styles (JQUI)
+// TILES......................Tile container styles
+// TOOLTIP....................Tooltip object styles (Tooltipster jQuery Plugin)
+
+
+// ==========================================================================================
+// CORE SASS IMPORTS
+// ==========================================================================================
+
+// NOTE #1: Make sure color variables partial is called before theme variables partial since theme variables partial requires color variables partial
+// NOTE #2: Make sure theme variables partial is called before variables partial since variables partial requires theme variables partial
+// NOTE #3: Make sure color variables, theme variables, and variables partials are called before mixins partial since mixins partial requires all three
+// NOTE #4: Make sure mixins partial is called before all other partials (excluding color variables, theme variables, variables, and functions) since all other partials require mixins partial
+
+@import "global/color_variables",
+		"global/theme_variables",
+		"global/variables",
+		"global/functions",
+		"global/mixins",
+		"global/normalize",
+		"global/helpers",
+
+		"base/boxes",
+		"base/buttons",
+		"base/footer",
+		"base/form",
+		"base/grid",
+		"base/header",
+		"base/hero_banner",
+		"base/icons",
+		"base/lists",
+		"base/menus",
+		"base/nav",
+		"base/tables",
+		"base/type",
+		
+		"objects/accordion",
+		"objects/advanced_filter",
+		"objects/alternate_views_badge",
+		"objects/autocomplete",
+		"objects/carousel",
+		"objects/content_modal",
+		"objects/datepicker",
+		"objects/dialog",
+		"objects/login",
+		"objects/mini_filter",
+		"objects/pagination",
+		"objects/profile_containers",
+		"objects/scroll_pane",
+		"objects/slider",
+		"objects/stepper",
+		"objects/summary_containers",
+		"objects/tabs",
+		"objects/tiles",
+		"objects/tooltip"
+		;

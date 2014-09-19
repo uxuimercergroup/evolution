@@ -1,0 +1,146 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">
+			The Content Modal Window provides information for the user that supplements the current page without taking the user away from it. This window allows large amounts of content to be displayed on a page in multiple layers and subsections without cluttering the user interface.
+		</p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<!-- NOT RESPONSIVE - ATTENTION MESSAGE - BEGINS -->
+<div class="mul-box mul-box-rnd mul-attention-ctn mul-hidden-large-mediaquery">
+	<div class="mul-box-hdr">
+		<h6 class="mul-message-hdr">
+			<i class="mul-icon-warning mul-icon-size-small mul-icon-color-attention mul-icon-position-left"></i>Attention
+		</h6>
+	</div>
+	<div class="box-bdy">
+		<p>This component does not have a baseline mobile version as of this release. A responsive version will be coming soon.</p>
+	</div>
+</div>
+<!-- NOT RESPONSIVE - ATTENTION MESSAGE - ENDS -->
+
+<section class="col-24 mul-visible-large-mediaquery">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+<!-- CONTENT MODAL - BEGINS -->
+	<div class="col-24 example-min-height">
+
+	<!-- CONTENT MODAL - EXAMPLE - BEGINS -->
+		{% include '/objects/content-modal' %}
+	<!-- CONTENT MODAL - EXAMPLE - ENDS -->
+
+	</div>
+<!-- CONTENT MODAL - ENDS -->
+
+<!-- DETAILS SECTION - BEGINS -->
+	<a name="moreDetails"></a>
+	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
+
+	<div class="col-24">
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>
+					You can use the Content Modal Window when you need to provide more information for users without taking them away from the current page. For example, users need to read content on a homepage, but the designer wants to provide an extra layer of supplemental content they can opt to read to further comprehension. A Content Modal Window is the perfect solution.
+				</p>
+			</div>
+			<div id="tabs-2">
+				<h5>Functionality</h5>
+				<ul>
+					<li>When the Content Modal Window is activated, the rest of the screen (the content/page behind it) is disabled until the user closes it by clicking on the X located in the top right corner or clicking on the overlay outside if the modal window.</li>
+					<li>Content Modal Windows will contain the "close" icon (white circle with a blue X inside) so the user can close the window when desired.</li>
+				</ul>
+
+				<!--
+				<h5>Scrolling</h5>
+				<ul>
+					<li>The Content Modal Window uses the <a href="/objects/scroll-pane">Scroll Pane</a> control if content is scrollable.</li>
+					<li>This feature is enabled when the height of the content area of the Content Modal Window is more than the height of the Content Modal Window.</li>
+					<li>The Scrollbar will be visible to user while content loads.</li>
+				</ul>
+				-->
+
+				<h5>Width/Height</h5>
+				<ul>
+					<li>The Content Modal Window has two available widths: 980px and 1200px. This width is based on the overall width of the site underneath the modal window. If a site width of 980px is choosen, the content modal will be 980px wide.</li>
+					<li>The Content Modal Window's height is dependent on the height of the browser window.</li>
+				</ul>
+			</div>
+			<div id="tabs-3">
+				<h5>Cross browser compatibility</h5>
+				<p>IE9 doesn't crop background gradients on containers with rounded corners, so we square the corners of every container so it looks just like IE8.</p>
+
+				<h5>Dependencies</h5>
+				<p>The Content Modal Window is based off a jQuery UI control called Dialog Widget. For more information on the jQuery UI Dialog Widget, check out the <a href="http://api.jqueryui.com/dialog/" target="_blank">jQuery UI Dialog Widget API</a>. This site is maintained by the jQuery Foundation, not Mercer.</p>
+				<p>The Scroll Pane Plugin is dependent on jQuery as well.</p>
+
+				<h4 class="mul-hdr-rule">Dependencies</h4>
+				<table class="mul-table mul-table-borders" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+					<thead>
+						<tr>
+							<th width="" scope="col">Library</th>
+							<th width="" scope="col">Location or Download</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>jQuery {{ global.jquery_version }}</td>
+							<td>assets/scripts/core/lib/jquery</td>
+						</tr>
+						<tr>
+							<td>jQuery UI {{ global.jquery_ui_version }}</td>
+							<td>assets/scripts/core/lib/jquery</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="tabs-4">
+				<p>{{ model.mobileIntroTabText }}</p>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+					
+
+					<pre class="prettyprint linenums"><xmp>{% include '/objects/content-modal' %}</xmp></pre>
+
+					<h5 class="mul-hdr-rule">JS</h5>
+					
+
+					<pre class="prettyprint linenums">
+// Content modal example click event
+var contentModalExampleClickEvent = function(){
+	jQuery('#js-mul-content-modal-example-btn').click(function() {
+		jQuery('#js-mul-content-modal-example').dialog('open');
+	});
+}
+
+// Content modal example
+mulContentModal('js-mul-content-modal-example',{
+	clickOutside: true, // Clicking outside content modal closes content modal, false turns off this option
+	clickOutsideTrigger: '#js-mul-content-modal-example-btn'
+});
+
+// Content modal example click event init
+contentModalExampleClickEvent();
+</pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

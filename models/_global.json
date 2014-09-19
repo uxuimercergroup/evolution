@@ -1,0 +1,410 @@
+{
+	"site_title": "Mercer Evolution",
+	"version_number": "v2-5",
+	"jquery_version": "1.10.2",
+	"jquery_ui_version": "1.10.3",
+
+	"header" : "",
+	"user_profile" : "",
+	"footer" : "",
+
+	"ExampleSectionHeader" : "Example",
+	"AddtionalDetailSectionHeader" : "Additional Details",
+
+	"PrettifyStartTag" : "<pre class=\"prettyprint linenums\"><xmp>",
+	"PrettifyEndTag" : "</xmp></pre>",
+
+
+	"page-tabs" : [
+		{"tabs": "Overview"},
+		{"tabs": "Usage"},
+		{"tabs": "Details"},
+		{"tabs": "Mobile"},
+		{"tabs": "Technical"},
+		{
+		"tabs": "Get Code",
+		"tab-classname": "get-code-tab"
+		}
+	],
+
+
+	"table-of-contents": [
+		{
+			"section-hdr": "Base",
+			"main-section": [
+				{"link-name": "Typography", "url": "/base/typography"},
+				{"link-name": "Colors", "url": "/base/colors"},
+				{"link-name": "Icons", "url": "/base/icons"},
+				{"link-name": "Grids", "url": "/base/grids"},
+				{"link-name": "Corporate Logos", "url": "/base/corp-logos"}
+			],
+
+			"sub-section-group": [
+				{
+					"sub-section-hdr": "Navigation",				
+					"sub-section": [
+						{"link-name": "Masthead With Main Navigation", "url": "/base/product-header"},
+						{"link-name": "Masthead With Sliding Navigation", "url": "/base/product-header-sliding-nav"},
+						{"link-name": "Thin Footer", "url": "/base/footer"},
+						{"link-name": "Fat Footer", "url": "/base/fat-footer"}
+					]
+				},
+				{
+					"sub-section-hdr": "Page Layouts",				
+					"sub-section": [
+						{"link-name": "Employer Portal Homepage", "url": "/base/layout-employee-portal-homepage"},
+						{"link-name": "Employee Portal Inner Page", "url": "/base/layout-employee-portal-innerpage"},
+						{"link-name": "Sidebar", "url": "/base/layout-sidebar"},
+						{"link-name": "Log In", "url": "/base/layout-login"},
+						{"link-name": "Hero Banner", "url": "/base/layout-hero-banner"}
+					]
+				},
+				{
+					"sub-section-hdr": "Profile Containers",				
+					"sub-section": [
+						{"link-name": "Entity Profile", "url": "/objects/profile-entity"},
+						{"link-name": "Prospective Client Profile", "url": "/objects/profile-prospective-client"},
+						{"link-name": "Active Client Profile", "url": "/objects/profile-client"},
+						{"link-name": "Inactive Client Profile", "url": "/objects/profile-inactive-client"},
+						{"link-name": "User Profile", "url": "/objects/profile-user"},
+						{"link-name": "Location Profile", "url": "/objects/profile-location"},
+						{"link-name": "Product Profile", "url": "/objects/profile-product"},
+						{"link-name": "Plan Profile", "url": "/objects/profile-plan"}
+					]
+				}
+			]
+		},
+
+		{
+			"section-hdr": "Narratives",
+			"main-section": [
+				{"link-name": "Page Error Messaging & Handling", "url": "/error-handling"},
+				{"link-name": "Search vs. Browse vs. Filter", "url": "/search-browse-filter"},
+				{"link-name": "Copy/Text Style Guide", "url": "/copy-text-styleguide"},
+				{"link-name": "Icon Fonts", "url": "/icon-font"}
+			]
+		},
+
+		{
+			"section-hdr": "Messaging",
+			"main-section": [
+				{"link-name": "Confirmation Message", "url": "/base/boxes/message-confirmation"},
+				{"link-name": "Error Message", "url": "/base/boxes/message-error"},
+				{"link-name": "Attention Message", "url": "/base/boxes/message-attention"},
+				{"link-name": "Tooltip", "url": "/objects/tooltip"}
+			]
+		},
+
+		{
+			"section-hdr": "Containers",
+			"main-section": [
+				{"link-name": "Basic Container", "url": "/base/boxes/container-basic"},
+				{"link-name": "Advanced Container", "url": "/base/boxes/container-advanced"}
+			],
+
+			"sub-section-group": [
+				{
+					"sub-section-hdr": "Custom Containers",				
+					"sub-section": [
+						{"link-name": "Feature Container", "url": "/base/boxes/container-feature"},
+						{"link-name": "Sidebar Container", "url": "/base/boxes/container-sidebar"},
+						{"link-name": "Support Container", "url": "/base/boxes/container-support"},
+						{"link-name": "Inline Search Container", "url": "/objects/inline-search"},
+						{"link-name": "Tile Container", "url": "/objects/container-tile"},
+						{"link-name": "Primary Summary Container", "url": "/objects/primary-summary"},
+						{"link-name": "Secondary Summary Container", "url": "/objects/secondary-summary"},
+						{"link-name": "Highlight Container", "url": "/base/boxes/container-highlight"},
+						{"link-name": "Pull Quote", "url": "/objects/pull-quote"}
+					]
+				}
+			]
+		},
+
+		{
+			"section-hdr": "Controls",
+			"main-section": [
+				{"link-name": "Accordian", "url": "/objects/accordion"},
+				{"link-name": "Alternate Views Badge", "url": "/objects/alternate-views-badge"},
+				{"link-name": "Buttons", "url": "/base/buttons"},
+				{"link-name": "Call To Action", "url": "/objects/call-to-action"},
+				{"link-name": "Calendar", "url": "/objects/calendar"},
+				{"link-name": "Calendar Date Range", "url": "/objects/date-range"},
+				{"link-name": "Carousel", "url": "/objects/carousel"},
+				{"link-name": "Mini Filter", "url": "/objects/mini-filter"},
+				{"link-name": "Tab Set", "url": "/objects/tabs"},
+				{"link-name": "Scoll Pane", "url": "/objects/scroll-pane"},
+				{"link-name": "Slider", "url": "/objects/slider"},
+				{"link-name": "Horizontal Stepper", "url": "/objects/horizontal-stepper"},
+				{"link-name": "Vertical Stepper", "url": "/objects/vertical-stepper"}
+			],
+
+			"sub-section-group": [
+				{
+					"sub-section-hdr": "Progress Indicators",				
+					"sub-section": [
+						{"link-name": "Loading Animation", "url": "/objects/load-animation"}
+					]
+				},
+				{
+					"sub-section-hdr": "Windows",				
+					"sub-section": [
+						{"link-name": "Modal Window", "url": "/objects/modal"},
+						{"link-name": "Content Modal", "url": "/objects/content-modal"}
+					]
+				},
+				{
+					"sub-section-hdr": "Lists",				
+					"sub-section": [
+						{"link-name": "Horizontal Lists", "url": "/base/lists/lists-horizontal-lists"},
+						{"link-name": "Vertical Lists", "url": "/base/lists/lists-vertical-lists"},
+						{"link-name": "Data Lists", "url": "/base/lists/lists-data-lists"}
+					]
+				}
+			]
+		},
+
+		{
+			"section-hdr": "Tables",
+			"main-section": [
+				{"link-name": "Static Data Table", "url": "/base/tables/static"},
+				{"link-name": "Interactive Data Table", "url": "/base/tables/interactive"}
+			],
+
+			"sub-section-group": [
+				{
+					"sub-section-hdr": "Data Table Add Ons",				
+					"sub-section": [
+						{"link-name": "Subheader Row", "url": "/base/tables/subheader"},
+						{"link-name": "Subtotal Row", "url": "/base/tables/subtotal"},
+						{"link-name": "Total Row", "url": "/base/tables/total"},
+						{"link-name": "Pagination", "url": "/objects/pagination"},
+						{"link-name": "Quick Filter", "url": "/base/tables/quick-filter"},
+						{"link-name": "Advanced Filter Modal", "url": "/objects/advanced-filter"}
+					]
+				}
+			]
+		},
+
+		{
+			"section-hdr": "Forms",
+			"main-section": [
+				{"link-name": "Stacked", "url": "/base/forms/stacked"},
+				{"link-name": "Inline", "url": "/base/forms/inline"},
+				{"link-name": "Multi-Column Stacked", "url": "/base/forms/multi-col-stacked"},
+				{"link-name": "Compact", "url": "/base/forms/compact"}
+			],
+
+			"sub-section-group": [
+				{
+					"sub-section-hdr": "Form Elements",				
+					"sub-section": [
+						{"link-name": "Text Input", "url": "/base/forms/input"},
+						{"link-name": "Textarea", "url": "/base/forms/textarea"},
+						{"link-name": "Radio Buttons", "url": "/base/forms/radio-button"},
+						{"link-name": "Checkboxes", "url": "/base/forms/checkbox"},
+						{"link-name": "Single Select Drop Down", "url": "/base/forms/drop-down"},
+						{"link-name": "HTML5 Form Elements", "url": "/base/forms/elements-html5"}
+					]
+				},
+				{
+					"sub-section-hdr": "Error Handling",				
+					"sub-section": [
+						{"link-name": "Field Specific Error", "url": "/base/forms/field-specific-error"}
+					]
+				},
+				{
+					"sub-section-hdr": "Form Add Ons",				
+					"sub-section": [
+						{"link-name": "Auto Suggest", "url": "/objects/auto-suggest"},
+						{"link-name": "Selected Checkbox", "url": "/base/forms/selected-checkbox"}
+					]
+				}
+			]
+		}
+
+	],
+
+
+	"table_data": [
+		{
+		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"task": "Create RFP/RFI",
+		"type_global": "Global",
+		"type_local": "Local",
+		"abbrev_first_name": "A.",
+		"first_name": "Arquimedez",
+		"last_name": "Pozo",
+		"company": "Impression Paper",
+		"location": "Germany",
+		"start_date": "22-Aug-2013",
+		"end_date": "2-Sep-2013",
+		"num_of": "9",
+		"Region": "EuroPac"
+		},
+		{
+		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"task": "Create RFP/RFI",
+		"type_global": "Global",
+		"type_local": "Local",
+		"abbrev_first_name": "A.",
+		"first_name": "Augie",
+		"last_name": "Schmitt",
+		"company": "Impression Paper",
+		"location": "Germany",
+		"start_date": "22-Aug-2013",
+		"end_date": "2-Sep-2013",
+		"num_of": "1",
+		"Region": "North America"
+		},
+		{
+		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"task": "Peer Review Savings Results",
+		"type_global": "Global",
+		"type_local": "Local",
+		"abbrev_first_name": "M.",
+		"first_name": "Marcia",
+		"last_name": "Wilshire",
+		"company": "Kord Enterprises",
+		"location": "Spain",
+		"start_date": "17-Aug-2013",
+		"end_date": "10-Sep-2013",
+		"num_of": "2",
+		"Region": "LAC"
+		},
+		{
+		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"task": "Conduct the HQ Client Kickoff Meeting",
+		"type_global": "Global",
+		"type_local": "Local",
+		"abbrev_first_name": "S.",
+		"first_name": "Scott",
+		"last_name": "Sizemore",
+		"company": "Impression Paper",
+		"location": "Sweden",
+		"start_date": "12-Aug-2013",
+		"end_date": "13-Sep-2013",
+		"num_of": "3",
+		"Region": "APAC"
+		},
+		{
+		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"task": "Conduct the HQ Client Kickoff Meeting",
+		"type_global": "Global",
+		"type_local": "Local",
+		"abbrev_first_name": "M.",
+		"first_name": "Mary",
+		"last_name": "Lowrie",
+		"company": "Impression Paper",
+		"location": "Brazil",
+		"start_date": "19-Aug-2013",
+		"end_date": "14-Sep-2013",
+		"num_of": "8",
+		"Region": "EuroPac"
+		},
+		{
+		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"task": "Develop Rules of the Road Governance Approach",
+		"type_global": "Global",
+		"type_local": "Local",
+		"abbrev_first_name": "M.",
+		"first_name": "Marcia",
+		"last_name": "Wilshire",
+		"company": "Resubi Exploration",
+		"location": "United States",
+		"start_date": "31-Aug-2013",
+		"end_date": "18-Sep-2013",
+		"num_of": "7",
+		"Region": "South America"
+		},
+		{
+		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"task": "Peer Review Savings Results",
+		"type_global": "Global",
+		"type_local": "Local",
+		"abbrev_first_name": "A.",
+		"first_name": "Augie",
+		"last_name": "Schmitt",
+		"company": "Kord Enterprises",
+		"location": "Japan",
+		"start_date": "28-Aug-2013",
+		"end_date": "20-Sep-2013",
+		"num_of": "4",
+		"Region": "LAC"
+		},
+		{
+		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"task": "Complete and Send Implementation Toolkit",
+		"type_global": "Global",
+		"type_local": "Local",
+		"abbrev_first_name": "S.",
+		"first_name": "Scott",
+		"last_name": "Sizemore",
+		"company": "Impression Paper",
+		"location": "Scotland",
+		"start_date": "24-Aug-2013",
+		"end_date": "21-Sep-2013",
+		"num_of": "2",
+		"Region": "APAC"
+		},
+		{
+		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"task": "Review Local Appointment Issues",
+		"type_global": "Global",
+		"type_local": "Local",
+		"abbrev_first_name": "M.",
+		"first_name": "Mary",
+		"last_name": "Lowrie",
+		"company": "Resubi Exploration",
+		"location": "France",
+		"start_date": "25-Aug-2013",
+		"end_date": "22-Sep-2013",
+		"num_of": "12",
+		"Region": "EuroPac"
+		},
+		{
+		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"task": "Conduct the HQ Client Kickoff Meeting",
+		"type_global": "Global",
+		"type_local": "Local",
+		"abbrev_first_name": "A.",
+		"first_name": "Augie",
+		"last_name": "Schmitt",
+		"company": "Impression Paper",
+		"location": "China",
+		"start_date": "24-Aug-2013",
+		"end_date": "23-Sep-2013",
+		"num_of": "3",
+		"Region": "North America"
+		},
+		{
+		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"task": "Peer Review Savings Results",
+		"type_global": "Global",
+		"type_local": "Local",
+		"abbrev_first_name": "A.",
+		"first_name": "Arquimedez",
+		"last_name": "Pozo",
+		"company": "Kord Enterprises",
+		"location": "Spain",
+		"start_date": "18-Aug-2013",
+		"end_date": "24-Sep-2013",
+		"num_of": "6",
+		"Region": "LAC"
+		},
+		{
+		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"task": "Review Local Appointment Issues",
+		"type_global": "Global",
+		"type_local": "Local",
+		"abbrev_first_name": "S.",
+		"first_name": "Scott",
+		"last_name": "Sizemore",
+		"company": "Resubi Exploration",
+		"location": "Italy",
+		"start_date": "29-Aug-2013",
+		"end_date": "26-Sep-2013",
+		"num_of": "1",
+		"Region": "APAC"
+		}
+	]
+}

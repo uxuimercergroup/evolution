@@ -1,0 +1,74 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">The Subheader Row is a Data Table Add-On. It allows you to subdivide and call out groups of data on a Data Table.</p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+	<div class="col-24 example-min-height">
+
+		{% include '/base/tables/table-subheader' %}
+
+	</div>
+
+<!-- DETAILS SECTION - BEGINS -->
+	<a name="moreDetails"></a>
+	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
+
+	<div class="col-24">
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>
+					Use the Subheader Row when you want to group data within a Data Table together.
+				</p>
+			</div>
+			<div id="tabs-2">
+				<strong>Color</strong>
+				<p>Subheader Rows should default to the color #e8f0s7</p>
+				
+				<strong>Width</strong>
+				<p>You can set column width using a helper Class. Since the Static Data Table functions within the Mercer Grid System, it will automatically adapt and configure itself.</p>
+
+				<strong>Row Details</strong>
+				<ul>
+					<li>Padding for all Static Data Table rows is set to five pixels on the top and bottom and ten pixels to the left and right.</li>
+					<li>Line height of Basic Data Table Subheader Rows is 13 pixels to keep text consistent with Mercer branding.</li>
+					<li>Subheader Row text is left aligned.</li>
+					<li>Subheader Row text is always in bold.</li>
+				</ul>
+			</div>
+			<div id="tabs-3">
+				<p>Technical details go here&hellip;</p>
+			</div>
+			<div id="tabs-4">
+				<p>Examples go here&hellip;</p>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+					<p>Make sure to modify the colspan based on how many columns you have in your table.</p>
+
+					<pre class="prettyprint linenums"><xmp>{% include '/base/tables/table-subheader' %}</xmp></pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

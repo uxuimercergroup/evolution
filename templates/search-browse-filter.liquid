@@ -1,0 +1,203 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+<div class="col-24">
+
+	<h1 class="mul-hdr-rule">{{ model.title }}</h1>
+
+	<div class="col-16 first">
+		<p>
+			When <strong>browsing</strong>, users scan or skim information displayed on a page. Users may or may not be looking for something in particular when <strong>browsing</strong>. <strong>Searching</strong> is a bit more proactive than <strong>browsing</strong> because users have key terms, images, people, elements, dates, etc., in mind and proactively plug specific “search terms” into the search box, which then showcases results that match those terms. Filtering allows users to further syphon data while <strong>browsing</strong> or searching by removing and showcasing items based on selected criteria.
+		</p>
+
+		<p>
+			<strong>Searching</strong> and <strong>filtering</strong> are primarily used together when users need to locate specific items within large, unknown groupings of results. They may have limited or incomplete details regarding the specific data they need to access. They then enter 1 or more details associated with the data set to enable the system to perform the preliminary "filter" and return filtered results.
+		</p>
+
+		<p>
+			Browsing and <strong>filtering</strong> can also go hand-in-hand. When used together, <strong>browsing</strong> and <strong>filtering</strong> allow users to directly access and view entire data sets, while still having the option to sort and filter the results in more detail.
+		</p>
+
+		<h4>Search Components:</h4>
+		<ul>
+			<li>Single search entry field or multiple choice metadata options</li>
+			<li>"Search" button</li>
+			<li>Can be combined with <a href="/objects/auto-suggest">auto-suggest</a> functionality</li>	
+		</ul>
+
+		<h4>Browse Components:</h4>
+		<ul>
+			<li>Access to full data set</li>
+			<li>Data table containing full set of results with default sorting capabilities</li>	
+		</ul>
+
+		<h4>Filtering Components:</h4>
+		<ul>
+			<li>Single filter entry field accompanies all results sets</li>
+			<li>Can be combined with <a href="/objects/auto-suggest">auto-suggest</a> functionality</li>
+			<li>Multiple choice "Advance" filter options may also be provided</li>
+			<li>"Filter" button</li>
+		</ul>
+
+	</div>
+	<div class="col-8">
+			
+		<!--
+		<div class="mul-box mul-sidebar-ctn">
+			<div class="mul-box-hdr">
+				<h3 class="mul-hdr-rule">Sidebar</h3>
+			</div>
+			<div class="box-bdy">
+
+			</div>
+		</div>
+		-->
+
+	</div>
+</div>
+
+<!--
+<h4 class="mul-hdr-rule">Search &amp; Filter</h4>
+
+<h2 class="mul-hdr-rule mul-margin-top">Members</h2>
+<p>Use the search area below to find a policy holder.</p>
+-->
+
+<!-- INLINE SEARCH CONTAINER - EXAMPLE - BEGINS
+<div class="mul-box mul-inline-search-ctn">
+	<div class="box-bdy">
+
+		<form class="mul-form" id="" name="" method="" action="" title="">
+			<fieldset>
+
+				<div class="col-18 first">
+					<ol class="col-24">
+						<li class="col-12 first">
+							<label for="">Member Name:</label>
+							<input class="" id="" name="" value="" type="text" tabindex="" title="" />
+						</li>
+						<li class="col-12">
+							<label for="">Employee ID:</label>
+							<input class="" id="" name="" value="" type="text" tabindex="" title="" />
+						</li>
+					</ol>
+					<ol class="col-24">
+						<li class="col-12 first">
+							<label for="">Member Type:</label>
+							<select name="" id="" tabindex="" title="">
+								<option value="choose one">choose one&hellip;</option>
+								<option value="option2">option 2</option>
+								<option value="option3">option 3</option>
+								<option value="option4">option 4</option>
+							</select>
+						</li>
+						<li class="col-12">
+							<label for="">Product:</label>
+							<select name="" id="" tabindex="" title="">
+								<option value="choose one">choose one&hellip;</option>
+								<option value="option2">option 2</option>
+								<option value="option3">option 3</option>
+								<option value="option4">option 4</option>
+							</select>
+						</li>
+					</ol>
+				</div>
+
+				FORM ACTION - BEGINS
+				<div class="col-6">
+					<ol>
+						<li class="mul-form-action">
+							<button class="mul-btn mul-btn-medium mul-btn-primary mul-center-block js-mul-toggle-content" mul-data-toggle="1" id="" name="" value="" type="button" tabindex="" title="Search">Search</button>
+						</li>
+					</ol>
+				</div>
+				FORM ACTION - ENDS
+
+			</fieldset>
+		</form>
+
+	</div>
+</div>
+INLINE SEARCH CONTAINER - EXAMPLE - ENDS
+
+INTERACTIVE DATA TABLE - EXAMPLE - BEGINS
+<div class="js-mul-toggle-content mul-display-none col-24 first mul-margin-top" id="div1">
+	
+	<table class="mul-table mul-footable mul-table-pagination mul-table-borders mul-table-striped mul-table-hover" data-filter="#filter1" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+		<caption>
+			<div class="col-19 first">
+				&nbsp;
+			</div>
+			<div class="col-5 mul-tbl-data-filter">
+				<input id="filter1" type="text" tabindex="" title="Type to filter results." placeholder="Filter">
+			</div>
+		</caption>
+		<thead>
+			<tr>
+				<th class="col-5" scope="col" data-sort-initial="ascending"><a href="javascript:;">Member Name</a></th>
+				<th class="col-3" scope="col"><a href="javascript:;">Employee ID</a></th>
+				<th class="col-8" scope="col"><a href="javascript:;">Product</a></th>
+				<th class="col-4" scope="col"><a href="javascript:;">Effective Date</a></th>
+				<th class="col-4" scope="col"><a href="javascript:;">Expiration Date</a></th>
+			</tr>
+		</thead>
+		<tbody>
+			
+			{% for item in model.table_data %}
+			<tr>
+				<td>{{ item.name }}</td>
+				<td>{{ item.id }}</td>
+				<td>{{ item.product }}</td>
+				<td>{{ item.effective_date }}</td>
+				<td>{{ item.expiration_date }}</td>
+			</tr>
+			{% endfor %}
+
+		</tbody>
+	</table>
+
+</div>
+INTERACTIVE DATA TABLE - EXAMPLE - ENDS
+
+<h4 class="mul-hdr-rule">Browse &amp; Filter</h4>
+
+<h2 class="mul-hdr-rule mul-margin-top">Products</h2>
+<p>All of the policies for your company are listed below.</p>
+
+INTERACTIVE DATA TABLE - EXAMPLE - BEGINS
+<table class="mul-table mul-footable mul-table-pagination mul-table-borders mul-table-striped mul-table-hover" data-filter="#filter2" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+	<caption>
+		<div class="col-19 first">
+			<dl class="mul-mini-filter">
+				<dt>View:</dt>
+				<dd><a href="javascript:;" class="active">Products</a></dd>
+				<dd class="last-child"><a href="javascript:;">Expired</a></dd>
+			</dl>
+		</div>
+		<div class="col-5 mul-tbl-data-filter">
+			<input id="filter2" type="text" placeholder="Filter">
+		</div>
+	</caption>
+	<thead>
+		<tr>
+			<th class="col-10" scope="col" data-sort-initial="ascending"><a href="javascript:;">Product</a></th>
+			<th class="col-4" scope="col"><a href="javascript:;">Policy Number</a></th>
+			<th class="col-4" scope="col"><a href="javascript:;">Insurer Name</a></th>
+			<th class="col-6" scope="col"><a href="javascript:;">Expiration Date</a></th>
+		</tr>
+	</thead>
+	<tbody>
+		
+		{% for item in model.table_data %}
+		<tr>
+			<td>{{ item.product }}</td>
+			<td>{{ item.policy_number }}</td>
+			<td>{{ item.insurer_name }}</td>
+			<td>{{ item.expiration_date }}</td>
+		</tr>
+		{% endfor %}
+
+	</tbody>
+</table>
+INTERACTIVE DATA TABLE - EXAMPLE - ENDS -->
+
+{% endblock %}

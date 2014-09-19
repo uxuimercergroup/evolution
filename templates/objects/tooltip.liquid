@@ -1,0 +1,200 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">
+			The Tooltip feature provides the user additional information/detail on <a href="/base/forms/input">Form Input</a> fields that is not initially displayed. This additional information displayed with the Tooltip shouldn't be crucial, required functionality, content needed to interact with the interface. It is simply a bit of additional information that would be considered helpful to the user, not essential.
+		</p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+<!-- TOOLTIP - BEGINS -->
+	<div class="col-24 example-min-height">
+
+		<div class="col-24">
+			<div class="col-8 first">
+				<div class="mul-box mul-box-rnd example-ctn">
+					<h4 class="mul-hdr-rule">Basic Tooltip</h4>
+					<!-- TOOLTIP - EXAMPLE - BEGINS -->
+						<p>{% include "/objects/tooltip-default" %}</p>
+						<p>{% include "/objects/tooltip-abbr" %}</p>
+					<!-- TOOLTIP - EXAMPLE - ENDS -->	
+				</div>
+			</div>
+
+			<div class="col-8">
+				<div class="mul-box mul-box-rnd example-ctn">
+					<h4 class="mul-hdr-rule">Tooltip Group</h4>
+					<!-- TOOLTIP - EXAMPLE - BEGINS -->
+						{% include "/objects/tooltip-group" %}
+					<!-- TOOLTIP - EXAMPLE - ENDS -->	
+				</div>
+			</div>
+
+			<div class="col-8">
+				<div class="mul-box mul-box-rnd example-ctn">
+					<h4 class="mul-hdr-rule">Tooltip In A Form</h4>
+					<!-- FORM TEXT INPUT WITH TOOLTIP - EXAMPLE - BEGINS -->
+						<form class="mul-form mul-no-margin-bottom" id="" name="" method="" action="" title="">
+							<fieldset>
+								<ol>
+									<li>
+										<label for="">Basic Text Input:</label>
+										{% include "/objects/tooltip-input" %}
+									</li>
+
+									<li class="mul-form-action"></li>
+								</ol>
+							</fieldset>
+						</form>
+					<!-- FORM TEXT INPUT WITH TOOLTIP - EXAMPLE - ENDS -->	
+				</div>
+			</div>
+		</div>
+
+		<div class="col-24">
+			<h4 class="mul-hdr-rule">Tooltip With Paragraph Text</h4>
+
+			<p>Lorem <abbr class="js-mul-tooltip js-mul-tooltip-hover-top" title="This is a tooltip.">ipsum dolor</abbr> sit amet, consectetur adipisicing elit. Saepe, iusto, esse, asperiores placeat molestias sequi aut eum sunt dolores consectetur dolorem nulla qui earum amet corporis tempore hic explicabo veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, iusto, esse, asperiores placeat molestias sequi aut eum sunt <a class="js-mul-tooltip js-mul-tooltip-hover-left" href="javascript:;" title="And another tooltip.">dolores</a> consectetur dolorem nulla qui <a class="js-mul-tooltip js-mul-tooltip-hover-right" href="javascript:;" title="And another tooltip.">earum</a> amet corporis tempore hic explicabo veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, iusto, esse, asperiores placeat molestias sequi aut eum sunt dolores consectetur dolorem nulla qui earum <a class="js-mul-tooltip js-mul-tooltip-hover-bottom" href="javascript:;" title="This is the last tooltip in this paragraph.">amet</a> corporis tempore hic explicabo veniam.</p>
+		</div>
+
+	</div>
+<!-- TOOLTIP - ENDS -->
+
+<!-- DETAILS SECTION - BEGINS -->
+	<a name="moreDetails"></a>
+	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
+
+	<div class="col-24">
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>
+					Designers should use the Tooltip when the amount of information displayed is short in length (10-15 words maximum) and not critical to the user. For longer content (more than 15 words or images) use the <a href="/objects/descriptive-hover">Descriptive Hover</a>.
+				</p>
+			</div>
+			<div id="tabs-2">
+				<strong>Text</strong>
+				<ul>
+					<li>The designer should use concise language in the Tooltip, no more than 15 words.</li>
+					<li>The Tooltip must be plain text. </li>
+				</ul>
+
+				<strong>Height/Width</strong>
+				<ul>
+					<li>The Tooltip has a maximum width of 200 pixels but can be smaller based on content.</li>
+					<li>The height of the Tooltip should be dynamic and based on the content included.</li>
+				</ul>
+
+				<strong>Color</strong>
+				<ul>
+					<li>The Tooltip container should have a light blue (#e7f0f9) color background.</li>
+					<li>The Tooltip container should have a light gray (#cccccc) border color.</li>
+					<li>The Tooltip text will be dark gray (#333333).</li>
+				</ul>
+
+				<strong>Placement</strong>
+				<ul>
+					<li>The Tooltip's placement relative to the link should be dynamic, based on how much space is available.</li>
+					<li>By default, the Tooltip should display above the link. However, if there is limited space, it should be able to dynamically shift to the bottom.</li>
+				</ul>
+
+				<strong>Accessibility</strong>
+				<ul>
+					<li>The Tooltip container will open when the user mouses over the parent element and will disappear when the user moves the mouse away from the parent element.</li>
+				</ul>
+			</div>
+			<div id="tabs-3">
+				<strong>Cross browser compatibility</strong>
+				<p>IE9 doesn't crop background gradients on containers with rounded corners, so we square the corners of every container so it looks just like IE8.</p>
+
+				<h4 class="mul-hdr-rule">Dependencies</h4>
+				<table class="mul-table mul-table-borders" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+					<thead>
+						<tr>
+							<th width="" scope="col">Library</th>
+							<th width="" scope="col">Location or Download</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>jQuery {{ global.jquery_version }}</td>
+							<td>assets/scripts/core/lib/jquery</td>
+						</tr>
+						<tr>
+							<td>jQuery Tooltipster 2.1.4</td>
+							<td>assets/scripts/core/lib/jquery/plugins</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="tabs-4">
+				<ul>
+					<li>The tooltip would open on tap. If the user taps the already open tooltip, it will close.</li>
+				</ul>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+					<p>
+						Below are different class-based options you can use to modify the position of the tooltip in relationship to the text or object that you are using with a toolitp.
+					</p>
+
+					<div class="col-24">
+
+						<div class="col-12 first">
+							<h5>For individual text-based elements</h5>					
+							<p>Use one of the follow classes to change the position of an individual text-based element on the page.</p>
+							<ol>
+								<li><code>js-mul-tooltip-hover-top</code></li>
+								<li><code>js-mul-tooltip-hover-right</code></li>
+								<li><code>js-mul-tooltip-hover-bottom</code></li>
+								<li><code>js-mul-tooltip-hover-left</code></li>
+							</ol>
+						</div>
+						<div class="col-12">
+							<h5>For non-text based objects like icons, images, or form elements</h5>						
+							<p>Use one of the follow classes to change the position of the tooltip with a group of icons or other non-text based objects like images or form elements.</p>
+							<ol>
+								<li><code>js-mul-tooltip-hover-top-object</code></li>
+								<li><code>js-mul-tooltip-hover-right-object</code></li>
+								<li><code>js-mul-tooltip-hover-bottom-object</code></li>
+								<li><code>js-mul-tooltip-hover-left-object</code></li>
+							</ol>
+						</div>
+
+					</div>
+
+					<h5>Basic Tooltip</h5>
+					<pre class="prettyprint linenums"><xmp>{% include "/objects/tooltip-default" %}</xmp></pre>
+
+					<h5>Basic Tooltip With Abbreviation Tag</h5>
+					<pre class="prettyprint linenums"><xmp>{% include "/objects/tooltip-abbr" %}</xmp></pre>
+
+					<h5>Tooltip Group</h5>
+					<pre class="prettyprint linenums"><xmp>{% include "/objects/tooltip-group" %}</xmp></pre>
+
+					<h5>Tooltip In A Form</h5>
+					<pre class="prettyprint linenums"><xmp>{% include "/objects/tooltip-input" %}</xmp></pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

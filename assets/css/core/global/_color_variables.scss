@@ -1,0 +1,275 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.5 - Global Color Variables Partial
+// DATE - June 13, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+// BASE COLORS
+// ------------------------------------------------------------------------------------------
+$transparent:								transparent !default;
+
+$white:										#FFF !default;
+
+$black:										#000 !default;
+$blue-gray:									#23334C !default;
+$blue-sapphire:								#002C77 !default;
+$purple:									#43276D !default;
+$fuscia:									#560054 !default;
+$pink:										#A9194F !default;
+$red:										#810009 !default;
+$orange:									#C45F24 !default;
+$tan:										#8E5501 !default;
+$green:										#005804 !default;
+$blue-green:								#004C4F !default;
+
+
+// GRAY COLORS
+// ------------------------------------------------------------------------------------------
+$gray-darkest:								lighten($black, 20%) !default;		// #333
+$gray-darker:								lighten($black, 40%) !default;		// #666	
+$gray-dark:									lighten($black, 60%) !default;		// #999
+$gray-mid-dark:								lighten($black, 69%) !default;		// #B0B0B0
+$gray-mid-light:							lighten($black, 80%) !default;		// #CCC
+$gray-light:								lighten($black, 90%) !default;		// #E6E6E6
+$gray-lighter:								lighten($black, 93.5%) !default;	// #EEE
+$gray-lightest:								lighten($black, 97%) !default;		// #F8F8F8
+
+
+// BLUE GRAY COLORS
+// ------------------------------------------------------------------------------------------
+$blue-gray-darkest:							#395A85 !default;
+$blue-gray-darker:							#396EA8 !default;
+$blue-gray-dark:							#517BAA !default;
+$blue-gray-mid-dark:						#6B90B8 !default;
+$blue-gray-mid-light:						#A9BCD3 !default;
+$blue-gray-light:							#C3D2E5 !default;
+$blue-gray-lighter:							#E9EEF5 !default;
+$blue-gray-lightest:						#E8F0F7 !default;
+
+
+// BLUE SAPPHIRE COLORS
+// ------------------------------------------------------------------------------------------
+$blue-sapphire-dark:						#006D9E !default;
+$blue-sapphire-mid:							#00A8C8 !default;
+$blue-sapphire-light:						#A6E2EF !default;
+
+
+// PURPLE COLORS
+// ------------------------------------------------------------------------------------------
+$purple-dark:								#595997 !default;
+$purple-mid:								#6F83C1 !default;
+$purple-light:								#C4CAE6 !default;
+
+
+// FUSCIA COLORS
+// ------------------------------------------------------------------------------------------
+$fuscia-dark:								#932077 !default;
+$fuscia-mid:								#CE3D95 !default;
+$fuscia-light:								#E7B8D5 !default;
+
+
+// PINK COLORS
+// ------------------------------------------------------------------------------------------
+$pink-dark:									#ED2C67 !default;
+$pink-light:								#F7B6BB !default;
+
+
+// RED COLORS
+// ------------------------------------------------------------------------------------------
+$red-dark:									#BA2C2B !default;
+$red-mid:									#EF4E45 !default;
+$red-light:									#FCDBD9 !default;
+
+
+// ORANGE COLORS
+// ------------------------------------------------------------------------------------------
+$orange-dark:								#F48132 !default;
+$orange-mid:								#FAA45E !default;
+$orange-light:								#FCCFAB !default;
+
+
+// TAN COLORS
+// ------------------------------------------------------------------------------------------
+$tan-dark:									#C6A54F !default;
+$tan-mid:									#F1D485 !default;
+$tan-light:									#FEF8E3 !default;
+
+
+// GREEN COLORS
+// ------------------------------------------------------------------------------------------
+$green-darker:								#2D7B05 !default;
+$green-dark:								#6EAA38 !default;
+$green-mid:									#72BE44 !default;
+$green-light:								#98E96C !default;
+$green-lighter:								#BDDCA1 !default;
+$green-lightest:							#D6EBC3 !default;
+
+
+// BLUE GREEN COLORS
+// ------------------------------------------------------------------------------------------
+$blue-green-dark:							#008075 !default;
+$blue-green-mid:							#0FB694 !default;
+$blue-green-light:							#A7D9C8 !default;
+
+
+// BRAND COLORS
+// ------------------------------------------------------------------------------------------
+
+// ICONS
+$iconFontColorWhite:						$white !default;
+$iconFontColorBlack:						$black !default;
+$iconFontColorGrayDarker:					$gray-darker !default;
+$iconFontColorDisabled:						$gray-mid-light !default;
+$iconFontColorConfirmation:					$green !default;
+$iconFontColorError:						$red-dark !default;
+$iconFontColorAttention:					$tan-dark !default;
+$iconFontColorInfo:							$blue-sapphire !default;
+$iconFontGrayDarkerBackgroundStartColor:	$gray-mid-light !default;
+$iconFontGrayDarkerBackgroundEndColor:		$gray-darker !default;
+$iconFontConfirmationBackgroundStartColor:	$green-mid !default;
+$iconFontConfirmationBackgroundEndColor:	$green !default;
+$iconFontErrorBackgroundStartColor:			$red-mid !default;
+$iconFontErrorBackgroundEndColor:			$red-dark !default;
+$iconFontAttentionBackgroundStartColor:		$tan-mid !default;
+$iconFontAttentionBackgroundEndColor:		$tan-dark !default;
+$iconFontInfoBackgroundStartColor:			$blue-sapphire-mid !default;
+$iconFontInfoBackgroundEndColor:			$blue-sapphire !default;
+$iconFontAdvGrayDarkerBackgroundStartColor:	$gray-dark !default;	
+$iconFontAdvGrayDarkerBackgroundEndColor:	$gray-darkest !default;
+$iconFontAdvGrayDarkerBackgroundColor:		$gray-darker !default;
+$iconFontAdvDisabledBackgroundStartColor:	$gray-light !default;
+$iconFontAdvDisabledBackgroundEndColor:		$gray-mid-light !default;
+$iconFontAdvDisabledBackgroundColor:		$gray-mid-light !default;
+$iconFontAdvDisabledShadowColor:			$gray-dark !default;
+
+// MESSAGE BOXES
+$errorBackgroundColor:						$red-light !default;
+$errorBorderColor:							$red-dark !default;
+$errorFontColor:							$black !default;
+$errorHdr:									$red !default;
+
+$attentionBoxBackgroundColor:				$tan-light !default;
+$attentionBoxBorderColor:					$tan-dark !default;
+$attentionBoxFontColor:						$black !default;
+$attentionHdr:								$tan !default;
+
+$infoBoxBackgroundColor:					$blue-sapphire-light !default;
+$infoBoxBorderColor:						$blue-sapphire-dark !default;
+$infoBoxFontColor:							$black !default;
+$infoHdr:									$blue-sapphire !default;
+
+$confirmationBoxBackgroundColor:			$green-lightest !default;
+$confirmationBoxBorderColor:				$green-darker !default;
+$confirmationBoxFontColor:					$black !default;
+$confirmationHdr:							$green !default;
+
+// PROFILE CONTAINERS
+$profileContainerUserHdrBackgroundColor:	$blue-sapphire-mid !default;
+$profileContainerClientInactiveHdrBackgroundColor: $gray-dark !default;
+$profileContainerClientActiveHdrBackgroundColor: $purple !default;
+$profileContainerClientProspectiveHdrBackgroundColor: $purple-mid !default;
+$profileContainerProductHdrBackgroundColor: $orange !default;
+$profileContainerPlanHdrBackgroundColor:	$orange-mid !default;
+$profileContainerLocationPlanHdrBackgroundColor: $blue-gray-mid-light !default;
+
+
+// COLOR PALETTE ARRAY
+// ------------------------------------------------------------------------------------------
+$color-palette: (
+
+	// BASE COLORS
+	transparent: 			(color: $transparent),
+
+	white: 					(color: $white),
+
+	black: 					(color: $black),
+	blue-gray: 				(color: $blue-gray),
+	blue-sapphire: 			(color: $blue-sapphire),
+	purple: 				(color: $purple),
+	fuscia: 				(color: $fuscia),
+	pink: 					(color: $pink),
+	red: 					(color: $red),
+	orange: 				(color: $orange),
+	tan: 					(color: $tan),
+	green: 					(color: $green),
+	blue-green: 			(color: $blue-green),
+
+
+	// GRAY COLORS
+	gray-darkest: 			(color: $gray-darkest),
+	gray-darker: 			(color: $gray-darker),
+	gray-dark: 				(color: $gray-dark),
+	gray-mid-dark: 			(color: $gray-mid-dark),
+	gray-mid-light: 		(color: $gray-mid-light),
+	gray-light: 			(color: $gray-light),
+	gray-lighter: 			(color: $gray-lighter),
+	gray-lightest: 			(color: $gray-lightest),
+
+
+	// BLUE GRAY COLORS
+	blue-gray-darkest: 		(color: $blue-gray-darkest),
+	blue-gray-darker: 		(color: $blue-gray-darker),
+	blue-gray-dark: 		(color: $blue-gray-dark),
+	blue-gray-mid-dark: 	(color: $blue-gray-mid-dark),
+	blue-gray-mid-light: 	(color: $blue-gray-mid-light),
+	blue-gray-light: 		(color: $blue-gray-light),
+	blue-gray-lighter: 		(color: $blue-gray-lighter),
+	blue-gray-lightest: 	(color: $blue-gray-lightest),
+
+
+	// BLUE SAPPHIRE COLORS
+	blue-sapphire-dark: 	(color: $blue-sapphire-dark),
+	blue-sapphire-mid: 		(color: $blue-sapphire-mid),
+	blue-sapphire-light: 	(color: $blue-sapphire-light),
+
+
+	// PURPLE COLORS
+	purple-dark: 			(color: $purple-dark),
+	purple-mid: 			(color: $purple-mid),
+	purple-light: 			(color: $purple-light),
+
+
+	// FUSCIA COLORS
+	fuscia-dark: 			(color: $fuscia-dark),
+	fuscia-mid: 			(color: $fuscia-mid),
+	fuscia-light: 			(color: $fuscia-light),
+
+
+	// PINK COLORS
+	pink-dark: 				(color: $pink-dark),
+	pink-light: 			(color: $pink-light),
+
+
+	// RED COLORS
+	red-dark: 				(color: $red-dark),
+	red-mid: 				(color: $red-mid),
+	red-light: 				(color: $red-light),
+
+
+	// ORANGE COLORS
+	orange-dark:			(color: $orange-dark),
+	orange-mid:				(color: $orange-mid),
+	orange-light:			(color: $orange-light),
+
+
+	// TAN COLORS
+	tan-dark:				(color: $tan-dark),
+	tan-mid:				(color: $tan-mid),
+	tan-light: 				(color: $tan-light),
+
+
+	// GREEN COLORS
+	green-darker: 			(color: $green-darker),
+	green-dark:				(color: $green-dark),
+	green-mid:				(color: $green-mid),
+	green-light:			(color: $green-light),
+	green-lighter:			(color: $green-lighter),
+	green-lightest:			(color: $green-lightest),
+
+
+	// BLUE GREEN COLORS
+	blue-green-dark:		(color: $blue-green-dark),
+	blue-green-mid:			(color: $blue-green-mid),
+	blue-green-light:		(color: $blue-green-light)
+
+);

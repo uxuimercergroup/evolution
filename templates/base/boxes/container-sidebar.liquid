@@ -1,0 +1,116 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">
+			The Sidebar Container is a secondary containing element that should be used to create a visual "spine" for a page. It essentially separates content on the left and right sides of the page.
+			
+		</p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+<!-- SIDEBAR CONTAINER - BEGINS -->
+	<div class="col-24 example-min-height">
+
+		<!-- SIDEBAR CONTAINER - EXAMPLE - BEGINS -->
+			<h4 class="mul-hdr-rule">Example with a single content area</h4>
+			<div class="col-24">
+
+				<div class="col-16 first">
+					{{ 3 | lorem_ipsum:'p' }}
+				</div>
+				<div class="col-8">
+					{% include "/base/boxes/sidebar-ctn" %}
+				</div>
+
+			</div>
+		<!-- SIDEBAR CONTAINER - EXAMPLE - ENDS -->
+
+	</div>
+<!-- SIDEBAR CONTAINER - ENDS -->
+
+<!-- DETAILS SECTION - BEGINS -->
+	<a name="moreDetails"></a>
+	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
+
+	<div class="col-24">
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>
+					Use the Sidebar Container when you want to separate content on the page into more than one vertical section. The Sidebar Container can also be used when you want to create a vertical interactive menu on the left or right side of the page.
+				</p>
+			</div>
+			<div id="tabs-2">
+						
+				<h5>Components</h5>
+				<ul>
+					<li>The Sidebar Container is comprised of the following three components:</li>
+						<ul>
+							<li>Border</li>
+							<li>Background</li>
+							<li>Content Area</li>
+						</ul>
+						<li>The Border color (#cccccc) should always be a solid, 1 pixel gray line. </li>
+						<li>The Background color (#eeeeeee) should always be gray. </li>
+						<li>The Content Area included in a sidebar container will always include:</li>
+						<ul>
+							<li>Header</li>
+							<li>Horizontal Line</li>
+						</ul>
+					<li>The headers for the Content Area in a Sidebar Containers should always be designated as an h3. </li>
+					<li>The Horizontal Line directly under the Feature Container's header can be any color depending on where it is used.</li>
+					<li>A Sidebar Container may include multiple Content Areas.
+				</ul>
+			
+				<h5>Sizing and Layout</h5>
+				<ul>
+					<li>The content margins inside all Mercer Sidebar Containers will have 15 pixels of padding all around.</li>
+					<li>The padding inside a Sidebar Container from the line under the header to the beginning of the actual content is also 15 pixels. </li>
+					<li>Sidebar Container height and width are variable based on inside content height and width. </li>
+				</ul>
+
+				<h5>Grids</h5>
+				<ul>
+					<li>Sidebar Containers work within the <a href="/base/grids">Mercer Evolution Grid System</a>.</li>
+					<li>Sidebar Containers can contain grids inside of them to display and section off data within the container.</li>
+				</ul>
+			</div>
+			<div id="tabs-3">
+				<p>The Feature Container is designed to work and display the same way across all browsers.</p>
+			</div>
+			<div id="tabs-4">
+				<ul>
+					<li>In the mobile version of this container the width will shrink to span the width of the parent container.</li>
+					<li>Font size increases for mobile.</li>
+				</ul>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+					<p>
+						All containers start with base box and in this example we are using the following class <code>mul-sidebar-ctn</code> to give more meaning to a basic box. For the header part of the container to adjust the size use one of the following tags in conjunction with <code>mul-hdr-rule</code> class: <code>h1</code> <code>h2</code> <code>h3</code>
+					</p>
+
+					<pre class="prettyprint linenums"><xmp>{% include "/base/boxes/sidebar-ctn" %}</xmp></pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

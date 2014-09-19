@@ -1,0 +1,211 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.5 - Base Navigation Partial
+// DATE - June 13, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-nav == true{
+
+	// TODO: Finish navbar styles using menuing system
+
+	$arrows-color:			$gray-darker !default;
+
+	// TEMPLATES
+	.sub-arrow-down			{
+							position: absolute;
+							bottom: 1px;
+							left: 50%;
+							margin-left: -5px;
+							width: 0;
+							height: 0;
+							overflow: hidden;
+							border-width: 5px;
+							border-style: solid dashed dashed dashed;
+							border-color: $arrows-color transparent transparent transparent;
+							}
+
+	.sub-arrow-right		{
+							bottom: auto;
+							top: 50%;
+							margin-top: -5px;
+							right: 15px;
+							left: auto;
+							margin-left: 0;
+							border-style: dashed dashed dashed solid;
+							border-color: transparent transparent transparent $arrows-color;
+							}
+
+	// MASTHEAD TOP
+	.mul-masthead			{
+							@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
+							position: static;
+							z-index: $zindexHeader;
+							margin-bottom: $mastheadMarginBottom;
+		.mul-grid				{min-height: 0;} // Override if you need to use grid in navbar
+		.mul-masthead-top		{
+								@include clearfix;
+								height: $mastheadContentHeight;
+								min-height: 0;
+			.mul-masthead-top-adjust
+									{
+									width: 980px;
+									margin: 0 auto;
+									padding:0 $gridSiteGutterPadding;
+
+				// HEADER MASTHEAD LOGO
+				.mul-logo				{
+										font-size: $mastheadLogoFontSize;
+										line-height: $mastheadLogoLineHeight;
+										margin-bottom: 0;
+										padding: 0;
+					a						{
+											@include href-link($mastheadLogoLinkColor, none);
+											font-weight: $mastheadLogoFontWeight;
+											white-space: nowrap;
+											}
+					span					{font-family: $proximaNovaThinStack;}
+										}
+									}
+								}
+							}
+
+	// MASTHEAD BOTTOM
+	.mul-masthead			{
+
+		.mul-masthead-bottom	{
+								@include clearfix;
+								@include background-gradient($navBackgroundStartColor, $navBackgroundEndColor);
+								border-bottom: 1px solid $navBorderColor;
+			.mul-masthead-bottom-adjust
+									{
+									width: 980px;
+									margin: 0 auto;
+			// NAVBAR - BEGINS
+				.mul-navbar				{
+				// SMARTMENU - BEGINS
+					.mul-menu-default		{
+					// MAIN MENU LI's - BEGINS	
+						li						{
+												border-right: 1px solid $navBorderColor;
+							&:first-child			{border-left: 1px solid $navBorderColor;}
+							a						{
+													@include href-link($navLinkColor, none);
+													border-right: 1px solid $navLinkBorderColor;
+													// TODO: Move to the desktop section
+													font-size: $navLinkFontSizeLargeBreakpoint;
+													line-height: $navLinkLineHeightLargeBreakpoint;
+													padding: 10px 15px 9px 15px;
+													margin-bottom: -1px;
+							// ARROW - BEGINS
+								.sub-arrow				{@extend .sub-arrow-down;}
+							// ARROW - ENDS
+									&:hover,
+									&:focus,
+									&:active,
+									.highlighted		{
+														@include background-gradient($navActiveBackgroundStartColor, $navActiveBackgroundEndColor);
+														@include href-link($navLinkColor, none);
+														}
+													}
+												}
+					// MAIN MENU LI's - ENDS
+
+					// MAIN MENU LI's ICONS - BEGINS
+						.mul-menu-icon			{
+												border: 0;
+												margin: 6px 4px 4px 4px;
+							a						{
+													@include border-radius(2px);
+													background-color: $gray-mid-dark;
+													border: 0;
+													padding: 0;
+													text-align: center;
+								&:hover,
+								&:active				{@include background-gradient($gray-mid-dark, $gray-mid-dark);}
+								i						{
+														color: $white;
+														padding: 4px 6px 6px 5px;
+														}
+													}
+												}
+					// MAIN MENU LI's ICONS - ENDS
+
+					// SECOND LEVE UL's - BEGINS
+						ul,
+						ul ul,
+						ul ul ul				{
+												background: $white;
+												border: 1px solid $navBorderColor;
+												padding: 0;
+							li						{
+													border: 0;
+													border-top: 1px solid $gray-light;
+													margin: 0;
+													padding: 0;
+													list-style-type: none;
+								&:first-child			{border: 0;}
+													}
+
+								a						{
+														border: 0;
+														background: $transparent;
+									&:hover,
+									&:focus,
+									&:active,
+									.highlighted			{@include background-gradient($navBackgroundStartColor, $navBackgroundEndColor);}
+
+								// SECOND LEVEL ARROW - BEGINS
+									.sub-arrow				{@extend .sub-arrow-right;}
+								// SECOND LEVEL ARROW - ENDS
+
+														}
+													}
+					// SECOND LEVE UL's - BEGINS
+											}
+				// SMARTMENU - ENDS
+										}
+			// NAVBAR - ENDS
+									}
+								}
+							}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+		
+		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+			// MASTHEAD TOP
+			.mul-masthead	{
+				.mul-masthead-top
+								{
+					.mul-masthead-top-adjust
+									{
+									padding: 0 $gridSiteGutterPadding;
+
+						// HEADER MASTHEAD LOGO
+						.mul-logo		{
+										font-size: $mastheadLogoFontSizeLargeBreakpoint;
+										line-height: $mastheadLogoLineHeightLargeBreakpoint;
+										}
+									}
+								}
+							}
+
+			// MASTHEAD BOTTOM
+			.mul-masthead	{
+				.mul-masthead-bottom
+								{
+					.mul-masthead-bottom-adjust
+									{
+									padding: 0 $gridSiteGutterPadding;
+									}
+								}
+							}
+
+		}
+		
+	}// endif
+
+}// endif

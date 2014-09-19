@@ -1,0 +1,27 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Site Responsive CSS - Small Media Query - 320px-767px
+// DATE - June 13, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
+@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+
+	/*--- FOOTER --------------------------------------------------------------------------*/
+	.mul-footer							{
+		.mul-footer-adjust					{
+			.mul-footer-content-ctn				{
+				.mul-footer-copyright				{
+					.mul-horizontal-list-piped			{
+						li									{
+															display: block;
+															border: 0;
+															padding: 0;
+															}
+														}
+													}
+												}
+											}
+										}
+
+}

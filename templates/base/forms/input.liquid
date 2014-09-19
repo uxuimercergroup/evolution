@@ -1,0 +1,140 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">The Text Input element is the field in which the user can enter text on a form.</p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+<!-- FORM TEXT INPUT - BEGINS -->
+	<div class="col-24 example-min-height">
+
+
+		<div class="col-6 first">
+
+			<div class="mul-box mul-box-rnd example-ctn">
+				<h4 class="mul-hdr-rule">Stacked</h4>
+				<form class="mul-form" id="" name="" method="" action="" title="">
+					<fieldset>
+						<ol>
+							{% include '/base/forms/form-stacked-text-input' %}
+						</ol>
+					</fieldset>
+				</form>
+			</div>
+
+		</div>
+		<div class="col-6">
+
+			<div class="mul-box mul-box-rnd example-ctn">
+				<h4 class="mul-hdr-rule">Inline</h4>
+				<form class="mul-form mul-form-inline" id="" name="" method="" action="" title="">
+					<fieldset>
+						<ol>
+							{% include '/base/forms/form-inline-text-input' %}
+						</ol>
+					</fieldset>
+				</form>
+			</div>
+
+		</div>
+		<div class="col-6">
+
+			<div class="mul-box mul-box-rnd example-ctn">
+				<h4 class="mul-hdr-rule">Placeholder Text</h4>
+				<form class="mul-form" id="" name="" method="" action="" title="">
+					<fieldset>
+						<ol>
+							<li>
+								<label for="">Basic Text Input:</label>
+								<input class="" id="" name="" value="" type="text" tabindex="" title="" placeholder="example@email.com" />
+							</li>
+						</ol>
+					</fieldset>
+				</form>
+			</div>
+
+		</div>
+		<div class="col-6">
+
+			<div class="mul-box mul-box-rnd example-ctn">
+				<h4 class="mul-hdr-rule">Only Numbers</h4>
+				<form class="mul-form" id="" name="" method="" action="" title="">
+					<fieldset>
+						<ol>
+							<li>
+								<label for="">Basic Text Input:</label>
+								<input class="js-mul-numeric-mask" id="" name="" value="" type="text" tabindex="" title="" placeholder="Only type numbers" />
+							</li>
+						</ol>
+					</fieldset>
+				</form>
+			</div>
+
+		</div>
+
+	</div>
+<!-- FORM TEXT INPUT - ENDS -->
+
+<!-- DETAILS SECTION - BEGINS -->
+	<a name="moreDetails"></a>
+	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
+
+	<div class="col-24">
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>
+					Use the Text Input element when a user is required to enter a small amount of text on a form. For longer content, use the
+					<a href="/base/forms/textarea">Text Area</a>
+					element.
+				</p>
+			</div>
+			<div id="tabs-2">
+				<ul>
+					<li>Text Input should default to the Attention/Highlight border color when the user clicks inside the box.</li>
+					<li>The Input Label should always be in Title Case.</li>
+					<li>Text Input should be adapted so it can be used with Placeholder Text if desired.</li>
+					<li>Text Input should be adapted so it can be used with an Icon preceding it if the designer wants to forgo a Label. An example of this would be using an icon of a cell phone for preceding a Text Input that requires the user to enter a phone number.</li>
+					<li>Text Input should be adapted so it can be used with a button, like if the Text Input is being used as a search function.</li>
+					<li>Text Input should be adapted so it can be used with add on text after the field, like adding the word, dollars or the abbreviation for pounds (lbs).</li>
+				</ul>
+			</div>
+			<div id="tabs-3">
+				<h5>Cross browser compatibility</h5>
+				<p>IE9 doesn't support rounded corners on inputs, so we square the corners of the inputs so it looks just like IE8.</p>
+			</div>
+			<div id="tabs-4">
+				<p>Examples go here&hellip;</p>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+					
+
+					<h5 class="mul-hdr-rule">Stacked Input</h5>
+					<pre class="prettyprint linenums"><xmp>{% include '/base/forms/form-stacked-text-input' %}</xmp></pre>
+
+					<h5 class="mul-hdr-rule">Inline Input</h5>
+					<pre class="prettyprint linenums"><xmp>{% include '/base/forms/form-inline-text-input' %}</xmp></pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

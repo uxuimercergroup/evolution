@@ -1,0 +1,70 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">
+			{{ model.IntroCopy }}
+			
+		</p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+<!-- HIGHLIGHT CONTAINER EXAMPLE - BEGINS -->
+	<div class="col-24 example-min-height">
+
+		<div class="col-12 first">
+			{% include '/base/boxes/highlight-ctn' %}
+		</div>
+		<div class="col-12">
+			{% include '/base/boxes/highlight-ctn-text' %}
+		</div>
+
+	</div>
+<!-- HIGHLIGHT CONTAINER EXAMPLE - ENDS -->
+
+<!-- DETAILS SECTION - BEGINS -->
+	<div class="col-24">
+		<a name="moreDetails"></a>
+		<h4 class="mul-hdr-dbl-rule addtional-detail-hdr">Additional Details</h4>
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>This message container should be used when you want to highlight some valuable piece of data/information to the user.</p>
+			</div>
+			<div id="tabs-2">
+				<p>This is a simple container with square corners and a light blue (#E8F0F7) background.</p>
+				<p>The container can support any type of content inside of it, although the intent is to keep the data/information very brief.</p>
+				<p>The containers can fit inside of any grid layout.</p>
+			</div>
+			<div id="tabs-3">
+				<p>{{ model.TechDetail }}</p>
+			</div>
+			<div id="tabs-4">
+				<p>The container itself is responsive, and it will take up 100% of the available space (or the containing element).</p>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+
+					{{ global.PrettifyStartTag }}{% include '/base/boxes/highlight-ctn' %}{{ global.PrettifyEndTag }}
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

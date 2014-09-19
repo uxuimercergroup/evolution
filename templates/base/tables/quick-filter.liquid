@@ -1,0 +1,160 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">
+			The Quick Filter/Autocomplete control syphons data as the user types search characters into a <a href="/base/forms/stacked">Text Input</a> field on a table. It enables users to quickly find and select from a pre-populated list of values as they type. By entering more characters, the user can filter down the list to produce better matches. The Quick Filter/Autocomplete feature is used along with the <a href="/base/tables/interactive">Interactive Data Table</a> to give the user control of the search results.
+		</p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+<!-- QUICK FILTER - BEGINS -->
+	<div class="col-24 example-min-height">
+
+		<div class="mul-table-small-mediaquery">
+			<table class="mul-table mul-footable mul-table-borders mul-table-striped mul-table-hover" data-filter="#filter" data-filter-timeout="300" data-filter-text-only="true" data-filter-minimum="1" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+				<caption>
+					<div class="col-19 first">&nbsp;</div>
+					<div class="col-5 mul-tbl-data-filter">
+						{% include '/base/tables/table-quick-filter' %}
+					</div>
+				</caption>
+				<thead>
+					<tr>
+						<th class="col-1" scope="col" data-sort-ignore="true">
+							<input type="checkbox" class="js-mul-select-all-checkboxes">
+						</th>
+						<th class="col-6" scope="col"><a href="javascript:;">Task</a></th>
+						<th class="col-2" scope="col"><a href="javascript:;">Type</a></th>
+						<th class="col-4" scope="col">
+							<a href="javascript:;">Client</a> |
+							<a href="javascript:;">Location</a>
+						</th>
+						<th class="col-2" data-sort-initial="ascending" scope="col"><a href="javascript:;">Assigned To</a></th>
+						<th class="col-2 mul-nowrap mul-align-right" scope="col"><a href="javascript:;">Start Date</a></th>
+						<th class="col-2 mul-nowrap mul-align-right" scope="col"><a href="javascript:;">End Date</a></th>
+					</tr>
+				</thead>
+				<tbody>
+
+					{% for item in global.table_data %}
+					<tr>
+						<td>{{ item.checkbox }}</td>
+						<td>{{ item.task }}</td>
+						<td>{{ item.type_global }}</td>
+						<td>
+							<a href="javascript:;">{{ item.company }}</a> |
+							{{ item.location}}
+						</td>
+						<td>
+							{{ item.abbrev_first_name}} {{ item.last_name}}
+						</td>
+						<td class="mul-nowrap mul-align-right">{{ item.start_date }}</td>
+						<td class="mul-nowrap mul-align-right">{{ item.end_date }}</td>
+					</tr>
+					{% endfor %}
+					
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+<!-- QUICK FILTER - ENDS -->
+
+<!-- DETAILS SECTION - BEGINS -->
+	<a name="moreDetails"></a>
+	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
+
+	<div class="col-24">
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>
+					When there is a lot of data displayed on a table, you can use the Quick Filter/Autocomplete control. This will allow you to search quickly for the information you are looking for and filters out excess unneeded data. 
+				</p>
+			</div>
+			<div id="tabs-2">
+				<h5>Functionality</h5>
+				<ul>
+					<li>
+						The Quick Filter/Autocomplete control will  begin syphoning out data as soon as the user enters the first character into  the Text Input field. There is no character minimum.
+					</li>
+				</ul>
+				
+				<h5>Color</h5>
+				<ul>
+					<li>
+						The Quick Filter/Autocomplete's Text Input field should default to the <a href="/base/colors">Attention/Highlight</a> border color when the user clicks inside the box.
+					</li>
+				</ul>
+				
+				<h5>Width/Height</h5>
+				<ul>
+					<li>
+						The designer can set the width parameters of  the Quick Filter/Autocomplete control.
+					</li>
+					<li>
+						The height of the Quick Filter/Autocomplete  control is variable. <strong></strong>
+					</li>
+				</ul>
+			</div>
+			<div id="tabs-3">
+				<h4 class="mul-hdr-rule">Dependencies</h4>
+				<table class="mul-table mul-table-borders" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+					<thead>
+						<tr>
+							<th width="" scope="col">Library</th>
+							<th width="" scope="col">Location or Download</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>jQuery {{ global.jquery_version }}</td>
+							<td>assets/scripts/core/lib/jquery</td>
+						</tr>
+						<tr>
+							<td>FooTables 2.0</td>
+							<td>assets/scripts/core/lib/jquery/plugins</td>
+						</tr>
+						<tr>
+							<td>FooTables 2.0 - Filter Plugin</td>
+							<td>assets/scripts/core/lib/jquery/plugins</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="tabs-4">
+				<p>On Mobile, the Quick Filter appears left aligned at the top of the table and enables users to quickly find and select from a pre-populated list of values as they type. This differs from the desktop view where the field is right aligned at top of table. When static and interactive data tables are viewed on mobile/tablet devices, the table will remain unchanged and displayed as seen on the desktop. When the user touches the screen (or swipes to the left) a scroll bar will appear which allows them to view the entire data table. They are then able to swipe right and left to view the contents. </p>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+					<p>Make sure to follow the table layout from the table section when adding these to your table.</p>
+
+					<h5>Quick Filter</h5>
+					<pre class="prettyprint linenums"><xmp>{% include '/base/tables/table-quick-filter' %}</xmp></pre>
+
+					<h5>Interactive Table calling Quick Filter</h5>
+					<p>Make sure the <code>id</code> of the Quick Filter input matches the <code>data-filter</code> attribute value (example: <code>data-filter="#filter"</code>) on your interactive table. The <code>data-filter</code> value will always have a <code>#</code> on the front. These need to match for the Quick Filter to be able to filter the table results.</p>
+					<pre class="prettyprint linenums"><xmp>{% include '/base/tables/table-interactive' %}</xmp></pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

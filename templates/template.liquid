@@ -1,0 +1,96 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<section class="col-24">
+	<!-- PAGE TITLE - BEGINS -->
+		<h1>{{ model.title }}</h1>
+	<!-- PAGE TITLE - ENDS -->
+
+		<i class="mul-icon-menu3 mul-sliding-sidebar-btn js-mul-sliding-sidebar-btn"></i>
+
+	<!-- TAB SECTION - BEGINS -->
+		<div class="js-mul-tabs-example mul-tabs tab-details-section">
+		<!-- TABS - BEGIN -->
+			<ul>
+			{% for item in global.page-tabs %}
+				<li class="{{ item.tab-classname }}">
+					<a href="#tabs-{% cycle '1', '2', '3', '4', '5', '6'%}">{{ item.tabs }}</a>
+				</li>
+			{% endfor %}
+			</ul>
+		<!-- TABS - END -->
+
+		<!-- TABS PANELS - BEGINS -->
+
+			<!-- OVERVIEW TAB - BEGINS -->
+				<div id="tabs-1">
+					<p>{{ model.intro-text }}</p>
+				</div>
+			<!-- OVERVIEW TAB - ENDS -->
+
+			<!-- USAGE TAB - BEGINS -->
+				<div id="tabs-2">
+					<p>Usage details go here&hellip;</p>
+				</div>
+			<!-- USAGE TAB - ENDS -->
+
+			<!-- DETAILS TAB - BEGINS -->
+				<div id="tabs-3">
+					<p>Details go here&hellip;</p>
+				</div>
+			<!-- DETAILS TAB - ENDS -->
+
+			<!-- MOBILE TAB - BEGINS -->
+				<div id="tabs-4">
+					<p>Mobile details go here&hellip;</p>
+				</div>
+			<!-- MOBILE TAB - END -->
+
+			<!-- TECH TAB - BEGINS -->
+				<div id="tabs-5">
+					<p>Technical details go here&hellip;</p>
+		
+					<h4 class="mul-hdr-rule">Dependencies</h4>
+				</div>
+			<!-- TECH TAB - ENDS -->
+
+			<!-- GET CODE - BEGINS -->
+				<div id="tabs-6" class="get-code-content-tab">
+					<section class="col-24">
+						<h5 class="mul-hdr-rule">HTML</h5>
+						{{ global.PrettifyStartTag }}INCLUDE GOES HERE{{ global.PrettifyEndTag }}
+
+						<h5 class="mul-hdr-rule">JS</h5>
+						{{ global.PrettifyStartTag }}REMOVE THIS IF NOT NEEDED{{ global.PrettifyEndTag }}
+					</section>
+				</div>
+			<!-- GET CODE - ENDS -->
+		<!-- TABS PANELS - ENDS -->
+
+		</div>
+	<!-- TAB SECTION - ENDS -->
+
+<!-- EXAMPLE HEADER - BEGINS -->
+	<h4 class="mul-hdr-dbl-rule example-main-hdr">
+		{{ global.ExampleSectionHeader }} - Default Button
+	</h4>
+<!-- EXAMPLE HEADER - ENDS -->
+
+<!-- [INSERT UI COMPONENT NAME] - BEGINS -->
+	<div class="col-24 example-min-height">
+		Example goes here
+	</div>
+<!-- [INSERT UI COMPONENT NAME] - ENDS -->
+
+</section>
+
+<!-- HIDDEN MENU - BEGINS -->
+	<section class="mul-sliding-sidebar mul-display-none js-mul-sliding-sidebar">
+		<div class="js-mul-sliding-sidebar-scrollpane">
+		{% for item in global.table-of-contents %}
+			{% include "sidebar-navbar" %}
+		{% endfor %}
+		</div>
+	</section>
+<!-- HIDDEN MENU - ENDS -->
+{% endblock %}

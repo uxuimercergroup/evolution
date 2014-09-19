@@ -1,0 +1,37 @@
+<!-- GRID - 2 COLUMN - COLUMN FLOW OPPOSITE - BEGINS -->
+<div class="col-24">
+	<div class="col-6 mul-col-flow-opposite">
+		<div class="mul-box mul-sidebar-ctn">
+			<div class="mul-box-hdr">
+				<h5>This column is last in desktop view but first in mobile view.</h5>
+			</div>
+			<div class="box-bdy">
+				{{ 1 | lorem_ipsum:'p' }}
+			</div>
+		</div>
+	</div>
+	<div class="col-18 first">
+		<h5>This column is first in desktop view but last in mobile view.</h5>
+		{{ 2 | lorem_ipsum:'p' }}
+	</div>
+</div>
+
+<hr />
+
+<div class="col-24">
+	<div class="col-18 mul-col-flow-opposite">
+		<h5>This column is last in desktop view but first in mobile view.</h5>
+		{{ 2 | lorem_ipsum:'p' }}
+	</div>
+	<div class="col-6 first">
+		<div class="mul-box mul-sidebar-ctn">
+			<div class="mul-box-hdr">
+				<h5>This column is first in desktop view but last in mobile view.</h5>
+			</div>
+			<div class="box-bdy">
+				{{ 1 | lorem_ipsum:'p' }}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- GRID - 2 COLUMN - COLUMN FLOW OPPOSITE - ENDS -->

@@ -1,0 +1,438 @@
+/*------------------------------------------------------------------------------------------
+Mercer Evolution - Site CSS
+DATE - June 13, 2014
+AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+-------------------------------------------------------------------------------------------*/
+
+// ==========================================================================================
+// CORE SASS IMPORTS
+// ==========================================================================================
+
+@import	"core/global/color_variables",
+		"core/global/theme_variables",
+		"core/global/variables",
+		"core/global/functions",
+		"core/global/mixins";
+
+
+// ==========================================================================================
+// SITE IMPORTS
+// ==========================================================================================
+
+@import	"partials/global/variables",
+		"partials/global/functions",
+		"partials/base/icons";
+
+
+/*=== WEBSITE STYLES ======================================================================*/
+
+/*--- SITE GLOBAL -------------------------------------------------------------------------*/
+
+// FIXES FLASH OF UNSTYLED CONTENT BUG - WHERE PAGE LOADS FASTER THAN JS AND MODERNIZR
+// HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
+html.mul-mod-js							{display:none;}
+
+// RELATED ITEMS MENU
+.related-items-menu						{
+										top: 3px !important;
+										font-family: $mulIconFontStack;
+										display: none;
+										}
+
+// TODO: TAB DETAIL SECTION STYLES
+.tab-details-section					{font-size: 16px;}
+.tab-details-section.ui-tabs			{
+	.ui-tabs-nav							{
+											margin-top: 15px;
+		.ui-state-default						{
+												@include background-gradient($white, $white);
+												@include border-radius(0);
+												border: 1px solid $gray-mid-light;
+												height: 29px;
+												margin-right: -1px;
+			&:first-child							{@include border-radius(4px 0 0 4px);}
+			&:last-child							{@include border-radius(0 4px 4px 0);}
+
+			a										{
+													background-color: $gray-lightest;
+													color: $gray-darker;
+													font-size: ($baseFontSize - 4);
+													padding-bottom: 2px;
+				&:hover									{
+														@include href-link-hover(none);
+														background-color: $gray-light;
+														}
+													}
+
+			&:first-child							{
+				a										{@include border-radius(4px 0 0 4px);}
+													}
+			&:last-child							{
+				a										{@include border-radius(0 4px 4px 0);}
+													}
+
+												}
+		.ui-tabs-active							{
+			a										{
+													background-color: $gray-light;
+													color: $black;
+													padding-bottom: 2px;
+													}
+			&:first-child							{
+				a										{@include border-radius(4px 0 0 4px);}
+													}
+			&:last-child							{
+				a										{@include border-radius(0 4px 4px 0);}
+													}
+												}
+											}
+	.ui-tabs-panel							{
+											border: 0;
+											padding-left: 0;
+											}
+										}
+
+// TODO: SLIDING SIDEBAR
+.mul-sliding-sidebar-btn				{
+										@include border-radius(4px);
+										background-color: $gray-lightest;
+										border: 1px solid $gray-mid-light;
+										padding: 5px;
+										width: 28px;
+										height: 28px;
+										float: right;
+										top: -40px;
+										cursor: pointer;
+										}
+
+.mul-sliding-sidebar					{
+										@include box-shadow(inset 0, 0, 10px, #000);
+										background-color: $gray-darkest;
+										padding-top: 15px;
+										padding-bottom: 15px;
+										overflow-y: hidden !important;
+
+	.mCSB_container							{margin-right: 0;}
+
+	h5,
+	h4										{
+											color: $white;
+											padding-left: 10px;
+											}
+	h5										{margin-bottom: 4px;}
+
+	.mul-vertical-list						{
+											margin-bottom: $baseMargin;
+		li										{
+												margin: 0;
+			a										{
+													color: $white;
+													display: block;
+													font-size: ($baseFontSize - 4);
+													line-height: 28px;
+													padding: 0 12px;
+				&:hover									{
+														@include href-link-hover(none);
+														background-color: $gray-darker;
+														}
+													}
+												}
+											}
+										}
+
+// LIBRARY EXAMPLES
+.mul-grid								{
+	.example-min-height						{min-height: 250px;}
+										}
+.example-ctn							{background-color: $white;}
+.example-main-hdr						{margin: 40px 0 25px 0;}
+
+
+// TODO: GET CODE FONT SIZE CHANGE
+.get-code-content-tab					{
+	pre										{font-size: 12px;}
+										}
+
+/*--- HOMEPAGE -----------------------------------------------------------------------------*/
+.hp-content-column						{
+	dd										{
+											margin-left: 0;
+		[class*="mul-icon"]						{float: right;}
+											}
+	.mul-tabs.ui-tabs						{
+		.ui-tabs-nav							{
+			.ui-state-default						{
+													@include background-gradient($white, $white);
+													border: 0;
+				a										{
+														margin: 0;
+														padding: 0;
+														}
+													}
+												}
+		.ui-tabs-panel							{border: 0;}
+											}
+										}
+
+	// MARKETING SECTION - HOMEPAGE
+	.marketing-ctn						{
+										border-bottom: 1px solid $gray-light;
+										margin-bottom: $baseMargin;
+		.img-section						{
+											border-bottom: 1px solid $gray-light;
+			img									{margin-bottom: -5px;}
+											}
+		.mkt-text							{
+			h1									{
+												font-family: $proximaNovaThinStack;
+				span								{display: block;}
+												}
+			.mul-icon-adv						{
+												margin-top: 15px;
+												float: right;
+												}
+											}
+										}
+
+.hp-layout								{
+	h5										{margin-bottom: 7px;}
+	.mul-vertical-list						{margin-bottom: $baseMargin;}
+	.todo									{
+											color: $orange-dark;
+											font-family: $proximaNovaSemiBoldStack;
+											padding-left: 6px;
+											}
+	.done									{
+											color: #55842B;
+											display: inline-block;
+											font-family: $proximaNovaSemiBoldStack;
+											padding-left: 6px;
+											}
+										}
+
+
+/*--- LAYOUT/GRIDS PAGE --------------------------------------------------------------------*/
+.unit									{
+										@include border-radius(3px);
+										margin-bottom:15px;
+										background-color:#e7e7e7;
+										border:1px solid #ccc;
+										}
+
+
+/*--- TYPE PAGE ----------------------------------------------------------------------------*/
+.type-table								{
+	td.type-example							{font-size: $baseFontSize !important;}
+										}
+.hyphen-demo							{@include hyphens(auto);}
+
+
+/*--- ICONS PAGE ----------------------------------------------------------------------------*/
+#icons-ctn								{
+	#icon-font-filter						{width: 250px;}
+										}
+.icons-large-on							{
+	i[class^="mul-icon-"]					{
+											font-size: ($iconFontSize*3);
+											margin: 0 auto;
+											display: block;
+											}
+										}
+.icon-table-cell-reverse-background		{background-color: $blue-gray-dark !important;}
+
+
+/*--- COLOR PAGE --------------------------------------------------------------------------*/
+.color-block
+										{
+										height: 50px;
+										text-align: center;
+										color: $white;
+										padding-top: 15px;
+										text-shadow: 1px 1px 1px $gray-darkest;
+										}
+
+// COLORS
+.gray
+										{
+	.color-block-01							{background-color: $black;}
+	.color-block-02							{background-color: $gray-darkest;}
+	.color-block-03							{background-color: $gray-darker;}
+	.color-block-04							{background-color: $gray-dark;}
+	.color-block-05							{background-color: $gray-mid-dark;}
+	.color-block-06							{background-color: $gray-mid-light;}
+	.color-block-07							{background-color: $gray-light;}
+	.color-block-08							{background-color: $gray-lighter;}
+	.color-block-09							{background-color: $gray-lightest;}
+										}
+
+.blue-gray
+										{
+	.color-block-01							{background-color: $blue-gray;}
+	.color-block-02							{background-color: $blue-gray-darkest;}
+	.color-block-03							{background-color: $blue-gray-darker;}
+	.color-block-04							{background-color: $blue-gray-dark;}
+	.color-block-05							{background-color: $blue-gray-mid-dark;}
+	.color-block-06							{background-color: $blue-gray-mid-light;}
+	.color-block-07							{background-color: $blue-gray-light;}
+	.color-block-08							{background-color: $blue-gray-lighter;}
+	.color-block-09							{background-color: $blue-gray-lightest;}
+										}
+
+.blue-sapphire
+										{
+	.color-block-01							{background-color: $blue-sapphire;}
+	.color-block-02							{background-color: $blue-sapphire-dark;}
+	.color-block-03							{background-color: $blue-sapphire-mid;}
+	.color-block-04							{background-color: $blue-sapphire-light;}
+										}
+
+.purple
+										{
+	.color-block-01							{background-color: $purple;}
+	.color-block-02							{background-color: $purple-dark;}
+	.color-block-03							{background-color: $purple-mid;}
+	.color-block-04							{background-color: $purple-light;}
+										}
+
+.fuscia
+										{
+	.color-block-01							{background-color: $fuscia;}
+	.color-block-02							{background-color: $fuscia-dark;}
+	.color-block-03							{background-color: $fuscia-mid;}
+	.color-block-04							{background-color: $fuscia-light;}
+										}
+
+.pink
+										{
+	.color-block-01							{background-color: $pink;}
+	.color-block-02							{background-color: $pink-dark;}
+	.color-block-03							{background-color: $pink-light;}
+										}
+
+.red
+										{
+	.color-block-01							{background-color: $red;}
+	.color-block-02							{background-color: $red-dark;}
+	.color-block-03							{background-color: $red-mid;}
+	.color-block-04							{background-color: $red-light;}
+										}
+
+.orange
+										{
+	.color-block-01							{background-color: $orange;}
+	.color-block-02							{background-color: $orange-dark;}
+	.color-block-03							{background-color: $orange-mid;}
+	.color-block-04							{background-color: $orange-light;}
+										}
+
+.tan
+										{
+	.color-block-01							{background-color: $tan;}
+	.color-block-02							{background-color: $tan-dark;}
+	.color-block-03							{background-color: $tan-mid;}
+	.color-block-04							{background-color: $tan-light;}
+										}
+
+.green
+										{
+	.color-block-01							{background-color: $green;}
+	.color-block-02							{background-color: $green-darker;}
+	.color-block-03							{background-color: $green-dark;}
+	.color-block-04							{background-color: $green-mid;}
+	.color-block-05							{background-color: $green-light;}
+	.color-block-06							{background-color: $green-lighter;}
+	.color-block-07							{background-color: $green-lightest;}
+										}
+
+.blue-green
+										{
+	.color-block-01							{background-color: $blue-green;}
+	.color-block-02							{background-color: $blue-green-dark;}
+	.color-block-03							{background-color: $blue-green-mid;}
+	.color-block-04							{background-color: $blue-green-light;}
+										}
+
+
+
+.colors									{
+										border: 1px dotted $gray-mid-light;
+										display: block;
+										height: 40px;
+										width: 100%;
+										}
+
+.mul-navbar-color						{@include background-gradient($gray-lightest, $gray-mid-light);}
+
+// TABLE COLORS
+.table-header-row						{background-color: $tableThBackgroundColor;}
+.table-subheader-row					{background-color: $tableSubHeaderBackgroundColor;}
+.table-header-row-color					{background-color: $blue-sapphire-light;}
+.table-subheader-row-color				{background-color: #E8F0F7;}
+.table-data-row-01						{background-color: $white;}
+.table-data-row-02						{background-color: $tableOddTdBackgroundColor;}
+.table-subtotal-row						{background-color: $tableSubTotalBackgroundColor;}
+.table-total-row						{background-color: $tableTotalBackgroundColor;}
+.table-sorting-row-01					{background-color: $tableOddTdBackgroundColor;}
+.table-sorting-row-02					{background-color: $tableOddTdSortedBackgroundColor;}
+.table-header-border					{background-color: #A9BCD3;}
+.table-row-border						{background-color: $tableTdBorderColor;}
+.table-subheader-border					{background-color: #C3D2E5;}
+
+// BUTTON COLORS
+.btn-primary							{@include background-gradient($buttonPrimaryBackgroundStartColor, $buttonPrimaryBackgroundEndColor);}
+.btn-primary-active						{@include background-gradient($buttonActivePrimaryBackgroundStartColor, $buttonActivePrimaryBackgroundEndColor);}
+.btn-primary-hover						{@include background-gradient($buttonHoverPrimaryBackgroundStartColor, $buttonHoverPrimaryBackgroundEndColor);}
+
+.btn-default							{@include background-gradient($buttonBackgroundStartColor, $buttonBackgroundEndColor);}
+.btn-default-active						{@include background-gradient($buttonActiveBackgroundStartColor, $buttonActiveBackgroundEndColor);}
+.btn-default-hover						{@include background-gradient($buttonHoverBackgroundStartColor, $buttonHoverBackgroundEndColor);}
+
+
+/*--- CORP LOGOS PAGE -----------------------------------------------------------------------*/
+.corp-logo-background-color				{background-color: $blue-gray !important;}
+
+
+/*--- PAGINATION PAGE -----------------------------------------------------------------------*/
+.pagination-hdr							{margin-top: 5px;}
+
+
+/*--- LOGIN DEMOS ---------------------------------------------------------------------------*/
+.mul-layout-login-background-1-demo		{background-image: url("../images/login_custom_bkgd_1.jpg");}
+.mul-layout-login-background-2-demo		{background-image: url("../images/login_custom_bkgd_2.jpg");}
+.mul-layout-login-background-3-demo		{background-image: url("../images/login_custom_bkgd_3.jpg");}
+
+
+/*--- HERO BANNER DEMOS ---------------------------------------------------------------------*/
+.mul-layout-hero-banner-background-1-demo,
+.mul-layout-hero-banner-background-2-demo,
+.mul-layout-hero-banner-background-3-demo
+										{
+	.mul-box								{background-color: rgba(255, 255, 255, .8);}
+										}
+
+.mul-layout-hero-banner-background-1-demo
+										{background: url("../images/core/objects/carousel/carousel_image1.jpg") no-repeat top left;}
+.mul-layout-hero-banner-background-2-demo
+										{background: url("../images/core/objects/carousel/carousel_image2.jpg") no-repeat top left;}
+.mul-layout-hero-banner-background-3-demo
+										{background: url("../images/core/objects/carousel/carousel_image3.jpg") no-repeat top left;}
+
+
+/*--- DEV QUICK REFERENCE -------------------------------------------------------------------*/
+.color-vars-quick-reference-table		{
+	tr										{color: $white;}
+	.default-text-color						{color: $baseFontColor;}
+										}
+
+.mul-footable.color-vars-quick-reference-table tbody > tr:nth-child(odd) > .mul-highlight
+										{background-color: inherit !important;}
+
+.mul-footable.color-vars-quick-reference-table .mul-highlight
+										{background-color: inherit !important;}
+										
+
+/*=== MEDIA QUERIES ==========================================================================*/
+@import	"partials/global/responsive_small",
+		"partials/global/responsive_medium",
+		"partials/global/responsive_large"
+		;

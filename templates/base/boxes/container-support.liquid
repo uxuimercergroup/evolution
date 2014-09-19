@@ -1,0 +1,104 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">
+			The Support Container is a secondary containing element that can be used to "support" other elements on the screen.
+			
+		</p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+	<!-- SUPPORT CONTAINER - BEGINS -->
+		<div class="col-24 example-min-height">
+
+			<div class="col-12 first">			
+				{% include "/base/boxes/support-ctn" %}
+			</div>
+			<div class="col-12"></div>
+
+		</div>
+	<!-- SUPPORT CONTAINER - ENDS -->
+
+<!-- DETAILS SECTION - BEGINS -->
+	<div class="col-24">
+		<a name="moreDetails"></a>
+		<h4 class="mul-hdr-dbl-rule addtional-detail-hdr">Additional Details</h4>
+		
+
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>
+					It should be used lower on the page in a more subserviant/supporting mode. It can list out for example; Quick Links, Reports, etc. and provide a link to more details.
+				</p>
+			</div>
+			<div id="tabs-2">
+				<h5>Components</h5>
+				<ul>
+					<li>The Support Container is comprised of the following four components:</li>
+					<ul>
+						<li>Border</li>
+						<li>Header</li>
+						<li>Horizontal Line</li>
+						<li>Content</li>
+					</ul>
+					<li>The border color (#6b90b8) should always be a solid, 1 pixel line.</li>
+					<li>The header size for Support Containers is h4.</li>
+					<li>The Horizontal Line directly under the Support Container's color should always be #C3D2E5.</li>
+					<li>The background color should always be #E9EEF5.</li>
+					<li>It sometimes can also include a link (on header right side) that may link to more information or a full list.</li>
+					<li>It can also include icons within the list that associate with the links/content.</li>
+				</ul>
+
+				<h5>Sizing and Layout</h5>
+				<ul>
+					<li>The content margins inside all Mercer Feature Containers will have 15 pixels of padding all around.</li>
+					<li>The padding inside a Support Container from the line under the header to the beginning of the actual content is also 15 pixels.</li>
+					<li>Support Container height and width are variable based on inside content height and width.</li>
+				</ul>
+
+				<h5>Grids</h5>
+				<ul>
+					<li>Feature Containers work within the Mercer Evolution Grid System.</li>
+					<li>Feature Containers can contain grids inside of them to display and section off data within the container.</li>
+				</ul>
+			</div>
+			<div id="tabs-3">
+				<p>Technical details go here&hellip;</p>
+			</div>
+			<div id="tabs-4">
+				<ul>
+					<li>In the mobile version of this container the width will shrink to span the width of the parent container.</li>
+					<li>Font size increases for mobile.</li>
+				</ul>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+					<p>
+						All containers start with base box and in this example we are using the following class <code>mul-support-ctn</code> to give more meaning to a basic box. For the header part of the container to adjust the size use one of the following tags in conjunction with <code>mul-hdr-rule</code> class: <code>h3</code> <code>h4</code>
+					</p>
+
+					<pre class="prettyprint linenums"><xmp>{% include "/base/boxes/support-ctn" %}</xmp></pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

@@ -1,0 +1,354 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+	<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">
+			Pagination allows user to scroll through multiple pages of content breaking longer pages into multiple shorter pages. This control is intended to be used in conjunction with the
+			<a href="/tables/static">Static Data Table</a>, the <a href="/base/tables/interactive">Interactive Data Table</a>, and content pages.
+		</p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+<!-- PAGINATION - EXAMPLE - BEGINS -->
+	<div class="col-24 mul-margin-bottom">
+		<div class="col-9 first">
+			<h5 class="pagination-hdr">User is on page 1:</h5>
+		</div>
+		<div class="col-15">
+			<div class="mul-pagination">
+				<ul>
+					<li class="mul-pagination-page-nav active"><a href="#" title="Current Page">1</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">2</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">3</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">4</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">5</a></li>
+					<li><a class="mul-icon-arrow-right2 mul-pagination-icon" href="#" title="Next &gt;"></a></li>
+					<li><a class="mul-icon-mul-arrow-doublearrow-right mul-pagination-icon" href="#" title="Last Page &raquo;"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- PAGINATION - EXAMPLE - ENDS -->
+
+<!-- PAGINATION - EXAMPLE - BEGINS -->
+	<div class="col-24 mul-margin-bottom mul-hidden-small-mediaquery">
+		<div class="col-9 first">
+			<h5 class="pagination-hdr">User is on page 2:</h5>
+		</div>
+		<div class="col-15">
+
+			<div class="mul-pagination">
+				<ul>
+					<li><a class="mul-icon-mul-arrow-doublearrow-left mul-pagination-icon" href="#" title="&laquo; First Page"></a></li>
+					<li><a class="mul-icon-arrow-left2 mul-pagination-icon" href="#" title="&lt; Previous"></a></li>
+					<li class="mul-pagination-page-nav"><a href="#">1</a></li>
+					<li class="mul-pagination-page-nav active"><a href="#" title="Current Page">2</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">3</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">4</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">5</a></li>
+					<li><a class="mul-icon-arrow-right2 mul-pagination-icon" href="#" title="Next &gt;"></a></li>
+					<li><a class="mul-icon-mul-arrow-doublearrow-right mul-pagination-icon" href="#" title="Last Page &raquo;"></a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+<!-- PAGINATION - EXAMPLE - ENDS -->
+
+<!-- PAGINATION - EXAMPLE - BEGINS -->
+	<div class="col-24 mul-margin-bottom">
+		<div class="col-9 first">
+			<h5 class="pagination-hdr">User is on page 5:</h5>
+		</div>
+		<div class="col-15">
+
+			<div class="mul-pagination">
+				<ul>
+					<li><a class="mul-icon-mul-arrow-doublearrow-left mul-pagination-icon" href="#" title="&laquo; First Page"></a></li>
+					<li><a class="mul-icon-arrow-left2 mul-pagination-icon" href="#" title="&lt; Previous"></a></li>
+					<li class="mul-pagination-page-nav"><a href="#">1</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">2</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">3</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">4</a></li>
+					<li class="mul-pagination-page-nav active"><a href="#" title="Current Page">5</a></li>
+					<li><a class="mul-icon-arrow-right2 mul-pagination-icon" href="#" title="Next &gt;"></a></li>
+					<li><a class="mul-icon-mul-arrow-doublearrow-right mul-pagination-icon" href="#" title="Last Page &raquo;"></a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+<!-- PAGINATION - EXAMPLE - ENDS -->
+
+<!-- PAGINATION - EXAMPLE - BEGINS -->
+	<div class="col-24 mul-margin-bottom mul-hidden-small-mediaquery">
+		<div class="col-9 first">
+			<h5 class="pagination-hdr">User is on page 6:</h5>
+		</div>
+		<div class="col-15">
+
+			<div class="mul-pagination">
+				<ul>
+					<li><a class="mul-icon-mul-arrow-doublearrow-left mul-pagination-icon" href="#" title="&laquo; First Page"></a></li>
+					<li><a class="mul-icon-arrow-left2 mul-pagination-icon" href="#" title="&lt; Previous"></a></li>
+					<li class="mul-pagination-page-nav"><a href="#">2</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">3</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">4</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">5</a></li>
+					<li class="mul-pagination-page-nav active"><a href="#" title="Current Page">6</a></li>
+					<li><a class="mul-icon-arrow-right2 mul-pagination-icon" href="#" title="Next &gt;"></a></li>
+					<li><a class="mul-icon-mul-arrow-doublearrow-right mul-pagination-icon" href="#" title="Last Page &raquo;"></a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+<!-- PAGINATION - EXAMPLE - ENDS -->
+
+<!-- PAGINATION - EXAMPLE - BEGINS -->
+	<div class="col-24 mul-margin-bottom">
+		<div class="col-9 first">
+			<h5 class="pagination-hdr">User is on last page:</h5>
+		</div>
+		<div class="col-15">
+
+			<div class="mul-pagination">
+				<ul>
+					<li><a class="mul-icon-mul-arrow-doublearrow-left mul-pagination-icon" href="#" title="&laquo; First Page"></a></li>
+					<li><a class="mul-icon-arrow-left2 mul-pagination-icon" href="#" title="&lt; Previous"></a></li>
+					<li class="mul-pagination-page-nav"><a href="#">20</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">21</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">22</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">23</a></li>
+					<li class="mul-pagination-page-nav active"><a href="#" title="Current Page">24</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+<!-- PAGINATION - EXAMPLE - ENDS -->
+
+<!-- PAGINATION - EXAMPLE - BEGINS -->
+	<div class="col-24 mul-margin-bottom mul-hidden-small-mediaquery">
+		<div class="col-9 first">
+			<h5 class="pagination-hdr">When there are fewer than 5 pages:</h5>
+		</div>
+		<div class="col-15">
+
+			<div class="mul-pagination">
+				<ul>
+					<li class="mul-pagination-page-nav active"><a href="#" title="Current Page">1</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">2</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">3</a></li>
+					<li><a class="mul-icon-arrow-right2 mul-pagination-icon" href="#" title="Next &gt;"></a></li>
+					<li><a class="mul-icon-mul-arrow-doublearrow-right mul-pagination-icon" href="#" title="Last Page &raquo;"></a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+<!-- PAGINATION - EXAMPLE - ENDS -->
+
+<!-- PAGINATION - EXAMPLE - BEGINS -->
+	<div class="col-24 mul-margin-bottom mul-hidden-small-mediaquery">
+		<div class="col-9 first">
+			<h5 class="pagination-hdr">When on last page with less than 5 pages:</h5>
+		</div>
+		<div class="col-15">
+
+			<div class="mul-pagination">
+				<ul>
+					<li><a class="mul-icon-mul-arrow-doublearrow-left mul-pagination-icon" href="#" title="&laquo; First Page"></a></li>
+					<li><a class="mul-icon-arrow-left2 mul-pagination-icon" href="#" title="&lt; Previous"></a></li>
+					<li class="mul-pagination-page-nav"><a href="#">1</a></li>
+					<li class="mul-pagination-page-nav"><a href="#">2</a></li>
+					<li class="mul-pagination-page-nav active"><a href="#" title="Current Page">3</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+<!-- PAGINATION - EXAMPLE - ENDS -->
+
+<hr />
+	
+<!-- TABLE PAGINATION - EXAMPLE - BEGINS -->
+	<small class="mul-table-results-label">Displaying 1-50 of 125 results.</small>
+
+	<div class="mul-table-small-mediaquery">
+		<table class="mul-table mul-footable mul-table-pagination mul-table-borders mul-table-striped mul-table-hover" data-filter="#filter" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+			<caption>
+				<div class="col-19 first">
+					{% include "/objects/mini-filter" %}
+				</div>
+				<div class="col-5 mul-tbl-data-filter">
+					<input id="filter" type="text" tabindex="" title="Type to filter results." placeholder="Filter">
+				</div>
+			</caption>
+			<thead>
+				<tr>
+					<th class="col-1" scope="col" data-sort-ignore="true">
+						<input type="checkbox" class="js-mul-select-all-checkboxes">
+					</th>
+					<th class="col-6" scope="col"><a href="javascript:;">Task</a></th>
+					<th class="col-2" scope="col"><a href="javascript:;">Type</a></th>
+					<th class="col-8" scope="col">
+						<a href="javascript:;">Client</a> |
+						<a href="javascript:;">Location</a>
+					</th>
+					<th class="col-4" data-sort-initial="ascending" scope="col"><a href="javascript:;">Assigned To</a></th>
+					<th class="col-3 mul-nowrap mul-align-right" scope="col"><a href="javascript:;">Start Date</a></th>
+					<th class="col-3 mul-nowrap mul-align-right" scope="col"><a href="javascript:;">End Date</a></th>
+				</tr>
+			</thead>
+			<tbody>
+
+				{% for item in global.table_data %}
+				<tr>
+					<td>{{ item.checkbox }}</td>
+					<td>{{ item.task }}</td>
+					<td>{{ item.type_global }}</td>
+					<td>
+						<a href="javascript:;">{{ item.company }}</a> |
+						{{ item.location}}
+					</td>
+					<td>
+						{{ item.abbrev_first_name}} {{ item.last_name}}
+					</td>
+					<td class="mul-nowrap mul-align-right">{{ item.start_date }}</td>
+					<td class="mul-nowrap mul-align-right">{{ item.end_date }}</td>
+				</tr>
+				{% endfor %}
+				
+			</tbody>
+			<tfoot>
+				<tr class="mul-pagination-row">
+					<td colspan="7">{% include '/objects/pagination' %}</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+<!-- TABLE PAGINATION - EXAMPLE - ENDS -->
+
+
+<!-- DETAILS SECTION - BEGINS -->
+	<a name="moreDetails"></a>
+	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
+
+	<div class="col-24">
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>
+					Pagination is used when the results on a page would require the user to scroll through an excessive amount of data. Typically, when more than 50 results are on a page (configurable) we will use Pagination. In certain instances, Infinite Scroll would be used.
+				</p>
+				<p>
+					We will also use the <a href="/objects/mini-filter">Mini Filter</a> which will offer users different content filters to organize and display the data by specific categories or attributes. This allows users to only see content that matters to them without getting overwhelmed.
+				</p>
+				<p>
+					The user can also use the <a href="/tables/quick-filter">Quick Filter/Autocomplete</a> to find and select from a pre-populated list of values as they type. By entering more characters, the user can filter down the list to better matches.
+				</p>
+			</div>
+			<div id="tabs-2">
+				<h5>Components</h5>
+				<ol>
+					<li> <strong>Number of results:</strong>
+						Displays the total number of results, and the current set of results being viewed. Example: "Displaying 1-50 of 125 results.
+					</li>
+					<li>
+						<strong>Previous and Next links:</strong>
+						<code>&lt;</code>
+						and
+						<code>&gt;</code>
+						icons will indicate Previous and Next.
+					</li>
+					<li>
+						<strong>First Page and Last Page:</strong>
+						<code>&laquo;</code>
+						and
+						<code>&raquo;</code>
+						indicate back to the first page, forward to the last page.
+					</li>
+				</ol>
+
+				<h5>Placement</h5>
+				<ul>
+					<li>
+						Pagination control should be placed below the grid of results.
+					</li>
+					<li>
+						In some cases, it will make sense to provide pagination controls above and below the data grid to ensure that the controls are always visible.
+					</li>
+				</ul>
+
+				<h5>Accessibility</h5>
+				<ul>
+					<li>
+						Allow each link to be navigated to with the Tab key, and when an individual link has keyboard focus, hitting the Enter key should navigate to the linked page.
+					</li>
+				</ul>
+
+				<h5>Visual Design</h5>
+				<ul>
+					<li>
+						Current page should be visually highlighted using the Active State.
+					</li>
+					<li>
+						<strong>Active State:</strong>
+						Background color is #FEF8E3 and font weight: bold.
+					</li>
+					<li>
+						<strong>Hover State:</strong>
+						Background color is #FEF8E3, and font weight: normal..
+					</li>
+					<li>
+						<strong>Numbers:</strong>
+						Color #003399 to indicate they are links. They stay blue when hovered over, and turn black/bold when selected.
+					</li>
+					<li>
+						<code>&laquo;</code>
+						<code>&lt;</code>
+						and
+						<code>&gt;</code>
+						<code>&raquo;</code>
+						: These icons are images.
+					</li>
+				</ul>
+			</div>
+			<div id="tabs-3">
+				<p>Technical details go here&hellip;</p>
+			</div>
+			<div id="tabs-4">
+				<ul>
+					<li>The pagination control would only be necessary for tables.</li>
+					<li>Pagination control would condense to only show First page/Previous Page/Next Page/Last Page icons.</li>
+					<li>Articles would scroll.</li>
+				</ul>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+					
+
+					<pre class="prettyprint linenums"><xmp>{% include '/objects/pagination' %}</xmp></pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

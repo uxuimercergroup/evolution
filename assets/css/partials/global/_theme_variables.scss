@@ -1,0 +1,513 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Site Theme SASS Variables
+// DATE - June 13, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+// ==========================================================================================
+// CORE THEME OVERRIDES
+// ==========================================================================================
+
+// Override any Mercer Evolution theme variable defaults.
+// Override reference: assets/css/core/global/_theme_variables.scss
+
+// ==========================================================================================
+// GLOBAL
+// ==========================================================================================
+
+// HELPERS
+// ------------------------------------------------------------------------------------------
+
+// TYPE
+// $footnoteFontColor:										;
+
+// KEYLINES
+// $keylineRightBorderRightColor: 							;
+// $keylineLeftBorderLeftColor:								;
+
+
+// ==========================================================================================
+// BASE
+// ==========================================================================================
+
+// TYPOGRAPHY
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $baseFontColor:											;
+
+// LINKS
+// $baseLinkColor:											;
+// $baseLinkVisitedColor:									;
+// $baseLinkHoverColor:										;
+
+// HEADERS
+// $baseHdrFontColor:										;
+// $hdrRuleBorderColor:										;
+// $hdrBackgroundColor:										;
+
+// OTHER ELEMENTS
+// $abbrBorderBottomColor:									;
+// $textSelectionTextColor:									;
+// $textSelectionBackgroundColor:							;
+
+// HORIZONTAL RULES
+// $hrBackgroundColor: 										;
+// $hrBorderTopColor:										;
+// $hrFontColor:											;
+
+
+// GRID
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $bodyBackgroundStartColor:								;
+// $bodyBackgroundEndColor:									;
+
+// BODY BACKGROUND STYLE
+// $bodyBackgroundBodyStartColor:							;
+// $bodyBackgroundBodyEndColor:								;
+
+// GRID BACKGROUND COLOR
+// $gridBackgroundColor:									;
+
+
+// BOXES
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $boxBackgroundColor:										;
+// $boxBorderColor:											;
+// $boxHdrBorderColor:										;
+// $boxShadowColor:											;
+
+// ADVANCED BOX
+// $boxAdvancedBackgroundColor:								;
+// $boxAdvancedHdrBackgroundColor:							;
+
+// CUSTOM CONTAINERS
+// $boxFeaturedBackgroundColor:								;
+// $boxFeaturedBorderBottomColor:							;
+
+// $boxSidebarBackgroundColor:								;
+// $boxSidebarBorderBottomColor:							;
+
+// $boxInlineSearchBackgroundColor:							;
+// $boxInlineSearchBorderColor:								;
+
+// $boxSupportBackgroundColor:								;
+// $boxSupportBottomColor:									;
+// $boxSupportBorderBottomColor:							;
+
+
+// FORM
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $baseInputShadowColor:									;
+// $baseInputBackgroundColor:								;
+// $baseInputBorderColor:									;
+// $baseInputColor:											;
+
+// FORM LABELS
+// $labelFontColor:											;
+
+// FORM INPUT FOCUS
+// $inputFocusShadowColor:									;
+// $inputFocusBorderColor:									;
+
+// FIELDHINTS
+// $placeholderTextColor:									;
+
+// FORM INFO TEXT
+// $formInfoTextColor:										;
+
+// FORM ERROR HANDLING
+// $inputValidTextColor:									;
+// $inputInvalidTextColor:									;
+
+// SELECTED CHECKBOX
+// $selectedCheckboxBorderColor:							;
+// $selectedCheckboxBackgroundColor:						;
+
+
+// BUTTONS
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $buttonBackgroundStartColor:								;
+// $buttonBackgroundEndColor:								;
+// $buttonHoverBackgroundStartColor: 						;
+// $buttonHoverBackgroundEndColor: 							;
+// $buttonHoverBorderColor:									;
+// $buttonActiveBackgroundStartColor:						;
+// $buttonActiveBackgroundEndColor:							;
+// $buttonShadowColor:										;
+// $buttonFontColor:										;
+// $buttonBorderColor:										;
+// $buttonTextShadowColor:									;
+
+// PRIMARY BUTTON
+// $buttonPrimaryBackgroundStartColor:						;
+// $buttonPrimaryBackgroundEndColor:						;
+// $buttonHoverPrimaryBackgroundStartColor:					;
+// $buttonHoverPrimaryBackgroundEndColor:					;
+// $buttonActivePrimaryBackgroundStartColor:				;
+// $buttonActivePrimaryBackgroundEndColor:					;
+// $buttonPrimaryFontColor:									;
+// $buttonPrimaryTextShadowColor:							;
+
+// BUTTON DISABLED
+// $buttonDisabledBackgroundColor:							;
+// $buttonDisabledBorderColor:								;
+// $buttonDisabledFontColor:								;
+// $buttonPrimaryDisabledBackgroundColor:					;
+// $buttonPrimaryDisabledBorderColor:						;
+// $buttonPrimaryDisabledFontColor:							;
+
+// BUTTON GROUP VERTICAL
+// $buttonVertGroupBorderTopColor:							;
+
+// BUTTON GROUP HORIZONTAL
+// $buttonHorzGroupBorderTopColor:							;
+// $buttonHorzGroupBorderBottomColor:						;
+// $buttonHorzGroupBorderRightColor:						;
+// $buttonHorzGroupFirstChildBorderLeftColor:				;
+
+
+// HEADER
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $mastheadBackgroundStartColor:							;
+// $mastheadBackgroundEndColor:								;
+// $mastheadLogoLinkColor:									;
+
+// PROFILE MENU
+// $mastheadProfileMenuBackgroundStartColor:				;
+// $mastheadProfileMenuBackgroundEndColor:					;
+// $mastheadProfileMenuBorderColor:							;
+// $mastheadProfileMenuIconColor:							;
+// $mastheadProfileMenuTextColor:							;
+// $mastheadProfileMenuAvatarIconColor:						;
+// $mastheadProfileMenuShadowColor:							;
+// $mastheadProfileMenuHoverColor:							;
+
+// PROFILE SIMPLE
+// $mastheadProfileSimpleTextColor:			 				;
+// $mastheadProfileSimpleListBorderColor:					;
+
+// MEGA MENU UTILITY ITEM
+// $megaMenuItemBackgroundColor:							;
+// $megaMenuItemColor:										;
+
+// MEGA MENU
+// $megaMenuContainerBackgroundColor: 						;
+// $megaMenuContainerBorderTopColor: 						;
+// $megaMenuContainerBorderBottomColor: 					;
+// $megaMenuContainerSpotlightBackgroundColor: 				;
+// $megaMenuContainerSpotlightTextColor: 					;
+// $megaMenuContainerMenuContainerTextColor: 				;
+
+// MEGA MENU SEARCH BOX ICON
+// $megaMenuSearchBoxIconColor:								;
+
+
+// NAVIGATION
+// ------------------------------------------------------------------------------------------
+// $navBackgroundStartColor:								;
+// $navBackgroundEndColor:									;
+// $navBorderColor:											;
+// $navLinkColor:											;
+// $navLinkBorderColor:										;
+// $navActiveBackgroundStartColor:							;
+// $navActiveBackgroundEndColor:							;
+// $navBorderLeftColor:										;
+
+
+// FOOTER
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $footerBorderTopColor:									;
+// $footerFontColor:										;
+
+// FAT FOOTER
+// $fatFooterBackgroundColor:								;
+// $fatFooterFontColor:										;
+
+
+// ICONS
+// ------------------------------------------------------------------------------------------
+// $iconFontColor:											;
+// $iconFontBackgroundStartColor:							;
+// $iconFontBackgroundEndColor:								;
+// $iconFontAdvBackgroundStartColor:						;
+// $iconFontAdvBackgroundEndColor:							;
+// $iconFontAdvBackgroundColor:								;
+// $iconFontAdvShadowColor:									;
+// $iconFontAdvBorderColor:									;
+// $iconFontAdvFontColor:									;
+
+// LISTS
+// ------------------------------------------------------------------------------------------
+// $horizontalListPipeBorderColor:							;
+// $definitionListHeaderColor:								;
+// $definitionDataListHeaderBorderColor:					;
+
+
+// TABLES
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $tableBackgroundColor:									;
+// $tableBorderColor:										;
+// $tableFontColor:											;
+// $tableThFontColor:										;
+// $tableThBackgroundColor:									;
+// $tableThBorderColor:										;
+// $tableTdBorderColor:										;
+// $tableEvenTdBackgroundColor:								;
+// $tableEvenTdSortedBackgroundColor: 						;
+// $tableOddTdBackgroundColor:								;
+// $tableOddTdSortedBackgroundColor: 						;
+// $tableRowHoverColor:										;
+
+// OPTIONS
+// $tableSubHeaderBackgroundColor:							;
+// $tableSubHeaderFontColor:								;
+// $tableSubHeaderBorderColor:								;
+// $tableSubTotalBackgroundColor:							;
+// $tableSubTotalFontColor:									;
+// $tableTotalBackgroundColor:								;
+// $tableTotalFontColor:									;
+
+
+// ==========================================================================================
+// OBJECTS
+// ==========================================================================================
+
+// ACCORDION
+// ------------------------------------------------------------------------------------------
+// $acccordionBorderColor:									;
+// $acccordionHeaderBackgroundColor:						;
+// $acccordionHeaderFontColor:								;
+// $accordionHeaderIconColor:								;
+// $acccordionContentBackgroundColor:						;
+
+
+// ALTERNATE VIEWS BADGE
+// ------------------------------------------------------------------------------------------
+// $alternateViewsBadgeButtonBackgroundStartColor: 			;
+// $alternateViewsBadgeButtonBackgroundEndColor: 			;
+// $alternateViewsBadgeButtonBorderColor: 					;
+// $alternateViewsBadgeButtonIconColor: 					;
+// $alternateViewsBadgeButtonLinkColor: 					;
+// $alternateViewsBadgeButtonHoverBackgroundStartColor: 	;
+// $alternateViewsBadgeButtonHoverBackgroundEndColor: 		;
+// $alternateViewsBadgeButtonHoverIconColor: 				;
+// $alternateViewsBadgeButtonHoverLinkColor: 				;
+// $alternateViewsBadgeButtonActiveBackgroundStartColor: 	;
+// $alternateViewsBadgeButtonActiveBackgroundEndColor: 		;
+// $alternateViewsBadgeButtonActiveBorderColor: 			;
+// $alternateViewsBadgeButtonActiveIconColor: 				;
+// $alternateViewsBadgeButtonActiveLinkColor: 				;
+
+
+// AUTOCOMPLETE
+// ------------------------------------------------------------------------------------------
+// $autocompleteShadowColor:								;
+// $autocompleteBackgroundColor:							;
+// $autocompleteBorderColor:								;
+// $autocompleteItemFontColor:								;
+// $autocompleteItemBorderTopColor:							;
+// $autocompleteItemBorderBottomColor:						;
+// $autocompleteItemHighlightText:							;
+// $autocompleteItemHoverBackgroundStartColor:				;
+// $autocompleteItemHoverBackgroundEndColor:				;
+
+
+// CAROUSEL
+// ------------------------------------------------------------------------------------------
+// $carouselPageCircleBackgroundColor:						;
+// $carouselPageCircleHoverBackgroundColor:					;
+// $carouselPageCircleActiveBackgroundColor:				;
+// $carouselPageCircleTextColor:							;
+// $carouselNavIconColor:									;
+// $carouselNavHoverIconColor:								;
+
+
+// CONTENT MODAL
+// ------------------------------------------------------------------------------------------
+// $contentModalBackgroundColor:							;
+// $contentModalUtilityBarBackgroundStartColor: 			;
+// $contentModalUtilityBarBackgroundEndColor: 				;
+// $contentModalUtilityBarTabsBorderColor:					;
+// $contentModalUtilityBarTabsAltBorderColor:				;
+// $contentModalUtilityBarTabsIconColor:					;
+// $contentModalUtilityBarTabsHoverBackgroundStartColor: 	;
+// $contentModalUtilityBarTabsHoverBackgroundEndColor: 		;
+// $contentModalUtilityBarTabsActiveBackgroundColor: 		;
+// $contentModalUtilityBarTabsActiveIconColor: 				;
+
+
+// DATEPICKER
+// ------------------------------------------------------------------------------------------
+// $datepickerShadowColor:									;
+// $datepickerBackgroundColor:								;
+// $datepickerThFontColor:									;
+// $datepickerBorderColor:									;
+// $datepickerLinkColor:									;
+// $datepickerHdrBackgroundStartColor:						;
+// $datepickerHdrBackgroundEndColor:						;
+// $datepickerHdrFontColor:									;
+// $datepickerHdrNavIconColor:								;
+// $datepickerTodayFontColor:								;
+// $datepickerTodayBackgroundColor: 						;
+// $datepickerCurrentDayBackgroundColor: 					;
+// $datepickerCurrentDayFontColor:							;
+// $datepickerHoverBackgroundColor: 						;
+// $datepickerDisabledFontColor:							;
+// $datepickerDisabledBackgroundColor:						;
+// $datepickerDisabledBorderColor:							;
+// $datepickerMessageFontColor:								;
+// $datepickerMessageBackgroundColor:						;
+// $datepickerIconColor:									;
+// $datepickerIE8BorderColor:								;
+
+
+// DIALOG/MODAL
+// ------------------------------------------------------------------------------------------
+// $dialogOverlayBackgroundColor:							;
+// $dialogShadowColor:										;
+// $dialogBackgroundColor:									;
+// $dialogHdrFontColor:										;
+// $dialogContentBorderTopColor: 							;
+// $dialogHdrBorderBottomColor:								;
+// $dialogCloseIconColor:									;
+
+
+// LOGIN LAYOUT
+// ------------------------------------------------------------------------------------------
+// $layoutLoginBackgroundImageSrcPath:						;
+// $layoutLoginBackgroundColor:								;
+// $layoutLoginContainerTranslucentBackgroundColor:			;
+// $layoutLoginContainerSubHeaderColor:						;
+// $layoutLoginContainerHeaderColor:						;
+// $layoutLoginContainerBoxBackgroundColor:					;
+// $layoutLoginContainerBoxBorderColor:						;
+// $layoutLoginFooterTranslucentBackgroundColor:			;
+// $layoutLoginFooterFontColor:								;
+// $layoutLoginFooterBorderColor:							;
+
+
+// MINI FILTER
+// ------------------------------------------------------------------------------------------
+// $miniFilterLabelFontColor:								;
+// $miniFilterActiveBackgroundColor: 						;
+// $miniFilterActiveFontColor:								;
+
+
+// PAGINATION
+// ------------------------------------------------------------------------------------------
+// $paginationBorderColor:									;
+// $paginationHoverBackgroundColor:							;
+// $paginationActiveBackgroundColor:						;
+// $paginationActiveFontColor:								;
+// $paginationLinkHoverColor:								;
+
+
+// PROFILE CONTAINERS
+// ------------------------------------------------------------------------------------------
+// $profileContainerHdrColor:								;
+// $profileContainerSecondaryHdrColor:						;
+// $profileContainerDataListLabelFontColor:					;
+
+
+// SCROLL PANE
+// ------------------------------------------------------------------------------------------
+// $scrollPaneScrollbarRGBColor:							;
+// $scrollPaneScrollbarHexColor:							;
+
+
+// SLIDER
+// ------------------------------------------------------------------------------------------
+// $sliderBarBackgroundStartColor:							;
+// $sliderBarBackgroundEndColor:							;
+// $sliderBarRangeBackgroundColor:							;
+// $sliderHandleBackgroundStartColor:						;
+// $sliderHandleBackgroundEndColor:							;
+// $sliderHandleShadowColor: 								;
+// $sliderHandleBorderColor:								;
+// $sliderHandleFocusBackgroundStartColor:					;
+// $sliderHandleFocusBackgroundEndColor:					;
+// $sliderHandleHoverBackgroundStartColor:					;
+// $sliderHandleHoverBackgroundEndColor:					;
+// $sliderHandleActiveBackgroundStartColor:					;
+// $sliderHandleActiveBackgroundEndColor:					;
+
+
+// SUMMARY CONTAINER
+// ------------------------------------------------------------------------------------------
+// $summaryCtnBorderColor:									;
+// $summaryCtnBorderColorTop:								;
+// $summaryCtnBorderColorBottom:							;
+// $summaryCtnBorderColorLeft:								;
+// $summaryCtnBorderFirstChildColorTop:						;
+// $summaryCtnBorderFirstChildColorLeft:					;
+// $summaryCtnBorderHoverTransitionSpeed:					;
+// $summaryCtnBorderHoverBackgroundColor:					;
+// $summaryCtnBorderHoverBorderTopColor:					;
+// $summaryCtnBorderHoverBorderBottomColor:					;
+// $summaryCtnAlertNegativeFontColor:						;
+// $summaryCtnAlertNegativeHoverBackgroundColor:			;
+// $summaryCtnAlertPositiveFontColor:						;
+// $summaryCtnAlertPositiveHoverBackgroundColor:			;
+
+
+// TABS
+// ------------------------------------------------------------------------------------------
+// $tabsBackgroundStartColor:								;
+// $tabsBackgroundEndColor:									;
+// $tabsBorderColor:										;
+// $tabsFontColor:											;
+// $tabsPagingNavBackgroundStartColor:						;
+// $tabsPagingNavBackgroundEndColor:						;
+// $tabsPagingNavLinkColor:									;
+// $tabsPagingNavHoverColor:								;
+// $tabsSelectedTabFontColor:								;
+// $tabsHoverBackgroundStartColor:							;
+// $tabsHoverBackgroundEndColor:							;
+// $tabsActiveFontColor:									;
+// $tabsActiveBackgroundStartColor:							;
+// $tabsActiveBackgroundEndColor:							;
+// $tabsPanelBorderColor:									;
+// $tabsPanelBackgroundColor: 								;
+
+
+// TILES
+// ------------------------------------------------------------------------------------------
+// $tilesBackgroundColor:									;
+// $tilesHeaderBorderTopColor:								;
+// $tilesHeaderBackgroundColor:								;
+// $tilesHeaderFontColor:									;
+// $tilesBodyBackgroundColor:								;
+// $tilesBodyBorderColor:									;
+// $tilesOutsideBorderColor:								;
+
+
+// TOOLTIP
+// ------------------------------------------------------------------------------------------
+// $tooltipShadowColor:										;
+// $tooltipBorderColor:										;
+// $tooltipBackgroundColor:									;
+// $tooltipFontColor:										;
+
+
+// ==========================================================================================
+// SITE THEME VARIABLES
+// ==========================================================================================
+
+// Define any reusable site theme variables
+
+

@@ -1,0 +1,638 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.5 - Base Icons Partial
+// DATE - June 13, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-icons == true {
+
+	// IMAGE ICONS
+	@if $use-icon-image == true {
+
+		// IMAGE ICON DEFAULTS
+		.mul-image-icon							{
+												display: inline-block;
+												cursor: default;
+												position: relative;
+												background-position: 0 0;
+												background-repeat: no-repeat;
+												overflow:hidden;
+												}
+
+		// IMAGE ICON SIZE HELPERS
+		.mul-image-icon-size-small				{
+												width: 16px;
+												height: 16px;
+												}
+		.mul-image-icon-size-small.mul-image-icon-position-left,
+		.mul-image-icon-size-small.mul-image-icon-position-right
+												{top: 3px;}
+		.mul-image-icon-size-medium				{
+												width: 32px;
+												height: 32px;
+												}
+		.mul-image-icon-size-medium.mul-image-icon-position-left,
+		.mul-image-icon-size-medium.mul-image-icon-position-right
+												{top: 11px;}
+		.mul-image-icon-size-medium-large		{
+												width: 44px;
+												height: 44px;
+												}
+		.mul-image-icon-size-medium-large.mul-image-icon-position-left,
+		.mul-image-icon-size-medium-large.mul-image-icon-position-right
+												{top: 15px;}
+		.mul-image-icon-size-large				{
+												width: 49px;
+												height: 49px;
+												}
+		.mul-image-icon-size-large.mul-image-icon-position-left,
+		.mul-image-icon-size-large.mul-image-icon-position-right
+												{top: 20px;}
+		.mul-image-icon-size-x-large			{
+												width: 64px;
+												height: 64px;
+												}
+		.mul-image-icon-size-x-large.mul-image-icon-position-left,
+		.mul-image-icon-size-x-large.mul-image-icon-position-right
+												{top: 29px;}
+
+		// IMAGE ICON POSITIONING HELPERS
+		// Remember to put the icon code in the correct content order so the icon is before or after the label text
+		// If you want an icon on the left, then have the icon HTML code before the label text inside the label tag
+		// If you want an icon on the right, then have the icon HTML code after the label text inside the label tag
+		// If you want an icon on the top, then have the icon HTML code before the label text inside the label tag, and add the icon top positioning class to the icon HTML code
+		// If you want an icon on the bottom, then have the icon HTML code after the label text inside the label tag, and add the icon bottom positioning class to the icon HTML code
+		.mul-image-icon-position-left			{margin-right: 4px;}
+		.mul-image-icon-position-right			{margin-left: 4px;}
+		.mul-image-icon-position-top,
+		.mul-image-icon-position-bottom			{
+												display: block;
+												margin: 0 auto;
+												}
+		
+		// IMAGE ICON MISC HELPERS
+		// Loading image icon fallback since IE8+9 do not understand CSS3 animations
+		.mul-image-icon-loading-fallback		{display: none;}
+
+	}//endif
+
+
+	// ICON FONT
+	@if $use-icon-font == true {
+
+		// ICON FONT DEFAULTS
+		[class^="mul-icon-"]					{
+												speak: none;
+												font-style: normal;
+												font-weight: normal;
+												font-variant: normal;
+												text-transform: none;
+												font-size: $iconFontSize;
+												line-height: 1;
+												color: $iconFontColor;
+												display: inline-block;
+												text-decoration: none;
+												width: 1em;
+												text-align: center;
+												position: relative;
+												-webkit-font-smoothing: antialiased;
+												-moz-osx-font-smoothing: grayscale;
+												}
+
+		// ICON FONT AS LINKS
+		a[class^="mul-icon-"]					{
+												text-decoration: none !important;
+												color: $iconFontColor;
+												cursor: pointer;
+												}
+
+		// ICON FONT SIZE HELPERS
+		// There are four font icon sizes: small, medium, large, x-large. The default size of icons is the small size.
+		.mul-icon-size-small					{font-size: $iconFontSize;}
+		.mul-icon-size-small.mul-icon-position-left,
+		.mul-icon-size-small.mul-icon-position-right
+												{top: 2px;}
+		.mul-icon-size-medium					{font-size: ($iconFontSize*2);}
+		.mul-icon-size-medium.mul-icon-position-left,
+		.mul-icon-size-medium.mul-icon-position-right
+												{top: 10px;}
+		.mul-icon-size-large					{font-size: ($iconFontSize*3);}
+		.mul-icon-size-large.mul-icon-position-left,
+		.mul-icon-size-large.mul-icon-position-right
+												{top: 16px;}
+		.mul-icon-size-x-large					{font-size: ($iconFontSize*4);}
+		.mul-icon-size-x-large.mul-icon-position-left,
+		.mul-icon-size-x-large.mul-icon-position-right
+												{top: 24px;}
+
+		// ICON FONT POSITIONING HELPERS
+		// Remember to put the icon code in the correct content order so the icon is before or after the label text
+		// If you want an icon on the left, then have the icon HTML code before the label text inside the label tag
+		// If you want an icon on the right, then have the icon HTML code after the label text inside the label tag
+		// If you want an icon on the top, then have the icon HTML code before the label text inside the label tag, and add the icon top positioning class to the icon HTML code
+		// If you want an icon on the bottom, then have the icon HTML code after the label text inside the label tag, and add the icon bottom positioning class to the icon HTML code
+		.mul-icon-position-left					{margin-right: 5px;}
+		.mul-icon-position-right				{margin-left: 5px;}
+		.mul-icon-position-top,
+		.mul-icon-position-bottom				{
+												display: block;
+												margin: 0 auto;
+												}
+
+		// ICON FONT COLOR HELPERS
+
+		[class^="mul-icon-"].mul-icon-color-white,
+		a[class^="mul-icon-"].mul-icon-color-white
+												{color: $iconFontColorWhite !important;}
+
+		[class^="mul-icon-"].mul-icon-color-black,
+		a[class^="mul-icon-"].mul-icon-color-black
+												{color: $iconFontColorBlack !important;}
+
+		[class^="mul-icon-"].mul-icon-color-gray-darker,
+		a[class^="mul-icon-"].mul-icon-color-gray-darker
+												{color: $iconFontColorGrayDarker !important;}
+
+		[class^="mul-icon-"].mul-icon-color-disabled,
+		a[class^="mul-icon-"].mul-icon-color-disabled
+												{color: $iconFontColorDisabled !important;}
+
+		// ICON FONT COLOR HELPERS - MESSAGES
+		[class^="mul-icon-"].mul-icon-color-confirmation,
+		a[class^="mul-icon-"].mul-icon-color-confirmation
+												{color: $iconFontColorConfirmation !important;}
+
+		[class^="mul-icon-"].mul-icon-color-error,
+		a[class^="mul-icon-"].mul-icon-color-error
+												{color: $iconFontColorError !important;}
+
+		[class^="mul-icon-"].mul-icon-color-attention,
+		a[class^="mul-icon-"].mul-icon-color-attention
+												{color: $iconFontColorAttention !important;}
+
+		[class^="mul-icon-"].mul-icon-color-info,
+		a[class^="mul-icon-"].mul-icon-color-info
+												{color: $iconFontColorInfo !important;}
+
+		// ICON FONT STYLES
+		// Icon text shadows
+		.mul-icon-style-shadow					{@include text-shadow(1px, 1px, 1px, rgba(127, 127, 127, 0.6));}
+
+		// Icon background gradients
+		// Background gradients on icon fonts only works in WebKit browsers (Safari, Chrome). A fallback text color is provided for other browsers.
+		[class^="mul-icon-"].mul-icon-style-gradient,
+		a[class^="mul-icon-"].mul-icon-style-gradient
+												{
+												color: $iconFontColor;
+												background: -webkit-linear-gradient(top, $iconFontBackgroundStartColor, $iconFontBackgroundEndColor);
+												-webkit-background-clip: text;
+												-webkit-text-fill-color: transparent;
+												}
+		[class^="mul-icon-"].mul-icon-style-gradient-gray-darker,
+		a[class^="mul-icon-"].mul-icon-style-gradient-gray-darker
+												{
+												color:  $iconFontColorGrayDarker;
+												background: -webkit-linear-gradient(top, $iconFontGrayDarkerBackgroundStartColor, $iconFontGrayDarkerBackgroundEndColor);
+												-webkit-background-clip: text;
+												-webkit-text-fill-color: transparent;
+												}
+		[class^="mul-icon-"].mul-icon-style-gradient-confirmation,
+		a[class^="mul-icon-"].mul-icon-style-gradient-confirmation
+												{
+												color: $iconFontColorConfirmation;
+												background: -webkit-linear-gradient(top, $iconFontConfirmationBackgroundStartColor, $iconFontConfirmationBackgroundEndColor);
+												-webkit-background-clip: text;
+												-webkit-text-fill-color: transparent;
+												}
+		[class^="mul-icon-"].mul-icon-style-gradient-error,
+		a[class^="mul-icon-"].mul-icon-style-gradient-error
+												{
+												color: $iconFontColorError;
+												background: -webkit-linear-gradient(top, $iconFontErrorBackgroundStartColor, $iconFontErrorBackgroundEndColor);
+												-webkit-background-clip: text;
+												-webkit-text-fill-color: transparent;
+												}
+		[class^="mul-icon-"].mul-icon-style-gradient-attention,
+		a[class^="mul-icon-"].mul-icon-style-gradient-attention
+												{
+												color: $iconFontColorAttention;
+												background: -webkit-linear-gradient(top, $iconFontAttentionBackgroundStartColor, $iconFontAttentionBackgroundEndColor);
+												-webkit-background-clip: text;
+												-webkit-text-fill-color: transparent;
+												}
+		[class^="mul-icon-"].mul-icon-style-gradient-info,
+		a[class^="mul-icon-"].mul-icon-style-gradient-info
+												{
+												color: $iconFontColorInfo;
+												background: -webkit-linear-gradient(top, $iconFontInfoBackgroundStartColor, $iconFontInfoBackgroundEndColor);
+												-webkit-background-clip: text;
+												-webkit-text-fill-color: transparent;
+												}
+
+		// Icon Animation
+		@include keyframe(mul-icon-animation-rotate)
+												{
+			0% 										{@include rotate(0);}
+		 
+			100%									{@include rotate(360deg);}
+												}
+		.mul-icon-animation-rotate				{
+												@include animation(mul-icon-animation-rotate 1s infinite steps(8));
+												height: 1em;
+												}
+
+		// HIDE ICON LABEL TEXT BUT KEEP ACCESSIBLE
+		.mul-icon-hide-text						{
+												font: 0/0 a;
+												color: transparent !important;
+												text-shadow: none;
+												background-color: transparent !important;
+												border: 0;
+												}
+
+		// ADVANCED ICON FONT ON CIRCLE SHIELD DEFAULTS
+		.mul-icon-adv							{
+												@include background-gradient($iconFontAdvBackgroundStartColor, $iconFontAdvBackgroundEndColor);
+												@include box-shadow(0, 0, 2px, $iconFontAdvShadowColor);
+												@include border-radius(100%);
+												width: $iconFontAdvSize;
+												height: $iconFontAdvSize;
+												padding: 6px 0;
+												display: block;
+												float: left;
+												border: 2px solid $iconFontAdvBorderColor;
+			[class*="mul-icon-"]					{
+													color: $iconFontAdvFontColor;
+													font-size: $iconFontSize;
+				&.mul-icon-adv-vert-adjust-down			{top: 1px;}
+				&.mul-icon-adv-vert-adjust-up			{bottom: 1px;}
+				&.mul-icon-adv-vert-adjust-left			{left: -1px;}
+				&.mul-icon-adv-vert-adjust-right		{right: -1px;}
+													}
+												}
+		
+		// ADVANCED ICON FONT ON CIRCLE SHIELD SIZE HELPERS
+		.mul-icon-adv-size-small				{
+												width: $iconFontAdvSize;
+												height: $iconFontAdvSize;
+												padding: 6px 0;
+			[class*="mul-icon-"]					{font-size: $iconFontSize;}
+												}
+		.mul-icon-adv-size-small-medium			{
+												width: ($iconFontAdvSize * 1.4);
+												height: ($iconFontAdvSize * 1.43);
+												padding: 8px 0;
+			[class*="mul-icon-"]					{font-size: ($iconFontSize*1.5);}
+												}
+		.mul-icon-adv-size-medium				{
+												width: ($iconFontAdvSize * 2);
+												height: ($iconFontAdvSize * 2);
+												padding: 14px 0;
+			[class*="mul-icon-"]					{font-size: (($iconFontSize*2) - 2);}
+												}
+		.mul-icon-adv-size-large				{
+												width: ($iconFontAdvSize * 3);
+												height: ($iconFontAdvSize * 3);
+												padding: 21px 0;
+			[class*="mul-icon-"]					{font-size: (($iconFontSize*3) - 2);}
+												}
+		.mul-icon-adv-size-x-large				{
+												width: ($iconFontAdvSize * 4);
+												height: ($iconFontAdvSize * 4);
+												padding: 27px 0;
+			[class*="mul-icon-"]					{font-size: (($iconFontSize*4) - 2);}
+												}
+
+		// ADVANCED ICON FONT ON CIRCLE SHIELD COLOR HELPERS
+		.mul-icon-adv.mul-icon-adv-color-gray-darker
+												{@include background-gradient($iconFontAdvGrayDarkerBackgroundStartColor, $iconFontAdvGrayDarkerBackgroundEndColor);}
+		.mul-icon-adv.mul-icon-adv-color-disabled
+												{
+												@include background-gradient($iconFontAdvDisabledBackgroundStartColor, $iconFontAdvDisabledBackgroundEndColor);
+												@include box-shadow(0, 0, 2px, $iconFontAdvDisabledShadowColor);
+												}
+
+		// ICON FONT IE FIXES
+		.ie8,
+		.ie9									{
+
+			// Loading image icon fallback since IE8+9 do not understand CSS3 animations
+			.mul-image-icon-loading-fallback		{display: inline-block;}
+			.mul-icon-mul-loading					{display: none;}
+
+			// ADVANCED ICON FONT ON CIRCLE SHIELD
+			// Fallback background color for filter gradient, since you can not use border radius with IE Filter
+			.mul-icon-adv							{
+													@include ie-gradient-reset-filter;
+													background-color: $iconFontAdvBackgroundColor;
+													}
+
+			// ADVANCED ICON FONT ON CIRCLE SHIELD COLOR HELPERS
+			// Fallback background color for filter gradient, since you can not use border radius with IE Filter
+			.mul-icon-adv.mul-icon-adv-color-gray-darker
+													{
+													@include ie-gradient-reset-filter;
+													background-color: $iconFontAdvGrayDarkerBackgroundColor;
+													}
+			.mul-icon-adv.mul-icon-adv-color-disabled
+													{
+													@include ie-gradient-reset-filter;
+													background-color: $iconFontAdvDisabledBackgroundColor;
+													}
+												}
+
+		// ICON FONT - CORE SET - FONT STACK
+		[class^="mul-icon-"]					{font-family: $mulIconFontStack;}
+
+		// ICON FONT - CORE SET - ICON CLASSES
+		.mul-icon-play:before {content: "\e042";}
+		.mul-icon-file:before {content: "\e07b";}
+		.mul-icon-file2:before {content: "\e08e";}
+		.mul-icon-stack:before {content: "\e096";}
+		.mul-icon-credit:before {content: "\e0d5";}
+		.mul-icon-clock:before {content: "\e101";}
+		.mul-icon-screen:before {content: "\e123";}
+		.mul-icon-mobile:before {content: "\e125";}
+		.mul-icon-tablet:before {content: "\e127";}
+		.mul-icon-bubbles:before {content: "\e152";}
+		.mul-icon-users:before {content: "\e18d";}
+		.mul-icon-users2:before {content: "\e198";}
+		.mul-icon-spinner:before {content: "\e1aa";}
+		.mul-icon-binoculars:before {content: "\e1b4";}
+		.mul-icon-zoomin:before {content: "\e1b8";}
+		.mul-icon-zoomout:before {content: "\e1b9";}
+		.mul-icon-wrench:before {content: "\e1d7";}
+		.mul-icon-tools:before {content: "\e1e9";}
+		.mul-icon-health:before {content: "\e1ee";}
+		.mul-icon-aid:before {content: "\e1ef";}
+		.mul-icon-bars:before {content: "\e205";}
+		.mul-icon-bars2:before {content: "\e206";}
+		.mul-icon-apple-fruit:before {content: "\e22e";}
+		.mul-icon-meter:before {content: "\e235";}
+		.mul-icon-meter-slow:before {content: "\e237";}
+		.mul-icon-meter-medium:before {content: "\e238";}
+		.mul-icon-balance:before {content: "\e23c";}
+		.mul-icon-briefcase:before {content: "\e259";}
+		.mul-icon-list:before {content: "\e29b";}
+		.mul-icon-tree:before {content: "\e2a8";}
+		.mul-icon-menu:before {content: "\e2b2";}
+		.mul-icon-arrow-up4:before {content: "\e3b0";}
+		.mul-icon-arrow-right4:before {content: "\e3b1";}
+		.mul-icon-arrow-down4:before {content: "\e3b2";}
+		.mul-icon-arrow-left4:before {content: "\e3b3";}
+		.mul-icon-arrow-right3:before {content: "\e3d3";}
+		.mul-icon-arrow-left3:before {content: "\e3d7";}
+		.mul-icon-camera:before {content: "\e04c";}
+		.mul-icon-megaphone:before {content: "\e060";}
+		.mul-icon-new:before {content: "\e061";}
+		.mul-icon-book:before {content: "\e071";}
+		.mul-icon-graduation:before {content: "\e076";}
+		.mul-icon-file3:before {content: "\e085";}
+		.mul-icon-file4:before {content: "\e086";}
+		.mul-icon-files:before {content: "\e08c";}
+		.mul-icon-file-plus:before {content: "\e087";}
+		.mul-icon-file-minus:before {content: "\e088";}
+		.mul-icon-file-download:before {content: "\e08d";}
+		.mul-icon-file-upload:before {content: "\e089";}
+		.mul-icon-file-check:before {content: "\e08a";}
+		.mul-icon-file-remove:before {content: "\e08b";}
+		.mul-icon-stack2:before {content: "\e097";}
+		.mul-icon-folder-plus:before {content: "\e0a4";}
+		.mul-icon-folder-minus:before {content: "\e0a5";}
+		.mul-icon-folder8:before {content: "\e0a6";}
+		.mul-icon-folder-remove:before {content: "\e0a7";}
+		.mul-icon-folder:before {content: "\e0a1";}
+		.mul-icon-folder-open:before {content: "\e0a2";}
+		.mul-icon-certificate:before {content: "\e0b1";}
+		.mul-icon-tag:before {content: "\e0b7";}
+		.mul-icon-tags:before {content: "\e0ba";}
+		.mul-icon-coins:before {content: "\e0d4";}
+		.mul-icon-calculate:before {content: "\e0d8";}
+		.mul-icon-calculate2:before {content: "\e0d7";}
+		.mul-icon-phone:before {content: "\e0dd";}
+		.mul-icon-contact-add:before {content: "\e0e0";}
+		.mul-icon-contact-remove:before {content: "\e0e1";}
+		.mul-icon-mail-send:before {content: "\e0f1";}
+		.mul-icon-envelop-opened:before {content: "\e0ef";}
+		.mul-icon-location:before {content: "\e0f3";}
+		.mul-icon-pushpin:before {content: "\e0f0";}
+		.mul-icon-location2:before {content: "\e0f7";}
+		.mul-icon-map:before {content: "\e0fc";}
+		.mul-icon-clock2:before {content: "\e102";}
+		.mul-icon-bell:before {content: "\e10c";}
+		.mul-icon-calendar:before {content: "\e116";}
+		.mul-icon-print:before {content: "\e119";}
+		.mul-icon-mouse:before {content: "\e11a";}
+		.mul-icon-disk:before {content: "\e135";}
+		.mul-icon-rotate:before {content: "\e13d";}
+		.mul-icon-rotate2:before {content: "\e13e";}
+		.mul-icon-bubble:before {content: "\e165";}
+		.mul-icon-drawer:before {content: "\e12e";}
+		.mul-icon-box-add:before {content: "\e130";}
+		.mul-icon-box-remove:before {content: "\e131";}
+		.mul-icon-bubble-locked:before {content: "\e172";}
+		.mul-icon-bubble-plus:before {content: "\e177";}
+		.mul-icon-bubble-minus:before {content: "\e178";}
+		.mul-icon-bubble-trash:before {content: "\e17a";}
+		.mul-icon-user:before {content: "\e188";}
+		.mul-icon-users3:before {content: "\e186";}
+		.mul-icon-user-plus:before {content: "\e187";}
+		.mul-icon-user-cancel:before {content: "\e18b";}
+		.mul-icon-user-block:before {content: "\e18c";}
+		.mul-icon-user-minus:before {content: "\e189";}
+		.mul-icon-user2:before {content: "\e199";}
+		.mul-icon-vcard:before {content: "\e19c";}
+		.mul-icon-busy:before {content: "\e1a5";}
+		.mul-icon-key:before {content: "\e1ca";}
+		.mul-icon-lock:before {content: "\e1d3";}
+		.mul-icon-unlocked:before {content: "\e1d4";}
+		.mul-icon-cogs:before {content: "\e1e0";}
+		.mul-icon-cog:before {content: "\e1e1";}
+		.mul-icon-hammer:before {content: "\e1e8";}
+		.mul-icon-bug:before {content: "\e1f2";}
+		.mul-icon-pie:before {content: "\e1f8";}
+		.mul-icon-pie2:before {content: "\e1f9";}
+		.mul-icon-pie3:before {content: "\e1fc";}
+		.mul-icon-stats:before {content: "\e1fe";}
+		.mul-icon-bars3:before {content: "\e203";}
+		.mul-icon-stats-up:before {content: "\e207";}
+		.mul-icon-chart:before {content: "\e20b";}
+		.mul-icon-gift:before {content: "\e211";}
+		.mul-icon-medal:before {content: "\e217";}
+		.mul-icon-fire:before {content: "\e23f";}
+		.mul-icon-lamp:before {content: "\e24d";}
+		.mul-icon-briefcase2:before {content: "\e258";}
+		.mul-icon-cube4:before {content: "\e269";}
+		.mul-icon-pyramid:before {content: "\e26b";}
+		.mul-icon-cylinder:before {content: "\e26c";}
+		.mul-icon-puzzle:before {content: "\e26e";}
+		.mul-icon-shield:before {content: "\e27e";}
+		.mul-icon-clipboard:before {content: "\e295";}
+		.mul-icon-list2:before {content: "\e29a";}
+		.mul-icon-numbered-list:before {content: "\e29c";}
+		.mul-icon-download:before {content: "\e2b8";}
+		.mul-icon-upload:before {content: "\e2b9";}
+		.mul-icon-globe:before {content: "\e2c4";}
+		.mul-icon-globe2:before {content: "\e2c5";}
+		.mul-icon-earth:before {content: "\e2c7";}
+		.mul-icon-network:before {content: "\e2c8";}
+		.mul-icon-link:before {content: "\e2c9";}
+		.mul-icon-link2:before {content: "\e2ca";}
+		.mul-icon-flag:before {content: "\e2d6";}
+		.mul-icon-attachment:before {content: "\e2d7";}
+		.mul-icon-eye:before {content: "\e2d9";}
+		.mul-icon-eye-blocked:before {content: "\e2da";}
+		.mul-icon-bookmark:before {content: "\e2e3";}
+		.mul-icon-bookmarks:before {content: "\e2e5";}
+		.mul-icon-thumbs-up:before {content: "\e310";}
+		.mul-icon-thumbs-down:before {content: "\e312";}
+		.mul-icon-question:before {content: "\e35d";}
+		.mul-icon-plus-circle:before {content: "\e360";}
+		.mul-icon-minus-circle:before {content: "\e362";}
+		.mul-icon-info:before {content: "\e363";}
+		.mul-icon-blocked:before {content: "\e364";}
+		.mul-icon-cancel-circle:before {content: "\e369";}
+		.mul-icon-cancel-circle2:before {content: "\e367";}
+		.mul-icon-checkmark-circle:before {content: "\e368";}
+		.mul-icon-checkmark:before {content: "\e372";}
+		.mul-icon-enter:before {content: "\e37d";}
+		.mul-icon-exit:before {content: "\e37e";}
+		.mul-icon-exit2:before {content: "\e37f";}
+		.mul-icon-volume-high:before {content: "\e38f";}
+		.mul-icon-loop:before {content: "\e3a5";}
+		.mul-icon-loop2:before {content: "\e3a8";}
+		.mul-icon-arrow-left2:before {content: "\e3c3";}
+		.mul-icon-arrow-up-left:before {content: "\e3c4";}
+		.mul-icon-arrow-up:before {content: "\e3c5";}
+		.mul-icon-arrow-up-right:before {content: "\e3c6";}
+		.mul-icon-arrow-right:before {content: "\e3c7";}
+		.mul-icon-arrow-down-right:before {content: "\e3c8";}
+		.mul-icon-arrow-down:before {content: "\e3c9";}
+		.mul-icon-arrow-down-left:before {content: "\e3ca";}
+		.mul-icon-arrow-left:before {content: "\e3cb";}
+		.mul-icon-menu2:before {content: "\e41d";}
+		.mul-icon-menu4:before {content: "\e41e";}
+		.mul-icon-menu-close:before {content: "\e41f";}
+		.mul-icon-menu-close2:before {content: "\e421";}
+		.mul-icon-enter2:before {content: "\e41c";}
+		.mul-icon-backspace:before {content: "\e420";}
+		.mul-icon-sort:before {content: "\e426";}
+		.mul-icon-filter:before {content: "\e446";}
+		.mul-icon-font-size:before {content: "\e448";}
+		.mul-icon-insert-template:before {content: "\e467";}
+		.mul-icon-table:before {content: "\e466";}
+		.mul-icon-share:before {content: "\e47b";}
+		.mul-icon-code:before {content: "\e480";}
+		.mul-icon-share2:before {content: "\e48c";}
+		.mul-icon-google-plus:before {content: "\e495";}
+		.mul-icon-facebook:before {content: "\e499";}
+		.mul-icon-twitter:before {content: "\e49e";}
+		.mul-icon-windows:before {content: "\e4c9";}
+		.mul-icon-file-pdf:before {content: "\e4e2";}
+		.mul-icon-file-openoffice:before {content: "\e4e3";}
+		.mul-icon-file-word:before {content: "\e4e4";}
+		.mul-icon-file-excel:before {content: "\e4e5";}
+		.mul-icon-file-zip:before {content: "\e4e6";}
+		.mul-icon-html5:before {content: "\e4ea";}
+		.mul-icon-css3:before {content: "\e4ec";}
+		.mul-icon-chrome:before {content: "\e4ed";}
+		.mul-icon-firefox:before {content: "\e4ee";}
+		.mul-icon-IE:before {content: "\e4ef";}
+		.mul-icon-safari:before {content: "\e4f1";}
+		.mul-icon-loop3:before {content: "\e3a9";}
+		.mul-icon-umbrella:before {content: "\e2f1";}
+		.mul-icon-star:before {content: "\e2fd";}
+		.mul-icon-star2:before {content: "\e2fe";}
+		.mul-icon-star3:before {content: "\e2fc";}
+		.mul-icon-heart:before {content: "\e304";}
+		.mul-icon-menu3:before {content: "\e2af";}
+		.mul-icon-accessibility:before {content: "\e277";}
+		.mul-icon-forward:before {content: "\e14d";}
+		.mul-icon-reply:before {content: "\e14e";}
+		.mul-icon-reply2:before {content: "\e14f";}
+		.mul-icon-database:before {content: "\e138";}
+		.mul-icon-watch:before {content: "\e105";}
+		.mul-icon-basket:before {content: "\e0ce";}
+		.mul-icon-bag:before {content: "\e0d2";}
+		.mul-icon-radio:before {content: "\e065";}
+		.mul-icon-office:before {content: "\e00b";}
+		.mul-icon-home:before {content: "\e003";}
+		.mul-icon-mul-task-reassign:before {content: "\e601";}
+		.mul-icon-mul-task-performance:before {content: "\e602";}
+		.mul-icon-mul-task-edit:before {content: "\e603";}
+		.mul-icon-mul-task-download:before {content: "\e604";}
+		.mul-icon-mul-double-greater-than:before {content: "\e605";}
+		.mul-icon-mul-dollar-sign:before {content: "\e606";}
+		.mul-icon-mul-document-edit:before {content: "\e607";}
+		.mul-icon-mul-directory-tree-centered:before {content: "\e608";}
+		.mul-icon-mul-directory-tree:before {content: "\e609";}
+		.mul-icon-mul-comment-edit:before {content: "\e60a";}
+		.mul-icon-mul-clipboard-x:before {content: "\e60b";}
+		.mul-icon-mul-asterisk-small:before {content: "\e60c";}
+		.mul-icon-mul-asterisk:before {content: "\e60d";}
+		.mul-icon-mul-arrow-doublearrow-right:before {content: "\e60e";}
+		.mul-icon-mul-arrow-doublearrow-left:before {content: "\e60f";}
+		.mul-icon-mul-arrow-circle-up:before {content: "\e610";}
+		.mul-icon-mul-arrow-circle-right:before {content: "\e611";}
+		.mul-icon-mul-arrow-circle-left:before {content: "\e612";}
+		.mul-icon-mul-report-arrow:before {content: "\e613";}
+		.mul-icon-mul-clipboard-minus:before {content: "\e614";}
+		.mul-icon-phone2:before {content: "\e0dc";}
+		.mul-icon-brush:before {content: "\e020";}
+		.mul-icon-image:before {content: "\e02b";}
+		.mul-icon-folder2:before {content: "\e09b";}
+		.mul-icon-folder-download:before {content: "\e09d";}
+		.mul-icon-folder-upload:before {content: "\e0a3";}
+		.mul-icon-call-incoming:before {content: "\e0e2";}
+		.mul-icon-call-outgoing:before {content: "\e0e3";}
+		.mul-icon-envelop:before {content: "\e0f2";}
+		.mul-icon-bubbles2:before {content: "\e16c";}
+		.mul-icon-bubble-check:before {content: "\e170";}
+		.mul-icon-address-book:before {content: "\e0e8";}
+		.mul-icon-search:before {content: "\e1ba";}
+		.mul-icon-expand:before {content: "\e1bf";}
+		.mul-icon-contract:before {content: "\e1c0";}
+		.mul-icon-meter-fast:before {content: "\e239";}
+		.mul-icon-grid:before {content: "\e2a0";}
+		.mul-icon-tree2:before {content: "\e2a6";}
+		.mul-icon-tree3:before {content: "\e2a7";}
+		.mul-icon-resize:before {content: "\e354";}
+		.mul-icon-warning:before {content: "\e357";}
+		.mul-icon-notification:before {content: "\e359";}
+		.mul-icon-arrow-up2:before {content: "\e3c0";}
+		.mul-icon-arrow-right2:before {content: "\e3c1";}
+		.mul-icon-arrow-down2:before {content: "\e3c2";}
+		.mul-icon-transmission:before {content: "\e424";}
+		.mul-icon-radio-checked:before {content: "\e438";}
+		.mul-icon-radio-unchecked:before {content: "\e439";}
+		.mul-icon-file-powerpoint:before {content: "\e4e7";}
+		.mul-icon-file-xml:before {content: "\e4e8";}
+		.mul-icon-file-css:before {content: "\e4e9";}
+		.mul-icon-undo:before {content: "\e14b";}
+		.mul-icon-redo:before {content: "\e14c";}
+		.mul-icon-mul-task-complete:before {content: "\e615";}
+		.mul-icon-mul-task-alert:before {content: "\e616";}
+		.mul-icon-mul-task:before {content: "\e617";}
+		.mul-icon-mul-clipboard-plus:before {content: "\e618";}
+		.mul-icon-mul-arrow-circle-down:before {content: "\e619";}
+		.mul-icon-mul-clipboard-edit:before {content: "\e61a";}
+		.mul-icon-mul-renewal:before {content: "\e61c";}
+		.mul-icon-mul-mercer-logo:before {content: "\e61d";}
+		.mul-icon-mul-mercer-globe:before {content: "\e61e";}
+		.mul-icon-mul-loading:before {content: "\e61f";}
+		.mul-icon-mul-library-locked:before {content: "\e620";}
+		.mul-icon-mul-library:before {content: "\e621";}
+		.mul-icon-mul-function:before {content: "\e622";}
+		.mul-icon-mul-flag-hollow:before {content: "\e623";}
+		.mul-icon-mul-experiment:before {content: "\e624";}
+		.mul-icon-mul-edit:before {content: "\e625";}
+		.mul-icon-mul-book-open:before {content: "\e626";}
+		.mul-icon-mul-box-check:before {content: "\e627";}
+		.mul-icon-mul-box-hollow:before {content: "\e628";}
+		.mul-icon-mul-checkbox-x:before {content: "\e629";}
+		.mul-icon-mul-clipboard:before {content: "\e62b";}
+		.mul-icon-calendar4:before {content: "\e62a"}
+
+	}//endif
+
+}//endif

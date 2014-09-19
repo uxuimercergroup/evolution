@@ -1,0 +1,111 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">Advanced Containers are built out using the <a href="/base/boxes/container-basic">Basic Container</a> framework. Normally they contain base information along with customizeable options.</p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+	<!-- ADVANCED CONTAINER - BEGINS -->
+		<div class="col-24 example-min-height">
+
+			<div class="col-8 first">
+				<h4 class="mul-hdr-rule">Default example</h4>
+				{% include "/base/boxes/advanced-ctn" %}
+			</div>
+			<div class="col-8">
+				<h4 class="mul-hdr-rule">Example with round corners</h4>
+				{% include "/base/boxes/advanced-ctn-rounded" %}
+			</div>
+			<div class="col-8">		
+				<h4 class="mul-hdr-rule">Example with drop shadow</h4>
+				{% include "/base/boxes/advanced-ctn-rounded-shadow" %}
+			</div>
+
+		</div>
+	<!-- ADVANCED CONTAINER - ENDS -->
+
+<!-- DETAILS SECTION - BEGINS -->
+	<div class="col-24">
+		<a name="moreDetails"></a>
+		<h4 class="mul-hdr-dbl-rule addtional-detail-hdr">Additional Details</h4>
+		
+
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>Containers in general are used to highlight specific areas of content. The Advanced Container features 3 components - header, body and footer. These components can be used in any combination - all are not required. Options for this container are rounded corners and drop shadows.</p>
+			</div>
+			<div id="tabs-2">
+				<h5>Components</h5>
+				<ul>
+					<li>The Advanced Container is comprised of the following components:
+						<ul>
+							<li>Border</li>
+							<li>Header</li>
+							<li>Header Background Color</li>
+							<li>Content</li>
+							<li>Rounded Corner (optional)</li>
+							<li>Drop Shadow (optional)</li>
+						</ul>
+					</li>
+					<li>The border color (#6b90b8) should always be a solid, 1 pixel gray line.</li>
+					<li>The headers for Advanced Containers can be designated as either h1, h2, h3, or h4. </li>
+					<li>The Header Background color is #EEEEEE.</li>
+				</ul>
+
+				<h5>Sizing and Layout</h5>
+				<ul>
+					<li>The padding inside a Advanced Container's body section is 10 pixels on the top, left, and right. There is no padding on the bottom, as this is taken care of by the content inside.</li>
+					<li>Advanced Container height is variable based on content height. Width is determined by the grid where the Advanced Container resides.</li>
+				</ul>
+
+				<h5>Grids</h5>
+				<ul>
+					<li>Advanced Containers work within the Mercer Evolution Grid System.</li>
+					<li>Advanced Containers can contain grids inside of them to display and section off data within the container.</li>
+				</ul>
+			</div>
+			<div id="tabs-3">
+				<p>Technical details go here&hellip;</p>
+			</div>
+			<div id="tabs-4">
+					<ul>
+					<li>In the mobile version of this container the width will shrink to span the width of the parent container.</li>
+					<li>Font size increases for mobile.</li>
+				</ul>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+
+					<h5>Default example</h5>
+					<pre class="prettyprint linenums"><xmp>{% include "/base/boxes/advanced-ctn" %}</xmp></pre>
+
+					<h5>Example with round corners</h5>
+					<pre class="prettyprint linenums"><xmp>{% include "/base/boxes/advanced-ctn-rounded" %}</xmp></pre>
+
+					<h5>Default with drop shadow</h5>
+					<pre class="prettyprint linenums"><xmp>{% include "/base/boxes/advanced-ctn-rounded-shadow" %}</xmp></pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

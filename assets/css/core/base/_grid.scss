@@ -1,0 +1,134 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.5 - Base Grid Partial
+// DATE - June 13, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+// BODY
+body							{@include background-gradient($bodyBackgroundStartColor, $bodyBackgroundEndColor);}
+
+.mul-body-background			{@include background-gradient($bodyBackgroundBodyStartColor, $bodyBackgroundBodyEndColor);}
+
+// PAGE LAYOUT GRID
+section[role="main"]			{
+								background-color: $gridBackgroundColor;
+								padding: $basePadding $gridSiteGutterPadding;
+								}
+
+// EMPLOYEE PORTAL HOMEPAGE GRID
+.mul-homepage-background section[role="main"]
+								{background-color: $transparent;}
+
+//=== MEDIA QUERIES =========================================================================
+
+// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
+@if $use-small-mediaquery == true {
+
+	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+		
+		// USE MUL SMALL MEDIAQUERY GRID TO LAYOUT COLUMNS HORIZONTALLY IN SMALL MEDIA QUERY, PUT CLASS ON CONTAINER WHICH HOLDS COLS
+		.mul-small-mediaquery-grid
+								{
+								@include grid-fluid-span-x($gridColumns, $fluidGridColumnWidth, $fluidGridColumnWidth);
+								@include grid-fluid-col;
+								@include grid-fluid-offset-x($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth);
+								margin: 0 auto;
+								width: $gridWidth;
+			[class*="col-"].first	{margin-left: 0;}
+			.col-24					{
+									float: none;
+									padding: 0 0 1px 0; // fixes collapsing margins
+									min-height: $fluidGridColumnWidth;
+									margin-left: 0;
+									}
+								}
+
+		.mul-small-mediaquery-grid.mul-grid-nomargin
+								{
+								@include grid-nomargin-span-x($gridColumns, $fluidGridNoMarginColumnWidth, $fluidGridGutterWidth);
+								@include grid-nomargin-col;
+								@include clearfix;
+								}
+
+		.col-24					{@include clearfix;}
+
+	}
+}
+
+// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+
+	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		
+		// GLOBAL SETUP
+		.mul-masthead-adjust,
+		.mul-footer-adjust,
+		.mul-hero-banner-adjust,
+		.mul-grid				{
+								@include grid-fluid-span-x($gridColumns, $fluidGridColumnWidth, $fluidGridColumnWidth);
+								@include grid-fluid-col;
+								@include grid-fluid-offset-x($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth);
+								@include clearfix;
+								margin: 0 auto;
+								width: $gridWidth;
+								
+								// If using 980 width layout
+								@if $use-grid-980 == true{
+									max-width: $gridMaxWidth980;
+								}
+								
+								// If using 1200 width layout
+								@if $use-grid-1200 == true{
+									max-width: $gridMaxWidth1200;
+								}
+
+								min-width: $gridMinWidth;
+
+			[class*="col-"].first	{margin-left:0;}
+			.col-24					{
+									@include clearfix;
+									float: none;
+									padding: 0 0 1px 0; // fixes collapsing margins
+									min-height: $fluidGridColumnWidth;
+									margin-left: 0;
+									}
+								}
+
+		// HTML SETUP
+		html					{
+								min-height: $htmlMinHeight;
+								height: auto !important;
+								height: $htmlMinHeight;
+								}
+
+		// GRID SETUP
+		.mul-grid				{
+								display: block;
+								height: auto !important;
+								height: $gridMinHeight;
+								min-height: $gridMinHeight;
+								text-align: left;
+								}
+								
+		.mul-grid-nomargin		{
+								@include grid-nomargin-span-x($gridColumns, $fluidGridNoMarginColumnWidth, $fluidGridGutterWidth);
+								@include grid-nomargin-col;
+								@include clearfix;
+								}
+
+		// PAGE LAYOUT GRID
+		section[role="main"]	{padding: $basePadding $gridSiteGutterPadding 1px $gridSiteGutterPadding;}
+
+		// GRID COLUMN FLOW OPPOSITE
+		// Add class of "mul-col-flow-opposite" to columns where you want content to display first on mobile but appear on the right on larger screens.
+		.mul-masthead-adjust,
+		.mul-footer-adjust,
+		.mul-hero-banner-adjust,
+		.mul-grid,
+		.mul-grid-nomargin		{
+			[class*="col-"].mul-col-flow-opposite
+									{float: right;}
+								}
+		
+	}
+}

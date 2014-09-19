@@ -1,0 +1,97 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">
+			A Stacked Form is a form where the Form Label is stacked on top of the Form Field. The stacked form is comprised of two main elements the Form label and Form field. In this use the form label is "stacked" on top of the form field.
+		</p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+	<div class="col-24 example-min-height">
+		<div class="col-10 first">
+			{% include '/base/forms/form-stacked' %}
+		</div>
+	</div>
+
+<!-- DETAILS SECTION - BEGINS -->
+	<a name="moreDetails"></a>
+	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
+
+	<div class="col-24">
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>Stacked Forms are typically a default layout for forms.</p>
+
+				<p>Stacked Forms are best used when a high level of end-user configurability is necessary. In cases like this, we have less control over the specific placement of all fields, so the flexibility of spacing is important. 
+				</p>
+				
+				<p>
+				The Stacked Form is flexible because it allows you to configure optional elements: 
+				</p>
+				
+				<ul>
+					<li>Hiding/displaying Fields</li>
+					<li>Changing the values of Field Labels</li>
+					<li>Localization/translation of Field Labels</li>
+				</ul>
+
+				<p>The Stacked Form works well when you want the user to read a Label and take an action directly underneath. However, for aesthetic purposes, it might be a good idea to use one of the other types of Forms if its contents are on the long side.
+				</p>
+			</div>
+			<div id="tabs-2">
+		
+				<h5>Margins</h5>
+				<p>In order to keep with Mercer consistency, the margins between Elements have been standardized:</p>
+				<ul>
+					<li>Use a 10 pixel bottom between the Element and next Field Label. </li>
+					<li>Use a 3 pixel bottom margin between a Label and an Input.</li>
+				</ul>
+				
+				<h5>Labels</h5>
+				<p>All field labels should use Title Case. See the <a href="/copy-text-styleguide">Copy/Text Style Guide narrative</a> for more detail.</p>
+
+				<h5>Active State</h5>
+				<p>The active state for any field should be indicated by the application of the "Attention" color to the border of the specific field the user has clicked into.</p>
+				
+				<h5>Required Fields</h5>
+				<p>All required fields should be denoted by placing the  Required icon (the "asterisk-required.png" image from the <a href="/base/icons">list of icons</a>) immediately to the left of the Field Label.</p>
+
+				<h5>Error Handling</h5>
+				<p>See the <a href="/base/forms/field-specific-error">Field Specific Error Message</a> page for details.</p>
+			</div>
+			<div id="tabs-3">
+				<h5>Placeholder Text</h5>
+				<p>Some Form Fields contain Placeholder Text. However, IE9 doesn't understand the polyfill needed to create this type of text. In this case, you will need Java Script to put the Placeholder Text where it needs to go.</p>
+			</div>
+			<div id="tabs-4">
+				<p>In the mobile version of forms, all text is slightly larger and buttons span the entire width of their container. Form elements stack vertically and also grow to span the entire width of the container (other than checkboxes, radio buttons, and the calendar date range picker).</p>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+					
+
+					<pre class="prettyprint linenums"><xmp>{% include '/base/forms/form-stacked' %}</xmp></pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

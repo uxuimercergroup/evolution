@@ -1,0 +1,92 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.5 - Tiles Partial
+// DATE - June 13, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-tiles == true{
+
+	.mul-tile-ctn							{
+											@include border-radius($tilesBorderRadius);
+											background-color: $tilesBackgroundColor;
+											margin-bottom: $tilesMarginBottom;
+											border-color: $tilesOutsideBorderColor;
+
+		// CUSTOM TILE BORDER TOP COLOR LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE, BORDER IS APPLIED TO TILE CONTAINER HEADER
+		@each $color-name, $color in $color-palette 
+												{
+			&[data-palette-color="#{$color-name}"] 	{
+				.mul-box-hdr							{border-top-color: map-get($color, color);}							
+													}
+												}
+
+		.mul-box-hdr							{
+												@include border-radius($tilesBorderRadius $tilesBorderRadius 0 0);
+												border-top: 5px solid $tilesHeaderBorderTopColor;
+												background-color: $tilesHeaderBackgroundColor;
+												cursor: pointer;
+												position: relative;
+												margin-bottom: 0;
+
+			.mul-hdr-rule							{
+													color: $tilesHeaderFontColor;
+													padding-bottom: 0;
+													}
+			span									{
+													@include text-overflow;
+													display: block;
+													margin-right: 20px;
+													}
+			.mul-tile-icon-position					{
+													position: absolute;
+													top: 0;
+													bottom: 0;
+													right: 10px;
+													margin: auto;
+													height: 16px;
+													}
+												}
+		.mul-box-bdy							{
+												@include border-radius($tilesBodyBorderRadius);
+												display: none;
+												background-color: $tilesBodyBackgroundColor;
+												border-top: 1px solid $tilesBodyBorderColor;
+												padding: 0;
+												}
+
+		.mul-scroll-pane						{
+												height: $tilesScrollPaneHeight;
+			.mCSB_container							{padding: $basePadding 0 0 $basePadding;}
+												}
+
+		.mul-tile-default-expanded				{display: block;}
+											}
+
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+
+		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+			.mul-tile-ctn					{
+											@include border-radius($tilesOuterBorderRadiusLargeBreakpoint);
+											margin-bottom: $baseMargin;
+				.mul-box-hdr					{
+												@include border-radius(0);
+												cursor: default;
+					.mul-tile-icon-position			{display: none;}
+												}
+				.mul-box-bdy					{
+												@include border-radius(0);
+												border: 1px solid $tilesBodyBorderColor;
+												display: block;
+												margin: 0 7px 7px 7px;
+												}
+											}
+		}
+
+	}//endif
+
+}//endif

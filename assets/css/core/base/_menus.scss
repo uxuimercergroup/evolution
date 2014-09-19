@@ -1,0 +1,289 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.5 - Base Menus Partial
+// DATE - June 13, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-menus == true{
+
+	// DEFAULT STYLES FOR SMARTMENU'S TO WORK
+	.sm,
+	.sm ul,
+	.sm li				{
+						display: block;
+						list-style: none;
+						padding: 0;
+						margin: 0;
+						direction: ltr;
+						}
+	ul.sm li			{position: relative;}
+	ul.sm a				{
+						position: relative;
+						display: block;
+						}
+	ul.sm a.disabled	{cursor: default;}
+	ul.sm ul			{
+						position: absolute;
+						top: -999999px;
+						left: -800px;
+						width: 100px;
+						}
+	ul.sm li			{float: left;}
+	ul.sm-rtl			{direction: rtl;}
+	ul.sm-rtl li		{float: right;}
+	ul.sm ul li,
+	ul.sm-vertical li	{float: none;}
+	ul.sm a				{white-space: nowrap;}
+	ul.sm ul a,
+	ul.sm-vertical a	{white-space: normal;}
+
+	* html ul.sm-vertical li	
+						{
+						float: left;
+						width: 100%;
+						}
+	* html ul.sm-vertical ul li	
+						{
+						float: none;
+						width: auto;
+						}
+	*:first-child+html ul.sm-vertical > li	
+						{
+						float: left;
+						width: 100%;
+						}
+
+	ul.sm ul.sm-nowrap>li>a
+						{white-space: nowrap;}
+	ul.sm:after			{
+						content: "\00a0";
+						display: block;
+						height: 0;
+						font: 0/0 serif;
+						clear: both;
+						visibility: hidden;
+						overflow: hidden;
+						}
+
+	* html ul.sm		{height: 1px;}
+	*:first-child+html ul.sm
+						{min-height: 1px;}
+
+	ul.sm li *,
+	ul.sm li *:before,
+	ul.sm li *:after	{
+						-moz-box-sizing: content-box;
+						-webkit-box-sizing: content-box;
+						box-sizing: content-box;
+						}
+	ul.sm				{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+
+
+	$arrows-color:		$gray-darker !default;
+
+	// mul-navbar-item-active selected item
+	.mul-navbar-item-active
+						{@include background-gradient($navActiveBackgroundStartColor, $navActiveBackgroundEndColor);}
+
+
+	// DEFAULT MENU
+	.mul-menu-default	{
+
+	// SCROLL ARROWS - BEGINS
+		/* These are the arrows placed at the top and bottom of the scrolling menu */
+		.scroll-up,
+		.scroll-down
+							{
+							position: absolute;
+							display: none;
+							visibility: hidden;
+							overflow: hidden;
+							background: $white;
+							height: 20px;
+							}
+
+		.scroll-up-arrow, 
+		.scroll-down-arrow	{
+							position: absolute;
+							top: -2px;
+							left: 50%;
+							margin-left: -8px;
+							width: 0;
+							height: 0;
+							overflow: hidden;
+							border-width: 8px; /* tweak size of the arrow */
+							border-style: dashed dashed solid dashed;
+							border-color: transparent transparent $arrows-color transparent;
+							}
+		.scroll-down-arrow	{
+							top: 6px;
+							border-style: solid dashed dashed dashed;
+							border-color: $arrows-color transparent transparent transparent;
+							}
+	// SCROLLING ARROWS - ENDS
+
+		a					{
+
+	/*
+	// ARROW - BEGINS
+			.sub-arrow			{
+								position: absolute;
+								bottom: 1px;
+								left: 50%;
+								margin-left: -5px;
+								width: 0;
+								height: 0;
+								overflow: hidden;
+								border-width: 5px;
+								border-style: solid dashed dashed dashed;
+								border-color: $arrows-color transparent transparent transparent;
+								}
+	// ARROW - ENDS
+	*/
+							}
+
+	// ACTIVE MENU ITEM - BEGINS
+	/*
+		.mul-navbar-item-active			{
+							@extend .mul-navbar-item-active;
+			&:hover,
+			&:focus,
+			&:active			{@extend .mul-navbar-item-active;}
+							}
+	*/
+	// ACTIVE MENU ITEM - ENDS
+
+	/*
+	// SECOND LEVE UL's - BEGINS
+		ul,
+		ul ul,
+		ul ul ul			{
+							@include border-radius(0 0 4px 4px);
+							@include box-shadow(0, 5px, 5px, $gray-dark);
+							background: $white;
+							border: 1px solid $navBorderColor;
+							border-top: 0;
+							padding: 0;
+			li					{
+								border: 0;
+								border-top: 1px solid $gray-lighter;
+								list-style: none;
+								margin: 0;
+
+				&:first-child		{
+									border-top: 0;
+									border-left: 0;
+									}
+								}
+
+			a					{
+								background: transparent;
+								border: 0;
+								padding: 9px 40px 8px 23px;
+								text-shadow: none;
+				&:hover,
+				&:focus,
+				&:active,
+				.highlighted		{@include background-gradient($navBackgroundStartColor, $navBackgroundEndColor);}
+
+			// SECOND LEVEL ARROW - BEGINS
+				.sub-arrow
+								 	{
+									bottom: auto;
+									top: 50%;
+									margin-top: -5px;
+									right: 15px;
+									left: auto;
+									margin-left: 0;
+									border-style: dashed dashed dashed solid;
+									border-color: transparent transparent transparent $arrows-color;
+									}
+			// SECOND LEVEL ARROW - ENDS
+
+								}
+
+		// SELECTED ITEM IN SUB MENU - BEGINS
+			.mul-navbar-item-active	
+								{
+								@extend .mul-navbar-item-active;
+				&:hover,
+				&:focus,
+				&:active			{@extend .mul-navbar-item-active;}
+								}
+		// SELECTED ITEM IN SUB MENU - ENDS
+
+							}
+	// SECOND LEVE UL's - BEGINS
+	*/
+
+	// ADD BORDER TOP - This adds to the to of all children ul's
+	/*
+		ul 					{border-top: 1px solid $navBorderColor !important;}
+		*/
+
+						}
+
+	// MEGA MENU - BEGINS
+		.mul-main-menu > li.mega-menu 
+							{position:static !important;}
+
+		.mega-menu			{
+							@include border-radius(0 !important);
+							border-bottom: 0 !important;
+							box-shadow: none !important;
+							margin-left: 0 !important;
+							max-width: none !important;
+							padding: 0 !important;
+							right: 0 !important;
+							width: auto !important;
+
+			.mul-mega-menu		{
+								@include box-shadow(0, 5px, 5px, $navBorderColor);
+				.mul-mega-menu-content
+									{
+									padding: 15px;
+					ul,
+					dl,
+					li,
+					dd,
+					a					{
+										@include href-link($baseLinkColor, underline);
+										@include box-shadow(0, 0, 0, #FFF);
+										border: 0;
+										width: auto;
+										position: static;
+										margin: 0;
+										padding: 0;
+						&:hover,
+						&:focus,
+						&:active			{
+											@include href-link-hover(none);
+											background: transparent;
+											}
+										}
+					li,
+					dd					{
+										display: list-item;
+										margin-left: 18px;
+										margin-bottom: 6px;
+										}
+									}
+								}
+							}
+	// MEGA MENU - ENDS
+
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+		
+		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+			
+
+		}
+		
+	}// endif
+
+}// endif

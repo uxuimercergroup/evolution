@@ -1,0 +1,102 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text"></p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+<!-- ACCORDIAN - BEGINS -->
+	<div class="col-24 example-min-height">
+
+		<h4 class="mul-hdr-rule">Default</h4>
+		{% include '/objects/accordion' %}
+
+		<h4 class="mul-hdr-rule">Icons</h4>
+		{% include '/objects/accordion-icons' %}
+
+	</div>
+<!-- ACCORDIAN - ENDS -->
+
+<!-- DETAILS SECTION - BEGINS -->
+	<div class="col-24">
+		<a name="moreDetails"></a>
+		<h4 class="mul-hdr-dbl-rule addtional-detail-hdr">Additional Details</h4>
+		
+
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>When to use details go here&hellip;</p>
+			</div>
+			<div id="tabs-2">
+				<p>Functional details go here&hellip;</p>
+			</div>
+			<div id="tabs-3">
+				<p>Technical details go here&hellip;</p>
+	
+				<h4 class="mul-hdr-rule">Dependencies</h4>
+				<table class="mul-table mul-table-borders" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+					<thead>
+						<tr>
+							<th width="" scope="col">Library</th>
+							<th width="" scope="col">Location or Download</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>jQuery {{ global.jquery_version }}</td>
+							<td>assets/scripts/core/lib/jquery</td>
+						</tr>
+						<tr>
+							<td>jQuery UI {{ global.jquery_ui_version }}</td>
+							<td>assets/scripts/core/lib/jquery</td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</div>
+			<div id="tabs-4">
+				<p>Examples go here&hellip;</p>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+
+					<h5 class="mul-hdr-rule">Default</h5>
+					{{ global.PrettifyStartTag }}{% include '/objects/accordion' %}{{ global.PrettifyEndTag }}
+
+					<h5 class="mul-hdr-rule">Icons</h5>
+					{{ global.PrettifyStartTag }}{% include '/objects/accordion-icons' %}{{ global.PrettifyEndTag }}
+
+					
+					<h5 class="mul-hdr-rule">JS</h5>
+
+					<h5 class="mul-hdr-rule">Default</h5>
+					<pre class="prettyprint linenums">mulAccordion('js-mul-accordion-example');</pre>
+
+					<h5 class="mul-hdr-rule">Icons</h5>
+					<pre class="prettyprint linenums">mulAccordion('js-mul-accordion-icons-example', {
+	icons: {'header': 'mul-icon-plus-circle', 'activeHeader': 'mul-icon-minus-circle'}
+});</pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

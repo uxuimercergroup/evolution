@@ -1,0 +1,32 @@
+{% block content %}
+
+<div class="col-24 marketing-ctn">
+
+	<div class="col-7 first img-section">
+		<img src="{{ "ux_people.png" | asset_url }}" width="235" height="140" alt="People" title="People" />
+	</div>
+	<div class="col-17 mkt-text mul-small-mediaquery-grid">
+		<span class="mul-icon-adv mul-icon-adv-size-medium mul-icon-adv-color-gray-darker mul-icon-position-right" title="Get Started"><i class="mul-icon-mul-double-greater-than"></i></span>
+		<h1><span>Welcome.</span> Let's get started.</h1>
+	</div>
+
+</div>
+
+<div class="col-24 hp-layout">
+	<div class="col-8 first">
+		{% for item in global.table-of-contents limit:2 %}
+			{% include "sidebar-navbar" %}
+		{% endfor %}
+	</div>
+	<div class="col-8">
+		{% for item in global.table-of-contents offset:2 limit:3 %}
+			{% include "sidebar-navbar" %}
+		{% endfor %}
+	</div>
+	<div class="col-8">
+		{% for item in global.table-of-contents offset:5 %}
+			{% include "sidebar-navbar" %}
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}

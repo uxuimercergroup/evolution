@@ -1,0 +1,189 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text"></p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+<!-- SLIDER - BEGINS -->
+	<div class="col-24 example-min-height">
+		
+		<div class="col-24">
+			<div class="col-6 first mul-box mul-box-rnd example-ctn">
+				<h4 class="mul-hdr-rule">Horizontal Slider</h4>
+				{% include '/objects/slider-horizontal' %}
+			</div>
+
+			<div class="col-6 mul-box mul-box-rnd example-ctn">
+				<h4 class="mul-hdr-rule">Horizontal Range Slider</h4>
+				{% include '/objects/slider-horizontal-range' %}
+			</div>
+
+			<div class="col-6 mul-box mul-box-rnd example-ctn">
+				<h4 class="mul-hdr-rule">Horizontal Range Slider - Fixed Min</h4>
+				{% include '/objects/slider-horizontal-range-min' %}
+			</div>
+
+			<div class="col-6 mul-box mul-box-rnd example-ctn">
+				<h4 class="mul-hdr-rule">Horizontal Range Slider - Fixed Max</h4>
+				{% include '/objects/slider-horizontal-range-max' %}
+			</div>
+		</div>
+
+		<div class="col-24">
+			<div class="col-6 first mul-box mul-box-rnd example-ctn">
+				<h4 class="mul-hdr-rule">Vertical Slider</h4>
+				{% include '/objects/slider-vertical' %}
+			</div>
+
+			<div class="col-6 mul-box mul-box-rnd example-ctn">
+				<h4 class="mul-hdr-rule">Vertical Range Slider</h4>
+				{% include '/objects/slider-vertical-range' %}
+			</div>
+
+			<div class="col-6 mul-box mul-box-rnd example-ctn">
+				<h4 class="mul-hdr-rule">Vertical Range Slider - Fixed Min</h4>
+				{% include '/objects/slider-vertical-range-min' %}
+			</div>
+
+			<div class="col-6 mul-box mul-box-rnd example-ctn">
+				<h4 class="mul-hdr-rule">Vertical Range Slider - Fixed Max</h4>
+				{% include '/objects/slider-vertical-range-max' %}
+			</div>
+		</div>
+
+	</div>
+<!-- SLIDER - ENDS -->
+
+<!-- DETAILS SECTION - BEGINS -->
+	<div class="col-24">
+		<a name="moreDetails"></a>
+		<h4 class="mul-hdr-dbl-rule addtional-detail-hdr">Additional Details</h4>
+		
+
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>When to use details go here&hellip;</p>
+			</div>
+			<div id="tabs-2">
+				<p>Functional details go here&hellip;</p>
+			</div>
+			<div id="tabs-3">
+	
+				<h5>Cross browser compatibility</h5>
+				<p>IE9 doesn't crop background gradients on containers with rounded corners, so we square the corners of every container so it looks just like IE8.</p>
+
+				<table class="mul-table mul-table-borders" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+					<thead>
+						<tr>
+							<th width="" scope="col">Library</th>
+							<th width="" scope="col">Location or Download</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>jQuery {{ global.jquery_version }}</td>
+							<td>assets/scripts/core/lib/jquery</td>
+						</tr>
+						<tr>
+							<td>jQuery UI {{ global.jquery_ui_version }}</td>
+							<td>assets/scripts/core/lib/jquery</td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</div>
+			<div id="tabs-4">
+				<p>Mobile details go here&hellip;</p>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+					
+					<h5>Horizontal Slider</h5>
+					{{ global.PrettifyStartTag }}{% include '/objects/slider-horizontal' %}{{ global.PrettifyEndTag }}
+
+					<h5>Horizontal Range Slider</h5>
+					{{ global.PrettifyStartTag }}{% include '/objects/slider-horizontal-range' %}{{ global.PrettifyEndTag }}
+
+					<h5>Horizontal Range Slider - Fixed Min</h5>
+					{{ global.PrettifyStartTag }}{% include '/objects/slider-horizontal-range-min' %}{{ global.PrettifyEndTag }}
+
+					<h5>Horizontal Range Slider - Fixed Max</h5>
+					{{ global.PrettifyStartTag }}{% include '/objects/slider-horizontal-range-max' %}{{ global.PrettifyEndTag }}
+
+					<h5>Vertical Slider</h5>
+					{{ global.PrettifyStartTag }}{% include '/objects/slider-vertical' %}{{ global.PrettifyEndTag }}
+
+					<h5>Vertical Range Slider</h5>
+					{{ global.PrettifyStartTag }}{% include '/objects/slider-vertical-range' %}{{ global.PrettifyEndTag }}
+
+					<h5>Vertical Range Slider - Fixed Min</h5>
+					{{ global.PrettifyStartTag }}{% include '/objects/slider-vertical-range-min' %}{{ global.PrettifyEndTag }}
+
+					<h5>Vertical Range Slider - Fixed Max</h5>
+					{{ global.PrettifyStartTag }}{% include '/objects/slider-vertical-range-max' %}{{ global.PrettifyEndTag }}
+
+					
+					<h5 class="mul-hdr-rule">JS</h5>
+
+					<h5>Horizontal Slider</h5>
+					<pre class="prettyprint linenums">mulSlider('js-mul-slider-horizontal-example');</pre>
+
+					<h5>Horizontal Range Slider</h5>
+					<pre class="prettyprint linenums">mulSliderRange('js-mul-slider-range-horizontal-example');</pre>
+
+					<h5>Horizontal Range Slider - Fixed Min</h5>
+					<pre class="prettyprint linenums">mulSliderRangeSingleHandle('js-mul-slider-range-horizontal-min-example',{
+	range: 'min'
+});</pre>
+
+					<h5>Horizontal Range Slider - Fixed Max</h5>
+					<pre class="prettyprint linenums">mulSliderRangeSingleHandle('js-mul-slider-range-horizontal-max-example',{
+	range: 'max'
+});</pre>
+
+					<h5>Vertical Slider</h5>
+					<pre class="prettyprint linenums">mulSlider('js-mul-slider-vertical-example',{
+	orientation: 'vertical'
+});</pre>
+
+					<h5>Vertical Range Slider</h5>
+					<pre class="prettyprint linenums">mulSliderRange('js-mul-slider-range-vertical-example',{
+	orientation: 'vertical'
+});</pre>
+
+					<h5>Vertical Range Slider - Fixed Min</h5>
+					<pre class="prettyprint linenums">mulSliderRangeSingleHandle('js-mul-slider-range-vertical-min-example',{
+	orientation: 'vertical',
+	range: 'min'
+});</pre>
+
+					<h5>Vertical Range Slider - Fixed Max</h5>
+					<pre class="prettyprint linenums">mulSliderRangeSingleHandle('js-mul-slider-range-vertical-max-example',{
+	orientation: 'vertical',
+	range: 'max'
+});</pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

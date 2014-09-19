@@ -1,0 +1,109 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.5 - Summary Containers Partial
+// DATE - June 13, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-summary-containers == true{
+
+	// SUMMARY CONTAINER
+	.mul-summary-ctn						{
+											margin-bottom: $baseMargin;
+											width: 100%;
+		.mul-summary-ctn-row					{
+			a:link									{
+													@include href-link($baseFontColor, none);
+													border-color: $summaryCtnBorderColor;
+													border-top-color: $summaryCtnBorderColorTop;
+													border-width: $summaryCtnBorderSize;
+													border-style: $summaryCtnBorderStyle;
+													display: block;
+													font-size: ($hdrH1FontSize + $summaryPrimaryCtnLargeFontSizeAdjust);
+													width: auto;
+													padding: $summaryCtnPadding;
+													text-align: center;
+				&:first-child							{border-top-color: $summaryCtnBorderFirstChildColorTop;}
+				.mul-main-text							{display: block;}
+				.mul-support-text						{
+														display: block;
+														font-size: ($baseFontSize - $summaryPrimaryCtnSupportFontSizeAdjust);
+														}
+				[class*="mul-icon-"]					{font-size: $summaryPrimaryCtnIconFontSize;}
+													}
+
+			// SET AN ITEM TO ALERT STATE
+			a.mul-summary-ctn-alert-negative,
+			a.mul-summary-ctn-alert-negative:link,
+			a.mul-summary-ctn-alert-negative:visited
+													{@include href-link($summaryCtnAlertNegativeFontColor, none);}
+
+			// SET AN ITEM TO ALERT STATE
+			.mul-summary-ctn-alert-positive,
+			.mul-summary-ctn-alert-positive:link,
+			.mul-summary-ctn-alert-positive:visited
+													{@include href-link($summaryCtnAlertPositiveFontColor, none);}
+												}
+											}
+
+	// SECONDARY SUMMARY CONTAINER
+	.mul-secondary-summary-ctn				{
+		.mul-summary-ctn-row					{
+			a:link									{
+				.mul-main-text							{font-size: ($hdrH1FontSize + $summarySecondaryCtnLargeFontSizeAdjust);}
+				.mul-support-text						{font-size: ($baseFontSize - $summarySecondaryCtnSupportFontSizeAdjust);}
+				[class*="mul-icon-"]					{font-size: $summarySecondaryCtnIconFontSize;}
+													}
+												}
+											}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+
+		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+			// SUMMARY CONTAINER
+			.mul-summary-ctn				{
+											display: table;
+				.mul-summary-ctn-row			{
+												display: table-row;
+					a:link							{
+													display: table-cell;
+													width: 10%;
+													border-left-color: $summaryCtnBorderColorLeft;
+													border-bottom-color: $summaryCtnBorderColorBottom;
+						&:first-child					{
+														border-top-color: $summaryCtnBorderColorTop;
+														border-left-color: $summaryCtnBorderFirstChildColorLeft;
+														}
+						&:hover							{
+														@include transition(background-color $summaryCtnBorderHoverTransitionSpeed ease-in-out);
+														background-color: $summaryCtnBorderHoverBackgroundColor;
+														border-top-color: $summaryCtnBorderHoverBorderTopColor;
+														border-bottom-color: $summaryCtnBorderHoverBorderBottomColor;
+														}
+													}
+					// SET AN ITEM TO ALERT STATE
+					a.mul-summary-ctn-alert-negative,
+					a.mul-summary-ctn-alert-negative:link,
+					a.mul-summary-ctn-alert-negative:visited
+													{
+						&:hover							{background-color: $summaryCtnAlertNegativeHoverBackgroundColor;}
+													}
+
+					// SET AN ITEM TO ALERT STATE
+					.mul-summary-ctn-alert-positive,
+					.mul-summary-ctn-alert-positive:link,
+					.mul-summary-ctn-alert-positive:visited
+													{
+						&:hover							{background-color: $summaryCtnAlertPositiveHoverBackgroundColor;}
+													}
+												}
+											}
+
+		}
+
+	}//endif
+
+}//endif

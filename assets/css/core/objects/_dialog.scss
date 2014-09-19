@@ -1,0 +1,224 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.5 - Dialog/Modal Partial
+// DATE - June 13, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-dialog == true{
+
+	// CLASS ADDED TO BODY TO STOP CONTENT BEHIND MODAL FROM SCROLLING
+	.mul-dialog-open				{
+									overflow: hidden;
+									position: relative;
+									}
+
+	// DIALOG POSITION CONTAINER
+	.mul-dialog-position-ctn		{
+									overflow: auto;
+									overflow-y: scroll;
+									position: fixed;
+									top: 0 !important;
+									right: 0;
+									bottom: 0;
+									left: 0;
+									z-index: $zindexDialogPosition;
+									-webkit-overflow-scrolling: touch;
+									outline: 0;
+									}
+
+	// DIALOG SOURCE CONTAINER
+	.mul-dialog-ctn					{display:none;}
+
+	// DIALOG SCREEN OVERLAY
+	.ui-widget-overlay				{
+									@include opacity($dialogOverlayBackgroundColorOpacity);
+									background-color: $dialogOverlayBackgroundColor;
+									position: fixed;
+									z-index: $zindexDialogOverlay;
+									top :0;
+									left: 0;
+									bottom: 0;
+									right: 0;
+									}
+
+	// DIALOG
+	.mul-dialog.ui-dialog			{
+									@include clearfix;
+									@include box-shadow($dialogVShadow, $dialogHShadow, $dialogShadowBlur, $dialogShadowColor);
+									@include border-radius($dialogBorderRadius);
+									position: relative;
+									top: auto !important;
+									left: auto !important;
+									margin: 10px;
+									background-color: $dialogBackgroundColor;
+									border: 0;
+									outline: none;
+									width: $dialogWidth !important;
+		
+		// DIALOG TITLE BAR
+		.ui-dialog-titlebar				{
+										border-bottom: $dialogHdrBorderBottomSize $dialogHdrBorderBottomStyle $dialogHdrBorderBottomColor;
+										cursor: move;
+										padding: $dialogHdrPaddingTop $dialogHdrPaddingRight $dialogHdrPaddingBottom $dialogHdrPaddingLeft;
+										position: relative;
+			
+			// DIALOG TITLE BAR HEADER
+			.ui-dialog-title				{
+											font-family: $proximaNovaSemiBoldStack;
+											font-weight: $WeightBold200;
+											font-size: $dialogHdrFontSize;
+											color: $dialogHdrFontColor;
+											}
+			
+			// DIALOG TITLE BAR CLOSE ICON
+			.ui-dialog-titlebar-close		{
+											position: absolute;
+											border: 0;
+											top: 8px;
+											right: 8px;
+											outline: 0;
+											background: transparent;
+											padding: 10px;
+											font-size: $iconFontSize;
+				&:before						{
+												font-family: $mulIconFontStack;
+												content: "\e369";
+												color: $dialogCloseIconColor;
+												height: $iconFontSize;
+												width: $iconFontSize;
+												}
+				.ui-button-text					{display: none;}
+											}
+										}
+		
+		// DIALOG CONTENT AREA
+		.ui-dialog-content				{
+										@include clearfix;
+										display: block;
+										overflow-y: auto;
+										overflow-x: hidden;
+										padding: 0 $dialogContentPaddingLeftRight 1px $dialogContentPaddingLeftRight;
+										border-top: $dialogContentBorderTopSize $dialogContentBorderTopStyle $dialogContentBorderTopColor;
+										}
+		.grid							{
+										min-width: 0;
+										max-width: none;
+										}
+
+		// DIALOG BUTTON PANE
+		.ui-dialog-buttonpane			{
+										padding: 18px;
+			.ui-dialog-buttonset			{@include clearfix;}
+										}
+
+		// DIALOG CONTENT - AUTO SCROLLING
+		.mul-dialog-content-scrolling	{
+			&+.ui-dialog-buttonpane			{padding: 18px 18px 0 18px;}
+										}
+
+		// DIALOG FOOTER - AUTO SCROLLING - ADDS GUTTER TO BOTTOM OF DIALOG
+		.mul-dialog-scrolling-footer
+										{
+										display: block;
+										height: 18px;
+										}
+									}
+
+	// MODAL DIALOG
+	.mul-dialog-modal.ui-dialog		{
+
+		// MODAL DIALOG TITLE BAR
+		.ui-dialog-titlebar				{cursor: default;}
+									}
+
+	// NO CLOSE BUTTON OPTION
+	.mul-dialog.ui-dialog.no-close-button
+									{
+		.ui-dialog-titlebar-close		{display:none;}
+									}
+
+	// CUSTOM MODALS/DIALOGS
+
+	// LOADING ANIMATION MODAL
+	.mul-dialog-loading.ui-dialog	{
+		.ui-dialog-titlebar				{
+										padding: 15px 18px 12px 18px;
+										text-align: center;
+										}
+									}
+
+	// DIALOG IE8+9 FIXES
+	.ie8,
+	.ie9							{
+
+		// DIALOG
+		.mul-dialog.ui-dialog			{
+			
+			// DIALOG TITLE BAR
+			.ui-dialog-titlebar				{
+
+				// DIALOG TITLE BAR CLOSE ICON
+				.ui-dialog-titlebar-close		{
+					&:before	
+													{
+													position: relative;
+													top: 0;
+													left: 0;
+													}
+												}
+											}
+										}
+									}
+
+	// DIALOG IE9 FIXES
+	.ie9							{
+		.mul-dialog.ui-dialog			{
+										border-radius:$baseBorderRadiusIE !important;
+			.ui-dialog-titlebar				{border-radius:$baseBorderRadiusIE !important;}
+			.ui-dialog-content				{border-radius:$baseBorderRadiusIE !important;}
+										}
+									}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+		
+		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+			// DIALOG
+			.mul-dialog.ui-dialog		{
+										margin: 100px auto 30px auto;
+										width: $dialogWidthLargeBreakpoint !important;
+				
+				// DIALOG TITLE BAR
+				.ui-dialog-titlebar			{
+					
+					// DIALOG TITLE BAR HEADER
+					.ui-dialog-title			{font-size: $dialogHdrFontSizeLargeBreakpoint;}
+
+					// DIALOG TITLE BAR CLOSE ICON
+					.ui-dialog-titlebar-close
+												{
+												top: 21px;
+												right: 18px;
+												padding: 0;
+												}
+											}
+
+				// DIALOG CONTENT - AUTO SCROLLING
+				.mul-dialog-content-scrolling
+											{max-height: $dialogContentMaxHeightLargeBreakpoint !important;}
+										}
+
+			// CUSTOM MODALS/DIALOGS
+
+			// LOADING ANIMATION MODAL
+			.mul-dialog-loading.ui-dialog
+										{width: $loadingModalWidthLargeBreakpoint !important;}
+
+		}
+		
+	}// endif
+
+}//endif

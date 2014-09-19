@@ -1,0 +1,212 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">This control allows the user to select a specific date range using the <a href="/objects/calendar">Calendar component</a>. </p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+<!-- CALENDAR DATE RANGE - BEGINS -->
+	<div class="col-24 example-min-height">
+
+		<div class="col-11 first">
+			<div class="col-24">
+				<div class="mul-box mul-box-rnd example-ctn">
+					<h4 class="mul-hdr-rule">Stacked</h4>
+					<!-- CALENDAR DATE RANGE - STACKED - EXAMPLE - BEGINS -->
+						<form class="mul-form" id="" name="" method="" action="" title="">
+							<fieldset>
+								<ol>
+									<li>
+										<label class="mul-required" for="js-mul-datepicker-range-stacked-from">
+											<i class="mul-icon-mul-asterisk-small mul-icon-color-gray-darker mul-icon-position-left"></i>Label:
+										</label>
+										{% include '/objects/date-range' %}
+									</li>
+								</ol>
+							</fieldset>
+						</form>
+					<!-- CALENDAR DATE RANGE - STACKED - EXAMPLE - ENDS -->
+				</div>
+			</div>
+
+			<div class="col-24">
+				<div class="mul-box mul-box-rnd example-ctn">
+					<h4 class="mul-hdr-rule">Left Aligned</h4>
+					<!-- CALENDAR DATE RANGE - LEFT ALIGNED - EXAMPLE - BEGINS -->
+						<form class="mul-form mul-form-inline" id="" name="" method="" action="" title="">
+							<fieldset>
+								<ol>
+									<li>
+										<label class="col-5 first mul-required" for="js-mul-datepicker-range-left-aligned-from">
+											<i class="mul-icon-mul-asterisk-small mul-icon-color-gray-darker mul-icon-position-left"></i>Label:
+										</label>
+										<div class="col-19 mul-datepicker-ctn mul-datepicker-range mul-small-mediaquery-grid">
+											<input class="col-12 first" id="js-mul-datepicker-range-left-aligned-from" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="From" data-mul-datepicker-message-label="This is a calendar message area for user messages related to dates" />
+											<input class="col-12" id="js-mul-datepicker-range-left-aligned-to" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="To" data-mul-datepicker-message-label="This is a calendar message area for user messages related to dates" />
+										</div>
+									</li>
+								</ol>
+							</fieldset>
+						</form>
+					<!-- CALENDAR DATE RANGE - LEFT ALIGNED - EXAMPLE - ENDS -->
+				</div>
+			</div>
+
+			<div class="col-24">
+				<div class="mul-box mul-box-rnd example-ctn">
+					<h4 class="mul-hdr-rule">Right Aligned</h4>
+					<!-- CALENDAR DATE RANGE - RIGHT ALIGNED - EXAMPLE - BEGINS -->
+						<form class="mul-form mul-form-inline mul-form-label-right" id="" name="" method="" action="" title="">
+							<fieldset>
+								<ol>
+									<li>
+										<label class="col-5 first mul-required" for="js-mul-datepicker-range-right-aligned-from">
+											<i class="mul-icon-mul-asterisk-small mul-icon-color-gray-darker mul-icon-position-left"></i>Label:
+										</label>
+										<div class="col-19 mul-datepicker-ctn mul-datepicker-range mul-small-mediaquery-grid">
+											<input class="col-12 first" id="js-mul-datepicker-range-right-aligned-from" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="From" data-mul-datepicker-message-label="This is a calendar message area for user messages related to dates" />
+											<input class="col-12" id="js-mul-datepicker-range-right-aligned-to" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="To" data-mul-datepicker-message-label="This is a calendar message area for user messages related to dates" />
+										</div>
+									</li>
+								</ol>
+							</fieldset>
+						</form>
+					<!-- CALENDAR DATE RANGE - RIGHT ALIGNED - EXAMPLE - ENDS -->
+				</div>
+			</div>
+		</div>
+		<div class="col-13">
+
+		</div>
+
+	</div>
+<!-- CALENDAR DATE RANGE - ENDS -->
+
+<!-- DETAILS SECTION - BEGINS -->
+	<a name="moreDetails"></a>
+	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
+
+	<div class="col-24">
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>
+					The Calendar Date Range control is needed when the application requires the user to select a date range, usually in the form of a "From/Start" date and a "To/End" date.
+				</p>
+			</div>
+			<div id="tabs-2">
+				<ul>
+					<li>The graphical 1-month calendar can be opened in 4 ways:
+						<ul>	
+							<li>Clicking on the calendar label ("Date.")</li>
+							<li>On focus of the calendar input box</li>
+							<li>Clicking the calendar input box</li>
+							<li>Clicking the calendar icon</li>
+						</ul>
+					</li>
+					<li>When the calendar control is opened, the current date is highlighted in green</li>
+					<li>The control has an optional message component. Messages would be related to the date selected</li>
+					<li>Date format is configurable to m/d/yy (which is the default) or mm/dd/yyyy</li>
+					<li>For Masked Date Input the format is configured to mm/dd/yy</li>
+					<li>Dates must use /s, not -s. </li>
+					<li>Selecting a date inserts the chosen date into the text field and closes the control.</li>
+					<li>Calendar should be configured so it won't accept letters. Users can only enter numbers into the text field.</li>
+					<li>Calendar should navigate user to the desired date as it is typed in the text field. </li>
+					<li>Calendar date range is configured in coding. Designer can select the minimum and maximum search dates.</li>
+					<li>If a user tries to search beyond the pre-determined minimum and maximum dates, the calendar will automatically go to the last possible date it can access.</li>
+				</ul>
+				<p>
+					Calendar icon can be found on the
+					<a href="/base/icons">list of Icons</a>.
+				</p>
+
+				<h5>Related Components</h5>
+				<p>
+					Calendar Date Range will work with any of the Mercer Forms (see examples):
+				</p>
+
+				<ul>
+					<li>
+						<a href="/base/forms/stacked">Stacked</a>
+					</li>
+					<li>
+						<a href="/base/forms/inline">Inline</a>
+					</li>
+					<li>
+						<a href="/base/forms/multi-col-stacked">Multi-Column Stacked</a>
+					</li>
+					<li>
+						<a href="/base/forms/compact">Compact</a>
+					</li>
+				</ul>
+
+				<h5>Visual Formatting</h5>
+				<p>
+					The visual formatting for this component is identical to the formatting on the
+					<a href="/objects/calendar">Calendar</a>
+					control.
+				</p>
+			</div>
+			<div id="tabs-3">
+				<h5>Cross Browser Compatibility</h5>
+				<p>IE9 doesn't crop background gradients on containers with rounded corners, so we square the corners of every container so it looks just like IE8.</p>
+				
+				<p>Our Calendar feature is a jQuery UI control by the name of Date Picker. For more information on jQuery UI Date Picker and the configurable options available, check out the <a href="http://api.jqueryui.com/datepicker/" target="_new">jQuery UI Date Picker API</a>. This site is maintained by The jQuery Foundation, not Mercer.</p>
+				
+				<h5>Dependencies</h5>
+				<p>The Calendar Date Range component depends on the <a href="/objects/calendar">Calendar</a> component.</p>
+			</div>
+			<div id="tabs-4">
+				<ul>
+					<li>All versions of the calendar control labels become stacked.</li> 
+					<li>The default behavior is to use the evolution calendar control instead of the native version in order to take advantage of the logic built into our control. (e.g., the ability to support a message, and the ability to support unselectable dates)</li>
+					<li>The default version of the calendar doesn’t allow for text input, and therefore does not invoke the device keyboard. Displaying both the default calendar control and the device keyboard would be a confusing experience for the user.</li>
+					<li>When displayed, the calendar should be both horizontally and vertically centered in the viewport and inherit the container margins.</li>
+					<li>Font size increases for mobile.</li>
+				</ul>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+					
+
+					<pre class="prettyprint linenums"><xmp>{% include '/objects/date-range' %}</xmp></pre>
+
+					<h5 class="mul-hdr-rule">JS</h5>
+					
+
+					<pre class="prettyprint linenums">// From date datepicker
+mulDatepickerRange('js-mul-datepicker-range-stacked-from',{
+	onClose: function(selectedDate) {
+		jQuery('#js-mul-datepicker-range-stacked-to').datepicker('option', 'minDate', selectedDate); // On calendar close, set the min date of the "To" calendar to the date picked in the "From" calendar
+	}
+});
+
+// To date datepicker
+mulDatepicker('js-mul-datepicker-range-stacked-to',{
+	onClose: function(selectedDate) {
+		jQuery('#js-mul-datepicker-range-stacked-from').datepicker('option', 'maxDate', selectedDate); // On calendar close, set the max date of the "From" calendar to the date picked in the "To" calendar
+	}
+});</pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

@@ -1,0 +1,337 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+<h1 class="mul-hdr-rule">{{ model.title }}</h1>
+
+<div class="col-24">
+	<p class="mul-intro-text">
+		We’ve implemented <strong>Proxima Nova</strong> as our default font family as a means to represent our brand instead of the typical fonts often used, like Arial and Verdana. Proxima Nova is a modern, yet professional, font, and it is also compatible with all modern web browsers (Internet Explorer, Firefox, Chrome, Safari, and Opera). 
+	</p>
+	<p class="mul-intro-text">
+		Since Proxima Nova isn’t a  standard  font, it's not automatically included in application development software. You will typically need to download font family on the server and then import the font via CSS. However, if you chose to download the entire framework locally, the Proxima font family will automatically be included. 	
+	</p>
+</div>
+
+<div class="mul-table-small-mediaquery">
+	<table class="mul-table mul-footable mul-table-borders mul-table-striped mul-table-hover type-table" data-filter="#typography-table-filter" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+		<caption>
+			<div class="col-19 first">
+				&nbsp;
+			</div>
+			<div class="col-5 mul-tbl-data-filter">
+				<input id="typography-table-filter" type="text" tabindex="" title="Type to filter results." placeholder="Filter" />
+			</div>
+		</caption>
+		<thead>
+			<tr>
+				<th class="col-5" scope="col"><a href="javascript:;">Example</a></th>
+				<th class="col-1" scope="col"><a href="javascript:;">Name</a></th>
+				<th class="col-4" scope="col"><a href="javascript:;">Usage</a></th>
+				<th class="col-4" scope="col"><a href="javascript:;">Font</a></th>
+				<th class="col-2" scope="col"><a href="javascript:;">Desktop Size</a></th>
+				<th class="col-2" scope="col"><a href="javascript:;">Mobile Size</a></th>
+				<th class="col-2" scope="col"><a href="javascript:;">Weight</a></th>
+				<th class="col-2" scope="col"><a href="javascript:;">Decoration</a></th>
+				<th class="col-2" scope="col"><a href="javascript:;">Color</a></th>
+			</tr>
+		</thead>
+		<tbody>
+
+			{% for item in model.typography_data %}
+			<tr>
+				<td>{{ item.example }}</td>
+				<td>{{ item.name }}</td>
+				<td>{{ item.usage }}</td>
+				<td>{{ item.font }}</td>
+				<td>{{ item.desktop_size }}</td>
+				<td>{{ item.mobile_size }}</td>
+				<td>{{ item.weight }}</td>
+				<td>{{ item.decoration }}</td>
+				<td>{{ item.color }}</td>
+			</tr>
+			{% endfor %}
+
+			{% for item in model.typography_base_data %}
+			<tr>
+				<td class="type-example">{{ item.example }}</td>
+				<td>{{ item.name }}</td>
+				<td>{{ item.usage }}</td>
+				<td>{{ item.font }}</td>
+				<td>{{ item.desktop_size }}</td>
+				<td>{{ item.mobile_size }}</td>
+				<td>{{ item.weight }}</td>
+				<td>{{ item.decoration }}</td>
+				<td>{{ item.color }}</td>
+			</tr>
+			{% endfor %}
+
+		</tbody>
+	</table>
+</div>
+
+<div class="col-24">
+	<div class="col-12 first">
+		<article>
+			<h3 class="mul-hdr-rule">Context example</h3>
+			<h1>Title &ndash; h1</h1>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+			<h2>Subtitle &ndash; h2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<h3>Subtitle &ndash; h3</h3>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<h4>Subtitle &ndash; h4</h4>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<h5>Subtitle &ndash; h5</h5>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<h6>Subtitle &ndash; h6</h6>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<ol>
+				<li><span>Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></li>
+				<li><span>Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing.</span></li>
+				<li><span>Ordered list item three</span></li>
+			</ol>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<ul>
+				<li><span>Unordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></li>
+				<li><span>Unordered list item two</span></li>
+				<li><span>Unordered list item three. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></li>
+			</ul>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<blockquote>
+				<p>&ldquo;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.&rdquo;</p>
+				<p class="mul-author">&mdash; John Doe, Expert</p>
+			</blockquote>
+		</article>
+
+		<article>
+			<section>
+				<h3 class="mul-hdr-rule">Ordered lists</h3>
+				<ol>
+					<li><span>Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></li>
+					<li><span>Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing.</span></li>
+					<li><span>Ordered list item three</span>
+						<ol>
+							<li><span>Ordered list level 2</span></li>
+							<li><span>Ordered list level 2</span></li>
+							<li><span>Ordered list level 2</span></li>
+						</ol>
+					</li>
+				</ol>
+			</section>
+		
+			<section>
+				<h3 class="mul-hdr-rule">Unordered lists</h3>
+				<ul>
+					<li><span>Unordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></li>
+					<li><span>Unordered list item two</span></li>
+					<li><span>Unordered list item three. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+						<ul>
+							<li><span>Unordered list level 2</span></li>
+							<li><span>Unordered list level 2</span></li>
+							<li><span>Unordered list level 2</span></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		
+			<section>
+				<h3 class="mul-hdr-rule">Unordered lists - different list style types</h3>
+				<ul class="mul-lower-alpha">
+					<li><span>Unordered list item one</span></li>
+					<li><span>Unordered list item two</span></li>
+					<li><span>Unordered list item three</span>
+						<ul class="mul-upper-alpha">
+							<li><span>Unordered list level 2</span></li>
+							<li><span>Unordered list level 2</span></li>
+							<li><span>Unordered list level 2</span></li>
+						</ul>
+						<ul class="mul-lower-roman">
+							<li><span>Unordered list level 2</span></li>
+							<li><span>Unordered list level 2</span></li>
+							<li><span>Unordered list level 2</span></li>
+						</ul>
+						<ul class="mul-upper-roman">
+							<li><span>Unordered list level 2</span></li>
+							<li><span>Unordered list level 2</span></li>
+							<li><span>Unordered list level 2</span></li>
+						</ul>
+						<ul class="mul-list-style-none">
+							<li><span>Unordered list level 2</span></li>
+							<li><span>Unordered list level 2</span></li>
+							<li><span>Unordered list level 2</span></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		
+			<section>
+				<h3 class="mul-hdr-rule">Definition lists</h3>
+				<dl>
+					<dt>Definition Term</dt>
+					<dd>Definition description. Lorem ipsum dolor sit amet, consectetur.</dd>
+					<dt>Definition Term</dt>
+					<dd>Definition description Lorem ipsum dolor sit amet, consectetur.</dd>
+					<dt>Definition Term</dt>
+					<dd>Definition description Lorem ipsum dolor sit amet, consectetur.</dd>
+				</dl>
+			</section>
+		</article>
+		
+	</div>
+
+	<div class="col-12">
+		<article>
+			<section>
+				<h3 class="mul-hdr-rule">Headers with background colors</h3>
+				<h1 class="mul-h1-hdr-background">h1 - Header</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+				<h2 class="mul-h2-hdr-background">h2 - Header</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+				<h3 class="mul-h3-hdr-background">h3 - Header</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+				<h4 class="mul-h4-hdr-background">h4 - Header</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</section>
+
+			<section>
+				<h3 class="mul-hdr-rule">Headers with rules</h3>
+				<h1 class="mul-hdr-rule">h1 - Header</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+				<h2 class="mul-hdr-rule">h2 - Header</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+				<h3 class="mul-hdr-rule">h3 - Header</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+				<h4 class="mul-hdr-rule">h4 - Header</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</section>
+		
+			<section>
+				<h3>Headers with double rules</h3>
+				<h1 class="mul-hdr-dbl-rule">h1 - Header</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+				<h2 class="mul-hdr-dbl-rule">h2 - Header</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+				<h3 class="mul-hdr-dbl-rule">h3 - Header</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+				<h4 class="mul-hdr-dbl-rule">h4 - Header</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</section>
+		</article>
+
+		<article>
+			<h3 class="mul-hdr-rule">Blockquotes</h3>
+			<blockquote>
+				<p>&ldquo;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.&rdquo;</p>
+				<p class="mul-author">&mdash; John Doe, Expert</p>
+			</blockquote>
+		</article>
+
+		<article>
+			<h3 class="mul-hdr-rule">Footnotes</h3>
+			<p><small class="mul-footnote">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</small></p>
+		</article>
+
+		<article>
+			<h3 class="mul-hdr-rule">Horizonal rules</h3>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<hr />
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+		</article>
+		
+		<article>
+			<h3 class="mul-hdr-rule">Text overflow</h3>
+			<p class="mul-text-overflow">
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			</p>
+		</article>
+
+		<article>
+			<h3 class="mul-hdr-rule">Hyphens</h3>
+			<p class="hyphen-demo">Lorem ipsum dolor sit amet, cons­ectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer­citation ullamco laboris nisi ut aliquip ex ea com­modo consequat. Duis aute irure dolor in repre­henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui of­ficia deserunt mollit anim id est lab­orum.</p>
+		</article>
+
+		<article>
+			<h3 class="mul-hdr-rule">Form Info/Error Text</h3>
+			<form class="mul-form" id="" name="" method="" action="" title="">
+				<fieldset>
+					<ol>
+						<li>
+							<label class="mul-required" for="">Basic Text Input:</label>
+							<input id="" name="" value="" tabindex="" type="text" title="" />
+							<small class="mul-info">This is form info text.</small>
+						</li>
+						<li class="mul-error">
+							<label class="mul-required" for="">Label:</label>
+							<select id="" tabindex="">
+								<option selected="selected" value="Select an item">choose one&hellip;</option>
+								<option>One</option>
+								<option>Two</option>
+								<option>Three</option>
+							</select>
+							<small class="mul-info">This is form error text.</small>
+						</li>
+					</ol>
+				</fieldset>
+			</form>
+		</article>
+
+		<article>
+			<h3 class="mul-hdr-rule">Other markup code</h3>
+			<p>
+				<a href="#" title="link">&lt;a&gt; anchor link</a>
+				<br /> <abbr title="title">&lt;abbr&gt; abbreviation</abbr>
+				<br /> <em>&lt;em&gt; emphasis stress or italic</em>
+				<br /> <strong>&lt;strong&gt; strong importance or bold</strong>
+				<br />			
+				<small>&lt;small&gt; small print, footnotes, or form helper text</small>
+			</p>
+		</article>
+
+		<article>
+			<h3 class="mul-hdr-rule">Western Latin Characters</h3>
+			<p>This is a demo of Western Latin characters to show off the compatibility of the Evolution web font (Proxima Nova) with the type of characters used in common Western European languages such as Spanish, Portuguese, French, German, etc.</p>
+
+			<div class="mul-table-small-mediaquery">
+				<table class="mul-table mul-footable mul-table-borders mul-table-striped mul-table-hover type-table" data-filter="#western-latin-characters-filter" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+					<caption>
+						<div class="col-14 first">
+							&nbsp;
+						</div>
+						<div class="col-10 mul-tbl-data-filter">
+							<input id="western-latin-characters-filter" type="text" tabindex="" title="Type to filter results." placeholder="Filter" />
+						</div>
+					</caption>
+					<thead>
+						<tr>
+							<th class="col-12" scope="col" data-sort-initial="true"><a href="javascript:;">Name</a></th>
+							<th class="col-12" scope="col" data-sort-ignore="true">Glyph</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						{% for item in model.western_latin_characters_data %}
+						<tr>
+							<td>{{ item.character_name }}</td>
+							<td class="type-example">{{ item.character_name_code }}</td>
+						</tr>
+						{% endfor %}
+
+					</tbody>
+				</table>
+			</div>
+
+		</article>
+
+	</div>
+</div>
+
+{% endblock %}

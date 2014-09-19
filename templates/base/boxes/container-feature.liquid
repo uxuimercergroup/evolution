@@ -1,0 +1,106 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+
+		<p class="mul-intro-text">
+			{{ model.IntroCopy }}
+		</p>
+
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		{{ global.ExampleSectionHeader }}
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+<!-- FEATURE CONTAINER - BEGINS -->
+	<div class="col-24 example-min-height">
+
+		<div class="col-18 first">
+		<!-- FEATURE CONTAINER - EXAMPLE - BEGINS -->
+		{% if model.featurecontainermodel == "true" %}
+			{% include "/base/boxes/feature-ctn" %}
+		{% endif %}
+		<!-- FEATURE CONTAINER - EXAMPLE - ENDS -->
+		</div>
+		<div class="col-6"></div>
+
+	</div>
+<!-- FEATURE CONTAINER - ENDS -->
+
+<!-- DETAILS SECTION - BEGINS -->
+	<a name="moreDetails"></a>
+	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">{{ global.AddtionalDetailSectionHeader }}</h4>
+
+	<div class="col-24">
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				{% for item in model.UsageTabContent %}
+					<p>{{ item.p1 }}</p>
+					<p>{{ item.p2 }}</p>
+				{% endfor %}
+			</div>
+			<div id="tabs-2">
+				<h5>Components</h5>
+				<ul>
+					<li>The Feature Container is comprised of the following four components:</li>
+						<ul>
+							<li>Border</li>
+							<li>Header</li>
+							<li>Horizontal Line</li>
+							<li>Content</li>
+						</ul>
+					<li>The border color (#6b90b8) should always be a solid, 1 pixel gray line. </li>
+					<li>The headers for Feature Containers can be designated as either h1, h2, or h3. </li>
+					<li>The Horizontal Line directly under the Feature Container's header can be any color depending on where it is used.</li>
+				</ul>
+
+				<h5>Sizing and Layout</h5>
+				<ul>
+					<li>The content margins inside all Mercer Feature Containers will have 15 pixels of padding all around.</li>
+					<li>The padding inside a Feature Container from the line under the header to the beginning of the actual content is also 15 pixels. </li>
+					<li>Feature Container height and width are variable based on inside content height and width.</li>
+				</ul>
+
+				<h5>Grids</h5>
+				<ul>
+					<li>Feature Containers work within the <a href="/base/grids">Mercer Evolution Grid System</a>.</li>
+					<li>Feature Containers can contain grids inside of them to display and section off data within the container.</li>
+				</ul>
+			</div>
+			<div id="tabs-3">
+				<ul>
+					<li>The Feature Container is designed to work and display the same way across all browsers.</li>
+					<li>Feature Containers are created using HTML tags.</li>
+				</ul>
+			</div>
+			<div id="tabs-4">
+				<p>Examples go here&hellip;</p>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+					{% for item in model.GetCodeTabContent %}
+					<h5 class="mul-hdr-rule">{{ item.tabTitle }}</h5>
+					<p>{{ item.description }}</p>
+					{% endfor %}
+
+					<h5>Example default H1</h5>
+					{{ global.PrettifyStartTag }}{% include "/base/boxes/feature-ctn" %}{{ global.PrettifyEndTag }}
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

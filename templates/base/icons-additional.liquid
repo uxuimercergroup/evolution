@@ -1,0 +1,89 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+<h1 class="mul-hdr-rule">{{ model.title }}</h1>
+
+<p class="mul-intro-text">
+	Icons can come in handy when you want enhance the visual aspect of your application or just simply use a visual instead of plain text. In order for users to recognize an icon's meaning, the meaning must be universal. To keep all mercer sites and applications consistent, we've listed the different Mercer icons used according their respective functions.
+</p>
+
+<p class="mul-intro-text">
+	Want to use an icon not found here? You can work with a Visual Designer to create a new icon that aligns to the Mercer brand and adheres to our visual standards. Contact <strong><a href="mailto:Jeff.Tudor@mercer.com">Jeff Tudor</a></strong> for more information.
+</p>
+
+<article>
+
+	<!-- ICON FONT ICONS - BEGINS -->
+	<script>
+
+		// Toggle large icons
+		function toggleLargeIcons(on) {
+			var obj = document.getElementById('icons-ctn');
+			
+			if (on) {
+				obj.className += ' icons-large-on';
+			} else {
+				obj.className = obj.className.replace(' icons-large-on', '');
+			}
+		}
+		
+	</script>
+
+	<div class="mul-table-small-mediaquery">
+		<table class="mul-table mul-footable mul-table-borders mul-table-striped mul-table-hover" data-filter="#icon-font-filter" id="icons-ctn" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+			<caption>
+				<div class="col-19 first">
+					<form class="mul-form mul-form-inline mul-no-margin-bottom" id="" name="" method="" action="" title="">
+						<fieldset>
+							<ol>
+								<li class="mul-no-margin-bottom">
+									<div class="mul-checkbox mul-no-margin-bottom">
+										<label class="mul-no-margin-bottom" for="large-switch-checkbox">
+											<input id="large-switch-checkbox" type="checkbox" onclick="toggleLargeIcons(this.checked)" title="Show Large Icons" /> Show Large Icons
+										</label>
+									</div>
+								</li>
+							</ol>
+						</fieldset>
+					</form>
+				</div>
+				<div class="col-5 mul-tbl-data-filter">
+					<input id="icon-font-filter" type="text" placeholder="Filter" tabindex="" title="Type to filter results." />
+				</div>
+			</caption>
+			<thead>
+				<tr>
+					<th class="col-4" data-sort-initial="true" scope="col"><a href="javascript:;">Name</a></th>
+					<th class="col-2 mul-align-center" scope="col"><a href="javascript:;">Blue</a></th>
+					<th class="col-2 mul-align-center" scope="col"><a href="javascript:;">Gray</a></th>
+					<th class="col-2 mul-align-center" scope="col"><a href="javascript:;">Disabled</a></th>
+					<th class="col-2 mul-align-center" scope="col"><a href="javascript:;">Reverse</a></th>
+					<th class="col-4 mul-align-center" scope="col"><a href="javascript:;">Specific Use Color</a></th>
+					<th class="col-8" scope="col"><a href="javascript:;">Keywords</a></th>
+				</tr>
+			</thead>
+			<tbody>
+
+				{% for item in model.icons %}
+				<tr>
+					<td>{{ item.properties.name }}</td>
+					<td class="mul-align-center"><i class="mul-icon-site-{{ item.properties.name }}"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span></td>
+					<td class="mul-align-center"><i class="mul-icon-site-{{ item.properties.name }} mul-icon-color-gray-darker"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span></td>
+					<td class="mul-align-center"><i class="mul-icon-site-{{ item.properties.name }} mul-icon-color-disabled"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span></td>
+					<td class="mul-align-center icon-table-cell-reverse-background"><i class="mul-icon-site-{{ item.properties.name }} mul-icon-color-white"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span></td>
+					<td class="mul-align-center">
+						<i class="mul-icon-site-{{ item.properties.name }} mul-icon-color-confirmation mul-icon-position-left"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span>
+						<i class="mul-icon-site-{{ item.properties.name }} mul-icon-color-error mul-icon-position-left"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span>
+						<i class="mul-icon-site-{{ item.properties.name }} mul-icon-color-attention mul-icon-position-left"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span>
+						<i class="mul-icon-site-{{ item.properties.name }} mul-icon-color-info mul-icon-position-left"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span>
+					</td>
+					<td>{{ item.icon.tags | join: ', ' }}</td>
+				</tr>
+				{% endfor %}
+
+			</tbody>
+		</table>
+	</div>
+	<!-- ICON FONT ICONS - ENDS -->
+
+</article>
+{% endblock %}

@@ -1,0 +1,158 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">
+			Loading animation is useful in letting users know that the server is processing the request. It is an animated icon and is displayed in a modal.
+		</p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+<!-- LOADING ANIMATION - BEGINS -->
+	<div class="col-24 example-min-height">
+
+		<div class="col-12 first">
+
+			<div class="mul-box mul-box-rnd mul-padding-bottom example-ctn">
+				<h4 class="mul-hdr-rule">Loading Animation Bar</h4>
+
+				<!-- LOADING ANIMATION - BAR - EXAMPLE - BEGINS -->
+					{% include '/objects/loading-animation-bar' %}
+				<!-- LOADING ANIMATION - BAR - EXAMPLE - ENDS -->
+
+			</div>
+
+		</div>
+
+		<div class="col-12">
+
+			<div class="mul-box mul-box-rnd mul-padding-bottom example-ctn">
+				<h4 class="mul-hdr-rule">Loading Animation Spinner</h4>
+
+				<!-- LOADING ANIMATION - SPINNER - EXAMPLE - BEGINS -->
+					{% include '/objects/loading-animation-spinner' %}
+				<!-- LOADING ANIMATION - SPINNER - EXAMPLE - ENDS -->
+
+			</div>
+
+		</div>
+
+	</div>
+<!-- LOADING ANIMATION - ENDS -->
+
+<!-- DETAILS SECTION - BEGINS -->
+	<a name="moreDetails"></a>
+	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
+
+	<div class="col-24">
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>
+					It's used when an action is happening behind the scenes, and informs the user to wait for a while before a result is return onto the page.
+				</p>
+			</div>
+			<div id="tabs-2">
+			
+				<h5>Cancel Button</h5>
+				<ul>
+					<li>The cancel button is displayed to allow the user to cancel out of the action.</li> 
+					<li>The button should be the secondary class.</li>
+				</ul>
+			</div>
+			<div id="tabs-3">
+				<strong>Cross Browser Compatibility</strong>
+				<p>IE9 doesn't crop background gradients on containers with rounded corners, so we square the corners of every container so it looks just like IE8.</p>
+
+				<h4 class="mul-hdr-rule">Dependencies</h4>
+				<table class="mul-table mul-table-borders" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+					<thead>
+						<tr>
+							<th width="" scope="col">Library</th>
+							<th width="" scope="col">Location or Download</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>jQuery {{ global.jquery_version }}</td>
+							<td>assets/scripts/core/lib/jquery</td>
+						</tr>
+						<tr>
+							<td>jQuery UI {{ global.jquery_ui_version }}</td>
+							<td>assets/scripts/core/lib/jquery</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="tabs-4">
+				<p>{{ model.mobileIntroTabText }}</p>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+					
+
+					<h5>Loading Animation Bar</h5>
+					<pre class="prettyprint linenums"><xmp>{% include '/objects/loading-animation-bar' %}</xmp></pre>
+
+					<h5>Loading Animation Spinner</h5>
+					<pre class="prettyprint linenums"><xmp>{% include '/objects/loading-animation-spinner' %}</xmp></pre>
+
+					<h5 class="mul-hdr-rule">JS</h5>
+					
+					<h5>Loading Animation Bar</h5>
+					<pre class="prettyprint linenums">
+// Loading animation image modal example click event
+var modalDialogLoadingImageExampleClickEvent = function(){
+	jQuery('#js-mul-dialog-loading-example-btn').click(function() {
+		jQuery('#js-mul-dialog-loading').dialog('open');
+	});
+}
+
+// Loading animation image modal
+mulDialogModal("js-mul-dialog-loading",{
+	dialogClass:'mul-dialog mul-dialog-modal mul-dialog-loading no-close-button'
+});
+
+// Loading animation image modal click example event init
+modalDialogLoadingImageExampleClickEvent();
+</pre>
+
+					<h5>Loading Animation Spinner</h5>
+					<pre class="prettyprint linenums">
+// Loading animation icon modal example click event
+var modalDialogLoadingIconExampleClickEvent = function(){
+	jQuery('#js-mul-dialog-loading-icon-example-btn').click(function() {
+		jQuery('#js-mul-dialog-loading-icon').dialog('open');
+	});
+}
+
+// Loading animation icon modal
+mulDialogModal("js-mul-dialog-loading-icon",{
+	dialogClass:'mul-dialog mul-dialog-modal mul-dialog-loading no-close-button'
+});
+
+// Loading animation icon modal example click event init
+modalDialogLoadingIconExampleClickEvent();
+</pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

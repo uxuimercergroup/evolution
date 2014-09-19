@@ -1,0 +1,146 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">
+			The Attention Message container is used when you want to highlight an important message to user. It follows the same structure as the other messaging containers.
+			
+		</p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+
+<!-- ATTENTION MESSAGE - BEGINS -->
+	<div class="col-24 example-min-height">
+
+		<a href="javascript:;" class="mul-float-right" onclick="location.reload();">Refresh</a>
+
+		<!-- ATTENTION MESSAGE CONTAINER - EXAMPLE - BEGINS -->
+			<h4 class="mul-hdr-rule">Static Version</h4>
+			{% include "/base/boxes/attention-ctn-default" %}
+		<!-- ATTENTION MESSAGE CONTAINER - EXAMPLE - ENDS -->
+
+		<!-- ATTENTION MESSAGE CONTAINER WITH CLOSE - EXAMPLE - BEGINS -->
+			<h4 class="mul-hdr-rule">User-Based Close</h4>
+			{% include "/base/boxes/attention-ctn-default-close" %}
+		<!-- ATTENTION MESSAGE CONTAINER WITH CLOSE - EXAMPLE - ENDS -->
+
+	</div>
+<!-- ATTENTION MESSAGE - ENDS -->
+
+<!-- DETAILS SECTION - BEGINS -->
+	<a name="moreDetails"></a>
+	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
+
+	<div class="col-24">
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>The Attention Message container should be displayed when you need to highlight something important to the user or when an important action is necessary.</p>
+				<h5>Common Uses</h5>
+				<ul>
+					<li>Inform the user that they have a task due.</li>
+					<li>Inform the user that a new tax form is now available.</p>
+			</div>
+			<div id="tabs-2">
+				<ul>
+					<li>The container will span the entire width of its parent container and be located immediately below the page title.</li>
+					<li>There should only ever be one Attention Message container on a page at a time.</li>
+					<li>
+						If there are multiple messages that need to get communicated, the page should display a single Attention Message container with multiple messages inside the container.
+					</li>
+					<li>
+						There are two additional types of configurations that should be supported:
+						<ul>
+							<li><strong>Optional Close</strong>
+								<ul>
+									<li>This configuration gives the user the ability to "close" the message container via the "close" icon in the upper right corner. When clicked, the container will dissolve and all content displayed below the container will shift up on the screen.</li>
+								</ul>
+							</li>
+							<li><strong>In Page Display vs On Top of Page Display</strong> - Each message container (Error, Attention, and Confirmation) should have a setting that will determine where the message will display.
+								<ul>
+									<li>The default display will be as an item within the rest of the content within the screen (In Page Display). </li>
+									<li>There is an alternative configuration that allows the message container to display "on top of" the other content on the page. This would be used in cases where it is highly important that the user notice and acknowledge the message. In this case, the container should be centered on the screen, near the top of the browser. </li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						Title
+						<ul>
+							<li>The title should always contain the "orange/yellow exlamation" icon</li>
+							<li>The title should always be "Attention"</li>
+							<li>The title should never be a link</li>
+						</ul>
+					</li>
+
+					<li>
+						Message
+						<ul>
+							<li>The message should be able to support two different formats</li>
+							<li><strong>Paragraph Text</strong> - This can be multiple lines or even multiple paragraphs</li>
+							<li><strong>List Items</strong> - This can be a single bulleted list item or multiple bulleted list items</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="tabs-3">
+				<h5>Cross browser compatibility</h5>
+				<p>IE9 doesn't crop background gradients on containers with rounded corners, so we square the corners of every container so it looks just like IE8.</p>
+
+				<h4 class="mul-hdr-rule">Dependencies</h4>
+				<table class="mul-table mul-table-borders" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+					<thead>
+						<tr>
+							<th width="" scope="col">Library</th>
+							<th width="" scope="col">Location or Download</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>jQuery {{ global.jquery_version }}</td>
+							<td>assets/scripts/core/lib/jquery</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="tabs-4">
+				<ul>
+					<li>In the mobile version of this container the width will shrink to span the width of the parent container.</li>
+					<li>The placement of this container would remain the same as the desktop version.</li>
+					<li>Font size increases for mobile</li>
+				</ul>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+					<p>
+						All <a href="/base/boxes/message-confirmation">confirmation message</a>, <a href="/base/boxes/message-attention">attention message</a> and <a href="/base/boxes/message-error">error message</a> containers start with base box. In this example we are using the following class <code>mul-attention-ctn</code> to give more meaning to a basic box.
+					</p>
+
+					<h5>Static version</h5>
+					<pre class="prettyprint linenums"><xmp>{% include "/base/boxes/attention-ctn-default" %}</xmp></pre>
+
+					<h5>User-based close</h5>
+					<pre class="prettyprint linenums"><xmp>{% include "/base/boxes/attention-ctn-default-close" %}</xmp></pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

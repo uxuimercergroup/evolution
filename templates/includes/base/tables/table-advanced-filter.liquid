@@ -1,0 +1,110 @@
+<!-- ADVANCED FILTER MODAL - BEGINS -->
+<div class="mul-dialog-ctn mul-grid" id="js-mul-advanced-filter-example" title="Advanced Filter: Tasks">
+	<form class="mul-form mul-advanced-filter-form js-mul-advanced-filter-form" name="" method="" action="" title="">
+		<fieldset>
+			<ol>
+				<li class="mul-match-question">
+					<span class="col-2 first">Match</span>
+					<select class="col-4" id="" tabindex="" title="">
+						<option value="">any</option>
+						<option value="">all</option>
+					</select>
+					<span class="col-6 first">of the following rules.</span>
+				</li>
+				<span class="js-mul-advanced-filter-form-rules">
+					<li>
+						<label class="col-5 first mul-required" for="select1">Text Field:</label>
+						<select class="col-5 first" id="select1" tabindex="" title="">
+							<option value="" selected="selected">contains</option>
+							<option value="">is</option>
+							<option value="">starts with</option>
+							<option value="">ends with</option>
+						</select>
+						<input class="col-5" id="" name="" value="" type="text" tabindex="" title="" />
+						<i class="mul-icon-plus-circle mul-icon-color-confirmation mul-icon-position-left js-mul-advanced-filter-add-rule" title="Add"></i>
+					</li>
+				</span>
+				<span class="mul-display-none">
+					<li class="js-mul-advanced-filter-form-rules-template-row">
+						<label class="col-5 first mul-required" for="select2">Text Field:</label>
+						<select class="col-5 first" id="select2" tabindex="" title="">
+							<option value="" selected="selected">contains</option>
+							<option value="">is</option>
+							<option value="">starts with</option>
+							<option value="">ends with</option>
+						</select>
+						<input class="col-5" id="" name="" value="" type="text" tabindex="" title="" />
+						<i class="mul-icon-plus-circle mul-icon-color-confirmation mul-icon-position-left js-mul-advanced-filter-add-rule" title="Add"></i>
+						<i class="mul-icon-minus-circle mul-icon-color-error mul-icon-position-left js-mul-advanced-filter-remove-rule" title="Remove"></i>
+					</li>
+				</span>
+				<li>
+					<label class="col-5 first mul-required" for="select3">Date Field:</label>
+					<select class="col-5 first js-mul-advanced-filter-datepicker-toggle" id="select3" tabindex="" title="">
+						<option value="1" selected="selected">between</option>
+						<option value="2">on or after</option>
+						<option value="3">on or before</option>
+					</select>
+					<div class="col-10 mul-datepicker-ctn mul-datepicker-range js-advanced-filter-mul-datepicker-range">
+						<input class="col-12 first" id="js-mul-datepicker-range-stacked-from" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="From" data-mul-datepicker-message-label="This is a calendar message area for user messages related to dates" />
+						<input class="col-12" id="js-mul-datepicker-range-stacked-to" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="To" data-mul-datepicker-message-label="This is a calendar message area for user messages related to dates" />
+					</div>
+					<span class="mul-display-none js-mul-advanced-filter-single-datepicker">
+						<input class="col-5" id="js-mul-datepicker-example-readonly" name="" value="" type="text" tabindex="" title="Select date." />
+					</span>
+				</li>
+				<li>
+					<label class="col-5 first mul-required" for="select4">Numeric:</label>
+					<select class="col-5 first" id="select4" tabindex="" title="">
+						<option value="" selected="selected">between</option>
+						<option value="">equal to</option>
+						<option value="">equal to or greater than</option>
+						<option value="">equal to or less than</option>
+					</select>
+					<div class="col-10">
+						<input class="col-10 first js-mul-numeric-mask" id="" name="" value="" type="text" tabindex="" title="" />
+						<label class="col-3 mul-nobold">and</label>
+						<input class="col-10 js-mul-numeric-mask" id="" name="" value="" type="text" tabindex="" title="" />
+					</div>
+
+				</li>
+				<li>
+					<label class="col-5 first mul-required">Checkbox:</label>
+					<div class="mul-checkbox">
+						<label for="open" class="mul-form-inline-element">
+							<input id="open" name="" value="" type="checkbox" tabindex="" title="" /> Open
+						</label>
+						<label for="completed" class="mul-form-inline-element">
+							<input id="completed" name="" value="" type="checkbox" tabindex="" title="" /> Completed
+						</label>
+						<label for="escalated" class="mul-form-inline-element">
+							<input id="escalated" name="" value="" type="checkbox" tabindex="" title="" /> Escalated
+						</label>
+						<label for="upcoming" class="mul-form-inline-element">
+							<input id="upcoming" name="" value="" type="checkbox" tabindex="" title="" /> Upcoming
+						</label>
+					</div>
+				</li>
+				<li>
+					<label class="col-5 first mul-required">Radio Button:</label>
+					<div class="mul-radio">
+						<label for="all" class="mul-form-inline-element">
+							<input id="all" name="radiobutton" value="" type="radio" tabindex="" title="" /> All
+						</label>
+						<label for="global" class="mul-form-inline-element">
+							<input id="global" name="radiobutton" value="" type="radio" tabindex="" title="" /> Global
+						</label>
+						<label for="local" class="mul-form-inline-element">
+							<input id="local" name="radiobutton" value="" type="radio" tabindex="" title="" /> Local
+						</label>
+					</div>
+				</li>
+				<li class="mul-form-action">
+					<button class="mul-btn mul-btn-medium mul-btn-secondary mul-btn-first js-mul-dialog-close" id="" name="" type="button" tabindex="" title="Cancel">Cancel</button>
+					<button class="mul-btn mul-btn-medium mul-btn-primary js-mul-dialog-close" id="js-mul-advanced-filter-example-results-btn" name="" value="" type="button" tabindex="" title="Filter">Filter</button>
+				</li>
+			</ol>
+		</fieldset>
+	</form>
+</div>
+<!-- ADVANCED FILTER MODAL - ENDS -->

@@ -1,0 +1,144 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">
+			The Interactive Data Table organizes data on a page or application so it's easy for the user to view and comprehend. It's used along with the Quick Filter so users can syphon data to view exactly what they need. Designers can also opt to combine the Interactive Data Table with the Inline Search Container to allow users to search for the data they want to view.
+		</p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+	<div class="col-24">
+		{% include '/base/tables/table-interactive' %}
+	</div>
+
+<!-- DETAILS SECTION - BEGINS -->
+	<a name="moreDetails"></a>
+	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
+
+	<div class="col-24">
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<p>
+					The Interactive Data Table organizes data on a page or application so it's easy for the user to view and comprehend. It's used along with the Mini Filter so users can syphon data to view exactly what they need. Designers can also opt to combine the Interactive Data Table with the Inline Search Container to allow users to search for the data they want to view.
+				</p>
+			</div>
+			<div id="tabs-2">
+				<ul>
+					<li>
+						The Interactive Data Table works within the Mercer Grid System, which means the sizing is flexible and fluid to adapt to designer's choices, user devices, and varying screen sizes.
+					</li>
+					<li>
+						Only use the Interactive Data Table in larger page/application foundations, such as the Workspace Layout.
+					</li>
+					<li>
+						Don't use the Interactive Data Table in a Sidebar Container or Sidebar Layout, unless you only need to display a small amount of data.
+					</li>
+				</ul>
+
+				<h5>Color</h5>
+				<ul>
+					<li>Coloring for each row in the Interactive Data Table will adhere to the Mercer Color Pallet for all Data Tables.</li>
+					<li>When the user hovers over a specific row, that row will be highlighted in yellow (#FCF8E3).</li>
+				</ul>
+
+				<h5>Width</h5>
+				<ul>
+					<li>Designer can set column width using a helper class. Since the Interactive Data Table functions within the Mercer Grid System, it will automatically adapt and configure itself.</li>
+				</ul>
+				
+				<h5>Row Details</h5>
+				<ul>
+					<li>Padding for Interactive Data Table rows are set to 5 pixels on the top and bottom and 10 pixels to the left and right.</li>
+					<li>Line height of Interactive Data Table rows are 13 pixels to keep text consistent with Mercer branding.</li>
+					<li>Some rows can be assigned a Right Align Helper Class to alter rows that might not have the same amount of content fields as other rows, such as the Subtotal and Total rows.</li>
+					<li>Text will wrap in basic rows to adapt to longer content, but the label rows will stay in the same position, which is vertically aligned to the top of the row.</li>
+				</ul>
+
+				<h5>Filters</h5>
+				<ul>
+					<li>The Interactive Data Table defaults data to an ascending order, but users can change the order of data to descending and vice versa by clicking on the header name.</li>
+					<li>Column headers will be links that user can click on to sort data from ascending to descending and vice versa.</li>
+					<li>The designer can determine what filters the Interactive Data Table will have, like sort by date, alphabetical order, assignment, etc.</li>
+					<li>The Interactive Data Table will contain a "Filter" Input Box located at the top right of the table.</li>
+					<li>Users can change the order of the columns by clicking on the appropriate "Filter" link located on the top left of the Interactive Data Table.</li>
+				</ul>
+			</div>
+			<div id="tabs-3">
+				<h4 class="mul-hdr-rule">Dependencies</h4>
+				<table class="mul-table mul-table-borders" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+					<thead>
+						<tr>
+							<th width="" scope="col">Library</th>
+							<th width="" scope="col">Location or Download</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>jQuery {{ global.jquery_version }}</td>
+							<td>assets/scripts/core/lib/jquery</td>
+						</tr>
+						<tr>
+							<td>FooTables 2.0</td>
+							<td>assets/scripts/core/lib/jquery/plugins</td>
+						</tr>
+						<tr>
+							<td>FooTables 2.0 - Sorting Plugin</td>
+							<td>assets/scripts/core/lib/jquery/plugins</td>
+						</tr>
+						<tr>
+							<td>FooTables 2.0 - Filter Plugin</td>
+							<td>assets/scripts/core/lib/jquery/plugins</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="tabs-4">
+				<p>
+					When static and interactive data tables are viewed on mobile/tablet devices, the table will remain unchanged and displayed as seen on the desktop. When the user touches the screen (or swipes to the left) a scroll bar will appear which allows them to view the entire data table. They are then able to swipe right and left to view the contents. The Quick Filter appears at the top of the table and enables users to quickly find and select from a pre-populated list of values as they type.
+				</p>
+			</div>
+			<div id="tabs-5">
+
+				<div class="mul-box mul-box-rnd mul-attention-ctn">
+					<div class="mul-box-hdr">
+						<h6 class="mul-message-hdr">
+							<i class="mul-icon-warning mul-icon-size-small mul-icon-color-attention mul-icon-position-left"></i>Attention
+						</h6>
+					</div>
+					<div class="box-bdy">
+						<p>Striped tables are styled via the :nth-child CSS selector, which is not available in Internet Explorer 8.</p>
+					</div>
+				</div>
+
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+					<p>Below is the interactive table you get with the following effects by default:</p>
+					<ul>
+						<li>Striped rows, Bordered table, Hover rows, Sorting on the columns, Client side table filtering</li>
+					</ul>
+
+					<pre class="prettyprint linenums"><xmp>{% include '/base/tables/table-interactive' %}</xmp></pre>
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}

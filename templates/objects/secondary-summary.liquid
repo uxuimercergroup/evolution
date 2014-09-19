@@ -1,0 +1,77 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="col-24">
+		<h1>{{ model.title }}</h1>
+		<p class="mul-intro-text">
+			{{ model.IntroCopy }}
+			
+		</p>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="col-24">
+
+	<h3 class="mul-hdr-dbl-rule">
+		Example
+		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
+	</h3>
+
+<!-- SECONDARY SUMMARY CONATINER EXAMPLE - BEGINS -->
+	<div class="col-24 example-min-height">
+		<h5>Default Example</h5>
+		{% include '/objects/secondary-summary-ctn' %}
+
+		<h5>Example With Icons</h5>
+		{% include '/objects/secondary-summary-icons-ctn' %}
+	</div>
+<!-- SECONDARY SUMMARY CONATINER EXAMPLE - ENDS -->
+
+<!-- DETAILS SECTION - BEGINS -->
+	<div class="col-24">
+		<a name="moreDetails"></a>
+		<h4 class="mul-hdr-dbl-rule addtional-detail-hdr">Additional Details</h4>
+		
+
+		<div class="js-mul-tabs-example mul-tabs">
+			{% include "page-tabs" %}
+			<div id="tabs-1">
+				<ul>
+					<li>Number of sub-sections can be a variable</li>
+					<li>Each section should be same size</li>
+					<li>Titles can wrap to second link</li>
+					<li>Each section has rollover color</li>
+					<li>Red to indicate Attention Needed</li>
+					<li>Yellow is rollover color</li>
+					<li>Each subsection can be a link to more details or just a number</li>
+				</ul>
+			</div>
+			<div id="tabs-2">
+				<p>Functional details go here&hellip;</p>
+			</div>
+			<div id="tabs-3">
+				<p>Technical details go here&hellip;</p>
+			</div>
+			<div id="tabs-4">
+				<p>Examples go here&hellip;</p>
+			</div>
+			<div id="tabs-5">
+			<!-- GET CODE - BEGINS -->
+				<section class="col-24">
+
+					<h5 class="mul-hdr-rule">HTML</h5>
+					
+
+					<h5>Default Example</h5>
+					{{ global.PrettifyStartTag }}{% include '/objects/secondary-summary-icons-ctn' %}{{ global.PrettifyEndTag }}
+
+				</section>
+			<!-- GET CODE - ENDS -->
+			</div>
+		</div>
+	</div>
+<!-- DETAILS SECTION - ENDS -->
+
+</section>
+{% endblock %}
