@@ -1,0 +1,112 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.4 - Core Profile Containers Module Partial
+// DATE - April 4, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+@if $use-profile-containers == true{
+
+	.mul-user-profile > .mul-box-hdr,
+	.mul-client-profile-inactive > .mul-box-hdr,
+	.mul-client-profile-active > .mul-box-hdr,
+	.mul-client-profile-prospective > .mul-box-hdr,
+	.mul-product-profile > .mul-box-hdr,
+	.mul-plan-profile > .mul-box-hdr,
+	.mul-location-profile > .mul-box-hdr
+								{
+								color: $profileContainerHdrColor;
+								margin-bottom: 0;
+			.mul-profile-icon		{
+									float: left;
+									margin-right: 10px;
+									}
+			.mul-hdr-rule			{
+									@include text-overflow;
+									font-size: $profileContainerHeaderFontSize;
+									line-height: $profileContainerHeaderLineHeight;
+									border-bottom: 0;
+									color: $profileContainerHdrColor;
+									padding: 0;
+									}
+			.mul-secondary-hdr		{
+									@include text-overflow;
+									color: $profileContainerSecondaryHdrColor;
+									}
+			
+			.mul-data-list-ctn		{
+									font-size: $profileContainerDataListFontSize;
+									margin-bottom: 0;
+				li						{
+										line-height: $profileContainerDataListLineHeight;
+					.mul-data-list-label	{color: $profileContainerDataListLabelFontColor;}
+										}
+									}
+								}
+
+	.mul-user-profile,
+	.mul-client-profile-inactive,
+	.mul-client-profile-active,
+	.mul-client-profile-prospective,
+	.mul-product-profile,
+	.mul-plan-profile,
+	.mul-location-profile
+								{
+		.mul-box-bdy				{padding-top: $basePadding;}
+								}
+
+	// CLIENT CONTAINER HELPERS
+	.mul-box-adv.mul-user-profile > .mul-box-hdr 
+								{background-color: $profileContainerUserHdrBackgroundColor;}
+
+	.mul-box-adv.mul-client-profile-inactive > .mul-box-hdr
+								{background-color: $profileContainerClientInactiveHdrBackgroundColor;}
+
+	.mul-box-adv.mul-client-profile-active > .mul-box-hdr
+								{background-color: $profileContainerClientActiveHdrBackgroundColor;}
+
+	.mul-box-adv.mul-client-profile-prospective > .mul-box-hdr
+								{background-color: $profileContainerClientProspectiveHdrBackgroundColor;}
+
+	.mul-box-adv.mul-product-profile > .mul-box-hdr
+								{background-color: $profileContainerProductHdrBackgroundColor;}
+
+	.mul-box-adv.mul-plan-profile > .mul-box-hdr
+								{background-color: $profileContainerPlanHdrBackgroundColor;}
+
+	.mul-box-adv.mul-location-profile > .mul-box-hdr
+								{background-color: $profileContainerLocationPlanHdrBackgroundColor;}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+		
+		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+			.mul-user-profile > .mul-box-hdr,
+			.mul-client-profile-inactive > .mul-box-hdr,
+			.mul-client-profile-active > .mul-box-hdr,
+			.mul-client-profile-prospective > .mul-box-hdr,
+			.mul-product-profile > .mul-box-hdr,
+			.mul-plan-profile > .mul-box-hdr,
+			.mul-location-profile > .mul-box-hdr
+								{
+					.mul-hdr-rule	{
+									font-size: $profileContainerHeaderFontSizeLargeBreakpoint;
+									line-height: $profileContainerHeaderLineHeightLargeBreakpoint;
+									}
+
+					.mul-data-list-ctn
+									{
+									font-size: $profileContainerDataListFontSizeLargeBreakpoint;
+						li				{
+										line-height: $profileContainerDataListLineHeightLargeBreakpoint;
+										}
+									}
+								}
+
+		}
+		
+	}// endif
+
+}//endif

@@ -1,0 +1,53 @@
+<header role="banner" class="mul-masthead">
+
+	<!-- MASTHEAD - BEGINS -->
+	<div class="mul-masthead-adjust">
+		<div class="mul-masthead-content-ctn">
+
+			<!-- MASTHEAD LOGO - BEGINS -->
+			<div class="col-18 first">
+				<h1 class="mul-logo">
+					<a href="index">MUL <span>BOILERPLATE</span></a>
+				</h1>
+			</div>
+			<!-- MASTHEAD LOGO - ENDS -->
+
+			{% if global.user_profile == "simple" %}
+
+				<!-- MASTHEAD PROFILE SIMPLE - BEGINS -->
+				{% include "/modules/masthead-profile-simple" %}
+				<!-- MASTHEAD PROFILE SIMPLE - ENDS -->
+
+			{% elseif global.user_profile == "menu"  %}
+
+				<!-- MASTHEAD PROFILE MENU - BEGINS -->
+				{% include "/modules/masthead-profile-menu" %}
+				<!-- MASTHEAD PROFILE MENU - ENDS -->
+
+			{% else %}
+
+			{% endif %}
+			
+		</div>
+	</div>
+	<!-- MASTHEAD - ENDS -->
+
+	<!-- MASTHEAD NAVBAR - BEGINS -->
+	<div class="mul-masthead-navbar-ctn">
+		<div class="mul-masthead-adjust">
+
+			<!-- NAVBAR - BEGINS -->
+			<nav role="navigation" class="mul-navbar">
+				<ul class="mul-horizontal-list">
+					<li><a class="mul-first-child {% if mixture.url == "home" %}mul-navbar-item-active{% endif %}" href="home">Home</a></li>
+					<li><a {% if mixture.url == "subpage-1" %}class="mul-navbar-item-active"{% endif %} href="#">Subpage 1</a></li>
+					<li><a {% if mixture.url == "subpage-2" %}class="mul-navbar-item-active"{% endif %} href="#">Subpage 2</a></li>
+				</ul>
+			</nav>
+			<!-- NAVBAR - ENDS -->
+
+		</div>
+	</div>
+	<!-- MASTHEAD NAVBAR - BEGINS -->
+
+</header>

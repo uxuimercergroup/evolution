@@ -1,0 +1,7 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+	<h1 class="mul-hdr-rule">{{ model.title }}</h1>
+	{{ 20 | lorem_ipsum: 'p' }}
+	
+{% endblock %}

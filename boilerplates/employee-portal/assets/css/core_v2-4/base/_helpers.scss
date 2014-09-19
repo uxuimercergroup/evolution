@@ -1,0 +1,309 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.4 - Base Helpers Partial
+// DATE - April 4, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+//--- TYPE HELPERS --------------------------------------------------------------------------
+
+// TEXT OVERFLOW
+.mul-text-overflow						{@include text-overflow;}
+
+// FOOTNOTES
+.mul-footnote							{color: $footnoteFontColor;}
+
+// NO BOLD STYLE
+.mul-nobold								{font-family: $proximaNovaRegularFamily;}
+
+// BOLD STYLE
+.mul-bold								{font-family: $proximaNovaSemiBoldFamily;}
+
+// NO BULLETED LISTS
+.mul-no-bullets							{
+										list-style: none;
+										margin-left: 0;
+										}
+
+
+//--- PAGE ELEMENT HELPERS ------------------------------------------------------------------
+
+// BASIC IMAGE STYLES
+img										{
+										max-width: 100%;
+										height: auto;
+
+	&.mul-image-left						{
+											float: left;
+											margin-top: 5px;
+											margin-right: 20px;
+											}
+	&.mul-image-right						{
+											float: right;
+											margin-top: 5px;
+											margin-left: 20px;
+											}
+										}
+
+// KEYLINES
+
+// Use on elememts which need a keyline on the right
+.mul-keyline-right						{
+										padding-right: 20px;
+										border-right:1px solid $keylineRightBorderRightColor;
+	img										{margin-top:5px;}
+										}
+
+// Use on elements which need a keyline on the left
+.mul-keyline-left						{
+										padding-left: 20px;
+										border-left: 1px solid $keylineLeftBorderLeftColor;
+	img										{margin-top: 5px;}
+										}
+
+// Removes border on last keyline right
+.mul-keyline-right.last					{border-right: 0;}
+
+// Removes border and padding on first keyline left, make sure to add class of first
+.mul-keyline-left.first					{
+										border-left: 0;
+										padding-left: 0;
+										}
+
+// KEYLINE MEDIA QUERIES
+
+// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
+@if $use-small-mediaquery == true {
+	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+		
+		// KEYLINES
+		.mul-keyline-right,
+		.mul-keyline-left					{
+											padding-right:0;
+											padding-left:0;
+											border-right:0;
+											border-left:0;
+			img									{margin-top:0;}
+											}
+
+	}
+}
+
+
+//--- LAYOUT HELPERS ------------------------------------------------------------------------
+
+// CLEAR FIX
+.mul-clearfix							{@include clearfix;}
+
+// ABSOLUTE CENTER
+// This will center an element horizontally and vertically
+.mul-align-absolute-center				{
+										position: relative;
+	.mul-align-absolute-center-element		{
+											margin: auto;
+											position: absolute;
+											top: 0;
+											left: 0;
+											bottom: 0;
+											right: 0;
+											}
+										}
+
+// LEFT AND RIGHT ALIGN TEXT
+.mul-align-center						{text-align: center !important;}
+.mul-align-left							{text-align: left !important;}
+.mul-align-right						{text-align: right !important;}
+
+
+// HORIZONTAL CENTERING FOR BLOCK ELEMENTS
+// Apply class to element that needs to be centered horizontally
+.mul-center-block						{
+										float: none !important;
+										display: block !important;
+										margin-right: auto !important;
+										margin-left: auto  !important;
+										}
+.mul-float-left							{float: left !important;}
+.mul-float-right						{float: right !important;}
+
+// HIDE ELEMENTS
+.mul-display-none						{display: none;}
+
+// WHITE SPACE NO WRAP
+.mul-nowrap								{white-space: nowrap !important;}
+
+
+// MARGIN ENABLERS/DISABLERS
+
+// ADD MARGIN
+.mul-margin-top							{margin-top: $baseMargin !important;}
+.mul-margin-right						{margin-right: $baseMargin !important;}
+.mul-margin-bottom						{margin-bottom: $baseMargin !important;}
+.mul-margin-left						{margin-left: $baseMargin !important;}
+
+// SUBTRACT MARGIN
+.mul-no-margin							{margin: 0 !important;}
+.mul-no-margin-top						{margin-top: 0 !important;}
+.mul-no-margin-right					{margin-right: 0 !important;}
+.mul-no-margin-bottom					{margin-bottom: 0 !important;}
+.mul-no-margin-left						{margin-left: 0 !important;}
+
+// PADDING ENABLERS/DISABLERS
+
+// ADD PADDING
+.mul-padding-top						{padding-top: $basePadding !important;}
+.mul-padding-right						{padding-right: $basePadding !important;}
+.mul-padding-bottom						{padding-bottom: $basePadding !important;}
+.mul-padding-left						{padding-left: $basePadding !important;}
+
+// SUBTRACT PADDING
+.mul-no-padding							{padding:0 !important;}
+.mul-no-padding-top						{padding-top: 0 !important;}
+.mul-no-padding-right					{padding-right: 0 !important;}
+.mul-no-padding-bottom					{padding-bottom: 0 !important;}
+.mul-no-padding-left					{padding-left: 0 !important;}
+
+// TABLE COLUMN WIDTHS ADJUSTS
+.mul-tbl-column-25						{width: #{tableColWidth(25)};}
+.mul-tbl-column-33						{width: #{tableColWidth(33.3)};}
+.mul-tbl-column-16						{width: #{tableColWidth(16.6)};}
+
+
+//--- RESPONSIVE HELPERS -------------------------------------------------------------------
+
+// BREAKPOINTS
+// small media query = phones
+// medium media query = tablets
+// large media query = desktop
+
+
+// IE10 Metro responsive
+// Required for Windows 8 Metro split-screen snapping with IE10
+// Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+@-ms-viewport 							{width:device-width;}
+
+// IE10 on Windows Phone 8
+// IE10 on WP8 doesn't report CSS pixels, but actual device pixels. In
+// other words, say on a Lumia, you'll get 768px as the device width,
+// meaning users will see the tablet styles and not phone styles.
+//
+// Alternatively you can override this with JS (see source below), but
+// we won't be doing that here given our limited scope.
+//
+// Source: http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
+@media screen and (max-width: 400px) 	{
+	@-ms-viewport 							{width: 320px;}
+										}
+
+// MEDIA QUERY VISIBILITY HELPERS
+
+// VISIBLE HELPERS
+
+// Small media query
+@include responsive-hide(".mul-visible-small-mediaquery");
+@if $use-small-mediaquery == true {
+	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+		@include responsive-show(".mul-visible-small-mediaquery");
+	}
+}
+@if $use-medium-mediaquery == true {
+	@include media-query(screen, both, $mediumMediaQueryBreakpointMin, $mediumMediaQueryBreakpointMax) {
+		@include responsive-show('.mul-visible-small-mediaquery.mul-visible-medium-mediaquery');
+	}
+}
+@if $use-large-mediaquery == true {
+	@include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
+		@include responsive-show('.mul-visible-small-mediaquery.mul-visible-large-mediaquery');
+	}
+}
+
+// Medium media query
+@include responsive-hide(".mul-visible-medium-mediaquery");
+@if $use-small-mediaquery == true {
+	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+		@include responsive-show(".mul-visible-medium-mediaquery.mul-visible-small-mediaquery");
+	}
+}
+@if $use-medium-mediaquery == true {
+	@include media-query(screen, both, $mediumMediaQueryBreakpointMin, $mediumMediaQueryBreakpointMax) {
+		@include responsive-show('.mul-visible-medium-mediaquery');
+	}
+}
+@if $use-large-mediaquery == true {
+	@include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
+		@include responsive-show('.mul-visible-medium-mediaquery.mul-visible-large-mediaquery');
+	}
+}
+
+// Large media query
+@include responsive-hide(".mul-visible-large-mediaquery");
+@if $use-small-mediaquery == true {
+	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+		@include responsive-show(".mul-visible-large-mediaquery.mul-visible-small-mediaquery");
+	}
+}
+@if $use-medium-mediaquery == true {
+	@include media-query(screen, both, $mediumMediaQueryBreakpointMin, $mediumMediaQueryBreakpointMax) {
+		@include responsive-show('.mul-visible-large-mediaquery.mul-visible-medium-mediaquery');
+	}
+}
+@if $use-large-mediaquery == true {
+	@include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
+		@include responsive-show('.mul-visible-large-mediaquery');
+	}
+}
+
+// HIDDEN HELPERS
+
+// Small media query
+@include responsive-show(".mul-hidden-small-mediaquery");
+@if $use-small-mediaquery == true {
+	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+		@include responsive-hide(".mul-hidden-small-mediaquery");
+	}
+}
+@if $use-medium-mediaquery == true {
+	@include media-query(screen, both, $mediumMediaQueryBreakpointMin, $mediumMediaQueryBreakpointMax) {
+		@include responsive-hide('.mul-hidden-small-mediaquery.mul-hidden-medium-mediaquery');
+	}
+}
+@if $use-large-mediaquery == true {
+	@include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
+		@include responsive-hide('.mul-hidden-small-mediaquery.mul-hidden-large-mediaquery');
+	}
+}
+
+// Medium media query
+@include responsive-show(".mul-hidden-medium-mediaquery");
+@if $use-small-mediaquery == true {
+	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+		@include responsive-hide(".mul-hidden-medium-mediaquery.mul-hidden-small-mediaquery");
+	}
+}
+@if $use-medium-mediaquery == true {
+	@include media-query(screen, both, $mediumMediaQueryBreakpointMin, $mediumMediaQueryBreakpointMax) {
+		@include responsive-hide('.mul-hidden-medium-mediaquery');
+	}
+}
+@if $use-large-mediaquery == true {
+	@include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
+		@include responsive-hide('.mul-hidden-medium-mediaquery.mul-hidden-large-mediaquery');
+	}
+}
+
+// Large media query
+@include responsive-show(".mul-hidden-large-mediaquery");
+@if $use-small-mediaquery == true {
+	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+		@include responsive-hide(".mul-hidden-large-mediaquery.mul-hidden-small-mediaquery");
+	}
+}
+@if $use-medium-mediaquery == true {
+	@include media-query(screen, both, $mediumMediaQueryBreakpointMin, $mediumMediaQueryBreakpointMax) {
+		@include responsive-hide('.mul-hidden-large-mediaquery.mul-hidden-medium-mediaquery');
+	}
+}
+@if $use-large-mediaquery == true {
+	@include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
+		@include responsive-hide('.mul-hidden-large-mediaquery');
+	}
+}

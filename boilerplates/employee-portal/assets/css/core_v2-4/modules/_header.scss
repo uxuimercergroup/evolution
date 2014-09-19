@@ -1,0 +1,543 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.4 - Core Page Header Module Partial
+// DATE - April 4, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+@if $use-header == true{
+
+	// HEADER MASTHEAD
+	.mul-masthead							{
+											@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
+											width: 100%;
+											position: static;
+											z-index: $zindexHeader;
+											margin-bottom: $mastheadMarginBottom;
+		.mul-masthead-adjust					{
+			.mul-masthead-content-ctn				{
+													padding:0 $gridSiteGutterPadding;
+													height: $mastheadContentHeight;
+
+				// HEADER MASTHEAD LOGO
+				.mul-logo								{
+														font-size: $mastheadLogoFontSize;
+														line-height: $mastheadLogoLineHeight;
+														margin-bottom: 0;
+														padding: 0;
+					a										{
+															@include href-link($mastheadLogoLinkColor, none);
+															font-weight: $mastheadLogoFontWeight;
+															white-space: nowrap;
+															}
+					span									{font-family: $proximaNovaThinStack;}
+														}
+
+													}
+												}
+											}
+
+	// HEADER MASTHEAD NAVBAR
+	.mul-masthead-navbar-ctn				{
+											@include background-gradient($navBackgroundStartColor, $navBackgroundEndColor);
+											border-bottom: 1px solid $navBorderColor;
+		.mul-navbar								{
+			.mul-horizontal-list					{
+													border-bottom: 0;
+													}
+												}
+											}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+		
+		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+			// HEADER MASTHEAD
+			.mul-masthead					{
+											margin-bottom: $mastheadMarginBottomLargeBreakpoint;
+
+				.mul-masthead-adjust			{
+												padding:0 $gridSiteGutterPadding;
+					.mul-masthead-content-ctn		{
+													padding: 0;
+													height: $mastheadContentHeightLargeBreakpoint;
+						
+						// HEADER MASTHEAD LOGO
+						.mul-logo						{
+														font-size: $mastheadLogoFontSizeLargeBreakpoint;
+														line-height: $mastheadLogoLineHeightLargeBreakpoint;
+														}
+
+						// HEADER MASTHEAD PROFILE MENU
+						.mul-profile-menu-ctn			{		
+														@include background-gradient($mastheadProfileMenuBackgroundStartColor,$mastheadProfileMenuBackgroundEndColor);
+														cursor: pointer;
+														height: $mastheadContentHeightLargeBreakpoint;
+														position: relative;
+														right: -1px;
+							.mul-profile-menu-user-info-ctn	{
+															border: 1px solid $mastheadProfileMenuBorderColor;
+															padding: 0;
+								.mul-profile-menu-user-info		{
+																padding: 5px 0;
+																height: 50px;
+									.mul-profile-menu-icon			{
+																	height: 40px;
+																	width: 26px;
+																	float: left;
+										&:before						{
+																		color: $mastheadProfileMenuIconColor;
+																		font-size: 20px;
+																		position: relative;
+																		left: 2px;
+																		}
+																	}
+									.mul-icon-arrow-right2:before	{top: 2px;}
+									.mul-icon-arrow-down2			{
+																	display: none;
+										&:before						{top: -1px;}
+																	}
+									dl								{
+																	position: relative;
+																	top: 4px;
+																	margin: 0;
+																	color: $mastheadProfileMenuTextColor;
+																	font-size: 12px;
+										dt, dd							{
+																		@include text-overflow;
+																		margin: 0;
+																		line-height: 16px;
+																		}
+																	}
+																}
+								.mul-profile-menu-user-avatar	{
+																padding: 5px;
+																height: 50px;
+									.mul-icon-user:before			{
+																	position: relative;
+																	top: 2px;
+																	color: $mastheadProfileMenuAvatarIconColor;
+																	}
+																}
+															}
+							.mul-profile-menu				{
+															@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+															@include box-shadow(0, 2px, 2px, $mastheadProfileMenuShadowColor);
+															display: none;
+															position: absolute;
+															top: 51px;
+															right: 0;
+															padding: 0;
+															z-index: $zindexMastheadProfileMenu;
+															background-color: $mastheadProfileMenuBackgroundEndColor;
+								.mul-vertical-list				{
+									li								{
+																	margin-bottom: 0;
+										a								{
+																		@include href-link($mastheadProfileMenuTextColor, none);
+																		display: block;
+																		font-size: $mastheadProfileMenuFontSize;
+																		padding: 6px 20px 6px 27px;
+											&:hover							{background-color: $mastheadProfileMenuHoverColor;}
+																		}
+
+										.last-child						{
+																		padding-bottom: 7px;
+											&:hover							{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+																		}
+																	}
+																}
+															}
+														}
+
+						// HEADER MASTHEAD PROFILE SIMPLE
+						.mul-profile-simple-ctn			{
+														padding: 15px 5px 15px 10px;
+														color: $mastheadProfileSimpleTextColor;
+														font-size: 12px;
+							a								{@include href-link($mastheadProfileSimpleTextColor, none);}
+							.mul-horizontal-list			{
+								li								{margin: 0;}
+								.mul-profile-simple-user-name	{
+																@include text-overflow;
+																font-family: $proximaNovaSemiBoldStack;
+																border-right: 1px solid $mastheadProfileSimpleListBorderColor;
+																padding-right: 8px;
+																text-align: right;
+																}
+								.mul-profile-simple-logout-link	{
+																white-space: nowrap;
+																padding-left: 8px;
+																}
+															}
+														}
+													}
+												}
+											}
+
+			// HEADER IE8 FIXES
+	
+			.ie8							{
+
+				// HEADER MASTHEAD
+				.mul-masthead					{
+					.mul-masthead-adjust			{
+
+						// HEADER MASTHEAD PROFILE MENU
+						.mul-masthead-content-ctn		{
+							.mul-profile-menu-ctn			{height: 53px;}
+														}
+													}
+												}
+											}
+
+			// HEADER IE8+9 FIXES
+
+			.ie8,
+			.ie9							{
+				
+				// HEADER MASTHEAD
+				.mul-masthead					{
+					.mul-masthead-adjust			{
+
+						// HEADER MASTHEAD PROFILE MENU
+						.mul-profile-menu-ctn			{
+							.mul-profile-menu-user-info-ctn	{
+								.mul-profile-menu-user-info		{
+									dl								{top: 2px;}
+																}
+															}
+														}
+													}
+												}
+											}
+
+			// HEADER IE9 FIXES
+			.ie9							{
+				
+				// HEADER MASTHEAD
+				.mul-masthead					{
+					.mul-masthead-adjust			{
+
+						// HEADER MASTHEAD PROFILE MENU
+						.mul-masthead-content-ctn		{
+							.mul-profile-menu-ctn			{
+								.mul-profile-menu				{
+																border-radius: $baseBorderRadiusIE;
+									.mul-vertical-list				{
+										li								{
+											.last-child						{
+												&:hover							{border-radius: $baseBorderRadiusIE;}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+
+		}
+		
+	}// endif
+
+}// endif
+
+
+@if $use-mega-menu-header == true{
+
+	// MEGA MENU HEADER
+	.mul-mega-menu-masthead					{
+		.mul-masthead-adjust					{
+			.mul-masthead-content-ctn				{
+				.mul-corp-logo							{
+														margin-top: 11px;
+														text-align: right;
+														}
+													}
+												}
+		.mul-masthead-navbar-ctn				{
+												@include box-shadow(0, 0, 0, $transparent);
+			.mul-masthead-adjust					{
+				.mul-mega-menu-navbar					{
+					a										{text-decoration: none;}
+					.mul-mega-menu-item						{
+															@include border-radius($megaMenuItemBorderRadius);
+															background-color: $megaMenuItemBackgroundColor;
+															color: $megaMenuItemColor;
+															display: inline-block;
+															margin: $megaMenuItemMargin;
+															outline: 0;
+															padding: $megaMenuItemPadding;
+															position: relative;
+						[class*="mul-icon"]						{
+																color: $megaMenuItemColor;
+																margin-right: 0;
+																}
+															}
+
+					.mul-mega-menu-item-expand				{
+															@include border-radius(4px 4px 0 0);
+															height: 37px;
+															margin-bottom: 0;
+															}
+
+					.mul-util-navbar						{
+															text-align: right;
+															padding-right: $megaMenuItemSpacing; 
+						.mul-mega-menu-item						{
+																float: right;
+																margin-left: $megaMenuItemSpacing;
+																}
+
+						.mul-horizontal-list					{margin: $megaMenuUtilNavbarSpacing;}
+															}
+
+														}
+													}
+												}
+		.mul-header-mega-menu-ctn				{
+												background-color: $megaMenuContainerBackgroundColor;
+												border-top: 5px solid $megaMenuContainerBorderTopColor;
+												border-bottom: 5px solid $megaMenuContainerBorderBottomColor;
+												margin-top: -2px;
+			.mul-masthead-adjust					{
+				.mul-mega-menu-content					{
+														padding: $megaMenuContainerContentPadding;
+
+					// SPOTLIGHT SECTION 
+					.mul-header-menu-spotlight				{
+															@include border-radius($megaMenuContainerSpotlightBorderRadius);
+															background-color: $megaMenuContainerSpotlightBackgroundColor;
+															color: $megaMenuContainerSpotlightTextColor;
+															padding: $megaMenuContainerSpotlightPadding;
+															margin-bottom: $baseMargin;
+						.mul-horizontal-list					{
+							li										{
+								a										{
+																		display: block;
+																		padding: 5px;
+																		@include href-link($megaMenuContainerSpotlightTextColor, none);
+									[class*="mul-icon"]						{color: $megaMenuContainerSpotlightTextColor;}
+																		}
+																	}
+																}
+															}
+
+					// MAIN MENU
+					.mul-menu-ctn							{
+															padding-left: 10px;
+															margin-top: 0;
+															margin-bottom: $baseMargin;
+						.mul-hdr-rule							{
+																color: $megaMenuContainerMenuContainerTextColor;
+																margin-bottom: 0;
+																}
+						dd										{
+																margin-left: 0;
+																margin-bottom: 5px;
+							a										{
+																	@include href-link($megaMenuContainerMenuContainerTextColor, none);
+																	display: block;
+																	outline: 0;
+								&:hover									{@include href-link-hover(underline);}
+																	}
+																}
+															}
+					.mul-last-child							{margin-bottom: 15px;}
+														}
+
+				.mul-mega-menu-search-content			{
+														float: right;
+														position: relative;
+														width: 100%;
+
+					// SEARCH BUTTON
+					.mul-mega-menu-search-btn				{
+															position: relative;
+															top: -1px;
+															border: 0;
+															padding: 5px 9px;
+															margin-bottom: 0;
+															min-width: 100%;
+						[class*="mul-icon"]						{
+																top: 1px;
+																color: $megaMenuSearchBoxIconColor;
+																}
+															}
+														}
+
+													}
+												}
+											}
+
+	// MEGA MENU HEADER IE8+9 FIXES
+
+	.ie8,
+	.ie9									{
+
+		// MEGA MENU HEADER
+		.mul-mega-menu-masthead					{
+			.mul-masthead-navbar-ctn				{
+				.mul-masthead-adjust					{
+					.mul-mega-menu-navbar					{
+						.mul-mega-menu-item						{border-radius:$baseBorderRadiusIE;}
+						.mul-mega-menu-item-expand				{border-radius:$baseBorderRadiusIE;}
+															}
+														}
+													}
+
+			.mul-header-mega-menu-ctn				{
+													position: relative;
+													z-index: 1;
+				.mul-masthead-adjust					{
+					.mul-mega-menu-content					{
+						.mul-header-menu-spotlight				{border-radius:$baseBorderRadiusIE;}
+															}
+														}
+													}
+												}
+											}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+		
+		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+			// MEGA MENU HEADER
+			.mul-mega-menu-masthead			{
+				.mul-masthead-navbar-ctn		{
+					.mul-masthead-adjust			{
+						.mul-mega-menu-navbar			{
+							.mul-mega-menu-item				{margin-left: 0;}
+
+							.mul-util-navbar				{
+															padding-right: 0;
+								.mul-mega-menu-item				{margin-right: 0;}
+								.mul-horizontal-list			{
+									li								{
+																	border-left-color: $megaMenuUtilityMenuPipedColor;
+										[class*="mul-icon"]				{
+																		margin-right: 0; 
+																		top: 3px;
+																		}
+										&:last-child					{padding-right: 6px;}
+																	}
+																}
+
+								.mul-utility-subnav-ctn			{
+																position: relative;
+									.mul-utility-subnav				{
+																	@include border-radius($megaMenuUtilityMenuBorderRadius);
+																	background-color: $megaMenuUtilityMenuBackgroundColor;
+																	border: 1px solid $megaMenuUtilityMenuBorderColor;
+																	border-top: 0;
+																	position: absolute;
+																	right: -10px;
+																	top: 25px;
+																	z-index: $zindexMegaMenuUtilityMenu;
+																	min-width: $megaMenuUtilityMenuMinWidth;
+										li								{
+																		border: 0;
+																		display: block;
+																		padding: 0;
+																		text-align: left;
+																		width: 100%;
+											a								{
+																			border-bottom: 1px solid $megaMenuUtilityMenuLinkBorderColor;
+																			display: block;
+																			padding: 5px;
+												&:hover							{background-color: $megaMenuUtilityMenuLinkHoverColor;}
+																			}
+											&:last-child					{
+												a								{
+																				border-bottom: 0;
+
+													&:hover							{@include border-radius($megaMenuUtilityMenuBorderRadius);}
+																				}
+																			}
+																		}
+																	}
+																}																	
+															}
+														}
+													}
+												}
+					
+				.mul-header-mega-menu-ctn		{
+					.mul-masthead-adjust			{
+						.mul-mega-menu-content			{
+														padding: 10px 0 !important;
+
+							// SPOTLIGHT SECTION 
+							.mul-header-menu-spotlight		{
+															margin-bottom: 12px;
+								.mul-horizontal-list			{
+									li								{
+																	margin-right: $baseMargin;
+										a								{
+																		display: inline-block;
+																		padding: 0;
+																		}
+																	}
+																}
+															}
+
+							// MAIN MENU
+							.mul-menu-ctn					{
+															margin-bottom: 0;
+															padding: 0;
+								dd								{
+									a								{display: inline-block;}
+																}
+															}
+							.mul-first-child				{padding-left: 10px;}
+							.mul-last-child					{display: none;}
+														}
+
+						.mul-mega-menu-search-content	{
+														width: 400px;
+							// SEARCH BUTTON
+							.mul-mega-menu-search-btn		{padding: 4px 9px;}
+														}
+													}
+												}
+											}
+
+			// MEGA MENU HEADER IE9 FIXES
+
+			.ie9							{
+				.mul-mega-menu-masthead			{
+					.mul-masthead-navbar-ctn		{
+						.mul-masthead-adjust			{
+							.mul-mega-menu-navbar			{
+								.mul-util-navbar				{
+									.mul-utility-subnav-ctn			{
+										.mul-utility-subnav				{
+																		border-radius:$baseBorderRadiusIE;
+											li								{
+												&:last-child					{
+													a								{
+														&:hover							{border-radius:$baseBorderRadiusIE;}
+																					}
+																				}
+																			}
+																		}
+																	}																	
+																}
+															}
+														}
+													}
+												}
+											}
+
+		}
+
+	}// endif
+
+}// endif

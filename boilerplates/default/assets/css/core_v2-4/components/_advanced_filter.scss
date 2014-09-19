@@ -1,0 +1,43 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.4 - Advanced Filter Partial
+// DATE - April 4, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+@if $use-advanced-filter == true{
+
+	// ADVANCED FILTER MODAL BUTTON AND ICON
+	.mul-tbl-data-filter		{
+		.mul-icon-filter			{
+									cursor: pointer;
+									top: 2px;
+									}
+								}
+
+	// ADVANCED FILTER MODAL
+	.mul-advanced-filter-modal.mul-dialog.ui-dialog
+								{
+								width: $advancedFilterModalWidth !important;
+		.mul-advanced-filter-form	{
+			.ui-datepicker				{z-index: $zindexAdvancedFilterModalDatepicker;}
+			.mul-match-question			{
+										margin-top: 2px;
+										margin-bottom: 25px;
+				select						{
+											position: relative;
+											top: -2px;
+											margin-left: 2px;
+											margin-right: 6px;
+											}
+										}
+			.mul-icon-plus-circle,
+			.mul-icon-minus-circle		{
+										cursor: pointer;
+										top: 5px;
+										left: 5px;
+										outline: none;
+										}
+									}
+								}
+
+}

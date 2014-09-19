@@ -1,0 +1,140 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.4 - JQuery UI Slider Partial
+// DATE - April 4, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+@if $use-slider == true{
+
+	// SLIDER RANGE INPUT
+	.mul-slider-range-input			{
+		label,
+		input							{float: left;}
+		input[type="text"]				{
+										@include border-radius(0);
+										@include box-shadow(0, 0, 0, transparent);
+										border: 0;
+										padding: 0 0 0 5px;
+										height: auto;
+										min-width: auto;
+										width: auto;
+										margin: 0;
+										}
+									}
+
+	// SLIDER
+	.ui-slider 						{
+									position: relative;
+									text-align: left;
+									display: inline-block;
+									width: 100%;
+
+		// SLIDER HANDLE
+		.ui-slider-handle				{
+										@include border-radius(30px);
+										@include background-gradient($sliderHandleBackgroundStartColor,$sliderHandleBackgroundEndColor);
+										@include box-shadow(0, 1px, 3px, $sliderHandleShadowColor);
+										border: $sliderHandleBorderSize $sliderHandleBorderStyle $sliderHandleBorderColor;
+										outline: none;
+										position: absolute;
+										z-index: $zindexSlider;
+										width: 20px;
+										height: 20px;
+										cursor: pointer;
+										}										
+		.ui-state-focus					{
+										border: $sliderHandleBorderSize $sliderHandleBorderStyle $sliderHandleBorderColor;
+										@include background-gradient($sliderHandleFocusBackgroundStartColor,$sliderHandleFocusBackgroundEndColor);
+										}
+		.ui-state-hover					{
+										border: $sliderHandleBorderSize $sliderHandleBorderStyle $sliderHandleBorderColor;
+										@include background-gradient($sliderHandleHoverBackgroundStartColor,$sliderHandleHoverBackgroundEndColor);
+										}
+		.ui-state-active 				{
+										border: $sliderHandleBorderSize $sliderHandleBorderStyle $sliderHandleBorderColor;
+										@include background-gradient($sliderHandleActiveBackgroundStartColor,$sliderHandleActiveBackgroundEndColor);
+										}
+
+		// SLIDER RANGE
+		.ui-slider-range				{
+										position: absolute;
+										z-index: $zindexSlider;
+										display: block;
+										border: 0;
+										background-position: 0 0;
+										}
+									}
+	
+	// SLIDER HORIZONTAL
+	.ui-slider-horizontal 			{
+									@include border-radius($baseBorderRadius);
+									@include background-gradient($sliderBarBackgroundStartColor,$sliderBarBackgroundEndColor);
+									border: $sliderBarBorderSize $sliderBarBorderStyle $sliderBarBorderColor;
+									height: 6px;
+		.ui-slider-handle				{
+										top: -9px;
+										margin-left: -3px;
+										}
+		.ui-slider-range				{
+										background-color: $gray-darker;
+										top: 0;
+										height: 100%;
+										}
+		.ui-slider-range-min			{left: 0;}
+		.ui-slider-range-max			{right: 0;}
+									}
+
+	// SLIDER VERTICAL
+	.ui-slider-vertical 			{
+									@include border-radius($baseBorderRadius);
+									@include background-gradient($gray-darker, $gray-darker);
+									border: $sliderBarBorderSize $sliderBarBorderStyle $sliderBarBorderColor;
+									width: 5px;
+									height: 100px;
+		.ui-slider-handle				{
+										left: -6px;
+										margin-bottom: -3px;
+										}
+		.ui-slider-range				{
+										background-color: $white;
+										left: 0;
+										width: 100%;
+										}
+		.ui-slider-range-min			{bottom: 0;}
+		.ui-slider-range-max			{top: 0;}
+									}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+		
+		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+			// SLIDER
+			.ui-slider 				{
+										
+				// SLIDER HANDLE
+				.ui-slider-handle		{
+										width: 16px;
+										height: 16px;
+										}
+									}
+
+			// SLIDER HORIZONTAL
+			.ui-slider-horizontal 	{
+				.ui-slider-handle		{
+										top: -7px;
+										}
+									}
+
+			// SLIDER VERTICAL
+			.ui-slider-vertical 	{
+
+									}
+
+		}
+		
+	}// endif
+
+}//endif

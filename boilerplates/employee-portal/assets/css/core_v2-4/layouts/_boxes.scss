@@ -1,0 +1,279 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.4 - Core Box Partial
+// DATE - April 4, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+@if $use-boxes == true{
+
+	// BOX BASE SETUP
+	.mul-box					{
+								@include clearfix; // must clearfix the box to use grid cols inside mul-box
+								position: relative;
+								margin-bottom: $baseMargin;
+								background-color: $boxBackgroundColor;
+								border: $boxBorderSize $boxBorderStyle $boxBorderColor;
+								padding: $boxPadding $boxPadding 0 $boxPadding;
+		.mul-box-hdr				{
+									margin-bottom: $baseMargin;
+			.mul-hdr-rule				{
+										border-bottom: $boxHdrBorderSize $boxHdrBorderStyle $boxHdrBorderColor;
+										padding: 0 0 4px 0;
+										}
+									}
+		.mul-box-bdy				{padding-bottom: 1px;}
+								}
+
+	
+	// ADVANCED BOX SETUP
+	.mul-box-adv				{
+								@extend .mul-box;
+								background-color: $boxAdvancedBackgroundColor;
+								padding: 0;
+		& > .mul-box-hdr			{
+									background-color: $boxAdvancedHdrBackgroundColor;
+									padding: $boxPadding;
+									margin-bottom: $baseMargin;
+			.mul-hdr-rule				{
+										border-bottom: 0;
+										margin-bottom: 0;
+										}
+									}
+		& > .mul-box-bdy			{padding: 0 $boxPadding 1px $boxPadding;}
+		& > .mul-box-ftr			{padding: 0 $boxPadding 1px $boxPadding;}
+								}
+
+
+
+	// BOX WITH ROUNDED CORNERS
+	.mul-box-rnd				{
+								@include border-radius($baseBorderRadius);
+		.mul-box-hdr				{@include border-radius($baseBorderRadius $baseBorderRadius 0 0);}
+								}
+
+	// BOX WITH A DROP SHADOW
+	.mul-box-shadow				{@include box-shadow($boxVShadow, $boxHShadow, $boxShadowBlur, $boxShadowColor);}
+
+	// BOX WITH ROUNDED CORNERS WITH A DROP SHADOW
+	.mul-box-rnd-shadow			{
+								@extend .mul-box-rnd;
+								@extend .mul-box-shadow;
+		.mul-box-hdr				{@include border-radius($baseBorderRadius $baseBorderRadius 0 0);}
+								}
+
+
+	@if $use-message-boxes == true{
+
+		// MESSAGE BOX LAYOUT
+		.mul-error-ctn,
+		.mul-attention-ctn,
+		.mul-info-ctn,
+		.mul-confirmation-ctn
+									{
+									padding: 10px 10px 0 10px;
+			.mul-box-hdr				{margin-bottom: 4px;}
+			.mul-box-bdy				{
+				p							{margin-bottom: 10px;}
+										}
+									}
+
+		// MESSAGE BUILDERS
+		.mul-message-hdr			{
+									font-family: $proximaNovaSemiBoldStack;
+									font-size: $baseFontSize;
+									margin-top: 0;
+									}
+		.mul-close-action			{
+									top: -7px !important;
+									right: -7px;
+									cursor: pointer;
+									display: block;
+									float: right;
+									}
+
+
+		// ERROR MESSAGE
+		.mul-error-ctn				{
+									@extend .mul-box;
+									background-color: $errorBackgroundColor;
+									border-color: $errorBorderColor;
+									color: $errorFontColor;
+			.mul-message-hdr			{color: $errorHdr;}
+			a							{color: $errorFontColor;}
+									}
+		// ATTENTION MESSAGE
+		.mul-attention-ctn			{
+									@extend .mul-box;
+									background-color: $attentionBoxBackgroundColor;
+									border-color: $attentionBoxBorderColor;
+									color: $attentionBoxFontColor;
+			.mul-message-hdr			{color: $attentionHdr;}
+			a							{color: $attentionBoxFontColor;}
+									}
+
+		// INFO MESSAGE
+		.mul-info-ctn				{
+									@extend .mul-box;
+									background-color: $infoBoxBackgroundColor;
+									border-color: $infoBoxBorderColor;
+									color: $infoBoxFontColor;
+			.mul-message-hdr			{color: $infoHdr;}
+			a							{color: $infoBoxFontColor;}
+									}
+
+		// CONFIRMATION MESSAGE
+		.mul-confirmation-ctn		{
+									@extend .mul-box;
+									background-color: $confirmationBoxBackgroundColor;
+									border-color: $confirmationBoxBorderColor;
+									color: $confirmationBoxFontColor;
+			.mul-message-hdr			{color: $confirmationHdr;}
+			a							{color: $confirmationBoxFontColor;}
+									}
+
+		// MESSAGE BOXES IE9 FIXES
+		.ie8,
+		.ie9						{
+			
+			// MESSAGE BUILDERS
+			.mul-close-action			{right: -7px;}
+
+									}
+
+	}//endif
+
+
+	//--- CUSTOM BOXES -------------------------------------------------------------------------------------------------
+
+	// FEATURE CONTAINER
+	.mul-feature-ctn			{
+								background-color: $boxFeaturedBackgroundColor;
+		.mul-box-hdr				{
+			.mul-hdr-rule				{border-bottom-color: $boxFeaturedBorderBottomColor;}
+									}
+								}
+
+	// HIGHLIGHT CONTAINER
+	.mul-highlight-ctn			{
+								@extend .mul-attention-ctn;
+								@include border-radius(2px);
+		.h5							{font-size: ($hdrH5FontSize - 1);}
+								}
+	
+	// SIDEBAR CONTAINER
+	.mul-sidebar-ctn			{
+								background-color: $boxSidebarBackgroundColor;
+		.mul-box-hdr				{
+			.mul-hdr-rule				{border-bottom-color: $boxSidebarBorderBottomColor;}
+									}
+								}
+
+	// INLINE SEARCH CONTAINER
+	.mul-inline-search-ctn		{
+								background-color: $boxInlineSearchBackgroundColor;
+								border: $boxInlineSearchBorderSizeColor $boxInlineSearchBorderTypeColor $boxInlineSearchBorderColor;
+		.mul-form					{margin: 0 0 $baseMargin 0;}
+		.mul-form-inline			{
+			input[type="text"],
+			input[type="password"],
+			input[type="datetime"],
+			input[type="datetime-local"],
+			input[type="date"],
+			input[type="month"],
+			input[type="time"],
+			input[type="week"],
+			input[type="number"],
+			input[type="email"],
+			input[type="url"],
+			input[type="search"],
+			input[type="tel"],
+			input[type="color"],
+			select,
+			textarea					{
+										display: block;
+										width: 100%;
+										}
+									}
+								}
+
+	// SUPPORT CONTAINER
+	.mul-support-ctn			{
+								@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+								background-color: $boxSupportBackgroundColor;
+								border-color: $boxSupportBottomColor;
+		.mul-box-hdr				{
+			.mul-hdr-rule				{border-bottom-color: $boxSupportBorderBottomColor;}
+									}
+								}
+
+	// BOXES IE9 FIXES
+	.ie9						{
+		
+		// BOX BASE SETUP
+		.mul-box					{border-radius:$baseBorderRadiusIE;}
+
+		// BOX WITH ROUNDED CORNERS
+		.mul-box-rnd				{
+									border-radius:$baseBorderRadiusIE;
+			.mul-box-hdr				{border-radius:$baseBorderRadiusIE;}
+									}
+								}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+		
+		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+			@if $use-message-boxes == true{
+
+				// MESSAGE BUILDERS
+				.mul-message-hdr	{font-size: $baseFontSizeLargeBreakpoint;}
+
+			}// endif
+
+			// INLINE SEARCH CONTAINER
+			.mul-inline-search-ctn
+								{
+				.mul-form			{
+									margin: 0 0 5px 0;
+					.mul-form-action	{
+										margin-top: 0;
+										padding-top: 18%;
+										}
+									}
+				.mul-form-inline	{
+									margin: 0;
+					label				{
+										vertical-align: top;
+										line-height: $boxInlineSearchLabelLineHeight;
+										}
+					input[type="text"],
+					input[type="password"],
+					input[type="datetime"],
+					input[type="datetime-local"],
+					input[type="date"],
+					input[type="month"],
+					input[type="time"],
+					input[type="week"],
+					input[type="number"],
+					input[type="email"],
+					input[type="url"],
+					input[type="search"],
+					input[type="tel"],
+					input[type="color"],
+					select,
+					textarea			{
+										display: inline-block;
+										width: auto;
+										}
+					.mul-form-action	{padding-top: 6%;}
+									}
+								}
+
+		}
+		
+	}// endif
+
+}//endif

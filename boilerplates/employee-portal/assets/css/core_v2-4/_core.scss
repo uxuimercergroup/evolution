@@ -1,0 +1,104 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.4 - Core SASS Imports Partial
+// DATE - April 4, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+//=== TABLE OF CONTENTS =====================================================================
+
+// COLOR VARIABLES............Global, brand, and other color variables
+// THEME VARIABLES............List of default theme variables that control the default theme of the library
+// VARIABLES..................List of variables that control the library that are not theme variables
+// FUNCTIONS..................Functions used for SASS calculations
+// MIXINS.....................SASS mixins for help with styling
+// NORMALIZE..................Reset all default browser styles to zero
+// HELPERS....................Helper classes to aid in styling, all helper use is class based
+// FONTS......................Global web fonts, including icon font
+// TYPE.......................Global typography styles, headers, body text, etc.
+
+// GRID.......................Mobile first grid based on 24 column layout
+// BOXES......................Global box container styles
+
+// FORM.......................Global form and form elements styles
+
+// BUTTONS....................Global button styles
+
+// TABLES.....................Global data table styles
+
+// FOOTER.....................Global footer and footer component styles
+// HEADER.....................Masthead and masthead component styles
+// ICONS......................Global icon styles
+// LISTS......................Global list styles including horizontal, vertical, and data lists
+// MINI FILTER................Mini Filter component styles
+// NAV........................Global navigation styles
+// PAGINATION.................Pagination component styles
+// PROFILE CONTAINERS.........Profile Entity container styles
+// SCROLL PANE................Scroll pane styles
+// STEPPER....................Stepper (Horizontal and Vertical) styles
+// SUMMARY CONTAINERS.........Summary Containers styles
+// TILES......................Tile container styles
+
+// ACCORDIAN..................Accordian component styles (JQUI)
+// ADVANCED FILTER............Advanced filter component styles (JQUI)
+// AUTOCOMPLETE...............Auto suggest component styles (JQUI)
+// CAROUSEL...................Carousel component styles (FlexSlider jQuery Plugin)
+// DATEPICKER.................Calendar component styles (JQUI)
+// DIALOG.....................Dialog/Modal component styles (JQUI)
+// LOGIN LAYOUT...............Login Page Layout styles
+// SLIDER.....................Slider component styles (JQUI)
+// TABS.......................Tab component styles (JQUI)
+// TOOLTIP....................Tooltip component styles (Tooltipster jQuery Plugin)
+// CONTENT MODAL..............Content modal component styles, jQuery dialog w/jQuery UI tabs and jScrollPane
+//
+
+//=== CORE SASS IMPORTS =====================================================================
+
+// NOTE #1: Make sure color variables partial is called before theme variables partial since theme variables partial requires color variables partial
+// NOTE #2: Make sure theme variables partial is called before variables partial since variables partial requires theme variables partial
+// NOTE #3: Make sure color variables, theme variables, and variables partials are called before mixins partial since mixins partial requires all three
+// NOTE #4: Make sure mixins partial is called before all other partials (excluding color variables, theme variables, variables, and functions) since all other partials require mixins partial
+
+@import "base/color_variables",
+		"base/theme_variables",
+		"base/variables",
+		"base/functions",
+		"base/mixins",
+		"base/normalize",
+		"base/helpers",
+		"base/fonts",
+		"base/type",
+
+		"layouts/grid",
+		"layouts/boxes",
+
+		"forms/form",
+
+		"buttons/buttons",
+
+		"tables/tables",
+
+		"modules/footer",
+		"modules/header",
+		"modules/icons",
+		"modules/lists",
+		"modules/mini_filter",
+		"modules/nav",
+		"modules/pagination",
+		"modules/profile_containers",
+		"modules/stepper",
+		"modules/summary_containers",
+		"modules/tiles",
+
+		"components/accordian",
+		"components/advanced_filter",
+		"components/autocomplete",
+		"components/carousel",
+		"components/datepicker",
+		"components/dialog",
+		"components/login",
+		"components/scroll_pane",
+		"components/slider",
+		"components/tabs",
+		"components/tooltip",
+		"components/content_modal"
+		;

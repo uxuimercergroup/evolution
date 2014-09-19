@@ -1,0 +1,31 @@
+/*------------------------------------------------------------------------------------------
+Site Name - Site CSS
+DATE - 
+AUTHOR -
+-------------------------------------------------------------------------------------------*/
+
+//=== CORE SASS IMPORTS =====================================================================
+@import	"core_v2-4/base/color_variables",
+		"core_v2-4/base/theme_variables",
+		"core_v2-4/base/variables",
+		"core_v2-4/base/functions",
+		"core_v2-4/base/mixins";
+
+//=== CORE DEV IMPORTS ======================================================================
+// @import "core_v2-4/dev_tools/debug";
+// @import "core_v2-4/dev_tools/tools";
+
+//=== SITE IMPORTS ==========================================================================
+@import	"partials/variables",
+		"partials/functions";
+
+
+/*=== WEBSITE STYLES ======================================================================*/
+
+
+
+/*=== MEDIA QUERIES ==========================================================================*/
+@import	"partials/responsive_small",
+		"partials/responsive_medium",
+		"partials/responsive_large"
+		;
