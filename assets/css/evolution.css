@@ -6927,6 +6927,9 @@ em {
   color: #FFF;
 }
 
+body:not(:-moz-handler-blocked) .mul-content-modal.mul-dialog.ui-dialog .mul-content-modal-ctn .mul-content-modal-util-bar {
+  position: absolute;
+}
 body:not(:-moz-handler-blocked) .mul-content-modal.mul-dialog.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
   top: 13px;
 }

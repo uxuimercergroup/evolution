@@ -110,10 +110,14 @@
 	// CONTENT MODAL FIREFOX (3.5+) FIXES
 	body:not(:-moz-handler-blocked) {
 
-
-		// MODAL TITLE BAR
 		.mul-content-modal.mul-dialog.ui-dialog
 										{
+
+			.mul-content-modal-ctn			{
+				.mul-content-modal-util-bar		{position: absolute;}
+											}
+
+			// MODAL TITLE BAR
 			.ui-dialog-titlebar				{
 				.ui-dialog-titlebar-close		{top: ($contentModalUtilityBarTabsCloseIconPositionTop - 2);}
 											}
