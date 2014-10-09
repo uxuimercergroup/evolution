@@ -1,0 +1,89 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.5 - Call To Action Partial
+// DATE - June 13, 2014
+// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-call-to-action == true{
+
+	.mul-call-to-action			{
+								@include border-radius($borderRadiusSmall);
+								display: table;
+								background-color: $callToActionBackgroundColor;
+								padding: 10px;
+								margin-bottom: $baseMargin;
+								width: 100%;
+
+		
+		// CUSTOM CALL TO ACTION BACKGROUND COLOR LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
+		@each $color-name, $color in $color-palette 
+									{
+			&[data-palette-color="#{$color-name}"]
+										{background-color: map-get($color, color);}
+									}
+
+		&:link,
+		&:visited,
+		&:hover,
+		&:active					{
+									text-decoration: none;
+									color: $callToActionTextColor;
+									}
+
+		&:hover						{background-color: $callToActionHoverBackgroundColor;}
+
+		// CUSTOM CALL TO ACTION BACKGROUND COLOR LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE FOR HOVER STATE
+		@each $color-name, $color in $color-palette 
+									{
+			&[data-palette-color="#{$color-name}"]:hover
+										{background-color: darken(map-get($color, color), 10%);}
+									}
+
+		span, i						{
+									display: table-cell;
+									vertical-align: top;
+									}
+
+		// CALL TO ACTION ICONS
+		[class^="mul-icon-"]		{
+									top: 1px;
+									color: $callToActionIconColor;
+									}
+
+		.mul-icon-position-left		{padding-right: 5px;}
+		.mul-icon-position-right	{
+									top: 2px;
+									float: right;
+									padding-left: 5px;
+									}
+
+		// CALL TO ACTION TEXT
+		.mul-call-to-action-text	{text-transform: uppercase;}
+								}
+
+	// CALL TO ACTION IE9 FIXES
+	.ie9						{
+		.mul-call-to-action			{border-radius:$baseBorderRadiusIE;}
+								}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+		
+		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+			.mul-call-to-action	{
+
+				// CALL TO ACTION ICONS
+				[class^="mul-icon-"]
+									{top: 0;}
+				.mul-icon-position-right
+									{top: 0;}
+								}
+
+		}
+		
+	}// endif
+
+}//endif

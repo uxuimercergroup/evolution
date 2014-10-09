@@ -5082,11 +5082,11 @@ a[class^="mul-icon-"].mul-icon-style-gradient-info,
   content: "\e61c";
 }
 
-.mul-icon-mul-mercer-logo:before {
+.mul-icon-mul-mmc-logo:before {
   content: "\e61d";
 }
 
-.mul-icon-mul-mercer-globe:before {
+.mul-icon-mul-mmc-globe:before {
   content: "\e61e";
 }
 
@@ -5140,6 +5140,18 @@ a[class^="mul-icon-"].mul-icon-style-gradient-info,
 
 .mul-icon-calendar4:before {
   content: "\e62a";
+}
+
+.mul-icon-mul-file3-small:before {
+  content: "\e62c";
+}
+
+.mul-icon-mul-task-cancelled:before {
+  content: "\e62d";
+}
+
+.mul-icon-mul-task-escalated:before {
+  content: "\e62e";
 }
 
 .mul-horizontal-list {
@@ -6657,6 +6669,403 @@ em {
   .ui-menu .ui-menu-item a .ui-menu-secondary {
     margin-left: 0;
     display: block;
+  }
+}
+.mul-call-to-action {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-clip: padding-box;
+  display: table;
+  background-color: #999999;
+  padding: 10px;
+  margin-bottom: 14px;
+  width: 100%;
+}
+.mul-call-to-action[data-palette-color="transparent"] {
+  background-color: transparent;
+}
+.mul-call-to-action[data-palette-color="white"] {
+  background-color: #FFF;
+}
+.mul-call-to-action[data-palette-color="black"] {
+  background-color: #000;
+}
+.mul-call-to-action[data-palette-color="blue-gray"] {
+  background-color: #23334C;
+}
+.mul-call-to-action[data-palette-color="blue-sapphire"] {
+  background-color: #002C77;
+}
+.mul-call-to-action[data-palette-color="purple"] {
+  background-color: #43276D;
+}
+.mul-call-to-action[data-palette-color="fuscia"] {
+  background-color: #560054;
+}
+.mul-call-to-action[data-palette-color="pink"] {
+  background-color: #A9194F;
+}
+.mul-call-to-action[data-palette-color="red"] {
+  background-color: #810009;
+}
+.mul-call-to-action[data-palette-color="orange"] {
+  background-color: #C45F24;
+}
+.mul-call-to-action[data-palette-color="tan"] {
+  background-color: #8E5501;
+}
+.mul-call-to-action[data-palette-color="green"] {
+  background-color: #005804;
+}
+.mul-call-to-action[data-palette-color="blue-green"] {
+  background-color: #004C4F;
+}
+.mul-call-to-action[data-palette-color="gray-darkest"] {
+  background-color: #333333;
+}
+.mul-call-to-action[data-palette-color="gray-darker"] {
+  background-color: #666666;
+}
+.mul-call-to-action[data-palette-color="gray-dark"] {
+  background-color: #999999;
+}
+.mul-call-to-action[data-palette-color="gray-mid-dark"] {
+  background-color: #b0b0b0;
+}
+.mul-call-to-action[data-palette-color="gray-mid-light"] {
+  background-color: #cccccc;
+}
+.mul-call-to-action[data-palette-color="gray-light"] {
+  background-color: #e6e6e6;
+}
+.mul-call-to-action[data-palette-color="gray-lighter"] {
+  background-color: #eeeeee;
+}
+.mul-call-to-action[data-palette-color="gray-lightest"] {
+  background-color: #f7f7f7;
+}
+.mul-call-to-action[data-palette-color="blue-gray-darkest"] {
+  background-color: #395A85;
+}
+.mul-call-to-action[data-palette-color="blue-gray-darker"] {
+  background-color: #396EA8;
+}
+.mul-call-to-action[data-palette-color="blue-gray-dark"] {
+  background-color: #517BAA;
+}
+.mul-call-to-action[data-palette-color="blue-gray-mid-dark"] {
+  background-color: #6B90B8;
+}
+.mul-call-to-action[data-palette-color="blue-gray-mid-light"] {
+  background-color: #A9BCD3;
+}
+.mul-call-to-action[data-palette-color="blue-gray-light"] {
+  background-color: #C3D2E5;
+}
+.mul-call-to-action[data-palette-color="blue-gray-lighter"] {
+  background-color: #E9EEF5;
+}
+.mul-call-to-action[data-palette-color="blue-gray-lightest"] {
+  background-color: #E8F0F7;
+}
+.mul-call-to-action[data-palette-color="blue-sapphire-dark"] {
+  background-color: #006D9E;
+}
+.mul-call-to-action[data-palette-color="blue-sapphire-mid"] {
+  background-color: #00A8C8;
+}
+.mul-call-to-action[data-palette-color="blue-sapphire-light"] {
+  background-color: #A6E2EF;
+}
+.mul-call-to-action[data-palette-color="purple-dark"] {
+  background-color: #595997;
+}
+.mul-call-to-action[data-palette-color="purple-mid"] {
+  background-color: #6F83C1;
+}
+.mul-call-to-action[data-palette-color="purple-light"] {
+  background-color: #C4CAE6;
+}
+.mul-call-to-action[data-palette-color="fuscia-dark"] {
+  background-color: #932077;
+}
+.mul-call-to-action[data-palette-color="fuscia-mid"] {
+  background-color: #CE3D95;
+}
+.mul-call-to-action[data-palette-color="fuscia-light"] {
+  background-color: #E7B8D5;
+}
+.mul-call-to-action[data-palette-color="pink-dark"] {
+  background-color: #ED2C67;
+}
+.mul-call-to-action[data-palette-color="pink-light"] {
+  background-color: #F7B6BB;
+}
+.mul-call-to-action[data-palette-color="red-dark"] {
+  background-color: #BA2C2B;
+}
+.mul-call-to-action[data-palette-color="red-mid"] {
+  background-color: #EF4E45;
+}
+.mul-call-to-action[data-palette-color="red-light"] {
+  background-color: #FCDBD9;
+}
+.mul-call-to-action[data-palette-color="orange-dark"] {
+  background-color: #F48132;
+}
+.mul-call-to-action[data-palette-color="orange-mid"] {
+  background-color: #FAA45E;
+}
+.mul-call-to-action[data-palette-color="orange-light"] {
+  background-color: #FCCFAB;
+}
+.mul-call-to-action[data-palette-color="tan-dark"] {
+  background-color: #C6A54F;
+}
+.mul-call-to-action[data-palette-color="tan-mid"] {
+  background-color: #F1D485;
+}
+.mul-call-to-action[data-palette-color="tan-light"] {
+  background-color: #FEF8E3;
+}
+.mul-call-to-action[data-palette-color="green-darker"] {
+  background-color: #2D7B05;
+}
+.mul-call-to-action[data-palette-color="green-dark"] {
+  background-color: #6EAA38;
+}
+.mul-call-to-action[data-palette-color="green-mid"] {
+  background-color: #72BE44;
+}
+.mul-call-to-action[data-palette-color="green-light"] {
+  background-color: #98E96C;
+}
+.mul-call-to-action[data-palette-color="green-lighter"] {
+  background-color: #BDDCA1;
+}
+.mul-call-to-action[data-palette-color="green-lightest"] {
+  background-color: #D6EBC3;
+}
+.mul-call-to-action[data-palette-color="blue-green-dark"] {
+  background-color: #008075;
+}
+.mul-call-to-action[data-palette-color="blue-green-mid"] {
+  background-color: #0FB694;
+}
+.mul-call-to-action[data-palette-color="blue-green-light"] {
+  background-color: #A7D9C8;
+}
+.mul-call-to-action:link, .mul-call-to-action:visited, .mul-call-to-action:hover, .mul-call-to-action:active {
+  text-decoration: none;
+  color: #FFF;
+}
+.mul-call-to-action:hover {
+  background-color: #666666;
+}
+.mul-call-to-action[data-palette-color="transparent"]:hover {
+  background-color: transparent;
+}
+.mul-call-to-action[data-palette-color="white"]:hover {
+  background-color: #e6e6e6;
+}
+.mul-call-to-action[data-palette-color="black"]:hover {
+  background-color: black;
+}
+.mul-call-to-action[data-palette-color="blue-gray"]:hover {
+  background-color: #131c29;
+}
+.mul-call-to-action[data-palette-color="blue-sapphire"]:hover {
+  background-color: #001944;
+}
+.mul-call-to-action[data-palette-color="purple"]:hover {
+  background-color: #2c1a47;
+}
+.mul-call-to-action[data-palette-color="fuscia"]:hover {
+  background-color: #230022;
+}
+.mul-call-to-action[data-palette-color="pink"]:hover {
+  background-color: #7d123a;
+}
+.mul-call-to-action[data-palette-color="red"]:hover {
+  background-color: #4e0005;
+}
+.mul-call-to-action[data-palette-color="orange"]:hover {
+  background-color: #994a1c;
+}
+.mul-call-to-action[data-palette-color="tan"]:hover {
+  background-color: #5b3701;
+}
+.mul-call-to-action[data-palette-color="green"]:hover {
+  background-color: #002502;
+}
+.mul-call-to-action[data-palette-color="blue-green"]:hover {
+  background-color: #001b1c;
+}
+.mul-call-to-action[data-palette-color="gray-darkest"]:hover {
+  background-color: #1a1a1a;
+}
+.mul-call-to-action[data-palette-color="gray-darker"]:hover {
+  background-color: #4d4d4d;
+}
+.mul-call-to-action[data-palette-color="gray-dark"]:hover {
+  background-color: gray;
+}
+.mul-call-to-action[data-palette-color="gray-mid-dark"]:hover {
+  background-color: #969696;
+}
+.mul-call-to-action[data-palette-color="gray-mid-light"]:hover {
+  background-color: #b3b3b3;
+}
+.mul-call-to-action[data-palette-color="gray-light"]:hover {
+  background-color: #cccccc;
+}
+.mul-call-to-action[data-palette-color="gray-lighter"]:hover {
+  background-color: #d5d5d5;
+}
+.mul-call-to-action[data-palette-color="gray-lightest"]:hover {
+  background-color: #dedede;
+}
+.mul-call-to-action[data-palette-color="blue-gray-darkest"]:hover {
+  background-color: #2a4261;
+}
+.mul-call-to-action[data-palette-color="blue-gray-darker"]:hover {
+  background-color: #2c5582;
+}
+.mul-call-to-action[data-palette-color="blue-gray-dark"]:hover {
+  background-color: #416287;
+}
+.mul-call-to-action[data-palette-color="blue-gray-mid-dark"]:hover {
+  background-color: #4e76a2;
+}
+.mul-call-to-action[data-palette-color="blue-gray-mid-light"]:hover {
+  background-color: #87a2c2;
+}
+.mul-call-to-action[data-palette-color="blue-gray-light"]:hover {
+  background-color: #9fb7d6;
+}
+.mul-call-to-action[data-palette-color="blue-gray-lighter"]:hover {
+  background-color: #c6d3e5;
+}
+.mul-call-to-action[data-palette-color="blue-gray-lightest"]:hover {
+  background-color: #c2d7ea;
+}
+.mul-call-to-action[data-palette-color="blue-sapphire-dark"]:hover {
+  background-color: #004a6b;
+}
+.mul-call-to-action[data-palette-color="blue-sapphire-mid"]:hover {
+  background-color: #007d95;
+}
+.mul-call-to-action[data-palette-color="blue-sapphire-light"]:hover {
+  background-color: #7bd4e7;
+}
+.mul-call-to-action[data-palette-color="purple-dark"]:hover {
+  background-color: #464677;
+}
+.mul-call-to-action[data-palette-color="purple-mid"]:hover {
+  background-color: #4c65b1;
+}
+.mul-call-to-action[data-palette-color="purple-light"]:hover {
+  background-color: #a0aad7;
+}
+.mul-call-to-action[data-palette-color="fuscia-dark"]:hover {
+  background-color: #691755;
+}
+.mul-call-to-action[data-palette-color="fuscia-mid"]:hover {
+  background-color: #ac2c7a;
+}
+.mul-call-to-action[data-palette-color="fuscia-light"]:hover {
+  background-color: #da92be;
+}
+.mul-call-to-action[data-palette-color="pink-dark"]:hover {
+  background-color: #d4124d;
+}
+.mul-call-to-action[data-palette-color="pink-light"]:hover {
+  background-color: #f28890;
+}
+.mul-call-to-action[data-palette-color="red-dark"]:hover {
+  background-color: #912221;
+}
+.mul-call-to-action[data-palette-color="red-mid"]:hover {
+  background-color: #eb2116;
+}
+.mul-call-to-action[data-palette-color="red-light"]:hover {
+  background-color: #f8aeaa;
+}
+.mul-call-to-action[data-palette-color="orange-dark"]:hover {
+  background-color: #e7650c;
+}
+.mul-call-to-action[data-palette-color="orange-mid"]:hover {
+  background-color: #f8882d;
+}
+.mul-call-to-action[data-palette-color="orange-light"]:hover {
+  background-color: #fab37a;
+}
+.mul-call-to-action[data-palette-color="tan-dark"]:hover {
+  background-color: #ab8b37;
+}
+.mul-call-to-action[data-palette-color="tan-mid"]:hover {
+  background-color: #ecc457;
+}
+.mul-call-to-action[data-palette-color="tan-light"]:hover {
+  background-color: #fcecb2;
+}
+.mul-call-to-action[data-palette-color="green-darker"]:hover {
+  background-color: #1b4a03;
+}
+.mul-call-to-action[data-palette-color="green-dark"]:hover {
+  background-color: #55842b;
+}
+.mul-call-to-action[data-palette-color="green-mid"]:hover {
+  background-color: #5b9a35;
+}
+.mul-call-to-action[data-palette-color="green-light"]:hover {
+  background-color: #79e240;
+}
+.mul-call-to-action[data-palette-color="green-lighter"]:hover {
+  background-color: #a3ce7c;
+}
+.mul-call-to-action[data-palette-color="green-lightest"]:hover {
+  background-color: #bcde9d;
+}
+.mul-call-to-action[data-palette-color="blue-green-dark"]:hover {
+  background-color: #004d46;
+}
+.mul-call-to-action[data-palette-color="blue-green-mid"]:hover {
+  background-color: #0b876e;
+}
+.mul-call-to-action[data-palette-color="blue-green-light"]:hover {
+  background-color: #83cab2;
+}
+.mul-call-to-action span, .mul-call-to-action i {
+  display: table-cell;
+  vertical-align: top;
+}
+.mul-call-to-action [class^="mul-icon-"], .mul-call-to-action .mul-accordion.ui-accordion .ui-accordion-header.ui-accordion-icons .ui-accordion-header-icon, .mul-accordion.ui-accordion .ui-accordion-header.ui-accordion-icons .mul-call-to-action .ui-accordion-header-icon {
+  top: 1px;
+  color: #FFF;
+}
+.mul-call-to-action .mul-icon-position-left {
+  padding-right: 5px;
+}
+.mul-call-to-action .mul-icon-position-right {
+  top: 2px;
+  float: right;
+  padding-left: 5px;
+}
+.mul-call-to-action .mul-call-to-action-text {
+  text-transform: uppercase;
+}
+
+.ie9 .mul-call-to-action {
+  border-radius: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .mul-call-to-action [class^="mul-icon-"], .mul-call-to-action .mul-accordion.ui-accordion .ui-accordion-header.ui-accordion-icons .ui-accordion-header-icon, .mul-accordion.ui-accordion .ui-accordion-header.ui-accordion-icons .mul-call-to-action .ui-accordion-header-icon {
+    top: 0;
+  }
+  .mul-call-to-action .mul-icon-position-right {
+    top: 0;
   }
 }
 .mul-carousel.owl-carousel {
@@ -8743,9 +9152,9 @@ body:not(:-moz-handler-blocked) .ui-datepicker-trigger {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   background-clip: padding-box;
-  background-color: #E8F0F7;
+  background-color: #f7f7f7;
   margin-bottom: 3px;
-  border-color: #cccccc;
+  border-color: #e6e6e6;
 }
 .mul-tile-ctn[data-palette-color="transparent"] .mul-box-hdr {
   border-top-color: transparent;
@@ -8956,7 +9365,7 @@ body:not(:-moz-handler-blocked) .ui-datepicker-trigger {
   background-clip: padding-box;
   display: none;
   background-color: #FFF;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #e6e6e6;
   padding: 0;
 }
 .mul-tile-ctn .mul-scroll-pane {
@@ -8989,7 +9398,7 @@ body:not(:-moz-handler-blocked) .ui-datepicker-trigger {
     -webkit-border-radius: 0;
     border-radius: 0;
     background-clip: padding-box;
-    border: 1px solid #cccccc;
+    border: 1px solid #e6e6e6;
     display: block;
     margin: 0 7px 7px 7px;
   }

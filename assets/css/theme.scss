@@ -876,6 +876,25 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 }//endif
 
 
+@if $use-call-to-action-theme == true{
+
+	/*--- CALL TO ACTION THEME -----------------------------------------------------------------*/
+	
+	.mul-call-to-action						{
+											background-color: $callToActionBackgroundColor;
+		&:link,
+		&:visited,
+		&:hover,
+		&:active								{color: $callToActionTextColor;}
+		&:hover									{background-color: $callToActionHoverBackgroundColor;}
+
+		// CALL TO ACTION ICONS
+		[class^="mul-icon-"]					{color: $callToActionIconColor;}
+											}
+
+}//endif
+
+
 @if $use-carousel-theme == true{
 
 	/*--- CAROUSEL THEME -----------------------------------------------------------------------*/
