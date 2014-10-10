@@ -870,6 +870,20 @@ a[class^="mul-icon-"].mul-icon-style-gradient {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFEF8E3', endColorstr='#FFFEF8E3', GradientType=0);
 }
 
+/*--- CALL TO ACTION THEME -----------------------------------------------------------------*/
+.mul-call-to-action {
+  background-color: #999999;
+}
+.mul-call-to-action:link, .mul-call-to-action:visited, .mul-call-to-action:hover, .mul-call-to-action:active {
+  color: #FFF;
+}
+.mul-call-to-action:hover {
+  background-color: #666666;
+}
+.mul-call-to-action [class^="mul-icon-"] {
+  color: #FFF;
+}
+
 /*--- CAROUSEL THEME -----------------------------------------------------------------------*/
 .mul-carousel.owl-carousel .owl-controls.clickable .owl-page:hover span {
   background: #999999;
