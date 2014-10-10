@@ -386,6 +386,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
 
 		/* HEADER MASTHEAD */
+		/*
 		.mul-masthead						{
 			.mul-masthead-adjust				{
 				.mul-masthead-content-ctn			{
@@ -429,9 +430,9 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 													}
 												}
 											}
+											*/
 
 	}
-
 }//endif
 
 
@@ -498,6 +499,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
 
 		// MEGA MENU HEADER
+		/*
 		.mul-mega-menu-masthead				{
 			.mul-masthead-navbar-ctn			{
 				.mul-masthead-adjust				{
@@ -524,6 +526,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 													}
 												}
 											}
+											*/
 
 	}// endif
 
@@ -535,6 +538,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 	/*--- NAVIGATION THEME ---------------------------------------------------------------------*/
 	
 	/* NAVIGATION */
+	/*
 	.mul-navbar								{
 		.mul-horizontal-list					{
 												@include background-gradient($navBackgroundStartColor, $navBackgroundEndColor);
@@ -550,6 +554,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 													}
 												}
 											}
+	*/
 
 	/*=== MEDIA QUERIES ========================================================================*/
 
@@ -557,6 +562,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
 
 		/* NAVIGATION */
+		/*
 		.mul-navbar							{
 			.mul-horizontal-list				{
 				li									{
@@ -566,6 +572,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 													}
 												}
 											}
+		*/
 
 	}
 

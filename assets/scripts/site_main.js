@@ -107,10 +107,16 @@ $(function() {
 			}
 
 			// SMARTMENU TEST
-			jQuery('.mul-main-menu').smartmenus({
-				//subMenusSubOffsetX: "300"
+			jQuery('.js-mul-menus').smartmenus('destroy');
+			jQuery('.js-mul-menus').smartmenus('menuHideAll');
+			jQuery('.js-mul-menus').smartmenus({
+				subIndicators: false,
+				mainMenuSubOffsetX: -1,
+				subMenusSubOffsetX: 30,
+				subMenusSubOffsetY: 20,
+				subMenusMinWidth: '100px',
+				subMenusMaxWidth: '250px'
 			});
-
 		/* PLEASE CLEAN UP! - ENDS */
 
 		

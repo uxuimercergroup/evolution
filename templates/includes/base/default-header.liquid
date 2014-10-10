@@ -1,164 +1,138 @@
-<header role="banner" class="mul-masthead">
+<header role="banner" class="mul-grid mul-header">
 
-	<section class="mul-grid mul-masthead-top">
-		<div class="mul-masthead-top-adjust">
+	<div class="mul-header-adjust">
 
-		<!-- LOGO SECTION - BEGINS -->
-			<div class="col-18 first">
-				<h1 class="mul-logo">
-					<a href="/index">MERCER <span>EVOLUTION</span></a>
-				</h1>
+	<!-- MASTHEAD - BEGINS -->
+		<section class="mul-masthead">
+			<div class="mul-masthead-adjust">
+				<div class="col-16 first masthead-col-1">
+				<!-- LOGO SECTION - BEGINS -->
+					<section class="col-24 mul-logo mul-small-mediaquery-grid">
+						<div class="col-6 first logo-col-1"></div>
+						<div class="col-18 logo-col-2">
+							<a href="/index">MERCER <span>EVOLUTION</span></a>
+						</div>
+					</section>
+				<!-- LOGO SECTION - ENDS -->
+				</div>
+				<div class="col-8 masthead-col-2">
+				<!-- PROFILE CONTAINER - BEGINS -->
+					<div class="js-mul-profile-menu-display mul-profile-menu-ctn mul-hidden-small-mediaquery">
+
+						<div class="mul-profile-menu-user-info-ctn">
+							<div class="mul-profile-menu-icons">
+								<i class="mul-icon-arrow-right2 mul-profile-menu-icon"></i>
+								<i class="mul-icon-arrow-down2 mul-profile-menu-icon"></i>
+							</div>
+							<div class="mul-profile-menu-user-info">
+								<dl>
+									<dt class="mul-profile-menu-user-name">Arquimedez Pozo</dt>
+									<dd class="mul-profile-menu-user-title">Front-end Web Developer</dd>
+								</dl>
+							</div>
+							<div class="mul-profile-menu-user-avatar">
+								<i class="mul-icon-user mul-icon-size-medium mul-center-block" title="Arquimedez Pozo"></i>
+							</div>
+	
+						<!-- PROFILE SUBMENU - BEGINS -->	
+							<div class="mul-profile-menu">
+								<ul class="mul-vertical-list">
+									<li><a href="#">View Profile</a></li>
+									<li><a href="#">Change Language</a></li>
+									<li><a href="#">User Administration</a></li>
+									<li><a class="last-child" href="/index">Log Out</a></li>
+								</ul>
+							</div>
+						<!-- PROFILE SUBMENU - BEGINS -->
+						</div>
+
+					</div>
+				<!-- PROFILE CONTAINER - ENDS -->
+				</div>
 			</div>
-		<!-- LOGO SECTION - ENDS -->
+		</section>
+	<!-- MASTHEAD - ENDS -->
 
-		<!-- PROFILE MENU SECTION - BEGINS -->
-			{% if global.user_profile == "simple" %}
-
-				<!-- MASTHEAD PROFILE SIMPLE - BEGINS -->
-				{% include "/base/masthead-profile-simple" %}
-				<!-- MASTHEAD PROFILE SIMPLE - ENDS -->
-
-			{% elseif global.user_profile == "menu"  %}
-
-				<!-- MASTHEAD PROFILE MENU - BEGINS -->
-				{% include "/base/masthead-profile-menu" %}
-				<!-- MASTHEAD PROFILE MENU - ENDS -->
-
-			{% else %}
-
-			{% endif %}
-		<!-- PROFILE MENU SECTION - ENDS -->
-
-		</div>
-	</section>
-
-	<section class="mul-masthead-bottom">
-		<div class="mul-masthead-bottom-adjust">
-		
-		<!-- NAVBAR - BEGINS -->
-			<nav role="navigation" class="mul-navbar mul-grid">
-
-				<ul class="mul-main-menu sm mul-menu-default">
-					<li><a class="mul-first-child {% if mixture.url == "index" %}mul-navbar-item-active{% endif %}" href="/index">Home</a></li>
-					<li>
-						<a {% if mixture.url == "browser-testing-support" %}class="mul-navbar-item-active"{% endif %} href="/browser-testing-support">Browser Support</a>
-						<ul>
-							<li><a href="#">Sub Item</a></li>
-							<li><a href="#">Sub Item</a></li>
-							<li><a href="#">Sub Item</a></li>
+	<!-- NAVBAR - BEGINS -->
+		<section class="col-24 mul-navbar">
+			<div class="mul-navbar-adjust">
+				<div class="col-18 first navbar-col-1">
+				<!-- NAVBAR - BEGINS -->
+					<nav class="mul-nav-blocks">
+						<ul class="mul-horizontal-list mul-horizontal-list-piped sm sm-simple js-mul-menus">
+							<li><a href="/index">Home</a></li>
+							<li><a href="/browser-testing-support">Browser Support</a></li>
+							<li><a href="/toolkit">Toolkit</a></li>
+							<li><a href="javascript:;">Item</a></li>
 							<li>
-								<a href="#">Sub Item</a>
-								<ul class="mul-vertical-list-bulleted">
-									<li><a href="javascript:;">Link 1</a></li>
-									<li><a href="javascript:;">Lorem ipsum Erat esse molestie esse soluta in ipsum luptatum no</a></li>
-									<li><a href="javascript:;">Link 3</a></li>
+								<a href="javascript:;">Item</a>
+								<ul>
+									<li><a href="javascript:;">Item for this is really long Item for this is really long Item for this is really long</a></li>
+									<li><a href="javascript:;">Item</a></li>
+									<li><a href="javascript:;">Item</a></li>
+									<li><a href="javascript:;">Item</a></li>
 									<li>
-										<a href="javascript:;">Link 4</a>
-										<ul class="mul-vertical-list-bulleted">
-											<li><a href="javascript:;">Link 1</a></li>
-											<li><a href="javascript:;">Lorem ipsum Erat esse molestie esse soluta in ipsum luptatum no</a></li>
-											<li><a href="javascript:;">Link 3</a></li>
+										<a href="javascript:;">Item</a>
+										<ul>
+											<li><a href="javascript:;">Item</a></li>
+											<li><a href="javascript:;">Item</a></li>
+											<li><a href="javascript:;">Item</a></li>
+											<li><a href="javascript:;">Item</a></li>
 											<li>
-												<a href="javascript:;">Link 4</a>
-												<ul class="mul-vertical-list-bulleted">
-													<li><a href="javascript:;">Link 1</a></li>
-													<li><a href="javascript:;">Lorem ipsum Erat esse molestie esse soluta in ipsum luptatum no</a></li>
-													<li><a href="javascript:;">Link 3</a></li>
-													<li>
-														<a href="javascript:;">Link 4</a>
-														<ul class="mul-vertical-list-bulleted">
-															<li><a href="javascript:;">Link 1</a></li>
-															<li><a href="javascript:;">Lorem ipsum Erat esse molestie esse soluta in ipsum luptatum no</a></li>
-															<li><a href="javascript:;">Link 3</a></li>
-															<li><a href="javascript:;">Link 4</a></li>
-														</ul>
-													</li>
+												<a href="javascript:;">Item</a>
+												<ul>
+													<li><a href="javascript:;">Item for this is really long Item for this is really long Item for this is really long</a></li>
+													<li><a href="javascript:;">Item</a></li>
+													<li><a href="javascript:;">Item</a></li>
+													<li><a href="javascript:;">Item</a></li>
 												</ul>
 											</li>
 										</ul>
 									</li>
 								</ul>
 							</li>
-						</ul>
-					</li>
-					<li><a {% if mixture.url == "tollkit" %}class="mul-navbar-item-active"{% endif %} href="/toolkit">Toolkit</a></li>
-					<li><a {% if mixture.url == "quick-reference" %}class="mul-navbar-item-active"{% endif %} href="/quick-reference">Quick Reference</a></li>
-					<li class="mega-menu">
-						<a href="#">Mega Menu</a>
-						<ul class="mega-menu">
-							<li>
-								<!-- The mega drop down contents -->
-								<div class="mul-mega-menu">
-									<div class="mul-mega-menu-content mul-grid">
-										{{ 2 | lorem_ipsum:'p' }}
-										<section class="col-24">
-											<div class="col-12 first">
-												<h4>Column Left</h4>
-											<!-- VERTICAL LISTS BULLETED - LINKS - BEGINS -->
-												<ul class="mul-vertical-list-bulleted">
-													<li><a href="javascript:;">Link 1</a></li>
-													<li><a href="javascript:;">Lorem ipsum Erat esse molestie esse soluta in ipsum luptatum no</a></li>
-													<li><a href="javascript:;">Link 3</a></li>
-													<li><a href="javascript:;">Link 4</a></li>
-												</ul>
-											<!-- VERTICAL LISTS BULLETED - LINKS - ENDS -->
-
-											</div>
-											<div class="col-12">
-												<h3>Column Right</h3>
-											<!-- VERTICAL DEFINITION LISTS BULLETED - LINKS - BEGINS -->
-												<dl class="mul-vertical-list-bulleted">
-													<dt>Title</dt>
-													<dd><a href="javascript:;">Link 1</a></dd>
-													<dd><a href="javascript:;">Lorem ipsum Erat esse molestie esse soluta in ipsum luptatum no</a></dd>
-													<dd><a href="javascript:;">Link 3</a></dd>
-													<dd><a href="javascript:;">Link 4</a></dd>
-												</dl>
-											<!-- VERTICAL DEFINITION LISTS BULLETED - LINKS - ENDS -->
-											</div>
-										</section>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-					<li class="mega-menu mul-menu-icon">
-						<a href="javascript:;"><i class="mul-icon-basket mul-icon-size-small"></i></a>
-						<ul class="mega-menu">
-							<li>
-								<!-- The mega drop down contents -->
-								<div class="mul-mega-menu">
-									<div class="mul-mega-menu-content mul-grid">
-
-										<div class="col-24 hp-layout">
-											<div class="col-8 first">
-												{% for item in global.table-of-contents limit:2 %}
-													{% include "sidebar-navbar" %}
-												{% endfor %}
-											</div>
-											<div class="col-8">
-												{% for item in global.table-of-contents limit:2 offset:3 %}
-													{% include "sidebar-navbar" %}
-												{% endfor %}
-											</div>
-											<div class="col-8">
-												{% for item in global.table-of-contents offset:5 %}
-													{% include "sidebar-navbar" %}
-												{% endfor %}
-											</div>
+							<li class="mul-mega-menu">
+								<a href="javascript:;">Item</a>
+								<ul class="mega-menu">
+									<li class="mul-mega-menu-adjust">
+									<!-- MEGA MENU CONTAINER - BEGINS -->
+										<div class="mul-mega-menu-ctn">
+											<p>Some content to test</p>
+											<p>Some content to test</p>
+											<p>Some content to test</p>
+											<p>Some content to test</p>
+											<p>Some content to test</p>
+											<p>Some content to test</p>
+											<p>Some content to test</p>
+											<p>Some content to test</p>
+											<p>Some content to test</p>
+											<p>Some content to test</p>
+											<p>Some content to test</p>
+											<p>Some content to test</p>
+											<p>Some content to test</p>
+											<p>Some content to test</p>
+											<p>Some content to test</p>
 										</div>
-
-									</div>
-								</div>
+									<!-- MEGA MENU CONTAINER - ENDS -->
+									</li>
+								</ul>
 							</li>
 						</ul>
-					</li>
-				</ul>
+					</nav>
+				<!-- NAVBAR - ENDS -->
+				</div>
+				<div class="col-6 navbar-col-2">
+				<!-- NAVBAR ICON CONTAINER - BEGINS -->
+					<div class="mul-navbar-icon-ctn">
+						<i class="mul-icon-menu3"></i>
+						<i class="mul-icon-basket"></i>
+					</div>
+				<!-- NAVBAR ICON CONTAINER - ENDS -->
+				</div>
+			</div>
+		</section>
+	<!-- NAVBAR - ENDS -->
 
-			</nav>
-		<!-- NAVBAR - ENDS -->
-
-		</div>
-	</section>
+	</div>
 
 </header>

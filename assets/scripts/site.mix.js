@@ -10,6 +10,7 @@
 
 @import "lib/jquery/plugins/jquery.jpanelmenu.js";
 @import "lib/prettify/prettify.js";
+@import "core/lib/jquery/plugins/jquery.smartmenus.js";
 
 
 // =======================================================================================================

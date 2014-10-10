@@ -3,6 +3,7 @@ Mercer Evolution - Site Theme CSS
 DATE - June 13, 2014
 AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 --------------------------------------------------------------------------------------------*/
+/* TODO: add this to the menu system $zindexNavbarSubmenu:						!default; */
 /*=== CORE THEME OVERRIDE STYLES ===========================================================*/
 /*--- HELPERS THEME ------------------------------------------------------------------------*/
 /* FOOTNOTES */
@@ -447,49 +448,51 @@ input[type="text"]:invalid {
 /* Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops */
 @media only screen and (min-width: 768px) {
   /* HEADER MASTHEAD */
-  .mul-masthead .mul-masthead-adjust .mul-masthead-content-ctn .mul-profile-menu-ctn {
-    background-color: #40699a;
-    background-image: -moz-linear-gradient(top, #4674a9, #385882);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4674a9), to(#385882));
-    background-image: -webkit-linear-gradient(top, #4674a9, #385882);
-    background-image: -o-linear-gradient(top, #4674a9, #385882);
-    background-image: linear-gradient(to bottom, #4674a9, #385882);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF4674A9', endColorstr='#FF385882', GradientType=0);
-  }
-  .mul-masthead .mul-masthead-adjust .mul-masthead-content-ctn .mul-profile-menu-ctn .mul-profile-menu-user-info-ctn .mul-profile-menu-user-info .mul-profile-menu-icon:before {
-    color: #c0d7f0;
-  }
-  .mul-masthead .mul-masthead-adjust .mul-masthead-content-ctn .mul-profile-menu-ctn .mul-profile-menu-user-info-ctn .mul-profile-menu-user-info dl {
-    color: #FFF;
-  }
-  .mul-masthead .mul-masthead-adjust .mul-masthead-content-ctn .mul-profile-menu-ctn .mul-profile-menu-user-info-ctn .mul-profile-menu-user-avatar .mul-icon-user:before {
-    color: #FFF;
-  }
-  .mul-masthead .mul-masthead-adjust .mul-masthead-content-ctn .mul-profile-menu-ctn .mul-profile-menu {
-    -moz-box-shadow: 0 2px 2px #666666;
-    -webkit-box-shadow: 0 2px 2px #666666;
-    -o-box-shadow: 0 2px 2px #666666;
-    box-shadow: 0 2px 2px #666666;
-    background-color: #385882;
-  }
-  .mul-masthead .mul-masthead-adjust .mul-masthead-content-ctn .mul-profile-menu-ctn .mul-profile-menu .mul-vertical-list li a, .mul-masthead .mul-masthead-adjust .mul-masthead-content-ctn .mul-profile-menu-ctn .mul-profile-menu .mul-vertical-list-bulleted li a {
-    color: #FFF;
-    text-decoration: none;
-  }
-  .mul-masthead .mul-masthead-adjust .mul-masthead-content-ctn .mul-profile-menu-ctn .mul-profile-menu .mul-vertical-list li a:hover, .mul-masthead .mul-masthead-adjust .mul-masthead-content-ctn .mul-profile-menu-ctn .mul-profile-menu .mul-vertical-list-bulleted li a:hover {
-    background-color: #23334C;
-  }
-  .mul-masthead .mul-masthead-adjust .mul-masthead-content-ctn .mul-profile-simple-ctn {
-    color: #FFF;
-  }
-  .mul-masthead .mul-masthead-adjust .mul-masthead-content-ctn .mul-profile-simple-ctn a {
-    color: #FFF;
-    text-decoration: none;
-  }
-  .mul-masthead .mul-masthead-adjust .mul-masthead-content-ctn .mul-profile-simple-ctn .mul-horizontal-list .mul-profile-simple-user-name {
-    border-right: 1px solid #FFF;
-  }
+  		/*
+  		.mul-masthead						{
+  			.mul-masthead-adjust				{
+  				.mul-masthead-content-ctn			{
+  
+  					// HEADER MASTHEAD PROFILE MENU
+  					.mul-profile-menu-ctn				{		
+  														@include background-gradient($mastheadProfileMenuBackgroundStartColor,$mastheadProfileMenuBackgroundEndColor);
+  						.mul-profile-menu-user-info-ctn		{
+  							.mul-profile-menu-user-info			{
+  								.mul-profile-menu-icon				{
+  									&:before							{color: $mastheadProfileMenuIconColor;}
+  																	}
+  								dl									{color: $mastheadProfileMenuTextColor;}
+  																}
+  							.mul-profile-menu-user-avatar		{
+  								.mul-icon-user:before				{color: $mastheadProfileMenuAvatarIconColor;}
+  																}
+  															}
+  						.mul-profile-menu					{
+  															@include box-shadow(0, 2px, 2px, $mastheadProfileMenuShadowColor);
+  															background-color: $mastheadProfileMenuBackgroundEndColor;
+  							.mul-vertical-list					{
+  								li									{
+  									a									{
+  																		@include href-link($mastheadProfileMenuTextColor, none);
+  										&:hover								{background-color: $mastheadProfileMenuHoverColor;}
+  																		}
+  																	}
+  																}
+  															}
+  														}
+  
+  					// HEADER MASTHEAD PROFILE SIMPLE
+  					.mul-profile-simple-ctn				{
+  														color: $mastheadProfileSimpleTextColor;
+  							a								{@include href-link($mastheadProfileSimpleTextColor, none);}
+  							.mul-horizontal-list			{
+  								.mul-profile-simple-user-name	{border-right: 1px solid $mastheadProfileSimpleListBorderColor;}
+  															}
+  														}
+  													}
+  												}
+  											}
+  											*/
 }
 .mul-mega-menu-masthead .mul-masthead-navbar-ctn .mul-masthead-adjust .mul-mega-menu-navbar .mul-mega-menu-item {
   background-color: #999999;
@@ -528,65 +531,69 @@ input[type="text"]:invalid {
 /*=== MEDIA QUERIES ========================================================================*/
 /* Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops */
 @media only screen and (min-width: 768px) {
-  .mul-mega-menu-masthead .mul-masthead-navbar-ctn .mul-masthead-adjust .mul-mega-menu-navbar .mul-util-navbar .mul-horizontal-list li {
-    border-left-color: #999999;
-  }
-  .mul-mega-menu-masthead .mul-masthead-navbar-ctn .mul-masthead-adjust .mul-mega-menu-navbar .mul-util-navbar .mul-utility-subnav-ctn .mul-utility-subnav {
-    background-color: #cccccc;
-    border-color: #b0b0b0;
-  }
-  .mul-mega-menu-masthead .mul-masthead-navbar-ctn .mul-masthead-adjust .mul-mega-menu-navbar .mul-util-navbar .mul-utility-subnav-ctn .mul-utility-subnav li a {
-    border-bottom-color: #eeeeee;
-  }
-  .mul-mega-menu-masthead .mul-masthead-navbar-ctn .mul-masthead-adjust .mul-mega-menu-navbar .mul-util-navbar .mul-utility-subnav-ctn .mul-utility-subnav li a:hover {
-    background-color: #eeeeee;
-  }
+  		/*
+  		.mul-mega-menu-masthead				{
+  			.mul-masthead-navbar-ctn			{
+  				.mul-masthead-adjust				{
+  					.mul-mega-menu-navbar				{
+  						.mul-util-navbar					{
+  							.mul-horizontal-list				{
+  								li									{border-left-color: $megaMenuUtilityMenuPipedColor;}
+  																}
+  
+  							.mul-utility-subnav-ctn				{
+  								.mul-utility-subnav					{
+  																	background-color: $megaMenuUtilityMenuBackgroundColor;
+  																	border-color: $megaMenuUtilityMenuBorderColor;
+  									li									{
+  										a									{
+  																			border-bottom-color: $megaMenuUtilityMenuLinkBorderColor;
+  											&:hover								{background-color: $megaMenuUtilityMenuLinkHoverColor;}
+  																			}
+  																		}
+  																	}
+  																}																	
+  															}
+  														}
+  													}
+  												}
+  											}
+  											*/
 }
 /*--- NAVIGATION THEME ---------------------------------------------------------------------*/
 /* NAVIGATION */
-.mul-navbar .mul-horizontal-list {
-  background-color: #e6e6e6;
-  background-image: -moz-linear-gradient(top, #f7f7f7, #cccccc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f7f7f7), to(#cccccc));
-  background-image: -webkit-linear-gradient(top, #f7f7f7, #cccccc);
-  background-image: -o-linear-gradient(top, #f7f7f7, #cccccc);
-  background-image: linear-gradient(to bottom, #f7f7f7, #cccccc);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF7F7F7', endColorstr='#FFCCCCCC', GradientType=0);
-  border-bottom-color: #b0b0b0;
-}
-.mul-navbar .mul-horizontal-list li {
-  border-bottom-color: #b0b0b0;
-}
-.mul-navbar .mul-horizontal-list li a {
-  color: #002C77;
-  text-decoration: none;
-  border-top-color: #FFF;
-}
-.mul-navbar .mul-horizontal-list li a.mul-navbar-item-active, .mul-navbar .mul-horizontal-list li a:hover {
-  background-color: gainsboro;
-  background-image: -moz-linear-gradient(top, #f7f7f7, #b0b0b0);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f7f7f7), to(#b0b0b0));
-  background-image: -webkit-linear-gradient(top, #f7f7f7, #b0b0b0);
-  background-image: -o-linear-gradient(top, #f7f7f7, #b0b0b0);
-  background-image: linear-gradient(to bottom, #f7f7f7, #b0b0b0);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF7F7F7', endColorstr='#FFB0B0B0', GradientType=0);
-}
-
+/*
+.mul-navbar								{
+	.mul-horizontal-list					{
+											@include background-gradient($navBackgroundStartColor, $navBackgroundEndColor);
+											border-bottom-color: $navBorderColor;
+		li										{
+												border-bottom-color: $navBorderColor;
+			a										{
+													@include href-link($navLinkColor, none);
+													border-top-color: $navLinkBorderColor;
+				&.mul-navbar-item-active,
+				&:hover									{@include background-gradient($navActiveBackgroundStartColor, $navActiveBackgroundEndColor);}
+													}
+												}
+											}
+										}
+*/
 /*=== MEDIA QUERIES ========================================================================*/
 /* Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops */
 @media only screen and (min-width: 768px) {
   /* NAVIGATION */
-  .mul-navbar .mul-horizontal-list li {
-    border-right-color: #b0b0b0;
-  }
-  .mul-navbar .mul-horizontal-list li a {
-    border-right-color: #FFF;
-  }
-  .mul-navbar .mul-horizontal-list li .mul-first-child {
-    border-left-color: #b0b0b0;
-  }
+  /*
+  .mul-navbar							{
+  	.mul-horizontal-list				{
+  		li									{
+  											border-right-color: $navBorderColor;
+  			a									{border-right-color: $navLinkBorderColor;}
+  			.mul-first-child					{border-left-color: $navBorderColor;}
+  											}
+  										}
+  									}
+  */
 }
 /*--- FOOTER THEME -------------------------------------------------------------------------*/
 .mul-footer {
@@ -1392,8 +1399,8 @@ a[class^="mul-icon-"].mul-icon-style-gradient {
 
 /*--- TILES THEME --------------------------------------------------------------------------*/
 .mul-tile-ctn {
-  background-color: #E8F0F7;
-  border-color: #cccccc;
+  background-color: #f7f7f7;
+  border-color: #e6e6e6;
 }
 .mul-tile-ctn .mul-box-hdr {
   border-top-color: #00A8C8;
@@ -1404,14 +1411,14 @@ a[class^="mul-icon-"].mul-icon-style-gradient {
 }
 .mul-tile-ctn .mul-box-bdy {
   background-color: #FFF;
-  border-top-color: #cccccc;
+  border-top-color: #e6e6e6;
 }
 
 /*=== MEDIA QUERIES ========================================================================*/
 /* Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops */
 @media only screen and (min-width: 768px) {
   .mul-tile-ctn .mul-box-bdy {
-    border-color: #cccccc;
+    border-color: #e6e6e6;
   }
 }
 /*--- TOOLTIP THEME ------------------------------------------------------------------------*/
