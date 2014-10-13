@@ -11,8 +11,8 @@
 											margin-bottom: $baseMargin;
 											width: 100%;
 		.mul-summary-ctn-row					{
-			a:link									{
-													@include href-link($baseFontColor, none);
+			div										{
+													color: $baseFontColor;
 													border-color: $summaryCtnBorderColor;
 													border-top-color: $summaryCtnBorderColorTop;
 													border-width: $summaryCtnBorderSize;
@@ -23,32 +23,40 @@
 													padding: $summaryCtnPadding;
 													text-align: center;
 				&:first-child							{border-top-color: $summaryCtnBorderFirstChildColorTop;}
+				a										{@include href-link($baseFontColor, none);}
 				.mul-main-text							{display: block;}
 				.mul-support-text						{
 														display: block;
 														font-size: ($baseFontSize - $summaryPrimaryCtnSupportFontSizeAdjust);
 														}
-				[class*="mul-icon-"]					{font-size: $summaryPrimaryCtnIconFontSize;}
+				[class*="mul-icon-"]					{
+														color: $baseFontColor;
+														font-size: $summaryPrimaryCtnIconFontSize;
+														}
 													}
 
-			// SET AN ITEM TO ALERT STATE
-			a.mul-summary-ctn-alert-negative,
-			a.mul-summary-ctn-alert-negative:link,
-			a.mul-summary-ctn-alert-negative:visited
-													{@include href-link($summaryCtnAlertNegativeFontColor, none);}
+			// SET AN ITEM TO ALERT STATE - NEGATIVE
+			.mul-summary-ctn-alert-negative,
+			.mul-summary-ctn-alert-negative a		{
+													@include href-link($summaryCtnAlertNegativeFontColor, none);
+													color: $summaryCtnAlertNegativeFontColor;
+				[class*="mul-icon-"]					{color: $summaryCtnAlertNegativeFontColor;}
+													}
 
-			// SET AN ITEM TO ALERT STATE
+			// SET AN ITEM TO ALERT STATE - POSITIVE
 			.mul-summary-ctn-alert-positive,
-			.mul-summary-ctn-alert-positive:link,
-			.mul-summary-ctn-alert-positive:visited
-													{@include href-link($summaryCtnAlertPositiveFontColor, none);}
+			.mul-summary-ctn-alert-positive a		{
+													@include href-link($summaryCtnAlertPositiveFontColor, none);
+													color: $summaryCtnAlertPositiveFontColor;
+				[class*="mul-icon-"]					{color: $summaryCtnAlertPositiveFontColor;}
+													}
 												}
 											}
 
 	// SECONDARY SUMMARY CONTAINER
 	.mul-secondary-summary-ctn				{
 		.mul-summary-ctn-row					{
-			a:link									{
+			div										{
 				.mul-main-text							{font-size: ($hdrH1FontSize + $summarySecondaryCtnLargeFontSizeAdjust);}
 				.mul-support-text						{font-size: ($baseFontSize - $summarySecondaryCtnSupportFontSizeAdjust);}
 				[class*="mul-icon-"]					{font-size: $summarySecondaryCtnIconFontSize;}
@@ -68,7 +76,7 @@
 											display: table;
 				.mul-summary-ctn-row			{
 												display: table-row;
-					a:link							{
+					div								{
 													display: table-cell;
 													width: 10%;
 													border-left-color: $summaryCtnBorderColorLeft;
@@ -84,19 +92,14 @@
 														border-bottom-color: $summaryCtnBorderHoverBorderBottomColor;
 														}
 													}
-					// SET AN ITEM TO ALERT STATE
-					a.mul-summary-ctn-alert-negative,
-					a.mul-summary-ctn-alert-negative:link,
-					a.mul-summary-ctn-alert-negative:visited
-													{
+
+					// SET AN ITEM TO ALERT STATE - NEGATIVE
+					.mul-summary-ctn-alert-negative	{
 						&:hover							{background-color: $summaryCtnAlertNegativeHoverBackgroundColor;}
 													}
 
-					// SET AN ITEM TO ALERT STATE
-					.mul-summary-ctn-alert-positive,
-					.mul-summary-ctn-alert-positive:link,
-					.mul-summary-ctn-alert-positive:visited
-													{
+					// SET AN ITEM TO ALERT STATE - POSITIVE
+					.mul-summary-ctn-alert-positive	{
 						&:hover							{background-color: $summaryCtnAlertPositiveHoverBackgroundColor;}
 													}
 												}

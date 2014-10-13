@@ -1339,29 +1339,26 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 
 	.mul-summary-ctn						{
 		.mul-summary-ctn-row					{
-			a:link									{
+			div										{
 													border-color: $summaryCtnBorderColor;
 													border-top-color: $summaryCtnBorderColorTop;
-				[class*="mul-icon-"]					{color:$baseFontColor;}
 				&:first-child							{border-top-color: $summaryCtnBorderFirstChildColorTop;}
 													}
 			
-			// SET AN ITEM TO ALERT STATE
-			a.mul-summary-ctn-alert-negative,
-			a.mul-summary-ctn-alert-negative:link,
-			a.mul-summary-ctn-alert-negative:visited
-													{
+			// SET AN ITEM TO ALERT STATE - NEGATIVE
+			.mul-summary-ctn-alert-negative,
+			.mul-summary-ctn-alert-negative a		{
 													@include href-link($summaryCtnAlertNegativeFontColor, none);
-				[class*="mul-icon-"]					{color:$summaryCtnAlertNegativeFontColor;}
+													color: $summaryCtnAlertNegativeFontColor;
+				[class*="mul-icon-"]					{color: $summaryCtnAlertNegativeFontColor;}
 													}
 
-			// SET AN ITEM TO ALERT STATE
+			// SET AN ITEM TO ALERT STATE - POSITIVE
 			.mul-summary-ctn-alert-positive,
-			.mul-summary-ctn-alert-positive:link,
-			.mul-summary-ctn-alert-positive:visited
-													{
+			.mul-summary-ctn-alert-positive a		{
 													@include href-link($summaryCtnAlertPositiveFontColor, none);
-				[class*="mul-icon-"]					{color:$summaryCtnAlertPositiveFontColor;}
+													color: $summaryCtnAlertPositiveFontColor;
+				[class*="mul-icon-"]					{color: $summaryCtnAlertPositiveFontColor;}
 													}
 												}
 											}
@@ -1373,7 +1370,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 
 		.mul-summary-ctn					{
 			.mul-summary-ctn-row				{
-				a:link								{
+				div									{
 													border-left-color: $summaryCtnBorderColorLeft;
 													border-bottom-color: $summaryCtnBorderColorBottom;
 					&:first-child						{
@@ -1387,19 +1384,13 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 														border-bottom-color: $summaryCtnBorderHoverBorderBottomColor;
 														}
 													}
-				// SET AN ITEM TO ALERT STATE
-				a.mul-summary-ctn-alert-negative,
-				a.mul-summary-ctn-alert-negative:link,
-				a.mul-summary-ctn-alert-negative:visited
-													{
+				// SET AN ITEM TO ALERT STATE - NEGATIVE
+				.mul-summary-ctn-alert-negative		{
 						&:hover							{background-color: $summaryCtnAlertNegativeHoverBackgroundColor;}
 													}
 
-				// SET AN ITEM TO ALERT STATE
-				.mul-summary-ctn-alert-positive,
-				.mul-summary-ctn-alert-positive:link,
-				.mul-summary-ctn-alert-positive:visited
-													{
+				// SET AN ITEM TO ALERT STATE - POSITIVE
+				.mul-summary-ctn-alert-positive		{
 						&:hover							{background-color: $summaryCtnAlertPositiveHoverBackgroundColor;}
 													}
 												}
