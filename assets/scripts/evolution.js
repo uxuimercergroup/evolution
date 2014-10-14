@@ -8369,7 +8369,9 @@ $.extend($.ui.tabs.prototype, {
 	// FORM ELEMENT AUTOFOCUS
 	var mulInputAutofocus = function(){
 		if (!("autofocus" in document.createElement("input"))) {
-			jQuery(".js-mul-autofocus").focus();
+			setTimeout(function(){
+				jQuery(".js-mul-autofocus").focus();
+			}, 0);
 		}
 	}
 
