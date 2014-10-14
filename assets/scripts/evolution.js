@@ -8402,7 +8402,7 @@ $.extend($.ui.tabs.prototype, {
 	var mulToggleContent = function(){
 		jQuery('.js-mul-toggle-content').click(function(){
 			jQuery('.js-toggle-content-hide').hide(); // Hides all layers first
-			var id = 'div' + jQuery(this).attr('mul-data-toggle');
+			var id = 'div' + jQuery(this).attr('data-mul-toggle');
 			jQuery('#' + id).toggle();
 		});
 	}
@@ -8415,7 +8415,7 @@ $.extend($.ui.tabs.prototype, {
 		jQuery('.js-mul-toggle-content-icon').click(function(){
 			jQuery('.js-toggle-content-hide').hide(); // Hides all layers first
 			jQuery(this).children('i').toggleClass("mul-icon-minus-circle mul-icon-plus-circle")
-			var id = 'div' + jQuery(this).attr('mul-data-toggle');
+			var id = 'div' + jQuery(this).attr('data-mul-toggle');
 			jQuery('#' + id).toggle();
 		});
 	}
