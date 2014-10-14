@@ -328,6 +328,17 @@ input[type="text"]:invalid {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF999999', endColorstr='#FFEEEEEE', GradientType=0);
 }
+.mul-btn:focus, .ui-datepicker-buttonpane .ui-state-default:focus, .ui-datepicker-buttonpane .ui-priority-secondary:focus, .ui-dialog-buttonpane .ui-state-default:focus {
+  background-color: #cecece;
+  background-image: -moz-linear-gradient(top, #eeeeee, #999999);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eeeeee), to(#999999));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #999999);
+  background-image: -o-linear-gradient(top, #eeeeee, #999999);
+  background-image: linear-gradient(to bottom, #eeeeee, #999999);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FF999999', GradientType=0);
+  border-color: #b0b0b0;
+}
 .mul-btn.disabled, .ui-datepicker-buttonpane .disabled.ui-state-default, .ui-datepicker-buttonpane .disabled.ui-priority-secondary, .ui-dialog-buttonpane .disabled.ui-state-default, .ui-dialog-buttonpane .ui-state-default[disabled], .mul-btn[disabled], .ui-datepicker-buttonpane [disabled].ui-state-default, .ui-datepicker-buttonpane [disabled].ui-priority-secondary, .ui-dialog-buttonpane [disabled].ui-state-default {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   background-image: none;
@@ -382,6 +393,17 @@ input[type="text"]:invalid {
   background-image: linear-gradient(to bottom, #005804, #72BE44);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF005804', endColorstr='#FF72BE44', GradientType=0);
+}
+
+.mul-btn-primary:focus, .ui-datepicker-buttonpane .ui-priority-primary:focus, .ui-dialog-buttonpane .ui-state-default.mul-btn-primary:focus {
+  background-color: #47972c;
+  background-image: -moz-linear-gradient(top, #72BE44, #005804);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#72BE44), to(#005804));
+  background-image: -webkit-linear-gradient(top, #72BE44, #005804);
+  background-image: -o-linear-gradient(top, #72BE44, #005804);
+  background-image: linear-gradient(to bottom, #72BE44, #005804);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF72BE44', endColorstr='#FF005804', GradientType=0);
 }
 
 .mul-btn-primary.disabled, .ui-datepicker-buttonpane .disabled.ui-priority-primary, .ui-dialog-buttonpane .disabled.ui-state-default.mul-btn-primary, .ui-dialog-buttonpane .ui-state-default.mul-btn-primary[disabled], .ui-dialog-buttonpane .ui-datepicker-buttonpane .ui-state-default[disabled].ui-priority-primary, .ui-datepicker-buttonpane .ui-dialog-buttonpane .ui-state-default[disabled].ui-priority-primary,

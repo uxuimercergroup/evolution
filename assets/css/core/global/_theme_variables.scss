@@ -135,6 +135,9 @@ $buttonHoverBackgroundEndColor: 			$gray-dark !default;
 $buttonHoverBorderColor:					$gray-mid-dark !default;
 $buttonActiveBackgroundStartColor:			$gray-dark !default;
 $buttonActiveBackgroundEndColor:			$gray-lighter !default;
+$buttonFocusBackgroundStartColor: 			$gray-lighter !default;
+$buttonFocusBackgroundEndColor: 			$gray-dark !default;
+$buttonFocusBorderColor:					$gray-mid-dark !default;
 $buttonShadowColor:							$transparent !default;
 $buttonFontColor:							$gray-darkest !default;
 $buttonBorderColor:							$gray-mid-light !default;
@@ -147,6 +150,8 @@ $buttonHoverPrimaryBackgroundStartColor:	$green-mid !default;
 $buttonHoverPrimaryBackgroundEndColor:		$green !default;
 $buttonActivePrimaryBackgroundStartColor:	$green !default;
 $buttonActivePrimaryBackgroundEndColor:		$green-mid !default;
+$buttonFocusPrimaryBackgroundStartColor:	$green-mid !default;
+$buttonFocusPrimaryBackgroundEndColor:		$green !default;
 $buttonPrimaryFontColor:					$white !default;
 $buttonPrimaryTextShadowColor:				$transparent !default;
 

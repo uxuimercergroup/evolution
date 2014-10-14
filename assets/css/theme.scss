@@ -278,13 +278,16 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 
 		// LINK STATES
 		&:link,
-		&:visited
-												{color:$buttonFontColor;}
+		&:visited								{color:$buttonFontColor;}
 		&:hover									{
 												@include background-gradient($buttonHoverBackgroundStartColor, $buttonHoverBackgroundEndColor);
 												border-color:$buttonHoverBorderColor;
 												}
 		&:active								{@include background-gradient($buttonActiveBackgroundStartColor,$buttonActiveBackgroundEndColor);}
+		&:focus									{
+												@include background-gradient($buttonFocusBackgroundStartColor, $buttonFocusBackgroundEndColor);
+												border-color: $buttonFocusBorderColor;
+												}
 
 		&.disabled,
 		&[disabled]								{
@@ -309,6 +312,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 											}
 	.mul-btn-primary:hover					{@include background-gradient($buttonHoverPrimaryBackgroundStartColor,$buttonHoverPrimaryBackgroundEndColor);}
 	.mul-btn-primary:active					{@include background-gradient($buttonActivePrimaryBackgroundStartColor,$buttonActivePrimaryBackgroundEndColor);}
+	.mul-btn-primary:focus					{@include background-gradient($buttonFocusPrimaryBackgroundStartColor,$buttonFocusPrimaryBackgroundEndColor);}
 	.mul-btn-primary.disabled,
 	.mul-btn-primary[disabled]				{
 											@include ie-gradient-reset-filter;
@@ -338,9 +342,11 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 
 		.ui-priority-primary					{@extend .mul-btn-primary;}
 		.ui-priority-primary:hover				{@extend .mul-btn-primary:hover;}
+		.ui-priority-primary:focus				{@extend .mul-btn-primary:focus;}
 
 		.ui-priority-secondary					{@extend .mul-btn;}
 		.ui-priority-secondary:hover			{@extend .mul-btn:hover;}
+		.ui-priority-secondary:focus			{@extend .mul-btn:focus;}
 											}
 
 	// SPECIAL BUTTONS FOR JQUERY UI DIALOG

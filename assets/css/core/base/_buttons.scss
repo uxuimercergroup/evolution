@@ -30,7 +30,7 @@
 													cursor: pointer;
 													outline: none !important;
 
-		// LINK STATES
+		// BUTTON STATES
 		&:link,
 		&:visited
 														{
@@ -45,6 +45,10 @@
 														@include background-gradient($buttonActiveBackgroundStartColor,$buttonActiveBackgroundEndColor);
 														@include box-shadow(0, 0, 0, transparent);
 														@include transition(translate(0, 0));
+														}
+		&:focus											{
+														@include background-gradient($buttonFocusBackgroundStartColor, $buttonFocusBackgroundEndColor);
+														border-color: $buttonFocusBorderColor;
 														}
 
 		// DISABLED BUTTON
@@ -70,6 +74,7 @@
 													}
 	.mul-btn-primary:hover							{@include background-gradient($buttonHoverPrimaryBackgroundStartColor,$buttonHoverPrimaryBackgroundEndColor);}
 	.mul-btn-primary:active							{@include background-gradient($buttonActivePrimaryBackgroundStartColor,$buttonActivePrimaryBackgroundEndColor);}
+	.mul-btn-primary:focus							{@include background-gradient($buttonFocusPrimaryBackgroundStartColor,$buttonFocusPrimaryBackgroundEndColor);}
 	.mul-btn-primary.mul-btn-disabled,
 	.mul-btn-primary[disabled]						{
 													@include ie-gradient-reset-filter;
@@ -188,12 +193,14 @@
 
 		.ui-priority-primary							{@extend .mul-btn-primary;}
 		.ui-priority-primary:hover						{@extend .mul-btn-primary:hover;}
+		.ui-priority-primary:focus						{@extend .mul-btn-primary:focus;}
 
 		.ui-priority-secondary							{
 														@extend .mul-btn;
 														margin-left: 0;
 														}
 		.ui-priority-secondary:hover					{@extend .mul-btn:hover;}
+		.ui-priority-secondary:focus					{@extend .mul-btn:focus;}
 													}
 
 	// SPECIAL BUTTONS FOR JQUERY UI DIALOG
