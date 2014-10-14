@@ -119,7 +119,7 @@ $(function() {
 			});
 		/* PLEASE CLEAN UP! - ENDS */
 
-		
+
 		// JS LIBRARY INITS
 
 			// GOOGLE PRETTIFY INIT (for code snippet coloring/formating)
