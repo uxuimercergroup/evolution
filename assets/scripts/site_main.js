@@ -110,12 +110,14 @@ $(function() {
 			jQuery('.js-mul-menus').smartmenus('destroy');
 			jQuery('.js-mul-menus').smartmenus('menuHideAll');
 			jQuery('.js-mul-menus').smartmenus({
-				subIndicators: false,
+				subIndicators: true,
 				mainMenuSubOffsetX: -1,
-				subMenusSubOffsetX: 30,
-				subMenusSubOffsetY: 20,
+				subMenusSubOffsetX: 10,
+				subMenusSubOffsetY: -1,
 				subMenusMinWidth: '100px',
-				subMenusMaxWidth: '250px'
+				subMenusMaxWidth: '250px',
+				subIndicatorsText: '',
+				subIndicatorsPos: 'append'
 			});
 		/* PLEASE CLEAN UP! - ENDS */
 
