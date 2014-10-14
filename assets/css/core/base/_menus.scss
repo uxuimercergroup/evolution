@@ -125,22 +125,34 @@
 	// MENU BOX SUBMENU - ENDS
 
 	// MENU BOX SUBMENU INDICATORS - BEGINS
-		.sm-simple a span.sub-arrow
-				{
-				display: none;
-				position: absolute;
-				right: 12px;
-				top: 50%;
-				margin-top: -8px;
-				width: 16px;
-				height: 16px;
-				line-height: 16px;
+	.sm-simple	{
+		li			{
+			.sub-arrow	{
+						position: absolute;
+						right: 0;
+						top: 50%;
+						margin-top: -8px;
+						width: 16px;
+						height: 16px;
+						outline: 1px solid red;
+				&:before	{
+							font-family: $mulIconFontStack;
+							content: "\e3c2";
+							}
+						}
+					}
+		ul > li 	{
+			.sub-arrow	{
+				&:before	{content: "\e3c1";}
+						}
+					}
 				}
+
 	 	.sm-simple ul a span.sub-arrow,
 		.sm-simple-vertical a span.sub-arrow
 				{
 				right: auto;
-				margin-left: -14px;
+				//margin-left: -14px;
 				}
 	// MENU BOX SUBMENU INDICATORS - ENDS
 

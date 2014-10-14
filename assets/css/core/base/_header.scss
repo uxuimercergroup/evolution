@@ -31,17 +31,26 @@
 
 		// NAVBAR ICON STYLES - BEGINS
 			.mul-navbar-icon-ctn	{
-				[class*="mul-icon"]		{
-										@include border-radius(3px);
-										background-color: $gray-mid-dark;
-										color: $gray-darker;
-										cursor: pointer;
-										padding: 4px 10px 6px 6px;
-										min-width: 28px;
-										top: 6px;
-					&:hover					{
-											background-color: $gray-dark;
-											color: $gray-mid-light;
+									@include clearfix;
+				li						{
+										margin-right: 0;
+										margin-left: 4px;
+					a						{
+											margin: 0;
+											padding: 0;
+						[class*="mul-icon"]		{
+												@include border-radius(3px);
+												background-color: $gray-mid-dark;
+												color: $gray-darker;
+												cursor: pointer;
+												padding: 4px 10px 6px 6px;
+												min-width: 28px;
+												top: 6px;
+							&:hover					{
+													background-color: $gray-dark;
+													color: $gray-mid-light;
+													}
+												}
 											}
 										}
 									}
@@ -151,7 +160,7 @@
 									@include clearfix;
 									width: 980px;
 									margin: 0 auto;
-					.navbar-col-2		{text-align: right;}
+					.navbar-col-2		{outline: 1px solid red;}
 					nav					{
 						.mul-horizontal-list-piped
 											{
@@ -197,6 +206,7 @@
 								position: static !important;
 				.mega-menu			{
 									margin: 0 auto !important;
+									top: 38px !important;
 									right: 0 !important;
 									width: 980px !important;
 									max-width: none !important;
@@ -209,6 +219,8 @@
 											}
 										}
 									}
+				.mul-mega-menu-icons
+									{left: auto !important;}
 								}
 		// MEGA MENU - ENDS
 							}
