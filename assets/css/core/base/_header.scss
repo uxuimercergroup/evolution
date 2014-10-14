@@ -19,13 +19,19 @@
 								font-size: $mastheadLogoFontSize;
 								line-height: $mastheadLogoLineHeight;
 								margin-bottom: 0;
-								padding: 4px 0 4px 0;
-				a					{
-									@include href-link($mastheadLogoLinkColor, none);
-									font-weight: $mastheadLogoFontWeight;
-									white-space: nowrap;
+								padding: 4px 0;
+				.mul-logo-col-1		{display: none;}
+				.mul-logo-col-2		{
+									margin-left: 10px;
+									width: 31.5%;
+					a					{
+										@include href-link($mastheadLogoLinkColor, none);
+										font-weight: $mastheadLogoFontWeight;
+										white-space: nowrap;
+										}
+						span			{font-family: $proximaNovaThinStack;}
 									}
-					span			{font-family: $proximaNovaThinStack;}
+				.mul-logo-col-3		{}
 								}
 		// MAIN LOGO CONTAINER - ENDS
 
@@ -38,6 +44,7 @@
 					a						{
 											margin: 0;
 											padding: 0;
+						.sub-arrow				{display: none;}
 						[class*="mul-icon"]		{
 												@include border-radius(3px);
 												background-color: $gray-mid-dark;
@@ -59,6 +66,7 @@
 		// MASTHEAD - BEGINS
 			.mul-masthead		{
 								@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
+								@include clearfix;
 								width: 100%;
 
 			// MASTHEAD ADJUST - BEGINS
@@ -76,6 +84,8 @@
 										text-align: left;
 										width: 225px;
 										padding: 5px 0;
+										z-index: 10000;
+
 
 						.mul-profile-menu-user-info-ctn
 											{
@@ -160,7 +170,9 @@
 									@include clearfix;
 									width: 980px;
 									margin: 0 auto;
-					.navbar-col-2		{outline: 1px solid red;}
+					.navbar-col-2		{
+						li					{float: right;}
+										}
 					nav					{
 						.mul-horizontal-list-piped
 											{
@@ -205,6 +217,8 @@
 			.mul-mega-menu		{
 								position: static !important;
 				.mega-menu			{
+									@include box-shadow(0, 2px, 5px, $gray-mid-dark);
+									@include border-radius(0 0 4px 4px);
 									margin: 0 auto !important;
 									top: 38px !important;
 									right: 0 !important;
@@ -214,9 +228,7 @@
 									display: none;
 					.mul-mega-menu-adjust
 										{
-						.mul-mega-menu-ctn	{
-											padding: 15px;
-											}
+						.mul-mega-menu-ctn	{padding: 5px 15px 0 15px;}
 										}
 									}
 				.mul-mega-menu-icons
@@ -234,6 +246,226 @@
 @if $use-medium-mediaquery == true or $use-large-mediaquery == true {
 	
 	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+
+		.mul-header			{
+			.mul-header-adjust	{
+
+			// MAIN LOGO CONTAINER - BEGINS
+				.mul-logo			{
+					.mul-logo-col-1		{display: none;}
+					.mul-logo-col-2		{
+										margin-left: 0;
+										width: 78.7234%;
+						a					{}
+							span			{}
+										}
+					.mul-logo-col-3		{display: none;}
+									}
+			// MAIN LOGO CONTAINER - ENDS
+
+			// NAVBAR ICON STYLES - BEGINS
+				.mul-navbar-icon-ctn	{
+										@include clearfix;
+					li						{
+											margin-right: 0;
+											margin-left: 4px;
+						a						{
+												margin: 0;
+												padding: 0;
+							.sub-arrow				{display: none;}
+							[class*="mul-icon"]		{
+													@include border-radius(3px);
+													background-color: $gray-mid-dark;
+													color: $gray-darker;
+													cursor: pointer;
+													padding: 4px 10px 6px 6px;
+													min-width: 28px;
+													top: 6px;
+								&:hover					{
+														background-color: $gray-dark;
+														color: $gray-mid-light;
+														}
+													}
+												}
+											}
+										}
+			// NAVBAR ICON STYLES - ENDS
+
+			// MASTHEAD - BEGINS
+				.mul-masthead		{
+									@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
+									width: 100%;
+
+				// MASTHEAD ADJUST - BEGINS
+					.mul-masthead-adjust
+										{
+										margin: 0 auto;
+										width: 980px;
+
+					// PROFILE CONTAINER - BEGINS
+						.mul-profile-menu-ctn
+											{
+											@include background-gradient($mastheadProfileMenuBackgroundStartColor,$mastheadProfileMenuBackgroundEndColor);
+											float: right;
+											position: relative;
+											text-align: left;
+											width: 225px;
+											padding: 5px 0;
+											z-index: 10000;
+
+
+							.mul-profile-menu-user-info-ctn
+												{
+												@include clearfix;
+
+								.mul-profile-menu-icons,
+								.mul-profile-menu-user-info,
+								.mul-profile-menu-user-avatar
+													{float: left;}
+
+								.mul-profile-menu-icons
+													{
+													cursor: pointer;
+													text-align: center;
+													width: 12%;
+									[class*="mul-icon"]	{color: $white;}
+													}
+								.mul-profile-menu-user-info
+													{
+													width: 65%;
+									dl					{
+														color: $white;
+														margin: 0;
+														font-size: 11px;
+										.mul-profile-menu-user-name
+															{}
+										.mul-profile-menu-user-title
+															{margin: 0;}
+														}
+													}
+								.mul-profile-menu-user-avatar
+													{
+													text-align: center;
+													width: 23%;
+													}
+												}
+											}
+
+						.mul-profile-menu	{
+											@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+											@include box-shadow(0, 2px, 2px, $mastheadProfileMenuShadowColor);
+											background-color: $mastheadProfileMenuBackgroundEndColor;
+											display: none;
+											padding: 0;
+											position: absolute;
+											top: 50px;
+											right: 0;
+											width: 100%;
+											z-index: $zindexMastheadProfileMenu;
+							.mul-vertical-list	{
+								li					{
+													margin-bottom: 0;
+									a					{
+														@include href-link($mastheadProfileMenuTextColor, none);
+														display: block;
+														font-size: $mastheadProfileMenuFontSize;
+														padding: 6px 20px 6px 27px;
+										&:hover				{background-color: $mastheadProfileMenuHoverColor;}
+														}
+
+								.last-child				{
+														padding-bottom: 7px;
+									&:hover					{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+														}
+													}
+												}
+											}
+					// PROFILE CONTAINER - ENDs
+										}
+
+				// MASTHEAD ADJUST - ENDS
+
+									}
+			// MASTHEAD - ENDS
+
+			// NAVBAR - BEGINS
+				.mul-navbar			{
+									@include background-gradient($gray-lightest, $gray-mid-light);
+									border-bottom: 1px solid $gray-mid-dark;
+									width: 100%;
+					.mul-navbar-adjust	{
+										@include clearfix;
+										width: 980px;
+										margin: 0 auto;
+						.navbar-col-2		{
+							li					{float: right;}
+											}
+						nav					{
+							.mul-horizontal-list-piped
+												{
+												margin: 8px 0;
+												}
+											}
+
+					// NAVBAR BLOCKS STYLE - BEGINS
+					/* TODO: This class needs to be highlighted in the documentation of the navbar, you should be able to add this class or remove it to get a block
+					looking nav or piped nav look */
+						.mul-nav-blocks		{
+							.mul-horizontal-list-piped
+												{
+												margin: 0;
+								li					{
+													border: 0;
+													border-right: 1px solid $gray-mid-light;
+													padding: 0;
+													margin: 0 -4px -1px 0;
+									&:first-child		{border-left: 1px solid $gray-mid-light;}
+									a					{
+														border-right: 1px solid $white;
+														color: #002C77;
+														display: block;
+														font-size: 14px;
+														font-family: $proximaNovaSemiBoldFamily;
+														padding: 11px 15px 10px 15px;
+										&:hover				{
+															@include background-gradient($gray-lightest, $gray-mid-dark);
+															text-decoration: none;
+															}
+														}
+													}
+												}
+											}
+					// NAVBAR BLOCKS STYLE - ENDS
+										}
+									}
+			// NAVBAR - ENDS
+
+			// MEGA MENU - BEGINS
+				.mul-mega-menu		{
+									position: static !important;
+					.mega-menu			{
+										@include box-shadow(0, 2px, 5px, $gray-mid-dark);
+										@include border-radius(0 0 4px 4px);
+										margin: 0 auto !important;
+										top: 38px !important;
+										right: 0 !important;
+										width: 980px !important;
+										max-width: none !important;
+										z-index: 100;
+										display: none;
+						.mul-mega-menu-adjust
+											{
+							.mul-mega-menu-ctn	{padding: 5px 15px 0 15px;}
+											}
+										}
+					.mul-mega-menu-icons
+										{left: auto !important;}
+									}
+			// MEGA MENU - ENDS
+								}
+							}
+
 
 	}// endif
 
