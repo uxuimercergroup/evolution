@@ -29,7 +29,7 @@
 										font-weight: $mastheadLogoFontWeight;
 										white-space: nowrap;
 										}
-						span			{font-family: $proximaNovaThinStack;}
+						span			{font-family: $fontThinStack;}
 									}
 				.mul-logo-col-3		{}
 								}
@@ -198,7 +198,7 @@
 													color: #002C77;
 													display: block;
 													font-size: 14px;
-													font-family: $proximaNovaSemiBoldFamily;
+													font-family: $fontSemiBoldFamily;
 													padding: 11px 15px 10px 15px;
 									&:hover				{
 														@include background-gradient($gray-lightest, $gray-mid-dark);
@@ -426,7 +426,7 @@
 														color: #002C77;
 														display: block;
 														font-size: 14px;
-														font-family: $proximaNovaSemiBoldFamily;
+														font-family: $fontSemiBoldFamily;
 														padding: 11px 15px 10px 15px;
 										&:hover				{
 															@include background-gradient($gray-lightest, $gray-mid-dark);

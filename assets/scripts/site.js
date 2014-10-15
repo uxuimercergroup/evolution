@@ -1274,7 +1274,7 @@ $(function() {
 			jQuery('.js-mul-menus').smartmenus({
 				subIndicators: true,
 				mainMenuSubOffsetX: -1,
-				subMenusSubOffsetX: 10,
+				subMenusSubOffsetX: 5,
 				subMenusSubOffsetY: -1,
 				subMenusMinWidth: '100px',
 				subMenusMaxWidth: '250px',
