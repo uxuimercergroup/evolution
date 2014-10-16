@@ -1282,6 +1282,8 @@ $(function() {
 				subIndicatorsPos: 'append',
 				keepInViewport: true
 			});
+			jQuery('.js-mul-profile-menu').smartmenus('destroy');
+			jQuery('.js-mul-profile-menu').smartmenus('menuHideAll');
 			jQuery('.js-mul-profile-menu').smartmenus({
 				subIndicators: true,
 				mainMenuSubOffsetX: -1,

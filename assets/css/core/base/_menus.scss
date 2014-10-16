@@ -98,23 +98,24 @@
 							color: #002C77;
 							display: block;
 							font-size: 14px;
-							font-family: $proximaNovaSemiBoldFamily;
+							font-family: $fontSemiBoldFamily;
 							text-decoration: none;
 							width: 100%;
+							padding: 10px;
 					&:hover		{
 								@include background-gradient($gray-lightest, $gray-mid-dark);
 								text-decoration: none;
 								}
 							}
 						}
-
 					}
-
 	// MENU BOX SUBMENU - ENDS
 
 	// HAS SUB MENU - BEGINS
 		.has-submenu
-					{padding-right: 16px;}
+					{
+					padding-right: 16px;
+					}
 	// HAS SUB MENU - ENDS
 
 	// MENU BOX SUBMENU INDICATORS - BEGINS

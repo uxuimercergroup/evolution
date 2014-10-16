@@ -98,71 +98,9 @@
 					.navbar-col-2		{
 						li					{float: right;}
 										}
-					nav					{
-						.mul-horizontal-list-piped
-<<<<<<< HEAD
-											{margin: 8px 0;}
-=======
-											{
-											margin: 8px 0;
-											}
-										}
-
-				// NAVBAR BLOCKS STYLE - BEGINS
-				/* TODO: This class needs to be highlighted in the documentation of the navbar, you should be able to add this class or remove it to get a block
-				looking nav or piped nav look */
-					.mul-nav-blocks		{
-						.mul-horizontal-list-piped
-											{
-											margin: 0;
-							li					{
-												border: 0;
-												border-right: 1px solid $gray-mid-light;
-												padding: 0;
-												margin: 0 -4px -1px 0;
-								&:first-child		{border-left: 1px solid $gray-mid-light;}
-								a					{
-													border-right: 1px solid $white;
-													color: #002C77;
-													display: block;
-													font-size: 14px;
-													font-family: $fontSemiBoldFamily;
-													padding: 11px 15px 10px 15px;
-									&:hover				{
-														@include background-gradient($gray-lightest, $gray-mid-dark);
-														text-decoration: none;
-														}
-													}
-												}
-											}
->>>>>>> origin/d2-5
-										}
 									}
 								}
 		// NAVBAR - ENDS
-
-		// MEGA MENU - BEGINS
-			.mul-mega-menu		{
-								position: static !important;
-				.mega-menu			{
-									@include box-shadow(0, 2px, 5px, $gray-mid-dark);
-									@include border-radius(0 0 4px 4px);
-									margin: 0 auto !important;
-									top: 38px !important;
-									right: 0 !important;
-									width: 980px !important;
-									max-width: none !important;
-									z-index: 100;
-									display: none;
-					.mul-mega-menu-adjust
-										{
-						.mul-mega-menu-ctn	{padding: 5px 15px 0 15px;}
-										}
-									}
-				.mul-mega-menu-icons
-									{left: auto !important;}
-								}
-		// MEGA MENU - ENDS
 							}
 						}
 
@@ -269,16 +207,19 @@
 											@include box-shadow(0, 2px, 2px, $mastheadProfileMenuShadowColor);
 											background-color: $mastheadProfileMenuBackgroundEndColor;
 											border: 0;
+											display: none;
 											top: 42px !important;
 											left: -4px !important;
-											width: 225px;
+											width: 225px !important;
 							li					{
-												border-top: 0 !important;
+												border: 0;
+												display: block;
+												margin-left: 0;
 								a					{
 													@include href-link($mastheadProfileMenuTextColor, none);
-													display: block;
 													font-size: $mastheadProfileMenuFontSize;
-													padding: 6px 20px 6px 27px;
+													padding: 6px 20px 6px 24px;
+													width: 100%;
 									&:hover				{@include background-gradient($mastheadProfileMenuHoverColor, $mastheadProfileMenuHoverColor);}
 													}
 
@@ -305,7 +246,6 @@
 										width: 980px;
 						.masthead-col-2		{}
 										}
-
 				// MASTHEAD ADJUST - ENDS
 
 									}
@@ -330,9 +270,8 @@
 											margin-bottom: -1px;
 							ul					{
 								li					{
-													border-left: 1px dotted $gray-mid-dark;
 									a					{
-														font-family: $proximaNovaSemiBoldFamily;
+														font-family: $fontSemiBoldFamily;
 														text-decoration: none;
 										&:hover				{color: #002C77;}
 														}
@@ -341,26 +280,38 @@
 											}
 					// DEFAULT NAVBAR - ENDS
 
+					// TEXT NAVBAR - BEGINS
+						.mul-text-nav		{
+							ul					{
+												top: 8px;
+								li					{
+													border-left: 1px dotted $gray-mid-dark;
+													margin: 0;
+													}
+												}
+							.has-submenu		{
+								.sm-nowrap			{top: 39px !important; outline:1px solid red;}
+												}
+											}
+					// TEXT NAVBAR - ENDS
+
 					// TABBED NAVBAR - BEGINS
 						.mul-tabbed-nav		{
 							ul					{
 												@include clearfix;
 												margin: 0;
+												padding-top: 0;
 								li					{
 													border-left: 1px solid $white;
 													margin: 0;
 									a					{
-<<<<<<< HEAD
 														border-left: 1px solid $gray-mid-light;
-														padding: 12px 15px 10px 15px;
-=======
-														border-right: 1px solid $white;
 														color: #002C77;
 														display: block;
 														font-size: 14px;
 														font-family: $fontSemiBoldFamily;
-														padding: 11px 15px 10px 15px;
->>>>>>> origin/d2-5
+														padding-top: 11px;
+														padding-bottom: 11px;
 										&:hover				{
 															//@include background-gradient($gray-lightest, $gray-mid-dark);
 															background-color: $gray-lighter;
@@ -382,7 +333,6 @@
 										@include box-shadow(0, 2px, 5px, $gray-mid-dark);
 										@include border-radius(0 0 4px 4px);
 										margin: 0 auto !important;
-										top: 39px !important;
 										right: 0 !important;
 										width: 980px !important;
 										max-width: none !important;
@@ -399,7 +349,6 @@
 			// MEGA MENU - ENDS
 								}
 							}
-
 
 	}// endif
 
