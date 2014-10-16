@@ -100,9 +100,6 @@
 										}
 					nav					{
 						.mul-horizontal-list-piped
-<<<<<<< HEAD
-											{margin: 8px 0;}
-=======
 											{
 											margin: 8px 0;
 											}
@@ -135,7 +132,6 @@
 													}
 												}
 											}
->>>>>>> origin/d2-5
 										}
 									}
 								}
@@ -332,7 +328,7 @@
 								li					{
 													border-left: 1px dotted $gray-mid-dark;
 									a					{
-														font-family: $proximaNovaSemiBoldFamily;
+														font-family: $fontSemiBoldFamily;
 														text-decoration: none;
 										&:hover				{color: #002C77;}
 														}
@@ -350,17 +346,12 @@
 													border-left: 1px solid $white;
 													margin: 0;
 									a					{
-<<<<<<< HEAD
-														border-left: 1px solid $gray-mid-light;
-														padding: 12px 15px 10px 15px;
-=======
 														border-right: 1px solid $white;
 														color: #002C77;
 														display: block;
 														font-size: 14px;
 														font-family: $fontSemiBoldFamily;
 														padding: 11px 15px 10px 15px;
->>>>>>> origin/d2-5
 										&:hover				{
 															//@include background-gradient($gray-lightest, $gray-mid-dark);
 															background-color: $gray-lighter;
