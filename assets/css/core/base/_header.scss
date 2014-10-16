@@ -98,6 +98,44 @@
 					.navbar-col-2		{
 						li					{float: right;}
 										}
+<<<<<<< HEAD
+=======
+					nav					{
+						.mul-horizontal-list-piped
+											{
+											margin: 8px 0;
+											}
+										}
+
+				// NAVBAR BLOCKS STYLE - BEGINS
+				/* TODO: This class needs to be highlighted in the documentation of the navbar, you should be able to add this class or remove it to get a block
+				looking nav or piped nav look */
+					.mul-nav-blocks		{
+						.mul-horizontal-list-piped
+											{
+											margin: 0;
+							li					{
+												border: 0;
+												border-right: 1px solid $gray-mid-light;
+												padding: 0;
+												margin: 0 -4px -1px 0;
+								&:first-child		{border-left: 1px solid $gray-mid-light;}
+								a					{
+													border-right: 1px solid $white;
+													color: #002C77;
+													display: block;
+													font-size: 14px;
+													font-family: $fontSemiBoldFamily;
+													padding: 11px 15px 10px 15px;
+									&:hover				{
+														@include background-gradient($gray-lightest, $gray-mid-dark);
+														text-decoration: none;
+														}
+													}
+												}
+											}
+										}
+>>>>>>> 2a653dcafe79fd448fa9af40bbfea8d9b1d7d773
 									}
 								}
 		// NAVBAR - ENDS
@@ -305,13 +343,21 @@
 													border-left: 1px solid $white;
 													margin: 0;
 									a					{
+<<<<<<< HEAD
 														border-left: 1px solid $gray-mid-light;
+=======
+														border-right: 1px solid $white;
+>>>>>>> 2a653dcafe79fd448fa9af40bbfea8d9b1d7d773
 														color: #002C77;
 														display: block;
 														font-size: 14px;
 														font-family: $fontSemiBoldFamily;
+<<<<<<< HEAD
 														padding-top: 11px;
 														padding-bottom: 11px;
+=======
+														padding: 11px 15px 10px 15px;
+>>>>>>> 2a653dcafe79fd448fa9af40bbfea8d9b1d7d773
 										&:hover				{
 															//@include background-gradient($gray-lightest, $gray-mid-dark);
 															background-color: $gray-lighter;
