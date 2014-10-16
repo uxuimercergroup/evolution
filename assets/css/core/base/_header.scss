@@ -32,7 +32,7 @@
 										white-space: nowrap;
 										width: auto;
 										}
-						span			{font-family: $proximaNovaThinStack;}
+						span			{font-family: $fontThinStack;}
 									}
 				.mul-logo-col-3		{}
 								}
@@ -100,7 +100,42 @@
 										}
 					nav					{
 						.mul-horizontal-list-piped
+<<<<<<< HEAD
 											{margin: 8px 0;}
+=======
+											{
+											margin: 8px 0;
+											}
+										}
+
+				// NAVBAR BLOCKS STYLE - BEGINS
+				/* TODO: This class needs to be highlighted in the documentation of the navbar, you should be able to add this class or remove it to get a block
+				looking nav or piped nav look */
+					.mul-nav-blocks		{
+						.mul-horizontal-list-piped
+											{
+											margin: 0;
+							li					{
+												border: 0;
+												border-right: 1px solid $gray-mid-light;
+												padding: 0;
+												margin: 0 -4px -1px 0;
+								&:first-child		{border-left: 1px solid $gray-mid-light;}
+								a					{
+													border-right: 1px solid $white;
+													color: #002C77;
+													display: block;
+													font-size: 14px;
+													font-family: $fontSemiBoldFamily;
+													padding: 11px 15px 10px 15px;
+									&:hover				{
+														@include background-gradient($gray-lightest, $gray-mid-dark);
+														text-decoration: none;
+														}
+													}
+												}
+											}
+>>>>>>> origin/d2-5
 										}
 									}
 								}
@@ -315,8 +350,17 @@
 													border-left: 1px solid $white;
 													margin: 0;
 									a					{
+<<<<<<< HEAD
 														border-left: 1px solid $gray-mid-light;
 														padding: 12px 15px 10px 15px;
+=======
+														border-right: 1px solid $white;
+														color: #002C77;
+														display: block;
+														font-size: 14px;
+														font-family: $fontSemiBoldFamily;
+														padding: 11px 15px 10px 15px;
+>>>>>>> origin/d2-5
 										&:hover				{
 															//@include background-gradient($gray-lightest, $gray-mid-dark);
 															background-color: $gray-lighter;

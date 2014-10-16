@@ -52,7 +52,7 @@
 										border-top:1px solid $tableThBorderColor;
 										border-bottom:1px solid $tableThBorderColor;
 										color:$tableThFontColor;
-										font-family: $proximaNovaSemiBoldStack;
+										font-family: $fontSemiBoldStack;
 										vertical-align: bottom;
 			&[class*="col-"]				{
 											float: none;
@@ -82,13 +82,13 @@
 										background-color: $tableSubHeaderBackgroundColor !important;
 										border: 1px solid $tableSubHeaderBorderColor;
 										color: $tableSubHeaderFontColor;
-										font-family: $proximaNovaSemiBoldStack;
+										font-family: $fontSemiBoldStack;
 										}
 
 		// SUBTOTAL AND TOTAL HELPERS
 		.mul-subtotal-row,
 		.mul-total-row					{
-										font-family: $proximaNovaSemiBoldStack;
+										font-family: $fontSemiBoldStack;
 			td								{border-top: 1px $tableBorderStyle $tableBorderColor;}
 										}
 		.mul-subtotal-row				{

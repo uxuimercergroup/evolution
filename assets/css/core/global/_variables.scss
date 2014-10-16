@@ -54,8 +54,6 @@ $zindexAutocomplete:						9999 !default;
 $zindexTooltip:								10000 !default;
 $zindexDialogOverlay:						10001 !default;
 $zindexDialogPosition:						10002 !default;
-$zindexDialog:								10003 !default;
-$zindexAdvancedFilterModalDatepicker:		10004 !default;
 
 
 // HELPERS
@@ -85,35 +83,35 @@ $baseFontFilePath:							"../fonts" !default;
 
 // WEB FONTS
 
-	// Proxima Nova - Thin
-	$proximaNovaThinFamily:						proxima_nova_ththin !default;
-	$proximaNovaThinFilePath:					"#{$baseFontFilePath}/ProximaNova-Thin-webfont" !default;
-	$proximaNovaThinStack:						"#{$proximaNovaThinFamily}", $baseFontStack !default;
+	// Thin
+	$fontThinFamily:							proxima_nova_ththin !default;
+	$fontThinFilePath:							"#{$baseFontFilePath}/ProximaNova-Thin-webfont" !default;
+	$fontThinStack:								"#{$fontThinFamily}", $baseFontStack !default;
 
-	// Proxima Nova - Regular
-	$proximaNovaRegularFamily:					proxima_nova_rgregular !default;
-	$proximaNovaRegularFilePath:				"#{$baseFontFilePath}/ProximaNova-Reg-webfont" !default;
-	$proximaNovaRegularStack:					"#{$proximaNovaRegularFamily}", $baseFontStack !default;
+	// Regular
+	$fontRegularFamily:							proxima_nova_rgregular !default;
+	$fontRegularFilePath:						"#{$baseFontFilePath}/ProximaNova-Reg-webfont" !default;
+	$fontRegularStack:							"#{$fontRegularFamily}", $baseFontStack !default;
 
-	// Proxima Nova - Bold
-	$proximaNovaBoldFamily:						proxima_nova_rgbold !default;
-	$proximaNovaBoldFilePath:					"#{$baseFontFilePath}/ProximaNova-Bold-webfont" !default;
-	$proximaNovaBoldStack:						"#{$proximaNovaBoldFamily}", $baseFontStack !default;
+	// Bold
+	$fontBoldFamily:							proxima_nova_rgbold !default;
+	$fontBoldFilePath:							"#{$baseFontFilePath}/ProximaNova-Bold-webfont" !default;
+	$fontBoldStack:								"#{$fontBoldFamily}", $baseFontStack !default;
 
-	// Proxima Nova - Italic
-	$proximaNovaItalicFamily:					proxima_novaregular_italic !default;
-	$proximaNovaItalicFilePath:					"#{$baseFontFilePath}/ProximaNova-RegIt-webfont" !default;
-	$proximaNovaItalicStack:					"#{$proximaNovaItalicFamily}", $baseFontStack !default;
+	// Italic
+	$fontItalicFamily:							proxima_novaregular_italic !default;
+	$fontItalicFilePath:						"#{$baseFontFilePath}/ProximaNova-RegIt-webfont" !default;
+	$fontItalicStack:							"#{$fontItalicFamily}", $baseFontStack !default;
 
-	// Proxima Nova - Bold Italic
-	$proximaNovaBoldItalicFamily:				proxima_novabold_italic !default;
-	$proximaNovaBoldItalicFilePath:				"#{$baseFontFilePath}/ProximaNova-BoldIt-webfont" !default;
-	$proximaNovaBoldItalicStack:				"#{$proximaNovaBoldItalicFamily}", $baseFontStack !default;
+	// Bold Italic
+	$fontBoldItalicFamily:						proxima_novabold_italic !default;
+	$fontBoldItalicFilePath:					"#{$baseFontFilePath}/ProximaNova-BoldIt-webfont" !default;
+	$fontBoldItalicStack:						"#{$fontBoldItalicFamily}", $baseFontStack !default;
 
-	// Proxima Nova - Semi-bold
-	$proximaNovaSemiBoldFamily:					proxima_nova_ltsemibold !default;
-	$proximaNovaSemiBoldFilePath:				"#{$baseFontFilePath}/ProximaNova-Sbold-webfont" !default;
-	$proximaNovaSemiBoldStack:					"#{$proximaNovaSemiBoldFamily}", $baseFontStack !default;
+	// Semi-bold
+	$fontSemiBoldFamily:						proxima_nova_ltsemibold !default;
+	$fontSemiBoldFilePath:						"#{$baseFontFilePath}/ProximaNova-Sbold-webfont" !default;
+	$fontSemiBoldStack:							"#{$fontSemiBoldFamily}", $baseFontStack !default;
 
 // ICON FONTS
 
@@ -132,7 +130,7 @@ $baseFontFilePath:							"../fonts" !default;
 // ------------------------------------------------------------------------------------------
 
 // BASE
-$baseFontFamily:							$proximaNovaRegularStack !default;
+$baseFontFamily:							$fontRegularStack !default;
 $baseFontSize:								16px !default;
 $baseFontSizeDifference:					2 !default;
 $baseFontSizeDifferenceMediumBreakpoint:	2 !default;
