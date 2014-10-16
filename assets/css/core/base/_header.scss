@@ -23,11 +23,14 @@
 				.mul-logo-col-1		{display: none;}
 				.mul-logo-col-2		{
 									margin-left: 10px;
-									width: 31.5%;
+									width: 25%;
 					a					{
 										@include href-link($mastheadLogoLinkColor, none);
+										@include text-overflow;
+										display: block;
 										font-weight: $mastheadLogoFontWeight;
 										white-space: nowrap;
+										width: auto;
 										}
 						span			{font-family: $proximaNovaThinStack;}
 									}
@@ -38,7 +41,9 @@
 		// NAVBAR ICON STYLES - BEGINS
 			.mul-navbar-icon-ctn	{
 									@include clearfix;
+									margin-top: -7px;
 				li						{
+										display: inline-block;
 										margin-right: 0;
 										margin-left: 4px;
 					a						{
@@ -74,86 +79,6 @@
 									{
 									margin: 0 auto;
 									width: 980px;
-
-				// PROFILE CONTAINER - BEGINS
-					.mul-profile-menu-ctn
-										{
-										@include background-gradient($mastheadProfileMenuBackgroundStartColor,$mastheadProfileMenuBackgroundEndColor);
-										float: right;
-										position: relative;
-										text-align: left;
-										width: 225px;
-										padding: 5px 0;
-										z-index: 10000;
-
-
-						.mul-profile-menu-user-info-ctn
-											{
-											@include clearfix;
-
-							.mul-profile-menu-icons,
-							.mul-profile-menu-user-info,
-							.mul-profile-menu-user-avatar
-												{float: left;}
-
-							.mul-profile-menu-icons
-												{
-												cursor: pointer;
-												text-align: center;
-												width: 12%;
-								[class*="mul-icon"]	{color: $white;}
-												}
-							.mul-profile-menu-user-info
-												{
-												width: 65%;
-								dl					{
-													color: $white;
-													margin: 0;
-													font-size: 11px;
-									.mul-profile-menu-user-name
-														{}
-									.mul-profile-menu-user-title
-														{margin: 0;}
-													}
-												}
-							.mul-profile-menu-user-avatar
-												{
-												text-align: center;
-												width: 23%;
-												}
-											}
-										}
-
-					.mul-profile-menu	{
-										@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
-										@include box-shadow(0, 2px, 2px, $mastheadProfileMenuShadowColor);
-										background-color: $mastheadProfileMenuBackgroundEndColor;
-										display: none;
-										padding: 0;
-										position: absolute;
-										top: 50px;
-										right: 0;
-										width: 100%;
-										z-index: $zindexMastheadProfileMenu;
-						.mul-vertical-list	{
-							li					{
-												margin-bottom: 0;
-								a					{
-													@include href-link($mastheadProfileMenuTextColor, none);
-													display: block;
-													font-size: $mastheadProfileMenuFontSize;
-													padding: 6px 20px 6px 27px;
-									&:hover				{background-color: $mastheadProfileMenuHoverColor;}
-													}
-
-							.last-child				{
-													padding-bottom: 7px;
-								&:hover					{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
-													}
-												}
-											}
-										}
-				// PROFILE CONTAINER - ENDs
 									}
 
 			// MASTHEAD ADJUST - ENDS
@@ -175,40 +100,8 @@
 										}
 					nav					{
 						.mul-horizontal-list-piped
-											{
-											margin: 8px 0;
-											}
+											{margin: 8px 0;}
 										}
-
-				// NAVBAR BLOCKS STYLE - BEGINS
-				/* TODO: This class needs to be highlighted in the documentation of the navbar, you should be able to add this class or remove it to get a block
-				looking nav or piped nav look */
-					.mul-nav-blocks		{
-						.mul-horizontal-list-piped
-											{
-											margin: 0;
-							li					{
-												border: 0;
-												border-right: 1px solid $gray-mid-light;
-												padding: 0;
-												margin: 0 -4px -1px 0;
-								&:first-child		{border-left: 1px solid $gray-mid-light;}
-								a					{
-													border-right: 1px solid $white;
-													color: #002C77;
-													display: block;
-													font-size: 14px;
-													font-family: $proximaNovaSemiBoldFamily;
-													padding: 11px 15px 10px 15px;
-									&:hover				{
-														@include background-gradient($gray-lightest, $gray-mid-dark);
-														text-decoration: none;
-														}
-													}
-												}
-											}
-										}
-				// NAVBAR BLOCKS STYLE - ENDS
 									}
 								}
 		// NAVBAR - ENDS
@@ -256,7 +149,7 @@
 					.mul-logo-col-1		{display: none;}
 					.mul-logo-col-2		{
 										margin-left: 0;
-										width: 78.7234%;
+										width: 74.46809%;
 						a					{}
 							span			{}
 										}
@@ -267,6 +160,7 @@
 			// NAVBAR ICON STYLES - BEGINS
 				.mul-navbar-icon-ctn	{
 										@include clearfix;
+										margin-top: 0;
 					li						{
 											margin-right: 0;
 											margin-left: 4px;
@@ -292,6 +186,78 @@
 										}
 			// NAVBAR ICON STYLES - ENDS
 
+			// PROFILE CONTAINER - BEGINS
+				.mul-profile-menu	{
+									@include background-gradient($mastheadProfileMenuBackgroundStartColor,$mastheadProfileMenuBackgroundEndColor);
+									height: 52px;
+									width: 225px;
+									float: right;
+									position: relative;
+									z-index: 10000;
+					.mul-profile-menu-adjust
+										{
+										padding: 9px 0 0 0;
+						[class*="mul-icon"]		{
+												@include border-radius(0);
+												background-color: $transparent;
+												color: $white;
+												margin: 0;
+												padding: 0;
+												min-width: 5px;
+												top: 0;
+							&:hover					{
+													background-color: $transparent;
+													color: $white;
+													}
+												}
+						.mul-profile-menu-icon	{}
+						.mul-profile-menu-user-info
+											{
+							.mul-profile-menu-user-name
+												{
+												display: block;
+												color: $white;
+												font-size: 11px;
+												}
+							.mul-profile-menu-user-title
+												{
+												display: block;
+												color: $white;
+												font-size: 11px;
+												}
+											}
+						.mul-profile-menu-user-avatar
+											{}
+					// SUB-MENU - BEGINS
+						.mul-vertical-list	{
+											@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+											@include box-shadow(0, 2px, 2px, $mastheadProfileMenuShadowColor);
+											background-color: $mastheadProfileMenuBackgroundEndColor;
+											border: 0;
+											top: 42px !important;
+											left: -4px !important;
+											width: 225px;
+							li					{
+												border-top: 0 !important;
+								a					{
+													@include href-link($mastheadProfileMenuTextColor, none);
+													display: block;
+													font-size: $mastheadProfileMenuFontSize;
+													padding: 6px 20px 6px 27px;
+									&:hover				{@include background-gradient($mastheadProfileMenuHoverColor, $mastheadProfileMenuHoverColor);}
+													}
+
+							.last-child				{
+													padding-bottom: 7px;
+								&:hover					{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+													}
+												}
+											}
+					// SUB-MENU - ENDS
+										}
+									}
+			// PROFILE CONTAINER - ENDs
+
 			// MASTHEAD - BEGINS
 				.mul-masthead		{
 									@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
@@ -302,86 +268,7 @@
 										{
 										margin: 0 auto;
 										width: 980px;
-
-					// PROFILE CONTAINER - BEGINS
-						.mul-profile-menu-ctn
-											{
-											@include background-gradient($mastheadProfileMenuBackgroundStartColor,$mastheadProfileMenuBackgroundEndColor);
-											float: right;
-											position: relative;
-											text-align: left;
-											width: 225px;
-											padding: 5px 0;
-											z-index: 10000;
-
-
-							.mul-profile-menu-user-info-ctn
-												{
-												@include clearfix;
-
-								.mul-profile-menu-icons,
-								.mul-profile-menu-user-info,
-								.mul-profile-menu-user-avatar
-													{float: left;}
-
-								.mul-profile-menu-icons
-													{
-													cursor: pointer;
-													text-align: center;
-													width: 12%;
-									[class*="mul-icon"]	{color: $white;}
-													}
-								.mul-profile-menu-user-info
-													{
-													width: 65%;
-									dl					{
-														color: $white;
-														margin: 0;
-														font-size: 11px;
-										.mul-profile-menu-user-name
-															{}
-										.mul-profile-menu-user-title
-															{margin: 0;}
-														}
-													}
-								.mul-profile-menu-user-avatar
-													{
-													text-align: center;
-													width: 23%;
-													}
-												}
-											}
-
-						.mul-profile-menu	{
-											@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
-											@include box-shadow(0, 2px, 2px, $mastheadProfileMenuShadowColor);
-											background-color: $mastheadProfileMenuBackgroundEndColor;
-											display: none;
-											padding: 0;
-											position: absolute;
-											top: 50px;
-											right: 0;
-											width: 100%;
-											z-index: $zindexMastheadProfileMenu;
-							.mul-vertical-list	{
-								li					{
-													margin-bottom: 0;
-									a					{
-														@include href-link($mastheadProfileMenuTextColor, none);
-														display: block;
-														font-size: $mastheadProfileMenuFontSize;
-														padding: 6px 20px 6px 27px;
-										&:hover				{background-color: $mastheadProfileMenuHoverColor;}
-														}
-
-								.last-child				{
-														padding-bottom: 7px;
-									&:hover					{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
-														}
-													}
-												}
-											}
-					// PROFILE CONTAINER - ENDs
+						.masthead-col-2		{}
 										}
 
 				// MASTHEAD ADJUST - ENDS
@@ -401,42 +288,45 @@
 						.navbar-col-2		{
 							li					{float: right;}
 											}
+					// DEFAULT NAVBAR - BEGINS
 						nav					{
-							.mul-horizontal-list-piped
-												{
-												margin: 8px 0;
+											@include clearfix;
+											height: 39px;
+											margin-bottom: -1px;
+							ul					{
+								li					{
+													border-left: 1px dotted $gray-mid-dark;
+									a					{
+														font-family: $proximaNovaSemiBoldFamily;
+														text-decoration: none;
+										&:hover				{color: #002C77;}
+														}
+													}
 												}
 											}
+					// DEFAULT NAVBAR - ENDS
 
-					// NAVBAR BLOCKS STYLE - BEGINS
-					/* TODO: This class needs to be highlighted in the documentation of the navbar, you should be able to add this class or remove it to get a block
-					looking nav or piped nav look */
-						.mul-nav-blocks		{
-							.mul-horizontal-list-piped
-												{
+					// TABBED NAVBAR - BEGINS
+						.mul-tabbed-nav		{
+							ul					{
+												@include clearfix;
 												margin: 0;
 								li					{
-													border: 0;
-													border-right: 1px solid $gray-mid-light;
-													padding: 0;
-													margin: 0 -4px -1px 0;
-									&:first-child		{border-left: 1px solid $gray-mid-light;}
+													border-left: 1px solid $white;
+													margin: 0;
 									a					{
-														border-right: 1px solid $white;
-														color: #002C77;
-														display: block;
-														font-size: 14px;
-														font-family: $proximaNovaSemiBoldFamily;
-														padding: 11px 15px 10px 15px;
+														border-left: 1px solid $gray-mid-light;
+														padding: 12px 15px 10px 15px;
 										&:hover				{
-															@include background-gradient($gray-lightest, $gray-mid-dark);
-															text-decoration: none;
+															//@include background-gradient($gray-lightest, $gray-mid-dark);
+															background-color: $gray-lighter;
+															@include transition(background-color 0.3s ease-in-out);
 															}
 														}
 													}
 												}
 											}
-					// NAVBAR BLOCKS STYLE - ENDS
+					// TABBED NAVBAR - ENDS
 										}
 									}
 			// NAVBAR - ENDS
@@ -448,7 +338,7 @@
 										@include box-shadow(0, 2px, 5px, $gray-mid-dark);
 										@include border-radius(0 0 4px 4px);
 										margin: 0 auto !important;
-										top: 38px !important;
+										top: 39px !important;
 										right: 0 !important;
 										width: 980px !important;
 										max-width: none !important;

@@ -8,15 +8,15 @@
 				<!-- LOGO SECTION - BEGINS -->
 					<section class="col-24 mul-logo mul-small-mediaquery-grid">
 						<div class="col-3 first mul-logo-col-1">LOGO</div>
-						<div class="col-19 first mul-logo-col-2">
+						<div class="col-18 first mul-logo-col-2">
 							<a href="/index">MERCER <span>EVOLUTION</span></a>
 						</div>
-						<div class="col-2 mul-logo-col-3 mul-visible-small-mediaquery">
+						<div class="col-4 mul-logo-col-3 mul-visible-small-mediaquery">
 						<!-- MOBILE MENU ICON - BEGINS -->
-							<ul class="mul-horizontal-list mul-navbar-icon-ctn" data-mul-toggle="1">
-								<li>
-									<a href="javascript:;"><i class="mul-icon-menu3"></i></a>
-								</li>
+							<ul class="mul-horizontal-list mul-navbar-icon-ctn">
+								<li class="mul-no-margin"><a href="javascript:;"><i class="mul-icon-user"></i></a></li>
+								<li class="mul-no-margin"><a href="javascript:;"><i class="mul-icon-search"></i></a></li>
+								<li class="mul-no-margin js-mul-toggle-content" data-mul-toggle="1"><a href="javascript:;"><i class="mul-icon-menu3"></i></a></li>
 							</ul>
 						<!-- MOBILE MENU ICON - ENDS -->
 						</div>
@@ -24,38 +24,34 @@
 				<!-- LOGO SECTION - ENDS -->
 				</div>
 				<div class="col-8 masthead-col-2">
-				<!-- PROFILE CONTAINER - BEGINS -->
-					<div class="js-mul-profile-menu-display mul-profile-menu-ctn mul-hidden-small-mediaquery">
 
-						<div class="mul-profile-menu-user-info-ctn">
-							<div class="mul-profile-menu-icons">
-								<i class="mul-icon-arrow-right2 mul-profile-menu-icon"></i>
-								<i class="mul-icon-arrow-down2 mul-profile-menu-icon"></i>
-							</div>
-							<div class="mul-profile-menu-user-info">
-								<dl>
-									<dt class="mul-profile-menu-user-name">Arquimedez Pozo</dt>
-									<dd class="mul-profile-menu-user-title">Front-end Web Developer</dd>
-								</dl>
-							</div>
-							<div class="mul-profile-menu-user-avatar">
-								<i class="mul-icon-user mul-icon-size-medium mul-center-block" title="Arquimedez Pozo"></i>
-							</div>
-	
-						<!-- PROFILE SUBMENU - BEGINS -->	
-							<div class="mul-profile-menu">
+				<!-- PROFILE CONTAINER - BEGINS -->
+					<div class="mul-profile-menu mul-profile-menu-navbar mul-hidden-small-mediaquery">
+						<ul class="mul-navbar-icon-ctn sm sm-simple js-mul-profile-menu mul-profile-menu-adjust">
+							<li class="col-24">
+								<a href="javascript:;">
+									<div class="col-2 first">
+										<i class="mul-icon-arrow-right2 mul-profile-menu-icon"></i>
+									</div>
+									<div class="col-16 mul-profile-menu-user-info">
+										<span class="mul-profile-menu-user-name">Arquimedez Pozo</span>
+										<span class="mul-profile-menu-user-title">Front-end Web Developer</span>
+									</div>
+									<div class="col-5 mul-profile-menu-user-avatar">
+										<i class="mul-icon-user mul-icon-size-medium mul-center-block" title="Arquimedez Pozo"></i>
+									</div>
+								</a>
 								<ul class="mul-vertical-list">
 									<li><a href="#">View Profile</a></li>
 									<li><a href="#">Change Language</a></li>
 									<li><a href="#">User Administration</a></li>
 									<li><a class="last-child" href="/index">Log Out</a></li>
 								</ul>
-							</div>
-						<!-- PROFILE SUBMENU - BEGINS -->
-						</div>
-
+							</li>
+						</ul>
 					</div>
 				<!-- PROFILE CONTAINER - ENDS -->
+
 				</div>
 			</div>
 		</section>
@@ -66,15 +62,14 @@
 			<div class="mul-navbar-adjust">
 				<div class="col-18 first navbar-col-1">
 				<!-- NAVBAR - BEGINS -->
-					<nav class="mul-nav-blocks">
-						<ul class="mul-horizontal-list mul-horizontal-list-piped sm sm-simple js-mul-menus">
+					<nav class="mul-tabbed-nav">
+						<ul class="sm sm-simple js-mul-menus" id="div1">
 							<li><a href="/index">Home</a></li>
 							<li><a href="/browser-testing-support">Browser Support</a></li>
 							<li><a href="/toolkit">Toolkit</a></li>
 							<li>
 								<a href="javascript:;">Sub Menu</a>
 								<ul>
-									<li><a href="javascript:;">Item</a></li>
 									<li><a href="javascript:;">Item</a></li>
 									<li><a href="javascript:;">Item</a></li>
 									<li><a href="javascript:;">Item</a></li>
@@ -85,17 +80,38 @@
 											<li><a href="javascript:;">Item</a></li>
 											<li><a href="javascript:;">Item</a></li>
 											<li><a href="javascript:;">Item</a></li>
-											<li>
-												<a href="javascript:;">Item</a>
-												<ul>
-													<li><a href="javascript:;">Item for this is really long Item for this is really long Item for this is really long</a></li>
-													<li><a href="javascript:;">Item</a></li>
-													<li><a href="javascript:;">Item</a></li>
-													<li><a href="javascript:;">Item</a></li>
-												</ul>
-											</li>
 										</ul>
 									</li>
+								</ul>
+							</li>
+							<li class="mul-mega-menu">
+								<a href="javascript:;">Mega Menu</a>
+								<ul class="mega-menu">
+									<li class="mul-mega-menu-adjust">
+									<!-- MEGA MENU CONTAINER - BEGINS -->
+										<div class="mul-mega-menu-ctn">
+											<h1>Here is a default mega menu</h1>
+											{{ 4 | lorem_ipsum:'p' }}
+										</div>
+									<!-- MEGA MENU CONTAINER - ENDS -->
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<br>
+					<nav class="mul-text-nav">
+						<ul class="sm sm-simple js-mul-menus" id="div1">
+							<li><a href="/index">Home</a></li>
+							<li><a href="/browser-testing-support">Browser Support</a></li>
+							<li><a href="/toolkit">Toolkit</a></li>
+							<li>
+								<a href="javascript:;">Sub Menu</a>
+								<ul>
+									<li><a href="javascript:;">Item</a></li>
+									<li><a href="javascript:;">Item</a></li>
+									<li><a href="javascript:;">Item</a></li>
+									<li><a href="javascript:;">Item</a></li>
 								</ul>
 							</li>
 							<li class="mul-mega-menu">
