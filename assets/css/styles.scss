@@ -39,59 +39,6 @@ html.mul-mod-js							{display:none;}
 										display: none;
 										}
 
-// TODO: TAB DETAIL SECTION STYLES
-.tab-details-section					{font-size: 16px;}
-.tab-details-section.ui-tabs			{
-	.ui-tabs-nav							{
-											margin-top: 15px;
-		.ui-state-default						{
-												@include background-gradient($white, $white);
-												@include border-radius(0);
-												border: 1px solid $gray-mid-light;
-												height: 29px;
-												margin-right: -1px;
-			&:first-child							{@include border-radius(4px 0 0 4px);}
-			&:last-child							{@include border-radius(0 4px 4px 0);}
-
-			a										{
-													background-color: $gray-lightest;
-													color: $gray-darker;
-													font-size: ($baseFontSize - 4);
-													padding-bottom: 2px;
-				&:hover									{
-														@include href-link-hover(none);
-														background-color: $gray-light;
-														}
-													}
-
-			&:first-child							{
-				a										{@include border-radius(4px 0 0 4px);}
-													}
-			&:last-child							{
-				a										{@include border-radius(0 4px 4px 0);}
-													}
-
-												}
-		.ui-tabs-active							{
-			a										{
-													background-color: $gray-light;
-													color: $black;
-													padding-bottom: 2px;
-													}
-			&:first-child							{
-				a										{@include border-radius(4px 0 0 4px);}
-													}
-			&:last-child							{
-				a										{@include border-radius(0 4px 4px 0);}
-													}
-												}
-											}
-	.ui-tabs-panel							{
-											border: 0;
-											padding-left: 0;
-											}
-										}
-
 // TODO: SLIDING SIDEBAR
 .mul-sliding-sidebar-btn				{
 										@include border-radius(4px);
@@ -147,11 +94,6 @@ html.mul-mod-js							{display:none;}
 .example-ctn							{background-color: $white;}
 .example-main-hdr						{margin: 40px 0 25px 0;}
 
-
-// TODO: GET CODE FONT SIZE CHANGE
-.get-code-content-tab					{
-	pre										{font-size: 12px;}
-										}
 
 /*--- HOMEPAGE -----------------------------------------------------------------------------*/
 .hp-content-column						{

@@ -3,73 +3,46 @@
 
 <section class="col-24">
 
-	<!-- PAGE TITLE - BEGINS -->
-		<h1>{{ model.title }}</h1>
-	<!-- PAGE TITLE - ENDS -->
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
 
-		<i class="mul-icon-menu3 mul-sliding-sidebar-btn js-mul-sliding-sidebar-btn"></i>
+	<i class="mul-icon-menu3 mul-sliding-sidebar-btn js-mul-sliding-sidebar-btn"></i>
 
-	<!-- TAB SECTION - BEGINS -->
-		<div class="js-mul-tabs-example mul-tabs tab-details-section">
+<!-- TAB SECTION - BEGINS -->
+	<div class="mul-alternate-views-badge mul-alternate-views-badge-full" data-alternate-views-badge="js-mul-alternate-views-badge-full-example">
 
-		<!-- TABS - BEGIN -->
-			<ul>
-			{% for item in global.page-tabs %}
-				<li class="{{ item.tab-classname }}">
-					<a href="#tabs-{% cycle '1', '2', '3', '4', '5', '6'%}">{{ item.tabs }}</a>
-				</li>
-			{% endfor %}
-			</ul>
-		<!-- TABS - END -->
+		<!-- NO WHITE SPACE BETWEEN CODE BELOW REQUIRED BECAUSE USING DISPLAY: INLINE-BLOCK ON BUTTONS -->
+		<ul class="mul-btn-group-horizontal">{% for item in global.page-tabs %}<li class="mul-btn {{ item.tab-classname }}"><a href="#alternate-views-badge-{% cycle '1', '2', '3', '4', '5', '6'%}"><i class="mul-icon-grid mul-icon-position-left" title="{{ item.tabs }}"></i><span>{{ item.tabs }}</span></a></li>{% endfor %}</ul>
 
-		<!-- TABS PANELS - BEGINS -->
-			<!-- OVERVIEW TAB - BEGINS -->
-				<div id="tabs-1">
-					<p>{{ model.intro-text }}</p>
-				</div>
-			<!-- OVERVIEW TAB - ENDS -->
-
-			<!-- USAGE TAB - BEGINS -->
-				<div id="tabs-2">
-					<p>Usage details go here&hellip;</p>
-				</div>
-			<!-- USAGE TAB - ENDS -->
-
-			<!-- DETAILS TAB - BEGINS -->
-				<div id="tabs-3">
-					<p>Details go here&hellip;</p>
-				</div>
-			<!-- DETAILS TAB - ENDS -->
-
-			<!-- MOBILE TAB - BEGINS -->
-				<div id="tabs-4">
-					<p>Mobile details go here&hellip;</p>
-				</div>
-			<!-- MOBILE TAB - END -->
-
-			<!-- TECH TAB - BEGINS -->
-				<div id="tabs-5">
-					<p>Technical details go here&hellip;</p>
-		
-					<h4 class="mul-hdr-rule">Dependencies</h4>
-				</div>
-			<!-- TECH TAB - ENDS -->
-
-			<!-- GET CODE - BEGINS -->
-				<div id="tabs-6" class="get-code-content-tab">
-					<section class="col-24">
-						<h5 class="mul-hdr-rule">HTML</h5>
-						{{ global.PrettifyStartTag }}INCLUDE GOES HERE{{ global.PrettifyEndTag }}
-
-						<h5 class="mul-hdr-rule">JS</h5>
-						{{ global.PrettifyStartTag }}JS CODE GOES HERE{{ global.PrettifyEndTag }}
-					</section>
-				</div>
-			<!-- GET CODE - ENDS -->
-		<!-- TABS PANELS - ENDS -->
-
+		<div id="alternate-views-badge-1">
+			<p>{{ model.intro-text }}</p>
 		</div>
-	<!-- TAB SECTION - ENDS -->
+		<div id="alternate-views-badge-2">
+			<p>Usage details go here&hellip;</p>
+		</div>
+		<div id="alternate-views-badge-3">
+			<p>Details go here&hellip;</p>
+		</div>
+		<div id="alternate-views-badge-4">
+			<p>Mobile details go here&hellip;</p>
+		</div>
+		<div id="alternate-views-badge-5">
+			<p>Technical details go here&hellip;</p>
+			<h4 class="mul-hdr-rule">Dependencies</h4>
+		</div>
+		<div id="alternate-views-badge-6" class="get-code-content-tab">
+			<section class="col-24">
+				<h5 class="mul-hdr-rule">HTML</h5>
+				{{ global.PrettifyStartTag }}INCLUDE GOES HERE{{ global.PrettifyEndTag }}
+
+				<h5 class="mul-hdr-rule">JS</h5>
+				{{ global.PrettifyStartTag }}JS CODE GOES HERE{{ global.PrettifyEndTag }}
+			</section>
+		</div>
+
+	</div>
+<!-- TAB SECTION - ENDS -->
 
 <!-- EXAMPLE HEADER - BEGINS -->
 	<h4 class="mul-hdr-dbl-rule example-main-hdr">

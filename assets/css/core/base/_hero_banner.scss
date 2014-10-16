@@ -23,7 +23,16 @@
 
 	// HERO BANNER - FULL WIDTH
 	.mul-hero-banner-full-width		{
-		.mul-hero-banner-adjust			{max-width: 100%;}
+		.mul-hero-banner-adjust			{
+										max-width: 100%;
+			.mul-hero-banner-content-ctn	{
+				.mul-hero-banner-full-width-content-adjust
+												{
+												min-height: 122px;
+												margin-bottom: $baseMargin;
+												}
+											}
+										}
 									}
 
 	//=== MEDIA QUERIES =========================================================================
@@ -60,9 +69,10 @@
 												}
 						.mul-hero-banner-full-width-content-adjust
 												{
-												margin: 0 auto;
+												margin: 0 auto $baseMargin auto;
 												padding: 0 $gridSiteGutterPadding;
 												width: $gridWidth;
+												min-height: 272px;
 
 												// If using 980 width layout
 												@if $use-grid-980 == true{
