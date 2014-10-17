@@ -285,12 +285,12 @@
 							ul					{
 												top: 8px;
 								li					{
-													border-left: 1px dotted $gray-mid-dark;
 													margin: 0;
+									a					{
+														border-left: 1px dotted $gray-mid-dark;
+														margin-bottom: 10px;
+														}
 													}
-												}
-							.has-submenu		{
-								.sm-nowrap			{top: 39px !important; outline:1px solid red;}
 												}
 											}
 					// TEXT NAVBAR - ENDS
@@ -306,7 +306,7 @@
 													margin: 0;
 									a					{
 														border-left: 1px solid $gray-mid-light;
-														color: #002C77;
+														//color: #002C77;
 														display: block;
 														font-size: 14px;
 														font-family: $fontSemiBoldFamily;
@@ -325,6 +325,41 @@
 										}
 									}
 			// NAVBAR - ENDS
+
+			// NAVBAR FIXED - BEGINS
+				.mul-navbar-fixed	{
+									@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundStartColor);
+									position: fixed;
+									top: 0;
+									left: 0;
+					.mul-navbar-fixed-adjust
+										{
+										width: 100%;
+										margin: 0 10px 0 0;
+						.mul-logo			{
+											font-size: $mastheadLogoFontSize;
+											line-height: 30px;
+											margin-bottom: 0;
+											padding: 4px 0;
+							.mul-logo-col-1		{display: none;}
+							.mul-logo-col-2		{
+												margin-left: 10px;
+								a,
+								&:visited			{
+													@include href-link($mastheadLogoLinkColor, none);
+													@include text-overflow;
+													display: block;
+													font-weight: $mastheadLogoFontWeight;
+													white-space: nowrap;
+													width: auto;
+													}
+									span			{font-family: $fontThinStack;}
+												}
+							.mul-logo-col-3		{}
+											}
+										}
+									}
+			// NAVBAR FIXED - ENDS
 
 			// MEGA MENU - BEGINS
 				.mul-mega-menu		{

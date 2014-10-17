@@ -95,13 +95,15 @@
 				&:first-child
 							{border-top: 0;}
 				a			{
-							color: #002C77;
+							border-left-style: solid;
+							//color: #002C77;
 							display: block;
 							font-size: 14px;
 							font-family: $fontSemiBoldFamily;
 							text-decoration: none;
 							width: 100%;
 							padding: 10px;
+							margin-bottom: 0 !important;
 					&:hover		{
 								@include background-gradient($gray-lightest, $gray-mid-dark);
 								text-decoration: none;
