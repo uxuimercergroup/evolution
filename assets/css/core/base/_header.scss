@@ -6,12 +6,39 @@
 
 @if $use-header == true{
 
+	// ICONS - BEGINS
+		.mul-header-icons	{
+							@include clearfix;
+							margin-right: 10px;
+			a					{
+								float: left;
+				[class*="mul-icon"]	{
+									@include border-radius(3px);
+									background-color: $gray-mid-dark;
+									color: $gray-darker;
+									cursor: pointer;
+									padding: 4px 10px 6px 6px;
+									min-width: 28px;
+					&:hover				{
+										background-color: $gray-dark;
+										color: $gray-mid-light;
+										}
+									}
+				&:first-child		{
+					[class*="mul-icon"]	{}
+									}
+								}
+							}
+	// ICONS - ENDS
+
+
 	.mul-header			{
 						min-height: 20px;
 						max-width: 100% !important;
 						margin: 0;
 
 		.mul-header-adjust	{
+							@include clearfix;
 							background-color: #EFEFEF;
 
 		// MAIN LOGO CONTAINER - BEGINS
@@ -20,7 +47,7 @@
 								line-height: $mastheadLogoLineHeight;
 								margin-bottom: 0;
 								padding: 4px 0;
-				.mul-logo-col-1		{display: none;}
+				.mul-logo-col-1		{}
 				.mul-logo-col-2		{
 									margin-left: 10px;
 									width: 25%;
@@ -34,73 +61,32 @@
 										}
 						span			{font-family: $fontThinStack;}
 									}
-				.mul-logo-col-3		{}
 								}
 		// MAIN LOGO CONTAINER - ENDS
 
-		// NAVBAR ICON STYLES - BEGINS
-			.mul-navbar-icon-ctn	{
-									@include clearfix;
-									margin-top: -7px;
-				li						{
-										display: inline-block;
-										margin-right: 0;
-										margin-left: 4px;
-					a						{
-											margin: 0;
-											padding: 0;
-						.sub-arrow				{display: none;}
-						[class*="mul-icon"]		{
-												@include border-radius(3px);
-												background-color: $gray-mid-dark;
-												color: $gray-darker;
-												cursor: pointer;
-												padding: 4px 10px 6px 6px;
-												min-width: 28px;
-												top: 6px;
-							&:hover					{
-													background-color: $gray-dark;
-													color: $gray-mid-light;
-													}
-												}
-											}
-										}
-									}
-		// NAVBAR ICON STYLES - ENDS
-
 		// MASTHEAD - BEGINS
 			.mul-masthead		{
-								@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
-								@include clearfix;
-								width: 100%;
-
 			// MASTHEAD ADJUST - BEGINS
 				.mul-masthead-adjust
 									{
 									margin: 0 auto;
 									width: 980px;
-									}
+									position: relative;
 
+					.mul-secondary-logo	{
+						img					{
+											position: absolute;
+											top: 0;
+											bottom: 0;
+											right: 0;
+											margin: auto;
+											}
+										}
+									}
 			// MASTHEAD ADJUST - ENDS
 
 								}
 		// MASTHEAD - ENDS
-
-		// NAVBAR - BEGINS
-			.mul-navbar			{
-								@include background-gradient($gray-lightest, $gray-mid-light);
-								border-bottom: 1px solid $gray-mid-dark;
-								width: 100%;
-				.mul-navbar-adjust	{
-									@include clearfix;
-									width: 980px;
-									margin: 0 auto;
-					.navbar-col-2		{
-						li					{float: right;}
-										}
-									}
-								}
-		// NAVBAR - ENDS
 							}
 						}
 
@@ -113,13 +99,12 @@
 	
 	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
 
-
 		.mul-header			{
 			.mul-header-adjust	{
 
 			// MAIN LOGO CONTAINER - BEGINS
 				.mul-logo			{
-					.mul-logo-col-1		{display: none;}
+					.mul-logo-col-1		{}
 					.mul-logo-col-2		{
 										margin-left: 0;
 										width: 74.46809%;
@@ -129,35 +114,6 @@
 					.mul-logo-col-3		{display: none;}
 									}
 			// MAIN LOGO CONTAINER - ENDS
-
-			// NAVBAR ICON STYLES - BEGINS
-				.mul-navbar-icon-ctn	{
-										@include clearfix;
-										margin-top: 0;
-					li						{
-											margin-right: 0;
-											margin-left: 4px;
-						a						{
-												margin: 0;
-												padding: 0;
-							.sub-arrow				{display: none;}
-							[class*="mul-icon"]		{
-													@include border-radius(3px);
-													background-color: $gray-mid-dark;
-													color: $gray-darker;
-													cursor: pointer;
-													padding: 4px 10px 6px 6px;
-													min-width: 28px;
-													top: 6px;
-								&:hover					{
-														background-color: $gray-dark;
-														color: $gray-mid-light;
-														}
-													}
-												}
-											}
-										}
-			// NAVBAR ICON STYLES - ENDS
 
 			// PROFILE CONTAINER - BEGINS
 				.mul-profile-menu	{
@@ -244,7 +200,6 @@
 										{
 										margin: 0 auto;
 										width: 980px;
-						.masthead-col-2		{}
 										}
 				// MASTHEAD ADJUST - ENDS
 
@@ -253,75 +208,10 @@
 
 			// NAVBAR - BEGINS
 				.mul-navbar			{
-									@include background-gradient($gray-lightest, $gray-mid-light);
-									border-bottom: 1px solid $gray-mid-dark;
-									width: 100%;
 					.mul-navbar-adjust	{
 										@include clearfix;
 										width: 980px;
 										margin: 0 auto;
-						.navbar-col-2		{
-							li					{float: right;}
-											}
-					// DEFAULT NAVBAR - BEGINS
-						nav					{
-											@include clearfix;
-											height: 39px;
-											margin-bottom: -1px;
-							ul					{
-								li					{
-									a					{
-														font-family: $fontSemiBoldFamily;
-														text-decoration: none;
-										&:hover				{color: #002C77;}
-														}
-													}
-												}
-											}
-					// DEFAULT NAVBAR - ENDS
-
-					// TEXT NAVBAR - BEGINS
-						.mul-text-nav		{
-							ul					{
-												top: 8px;
-								li					{
-													margin: 0;
-									a					{
-														border-left: 1px dotted $gray-mid-dark;
-														margin-bottom: 10px;
-														}
-													}
-												}
-											}
-					// TEXT NAVBAR - ENDS
-
-					// TABBED NAVBAR - BEGINS
-						.mul-tabbed-nav		{
-							ul					{
-												@include clearfix;
-												margin: 0;
-												padding-top: 0;
-								li					{
-													border-left: 1px solid $white;
-													margin: 0;
-									a					{
-														border-left: 1px solid $gray-mid-light;
-														//color: #002C77;
-														display: block;
-														font-size: 14px;
-														font-family: $fontSemiBoldFamily;
-														padding-top: 11px;
-														padding-bottom: 11px;
-										&:hover				{
-															//@include background-gradient($gray-lightest, $gray-mid-dark);
-															background-color: $gray-lighter;
-															@include transition(background-color 0.3s ease-in-out);
-															}
-														}
-													}
-												}
-											}
-					// TABBED NAVBAR - ENDS
 										}
 									}
 			// NAVBAR - ENDS
@@ -329,33 +219,27 @@
 			// NAVBAR FIXED - BEGINS
 				.mul-navbar-fixed	{
 									@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundStartColor);
+									border-bottom: 0;
 									position: fixed;
 									top: 0;
 									left: 0;
 					.mul-navbar-fixed-adjust
 										{
 										width: 100%;
-										margin: 0 10px 0 0;
+										margin: 0;
+										padding: 0 10px;
 						.mul-logo			{
 											font-size: $mastheadLogoFontSize;
 											line-height: 30px;
 											margin-bottom: 0;
 											padding: 4px 0;
-							.mul-logo-col-1		{display: none;}
-							.mul-logo-col-2		{
-												margin-left: 10px;
-								a,
-								&:visited			{
-													@include href-link($mastheadLogoLinkColor, none);
-													@include text-overflow;
-													display: block;
-													font-weight: $mastheadLogoFontWeight;
-													white-space: nowrap;
-													width: auto;
-													}
-									span			{font-family: $fontThinStack;}
+											}
+						.navbar-col-1		{}
+						.navbar-col-2		{
+							a					{
+												@include href-link($white, none);
+								&:hover				{color: $white;}
 												}
-							.mul-logo-col-3		{}
 											}
 										}
 									}
