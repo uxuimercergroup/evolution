@@ -1,28 +1,4 @@
-{% if model.hero_banner == "hero-banner-carousel" %}
-
-	<!-- HERO BANNER CAROUSEL (IMAGES) - BEGINS -->
-	{% include "/base/hero-banner-carousel" %}
-	<!-- HERO BANNER CAROUSEL (IMAGES) - ENDS -->
-
-{% elsif model.hero_banner == "hero-banner-content" %}
-
-	<!-- HERO BANNER - CONTENT - BEGINS -->
-	{% include "/base/hero-banner-content" %}
-	<!-- HERO BANNER - CONTENT - ENDS -->
-
-{% elsif model.hero_banner == "hero-banner-carousel-content" %}
-
-	<!-- HERO BANNER CAROUSEL - CONTENT - BEGINS -->
-	{% include "/base/hero-banner-carousel-content" %}
-	<!-- HERO BANNER CAROUSEL - CONTENT - ENDS -->
-	
-{% elsif model.hero_banner == "hero-banner-fullwidth" %}
-
-	<!-- HERO BANNER (IMAGE) - FULL WIDTH - BEGINS -->
-	{% include "/base/hero-banner-fullwidth" %}
-	<!-- HERO BANNER (IMAGE) - FULL WIDTH - ENDS -->
-
-{% elsif model.hero_banner == "hero-banner-content-fullwidth" %}
+{% if model.hero_banner == "hero-banner-content-fullwidth" %}
 
 	<!-- HERO BANNER - CONTENT - FULL WIDTH - BEGINS -->
 	{% include "/base/hero-banner-content-fullwidth" %}
@@ -43,7 +19,7 @@
 {% else %}
 
 	<!-- DEFAULT HERO BANNER (IMAGE) - BEGINS -->
-	{% include "/base/hero-banner" %}
+	{% include "/base/hero-banner-fullwidth" %}
 	<!-- DEFAULT HERO BANNER (IMAGE) - ENDS -->
 
 {% endif %}
