@@ -1,25 +1,25 @@
-{% if model.hero_banner == "hero-banner-content-fullwidth" %}
+{% if model.hero_banner == "hero-banner-background-color-carousel" %}
 
-	<!-- HERO BANNER - CONTENT - FULL WIDTH - BEGINS -->
-	{% include "/base/hero-banner-content-fullwidth" %}
-	<!-- HERO BANNER - CONTENT - FULL WIDTH - ENDS -->
+	<!-- HERO BANNER - BACKGROUND COLOR - CAROUSEL - BEGINS -->
+	{% include "/base/hero-banner-background-color-carousel" %}
+	<!-- HERO BANNER - BACKGROUND COLOR - CAROUSEL - ENDS -->
 
-{% elsif model.hero_banner == "hero-banner-carousel-fullwidth" %}
+{% elsif model.hero_banner == "hero-banner-background-image" %}
 
-	<!-- HERO BANNER CAROUSEL (IMAGES) - FULL WIDTH - BEGINS -->
-	{% include "/base/hero-banner-carousel-fullwidth" %}
-	<!-- HERO BANNER CAROUSEL (IMAGES) - FULL WIDTH - ENDS -->
+	<!-- HERO BANNER - BACKGROUND IMAGE - BEGINS -->
+	{% include "/base/hero-banner-background-image" %}
+	<!-- HERO BANNER - BACKGROUND IMAGE - ENDS -->
 
-{% elsif model.hero_banner == "hero-banner-carousel-content-fullwidth" %}
+{% elsif model.hero_banner == "hero-banner-background-image-carousel" %}
 
-	<!-- HERO BANNER CAROUSEL - CONTENT - FULL WIDTH - BEGINS -->
-	{% include "/base/hero-banner-carousel-content-fullwidth" %}
-	<!-- HERO BANNER CAROUSEL - CONTENT - FULL WIDTH - ENDS -->
+	<!-- HERO BANNER - BACKGROUND IMAGE - CAROUSEL - BEGINS -->
+	{% include "/base/hero-banner-background-image-carousel" %}
+	<!-- HERO BANNER - BACKGROUND IMAGE - CAROUSEL - ENDS -->
 
 {% else %}
 
-	<!-- DEFAULT HERO BANNER (IMAGE) - BEGINS -->
-	{% include "/base/hero-banner-fullwidth" %}
-	<!-- DEFAULT HERO BANNER (IMAGE) - ENDS -->
+	<!-- DEFAULT - HERO BANNER - BACKGROUND COLOR - BEGINS -->
+	{% include "/base/hero-banner-background-color" %}
+	<!-- DEFAULT - HERO BANNER - BACKGROUND COLOR - ENDS -->
 
 {% endif %}

@@ -442,7 +442,23 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 }//endif
 
 
+@if $use-hero-banner-theme == true{
+
+	/*--- HERO BANNER THEME --------------------------------------------------------------------*/
+	.mul-hero-banner						{
+		.mul-hero-banner-adjust					{
+			.mul-hero-banner-content-ctn			{
+				.mul-hero-banner-content-item			{background-color: $heroBannerBackgroundColor;}
+													}
+												}
+											}
+
+}//endif
+
+
 @if $use-mega-menu-theme == true{
+
+	/*--- MEGA MENU THEME ----------------------------------------------------------------------*/
 
 	// MEGA MENU HEADER
 	.mul-mega-menu-masthead					{
