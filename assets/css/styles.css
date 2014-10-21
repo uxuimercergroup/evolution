@@ -5611,23 +5611,21 @@ html.mul-mod-js {
   background-image: url("../images/login_custom_bkgd_3.jpg");
 }
 
-/*--- HERO BANNER DEMOS ---------------------------------------------------------------------*/
-.mul-hero-banner-background-image-1 .mul-box,
-.mul-hero-banner-background-image-2 .mul-box,
-.mul-hero-banner-background-image-3 .mul-box {
-  background-color: rgba(255, 255, 255, 0.8);
+/*--- IMAGE CONTENT OVERLAY DEMOS -----------------------------------------------------------*/
+.mul-image-content-overlay-background-image {
+  background: url("../images/core/objects/carousel/carousel_image1.jpg") no-repeat top center;
 }
 
-.mul-hero-banner-background-image-1 {
-  background: url("../images/core/objects/carousel/carousel_image1.jpg") no-repeat top left;
+.mul-image-content-overlay-background-image-1 {
+  background: url("../images/core/objects/carousel/carousel_image1.jpg") no-repeat top center;
 }
 
-.mul-hero-banner-background-image-2 {
-  background: url("../images/core/objects/carousel/carousel_image2.jpg") no-repeat top left;
+.mul-image-content-overlay-background-image-2 {
+  background: url("../images/core/objects/carousel/carousel_image2.jpg") no-repeat top center;
 }
 
-.mul-hero-banner-background-image-3 {
-  background: url("../images/core/objects/carousel/carousel_image3.jpg") no-repeat top left;
+.mul-image-content-overlay-background-image-3 {
+  background: url("../images/core/objects/carousel/carousel_image3.jpg") no-repeat top center;
 }
 
 /*--- DEV QUICK REFERENCE -------------------------------------------------------------------*/

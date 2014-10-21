@@ -1105,6 +1105,20 @@ a[class^="mul-icon-"].mul-icon-style-gradient {
   border-top-color: #FFF;
 }
 
+/*--- IMAGE CONTENT OVERLAY THEME ----------------------------------------------------------*/
+.mul-image-content-overlay {
+  background-color: rgba(102, 102, 102, 0.6);
+  border-bottom-color: #999999;
+}
+.mul-image-content-overlay h1, .mul-image-content-overlay .h1, .mul-image-content-overlay h2, .mul-image-content-overlay .h2,
+.mul-image-content-overlay h3, .mul-image-content-overlay .h3, .mul-image-content-overlay h4, .mul-image-content-overlay .h4,
+.mul-image-content-overlay h5, .mul-image-content-overlay .h5, .mul-image-content-overlay h6, .mul-image-content-overlay .h6,
+.mul-image-content-overlay p, .mul-image-content-overlay span, .mul-image-content-overlay li, .mul-image-content-overlay dt, .mul-image-content-overlay dd, .mul-image-content-overlay blockquote,
+.mul-image-content-overlay th, .mul-image-content-overlay td, .mul-image-content-overlay legend, .mul-image-content-overlay hr, .mul-image-content-overlay abbr,
+.mul-image-content-overlay a, .mul-image-content-overlay a:link, .mul-image-content-overlay a:visited, .mul-image-content-overlay a:hover, .mul-image-content-overlay a:active {
+  color: #FFF;
+}
+
 /*--- LOGIN LAYOUT THEME -------------------------------------------------------------------*/
 .mul-layout-login {
   background: url("../images/login_bkgd.jpg") no-repeat center center fixed #23334C;
@@ -1159,6 +1173,7 @@ a[class^="mul-icon-"].mul-icon-style-gradient {
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
+/*--- IMAGE CONTENT OVERLAY THEME ----------------------------------------------------------*/
 /*--- MINI FILTER THEME --------------------------------------------------------------------*/
 .mul-mini-filter dt {
   color: #000;

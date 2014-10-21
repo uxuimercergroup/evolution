@@ -12,6 +12,7 @@
 										max-width: 100%;
 			.mul-hero-banner-content-ctn	{
 				.mul-hero-banner-content-item	{
+												margin-bottom: 0;
 												background-color: $heroBannerBackgroundColor;
 
 					// CUSTOM HERO BANNER BACKGROUND COLOR LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
@@ -21,7 +22,7 @@
 														{background-color: map-get($color, color);}
 													}
 
-					.mul-hero-banner-content-ctn-adjust
+					.mul-hero-banner-content-item-adjust
 													{
 													@include clearfix;
 													margin: 0 auto;
@@ -52,7 +53,7 @@
 											{
 						.mul-hero-banner-content-item
 												{
-							.mul-hero-banner-content-ctn-adjust
+							.mul-hero-banner-content-item-adjust
 													{
 													min-height: 300px;
 
@@ -67,6 +68,8 @@
 													}
 
 													}
+							.mul-image-content-overlay-ctn-adjust.mul-hero-banner-content-item-adjust
+													{padding-top: ($basePadding*3);}
 												}
 						.mul-carousel.owl-carousel
 												{
