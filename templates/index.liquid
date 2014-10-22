@@ -15,17 +15,17 @@
 <div class="col-24 hp-layout">
 	<div class="col-8 first">
 		{% for item in global.table-of-contents limit:2 %}
-			{% include "sidebar-navbar" %}
+			{% include "/reference/toc-nav" %}
 		{% endfor %}
 	</div>
 	<div class="col-8">
 		{% for item in global.table-of-contents offset:2 limit:3 %}
-			{% include "sidebar-navbar" %}
+			{% include "/reference/toc-nav" %}
 		{% endfor %}
 	</div>
 	<div class="col-8">
 		{% for item in global.table-of-contents offset:5 %}
-			{% include "sidebar-navbar" %}
+			{% include "/reference/toc-nav" %}
 		{% endfor %}
 	</div>
 </div>

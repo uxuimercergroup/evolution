@@ -5089,27 +5089,33 @@ html.mul-mod-js {
   display: none;
 }
 
-.related-items-menu {
-  top: 3px !important;
-  font-family: "mul_icon_font";
-  display: none;
+/*--- REFERENCE PAGES ---------------------------------------------------------------------*/
+.mul-ref-example .mul-ref-example-hdr {
+  margin: 40px 0 25px 0;
+}
+.mul-ref-example .mul-ref-example-content {
+  min-height: 250px;
 }
 
-.mul-sliding-sidebar-btn {
+.mul-ref-example-box {
+  background-color: #FFF;
+}
+
+.mul-ref-sliding-drawer-btn {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   background-clip: padding-box;
   background-color: #f7f7f7;
   border: 1px solid #cccccc;
-  padding: 5px;
+  padding: 5px 3px 5px 2px;
   width: 28px;
   height: 28px;
   float: right;
-  top: -40px;
+  top: -5px;
   cursor: pointer;
 }
 
-.mul-sliding-sidebar {
+.mul-ref-sliding-drawer {
   -moz-box-shadow: inset 0 0 10px #000;
   -webkit-box-shadow: inset 0 0 10px #000;
   -o-box-shadow: inset 0 0 10px #000;
@@ -5119,48 +5125,37 @@ html.mul-mod-js {
   padding-bottom: 15px;
   overflow-y: hidden !important;
 }
-.mul-sliding-sidebar .mCSB_container {
+.mul-ref-sliding-drawer .mCSB_container {
   margin-right: 0;
+  padding-bottom: 100px;
 }
-.mul-sliding-sidebar h5,
-.mul-sliding-sidebar h4 {
+.mul-ref-sliding-drawer h5,
+.mul-ref-sliding-drawer h4 {
   color: #FFF;
   padding-left: 10px;
 }
-.mul-sliding-sidebar h5 {
+.mul-ref-sliding-drawer h5 {
   margin-bottom: 4px;
 }
-.mul-sliding-sidebar .mul-vertical-list {
+.mul-ref-sliding-drawer .mul-vertical-list {
   margin-bottom: 14px;
 }
-.mul-sliding-sidebar .mul-vertical-list li {
+.mul-ref-sliding-drawer .mul-vertical-list li {
   margin: 0;
 }
-.mul-sliding-sidebar .mul-vertical-list li a {
+.mul-ref-sliding-drawer .mul-vertical-list li a {
   color: #FFF;
   display: block;
   font-size: 12px;
   line-height: 28px;
   padding: 0 12px;
 }
-.mul-sliding-sidebar .mul-vertical-list li a:hover {
+.mul-ref-sliding-drawer .mul-vertical-list li a:hover {
   text-decoration: none;
   background-color: #666666;
 }
 
-.example-min-height {
-  min-height: 250px;
-}
-
-.example-ctn {
-  background-color: #FFF;
-}
-
-.example-main-hdr {
-  margin: 40px 0 25px 0;
-}
-
-/*--- HOMEPAGE -----------------------------------------------------------------------------*/
+/*--- HOMEPAGE ----------------------------------------------------------------------------*/
 .hp-content-column dd {
   margin-left: 0;
 }
@@ -5225,7 +5220,7 @@ html.mul-mod-js {
   padding-left: 6px;
 }
 
-/*--- LAYOUT/GRIDS PAGE --------------------------------------------------------------------*/
+/*--- LAYOUT/GRIDS PAGE -------------------------------------------------------------------*/
 .unit {
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -5235,7 +5230,7 @@ html.mul-mod-js {
   border: 1px solid #ccc;
 }
 
-/*--- TYPE PAGE ----------------------------------------------------------------------------*/
+/*--- TYPE PAGE ---------------------------------------------------------------------------*/
 .type-table td.type-example {
   font-size: 16px !important;
 }
@@ -5249,7 +5244,7 @@ html.mul-mod-js {
   hyphens: auto;
 }
 
-/*--- ICONS PAGE ----------------------------------------------------------------------------*/
+/*--- ICONS PAGE --------------------------------------------------------------------------*/
 #icons-ctn #icon-font-filter {
   width: 250px;
 }
@@ -5588,12 +5583,12 @@ html.mul-mod-js {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FF999999', GradientType=0);
 }
 
-/*--- CORP LOGOS PAGE -----------------------------------------------------------------------*/
+/*--- CORP LOGOS PAGE ----------------------------------------------------------------------*/
 .corp-logo-background-color {
   background-color: #23334C !important;
 }
 
-/*--- PAGINATION PAGE -----------------------------------------------------------------------*/
+/*--- PAGINATION PAGE ----------------------------------------------------------------------*/
 .pagination-hdr {
   margin-top: 5px;
 }
@@ -5611,7 +5606,7 @@ html.mul-mod-js {
   background-image: url("../images/login_custom_bkgd_3.jpg");
 }
 
-/*--- IMAGE CONTENT OVERLAY DEMOS -----------------------------------------------------------*/
+/*--- IMAGE CONTENT OVERLAY DEMOS ----------------------------------------------------------*/
 .mul-image-content-overlay-background-image {
   background: url("../images/core/objects/carousel/carousel_image1.jpg") no-repeat top center;
 }
@@ -5628,7 +5623,7 @@ html.mul-mod-js {
   background: url("../images/core/objects/carousel/carousel_image3.jpg") no-repeat top center;
 }
 
-/*--- DEV QUICK REFERENCE -------------------------------------------------------------------*/
+/*--- DEV QUICK REFERENCE ------------------------------------------------------------------*/
 .color-vars-quick-reference-table tr {
   color: #FFF;
 }
@@ -5644,7 +5639,7 @@ html.mul-mod-js {
   background-color: inherit !important;
 }
 
-/*=== MEDIA QUERIES ==========================================================================*/
+/*=== MEDIA QUERIES =========================================================================*/
 @media only screen and (max-width: 767px) {
   /*--- FOOTER --------------------------------------------------------------------------*/
   .mul-footer .mul-footer-adjust .mul-footer-content-ctn .mul-footer-copyright .mul-horizontal-list-piped li {

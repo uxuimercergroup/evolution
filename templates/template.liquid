@@ -1,71 +1,117 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<section class="col-24">
-
 <!-- PAGE TITLE - BEGINS -->
 	<h1>{{ model.title }}</h1>
 <!-- PAGE TITLE - ENDS -->
 
-	<i class="mul-icon-menu3 mul-sliding-sidebar-btn js-mul-sliding-sidebar-btn"></i>
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24 mul-alternate-views-badge mul-alternate-views-badge-text-only mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-alternate-views-badge-text-only-example">
 
-<!-- TAB SECTION - BEGINS -->
-	<div class="mul-alternate-views-badge mul-alternate-views-badge-full" data-alternate-views-badge="js-mul-alternate-views-badge-full-example">
+	<!-- CONTENT SECTION - TOGGLE BUTTONS - BEGINS -->
+		<ul class="mul-btn-group-horizontal">{% for item in global.reference-buttons %}<li class="mul-btn"><a href="#mul-ref-alternate-views-badge-content-panel-{% cycle '1', '2', '3', '4', '5', '6'%}"><span>{{ item.reference-button-label }}</span></a></li>{% endfor %}</ul>
+	<!-- CONTENT SECTION - TOGGLE BUTTONS - ENDS -->
 
-		<!-- NO WHITE SPACE BETWEEN CODE BELOW REQUIRED BECAUSE USING DISPLAY: INLINE-BLOCK ON BUTTONS -->
-		<ul class="mul-btn-group-horizontal">{% for item in global.page-tabs %}<li class="mul-btn {{ item.tab-classname }}"><a href="#alternate-views-badge-{% cycle '1', '2', '3', '4', '5', '6'%}"><i class="mul-icon-grid mul-icon-position-left" title="{{ item.tabs }}"></i><span>{{ item.tabs }}</span></a></li>{% endfor %}</ul>
+	<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
+		<div id="mul-ref-alternate-views-badge-content-panel-1">
 
-		<div id="alternate-views-badge-1">
-			<p>{{ model.intro-text }}</p>
+			<p>Intro copy should be placed here.</p>
+
 		</div>
-		<div id="alternate-views-badge-2">
+	<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
+
+	<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
+		<div id="mul-ref-alternate-views-badge-content-panel-2">
+
 			<p>Usage details go here&hellip;</p>
+
 		</div>
-		<div id="alternate-views-badge-3">
+	<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
+
+	<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
+		<div id="mul-ref-alternate-views-badge-content-panel-3">
+
 			<p>Details go here&hellip;</p>
+
 		</div>
-		<div id="alternate-views-badge-4">
+	<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
+
+	<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
+		<div id="mul-ref-alternate-views-badge-content-panel-4">
+
 			<p>Mobile details go here&hellip;</p>
+
 		</div>
-		<div id="alternate-views-badge-5">
+	<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
+
+	<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
+		<div id="mul-ref-alternate-views-badge-content-panel-5">
+
 			<p>Technical details go here&hellip;</p>
-			<h4 class="mul-hdr-rule">Dependencies</h4>
+			
+			<!-- DEPENDENCY LIST - BEGINS -->
+			<h5 class="mul-hdr-rule">Dependencies</h5>
+			<ul>
+				{% if item.reference-dependency-jquery == "true" %}
+					<li>jQuery {{ global.jquery_version }}</li>
+				{% endif %}
+
+				{% if item.reference-dependency-jquery-ui == "true" %}
+					<li>jQuery {{ global.jquery_version }}</li>
+				{% endif %}
+
+				<li>jQuery Mouse Wheel Intent 1.2</li>
+				<li>jQuery UI Dialog - Click Outside Plugin</li>
+			</ul>
+			<!-- DEPENDENCY LIST - ENDS -->
+
 		</div>
-		<div id="alternate-views-badge-6" class="get-code-content-tab">
-			<section class="col-24">
-				<h5 class="mul-hdr-rule">HTML</h5>
-				{{ global.PrettifyStartTag }}INCLUDE GOES HERE{{ global.PrettifyEndTag }}
+	<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
 
-				<h5 class="mul-hdr-rule">JS</h5>
-				{{ global.PrettifyStartTag }}JS CODE GOES HERE{{ global.PrettifyEndTag }}
-			</section>
+	<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
+		<div id="mul-ref-alternate-views-badge-content-panel-6">
+
+			<h5 class="mul-hdr-rule">HTML</h5>
+			{{ global.reference-get-code-start-tag }}{ include '' }{{ global.reference-get-code-end-tag }}
+
+			<h5 class="mul-hdr-rule">JS</h5>
+			{{ global.reference-get-code-start-tag }}{ include '' }{{ global.reference-get-code-end-tag }}
+
 		</div>
+	<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
 
-	</div>
-<!-- TAB SECTION - ENDS -->
-
-<!-- EXAMPLE HEADER - BEGINS -->
-	<h4 class="mul-hdr-dbl-rule example-main-hdr">
-		{{ global.ExampleSectionHeader }} - Default Button
-	</h4>
-<!-- EXAMPLE HEADER - ENDS -->
-
-<!-- [INSERT UI COMPONENT NAME] - BEGINS -->
-	<div class="example-min-height">
-		INCLUDE GOES HERE
-	</div>
-<!-- [INSERT UI COMPONENT NAME] - ENDS -->
-
-</section>
-
-<!-- HIDDEN MENU - BEGINS -->
-	<section class="mul-sliding-sidebar mul-display-none js-mul-sliding-sidebar">
-		<div class="js-mul-sliding-sidebar-scrollpane">
-		{% for item in global.table-of-contents %}
-			{% include "sidebar-navbar" %}
-		{% endfor %}
-		</div>
 	</section>
-<!-- HIDDEN MENU - ENDS -->
+<!-- CONTENT SECTION - ENDS -->
+
+<!-- EXAMPLE SECTION - BEGINS -->
+	<section class="col-24 mul-ref-example">
+
+	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+		<h4 class="mul-hdr-dbl-rule mul-ref-example-hdr">{{ global.reference-example-hdr }}</h4>
+	<!-- EXAMPLE SECTION - HEADER - ENDS -->
+
+	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+		<section class="mul-ref-example-content">
+
+		<!-- [UI COMPONENT NAME] - EXAMPLE - BEGINS -->
+			{ include '' }
+		<!-- [UI COMPONENT NAME] - EXAMPLE - ENDS -->
+
+		<!-- EXAMPLE SECTION - BOX - BEGINS -->
+			<div class="mul-box mul-box-rnd mul-ref-example-box">
+				<h4 class="mul-hdr-rule">{Example Box with Version (Default, Option A, Option B, etc.)}</h4>
+
+				<!-- [UI COMPONENT NAME] - EXAMPLE - BEGINS -->
+					{ include '' }
+				<!-- [UI COMPONENT NAME] - EXAMPLE - ENDS -->
+
+			</div>
+		<!-- EXAMPLE SECTION - BOX - ENDS -->
+
+		</section>
+	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
+
+	</section>
+<!-- EXAMPLE SECTION - ENDS -->
 
 {% endblock %}

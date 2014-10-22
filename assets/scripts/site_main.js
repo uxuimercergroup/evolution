@@ -7,6 +7,19 @@
 		jQuery('html.mul-mod-js').show();
 	}
 
+	// REFERENCE PAGES
+
+		// TOC - SLIDING DRAWER
+		var mulRefSlidingDrawer = jQuery.jPanelMenu({
+			animated: true,
+			closeOnContentClick: false,
+			duration: 450,
+			direction: 'left',
+			menu: '.js-mul-ref-sliding-drawer',
+			keyboardShortcuts: false,
+			trigger: '.js-mul-ref-sliding-drawer-btn'
+		});
+
 
 	// LIBRARY EXAMPLES
 	//----------------------------------------------------------------------------------------------------
@@ -80,32 +93,6 @@ $(function() {
 
 		/* TODO: PLEASE CLEAN UP! - BEGINS */
 
-			// SIDEBAR SECTION
-			var jPM = jQuery.jPanelMenu({
-				menu: '.js-mul-sliding-sidebar',
-				trigger: '.js-mul-sliding-sidebar-btn',
-				duration: 450,
-				direction: 'left',
-				closeOnContentClick: false,
-				keyboardShortcuts: false
-			});
-
-			jPM.on();
-
-			var windowHeight = jQuery(window).height();
-			mulScrollPaneCustom('js-mul-sliding-sidebar-scrollpane',{
-				setHeight: windowHeight,
-				advanced:{
-					updateOnContentResize: true
-				}
-			});
-
-			jQuery(window).bind('resize', resizeWindow);
-			function resizeWindow(e) {
-				var newWindowHeight = jQuery(window).height();
-				jQuery('.js-mul-sliding-sidebar-scrollpane').css('height', newWindowHeight);
-			}
-
 			// SMARTMENU TEST
 			jQuery('.js-mul-menus').smartmenus('destroy');
 			jQuery('.js-mul-menus').smartmenus('menuHideAll');
@@ -134,7 +121,30 @@ $(function() {
 				hideOnClick: true,
 				keepInViewport: true
 			});
+
 		/* PLEASE CLEAN UP! - ENDS */
+
+
+		// REFERENCE PAGES
+
+			// TOC - SLIDING DRAWER INIT
+			mulRefSlidingDrawer.on();
+
+			// TOC - SLIDING DRAWER - SCROLL PANE
+			var windowHeight = jQuery(window).height();
+			mulScrollPaneCustom('js-mul-ref-sliding-drawer-scrollpane',{
+				setHeight: windowHeight,
+				advanced:{
+					updateOnContentResize: true
+				}
+			});
+
+			// TOC - SLIDING DRAWER - SCROLL PANE - CHANGE ON RESIZE OF WINDOW
+			jQuery(window).bind('resize', resizeWindow);
+			function resizeWindow(e) {
+				var newWindowHeight = jQuery(window).height();
+				jQuery('.js-mul-ref-sliding-drawer-scrollpane').css('height', newWindowHeight);
+			}
 
 
 		// JS LIBRARY INITS

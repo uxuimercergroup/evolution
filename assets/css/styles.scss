@@ -32,34 +32,39 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 // HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
 html.mul-mod-js							{display:none;}
 
-// RELATED ITEMS MENU
-.related-items-menu						{
-										top: 3px !important;
-										font-family: $mulIconFontStack;
-										display: none;
-										}
 
-// TODO: SLIDING SIDEBAR
-.mul-sliding-sidebar-btn				{
+/*--- REFERENCE PAGES ---------------------------------------------------------------------*/
+
+// EXAMPLES
+.mul-ref-example						{
+	.mul-ref-example-hdr					{margin: 40px 0 25px 0;}
+	.mul-ref-example-content				{min-height: 250px;}
+										}
+.mul-ref-example-box					{background-color: $white;}
+
+// TOC - SLIDING DRAWER
+.mul-ref-sliding-drawer-btn				{
 										@include border-radius(4px);
 										background-color: $gray-lightest;
 										border: 1px solid $gray-mid-light;
-										padding: 5px;
+										padding: 5px 3px 5px 2px;
 										width: 28px;
 										height: 28px;
 										float: right;
-										top: -40px;
+										top: -5px;
 										cursor: pointer;
 										}
-
-.mul-sliding-sidebar					{
+.mul-ref-sliding-drawer					{
 										@include box-shadow(inset 0, 0, 10px, #000);
 										background-color: $gray-darkest;
 										padding-top: 15px;
 										padding-bottom: 15px;
 										overflow-y: hidden !important;
 
-	.mCSB_container							{margin-right: 0;}
+	.mCSB_container							{
+											margin-right: 0;
+											padding-bottom: 100px;
+											}
 
 	h5,
 	h4										{
@@ -87,14 +92,8 @@ html.mul-mod-js							{display:none;}
 											}
 										}
 
-// LIBRARY EXAMPLES
 
-.example-min-height						{min-height: 250px;}
-.example-ctn							{background-color: $white;}
-.example-main-hdr						{margin: 40px 0 25px 0;}
-
-
-/*--- HOMEPAGE -----------------------------------------------------------------------------*/
+/*--- HOMEPAGE ----------------------------------------------------------------------------*/
 .hp-content-column						{
 	dd										{
 											margin-left: 0;
@@ -152,7 +151,7 @@ html.mul-mod-js							{display:none;}
 										}
 
 
-/*--- LAYOUT/GRIDS PAGE --------------------------------------------------------------------*/
+/*--- LAYOUT/GRIDS PAGE -------------------------------------------------------------------*/
 .unit									{
 										@include border-radius(3px);
 										margin-bottom:15px;
@@ -161,14 +160,14 @@ html.mul-mod-js							{display:none;}
 										}
 
 
-/*--- TYPE PAGE ----------------------------------------------------------------------------*/
+/*--- TYPE PAGE ---------------------------------------------------------------------------*/
 .type-table								{
 	td.type-example							{font-size: $baseFontSize !important;}
 										}
 .hyphen-demo							{@include hyphens(auto);}
 
 
-/*--- ICONS PAGE ----------------------------------------------------------------------------*/
+/*--- ICONS PAGE --------------------------------------------------------------------------*/
 #icons-ctn								{
 	#icon-font-filter						{width: 250px;}
 										}
@@ -329,11 +328,11 @@ html.mul-mod-js							{display:none;}
 .btn-default-hover						{@include background-gradient($buttonHoverBackgroundStartColor, $buttonHoverBackgroundEndColor);}
 
 
-/*--- CORP LOGOS PAGE -----------------------------------------------------------------------*/
+/*--- CORP LOGOS PAGE ----------------------------------------------------------------------*/
 .corp-logo-background-color				{background-color: $blue-gray !important;}
 
 
-/*--- PAGINATION PAGE -----------------------------------------------------------------------*/
+/*--- PAGINATION PAGE ----------------------------------------------------------------------*/
 .pagination-hdr							{margin-top: 5px;}
 
 
@@ -343,7 +342,7 @@ html.mul-mod-js							{display:none;}
 .mul-layout-login-background-3-demo		{background-image: url("../images/login_custom_bkgd_3.jpg");}
 
 
-/*--- IMAGE CONTENT OVERLAY DEMOS -----------------------------------------------------------*/
+/*--- IMAGE CONTENT OVERLAY DEMOS ----------------------------------------------------------*/
 .mul-image-content-overlay-background-image
 										{background: url("../images/core/objects/carousel/carousel_image1.jpg") no-repeat top center;}
 
@@ -355,7 +354,7 @@ html.mul-mod-js							{display:none;}
 										{background: url("../images/core/objects/carousel/carousel_image3.jpg") no-repeat top center;}
 
 
-/*--- DEV QUICK REFERENCE -------------------------------------------------------------------*/
+/*--- DEV QUICK REFERENCE ------------------------------------------------------------------*/
 .color-vars-quick-reference-table		{
 	tr										{color: $white;}
 	.default-text-color						{color: $baseFontColor;}
@@ -368,7 +367,7 @@ html.mul-mod-js							{display:none;}
 										{background-color: inherit !important;}
 										
 
-/*=== MEDIA QUERIES ==========================================================================*/
+/*=== MEDIA QUERIES =========================================================================*/
 @import	"partials/global/responsive_small",
 		"partials/global/responsive_medium",
 		"partials/global/responsive_large"
