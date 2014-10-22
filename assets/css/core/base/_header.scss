@@ -31,6 +31,27 @@
 							}
 	// ICONS - ENDS
 
+	// MAIN LOGO CONTAINER - BEGINS
+		.mul-logo			{
+							font-size: $mastheadLogoFontSize;
+							line-height: $mastheadLogoLineHeight;
+							margin-bottom: 0;
+							padding: 4px 0;
+			.mul-logo-col-1		{}
+			.mul-logo-col-2		{
+								margin-left: 10px;
+				a					{
+									@include href-link($mastheadLogoLinkColor, none);
+									@include text-overflow;
+									display: block;
+									font-weight: $mastheadLogoFontWeight;
+									white-space: nowrap;
+									width: auto;
+									}
+					span			{font-family: $fontThinStack;}
+								}
+							}
+	// MAIN LOGO CONTAINER - ENDS
 
 	.mul-header			{
 						min-height: 20px;
@@ -40,30 +61,6 @@
 		.mul-header-adjust	{
 							@include clearfix;
 							background-color: #EFEFEF;
-
-		// MAIN LOGO CONTAINER - BEGINS
-			.mul-logo			{
-								font-size: $mastheadLogoFontSize;
-								line-height: $mastheadLogoLineHeight;
-								margin-bottom: 0;
-								padding: 4px 0;
-				.mul-logo-col-1		{}
-				.mul-logo-col-2		{
-									margin-left: 10px;
-									width: 25%;
-					a					{
-										@include href-link($mastheadLogoLinkColor, none);
-										@include text-overflow;
-										display: block;
-										font-weight: $mastheadLogoFontWeight;
-										white-space: nowrap;
-										width: auto;
-										}
-						span			{font-family: $fontThinStack;}
-									}
-								}
-		// MAIN LOGO CONTAINER - ENDS
-
 		// MASTHEAD - BEGINS
 			.mul-masthead		{
 			// MASTHEAD ADJUST - BEGINS
@@ -72,7 +69,6 @@
 									margin: 0 auto;
 									width: 980px;
 									position: relative;
-
 					.mul-secondary-logo	{
 						img					{
 											position: absolute;
@@ -87,6 +83,45 @@
 
 								}
 		// MASTHEAD - ENDS
+
+		// NAVBAR - BEGINS
+			.mul-navbar			{
+				.mul-navbar-adjust	{
+									@include clearfix;
+									width: 980px;
+									margin: 0 auto;
+									}
+								}
+		// NAVBAR - ENDS
+
+		// NAVBAR FIXED - BEGINS
+			.mul-navbar-fixed	{
+								@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundStartColor);
+				.mul-navbar-fixed-adjust
+									{
+									padding: 0 5px;
+									margin: 0;
+									width: 100%;
+					.mul-logo			{
+						.mul-logo-col-2		{
+											margin-left: 0;
+							a					{line-height: 32px;}
+											}
+										}
+
+				// TEXT NAVBAR - BEGINS
+					nav.mul-text-nav	{
+						ul					{
+							li					{
+								a					{color: $white;}
+												}
+											}
+										}
+				// TEXT NAVBAR - ENDS
+
+									}
+								}
+		// NAVBAR FIXED - ENDS
 							}
 						}
 
@@ -101,19 +136,6 @@
 
 		.mul-header			{
 			.mul-header-adjust	{
-
-			// MAIN LOGO CONTAINER - BEGINS
-				.mul-logo			{
-					.mul-logo-col-1		{}
-					.mul-logo-col-2		{
-										margin-left: 0;
-										width: 74.46809%;
-						a					{}
-							span			{}
-										}
-					.mul-logo-col-3		{display: none;}
-									}
-			// MAIN LOGO CONTAINER - ENDS
 
 			// PROFILE CONTAINER - BEGINS
 				.mul-profile-menu	{
@@ -190,82 +212,6 @@
 									}
 			// PROFILE CONTAINER - ENDs
 
-			// MASTHEAD - BEGINS
-				.mul-masthead		{
-									@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
-									width: 100%;
-
-				// MASTHEAD ADJUST - BEGINS
-					.mul-masthead-adjust
-										{
-										margin: 0 auto;
-										width: 980px;
-										}
-				// MASTHEAD ADJUST - ENDS
-
-									}
-			// MASTHEAD - ENDS
-
-			// NAVBAR - BEGINS
-				.mul-navbar			{
-					.mul-navbar-adjust	{
-										@include clearfix;
-										width: 980px;
-										margin: 0 auto;
-										}
-									}
-			// NAVBAR - ENDS
-
-			// NAVBAR FIXED - BEGINS
-				.mul-navbar-fixed	{
-									@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundStartColor);
-									border-bottom: 0;
-									position: fixed;
-									top: 0;
-									left: 0;
-					.mul-navbar-fixed-adjust
-										{
-										width: 100%;
-										margin: 0;
-										padding: 0 10px;
-						.mul-logo			{
-											font-size: $mastheadLogoFontSize;
-											line-height: 30px;
-											margin-bottom: 0;
-											padding: 4px 0;
-											}
-						.navbar-col-1		{}
-						.navbar-col-2		{
-							a					{
-												@include href-link($white, none);
-								&:hover				{color: $white;}
-												}
-											}
-										}
-									}
-			// NAVBAR FIXED - ENDS
-
-			// MEGA MENU - BEGINS
-				.mul-mega-menu		{
-									position: static !important;
-					.mega-menu			{
-										@include box-shadow(0, 2px, 5px, $gray-mid-dark);
-										@include border-radius(0 0 4px 4px);
-										margin: 0 auto !important;
-										right: 0 !important;
-										width: 980px !important;
-										max-width: none !important;
-										z-index: 100;
-										display: none;
-						.mul-mega-menu-adjust
-											{
-							.mul-mega-menu-ctn	{padding: 5px 15px 0 15px;}
-											}
-										}
-					.mul-mega-menu-icons
-										{left: auto !important;}
-									}
-			// MEGA MENU - ENDS
 								}
 							}
 
