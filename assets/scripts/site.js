@@ -1276,8 +1276,8 @@ $(function() {
 				mainMenuSubOffsetX: 0,
 				subMenusSubOffsetX: 5,
 				subMenusSubOffsetY: 0,
-				subMenusMinWidth: '100px',
-				subMenusMaxWidth: '250px',
+				subMenusMinWidth: '',
+				subMenusMaxWidth: '',
 				subIndicatorsText: '',
 				subIndicatorsPos: 'append',
 				keepInViewport: true

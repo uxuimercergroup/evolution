@@ -71,6 +71,7 @@ section[role="main"]			{
 								@include clearfix;
 								margin: 0 auto;
 								width: $gridWidth;
+								min-width: $gridMinWidth;
 								
 								// If using 980 width layout
 								@if $use-grid-980 == true{
@@ -81,8 +82,6 @@ section[role="main"]			{
 								@if $use-grid-1200 == true{
 									max-width: $gridMaxWidth1200;
 								}
-
-								min-width: $gridMinWidth;
 
 			[class*="col-"].first	{margin-left:0;}
 			.col-24					{
@@ -104,9 +103,6 @@ section[role="main"]			{
 		// GRID SETUP
 		.mul-grid				{
 								display: block;
-								height: auto !important;
-								height: $gridMinHeight;
-								min-height: $gridMinHeight;
 								text-align: left;
 								}
 								
@@ -117,7 +113,12 @@ section[role="main"]			{
 								}
 
 		// PAGE LAYOUT GRID
-		section[role="main"]	{padding: $basePadding $gridSiteGutterPadding 1px $gridSiteGutterPadding;}
+		section[role="main"]	{
+								height: auto !important;
+								height: $gridMinHeight;
+								min-height: $gridMinHeight;
+								padding: $basePadding $gridSiteGutterPadding 1px $gridSiteGutterPadding;
+								}
 
 		// GRID COLUMN FLOW OPPOSITE
 		// Add class of "mul-col-flow-opposite" to columns where you want content to display first on mobile but appear on the right on larger screens.
