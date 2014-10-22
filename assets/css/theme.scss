@@ -442,7 +442,23 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 }//endif
 
 
+@if $use-hero-banner-theme == true{
+
+	/*--- HERO BANNER THEME --------------------------------------------------------------------*/
+	.mul-hero-banner						{
+		.mul-hero-banner-adjust					{
+			.mul-hero-banner-content-ctn			{
+				.mul-hero-banner-content-item			{background-color: $heroBannerBackgroundColor;}
+													}
+												}
+											}
+
+}//endif
+
+
 @if $use-mega-menu-theme == true{
+
+	/*--- MEGA MENU THEME ----------------------------------------------------------------------*/
 
 	// MEGA MENU HEADER
 	.mul-mega-menu-masthead					{
@@ -1130,6 +1146,26 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 }//endif
 
 
+@if $use-image-content-overlay-theme == true{
+
+	/*--- IMAGE CONTENT OVERLAY THEME ----------------------------------------------------------*/
+	.mul-image-content-overlay				{
+											background-color: rgba($imageContentOverlayBackgroundColor, .6);
+											border-bottom-color: $imageContentOverlayBorderBottomColor;
+
+			h1, .h1, h2, .h2,
+			h3, .h3, h4, .h4,
+			h5, .h5, h6, .h6,
+			p, span, li, dt, dd, blockquote,
+			th, td, legend, hr, abbr,
+			a, a:link, a:visited, a:hover, a:active
+												{color: $imageContentOverlayFontColor;}
+
+											}
+
+}//endif
+
+
 @if $use-login-layout-theme == true{
 
 	/*--- LOGIN LAYOUT THEME -------------------------------------------------------------------*/
@@ -1187,6 +1223,24 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 				.mul-layout-login-footer-bkgd		{@include translucent-background($layoutLoginFooterTranslucentBackgroundColor, .5);}
 												}
 											}
+
+	}
+
+}//endif
+
+
+@if $use-image-content-overlay-theme == true{
+
+	/*--- IMAGE CONTENT OVERLAY THEME ----------------------------------------------------------*/
+
+	
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+		
 
 	}
 

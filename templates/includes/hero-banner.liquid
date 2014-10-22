@@ -1,49 +1,25 @@
-{% if model.hero_banner == "hero-banner-carousel" %}
+{% if model.hero_banner == "hero-banner-background-color-carousel" %}
 
-	<!-- HERO BANNER CAROUSEL (IMAGES) - BEGINS -->
-	{% include "/base/hero-banner-carousel" %}
-	<!-- HERO BANNER CAROUSEL (IMAGES) - ENDS -->
+	<!-- HERO BANNER - BACKGROUND COLOR - CAROUSEL - BEGINS -->
+	{% include "/base/hero-banner-background-color-carousel" %}
+	<!-- HERO BANNER - BACKGROUND COLOR - CAROUSEL - ENDS -->
 
-{% elsif model.hero_banner == "hero-banner-content" %}
+{% elsif model.hero_banner == "hero-banner-background-image" %}
 
-	<!-- HERO BANNER - CONTENT - BEGINS -->
-	{% include "/base/hero-banner-content" %}
-	<!-- HERO BANNER - CONTENT - ENDS -->
+	<!-- HERO BANNER - BACKGROUND IMAGE - BEGINS -->
+	{% include "/base/hero-banner-background-image" %}
+	<!-- HERO BANNER - BACKGROUND IMAGE - ENDS -->
 
-{% elsif model.hero_banner == "hero-banner-carousel-content" %}
+{% elsif model.hero_banner == "hero-banner-background-image-carousel" %}
 
-	<!-- HERO BANNER CAROUSEL - CONTENT - BEGINS -->
-	{% include "/base/hero-banner-carousel-content" %}
-	<!-- HERO BANNER CAROUSEL - CONTENT - ENDS -->
-	
-{% elsif model.hero_banner == "hero-banner-fullwidth" %}
-
-	<!-- HERO BANNER (IMAGE) - FULL WIDTH - BEGINS -->
-	{% include "/base/hero-banner-fullwidth" %}
-	<!-- HERO BANNER (IMAGE) - FULL WIDTH - ENDS -->
-
-{% elsif model.hero_banner == "hero-banner-content-fullwidth" %}
-
-	<!-- HERO BANNER - CONTENT - FULL WIDTH - BEGINS -->
-	{% include "/base/hero-banner-content-fullwidth" %}
-	<!-- HERO BANNER - CONTENT - FULL WIDTH - ENDS -->
-
-{% elsif model.hero_banner == "hero-banner-carousel-fullwidth" %}
-
-	<!-- HERO BANNER CAROUSEL (IMAGES) - FULL WIDTH - BEGINS -->
-	{% include "/base/hero-banner-carousel-fullwidth" %}
-	<!-- HERO BANNER CAROUSEL (IMAGES) - FULL WIDTH - ENDS -->
-
-{% elsif model.hero_banner == "hero-banner-carousel-content-fullwidth" %}
-
-	<!-- HERO BANNER CAROUSEL - CONTENT - FULL WIDTH - BEGINS -->
-	{% include "/base/hero-banner-carousel-content-fullwidth" %}
-	<!-- HERO BANNER CAROUSEL - CONTENT - FULL WIDTH - ENDS -->
+	<!-- HERO BANNER - BACKGROUND IMAGE - CAROUSEL - BEGINS -->
+	{% include "/base/hero-banner-background-image-carousel" %}
+	<!-- HERO BANNER - BACKGROUND IMAGE - CAROUSEL - ENDS -->
 
 {% else %}
 
-	<!-- DEFAULT HERO BANNER (IMAGE) - BEGINS -->
-	{% include "/base/hero-banner" %}
-	<!-- DEFAULT HERO BANNER (IMAGE) - ENDS -->
+	<!-- DEFAULT - HERO BANNER - BACKGROUND COLOR - BEGINS -->
+	{% include "/base/hero-banner-background-color" %}
+	<!-- DEFAULT - HERO BANNER - BACKGROUND COLOR - ENDS -->
 
 {% endif %}

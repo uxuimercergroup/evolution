@@ -344,20 +344,16 @@ html.mul-mod-js							{display:none;}
 .mul-layout-login-background-3-demo		{background-image: url("../images/login_custom_bkgd_3.jpg");}
 
 
-/*--- HERO BANNER DEMOS ---------------------------------------------------------------------*/
-.mul-hero-banner-content-item-background-1,
-.mul-hero-banner-content-item-background-2,
-.mul-hero-banner-content-item-background-3
-										{
-	.mul-box								{background-color: rgba(255, 255, 255, .8);}
-										}
+/*--- IMAGE CONTENT OVERLAY DEMOS -----------------------------------------------------------*/
+.mul-image-content-overlay-background-image
+										{background: url("../images/core/objects/carousel/carousel_image1.jpg") no-repeat top center;}
 
-.mul-hero-banner-content-item-background-1
-										{background: url("../images/core/objects/carousel/carousel_image1.jpg") no-repeat top left;}
-.mul-hero-banner-content-item-background-2
-										{background: url("../images/core/objects/carousel/carousel_image2.jpg") no-repeat top left;}
-.mul-hero-banner-content-item-background-3
-										{background: url("../images/core/objects/carousel/carousel_image3.jpg") no-repeat top left;}
+.mul-image-content-overlay-background-image-1
+										{background: url("../images/core/objects/carousel/carousel_image1.jpg") no-repeat top center;}
+.mul-image-content-overlay-background-image-2
+										{background: url("../images/core/objects/carousel/carousel_image2.jpg") no-repeat top center;}
+.mul-image-content-overlay-background-image-3
+										{background: url("../images/core/objects/carousel/carousel_image3.jpg") no-repeat top center;}
 
 
 /*--- DEV QUICK REFERENCE -------------------------------------------------------------------*/
