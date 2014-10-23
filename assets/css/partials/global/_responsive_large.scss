@@ -6,9 +6,6 @@
 
 // Landscape iPad, laptops and desktops
 @include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
-	
-	/*--- GLOBAL --------------------------------------------------------------------------*/
-
 
 	/*--- HOME PAGE -----------------------------------------------------------------------*/
 
@@ -33,7 +30,7 @@
 		td.type-example							{font-size: $baseFontSizeLargeBreakpoint !important;}
 											}
 
-	/*--- ICONS PAGE ----------------------------------------------------------------------------*/
+	/*--- ICONS PAGE ----------------------------------------------------------------------*/
 	#icons-ctn								{
 		#icon-font-filter						{width: 100%;}
 											}

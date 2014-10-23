@@ -35,6 +35,27 @@ html.mul-mod-js							{display:none;}
 
 /*--- REFERENCE PAGES ---------------------------------------------------------------------*/
 
+// ALTERNATE VIEWS BADGE
+.mul-ref-alternate-views-badge.ui-tabs	{
+										margin-top: 5px;
+	.mul-btn-group-horizontal				{
+		.mul-btn								{
+												@include background-gradient($gray-lighter, $gray-lighter);
+												border-color: $gray-light;
+												font-size: 13px;
+			a										{
+													padding: 8px 9px 5px 9px;
+				[class^="mul-icon-"]					{display: none;}
+													}
+			&:hover									{@include background-gradient($gray-light, $gray-light);}
+			&.ui-tabs-active						{
+													@include background-gradient(#fef8e3, #fef8e3);
+													border-color: #f9eec7;
+													}
+												}
+											}
+										}
+
 // EXAMPLES
 .mul-ref-example						{
 	.mul-ref-example-hdr					{margin: 40px 0 25px 0;}
@@ -57,20 +78,34 @@ html.mul-mod-js							{display:none;}
 .mul-ref-sliding-drawer					{
 										@include box-shadow(inset 0, 0, 10px, #000);
 										background-color: $gray-darkest;
-										padding-top: 15px;
-										padding-bottom: 15px;
+										padding-top: 95px;
 										overflow-y: hidden !important;
+
+	.mul-ref-sliding-drawer-hdr				{
+											@include box-shadow(0, 0, 10px, #000);
+											position: fixed;
+											top: 0;
+											width: 250px;
+											height: 95px;
+											padding: 10px;
+											background-color: $gray-dark;
+		h3										{
+												color: $white;
+												padding: 0 0 10px 0;
+												}
+											}
 
 	.mCSB_container							{
 											margin-right: 0;
 											padding-bottom: 100px;
 											}
 
-	h5,
-	h4										{
+	h4,
+	h5										{
 											color: $white;
 											padding-left: 10px;
 											}
+	h4:first-child							{margin-top: $baseMargin;}
 	h5										{margin-bottom: 4px;}
 
 	.mul-vertical-list						{

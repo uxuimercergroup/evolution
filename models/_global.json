@@ -1,6 +1,6 @@
 {
 	"site_title": "Mercer Evolution",
-	"version_number": "v2-5",
+	"version_number": "v2.5",
 	"jquery_version": "1.10.2",
 	"jquery_ui_version": "1.10.3",
 
@@ -27,17 +27,34 @@
 	],
 
 	"reference-buttons" : [
-		{"reference-button-label": "Overview"},
-		{"reference-button-label": "Usage"},
-		{"reference-button-label": "Details"},
-		{"reference-button-label": "Mobile"},
-		{"reference-button-label": "Technical"},
-		{"reference-button-label": "Get Code"}
+		{
+		"reference-button-label": "Overview",
+		"reference-button-icon": "list2"
+		},
+		{
+		"reference-button-label": "Usage",
+		"reference-button-icon": "insert-template"
+		},
+		{
+		"reference-button-label": "Details",
+		"reference-button-icon": "eye"
+		},
+		{
+		"reference-button-label": "Mobile",
+		"reference-button-icon": "mobile"
+		},
+		{
+		"reference-button-label": "Technical",
+		"reference-button-icon": "cogs"
+		},
+		{
+		"reference-button-label": "Get Code",
+		"reference-button-icon": "code"
+		}
 	],
 	"reference-example-hdr" : "Example",
 	"reference-get-code-start-tag" : "<pre class=\"prettyprint linenums\"><xmp>",
 	"reference-get-code-end-tag" : "</xmp></pre>",
-
 
 	"table-of-contents": [
 		{

@@ -1,0 +1,21 @@
+<!-- DEVELOPER - SLIDING DRAWER - BEGINS -->
+	<section class="mul-ref-sliding-drawer mul-display-none js-mul-ref-sliding-drawer">
+		<div class="mul-ref-sliding-drawer-hdr">
+			<h3>UI Developer Drawer</h3>
+
+			<!-- QUICK REFERENCE - CALL TO ACTION - BEGINS -->
+			<a class="mul-call-to-action" data-palette-color="gray-darker" href="/quick-reference" title="Quick Reference">
+				<i class="mul-icon-code mul-icon-position-left" title="Contact Us"></i>
+				<span class="mul-call-to-action-text">Quick Reference</span>
+				<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Quick Reference"></i>
+			</a>
+			<!-- QUICK REFERENCE - CALL TO ACTION - ENDS -->
+
+		</div>
+		<div class="js-mul-ref-sliding-drawer-scrollpane">
+			{% for item in global.table-of-contents %}
+				{% include "/reference/toc-nav" %}
+			{% endfor %}
+		</div>
+	</section>
+<!-- DEVELOPER - SLIDING DRAWER - ENDS -->

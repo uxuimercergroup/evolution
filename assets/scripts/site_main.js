@@ -126,6 +126,9 @@ $(function() {
 
 		// REFERENCE PAGES
 
+			// ALTERNATE VIEWS BADGE
+			mulAlternateViewsBadge('js-mul-ref-alternate-views-badge', 'left');
+
 			// TOC - SLIDING DRAWER INIT
 			mulRefSlidingDrawer.on();
 

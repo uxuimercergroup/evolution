@@ -6,79 +6,27 @@
 <!-- PAGE TITLE - ENDS -->
 
 <!-- CONTENT SECTION - BEGINS -->
-	<section class="col-24 mul-alternate-views-badge mul-alternate-views-badge-text-only mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-alternate-views-badge-text-only-example">
+	<section class="col-24 mul-alternate-views-badge mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-ref-alternate-views-badge">
 
-	<!-- CONTENT SECTION - TOGGLE BUTTONS - BEGINS -->
-		<ul class="mul-btn-group-horizontal">{% for item in global.reference-buttons %}<li class="mul-btn"><a href="#mul-ref-alternate-views-badge-content-panel-{% cycle '1', '2', '3', '4', '5', '6'%}"><span>{{ item.reference-button-label }}</span></a></li>{% endfor %}</ul>
-	<!-- CONTENT SECTION - TOGGLE BUTTONS - ENDS -->
+		{% include '/reference/reference-content' %}
 
-	<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
-		<div id="mul-ref-alternate-views-badge-content-panel-1">
-
-			<p>Intro copy should be placed here.</p>
-
-		</div>
-	<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
-
-	<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
-		<div id="mul-ref-alternate-views-badge-content-panel-2">
-
-			<p>Usage details go here&hellip;</p>
-
-		</div>
-	<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
-
-	<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
-		<div id="mul-ref-alternate-views-badge-content-panel-3">
-
-			<p>Details go here&hellip;</p>
-
-		</div>
-	<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
-
-	<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
-		<div id="mul-ref-alternate-views-badge-content-panel-4">
-
-			<p>Mobile details go here&hellip;</p>
-
-		</div>
-	<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
-
-	<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
-		<div id="mul-ref-alternate-views-badge-content-panel-5">
-
-			<p>Technical details go here&hellip;</p>
-			
-			<!-- DEPENDENCY LIST - BEGINS -->
-			<h5 class="mul-hdr-rule">Dependencies</h5>
-			<ul>
-				{% if item.reference-dependency-jquery == "true" %}
-					<li>jQuery {{ global.jquery_version }}</li>
-				{% endif %}
-
-				{% if item.reference-dependency-jquery-ui == "true" %}
-					<li>jQuery {{ global.jquery_version }}</li>
-				{% endif %}
-
-				<li>jQuery Mouse Wheel Intent 1.2</li>
-				<li>jQuery UI Dialog - Click Outside Plugin</li>
-			</ul>
-			<!-- DEPENDENCY LIST - ENDS -->
-
-		</div>
-	<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
-
-	<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
-		<div id="mul-ref-alternate-views-badge-content-panel-6">
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
+		<div id="mul-ref-alternate-views-badge-content-panel-get-code">
 
 			<h5 class="mul-hdr-rule">HTML</h5>
+			{{ model.reference-code-html-content-block-pre }}
 			{{ global.reference-get-code-start-tag }}{ include '' }{{ global.reference-get-code-end-tag }}
+			{{ model.reference-code-html-content-block-post }}
 
-			<h5 class="mul-hdr-rule">JS</h5>
-			{{ global.reference-get-code-start-tag }}{ include '' }{{ global.reference-get-code-end-tag }}
+			{% if model.reference-code-js == "true" %}
+				<h5 class="mul-hdr-rule">JS</h5>
+				{{ model.reference-code-js-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{ include '' }{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-js-content-block-post }}
+			{% endif %}
 
 		</div>
-	<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
 
 	</section>
 <!-- CONTENT SECTION - ENDS -->
@@ -93,17 +41,17 @@
 	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
 		<section class="mul-ref-example-content">
 
-		<!-- [UI COMPONENT NAME] - EXAMPLE - BEGINS -->
+		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 			{ include '' }
-		<!-- [UI COMPONENT NAME] - EXAMPLE - ENDS -->
+		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 		<!-- EXAMPLE SECTION - BOX - BEGINS -->
 			<div class="mul-box mul-box-rnd mul-ref-example-box">
 				<h4 class="mul-hdr-rule">{Example Box with Version (Default, Option A, Option B, etc.)}</h4>
 
-				<!-- [UI COMPONENT NAME] - EXAMPLE - BEGINS -->
+				<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 					{ include '' }
-				<!-- [UI COMPONENT NAME] - EXAMPLE - ENDS -->
+				<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 			</div>
 		<!-- EXAMPLE SECTION - BOX - ENDS -->
