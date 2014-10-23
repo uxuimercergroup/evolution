@@ -111,14 +111,13 @@ $(function() {
 			jQuery('.js-mul-profile-menu').smartmenus('menuHideAll');
 			jQuery('.js-mul-profile-menu').smartmenus({
 				subIndicators: true,
-				mainMenuSubOffsetX: -1,
+				mainMenuSubOffsetX: 0,
 				subMenusSubOffsetX: 5,
-				subMenusSubOffsetY: -1,
-				subMenusMinWidth: '100px',
-				subMenusMaxWidth: '250px',
-				subIndicators: false,
-				showOnClick: true,
-				hideOnClick: true,
+				subMenusSubOffsetY: 0,
+				subMenusMinWidth: '',
+				subMenusMaxWidth: '',
+				subIndicatorsText: '',
+				subIndicatorsPos: 'append',
 				keepInViewport: true
 			});
 

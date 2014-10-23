@@ -50,6 +50,7 @@
 									}
 					span			{font-family: $fontThinStack;}
 								}
+			.mul-logo-col-3		{}
 							}
 	// MAIN LOGO CONTAINER - ENDS
 
@@ -61,6 +62,18 @@
 		.mul-header-adjust	{
 							@include clearfix;
 							background-color: #EFEFEF;
+
+		// MOBILE ICON CONTAINER - BEGINS
+			.mul-navbar-icon-ctn	{
+									outline: 1px solid red;
+									}
+		// MOBILE ICON CONTAINER - ENDS
+
+		// USER IDENTIFIER CONTAINER - BEGINS
+			.mul-user-identifier-ctn
+								{display: none;}
+		// USER IDENTIFIER CONTAINER - ENDS
+
 		// MASTHEAD - BEGINS
 			.mul-masthead		{
 			// MASTHEAD ADJUST - BEGINS
@@ -137,80 +150,73 @@
 		.mul-header			{
 			.mul-header-adjust	{
 
-			// PROFILE CONTAINER - BEGINS
-				.mul-profile-menu	{
+			// USER IDENTIFIER CONTAINER - BEGINS
+				.mul-user-identifier-ctn
+									{
 									@include background-gradient($mastheadProfileMenuBackgroundStartColor,$mastheadProfileMenuBackgroundEndColor);
+									display: block;
 									height: 52px;
-									width: 225px;
-									float: right;
-									position: relative;
-									z-index: 10000;
-					.mul-profile-menu-adjust
-										{
-										padding: 9px 0 0 0;
-						[class*="mul-icon"]		{
-												@include border-radius(0);
-												background-color: $transparent;
+					li					{
+										float: none;
+						a					{
+											@include clearfix;
+											padding: 10px 5px 0 0;
+											width: 100%;
+							.mul-user-identifier-ctn-indicator,
+							.mul-user-identifier-ctn-user-info,
+							.mul-user-identifier-ctn-avatar
+												{
 												color: $white;
-												margin: 0;
-												padding: 0;
-												min-width: 5px;
-												top: 0;
-							&:hover					{
-													background-color: $transparent;
+												float: left;
+												}
+
+							.mul-user-identifier-ctn-indicator
+												{top: -2px;}
+							.mul-user-identifier-ctn-user-info
+												{
+								span				{
 													color: $white;
+													display: block;
+													font-size: 11px;
 													}
 												}
-						.mul-profile-menu-icon	{}
-						.mul-profile-menu-user-info
-											{
-							.mul-profile-menu-user-name
+							.mul-user-identifier-ctn-avatar
 												{
-												display: block;
-												color: $white;
-												font-size: 11px;
-												}
-							.mul-profile-menu-user-title
-												{
-												display: block;
-												color: $white;
-												font-size: 11px;
 												}
 											}
-						.mul-profile-menu-user-avatar
-											{}
 					// SUB-MENU - BEGINS
-						.mul-vertical-list	{
+						.mul-user-identifier-menu
+											{
 											@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
 											@include box-shadow(0, 2px, 2px, $mastheadProfileMenuShadowColor);
 											background-color: $mastheadProfileMenuBackgroundEndColor;
 											border: 0;
 											display: none;
-											top: 42px !important;
-											left: -4px !important;
-											width: 225px !important;
+											top: 50px !important;
+											margin-left: 0 !important;
+											width: 100% !important;
 							li					{
-												border: 0;
-												display: block;
-												margin-left: 0;
+												margin-bottom: 0;
 								a					{
 													@include href-link($mastheadProfileMenuTextColor, none);
 													font-size: $mastheadProfileMenuFontSize;
-													padding: 6px 20px 6px 24px;
-													width: 100%;
-									&:hover				{@include background-gradient($mastheadProfileMenuHoverColor, $mastheadProfileMenuHoverColor);}
+													padding: 6px 12%;
+									&:hover				{
+														background-color: $mastheadProfileMenuHoverColor;
+														@include transition(background-color 0.3s ease-in-out);
+														}
 													}
-
-							.last-child				{
-													padding-bottom: 7px;
-								&:hover					{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+								&:last-child		{
+									a					{
+										&:hover				{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+														}
 													}
 												}
 											}
 					// SUB-MENU - ENDS
 										}
 									}
-			// PROFILE CONTAINER - ENDs
+			// USER IDENTIFIER CONTAINER - ENDS
 
 								}
 							}
