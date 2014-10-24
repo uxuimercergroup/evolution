@@ -5164,7 +5164,6 @@ html.mul-mod-js {
   -o-box-shadow: inset 0 0 10px #000;
   box-shadow: inset 0 0 10px #000;
   background-color: #333333;
-  padding-top: 95px;
   overflow-y: hidden !important;
 }
 .mul-ref-sliding-drawer .mul-ref-sliding-drawer-hdr {
@@ -5175,17 +5174,27 @@ html.mul-mod-js {
   position: fixed;
   top: 0;
   width: 250px;
-  height: 95px;
-  padding: 10px;
+  min-width: 250px;
+  padding: 14px 14px 0 14px;
   background-color: #999999;
 }
 .mul-ref-sliding-drawer .mul-ref-sliding-drawer-hdr h3 {
   color: #FFF;
-  padding: 0 0 10px 0;
+  padding: 0 0 7px 0;
+  position: relative;
+  top: -4px;
 }
-.mul-ref-sliding-drawer .mCSB_container {
+.mul-ref-sliding-drawer .mul-ref-sliding-drawer-hdr .mul-ref-sliding-drawer-close-btn {
+  color: #FFF;
+  cursor: pointer;
+  top: 0;
+  right: 12px;
+}
+.mul-ref-sliding-drawer .mCustomScrollbar {
+  padding-top: 97px;
+}
+.mul-ref-sliding-drawer .mCustomScrollbar .mCSB_container {
   margin-right: 0;
-  padding-bottom: 100px;
 }
 .mul-ref-sliding-drawer h4,
 .mul-ref-sliding-drawer h5 {
@@ -5193,13 +5202,16 @@ html.mul-mod-js {
   padding-left: 10px;
 }
 .mul-ref-sliding-drawer h4:first-child {
-  margin-top: 14px;
+  margin-top: 7px;
 }
 .mul-ref-sliding-drawer h5 {
   margin-bottom: 4px;
 }
 .mul-ref-sliding-drawer .mul-vertical-list {
   margin-bottom: 14px;
+}
+.mul-ref-sliding-drawer .mul-vertical-list:last-child {
+  margin-bottom: 100px;
 }
 .mul-ref-sliding-drawer .mul-vertical-list li {
   margin: 0;
@@ -5715,6 +5727,10 @@ html.mul-mod-js {
   }
   .mul-ref-alternate-views-badge.ui-tabs .mul-btn-group-horizontal .mul-btn a [class^="mul-icon-"] {
     display: block;
+  }
+
+  .mul-ref-sliding-drawer .mCustomScrollbar {
+    padding-top: 101px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {

@@ -1171,7 +1171,7 @@
 
 	// REFERENCE PAGES
 
-		// TOC - SLIDING DRAWER
+		// DEVELOPER - SLIDING DRAWER
 		var mulRefSlidingDrawer = jQuery.jPanelMenu({
 			animated: true,
 			closeOnContentClick: false,
@@ -1273,14 +1273,13 @@ $(function() {
 			jQuery('.js-mul-profile-menu').smartmenus('menuHideAll');
 			jQuery('.js-mul-profile-menu').smartmenus({
 				subIndicators: true,
-				mainMenuSubOffsetX: -1,
+				mainMenuSubOffsetX: 0,
 				subMenusSubOffsetX: 5,
-				subMenusSubOffsetY: -1,
-				subMenusMinWidth: '100px',
-				subMenusMaxWidth: '250px',
-				subIndicators: false,
-				showOnClick: true,
-				hideOnClick: true,
+				subMenusSubOffsetY: 0,
+				subMenusMinWidth: '',
+				subMenusMaxWidth: '',
+				subIndicatorsText: '',
+				subIndicatorsPos: 'append',
 				keepInViewport: true
 			});
 
@@ -1292,10 +1291,10 @@ $(function() {
 			// ALTERNATE VIEWS BADGE
 			mulAlternateViewsBadge('js-mul-ref-alternate-views-badge', 'left');
 
-			// TOC - SLIDING DRAWER INIT
+			// DEVELOPER - SLIDING DRAWER INIT
 			mulRefSlidingDrawer.on();
 
-			// TOC - SLIDING DRAWER - SCROLL PANE
+			// DEVELOPER - SLIDING DRAWER - SCROLL PANE
 			var windowHeight = jQuery(window).height();
 			mulScrollPaneCustom('js-mul-ref-sliding-drawer-scrollpane',{
 				setHeight: windowHeight,
@@ -1304,7 +1303,7 @@ $(function() {
 				}
 			});
 
-			// TOC - SLIDING DRAWER - SCROLL PANE - CHANGE ON RESIZE OF WINDOW
+			// DEVELOPER - SLIDING DRAWER - SCROLL PANE - CHANGE ON RESIZE OF WINDOW
 			jQuery(window).bind('resize', resizeWindow);
 			function resizeWindow(e) {
 				var newWindowHeight = jQuery(window).height();

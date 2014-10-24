@@ -1,7 +1,15 @@
 <!-- DEVELOPER - SLIDING DRAWER - BEGINS -->
 	<section class="mul-ref-sliding-drawer mul-display-none js-mul-ref-sliding-drawer">
-		<div class="mul-ref-sliding-drawer-hdr">
-			<h3>UI Developer Drawer</h3>
+		<div class="mul-grid mul-ref-sliding-drawer-hdr">
+
+			<div class="col-24 mul-small-mediaquery-grid">
+				<div class="col-23 first">
+					<h3>Developer Drawer</h3>
+				</div>
+				<div class="col-1">
+					<i class="mul-icon-cancel-circle mul-ref-sliding-drawer-close-btn js-mul-ref-sliding-drawer-btn" title="Close"></i>
+				</div>
+			</div>
 
 			<!-- QUICK REFERENCE - CALL TO ACTION - BEGINS -->
 			<a class="mul-call-to-action" data-palette-color="gray-darker" href="/quick-reference" title="Quick Reference">
@@ -13,9 +21,13 @@
 
 		</div>
 		<div class="js-mul-ref-sliding-drawer-scrollpane">
+
+			<!-- DEVELOPER - TOC - BEGINS -->
 			{% for item in global.table-of-contents %}
 				{% include "/reference/toc-nav" %}
 			{% endfor %}
+			<!-- DEVELOPER - TOC - ENDS -->
+
 		</div>
 	</section>
 <!-- DEVELOPER - SLIDING DRAWER - ENDS -->

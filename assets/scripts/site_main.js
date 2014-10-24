@@ -9,7 +9,7 @@
 
 	// REFERENCE PAGES
 
-		// TOC - SLIDING DRAWER
+		// DEVELOPER - SLIDING DRAWER
 		var mulRefSlidingDrawer = jQuery.jPanelMenu({
 			animated: true,
 			closeOnContentClick: false,
@@ -129,10 +129,10 @@ $(function() {
 			// ALTERNATE VIEWS BADGE
 			mulAlternateViewsBadge('js-mul-ref-alternate-views-badge', 'left');
 
-			// TOC - SLIDING DRAWER INIT
+			// DEVELOPER - SLIDING DRAWER INIT
 			mulRefSlidingDrawer.on();
 
-			// TOC - SLIDING DRAWER - SCROLL PANE
+			// DEVELOPER - SLIDING DRAWER - SCROLL PANE
 			var windowHeight = jQuery(window).height();
 			mulScrollPaneCustom('js-mul-ref-sliding-drawer-scrollpane',{
 				setHeight: windowHeight,
@@ -141,7 +141,7 @@ $(function() {
 				}
 			});
 
-			// TOC - SLIDING DRAWER - SCROLL PANE - CHANGE ON RESIZE OF WINDOW
+			// DEVELOPER - SLIDING DRAWER - SCROLL PANE - CHANGE ON RESIZE OF WINDOW
 			jQuery(window).bind('resize', resizeWindow);
 			function resizeWindow(e) {
 				var newWindowHeight = jQuery(window).height();
