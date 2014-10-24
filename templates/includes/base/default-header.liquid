@@ -1,44 +1,35 @@
 <header role="banner" class="mul-grid mul-header">
 	<div class="mul-header-adjust">
+
 	<!-- MASTHEAD - BEGINS -->
 		<section class="mul-masthead">
 			<div class="mul-masthead-adjust">
-				<div class="col-18 first masthead-col-1">
 
-				<!-- LOGO SECTION - BEGINS -->
-					<section class="mul-logo mul-small-mediaquery-grid">
-						<div class="col-3 first mul-logo-col-1"></div>
-						<div class="col-17 first mul-logo-col-2">
-							<a href="/index">MERCER <span>EVOLUTION</span></a>
+				<section class="col-18 first mul-logo mul-small-mediaquery-grid">
+					<div class="col-3 first mul-logo-col-1 mul-hidden-small-mediaquery">
+						<div class="mul-primary-logo">
+							<img src="{{ "marsh_logo_126x18.png" | asset_url }}" alt="Marsh Logo" width="126" height="18" title="Marsh Logo">
 						</div>
-						<div class="col-4 mul-logo-col-3">
-						<!-- MOBILE MENU ICON - BEGINS -->
-
-							<ul class="sm sm-simple mul-menu-ctn js-mul-menus">
-								<li class="mul-header-icons">
-									<a href="javascript:;"><i class="mul-icon-user mul-icon-position-left"></i></a>
-									<a href="javascript:;"><i class="mul-icon-search mul-icon-position-left"></i></a>
-									<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
-								</li>
-							</ul>
-
-							<!--
-							<ul class="mul-horizontal-list mul-navbar-icon-ctn">
-								<li class="mul-no-margin"><a href="javascript:;"><i class="mul-icon-user"></i></a></li>
-								<li class="mul-no-margin"><a href="javascript:;"><i class="mul-icon-search"></i></a></li>
-								<li class="mul-no-margin js-mul-toggle-content" data-mul-toggle="1"><a href="javascript:;"><i class="mul-icon-menu3"></i></a></li>
-							</ul>
-							-->
-						<!-- MOBILE MENU ICON - ENDS -->
-
-						</div>
-					</section>
-				<!-- LOGO SECTION - ENDS -->
-
-				</div>
-				<div class="col-6 masthead-col-2">
+					</div>
+					<div class="col-14 mul-logo-col-2">
+						<a href="/index">MERCER <span>EVOLUTION</span></a>
+					</div>
+					<div class="col-7 mul-logo-col-3 mul-mb-navbar-ctn">
+					<!-- MOBILE MENU ICON - BEGINS -->
+						<ul class="sm sm-simple mul-menu-ctn js-mul-menus">
+							<li class="mul-header-icons">
+								<a href="javascript:;"><i class="mul-icon-user mul-icon-position-left"></i></a>
+								<a href="javascript:;"><i class="mul-icon-search mul-icon-position-left"></i></a>
+								<a href="javascript:;" class="js-mul-toggle-content" data-mul-toggle="1"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+						</ul>
+					<!-- MOBILE MENU ICON - ENDS -->
+					</div>
+				</section>
+				<section class="col-6 mul-hidden-small-mediaquery">
 					{% include 'user-identifier' %}
-				</div>
+				</section>
+
 			</div>
 		</section>
 	<!-- MASTHEAD - ENDS -->
@@ -46,100 +37,34 @@
 	<!-- MASTHEAD - BEGINS -->
 		<section class="mul-masthead">
 			<div class="mul-masthead-adjust">
-				<div class="col-18 first masthead-col-1">
-				<!-- LOGO SECTION - BEGINS -->
-					<section class="mul-logo">
-						<div class="col-3 first mul-logo-col-1">
-							<img src="{{ "marsh_logo_126x18.png" | asset_url }}" alt="Marsh Logo" width="126" height="18" title="Marsh Logo">
-						</div>
-						<div class="col-18 first mul-logo-col-2">
-							<a href="/index">MERCER <span>EVOLUTION</span></a>
-						</div>
-						<div class="col-4 mul-logo-col-3 mul-visible-small-mediaquery">
-						<!-- MOBILE MENU ICON - BEGINS -->
-							<ul class="sm sm-simple mul-menu-ctn js-mul-menus">
-								<li class="mul-header-icons">
-									<a href="javascript:;"><i class="mul-icon-user mul-icon-position-left"></i></a>
-									<a href="javascript:;"><i class="mul-icon-search mul-icon-position-left"></i></a>
-									<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
-								</li>
-							</ul>
-						<!-- MOBILE MENU ICON - ENDS -->
-						</div>
-					</section>
-				<!-- LOGO SECTION - ENDS -->
-				</div>
-				<div class="col-6 masthead-col-2">
-					{% include 'user-identifier' %}
-				</div>
-			</div>
-		</section>
-	<!-- MASTHEAD - ENDS -->
 
-	<!-- MASTHEAD - BEGINS -->
-		<section class="mul-masthead">
-			<div class="mul-masthead-adjust">
-				<div class="col-18 first masthead-col-1">
-				<!-- LOGO SECTION - BEGINS -->
-					<section class="col-24 mul-logo mul-small-mediaquery-grid">
-						<div class="col-3 first mul-logo-col-1">
+				<section class="col-18 first mul-logo mul-small-mediaquery-grid">
+					<div class="col-3 first mul-logo-col-1 mul-hidden-small-mediaquery">
+						<div class="mul-primary-logo">
 							<img src="{{ "marsh_logo_126x18.png" | asset_url }}" alt="Marsh Logo" width="126" height="18" title="Marsh Logo">
 						</div>
-						<div class="col-18 first mul-logo-col-2">
-							<a href="/index">MERCER <span>EVOLUTION</span></a>
-						</div>
-						<div class="col-4 mul-logo-col-3 mul-visible-small-mediaquery">
-						<!-- MOBILE MENU ICON - BEGINS -->
-							<ul class="sm sm-simple mul-menu-ctn js-mul-menus">
-								<li class="mul-header-icons">
-									<a href="javascript:;"><i class="mul-icon-user mul-icon-position-left"></i></a>
-									<a href="javascript:;"><i class="mul-icon-search mul-icon-position-left"></i></a>
-									<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
-								</li>
-							</ul>
-						<!-- MOBILE MENU ICON - ENDS -->
-						</div>
-					</section>
-				<!-- LOGO SECTION - ENDS -->
-				</div>
-				<div class="col-6 masthead-col-2">
+					</div>
+					<div class="col-14 mul-logo-col-2">
+						<a href="/index">MERCER <span>EVOLUTION</span></a>
+					</div>
+					<div class="col-7 mul-logo-col-3 mul-mb-navbar-ctn">
+					<!-- MOBILE MENU ICON - BEGINS -->
+						<ul class="sm sm-simple mul-menu-ctn js-mul-menus">
+							<li class="mul-header-icons">
+								<a href="javascript:;"><i class="mul-icon-user mul-icon-position-left"></i></a>
+								<a href="javascript:;"><i class="mul-icon-search mul-icon-position-left"></i></a>
+								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+						</ul>
+					<!-- MOBILE MENU ICON - ENDS -->
+					</div>
+				</section>
+				<section class="col-6 mul-hidden-small-mediaquery">
 					<div class="mul-secondary-logo">
 						<img src="{{ "marsh_logo_126x18.png" | asset_url }}" alt="Marsh Logo" width="126" height="18" title="Marsh Logo">
 					</div>
-				</div>
-			</div>
-		</section>
-	<!-- MASTHEAD - ENDS -->
+				</section>
 
-	<!-- MASTHEAD - BEGINS -->
-		<section class="mul-masthead">
-			<div class="mul-masthead-adjust">
-				<div class="col-18 first masthead-col-1">
-				<!-- LOGO SECTION - BEGINS -->
-					<section class="col-24 mul-logo mul-small-mediaquery-grid">
-						<div class="col-3 first mul-logo-col-1"></div>
-						<div class="col-18 first mul-logo-col-2">
-							<a href="/index">MERCER <span>EVOLUTION</span></a>
-						</div>
-						<div class="col-4 mul-logo-col-3 mul-visible-small-mediaquery">
-						<!-- MOBILE MENU ICON - BEGINS -->
-							<ul class="sm sm-simple mul-menu-ctn js-mul-menus">
-								<li class="mul-header-icons">
-									<a href="javascript:;"><i class="mul-icon-user mul-icon-position-left"></i></a>
-									<a href="javascript:;"><i class="mul-icon-search mul-icon-position-left"></i></a>
-									<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
-								</li>
-							</ul>
-						<!-- MOBILE MENU ICON - ENDS -->
-						</div>
-					</section>
-				<!-- LOGO SECTION - ENDS -->
-				</div>
-				<div class="col-6 masthead-col-2">
-					<div class="mul-secondary-logo">
-						<img src="{{ "marsh_logo_126x18.png" | asset_url }}" alt="Marsh Logo" width="126" height="18" title="Marsh Logo">
-					</div>
-				</div>
 			</div>
 		</section>
 	<!-- MASTHEAD - ENDS -->
@@ -156,7 +81,21 @@
 						<ul class="sm sm-simple mul-menu-ctn js-mul-menus">
 							<li><a class="{% if mixture.url == "index" %}mul-navbar-item-active{% endif %}" href="/index">Home</a></li>
 							<li><a href="/browser-testing-support">Browser Support</a></li>
-							<li><a href="/toolkit">Toolkit</a></li>
+							<li>
+								<a href="/toolkit">Toolkit</a>
+								<ul>
+									<li><a href="javascript:;">English</a></li>
+									<li><a href="javascript:;">Spanish</a></li>
+									<li>
+										<a href="javascript:;">German</a>
+										<ul>
+											<li><a href="javascript:;">English</a></li>
+											<li><a href="javascript:;">Spanish</a></li>
+											<li><a href="javascript:;">German</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="col-12 mul-navbar-col-2">
@@ -235,7 +174,7 @@
 	<!-- NAVBAR - ENDS -->
 
 	<!-- NAVBAR - BEGINS -->
-		<section class="mul-navbar">
+		<section class="mul-navbar" id="div1">
 			<div class="mul-navbar-adjust">
 				<nav class="mul-text-nav">
 					<div class="col-12 first mul-navbar-col-1">
@@ -248,7 +187,42 @@
 					<div class="col-12 mul-navbar-col-2">
 						<ul class="sm sm-simple mul-menu-ctn js-mul-menus">
 							<li><a class="{% if mixture.url == "index" %}mul-navbar-item-active{% endif %} mul-navbar-no-pipe-left" href="javascript:;">Contact Us</a></li>
-							<li><a href="javascript:;">Change Language</a></li>
+							<li>
+								<a href="javascript:;">Change Language</a>
+								<ul>
+									<li><a href="javascript:;">English</a></li>
+									<li><a href="javascript:;">Spanish</a></li>
+									<li>
+										<a href="javascript:;">German</a>
+										<ul>
+											<li><a href="javascript:;">English</a></li>
+											<li><a href="javascript:;">Spanish</a></li>
+											<li>
+												<a href="javascript:;">German</a>
+												<ul>
+													<li><a href="javascript:;">English</a></li>
+													<li><a href="javascript:;">Spanish</a></li>
+													<li>
+														<a href="javascript:;">German</a>
+														<ul>
+															<li><a href="javascript:;">English</a></li>
+															<li><a href="javascript:;">Spanish</a></li>
+															<li>
+																<a href="javascript:;">German</a>
+																<ul>
+																	<li><a href="javascript:;">English</a></li>
+																	<li><a href="javascript:;">Spanish</a></li>
+																	<li><a href="javascript:;">German</a></li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
 							<li><a href="javascript:;">Sign Out</a></li>
 						</ul>
 					</div>
@@ -525,135 +499,3 @@
 	<!-- FIXED NAVBAR - ENDS -->
 	</div>
 </header>
-
-
-<br><br>
-
-
-<!-- NAVBAR - BEGINS -->
-	<div class="mul-grid" style="max-width:100%;">
-
-		<section class="mul-navbar">
-			<div class="mul-navbar-adjust">
-				<nav class="mul-text-nav">
-					<div class="col-12 first mul-navbar-col-1">
-						<ul class="sm sm-simple mul-menu-ctn js-mul-menus">
-							<li><a class="{% if mixture.url == "index" %}mul-navbar-item-active{% endif %}" href="/index">Home</a></li>
-							<li><a href="/browser-testing-support">Browser Support</a></li>
-							<li><a href="/toolkit">Toolkit</a></li>
-							<li>
-								<a href="javascript:;">Sub Menu</a>
-								<ul>
-									<li><a href="javascript:;">Item</a></li>
-									<li><a href="javascript:;">Item</a></li>
-									<li><a href="javascript:;">Item</a></li>
-									<li>
-										<a href="javascript:;">Item</a>
-										<ul>
-											<li><a href="javascript:;">Item</a></li>
-											<li><a href="javascript:;">Item</a></li>
-											<li><a href="javascript:;">Item</a></li>
-											<li><a href="javascript:;">Item</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-
-							<li class="mul-mega-menu">
-								<a href="javascript:;">Mega Menu</a>
-								<ul class="mega-menu">
-									<li>
-									<!-- The mega drop down contents -->
-										<div class="mul-mega-menu-adjust">
-											{{ 4 | lorem_ipsum:'p' }}
-										</div>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-					<div class="col-12 mul-navbar-col-2">
-						<ul class="sm sm-simple mul-menu-ctn js-mul-menus">
-							<li class="mul-navbar-message" title="This is a message text area of really long text.">
-								<span>This is a message text area of really long text.</span>
-							</li>
-							<li class="mul-header-icons">
-								<a href="javascript:;"><i class="mul-icon-basket mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-basket mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-basket mul-icon-position-left"></i></a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-			</div>
-		</section>
-
-<br><br>
-
-		<section class="mul-navbar">
-			<div class="mul-navbar-adjust">
-				<nav class="mul-tabbed-nav">
-					<div class="col-12 first mul-navbar-col-1">
-						<ul class="sm sm-simple mul-menu-ctn js-mul-menus">
-							<li class="mul-header-icons">
-								<a href="javascript:;"><i class="mul-icon-basket mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-basket mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-basket mul-icon-position-left"></i></a>
-							</li>
-							<li><a class="{% if mixture.url == "index" %}mul-navbar-item-active{% endif %}" href="/index">Home</a></li>
-							<li><a href="/browser-testing-support">Browser Support</a></li>
-							<li><a href="/toolkit">Toolkit</a></li>
-							<li>
-								<a href="javascript:;">Sub Menu</a>
-								<ul>
-									<li><a href="javascript:;">Item</a></li>
-									<li><a href="javascript:;">Item</a></li>
-									<li><a href="javascript:;">Item</a></li>
-									<li>
-										<a href="javascript:;">Item</a>
-										<ul>
-											<li><a href="javascript:;">Item</a></li>
-											<li><a href="javascript:;">Item</a></li>
-											<li><a href="javascript:;">Item</a></li>
-											<li><a href="javascript:;">Item</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li class="mul-mega-menu">
-								<a href="javascript:;">Mega Menu</a>
-								<ul class="mega-menu">
-									<li>
-									<!-- The mega drop down contents -->
-										<div class="mul-mega-menu-adjust">
-											{{ 4 | lorem_ipsum:'p' }}
-										</div>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-					<div class="col-12 mul-navbar-col-2">
-						<ul class="sm sm-simple mul-menu-ctn js-mul-menus">
-							<li class="mul-navbar-message" title="This is a message text area of really long text.">
-								<span>This is a message text area of really long text.</span>
-							</li>
-							<li class="mul-header-icons">
-								<a href="javascript:;"><i class="mul-icon-basket mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-basket mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-basket mul-icon-position-left"></i></a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-			</div>
-		</section>
-
-	</div>
-<!-- NAVBAR - ENDS -->

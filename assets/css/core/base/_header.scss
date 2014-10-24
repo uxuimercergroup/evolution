@@ -55,6 +55,7 @@
 	// MAIN LOGO CONTAINER - ENDS
 
 	.mul-header			{
+						@include clearfix;
 						min-height: 20px;
 						max-width: 100% !important;
 						margin: 0;
@@ -63,12 +64,6 @@
 							@include clearfix;
 							background-color: #EFEFEF;
 
-		// MOBILE ICON CONTAINER - BEGINS
-			.mul-navbar-icon-ctn	{
-									outline: 1px solid red;
-									}
-		// MOBILE ICON CONTAINER - ENDS
-
 		// USER IDENTIFIER CONTAINER - BEGINS
 			.mul-user-identifier-ctn
 								{display: none;}
@@ -76,21 +71,33 @@
 
 		// MASTHEAD - BEGINS
 			.mul-masthead		{
+								@include clearfix;
 			// MASTHEAD ADJUST - BEGINS
 				.mul-masthead-adjust
 									{
-									margin: 0 auto;
-									width: 980px;
-									position: relative;
-					.mul-secondary-logo	{
-						img					{
-											position: absolute;
-											top: 0;
-											bottom: 0;
-											right: 0;
-											margin: auto;
-											}
+
+				// MOBILE NAVBAR CONTAINER - BEGINS
+					.mul-mb-navbar-ctn	{
+										float: right;
 										}
+				// MOBILE NAVBAR CONTAINER - ENDS
+
+				// PRIMARY & SECONDARY LOGO - BEGINS
+					.mul-logo-col-1,
+					.mul-logo-col-3		{position: relative;}
+
+					.mul-primary-logo	{
+						img					{}
+										}
+					.mul-secondary-logo	{
+										position: absolute;
+										top: 50%;
+										right: 0;
+										height: 52px;
+										margin-top: -10px;
+										}
+				// PRIMARY & SECONDARY LOGO - ENDS
+
 									}
 			// MASTHEAD ADJUST - ENDS
 
@@ -99,6 +106,7 @@
 
 		// NAVBAR - BEGINS
 			.mul-navbar			{
+								display: none;
 				.mul-navbar-adjust	{
 									@include clearfix;
 									width: 980px;
@@ -146,78 +154,95 @@
 @if $use-medium-mediaquery == true or $use-large-mediaquery == true {
 	
 	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		// USER IDENTIFIER CONTAINER - BEGINS
+			.mul-user-identifier-ctn
+								{
+								@include background-gradient($mastheadProfileMenuBackgroundStartColor,$mastheadProfileMenuBackgroundEndColor);
+								height: 52px;
+				li					{
+									float: none;
+					a					{
+										@include clearfix;
+										padding: 10px 5px 0 0;
+										width: 100%;
+						.mul-user-identifier-ctn-indicator,
+						.mul-user-identifier-ctn-user-info,
+						.mul-user-identifier-ctn-avatar
+											{
+											color: $white;
+											float: left;
+											}
+
+						.mul-user-identifier-ctn-indicator
+											{top: -2px;}
+						.mul-user-identifier-ctn-user-info
+											{
+							span				{
+												color: $white;
+												display: block;
+												font-size: 11px;
+												}
+											}
+						.mul-user-identifier-ctn-avatar
+											{
+											}
+										}
+				// SUB-MENU - BEGINS
+					.mul-user-identifier-menu
+										{
+										@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+										@include box-shadow(0, 2px, 2px, $mastheadProfileMenuShadowColor);
+										background-color: $mastheadProfileMenuBackgroundEndColor;
+										border: 0;
+										display: none;
+										top: 50px !important;
+										margin-left: 0 !important;
+										width: 100% !important;
+						li					{
+											margin-bottom: 0;
+							a					{
+												@include href-link($mastheadProfileMenuTextColor, none);
+												font-size: $mastheadProfileMenuFontSize;
+												padding: 6px 12%;
+								&:hover				{
+													background-color: $mastheadProfileMenuHoverColor;
+													@include transition(background-color 0.3s ease-in-out);
+													}
+												}
+							&:last-child		{
+								a					{
+									&:hover				{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+													}
+												}
+											}
+										}
+				// SUB-MENU - ENDS
+									}
+								}
+		// USER IDENTIFIER CONTAINER - ENDS
 
 		.mul-header			{
 			.mul-header-adjust	{
 
 			// USER IDENTIFIER CONTAINER - BEGINS
 				.mul-user-identifier-ctn
-									{
-									@include background-gradient($mastheadProfileMenuBackgroundStartColor,$mastheadProfileMenuBackgroundEndColor);
-									display: block;
-									height: 52px;
-					li					{
-										float: none;
-						a					{
-											@include clearfix;
-											padding: 10px 5px 0 0;
-											width: 100%;
-							.mul-user-identifier-ctn-indicator,
-							.mul-user-identifier-ctn-user-info,
-							.mul-user-identifier-ctn-avatar
-												{
-												color: $white;
-												float: left;
-												}
-
-							.mul-user-identifier-ctn-indicator
-												{top: -2px;}
-							.mul-user-identifier-ctn-user-info
-												{
-								span				{
-													color: $white;
-													display: block;
-													font-size: 11px;
-													}
-												}
-							.mul-user-identifier-ctn-avatar
-												{
-												}
-											}
-					// SUB-MENU - BEGINS
-						.mul-user-identifier-menu
-											{
-											@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
-											@include box-shadow(0, 2px, 2px, $mastheadProfileMenuShadowColor);
-											background-color: $mastheadProfileMenuBackgroundEndColor;
-											border: 0;
-											display: none;
-											top: 50px !important;
-											margin-left: 0 !important;
-											width: 100% !important;
-							li					{
-												margin-bottom: 0;
-								a					{
-													@include href-link($mastheadProfileMenuTextColor, none);
-													font-size: $mastheadProfileMenuFontSize;
-													padding: 6px 12%;
-									&:hover				{
-														background-color: $mastheadProfileMenuHoverColor;
-														@include transition(background-color 0.3s ease-in-out);
-														}
-													}
-								&:last-child		{
-									a					{
-										&:hover				{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
-														}
-													}
-												}
-											}
-					// SUB-MENU - ENDS
-										}
-									}
+									{display: block;}
 			// USER IDENTIFIER CONTAINER - ENDS
 
+			// MASTHEAD - BEGINS
+				.mul-masthead		{
+					.mul-masthead-adjust
+										{
+					// MOBILE NAVBAR CONTAINER - BEGINS
+						.mul-mb-navbar-ctn	{display: none;}
+					// MOBILE NAVBAR CONTAINER - ENDS
+										}
+									}
+			// MASTHEAD - ENDS
+
+			// NAVBAR - BEGINS
+				.mul-navbar			{display: block;}
+			// NAVBAR - ENDS
 								}
 							}
 

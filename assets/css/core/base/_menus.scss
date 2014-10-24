@@ -6,191 +6,321 @@
 
 @if $use-menus == true{
 
-	// DEFAULT SMARTMENU STYLES - BEGINS
-		.sm,
-		.sm ul,
-		.sm li
-				{
-				display: block;
-				list-style: none;
-				padding: 0;
-				margin: 0;
-				line-height: normal;
-				direction: ltr;
-				}
-		ul.sm ul
-				{
-				position: absolute;
-				top: -999999px;
-				width: 100px;
-				}
-		ul.sm li
-				{
-				position: relative;
-				float: left;
-				}
-		ul.sm a
-				{
-				position: relative;
-				display: block;
-				white-space: nowrap;
-				}
-		ul.sm a.disabled
-				{cursor: default;}
-		.sm-rtl,
-		.sm-rtl ul,
-		.sm-rtl li
-				{direction: rtl;}
-		ul.sm-rtl li
-				{float: right;}
-		ul.sm ul li,
-		ul.sm-vertical li
-				{float: none;}
-		ul.sm ul a,
-		ul.sm-vertical a
-				{white-space: normal;}
-		ul.sm ul.sm-nowrap>li>a
-				{white-space: nowrap;}
-		ul.sm:after
-				{
-				content: "\00a0";
-				display: block;
-				height: 0;
-				font: 0/0 serif;
-				clear: both;
-				visibility: hidden;
-				overflow: hidden;
-				}
-		ul.sm,
-		ul.sm *,
-		ul.sm *:before,
-		ul.sm *:after
-				{
-				-moz-box-sizing: border-box;
-				-webkit-box-sizing: border-box;
-				box-sizing: border-box;
-				}
-		ul.sm	{-webkit-tap-highlight-color:rgba(0,0,0,0);}
-	// DEFAULT SMARTMENU STYLES - ENDS
-
-.mul-navbar		{
-	.mul-navbar-adjust
-					{
-		nav.mul-tabbed-nav,
-		nav.mul-text-nav
-						{
-			.sm-simple		{
-							height: auto;
-				li				{
-				// DEFAULT ARROW - BEGINS
-					.sub-arrow		{
-									position: relative;
-									right: -4px;
-									top: 3px;
-									width: 16px;
-									height: 16px;
-						&:before		{
-										font-family: $mulIconFontStack;
-										content: "\e3c2"; // DOWN ARROW
-										}
-									}
-				// DEFAULT ARROW - ENDS
-					ul				{
-									@include box-shadow(0, 2px, 5px, $gray-mid-dark);
-									@include border-radius(0 0 4px 4px);
-									@include clearfix;
-									background-color: $white;
-									border: 1px solid $gray-mid-dark;
+	// NAVBAR STYLES - BEGINS
+		.mul-navbar		{
+			.mul-navbar-adjust
+							{
+				nav.mul-tabbed-nav,
+				nav.mul-text-nav
+								{
+					.sm-simple		{
+direction: ltr;
 									height: auto;
-									z-index: 10000;
-						>li				{
-										border-left: 0;
-										border-right: 0;
-										border-top: 1px dotted $gray-mid-light;
-							&:first-child	{border-top: 0;}
-							&:last-child	{
-								a				{@include border-radius(0 0 4px 4px);}
-											}
-							a				{
-											border-left: 0;
-											display: block;
-											font-family: $fontRegularFamily;
-											}
-										}
-						.has-submenu	{
+line-height: normal;
+margin: 0;
+									width: auto;
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+
+
+						li				{
+										display: block;
+										width: 100%;
+margin: 0;
 						// DEFAULT ARROW - BEGINS
 							.sub-arrow		{
-											position: absolute;
-											top: 50%;
-											right: 0;
-											margin-top: -6px;
-								&:before		{content: "\e3c1";} // RIGHT ARROW
+											position: relative;
+											right: -4px;
+											top: 3px;
+											width: 16px;
+											height: 16px;
+								&:before		{
+												font-family: $mulIconFontStack;
+												content: "\e3c2"; // DOWN ARROW
+												}
 											}
 						// DEFAULT ARROW - ENDS
+							a				{
+											display: block;
+padding: 7px 10px;
+text-decoration: none;
+											}
+							ul				{
+											@include clearfix;
+background: rgba(100,100,100,0.1);
+											//border: 1px solid $gray-mid-dark;
+											height: auto;
+display: none;
+position: static;
+top: auto !important;
+left: auto !important;
+margin-left: 0 !important;
+margin-top: 0 !important;
+width: auto !important;
+min-width: 0 !important;
+max-width: none !important;
+float: none !important;
+
+								>li				{
+												border-left: 0;
+												border-right: 0;
+												border-top: 1px dotted $gray-mid-light;
+
+									&:first-child	{border-top: 0;}
+									&:last-child	{
+										a				{@include border-radius(0 0 4px 4px);}
+													}
+									a				{
+													display: block;
+													font-family: $fontRegularFamily;
+													padding-left: 17px;
+													}
+								// PADDING LEFT FOR MENUS - BEGINS
+									ul					{
+										li					{
+											a					{padding-left: 24px;}
+											ul					{
+												li					{
+													a					{padding-left: 31px;}
+													ul					{
+														li					{
+															a					{padding-left: 38px;}
+															ul					{
+																li					{
+																	a					{padding-left: 45px;}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+								// PADDING LEFT FOR MENUS - BEGINS
+												}
+								.has-submenu	{
+								// DEFAULT ARROW - BEGINS
+									.sub-arrow		{
+													position: absolute;
+													top: 50%;
+													right: 0;
+													margin-top: -6px;
+										&:before		{content: "\e3c1";} // RIGHT ARROW
+													}
+								// DEFAULT ARROW - ENDS
+												}
+											}
 										}
+
+				// MEGA MENU - BEGINS
+						li.mul-mega-menu{
+										position: static !important;
+
+							ul.mega-menu	{
+											margin-left: 0 !important;
+											min-width: 0 !important;
+											max-width: none !important;
+											right: 0 !important;
+											width: 100% !important;
+											height: auto;
+
+											@include box-shadow(0, 0, 0, $white);
+											@include border-radius(0);
+											@include clearfix;
+											background-color: $gray-light;
+											border: 0;
+											border-top: 4px solid $gray-mid-dark;
+											border-bottom: 4px solid $gray-mid-dark;
+
+						// MEGA MENU CONTENT - BEGINS
+							.mul-mega-menu-adjust
+												{
+												@include clearfix;
+												margin: 0 auto;
+												padding: $basePadding $basePadding 0 $basePadding;
+												width: $gridWidth;
+
+													// If using 980 width layout
+													@if $use-grid-980 == true{
+														max-width: $gridMaxWidth980;
+													}
+													
+													// If using 1200 width layout
+													@if $use-grid-1200 == true{
+														max-width: $gridMaxWidth1200;
+													}
+												}
+						// MEGA MENU CONTENT - ENDS
+											}
+										}
+				// MEGA MENU - ENDS
+
 									}
 								}
 
-		// MEGA MENU - BEGINS
-				li.mul-mega-menu{
-								position: static !important;
-
-					ul.mega-menu	{
-									margin-left: 0 !important;
-									min-width: 0 !important;
-									max-width: none !important;
-									right: 0 !important;
-									width: 100% !important;
-									height: auto;
-
-									@include box-shadow(0, 0, 0, $white);
-									@include border-radius(0);
-									@include clearfix;
-									background-color: $gray-light;
-									border: 0;
-									border-top: 4px solid $gray-mid-dark;
-									border-bottom: 4px solid $gray-mid-dark;
-
-				// MEGA MENU CONTENT - BEGINS
-					.mul-mega-menu-adjust
-										{
-										@include clearfix;
-										margin: 0 auto;
-										padding: $basePadding $basePadding 0 $basePadding;
-										width: $gridWidth;
-
-											// If using 980 width layout
-											@if $use-grid-980 == true{
-												max-width: $gridMaxWidth980;
-											}
-											
-											// If using 1200 width layout
-											@if $use-grid-1200 == true{
-												max-width: $gridMaxWidth1200;
-											}
+				nav.mul-text-nav
+								{
+					.sm-simple		{
+						> li			{
+							> .has-submenu + ul	{margin-top: 9px !important;}
 										}
-				// MEGA MENU CONTENT - ENDS
+						li				{					
+							ul.mega-menu	{margin-top: 9px !important;}
+										}
+
 									}
 								}
-		// MEGA MENU - ENDS
 
 							}
 						}
+	// NAVBAR STYLES - ENDS
 
-		nav.mul-text-nav
-						{
-			.sm-simple		{
-				> li			{
-					> .has-submenu + ul	{margin-top: 9px !important;}
+}// endif
+
+
+//=== MEDIA QUERIES =========================================================================
+
+// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	
+	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+	// NAVBAR STYLES - BEGINS
+		.mul-navbar		{
+			.mul-navbar-adjust
+							{
+				nav.mul-tabbed-nav,
+				nav.mul-text-nav
+								{
+					.sm-simple		{
+						li				{
+										width: auto;
+										margin: 0;
+										line-height: normal;
+										direction: ltr;
+										position: relative;
+										float: left;
+						// DEFAULT ARROW - BEGINS
+							.sub-arrow		{
+											position: relative;
+											right: -4px;
+											top: 3px;
+											width: 16px;
+											height: 16px;
+								&:before		{
+												font-family: $mulIconFontStack;
+												content: "\e3c2"; // DOWN ARROW
+												}
+											}
+						// DEFAULT ARROW - ENDS
+							ul				{
+											@include box-shadow(0, 2px, 5px, $gray-mid-dark);
+											@include border-radius(0 0 4px 4px);
+											@include clearfix;
+											background-color: $white;
+											border: 1px solid $gray-mid-dark;
+											height: auto;
+											margin: 0;
+											line-height: normal;
+											direction: ltr;
+											position: absolute;
+											top: -999999px;
+											width: 100px;
+											z-index: 10000;
+								>li				{
+												border-left: 0;
+												border-right: 0;
+												border-top: 1px dotted $gray-mid-light;
+												float: none;
+									&:first-child	{border-top: 0;}
+									&:last-child	{
+										a				{@include border-radius(0 0 4px 4px);}
+													}
+									a				{
+													border-left: 0;
+													display: block;
+													font-family: $fontRegularFamily;
+													position: relative;
+													white-space: nowrap;
+													}
+												}
+								.has-submenu	{
+								// DEFAULT ARROW - BEGINS
+									.sub-arrow		{
+													position: absolute;
+													top: 50%;
+													right: 0;
+													margin-top: -6px;
+										&:before		{content: "\e3c1";} // RIGHT ARROW
+													}
+								// DEFAULT ARROW - ENDS
+												}
+											}
+										}
+
+				// MEGA MENU - BEGINS
+						li.mul-mega-menu{
+										position: static !important;
+
+							ul.mega-menu	{
+											margin-left: 0 !important;
+											min-width: 0 !important;
+											max-width: none !important;
+											right: 0 !important;
+											width: 100% !important;
+											height: auto;
+
+											@include box-shadow(0, 0, 0, $white);
+											@include border-radius(0);
+											@include clearfix;
+											background-color: $gray-light;
+											border: 0;
+											border-top: 4px solid $gray-mid-dark;
+											border-bottom: 4px solid $gray-mid-dark;
+
+						// MEGA MENU CONTENT - BEGINS
+							.mul-mega-menu-adjust
+												{
+												@include clearfix;
+												margin: 0 auto;
+												padding: $basePadding $basePadding 0 $basePadding;
+												width: $gridWidth;
+
+													// If using 980 width layout
+													@if $use-grid-980 == true{
+														max-width: $gridMaxWidth980;
+													}
+													
+													// If using 1200 width layout
+													@if $use-grid-1200 == true{
+														max-width: $gridMaxWidth1200;
+													}
+												}
+						// MEGA MENU CONTENT - ENDS
+											}
+										}
+				// MEGA MENU - ENDS
+
+									}
 								}
-				li				{					
-					ul.mega-menu	{margin-top: 9px !important;}
+
+				nav.mul-text-nav
+								{
+					.sm-simple		{
+						> li			{
+							> .has-submenu + ul	{margin-top: 9px !important;}
+										}
+						li				{					
+							ul.mega-menu	{margin-top: 9px !important;}
+										}
+
+									}
 								}
 
 							}
 						}
+	// NAVBAR STYLES - ENDS
 
-					}
-				}
+
+	}// endif
 
 }// endif
