@@ -14,15 +14,25 @@
 		<div id="mul-ref-alternate-views-badge-content-panel-get-code">
 
 			<h5 class="mul-hdr-rule">HTML</h5>
+
+			{% if model.reference-example-versions == "true" %}
+				<h5>{{ model.reference-example-version-label }}</h5>
+			{% endif %}
 			{{ model.reference-code-html-content-block-pre }}
 			{{ global.reference-get-code-start-tag }}{ include '' }{{ global.reference-get-code-end-tag }}
 			{{ model.reference-code-html-content-block-post }}
 
 			{% if model.reference-code-js == "true" %}
+
 				<h5 class="mul-hdr-rule">JS</h5>
+
+				{% if model.reference-example-versions == "true" %}
+					<h5>{{ model.reference-example-version-label }}</h5>
+				{% endif %}
 				{{ model.reference-code-js-content-block-pre }}
-				{{ global.reference-get-code-start-tag }}{ include '' }{{ global.reference-get-code-end-tag }}
+				{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
 				{{ model.reference-code-js-content-block-post }}
+
 			{% endif %}
 
 		</div>
@@ -42,12 +52,21 @@
 		<section class="mul-ref-example-content">
 
 		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+
+			{% if model.reference-example-versions == "true" %}
+				<h5 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h5>
+			{% endif %}
+
 			{ include '' }
+
 		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 		<!-- EXAMPLE SECTION - BOX - BEGINS -->
 			<div class="mul-box mul-box-rnd mul-ref-example-box">
-				<h4 class="mul-hdr-rule">{Example Box with Version (Default, Option A, Option B, etc.)}</h4>
+
+				{% if model.reference-example-versions == "true" %}
+					<h5 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h5>
+				{% endif %}
 
 				<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 					{ include '' }

@@ -44,8 +44,8 @@ html.mul-mod-js							{display:none;}
 												border-color: $gray-light;
 												font-size: 13px;
 			a										{
-													padding: 8px 9px 5px 9px;
-				[class^="mul-icon-"]					{display: none;}
+													padding: 13px 9px 14px 14px; 
+				[class^="mul-icon-"]					{display: block;}
 													}
 			&:hover									{@include background-gradient($gray-light, $gray-light);}
 			&.ui-tabs-active						{
@@ -102,7 +102,7 @@ html.mul-mod-js							{display:none;}
 											}
 
 	.mCustomScrollbar						{
-											padding-top: 97px;
+											padding-top: 101px;
 		.mCSB_container							{margin-right: 0;}
 											}
 

@@ -5106,10 +5106,10 @@ html.mul-mod-js {
   font-size: 13px;
 }
 .mul-ref-alternate-views-badge.ui-tabs .mul-btn-group-horizontal .mul-btn a {
-  padding: 8px 9px 5px 9px;
+  padding: 13px 9px 14px 14px;
 }
 .mul-ref-alternate-views-badge.ui-tabs .mul-btn-group-horizontal .mul-btn a [class^="mul-icon-"] {
-  display: none;
+  display: block;
 }
 .mul-ref-alternate-views-badge.ui-tabs .mul-btn-group-horizontal .mul-btn:hover {
   background-color: #e6e6e6;
@@ -5191,7 +5191,7 @@ html.mul-mod-js {
   right: 12px;
 }
 .mul-ref-sliding-drawer .mCustomScrollbar {
-  padding-top: 97px;
+  padding-top: 101px;
 }
 .mul-ref-sliding-drawer .mCustomScrollbar .mCSB_container {
   margin-right: 0;
@@ -5720,20 +5720,20 @@ html.mul-mod-js {
     border: 0;
     padding: 0;
   }
-
-  /*--- REFERENCE PAGES ---------------------------------------------------------------------*/
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  /*--- REFERENCE PAGES -----------------------------------------------------------------*/
   .mul-ref-alternate-views-badge.ui-tabs .mul-btn-group-horizontal .mul-btn a {
-    padding: 13px 9px 14px 14px;
+    padding: 8px 9px 5px 9px;
   }
   .mul-ref-alternate-views-badge.ui-tabs .mul-btn-group-horizontal .mul-btn a [class^="mul-icon-"] {
-    display: block;
+    display: none;
   }
 
   .mul-ref-sliding-drawer .mCustomScrollbar {
-    padding-top: 101px;
+    padding-top: 97px;
   }
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
+
   /*--- HOME PAGE -----------------------------------------------------------------------*/
   .marketing-ctn .img-section {
     border-bottom: 0;
@@ -5755,6 +5755,18 @@ html.mul-mod-js {
   }
 }
 @media only screen and (min-width: 980px) {
+  /*--- REFERENCE PAGES -----------------------------------------------------------------*/
+  .mul-ref-alternate-views-badge.ui-tabs .mul-btn-group-horizontal .mul-btn a {
+    padding: 8px 9px 5px 9px;
+  }
+  .mul-ref-alternate-views-badge.ui-tabs .mul-btn-group-horizontal .mul-btn a [class^="mul-icon-"] {
+    display: none;
+  }
+
+  .mul-ref-sliding-drawer .mCustomScrollbar {
+    padding-top: 97px;
+  }
+
   /*--- HOME PAGE -----------------------------------------------------------------------*/
   .marketing-ctn .img-section {
     border-bottom: 0;

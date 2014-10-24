@@ -7,6 +7,27 @@
 // Landscape iPad, laptops and desktops
 @include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
 
+	/*--- REFERENCE PAGES -----------------------------------------------------------------*/
+
+	// ALTERNATE VIEWS BADGE
+	.mul-ref-alternate-views-badge.ui-tabs
+											{
+		.mul-btn-group-horizontal				{
+			.mul-btn								{
+				a										{
+														padding: 8px 9px 5px 9px;
+					[class^="mul-icon-"]					{display: none;}
+														}
+													}
+												}
+											}
+
+	// DEVELOPER - SLIDING DRAWER
+	.mul-ref-sliding-drawer					{
+		.mCustomScrollbar						{padding-top: 97px;}
+											}
+
+
 	/*--- HOME PAGE -----------------------------------------------------------------------*/
 
 	// MARKETING SECTION - HOMEPAGE
