@@ -1,524 +1,533 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<!-- INTRO SECTION - BEGINS -->
-	<section class="col-24">
-		<h1>{{ model.title }}</h1>
-		<p class="mul-intro-text"></p>
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
+
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24 mul-alternate-views-badge mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-ref-alternate-views-badge">
+
+		{% include '/reference/reference-content' %}
+
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
+		<div id="mul-ref-alternate-views-badge-content-panel-get-code">
+
+			<h5 class="mul-hdr-rule">HTML</h5>
+
+			{% if model.reference-example-versions == "true" %}
+				<h5>{{ model.reference-example-version-label }}</h5>
+			{% endif %}
+			{{ model.reference-code-html-content-block-pre }}
+			{{ global.reference-get-code-start-tag }}{% include '/objects/call-to-action' %}{{ global.reference-get-code-end-tag }}
+			{{ model.reference-code-html-content-block-post }}
+
+			{% if model.reference-example-versions == "true" %}
+				<h5>{{ model.reference-example-version-label-2 }}</h5>
+			{% endif %}
+			{{ model.reference-code-html-content-block-pre-2 }}
+			{{ global.reference-get-code-start-tag }}{% include '/objects/call-to-action-icon-left' %}{{ global.reference-get-code-end-tag }}
+			{{ model.reference-code-html-content-block-post-2 }}
+
+			{% if model.reference-example-versions == "true" %}
+				<h5>{{ model.reference-example-version-label-3 }}</h5>
+			{% endif %}
+			{{ model.reference-code-html-content-block-pre-3 }}
+			{{ global.reference-get-code-start-tag }}{% include '/objects/call-to-action-icon-right' %}{{ global.reference-get-code-end-tag }}
+			{{ model.reference-code-html-content-block-post-3 }}
+
+			{% if model.reference-example-versions == "true" %}
+				<h5>{{ model.reference-example-version-label-4 }}</h5>
+			{% endif %}
+			{{ model.reference-code-html-content-block-pre-4 }}
+			{{ global.reference-get-code-start-tag }}{% include '/objects/call-to-action-icon-left-right' %}{{ global.reference-get-code-end-tag }}
+			{{ model.reference-code-html-content-block-post-4 }}
+
+			{% if model.reference-example-versions == "true" %}
+				<h5>{{ model.reference-example-version-label-5 }}</h5>
+			{% endif %}
+			{{ model.reference-code-html-content-block-pre-5 }}
+			{{ global.reference-get-code-start-tag }}{% include '/objects/call-to-action-custom-color' %}{{ global.reference-get-code-end-tag }}
+			{{ model.reference-code-html-content-block-post-5 }}
+
+			{% if model.reference-code-js == "true" %}
+
+				<h5 class="mul-hdr-rule">JS</h5>
+
+				{% if model.reference-example-versions == "true" %}
+					<h5>{{ model.reference-example-version-label }}</h5>
+				{% endif %}
+				{{ model.reference-code-js-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-js-content-block-post }}
+
+			{% endif %}
+
+		</div>
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
+
 	</section>
-<!-- INTRO SECTION - ENDS -->
+<!-- CONTENT SECTION - ENDS -->
 
-<section class="col-24">
+<!-- EXAMPLE SECTION - BEGINS -->
+	<section class="col-24 mul-ref-example">
 
-	<h3 class="mul-hdr-dbl-rule">
-		{{ global.ExampleSectionHeader }}
-		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
-	</h3>
+	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+		<h4 class="mul-hdr-dbl-rule mul-ref-example-hdr">{{ global.reference-example-hdr }}</h4>
+	<!-- EXAMPLE SECTION - HEADER - ENDS -->
 
-<!-- CALL TO ACTION - BEGINS -->
-	<div class="col-24 example-min-height">
-		
-		<div class="col-24">
-			<div class="col-6 first">
-				<div class="mul-box mul-box-rnd mul-ref-example-box">
-					<h4 class="mul-hdr-rule">Default</h4>
+	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+		<section class="mul-ref-example-content">
 
-					<!-- CALL TO ACTION - EXAMPLE - BEGINS -->
-						{% include '/objects/call-to-action' %}
-					<!-- CALL TO ACTION - EXAMPLE - ENDS -->
+			<div class="col-24">
+				<div class="col-6 first">
+
+				<!-- EXAMPLE SECTION - BOX - BEGINS -->
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
+
+						{% if model.reference-example-versions == "true" %}
+							<h5 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h5>
+						{% endif %}
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+							{% include '/objects/call-to-action' %}
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+				<!-- EXAMPLE SECTION - BOX - ENDS -->
+
+				</div>
+				<div class="col-6">
+
+				<!-- EXAMPLE SECTION - BOX - BEGINS -->
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
+
+						{% if model.reference-example-versions == "true" %}
+							<h5 class="mul-hdr-rule">{{ model.reference-example-version-label-2 }}</h5>
+						{% endif %}
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+							{% include '/objects/call-to-action-icon-left' %}
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+				<!-- EXAMPLE SECTION - BOX - ENDS -->
+
+				</div>
+				<div class="col-6">
+
+				<!-- EXAMPLE SECTION - BOX - BEGINS -->
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
+
+						{% if model.reference-example-versions == "true" %}
+							<h5 class="mul-hdr-rule">{{ model.reference-example-version-label-3 }}</h5>
+						{% endif %}
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+							{% include '/objects/call-to-action-icon-right' %}
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+				<!-- EXAMPLE SECTION - BOX - ENDS -->
+
+				</div>
+				<div class="col-6">
+
+				<!-- EXAMPLE SECTION - BOX - BEGINS -->
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
+
+						{% if model.reference-example-versions == "true" %}
+							<h5 class="mul-hdr-rule">{{ model.reference-example-version-label-4 }}</h5>
+						{% endif %}
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+							{% include '/objects/call-to-action-icon-left-right' %}
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+				<!-- EXAMPLE SECTION - BOX - ENDS -->
 
 				</div>
 			</div>
-			<div class="col-6">
-				<div class="mul-box mul-box-rnd mul-ref-example-box">
-					<h4 class="mul-hdr-rule">Icon on Left</h4>
 
-					<!-- CALL TO ACTION - ICON LEFT - EXAMPLE - BEGINS -->
-						{% include '/objects/call-to-action-icon-left' %}
-					<!-- CALL TO ACTION - ICON LEFT - EXAMPLE - ENDS -->
+			{% if model.reference-example-versions == "true" %}
+				<h5 class="mul-hdr-rule">{{ model.reference-example-version-label-5 }}</h5>
+			{% endif %}
 
-				</div>
-			</div>
-			<div class="col-6">
-				<div class="mul-box mul-box-rnd mul-ref-example-box">
-					<h4 class="mul-hdr-rule">Icon on Right</h4>
+			<div class="col-24">
+				<div class="col-6 first">
 
-					<!-- CALL TO ACTION - ICON RIGHT - EXAMPLE - BEGINS -->
-						{% include '/objects/call-to-action-icon-right' %}
-					<!-- CALL TO ACTION - ICON RIGHT - EXAMPLE - ENDS -->
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
 
-				</div>
-			</div>
-			<div class="col-6">
-				<div class="mul-box mul-box-rnd mul-ref-example-box">
-					<h4 class="mul-hdr-rule">Icon on Left and Right</h4>
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+							{% include '/objects/call-to-action-custom-color' %}
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-					<!-- CALL TO ACTION - ICON LEFT AND RIGHT - EXAMPLE - BEGINS -->
-						{% include '/objects/call-to-action-icon-left-right' %}
-					<!-- CALL TO ACTION - ICON LEFT AND RIGHT - EXAMPLE - ENDS -->
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="blue-gray-darkest" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-				</div>
-			</div>
-		</div>
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="blue-gray-darker" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-		<h4 class="mul-hdr-rule">Custom Colors</h4>
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="blue-gray-dark" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-		<div class="col-24">
-			<div class="col-6 first">
-				<div class="mul-box mul-box-rnd mul-ref-example-box">
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="blue-gray-mid-dark" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-					<!-- CALL TO ACTION - CUSTOM COLOR - EXAMPLE - BEGINS -->
-						{% include '/objects/call-to-action-custom-color' %}
-					<!-- CALL TO ACTION - CUSTOM COLOR - EXAMPLE - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="blue-gray-darkest" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="blue-gray-darker" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="blue-gray-dark" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="blue-gray-mid-dark" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-				</div>
-			</div>
-			<div class="col-6">
-				<div class="mul-box mul-box-rnd mul-ref-example-box">
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="blue-sapphire" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="blue-sapphire-dark" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="blue-sapphire-mid" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-				</div>
-			</div>
-			<div class="col-6">
-				<div class="mul-box mul-box-rnd mul-ref-example-box">
-					
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="purple" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="purple-dark" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="purple-mid" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-				</div>
-			</div>
-			<div class="col-6">
-				<div class="mul-box mul-box-rnd mul-ref-example-box">
-					
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="fuscia" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="fuscia-dark" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="fuscia-mid" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-				</div>
-			</div>
-		</div>
-
-		<div class="col-24">
-			<div class="col-6 first">
-				<div class="mul-box mul-box-rnd mul-ref-example-box">
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="pink" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="pink-dark" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-				</div>
-			</div>
-			<div class="col-6">
-				<div class="mul-box mul-box-rnd mul-ref-example-box">
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="red" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="red-dark" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="red-mid" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-				</div>
-			</div>
-			<div class="col-6">
-				<div class="mul-box mul-box-rnd mul-ref-example-box">
-					
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="orange" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="orange-dark" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="orange-mid" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-				</div>
-			</div>
-			<div class="col-6">
-				<div class="mul-box mul-box-rnd mul-ref-example-box">
-					
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="tan" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="tan-dark" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-				</div>
-			</div>
-		</div>
-
-		<div class="col-24">
-			<div class="col-6 first">
-				<div class="mul-box mul-box-rnd mul-ref-example-box">
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="green" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="green-darker" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="green-dark" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="green-mid" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-				</div>
-			</div>
-			<div class="col-6">
-				<div class="mul-box mul-box-rnd mul-ref-example-box">
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="blue-green" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="blue-green-dark" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="blue-green-mid" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-				</div>
-			</div>
-			<div class="col-6">
-				<div class="mul-box mul-box-rnd mul-ref-example-box">
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="black" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="gray-darkest" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="gray-darker" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="gray-dark" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-					<!-- CALL TO ACTION - BEGINS -->
-					<a class="mul-call-to-action" data-palette-color="gray-mid-dark" href="#" title="Contact Us">
-						<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
-						<span class="mul-call-to-action-text">Contact Us</span>
-						<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
-					</a>
-					<!-- CALL TO ACTION - ENDS -->
-
-				</div>
-			</div>
-		</div>
-
-	</div>
-<!-- CALL TO ACTION - ENDS -->
-
-<!-- DETAILS SECTION - BEGINS -->
-	<div class="col-24">
-		<a name="moreDetails"></a>
-		<h4 class="mul-hdr-dbl-rule addtional-detail-hdr">{{ global.AddtionalDetailSectionHeader }}</h4>
-		
-		<div class="js-mul-tabs-example mul-tabs">
-			{% include "page-tabs" %}
-			<div id="tabs-1">
-				<p>When to use details go here&hellip;</p>
-			</div>
-			<div id="tabs-2">
-				<p>Functional details go here&hellip;</p>
-			</div>
-			<div id="tabs-3">
-				<p>Technical details go here&hellip;</p>
-			</div>
-			<div id="tabs-4">
-				<p>Mobile details go here&hellip;</p>
-			</div>
-			<div id="tabs-5">
-			<!-- GET CODE - BEGINS -->
-				<section class="col-24">
-
-					<h5 class="mul-hdr-rule">HTML</h5>
-					
-					<h5>Default</h5>
-					{{ global.PrettifyStartTag }}{% include '/objects/call-to-action' %}{{ global.PrettifyEndTag }}
-
-					<h5>Icon on Left</h5>
-					{{ global.PrettifyStartTag }}{% include '/objects/call-to-action-icon-left' %}{{ global.PrettifyEndTag }}
-
-					<h5>Icon on Right</h5>
-					{{ global.PrettifyStartTag }}{% include '/objects/call-to-action-icon-right' %}{{ global.PrettifyEndTag }}
-
-					<h5>Icon on Left and Right</h5>
-					{{ global.PrettifyStartTag }}{% include '/objects/call-to-action-icon-left-right' %}{{ global.PrettifyEndTag }}
-
-					<h5>Custom Color</h5>
-					<p>The default background color of the Call to Action is #999999 (gray-dark). In order to have a custom background color for the Call to Action add the following data attribute to the Call to Action container: <code>data-palette-color=""</code>.</p>
-
-					<p>Choose from the following color options for the value of <code>data-palette-color=""</code>:</p>
-
-					<div class="col-24">
-						<div class="col-6 first">
-							<ul>
-								<li>black</li>
-								<li>gray-darkest</li>
-								<li>gray-darker</li>
-								<li>gray-dark</li>
-								<li>gray-mid-dark</li>
-								<li>blue-gray</li>
-								<li>blue-gray-darkest</li>
-								<li>blue-gray-darker</li>
-								<li>blue-gray-dark</li>
-								<li>blue-gray-mid-dark</li>
-							</ul>
-						</div>
-						<div class="col-6">
-							<ul>
-								<li>blue-sapphire</li>
-								<li>blue-sapphire-dark</li>
-								<li>blue-sapphire-mid</li>
-								<li>purple</li>
-								<li>purple-dark</li>
-								<li>purple-mid</li>
-								<li>fuscia</li>
-								<li>fuscia-dark</li>
-								<li>fuscia-mid</li>
-								<li>pink</li>
-							</ul>
-						</div>
-						<div class="col-6">
-							<ul>
-								<li>pink-dark</li>
-								<li>red</li>
-								<li>red-dark</li>
-								<li>red-mid</li>
-								<li>orange</li>
-								<li>orange-dark</li>
-								<li>orange-mid</li>
-								<li>tan</li>
-								<li>tan-dark</li>
-								<li>green</li>
-							</ul>
-						</div>
-						<div class="col-6">
-							<ul>
-								<li>green-darker</li>
-								<li>green-dark</li>
-								<li>green-mid</li>
-								<li>blue-green</li>
-								<li>blue-green-dark</li>
-								<li>blue-green-mid</li>
-							</ul>
-						</div>
 					</div>
 
-					{{ global.PrettifyStartTag }}{% include '/objects/call-to-action-custom-color' %}{{ global.PrettifyEndTag }}
+				</div>
+				<div class="col-6">
 
-				</section>
-			<!-- GET CODE - ENDS -->
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="blue-sapphire" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="blue-sapphire-dark" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="blue-sapphire-mid" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+
+				</div>
+				<div class="col-6">
+
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
+						
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="purple" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="purple-dark" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="purple-mid" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+
+				</div>
+				<div class="col-6">
+
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
+						
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="fuscia" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="fuscia-dark" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="fuscia-mid" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+
+				</div>
 			</div>
-		</div>
-	</div>
-<!-- DETAILS SECTION - ENDS -->
 
-</section>
+			<div class="col-24">
+				<div class="col-6 first">
+
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="pink" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="pink-dark" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+
+				</div>
+				<div class="col-6">
+
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="red" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="red-dark" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="red-mid" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+
+				</div>
+				<div class="col-6">
+
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
+						
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="orange" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="orange-dark" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="orange-mid" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+
+				</div>
+				<div class="col-6">
+
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
+						
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="tan" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="tan-dark" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="col-24">
+				<div class="col-6 first">
+
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="green" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="green-darker" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="green-dark" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="green-mid" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+
+				</div>
+				<div class="col-6">
+
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="blue-green" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="blue-green-dark" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="blue-green-mid" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+
+				</div>
+				<div class="col-6">
+
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="black" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="gray-darkest" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="gray-darker" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="gray-dark" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a class="mul-call-to-action" data-palette-color="gray-mid-dark" href="#" title="Contact Us">
+							<i class="mul-icon-phone2 mul-icon-position-left" title="Contact Us"></i>
+							<span class="mul-call-to-action-text">Contact Us</span>
+							<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Contact Us"></i>
+						</a>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
+
+	</section>
+<!-- EXAMPLE SECTION - ENDS -->
+
 {% endblock %}

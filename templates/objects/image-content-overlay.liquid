@@ -1,162 +1,90 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<!-- INTRO SECTION - BEGINS -->
-	<section class="col-24">
-		<h1>{{ model.title }}</h1>
-		<p class="mul-intro-text"></p>
-	</section>
-<!-- INTRO SECTION - ENDS -->
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
 
-<section class="col-24">
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24 mul-alternate-views-badge mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-ref-alternate-views-badge">
 
-	<h3 class="mul-hdr-dbl-rule">
-		{{ global.ExampleSectionHeader }}
-		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
-	</h3>
+		{% include '/reference/reference-content' %}
 
-<!-- IMAGE CONTENT OVERLAY - BEGINS -->
-	<div class="col-24 example-min-height">
-		
-		<h4 class="mul-hdr-rule">Default</h4>
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
+		<div id="mul-ref-alternate-views-badge-content-panel-get-code">
 
-		<!-- IMAGE CONTENT OVERLAY - EXAMPLE - BEGINS -->
-			{% include '/objects/image-content-overlay' %}
-		<!-- IMAGE CONTENT OVERLAY - EXAMPLE - ENDS -->
+			<h5 class="mul-hdr-rule">HTML</h5>
 
-		<h4 class="mul-hdr-rule">Custom Colors</h4>
+			{{ model.reference-code-html-content-block-pre }}
 
-		<!-- IMAGE CONTENT OVERLAY - CUSTOM COLORS - EXAMPLE - BEGINS -->
-			{% include '/objects/image-content-overlay-custom-color' %}
-		<!-- IMAGE CONTENT OVERLAY - CUSTOM COLORS - EXAMPLE - ENDS -->
+			{{ global.reference-get-code-start-tag }}{% include '/objects/image-content-overlay-custom-color' %}{{ global.reference-get-code-end-tag }}
 
-	</div>
-<!-- IMAGE CONTENT OVERLAY - ENDS -->
+			{% if model.reference-example-versions == "true" %}
+				<h5>{{ model.reference-example-version-label }}</h5>
+			{% endif %}
+			{{ global.reference-get-code-start-tag }}{% include '/objects/image-content-overlay' %}{{ global.reference-get-code-end-tag }}
+			{{ model.reference-code-html-content-block-post }}
 
-<!-- DETAILS SECTION - BEGINS -->
-	<div class="col-24">
-		<a name="moreDetails"></a>
-		<h4 class="mul-hdr-dbl-rule addtional-detail-hdr">{{ global.AddtionalDetailSectionHeader }}</h4>
-		
-		<div class="js-mul-tabs-example mul-tabs">
-			{% include "page-tabs" %}
-			<div id="tabs-1">
-				<p>When to use details go here&hellip;</p>
-			</div>
-			<div id="tabs-2">
-				<p>Functional details go here&hellip;</p>
-			</div>
-			<div id="tabs-3">
-				<p>Technical details go here&hellip;</p>
-			</div>
-			<div id="tabs-4">
-				<p>Mobile details go here&hellip;</p>
-			</div>
-			<div id="tabs-5">
-			<!-- GET CODE - BEGINS -->
-				<section class="col-24">
+			{% if model.reference-example-versions == "true" %}
+				<h5>{{ model.reference-example-version-label-2 }}</h5>
+			{% endif %}
+			{{ model.reference-code-html-content-block-pre-2 }}
+			{{ global.reference-get-code-start-tag }}{% include '/objects/image-content-overlay-custom-color' %}{{ global.reference-get-code-end-tag }}
+			{{ model.reference-code-html-content-block-post-2 }}
 
-					<h5 class="mul-hdr-rule">HTML</h5>
+			{% if model.reference-code-js == "true" %}
 
-					<h5>Custom Background Color</h5>
-					<p>The default background color of the Image Content Overlay is #666666 (gray-darker). In order to have a custom background color on the Image Content Overlay add the following data attribute to the Image Content Overlay container: <code>data-palette-color=""</code>.</p>
+				<h5 class="mul-hdr-rule">JS</h5>
 
-					<h5>Custom Border Color</h5>
-					<p>The default border color at the bottom of the Image Content Overlay is #999999 (gray-dark). In order to have a custom border color on the Image Content Overlay add the following data attribute to the Image Content Overlay container: <code>data-palette-border-color=""</code>.</p>
+				{% if model.reference-example-versions == "true" %}
+					<h5>{{ model.reference-example-version-label }}</h5>
+				{% endif %}
+				{{ model.reference-code-js-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-js-content-block-post }}
 
-					<p>Choose from the following color options for the value of <code>data-palette-color=""</code> and <code>data-palette-border-color=""</code>.</p>
+			{% endif %}
 
-					<div class="col-24">
-						<div class="col-6 first">
-							<ul>
-								<li>transparent</li>
-								<li>white</li>
-								<li>black</li>
-								<li>gray-darkest</li>
-								<li>gray-darker</li>
-								<li>gray-dark</li>
-								<li>gray-mid-dark</li>
-								<li>gray-mid-light</li>
-								<li>gray-light</li>
-								<li>gray-lighter</li>
-								<li>gray-lightest</li>
-								<li>blue-gray</li>
-								<li>blue-gray-darkest</li>
-								<li>blue-gray-darker</li>
-								<li>blue-gray-dark</li>
-								<li>blue-gray-mid-dark</li>
-								<li>blue-gray-mid-light</li>
-							</ul>
-						</div>
-						<div class="col-6">
-							<ul>
-								<li>blue-gray-light</li>
-								<li>blue-gray-lighter</li>
-								<li>blue-gray-lightest</li>
-								<li>blue-sapphire</li>
-								<li>blue-sapphire-dark</li>
-								<li>blue-sapphire-mid</li>
-								<li>blue-sapphire-light</li>
-								<li>purple</li>
-								<li>purple-dark</li>
-								<li>purple-mid</li>
-								<li>purple-light</li>
-								<li>fuscia</li>
-								<li>fuscia-dark</li>
-								<li>fuscia-mid</li>
-								<li>fuscia-light</li>
-								<li>pink</li>
-							</ul>
-						</div>
-						<div class="col-6">
-							<ul>
-								<li>pink-dark</li>
-								<li>pink-light</li>
-								<li>red</li>
-								<li>red-dark</li>
-								<li>red-mid</li>
-								<li>red-light</li>
-								<li>orange</li>
-								<li>orange-dark</li>
-								<li>orange-mid</li>
-								<li>orange-light</li>
-								<li>tan</li>
-								<li>tan-dark</li>
-								<li>tan-mid</li>
-								<li>tan-light</li>
-								<li>green</li>
-								<li>green-darker</li>
-							</ul>
-						</div>
-						<div class="col-6">
-							<ul>
-								<li>green-dark</li>
-								<li>green-mid</li>
-								<li>green-light</li>
-								<li>green-lighter</li>
-								<li>green-lightest</li>
-								<li>blue-green</li>
-								<li>blue-green-dark</li>
-								<li>blue-green-mid</li>
-								<li>blue-green-light</li>
-							</ul>
-						</div>
-					</div>
-
-					{{ global.PrettifyStartTag }}<div class="mul-image-content-overlay" data-palette-color="tan" data-palette-border-color="tan-mid">{{ global.PrettifyEndTag }}
-					
-					<h5>Default</h5>
-					{{ global.PrettifyStartTag }}{% include '/objects/image-content-overlay' %}{{ global.PrettifyEndTag }}
-
-					<h5>Custom Background Color and Border Color</h5>
-					{{ global.PrettifyStartTag }}{% include '/objects/image-content-overlay-custom-color' %}{{ global.PrettifyEndTag }}
-
-				</section>
-			<!-- GET CODE - ENDS -->
-			</div>
 		</div>
-	</div>
-<!-- DETAILS SECTION - ENDS -->
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
 
-</section>
+	</section>
+<!-- CONTENT SECTION - ENDS -->
+
+<!-- EXAMPLE SECTION - BEGINS -->
+	<section class="col-24 mul-ref-example">
+
+	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+		<h4 class="mul-hdr-dbl-rule mul-ref-example-hdr">{{ global.reference-example-hdr }}</h4>
+	<!-- EXAMPLE SECTION - HEADER - ENDS -->
+
+	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+		<section class="mul-ref-example-content">
+
+		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+
+			{% if model.reference-example-versions == "true" %}
+				<h5 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h5>
+			{% endif %}
+
+			{% include '/objects/image-content-overlay' %}
+
+		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+
+			{% if model.reference-example-versions == "true" %}
+				<h5 class="mul-hdr-rule">{{ model.reference-example-version-label-2 }}</h5>
+			{% endif %}
+
+			{% include '/objects/image-content-overlay-custom-color' %}
+
+		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+		</section>
+	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
+
+	</section>
+<!-- EXAMPLE SECTION - ENDS -->
+
 {% endblock %}
