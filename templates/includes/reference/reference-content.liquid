@@ -1,5 +1,6 @@
 <!-- CONTENT SECTION - TOGGLE BUTTONS - BEGINS -->
-	<ul class="mul-btn-group-horizontal">{% for item in global.reference-buttons %}<li class="mul-btn"><a href="#mul-ref-alternate-views-badge-content-panel-{% cycle '1', '2', '3', '4', '5', 'get-code'%}"><i class="mul-icon-{{ item.reference-button-icon }} mul-icon-position-left" title="{{ item.reference-button-label }}"></i><span>{{ item.reference-button-label }}</span></a></li>{% endfor %}</ul>
+	<ul class="mul-btn-group-horizontal">{% for item in global.reference-buttons %}<li class="mul-btn"><a href="#mul-ref-alternate-views-badge-content-panel-{% cycle '1', '2', '3', '4', '5' %}"><i class="mul-icon-{{ item.reference-button-icon }} mul-icon-position-left" title="{{ item.reference-button-label }}"></i><span>{{ item.reference-button-label }}</span></a></li>{% endfor %}{% if model.reference-get-code == "true" %}<li class="mul-btn"><a href="#mul-ref-alternate-views-badge-content-panel-get-code"><i class="mul-icon-{{ global.reference-button-icon-get-code }} mul-icon-position-left" title="{{ global.reference-button-label-get-code }}"></i><span>{{ global.reference-button-label-get-code }}</span></a></li>{% endif %}</ul>
+
 <!-- CONTENT SECTION - TOGGLE BUTTONS - ENDS -->
 
 <!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->

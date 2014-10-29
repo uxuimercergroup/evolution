@@ -11,31 +11,33 @@
 		{% include '/reference/reference-content' %}
 
 	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
-		<div id="mul-ref-alternate-views-badge-content-panel-get-code">
+		{% if model.reference-get-code == "true" %}
+			<div id="mul-ref-alternate-views-badge-content-panel-get-code">
 
-			<h5 class="mul-hdr-rule">HTML</h5>
-
-			{% if model.reference-example-versions == "true" %}
-				<h5>{{ model.reference-example-version-label }}</h5>
-			{% endif %}
-			{{ model.reference-code-html-content-block-pre }}
-			{{ global.reference-get-code-start-tag }}{ include '' }{{ global.reference-get-code-end-tag }}
-			{{ model.reference-code-html-content-block-post }}
-
-			{% if model.reference-code-js == "true" %}
-
-				<h5 class="mul-hdr-rule">JS</h5>
+				<h5 class="mul-hdr-rule">HTML</h5>
 
 				{% if model.reference-example-versions == "true" %}
 					<h5>{{ model.reference-example-version-label }}</h5>
 				{% endif %}
-				{{ model.reference-code-js-content-block-pre }}
-				{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-js-content-block-post }}
+				{{ model.reference-code-html-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{ include '' }{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post }}
 
-			{% endif %}
+				{% if model.reference-code-js == "true" %}
 
-		</div>
+					<h5 class="mul-hdr-rule">JS</h5>
+
+					{% if model.reference-example-versions == "true" %}
+						<h5>{{ model.reference-example-version-label }}</h5>
+					{% endif %}
+					{{ model.reference-code-js-content-block-pre }}
+					{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-js-content-block-post }}
+
+				{% endif %}
+
+			</div>
+		{% endif %}
 	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
 
 	</section>
@@ -59,7 +61,7 @@
 				<div class="col-12 first">
 
 				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="mul-box mul-box-rnd mul-ref-example-box">
+					<div class="mul-box mul-box-rnd mul-padding-bottom mul-ref-example-box">
 
 						{% if model.reference-example-versions == "true" %}
 							<h5 class="mul-hdr-rule">{{ model.reference-example-version-label-3 }}</h5>
@@ -76,7 +78,7 @@
 				<div class="col-12">
 
 				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="mul-box mul-box-rnd mul-ref-example-box">
+					<div class="mul-box mul-box-rnd mul-padding-bottom mul-ref-example-box">
 
 						{% if model.reference-example-versions == "true" %}
 							<h5 class="mul-hdr-rule">{{ model.reference-example-version-label-4 }}</h5>
@@ -100,7 +102,7 @@
 				<div class="col-12 first">
 
 				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="mul-box mul-box-rnd mul-ref-example-box">
+					<div class="mul-box mul-box-rnd mul-padding-bottom mul-ref-example-box">
 
 						{% if model.reference-example-versions == "true" %}
 							<h5 class="mul-hdr-rule">{{ model.reference-example-version-label-3 }}</h5>
@@ -117,7 +119,7 @@
 				<div class="col-12">
 
 				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="mul-box mul-box-rnd mul-ref-example-box">
+					<div class="mul-box mul-box-rnd mul-padding-bottom mul-ref-example-box">
 
 						{% if model.reference-example-versions == "true" %}
 							<h5 class="mul-hdr-rule">{{ model.reference-example-version-label-4 }}</h5>
