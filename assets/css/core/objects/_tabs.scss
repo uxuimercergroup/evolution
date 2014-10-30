@@ -101,7 +101,7 @@
 																	}
 																}
 		.ui-tabs-panel											{
-																@include border-radius($tabsBorderRadius);
+																@include border-radius(0 $tabsBorderRadius $tabsBorderRadius $tabsBorderRadius);
 																padding:$tabsPanelPadding $tabsPanelPadding 0 $tabsPanelPadding;
 																border:$tabsPanelBorderSize $tabsPanelBorderStyle $tabsPanelBorderColor;
 																background-color:$tabsPanelBackgroundColor;
