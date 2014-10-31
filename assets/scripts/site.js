@@ -1253,7 +1253,7 @@ $(function() {
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
 
-		/* TODO: PLEASE CLEAN UP! - BEGINS */
+		
 
 			// SMARTMENU TEST
 			jQuery('.js-mul-menus').smartmenus('destroy');
