@@ -7,25 +7,17 @@
 @if $use-menus == true{
 
 	// NAVBAR STYLES - BEGINS
-		.mul-navbar		{
-			.mul-navbar-adjust
-							{
-				.mul-tabbed-nav,
-				.mul-text-nav
-								{
-					.mul-nav-menus	{
-direction: ltr;
-									height: auto;
-line-height: normal;
-margin: 0;
-									width: auto;
--webkit-tap-highlight-color: rgba(0,0,0,0);
-
-
-						li				{
-										display: block;
-										width: 100%;
-margin: 0;
+		.mul-nav-menus	{
+						direction: ltr;
+						height: auto;
+						line-height: normal;
+						margin: 0;
+						width: auto;
+						-webkit-tap-highlight-color: rgba(0,0,0,0);
+			li				{
+							display: block;
+							width: 100%;
+							margin: 0;
 						// DEFAULT ARROW - BEGINS
 							.sub-arrow		{
 											position: relative;
@@ -39,121 +31,122 @@ margin: 0;
 												}
 											}
 						// DEFAULT ARROW - ENDS
-							a				{
-											display: block;
-padding: 7px 10px;
-text-decoration: none;
-											}
-							ul				{
-											@include clearfix;
-background: rgba(100,100,100,0.1);
-											//border: 1px solid $gray-mid-dark;
-											height: auto;
-display: none;
-position: static;
-top: auto !important;
-left: auto !important;
-width: auto !important;
-min-width: 0 !important;
-max-width: none !important;
-float: none !important;
+				a				{
+								display: block;
+								padding: 7px 10px;
+								text-decoration: none;
+								}
+					ul			{
+								@include clearfix;
+								background: rgba(100,100,100,0.1);
+								height: auto;
+								display: none;
+								position: static;
+								top: auto !important;
+								left: auto !important;
+								width: auto !important;
+								min-width: 0 !important;
+								max-width: none !important;
+								float: none !important;
 
-								>li				{
-												border-left: 0;
-												border-right: 0;
-												border-top: 1px dotted $gray-mid-light;
+						>li			{
+									border-left: 0;
+									border-right: 0;
+									border-top: 1px dotted $gray-mid-light;
 
-									&:first-child	{border-top: 0;}
-									&:last-child	{
-										a				{@include border-radius(0 0 4px 4px);}
-													}
-									a				{
-													display: block;
-													font-family: $fontRegularFamily;
-													padding-left: 17px;
-													}
-								// PADDING LEFT FOR MENUS - BEGINS
+							&:first-child
+										{border-top: 0;}
+							&:last-child
+										{
+								a			{@include border-radius(0 0 4px 4px);}
+										}
+							a			{
+										display: block;
+										font-family: $fontRegularFamily;
+										padding-left: 17px;
+										}
+				// PADDING LEFT FOR MENUS - BEGINS
+					ul					{
+						li					{
+							a					{padding-left: 24px;}
+							ul					{
+								li					{
+									a					{padding-left: 31px;}
 									ul					{
 										li					{
-											a					{padding-left: 24px;}
+											a					{padding-left: 38px;}
 											ul					{
 												li					{
-													a					{padding-left: 31px;}
-													ul					{
-														li					{
-															a					{padding-left: 38px;}
-															ul					{
-																li					{
-																	a					{padding-left: 45px;}
-																					}
-																				}
-																			}
-																		}
+													a					{padding-left: 45px;}
 																	}
 																}
 															}
 														}
-								// PADDING LEFT FOR MENUS - BEGINS
-												}
-								.has-submenu	{
-								// DEFAULT ARROW - BEGINS
-									.sub-arrow		{
-													position: absolute;
-													top: 50%;
-													right: 0;
-													margin-top: -6px;
-										&:before		{content: "\e3c1";} // RIGHT ARROW
 													}
-								// DEFAULT ARROW - ENDS
 												}
 											}
 										}
+				// PADDING LEFT FOR MENUS - BEGINS
+									}
 
-				// MEGA MENU - BEGINS
-						li.mul-mega-menu{
-										position: static !important;
+					// DEFAULT ARROW - BEGINS
+						.sub-arrow		{
+										position: absolute;
+										top: 50%;
+										right: 0;
+										margin-top: -6px;
+							&:before		{content: "\e3c1";} // RIGHT ARROW
+										}
+					// DEFAULT ARROW - ENDS
 
-							ul.mega-menu	{
-											margin-left: 0 !important;
-											min-width: 0 !important;
-											max-width: none !important;
-											right: 0 !important;
-											width: 100% !important;
-											height: auto;
+								}
+							}
 
-											@include box-shadow(0, 0, 0, $white);
-											@include border-radius(0);
+			// MEGA MENU - BEGINS
+					li.mul-mega-menu{
+									position: static !important;
+
+						ul.mega-menu	{
+										margin-left: 0 !important;
+										min-width: 0 !important;
+										max-width: none !important;
+										right: 0 !important;
+										width: 100% !important;
+										height: auto;
+
+										@include box-shadow(0, 0, 0, $white);
+										@include border-radius(0);
+										@include clearfix;
+										background-color: $gray-light;
+										border: 0;
+										border-top: 4px solid $gray-mid-dark;
+										border-bottom: 4px solid $gray-mid-dark;
+
+					// MEGA MENU CONTENT - BEGINS
+						.mul-mega-menu-adjust
+											{
 											@include clearfix;
-											background-color: $gray-light;
-											border: 0;
-											border-top: 4px solid $gray-mid-dark;
-											border-bottom: 4px solid $gray-mid-dark;
+											margin: 0 auto;
+											padding: $basePadding $basePadding 0 $basePadding;
+											width: $gridWidth;
 
-						// MEGA MENU CONTENT - BEGINS
-							.mul-mega-menu-adjust
-												{
-												@include clearfix;
-												margin: 0 auto;
-												padding: $basePadding $basePadding 0 $basePadding;
-												width: $gridWidth;
-
-													// If using 980 width layout
-													@if $use-grid-980 == true{
-														max-width: $gridMaxWidth980;
-													}
-													
-													// If using 1200 width layout
-													@if $use-grid-1200 == true{
-														max-width: $gridMaxWidth1200;
-													}
+												// If using 980 width layout
+												@if $use-grid-980 == true{
+													max-width: $gridMaxWidth980;
 												}
-						// MEGA MENU CONTENT - ENDS
+												
+												// If using 1200 width layout
+												@if $use-grid-1200 == true{
+													max-width: $gridMaxWidth1200;
+												}
 											}
+					// MEGA MENU CONTENT - ENDS
 										}
-				// MEGA MENU - ENDS
+									}
+			// MEGA MENU - ENDS
 
 									}
-								}
+
 
 				nav.mul-text-nav
 								{
@@ -168,8 +161,7 @@ float: none !important;
 									}
 								}
 
-							}
-						}
+
 	// NAVBAR STYLES - ENDS
 
 }// endif
@@ -213,91 +205,83 @@ float: none !important;
 	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
 
 	// NAVBAR STYLES - BEGINS
-		.mul-navbar		{
-			.mul-navbar-adjust
-							{
-				nav.mul-tabbed-nav,
-				nav.mul-text-nav
-								{
-					.mul-nav-menus		{
-						li				{
-										width: auto;
-										margin: 0;
-										line-height: normal;
-										direction: ltr;
-										position: relative;
-										float: left;
-						// DEFAULT ARROW - BEGINS
-							.sub-arrow		{
-											position: relative;
-											right: -4px;
-											top: 3px;
-											width: 16px;
-											height: 16px;
-								&:before		{
-												font-family: $mulIconFontStack;
-												content: "\e3c2"; // DOWN ARROW
-												}
+		.mul-nav-menus		{
+			li					{
+								width: auto;
+								margin: 0;
+								line-height: normal;
+								direction: ltr;
+								position: relative;
+								float: left;
+				// DEFAULT ARROW - BEGINS
+					.sub-arrow		{
+									position: relative;
+									right: -4px;
+									top: 3px;
+									width: 16px;
+									height: 16px;
+						&:before		{
+										font-family: $mulIconFontStack;
+										content: "\e3c2"; // DOWN ARROW
+										}
+									}
+				// DEFAULT ARROW - ENDS
+				ul					{
+									@include box-shadow(0, 2px, 5px, $gray-mid-dark);
+									@include border-radius(0 0 4px 4px);
+									@include clearfix;
+									background-color: $white;
+									border: 1px solid $gray-mid-dark;
+									direction: ltr;
+									height: auto;
+									line-height: normal;
+									margin: 0;
+									min-width: 100px !important;
+									max-width: 225px !important;
+									position: absolute;
+									top: -999999px;
+									z-index: 10000;
+					>li					{
+										border-left: 0;
+										border-right: 0;
+										border-top: 1px dotted $gray-mid-light;
+										float: none;
+						&:first-child		{border-top: 0;}
+						&:last-child		{
+							a					{@include border-radius(0 0 4px 4px);}
 											}
-						// DEFAULT ARROW - ENDS
-							ul				{
-											@include box-shadow(0, 2px, 5px, $gray-mid-dark);
-											@include border-radius(0 0 4px 4px);
-											@include clearfix;
-											background-color: $white;
-											border: 1px solid $gray-mid-dark;
-											height: auto;
-											margin: 0;
-											line-height: normal;
-											direction: ltr;
-											position: absolute;
-											top: -999999px;
-											width: 100px;
-											z-index: 10000;
-								>li				{
-												border-left: 0;
-												border-right: 0;
-												border-top: 1px dotted $gray-mid-light;
-												float: none;
-									&:first-child	{border-top: 0;}
-									&:last-child	{
-										a				{@include border-radius(0 0 4px 4px);}
-													}
-									a				{
-													border-left: 0;
-													display: block;
-													font-family: $fontRegularFamily;
-													position: relative;
-													white-space: nowrap;
-													}
-												}
-								.has-submenu	{
-								// DEFAULT ARROW - BEGINS
-									.sub-arrow		{
-													position: absolute;
-													top: 50%;
-													right: 0;
-													margin-top: -6px;
-										&:before		{content: "\e3c1";} // RIGHT ARROW
-													}
-								// DEFAULT ARROW - ENDS
-												}
+							a				{
+											border-left: 0;
+											display: block;
+											font-family: $fontRegularFamily;
+											position: relative;
+											white-space: nowrap;
 											}
 										}
-
-							ul				{
-											@include clearfix;
-											height: auto;
-
-
-								>li				{
-									a				{
-display: block;
-width: 100%;
-													}
-												}
-
+						.has-submenu	{
+						// DEFAULT ARROW - BEGINS
+							.sub-arrow		{
+											position: absolute;
+											top: 50%;
+											right: 0;
+											margin-top: -6px;
+								&:before		{content: "\e3c1";} // RIGHT ARROW
 											}
+						// DEFAULT ARROW - ENDS
+										}
+									}
+								}
+
+				ul				{
+								@include clearfix;
+								height: auto;
+					>li				{
+						a				{
+										display: block;
+										width: 100%;
+										}
+									}
+								}
 
 				// MEGA MENU - BEGINS
 						li.mul-mega-menu{
@@ -343,7 +327,7 @@ width: 100%;
 				// MEGA MENU - ENDS
 
 									}
-								}
+
 
 				nav.mul-text-nav
 								{
@@ -358,8 +342,6 @@ width: 100%;
 									}
 								}
 
-							}
-						}
 	// NAVBAR STYLES - ENDS
 
 	}// endif
