@@ -2,19 +2,19 @@
 	"title": "Alternate Views Badge",
 
 	"reference-overview": 
-		"<h5>Header Goes Here</h5><p>Intro copy should be placed here. This is a <a href='/objects/mini-filter'>link</a>.</p><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol>",
+		"<p>The Alternate Views Badge allows the user to switch back and forth between \"alternate views\" of related content in the same area. It is a more visual and expanded solution than <a href='/objects/tabs'>Tab Set</a> control.</p>",
 
 	"reference-usage": 
-		"<h5>Header</h5><p>Usage details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol>",
+		"<p>The alternate views badge is used to switch back and forth quickly from one large content area to another. This function applies well to areas where real estate on the page is condensed and another page is not necessary to display the content. In a sense, the alternate views page can be defined as sub-navigation within a particular section.</p>",
 
 	"reference-details": 
-		"<h5>Header</h5><p>Details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol>",
+		"<h5>Variations</h5><p>There are three hierarchical levels to the Alternate Views Badge:</p><u>Full Badge</u><ul><li>Contains both icons and text labels</li><li>Should be centered on the screen</li><li>Should be used when the ability to switch views needs to be featured prominently</li></ul><u>Icons Only</u><ul><li>Text label is not displayed on screen, so each icon stands on its own</li><li>The text label can be added via the <a href='/objects/tooltip'>Tooltip</a> control</li><li>Should be aligned either right or left.</li></ul><u>Text Only</u><ul><li>No icon is used, so the text label exists on its own.</li><li>Text labels so should be short, concise and descriptive</li><li>Should be aligned either right or left.</li></ul><h5>More Details</h5><ul><li>The alternate views badge switches content within the same table</li><li>The alternate views badge can have iconography and or text descriptions</li><li>The badges can be center, left or right justified depending on need</li><li>When a badge is selected, hidden data replaces current data</li></ul>",
 
 	"reference-mobile": 
-		"<h5>Header</h5><p>Mobile details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol>",
+		"<ul><li>The font size increases for mobile.</li><li>The Full Badge version will drop the text label from the initial display on mobile devices (converting to the Icon Only view).</li><li>The individual badges within the Text Only version will stack for mobile as necessary.</li></ul>",
 
 	"reference-technical": 
-		"<h5>Cross browser compatibility</h5><p>IE9 doesn't crop background gradients on containers with rounded corners, so we square the corners of every container so it looks just like IE8.</p>",
+		"<h5>Cross browser compatibility</h5><p>The Alternate Views Badge control is compatible will all current A and B grade browsers that Evolution currently supports.</p>",
 
 	
 	"reference-dependency": "true",
@@ -25,11 +25,11 @@
 
 	"reference-example-versions": "true",
 	"reference-example-version-label":
-		"Full Badge - Center Position",
+		"Full Badge",
 	"reference-example-version-label-2":
-		"Icon Only - Right Position",
+		"Icon Only",
 	"reference-example-version-label-3":
-		"Text Only - Left Position",
+		"Text Only",
 
 	"reference-get-code": "true",
 
