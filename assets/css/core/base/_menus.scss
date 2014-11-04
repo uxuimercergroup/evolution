@@ -10,16 +10,16 @@
 		.mul-navbar		{
 			.mul-navbar-adjust
 							{
-				nav.mul-tabbed-nav,
-				nav.mul-text-nav
+				.mul-tabbed-nav,
+				.mul-text-nav
 								{
-					.sm-simple		{
+					.mul-nav-menus	{
 direction: ltr;
 									height: auto;
 line-height: normal;
 margin: 0;
 									width: auto;
--webkit-tap-highlight-color:rgba(0,0,0,0);
+-webkit-tap-highlight-color: rgba(0,0,0,0);
 
 
 						li				{
@@ -53,8 +53,6 @@ display: none;
 position: static;
 top: auto !important;
 left: auto !important;
-margin-left: 0 !important;
-margin-top: 0 !important;
 width: auto !important;
 min-width: 0 !important;
 max-width: none !important;
@@ -159,7 +157,7 @@ float: none !important;
 
 				nav.mul-text-nav
 								{
-					.sm-simple		{
+					.mul-nav-menus		{
 						> li			{
 							> .has-submenu + ul	{margin-top: 9px !important;}
 										}
@@ -179,6 +177,36 @@ float: none !important;
 
 //=== MEDIA QUERIES =========================================================================
 
+@if $use-small-mediaquery == true {
+	
+	// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
+	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+
+	// NAVBAR STYLES - BEGINS
+		.mul-navbar		{
+			.mul-navbar-adjust
+							{
+				nav.mul-tabbed-nav,
+				nav.mul-text-nav
+								{
+					.mul-nav-menus		{
+						li				{
+							ul				{
+											margin-left: 0 !important;
+											margin-top: 0 !important;
+											}
+										}
+									}
+								}
+							}
+						}
+	// NAVBAR STYLES - ENDS
+
+	}// endif
+
+}// endif
+
+
 // Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
 @if $use-medium-mediaquery == true or $use-large-mediaquery == true {
 	
@@ -191,7 +219,7 @@ float: none !important;
 				nav.mul-tabbed-nav,
 				nav.mul-text-nav
 								{
-					.sm-simple		{
+					.mul-nav-menus		{
 						li				{
 										width: auto;
 										margin: 0;
@@ -257,6 +285,20 @@ float: none !important;
 											}
 										}
 
+							ul				{
+											@include clearfix;
+											height: auto;
+
+
+								>li				{
+									a				{
+display: block;
+width: 100%;
+													}
+												}
+
+											}
+
 				// MEGA MENU - BEGINS
 						li.mul-mega-menu{
 										position: static !important;
@@ -305,7 +347,7 @@ float: none !important;
 
 				nav.mul-text-nav
 								{
-					.sm-simple		{
+					.mul-nav-menus		{
 						> li			{
 							> .has-submenu + ul	{margin-top: 9px !important;}
 										}
@@ -319,7 +361,6 @@ float: none !important;
 							}
 						}
 	// NAVBAR STYLES - ENDS
-
 
 	}// endif
 
