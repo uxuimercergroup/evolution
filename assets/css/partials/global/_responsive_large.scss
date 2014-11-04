@@ -20,6 +20,15 @@
 														}
 													}
 												}
+		.ui-tabs-panel							{
+			p, ul, ol, li, dt, dd					{
+													font-size: ($baseFontSizeLargeBreakpoint + 2px);
+													line-height: ($baseLineHeightLargeBreakpoint + 2px);
+													}
+			.prettyprint							{
+				li 										{font-size: $baseFontSizeLargeBreakpoint;}
+													}
+												}
 											}
 
 	// DEVELOPER - SLIDING DRAWER

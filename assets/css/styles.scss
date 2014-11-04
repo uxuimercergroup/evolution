@@ -54,6 +54,15 @@ html.mul-mod-js							{display:none;}
 													}
 												}
 											}
+	.ui-tabs-panel							{
+		p, ul, ol, li, dt, dd					{
+												font-size: ($baseFontSize + 2px);
+												line-height: ($baseLineHeight + 2px);
+												}
+		.prettyprint							{
+			li 										{font-size: $baseFontSize;}
+												}
+											}
 										}
 
 // EXAMPLES
