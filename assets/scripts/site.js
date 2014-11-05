@@ -1253,25 +1253,12 @@ $(function() {
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
 
-		
+		/* TODO: PLEASE CLEAN UP! - BEGINS */
 
 			// SMARTMENU TEST
 			jQuery('.js-mul-menus').smartmenus('destroy');
 			jQuery('.js-mul-menus').smartmenus('menuHideAll');
 			jQuery('.js-mul-menus').smartmenus({
-				subIndicators: true,
-				mainMenuSubOffsetX: 0,
-				subMenusSubOffsetX: 5,
-				subMenusSubOffsetY: 0,
-				subMenusMinWidth: '',
-				subMenusMaxWidth: '',
-				subIndicatorsText: '',
-				subIndicatorsPos: 'append',
-				keepInViewport: true
-			});
-			jQuery('.js-mul-profile-menu').smartmenus('destroy');
-			jQuery('.js-mul-profile-menu').smartmenus('menuHideAll');
-			jQuery('.js-mul-profile-menu').smartmenus({
 				subIndicators: true,
 				mainMenuSubOffsetX: 0,
 				subMenusSubOffsetX: 5,
