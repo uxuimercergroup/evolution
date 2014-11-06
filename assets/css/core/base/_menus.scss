@@ -18,23 +18,28 @@
 							display: block;
 							width: 100%;
 							margin: 0;
-						// DEFAULT ARROW - BEGINS
-							.sub-arrow		{
-											position: relative;
-											right: -4px;
-											top: 3px;
-											width: 16px;
-											height: 16px;
-								&:before		{
-												font-family: $mulIconFontStack;
-												content: "\e3c2"; // DOWN ARROW
-												}
-											}
-						// DEFAULT ARROW - ENDS
 				a				{
 								display: block;
 								padding: 7px 10px;
+								position: relative;
 								text-decoration: none;
+				// DEFAULT ARROW - BEGINS
+					.sub-arrow		{
+									position: absolute;
+									right: 10px;
+									top: 7px;
+									width: 16px;
+									height: 16px;
+						&:before		{
+										color: $gray-dark;
+										content: "\e360"; // PLUS ICON
+										font-family: $mulIconFontStack;
+										}
+									}
+				// DEFAULT ARROW - ENDS
+					&:hover			{
+									color: #002C77;
+									}
 								}
 					ul			{
 								@include clearfix;
@@ -64,56 +69,20 @@
 										display: block;
 										font-family: $fontRegularFamily;
 										padding-left: 17px;
-										}
-				// PADDING LEFT FOR MENUS - BEGINS
-					ul					{
-						li					{
-							a					{padding-left: 24px;}
-							ul					{
-								li					{
-									a					{padding-left: 31px;}
-									ul					{
-										li					{
-											a					{padding-left: 38px;}
-											ul					{
-												li					{
-													a					{padding-left: 45px;}
-																	}
-																}
-															}
-														}
-													}
-												}
+						// DEFAULT ARROW - BEGINS
+							.sub-arrow		{
+								&:before		{content: "\e360";} // RIGHT ARROW
 											}
+						// DEFAULT ARROW - ENDS
 										}
-				// PADDING LEFT FOR MENUS - BEGINS
 									}
-
-					// DEFAULT ARROW - BEGINS
-						.sub-arrow		{
-										position: absolute;
-										top: 50%;
-										right: 0;
-										margin-top: -6px;
-							&:before		{content: "\e3c1";} // RIGHT ARROW
-										}
-					// DEFAULT ARROW - ENDS
-
 								}
 							}
 
 			// MEGA MENU - BEGINS
 					li.mul-mega-menu{
-									position: static !important;
-
+						.sub-arrow		{display: none;}
 						ul.mega-menu	{
-										margin-left: 0 !important;
-										min-width: 0 !important;
-										max-width: none !important;
-										right: 0 !important;
-										width: 100% !important;
-										height: auto;
-
 										@include box-shadow(0, 0, 0, $white);
 										@include border-radius(0);
 										@include clearfix;
@@ -160,8 +129,6 @@
 
 									}
 								}
-
-
 	// NAVBAR STYLES - ENDS
 
 }// endif
@@ -175,19 +142,14 @@
 	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
 
 	// NAVBAR STYLES - BEGINS
-		.mul-navbar		{
-			.mul-navbar-adjust
-							{
-				nav.mul-tabbed-nav,
-				nav.mul-text-nav
-								{
-					.mul-nav-menus		{
-						li				{
-							ul				{
-											margin-left: 0 !important;
-											margin-top: 0 !important;
-											}
-										}
+		.mul-nav-menus	{
+			li				{
+				a				{}
+				ul				{
+								margin-left: 0 !important;
+								margin-top: 0 !important;
+					>li				{
+						a				{}
 									}
 								}
 							}
@@ -213,19 +175,24 @@
 								direction: ltr;
 								position: relative;
 								float: left;
-				// DEFAULT ARROW - BEGINS
-					.sub-arrow		{
-									position: relative;
-									right: -4px;
-									top: 3px;
-									width: 16px;
-									height: 16px;
-						&:before		{
-										font-family: $mulIconFontStack;
-										content: "\e3c2"; // DOWN ARROW
+				a					{
+					// DEFAULT ARROW - BEGINS
+						.sub-arrow		{
+										position: relative;
+										left: 0;
+										right: -4px;
+										top: 2px;
+							&:before		{
+											font-family: $mulIconFontStack;
+											content: "\e3c2"; // DOWN ARROW
+											}
+										}
+					// DEFAULT ARROW - ENDS
+					&:hover				{
+										background-color: $gray-lighter;
+										@include transition(background-color 0.3s ease-in-out);
 										}
 									}
-				// DEFAULT ARROW - ENDS
 				ul					{
 									@include box-shadow(0, 2px, 5px, $gray-mid-dark);
 									@include border-radius(0 0 4px 4px);
@@ -256,18 +223,17 @@
 											font-family: $fontRegularFamily;
 											position: relative;
 											white-space: nowrap;
+							// DEFAULT ARROW - BEGINS
+								.sub-arrow		{
+												position: absolute;
+												top: 50%;
+												right: 0;
+												left: auto;
+												margin-top: -6px;
+									&:before		{content: "\e3c1";} // RIGHT ARROW
+												}
+							// DEFAULT ARROW - ENDS
 											}
-										}
-						.has-submenu	{
-						// DEFAULT ARROW - BEGINS
-							.sub-arrow		{
-											position: absolute;
-											top: 50%;
-											right: 0;
-											margin-top: -6px;
-								&:before		{content: "\e3c1";} // RIGHT ARROW
-											}
-						// DEFAULT ARROW - ENDS
 										}
 									}
 								}
@@ -286,42 +252,13 @@
 				// MEGA MENU - BEGINS
 						li.mul-mega-menu{
 										position: static !important;
-
 							ul.mega-menu	{
 											margin-left: 0 !important;
 											min-width: 0 !important;
 											max-width: none !important;
 											right: 0 !important;
 											width: 100% !important;
-											height: auto;
-
-											@include box-shadow(0, 0, 0, $white);
-											@include border-radius(0);
-											@include clearfix;
-											background-color: $gray-light;
-											border: 0;
-											border-top: 4px solid $gray-mid-dark;
-											border-bottom: 4px solid $gray-mid-dark;
-
-						// MEGA MENU CONTENT - BEGINS
-							.mul-mega-menu-adjust
-												{
-												@include clearfix;
-												margin: 0 auto;
-												padding: $basePadding $basePadding 0 $basePadding;
-												width: $gridWidth;
-
-													// If using 980 width layout
-													@if $use-grid-980 == true{
-														max-width: $gridMaxWidth980;
-													}
-													
-													// If using 1200 width layout
-													@if $use-grid-1200 == true{
-														max-width: $gridMaxWidth1200;
-													}
-												}
-						// MEGA MENU CONTENT - ENDS
+											margin-top: 8px !important;
 											}
 										}
 				// MEGA MENU - ENDS

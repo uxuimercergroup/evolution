@@ -6,21 +6,14 @@
 			<div class="mul-masthead-adjust">
 
 				<section class="col-18 first mul-logo mul-small-mediaquery-grid">
-					<div class="col-3 first mul-logo-col-1 mul-hidden-small-mediaquery">
-						<div class="mul-primary-logo">
-							<img src="{{ "marsh_logo_126x18.png" | asset_url }}" alt="Marsh Logo" width="126" height="18" title="Marsh Logo">
-						</div>
-					</div>
-					<div class="col-14 mul-logo-col-2">
+					<div class="mul-logo-col-2">
 						<a href="/index">MERCER <span>EVOLUTION</span></a>
-					</div>
-					<div class="col-7 mul-logo-col-3 mul-mb-navbar-ctn">
+					</div><!--
+					--><div class="mul-logo-col-3 mul-mb-navbar-ctn">
 					<!-- MOBILE MENU ICON - BEGINS -->
 						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-							<li class="mul-header-icons">
-								<a href="javascript:;"><i class="mul-icon-user mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-search mul-icon-position-left"></i></a>
-								<a href="javascript:;" class="js-mul-toggle-content" data-mul-toggle="1"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							<li class="mul-header-icon">
+								<a href="javascript:;" class="js-mul-toggle-content" data-mul-toggle="1"><i class="mul-icon-menu3"></i></a>
 							</li>
 						</ul>
 					<!-- MOBILE MENU ICON - ENDS -->
@@ -39,28 +32,17 @@
 			<div class="mul-masthead-adjust">
 
 				<section class="col-18 first mul-logo mul-small-mediaquery-grid">
-					<div class="col-3 first mul-logo-col-1 mul-hidden-small-mediaquery">
+					<div class="mul-logo-col-1">
 						<div class="mul-primary-logo">
 							<img src="{{ "marsh_logo_126x18.png" | asset_url }}" alt="Marsh Logo" width="126" height="18" title="Marsh Logo">
 						</div>
-					</div>
-					<div class="col-14 mul-logo-col-2">
+					</div><!--
+					--><div class="mul-logo-col-2">
 						<a href="/index">MERCER <span>EVOLUTION</span></a>
 					</div>
-					<div class="col-7 mul-logo-col-3 mul-mb-navbar-ctn">
-					<!-- MOBILE MENU ICON - BEGINS -->
-						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-							<li class="mul-header-icons">
-								<a href="javascript:;"><i class="mul-icon-user mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-search mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
-							</li>
-						</ul>
-					<!-- MOBILE MENU ICON - ENDS -->
-					</div>
 				</section>
-				<section class="col-6 mul-hidden-small-mediaquery">
-					<div class="mul-secondary-logo">
+				<section class="col-6 mul-secondary-logo mul-hidden-small-mediaquery">
+					<div class="">
 						<img src="{{ "marsh_logo_126x18.png" | asset_url }}" alt="Marsh Logo" width="126" height="18" title="Marsh Logo">
 					</div>
 				</section>
@@ -79,7 +61,7 @@
 				<nav class="mul-tabbed-nav">
 					<div class="col-12 first mul-navbar-col-1">
 						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-							<li><a class="{% if mixture.url == "index" %}mul-navbar-item-active{% endif %}" href="/index">Home 1</a></li>
+							<li><a class="{% if mixture.url == "index" %}mul-navbar-item-active{% endif %}" href="/index">Home 2</a></li>
 							<li><a href="/browser-testing-support">Browser Support</a></li>
 							<li>
 								<a href="/toolkit">Toolkit</a>
@@ -151,16 +133,53 @@
 							<li><a class="{% if mixture.url == "index" %}mul-navbar-item-active{% endif %}" href="/index">Home 3</a></li>
 							<li><a href="/browser-testing-support">Browser Support</a></li>
 							<li><a href="/toolkit">Toolkit</a></li>
+							<li>
+								<a href="javascript:;">Arquimedez Pozo</a>
+								<ul class="mul-user-identifier-menu">
+									<li><a href="javascript:;">View Profile</a></li>
+									<li><a href="javascript:;">Change Language</a></li>
+									<li><a href="javascript:;">User Administration</a></li>
+									<li><a href="javascript:;">Log Out</a></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="col-12 mul-navbar-col-2">
-						<ul>
-							<li class="mul-header-icons">
-								<a href="javascript:;"><i class="mul-icon-basket mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-basket mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
-								<a href="javascript:;"><i class="mul-icon-basket mul-icon-position-left"></i></a>
+						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
+							<li class="mul-header-icon">
+								<a href="javascript:;"><i class="mul-icon-basket"></i></a>
+							</li>
+							<li class="mul-header-icon">
+								<a href="javascript:;"><i class="mul-icon-basket"></i></a>
+							</li>
+							<li class="mul-header-icon">
+								<a href="javascript:;"><i class="mul-icon-basket"></i></a>
+							</li>
+							<li class="mul-header-icon mul-mega-menu">
+								<a href="javascript:;"><i class="mul-icon-basket"></i></a>
+								<ul class="mega-menu">
+									<li class="mul-mega-menu-adjust">
+									<!-- MEGA MENU CONTAINER - BEGINS -->
+										<div class="mul-mega-menu-ctn">
+											<h1>Large Menu 1</h1>
+											{{ 4 | lorem_ipsum:'p' }}
+										</div>
+									<!-- MEGA MENU CONTAINER - ENDS -->
+									</li>
+								</ul>
+							</li>
+							<li class="mul-header-icon mul-mega-menu">
+								<a href="javascript:;"><i class="mul-icon-menu3"></i></a>
+								<ul class="mega-menu">
+									<li class="mul-mega-menu-adjust">
+									<!-- MEGA MENU CONTAINER - BEGINS -->
+										<div class="mul-mega-menu-ctn">
+											<h1>Large Menu 2</h1>
+											{{ 4 | lorem_ipsum:'p' }}
+										</div>
+									<!-- MEGA MENU CONTAINER - ENDS -->
+									</li>
+								</ul>
 							</li>
 						</ul>
 					</div>
@@ -175,7 +194,7 @@
 				<nav class="mul-tabbed-nav">
 					<div class="col-12 first mul-navbar-col-1">
 						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-							<li class="mul-header-icons">
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
 							</li>
 						</ul>
@@ -193,7 +212,7 @@
 				<nav class="mul-text-nav">
 					<div class="col-12 first mul-navbar-col-1">
 						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-							<li class="mul-header-icons">
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
 							</li>
 						</ul>
@@ -238,31 +257,14 @@
 								</ul>
 							</li>
 							<li><a href="javascript:;">Sign Out</a></li>
-						</ul>
-					</div>
-				</nav>
-			</div>
-		</section>
-	<!-- NAVBAR - ENDS -->
-
-	<!-- NAVBAR - BEGINS -->
-		<section class="mul-navbar">
-			<div class="mul-navbar-adjust">
-				<nav class="mul-text-nav">
-					<div class="col-12 first mul-navbar-col-1">
-						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-							<li class="mul-header-icons">
-								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-12 mul-navbar-col-2">
-						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-							<li><a class="{% if mixture.url == "index" %}mul-navbar-item-active{% endif %} mul-navbar-no-pipe-left" href="javascript:;">Contact Us</a></li>
-							<li><a href="javascript:;">Change Language</a></li>
-							<li><a href="javascript:;">Sign Out</a></li>
-							<li class="mul-header-icons">
-								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							<li>
+								<a href="javascript:;">Arquimedez Pozo <span class="mul-user-identifier-support-text">Front-end Web Developer</span></a>
+								<ul class="mul-user-identifier-menu">
+									<li><a href="javascript:;">View Profile</a></li>
+									<li><a href="javascript:;">Change Language</a></li>
+									<li><a href="javascript:;">User Administration</a></li>
+									<li><a href="javascript:;">Log Out</a></li>
+								</ul>
 							</li>
 						</ul>
 					</div>
@@ -277,15 +279,43 @@
 				<nav class="mul-text-nav">
 					<div class="col-12 first mul-navbar-col-1">
 						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-							<li class="mul-header-icons">
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
 							</li>
 						</ul>
 					</div>
 					<div class="col-12 mul-navbar-col-2">
 						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-							<li class="mul-header-icons">
+							<li><a class="{% if mixture.url == "index" %}mul-navbar-item-active{% endif %} mul-navbar-no-pipe-left" href="javascript:;">Contact Us</a></li>
+							<li><a href="javascript:;">Change Language</a></li>
+							<li><a href="javascript:;">Sign Out</a></li>
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</section>
+	<!-- NAVBAR - ENDS -->
+
+	<!-- NAVBAR - BEGINS -->
+		<section class="mul-navbar">
+			<div class="mul-navbar-adjust">
+				<nav class="mul-text-nav">
+					<div class="col-12 first mul-navbar-col-1">
+						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
+							<li class="mul-header-icon">
+								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-12 mul-navbar-col-2">
+						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
+							<li class="mul-header-icon">
+								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
 							</li>
 						</ul>
@@ -301,7 +331,7 @@
 				<nav class="mul-text-nav">
 					<div class="col-4 first mul-navbar-col-1">
 						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-							<li class="mul-header-icons">
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
 							</li>
 						</ul>
@@ -314,8 +344,10 @@
 							<li><a class="{% if mixture.url == "index" %}mul-navbar-item-active{% endif %} mul-navbar-no-pipe-left" href="javascript:;">Contact Us</a></li>
 							<li><a href="javascript:;">Change Language</a></li>
 							<li><a href="javascript:;">Sign Out</a></li>
-							<li class="mul-header-icons">
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
 							</li>
 						</ul>
@@ -331,7 +363,7 @@
 				<nav class="mul-text-nav">
 					<div class="col-4 first mul-navbar-col-1">
 						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-							<li class="mul-header-icons">
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
 							</li>
 						</ul>
@@ -357,7 +389,7 @@
 				<nav class="mul-text-nav">
 					<div class="col-4 first mul-navbar-col-1">
 						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-							<li class="mul-header-icons">
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
 							</li>
 						</ul>
@@ -367,8 +399,10 @@
 							<li class="mul-navbar-message" title="This is a message text area of really long text.">
 								<span>This is a message text area of really long text.</span>
 							</li>
-							<li class="mul-header-icons">
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
 							</li>
 						</ul>
@@ -384,7 +418,7 @@
 				<nav class="mul-text-nav">
 					<div class="col-4 first mul-navbar-col-1">
 						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-							<li class="mul-header-icons">
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
 							</li>
 						</ul>
@@ -397,12 +431,22 @@
 							<li><a class="{% if mixture.url == "index" %}mul-navbar-item-active{% endif %} mul-navbar-no-pipe-left" href="javascript:;">Contact Us</a></li>
 							<li><a href="javascript:;">Change Language</a></li>
 							<li><a href="javascript:;">Sign Out</a></li>
-							<li class="mul-header-icons">
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
 							</li>
 						</ul>
@@ -418,9 +462,7 @@
 	<!-- FIXED NAVBAR - BEGINS -->
 		<section class="mul-navbar mul-navbar-fixed">
 			<div class="mul-navbar-adjust mul-navbar-fixed-adjust">
-
 				<nav class="mul-text-nav">
-
 					<div class="col-12 first mul-navbar-col-1">
 					<!-- LOGO SECTION - BEGINS -->
 						<section class="mul-logo">
@@ -430,17 +472,14 @@
 						</section>
 					<!-- LOGO SECTION - ENDS -->
 					</div>
-
 					<div class="col-12 mul-navbar-col-2">
 						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-							<li class="mul-header-icons">
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
 							</li>
 						</ul>
 					</div>
-
 				</nav>
-
 			</div>
 		</section>
 	<!-- FIXED NAVBAR - ENDS -->
@@ -463,9 +502,13 @@
 
 					<div class="col-12 mul-navbar-col-2">
 						<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-							<li class="mul-header-icons">
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
 							</li>
 						</ul>
@@ -498,9 +541,13 @@
 							<li><a class="mul-navbar-no-pipe-left" href="/index">Contact Us</a></li>
 							<li><a href="/browser-testing-support">Browser Support</a></li>
 							<li><a href="/toolkit">Toolkit</a></li>
-							<li class="mul-header-icons">
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
+							</li>
+							<li class="mul-header-icon">
 								<a href="javascript:;"><i class="mul-icon-menu3 mul-icon-position-left"></i></a>
 							</li>
 						</ul>
