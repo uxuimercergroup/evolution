@@ -60,7 +60,10 @@ html.mul-mod-js							{display:none;}
 												line-height: ($baseLineHeight + 2px);
 												}
 		.prettyprint							{
-			li 										{font-size: $baseFontSize;}
+			li 										{
+													font-size: $baseFontSize;
+													line-height: $baseLineHeight;
+													}
 												}
 											}
 										}
