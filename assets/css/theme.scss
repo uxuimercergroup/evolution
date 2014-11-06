@@ -283,11 +283,11 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 												@include background-gradient($buttonHoverBackgroundStartColor, $buttonHoverBackgroundEndColor);
 												border-color:$buttonHoverBorderColor;
 												}
-		&:active								{@include background-gradient($buttonActiveBackgroundStartColor,$buttonActiveBackgroundEndColor);}
 		&:focus									{
 												@include background-gradient($buttonFocusBackgroundStartColor, $buttonFocusBackgroundEndColor);
 												border-color: $buttonFocusBorderColor;
 												}
+		&:active								{@include background-gradient($buttonActiveBackgroundStartColor,$buttonActiveBackgroundEndColor);}
 
 		&.disabled,
 		&[disabled]								{
@@ -311,8 +311,8 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 											color:$buttonPrimaryFontColor;
 											}
 	.mul-btn-primary:hover					{@include background-gradient($buttonHoverPrimaryBackgroundStartColor,$buttonHoverPrimaryBackgroundEndColor);}
-	.mul-btn-primary:active					{@include background-gradient($buttonActivePrimaryBackgroundStartColor,$buttonActivePrimaryBackgroundEndColor);}
 	.mul-btn-primary:focus					{@include background-gradient($buttonFocusPrimaryBackgroundStartColor,$buttonFocusPrimaryBackgroundEndColor);}
+	.mul-btn-primary:active					{@include background-gradient($buttonActivePrimaryBackgroundStartColor,$buttonActivePrimaryBackgroundEndColor);}
 	.mul-btn-primary.disabled,
 	.mul-btn-primary[disabled]				{
 											@include ie-gradient-reset-filter;

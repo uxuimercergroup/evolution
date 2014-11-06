@@ -1,10 +1,15 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
-<div class="col-24">
-	<h1 class="mul-hdr-rule">{{ model.title }}</h1>
 
-	<aside role="complementary" class="ui-box-rnd">
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
+
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24">
+		
 		<h3>Evolution Release 2.4</h3>
+		
 		<h5>Bug</h5>
 		<ul>
 			<li>
@@ -78,6 +83,7 @@
 		<hr />
 
 		<h3>Evolution Release 2.3 (Internal Release)</h3>
+
 		<ul>
 			<li>
 				Flash of Content bug with Tabbed based content on Library site
@@ -103,6 +109,7 @@
 		<hr />
 
 		<h3>Evolution Release 2.2</h3>
+
 		<ul>
 			<li>Evolution 2.2 was release on Monday, February 17</li>
 			<li>
@@ -115,6 +122,7 @@
 				The specific additions/modifications were broken out into the following categories:
 			</li>
 		</ul>
+
 		<h5>Content</h5>
 		<ul>
 			<li>Add "Usage" and "Details" Content for Interactive Data Table</li>
@@ -232,11 +240,13 @@
 		<hr />
 
 		<h3>Previous Changes</h3>
+
 		<h5>August 6, 2013 - Matt</h5>
 		<ul>
 			<li>Ported library site over to use Mixture</li>
 			<li>Added jScrollPane component sass and added sass vars</li>
 		</ul>
+
 		<h5>August 2, 2013 - Matt</h5>
 		<ul>
 			<li>
@@ -244,6 +254,7 @@
 			</li>
 			<li>Added jScrollPane functionality to Dialog/Modal window</li>
 		</ul>
+
 		<h5>July 18, 2013 - Matt</h5>
 		<ul>
 			<li>Added font-face mixin to base mixins</li>
@@ -255,10 +266,12 @@
 			<li>Added styles for Dialog/Modal component, cleaned up vars</li>
 			<li>Added Google Prettify styles for code syntax highlighting</li>
 		</ul>
+
 		<h5>July 15, 2013 - Matt</h5>
 		<ul>
 			<li>Added styles for code syntax examples in dev/tools.scss.</li>
 		</ul>
+
 		<h5>July 11, 2013 - Matt</h5>
 		<ul>
 			<li>
@@ -268,6 +281,7 @@
 				Removed "ui" from the beginning of core component sass partials.
 			</li>
 		</ul>
+
 		<h5>July 8, 2013 - Matt</h5>
 		<ul>
 			<li>Added "loading" state to core button</li>
@@ -278,6 +292,7 @@
 				Cleaned up base variables in variables.scss to be in the order called in core.scss
 			</li>
 		</ul>
+
 		<h5>July 3, 2013 - Matt</h5>
 		<ul>
 			<li>Added a media query SASS mixin to base mixins</li>
@@ -286,6 +301,7 @@
 				Cleaned up header comments in every core v1 file, and made most comments into SASS comments so they don't show up in rendered CSS
 			</li>
 		</ul>
+		
 		<h5>July 1, 2013 - Doug</h5>
 		<ul>
 			<li>Move mixins, functions and variables to base folder</li>
@@ -296,6 +312,8 @@
 			<li>Created the change log page</li>
 			<li>Renamed the project from "uxui_library" to "library"</li>
 		</ul>
-	</aside>
-</div>
+
+	</section>
+<!-- CONTENT SECTION - ENDS -->
+
 {% endblock %}
