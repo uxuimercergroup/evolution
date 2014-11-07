@@ -1,3 +1,42 @@
 {
-  "title": "Product Header With Main Navigation"
+	"title": "Product Header With Main Navigation",
+
+	"reference-overview": 
+		"<p>The Product Header With Static Navigation is one of the default product headers offered in Evolution. This version contains a static gray main navigation bar that displays immediately below the blue product identifier background.</p>",
+
+	"reference-usage": 
+		"<p>This version of a product header should be used when it is important to provide a consistent main navigation option that is displayed on every screen, and when the number of main navigation options is manageble number (less than 7 or so).</p>",
+
+	"reference-details": 
+		"<p>This header is comprised of the following sections:</p><h3>Product Identifier</h3><ul><li>This is the first bar across the top that contains the dark blue to light blue gradient.</li><li>It contains the <strong>product name</strong>, which is always displayed in CAPS, with the first part offset by a bolder display.</li><li>There is also an optional \"User Identifier\" menu control that can be turned on or off.</li></ul><h3>Main Navigation</h3><ul><li>This gray bar with the light gray to dark gray gradient also spans the width of the screen.</li><li>It contains all of the main navigation sections (as defined by the specific project needs).</li><li>Each navigation \"tab\" has a hover state on desktop version to provide user feedback.</li></ul>",
+
+	"reference-mobile": 
+		"<p>This product header version is built responsively, and when the breakpoint is reached, the following will happen:</p><ul><li>The \"User Identifier\" control will drop off and will not display.</li><li>Each navigation \"tab\" will stack on top of the other, on a separate line</li><li>The product name text size will decrease.</li><li>The \"tab\" text size will increase.</li></ul>",
+
+	"reference-technical": 
+		"<h3>Header</h3><p>Technical details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+
+	
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "false",
+	"reference-example-version-label":
+		"",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"",
+	"reference-code-html-content-block-post": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
 }

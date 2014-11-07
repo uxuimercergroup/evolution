@@ -1,104 +1,72 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<!-- INTRO SECTION - BEGINS -->
-	<section class="col-24">
-		<h1>{{ model.title }}</h1>
-		<p class="mul-intro-text">
-			The Support Container is a secondary containing element that can be used to "support" other elements on the screen.
-			
-		</p>
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
+
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24 mul-alternate-views-badge mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-ref-alternate-views-badge">
+
+		{% include '/reference/reference-content' %}
+
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
+		{% if model.reference-get-code == "true" %}
+			<div id="mul-ref-alternate-views-badge-content-panel-get-code">
+
+				<h3 class="mul-hdr-rule">HTML</h3>
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{% include "/base/boxes/support-ctn" %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post }}
+
+				{% if model.reference-code-js == "true" %}
+
+					<h3 class="mul-hdr-rule">JS</h3>
+
+					{% if model.reference-example-versions == "true" %}
+						<h4>{{ model.reference-example-version-label }}</h4>
+					{% endif %}
+					{{ model.reference-code-js-content-block-pre }}
+					{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-js-content-block-post }}
+
+				{% endif %}
+
+			</div>
+		{% endif %}
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
+
 	</section>
-<!-- INTRO SECTION - ENDS -->
+<!-- CONTENT SECTION - ENDS -->
 
-<section class="col-24">
+<!-- EXAMPLE SECTION - BEGINS -->
+	<section class="col-24 mul-ref-example">
 
-	<h3 class="mul-hdr-dbl-rule">
-		Example
-		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
-	</h3>
+	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+		<h3 class="mul-hdr-dbl-rule mul-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
+	<!-- EXAMPLE SECTION - HEADER - ENDS -->
 
-	<!-- SUPPORT CONTAINER - BEGINS -->
-		<div class="col-24 example-min-height">
+	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+		<section class="mul-ref-example-content">
 
-			<div class="col-12 first">			
-				{% include "/base/boxes/support-ctn" %}
-			</div>
-			<div class="col-12"></div>
+		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 
-		</div>
-	<!-- SUPPORT CONTAINER - ENDS -->
+			{% if model.reference-example-versions == "true" %}
+				<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
+			{% endif %}
 
-<!-- DETAILS SECTION - BEGINS -->
-	<div class="col-24">
-		<a name="moreDetails"></a>
-		<h4 class="mul-hdr-dbl-rule addtional-detail-hdr">Additional Details</h4>
-		
+			{% include "/base/boxes/support-ctn" %}
 
-		<div class="js-mul-tabs-example mul-tabs">
-			{% include "page-tabs" %}
-			<div id="tabs-1">
-				<p>
-					It should be used lower on the page in a more subserviant/supporting mode. It can list out for example; Quick Links, Reports, etc. and provide a link to more details.
-				</p>
-			</div>
-			<div id="tabs-2">
-				<h5>Components</h5>
-				<ul>
-					<li>The Support Container is comprised of the following four components:</li>
-					<ul>
-						<li>Border</li>
-						<li>Header</li>
-						<li>Horizontal Line</li>
-						<li>Content</li>
-					</ul>
-					<li>The border color (#6b90b8) should always be a solid, 1 pixel line.</li>
-					<li>The header size for Support Containers is h4.</li>
-					<li>The Horizontal Line directly under the Support Container's color should always be #C3D2E5.</li>
-					<li>The background color should always be #E9EEF5.</li>
-					<li>It sometimes can also include a link (on header right side) that may link to more information or a full list.</li>
-					<li>It can also include icons within the list that associate with the links/content.</li>
-				</ul>
+		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-				<h5>Sizing and Layout</h5>
-				<ul>
-					<li>The content margins inside all Mercer Feature Containers will have 15 pixels of padding all around.</li>
-					<li>The padding inside a Support Container from the line under the header to the beginning of the actual content is also 15 pixels.</li>
-					<li>Support Container height and width are variable based on inside content height and width.</li>
-				</ul>
+		</section>
+	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
 
-				<h5>Grids</h5>
-				<ul>
-					<li>Feature Containers work within the Mercer Evolution Grid System.</li>
-					<li>Feature Containers can contain grids inside of them to display and section off data within the container.</li>
-				</ul>
-			</div>
-			<div id="tabs-3">
-				<p>Technical details go here&hellip;</p>
-			</div>
-			<div id="tabs-4">
-				<ul>
-					<li>In the mobile version of this container the width will shrink to span the width of the parent container.</li>
-					<li>Font size increases for mobile.</li>
-				</ul>
-			</div>
-			<div id="tabs-5">
-			<!-- GET CODE - BEGINS -->
-				<section class="col-24">
+	</section>
+<!-- EXAMPLE SECTION - ENDS -->
 
-					<h5 class="mul-hdr-rule">HTML</h5>
-					<p>
-						All containers start with base box and in this example we are using the following class <code>mul-support-ctn</code> to give more meaning to a basic box. For the header part of the container to adjust the size use one of the following tags in conjunction with <code>mul-hdr-rule</code> class: <code>h3</code> <code>h4</code>
-					</p>
-
-					<pre class="prettyprint linenums"><xmp>{% include "/base/boxes/support-ctn" %}</xmp></pre>
-
-				</section>
-			<!-- GET CODE - ENDS -->
-			</div>
-		</div>
-	</div>
-<!-- DETAILS SECTION - ENDS -->
-
-</section>
 {% endblock %}
