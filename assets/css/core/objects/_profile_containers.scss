@@ -76,12 +76,106 @@
 	.mul-box-adv.mul-location-profile > .mul-box-hdr
 								{background-color: $profileContainerLocationPlanHdrBackgroundColor !important;}
 
+
+	.mul-user-profile,
+	.mul-client-profile-inactive,
+	.mul-client-profile-active,
+	.mul-client-profile-prospective,
+	.mul-product-profile,
+	.mul-plan-profile,
+	.mul-location-profile
+						{
+		.mul-entity-profile-mb-navbar
+							{
+							@include background-gradient($gray-lightest, $gray-mid-light);
+							@include clearfix;
+							border-bottom: 1px solid $gray-mid-dark;
+							display: block;
+							width: 100%;
+			ul					{float: right;}
+							}
+		.mul-navbar			{
+			.mul-navbar-adjust	{
+				.mul-menu-ctn		{display: block;}
+								}
+							}
+						}
+
 	//=== MEDIA QUERIES =========================================================================
 
 	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
 	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
 		
 		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+			.mul-user-profile,
+			.mul-client-profile-inactive,
+			.mul-client-profile-active,
+			.mul-client-profile-prospective,
+			.mul-product-profile,
+			.mul-plan-profile,
+			.mul-location-profile
+								{
+				.mul-entity-profile-mb-navbar
+									{display: none;}
+				.mul-navbar			{
+					.mul-navbar-adjust	{
+					// GENERAL NAVBAR - BEGINS	
+						nav					{
+							ul					{
+								li					{
+									a					{
+														font-size: 14px;
+														font-family: $fontRegularFamily;
+														}
+													}
+												}
+											}
+					// GENERAL NAVBAR - ENDS
+
+					// TEXT NAVBAR - BEGINS
+						nav.mul-text-nav	{
+							ul					{
+								li					{
+													padding-top: 6px;
+													padding-bottom: 5px;
+													}
+												}
+						// MENU OVERRIDES - BEGINS
+							.mul-nav-menus		{
+								li					{
+									ul					{top: 24px !important;}
+													}
+												}
+						// MENU OVERRIDES - ENDS
+											}
+					// TEXT NAVBAR - ENDS
+
+					// TABBED NAVBAR - BEGINS
+						nav.mul-tabbed-nav	{
+							ul					{
+								li					{
+									a					{
+														padding: 8px 10px 6px 10px !important;
+														margin-bottom: -1px;
+														}
+									&:first-child		{
+														border-left: 0;
+										a					{border-left: 0;}
+														}
+													}
+												}
+						// MENU OVERRIDES - BEGINS
+							.mul-nav-menus		{
+								li					{
+									ul					{top: 31px !important;}
+													}
+												}
+						// MENU OVERRIDES - ENDS
+											}
+					// TABBED NAVBAR - ENDS
+										}
+									}
+								}
 
 			.mul-user-profile > .mul-box-hdr,
 			.mul-client-profile-inactive > .mul-box-hdr,

@@ -108,6 +108,21 @@ $(function() {
 				keepInViewport: true
 			});
 
+			var nav = $('.mul-navbar-fixed-adjust'); // Change to nav div
+			var nav_class = 'mul-navbar-fixed-adjust-shadow'; // Change to class name
+			var threshold = 40; // Change to pixels scrolled
+
+			$(window).scroll(function () {
+			    var distance = $(this).scrollTop();
+			    if (distance > threshold) { // If scrolled past threshold
+			        nav.addClass(nav_class); // Add class to nav
+			    } else { // If user scrolls back to top
+			        if (nav.hasClass(nav_class)) { // And if class has been added
+			            nav.removeClass(nav_class); // Remove it
+			        }
+			    }
+			});
+
 		/* PLEASE CLEAN UP! - ENDS */
 
 

@@ -10,9 +10,9 @@
 		.mul-header-icon	{
 			a					{
 				[class*="mul-icon"]	{
-									@include border-radius(3px);
-									background-color: $gray-mid-dark;
-									color: $gray-darker;
+									@include border-radius($megaMenuItemBorderRadius);
+									background-color: $megaMenuItemBackgroundColor;
+									color: $megaMenuItemColor;
 									cursor: pointer;
 									padding: 4px 10px 6px 6px;
 									min-width: 28px;
@@ -66,17 +66,14 @@
 				.mul-masthead-adjust
 									{
 									@include clearfix;
-
 					.mul-logo-col-1,
 					.mul-logo-col-2,
 					.mul-logo-col-3		{
-										float: none;
-										display: inline-block;
-										vertical-align: middle;
+										float: left;
 										margin-left: 0;
-
 					// ICON STYLES OVERRIDES - BEGIN
 						li.mul-header-icon	{
+											border-bottom: 0;
 											float: left;
 											width: auto;
 								a				{
@@ -93,17 +90,18 @@
 											}
 					// ICON STYLES OVERRIDES - END
 										}
-
-					.mul-logo-col-1		{
-										display: none;
-										width: 12%;
+					.mul-logo-col-1		{display: none;}
+					.mul-logo-col-2		{
+										margin-left: 10px;
+						a					{font-size: ($hdrH1FontSize - 10);}
 										}
-					.mul-logo-col-2		{margin-left: 10px;}
+
 					.mul-logo-col-3		{
-										width: 35.5%;
-						ul					{float: right;}
+										float: right;
+										margin-top: 8px;
+										margin-right: 10px;
+						ul					{@include clearfix;}
 										}
-
 				// PRIMARY & SECONDARY LOGO - BEGINS
 					.mul-primary-logo	{}
 					.mul-secondary-logo	{
@@ -111,10 +109,8 @@
 										text-align: right;
 										}
 				// PRIMARY & SECONDARY LOGO - ENDS
-
 									}
 			// MASTHEAD ADJUST - ENDS
-
 								}
 		// MASTHEAD - ENDS
 							}
@@ -136,6 +132,7 @@
 								height: 52px;
 				li					{
 									width: 100% !important;
+									border-bottom: 0;
 					a					{
 										padding: 0;
 						.sub-arrow			{display: none;}
@@ -146,9 +143,6 @@
 											color: $white;
 											padding-top: 10px;
 											}
-
-						.mul-user-identifier-ctn-indicator
-											{}
 						.mul-user-identifier-ctn-user-info
 											{
 							span				{
@@ -156,8 +150,6 @@
 												font-size: 11px;
 												}
 											}
-						.mul-user-identifier-ctn-avatar
-											{}
 										}
 				// SUB-MENU - BEGINS
 					.mul-user-identifier-menu
@@ -207,11 +199,13 @@
 
 						.mul-logo-col-1		{
 											display: inline-block;
+											margin-top: 2px;
 											margin-right: 8px;
 											}
 						.mul-logo-col-2		{
 											margin-left: 0;
 											margin-right: 8px;
+							a					{font-size: $hdrH1FontSize;}
 											}
 					// MOBILE NAVBAR CONTAINER - BEGINS
 						.mul-mb-navbar-ctn	{display: none;}

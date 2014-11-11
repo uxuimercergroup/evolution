@@ -43,20 +43,46 @@
 			</div>
 		</div>
 	</div>
-	<nav class="mul-navbar">
-		<ul class="mul-horizontal-list">
-			<li><a class="mul-navbar-item-active" href="javascript:;">Link 1</a></li>
-			<li><a href="javascript:;">Link 2</a></li>
-			<li><a href="javascript:;">Link 3</a></li>
-			<li><a href="javascript:;">Link 4</a></li>
-			<li><a href="javascript:;">Link 5</a></li>
-			<li><a href="javascript:;">Link 6</a></li>
-			<li><a href="javascript:;">Link 7</a></li>
-			<li><a href="javascript:;">Link 8</a></li>
-			<li><a href="javascript:;">Link 9</a></li>
-			<li><a href="javascript:;">Link 10</a></li>
+
+<!-- MOBILE NAVBAR - BEGINS -->
+	<section class="col-24 mul-entity-profile-mb-navbar">
+		<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
+			<li class="mul-header-icon">
+				<a href="javascript:;" class="js-mul-toggle-content" data-mul-toggle="2"><i class="mul-icon-menu3"></i></a>
+			</li>
 		</ul>
-	</nav>
+	</section>
+<!-- MOBILE NAVBAR - ENDS -->
+
+<!-- NAVBAR - BEGINS -->
+	<section class="mul-navbar" id="div2">
+		<div class="mul-navbar-adjust">
+			<nav class="mul-tabbed-nav">
+				<div class="col-24 mul-navbar-col-1">
+					<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
+						<li><a href="javascript:;">Link 1</a></li>
+						<li><a href="javascript:;">Link 2</a></li>
+						<li><a class="mul-navbar-item-active" href="javascript:;">Link 3</a></li>
+						<li><a href="javascript:;">Link 4</a></li>
+						<li><a href="javascript:;">Link 5</a></li>
+						<li><a href="javascript:;">Link 6</a></li>
+						<li><a href="javascript:;">Link 7</a></li>
+						<li>
+							<a href="javascript:;">Link 8</a>
+							<ul>
+								<li><a href="javascript:;">Test</a></li>
+								<li><a href="javascript:;">test</a></li>
+								<li><a href="javascript:;">test</a></li>
+								<li><a href="javascript:;">test</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</section>
+<!-- NAVBAR - ENDS -->
+
 	<div class="mul-box-bdy">
 		{{ 3 | lorem_ipsum:'p' }}
 	</div>

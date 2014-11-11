@@ -43,7 +43,6 @@
 									@include clearfix;
 									width: 980px;
 									margin: 0 auto;
-
 					.mul-navbar-col-1	{
 						.mul-nav-menus		{display: block;}
 										}
@@ -53,6 +52,8 @@
 						ul					{
 											@include clearfix;
 							li					{
+												border-bottom: 0;
+								&:last-child		{border-bottom: 0;}
 								a					{
 													display: block;
 													padding: 0;
@@ -100,7 +101,20 @@
 								a					{
 													border-left: 1px dotted $gray-mid-dark;
 													padding: 2px 10px;
+									&:hover				{background-color: $transparent;}
 													}
+								ul					{
+									li					{
+									// HOVER EFFECT FOR SUB-MENU - BEGINS
+										a					{
+											&:hover				{
+																background-color: $gray-lighter;
+																@include transition(background-color 0.3s ease-in-out);
+																}
+															}
+									// HOVER EFFECT FOR SUB-MENU - ENDS
+														}
+													}	
 								.mul-navbar-item-active	{font-family: $fontSemiBoldFamily;}
 												}
 											}
@@ -156,9 +170,21 @@
 													display: block;
 													font-size: 14px;
 													font-family: $fontSemiBoldFamily;
+									&:hover				{@include background-gradient($navActiveBackgroundStartColor, $navActiveBackgroundEndColor);}
 													}
 								.mul-navbar-item-active
-													{background-color: $gray-lighter;}
+													{@include background-gradient($navActiveBackgroundStartColor, $navActiveBackgroundEndColor);}
+									ul				{
+										li				{
+											a				{
+												&:hover			{
+																@include background-gradient($transparent, $transparent);
+																background-color: $gray-lighter;
+																@include transition(background-color 0.3s ease-in-out);
+																}
+															}
+														}
+													}
 								&:last-child		{
 													border-right: 1px solid $gray-mid-light;
 									a					{border-right: 1px solid $white;}
@@ -173,14 +199,16 @@
 											}
 					// ICON STYLES OVERRIDES - BEGIN
 						li.mul-header-icon	{
-											//border: 0 !important;
 											padding: 0;
 											margin: 7px 0;
 								a				{
-												//border: 0 !important;
 												padding: 0;
 									[class*="mul-icon"]
 													{margin-right: 4px;}
+									&:hover			{
+										[class*="mul-icon"]
+														{color: $white;}
+													}
 												}
 							&:last-child		{
 								a					{
@@ -197,10 +225,10 @@
 					// MENU OVERRIDES - BEGIN
 						.mul-nav-menus		{
 								li				{
-												//border-left: 0;
 									a				{padding: 12px 10px 11px 10px;}
 									ul				{
 										li				{
+														border-left: 0;
 											&:last-child	{border-right: 0;}
 											a				{border: 0;}
 														}
@@ -224,8 +252,17 @@
 								}
 
 		// NAVBAR FIXED - BEGINS
+			// This class is used when the user starts to scroll, js will add this class to the navbar to create a drop shadow.
+			.mul-navbar-fixed-adjust-shadow
+								{@include box-shadow(0, 0, 10px, $gray-mid-dark);}
 			.mul-navbar-fixed	{
 								@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundStartColor);
+								/*
+								position: fixed;
+								top: 0;
+								left: 0;
+								*/
+
 				.mul-navbar-fixed-adjust
 									{
 									padding: 0 5px;
@@ -244,6 +281,14 @@
 						ul					{
 							li					{
 								a					{color: $white;}
+								&:first-child		{
+									a					{border-left: 0;}
+													}
+								ul					{
+									li					{
+										a					{color: #002C77;}
+														}
+													}
 												}
 											}
 										}
