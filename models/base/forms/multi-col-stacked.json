@@ -1,3 +1,42 @@
 {
-  "title": "Multi-Column Stacked Form"
+	"title": "Multi-Column Stacked Form",
+
+	"reference-overview": 
+		"<p>The Multi-Column Stacked Form takes the <a href='/base/forms/stacked'>Stacked Form</a> and allows it to be split into multiple columns using any of the underlying Mercer Grid systems.</p><p><small>**Not all form layouts will work well together</small></p>",
+
+	"reference-usage": 
+		"<p>Multi-Column Stacked Forms work well when Form Elements have multiple parts, like a mailing address. It's also a good option if a Form has several Fields grouped together, like on an employment history section on an online job application.</p><p>The Multi-Column Stacked Form allows for the high level of configurability support offered by the Stacked Form, while at the same time providing a higher degree of manipulation of screen real estate for grouping or aesthetic purposes.</p>",
+
+	"reference-details": 
+		"<h3>Margins</h3><p>In order to keep with Mercer consistency, the margins between Elements have been standardized:</p><ul><li>Use a 10 pixel bottom between the Element and next Field Label.</li><li>Use a 3 pixel bottom margin between a Label and an Input.</li></ul><h3>Labels</h3><p>All field labels should use Title Case. See the <a href='/copy-text-styleguide'>Copy/Text Style Guide narrative</a> for more detail.</p><h3>Active State</h3><p>The active state for any field should be indicated by the application of the \"Attention\" color to the border of the specific field the user has clicked into.</p><h3>Required Fields</h3><p>All required fields should be denoted by placing the Required icon (the <code>mul-asterisk-small</code> icon from the <a href='/base/icons'>list of icons</a>) immediately to the left of the Field Label.</p><h3>Error Handling</h3><p>See the <a href='/base/forms/field-specific-error'>Field Specific Error Message</a> page for details.</p>",
+
+	"reference-mobile": 
+		"<h3>Header</h3><p>Mobile details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+
+	"reference-technical": 
+		"<h3>Header</h3><p>Technical details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+
+	
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "false",
+	"reference-example-version-label":
+		"",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"",
+	"reference-code-html-content-block-post": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
 }
