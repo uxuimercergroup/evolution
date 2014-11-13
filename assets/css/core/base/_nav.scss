@@ -10,9 +10,6 @@
 		.mul-navbar			{
 							display: none;
 			.mul-navbar-adjust	{
-				.mul-navbar-col-1	{
-					.mul-nav-menus		{display: none;}
-									}
 				nav					{
 					li					{
 						a					{
@@ -63,14 +60,44 @@
 														{display: none;}
 													}
 												}
+						// HEADER ICON OVERRIDES - BEGINS
 							.mul-header-icon	{
 								a:last-child		{
 									[class*="mul-icon"]	{margin-right: 0;}
 													}
+									a				{
+													padding: 0;
+										[class*="mul-icon"]
+														{margin-right: 4px;}
+										&:hover			{
+														@include background-gradient($transparent, $transparent);
+											[class*="mul-icon"]
+															{color: $white;}
+														}
+													}
+												}
+						// HEADER ICON OVERRIDES - BEGINS
+											}
+					// MENU OVERRIDES - BEGINS
+						.mul-nav-menus		{
+							li					{
+								ul					{
+													background-color: #CCC;
+									li					{
+														border-top-color: #EEE;
+										a					{
+															@include border-radius(0);
+															font-family: $fontRegularFamily;
+															}
+										&:last-child		{
+											a					{@include border-radius(0 0 4px 4px);}
+															}
+														}
+													}
 												}
 											}
+					// MENU OVERRIDES - ENDS
 
-						.mul-navbar-col-1	{}
 						.mul-navbar-col-2	{
 							.mul-menu-ctn		{float: right;}
 							.mul-navbar-no-pipe-left
@@ -86,8 +113,15 @@
 												font-family: $fontSemiBoldFamily;
 												padding: 2px 10px 2px 0;
 												width: 200px;
-												margin-right: -1px;
 												}
+											}
+						.mul-navbar-message-noline
+											{
+							span				{border-right: 0;}
+											}
+						.mul-navbar-message-nopadding
+											{
+							span				{padding-right: 0;}
 											}
 										}
 				// GENERAL NAVBAR - ENDS
@@ -146,7 +180,7 @@
 														padding: 0;
 										a					{
 															border-left: 0;
-															padding: 9px 10px;
+															padding: 5px 10px 4px 10px;
 															}
 														}
 													}
@@ -197,55 +231,45 @@
 													}
 												}
 											}
-					// ICON STYLES OVERRIDES - BEGIN
-						li.mul-header-icon	{
-											padding: 0;
-											margin: 7px 0;
-								a				{
-												padding: 0;
-									[class*="mul-icon"]
-													{margin-right: 4px;}
-									&:hover			{
-										[class*="mul-icon"]
-														{color: $white;}
+					// ICON-MENU STYLES OVERRIDES - BEGIN
+						.mul-nav-menus		{
+							li					{
+								a					{padding: 12px 10px 11px 10px;}
+								ul					{
+									li					{
+														border-left: 0;
+										a					{
+															border: 0;
+															padding: 5px 10px 4px 10px;
+															}
+														}
 													}
 												}
-							&:last-child		{
-								a					{
-									[class*="mul-icon"]	{margin-right: 0;}
+							li.mul-header-icon	{
+												border-left: 0;
+												border-right: 0;
+												padding: 0;
+												margin: 7px 0;
+									a				{
+													border-left: 0;
+													border-right: 0;
+													padding: 0;
+										[class*="mul-icon"]
+														{margin-right: 4px;}
+										&:hover			{@include background-gradient($transparent, $transparent);}
+													}
+								&:last-child		{
+									a					{
+										[class*="mul-icon"]	{margin-right: 0;}
+														}
 													}
 												}
 											}
-					// ICON STYLES OVERRIDES - END
+					// ICON-MENU STYLES OVERRIDES - END
 
 						.mul-navbar-col-2	{
 							.mul-navbar-message	{float: right;}
 											}
-
-					// MENU OVERRIDES - BEGIN
-						.mul-nav-menus		{
-								li				{
-									a				{padding: 12px 10px 11px 10px;}
-									ul				{
-										li				{
-														border-left: 0;
-											&:last-child	{border-right: 0;}
-											a				{border: 0;}
-														}
-													}
-												}
-							.mul-header-icon	{
-												border-left: 0;
-												border-right: 0;
-								a					{
-													border-left: 0;
-													border-right: 0;
-													padding: 0;
-													}
-												}
-											}
-					// MENU OVERRIDES - ENDS
-
 										}
 				// TABBED NAVBAR - ENDS
 									}
@@ -256,7 +280,7 @@
 			.mul-navbar-fixed-adjust-shadow
 								{@include box-shadow(0, 0, 10px, $gray-mid-dark);}
 			.mul-navbar-fixed	{
-								@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundStartColor);
+								@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
 								/*
 								position: fixed;
 								top: 0;

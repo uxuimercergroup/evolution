@@ -96,7 +96,10 @@
 							}
 		.mul-navbar			{
 			.mul-navbar-adjust	{
-				.mul-menu-ctn		{display: block;}
+				.mul-menu-ctn		{
+									@include background-gradient(#e7e7e7, #ccc);
+									display: block;
+									}
 								}
 							}
 						}
