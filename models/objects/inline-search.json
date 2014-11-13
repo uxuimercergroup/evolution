@@ -1,3 +1,48 @@
 {
-  "title": "Inline Search Container"
+	"title": "Inline Search Container",
+
+	"reference-overview": 
+		"<p>The Inline Search Container is used whenever you want to present the user with a small, concise search form that will display results immediately below.</p>",
+
+	"reference-usage": 
+		"<p>Use the Inline Search Container when the user needs to conduct a search <strong>limited to a small number of fields</strong> on a page or within an application. When the search button is selected, search results will appear below and will not reload the page. The results displayed will be formatted using the <a href='/base/tables/interactive'>Interactive Data Table.</a> This component also allows search results that can be displayed on a different page once the search button is selected.</p>",
+
+	"reference-details": 
+		"<h3>Form Styles</h3><ul><li>The forms within the Inline Search Container can be either <a href='/base/forms/stacked'>Stacked</a> or <a href='/base/forms/inline'>Inline</a>.</li><li>inline forms within the Inline Search Container can be Left or Right Aligned.</li></ul><h3>Sizing and Layout</h3><ul><li>Inline Search Container height and width are variable based on inside content and Inline Search Form height and width.</li><li>The content margins inside all Mercer Inline Search Containers will have 15 pixels of padding all around.</li><li>The padding inside an Inline Search Container from the line under the Label to the beginning of the actual content or Inline Search Form is also 15 pixels.</li></ul><h3>Miscellaneous</h3><ul><li>Inline Search Containers work within the Mercer Grid System.</li><li>Inline Search Containers can contain grids inside of them to display and section off data within the container.</li><li>Inline Search Containers are created using HTML tags and the Inline Search Form.</li></ul><h3>Buttons</h3><ul><li>There should only be a single Primary Button.</li><li>All button related behavior and styling should work as defined on the <a href='/base/buttons'>Buttons</a> component.</li></ul>",
+
+	"reference-mobile": 
+		"<ul><li>For mobile, the inline search container labels stack above the fields.</li><li>The input fields span the width of the parent container (minus the margins).</li><li>The \"Search\" button spans the width of the parent container (minus the margins).</li></ul>",
+
+	"reference-technical": 
+		"<h3>Header</h3><p>Technical details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+
+	
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "true",
+	"reference-example-version-label":
+		"Example using inline layout",
+	"reference-example-version-label-2":
+		"Example using stacked layout",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"<p>All containers start with base box and in this example we are using the following class <code>mul-inline-search-ctn</code> to give more meaning to a basic box.</p>",
+	"reference-code-html-content-block-post": 
+		"",
+	"reference-code-html-content-block-pre-2": 
+		"",
+	"reference-code-html-content-block-post-2": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
 }

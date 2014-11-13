@@ -1,260 +1,163 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<!-- INTRO SECTION - BEGINS -->
-	<section class="col-24">
-		<h1>{{ model.title }}</h1>
-		<p class="mul-intro-text">
-			The Tile Container should be used primarily on home pages that are designed for both mobile and desktop. The allow the designer to organize content into logical groupings that can be stacked on one another as the browser size diminishes.
-		</p>
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
+
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24 mul-alternate-views-badge mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-ref-alternate-views-badge">
+
+		{% include '/reference/reference-content' %}
+
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
+		{% if model.reference-get-code == "true" %}
+			<div id="mul-ref-alternate-views-badge-content-panel-get-code">
+
+				<h3 class="mul-hdr-rule">HTML</h3>
+
+				{{ model.reference-code-html-content-block-pre }}
+
+				{{ global.reference-get-code-start-tag }}<div class="mul-box-adv mul-tile-ctn" data-palette-color="purple-mid">{{ global.reference-get-code-end-tag }}
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label }}</h4>
+				{% endif %}
+				{{ global.reference-get-code-start-tag }}{% include '/objects/tile-ctn' %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post }}
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label-2 }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre-2 }}
+				{{ global.reference-get-code-start-tag }}{% include '/objects/tile-ctn-custom-color' %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post-2 }}
+
+				{% if model.reference-code-js == "true" %}
+
+					<h3 class="mul-hdr-rule">JS</h3>
+
+					{% if model.reference-example-versions == "true" %}
+						<h4>{{ model.reference-example-version-label }}</h4>
+					{% endif %}
+					{{ model.reference-code-js-content-block-pre }}
+					{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-js-content-block-post }}
+
+				{% endif %}
+
+			</div>
+		{% endif %}
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
+
 	</section>
-<!-- INTRO SECTION - ENDS -->
+<!-- CONTENT SECTION - ENDS -->
 
-<section class="col-24">
+<!-- EXAMPLE SECTION - BEGINS -->
+	<section class="col-24 mul-ref-example">
 
-	<h3 class="mul-hdr-dbl-rule">
-		Example
-		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
-	</h3>
+	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+		<h3 class="mul-hdr-dbl-rule mul-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
+	<!-- EXAMPLE SECTION - HEADER - ENDS -->
 
-<!-- TILES - BEGINS -->
-	<div class="col-24 example-min-height">
+	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+		<section class="mul-ref-example-content">
 
-		<div class="col-24">
-			<div class="col-8 first">
-				{% include '/objects/tile-ctn' %}
-			</div>
-			<div class="col-16">
-				{% include '/objects/tile-ctn-custom-color' %}
-			</div>
-		</div>
+		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 
-		<div class="col-24">
-			<div class="col-24 first">
-				
-				<!-- TILES - BEGINS -->
-				<div class="mul-box-adv mul-tile-ctn" data-palette-color="orange-dark">
-					<div class="mul-box-hdr js-mul-width-check js-mul-toggle-content-icon" data-mul-toggle="3">
-						<i class="mul-icon-plus-circle mul-icon-position-left mul-float-right mul-tile-icon-position" href="javascript:;" title="Toggle Open/Closed"></i>
-						<h4 class="mul-hdr-rule">
-							<span>Header</span>
-						</h4>
-					</div>
-					<div class="mul-box-bdy mul-scroll-pane js-mul-scroll-pane" id="div3">
-						{{ 6 | lorem_ipsum: 'p' }}
-					</div>
+			<div class="col-24">
+				<div class="col-8 first">
+
+					{% include '/objects/tile-ctn' %}
+
 				</div>
-				<!-- TILES - ENDS -->
+				<div class="col-16">
 
-			</div>
-		</div>
+					{% include '/objects/tile-ctn-custom-color' %}
 
-		<div class="col-24">
-			<div class="col-8 first">
-				
-				<!-- TILES - BEGINS -->
-				<div class="mul-box-adv mul-tile-ctn" data-palette-color="tan-mid">
-					<div class="mul-box-hdr js-mul-width-check js-mul-toggle-content-icon" data-mul-toggle="4">
-						<i class="mul-icon-plus-circle mul-icon-position-left mul-float-right mul-tile-icon-position" href="javascript:;" title="Toggle Open/Closed"></i>
-						<h4 class="mul-hdr-rule">
-							<span>Header</span>
-						</h4>
-					</div>
-					<div class="mul-box-bdy mul-scroll-pane js-mul-scroll-pane" id="div4">
-						{{ 6 | lorem_ipsum: 'p' }}
-					</div>
 				</div>
-				<!-- TILES - ENDS -->
-
 			</div>
-			<div class="col-8">
-				
-				<!-- TILES - BEGINS -->
-				<div class="mul-box-adv mul-tile-ctn" data-palette-color="green-mid">
-					<div class="mul-box-hdr js-mul-width-check js-mul-toggle-content-icon" data-mul-toggle="5">
-						<i class="mul-icon-plus-circle mul-icon-position-left mul-float-right mul-tile-icon-position" href="javascript:;" title="Toggle Open/Closed"></i>
-						<h4 class="mul-hdr-rule">
-							<span>Header</span>
-						</h4>
-					</div>
-					<div class="mul-box-bdy mul-scroll-pane js-mul-scroll-pane" id="div5">
-						{{ 6 | lorem_ipsum: 'p' }}
-					</div>
-				</div>
-				<!-- TILES - ENDS -->
 
-			</div>
-			<div class="col-8">
-				
-				<!-- TILES - BEGINS -->
-				<div class="mul-box-adv mul-tile-ctn" data-palette-color="fuscia-mid">
-					<div class="mul-box-hdr js-mul-width-check js-mul-toggle-content-icon" data-mul-toggle="6">
-						<i class="mul-icon-plus-circle mul-icon-position-left mul-float-right mul-tile-icon-position" href="javascript:;" title="Toggle Open/Closed"></i>
-						<h4 class="mul-hdr-rule">
-							<span>Header</span>
-						</h4>
-					</div>
-					<div class="mul-box-bdy mul-scroll-pane js-mul-scroll-pane" id="div6">
-						{{ 6 | lorem_ipsum: 'p' }}
-					</div>
-				</div>
-				<!-- TILES - ENDS -->
-
-			</div>
-		</div>
-
-	</div>
-<!-- TILES - ENDS -->
-
-<!-- DETAILS SECTION - BEGINS -->
-	<div class="col-24">
-		<a name="moreDetails"></a>
-		<h4 class="mul-hdr-dbl-rule addtional-detail-hdr">Additional Details</h4>
-
-		<div class="js-mul-tabs-example mul-tabs">
-			{% include "page-tabs" %}
-			<div id="tabs-1">
-				<p>For use on a home page, a tile is used to present primary information to a user - focused on primary content and providing easy access to more details.</p>
-			</div>
-			<div id="tabs-2">
-				<p>Any manner of content may be used in a tile - text, graphics, links, etc. - and multiple tiles may be used on a home page. A tile may contain a fixed amount of content or have scrolling to facilitate more than can fit in the initial version.</p>
-			</div>
-			<div id="tabs-3">
-				<h4 class="mul-hdr-rule">Dependencies</h4>
-				<table class="mul-table mul-table-borders" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
-					<thead>
-						<tr>
-							<th width="" scope="col">Library</th>
-							<th width="" scope="col">Location or Download</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>jQuery {{ global.jquery_version }}</td>
-							<td>assets/scripts/core/lib/jquery</td>
-						</tr>
-						<tr>
-							<td>jQuery Mouse Wheel 3.1.11</td>
-							<td>assets/scripts/core/lib/jquery/plugins</td>
-						</tr>
-						<tr>
-							<td>Malihu jQuery Custom Scrollbar Plugin 3.0.1</td>
-							<td>assets/scripts/core/lib/jquery/plugins</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div id="tabs-4">
-				<p>Tiles stack in order of left to right and top to bottom upon entering mobile mode and text becomes larger.</p>
-			</div>
-			<div id="tabs-5">
-			<!-- GET CODE - BEGINS -->
-				<section class="col-24">
-
-					<h5 class="mul-hdr-rule">HTML</h5>
-					<p>
-						All containers start with base box and in this example we are using the following class <code>mul-tile-ctn</code> to give more meaning to a basic box. Tile containers will automatically have <a href="/objects/scroll-pane">scroll pane</a> applied to the <code>mul-box-bdy</code> when the the content gets larger than the 400px min-height.
-					</p>
-					<p>
-						In addition, when the viewport gets below 768px the tiles will stack and a hide/collapse function will get applied to the <code>mul-box-hdr</code>.
-					</p>
-
-					<h5>Custom Top Border Color</h5>
-					<p>The default top border color of tiles is #00A8C8 (blue-sapphire-mid). In order to have a custom border color on top of the tile container add the following data attribute to the tile container: <code>data-palette-color=""</code>.</p>
-
-					<p>Choose from the following color options for the value of <code>data-palette-color=""</code>:</p>
-
-					<div class="col-24">
-						<div class="col-6 first">
-							<ul>
-								<li>transparent</li>
-								<li>white</li>
-								<li>black</li>
-								<li>gray-darkest</li>
-								<li>gray-darker</li>
-								<li>gray-dark</li>
-								<li>gray-mid-dark</li>
-								<li>gray-mid-light</li>
-								<li>gray-light</li>
-								<li>gray-lighter</li>
-								<li>gray-lightest</li>
-								<li>blue-gray</li>
-								<li>blue-gray-darkest</li>
-								<li>blue-gray-darker</li>
-								<li>blue-gray-dark</li>
-								<li>blue-gray-mid-dark</li>
-								<li>blue-gray-mid-light</li>
-							</ul>
+			<div class="col-24">
+				<div class="col-24 first">
+					                                   
+					<!-- TILES - BEGINS -->
+					<div class="mul-box-adv mul-tile-ctn" data-palette-color="orange-dark">
+						<div class="mul-box-hdr js-mul-width-check js-mul-toggle-content-icon" data-mul-toggle="3">
+							<i class="mul-icon-plus-circle mul-icon-position-left mul-float-right mul-tile-icon-position" href="javascript:;" title="Toggle Open/Closed"></i>
+							<h4 class="mul-hdr-rule">
+								<span>Header</span>
+							</h4>
 						</div>
-						<div class="col-6">
-							<ul>
-								<li>blue-gray-light</li>
-								<li>blue-gray-lighter</li>
-								<li>blue-gray-lightest</li>
-								<li>blue-sapphire</li>
-								<li>blue-sapphire-dark</li>
-								<li>blue-sapphire-mid</li>
-								<li>blue-sapphire-light</li>
-								<li>purple</li>
-								<li>purple-dark</li>
-								<li>purple-mid</li>
-								<li>purple-light</li>
-								<li>fuscia</li>
-								<li>fuscia-dark</li>
-								<li>fuscia-mid</li>
-								<li>fuscia-light</li>
-								<li>pink</li>
-							</ul>
-						</div>
-						<div class="col-6">
-							<ul>
-								<li>pink-dark</li>
-								<li>pink-light</li>
-								<li>red</li>
-								<li>red-dark</li>
-								<li>red-mid</li>
-								<li>red-light</li>
-								<li>orange</li>
-								<li>orange-dark</li>
-								<li>orange-mid</li>
-								<li>orange-light</li>
-								<li>tan</li>
-								<li>tan-dark</li>
-								<li>tan-mid</li>
-								<li>tan-light</li>
-								<li>green</li>
-								<li>green-darker</li>
-							</ul>
-						</div>
-						<div class="col-6">
-							<ul>
-								<li>green-dark</li>
-								<li>green-mid</li>
-								<li>green-light</li>
-								<li>green-lighter</li>
-								<li>green-lightest</li>
-								<li>blue-green</li>
-								<li>blue-green-dark</li>
-								<li>blue-green-mid</li>
-								<li>blue-green-light</li>
-							</ul>
+						<div class="mul-box-bdy mul-scroll-pane js-mul-scroll-pane" id="div3">
+							{{ 6 | lorem_ipsum: 'p' }}
 						</div>
 					</div>
+					<!-- TILES - ENDS -->
 
-					<pre class="prettyprint linenums"><xmp><div class="mul-box-adv mul-tile-ctn" data-palette-color="purple-mid"></xmp></pre>
-
-					<h5>Default</h5>
-					<pre class="prettyprint linenums"><xmp>{% include '/objects/tile-ctn' %}</xmp></pre>
-
-					<h5>Custom Top Border Color</h5>
-					<pre class="prettyprint linenums"><xmp>{% include '/objects/tile-ctn-custom-color' %}</xmp></pre>
-
-				</section>
-			<!-- GET CODE - ENDS -->
+				</div>
 			</div>
-		</div>
-	</div>
-<!-- DETAILS SECTION - ENDS -->
 
-</section>
+			<div class="col-24">
+				<div class="col-8 first">
+					
+					<!-- TILES - BEGINS -->
+					<div class="mul-box-adv mul-tile-ctn" data-palette-color="tan-mid">
+						<div class="mul-box-hdr js-mul-width-check js-mul-toggle-content-icon" data-mul-toggle="4">
+							<i class="mul-icon-plus-circle mul-icon-position-left mul-float-right mul-tile-icon-position" href="javascript:;" title="Toggle Open/Closed"></i>
+							<h4 class="mul-hdr-rule">
+								<span>Header</span>
+							</h4>
+						</div>
+						<div class="mul-box-bdy mul-scroll-pane js-mul-scroll-pane" id="div4">
+							{{ 6 | lorem_ipsum: 'p' }}
+						</div>
+					</div>
+					<!-- TILES - ENDS -->
+
+				</div>
+				<div class="col-8">
+					
+					<!-- TILES - BEGINS -->
+					<div class="mul-box-adv mul-tile-ctn" data-palette-color="green-mid">
+						<div class="mul-box-hdr js-mul-width-check js-mul-toggle-content-icon" data-mul-toggle="5">
+							<i class="mul-icon-plus-circle mul-icon-position-left mul-float-right mul-tile-icon-position" href="javascript:;" title="Toggle Open/Closed"></i>
+							<h4 class="mul-hdr-rule">
+								<span>Header</span>
+							</h4>
+						</div>
+						<div class="mul-box-bdy mul-scroll-pane js-mul-scroll-pane" id="div5">
+							{{ 6 | lorem_ipsum: 'p' }}
+						</div>
+					</div>
+					<!-- TILES - ENDS -->
+
+				</div>
+				<div class="col-8">
+					
+					<!-- TILES - BEGINS -->
+					<div class="mul-box-adv mul-tile-ctn" data-palette-color="fuscia-mid">
+						<div class="mul-box-hdr js-mul-width-check js-mul-toggle-content-icon" data-mul-toggle="6">
+							<i class="mul-icon-plus-circle mul-icon-position-left mul-float-right mul-tile-icon-position" href="javascript:;" title="Toggle Open/Closed"></i>
+							<h4 class="mul-hdr-rule">
+								<span>Header</span>
+							</h4>
+						</div>
+						<div class="mul-box-bdy mul-scroll-pane js-mul-scroll-pane" id="div6">
+							{{ 6 | lorem_ipsum: 'p' }}
+						</div>
+					</div>
+					<!-- TILES - ENDS -->
+
+				</div>
+			</div>
+
+		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+		</section>
+	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
+
+	</section>
+<!-- EXAMPLE SECTION - ENDS -->
+
 {% endblock %}

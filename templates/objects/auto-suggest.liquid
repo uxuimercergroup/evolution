@@ -1,139 +1,78 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<!-- INTRO SECTION - BEGINS -->
-	<section class="col-24">
-		<h1>{{ model.title }}</h1>
-		<p class="mul-intro-text">
-			The Auto Suggest add on feature automatically inputs suggested items for users while filling out any type of form. Auto Suggest text is generated from a pre-defined list as the user types content into the Form Field. This control works well when input speed is important for the user or when data might be entered in different ways.
-		</p>
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
+
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24 mul-alternate-views-badge mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-ref-alternate-views-badge">
+
+		{% include '/reference/reference-content' %}
+
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
+		{% if model.reference-get-code == "true" %}
+			<div id="mul-ref-alternate-views-badge-content-panel-get-code">
+
+				<h3 class="mul-hdr-rule">HTML</h3>
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{% include "/objects/auto-suggest" %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post }}
+
+				{% if model.reference-code-js == "true" %}
+
+					<h3 class="mul-hdr-rule">JS</h3>
+
+					{% if model.reference-example-versions == "true" %}
+						<h4>{{ model.reference-example-version-label }}</h4>
+					{% endif %}
+					{{ model.reference-code-js-content-block-pre }}
+					{{ global.reference-get-code-start-tag }}{% include '/js/objects/auto-suggest' %}{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-js-content-block-post }}
+
+				{% endif %}
+
+			</div>
+		{% endif %}
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
+
 	</section>
-<!-- INTRO SECTION - ENDS -->
+<!-- CONTENT SECTION - ENDS -->
 
-<section class="col-24">
+<!-- EXAMPLE SECTION - BEGINS -->
+	<section class="col-24 mul-ref-example">
 
-	<h3 class="mul-hdr-dbl-rule">
-		Example
-		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
-	</h3>
+	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+		<h3 class="mul-hdr-dbl-rule mul-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
+	<!-- EXAMPLE SECTION - HEADER - ENDS -->
 
-	<div class="col-24 example-min-height">
-<!-- AUTO SUGGEST - BEGINS -->
-		<form class="mul-form col-8 first" id="" name="" method="" action="" title="">
-			<fieldset>
-				<ol>
-					{% include "/objects/auto-suggest" %}
-				</ol>
-			</fieldset>
-		</form>
-<!-- AUTO SUGGEST - ENDS -->
-	</div>
+	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+		<section class="mul-ref-example-content">
 
-<!-- DETAILS SECTION - BEGINS -->
-	<a name="moreDetails"></a>
-	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
+		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 
-	<div class="col-24">
-		<div class="js-mul-tabs-example mul-tabs">
-			{% include "page-tabs" %}
-			<div id="tabs-1">
-				<p>
-					The Auto Suggest feature should be used when issues of ambiguity might arise (in place of a Text Input) while filling out a form. It’s great when extremely long lists of predefined data preclude the use of a drop down selection. It’s also quite useful when the user only has a certain amount of time to fill out a form. 
-				</p>
-			</div>
-			<div id="tabs-2">
-				<ul>
-					<li>The Auto Suggest control should be able to support "Starts With" or "Contains" searches, although the preference is to default to "Contains" in order to maximize the return.</li>
-					<li>The matching text should be highlighted in the Suggested Values.</li> 
-					<li>Suggest Values should be a Drop Down field. </li>
-					<li>The color of the Auto Suggest text should different itself from the standard black used in forms. It will default to #999999.</li>
-					<li>User  should be able to turn Auto Suggest on or off.</li>
-				</ul>
-			</div>
-			<div id="tabs-3">
-				<p>Technical details go here&hellip;</p>
+			{% if model.reference-example-versions == "true" %}
+				<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
+			{% endif %}
 
-				<h4 class="mul-hdr-rule">Dependencies</h4>
-				<table class="mul-table mul-table-borders" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
-					<thead>
-						<tr>
-							<th width="" scope="col">Library</th>
-							<th width="" scope="col">Location or Download</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>jQuery {{ global.jquery_version }}</td>
-							<td>assets/scripts/core/lib/jquery</td>
-						</tr>
-						<tr>
-							<td>jQuery UI {{ global.jquery_ui_version }}</td>
-							<td>assets/scripts/core/lib/jquery</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div id="tabs-4">
-				<p>On a mobile device or tablet, when a user searches for content the Auto Suggest search results are restricted to show only 3 items. Input and text sizes have also increased on mobile.</p>
-			</div>
-			<div id="tabs-5">
-			<!-- GET CODE - BEGINS -->
-				<section class="col-24">
+			<form class="mul-form col-8 first" id="" name="" method="" action="" title="">
+				<fieldset>
+					<ol>
+						{% include "/objects/auto-suggest" %}
+					</ol>
+				</fieldset>
+			</form>
 
-					<h5 class="mul-hdr-rule">HTML</h5>
-					
+		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-					<pre class="prettyprint linenums"><xmp>{% include "/objects/auto-suggest" %}</xmp></pre>
+		</section>
+	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
 
-					<h5 class="mul-hdr-rule">JS</h5>
-					
+	</section>
+<!-- EXAMPLE SECTION - ENDS -->
 
-					<pre class="prettyprint linenums">
-var autoCompleteExampleData = [
-	'Agresta, Jewel (Dallas) - Marsh',
-	'Agricola, Dwain (Norwood) - Mercer',
-	'Alexy, Dorthy (Chichester) - Mercer',
-	'Altonen, Colin (Hartford) - Marsh',
-	'Amaral, Ramon (Auckland) - Marsh',
-	'Amrich, Darrell (Iowa City) - Mercer',
-	'Araiza, Chad (Houston) - Mercer',
-	'Arenburg, Margot (Dusseldorf) - Mercer',
-	'Argenti, Kathie (Croydon) - Mercer',
-	'Arostegui, Marcelo (Norwood) - Mercer',
-	'Asberry, Kurtis (Dallas) - Marsh',
-	'Assad, Jess (Louisville) - Marsh',
-	'Backus, Neil (Dallas) - Marsh',
-	'Bagnoli, Luciusv (Croydon) - Marsh',
-	'Backus, Neil (Dallas) - Marsh',
-	'Bagnoli, Luciusv (Croydon) - Marsh',
-	'Assad, Jess (Louisville) - Marsh',
-	'Backus, Neil (Dallas) - Marsh',
-	'Bagnoli, Luciusv (Croydon) - Marsh',
-	'Backus, Neil (Dallas) - Marsh',
-	'Bagnoli, Luciusv (Croydon) - Marsh',
-	'Assad, Jess (Louisville) - Marsh',
-	'Backus, Neil (Dallas) - Marsh',
-	'Bagnoli, Luciusv (Croydon) - Marsh',
-	'Backus, Neil (Dallas) - Marsh',
-	'Bagnoli, Luciusv (Croydon) - Marsh',
-	'Bagnli, Luusv (Crydon) - Mercer',
-	'Bgnoli, Luciusv (Croon) - Marsh',
-	'Bagnol, Lucisv (Crodon) - Mercer',
-	'Bagnoli, uciusv (Croyn) - Mercer',
-	'Gnoli, Lucisv (Cdon) - Mercer',
-];
-
-//  Auto Suggest init
-mulAutocomplete('js-mul-autocomplete-example',{
-	source: autoCompleteExampleData
-});</pre>
-
-				</section>
-			<!-- GET CODE - ENDS -->
-			</div>
-		</div>
-	</div>
-<!-- DETAILS SECTION - ENDS -->
-
-</section>
 {% endblock %}

@@ -1,205 +1,175 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<!-- INTRO SECTION - BEGINS -->
-	<section class="col-24">
-		<h1>{{ model.title }}</h1>
-		<p class="mul-intro-text">
-			The Calendar control allows the user to select a specific date, or with multiple entries, a date range. It automatically defaults to show a 1-month range with the current month visible. Users can click on the month and year drop downs to select the month and year they need. Users can also click the arrow to the right of the year drop down to advance to the next month.
-		</p>
-		<p class="mul-intro-text">
-			The calendar control is related to the <a href="/objects/date-range">Date Range</a> control.
-		</p>
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
+
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24 mul-alternate-views-badge mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-ref-alternate-views-badge">
+
+		{% include '/reference/reference-content' %}
+
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
+		{% if model.reference-get-code == "true" %}
+			<div id="mul-ref-alternate-views-badge-content-panel-get-code">
+
+				<h3 class="mul-hdr-rule">HTML</h3>
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{% include '/objects/calendar' %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post }}
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label-2 }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre-2 }}
+				{{ global.reference-get-code-start-tag }}{% include '/objects/calendar-date-input' %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post-2 }}
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label-3 }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre-3 }}
+				{{ global.reference-get-code-start-tag }}{% include '/objects/calendar-message' %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post-3 }}
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label-4 }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre-4 }}
+				{{ global.reference-get-code-start-tag }}{% include '/objects/calendar-date-input-masked' %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post-4 }}
+
+				{% if model.reference-code-js == "true" %}
+
+					<h3 class="mul-hdr-rule">JS</h3>
+
+					{{ model.reference-code-js-content-block-pre }}
+					{{ global.reference-get-code-start-tag }}{% include '/js/objects/calendar' %}{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-js-content-block-post }}
+
+				{% endif %}
+
+			</div>
+		{% endif %}
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
+
 	</section>
-<!-- INTRO SECTION - ENDS -->
+<!-- CONTENT SECTION - ENDS -->
 
-<section class="col-24">
+<!-- EXAMPLE SECTION - BEGINS -->
+	<section class="col-24 mul-ref-example">
 
-	<h3 class="mul-hdr-dbl-rule">
-		Example
-		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
-	</h3>
+	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+		<h3 class="mul-hdr-dbl-rule mul-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
+	<!-- EXAMPLE SECTION - HEADER - ENDS -->
 
-<!-- CALENDAR - BEGINS -->
-	<div class="col-24 example-min-height">
+	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+		<section class="mul-ref-example-content">
 
-		<div class="col-6 first">
+			<div class="col-24">
+				<div class="col-6 first">
 
-			<div class="mul-box mul-box-rnd mul-ref-example-box">
-				<h4 class="mul-hdr-rule">Default Calendar</h4>
-				<!-- CALENDAR - READ ONLY INPUT - EXAMPLE - BEGINS -->
-					<form class="mul-form mul-form-inline" id="" name="" method="" action="" title="">
-						<fieldset>
-							<ol>
-								<li>{% include '/objects/calendar' %}</li>
-							</ol>
-						</fieldset>
-					</form>
-				<!-- CALENDAR - READ ONLY INPUT - EXAMPLE - ENDS -->
-			</div>
+				<!-- EXAMPLE SECTION - BOX - BEGINS -->
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
 
-		</div>
-		<div class="col-6">
+						{% if model.reference-example-versions == "true" %}
+							<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
+						{% endif %}
 
-			<div class="mul-box mul-box-rnd mul-ref-example-box">
-				<h4 class="mul-hdr-rule">Date Input</h4>
-				<!-- CALENDAR - EXAMPLE - BEGINS -->
-					<form class="mul-form" id="" name="" method="" action="" title="">
-						<fieldset>
-							<ol>
-								<li>
-									<div class="col-24 mul-datepicker-ctn">
-										<label for="js-mul-datepicker-example-default">Date:</label>
-										<input class="col-24" id="js-mul-datepicker-example-default" name="" value="" type="text" tabindex="" title="Select date." />
-									</div>
-								</li>
-							</ol>
-						</fieldset>
-					</form>
-				<!-- CALENDAR - EXAMPLE - ENDS -->	
-			</div>
-			
-		</div>
-		<div class="col-6">
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+							<form class="mul-form mul-form-inline" id="" name="" method="" action="" title="">
+								<fieldset>
+									<ol>
+										<li>{% include '/objects/calendar' %}</li>
+									</ol>
+								</fieldset>
+							</form>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-			<div class="mul-box mul-box-rnd mul-ref-example-box">
-				<h4 class="mul-hdr-rule">Message Calendar</h4>
-				<!-- CALENDAR - MESSAGE - EXAMPLE - BEGINS -->
-					<form class="mul-form mul-form-inline" id="" name="" method="" action="" title="">
-						<fieldset>
-							<ol>
-								<li>
-									<div class="col-24 mul-datepicker-ctn">
-										<label class="col-6 first" for="js-mul-datepicker-example-message">Date:</label>
-										<input class="col-18" id="js-mul-datepicker-example-message" name="" value="" type="text" tabindex="" title="Select date." data-mul-datepicker-message-label="This is a calendar message area for user messages related to dates" />
-									</div>
-								</li>
-							</ol>
-						</fieldset>
-					</form>
-				<!-- CALENDAR - MESSAGE - EXAMPLE - ENDS -->
-			</div>
-
-		</div>
-		<div class="col-6">
-
-			<div class="mul-box mul-box-rnd mul-ref-example-box">
-				<h4 class="mul-hdr-rule">Masked Date Input</h4>
-				<!-- CALENDAR - MASKED DATE INPUT - EXAMPLE - BEGINS -->
-					<form class="mul-form" id="" name="" method="" action="" title="">
-						<fieldset>
-							<ol>
-								<li>
-									<div class="col-24 mul-datepicker-ctn">
-										<label for="js-mul-datepicker-example-masked">Date:</label>
-										<input class="col-24 mul-datepicker-masked-input" id="js-mul-datepicker-example-masked" name="" value="" type="text" tabindex="" title="Select date." />
-									</div>
-								</li>
-							</ol>
-						</fieldset>
-					</form>
-				<!-- CALENDAR - MASKED DATE INPUT - EXAMPLE - ENDS -->
-			</div>
-
-		</div>
-
-	</div>
-<!-- CALENDAR - ENDS -->
-
-<!-- DETAILS SECTION - BEGINS -->
-	<a name="moreDetails"></a>
-	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
-
-	<div class="col-24">
-		<div class="js-mul-tabs-example mul-tabs">
-			{% include "page-tabs" %}
-			<div id="tabs-1">
-				<p>A Calendar function is needed when the site/application needs the user to select a date for something, like a start date for an online employment application.
-				</p>
-				<p>Users can also select a date range, for instance if they are looking for a flight, they might need depart and arrival dates.</p>
-			</div>
-			<div id="tabs-2">
-				<ul>
-					<li>The graphical 1-month calendar can be opened in 4 ways:
-						<ul>	
-							<li>Clicking on the calendar label ("Date.")</li>
-							<li>On focus of the calendar input box</li>
-							<li>Clicking the calendar input box</li>
-							<li>Clicking the calendar icon</li>
-						</ul>
-					</li>
-					<li>When the calendar control is opened, the current date is highlighted in green</li>
-					<li>The control has an optional message component. Messages would be related to the date selected</li>
-					<li>Date format is configurable to m/d/yy (which is the default) or mm/dd/yyyy</li>
-					<li>For Masked Date Input the format is configured to mm/dd/yy</li>
-					<li>Dates must use /s, not -s. </li>
-					<li>Selecting a date inserts the chosen date into the text field and closes the control.</li>
-					<li>Calendar should be configured so it won't accept letters. Users can only enter numbers into the text field.</li>
-					<li>Calendar should navigate user to the desired date as it is typed in the text field. </li>
-					<li>Calendar date range is configured in coding. Designer can select the minimum and maximum search dates.</li>
-					<li>If a user tries to search beyond the pre-determined minimum and maximum dates, the calendar will automatically go to the last possible date it can access.</li>
-				</ul>
-			</div>
-			<div id="tabs-3">
-				<h5>Cross Browser Compatibility</h5>
-				<p>IE9 doesn't crop background gradients on containers with rounded corners, so we square the corners of every container so it looks just like IE8.</p>
-				
-				<h5>Dependencies</h5>
-				<p>Our Calendar feature is a jQuery UI control by the name of Date Picker. For more information on jQuery UI Date Picker and the configurable options available, check out the <a href="http://api.jqueryui.com/datepicker/" target="_blank">jQuery UI Date Picker API</a>. This site is maintained by The jQuery Foundation, not Mercer.</p>
-
-				<h4 class="mul-hdr-rule">Dependencies</h4>
-				<table class="mul-table mul-table-borders" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
-					<thead>
-						<tr>
-							<th width="" scope="col">Library</th>
-							<th width="" scope="col">Location or Download</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>jQuery {{ global.jquery_version }}</td>
-							<td>assets/scripts/core/lib/jquery</td>
-						</tr>
-						<tr>
-							<td>jQuery UI {{ global.jquery_ui_version }}</td>
-							<td>assets/scripts/core/lib/jquery</td>
-						</tr>
-						<tr>
-							<td>jQuery Masked Input Plugin 1.3.1</td>
-							<td>assets/scripts/core/lib/jquery/plugins</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div id="tabs-4">
-				<ul>
-					<li>All versions of the calendar control labels become stacked.</li> 
-					<li>The default behavior is to use the evolution calendar control instead of the native version in order to take advantage of the logic built into our control. (e.g., the ability to support a message, and the ability to support unselectable dates)</li>
-					<li>The default version of the calendar doesn’t allow for text input, and therefore does not invoke the device keyboard. Displaying both the default calendar control and the device keyboard would be a confusing experience for the user.</li>
-					<li>When displayed, the calendar should be both horizontally and vertically centered in the viewport and inherit the container margins.</li>
-					<li>The font size increases for mobile</li>
-				</ul>
-			</div>
-			<div id="tabs-5">
-			<!-- GET CODE - BEGINS -->
-				<section class="col-24">
-
-					<h5 class="mul-hdr-rule">HTML</h5>
+					</div>
+				<!-- EXAMPLE SECTION - BOX - ENDS -->
 					
+				</div>
+				<div class="col-6">
 
-					<pre class="prettyprint linenums"><xmp>{% include '/objects/calendar' %}</xmp></pre>
+				<!-- EXAMPLE SECTION - BOX - BEGINS -->
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
 
-					<h5 class="mul-hdr-rule">JS</h5>
+						{% if model.reference-example-versions == "true" %}
+							<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
+						{% endif %}
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+							<form class="mul-form mul-form-inline" id="" name="" method="" action="" title="">
+								<fieldset>
+									<ol>
+										<li>{% include '/objects/calendar-date-input' %}</li>
+									</ol>
+								</fieldset>
+							</form>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+				<!-- EXAMPLE SECTION - BOX - ENDS -->
 					
+				</div>
+				<div class="col-6">
 
-					<pre class="prettyprint linenums">mulDatepicker('js-mul-datepicker-example-readonly');</pre>
+				<!-- EXAMPLE SECTION - BOX - BEGINS -->
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
 
-				</section>
-			<!-- GET CODE - ENDS -->
+						{% if model.reference-example-versions == "true" %}
+							<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
+						{% endif %}
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+							<form class="mul-form mul-form-inline" id="" name="" method="" action="" title="">
+								<fieldset>
+									<ol>
+										<li>{% include '/objects/calendar-message' %}</li>
+									</ol>
+								</fieldset>
+							</form>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+				<!-- EXAMPLE SECTION - BOX - ENDS -->
+					
+				</div>
+				<div class="col-6">
+
+				<!-- EXAMPLE SECTION - BOX - BEGINS -->
+					<div class="mul-box mul-box-rnd mul-ref-example-box">
+
+						{% if model.reference-example-versions == "true" %}
+							<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-4 }}</h4>
+						{% endif %}
+
+						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+							<form class="mul-form mul-form-inline" id="" name="" method="" action="" title="">
+								<fieldset>
+									<ol>
+										<li>{% include '/objects/calendar-date-input-masked' %}</li>
+									</ol>
+								</fieldset>
+							</form>
+						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+				<!-- EXAMPLE SECTION - BOX - ENDS -->
+					
+				</div>
 			</div>
-		</div>
-	</div>
-<!-- DETAILS SECTION - ENDS -->
 
-</section>
+		</section>
+	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
+
+	</section>
+<!-- EXAMPLE SECTION - ENDS -->
+
 {% endblock %}
