@@ -2,16 +2,16 @@
 	"title": "Log In Layout",
 
 	"reference-overview": 
-		"<h3>Header</h3><p>Intro copy should be placed here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+		"<p>The Log In page serves as the entry point into the product, and as such it provides an opportunity to set the visual tone for the rest of the application. The main concept behind the Employee Portal login page is the use of a large branding image (large in terms of dimension, not file size) as the background.</p>",
 
 	"reference-usage": 
-		"<h3>Form</h3><ul><li>It is recommended that you use the <a href='/base/forms/compact'>Compact Inline Form</a> with the Login Layout.</li></ul><h3>Background Image</h3><ul><li>Login Layout background images need to be big enough to cover the whole browser window on big monitors, so 1600x1200 is recommended.</li><li>Background image can be customized using theme variable or by replacing the following image: \"assets/images/login_bkgd.jpg\", make sure to use the same file format and file name, along with the same dimensions (1600px X 1200px)</li></ul><h3>Customizations</h3><ul><li>Enable/disable \"Welcome To\" sub-header</li><li>Enable/disable header sub-text.</li><li>One or two column layout, if one column is used, the container is centered.</li><li>Background image can be customized using theme variable or by replacing the following image: \"assets/images/login_bkgd.jpg\", make sure to use the same file format and file name, along with the same dimensions (1600px X 1200px)</li></ul>",
+		"<p>The Login Page layout should be used for all instances where user authentication is required in order to access the site, product or system.</p>",
 
 	"reference-details": 
-		"<h3>Header</h3><p>Details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+		"<p>There are three main components of the baseline Log In template:</p><dt>Background Image</dt><ul><li>The image in this example is a placeholder – each geography or business line should select a unique image that best meets its needs.</li><li>The dimensions of the image should be at least 2500px wide and 1600px tall</li> <li>The image will stretch as necessary to fit the width of the viewing screen.</li></ul><dt>Welcome Container</dt><ul><li>This serves as the focal point of the page. It contains a welcome/ greeting, along with the product name. There is space for an optional text overview. This can be turned on or off,</li><li>This container can also house one or two additional containers. In this example, the Log In container is always required. It contains the Inline Form that captures the authentication information, along with the [Enter] button. There is room beneath the [Enter] button for optional “Forgot Password” and/or “Forgot Username” links.</li><li>The second internal container in this example can be turned on or off. When off, the Log In container centers itself inside the larger Welcome Container. This example shows a “Create Account” container, but it can be used for anything.</li></ul><dt>Login Footer</dt><ul><li>This footer is unique to the login page. It is attached to the bottom of the screen, and runs the width of the screen. It contains a company logo on the left side, and then whatever text links are necessary for each geography or business line on the right side. This example shows a number of possibilities, but the content and structure should be defined at a geographic level.</li></ul> ",
 
 	"reference-mobile": 
-		"<h3>Header</h3><p>Mobile details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+		"<ul><li>The individual containers within the Welcome Container will stack on top of each other.</li><li>The Buttons will span the width of the viewing screen.</li><li>The background image will shrink to fill the available screen real estate.</li><li>The footer links will stack on top of each other, and will be separated by a horizontal line.</ul>",
 
 	"reference-technical": 
 		"<h3>Header</h3><p>Technical details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
@@ -25,11 +25,11 @@
 
 	"reference-example-versions": "true",
 	"reference-example-version-label":
-		"Default Layout",
+		"Multiple Internal Containers",
 	"reference-example-version-content":
 		"<p>Two column container layout with \"Welcome To\" sub-header.</p>",
 	"reference-example-version-label-2":
-		"Custom Layout",
+		"Single Internal Container",
 	"reference-example-version-content-2":
 		"<p>One column container layout with no \"Welcome To\" sub-header.</p>",
 	"reference-example-version-label-3":
