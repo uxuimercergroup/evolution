@@ -12,7 +12,7 @@
 			a.highlighted	{
 				[class*="mul-icon"]
 								{
-								@include border-radius($megaMenuItemBorderRadius $megaMenuItemBorderRadius 0 0);
+								@include border-radius($headerIconRadius $headerIconRadius 0 0);
 								padding-bottom: 12px;
 								margin-bottom: -10px;
 								}
@@ -52,16 +52,20 @@
 					.mul-mega-menu-spotlight-ctn
 										{
 										@include clearfix;
-										@include border-radius(4px);
+										@include border-radius($megaMenuContainerSpotlightBorderRadius);
 										background-color: $gray-darkest;
-										padding: 4px 0;
+										padding: $basePadding;
 						.mul-horizontal-list
 											{
 							dd					{
 												margin-left: 0;
-								&:first-child		{margin-left: 0;}
+								&:first-child		{
+													margin-left: 0;
+									a					{padding-top: 0;}
+													}
 								a					{
 													color: #72BE44;
+													padding: $basePadding 0 0 0;
 									[class*="mul-icon"]	{
 														background-color: $transparent;
 														color: #72BE44;
@@ -86,7 +90,6 @@
 					dt					{
 										color: $white;
 										margin-bottom: 0;
-										padding: 0 $basePadding 2px $basePadding;
 										}
 					dd					{
 										margin: 0;
@@ -94,7 +97,8 @@
 						&:last-child		{border-bottom: 1px dotted $gray-mid-dark;}
 						a					{
 											color: $white;
-											padding: 10px $basePadding;
+											line-height: 30px;
+											padding-left: 0;
 							&:hover				{
 												background-color: $transparent;
 												text-decoration: underline;
@@ -243,16 +247,17 @@
 				.mul-mega-menu-adjust
 									{
 					.mul-mega-menu-ctn	{
+
 					// SPOTLIGHT CONTAINER - BEGINS
 						.mul-mega-menu-spotlight-ctn
 											{
-											padding: 10px;
 							.mul-horizontal-list
 												{
 								dd					{
 													margin-left: $baseMargin;
 									&:first-child		{}
 									a					{
+														padding-top: 0;
 										[class*="mul-icon"]	{}
 										&:hover				{
 											[class*="mul-icon"]	{}
@@ -269,9 +274,9 @@
 						dt					{}
 						dd					{
 											border-top: 0;
-											margin: 4px 0 4px 14px;
 							&:last-child		{border-bottom: 0;}
 							a					{
+												padding-top: 0;
 								&:hover				{}
 												}
 											}

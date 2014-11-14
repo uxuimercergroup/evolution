@@ -10,7 +10,7 @@
 		.mul-header-icon	{
 			a					{
 				[class*="mul-icon"]	{
-									@include border-radius($megaMenuItemBorderRadius);
+									@include border-radius($headerIconRadius);
 									background-color: $megaMenuItemBackgroundColor;
 									color: $megaMenuItemColor;
 									cursor: pointer;
@@ -129,7 +129,7 @@
 								{
 								@include background-gradient($mastheadProfileMenuBackgroundStartColor,$mastheadProfileMenuBackgroundEndColor);
 								@include clearfix;
-								height: 52px;
+								height: $mastheadContentHeight;
 				li					{
 									width: 100% !important;
 									border-bottom: 0;
@@ -205,7 +205,7 @@
 						.mul-logo-col-2		{
 											margin-left: 0;
 											margin-right: 8px;
-							a					{font-size: $hdrH1FontSize;}
+							a					{font-size: $mastheadLogoFontSizeLargeBreakpoint;}
 											}
 					// MOBILE NAVBAR CONTAINER - BEGINS
 						.mul-mb-navbar-ctn	{display: none;}

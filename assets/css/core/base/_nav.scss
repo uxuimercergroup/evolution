@@ -31,9 +31,9 @@
 		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
 
 			.mul-navbar			{
-								@include background-gradient($gray-lightest, $gray-mid-light);
+								@include background-gradient($gray-lightest, $gray-mid-light); //THEME
 								@include clearfix;
-								border-bottom: 1px solid $gray-mid-dark;
+								border-bottom: $navbarBorderBottomWidth $navbarBorderBottomStyle $gray-mid-dark; //THEME
 								display: block;
 								width: 100%;
 				.mul-navbar-adjust	{
@@ -55,7 +55,7 @@
 													display: block;
 													padding: 0;
 													text-decoration: none;
-									&:hover				{color: #002C77;}
+									&:hover				{color: #002C77;} //THEME
 									.mul-user-identifier-support-text
 														{display: none;}
 													}
@@ -70,9 +70,9 @@
 										[class*="mul-icon"]
 														{margin-right: 4px;}
 										&:hover			{
-														@include background-gradient($transparent, $transparent);
+														@include background-gradient($transparent, $transparent); //THEME
 											[class*="mul-icon"]
-															{color: $white;}
+															{color: $white;} //THEME
 														}
 													}
 												}
@@ -82,9 +82,9 @@
 						.mul-nav-menus		{
 							li					{
 								ul					{
-													background-color: #CCC;
+													background-color: #CCC; //THEME
 									li					{
-														border-top-color: #EEE;
+														border-top-color: #EEE; //THEME
 										a					{
 															@include border-radius(0);
 															font-family: $fontRegularFamily;
@@ -105,14 +105,14 @@
 											}
 						.mul-navbar-message	{
 											border: 0 !important;
-											padding: 9px 0 7px 0;
+											padding: $navbarMessagePadding;
 							span				{
 												@include text-overflow;
-												border-right: 1px dotted $gray-mid-dark;
+												border-right: $navbarMessageBorderRightWidth $navbarMessageBorderRightStyle $gray-mid-dark; //THEME
 												display: block;
-												font-family: $fontSemiBoldFamily;
-												padding: 2px 10px 2px 0;
-												width: 200px;
+												font-family: $navbarMessageFontFamily;
+												padding: $navbarMessageInnerPadding;
+												width: $navbarMessageWidth;
 												}
 											}
 						.mul-navbar-message-noline
