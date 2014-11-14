@@ -1,3 +1,42 @@
 {
-  "title": "Tab Set"
+	"title": "Tab Set",
+
+	"reference-overview": 
+		"<p>The Tab Set control is a supplementary navigational system that controls the display of large groups of related content. It essentially organizes content into logical/easy to digest chunks that are displayed one at a time. Tab Sets help organize content on the page and keep sites looking neat and clean, so users won't be overwhelmed by tons of content.</p>",
+
+	"reference-usage": 
+		"<p>This Tab Set control should be used when you want to manage the display of distinct, yet related groups of content that are connected to a single concept.</p><p>It's a great feature when there is a lot of content that needs to be displayed as it only presents a subset of the content and keeps the rest hidden until another tab is selected.</p>",
+
+	"reference-details": 
+		"<p>All tabs should be left justified. This makes all Mercer tabs uniform and easy for users to spot on the page.</p><p>Use Title Case for the tab labels.</p><p>The tab content area is a variable height, so the height of that container may increase or decrease from one tab to another depending on the amount of content included.</p><p>Avoid using multiple nested Tab Sets. When you have multiple layers of content or data, use a different UI control for the interior of a tab, such as a <a href='/objects/mini-filter'>Mini Filter</a>.</p><h3>States</h3><p>There are two states to the tab set control:</p><ul><li>Active - This is the selected tab. There is only one Active tab at a time in the control.</li><li>Inactive - These are the other available tabs. There may be more than one Inactive tab at a time in the control.</li></ul><h3>Visual Design</h3><p>The background for the Active tab is #FFFFFF.</p><p>The background for the Inactive tab is a gradient. The top color is #dfdfdf, and the bottom color is #f2f2f2.</p>",
+
+	"reference-mobile": 
+		"<p>In the mobile version, the tab set becomes an active component, the number of tabs shrink to fit the screen.  The user is provided with 'forward' and 'back' controls to scroll thru the total number of available tabs.</p><p>The text for the tab name and content increases slightly to allow for better readability.</p>",
+
+	"reference-technical": 
+		"<h3>Cross Browser Compatibility</h3><p>IE9 doesn't crop background gradients on rounded corners, so we square the corners of the tabs and it looks just like IE8.</p><h3>Dependencies</h3><p>Tab Sets are a jQuery UI control. For more information on jQuery UI Tabs and the configurable options available, check out the <a href='http://api.jqueryui.com/tabs/' target='_blank'>jQuery UI Tabs API</a>. This site is maintained by The jQuery Foundation, not Mercer.</p>",
+
+	
+	"reference-dependency": "true",
+	"reference-dependency-jquery": "true",
+	"reference-dependency-jquery-ui": "true",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "false",
+	"reference-example-version-label":
+		"",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"<p>Tabs work on a small screen size because there is a carousel like functionality added to the tab grouping.</p>",
+	"reference-code-html-content-block-post": 
+		"",
+
+	"reference-code-js": "true",
+	"reference-code-js-content-block-pre": 
+		"<p>To init the tabs for your page you would replace <code>js-mul-tabs-example</code> with the name of your tabs. You would also need to add the new class name to the HTML as well.</p>",
+	"reference-code-js-content-block-post": 
+		""
 }

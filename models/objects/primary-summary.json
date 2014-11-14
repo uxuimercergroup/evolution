@@ -1,4 +1,48 @@
 {
-  "title": "Primary Summary Container",
-  "IntroCopy" : "The Primary Summary Container is meant to provide the user with a high level overview of various subsections of data.  For example, a user could have a number of tasks which could be broken down into a set of statuses.  The primary summary container would provide the number of total tasks broken down into the various status states."
+	"title": "Primary Summary Container",
+
+	"reference-overview": 
+		"<p>The Primary Summary Container is meant to provide the user with a high level overview of various subsections of data.  For example, a user could have a number of tasks which could be broken down into a set of statuses.  The primary summary container would provide the number of total tasks broken down into the various status states.</p>",
+
+	"reference-usage": 
+		"<ul><li>Number of sub-sections can be a variable</li><li>Each section should be same size</li><li>Titles can wrap to second link</li><li>Each section has rollover color</li><li>Red to indicate Attention Needed</li><li>Yellow is rollover color</li><li>Each subsection can be a link to more details or just a number</li></ul>",
+
+	"reference-details": 
+		"<h3>Header</h3><p>Details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+
+	"reference-mobile": 
+		"<p>No change for mobile presentation.  The copy shrinks to fit the available space and can wrap.</p>",
+
+	"reference-technical": 
+		"<h3>Header</h3><p>Technical details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+
+	
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "true",
+	"reference-example-version-label":
+		"Default Example",
+	"reference-example-version-label-2":
+		"Example With Icons",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"",
+	"reference-code-html-content-block-post": 
+		"",
+	"reference-code-html-content-block-pre-2": 
+		"",
+	"reference-code-html-content-block-post-2": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
 }

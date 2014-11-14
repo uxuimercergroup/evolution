@@ -1,81 +1,89 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<!-- INTRO SECTION - BEGINS -->
-	<section class="col-24">
-		<h1>{{ model.title }}</h1>
-		<p class="mul-intro-text">
-			{{ model.IntroCopy }}
-			
-		</p>
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
+
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24 mul-alternate-views-badge mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-ref-alternate-views-badge">
+
+		{% include '/reference/reference-content' %}
+
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
+		{% if model.reference-get-code == "true" %}
+			<div id="mul-ref-alternate-views-badge-content-panel-get-code">
+
+				<h3 class="mul-hdr-rule">HTML</h3>
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{% include '/objects/primary-summary-ctn' %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post }}
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label-2 }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre-2 }}
+				{{ global.reference-get-code-start-tag }}{% include '/objects/primary-summary-icons-ctn' %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post-2 }}
+
+				{% if model.reference-code-js == "true" %}
+
+					<h3 class="mul-hdr-rule">JS</h3>
+
+					{% if model.reference-example-versions == "true" %}
+						<h4>{{ model.reference-example-version-label }}</h4>
+					{% endif %}
+					{{ model.reference-code-js-content-block-pre }}
+					{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-js-content-block-post }}
+
+				{% endif %}
+
+			</div>
+		{% endif %}
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
+
 	</section>
-<!-- INTRO SECTION - ENDS -->
+<!-- CONTENT SECTION - ENDS -->
 
-<section class="col-24">
+<!-- EXAMPLE SECTION - BEGINS -->
+	<section class="col-24 mul-ref-example">
 
-	<h3 class="mul-hdr-dbl-rule">
-		Example
-		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
-	</h3>
+	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+		<h3 class="mul-hdr-dbl-rule mul-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
+	<!-- EXAMPLE SECTION - HEADER - ENDS -->
 
-<!-- PRIMARY SUMMARY CONTAINER EXAMPLE - BEGINS -->
-	<div class="col-24 example-min-height">
-		<h5>Default Example</h5>
-		{% include '/objects/primary-summary-ctn' %}
+	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+		<section class="mul-ref-example-content">
 
-		<h5>Example With Icons</h5>
-		{% include '/objects/primary-summary-icons-ctn' %}
-	</div>
-<!-- PRIMARY SUMMARY CONTAINER EXAMPLE - ENDS -->
+		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 
-<!-- DETAILS SECTION - BEGINS -->
-	<div class="col-24">
-		<a name="moreDetails"></a>
-		<h4 class="mul-hdr-dbl-rule addtional-detail-hdr">Additional Details</h4>
-		
+			{% if model.reference-example-versions == "true" %}
+				<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
+			{% endif %}
 
-		<div class="js-mul-tabs-example mul-tabs">
-			{% include "page-tabs" %}
-			<div id="tabs-1">
-				<ul>
-					<li>Number of sub-sections can be a variable</li>
-					<li>Each section should be same size</li>
-					<li>Titles can wrap to second link</li>
-					<li>Each section has rollover color</li>
-					<li>Red to indicate Attention Needed</li>
-					<li>Yellow is rollover color</li>
-					<li>Each subsection can be a link to more details or just a number</li>
-				</ul>
-			</div>
-			<div id="tabs-2">
-				<p>Functional details go here&hellip;</p>
-			</div>
-			<div id="tabs-3">
-				<p>Technical details go here&hellip;</p>
-			</div>
-			<div id="tabs-4">
-				<p>No change for mobile presentation.  The copy shrinks to fit the available space and can wrap.</p>
-			</div>
-			<div id="tabs-5">
-			<!-- GET CODE - BEGINS -->
-				<section class="col-24">
+			{% include '/objects/primary-summary-ctn' %}
 
-					<h5 class="mul-hdr-rule">HTML</h5>
-					
+		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-					<h5>Default Example</h5>
-					{{ global.PrettifyStartTag }}{% include '/objects/primary-summary-ctn' %}{{ global.PrettifyEndTag }}
+		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 
-					<h5>Example With Icons</h5>
-					{{ global.PrettifyStartTag }}{% include '/objects/primary-summary-icons-ctn' %}{{ global.PrettifyEndTag }}
-					
+			{% if model.reference-example-versions == "true" %}
+				<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
+			{% endif %}
 
-				</section>
-			<!-- GET CODE - ENDS -->
-			</div>
-		</div>
-	</div>
-<!-- DETAILS SECTION - ENDS -->
+			{% include '/objects/primary-summary-icons-ctn' %}
 
-</section>
+		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+		</section>
+	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
+
+	</section>
+<!-- EXAMPLE SECTION - ENDS -->
+
 {% endblock %}

@@ -1,3 +1,42 @@
 {
-  "title": "User Profile"
+	"title": "User Profile",
+
+	"reference-overview": 
+		"<p>This profile displays information for a User.</p>",
+
+	"reference-usage": 
+		"<p>Use this specfic profile header for a user. This allows for consistency as you navigate through the respective information within the profile itself.</p>",
+
+	"reference-details": 
+		"<h3>Background Color</h3><p>The background color for this profile is #00A8C8.</p><h3>Icon</h3><p>This icon used for user profile is different according to the status/type.</p><ul><li>Green - Active</li><li>Yellow - Dependent</li><li>Grey - Inactive</li><li>Red - Terminated</li></ul><p><img src='../assets/images/core/icons/icon_user_active_large.png' alt='Active User' height='49' width='49'> <img src='../assets/images/core/icons/icon_user_dependent_large.png' alt='Dependent User' height='49' width='49'> <img src='../assets/images/core/icons/icon_user_generic_large.png' alt='Inactive User' height='49' width='49'> <img src='../assets/images/core/icons/icon_user_termed_large.png' alt='Terminated User' height='49' width='49'></p>",
+
+	"reference-mobile": 
+		"<p>When the profiles are viewed on mobile/tablet devices, the navigation links will appear as a slidedown menu. Users will click on a menu icon to view the navigation that can be toggled. The demographic information that may appear in a profile header will be displayed once the user clicks on the demographic icon next to the menu icon and can be toggled on and off. The Identifier and 2nd level Identifier (header and subheader) will ellipse if necessary.</p>",
+
+	"reference-technical": 
+		"<h3>Header</h3><p>Technical details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+
+	
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "false",
+	"reference-example-version-label":
+		"",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"",
+	"reference-code-html-content-block-post": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
 }

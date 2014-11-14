@@ -1,80 +1,72 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<!-- INTRO SECTION - BEGINS -->
-	<section class="col-24">
-		<h1>{{ model.title }}</h1>
-		<p class="mul-intro-text">
-			The Entity Profile makes up the core elements that live on a page. For example: icon, header, secondary header, navigation links.
-		</p>
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
+
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24 mul-alternate-views-badge mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-ref-alternate-views-badge">
+
+		{% include '/reference/reference-content' %}
+
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
+		{% if model.reference-get-code == "true" %}
+			<div id="mul-ref-alternate-views-badge-content-panel-get-code">
+
+				<h3 class="mul-hdr-rule">HTML</h3>
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{% include "/objects/profile-entity" %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post }}
+
+				{% if model.reference-code-js == "true" %}
+
+					<h3 class="mul-hdr-rule">JS</h3>
+
+					{% if model.reference-example-versions == "true" %}
+						<h4>{{ model.reference-example-version-label }}</h4>
+					{% endif %}
+					{{ model.reference-code-js-content-block-pre }}
+					{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-js-content-block-post }}
+
+				{% endif %}
+
+			</div>
+		{% endif %}
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
+
 	</section>
-<!-- INTRO SECTION - ENDS -->
+<!-- CONTENT SECTION - ENDS -->
 
-<section class="col-24">
+<!-- EXAMPLE SECTION - BEGINS -->
+	<section class="col-24 mul-ref-example">
 
-	<h3 class="mul-hdr-dbl-rule">
-		Example
-		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
-	</h3>
+	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+		<h3 class="mul-hdr-dbl-rule mul-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
+	<!-- EXAMPLE SECTION - HEADER - ENDS -->
 
-	<div class="col-24 example-min-height">
-		{% include "/objects/profile-entity" %}
-	</div>
+	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+		<section class="mul-ref-example-content">
 
-<!-- DETAILS SECTION - BEGINS -->
-	<a name="moreDetails"></a>
-	<h4 class="mul-hdr-dbl-rule addtional-detail-hdr">Additional Details</h4>
+		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 
-	<div class="col-24">
-		<div class="js-mul-tabs-example mul-tabs">
-			{% include "page-tabs" %}
-			<div id="tabs-1">
-				<p>These profiles are differentiated from each other using a background color and unique icon used to indicate the status or type of page you are on. They are used for consistency as you navigate through the respective information within the profile itself.</p>
-			</div>
-			<div id="tabs-2">
-				<p>Each profile consists of the following elements:</p>
+			{% if model.reference-example-versions == "true" %}
+				<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
+			{% endif %}
 
-				<h5>Background color</h5>
-				<p>Each profile has a different gradient background color which is unique to that profile.</p>
+			{% include "/objects/profile-entity" %}
 
-				<h5>Icon</h5>
-				<p>An icon aligned to the left of the Header and Subheader is used to uniquely identify the profile you are in. Some profiles have different color icons representing status.</p>
+		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-				<h5>Indentifier (Header)</h5>
-				<p>Depending on which profile you are in, a unique header will coordinate with the profile.</p>
+		</section>
+	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
 
-				<h5>2nd Level Identifier (Subheader)</h5>
-				<p>The subheader will coordinate with the Header and can be anything from a specific location or status.</p>
+	</section>
+<!-- EXAMPLE SECTION - ENDS -->
 
-				<h5>Navigation links</h5>
-				<p>Navigates to other pages within the profile and are unique to each profile. A profile may or may not have links.</p>
-
-				<h5>Demographic Information</h5>
-				<p>This information appears in the header on the right hand side. This information can include types of information such as; user information (SSN, DOB), Office Locations, Premium $, Revenue $, Countries, etc.</p>
-			</div>
-			<div id="tabs-3">
-				<p>Technical details go here&hellip;</p>
-			</div>
-			<div id="tabs-4">
-				<p>
-					When the profiles are viewed on mobile/tablet devices, the navigation links will appear as a slidedown menu. Users will click on a menu icon to view the navigation that can be toggled. The demographic information that may appear in a profile header will be displayed once the user clicks on the demographic icon next to the menu icon and can be toggled on and off. The Identifier and 2nd level Identifier (header and subheader) will ellipse if necessary.
-				</p>
-			</div>
-			<div id="tabs-5">
-			<!-- GET CODE - BEGINS -->
-				<section class="col-24">
-
-					<h5 class="mul-hdr-rule">HTML</h5>
-					
-
-					<pre class="prettyprint linenums"><xmp>{% include "/objects/profile-entity" %}</xmp></pre>
-
-				</section>
-			<!-- GET CODE - ENDS -->
-			</div>
-		</div>
-	</div>
-<!-- DETAILS SECTION - ENDS -->
-
-</section>
 {% endblock %}
