@@ -55,9 +55,27 @@
 
 		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 
-			<a class="mul-btn mul-btn-medium mul-btn-primary mul-btn-first" href="/demos/product-header-sliding-nav-demo" target="_blank">View Full Page Example</a>
+			{% if model.reference-example-versions == "true" %}
+				<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
+			{% endif %}
+
+			{ include '' }
 
 		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+		<!-- EXAMPLE SECTION - BOX - BEGINS -->
+			<div class="mul-box mul-box-rnd mul-ref-example-box">
+
+				{% if model.reference-example-versions == "true" %}
+					<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
+				{% endif %}
+
+				<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+					{ include '' }
+				<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+			</div>
+		<!-- EXAMPLE SECTION - BOX - ENDS -->
 
 		</section>
 	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
