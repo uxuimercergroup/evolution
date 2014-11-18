@@ -1,0 +1,37 @@
+<!-- MASTHEAD - BEGINS -->
+{% if global.navbar_type != 'toolbar' %}
+	<section class="mul-masthead">
+		<div class="mul-masthead-adjust">
+			<section class="col-18 first mul-logo mul-small-mediaquery-grid">
+			{% if global.company_logo_primary == 'true' %}
+				<div class="mul-logo-col-1">
+					{% include '/base/header/company-logo-primary' %}
+				</div>
+			{% endif %}
+				<div class="mul-logo-col-2">
+					<a href="/index">MERCER <span>EVOLUTION</span></a>
+				</div>
+
+				<div class="mul-logo-col-3 mul-mb-navbar-ctn">
+				<!-- MOBILE MENU ICON - BEGINS -->
+					<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
+						<li class="mul-header-icon">
+							<a href="javascript:;" class="js-mul-toggle-content" data-mul-toggle="1"><i class="mul-icon-menu3"></i></a>
+						</li>
+					</ul>
+				<!-- MOBILE MENU ICON - ENDS -->
+				</div>
+			</section>
+			<section class="col-6 mul-hidden-small-mediaquery">
+			{% if global.identifier_or_logo == 'user-identifier' %}
+				{% include '/base/header/user-identifier' %}
+			{% elseif global.identifier_or_logo == 'company-logo-secondary' %}
+				{% include '/base/header/company-logo-secondary' %}
+			{% else %}
+
+			{% endif %}
+			</section>
+		</div>
+	</section>
+{% endif %}
+<!-- MASTHEAD - ENDS -->

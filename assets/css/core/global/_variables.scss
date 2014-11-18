@@ -336,8 +336,10 @@ $buttonHorzGroupFirstChildBorderLeftStyle:	solid !default;
 
 // ICON STYLES
 $headerIconRadius:							3px !default;
+$headerIconPadding:							4px 10px 6px 6px !default;
+$headerIconMinWidth:						28px !default;
 
-// BASE
+// BASE & LOGO STYLES
 $mastheadContentHeight:						52px !default;
 $mastheadLogoLineHeight:					44px !default;
 $mastheadLogoFontWeight:					400 !default;
@@ -345,17 +347,22 @@ $mastheadLogoFontSize:						24px !default;
 $mastheadLogoFontSizeLargeBreakpoint:		33px !default;
 
 // USER IDENTIFIER
-$mastheadProfileMenuFontSize:				12px !default;
+$userIdentifierMenuFontSize:				12px !default;
+$userIdentifierMenuPadding:					6px 10px 6px 30px !default;
 
 // SPOTLIGHT CONTAINER
 $megaMenuContainerSpotlightBorderRadius: 	4px !default;
+
+
+// MENU STYLES
+// ------------------------------------------------------------------------------------------
+$menuLinkPadding:							7px 10px !default;
 
 
 // NAVIGATION
 // ------------------------------------------------------------------------------------------
 $navbarBorderBottomWidth:					1px !default;
 $navbarBorderBottomStyle:					solid !default;
-
 $navbarMessageWidth:						200px !default;
 $navbarMessagePadding:						9px 0 7px 0 !default;
 $navbarMessageInnerPadding:					2px 10px 2px 0 !default;
@@ -363,17 +370,6 @@ $navbarMessageFontFamily:					$fontSemiBoldFamily !default;
 $navbarMessageBorderRightWidth:				1px !default;
 $navbarMessageBorderRightStyle:				dotted !default;
 
-/*
-$navLinkHeightLargeBreakpoint:				37px !default;
-$navLinkFontSize:							18px !default;
-$navLinkFontSizeLargeBreakpoint:			14px !default;
-$navLinkLineHeight:							26px !default;
-$navLinkLineHeightLargeBreakpoint:			20px !default;
-$navBoxLinkHeightLargeBreakpoint:			30px !default;
-$navBoxLinkFontSize:						14px !default;
-$navBoxLinkFontSizeLargeBreakpoint:			($navBoxLinkFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$navBoxLinkLineHeight:						20px !default;
-*/
 
 // ICONS
 // ------------------------------------------------------------------------------------------

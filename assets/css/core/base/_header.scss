@@ -14,11 +14,11 @@
 									background-color: $megaMenuItemBackgroundColor;
 									color: $megaMenuItemColor;
 									cursor: pointer;
-									padding: 4px 10px 6px 6px;
-									min-width: 28px;
+									padding: $headerIconPadding;
+									min-width: $headerIconMinWidth;
 					&:hover				{
-										background-color: $gray-dark;
-										color: $gray-mid-light;
+										background-color: $gray-dark; //THEME
+										color: $gray-mid-light; //THEME
 										}
 									}
 								}
@@ -53,7 +53,7 @@
 
 		.mul-header-adjust	{
 							@include clearfix;
-							background-color: #EFEFEF;
+							background-color: $gray-lighter; //THEME
 		// USER IDENTIFIER CONTAINER - BEGINS
 			.mul-user-identifier-ctn
 								{display: none;}
@@ -127,7 +127,7 @@
 		// USER IDENTIFIER CONTAINER - BEGINS
 			.mul-user-identifier-ctn
 								{
-								@include background-gradient($mastheadProfileMenuBackgroundStartColor,$mastheadProfileMenuBackgroundEndColor);
+								@include background-gradient($mastheadProfileMenuBackgroundStartColor,$mastheadProfileMenuBackgroundEndColor); //THEME
 								@include clearfix;
 								height: $mastheadContentHeight;
 				li					{
@@ -155,8 +155,8 @@
 					.mul-user-identifier-menu
 										{
 										@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
-										@include box-shadow(0, 2px, 2px, $mastheadProfileMenuShadowColor);
-										background-color: $mastheadProfileMenuBackgroundEndColor;
+										@include box-shadow(0, 2px, 2px, $mastheadProfileMenuShadowColor); //THEME
+										background-color: $mastheadProfileMenuBackgroundEndColor; //THEME
 										border: 0;
 										min-width: 100% !important;
 										max-width: 100% !important;
@@ -164,12 +164,12 @@
 						li					{
 											border: 0;
 							a					{
-												@include href-link($mastheadProfileMenuTextColor, none);
-												font-size: $mastheadProfileMenuFontSize;
+												@include href-link($mastheadProfileMenuTextColor, none); //THEME
+												font-size: $userIdentifierMenuFontSize;
 												display: block;
-												padding: 6px 10px 6px 30px;
+												padding: $userIdentifierMenuPadding;
 								&:hover				{
-													background-color: $mastheadProfileMenuHoverColor;
+													background-color: $mastheadProfileMenuHoverColor; //THEME
 													@include transition(background-color 0.3s ease-in-out);
 													}
 												}

@@ -1,0 +1,159 @@
+{% if global.navbar_type == "toolbar" %}
+<!-- FIXED NAVBAR - BEGINS -->
+	<section class="mul-navbar mul-navbar-fixed">
+		<div class="mul-navbar-adjust mul-navbar-fixed-adjust">
+			<nav class="mul-text-nav">
+				<div class="col-{{ global.toolbar_column_width_left }} first mul-navbar-col-1">
+				<!-- LOGO SECTION - BEGINS -->
+					<section class="mul-logo">
+						<div class="mul-logo-col-2">
+							<a href="/index">MERCER <span>EVOLUTION</span></a>
+						</div>
+					</section>
+				<!-- LOGO SECTION - ENDS -->
+				</div>
+				<div class="col-{{ global.toolbar_column_width_right }} mul-navbar-col-2">
+				{% if global.toolbar_group_icons == 'true' %}
+					<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
+						<li class="mul-header-icon">
+							<a href="javascript:;"><i class="mul-icon-envelop"></i></a>
+						</li>
+						<li class="mul-header-icon">
+							<a href="javascript:;"><i class="mul-icon-basket"></i></a>
+						</li>
+						<li class="mul-header-icon">
+							<a href="javascript:;"><i class="mul-icon-menu3"></i></a>
+						</li>
+					</ul>
+				{% endif %}
+
+				{% if global.toolbar_navigation == 'true' %}
+					<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
+					{% if global.toolbar_navigation_items == 'true' %}
+						<li><a class="mul-navbar-no-pipe-left" href="javascript:;">Home</a></li>
+						<li><a href="javascript:;">Product</a></li>
+						<li><a href="javascript:;">Company</a></li>
+						<li><a href="javascript:;">Blog</a></li>
+					{% endif %}
+
+					{% if global.toolbar_user_identifier == "true" %}
+						<li>
+							<a href="javascript:;">Arquimedez Pozo</a>
+							<ul class="mul-user-identifier-menu">
+								<li><a href="javascript:;">View Profile</a></li>
+								<li><a href="javascript:;">Change Language</a></li>
+								<li><a href="javascript:;">User Administration</a></li>
+								<li><a href="javascript:;">Log Out</a></li>
+							</ul>
+						</li>
+					{% endif %}
+					</ul>
+				{% endif %}
+				</div>
+			</nav>
+		</div>
+	</section>
+<!-- FIXED NAVBAR - ENDS -->
+{% else %}
+<!-- NAVBAR - BEGINS -->
+	<section class="mul-navbar">
+		<div class="mul-navbar-adjust">
+		{% if global.navbar_style == "text" %}
+			<nav class="mul-text-nav">
+		{% else %}
+			<nav class="mul-tabbed-nav">
+		{% endif %}
+				<div class="col-{{ global.navbar_column_width_left }} first mul-navbar-col-1">
+				{% if global.navbar_left == "true" %}
+
+					<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
+					{% if global.navbar_navigation == "true" %}
+						<li><a class="{% if mixture.url == "index" %}mul-navbar-item-active{% endif %}" href="/index">Home</a></li>
+						<li><a href="/browser-testing-support">Browser Support</a></li>
+						<li>
+							<a href="/toolkit">Toolkit</a>
+							<ul>
+								<li><a href="javascript:;">English</a></li>
+								<li><a href="javascript:;">Spanish</a></li>
+								<li>
+									<a href="javascript:;">German</a>
+									<ul>
+										<li><a href="javascript:;">English</a></li>
+										<li><a href="javascript:;">Spanish</a></li>
+										<li><a href="javascript:;">German</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						{% if global.navbar_user_identifier == "true" %}
+							<li>
+								<a href="javascript:;">Arquimedez Pozo</a>
+								<ul class="mul-user-identifier-menu">
+									<li><a href="javascript:;">View Profile</a></li>
+									<li><a href="javascript:;">Change Language</a></li>
+									<li><a href="javascript:;">User Administration</a></li>
+									<li><a href="javascript:;">Log Out</a></li>
+								</ul>
+							</li>
+						{% endif %}
+
+					{% else %}
+						<li class="mul-header-icon">
+							<a href="javascript:;"><i class="mul-icon-menu3"></i></a>
+						</li>
+					{% endif %}
+					</ul>
+
+				{% endif %}
+				</div>
+				<div class="col-{{ global.navbar_column_width_right }} mul-navbar-col-2">
+				{% if global.navbar_group_icons == "true" %}
+					<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
+						{% include "/base/header/navbar-group-icons" %}
+					</ul>
+				{% endif %}
+
+				{% if global.navbar_right == "true" %}
+					<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
+						<li><a class="{% if mixture.url == "index" %}mul-navbar-item-active{% endif %}" href="/index">Home</a></li>
+						<li><a href="/browser-testing-support">Browser Support</a></li>
+						<li>
+							<a href="/toolkit">Toolkit</a>
+							<ul>
+								<li><a href="javascript:;">English</a></li>
+								<li><a href="javascript:;">Spanish</a></li>
+								<li>
+									<a href="javascript:;">German</a>
+									<ul>
+										<li><a href="javascript:;">English</a></li>
+										<li><a href="javascript:;">Spanish</a></li>
+										<li><a href="javascript:;">German</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					{% if global.navbar_user_identifier == "true" %}
+						<li>
+							<a href="javascript:;">Arquimedez Pozo</a>
+							<ul class="mul-user-identifier-menu">
+								<li><a href="javascript:;">View Profile</a></li>
+								<li><a href="javascript:;">Change Language</a></li>
+								<li><a href="javascript:;">User Administration</a></li>
+								<li><a href="javascript:;">Log Out</a></li>
+							</ul>
+						</li>
+					{% endif %}
+					</ul>
+				{% endif %}
+
+				{% if global.navbar_message_area == "true" %}
+					<ul class="mul-navbar-message {% if global.navbar_message_area_noborder == "true" %}mul-navbar-message-noline{% endif %} {% if global.navbar_message_area_nopadding == "true" %}mul-navbar-message-nopadding{% endif %}">
+						{% include "/base/header/navbar-message-area" %}
+					</ul>
+				{% endif %}
+				</div>
+			</nav>
+		</div>
+	</section>
+<!-- NAVBAR - ENDS -->
+{% endif %}
