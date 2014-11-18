@@ -10,7 +10,6 @@
 
 
 
-
 	"navbar_type": "toolbar",
 
 	"company_logo_primary": "false",
@@ -45,25 +44,6 @@
 
 
 
-
-
-	"ExampleSectionHeader" : "Example",
-	"AddtionalDetailSectionHeader" : "Additional Details",
-
-	"PrettifyStartTag" : "<pre class=\"prettyprint linenums\"><xmp>",
-	"PrettifyEndTag" : "</xmp></pre>",
-
-	"page-tabs" : [
-		{"tabs": "Overview"},
-		{"tabs": "Usage"},
-		{"tabs": "Details"},
-		{"tabs": "Mobile"},
-		{"tabs": "Technical"},
-		{
-		"tabs": "Get Code",
-		"tab-classname": "get-code-tab"
-		}
-	],
 
 	"reference-buttons" : [
 		{
@@ -108,8 +88,10 @@
 				{
 					"sub-section-hdr": "Navigation",				
 					"sub-section": [
-						{"link-name": "Masthead With Main Navigation", "url": "/base/product-header"},
-						{"link-name": "Masthead With Sliding Navigation", "url": "/base/product-header-sliding-nav"},
+						{"link-name": "Product Header", "url": "/base/product-header"},
+						{"link-name": "Masthead", "url": "/base/header/masthead"},
+						{"link-name": "Navigation Bar", "url": "/base/header/navbar"},
+						{"link-name": "Toolbar Header", "url": "/base/toolbar-header"},
 						{"link-name": "Thin Footer", "url": "/base/footer"},
 						{"link-name": "Fat Footer", "url": "/base/fat-footer"}
 					]
@@ -118,8 +100,6 @@
 					"sub-section-hdr": "Page Layouts",				
 					"sub-section": [
 						{"link-name": "Employer Portal Homepage", "url": "/base/layout-employee-portal-homepage"},
-						{"link-name": "Employee Portal Inner Page", "url": "/base/layout-employee-portal-innerpage"},
-						{"link-name": "Sidebar", "url": "/base/layout-sidebar"},
 						{"link-name": "Log In", "url": "/base/layout-login"},
 						{"link-name": "Hero Banner", "url": "/base/layout-hero-banner"}
 					]
@@ -455,21 +435,6 @@
 		"end_date": "24-Sep-2013",
 		"num_of": "6",
 		"Region": "LAC"
-		},
-		{
-		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
-		"task": "Review Local Appointment Issues",
-		"type_global": "Global",
-		"type_local": "Local",
-		"abbrev_first_name": "S.",
-		"first_name": "Scott",
-		"last_name": "Sizemore",
-		"company": "Resubi Exploration",
-		"location": "Italy",
-		"start_date": "29-Aug-2013",
-		"end_date": "26-Sep-2013",
-		"num_of": "1",
-		"Region": "APAC"
 		}
 	]
 }
