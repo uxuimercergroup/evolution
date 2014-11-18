@@ -196,6 +196,26 @@
                 "directory": false
             },
             {
+                "key": "header",
+                "name": "Header",
+                "url": "/base/header",
+                "directory": true,
+                "children": [
+                    {
+                        "key": "masthead",
+                        "name": "Masthead",
+                        "url": "/base/header/masthead",
+                        "directory": false
+                    },
+                    {
+                        "key": "navbar",
+                        "name": "Navbar",
+                        "url": "/base/header/navbar",
+                        "directory": false
+                    }
+                ]
+            },
+            {
                 "key": "icons",
                 "name": "Icons",
                 "url": "/base/icons",
@@ -270,12 +290,6 @@
                 "directory": false
             },
             {
-                "key": "product-header-sliding-nav",
-                "name": "Product header sliding nav",
-                "url": "/base/product-header-sliding-nav",
-                "directory": false
-            },
-            {
                 "key": "tables",
                 "name": "Tables",
                 "url": "/base/tables",
@@ -318,6 +332,12 @@
                         "directory": false
                     }
                 ]
+            },
+            {
+                "key": "toolbar-header",
+                "name": "Toolbar header",
+                "url": "/base/toolbar-header",
+                "directory": false
             },
             {
                 "key": "typography",
@@ -421,12 +441,6 @@
                 "key": "login-demo",
                 "name": "Login demo",
                 "url": "/demos/login-demo",
-                "directory": false
-            },
-            {
-                "key": "product-header-sliding-nav-demo",
-                "name": "Product header sliding nav demo",
-                "url": "/demos/product-header-sliding-nav-demo",
                 "directory": false
             }
         ]
