@@ -283,16 +283,16 @@
 
 		// NAVBAR FIXED - BEGINS
 			// This class is used when the user starts to scroll, js will add this class to the navbar to create a drop shadow.
-			.mul-navbar-fixed-adjust-shadow
+			.mul-toolbar-fixed-adjust-shadow
 								{@include box-shadow(0, 0, 10px, $gray-mid-dark);} //THEME
-			.mul-navbar-fixed	{
+			.mul-toolbar-fixed	{
 								@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
 								position: fixed;
 								top: 0;
 								left: 0;
 								z-index: $zindexToolbar;
 
-				.mul-navbar-fixed-adjust
+				.mul-toolbar-fixed-adjust
 									{
 									padding: 0 5px;
 									margin: 0;
