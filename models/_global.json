@@ -4,42 +4,42 @@
 	"jquery_version": "1.10.2",
 	"jquery_ui_version": "1.10.3",
 
-	"header" : "",
-	"user_profile" : "",
-	"footer" : "",
 
 
+"HEADER OPTIONS": "",
+	"COMMENT": "Add 'toolbar' to the below to get a toolbar or blank for default navbar style",
+		"type_of_navbar": "",
 
-	"navbar_type": "toolbar",
+	"COMMENT": "Masthead configurations",
+		"masthead_logo_primary": "false",
+		"masthead_company_text": "true",
+		"COMMENT": "options: 'identifier' or 'logo' can be placed below",
+		"masthead_identifier_or_logo": "logo",
 
-	"company_logo_primary": "false",
-	"identifier_or_logo": "user-identifier",
+	"COMMENT": "Navbar configurations",
+		"navbar_style": "text",
+		"navbar_left": "true",
+		"navbar_menu_icon_left": "false",
+		"navbar_right": "false",
+		"navbar_user_identifier": "false",
+		"navbar_column_width_left": "12",
+		"navbar_column_width_right": "12",
+		"navbar_message_area": "false",
+		"navbar_message_area_nopadding": "false",
+		"navbar_message_area_noborder": "true",
+		"navbar_group_icons": "false",
 
-	"navbar_style": "tabbed",
+	"COMMENT": "If toolbar is the type of navbar list above these are the configurations",
+		"toolbar_column_width_left": "4",
+		"toolbar_column_width_right": "20",
+		"toolbar_navigation": "true",
+		"toolbar_navigation_items": "true",
+		"toolbar_user_identifier": "false",
+		"toolbar_group_icons": "false",
 
-	"navbar_navigation": "true",
-
-	"navbar_left": "true",
-	"navbar_right": "false",
-
-	"navbar_column_width_left": "12",
-	"navbar_column_width_right": "12",
-
-	"navbar_user_identifier": "true",
-
-	"navbar_message_area": "false",
-	"navbar_message_area_nopadding": "false",
-	"navbar_message_area_noborder": "true",
-
-	"navbar_group_icons": "false",
-
-	"toolbar_column_width_left": "4",
-	"toolbar_column_width_right": "20",
-
-	"toolbar_navigation": "true",
-	"toolbar_navigation_items": "true",
-	"toolbar_user_identifier": "false",
-	"toolbar_group_icons": "false",
+"FOOTER OPTIONS": "",
+	"COMMENT": "Leave blank to get default footer or add 'fat' if you want a fat footer",
+		"footer" : "",
 
 
 

@@ -1,4 +1,4 @@
-{% if global.navbar_type == "toolbar" %}
+{% if global.type_of_navbar == "toolbar" %}
 <!-- FIXED NAVBAR - BEGINS -->
 	<section class="mul-navbar mul-navbar-fixed">
 		<div class="mul-navbar-adjust mul-navbar-fixed-adjust">
@@ -64,10 +64,20 @@
 			<nav class="mul-tabbed-nav">
 		{% endif %}
 				<div class="col-{{ global.navbar_column_width_left }} first mul-navbar-col-1">
-				{% if global.navbar_left == "true" %}
+
 
 					<ul class="sm mul-nav-menus mul-menu-ctn js-mul-menus">
-					{% if global.navbar_navigation == "true" %}
+					{% if global.navbar_left == "false" || global.navbar_menu_icon_left == "false" %}
+						<li>&nbsp;</li>
+					{% endif %}
+
+					{% if global.navbar_menu_icon_left == "true" %}
+						<li class="mul-header-icon">
+							<a href="javascript:;"><i class="mul-icon-menu3"></i></a>
+						</li>
+					{% endif %}
+
+					{% if global.navbar_left == "true" %}
 						<li><a class="{% if mixture.url == "index" %}mul-navbar-item-active{% endif %}" href="/index">Home</a></li>
 						<li><a href="/browser-testing-support">Browser Support</a></li>
 						<li>
@@ -96,15 +106,10 @@
 								</ul>
 							</li>
 						{% endif %}
-
-					{% else %}
-						<li class="mul-header-icon">
-							<a href="javascript:;"><i class="mul-icon-menu3"></i></a>
-						</li>
 					{% endif %}
 					</ul>
 
-				{% endif %}
+
 				</div>
 				<div class="col-{{ global.navbar_column_width_right }} mul-navbar-col-2">
 				{% if global.navbar_group_icons == "true" %}
