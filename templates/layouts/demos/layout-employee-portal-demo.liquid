@@ -84,10 +84,10 @@
 		{{ "respond_1.3.0.js" | asset_url | script_tag }}
 
 	</head>
-	<body>
+	<body class="mul-body-background {% if mixture.url == "demos/layout-employee-portal-homepage-demo" %}mul-homepage-background{% endif %}">
 
 		<!-- HEADER - BEGINS -->
-		{% include "/base/default-header-profile-menu" %}
+		{% include "/demos/base/header-sliding-nav" %}
 		<!-- HEADER - ENDS -->
 
 		<!-- PAGE - BEGINS -->
@@ -97,7 +97,7 @@
 		<!-- PAGE - ENDS -->
 
 		<!-- FOOTER - BEGINS -->
-		{% include "footer" %}
+		{% include "/base/fat-footer" %}
 		<!-- FOOTER - ENDS -->
 
 		<!-- MERCER EVOLUTION CORE SCRIPTS -->

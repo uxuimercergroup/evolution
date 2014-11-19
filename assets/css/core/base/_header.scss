@@ -27,8 +27,6 @@
 
 	// MAIN LOGO CONTAINER - BEGINS
 		.mul-logo			{
-							font-size: $mastheadLogoFontSize;
-							line-height: $mastheadLogoLineHeight;
 			.mul-logo-col-1		{}
 			.mul-logo-col-2		{
 				a					{
@@ -36,6 +34,8 @@
 									@include text-overflow;
 									display: block;
 									font-weight: $mastheadLogoFontWeight;
+									font-size: $mastheadLogoFontSize;
+									line-height: $mastheadLogoLineHeight;
 									white-space: nowrap;
 									width: auto;
 									}
@@ -103,10 +103,16 @@
 						ul					{@include clearfix;}
 										}
 				// PRIMARY & SECONDARY LOGO - BEGINS
-					.mul-primary-logo	{}
+					.mul-primary-logo,
 					.mul-secondary-logo	{
-										margin-top: 13px;
+						img					{
+											position: relative;
+											top: 14px;
+											}
+										}
+					.mul-secondary-logo	{
 										text-align: right;
+						img					{top: 17px;}
 										}
 				// PRIMARY & SECONDARY LOGO - ENDS
 									}

@@ -42,18 +42,16 @@ $baseBorderRadiusIE:						0 !default;
 
 // Z-INDEX MASTER LIST
 // Used for a bird's eye view of components dependent on the z-axis
-$zindexLayoutLoginFooterBackground:			9993 !default;
-$zindexLayoutLoginFooter:					9994 !default;
-$zindexSlider:								9995 !default;
-$zindexHeader:								9996 !default;
-$zindexMastheadProfileMenu:					9997 !default;
-$zindexMegaMenuUtilityMenu:					9997 !default;
-$zindexDatepicker:							9998 !default;
-$zindexAutocomplete:						9999 !default;
-/* TODO: add this to the menu system $zindexNavbarSubmenu:						!default; */
-$zindexTooltip:								10000 !default;
-$zindexDialogOverlay:						10001 !default;
-$zindexDialogPosition:						10002 !default;
+$zindexLayoutLoginFooterBackground:			9994 !default;
+$zindexLayoutLoginFooter:					9995 !default;
+$zindexSlider:								9996 !default;
+$zindexDatepicker:							9997 !default;
+$zindexAutocomplete:						9998 !default;
+$zindexTooltip:								9999 !default;
+$zindexToolbar:								10000 !default;
+$zindexMenu:								10001 !default;
+$zindexDialogOverlay:						10002 !default;
+$zindexDialogPosition:						10003 !default;
 
 
 // HELPERS
@@ -341,7 +339,7 @@ $headerIconMinWidth:						28px !default;
 
 // BASE & LOGO STYLES
 $mastheadContentHeight:						52px !default;
-$mastheadLogoLineHeight:					44px !default;
+$mastheadLogoLineHeight:					52px !default;
 $mastheadLogoFontWeight:					400 !default;
 $mastheadLogoFontSize:						24px !default;
 $mastheadLogoFontSizeLargeBreakpoint:		33px !default;
