@@ -1,5 +1,5 @@
 <header role="banner" class="mul-grid mul-header">
-	<div class="mul-header-adjust">
+	<div class="mul-header-adjust {% if global.toolbar_fixed == 'true' %}mul-toolbar-header-adjust{% endif %}">
 		{% include '/base/header/masthead' %}
 		{% include '/base/header/navbar' %}
 	</div>

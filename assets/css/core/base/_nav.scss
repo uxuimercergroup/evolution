@@ -281,18 +281,10 @@
 									}
 								}
 
-		// NAVBAR FIXED - BEGINS
-			// This class is used when the user starts to scroll, js will add this class to the navbar to create a drop shadow.
-			.mul-toolbar-fixed-adjust-shadow
-								{@include box-shadow(0, 0, 10px, $gray-mid-dark);} //THEME
-			.mul-toolbar-fixed	{
+		// TOOLBAR - BEGINS
+			.mul-toolbar		{
 								@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
-								position: fixed;
-								top: 0;
-								left: 0;
-								z-index: $zindexToolbar;
-
-				.mul-toolbar-fixed-adjust
+				.mul-toolbar-adjust
 									{
 									padding: 0 5px;
 									margin: 0;
@@ -325,7 +317,20 @@
 
 									}
 								}
-		// NAVBAR FIXED - ENDS
+		// TOOLBAR - ENDS
+
+
+		// TOOLBAR FIXED - BEGINS
+			// This class is used when the user starts to scroll, js will add this class to the navbar to create a drop shadow.
+			.mul-toolbar-fixed-adjust-shadow
+								{@include box-shadow(0, 0, 10px, $gray-mid-dark);} //THEME
+			.mul-toolbar-fixed	{
+								position: fixed;
+								top: 0;
+								left: 0;
+								z-index: $zindexToolbar;
+								}
+		// TOOLBAR FIXED - ENDS
 
 		}
 		
