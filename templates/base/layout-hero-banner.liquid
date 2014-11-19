@@ -53,84 +53,82 @@
 	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
 		<section class="mul-ref-example-content">
 
-			{% if model.reference-example-versions == "true" %}
-				<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
-			{% endif %}
-
-			<div class="col-24">
+			<div class="col-24 mul-margin-bottom">
 				<div class="col-12 first">
 
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="mul-box mul-box-rnd mul-padding-bottom mul-ref-example-box">
+					{% if model.reference-example-versions == "true" %}
+						<h5>{{ model.reference-example-version-label }}</h5>
+						{{ model.reference-example-version-content }}
+					{% endif %}
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<a class="mul-btn mul-btn-medium mul-btn-primary mul-btn-first" href="/demos/hero-banner-background-color-demo" target="_blank">View Layout</a>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<p><a href="/demos/hero-banner-background-color-demo" target="_blank">See example</a></p>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 				</div>
 				<div class="col-12">
 
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="mul-box mul-box-rnd mul-padding-bottom mul-ref-example-box">
-
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-4 }}</h4>
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<a class="mul-btn mul-btn-medium mul-btn-primary mul-btn-first" href="/demos/hero-banner-background-color-carousel-demo" target="_blank">View Layout</a>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
+					<a href="/demos/hero-banner-background-color-demo" target="_blank"><img src="{{ "placeholder_rectangle_wide.png" | asset_url }}" width="490" height="239" alt="{{ model.reference-example-version-label }}" title="{{ model.reference-example-version-label }}" /></a>
 
 				</div>
 			</div>
 
-			{% if model.reference-example-versions == "true" %}
-				<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
-			{% endif %}
-
-			<div class="col-24">
+			<div class="col-24 mul-margin-bottom">
 				<div class="col-12 first">
 
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="mul-box mul-box-rnd mul-padding-bottom mul-ref-example-box">
+					{% if model.reference-example-versions == "true" %}
+						<h5>{{ model.reference-example-version-label-2 }}</h5>
+						{{ model.reference-example-version-content-2 }}
+					{% endif %}
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<a class="mul-btn mul-btn-medium mul-btn-primary mul-btn-first" href="/demos/hero-banner-background-image-demo" target="_blank">View Layout</a>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<p><a href="/demos/hero-banner-background-image-demo" target="_blank">See example</a></p>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 				</div>
 				<div class="col-12">
 
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="mul-box mul-box-rnd mul-padding-bottom mul-ref-example-box">
+					<a href="/demos/hero-banner-background-image-demo" target="_blank"><img src="{{ "placeholder_rectangle_wide.png" | asset_url }}" width="490" height="239" alt="{{ model.reference-example-version-label-2 }}" title="{{ model.reference-example-version-label-2 }}" /></a>
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-4 }}</h4>
-						{% endif %}
+				</div>
+			</div>
 
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<a class="mul-btn mul-btn-medium mul-btn-primary mul-btn-first" href="/demos/hero-banner-background-image-carousel-demo" target="_blank">View Layout</a>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+			<div class="col-24 mul-margin-bottom">
+				<div class="col-12 first">
 
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
+					{% if model.reference-example-versions == "true" %}
+						<h5>{{ model.reference-example-version-label-3 }}</h5>
+						{{ model.reference-example-version-content-3 }}
+					{% endif %}
+
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<p><a href="/demos/hero-banner-background-color-carousel-demo" target="_blank">See example</a></p>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+				</div>
+				<div class="col-12">
+
+					<a href="/demos/hero-banner-background-color-carousel-demo" target="_blank"><img src="{{ "placeholder_rectangle_wide.png" | asset_url }}" width="490" height="239" alt="{{ model.reference-example-version-label-3 }}" title="{{ model.reference-example-version-label-3 }}" /></a>
+
+				</div>
+			</div>
+
+			<div class="col-24 mul-margin-bottom">
+				<div class="col-12 first">
+
+					{% if model.reference-example-versions == "true" %}
+						<h5>{{ model.reference-example-version-label-4 }}</h5>
+						{{ model.reference-example-version-content-4 }}
+					{% endif %}
+
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<p><a href="/demos/hero-banner-background-image-carousel-demo" target="_blank">See example</a></p>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+				</div>
+				<div class="col-12">
+
+					<a href="/demos/hero-banner-background-image-carousel-demo" target="_blank"><img src="{{ "placeholder_rectangle_wide.png" | asset_url }}" width="490" height="239" alt="{{ model.reference-example-version-label-4 }}" title="{{ model.reference-example-version-label-4 }}" /></a>
 
 				</div>
 			</div>

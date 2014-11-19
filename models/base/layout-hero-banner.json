@@ -8,7 +8,7 @@
 		"<p>The simplicity of the Hero Banner layout makes it ideal to use when you want to push a specific message or ensure that the user notices a specific piece of content. It can be used with either a background image or a background color in order to offset it from the rest of the screen.</p>",
 
 	"reference-details": 
-		"<ul><li>The banner area spans 100% of the width of the screen.</li><li>The banner should always be located directly below the Product Header.</li><li>The default minimum height of the banner area is 300px, but can be configured for each use.</li><li>The banner area can support either a background image or a background color.</li><li>The <a href='/objects/carousel'>Carousel</a> component can be used in conjunction with the Hero Banner image in order to provide a revolving display of different types of content. </li><li>The banner area can support any type of content or componet. When additional content is used in the banner area, it will be displayed within the centering content div.</li></ul><dt>Background Images</dt><ul><li>The background image will span 100% of the width of the available screen. The image width and height will automatically adjust as the screen changes sizes.</li><li>The <a href='/objects/image-content-overlay'>Image Content Overlay</a> component should be used to display content on top of a background image.</li></ul>",
+		"<ul><li>The banner area spans 100% of the width of the screen.</li><li>The banner should always be located directly below the Product Header.</li><li>The default minimum height of the banner area is 300px, but can be configured for each use.</li><li>The banner area can support either a background image or a background color.</li><li>The <a href='/objects/carousel'>Carousel</a> component can be used in conjunction with the Hero Banner image in order to provide a revolving display of different types of content. </li><li>The banner area can support any type of content or componet. When additional content is used in the banner area, it will be displayed within the centering content div.</li></ul><h3>Background Images</h3><ul><li>The background image will span 100% of the width of the available screen. The image width and height will automatically adjust as the screen changes sizes.</li><li>The <a href='/objects/image-content-overlay'>Image Content Overlay</a> component should be used to display content on top of a background image.</li></ul>",
 
 	"reference-mobile": 
 		"<ul><li>When a background image is used in the Banner area, it will automatically re-size to fit 100% of the width of the mobile screen.</li><li>Any components used within the content area of the Hero Banner layout will automatically respond according to their specific mobile responsiveness conventions.</li></ul>",
@@ -24,14 +24,26 @@
 		"",
 
 	"reference-example-versions": "true",
+
 	"reference-example-version-label":
-		"Background Colors",
+		"Background Color",
+	"reference-example-version-content":
+		"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget massa sit amet tellus rhoncus ornare.</p><ul><li>List item 1</li><li>List item 2</li></ul>",
+
 	"reference-example-version-label-2":
-		"Background Images with Image Content Overlay",
+		"Background Image",
+	"reference-example-version-content-2":
+		"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget massa sit amet tellus rhoncus ornare.</p><ul><li>List item 1</li><li>List item 2</li></ul>",
+
 	"reference-example-version-label-3":
-		"Static",
+		"Background Color With Carousel",
+	"reference-example-version-content-3":
+		"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget massa sit amet tellus rhoncus ornare.</p><ul><li>List item 1</li><li>List item 2</li></ul>",
+		
 	"reference-example-version-label-4":
-		"Carousel",
+		"Background Image With Carousel",
+	"reference-example-version-content-4":
+		"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget massa sit amet tellus rhoncus ornare.</p><ul><li>List item 1</li><li>List item 2</li></ul>",
 
 	"reference-get-code": "false",
 

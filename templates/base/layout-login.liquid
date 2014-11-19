@@ -53,97 +53,102 @@
 	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
 		<section class="mul-ref-example-content">
 
-			<div class="col-24">
+			<div class="col-24 mul-margin-bottom">
 				<div class="col-12 first">
 
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="mul-box mul-box-rnd mul-padding-bottom mul-ref-example-box">
+					{% if model.reference-example-versions == "true" %}
+						<h5>{{ model.reference-example-version-label }}</h5>
+						{{ model.reference-example-version-content }}
+					{% endif %}
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
-							{{ model.reference-example-version-content }}
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<a class="mul-btn mul-btn-medium mul-btn-primary mul-btn-first" href="/demos/login-demo" target="_blank">View Layout</a>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<p><a href="/demos/login-demo" target="_blank">See example</a></p>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 				</div>
 				<div class="col-12">
 
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="mul-box mul-box-rnd mul-padding-bottom mul-ref-example-box">
-
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
-							{{ model.reference-example-version-content-2 }}
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<a class="mul-btn mul-btn-medium mul-btn-primary mul-btn-first" href="/demos/login-custom-demo" target="_blank">View Layout</a>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
+					<a href="/demos/login-demo" target="_blank"><img src="{{ "login_multiple_layout.png" | asset_url }}" width="490" height="239" alt="{{ model.reference-example-version-label }}" title="{{ model.reference-example-version-label }}" /></a>
 
 				</div>
 			</div>
-			<div class="col-24">
-				<div class="col-8 first">
 
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="mul-box mul-box-rnd mul-padding-bottom mul-ref-example-box">
+			<div class="col-24 mul-margin-bottom">
+				<div class="col-12 first">
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
-							{{ model.reference-example-version-content-3 }}
-						{% endif %}
+					{% if model.reference-example-versions == "true" %}
+						<h5>{{ model.reference-example-version-label-2 }}</h5>
+						{{ model.reference-example-version-content-2 }}
+					{% endif %}
 
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<a class="mul-btn mul-btn-medium mul-btn-primary mul-btn-first" href="/demos/login-background1-demo" target="_blank">View Layout</a>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<p><a href="/demos/login-custom-demo" target="_blank">See example</a></p>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 				</div>
-				<div class="col-8">
+				<div class="col-12">
 
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="mul-box mul-box-rnd mul-padding-bottom mul-ref-example-box">
-
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-4 }}</h4>
-							{{ model.reference-example-version-content-4 }}
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<a class="mul-btn mul-btn-medium mul-btn-primary mul-btn-first" href="/demos/login-background2-demo" target="_blank">View Layout</a>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
+					<a href="/demos/login-custom-demo" target="_blank"><img src="{{ "login_single_layout.png" | asset_url }}" width="490" height="239" alt="{{ model.reference-example-version-label-2 }}" title="{{ model.reference-example-version-label-2 }}" /></a>
 
 				</div>
-				<div class="col-8">
+			</div>
 
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="mul-box mul-box-rnd mul-padding-bottom mul-ref-example-box">
+			<div class="col-24 mul-margin-bottom">
+				<div class="col-12 first">
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-5 }}</h4>
-							{{ model.reference-example-version-content-5 }}
-						{% endif %}
+					{% if model.reference-example-versions == "true" %}
+						<h5>{{ model.reference-example-version-label-3 }}</h5>
+						{{ model.reference-example-version-content-3 }}
+					{% endif %}
 
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<a class="mul-btn mul-btn-medium mul-btn-primary mul-btn-first" href="/demos/login-background3-demo" target="_blank">View Layout</a>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<p><a href="/demos/login-background1-demo" target="_blank">See example</a></p>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
+				</div>
+				<div class="col-12">
+
+					<a href="/demos/login-background1-demo" target="_blank"><img src="{{ "login_custom_bkgd_1.png" | asset_url }}" width="490" height="239" alt="{{ model.reference-example-version-label-3 }}" title="{{ model.reference-example-version-label-3 }}" /></a>
+
+				</div>
+			</div>
+
+			<div class="col-24 mul-margin-bottom">
+				<div class="col-12 first">
+
+					{% if model.reference-example-versions == "true" %}
+						<h5>{{ model.reference-example-version-label-4 }}</h5>
+						{{ model.reference-example-version-content-4 }}
+					{% endif %}
+
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<p><a href="/demos/login-background2-demo" target="_blank">See example</a></p>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+				</div>
+				<div class="col-12">
+
+					<a href="/demos/login-background2-demo" target="_blank"><img src="{{ "login_custom_bkgd_2.png" | asset_url }}" width="490" height="239" alt="{{ model.reference-example-version-label-4 }}" title="{{ model.reference-example-version-label-4 }}" /></a>
+
+				</div>
+			</div>
+
+			<div class="col-24 mul-margin-bottom">
+				<div class="col-12 first">
+
+					{% if model.reference-example-versions == "true" %}
+						<h5>{{ model.reference-example-version-label-5 }}</h5>
+						{{ model.reference-example-version-content-5 }}
+					{% endif %}
+
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<p><a href="/demos/login-background3-demo" target="_blank">See example</a></p>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+				</div>
+				<div class="col-12">
+
+					<a href="/demos/login-background3-demo" target="_blank"><img src="{{ "login_custom_bkgd_3.png" | asset_url }}" width="490" height="239" alt="{{ model.reference-example-version-label-5 }}" title="{{ model.reference-example-version-label-5 }}" /></a>
 
 				</div>
 			</div>
