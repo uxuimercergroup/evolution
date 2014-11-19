@@ -72,8 +72,8 @@ html.mul-mod-js							{display:none;}
 .mul-ref-example						{
 	.mul-ref-example-hdr					{margin: 40px 0 25px 0;}
 	.mul-ref-example-content				{min-height: 250px;}
+	.mul-ref-example-box					{background-color: $white;}
 										}
-.mul-ref-example-box					{background-color: $white;}
 
 // DEVELOPER - SLIDING DRAWER
 .mul-ref-sliding-drawer-btn				{
@@ -94,7 +94,7 @@ html.mul-mod-js							{display:none;}
 	.mul-ref-sliding-drawer-hdr				{
 											@include box-shadow(0, 0, 10px, #000);
 											position: fixed;
-											top: 0;
+											top: 39px;
 											width: 250px;
 											min-width: 250px;
 											padding: $basePadding $basePadding 0 $basePadding;
@@ -114,7 +114,7 @@ html.mul-mod-js							{display:none;}
 											}
 
 	.mCustomScrollbar						{
-											padding-top: 101px;
+											padding-top: 140px;
 		.mCSB_container							{margin-right: 0;}
 											}
 
