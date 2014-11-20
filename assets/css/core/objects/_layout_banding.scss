@@ -8,20 +8,18 @@
 	.banding-layout[role="main"]			{
 											margin: 0;
 											padding: 0 0 1px 0;
-		[class*="banding-section-"]			{
+		[class*="banding-section-"]				{
 			.mul-grid								{
 													min-height: 200px;
 													padding: 20px 10px 30px 10px;
 													}
-												}
 
-												$colors-list: $orange-dark $white $gray-light #C3D2E5;
-												@each $current-color in $colors-list
-												{
-													$color: index($colors-list, $current-color);
-													.banding-section-#{$color} {background-color: $current-color;}
+			@each $color-name, $color in $color-palette
+													{
+				&[data-palette-color="#{$color-name}"]
+														{background-color: map-get($color, color);}
+													}
 												}
-
 											}
 
 	//=== MEDIA QUERIES =========================================================================

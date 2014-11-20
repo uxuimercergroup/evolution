@@ -2,9 +2,9 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<section class="banding-section-1">
+<section class="banding-section-1" data-palette-color="orange-dark">
 	<div class="mul-grid">
-		<div class="col-24">
+		<div class="col-24 mul-small-mediaquery-grid">
 			<h1 style="color:white;">Exciting New Contest</h1>
 			<p style="font-size:16px; margin-bottom:40px; color:white;">{{ 2 | lorem_ipsum }}</p>
 			<div class="col-6 first mul-align-center">
@@ -23,11 +23,11 @@
 	</div>
 </section>
 
-<section class="banding-section-2">
+<section class="banding-section-2" data-palette-color="white">
 	<div class="mul-grid">
 		<div class="col-24">
 			<h2>What You Could Win</h2>
-			<div class="col-24 mul-small-mediaquery-grid">
+			<div class="col-24">
 				<div class="col-8 first">
 					{{ 2 | lorem_ipsum:'p' }}
 				</div>
@@ -42,7 +42,7 @@
 	</div>
 </section>
 
-<section class="banding-section-3">
+<section class="banding-section-3" data-palette-color="gray-lighter">
 	<div class="mul-grid">
 		<div class="col-24">
 			<h2>Enter Contest</h2>
@@ -75,7 +75,7 @@
 	</div>
 </section>
 
-<section class="banding-section-4">
+<section class="banding-section-4" data-palette-color="blue-gray-light">
 	<div class="mul-grid">
 		<div class="col-24">
 			<h2>Rules of The Contest</h2>

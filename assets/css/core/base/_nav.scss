@@ -38,7 +38,10 @@
 										margin: 11px 10px 0 0;
 										}
 									}
-				.mul-navbar-col-2	{background-color: $gray-lighter;}
+				.mul-navbar-col-2	{
+									display: none;
+									background-color: $gray-lighter;
+									}
 								}
 							}
 	// TOOLBAR - ENDS	
@@ -318,7 +321,10 @@
 											}
 						.mul-logo-col-3		{display: none;}
 										}
-					.mul-navbar-col-2	{background-color: $transparent;}
+					.mul-navbar-col-2	{
+										display: block;
+										background-color: $transparent;
+										}
 
 				// TEXT NAVBAR - BEGINS
 					nav.mul-text-nav	{
