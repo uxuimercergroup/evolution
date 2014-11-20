@@ -119,6 +119,7 @@ $(function() {
 		/* TODO: PLEASE CLEAN UP! - BEGINS */
 
 			// SMARTMENU TEST
+			/*
 			jQuery('.js-mul-menus').smartmenus('destroy');
 			jQuery('.js-mul-menus').smartmenus('menuHideAll');
 			jQuery('.js-mul-menus').smartmenus({
@@ -132,9 +133,10 @@ $(function() {
 				subIndicatorsPos: 'append',
 				keepInViewport: true
 			});
+			*/
 
-			var nav = $('.mul-navbar-fixed-adjust'); // Change to nav div
-			var nav_class = 'mul-navbar-fixed-adjust-shadow'; // Change to class name
+			var nav = $('.mul-toolbar-fixed-adjust'); // Change to nav div
+			var nav_class = 'mul-toolbar-fixed-adjust-shadow'; // Change to class name
 			var threshold = 40; // Change to pixels scrolled
 
 			$(window).scroll(function () {
