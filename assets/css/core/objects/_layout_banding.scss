@@ -8,14 +8,14 @@
 	.banding-layout[role="main"]			{
 											margin: 0;
 											padding: 0 0 1px 0;
-		[banding-sectioin-]						{
+		[class*="banding-section-"]			{
 			.mul-grid								{
 													min-height: 200px;
 													padding: 20px 10px 30px 10px;
 													}
 												}
 
-												$colors-list: $gray-lighter $white $orange-dark $gray-light;
+												$colors-list: $orange-dark $white $gray-light #C3D2E5;
 												@each $current-color in $colors-list
 												{
 													$color: index($colors-list, $current-color);
@@ -32,16 +32,9 @@
 		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
 
 			.banding-layout[role="main"]			{
-				.banding-section-1,
-				.banding-section-2,
-				.banding-section-3,
-				.banding-section-4						{
+				[class*="banding-section-"]			{
 					.mul-grid								{padding: 20px 0 30px 0;}
 														}
-				.banding-section-1						{}
-				.banding-section-2						{}
-				.banding-section-3						{}
-				.banding-section-4						{}
 													}
 
 		}
