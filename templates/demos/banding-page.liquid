@@ -1,0 +1,29 @@
+{% layout "layout-banding" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<section class="banding-section-1">
+	<div class="mul-grid">
+		<div class="col-24">
+			{{ 3 | lorem_ipsum:'p' }}
+		</div>
+	</div>
+</section>
+
+<section class="banding-section-2">
+	<div class="mul-grid">
+		<div class="col-24">
+			{{ 3 | lorem_ipsum:'p' }}
+		</div>
+	</div>
+</section>
+
+<section class="banding-section-3">
+	<div class="mul-grid">
+		<div class="col-24">
+			{{ 3 | lorem_ipsum:'p' }}
+		</div>
+	</div>
+</section>
+
+{% endblock %}
