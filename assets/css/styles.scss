@@ -34,25 +34,6 @@ html.mul-mod-js							{display:none;}
 
 .see-context-link						{font-size: 13px;}
 
-
-.banding-layout							{
-										margin: 0;
-										padding-left: 0 !important;
-										padding-right: 0 !important;
-	.banding-section-1,
-	.banding-section-2,
-	.banding-section-3						{
-		.mul-grid								{
-												background: rgba(255, 255, 255, 0.5);
-												min-height: 200px;
-												padding: 40px $basePadding;
-												}
-											}
-	.banding-section-1						{background-color: $gray-darkest;}
-	.banding-section-2						{background-color: $gray-darker;}
-	.banding-section-3						{background-color: $gray-dark;}
-										}
-
 /*--- REFERENCE PAGES ---------------------------------------------------------------------*/
 
 // ALTERNATE VIEWS BADGE
