@@ -53,6 +53,7 @@
 
 @import "core/global/helpers.js";
 @import "core/base/base.js";
+@import "core/base/header.js";
 @import "core/base/menus.js";
 @import "core/objects/accordion.js";
 @import "core/objects/advanced_filter.js";

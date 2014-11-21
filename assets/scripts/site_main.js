@@ -91,43 +91,6 @@ $(function() {
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
 
-		/* TODO: PLEASE CLEAN UP! - BEGINS */
-
-			// SMARTMENU TEST
-			/*
-			jQuery('.js-mul-menus').smartmenus('destroy');
-			jQuery('.js-mul-menus').smartmenus('menuHideAll');
-			jQuery('.js-mul-menus').smartmenus({
-				subIndicators: true,
-				mainMenuSubOffsetX: 0,
-				subMenusSubOffsetX: 5,
-				subMenusSubOffsetY: 0,
-				subMenusMinWidth: '',
-				subMenusMaxWidth: '',
-				subIndicatorsText: '',
-				subIndicatorsPos: 'append',
-				keepInViewport: true
-			});
-			*/
-
-			var nav = $('.mul-toolbar-fixed-adjust'); // Change to nav div
-			var nav_class = 'mul-toolbar-fixed-adjust-shadow'; // Change to class name
-			var threshold = 40; // Change to pixels scrolled
-
-			$(window).scroll(function () {
-			    var distance = $(this).scrollTop();
-			    if (distance > threshold) { // If scrolled past threshold
-			        nav.addClass(nav_class); // Add class to nav
-			    } else { // If user scrolls back to top
-			        if (nav.hasClass(nav_class)) { // And if class has been added
-			            nav.removeClass(nav_class); // Remove it
-			        }
-			    }
-			});
-
-		/* PLEASE CLEAN UP! - ENDS */
-
-
 		// REFERENCE PAGES
 
 			// ALTERNATE VIEWS BADGE

@@ -42,7 +42,7 @@
 				.mul-navbar-col-1	{padding-left: $gridSiteGutterPadding;}
 				.mul-navbar-col-2	{
 									display: none;
-									background-color: $gray-lighter;
+									background-color: $gray-lighter; // THEME
 									}
 								}
 							}
@@ -353,8 +353,9 @@
 		// TOOLBAR - ENDS
 
 		// TOOLBAR FIXED - BEGINS
+			
 			// This class is used when the user starts to scroll, js will add this class to the navbar to create a drop shadow.
-			.mul-toolbar-fixed-adjust-shadow
+			.mul-toolbar-fixed-shadow
 								{@include box-shadow(0, 0, 10px, $gray-mid-dark);} //THEME
 			.mul-toolbar-fixed	{
 								position: fixed;
