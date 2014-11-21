@@ -248,7 +248,7 @@
 											a				{
 												&:hover			{
 																@include background-gradient($transparent, $transparent);
-																background-color: $gray-lighter;
+																background-color: $white;
 																@include transition(background-color 0.3s ease-in-out);
 																}
 															}
