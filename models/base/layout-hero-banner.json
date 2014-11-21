@@ -5,7 +5,7 @@
 		"<p>The Hero Banner Layout reserves a large area at the top of the screen - underneath the Product Header - that can be used to highlight specific content or set a visual tone.</p>",
 
 	"reference-usage": 
-		"<p>The simplicity of the Hero Banner layout makes it ideal to use when you want to push a specific message or ensure that the user notices a specific piece of content. It can be used with either a background image or a background color in order to offset it from the rest of the screen.</p>",
+		"<p>The simplicity of the Hero Banner layout makes it ideal to use when you want to push a specific message or ensure that the user notices a specific piece of content. It can be used with either a background image or a background color in order to offset it from the rest of the screen.</p><p>The background image version of the Hero Banner can often be used in conjunction with the <a href='/base/layout-banding'>Banding Layout</a> layout to create a more visually compelling display.</p>",
 
 	"reference-details": 
 		"<ul><li>The banner area spans 100% of the width of the screen.</li><li>The banner should always be located directly below the Product Header.</li><li>The default minimum height of the banner area is 300px, but can be configured for each use.</li><li>The banner area can support either a background image or a background color.</li><li>The <a href='/objects/carousel'>Carousel</a> component can be used in conjunction with the Hero Banner image in order to provide a revolving display of different types of content. </li><li>The banner area can support any type of content or componet. When additional content is used in the banner area, it will be displayed within the centering content div.</li></ul><dl><dt>Background Images</dt><dd>The background image will span 100% of the width of the available screen. The image width and height will automatically adjust as the screen changes sizes.</dd><dd>The <a href='/objects/image-content-overlay'>Image Content Overlay</a> component should be used to display content on top of a background image.</dd></dl>",
@@ -28,22 +28,22 @@
 	"reference-example-version-label":
 		"Background Color",
 	"reference-example-version-content":
-		"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget massa sit amet tellus rhoncus ornare.</p><ul><li>List item 1</li><li>List item 2</li></ul>",
+		"<p>This example shows the Hero Banner layout with a sample background color. The color can be changed per project, and the banner can house any type of content.</p>",
 
 	"reference-example-version-label-2":
 		"Background Image",
 	"reference-example-version-content-2":
-		"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget massa sit amet tellus rhoncus ornare.</p><ul><li>List item 1</li><li>List item 2</li></ul>",
+		"<p>This version shows the use of a background image in banner area. This is a sample image; the specific image to be used will be determined at the project level. This example also uses the <a href='/objects/image-content-overlay'>Image Content Overlay</a> on top of the background image.</p>",
 
 	"reference-example-version-label-3":
 		"Background Color With Carousel",
 	"reference-example-version-content-3":
-		"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget massa sit amet tellus rhoncus ornare.</p><ul><li>List item 1</li><li>List item 2</li></ul>",
+		"<p>This example shows the Hero Banner layout using a color background in conjunction with the <a href='/objects/carousel'>Carousel</a> control.</p>",
 		
 	"reference-example-version-label-4":
 		"Background Image With Carousel",
 	"reference-example-version-content-4":
-		"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget massa sit amet tellus rhoncus ornare.</p><ul><li>List item 1</li><li>List item 2</li></ul>",
+		"<p>This example shows the Hero Banner layout using a background image in conjunction with the <a href='/objects/carousel'>Carousel</a> control.</p>",
 
 	"reference-get-code": "false",
 
