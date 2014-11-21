@@ -32,12 +32,14 @@
 				.mul-logo			{
 									@include clearfix;
 									display: block;
-					.mul-logo-col-2		{}
+					.mul-logo-col-2		{margin-left: 0;}
 					.mul-logo-col-3		{
 										float: right;
-										margin: 11px 10px 0 0;
+										padding-top: 12px;
+										padding-right: $gridSiteGutterPadding;
 										}
 									}
+				.mul-navbar-col-1	{padding-left: $gridSiteGutterPadding;}
 				.mul-navbar-col-2	{
 									display: none;
 									background-color: $gray-lighter;
@@ -322,6 +324,7 @@
 											}
 						.mul-logo-col-3		{display: none;}
 										}
+					.mul-navbar-col-1	{padding-left: 0;}			
 					.mul-navbar-col-2	{
 										display: block;
 										background-color: $transparent;
