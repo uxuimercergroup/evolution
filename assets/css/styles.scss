@@ -69,6 +69,17 @@ html.mul-mod-js							{display:none;}
 											}
 										}
 
+// STYLES FOR THE DEMO SEARCH IN THE MENU NAVBAR
+.menu-search							{
+	.menu-search-btn						{
+											border-color: $green-darker;
+											padding: 4px 9px;
+											margin-top: -1px;
+											min-width: 100%;
+		[class*='mul-icon']						{color: $white !important;}
+											}
+										}
+
 // EXAMPLES
 .mul-ref-example						{
 	.mul-ref-example-hdr					{margin: 40px 0 25px 0;}
