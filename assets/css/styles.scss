@@ -108,7 +108,7 @@ html.mul-mod-js							{display:none;}
 	.mul-ref-sliding-drawer-hdr				{
 											@include box-shadow(0, 0, 10px, #000);
 											position: fixed;
-											top: 39px;
+											top: 0;
 											width: 250px;
 											min-width: 250px;
 											padding: $basePadding $basePadding 0 $basePadding;
@@ -128,7 +128,7 @@ html.mul-mod-js							{display:none;}
 											}
 
 	.mCustomScrollbar						{
-											padding-top: 140px;
+											padding-top: 103px;
 		.mCSB_container							{margin-right: 0;}
 											}
 

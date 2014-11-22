@@ -5196,7 +5196,7 @@ html.mul-mod-js {
   -o-box-shadow: 0 0 10px #000;
   box-shadow: 0 0 10px #000;
   position: fixed;
-  top: 39px;
+  top: 0;
   width: 250px;
   min-width: 250px;
   padding: 14px 14px 0 14px;
@@ -5215,7 +5215,7 @@ html.mul-mod-js {
   right: 12px;
 }
 .mul-ref-sliding-drawer .mCustomScrollbar {
-  padding-top: 140px;
+  padding-top: 103px;
 }
 .mul-ref-sliding-drawer .mCustomScrollbar .mCSB_container {
   margin-right: 0;
@@ -5767,6 +5767,9 @@ html.mul-mod-js {
     line-height: 20px;
   }
 
+  .mul-ref-sliding-drawer .mul-ref-sliding-drawer-hdr {
+    top: 39px;
+  }
   .mul-ref-sliding-drawer .mCustomScrollbar {
     padding-top: 136px;
   }
@@ -5808,6 +5811,9 @@ html.mul-mod-js {
     line-height: 20px;
   }
 
+  .mul-ref-sliding-drawer .mul-ref-sliding-drawer-hdr {
+    top: 39px;
+  }
   .mul-ref-sliding-drawer .mCustomScrollbar {
     padding-top: 136px;
   }

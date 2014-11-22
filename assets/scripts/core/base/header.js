@@ -7,7 +7,7 @@
 // HEADER MOBILE MENU TOGGLE
 //--------------------------------------------------------------------------------------------------------
 
-// Header mobile menu toggle
+// Header mobile menu toggle function
 var mulHeaderMobileMenuToggle = function() {
 	
 	jQuery('.js-mul-header-mobile-menu-toggle').click(function(){
@@ -18,7 +18,7 @@ var mulHeaderMobileMenuToggle = function() {
 	
 };
 
-// Header mobile menu toggle Init
+// Header mobile menu toggle init
 mulHeaderMobileMenuToggle();
 
 
