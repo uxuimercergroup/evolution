@@ -8691,6 +8691,24 @@ $.extend($.ui.tabs.prototype, {
 // AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 //--------------------------------------------------------------------------------------------------------
 
+// HEADER MOBILE MENU TOGGLE
+//--------------------------------------------------------------------------------------------------------
+
+// Header mobile menu toggle
+var mulHeaderMobileMenuToggle = function() {
+	
+	jQuery('.js-mul-header-mobile-menu-toggle').click(function(){
+		jQuery('.js-mul-header-mobile-menu-toggle-hide').hide();
+		var id = 'mul-header-mobile-menu-toggle-' + jQuery(this).attr('data-mul-header-mobile-menu-toggle');
+		jQuery('#' + id).slideToggle();
+	});
+	
+};
+
+// Header mobile menu toggle Init
+mulHeaderMobileMenuToggle();
+
+
 // TOOLBAR
 //--------------------------------------------------------------------------------------------------------
 

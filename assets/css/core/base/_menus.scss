@@ -29,6 +29,7 @@
 		// MEGA MENU CONTENT - BEGINS
 			.mul-mega-menu-adjust
 								{
+								border-top-style: none;
 				.mul-mega-menu-ctn	{
 									@include clearfix;
 									color: $white;
@@ -181,21 +182,7 @@
 									}
 								}
 							}
-									}
-
-
-				nav.mul-text-nav
-								{
-					.mul-nav-menus		{
-						> li			{
-							> .has-submenu + ul	{margin-top: 9px !important;}
-										}
-						li				{					
-							ul.mega-menu	{margin-top: 9px !important;}
-										}
-
-									}
-								}
+						}
 	// MENU STYLES - ENDS
 
 }// endif
@@ -289,89 +276,89 @@
 	// MEGA MENU - ENDS
 
 	// MENU STYLES - BEGINS
-		.mul-nav-menus		{
-			li					{
-								direction: ltr;
-								float: left;
-								line-height: normal;
-								margin: 0;
-								position: relative;
-								width: auto;
-				a					{
+		.mul-nav-menus	{
+			li				{
+							direction: ltr;
+							float: left;
+							line-height: normal;
+							margin: 0;
+							position: relative;
+							width: auto;
+				a				{
 					// DEFAULT ARROW - BEGINS
-						.sub-arrow		{
-										position: relative;
-										left: 0;
-										right: -4px;
-										top: 2px;
-							&:before		{
-											font-family: $mulIconFontStack;
-											content: "\e3c2"; // DOWN ARROW
-											}
-										}
-					// DEFAULT ARROW - ENDS
-					&:hover				{
-										background-color: $white; //THEME
-										@include transition(background-color 0.3s ease-in-out);
+						.sub-arrow	{
+									position: relative;
+									left: 0;
+									right: -4px;
+									top: 2px;
+							&:before	{
+										font-family: $mulIconFontStack;
+										content: "\e3c2"; // DOWN ARROW
 										}
 									}
-				ul					{
-									@include box-shadow(0, 2px, 5px, $gray-mid-dark); //THEME
-									@include border-radius(0 0 4px 4px);
-									@include clearfix;
+					// DEFAULT ARROW - ENDS
+					&:hover			{
 									background-color: $white; //THEME
-									border: 1px solid $gray-mid-dark; //THEME
-									direction: ltr;
-									height: auto;
-									line-height: normal;
-									margin: 0;
-									min-width: 100px !important;
-									max-width: 225px !important;
-									position: absolute;
-									top: -999999px;
-									z-index: $zindexMenu;
-									height: auto;
-					>li					{
+									@include transition(background-color 0.3s ease-in-out);
+									}
+								}
+				ul				{
+								@include box-shadow(0, 2px, 5px, $gray-mid-dark); //THEME
+								@include border-radius(0 0 4px 4px);
+								@include clearfix;
+								background-color: $white; //THEME
+								border: 1px solid $gray-mid-dark; //THEME
+								direction: ltr;
+								height: auto;
+								line-height: normal;
+								margin: 0;
+								min-width: 100px !important;
+								max-width: 225px !important;
+								position: absolute;
+								top: -999999px;
+								z-index: $zindexMenu;
+								height: auto;
+					>li				{
+									border-left: 0;
+									border-right: 0;
+									float: none;
+						&:first-child	{border-top: 0;}
+							a			{
 										border-left: 0;
-										border-right: 0;
-										float: none;
-						&:first-child		{border-top: 0;}
-							a				{
-											border-left: 0;
-											display: block;
-											font-family: $fontRegularFamily;
-											position: relative;
-											white-space: nowrap;
-											width: 100%;
+										display: block;
+										font-family: $fontRegularFamily;
+										position: relative;
+										white-space: nowrap;
+										width: 100%;
 							// DEFAULT ARROW - BEGINS
-								.sub-arrow		{
-												position: absolute;
-												top: 50%;
-												right: 0;
-												left: auto;
-												margin-top: -6px;
-									&:before		{content: "\e3c1";} // RIGHT ARROW
-												}
-							// DEFAULT ARROW - ENDS
+								.sub-arrow	{
+											position: absolute;
+											top: 50%;
+											right: 0;
+											left: auto;
+											margin-top: -6px;
+									&:before	{content: "\e3c1";} // RIGHT ARROW
 											}
+							// DEFAULT ARROW - ENDS
 										}
 									}
 								}
 							}
+						}
 
 
-				nav.mul-text-nav
-								{
-					.mul-nav-menus		{
-						> li			{
-							> .has-submenu + ul	{margin-top: 9px !important;}
-										}
-						li				{					
-							ul.mega-menu	{margin-top: 9px !important;}
-										}
-
-									}
+		nav.mul-text-nav
+						{
+			.mul-nav-menus	{
+				> li			{
+					> .has-submenu + ul
+									{margin-top: 9px !important;}
 								}
+				li				{					
+					ul.mega-menu	{margin-top: 9px !important;}
+								}
+							}
+						}
 	// MENU STYLES - ENDS
 
 	}// endif

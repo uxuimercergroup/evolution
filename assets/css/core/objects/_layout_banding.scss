@@ -7,11 +7,11 @@
 @if $use-banding-layout == true{
 	.banding-layout[role="main"]			{
 											margin: 0;
-											padding: 0 0 1px 0;
+											padding: 0;
 		[class*="banding-section-"]				{
 			.mul-grid								{
 													min-height: 200px;
-													padding: 20px 10px 30px 10px;
+													padding: 20px $gridSiteGutterPadding 30px $gridSiteGutterPadding;
 													}
 
 			@each $color-name, $color in $color-palette
@@ -29,11 +29,7 @@
 		
 		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
 
-			.banding-layout[role="main"]			{
-				[class*="banding-section-"]			{
-					.mul-grid								{padding: 20px 0 30px 0;}
-														}
-													}
+			
 
 		}
 		

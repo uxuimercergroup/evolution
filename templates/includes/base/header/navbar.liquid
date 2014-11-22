@@ -10,12 +10,12 @@
 							<a href="/index">MERCER <span>EVOLUTION</span></a>
 						</div>
 						<div class="mul-logo-col-3 mul-header-icon">
-							<a href="javascript:;"><i class="mul-icon-menu3"></i></a>
+							<a href="javascript:;" class="js-mul-header-mobile-menu-toggle" data-mul-header-mobile-menu-toggle="toolbar"><i class="mul-icon-menu3"></i></a>
 						</div>
 					</section>
 				<!-- LOGO SECTION - ENDS -->
 				</div>
-				<div class="col-{{ global.toolbar_column_width_right }} mul-navbar-col-2">
+				<div class="col-{{ global.toolbar_column_width_right }} mul-navbar-col-2" id="mul-header-mobile-menu-toggle-toolbar">
 				{% if global.toolbar_group_icons == 'true' %}
 					<ul class="sm mul-nav-menus mul-menu-ctn" data-menu="click">
 						<li class="mul-header-icon">
@@ -58,7 +58,7 @@
 <!-- FIXED NAVBAR - ENDS -->
 {% else %}
 <!-- NAVBAR - BEGINS -->
-	<section class="mul-navbar">
+	<section class="mul-navbar" id="mul-header-mobile-menu-toggle-navbar">
 		<div class="mul-navbar-adjust">
 		{% if global.navbar_style == "text" %}
 			<nav class="mul-text-nav">
