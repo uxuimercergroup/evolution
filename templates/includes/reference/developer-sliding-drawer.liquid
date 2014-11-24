@@ -23,7 +23,10 @@
 		<div class="js-mul-ref-sliding-drawer-scrollpane">
 
 			<!-- DEVELOPER - TOC - BEGINS -->
-			{% for item in global.table-of-contents %}
+			{% for item in global.table-of-contents limit:1 %}
+				{% include "/reference/toc-nav" %}
+			{% endfor %}
+			{% for item in global.table-of-contents offset:2 %}
 				{% include "/reference/toc-nav" %}
 			{% endfor %}
 			<!-- DEVELOPER - TOC - ENDS -->
