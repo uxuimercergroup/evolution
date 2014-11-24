@@ -3,20 +3,20 @@
 <!-- TOC - SECTION HEADER - ENDS -->
 
 <!-- TOC - SECTION - BEGINS -->
-	<ul class="mul-vertical-list">
+	<dl class="mul-vertical-list">
 		{% for item in item.main-section %}
-			<li><a href="{{ item.url }}">{{ item.link-name }}</a></li>
+			<dd><a href="{{ item.url }}">{{ item.link-name }}</a></dd>
 		{% endfor %}
-	</ul>
+	</dl>
 <!-- TOC - SECTION - ENDS -->
 
 <!-- TOC - SUB-SECTION - BEGINS -->
 	{% for item in item.sub-section-group %}
 		<h5>{{ item.sub-section-hdr }}</h5>
-		<ul class="mul-vertical-list">
+		<dl class="mul-vertical-list">
 			{% for item in item.sub-section %}
-				<li><a href="{{ item.url }}">{{ item.link-name }}</a></li>
+				<dd><a href="{{ item.url }}">{{ item.link-name }}</a></dd>
 			{% endfor %}
-		</ul>
+		</dl>
 	{% endfor %}
 <!-- TOC - SUB-SECTION - ENDS -->

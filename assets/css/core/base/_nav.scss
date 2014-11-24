@@ -311,11 +311,13 @@
 		// TOOLBAR - BEGINS
 			.mul-toolbar		{
 								@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
+								border-bottom: 0;
 				.mul-toolbar-adjust
 									{
 									padding: 0 5px;
 									margin: 0;
 									max-width: 100%;
+									margin-bottom: 1px;
 					.mul-logo			{
 						.mul-logo-col-2		{
 											margin-top: 4px;
@@ -356,7 +358,7 @@
 			
 			// This class is used when the user starts to scroll, js will add this class to the navbar to create a drop shadow.
 			.mul-toolbar-fixed-shadow
-								{@include box-shadow(0, 0, 10px, $gray-mid-dark);} //THEME
+								{@include box-shadow(0, 0, 15px, $gray-darker);} //THEME
 			.mul-toolbar-fixed	{
 								position: fixed;
 								top: 0;

@@ -69,6 +69,37 @@ html.mul-mod-js							{display:none;}
 												}
 											}
 										}
+// NAVBAR
+.mul-navbar								{
+	.mul-navbar-adjust						{
+		nav.mul-text-nav						{
+			.mul-nav-menus							{
+				.navbar-site-menu						{
+					h4										{
+															border-bottom: 1px dotted $gray-mid-light;
+															margin-bottom: 4px;
+															}
+					h5										{}
+					dl										{
+															margin: 0 0 5px 0;
+															padding: 0;
+						dd										{
+																margin: 0;
+																padding: 0 0 3px 0;
+							a										{
+																	color: $white;
+																	font-size: 12px;
+																	padding: 0;
+																	margin: 0;
+								&:hover									{background-color: $transparent;}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
 
 // STYLES FOR THE DEMO SEARCH IN THE MENU NAVBAR
 .menu-search							{
@@ -142,7 +173,7 @@ html.mul-mod-js							{display:none;}
 	.mul-vertical-list						{
 											margin-bottom: $baseMargin;
 		&:last-child							{margin-bottom: 100px;}
-		li										{
+		dd										{
 												margin: 0;
 			a										{
 													color: $white;
@@ -161,6 +192,63 @@ html.mul-mod-js							{display:none;}
 
 
 /*--- HOMEPAGE ----------------------------------------------------------------------------*/
+[class*="banding-section"]				{font-size: ($baseFontSize + 1);}
+
+
+.mul-alternate-views-badge.ui-tabs		{
+	.banding-section-1						{
+											@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
+		h1										{
+												color: $white;
+												font-size: ($baseFontSize + 30);
+												}
+		.mul-btn-group-horizontal				{
+												margin-top: $baseMargin;
+												margin-bottom: 0;
+												}
+											}
+										}
+
+.banding-section-2						{
+	[class*="mul-icon"]						{color: $orange-dark;}
+										}
+
+.banding-section-3						{
+										color: $green-darker;
+	h1, h3									{color: $green-darker;}
+	[class*="mul-icon"]						{color: $green-darker;}
+										}
+
+.banding-section-4						{
+	[class*="mul-icon"]						{
+											color: $gray-darkest;
+											margin-bottom: 15px;
+											top: 8px;
+											}
+										}
+
+.banding-section-5						{
+										color: $white;
+	h1, p									{
+											color: $white;
+											text-align: center;
+											}
+	.mul-horizontal-list					{
+											text-align: center;
+		&:last-child							{
+			li										{margin-bottom: 0;}
+												}
+		li										{
+												font-size: ($baseFontSize + 8);
+												margin-right: 85px;
+												margin-bottom: 35px;
+			&:last-child							{margin-right: 0;}
+												}
+											}
+										}
+
+.banding-section-6						{font-size: 14px;}
+
 .hp-content-column						{
 	dd										{
 											margin-left: 0;
@@ -183,8 +271,6 @@ html.mul-mod-js							{display:none;}
 
 	// MARKETING SECTION - HOMEPAGE
 	.marketing-ctn						{
-										border-bottom: 1px solid $gray-light;
-										margin-bottom: $baseMargin;
 		.img-section						{
 											border-bottom: 1px solid $gray-light;
 			img									{margin-bottom: -5px;}
@@ -202,19 +288,9 @@ html.mul-mod-js							{display:none;}
 										}
 
 .hp-layout								{
+										padding-top: 40px;
 	h5										{margin-bottom: 7px;}
 	.mul-vertical-list						{margin-bottom: $baseMargin;}
-	.todo									{
-											color: $orange-dark;
-											font-family: $fontSemiBoldStack;
-											padding-left: 6px;
-											}
-	.done									{
-											color: #55842B;
-											display: inline-block;
-											font-family: $fontSemiBoldStack;
-											padding-left: 6px;
-											}
 										}
 
 

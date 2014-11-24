@@ -11,7 +11,7 @@
 		[class*="banding-section-"]				{
 			.mul-grid								{
 													min-height: 200px;
-													padding: 20px $gridSiteGutterPadding 30px $gridSiteGutterPadding;
+													padding: 50px $gridSiteGutterPadding 60px $gridSiteGutterPadding;
 													}
 
 			@each $color-name, $color in $color-palette

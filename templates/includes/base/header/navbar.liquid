@@ -1,5 +1,5 @@
 {% if global.type_of_navbar == "toolbar" %}
-<!-- FIXED NAVBAR - BEGINS -->
+<!-- TOOLBAR - BEGINS -->
 	<section class="mul-navbar mul-toolbar {% if global.toolbar_fixed == 'true' %}mul-toolbar-fixed{% endif %}">
 		<div class="mul-navbar-adjust mul-toolbar-adjust">
 			<nav class="mul-text-nav">
@@ -18,14 +18,38 @@
 				<div class="col-{{ global.toolbar_column_width_right }} mul-navbar-col-2" id="mul-header-mobile-menu-toggle-toolbar">
 				{% if global.toolbar_group_icons == 'true' %}
 					<ul class="sm mul-nav-menus mul-menu-ctn" data-menu="click">
-						<li class="mul-header-icon">
-							<a href="javascript:;"><i class="mul-icon-envelop"></i></a>
-						</li>
-						<li class="mul-header-icon">
-							<a href="javascript:;"><i class="mul-icon-basket"></i></a>
-						</li>
-						<li class="mul-header-icon">
-							<a href="javascript:;"><i class="mul-icon-menu3"></i></a>
+						<li class="mul-header-icon mul-mega-menu">
+							<a href="javascript:;"><i class="mul-icon-mul-library"></i></a>
+							<ul class="mega-menu">
+								<li class="mul-mega-menu-adjust">
+								<!-- MEGA MENU CONTAINER - BEGINS -->
+									<div class="mul-mega-menu-ctn navbar-site-menu">
+										<section class="col-24">
+											<div class="col-6 first">
+												{% for item in global.table-of-contents limit:1 %}
+													{% include "/reference/toc-nav" %}
+												{% endfor %}
+											</div>
+											<div class="col-6">
+												{% for item in global.table-of-contents offset:2 limit:2 %}
+													{% include "/reference/toc-nav" %}
+												{% endfor %}
+											</div>
+											<div class="col-6">
+												{% for item in global.table-of-contents offset:4 limit:1 %}
+													{% include "/reference/toc-nav" %}
+												{% endfor %}
+											</div>
+											<div class="col-6">
+												{% for item in global.table-of-contents offset:5 %}
+													{% include "/reference/toc-nav" %}
+												{% endfor %}
+											</div>
+										</section>
+									</div>
+								<!-- MEGA MENU CONTAINER - ENDS -->
+								</li>
+							</ul>
 						</li>
 					</ul>
 				{% endif %}
@@ -55,7 +79,7 @@
 			</nav>
 		</div>
 	</section>
-<!-- FIXED NAVBAR - ENDS -->
+<!-- TOOLBAR - ENDS -->
 {% else %}
 <!-- NAVBAR - BEGINS -->
 	<section class="mul-navbar" id="mul-header-mobile-menu-toggle-navbar">
