@@ -199,30 +199,49 @@ html.mul-mod-js							{display:none;}
 											@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
 		h1										{
 												color: $white;
-												font-size: ($baseFontSize + 30);
+												font-size: ($baseFontSize + 35);
+												font-family: $fontThinStack;
+												padding-top: 20px;
 												}
-		.mul-btn-group-horizontal				{
-												margin-top: $baseMargin;
-												margin-bottom: 0;
+		h3										{
+												color: $white;
+												font-family: $fontThinStack;
+												padding-bottom: 70px;
 												}
+		.evo-icon								{
+												color: $white;
+												display: inline-block;
+												top: -12px;
+												font-size: 140px;
+												}
+		.mul-btn-group-horizontal				{@include clearfix;}
 											}
 										}
 
 .banding-section-2						{
-	[class*="mul-icon"]						{color: $gray-darkest;}
+	h1										{
+											text-align: center;
+											margin-bottom: 20px;
+											}
+	[class*="mul-icon"]						{
+											color: $gray-darkest;
+											margin-bottom: 10px;
+											}
+	h3, p									{text-align: center;}
 										}
 
 .banding-section-3						{
-										color: $green-darker;
-	h1, h3									{color: $green-darker;}
-	[class*="mul-icon"]						{color: $green-darker;}
+										color: $blue-sapphire-dark;
+	h1, h3									{color: $blue-sapphire-dark;}
+	[class*="mul-icon"]						{color: $blue-sapphire-dark;}
 										}
 
 .banding-section-4						{
+	li										{line-height: 20px;}
 	[class*="mul-icon"]						{
-											color: $gray-darkest;
-											margin-bottom: 15px;
-											top: 8px;
+											color: $green-darker;
+											margin-bottom: 30px;
+											top: 12px;
 											}
 										}
 
@@ -246,7 +265,13 @@ html.mul-mod-js							{display:none;}
 											}
 										}
 
-.banding-section-6						{font-size: 14px;}
+.banding-section-6						{
+										font-size: 14px;
+	.hp-layout								{
+		h5										{margin-bottom: 7px;}
+		.mul-vertical-list						{margin-bottom: $baseMargin;}
+											}
+										}
 
 .hp-content-column						{
 	dd										{
@@ -266,30 +291,6 @@ html.mul-mod-js							{display:none;}
 												}
 		.ui-tabs-panel							{border: 0;}
 											}
-										}
-
-	// MARKETING SECTION - HOMEPAGE
-	.marketing-ctn						{
-		.img-section						{
-											border-bottom: 1px solid $gray-light;
-			img									{margin-bottom: -5px;}
-											}
-		.mkt-text							{
-			h1									{
-												font-family: $fontThinStack;
-				span								{display: block;}
-												}
-			.mul-icon-adv						{
-												margin-top: 15px;
-												float: right;
-												}
-											}
-										}
-
-.hp-layout								{
-										padding-top: 40px;
-	h5										{margin-bottom: 7px;}
-	.mul-vertical-list						{margin-bottom: $baseMargin;}
 										}
 
 

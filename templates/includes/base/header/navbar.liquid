@@ -7,7 +7,9 @@
 				<!-- LOGO SECTION - BEGINS -->
 					<section class="mul-logo mul-small-mediaquery-grid">
 						<div class="mul-logo-col-2">
+						{% if mixture.url != "index" %}
 							<a href="/index">MERCER <span>EVOLUTION</span></a>
+						{% endif %}
 						</div>
 						<div class="mul-logo-col-3 mul-header-icon">
 							<a href="javascript:;" class="js-mul-header-mobile-menu-toggle" data-mul-header-mobile-menu-toggle="toolbar"><i class="mul-icon-menu3"></i></a>
@@ -19,7 +21,7 @@
 				{% if global.toolbar_group_icons == 'true' %}
 					<ul class="sm mul-nav-menus mul-menu-ctn" data-menu="click">
 						<li class="mul-header-icon mul-mega-menu">
-							<a href="javascript:;"><i class="mul-icon-grid"></i></a>
+							<a href="javascript:;"><i class="mul-icon-mul-book-open"></i></a>
 							<ul class="mega-menu">
 								<li class="mul-mega-menu-adjust">
 								<!-- MEGA MENU CONTAINER - BEGINS -->
