@@ -2,19 +2,19 @@
 	"title": "Navigation Bar",
 
 	"reference-overview": 
-		"<p>The Navigation Bar is denoted by the gray background area. If it is used, it will always be displayed immediately underneath the <a href='/masthead'>Masthead</a>. There are two primary versions:</p><ul><li>Tabs</li><li>Sliding Menu</li></ul><p>In addition, there are other optional pieces that can be used, including Text Links, Secondary Icons, User Identifier.</p>",
+		"<p>The Navigation Bar is denoted by the gray background area. If it is used, it will always be displayed immediately underneath the <a href='/masthead'>Masthead</a>. There are two primary versions:</p><ul><li>Tabs</li><li>Mega Menu</li></ul><p>In addition, there are other optional pieces that can be used, including Text Links, Secondary Icons, User Identifier.</p>",
 
 	"reference-usage": 
-		"<p>The Navigation Bar should be used in conjunction with the <a href='/masthead'>Masthead</a> to create the overall <a href='/base/product-header'>Product Header</a>. The <strong>Tabs</strong> version should be used when you want to explicitly convey the main site structure in the main navigation. The <strong> Sliding Menu</strong> version should be used when you want the main navigation accessible on each screen but not necessarily front and center on the sceen.</p>",
+		"<p>The Navigation Bar should be used in conjunction with the <a href='/masthead'>Masthead</a> to create the overall <a href='/base/product-header'>Product Header</a>. The <strong>Tabs</strong> version should be used when you want to explicitly convey the main site structure in the main navigation. The <strong> Mega Menu</strong> version should be used when you want the main navigation accessible on each screen but not necessarily front and center on the sceen.</p>",
 
 	"reference-details": 
-		"<h3>Header</h3><p>Details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+		"<p>The primary difference between the Mega Menu and the Tabs version is in how you want to present the structural navigation options to the user. </p><h4>Mega Menu Version</h4><p>The Mega Menu hides the structural navigation from the baseline UI, but makes it accessible by clicking or tapping on the menu icon. When clicked, a menu slides down that exposes the navigation options. Within this slide down menu area, there are two main sections: <ul><li>Showcase Area</li><ul><li>This area sits on top fo the Navigation Section and should be used to showcase any specific links or destinations that are higher in prominence</a>.</li></ul><li>Navigation Section</li><ul><li>Can be organized into any grid comnbination using the <a href='/base/grids'>Evolution Grid System</a>.</li><li>Can support multiple levels of categorization using section headers.</li></ul></ul></p><h4>Tabs Version</h4><p>This version of the Navigation bar provides the user with the main structural navigation in the form of consistent navigation options. These options are separated from one another by creating a visual indicator of tabs. These menu items can support multiple levels of submenus if desired.</p><h4>Other Configurations</h4><p>The following additional configurable elements can be used with either version of the Navigation Bar.</p><ul><li>Secondary Icons - These additional icons follow the same basic interaction pattern as the Mega Menu; when a user clicks or taps an icon, an associated menu will slide down. Some of the common uses for Secondary Icons are Shopping Cart, Documents, Messages, Sign Out and more.</li><li>Ancillary Text Links - This optional area can be used to expose secondary navigation items in a consistent manner. These menu items are intended to be secondary in nature, which is why they are presented as text. They can support multiple levels of menuing themselves.</li><li>Custom Message - If necessary, the Navigation Bar can easily support a custom text message.</li></ul>",
 
 	"reference-mobile": 
-		"<h3>Header</h3><p>Mobile details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+		"<p>The behavior of the Navigation Bar when viewed on mobile differs according to which version is being used.</p><h4>Mega Menu</h3><ul><li>The Mega Menu icon behavior remains unchanged.</li><li>All Ancillary Text Links are removed from the default view and instead become accessible inside the Mega Menu.</li><li>All Secondary Icons are removed from the default view and instead become accessible inside the Mega Menu.</li><li>Any Custom Text Message that is used in the Navigation Bar is removed from the default mobile view.</li></ul><h4>Tabs </h4><ul><li>When viewed on mobile, the Tabs view will always be replaced by the Mega Menu version. </li><li>All of the top level Tab items are removed from the default view and are instead moved into the Mega Menu</li><li>If multiple levels of navigation are used in the Tabs, all levels will be accessible in the mobile view by tapping the top level item.</li></ul>",
 
 	"reference-technical": 
-		"<h3>Header</h3><p>Technical details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+		"<p>Technical details go here. </p>",
 
 	
 	"reference-dependency": "false",
@@ -24,24 +24,24 @@
 		"",
 
 	"reference-example-versions": "true",
-	"reference-example-version-label": "Tabs - Version 1",
-	"reference-example-description": "Copy goes here",
-	"reference-example-version-label-1": "Tabs - Version 2",
-	"reference-example-description-1": "Copy goes here",
-	"reference-example-version-label-2": "Tabs - Version 3",
-	"reference-example-description-2": "Copy goes here",
-	"reference-example-version-label-3": "Mega Menu",
-	"reference-example-description-3": "Copy goes here",
-	"reference-example-version-label-4": "Mega Menu & Text Links",
-	"reference-example-description-4": "Copy goes here",
-	"reference-example-version-label-5": "Mega Menu & Text Links & Additional Icons",
-	"reference-example-description-5": "Copy goes here",
-	"reference-example-version-label-6": "Mega Menu & Additional Icons",
-	"reference-example-description-6": "Copy goes here",
-	"reference-example-version-label-7": "Mega Menu & Custom Message",
-	"reference-example-description-7": "Copy goes here",
-	"reference-example-version-label-8": "Full Version",
-	"reference-example-description-8": "Copy goes here",
+	"reference-example-version-label": "Mega Menu",
+	"reference-example-description": "This baseline version of Tabs includes just the stand alone Tabs as the main navigation elements.",
+	"reference-example-version-label-1": "Mega Menu & Ancillary Text Links",
+	"reference-example-description-1": "This version allows you to use the Mega Menu to house the structural navigation, but also allows for ancillary items to be bubbled up to the navigation bar in the form of secondary text links.",
+	"reference-example-version-label-2": "Mega Menu, Ancillary Text Links & Secondary Icons",
+	"reference-example-description-2": "This version shows the additional of secondary icons to allow for additional functionality.",
+	"reference-example-version-label-3": "Mega Menu & Secondary Icons",
+	"reference-example-description-3": "This common configuration combines the Mega Menu with additional Secondary Icons that also invoke a slide down menu.",
+	"reference-example-version-label-4": "Mega Menu & Custom Message",
+	"reference-example-description-4": "This version shows an example of the Mega Menu used in combination with a custom text message.",
+	"reference-example-version-label-5": "Mega Menu & Text Links & Secondary Icons",
+	"reference-example-description-5": "This version has all of the configurable elements turned on.",
+	"reference-example-version-label-6": "Tabs",
+	"reference-example-description-6": "This baseline version of Tabs includes just the stand alone Tabs as the main navigation elements.",
+	"reference-example-version-label-7": "Tabs & Custom Message",
+	"reference-example-description-7": "This version of Tabs includes a custom text message.",
+	"reference-example-version-label-8": "Tabs & Secondary icons",
+	"reference-example-description-8": "In this version, the Tabs act as the main navigation options, but the Additional Icons are added to allow for additional functionality.",
 
 
 
