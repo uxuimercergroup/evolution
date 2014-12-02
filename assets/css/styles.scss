@@ -227,46 +227,37 @@ html.mul-mod-js							{display:none;}
 											color: $gray-darker;
 											margin-bottom: 10px;
 											}
-	h3										{color: $blue-gray-darker;}
 	h3, p									{text-align: center;}
 										}
 
 .banding-section-3						{
-										color: $gray-darker;
-	h1, h3									{color: $gray-darker;}
-	[class*="mul-icon"]						{color: $gray-darker;}
+										color: $blue-sapphire-dark;
+	h1, h3									{color: $blue-sapphire-dark;}
+	[class*="mul-icon"]						{color: $blue-sapphire-dark;}
+	.mul-icon-puzzle						{
+											@include rotate(35deg);
+											top: -7px;
+											}
 										}
 
 .banding-section-4						{
-	h1, h4, li								{color: $white;}
-	li										{
-											line-height: 20px;
-											}
+	li										{line-height: 20px;}
 	[class*="mul-icon"]						{
-											color: $gray-lighter;
+											color: $gray-darkest;
 											margin-bottom: 30px;
 											top: 12px;
-											}
-	.mul-vertical-list						{
-		li										{
-												@include border-radius(4px);
-												background-color: $purple;
-												}
 											}
 										}
 
 .banding-section-5						{
-										color: $white;
-	h1, p									{
-											color: $white;
-											text-align: center;
-											}
+	h1, p									{text-align: center;}
 	.mul-horizontal-list					{
 											text-align: center;
 		&:last-child							{
 			li										{margin-bottom: 0;}
 												}
 		li										{
+												color: $orange-dark;
 												font-size: ($baseFontSize + 8);
 												margin-right: 85px;
 												margin-bottom: 35px;
