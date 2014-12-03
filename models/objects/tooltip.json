@@ -2,7 +2,7 @@
 	"title": "Tooltip",
 
 	"reference-overview": 
-		"<p>The Tooltip feature provides the user additional information/detail on <a href='/base/forms/input'>Form Input</a> fields that is not initially displayed. This additional information displayed with the Tooltip shouldn't be crucial, required functionality, content needed to interact with the interface. It is simply a bit of additional information that would be considered helpful to the user, not essential.</p>",
+		"<p>The Tooltip feature provides the user additional information/detail on <a href='/base/forms/input'>Form Input</a> fields that is not initially displayed. The information displayed with the Tooltip should not be crucial, required functionality, or content needed to interact with the interface. It is simply a bit of additional information that would be considered helpful to the user, but not essential.</p>",
 
 	"reference-usage": 
 		"<p>Designers should use the Tooltip when the amount of information displayed is short in length (10-15 words maximum) and not critical to the user. For longer content (more than 15 words or images) use the  Content Menu.</p>",
@@ -11,7 +11,7 @@
 		"<h3>Text</h3><ul><li>The designer should use concise language in the Tooltip, no more than 15 words.</li><li>The Tooltip must be plain text.</li></ul><h3>Height/Width</h3><ul><li>The Tooltip has a maximum width of 200 pixels but can be smaller based on content.</li><li>The height of the Tooltip should be dynamic and based on the content included.</li></ul><h3>Color</h3><ul><li>The Tooltip container should have a light blue (#e7f0f9) color background.</li><li>The Tooltip container should have a light gray (#cccccc) border color.</li><li>The Tooltip text will be dark gray (#333333).</li></ul><h3>Placement</h3><ul><li>The Tooltip's placement relative to the link should be dynamic, based on how much space is available.</li><li>By default, the Tooltip should display above the link. However, if there is limited space, it should be able to dynamically shift to the bottom.</li></ul><h3>Accessibility</h3><ul><li>The Tooltip container will open when the user mouses over the parent element and will disappear when the user moves the mouse away from the parent element.</li></ul>",
 
 	"reference-mobile": 
-		"<ul><li>The tooltip will open on tap. If the user taps the already open tooltip, it will close.</li><li>The font size of the content wihtin the tool tip will increase for mobile.</li></ul>",
+		"<ul><li>The tooltip will open on tap. If the user taps the already open tooltip, it will close.</li><li>The font size of the content within the tool tip will increase for mobile.</li></ul>",
 
 	"reference-technical": 
 		"<h3>Cross browser compatibility</h3><p>IE9 doesn't crop background gradients on containers with rounded corners, so we square the corners of every container so it looks just like IE8.</p>",
