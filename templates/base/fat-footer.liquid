@@ -53,10 +53,21 @@
 	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
 		<section class="mul-ref-example-content">
 
-		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-
-			<a class="mul-btn mul-btn-medium mul-btn-primary mul-btn-first" href="/demos/layout-fat-footer-demo" target="_blank">View Footer</a>
-
+			<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+			<section class="col-24">	
+				{% if model.reference-example-versions == "true" %}
+					<h4 class="mul-hdr-rule">
+						<a href="/demos/layout-fat-footer-demo" class="mul-float-right see-context-link" target="_blank">See in context</a>
+						{{ model.reference-example-version-label }}
+					</h4>
+				{% endif %}
+					<p>{{ model.reference-example-description}}</p>
+					<p>
+						<a href="/demos/layout-fat-footer-demo" class="mul-float-right see-context-link" target="_blank">
+							<img src="{{ "fat-footer.png" | asset_url }}" width="980" height="" />
+						</a>
+					</p>
+			</section>
 		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 		</section>
