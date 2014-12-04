@@ -17,7 +17,7 @@
 								margin-bottom: -10px;
 								}
 							}
-			ul.mega-menu	{
+			.mega-menu		{
 							@include box-shadow(0, 0, 0, $white);
 							@include border-radius(0);
 							@include clearfix;
@@ -111,6 +111,31 @@
 		// MEGA MENU CONTENT - ENDS
 							}
 						}
+
+
+.test					{
+						@include box-shadow(0, 0, 0, $white);
+						@include border-radius(0);
+						@include clearfix;
+						background-color: $gray-darker !important;
+						border: 0;
+						border-top: 4px solid $gray-dark;
+						border-bottom: 4px solid $gray-dark;
+						display: none;
+						position: absolute;
+						left: 0;
+						width: 100%;
+						z-index: 9999;
+						top: 50px;
+	li						{
+		a						{
+								color: $white;
+								font-family: $fontRegularFamily;
+			&:hover					{color: $white;}
+								}
+							}
+						}
+
 	// MEGA MENU - ENDS
 
 	// MENU STYLES - BEGINS
@@ -309,7 +334,6 @@
 								background-color: $white; //THEME
 								border: 1px solid $gray-mid-dark; //THEME
 								direction: ltr;
-								height: auto;
 								line-height: normal;
 								margin: 0;
 								min-width: 100px !important;
