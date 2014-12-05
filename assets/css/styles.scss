@@ -35,6 +35,23 @@ html.mul-mod-js							{display:none;}
 
 .img-border								{border: 1px solid $gray-mid-dark;}
 
+
+
+/*--- DEMO STYLES -------------------------------------------------------------------------*/
+.mul-masthead			{
+	.mul-masthead-adjust	{
+		.mul-logo-col-1			{
+			.mul-primary-logo		{
+				[class*="mul-icon"]		{
+										color: $white;
+										top: 6px;
+										}
+									}
+								}
+							}
+						}
+
+
 /*--- REFERENCE PAGES ---------------------------------------------------------------------*/
 
 // ALTERNATE VIEWS BADGE

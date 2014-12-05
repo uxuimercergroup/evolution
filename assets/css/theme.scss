@@ -605,7 +605,32 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 								}
 
 		// TOOLBAR - BEGINS
-			.mul-toolbar		{@include background-gradient-horizontal($toolbarBackgroundStartColor, $toolbarBackgroundEndColor);}
+			.mul-toolbar		{
+								@include background-gradient-horizontal($toolbarBackgroundStartColor, $toolbarBackgroundEndColor);
+				.mul-toolbar-adjust
+									{
+				// TEXT NAVBAR - BEGINS
+					nav.mul-text-nav	{
+						ul					{
+							li					{
+								a					{
+													color: $toolbarLinkColor;
+									&:hover				{color: $toolbarLinkHoverColor;}
+													}
+								ul					{
+									li					{
+										a					{
+															color: $menuFontColor;
+											&:hover				{color: $menuHoverFontColor;}
+															}
+														}
+													}
+												}
+											}
+										}
+				// TEXT NAVBAR - ENDS
+									}
+								}
 		// TOOLBAR - ENDS
 
 		// TOOLBAR FIXED - BEGINS
