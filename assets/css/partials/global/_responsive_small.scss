@@ -7,6 +7,11 @@
 // Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
 @include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
 
+	.mb-navb-off							{
+											height: 20px;
+		[class*="mul-icon"]						{display: none;}
+											}
+
 	/*--- HOMEPAGE ------------------------------------------------------------------------*/
 	.mul-alternate-views-badge.ui-tabs		{
 		.banding-section-1						{

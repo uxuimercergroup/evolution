@@ -1,6 +1,6 @@
 {% if global.type_of_navbar == "toolbar" %}
 <!-- TOOLBAR - BEGINS -->
-	<section class="mul-navbar mul-toolbar {% if global.toolbar_fixed == 'true' %}mul-toolbar-fixed{% endif %}">
+	<section class="mul-navbar mul-toolbar {% if global.toolbar_fixed == 'true' %}mul-toolbar-fixed{% endif %} ">
 		<div class="mul-navbar-adjust mul-toolbar-adjust">
 			<nav class="mul-text-nav">
 				<div class="col-{{ global.toolbar_column_width_left }} first mul-navbar-col-1">
@@ -11,7 +11,7 @@
 							<a href="/index">MERCER <span>EVOLUTION</span></a>
 						{% endif %}
 						</div>
-						<div class="mul-logo-col-3 mul-header-icon">
+						<div class="mul-logo-col-3 mul-header-icon {% if mixture.url == "index" %}mb-navb-off{% endif %}">
 							<a href="javascript:;" class="js-mul-header-mobile-menu-toggle" data-mul-header-mobile-menu-toggle="toolbar"><i class="mul-icon-menu3"></i></a>
 						</div>
 					</section>
