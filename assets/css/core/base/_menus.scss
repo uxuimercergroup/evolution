@@ -21,10 +21,12 @@
 							@include box-shadow(0, 0, 0, $white);
 							@include border-radius(0);
 							@include clearfix;
-							background-color: $gray-darker !important;
+							background-color: $megaMenuBackgroundColor !important;
 							border: 0;
-							border-top: 4px solid $gray-dark;
-							border-bottom: 4px solid $gray-dark;
+							border-top-width: 4px;
+							border-top-style: solid;
+							border-bottom-width: 4px;
+							border-bottom-style: solid;
 
 		// MEGA MENU CONTENT - BEGINS
 			.mul-mega-menu-adjust
@@ -32,7 +34,6 @@
 								border-top-style: none;
 				.mul-mega-menu-ctn	{
 									@include clearfix;
-									color: $white;
 									margin: 0 auto;
 									padding: $basePadding;
 									width: $gridWidth;
@@ -46,8 +47,6 @@
 										@if $use-grid-1200 == true{
 											max-width: $gridMaxWidth1200;
 										}
-					h1, h2, h3,
-					h4, h5, h6			{color: $white;}
 
 				// SPOTLIGHT CONTAINER - BEGINS
 					.mul-mega-menu-spotlight-ctn
@@ -89,7 +88,7 @@
 				.mul-mega-menu-groups
 									{
 					dt					{
-										color: $white; //THEME
+										color: $megaMenuContentFontColor;
 										margin-bottom: 0;
 										}
 					dd					{
@@ -97,11 +96,11 @@
 										border-top: 1px dotted $gray-mid-dark; //THEME
 						&:last-child		{border-bottom: 1px dotted $gray-mid-dark;} //THEME
 						a					{
-											color: $white; //THEME
+											color: $megaMenuContentFontColor; //THEME
 											line-height: 30px;
 											padding: 0 !important;
 							&:hover				{
-												background-color: $transparent; //THEME
+												background-color: $transparent;
 												text-decoration: underline;
 												}
 											}
@@ -111,31 +110,6 @@
 		// MEGA MENU CONTENT - ENDS
 							}
 						}
-
-
-.test					{
-						@include box-shadow(0, 0, 0, $white);
-						@include border-radius(0);
-						@include clearfix;
-						background-color: $gray-darker !important;
-						border: 0;
-						border-top: 4px solid $gray-dark;
-						border-bottom: 4px solid $gray-dark;
-						display: none;
-						position: absolute;
-						left: 0;
-						width: 100%;
-						z-index: 9999;
-						top: 50px;
-	li						{
-		a						{
-								color: $white;
-								font-family: $fontRegularFamily;
-			&:hover					{color: $white;}
-								}
-							}
-						}
-
 	// MEGA MENU - ENDS
 
 	// MENU STYLES - BEGINS
@@ -147,7 +121,6 @@
 						width: auto;
 						-webkit-tap-highlight-color: rgba(0,0,0,0);
 			li				{
-							border-bottom: 1px dotted $gray-mid-dark; //THEME
 							display: block;
 							width: 100%;
 							margin: 0;
@@ -164,17 +137,15 @@
 									width: 16px;
 									height: 16px;
 						&:before		{
-										color: $gray-dark; //THEME
 										content: "\e360"; // PLUS ICON
 										font-family: $mulIconFontStack;
 										}
 									}
 				// DEFAULT ARROW - ENDS
-					&:hover			{color: #002C77;} //THEME
 								}
 					ul			{
 								@include clearfix;
-								background: rgba(100,100,100,0.1); //THEME
+								background: rgba(100,100,100,0.1);
 								height: auto;
 								display: none;
 								position: static;
@@ -189,7 +160,9 @@
 									border-left: 0;
 									border-right: 0;
 									border-bottom: 0;
-									border-top: 1px dotted $gray-mid-dark; //THEME
+									border-top-width: 1px;
+									border-top-style: dotted;
+
 							&:last-child
 										{
 								a			{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
@@ -322,17 +295,14 @@
 										}
 									}
 					// DEFAULT ARROW - ENDS
-					&:hover			{
-									background-color: $white; //THEME
-									@include transition(background-color 0.3s ease-in-out);
-									}
+					&:hover			{@include transition(background-color 0.3s ease-in-out);}
 								}
 				ul				{
-								@include box-shadow(0, 2px, 5px, $gray-mid-dark); //THEME
+								@include box-shadow(0, 2px, 5px, $menuDropShadowColor);
 								@include border-radius(0 0 4px 4px);
 								@include clearfix;
-								background-color: $white; //THEME
-								border: 1px solid $gray-mid-dark; //THEME
+								border-width: 1px;
+								border-style: solid;
 								direction: ltr;
 								line-height: normal;
 								margin: 0;

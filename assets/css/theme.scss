@@ -360,87 +360,264 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 
 }//endif
 
+@if $use-menu-theme == true{
 
-@if $use-header-theme == true{
+	// MEGA MENU - BEGINS
+		li.mul-mega-menu{
+			.mega-menu		{
+							background-color: $megaMenuBackgroundColor !important;
+							border-top-color: $megaMenuBorderTopColor;
+							border-bottom-color: $megaMenuBorderBottomColor;
 
-	/*--- HEADER THEME -------------------------------------------------------------------------*/
+		// MEGA MENU CONTENT - BEGINS
+			.mul-mega-menu-adjust
+								{
+				.mul-mega-menu-ctn	{
+									color: $megaMenuContentFontColor;
+					h1, h2, h3,
+					h4, h5, h6			{color: $megaMenuContentFontColor;}
+									}
+								}
+		// MEGA MENU CONTENT - ENDS
+							}
+						}
+	// MEGA MENU - ENDS
 
-	/* HEADER MASTHEAD */
-	.mul-masthead							{
-											@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
-		.mul-masthead-adjust					{
-			.mul-masthead-content-ctn				{
-				
-				// HEADER MASTHEAD LOGO
-				.mul-logo								{
-					a										{@include href-link($mastheadLogoLinkColor, none);}
-														}
+	// MENU STYLES - BEGINS
+		.mul-nav-menus	{
+			li				{
+							border-bottom: 1px dotted $menuBorderTopColor;
+				a				{
+				// DEFAULT ARROW - BEGINS
+					.sub-arrow		{
+						&:before		{color: $menuIndicatorColor1stLevel;}
+									}
+				// DEFAULT ARROW - ENDS
+					&:hover			{color: $menuHoverFontColor;}
+								}
+					ul			{
 
-													}
-												}
-											}
-
-	/* HEADER MASTHEAD NAVBAR */
-	.mul-masthead-navbar-ctn				{
-											@include background-gradient($navBackgroundStartColor, $navBackgroundEndColor);
-											border-color: $navBorderColor;
-											}
+						>li			{
+									border-top-color: $menuBorderTopColor2ndlevel;
+							&:last-child
+										{
+								a			{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+										}
+									}
+								}
+							}
+						}
+	// MENU STYLES - ENDS
 
 	/*=== MEDIA QUERIES ========================================================================*/
 
 	/* Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops */
 	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
 
-		/* HEADER MASTHEAD */
-		/*
-		.mul-masthead						{
-			.mul-masthead-adjust				{
-				.mul-masthead-content-ctn			{
+	// MENU STYLES - BEGINS
+		.mul-nav-menus	{
+			li				{
+				a				{
+					&:hover			{background-color: $menuBackgroundHoverColor;}
+								}
+				ul				{
+								@include box-shadow(0, 2px, 5px, $menuDropShadowColor);
+								background-color: $menuBackgroundColor;
+								border-color: $menuBorderColor;
+								}
+							}
+						}
+	// MENU STYLES - ENDS
 
-					// HEADER MASTHEAD PROFILE MENU
-					.mul-profile-menu-ctn				{		
-														@include background-gradient($mastheadProfileMenuBackgroundStartColor,$mastheadProfileMenuBackgroundEndColor);
-						.mul-profile-menu-user-info-ctn		{
-							.mul-profile-menu-user-info			{
-								.mul-profile-menu-icon				{
-									&:before							{color: $mastheadProfileMenuIconColor;}
-																	}
-								dl									{color: $mastheadProfileMenuTextColor;}
-																}
-							.mul-profile-menu-user-avatar		{
-								.mul-icon-user:before				{color: $mastheadProfileMenuAvatarIconColor;}
-																}
-															}
-						.mul-profile-menu					{
-															@include box-shadow(0, 2px, 2px, $mastheadProfileMenuShadowColor);
-															background-color: $mastheadProfileMenuBackgroundEndColor;
-							.mul-vertical-list					{
-								li									{
-									a									{
-																		@include href-link($mastheadProfileMenuTextColor, none);
-										&:hover								{background-color: $mastheadProfileMenuHoverColor;}
-																		}
-																	}
-																}
-															}
-														}
+	}
 
-					// HEADER MASTHEAD PROFILE SIMPLE
-					.mul-profile-simple-ctn				{
-														color: $mastheadProfileSimpleTextColor;
-							a								{@include href-link($mastheadProfileSimpleTextColor, none);}
-							.mul-horizontal-list			{
-								.mul-profile-simple-user-name	{border-right: 1px solid $mastheadProfileSimpleListBorderColor;}
-															}
-														}
-													}
-												}
-											}
-											*/
+}//endif
+
+@if $use-header-theme == true{
+
+	// ICON STYLES - BEGINS
+		.mul-header-icon	{
+			a					{
+				[class*="mul-icon"]	{
+									background-color: $headerIconBackgroundColor;
+									color: $headerIconFontColor;
+					&:hover				{
+										background-color: $headerIconHoverBackgroundColor;
+										color: $headerIconHoverFontColor;
+										}
+									}
+								}
+							}
+	// ICON STYLES - ENDS
+
+	// MAIN LOGO CONTAINER - BEGINS
+		.mul-logo			{
+			.mul-logo-col-2		{
+				a					{@include href-link($mastheadLogoLinkColor, none);}
+								}
+							}
+	// MAIN LOGO CONTAINER - ENDS
+
+	// MASTHEAD - BEGINS
+		.mul-masthead		{@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);}
+	// MASTHEAD - ENDS
+
+	/*=== MEDIA QUERIES ========================================================================*/
+
+	/* Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops */
+	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+	// USER IDENTIFIER CONTAINER - BEGINS
+		.mul-user-identifier-ctn
+					{
+					@include background-gradient($userIdentifierBackgroundStartColor,$userIdentifierBackgroundEndColor);
+			li			{
+				a			{
+					.mul-user-identifier-ctn-indicator,
+					.mul-user-identifier-ctn-user-info,
+					.mul-user-identifier-ctn-avatar
+								{color: $userIdentifierFontColor;}
+							}
+
+			// SUB-MENU - BEGINS
+				.mul-user-identifier-menu
+							{
+							background-color: $userIdentifierBackgroundEndColor;
+					li			{
+						a			{
+									@include href-link($userIdentifierMenuTextColor, none);
+							&:hover		{background-color: $userIdentifierMenuHoverColor;}
+									}
+								}
+							}
+			// SUB-MENU - ENDS
+
+						}
+					}
+	// USER IDENTIFIER CONTAINER - ENDS
 
 	}
 }//endif
 
+@if $use-nav-theme == true{
+
+	// TOOLBAR - BEGINS
+		.mul-toolbar		{
+							@include background-gradient-horizontal($toolbarBackgroundStartColor, $toolbarBackgroundEndColor);
+			.mul-navbar-col-2	{background-color: $toolbarMobileNavbarBackgroundColor;}
+							}
+	// TOOLBAR - ENDS	
+
+	/*=== MEDIA QUERIES ========================================================================*/
+
+	/* Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops */
+	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+			.mul-navbar			{
+								@include background-gradient($navbarBackgroundGradientStartColor, $navbarBackgroundGradientEndColor);
+								border-bottom-color: $navbarBorderColor;
+				.mul-navbar-adjust	{
+
+				// GENERAL NAVBAR - BEGINS
+					nav					{
+						ul					{
+							li					{
+								a					{
+									&:hover				{color: $navbarFontHoverColor;}
+													}
+												}
+						// HEADER ICON OVERRIDES - BEGINS
+							.mul-header-icon	{
+									a				{
+										&:hover			{
+											[class*="mul-icon"]
+															{color: $headerIconHoverFontColor;}
+														}
+													}
+												}
+						// HEADER ICON OVERRIDES - BEGINS
+											}
+					// MENU OVERRIDES - BEGINS
+						.mul-nav-menus		{
+							li					{
+								ul					{
+													background-color: $subMenuBackgroundColor;
+									li					{border-top-color: $subMenuBorderTopColor;}
+													}
+												}
+											}
+					// MENU OVERRIDES - ENDS
+
+						.mul-navbar-message	{
+							li					{
+								span				{border-right-color: $navbarMessageBorderRightColor;}
+												}
+											}
+										}
+				// GENERAL NAVBAR - ENDS
+
+				// TEXT NAVBAR - BEGINS
+					nav.mul-text-nav	{
+						ul					{
+							li					{
+								a					{border-left-color: $textNavbarBorderLeftColor;}
+								ul					{
+									li					{
+									// HOVER EFFECT FOR SUB-MENU - BEGINS
+										a					{
+											&:hover				{background-color: $textNavbarSubMenuHoverBackgroundColor;}
+															}
+									// HOVER EFFECT FOR SUB-MENU - ENDS
+														}
+													}
+												}
+											}
+										}
+				// TEXT NAVBAR - ENDS
+
+				// TABBED NAVBAR - BEGINS
+					nav.mul-tabbed-nav	{
+						ul					{
+							li					{
+												border-left-color: $tabbedNavbarBorderLeftColor;
+								a					{
+													border-left-color: $tabbedNavbarHrefBorderLeftColor;
+									&:hover				{@include background-gradient($tabbedNavbarActiveBackgroundStartColor, $tabbedNavbarActiveBackgroundEndColor);}
+													}
+								.mul-navbar-item-active
+													{@include background-gradient($tabbedNavbarActiveBackgroundStartColor, $tabbedNavbarActiveBackgroundEndColor);}
+									ul				{
+										li				{
+											a				{
+												&:hover			{background-color: $tabbedNavbarSubMenuHoverBackgroundColor;}
+															}
+														}
+													}
+								&:last-child		{
+													border-right-color: $tabbedNavbarHrefBorderLeftColor;
+									a					{border-right-color: $tabbedNavbarBorderLeftColor;}
+													}
+												}
+											}
+										}
+				// TABBED NAVBAR - ENDS
+									}
+								}
+
+		// TOOLBAR - BEGINS
+			.mul-toolbar		{@include background-gradient-horizontal($toolbarBackgroundStartColor, $toolbarBackgroundEndColor);}
+		// TOOLBAR - ENDS
+
+		// TOOLBAR FIXED - BEGINS
+			
+			// This class is used when the user starts to scroll, js will add this class to the navbar to create a drop shadow.
+			.mul-toolbar-fixed-shadow
+								{@include box-shadow(0, 0, 15px, $toolbarDropShadowColor);}
+		// TOOLBAR FIXED - ENDS
+
+	}
+
+}//endif
 
 @if $use-hero-banner-theme == true{
 
@@ -452,151 +629,6 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 													}
 												}
 											}
-
-}//endif
-
-
-@if $use-mega-menu-theme == true{
-
-	/*--- MEGA MENU THEME ----------------------------------------------------------------------*/
-
-	// MEGA MENU HEADER
-	.mul-mega-menu-masthead					{
-		.mul-masthead-navbar-ctn				{
-			.mul-masthead-adjust					{
-				.mul-mega-menu-navbar					{
-					.mul-mega-menu-item						{
-															background-color: $megaMenuItemBackgroundColor;
-															color: $megaMenuItemColor;
-						[class*="mul-icon"]						{color: $megaMenuItemColor;}
-															}
-														}
-													}
-												}
-
-		.mul-header-mega-menu-ctn				{
-												background-color: $megaMenuContainerBackgroundColor;
-												border-top-color: $megaMenuContainerBorderTopColor;
-												border-bottom-color: $megaMenuContainerBorderBottomColor;
-			.mul-masthead-adjust					{
-				.mul-mega-menu-content					{
-
-					// SPOTLIGHT SECTION 
-					.mul-header-menu-spotlight				{
-															background-color: $megaMenuContainerSpotlightBackgroundColor;
-															color: $megaMenuContainerSpotlightTextColor;
-						.mul-horizontal-list					{
-							li										{
-								a										{
-																		@include href-link($megaMenuContainerSpotlightTextColor, none);
-									[class*="mul-icon"]						{color: $megaMenuContainerSpotlightTextColor;}
-																		}
-																	}
-																}
-															}
-
-					// MAIN MENU
-					.mul-menu-ctn							{
-						.mul-hdr-rule							{color: $megaMenuContainerMenuContainerTextColor;}
-						dd										{
-							a										{@include href-link($megaMenuContainerMenuContainerTextColor, none);}
-																}
-															}
-														}
-
-				.mul-mega-menu-search-content			{
-					// SEARCH BUTTON
-					.mul-mega-menu-search-btn				{
-						[class*="mul-icon"]						{color: $megaMenuSearchBoxIconColor;}
-															}
-														}
-
-													}
-												}
-											}
-
-	/*=== MEDIA QUERIES ========================================================================*/
-
-	/* Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops */
-	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
-
-		// MEGA MENU HEADER
-		/*
-		.mul-mega-menu-masthead				{
-			.mul-masthead-navbar-ctn			{
-				.mul-masthead-adjust				{
-					.mul-mega-menu-navbar				{
-						.mul-util-navbar					{
-							.mul-horizontal-list				{
-								li									{border-left-color: $megaMenuUtilityMenuPipedColor;}
-																}
-
-							.mul-utility-subnav-ctn				{
-								.mul-utility-subnav					{
-																	background-color: $megaMenuUtilityMenuBackgroundColor;
-																	border-color: $megaMenuUtilityMenuBorderColor;
-									li									{
-										a									{
-																			border-bottom-color: $megaMenuUtilityMenuLinkBorderColor;
-											&:hover								{background-color: $megaMenuUtilityMenuLinkHoverColor;}
-																			}
-																		}
-																	}
-																}																	
-															}
-														}
-													}
-												}
-											}
-											*/
-
-	}// endif
-
-}//endif
-
-
-@if $use-nav-theme == true{
-
-	/*--- NAVIGATION THEME ---------------------------------------------------------------------*/
-	
-	/* NAVIGATION */
-	/*
-	.mul-navbar								{
-		.mul-horizontal-list					{
-												@include background-gradient($navBackgroundStartColor, $navBackgroundEndColor);
-												border-bottom-color: $navBorderColor;
-			li										{
-													border-bottom-color: $navBorderColor;
-				a										{
-														@include href-link($navLinkColor, none);
-														border-top-color: $navLinkBorderColor;
-					&.mul-navbar-item-active,
-					&:hover									{@include background-gradient($navActiveBackgroundStartColor, $navActiveBackgroundEndColor);}
-														}
-													}
-												}
-											}
-	*/
-
-	/*=== MEDIA QUERIES ========================================================================*/
-
-	/* Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops */
-	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
-
-		/* NAVIGATION */
-		/*
-		.mul-navbar							{
-			.mul-horizontal-list				{
-				li									{
-													border-right-color: $navBorderColor;
-					a									{border-right-color: $navLinkBorderColor;}
-					.mul-first-child					{border-left-color: $navBorderColor;}
-													}
-												}
-											}
-		*/
-
-	}
 
 }//endif
 

@@ -11,15 +11,9 @@
 		a					{
 			[class*="mul-icon"]	{
 								@include border-radius($headerIconRadius);
-								background-color: $megaMenuItemBackgroundColor;
-								color: $megaMenuItemColor;
 								cursor: pointer;
 								padding: $headerIconPadding;
 								min-width: $headerIconMinWidth;
-				&:hover				{
-									background-color: $gray-dark; //THEME
-									color: $white; //THEME
-									}
 								}
 							}
 						}
@@ -27,7 +21,6 @@
 
 // MAIN LOGO CONTAINER - BEGINS
 	.mul-logo			{
-		.mul-logo-col-1		{}
 		.mul-logo-col-2		{
 			a					{
 								@include href-link($mastheadLogoLinkColor, none);
@@ -41,7 +34,6 @@
 								}
 				span			{font-family: $fontThinStack;}
 							}
-		.mul-logo-col-3		{}
 						}
 // MAIN LOGO CONTAINER - ENDS
 
@@ -53,7 +45,6 @@
 
 		.mul-header-adjust	{
 							@include clearfix;
-							background-color: $gray-lighter; //THEME
 
 		// USER IDENTIFIER CONTAINER - BEGINS
 			.mul-user-identifier-ctn
@@ -171,23 +162,19 @@
 		// USER IDENTIFIER CONTAINER - BEGINS
 			.mul-user-identifier-ctn
 						{
-						@include background-gradient($mastheadProfileMenuBackgroundStartColor,$mastheadProfileMenuBackgroundEndColor); //THEME
 						@include clearfix;
 						height: $mastheadContentHeight;
 						cursor: pointer;
 				li			{
 							width: 100% !important;
-							border-bottom: 0;
+							border-bottom: 0 !important;
 					a			{
 								padding: 0;
 						.sub-arrow	{display: none;}
 						.mul-user-identifier-ctn-indicator,
 						.mul-user-identifier-ctn-user-info,
 						.mul-user-identifier-ctn-avatar
-									{
-									color: $white;
-									padding-top: 10px;
-									}
+									{padding-top: 10px;}
 						.mul-user-identifier-ctn-user-info
 									{
 							span		{
@@ -202,8 +189,7 @@
 					.mul-user-identifier-menu
 								{
 								@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
-								@include box-shadow(0, 2px, 2px, $mastheadProfileMenuShadowColor); //THEME
-								background-color: $mastheadProfileMenuBackgroundEndColor; //THEME
+								@include box-shadow(0, 2px, 2px, $userIdentifierMenuShadowColor);
 								border: 0;
 								min-width: 100% !important;
 								max-width: 100% !important;
@@ -211,14 +197,10 @@
 						li			{
 									border: 0;
 							a			{
-										@include href-link($mastheadProfileMenuTextColor, none); //THEME
 										font-size: $userIdentifierMenuFontSize;
 										display: block;
 										padding: $userIdentifierMenuPadding;
-								&:hover		{
-											background-color: $mastheadProfileMenuHoverColor; //THEME
-											@include transition(background-color 0.3s ease-in-out);
-											}
+								&:hover		{@include transition(background-color 0.3s ease-in-out);}
 										}
 							&:last-child
 										{

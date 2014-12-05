@@ -176,60 +176,77 @@ $buttonHorzGroupFirstChildBorderLeftColor:	$gray-mid-light !default;
 // HEADER
 // ------------------------------------------------------------------------------------------
 
-// BASE
+// ICONS
+$headerIconBackgroundColor:					$gray-dark !default;
+$headerIconFontColor:						$white !default;
+$headerIconHoverBackgroundColor:			$gray-dark !default;
+$headerIconHoverFontColor:					$white !default;
+
+// MASTHEAD TEXT LOGO
 $mastheadBackgroundStartColor:				$blue-gray !default;
 $mastheadBackgroundEndColor:				$blue-gray-darker !default;
 $mastheadLogoLinkColor:						$white !default;
 
-// PROFILE MENU
-$mastheadProfileMenuBackgroundStartColor:	#4674a9 !default;
-$mastheadProfileMenuBackgroundEndColor:		#385882 !default;
-$mastheadProfileMenuBorderColor:			#385882 !default;
-$mastheadProfileMenuIconColor:				#c0d7f0 !default;
-$mastheadProfileMenuTextColor:				$white !default;
-$mastheadProfileMenuAvatarIconColor:		$white !default;
-$mastheadProfileMenuShadowColor:			$gray-darker !default;
-$mastheadProfileMenuHoverColor:				$blue-gray !default;
+// USER IDENTIFIER
+$userIdentifierBackgroundStartColor:		#4674a9 !default;
+$userIdentifierBackgroundEndColor:			#385882 !default;
+$userIdentifierFontColor:					$white !default;
+$userIdentifierMenuShadowColor:				$gray-darker !default;
+$userIdentifierMenuTextColor:				$white !default;
+$userIdentifierMenuHoverColor:				$blue-gray !default;
 
-// PROFILE SIMPLE
-$mastheadProfileSimpleTextColor:			$white !default;
-$mastheadProfileSimpleListBorderColor:		$white !default;
+// TOOLBAR
+$toolbarBackgroundStartColor:				$blue-gray !default;
+$toolbarBackgroundEndColor:					$blue-gray-darker !default;
+$toolbarMobileNavbarBackgroundColor:		$gray-lighter !default;
+$toolbarDropShadowColor:					$gray-darker !default;
 
-// MEGA MENU UTILITY LINKS
-$megaMenuUtilityMenuPipedColor:				$gray-dark !default;
+// NAVBAR
+$navbarBackgroundGradientStartColor:		$gray-lightest !default;
+$navbarBackgroundGradientEndColor:			$gray-mid-light !default;
+$navbarBorderColor:							$gray-mid-dark !default;
+$navbarBorderBottomStyle:					solid !default;
+$navbarBorderColor:							$gray-mid-dark !default;
+$navbarFontHoverColor:						#002C77 !default;
 
-// MEGA MENU UTILITY MENU
-$megaMenuUtilityMenuBackgroundColor:		$gray-mid-light !default;
-$megaMenuUtilityMenuBorderColor:			$gray-mid-dark !default;
-$megaMenuUtilityMenuLinkBorderColor:		$gray-lighter !default;
-$megaMenuUtilityMenuLinkHoverColor:			$gray-lighter !default;
-
-// MEGA MENU UTILITY ITEM
-$megaMenuItemBackgroundColor:				$gray-dark !default;
-$megaMenuItemColor:							$white !default;
-
-// MEGA MENU
-$megaMenuContainerBackgroundColor: 			$gray-darker !default;
-$megaMenuContainerBorderTopColor: 			$gray-dark !default;
-$megaMenuContainerBorderBottomColor: 		$gray-dark !default;
-$megaMenuContainerSpotlightBackgroundColor: $gray-darkest !default;
-$megaMenuContainerSpotlightTextColor: 		$green-mid !default;
-$megaMenuContainerMenuContainerTextColor: 	$white !default;
-
-// MEGA MENU SEARCH BOX ICON
-$megaMenuSearchBoxIconColor: 				$gray-lightest !default;
+	// MENU OVERRIDES
+	$subMenuBackgroundColor:				$gray-lighter !default;
+	$subMenuBorderTopColor:					$gray-mid-dark !default;
 
 
-// NAVIGATION
-// ------------------------------------------------------------------------------------------
-$navBackgroundStartColor:					$gray-lightest !default;
-$navBackgroundEndColor:						$gray-mid-light !default;
-$navBorderColor:							$gray-mid-dark !default;
-$navLinkColor:								$blue-sapphire !default;
-$navLinkBorderColor:						$white !default;
-$navActiveBackgroundStartColor:				$gray-lightest !default;
-$navActiveBackgroundEndColor:				$gray-mid-dark !default;
-$navBorderLeftColor:						$white !default;
+	// NAVBAR MESSAGE AREA
+	$navbarMessageBorderRightColor:			$gray-mid-dark !default;
+
+	// TEXT NAVBAR
+	$textNavbarBorderLeftColor:				$gray-mid-dark !default;
+	$textNavbarSubMenuHoverBackgroundColor:	$white !default;
+
+	// TABBED NAVBAR
+	$tabbedNavbarBorderLeftColor:			$white !default;
+	$tabbedNavbarHrefBorderLeftColor:		$gray-mid-light !default;
+
+	$tabbedNavbarActiveBackgroundStartColor:	$gray-lightest !default;
+	$tabbedNavbarActiveBackgroundEndColor:		$gray-mid-dark !default;
+	$tabbedNavbarSubMenuHoverBackgroundColor:	$white !default;
+
+// MENU SYSTEM
+
+	// MENUS
+	$menuBackgroundHoverColor: 				$white !default;
+	$menuDropShadowColor:					$gray-mid-dark !default;
+	$menuBackgroundColor:					$white !default;
+	$menuBorderColor:						$gray-mid-dark !default;
+	$menuBorderTopColor:					$gray-mid-dark !default;
+	$menuIndicatorColor1stLevel:			$gray-dark !default;
+	$menuHoverFontColor:					#002C77 !default;
+	$menuBorderTopColor2ndlevel:			$gray-mid-dark !default;
+
+
+	// MEGA MENU
+	$megaMenuBackgroundColor: 				$gray-darker !default;
+	$megaMenuBorderTopColor:				$gray-dark !default;
+	$megaMenuBorderBottomColor:				$gray-dark !default;
+	$megaMenuContentFontColor:				$white !default;
 
 
 // HERO BANNER
