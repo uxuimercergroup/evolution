@@ -23,7 +23,6 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 		"partials/global/functions",
 		"partials/base/icons";
 
-
 /*=== WEBSITE STYLES ======================================================================*/
 
 /*--- SITE GLOBAL -------------------------------------------------------------------------*/
@@ -32,98 +31,165 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 // HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
 html.mul-mod-js							{display:none;}
 
-// RELATED ITEMS MENU
-.related-items-menu						{
-										top: 3px !important;
-										font-family: $mulIconFontStack;
-										display: none;
+.see-context-link						{font-size: 13px;}
+
+.img-border								{border: 1px solid $gray-mid-dark;}
+
+
+
+/*--- DEMO STYLES -------------------------------------------------------------------------*/
+.mul-masthead			{
+	.mul-masthead-adjust	{
+		.mul-logo-col-1			{
+			.mul-primary-logo		{
+				[class*="mul-icon"]		{
+										color: $white;
+										top: 6px;
 										}
+									}
+								}
+							}
+						}
 
-// TODO: TAB DETAIL SECTION STYLES
-.tab-details-section					{font-size: 16px;}
-.tab-details-section.ui-tabs			{
-	.ui-tabs-nav							{
-											margin-top: 15px;
-		.ui-state-default						{
-												@include background-gradient($white, $white);
-												@include border-radius(0);
-												border: 1px solid $gray-mid-light;
-												height: 29px;
-												margin-right: -1px;
-			&:first-child							{@include border-radius(4px 0 0 4px);}
-			&:last-child							{@include border-radius(0 4px 4px 0);}
 
+/*--- REFERENCE PAGES ---------------------------------------------------------------------*/
+
+// ALTERNATE VIEWS BADGE
+.mul-ref-alternate-views-badge.ui-tabs	{
+										margin-top: 5px;
+	.mul-btn-group-horizontal				{
+		.mul-btn								{
+												@include background-gradient($gray-lighter, $gray-lighter);
+												border-color: $gray-light;
+												font-size: 13px;
 			a										{
-													background-color: $gray-lightest;
-													color: $gray-darker;
-													font-size: ($baseFontSize - 4);
-													padding-bottom: 2px;
-				&:hover									{
-														@include href-link-hover(none);
-														background-color: $gray-light;
-														}
+													padding: 13px 9px 14px 14px; 
+				[class^="mul-icon-"]					{display: block;}
 													}
-
-			&:first-child							{
-				a										{@include border-radius(4px 0 0 4px);}
-													}
-			&:last-child							{
-				a										{@include border-radius(0 4px 4px 0);}
-													}
-
-												}
-		.ui-tabs-active							{
-			a										{
-													background-color: $gray-light;
-													color: $black;
-													padding-bottom: 2px;
-													}
-			&:first-child							{
-				a										{@include border-radius(4px 0 0 4px);}
-													}
-			&:last-child							{
-				a										{@include border-radius(0 4px 4px 0);}
+			&:hover									{@include background-gradient($gray-light, $gray-light);}
+			&.ui-tabs-active						{
+													@include background-gradient(#fef8e3, #fef8e3);
+													border-color: #f9eec7;
 													}
 												}
 											}
 	.ui-tabs-panel							{
-											border: 0;
-											padding-left: 0;
+		p, ul, ol, li, dt, dd					{
+												font-size: ($baseFontSize + 2px);
+												line-height: ($baseLineHeight + 2px);
+												}
+		.prettyprint							{
+			li 										{
+													font-size: $baseFontSize;
+													line-height: $baseLineHeight;
+													}
+												}
+											}
+										}
+// NAVBAR
+.mul-navbar								{
+	.mul-navbar-adjust						{
+		nav.mul-text-nav						{
+			.mul-nav-menus							{
+				.navbar-site-menu						{
+					h4										{
+															border-bottom: 1px dotted $gray-mid-light;
+															margin-bottom: 4px;
+															}
+					dl										{
+															margin: 0 0 5px 0;
+															padding: 0;
+						dd										{
+																margin: 0;
+																padding: 0 0 3px 0;
+							a										{
+																	color: $white;
+																	font-size: 12px;
+																	padding: 0;
+																	margin: 0;
+								&:hover									{background-color: $transparent;}
+																	}
+																}
+															}
+														}
+													}
+												}
 											}
 										}
 
-// TODO: SLIDING SIDEBAR
-.mul-sliding-sidebar-btn				{
+// STYLES FOR THE DEMO SEARCH IN THE MENU NAVBAR
+.menu-search							{
+	.menu-search-btn						{
+											border-color: $green-darker;
+											padding: 4px 9px;
+											margin-top: -1px;
+											min-width: 100%;
+		[class*='mul-icon']						{color: $white !important;}
+											}
+										}
+
+// EXAMPLES
+.mul-ref-example						{
+	.mul-ref-example-hdr					{margin: 40px 0 25px 0;}
+	.mul-ref-example-content				{min-height: 250px;}
+	.mul-ref-example-box					{background-color: $white;}
+										}
+
+// DEVELOPER - SLIDING DRAWER
+.mul-ref-sliding-drawer-btn				{
 										@include border-radius(4px);
 										background-color: $gray-lightest;
 										border: 1px solid $gray-mid-light;
-										padding: 5px;
+										padding: 5px 3px 5px 2px;
 										width: 28px;
 										height: 28px;
 										float: right;
-										top: -40px;
+										top: -5px;
 										cursor: pointer;
 										}
-
-.mul-sliding-sidebar					{
+.mul-ref-sliding-drawer					{
 										@include box-shadow(inset 0, 0, 10px, #000);
 										background-color: $gray-darkest;
-										padding-top: 15px;
-										padding-bottom: 15px;
 										overflow-y: hidden !important;
+	.mul-ref-sliding-drawer-hdr				{
+											@include box-shadow(0, 0, 10px, #000);
+											position: fixed;
+											top: 0;
+											width: 250px;
+											min-width: 250px;
+											padding: $basePadding $basePadding 0 $basePadding;
+											background-color: $gray-dark;
+		h3										{
+												color: $white;
+												padding: 0 0 7px 0;
+												position: relative;
+												top: -4px;
+												}
+		.mul-ref-sliding-drawer-close-btn		{
+												color: $white;
+												cursor: pointer;
+												top: 0;
+												right: 12px;
+												}
+											}
 
-	.mCSB_container							{margin-right: 0;}
+	.mCustomScrollbar						{
+											padding-top: 103px;
+		.mCSB_container							{margin-right: 0;}
+											}
 
-	h5,
-	h4										{
+	h4,
+	h5										{
 											color: $white;
 											padding-left: 10px;
 											}
+	h4:first-child							{margin-top: 7px;}
 	h5										{margin-bottom: 4px;}
 
 	.mul-vertical-list						{
 											margin-bottom: $baseMargin;
-		li										{
+		&:last-child							{margin-bottom: 100px;}
+		dd										{
 												margin: 0;
 			a										{
 													color: $white;
@@ -140,20 +206,91 @@ html.mul-mod-js							{display:none;}
 											}
 										}
 
-// LIBRARY EXAMPLES
-.mul-grid								{
-	.example-min-height						{min-height: 250px;}
+
+/*--- HOMEPAGE ----------------------------------------------------------------------------*/
+[class*="banding-section"]				{font-size: ($baseFontSize + 1);}
+
+
+.mul-alternate-views-badge.ui-tabs		{
+	.banding-section-1						{
+											@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
+		h1										{
+												color: $white;
+												font-size: ($baseFontSize + 35);
+												font-family: $fontThinStack;
+												padding-top: 20px;
+												}
+		h3										{
+												color: $white;
+												font-family: $fontThinStack;
+												padding-bottom: 70px;
+												}
+		.evo-icon								{
+												color: $white;
+												display: inline-block;
+												top: -12px;
+												font-size: 140px;
+												}
+		.mul-btn-group-horizontal				{@include clearfix;}
+											}
 										}
-.example-ctn							{background-color: $white;}
-.example-main-hdr						{margin: 40px 0 25px 0;}
 
-
-// TODO: GET CODE FONT SIZE CHANGE
-.get-code-content-tab					{
-	pre										{font-size: 12px;}
+.banding-section-2						{
+	h1										{
+											text-align: center;
+											margin-bottom: 20px;
+											}
+	[class*="mul-icon"]						{
+											color: $gray-darker;
+											margin-bottom: 10px;
+											}
+	h3, p									{text-align: center;}
 										}
 
-/*--- HOMEPAGE -----------------------------------------------------------------------------*/
+.banding-section-3						{
+										color: $blue-sapphire-dark;
+	h1, h3									{color: $blue-sapphire-dark;}
+	[class*="mul-icon"]						{color: $blue-sapphire-dark;}
+	.mul-icon-puzzle						{
+											@include rotate(35deg);
+											top: -7px;
+											}
+										}
+
+.banding-section-4						{
+	li										{line-height: 20px;}
+	[class*="mul-icon"]						{
+											color: $gray-darkest;
+											margin-bottom: 30px;
+											top: 12px;
+											}
+										}
+
+.banding-section-5						{
+	h1, p									{text-align: center;}
+	.mul-horizontal-list					{
+											text-align: center;
+		&:last-child							{
+			li										{margin-bottom: 0;}
+												}
+		li										{
+												color: $orange-dark;
+												font-size: ($baseFontSize + 8);
+												margin-right: 85px;
+												margin-bottom: 35px;
+			&:last-child							{margin-right: 0;}
+												}
+											}
+										}
+
+.banding-section-6						{
+										font-size: 14px;
+	.hp-layout								{
+		h5										{margin-bottom: 7px;}
+		.mul-vertical-list						{margin-bottom: $baseMargin;}
+											}
+										}
+
 .hp-content-column						{
 	dd										{
 											margin-left: 0;
@@ -174,44 +311,8 @@ html.mul-mod-js							{display:none;}
 											}
 										}
 
-	// MARKETING SECTION - HOMEPAGE
-	.marketing-ctn						{
-										border-bottom: 1px solid $gray-light;
-										margin-bottom: $baseMargin;
-		.img-section						{
-											border-bottom: 1px solid $gray-light;
-			img									{margin-bottom: -5px;}
-											}
-		.mkt-text							{
-			h1									{
-												font-family: $proximaNovaThinStack;
-				span								{display: block;}
-												}
-			.mul-icon-adv						{
-												margin-top: 15px;
-												float: right;
-												}
-											}
-										}
 
-.hp-layout								{
-	h5										{margin-bottom: 7px;}
-	.mul-vertical-list						{margin-bottom: $baseMargin;}
-	.todo									{
-											color: $orange-dark;
-											font-family: $proximaNovaSemiBoldStack;
-											padding-left: 6px;
-											}
-	.done									{
-											color: #55842B;
-											display: inline-block;
-											font-family: $proximaNovaSemiBoldStack;
-											padding-left: 6px;
-											}
-										}
-
-
-/*--- LAYOUT/GRIDS PAGE --------------------------------------------------------------------*/
+/*--- LAYOUT/GRIDS PAGE -------------------------------------------------------------------*/
 .unit									{
 										@include border-radius(3px);
 										margin-bottom:15px;
@@ -220,14 +321,14 @@ html.mul-mod-js							{display:none;}
 										}
 
 
-/*--- TYPE PAGE ----------------------------------------------------------------------------*/
-.type-table								{
-	td.type-example							{font-size: $baseFontSize !important;}
+/*--- TYPE PAGE ---------------------------------------------------------------------------*/
+.mul-ref-type-table						{
+	td.mul-ref-type-example					{font-size: $baseFontSize !important;}
 										}
-.hyphen-demo							{@include hyphens(auto);}
+.mul-ref-hyphen-demo					{@include hyphens(auto);}
 
 
-/*--- ICONS PAGE ----------------------------------------------------------------------------*/
+/*--- ICONS PAGE --------------------------------------------------------------------------*/
 #icons-ctn								{
 	#icon-font-filter						{width: 250px;}
 										}
@@ -388,12 +489,16 @@ html.mul-mod-js							{display:none;}
 .btn-default-hover						{@include background-gradient($buttonHoverBackgroundStartColor, $buttonHoverBackgroundEndColor);}
 
 
-/*--- CORP LOGOS PAGE -----------------------------------------------------------------------*/
+/*--- CORP LOGOS PAGE ----------------------------------------------------------------------*/
 .corp-logo-background-color				{background-color: $blue-gray !important;}
 
 
-/*--- PAGINATION PAGE -----------------------------------------------------------------------*/
+/*--- PAGINATION PAGE ----------------------------------------------------------------------*/
 .pagination-hdr							{margin-top: 5px;}
+
+
+/*--- ALTERNATE VIEWS BADGE PAGE -----------------------------------------------------------*/
+.mul-alternate-views-badge-feature-ctn	{min-height: 365px !important;}
 
 
 /*--- LOGIN DEMOS ---------------------------------------------------------------------------*/
@@ -402,23 +507,19 @@ html.mul-mod-js							{display:none;}
 .mul-layout-login-background-3-demo		{background-image: url("../images/login_custom_bkgd_3.jpg");}
 
 
-/*--- HERO BANNER DEMOS ---------------------------------------------------------------------*/
-.mul-layout-hero-banner-background-1-demo,
-.mul-layout-hero-banner-background-2-demo,
-.mul-layout-hero-banner-background-3-demo
-										{
-	.mul-box								{background-color: rgba(255, 255, 255, .8);}
-										}
+/*--- IMAGE CONTENT OVERLAY DEMOS ----------------------------------------------------------*/
+.mul-image-content-overlay-background-image
+										{background: url("../images/core/objects/carousel/carousel_image1.jpg") no-repeat top center;}
 
-.mul-layout-hero-banner-background-1-demo
-										{background: url("../images/core/objects/carousel/carousel_image1.jpg") no-repeat top left;}
-.mul-layout-hero-banner-background-2-demo
-										{background: url("../images/core/objects/carousel/carousel_image2.jpg") no-repeat top left;}
-.mul-layout-hero-banner-background-3-demo
-										{background: url("../images/core/objects/carousel/carousel_image3.jpg") no-repeat top left;}
+.mul-image-content-overlay-background-image-1
+										{background: url("../images/core/objects/carousel/carousel_image1.jpg") no-repeat top center;}
+.mul-image-content-overlay-background-image-2
+										{background: url("../images/core/objects/carousel/carousel_image2.jpg") no-repeat top center;}
+.mul-image-content-overlay-background-image-3
+										{background: url("../images/core/objects/carousel/carousel_image3.jpg") no-repeat top center;}
 
 
-/*--- DEV QUICK REFERENCE -------------------------------------------------------------------*/
+/*--- DEV QUICK REFERENCE ------------------------------------------------------------------*/
 .color-vars-quick-reference-table		{
 	tr										{color: $white;}
 	.default-text-color						{color: $baseFontColor;}
@@ -431,7 +532,7 @@ html.mul-mod-js							{display:none;}
 										{background-color: inherit !important;}
 										
 
-/*=== MEDIA QUERIES ==========================================================================*/
+/*=== MEDIA QUERIES =========================================================================*/
 @import	"partials/global/responsive_small",
 		"partials/global/responsive_medium",
 		"partials/global/responsive_large"

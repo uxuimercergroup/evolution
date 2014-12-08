@@ -196,6 +196,26 @@
                 "directory": false
             },
             {
+                "key": "header",
+                "name": "Header",
+                "url": "/base/header",
+                "directory": true,
+                "children": [
+                    {
+                        "key": "masthead",
+                        "name": "Masthead",
+                        "url": "/base/header/masthead",
+                        "directory": false
+                    },
+                    {
+                        "key": "navbar",
+                        "name": "Navbar",
+                        "url": "/base/header/navbar",
+                        "directory": false
+                    }
+                ]
+            },
+            {
                 "key": "icons",
                 "name": "Icons",
                 "url": "/base/icons",
@@ -205,6 +225,12 @@
                 "key": "icons-additional",
                 "name": "Icons additional",
                 "url": "/base/icons-additional",
+                "directory": false
+            },
+            {
+                "key": "layout-banding",
+                "name": "Layout banding",
+                "url": "/base/layout-banding",
                 "directory": false
             },
             {
@@ -320,6 +346,12 @@
                 ]
             },
             {
+                "key": "toolbar-header",
+                "name": "Toolbar header",
+                "url": "/base/toolbar-header",
+                "directory": false
+            },
+            {
                 "key": "typography",
                 "name": "Typography",
                 "url": "/base/typography",
@@ -352,6 +384,36 @@
         "directory": true,
         "children": [
             {
+                "key": "banding-page",
+                "name": "Banding page",
+                "url": "/demos/banding-page",
+                "directory": false
+            },
+            {
+                "key": "hero-banner-background-color-carousel-demo",
+                "name": "Hero banner background color carousel demo",
+                "url": "/demos/hero-banner-background-color-carousel-demo",
+                "directory": false
+            },
+            {
+                "key": "hero-banner-background-color-demo",
+                "name": "Hero banner background color demo",
+                "url": "/demos/hero-banner-background-color-demo",
+                "directory": false
+            },
+            {
+                "key": "hero-banner-background-image-carousel-demo",
+                "name": "Hero banner background image carousel demo",
+                "url": "/demos/hero-banner-background-image-carousel-demo",
+                "directory": false
+            },
+            {
+                "key": "hero-banner-background-image-demo",
+                "name": "Hero banner background image demo",
+                "url": "/demos/hero-banner-background-image-demo",
+                "directory": false
+            },
+            {
                 "key": "layout-default-demo",
                 "name": "Layout default demo",
                 "url": "/demos/layout-default-demo",
@@ -367,6 +429,12 @@
                 "key": "layout-employee-portal-innerpage-demo",
                 "name": "Layout employee portal innerpage demo",
                 "url": "/demos/layout-employee-portal-innerpage-demo",
+                "directory": false
+            },
+            {
+                "key": "layout-fat-footer-demo",
+                "name": "Layout fat footer demo",
+                "url": "/demos/layout-fat-footer-demo",
                 "directory": false
             },
             {
@@ -452,8 +520,62 @@
                 "name": "Product header sliding nav demo",
                 "url": "/demos/product-header-sliding-nav-demo",
                 "directory": false
+            },
+            {
+                "key": "product-header-version-1",
+                "name": "Product header version 1",
+                "url": "/demos/product-header-version-1",
+                "directory": false
+            },
+            {
+                "key": "product-header-version-2",
+                "name": "Product header version 2",
+                "url": "/demos/product-header-version-2",
+                "directory": false
+            },
+            {
+                "key": "product-header-version-3",
+                "name": "Product header version 3",
+                "url": "/demos/product-header-version-3",
+                "directory": false
+            },
+            {
+                "key": "product-header-version-4",
+                "name": "Product header version 4",
+                "url": "/demos/product-header-version-4",
+                "directory": false
+            },
+            {
+                "key": "toolbar-version-1",
+                "name": "Toolbar version 1",
+                "url": "/demos/toolbar-version-1",
+                "directory": false
+            },
+            {
+                "key": "toolbar-version-2",
+                "name": "Toolbar version 2",
+                "url": "/demos/toolbar-version-2",
+                "directory": false
+            },
+            {
+                "key": "toolbar-version-3",
+                "name": "Toolbar version 3",
+                "url": "/demos/toolbar-version-3",
+                "directory": false
+            },
+            {
+                "key": "toolbar-version-4",
+                "name": "Toolbar version 4",
+                "url": "/demos/toolbar-version-4",
+                "directory": false
             }
         ]
+    },
+    {
+        "key": "dev-sandbox",
+        "name": "Dev sandbox",
+        "url": "/dev-sandbox",
+        "directory": false
     },
     {
         "key": "error-handling",
@@ -549,6 +671,12 @@
                 "key": "horizontal-stepper",
                 "name": "Horizontal stepper",
                 "url": "/objects/horizontal-stepper",
+                "directory": false
+            },
+            {
+                "key": "image-content-overlay",
+                "name": "Image content overlay",
+                "url": "/objects/image-content-overlay",
                 "directory": false
             },
             {
@@ -701,6 +829,12 @@
         "key": "template",
         "name": "Template",
         "url": "/template",
+        "directory": false
+    },
+    {
+        "key": "template-simple",
+        "name": "Template simple",
+        "url": "/template-simple",
         "directory": false
     },
     {

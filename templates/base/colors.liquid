@@ -1,636 +1,650 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
-<h1 class="mul-hdr-rule">{{ model.title }}</h1>
 
-<p class="mul-intro-text">
-	We automatically associate certain things with specific colors. For instance, what do you think of when you see the color red? "Stop," right? Or, perhaps, "wrong answer?" What about yellow? "Caution?" Color is also important when it comes to branding. The famous big yellow arch for McDonald's will always be yellow, not green or blue or purple.
-</p>
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
 
-<div class="js-mul-tabs-example mul-tabs">
-	<ul>
-		<li><a href="#tabs-1">Specified Colors</a></li>
-		<li><a href="#tabs-2">Available Palette</a></li>
-	</ul>
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24">
+		{{ model.reference-overview }}
+	</section>
+<!-- CONTENT SECTION - ENDS -->
 
-	<div id="tabs-1">
+<!-- EXAMPLE SECTION - BEGINS -->
+	<section class="col-24 mul-ref-example">
 
-		<h3 class="mul-hdr-rule">Baseline</h3>
-		<p>
-			The following baseline colors are consistent with the Mercer brand and are used for all basic elements 
-			for applications and sites, like the base font and the navigation menu. 
-		</p>
-		<div class="mul-table-small-mediaquery">
-			<table class="mul-table mul-table-borders mul-table-striped" cellpadding="0" cellspacing="0" border="0">
-				<thead>
-					<tr>
-						<th class="col-5">Example</th>
-						<th class="col-2">Style</th>
-						<th class="col-2">Hex Top</th>
-						<th class="col-3">Hex Bottom</th>
-						<th class="col-13">Usage Details</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="blue-gray">
-							<div class="colors color-block-01"></div>
-						</td>
-						<td>Solid</td>
-						<td>#23334C</td>
-						<td>--</td>
-						<td><strong>Header Background</strong> - this is used as the background in the <a href="/base/product-header">Main Navigation</a> and is mostly viewable on the left and right sides of product header.</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors mul-navbar-color"></div>
-						</td>
-						<td>Gradient</td>
-						<td>#F6F6F6</td>
-						<td>#CDCDCD</td>
-						<td><strong>Main Navigation</strong> - This background gradient is used on the main navigation bar in the <a href="/base/product-header">Product Header</a>.</td>
-					</tr>
-					<tr>
-						<td class="blue-sapphire">
-							<div class="colors color-block-01"></div>
-						</td>
-						<td>Solid</td>
-						<td>#002c77</td>
-						<td>--</td>
-						<td><strong>Default Link</strong> - This color is used as the default link color.</td>
-					</tr>
-					<tr>
-						<td class="gray">
-							<div class="colors color-block-02"></div>
-						</td>
-						<td>Solid</td>
-						<td>#333333</td>
-						<td>--</td>
-						<td><strong>Page Headers</strong> - This color is used for all page headers or titles. See the <a href="/base/typography">Typography section</a> for more details.</td>
-					</tr>
-					<tr>
-						<td class="gray">
-							<div class="colors color-block-01"></div>
-						</td>
-						<td>Solid</td>
-						<td>#000000</td>
-						<td>--</td>
-						<td><strong>Base Font</strong> - This color is used for the base font for all applications. See the <a href="/base/typography">Typography section</a> for more details.</td>
-					</tr>
-				</tbody>
-			</table>
+	<!-- EXAMPLE SECTION - COLORS TABS - BEGINS -->
+		<div class="js-mul-tabs-example mul-tabs">
+			<ul>
+				<li><a href="#tabs-1">Available Palette</a></li>
+				<li><a href="#tabs-2">Specified Colors</a></li>
+			</ul>
+
+			<div id="tabs-1">
+
+				<div class="col-24 mul-margin-bottom">
+
+					<div class="gray col-4 first">
+						<h4 class="mul-align-center">Black</h4>
+						<div class="color-block color-block-01">#000000</div>
+						<div class="color-block color-block-02">#333333</div>
+						<div class="color-block color-block-03">#666666</div>
+						<div class="color-block color-block-04">#999999</div>
+						<div class="color-block color-block-05">#B0B0B0</div>
+						<div class="color-block color-block-06">#CCCCCC</div>
+						<div class="color-block color-block-07">#E6E6E6</div>
+						<div class="color-block color-block-08">#EEEEEE</div>
+						<div class="color-block color-block-09">#F8F8F8</div>
+					</div>
+
+					<div class="blue-gray col-4">
+						<h4 class="mul-align-center">Blue-Gray</h4>
+						<div class="color-block color-block-01">#23334C</div>
+						<div class="color-block color-block-02">#395A85</div>
+						<div class="color-block color-block-03">#396EA8</div>
+						<div class="color-block color-block-04">#517BAA</div>
+						<div class="color-block color-block-05">#6B90B8</div>
+						<div class="color-block color-block-06">#A9BCD3</div>
+						<div class="color-block color-block-07">#C3D2E5</div>
+						<div class="color-block color-block-08">#E9EEF5</div>
+						<div class="color-block color-block-09">#E8F0F7</div>
+					</div>
+
+					<div class="blue-sapphire col-4">
+						<h4 class="mul-align-center">Blue-Sapphire</h4>
+						<div class="color-block color-block-01">#002C77</div>
+						<div class="color-block color-block-02">#006D9E</div>
+						<div class="color-block color-block-03">#00A8C8</div>
+						<div class="color-block color-block-04">#A6E2EF</div>
+					</div>
+
+					<div class="purple col-4">
+						<h4 class="mul-align-center">Purple</h4>
+						<div class="color-block color-block-01">#43276D</div>
+						<div class="color-block color-block-02">#595997</div>
+						<div class="color-block color-block-03">#6F83C1</div>
+						<div class="color-block color-block-04">#C4CAE6</div>
+					</div>
+
+					<div class="fuscia col-4">
+						<h4 class="mul-align-center">Fuscia</h4>
+						<div class="color-block color-block-01">#560054</div>
+						<div class="color-block color-block-02">#932077</div>
+						<div class="color-block color-block-03">#CE3D95</div>
+						<div class="color-block color-block-04">#E7B8D5</div>
+					</div>
+
+					<div class="pink col-4">
+						<h4 class="mul-align-center">Pink</h4>
+						<div class="color-block color-block-01">#A9194F</div>
+						<div class="color-block color-block-02">#ED2C67</div>
+						<div class="color-block color-block-03">#F7B6BB</div>
+					</div>
+
+				</div>
+
+				<div class="col-24 mul-margin-bottom">
+
+					<div class="red col-4 first">
+						<h4 class="mul-align-center">Red</h4>
+						<div class="color-block color-block-01">#810009</div>
+						<div class="color-block color-block-02">#BA2C2B</div>
+						<div class="color-block color-block-03">#EF4E45</div>
+						<div class="color-block color-block-04">#FCDBD9</div>
+					</div>
+
+					<div class="orange col-4">
+						<h4 class="mul-align-center">Orange</h4>
+						<div class="color-block color-block-01">#C45F24</div>
+						<div class="color-block color-block-02">#F48132</div>
+						<div class="color-block color-block-03">#FAA45E</div>
+						<div class="color-block color-block-04">#FCCFAB</div>
+					</div>
+
+					<div class="tan col-4">
+						<h4 class="mul-align-center">Tan</h4>
+						<div class="color-block color-block-01">#8E5501</div>
+						<div class="color-block color-block-02">#C6A54F</div>
+						<div class="color-block color-block-03">#F1D485</div>
+						<div class="color-block color-block-04">#FEF8E3</div>
+					</div>
+
+					<div class="green col-4">
+						<h4 class="mul-align-center">Green</h4>
+						<div class="color-block color-block-01">#005804</div>
+						<div class="color-block color-block-02">#2D7B05</div>
+						<div class="color-block color-block-03">#6EAA38</div>
+						<div class="color-block color-block-04">#72BE44</div>
+						<div class="color-block color-block-05">#98E96C</div>
+						<div class="color-block color-block-06">#BDDCA1</div>
+						<div class="color-block color-block-07">#D6EBC3</div>
+					</div>
+
+					<div class="blue-green col-4">
+						<h4 class="mul-align-center">Blue-Green</h4>
+						<div class="color-block color-block-01">#004C4F</div>
+						<div class="color-block color-block-02">#008075</div>
+						<div class="color-block color-block-03">#0FB694</div>
+						<div class="color-block color-block-04">#A7D9C8</div>
+					</div>
+
+				</div>
+			</div>
+			<div id="tabs-2">
+
+				<h3 class="mul-hdr-rule">{{ model.reference-color-hdr }}</h3>
+				{{ model.reference-color-content }}
+
+				<div class="mul-table-small-mediaquery">
+					<table class="mul-table mul-table-borders mul-table-striped" cellpadding="0" cellspacing="0" border="0">
+						<thead>
+							<tr>
+								<th class="col-5">Example</th>
+								<th class="col-2">Style</th>
+								<th class="col-2">Hex Top</th>
+								<th class="col-3">Hex Bottom</th>
+								<th class="col-13">Usage Details</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="blue-gray">
+									<div class="colors color-block-01"></div>
+								</td>
+								<td>Solid</td>
+								<td>#23334C</td>
+								<td>--</td>
+								<td><strong>Header Background</strong> - this is used as the background in the <a href="/base/product-header">Main Navigation</a> and is mostly viewable on the left and right sides of product header.</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors mul-navbar-color"></div>
+								</td>
+								<td>Gradient</td>
+								<td>#F6F6F6</td>
+								<td>#CDCDCD</td>
+								<td><strong>Main Navigation</strong> - This background gradient is used on the main navigation bar in the <a href="/base/product-header">Product Header</a>.</td>
+							</tr>
+							<tr>
+								<td class="blue-sapphire">
+									<div class="colors color-block-01"></div>
+								</td>
+								<td>Solid</td>
+								<td>#002c77</td>
+								<td>--</td>
+								<td><strong>Default Link</strong> - This color is used as the default link color.</td>
+							</tr>
+							<tr>
+								<td class="gray">
+									<div class="colors color-block-02"></div>
+								</td>
+								<td>Solid</td>
+								<td>#333333</td>
+								<td>--</td>
+								<td><strong>Page Headers</strong> - This color is used for all page headers or titles. See the <a href="/base/typography">Typography section</a> for more details.</td>
+							</tr>
+							<tr>
+								<td class="gray">
+									<div class="colors color-block-01"></div>
+								</td>
+								<td>Solid</td>
+								<td>#000000</td>
+								<td>--</td>
+								<td><strong>Base Font</strong> - This color is used for the base font for all applications. See the <a href="/base/typography">Typography section</a> for more details.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h3 class="mul-hdr-rule">{{ model.reference-color-hdr-2 }}</h3>
+				{{ model.reference-color-content-2 }}
+				
+				<div class="mul-table-small-mediaquery">
+					<table class="mul-table mul-table-borders mul-table-striped" cellpadding="0" cellspacing="0" border="0">
+						<thead>
+							<tr>
+								<th class="col-5">Example</th>
+								<th class="col-2">Style</th>
+								<th class="col-2">Hex Top</th>
+								<th class="col-3">Hex Bottom</th>
+								<th class="col-13">Usage Details</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="green">
+									<div class="colors color-block-06"></div>
+								</td>
+								<td>Solid</td>
+								<td>#d6ebc3</td>
+								<td>--</td>
+								<td><strong>Background</strong> - Commonly used as the background color on the <a href="/base/boxes/message-confirmation">Confirmation Message</a> container.</td>
+							</tr>
+							<tr>
+								<td class="green">
+									<div class="colors color-block-02"></div>
+								</td>
+								<td>Solid</td>
+								<td>#2d7b05</td>
+								<td>--</td>
+								<td><strong>Border</strong> - Used as the border color in the <a href="/base/boxes/message-confirmation">Confirmation Message</a> container.</td>
+							</tr>
+							<tr>
+								<td class="green">
+									<div class="colors color-block-01"></div>
+								</td>
+								<td>Solid</td>
+								<td>#005804</td>
+								<td>--</td>
+								<td><strong>Text</strong> - Confirmation/Positive - used as the text color when displaying a positive number, result or confirmation.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h3 class="mul-hdr-rule">{{ model.reference-color-hdr-3 }}</h3>
+				{{ model.reference-color-content-3 }}
+
+				<div class="mul-table-small-mediaquery">
+					<table class="mul-table mul-table-borders mul-table-striped" cellpadding="0" cellspacing="0" border="0">
+						<thead>
+							<tr>
+								<th class="col-5">Example</th>
+								<th class="col-2">Style</th>
+								<th class="col-2">Hex Top</th>
+								<th class="col-3">Hex Bottom</th>
+								<th class="col-13">Usage Details</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="red">
+									<div class="colors color-block-03"></div>
+								</td>
+								<td>Solid</td>
+								<td>#fcdbd9</td>
+								<td>--</td>
+								<td><strong>Background</strong>  - Used as the background color in the <a href="/base/boxes/message-error">Error Message</a> container or as the hover color for negative or escalated items in the <a href="/objects/primary-summary">Summary Data</a> containers.</td>
+							</tr>
+							<tr>
+								<td class="red">
+									<div class="colors color-block-02"></div>
+								</td>
+								<td>Solid</td>
+								<td>#ba2c2b</td>
+								<td>--</td>
+								<td><strong>Border</strong> - Used as the border color in the <a href="/base/boxes/message-error">Error Message</a> container.</td>
+							</tr>
+							<tr>
+								<td class="red">
+									<div class="colors color-block-01"></div>
+								</td>
+								<td>Solid</td>
+								<td>#810009</td>
+								<td>--</td>
+								<td><strong>Text</strong> - Used as the text color when displaying an error message or a negative number or result.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h3 class="mul-hdr-rule">{{ model.reference-color-hdr-4 }}</h3>
+				{{ model.reference-color-content-4 }}
+				
+				<div class="mul-table-small-mediaquery">
+					<table class="mul-table mul-table-borders mul-table-striped" cellpadding="0" cellspacing="0" border="0">
+						<thead>
+							<tr>
+								<th class="col-5">Example</th>
+								<th class="col-2">Style</th>
+								<th class="col-2">Hex Top</th>
+								<th class="col-3">Hex Bottom</th>
+								<th class="col-13">Usage Details</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tan">
+									<div class="colors color-block-03"></div>
+								</td>
+								<td>Solid</td>
+								<td>#fef8e3</td>
+								<td>--</td>
+								<td><strong>Background</strong> - Used in areas like the <a href="/base/boxes/message-attention">Attention Message</a> container, as the hover color in the <a href="/base/tables/interactive">Interactive Data Table</a> or as the background for the selected item in the <a href="/objects/mini-filter">Mini Filter</a>. </td>
+							</tr>
+							<tr>
+								<td class="tan">
+									<div class="colors color-block-02"></div>
+								</td>
+								<td>Solid</td>
+								<td>#c6a54f</td>
+								<td>--</td>
+								<td><strong>Border</strong> - Used as the border color in the <a href="/base/boxes/message-attention">Attention Message</a> container. </td>
+							</tr>
+							<tr>
+								<td class="tan">
+									<div class="colors color-block-01"></div>
+								</td>
+								<td>Solid</td>
+								<td>#8e5501</td>
+								<td>--</td>
+								<td><strong>Text</strong> - Used as the text color for titles inside the <a href="/base/boxes/message-attention">Attention Message</a> container, or in other areas as the text color to display highlighted text.</td>
+							</tr>	
+						</tbody>
+					</table>
+				</div>
+
+				<h3 class="mul-hdr-rule">{{ model.reference-color-hdr-5 }}</h3>
+				{{ model.reference-color-content-5 }}
+				
+				<div class="mul-table-small-mediaquery">
+					<table class="mul-table mul-table-borders mul-table-striped" cellpadding="0" cellspacing="0" border="0">
+						<thead>
+							<tr>
+								<th class="col-5">Example</th>
+								<th class="col-2">Style</th>
+								<th class="col-2">Hex Top</th>
+								<th class="col-3">Hex Bottom</th>
+								<th class="col-13">Usage Details</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="colors table-header-row"></div>
+								</td>
+								<td>Solid</td>
+								<td>#E9EEF5</td>
+								<td>--</td>
+								<td><strong>Header Row</strong> - Background color for the top most row on a Interactive Data Table.</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors table-subheader-row"></div>
+								</td>
+								<td>Solid</td>
+								<td>#E8F0F7</td>
+								<td>--</td>
+								<td><strong>Subheader Row</strong> - Background color used on the optional subheader row in a Interactive Data Table.</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors table-data-row-01"></div>
+								</td>
+								<td>Solid</td>
+								<td>#FFFFFF</td>
+								<td>--</td>
+								<td><strong>Alternating Data Row 1</strong> - used on the <a href="/base/tables/interactive">Interactive Data Table</a> in conjunction with Alternating Data Row 1 to create a "zebra-stripe" effect in the main content area to allow the user to easily identify a single row of data.</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors table-data-row-02"></div>
+								</td>
+								<td>Solid</td>
+								<td>#F7F7F7</td>
+								<td>--</td>
+								<td><strong>Alternating Data Row 2</strong> - used on the <a href="/base/tables/interactive">Interactive Data Table</a> in conjunction with Alternating Data Row 1 to create a "zebra-stripe" effect in the main content area to allow the user to easily identify a single row of data.</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors table-subtotal-row"></div>
+								</td>
+								<td>Solid</td>
+								<td>#EEEEEE</td>
+								<td>--</td>
+								<td><strong>Subtotal Row</strong> - Background color for the optional summary or total row that would appear as the last row in an <a href="/base/tables/interactive">Interactive Data Table</a>.</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors table-total-row"></div>
+								</td>
+								<td>Solid</td>
+								<td>#E6E6E6</td>
+								<td>--</td>
+								<td><strong>Total Row</strong> - Background color for the optional summary or total row that would appear as the last row in an <a href="/base/tables/interactive">Interactive Data Table</a>.</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors table-sorting-row-01"></div>
+								</td>
+								<td>Solid</td>
+								<td>#F7F7F7</td>
+								<td>--</td>
+								<td><strong>Sorting (odd row)</strong> -</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors table-sorting-row-02"></div>
+								</td>
+								<td>Solid</td>
+								<td>#EEEEEE</td>
+								<td>--</td>
+								<td><strong>Sorting (even row)</strong> -</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors table-header-border"></div>
+								</td>
+								<td>Solid</td>
+								<td>#A9BCD3</td>
+								<td>--</td>
+								<td><strong>Table Header Border Color</strong> -</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors table-row-border"></div>
+								</td>
+								<td>Solid</td>
+								<td>#CCCCCC</td>
+								<td>--</td>
+								<td><strong>Table Row Border Color</strong> -</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors table-subheader-border"></div>
+								</td>
+								<td>Solid</td>
+								<td>#C3D2E5</td>
+								<td>--</td>
+								<td><strong>Table Subheader Border Color</strong> -</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<a name="buttonColors"></a>
+				<h3 class="mul-hdr-rule">{{ model.reference-color-hdr-6 }}</h3>
+				{{ model.reference-color-content-6 }}
+				
+				<div class="mul-table-small-mediaquery">
+					<table class="mul-table mul-table-borders mul-table-striped" cellpadding="0" cellspacing="0" border="0">
+						<thead>
+							<tr>
+								<th class="col-5">Example</th>
+								<th class="col-2">Style</th>
+								<th class="col-2">Hex Top</th>
+								<th class="col-3">Hex Bottom</th>
+								<th class="col-13">Usage Details</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="colors btn-primary"></div>
+								</td>
+								<td>Gradient</td>
+								<td>#69dd14</td>
+								<td>#2d6e0c</td>
+								<td>This is the background color for the <a href="/base/buttons">Primary Button (Default State)</a>.</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors btn-primary-active"></div>
+								</td>
+								<td>Gradient</td>
+								<td>#1b4a03 </td>
+								<td>#69dd14 </td>
+								<td>This is the background color for the <a href="/base/buttons">Primary Button (Active State)</a>.</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors btn-primary-hover"></div>
+								</td>
+								<td>Gradient</td>
+								<td>#69dd14 </td>
+								<td>#1b4a03 </td>
+								<td>This is the background color for the <a href="/base/buttons">Primary Button (Hover State)</a>.</td>
+							</tr>
+							<tr>
+								<td class="green">
+									<div class="colors color-block-02"></div>
+								</td>
+								<td>Solid</td>
+								<td>#2D7B05</td>
+								<td>--</td>
+								<td>This is the background color for the <a href="/base/buttons">Primary Button (Loading State)</a>.</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors btn-default"></div>
+								</td>
+								<td>Gradient</td>
+								<td>#efefef </td>
+								<td>#b0b0b0 </td>
+								<td>This is the background color for the <a href="/base/buttons">Secondary Button (Default State)</a>.</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors btn-default-active"></div>
+								</td>
+								<td>Gradient</td>
+								<td>#9a9a9a </td>
+								<td>#efefef </td>
+								<td>This is the background color for the <a href="/base/buttons">Secondary Button (Active State)</a>.</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="colors btn-default-hover"></div>
+								</td>
+								<td>Gradient</td>
+								<td>#efefef </td>
+								<td>#9a9a9a </td>
+								<td>This is the background color for the <a href="/base/buttons">Secondary Button (Hover State)</a>.</td>
+							</tr>
+							<tr>
+								<td class="gray">
+									<div class="colors color-block-08"></div>
+								</td>
+								<td>Solid</td>
+								<td>#EEEEEE</td>
+								<td>--</td>
+								<td>This is the background color for the <a href="/base/buttons">Secondary Button (Loading State)</a>.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h3 class="mul-hdr-rule">{{ model.reference-color-hdr-7 }}</h3>
+				{{ model.reference-color-content-7 }}
+				
+				<div class="mul-table-small-mediaquery">
+					<table class="mul-table mul-table-borders mul-table-striped" cellpadding="0" cellspacing="0" border="0">
+						<thead>
+							<tr>
+								<th class="col-5">Example</th>
+								<th class="col-2">Style</th>
+								<th class="col-2">Hex Top</th>
+								<th class="col-3">Hex Bottom</th>
+								<th class="col-13">Usage Details</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="mul-box-adv mul-user-profile mul-no-margin-bottom">
+										<div class="mul-box-hdr">&nbsp;</div>
+									</div>
+								</td>
+								<td>Solid</td>
+								<td>#00a8c8</td>
+								<td>--</td>
+								<td>User Profile</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="mul-box-adv mul-client-profile-inactive mul-no-margin-bottom">
+										<div class="mul-box-hdr">&nbsp;</div>
+									</div>
+								</td>
+								<td>Solid</td>
+								<td>#999999</td>
+								<td>--</td>
+								<td>Inactive Client Profile</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="mul-box-adv mul-client-profile-active mul-no-margin-bottom">
+										<div class="mul-box-hdr">&nbsp;</div>
+									</div>
+								</td>
+								<td>Solid</td>
+								<td>#43276d</td>
+								<td>--</td>
+								<td>Active Client Profile</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="mul-box-adv mul-client-profile-prospective mul-no-margin-bottom">
+										<div class="mul-box-hdr">&nbsp;</div>
+									</div>
+								</td>
+								<td>Solid</td>
+								<td>#6f83c1</td>
+								<td>--</td>
+								<td>Prospective Client Profile</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="mul-box-adv mul-product-profile mul-no-margin-bottom">
+										<div class="mul-box-hdr">&nbsp;</div>
+									</div>
+								</td>
+								<td>Solid</td>
+								<td>#c45f24</td>
+								<td>--</td>
+								<td>Product Profile</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="mul-box-adv mul-plan-profile mul-no-margin-bottom">
+										<div class="mul-box-hdr">&nbsp;</div>
+									</div>
+								</td>
+								<td>Solid</td>
+								<td>#FAA45E</td>
+								<td>--</td>
+								<td>Plan Profile</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="mul-box-adv mul-location-profile mul-no-margin-bottom">
+										<div class="mul-box-hdr">&nbsp;</div>
+									</div>
+								</td>
+								<td>Solid</td>
+								<td>#a9bcd3</td>
+								<td>--</td>
+								<td>Location Profile</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</div>
+	<!-- EXAMPLE SECTION - COLORS TABS - ENDS -->
 
-		<h3 class="mul-hdr-rule">Confirmation/Positive</h3>
-		<p>Green denotes a positive experience, and users tend to associate it with a confirmation, a positive result or a correct answer. In our applications, it is reserved for this use.</p>
-		<div class="mul-table-small-mediaquery">
-			<table class="mul-table mul-table-borders mul-table-striped" cellpadding="0" cellspacing="0" border="0">
-				<thead>
-					<tr>
-						<th class="col-5">Example</th>
-						<th class="col-2">Style</th>
-						<th class="col-2">Hex Top</th>
-						<th class="col-3">Hex Bottom</th>
-						<th class="col-13">Usage Details</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="green">
-							<div class="colors color-block-06"></div>
-						</td>
-						<td>Solid</td>
-						<td>#d6ebc3</td>
-						<td>--</td>
-						<td><strong>Background</strong> - Commonly used as the background color on the <a href="/base/boxes/message-confirmation">Confirmation Message</a> container.</td>
-					</tr>
-					<tr>
-						<td class="green">
-							<div class="colors color-block-02"></div>
-						</td>
-						<td>Solid</td>
-						<td>#2d7b05</td>
-						<td>--</td>
-						<td><strong>Border</strong> - Used as the border color in the <a href="/base/boxes/message-confirmation">Confirmation Message</a> container.</td>
-					</tr>
-					<tr>
-						<td class="green">
-							<div class="colors color-block-01"></div>
-						</td>
-						<td>Solid</td>
-						<td>#005804</td>
-						<td>--</td>
-						<td><strong>Text</strong> - Confirmation/Positive - used as the text color when displaying a positive number, result or confirmation.</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<h3 class="mul-hdr-rule">Error/Negative</h3>
-		<p>Red tends to signify that something is wrong or incorrect. We've softened this up a bit by using a pink/rose color scheme for errors instead of a bold red, so we can convey that same message without the harshness. In our applications, red is used to denote an error, a negative amount or an incorrect response.</p>
-		<div class="mul-table-small-mediaquery">
-			<table class="mul-table mul-table-borders mul-table-striped" cellpadding="0" cellspacing="0" border="0">
-				<thead>
-					<tr>
-						<th class="col-5">Example</th>
-						<th class="col-2">Style</th>
-						<th class="col-2">Hex Top</th>
-						<th class="col-3">Hex Bottom</th>
-						<th class="col-13">Usage Details</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="red">
-							<div class="colors color-block-03"></div>
-						</td>
-						<td>Solid</td>
-						<td>#fcdbd9</td>
-						<td>--</td>
-						<td><strong>Background</strong>  - Used as the background color in the <a href="/base/boxes/message-error">Error Message</a> container or as the hover color for negative or escalated items in the <a href="/objects/primary-summary">Summary Data</a> containers.</td>
-					</tr>
-					<tr>
-						<td class="red">
-							<div class="colors color-block-02"></div>
-						</td>
-						<td>Solid</td>
-						<td>#ba2c2b</td>
-						<td>--</td>
-						<td><strong>Border</strong> - Used as the border color in the <a href="/base/boxes/message-error">Error Message</a> container.</td>
-					</tr>
-					<tr>
-						<td class="red">
-							<div class="colors color-block-01"></div>
-						</td>
-						<td>Solid</td>
-						<td>#810009</td>
-						<td>--</td>
-						<td><strong>Text</strong> - Used as the text color when displaying an error message or a negative number or result.</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<h3 class="mul-hdr-rule">Attention/Highlight</h3>
-		<p>Since the color yellow is often associated with calling attention or highlighting, we use a yellow color scheme when users need to be alerted to something on the screen. This way, when users see the color yellow appear on a site or application, they know they need to pay particular attention to that item. </p>
-		<div class="mul-table-small-mediaquery">
-			<table class="mul-table mul-table-borders mul-table-striped" cellpadding="0" cellspacing="0" border="0">
-				<thead>
-					<tr>
-						<th class="col-5">Example</th>
-						<th class="col-2">Style</th>
-						<th class="col-2">Hex Top</th>
-						<th class="col-3">Hex Bottom</th>
-						<th class="col-13">Usage Details</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="tan">
-							<div class="colors color-block-03"></div>
-						</td>
-						<td>Solid</td>
-						<td>#fef8e3</td>
-						<td>--</td>
-						<td><strong>Background</strong> - Used in areas like the <a href="/base/boxes/message-attention">Attention Message</a> container, as the hover color in the <a href="/base/tables/interactive">Interactive Data Table</a> or as the background for the selected item in the <a href="/objects/mini-filter">Mini Filter</a>. </td>
-					</tr>
-					<tr>
-						<td class="tan">
-							<div class="colors color-block-02"></div>
-						</td>
-						<td>Solid</td>
-						<td>#c6a54f</td>
-						<td>--</td>
-						<td><strong>Border</strong> - Used as the border color in the <a href="/base/boxes/message-attention">Attention Message</a> container. </td>
-					</tr>
-					<tr>
-						<td class="tan">
-							<div class="colors color-block-01"></div>
-						</td>
-						<td>Solid</td>
-						<td>#8e5501</td>
-						<td>--</td>
-						<td><strong>Text</strong> - Used as the text color for titles inside the <a href="/base/boxes/message-attention">Attention Message</a> container, or in other areas as the text color to display highlighted text.</td>
-					</tr>	
-				</tbody>
-			</table>
-		</div>
-
-		<h3 class="mul-hdr-rule">Interactive Data Tables</h3>
-		<p>Interactive Data Tables need to have color so users can easily interpret the data presented, but at the same time, the colors should be soft as not to direct attention away from the table's content. Mercer's color scheme for all interactive data tables is a collection of soft light blues.</p>
-		<div class="mul-table-small-mediaquery">
-			<table class="mul-table mul-table-borders mul-table-striped" cellpadding="0" cellspacing="0" border="0">
-				<thead>
-					<tr>
-						<th class="col-5">Example</th>
-						<th class="col-2">Style</th>
-						<th class="col-2">Hex Top</th>
-						<th class="col-3">Hex Bottom</th>
-						<th class="col-13">Usage Details</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							<div class="colors table-header-row"></div>
-						</td>
-						<td>Solid</td>
-						<td>#E9EEF5</td>
-						<td>--</td>
-						<td><strong>Header Row</strong> - Background color for the top most row on a Interactive Data Table.</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors table-subheader-row"></div>
-						</td>
-						<td>Solid</td>
-						<td>#E8F0F7</td>
-						<td>--</td>
-						<td><strong>Subheader Row</strong> - Background color used on the optional subheader row in a Interactive Data Table.</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors table-data-row-01"></div>
-						</td>
-						<td>Solid</td>
-						<td>#FFFFFF</td>
-						<td>--</td>
-						<td><strong>Alternating Data Row 1</strong> - used on the <a href="/base/tables/interactive">Interactive Data Table</a> in conjunction with Alternating Data Row 1 to create a "zebra-stripe" effect in the main content area to allow the user to easily identify a single row of data.</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors table-data-row-02"></div>
-						</td>
-						<td>Solid</td>
-						<td>#F7F7F7</td>
-						<td>--</td>
-						<td><strong>Alternating Data Row 2</strong> - used on the <a href="/base/tables/interactive">Interactive Data Table</a> in conjunction with Alternating Data Row 1 to create a "zebra-stripe" effect in the main content area to allow the user to easily identify a single row of data.</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors table-subtotal-row"></div>
-						</td>
-						<td>Solid</td>
-						<td>#EEEEEE</td>
-						<td>--</td>
-						<td><strong>Subtotal Row</strong> - Background color for the optional summary or total row that would appear as the last row in an <a href="/base/tables/interactive">Interactive Data Table</a>.</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors table-total-row"></div>
-						</td>
-						<td>Solid</td>
-						<td>#E6E6E6</td>
-						<td>--</td>
-						<td><strong>Total Row</strong> - Background color for the optional summary or total row that would appear as the last row in an <a href="/base/tables/interactive">Interactive Data Table</a>.</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors table-sorting-row-01"></div>
-						</td>
-						<td>Solid</td>
-						<td>#F7F7F7</td>
-						<td>--</td>
-						<td><strong>Sorting (odd row)</strong> -</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors table-sorting-row-02"></div>
-						</td>
-						<td>Solid</td>
-						<td>#EEEEEE</td>
-						<td>--</td>
-						<td><strong>Sorting (even row)</strong> -</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors table-header-border"></div>
-						</td>
-						<td>Solid</td>
-						<td>#A9BCD3</td>
-						<td>--</td>
-						<td><strong>Table Header Border Color</strong> -</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors table-row-border"></div>
-						</td>
-						<td>Solid</td>
-						<td>#CCCCCC</td>
-						<td>--</td>
-						<td><strong>Table Row Border Color</strong> -</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors table-subheader-border"></div>
-						</td>
-						<td>Solid</td>
-						<td>#C3D2E5</td>
-						<td>--</td>
-						<td><strong>Table Subheader Border Color</strong> -</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<a name="buttonColors"></a>
-		<h3 class="mul-hdr-rule">Buttons</h3>
-		<p>Primary and secondary buttons can be easily distinguished by using different colors: green for primary and grey for secondary. The bright green will instantly draw users to primary buttons as they are the ones that need to be addressed first. There are slight visual variations for each of the four button states.
-		</p>
-		<div class="mul-table-small-mediaquery">
-			<table class="mul-table mul-table-borders mul-table-striped" cellpadding="0" cellspacing="0" border="0">
-				<thead>
-					<tr>
-						<th class="col-5">Example</th>
-						<th class="col-2">Style</th>
-						<th class="col-2">Hex Top</th>
-						<th class="col-3">Hex Bottom</th>
-						<th class="col-13">Usage Details</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							<div class="colors btn-primary"></div>
-						</td>
-						<td>Gradient</td>
-						<td>#69dd14</td>
-						<td>#2d6e0c</td>
-						<td>This is the background color for the <a href="/base/buttons">Primary Button (Default State)</a>.</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors btn-primary-active"></div>
-						</td>
-						<td>Gradient</td>
-						<td>#1b4a03 </td>
-						<td>#69dd14 </td>
-						<td>This is the background color for the <a href="/base/buttons">Primary Button (Active State)</a>.</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors btn-primary-hover"></div>
-						</td>
-						<td>Gradient</td>
-						<td>#69dd14 </td>
-						<td>#1b4a03 </td>
-						<td>This is the background color for the <a href="/base/buttons">Primary Button (Hover State)</a>.</td>
-					</tr>
-					<tr>
-						<td class="green">
-							<div class="colors color-block-02"></div>
-						</td>
-						<td>Solid</td>
-						<td>#2D7B05</td>
-						<td>--</td>
-						<td>This is the background color for the <a href="/base/buttons">Primary Button (Loading State)</a>.</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors btn-default"></div>
-						</td>
-						<td>Gradient</td>
-						<td>#efefef </td>
-						<td>#b0b0b0 </td>
-						<td>This is the background color for the <a href="/base/buttons">Secondary Button (Default State)</a>.</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors btn-default-active"></div>
-						</td>
-						<td>Gradient</td>
-						<td>#9a9a9a </td>
-						<td>#efefef </td>
-						<td>This is the background color for the <a href="/base/buttons">Secondary Button (Active State)</a>.</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="colors btn-default-hover"></div>
-						</td>
-						<td>Gradient</td>
-						<td>#efefef </td>
-						<td>#9a9a9a </td>
-						<td>This is the background color for the <a href="/base/buttons">Secondary Button (Hover State)</a>.</td>
-					</tr>
-					<tr>
-						<td class="gray">
-							<div class="colors color-block-08"></div>
-						</td>
-						<td>Solid</td>
-						<td>#EEEEEE</td>
-						<td>--</td>
-						<td>This is the background color for the <a href="/base/buttons">Secondary Button (Loading State)</a>.</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<h3 class="mul-hdr-rule">Entity Profiles</h3>
-		<p>The following colors are reserved for use with specific site/application entities (like Client profile, User profile, etc). The colors will be used primarily in the profile header for the specific entity. They will also be used as accents  throughout various elements within the entity profile.</p>
-		<div class="mul-table-small-mediaquery">
-			<table class="mul-table mul-table-borders mul-table-striped" cellpadding="0" cellspacing="0" border="0">
-				<thead>
-					<tr>
-						<th class="col-5">Example</th>
-						<th class="col-2">Style</th>
-						<th class="col-2">Hex Top</th>
-						<th class="col-3">Hex Bottom</th>
-						<th class="col-13">Usage Details</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							<div class="mul-box-adv mul-user-profile mul-no-margin-bottom">
-								<div class="mul-box-hdr">&nbsp;</div>
-							</div>
-						</td>
-						<td>Solid</td>
-						<td>#00a8c8</td>
-						<td>--</td>
-						<td>User Profile</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="mul-box-adv mul-client-profile-inactive mul-no-margin-bottom">
-								<div class="mul-box-hdr">&nbsp;</div>
-							</div>
-						</td>
-						<td>Solid</td>
-						<td>#999999</td>
-						<td>--</td>
-						<td>Inactive Client Profile</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="mul-box-adv mul-client-profile-active mul-no-margin-bottom">
-								<div class="mul-box-hdr">&nbsp;</div>
-							</div>
-						</td>
-						<td>Solid</td>
-						<td>#43276d</td>
-						<td>--</td>
-						<td>Active Client Profile</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="mul-box-adv mul-client-profile-prospective mul-no-margin-bottom">
-								<div class="mul-box-hdr">&nbsp;</div>
-							</div>
-						</td>
-						<td>Solid</td>
-						<td>#6f83c1</td>
-						<td>--</td>
-						<td>Prospective Client Profile</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="mul-box-adv mul-product-profile mul-no-margin-bottom">
-								<div class="mul-box-hdr">&nbsp;</div>
-							</div>
-						</td>
-						<td>Solid</td>
-						<td>#c45f24</td>
-						<td>--</td>
-						<td>Product Profile</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="mul-box-adv mul-plan-profile mul-no-margin-bottom">
-								<div class="mul-box-hdr">&nbsp;</div>
-							</div>
-						</td>
-						<td>Solid</td>
-						<td>#FAA45E</td>
-						<td>--</td>
-						<td>Plan Profile</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="mul-box-adv mul-location-profile mul-no-margin-bottom">
-								<div class="mul-box-hdr">&nbsp;</div>
-							</div>
-						</td>
-						<td>Solid</td>
-						<td>#a9bcd3</td>
-						<td>--</td>
-						<td>Location Profile</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-	</div>
-	<div id="tabs-2">
-
-		<div class="col-24 mul-margin-bottom">
-
-			<div class="gray col-4 first">
-				<h4 class="mul-align-center">Black</h4>
-				<div class="color-block color-block-01">#000000</div>
-				<div class="color-block color-block-02">#333333</div>
-				<div class="color-block color-block-03">#666666</div>
-				<div class="color-block color-block-04">#999999</div>
-				<div class="color-block color-block-05">#B0B0B0</div>
-				<div class="color-block color-block-06">#CCCCCC</div>
-				<div class="color-block color-block-07">#E6E6E6</div>
-				<div class="color-block color-block-08">#EEEEEE</div>
-				<div class="color-block color-block-09">#F8F8F8</div>
-			</div>
-
-			<div class="blue-gray col-4">
-				<h4 class="mul-align-center">Blue-Gray</h4>
-				<div class="color-block color-block-01">#23334C</div>
-				<div class="color-block color-block-02">#395A85</div>
-				<div class="color-block color-block-03">#396EA8</div>
-				<div class="color-block color-block-04">#517BAA</div>
-				<div class="color-block color-block-05">#6B90B8</div>
-				<div class="color-block color-block-06">#A9BCD3</div>
-				<div class="color-block color-block-07">#C3D2E5</div>
-				<div class="color-block color-block-08">#E9EEF5</div>
-				<div class="color-block color-block-09">#E8F0F7</div>
-			</div>
-
-			<div class="blue-sapphire col-4">
-				<h4 class="mul-align-center">Blue-Sapphire</h4>
-				<div class="color-block color-block-01">#002C77</div>
-				<div class="color-block color-block-02">#006D9E</div>
-				<div class="color-block color-block-03">#00A8C8</div>
-				<div class="color-block color-block-04">#A6E2EF</div>
-			</div>
-
-			<div class="purple col-4">
-				<h4 class="mul-align-center">Purple</h4>
-				<div class="color-block color-block-01">#43276D</div>
-				<div class="color-block color-block-02">#595997</div>
-				<div class="color-block color-block-03">#6F83C1</div>
-				<div class="color-block color-block-04">#C4CAE6</div>
-			</div>
-
-			<div class="fuscia col-4">
-				<h4 class="mul-align-center">Fuscia</h4>
-				<div class="color-block color-block-01">#560054</div>
-				<div class="color-block color-block-02">#932077</div>
-				<div class="color-block color-block-03">#CE3D95</div>
-				<div class="color-block color-block-04">#E7B8D5</div>
-			</div>
-
-			<div class="pink col-4">
-				<h4 class="mul-align-center">Pink</h4>
-				<div class="color-block color-block-01">#A9194F</div>
-				<div class="color-block color-block-02">#ED2C67</div>
-				<div class="color-block color-block-03">#F7B6BB</div>
-			</div>
-
-		</div>
-
-		<div class="col-24 mul-margin-bottom">
-
-			<div class="red col-4 first">
-				<h4 class="mul-align-center">Red</h4>
-				<div class="color-block color-block-01">#810009</div>
-				<div class="color-block color-block-02">#BA2C2B</div>
-				<div class="color-block color-block-03">#EF4E45</div>
-				<div class="color-block color-block-04">#FCDBD9</div>
-			</div>
-
-			<div class="orange col-4">
-				<h4 class="mul-align-center">Orange</h4>
-				<div class="color-block color-block-01">#C45F24</div>
-				<div class="color-block color-block-02">#F48132</div>
-				<div class="color-block color-block-03">#FAA45E</div>
-				<div class="color-block color-block-04">#FCCFAB</div>
-			</div>
-
-			<div class="tan col-4">
-				<h4 class="mul-align-center">Tan</h4>
-				<div class="color-block color-block-01">#8E5501</div>
-				<div class="color-block color-block-02">#C6A54F</div>
-				<div class="color-block color-block-03">#F1D485</div>
-				<div class="color-block color-block-04">#FEF8E3</div>
-			</div>
-
-			<div class="green col-4">
-				<h4 class="mul-align-center">Green</h4>
-				<div class="color-block color-block-01">#005804</div>
-				<div class="color-block color-block-02">#2D7B05</div>
-				<div class="color-block color-block-03">#6EAA38</div>
-				<div class="color-block color-block-04">#72BE44</div>
-				<div class="color-block color-block-05">#98E96C</div>
-				<div class="color-block color-block-06">#BDDCA1</div>
-				<div class="color-block color-block-07">#D6EBC3</div>
-			</div>
-
-			<div class="blue-green col-4">
-				<h4 class="mul-align-center">Blue-Green</h4>
-				<div class="color-block color-block-01">#004C4F</div>
-				<div class="color-block color-block-02">#008075</div>
-				<div class="color-block color-block-03">#0FB694</div>
-				<div class="color-block color-block-04">#A7D9C8</div>
-			</div>
-
-		</div>
-
-	</div>
-</div>
+	</section>
+<!-- EXAMPLE SECTION - ENDS -->
 
 {% endblock %}

@@ -1,77 +1,72 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<!-- INTRO SECTION - BEGINS -->
-	<section class="col-24">
-		<h1>{{ model.title }}</h1>
-		<p class="mul-intro-text">
-			The Compact Inline Form is intended to be used when there are a small number of fields used on the form and the form needs to be displayed in a tight area. It is normally used in conjunction with Placeholder Text, and usually without a corresponding Field Label.
-		</p>
-		<p><small>**Not all form layouts will work well together</small></p>
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
+
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24 mul-alternate-views-badge mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-ref-alternate-views-badge">
+
+		{% include '/reference/reference-content' %}
+
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
+		{% if model.reference-get-code == "true" %}
+			<div id="mul-ref-alternate-views-badge-content-panel-get-code">
+
+				<h3 class="mul-hdr-rule">HTML</h3>
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{% include '/base/forms/form-compact' %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post }}
+
+				{% if model.reference-code-js == "true" %}
+
+					<h3 class="mul-hdr-rule">JS</h3>
+
+					{% if model.reference-example-versions == "true" %}
+						<h4>{{ model.reference-example-version-label }}</h4>
+					{% endif %}
+					{{ model.reference-code-js-content-block-pre }}
+					{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-js-content-block-post }}
+
+				{% endif %}
+
+			</div>
+		{% endif %}
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
+
 	</section>
-<!-- INTRO SECTION - ENDS -->
+<!-- CONTENT SECTION - ENDS -->
 
-<section class="col-24">
+<!-- EXAMPLE SECTION - BEGINS -->
+	<section class="col-24 mul-ref-example">
 
-	<h3 class="mul-hdr-dbl-rule">
-		Example
-		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
-	</h3>
+	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+		<h3 class="mul-hdr-dbl-rule mul-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
+	<!-- EXAMPLE SECTION - HEADER - ENDS -->
 
-	<div class="col-24 example-min-height">
+	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+		<section class="mul-ref-example-content">
 
-		{% include '/base/forms/form-compact' %}
+		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 
-	</div>
+			{% if model.reference-example-versions == "true" %}
+				<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
+			{% endif %}
 
-<!-- DETAILS SECTION - BEGINS -->
-	<a name="moreDetails"></a>
-	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
+			{% include '/base/forms/form-compact' %}
 
-	<div class="col-24">
-		<div class="js-mul-tabs-example mul-tabs">
-			{% include "page-tabs" %}
-			<div id="tabs-1">
-				<p>
-					Use the Compact Inline Form when you only have a few fields on the Form. You can also use this form when you only have a small area in which to display the Form, like within a login container or an advanced search or filter functionality associated with a data grid.
-				</p>
-			</div>
-			<div id="tabs-2">
-				<h5>Labels</h5>
-				<p>All field labels should be replaced with Placeholder text, which should use Title Case. See the <a href="/copy-text-styleguide">Copy/Text Style Guide narrative</a> for more detail.</p>
-				
-				<h5>Required Fields</h5>
-				<p>Required fields are not denoted on a Compact Inline Form. </p>
-				
-				<h5>Error Handling</h5>
-				<p>Should work as defined on the <a href="/base/forms/field-specific-error">Field Specific Error Message</a> page for details, with the following exception:</p>
-				
-				<ul>
-				<li>There is no Required Icon, so the error version of the Required Icon should never be displayed.</li>
-				</ul>
-			</div>
-			<div id="tabs-3">
-				<h5>Placeholder Text</h5>
-				<p>Some Form Fields contain Placeholder Text. However, IE9 doesn't understand the polyfill needed to create this type of text. In this case, you will need Java Script to put the Placeholder Text where it needs to go.</p>
-			</div>
-		<div id="tabs-4">
-			<p>Examples go here&hellip;</p>
-		</div>
-		<div id="tabs-5">
-		<!-- GET CODE - BEGINS -->
-			<section class="col-24">
+		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-				<h5 class="mul-hdr-rule">HTML</h5>
-				
+		</section>
+	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
 
-				<pre class="prettyprint linenums"><xmp>{% include '/base/forms/form-compact' %}</xmp></pre>
+	</section>
+<!-- EXAMPLE SECTION - ENDS -->
 
-			</section>
-		<!-- GET CODE - ENDS -->
-		</div>
-
-	</div>
-<!-- DETAILS SECTION - ENDS -->
-
-</section>
 {% endblock %}

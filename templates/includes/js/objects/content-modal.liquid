@@ -1,0 +1,15 @@
+// Content modal example click event
+var contentModalExampleClickEvent = function(){
+	jQuery('#js-mul-content-modal-example-btn').click(function() {
+		jQuery('#js-mul-content-modal-example').dialog('open');
+	});
+}
+
+// Content modal example
+mulContentModal('js-mul-content-modal-example',{
+	clickOutside: true, // Clicking outside content modal closes content modal, false turns off this option
+	clickOutsideTrigger: '#js-mul-content-modal-example-btn'
+});
+
+// Content modal example click event init
+contentModalExampleClickEvent();

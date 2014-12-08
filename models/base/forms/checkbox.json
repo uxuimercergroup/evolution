@@ -1,3 +1,48 @@
 {
-  "title": "Form Checkboxes"
+	"title": "Form Checkboxes",
+
+	"reference-overview": 
+		"<p>Check boxes are form elements that allow users to make specific selections from a set of alternatives. More than one checkbox can be selected at time and a checkbox can be preselected by default. Use subheads to break up a long list of checkboxes into logical groups. This makes the choices faster to scan and easier to understand. And in those cases you may want to use <a href='/base/forms/selected-checkbox'>Selected Checkbox</a>.</p>",
+
+	"reference-usage": 
+		"<p>Check boxes are used when you want to let the user select one or more options from a set of options. If only one option is to be selected at a time you should use <a href='/base/forms/radio-button'>radio buttons</a> instead.</p>",
+
+	"reference-details": 
+		"<p>When a checkox is initially selected the Active State (see below) is highlighted using the \"Attention\" color and a checkmark is added to the box.</p><h3>Margins</h3><p>In order to keep with Mercer consistency, the margins between Elements have been standardized:</p><ul><li>Use a 10 pixel bottom between the Element and next Field Label.</li><li>Use a 3 pixel bottom margin between a Label and an Input.</li></ul><h3>Labels</h3><p>All field labels should use Title Case. See the <a href=\"/copy-text-styleguide\">Copy/Text Style Guide narrative</a> for more detail.</p><h3>Active State</h3><p>The active state for any field should be indicated by the application of the \"Attention\" color to the border of the specific field the user has clicked into. See <a href=\"/base/colors\">Color Palette</a> for more details on \"Attention\" color.</p><h3>Required Fields</h3><p>All required fields should be denoted by placing the Required icon (the <code>mul-asterisk-small</code> icon from the <a href=\"/base/icons\">list of icons</a>) immediately to the left of the Field Label.</p><h3>Error Handling</h3><p>See the <a href=\"/base/forms/field-specific-error\">Field Specific Error Message</a> page for details.</p>",
+
+	"reference-mobile": 
+		"<p>The font size will increase slightly.</p><p>The field label will stack on top of the checkbox options.</p>",
+
+	"reference-technical": 
+		"<p>Technical details go here...</p>",
+
+	
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "true",
+	"reference-example-version-label":
+		"Stacked Layout",
+	"reference-example-version-label-2":
+		"Inline Layout",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"",
+	"reference-code-html-content-block-post": 
+		"",
+	"reference-code-html-content-block-pre-2": 
+		"",
+	"reference-code-html-content-block-post-2": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
 }

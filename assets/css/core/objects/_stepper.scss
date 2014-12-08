@@ -30,7 +30,7 @@
 			a						{@include href-link($gray-mid-dark, none);}
 			.mul-stepper-text		{
 									display: none;
-									font-family: $proximaNovaSemiBoldFamily;
+									font-family: $fontSemiBoldFamily;
 									}
 			[class*="mul-icon"]		{
 									color: $gray-mid-dark;
@@ -44,7 +44,7 @@
 			[class*="mul-icon"]		{color: $green;}
 			.mul-stepper-text		{
 									color: $green;
-									font-family: $proximaNovaSemiBoldFamily;
+									font-family: $fontSemiBoldFamily;
 									}
 						 		}
 		// ACTIVE STEP
@@ -53,7 +53,7 @@
 			[class*="mul-icon"]		{color: $tan-dark;}
 			.mul-stepper-text		{
 									color: $tan-dark;
-									font-family: $proximaNovaSemiBoldFamily;
+									font-family: $fontSemiBoldFamily;
 									}
 						 		}
 							}

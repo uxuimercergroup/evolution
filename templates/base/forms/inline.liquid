@@ -1,93 +1,103 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<!-- INTRO SECTION - BEGINS -->
-	<section class="col-24">
-		<h1>{{ model.title }}</h1>
-		<p class="mul-intro-text">The Inline Form displays the Field Labels and the associated Form Fields on the same line with one another.</p>
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
+
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24 mul-alternate-views-badge mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-ref-alternate-views-badge">
+
+		{% include '/reference/reference-content' %}
+
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
+		{% if model.reference-get-code == "true" %}
+			<div id="mul-ref-alternate-views-badge-content-panel-get-code">
+
+				<h3 class="mul-hdr-rule">HTML</h3>
+				
+				{{ model.reference-code-html-content-block-pre }}
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label }}</h4>
+				{% endif %}
+				{{ global.reference-get-code-start-tag }}{% include '/base/forms/form-inline' %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post }}
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label-2 }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre-2 }}
+				{{ global.reference-get-code-start-tag }}{% include '/base/forms/form-inline-right-labels' %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post-2 }}
+
+				{% if model.reference-code-js == "true" %}
+
+					<h3 class="mul-hdr-rule">JS</h3>
+
+					{% if model.reference-example-versions == "true" %}
+						<h4>{{ model.reference-example-version-label }}</h4>
+					{% endif %}
+					{{ model.reference-code-js-content-block-pre }}
+					{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-js-content-block-post }}
+
+				{% endif %}
+
+			</div>
+		{% endif %}
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
+
 	</section>
-<!-- INTRO SECTION - ENDS -->
+<!-- CONTENT SECTION - ENDS -->
 
-<section class="col-24">
+<!-- EXAMPLE SECTION - BEGINS -->
+	<section class="col-24 mul-ref-example">
 
-	<h3 class="mul-hdr-dbl-rule">
-		Example
-		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
-	</h3>
+	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+		<h3 class="mul-hdr-dbl-rule mul-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
+	<!-- EXAMPLE SECTION - HEADER - ENDS -->
 
-<!-- FORM INLINE - BEGINS -->
-	<div class="col-24 example-min-height">
-		<div class="col-16 first">
-			{% include '/base/forms/form-inline' %}
+	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+		<section class="mul-ref-example-content">
 
-			<br><hr><br>
+			<div class="col-24">
+				<div class="col-16 first">
 
-			{% include '/base/forms/form-inline-right-labels' %}
-		</div>
-	</div>
-<!-- FORM INLINE - ENDS -->
+				<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 
-<!-- DETAILS SECTION - BEGINS -->
-	<a name="moreDetails"></a>
-	<h4 class="mul-hdr-dbl-rule additional-detail-hdr">Additional Details</h4>
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
+					{% endif %}
 
-	<div class="col-24">
-		<div class="js-mul-tabs-example mul-tabs">
-			{% include "page-tabs" %}
-			<div id="tabs-1">
-				<p>An Inline Form is best used when the system has more control over the specific layout of the page (when <strong>end-user configurability is less important</strong>).</p>
-				
-				<p>It is also a good solution in cases <strong>when there are numerous fields</strong>, and a <strong>smaller amount of screen real estate</strong> is available.</p>
-				
-				<p>When using an Inline Form, the preference is to <strong>use the Right Aligned version</strong>, as this creates a tighter association between the Field Label and the Form Field. The Left Aligned form is availble to be used, but the excess white space between the Form Label and the Form Field creates issues with readability.</p>
+					{% include '/base/forms/form-inline' %}
+
+				<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+				</div>
 			</div>
-			<div id="tabs-2">
-				<h5>Margins</h5>
-				<p>In order to keep with Mercer consistency, the margins between Elements have been standardized:</p>
-				<ul>
-					<li>Use a 10 pixel bottom between the Element and next Field Label. </li>
-					<li>Use a 3 pixel bottom margin between a Label and an Input.</li>
-				</ul>
-				
-				<h5>Labels</h5>
-				<p>All field labels should use Title Case. See the <a href="/copy-text-styleguide">Copy/Text Style Guide narrative</a> for more detail.</p>
 
-				<h5>Active State</h5>
-				<p>The active state for any field should be indicated by the application of the "Attention" color to the border of the specific field the user has clicked into.</p>
-				
-				<h5>Required Fields</h5>
-				<p>All required fields should be denoted by placing the  Required icon (the "asterisk-required.png" image from the <a href="/base/icons">list of icons</a>) immediately to the left of the Field Label.</p>
 
-				<h5>Error Handling</h5>
-				<p>See the <a href="/base/forms/field-specific-error">Field Specific Error Message</a> page for details.</p>
+			<div class="col-24">
+				<div class="col-16 first">
+
+				<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
+					{% endif %}
+
+					{% include '/base/forms/form-inline-right-labels' %}
+
+				<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+				</div>
 			</div>
-			<div id="tabs-3">
-				<h5>Placeholder Text</h5>
-				<p>Some Form Fields contain Placeholder Text. However, IE9 doesn't understand the polyfill needed to create this type of text. In this case, you will need Java Script to put the Placeholder Text where it needs to go.</p>
-			</div>
-			<div id="tabs-4">
-				<p>In the mobile version, all text is slightly larger and buttons span the entire width of their container. Input areas and drop-down menus also grow to span the entire width of the container.</p>
-				<p>All forms become stacked for mobile and whether the labels are right or left aligned in the stacked form for desktop, they all become left aligned and stacked for mobile. </p>
-			</div>
-			<div id="tabs-5">
-			<!-- GET CODE - BEGINS -->
-				<section class="col-24">
 
-					<h5 class="mul-hdr-rule">HTML</h5>
-					<p>To right align labels in a for please use the following class name in the form tag "mul-form-label-right".</p>
+		</section>
+	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
 
-					<h5 class="mul-hdr-rule">Inline Form</h5>
-					<pre class="prettyprint linenums"><xmp>{% include '/base/forms/form-inline' %}</xmp></pre>
+	</section>
+<!-- EXAMPLE SECTION - ENDS -->
 
-					<h5 class="mul-hdr-rule">Inline Form with Right Aligned Labels</h5>
-					<pre class="prettyprint linenums"><xmp>{% include '/base/forms/form-inline-right-labels' %}</xmp></pre>
-
-				</section>
-			<!-- GET CODE - ENDS -->
-			</div>
-		</div>
-	</div>
-<!-- DETAILS SECTION - ENDS -->
-
-</section>
 {% endblock %}

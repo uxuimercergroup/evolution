@@ -1,119 +1,138 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<!-- INTRO SECTION - BEGINS -->
-	<section class="col-24">
-		<h1>{{ model.title }}</h1>
-		<p class="mul-intro-text">Basic Containers are used throughout the site and applications as a starting point for all boxes. Normally they contain base information along with customizeable options. </p>
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
+
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24 mul-alternate-views-badge mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-ref-alternate-views-badge">
+
+		{% include '/reference/reference-content' %}
+
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
+		{% if model.reference-get-code == "true" %}
+			<div id="mul-ref-alternate-views-badge-content-panel-get-code">
+
+				<h3 class="mul-hdr-rule">HTML</h3>
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{% include "/base/boxes/basic-ctn" %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post }}
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label-2 }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{% include "/base/boxes/basic-ctn-header" %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post }}
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label-3 }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{% include "/base/boxes/basic-ctn-header-rounded" %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post }}
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label-4 }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{% include "/base/boxes/basic-ctn-header-rounded-shadow" %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post }}
+
+				{% if model.reference-code-js == "true" %}
+
+					<h3 class="mul-hdr-rule">JS</h3>
+
+					{% if model.reference-example-versions == "true" %}
+						<h4>{{ model.reference-example-version-label }}</h4>
+					{% endif %}
+					{{ model.reference-code-js-content-block-pre }}
+					{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-js-content-block-post }}
+
+				{% endif %}
+
+			</div>
+		{% endif %}
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
+
 	</section>
-<!-- INTRO SECTION - ENDS -->
+<!-- CONTENT SECTION - ENDS -->
 
-<section class="col-24">
+<!-- EXAMPLE SECTION - BEGINS -->
+	<section class="col-24 mul-ref-example">
 
-	<h3 class="mul-hdr-dbl-rule">
-		Example
-		<a href="javascript:;" class="mul-icon-size-small mul-icon-mul-arrow-circle-down mul-icon-color-gray-darker mul-icon-position-right mul-float-right related-items-menu"></a>
-	</h3>
+	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+		<h3 class="mul-hdr-dbl-rule mul-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
+	<!-- EXAMPLE SECTION - HEADER - ENDS -->
 
-<!-- BASIC CONTAINER - BEGINS -->
-	<div class="col-24 example-min-height">
+	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+		<section class="mul-ref-example-content">
 
-		<div class="col-6 first">
-			<h4 class="mul-hdr-rule">Basic container</h4>
-			{% include "/base/boxes/basic-ctn" %}
-		</div>
-		<div class="col-6">
-			<h4 class="mul-hdr-rule">Example with header</h4>
-			{% include "/base/boxes/basic-ctn-header" %}
-		</div>
-		<div class="col-6">
-			<h4 class="mul-hdr-rule">Example with round corners</h4>
-			{% include "/base/boxes/basic-ctn-header-rounded" %}
-		</div>
-		<div class="col-6">
-			<h4 class="mul-hdr-rule">Example with drop shadow</h4>
-			{% include "/base/boxes/basic-ctn-header-rounded-shadow" %}
-		</div>
-	</div>
-<!-- BASIC CONTAINER - ENDS -->
+			<div class="col-24">
+				<div class="col-6 first">
+					
+				<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 
-<!-- DETAILS SECTION - BEGINS -->
-	<div class="col-24">
-		<a name="moreDetails"></a>
-		<h4 class="mul-hdr-dbl-rule addtional-detail-hdr">Additional Details</h4>
-		
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
+					{% endif %}
 
-		<div class="js-mul-tabs-example mul-tabs">
-			{% include "page-tabs" %}
-			<div id="tabs-1">
-				<p>Containers in general are used to highlight specific areas of content. The Basic Container features 3 components - header, body and footer. These components can be used in any combination - all are not required. Options for this container are rounded corners and drop shadows. A sample of a basic container is the <a href="/objects/inline-search">Inline Search Container</a>.</p>
+					{% include "/base/boxes/basic-ctn" %}
+
+				<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+				</div>
+				<div class="col-6">
+				
+				<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
+					{% endif %}
+
+					{% include "/base/boxes/basic-ctn-header" %}
+
+				<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+	
+				</div>
+				<div class="col-6">
+
+				<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
+					{% endif %}
+
+					{% include "/base/boxes/basic-ctn-header-rounded" %}
+
+				<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+							
+				</div>
+				<div class="col-6">
+
+				<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-4 }}</h4>
+					{% endif %}
+
+					{% include "/base/boxes/basic-ctn-header-rounded-shadow" %}
+
+				<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+					
+				</div>
 			</div>
-			<div id="tabs-2">
-				<h5>Components</h5>
-				<ul>
-					<li>The Basic Container is comprised of the following components:
-						<ul>
-							<li>Border</li>
-							<li>Header (optional)</li>
-							<li>Horizontal Line (optional)</li>
-							<li>Content</li>
-							<li>Background Color</li>
-							<li>Rounded Corner (optional)</li>
-							<li>Drop Shadow (optional)</li>
-						</ul>
-					</li>
-					<li>The border color (#6b90b8) should always be a solid, 1 pixel gray line.</li>
-					<li>The headers for Basic Containers can be designated as either h1, h2, or h3. </li>
-					<li>The Horizontal Line directly under the Basic Container's header is (#CCCCCC).</li>
-					<li>The Background color is #EEEEEE.</li>
-				</ul>
 
-				<h5>Sizing and Layout</h5>
-				<ul>
-					<li>The content margins inside all Mercer Basic Containers will have 15 pixels of padding all around.</li>
-					<li>The padding inside a Basic Container from the line under the header to the beginning of the actual content is also 15 pixels.</li>
-					<li>Basic Container height and width are variable based on inside content height and width.</li>
-				</ul>
+		</section>
+	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
 
-				<h5>Grids</h5>
-				<ul>
-					<li>Basic Containers work within the Mercer Evolution Grid System.</li>
-					<li>Basic Containers can contain grids inside of them to display and section off data within the container.</li>
-				</ul>
-			</div>
-			<div id="tabs-3">
-				<p>Technical details go here&hellip;</p>
-			</div>
-			<div id="tabs-4">
-				<ul>
-					<li>In the mobile version of this container the width will shrink to span the width of the parent container.</li>
-					<li>Font size increases for mobile.</li>
-				</ul>
-			</div>
-			<div id="tabs-5">
-			<!-- GET CODE - BEGINS -->
-				<section class="col-24">
+	</section>
+<!-- EXAMPLE SECTION - ENDS -->
 
-					<h5 class="mul-hdr-rule">HTML</h5>
-
-                    <h5>Basic container</h5>
-					<pre class="prettyprint linenums"><xmp>{% include "/base/boxes/basic-ctn" %}</xmp></pre>
-
-                    <h5>Container with header</h5>
-					<pre class="prettyprint linenums"><xmp>{% include "/base/boxes/basic-ctn-header" %}</xmp></pre>
-
-                    <h5>Container with rounded corners</h5>
-					<pre class="prettyprint linenums"><xmp>{% include "/base/boxes/basic-ctn-header-rounded" %}</xmp></pre>
-
-                    <h5>Container with drop shadow</h5>
-					<pre class="prettyprint linenums"><xmp>{% include "/base/boxes/basic-ctn-header-rounded-shadow" %}</xmp></pre>
-
-				</section>
-			<!-- GET CODE - ENDS -->
-			</div>
-		</div>
-	</div>
-<!-- DETAILS SECTION - ENDS -->
-
-</section>
 {% endblock %}

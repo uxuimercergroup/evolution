@@ -1,22 +1,42 @@
 {
 	"title": "Feature Container",
 
-	"featurecontainermodel" : "true",
+	"reference-overview": 
+		"<p>The Feature Container functions as a means to highlight the most important information on the page. It's essentially featuring the primary content on the page by placing emphasis on it. Feature containers differ from other types of containers because they are typically bigger in size and hold \"main\" information.</p>",
 
-	"FeatureContainerHeaderText": "Container Title",
-	"IntroCopy" : "The Feature Container functions as a means to highlight the most important information on the page. It's essentially featuring the primary content on the page by placing emphasis on it. Feature containers differ from other types of containers because they are typically bigger in size and hold \"main\" information.",
+	"reference-usage": 
+		"<p>The Feature Container is used when you want to feature a certain item or set of data on a page or application.</p><p>One thing designers should keep in mind is that the Feature Container should be used sparingly in order to preserve the uniqueness of featuring an item.</p>",
 
-	"UsageTabContent" : [
-		{
-			"p1" : "The Feature Container is used when you want to feature a certain item or set of data on a page or application.",
-			"p2" : "One thing designers should keep in mind is that the Feature Container should be used sparingly in order to preserve the uniqueness of featuring an item."
-		}
-	],
+	"reference-details": 
+		"<h3>Components</h3><ul><li>The Feature Container is comprised of the following four components:</li><ul><li>Border</li><li>Header</li><li>Horizontal Line</li><li>Content</li></ul><li>The border color (#6b90b8) should always be a solid, 1 pixel gray line.</li><li>The headers for Feature Containers can be designated as either h1, h2, or h3.</li><li>The Horizontal Line directly under the Feature Container's header can be any color depending on where it is used.</li></ul><h3>Sizing and Layout</h3><ul><li>The content margins inside all Mercer Feature Containers will have 15 pixels of padding all around.</li><li>The padding inside a Feature Container from the line under the header to the beginning of the actual content is also 15 pixels.</li><li>Feature Container height and width are variable based on inside content height and width.</li></ul><h3>Grids</h3><ul><li>Feature Containers work within the <a href='/base/grids'>Mercer Evolution Grid System</a>.</li><li>Feature Containers can contain grids inside of them to display and section off data within the container.</li></ul>",
 
-	"GetCodeTabContent" : [
-		{
-			"tabTitle" : "HTML",
-			"description" : "All containers start with base box and in this example we are using the following class <code>mul-feature-ctn</code> to give more meaning to a basic box. For the header part of the container to adjust the size use one of the following tags in conjunction with <code>mul-hdr-rule</code> class: <code>h1</code>, <code>h2</code>"
-		}
-	]
+	"reference-mobile": 
+		"<ul><li>The width of the Feature Container will shrink to fit the mobile display used.</li><li>The font sizes for the header will increase slightly.</li></ul>",
+
+	"reference-technical": 
+		"<p>The Feature Container is designed to work and display the same way across all browsers.</p>",
+
+	
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "false",
+	"reference-example-version-label":
+		"",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"<p>All containers start with base box and in this example we are using the following class <code>mul-feature-ctn</code> to give more meaning to a basic box. For the header part of the container, adjust the header tag size in conjunction with the class of <code>mul-hdr-rule</code>. Recommended header tags are <code>h1</code>, <code>h2</code>, <code>h3</code></p>",
+	"reference-code-html-content-block-post": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
 }

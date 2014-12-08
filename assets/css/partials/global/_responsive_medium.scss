@@ -7,6 +7,40 @@
 // Portrait iPad, portrait tablets, Low-resolution laptops and desktops
 @include media-query(screen, both, $mediumMediaQueryBreakpointMin, $mediumMediaQueryBreakpointMax) {
 
+	/*--- REFERENCE PAGES -----------------------------------------------------------------*/
+
+	// ALTERNATE VIEWS BADGE
+	.mul-ref-alternate-views-badge.ui-tabs
+											{
+		.mul-btn-group-horizontal				{
+			.mul-btn								{
+				a										{
+														padding: 8px 9px 5px 9px;
+					[class^="mul-icon-"]					{display: none;}
+														}
+													}
+												}
+		.ui-tabs-panel							{
+			p, ul, ol, li, dt, dd					{
+													font-size: ($baseFontSizeLargeBreakpoint + 2px);
+													line-height: ($baseLineHeightLargeBreakpoint + 2px);
+													}
+			.prettyprint							{
+				li 										{
+														font-size: $baseFontSizeLargeBreakpoint;
+														line-height: $baseLineHeightLargeBreakpoint;
+														}
+													}
+												}
+											}
+
+	// DEVELOPER - SLIDING DRAWER
+	.mul-ref-sliding-drawer					{
+		.mul-ref-sliding-drawer-hdr				{top: 39px;}
+		.mCustomScrollbar						{padding-top: 136px;}
+											}
+											
+
 	/*--- HOME PAGE -----------------------------------------------------------------------*/
 
 	// MARKETING SECTION - HOMEPAGE
@@ -24,9 +58,9 @@
 												}
 											}
 
-	/*--- TYPE PAGE ----------------------------------------------------------------------------*/
-	.type-table								{
-		td.type-example							{font-size: $baseFontSizeLargeBreakpoint !important;}
+	/*--- TYPE PAGE ------------------------------------------------------------------------*/
+	.mul-ref-type-table						{
+		td.mul-ref-type-example					{font-size: $baseFontSizeLargeBreakpoint !important;}
 											}
 
 }

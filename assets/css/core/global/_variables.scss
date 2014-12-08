@@ -42,19 +42,30 @@ $baseBorderRadiusIE:						0 !default;
 
 // Z-INDEX MASTER LIST
 // Used for a bird's eye view of components dependent on the z-axis
-$zindexLayoutLoginFooterBackground:			9993 !default;
-$zindexLayoutLoginFooter:					9994 !default;
-$zindexSlider:								9995 !default;
-$zindexHeader:								9996 !default;
-$zindexMastheadProfileMenu:					9997 !default;
-$zindexMegaMenuUtilityMenu:					9997 !default;
-$zindexDatepicker:							9998 !default;
-$zindexAutocomplete:						9999 !default;
-$zindexTooltip:								10000 !default;
-$zindexDialogOverlay:						10001 !default;
-$zindexDialogPosition:						10002 !default;
-$zindexDialog:								10003 !default;
-$zindexAdvancedFilterModalDatepicker:		10004 !default;
+$zindexLayoutLoginFooterBackground:			9994 !default;
+$zindexLayoutLoginFooter:					9995 !default;
+$zindexSlider:								9996 !default;
+$zindexDatepicker:							9997 !default;
+$zindexAutocomplete:						9998 !default;
+$zindexTooltip:								9999 !default;
+$zindexToolbar:								10000 !default;
+$zindexMenu:								10001 !default;
+$zindexDialogOverlay:						10002 !default;
+$zindexDialogPosition:						10003 !default;
+
+
+// HELPERS
+// ------------------------------------------------------------------------------------------
+
+// SPACER SIZES
+$spacerSize:								5px !default;
+$spacerXSmall:								($spacerSize*1) !default;
+$spacerSmall:								($spacerSize*2) !default;
+$spacerMedium:								($spacerSize*3) !default;
+$spacerLarge:								($spacerSize*4) !default;
+$spacerXLarge:								($spacerSize*5) !default;
+$spacerXXLarge:								($spacerSize*6) !default;
+$spacerXXXLarge:							($spacerSize*7) !default;
 
 
 // ==========================================================================================
@@ -70,35 +81,35 @@ $baseFontFilePath:							"../fonts" !default;
 
 // WEB FONTS
 
-	// Proxima Nova - Thin
-	$proximaNovaThinFamily:						proxima_nova_ththin !default;
-	$proximaNovaThinFilePath:					"#{$baseFontFilePath}/ProximaNova-Thin-webfont" !default;
-	$proximaNovaThinStack:						"#{$proximaNovaThinFamily}", $baseFontStack !default;
+	// Thin
+	$fontThinFamily:							proxima_nova_ththin !default;
+	$fontThinFilePath:							"#{$baseFontFilePath}/ProximaNova-Thin-webfont" !default;
+	$fontThinStack:								"#{$fontThinFamily}", $baseFontStack !default;
 
-	// Proxima Nova - Regular
-	$proximaNovaRegularFamily:					proxima_nova_rgregular !default;
-	$proximaNovaRegularFilePath:				"#{$baseFontFilePath}/ProximaNova-Reg-webfont" !default;
-	$proximaNovaRegularStack:					"#{$proximaNovaRegularFamily}", $baseFontStack !default;
+	// Regular
+	$fontRegularFamily:							proxima_nova_rgregular !default;
+	$fontRegularFilePath:						"#{$baseFontFilePath}/ProximaNova-Reg-webfont" !default;
+	$fontRegularStack:							"#{$fontRegularFamily}", $baseFontStack !default;
 
-	// Proxima Nova - Bold
-	$proximaNovaBoldFamily:						proxima_nova_rgbold !default;
-	$proximaNovaBoldFilePath:					"#{$baseFontFilePath}/ProximaNova-Bold-webfont" !default;
-	$proximaNovaBoldStack:						"#{$proximaNovaBoldFamily}", $baseFontStack !default;
+	// Bold
+	$fontBoldFamily:							proxima_nova_rgbold !default;
+	$fontBoldFilePath:							"#{$baseFontFilePath}/ProximaNova-Bold-webfont" !default;
+	$fontBoldStack:								"#{$fontBoldFamily}", $baseFontStack !default;
 
-	// Proxima Nova - Italic
-	$proximaNovaItalicFamily:					proxima_novaregular_italic !default;
-	$proximaNovaItalicFilePath:					"#{$baseFontFilePath}/ProximaNova-RegIt-webfont" !default;
-	$proximaNovaItalicStack:					"#{$proximaNovaItalicFamily}", $baseFontStack !default;
+	// Italic
+	$fontItalicFamily:							proxima_novaregular_italic !default;
+	$fontItalicFilePath:						"#{$baseFontFilePath}/ProximaNova-RegIt-webfont" !default;
+	$fontItalicStack:							"#{$fontItalicFamily}", $baseFontStack !default;
 
-	// Proxima Nova - Bold Italic
-	$proximaNovaBoldItalicFamily:				proxima_novabold_italic !default;
-	$proximaNovaBoldItalicFilePath:				"#{$baseFontFilePath}/ProximaNova-BoldIt-webfont" !default;
-	$proximaNovaBoldItalicStack:				"#{$proximaNovaBoldItalicFamily}", $baseFontStack !default;
+	// Bold Italic
+	$fontBoldItalicFamily:						proxima_novabold_italic !default;
+	$fontBoldItalicFilePath:					"#{$baseFontFilePath}/ProximaNova-BoldIt-webfont" !default;
+	$fontBoldItalicStack:						"#{$fontBoldItalicFamily}", $baseFontStack !default;
 
-	// Proxima Nova - Semi-bold
-	$proximaNovaSemiBoldFamily:					proxima_nova_ltsemibold !default;
-	$proximaNovaSemiBoldFilePath:				"#{$baseFontFilePath}/ProximaNova-Sbold-webfont" !default;
-	$proximaNovaSemiBoldStack:					"#{$proximaNovaSemiBoldFamily}", $baseFontStack !default;
+	// Semi-bold
+	$fontSemiBoldFamily:						proxima_nova_ltsemibold !default;
+	$fontSemiBoldFilePath:						"#{$baseFontFilePath}/ProximaNova-Sbold-webfont" !default;
+	$fontSemiBoldStack:							"#{$fontSemiBoldFamily}", $baseFontStack !default;
 
 // ICON FONTS
 
@@ -117,7 +128,7 @@ $baseFontFilePath:							"../fonts" !default;
 // ------------------------------------------------------------------------------------------
 
 // BASE
-$baseFontFamily:							$proximaNovaRegularStack !default;
+$baseFontFamily:							$fontRegularStack !default;
 $baseFontSize:								16px !default;
 $baseFontSizeDifference:					2 !default;
 $baseFontSizeDifferenceMediumBreakpoint:	2 !default;
@@ -321,48 +332,41 @@ $buttonHorzGroupFirstChildBorderLeftStyle:	solid !default;
 // HEADER
 // ------------------------------------------------------------------------------------------
 
-// BASE
-$mastheadContentHeight:						45px !default;
-$mastheadContentHeightLargeBreakpoint:		52px !default;
-$mastheadMarginBottom:						0 !default;
-$mastheadMarginBottomLargeBreakpoint:		0 !default;
-$mastheadLogoLineHeight:					44px !default;
-$mastheadLogoLineHeightLargeBreakpoint:		51px !default;
+// ICON STYLES
+$headerIconRadius:							3px !default;
+$headerIconPadding:							4px 10px 6px 6px !default;
+$headerIconMinWidth:						28px !default;
+
+// BASE & LOGO STYLES
+$mastheadContentHeight:						52px !default;
+$mastheadLogoLineHeight:					52px !default;
 $mastheadLogoFontWeight:					400 !default;
 $mastheadLogoFontSize:						24px !default;
 $mastheadLogoFontSizeLargeBreakpoint:		33px !default;
-$mastheadProfileMenuFontSize:				12px !default;
 
-// MEGA MENU UTILITY ITEM
-$megaMenuItemBorderRadius:					3px !default;
-$megaMenuItemMargin:						6px 0 6px 10px !default;
-$megaMenuItemPadding:						5px 8px 6px 8px !default;
-$megaMenuItemSpacing:						10px !default;
+// USER IDENTIFIER
+$userIdentifierMenuFontSize:				12px !default;
+$userIdentifierMenuPadding:					6px 10px 6px 30px !default;
 
-// MEGA MENU UTILITY MENU
-$megaMenuUtilityMenuBorderRadius:			0 0 4px 4px !default;
-$megaMenuUtilityMenuMinWidth:				180px !default;
-
-// MEGA MENU UTILITY NAVBAR OPTIONS
-$megaMenuUtilNavbarSpacing:					12px 0 0 0 !default;
-
-// MEGA MENU
-$megaMenuContainerContentPadding: 			10px !default;
+// SPOTLIGHT CONTAINER
 $megaMenuContainerSpotlightBorderRadius: 	4px !default;
-$megaMenuContainerSpotlightPadding:			10px !default;
+
+
+// MENU STYLES
+// ------------------------------------------------------------------------------------------
+$menuLinkPadding:							7px 10px !default;
 
 
 // NAVIGATION
 // ------------------------------------------------------------------------------------------
-$navLinkHeightLargeBreakpoint:				37px !default;
-$navLinkFontSize:							18px !default;
-$navLinkFontSizeLargeBreakpoint:			14px !default;
-$navLinkLineHeight:							26px !default;
-$navLinkLineHeightLargeBreakpoint:			20px !default;
-$navBoxLinkHeightLargeBreakpoint:			30px !default;
-$navBoxLinkFontSize:						14px !default;
-$navBoxLinkFontSizeLargeBreakpoint:			($navBoxLinkFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$navBoxLinkLineHeight:						20px !default;
+$navbarBorderBottomWidth:					1px !default;
+$navbarBorderBottomStyle:					solid !default;
+$navbarMessageWidth:						200px !default;
+$navbarMessagePadding:						9px 0 7px 0 !default;
+$navbarMessageInnerPadding:					2px 10px 2px 0 !default;
+$navbarMessageFontFamily:					$fontSemiBoldFamily !default;
+$navbarMessageBorderRightWidth:				1px !default;
+$navbarMessageBorderRightStyle:				dotted !default;
 
 
 // ICONS

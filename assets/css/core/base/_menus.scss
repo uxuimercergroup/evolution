@@ -6,284 +6,355 @@
 
 @if $use-menus == true{
 
-	// DEFAULT STYLES FOR SMARTMENU'S TO WORK
-	.sm,
-	.sm ul,
-	.sm li				{
-						display: block;
-						list-style: none;
-						padding: 0;
-						margin: 0;
-						direction: ltr;
-						}
-	ul.sm li			{position: relative;}
-	ul.sm a				{
-						position: relative;
-						display: block;
-						}
-	ul.sm a.disabled	{cursor: default;}
-	ul.sm ul			{
-						position: absolute;
-						top: -999999px;
-						left: -800px;
-						width: 100px;
-						}
-	ul.sm li			{float: left;}
-	ul.sm-rtl			{direction: rtl;}
-	ul.sm-rtl li		{float: right;}
-	ul.sm ul li,
-	ul.sm-vertical li	{float: none;}
-	ul.sm a				{white-space: nowrap;}
-	ul.sm ul a,
-	ul.sm-vertical a	{white-space: normal;}
-
-	* html ul.sm-vertical li	
-						{
-						float: left;
-						width: 100%;
-						}
-	* html ul.sm-vertical ul li	
-						{
-						float: none;
-						width: auto;
-						}
-	*:first-child+html ul.sm-vertical > li	
-						{
-						float: left;
-						width: 100%;
-						}
-
-	ul.sm ul.sm-nowrap>li>a
-						{white-space: nowrap;}
-	ul.sm:after			{
-						content: "\00a0";
-						display: block;
-						height: 0;
-						font: 0/0 serif;
-						clear: both;
-						visibility: hidden;
-						overflow: hidden;
-						}
-
-	* html ul.sm		{height: 1px;}
-	*:first-child+html ul.sm
-						{min-height: 1px;}
-
-	ul.sm li *,
-	ul.sm li *:before,
-	ul.sm li *:after	{
-						-moz-box-sizing: content-box;
-						-webkit-box-sizing: content-box;
-						box-sizing: content-box;
-						}
-	ul.sm				{-webkit-tap-highlight-color: rgba(0,0,0,0);}
-
-
-	$arrows-color:		$gray-darker !default;
-
-	// mul-navbar-item-active selected item
-	.mul-navbar-item-active
-						{@include background-gradient($navActiveBackgroundStartColor, $navActiveBackgroundEndColor);}
-
-
-	// DEFAULT MENU
-	.mul-menu-default	{
-
-	// SCROLL ARROWS - BEGINS
-		/* These are the arrows placed at the top and bottom of the scrolling menu */
-		.scroll-up,
-		.scroll-down
-							{
-							position: absolute;
-							display: none;
-							visibility: hidden;
-							overflow: hidden;
-							background: $white;
-							height: 20px;
-							}
-
-		.scroll-up-arrow, 
-		.scroll-down-arrow	{
-							position: absolute;
-							top: -2px;
-							left: 50%;
-							margin-left: -8px;
-							width: 0;
-							height: 0;
-							overflow: hidden;
-							border-width: 8px; /* tweak size of the arrow */
-							border-style: dashed dashed solid dashed;
-							border-color: transparent transparent $arrows-color transparent;
-							}
-		.scroll-down-arrow	{
-							top: 6px;
-							border-style: solid dashed dashed dashed;
-							border-color: $arrows-color transparent transparent transparent;
-							}
-	// SCROLLING ARROWS - ENDS
-
-		a					{
-
-	/*
-	// ARROW - BEGINS
-			.sub-arrow			{
-								position: absolute;
-								bottom: 1px;
-								left: 50%;
-								margin-left: -5px;
-								width: 0;
-								height: 0;
-								overflow: hidden;
-								border-width: 5px;
-								border-style: solid dashed dashed dashed;
-								border-color: $arrows-color transparent transparent transparent;
-								}
-	// ARROW - ENDS
-	*/
-							}
-
-	// ACTIVE MENU ITEM - BEGINS
-	/*
-		.mul-navbar-item-active			{
-							@extend .mul-navbar-item-active;
-			&:hover,
-			&:focus,
-			&:active			{@extend .mul-navbar-item-active;}
-							}
-	*/
-	// ACTIVE MENU ITEM - ENDS
-
-	/*
-	// SECOND LEVE UL's - BEGINS
-		ul,
-		ul ul,
-		ul ul ul			{
-							@include border-radius(0 0 4px 4px);
-							@include box-shadow(0, 5px, 5px, $gray-dark);
-							background: $white;
-							border: 1px solid $navBorderColor;
-							border-top: 0;
-							padding: 0;
-			li					{
-								border: 0;
-								border-top: 1px solid $gray-lighter;
-								list-style: none;
-								margin: 0;
-
-				&:first-child		{
-									border-top: 0;
-									border-left: 0;
-									}
-								}
-
-			a					{
-								background: transparent;
-								border: 0;
-								padding: 9px 40px 8px 23px;
-								text-shadow: none;
-				&:hover,
-				&:focus,
-				&:active,
-				.highlighted		{@include background-gradient($navBackgroundStartColor, $navBackgroundEndColor);}
-
-			// SECOND LEVEL ARROW - BEGINS
-				.sub-arrow
-								 	{
-									bottom: auto;
-									top: 50%;
-									margin-top: -5px;
-									right: 15px;
-									left: auto;
-									margin-left: 0;
-									border-style: dashed dashed dashed solid;
-									border-color: transparent transparent transparent $arrows-color;
-									}
-			// SECOND LEVEL ARROW - ENDS
-
-								}
-
-		// SELECTED ITEM IN SUB MENU - BEGINS
-			.mul-navbar-item-active	
-								{
-								@extend .mul-navbar-item-active;
-				&:hover,
-				&:focus,
-				&:active			{@extend .mul-navbar-item-active;}
-								}
-		// SELECTED ITEM IN SUB MENU - ENDS
-
-							}
-	// SECOND LEVE UL's - BEGINS
-	*/
-
-	// ADD BORDER TOP - This adds to the to of all children ul's
-	/*
-		ul 					{border-top: 1px solid $navBorderColor !important;}
-		*/
-
-						}
-
 	// MEGA MENU - BEGINS
-		.mul-main-menu > li.mega-menu 
-							{position:static !important;}
+		li.mul-mega-menu{
+			.sub-arrow		{display: none !important;}
+			a.highlighted	{
+				[class*="mul-icon"]
+								{
+								@include border-radius($headerIconRadius $headerIconRadius 0 0);
+								padding-bottom: 12px;
+								margin-bottom: -10px;
+								}
+							}
+			.mega-menu		{
+							@include box-shadow(0, 0, 0, $white);
+							@include border-radius(0);
+							@include clearfix;
+							background-color: $megaMenuBackgroundColor !important;
+							border: 0;
+							border-top-width: 4px;
+							border-top-style: solid;
+							border-bottom-width: 4px;
+							border-bottom-style: solid;
 
-		.mega-menu			{
-							@include border-radius(0 !important);
-							border-bottom: 0 !important;
-							box-shadow: none !important;
-							margin-left: 0 !important;
-							max-width: none !important;
-							padding: 0 !important;
-							right: 0 !important;
-							width: auto !important;
+		// MEGA MENU CONTENT - BEGINS
+			.mul-mega-menu-adjust
+								{
+								border-top-style: none;
+				.mul-mega-menu-ctn	{
+									@include clearfix;
+									margin: 0 auto;
+									padding: $basePadding;
+									width: $gridWidth;
 
-			.mul-mega-menu		{
-								@include box-shadow(0, 5px, 5px, $navBorderColor);
-				.mul-mega-menu-content
-									{
-									padding: 15px;
-					ul,
-					dl,
-					li,
-					dd,
-					a					{
-										@include href-link($baseLinkColor, underline);
-										@include box-shadow(0, 0, 0, #FFF);
-										border: 0;
-										width: auto;
-										position: static;
-										margin: 0;
-										padding: 0;
-						&:hover,
-						&:focus,
-						&:active			{
-											@include href-link-hover(none);
-											background: transparent;
+										// If using 980 width layout
+										@if $use-grid-980 == true{
+											max-width: $gridMaxWidth980;
+										}
+										
+										// If using 1200 width layout
+										@if $use-grid-1200 == true{
+											max-width: $gridMaxWidth1200;
+										}
+
+				// SPOTLIGHT CONTAINER - BEGINS
+					.mul-mega-menu-spotlight-ctn
+										{
+										@include clearfix;
+										@include border-radius($megaMenuContainerSpotlightBorderRadius);
+										background-color: $gray-darkest; //THEME
+										padding: $basePadding;
+						.mul-horizontal-list
+											{
+							dd					{
+												margin-left: 0;
+								&:first-child		{
+													margin-left: 0;
+									a					{padding-top: 0;}
+													}
+								a					{
+													color: #72BE44; //THEME
+													padding: $basePadding 0 0 0;
+									[class*="mul-icon"]	{
+														background-color: $transparent; //THEME
+														color: #72BE44; //THEME
+														padding: 0;
+														width: auto;
+														min-width: 10px;
+														}
+									&:hover				{
+														background-color: $transparent; //THEME
+										[class*="mul-icon"]	{color: #72BE44;} //THEME
+														}
+													}
+												}
 											}
 										}
-					li,
+				// SPOTLIGHT CONTAINER - ENDS
+
+									}
+
+				.mul-mega-menu-groups
+									{
+					dt					{
+										color: $megaMenuContentFontColor;
+										margin-bottom: 0;
+										}
 					dd					{
-										display: list-item;
-										margin-left: 18px;
-										margin-bottom: 6px;
+										margin: 0;
+										border-top: 1px dotted $gray-mid-dark; //THEME
+						&:last-child		{border-bottom: 1px dotted $gray-mid-dark;} //THEME
+						a					{
+											color: $megaMenuContentFontColor; //THEME
+											line-height: 30px;
+											padding: 0 !important;
+							&:hover				{
+												background-color: $transparent;
+												text-decoration: underline;
+												}
+											}
+										}
+									}
+								}
+		// MEGA MENU CONTENT - ENDS
+							}
+						}
+	// MEGA MENU - ENDS
+
+	// MENU STYLES - BEGINS
+		.mul-nav-menus	{
+						direction: ltr;
+						height: auto;
+						line-height: normal;
+						margin: 0;
+						width: auto;
+						-webkit-tap-highlight-color: rgba(0,0,0,0);
+			li				{
+							display: block;
+							width: 100%;
+							margin: 0;
+				a				{
+								display: block;
+								padding: $menuLinkPadding;
+								position: relative;
+								text-decoration: none;
+				// DEFAULT ARROW - BEGINS
+					.sub-arrow		{
+									position: absolute;
+									right: 10px;
+									top: 7px;
+									width: 16px;
+									height: 16px;
+						&:before		{
+										content: "\e360"; // PLUS ICON
+										font-family: $mulIconFontStack;
+										}
+									}
+				// DEFAULT ARROW - ENDS
+								}
+					ul			{
+								@include clearfix;
+								background: rgba(100,100,100,0.1);
+								height: auto;
+								display: none;
+								position: static;
+								top: auto !important;
+								left: auto !important;
+								width: auto !important;
+								min-width: 0 !important;
+								max-width: none !important;
+								float: none !important;
+
+						>li			{
+									border-left: 0;
+									border-right: 0;
+									border-bottom: 0;
+									border-top-width: 1px;
+									border-top-style: dotted;
+
+							&:last-child
+										{
+								a			{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+										}
+							a			{
+										display: block;
+										font-family: $fontRegularFamily;
+										padding-left: 17px;
+						// DEFAULT ARROW - BEGINS
+							.sub-arrow		{
+								&:before		{content: "\e360";} // RIGHT ARROW
+											}
+						// DEFAULT ARROW - ENDS
 										}
 									}
 								}
 							}
+						}
+	// MENU STYLES - ENDS
+
+}// endif
+
+
+//=== MEDIA QUERIES =========================================================================
+
+@if $use-small-mediaquery == true {
+	
+	// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
+	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+
+	// MENU STYLES - BEGINS
+		.mul-nav-menus	{
+			li				{
+				a				{}
+				ul				{
+								margin-left: 0 !important;
+								margin-top: 0 !important;
+					>li				{
+						a				{}
+									}
+								}
+							}
+						}
+	// MENU STYLES - ENDS
+
+	}// endif
+
+}// endif
+
+
+// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
+@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	
+	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+
+	// MEGA MENU - BEGINS
+		li.mul-mega-menu{
+						position: static !important;
+			ul.mega-menu	{
+							margin-left: 0 !important;
+							min-width: 0 !important;
+							max-width: none !important;
+							right: 0 !important;
+							width: 100% !important;
+							margin-top: 8px !important;
+
+			// MEGA MENU CONTENT - BEGINS
+				.mul-mega-menu-adjust
+									{
+					.mul-mega-menu-ctn	{
+
+					// SPOTLIGHT CONTAINER - BEGINS
+						.mul-mega-menu-spotlight-ctn
+											{
+							.mul-horizontal-list
+												{
+								dd					{
+													margin-left: $baseMargin;
+									&:first-child		{}
+									a					{
+														padding-top: 0;
+										[class*="mul-icon"]	{}
+										&:hover				{
+											[class*="mul-icon"]	{}
+															}
+														}
+													}
+												}
+											}
+					// SPOTLIGHT CONTAINER - ENDS
+										}
+
+					.mul-mega-menu-groups
+										{
+						dt					{}
+						dd					{
+											border-top: 0;
+							&:last-child		{border-bottom: 0;}
+							a					{
+												padding-top: 0;
+								&:hover				{}
+												}
+											}
+										}
+									}
+			// MEGA MENU CONTENT - ENDS
+							}
+						}
 	// MEGA MENU - ENDS
 
+	// MENU STYLES - BEGINS
+		.mul-nav-menus	{
+			li				{
+							direction: ltr;
+							float: left;
+							line-height: normal;
+							margin: 0;
+							position: relative;
+							width: auto;
+				a				{
+					// DEFAULT ARROW - BEGINS
+						.sub-arrow	{
+									position: relative;
+									left: 0;
+									right: -4px;
+									top: 2px;
+							&:before	{
+										font-family: $mulIconFontStack;
+										content: "\e3c2"; // DOWN ARROW
+										}
+									}
+					// DEFAULT ARROW - ENDS
+					&:hover			{@include transition(background-color 0.3s ease-in-out);}
+								}
+				ul				{
+								@include box-shadow(0, 2px, 5px, $menuDropShadowColor);
+								@include border-radius(0 0 4px 4px);
+								@include clearfix;
+								border-width: 1px;
+								border-style: solid;
+								direction: ltr;
+								line-height: normal;
+								margin: 0;
+								min-width: 100px !important;
+								max-width: 225px !important;
+								position: absolute;
+								top: -999999px;
+								z-index: $zindexMenu;
+								height: auto;
+					>li				{
+									border-left: 0;
+									border-right: 0;
+									float: none;
+						&:first-child	{border-top: 0;}
+							a			{
+										border-left: 0;
+										display: block;
+										font-family: $fontRegularFamily;
+										position: relative;
+										white-space: nowrap;
+										width: 100%;
+							// DEFAULT ARROW - BEGINS
+								.sub-arrow	{
+											position: absolute;
+											top: 50%;
+											right: 0;
+											left: auto;
+											margin-top: -6px;
+									&:before	{content: "\e3c1";} // RIGHT ARROW
+											}
+							// DEFAULT ARROW - ENDS
+										}
+									}
+								}
+							}
+						}
 
-	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
-		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		nav.mul-text-nav
+						{
+			.mul-nav-menus	{
+				> li			{
+					> .has-submenu + ul
+									{margin-top: 9px !important;}
+								}
+				li				{					
+					ul.mega-menu	{margin-top: 9px !important;}
+								}
+							}
+						}
+	// MENU STYLES - ENDS
 
-			
-
-		}
-		
 	}// endif
 
 }// endif

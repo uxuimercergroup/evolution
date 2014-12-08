@@ -39,29 +39,29 @@
 // WEB FONTS
 // ------------------------------------------------------------------------------------------
 
-// Proxima Nova - Thin
+// Thin
 // -------------------------------------------------
-@include font-face($proximaNovaThinFamily, $proximaNovaThinFilePath);
+@include font-face($fontThinFamily, $fontThinFilePath);
 
-// Proxima Nova - Regular
+// Regular
 // -------------------------------------------------
-@include font-face($proximaNovaRegularFamily, $proximaNovaRegularFilePath);
+@include font-face($fontRegularFamily, $fontRegularFilePath);
 
-// Proxima Nova - Bold
+// Bold
 // -------------------------------------------------
-@include font-face($proximaNovaBoldFamily, $proximaNovaBoldFilePath);
+@include font-face($fontBoldFamily, $fontBoldFilePath);
 
-// Proxima Nova - Italic
+// Italic
 // -------------------------------------------------
-@include font-face($proximaNovaItalicFamily, $proximaNovaItalicFilePath);
+@include font-face($fontItalicFamily, $fontItalicFilePath);
 
-// Proxima Nova - Bold Italic
+// Bold Italic
 // -------------------------------------------------
-@include font-face($proximaNovaBoldItalicFamily, $proximaNovaBoldItalicFilePath);
+@include font-face($fontBoldItalicFamily, $fontBoldItalicFilePath);
 
-// Proxima Nova - Semi-bold
+// Semi-bold
 // -------------------------------------------------
-@include font-face($proximaNovaSemiBoldFamily, $proximaNovaSemiBoldFilePath);
+@include font-face($fontSemiBoldFamily, $fontSemiBoldFilePath);
 
 
 // ICON FONTS
@@ -119,19 +119,19 @@ h3, .h3						{
 h4, .h4						{
 							font-size: $hdrH4FontSize;
 							font-weight: $WeightBold200;
-							font-family: $proximaNovaSemiBoldStack;
+							font-family: $fontSemiBoldStack;
 							line-height: $hdrH4LineHeight;
 							padding: $hdrH4PaddingTopBottom 0;
 							}
 h5, .h5						{
 							font-size: $hdrH5FontSize;
 							font-weight: $WeightBold200;
-							font-family: $proximaNovaSemiBoldStack;
+							font-family: $fontSemiBoldStack;
 							}
 h6, .h6						{
 							font-size: $hdrH6FontSize;
 							font-weight: $WeightBold200;
-							font-family: $proximaNovaSemiBoldStack;
+							font-family: $fontSemiBoldStack;
 							}
 
 .mul-h1-hdr-background,
@@ -174,7 +174,7 @@ h6, .h6						{
 
 b, strong, th, thead,
 dt, legend					{
-							font-family: $proximaNovaSemiBoldStack;
+							font-family: $fontSemiBoldStack;
 							font-weight: normal;
 							}
 
@@ -228,7 +228,7 @@ dialog						{margin-bottom: $baseParagraphMarginBottom;}
 dl							{margin-bottom: 20px;}
 dt,
 dd							{line-height: $baseLineHeight;}
-dt							{font-family: $proximaNovaSemiBoldStack;}
+dt							{font-family: $fontSemiBoldStack;}
 dd							{margin-left: 10px;}
 						
 .mul-lower-alpha			{list-style-type: lower-alpha;}
@@ -246,12 +246,12 @@ blockquote					{
 								margin: 0;
 								font-size: 150%;
 								line-height: $baseLineHeight;
-								font-family: $proximaNovaThinStack;
+								font-family: $fontThinStack;
 								}
 	.mul-author					{
 								font-size: 100%;
 								text-align: right;
-								font-family: $proximaNovaSemiBoldStack;
+								font-family: $fontSemiBoldStack;
 								}
 							}
 
@@ -299,7 +299,7 @@ sup, sub					{font-size: $smallFontSize;}
 sup							{vertical-align: 4px;}
 sub							{vertical-align: -5px;}
 em							{
-							font-family: $proximaNovaItalicStack;
+							font-family: $fontItalicStack;
 							font-style: normal;
 							}
 

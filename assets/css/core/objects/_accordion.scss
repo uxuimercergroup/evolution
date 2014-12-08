@@ -23,7 +23,7 @@
 											float: right;
 											position: relative;
 											margin-left: $baseMargin;
-											top: 2px;
+											top: 1px;
 											cursor: pointer;
 											color: $accordionHeaderIconColor;
 											}
@@ -43,17 +43,7 @@
 		
 		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
 
-			.mul-accordion.ui-accordion
-								{
-				.ui-accordion-header
-									{
-					&.ui-accordion-icons
-										{
-						.ui-accordion-header-icon
-											{top: 1px;}
-										}
-									}
-								}
+			
 
 		}
 		

@@ -7,6 +7,19 @@
 		jQuery('html.mul-mod-js').show();
 	}
 
+	// REFERENCE PAGES
+
+		// DEVELOPER - SLIDING DRAWER
+		var mulRefSlidingDrawer = jQuery.jPanelMenu({
+			animated: true,
+			closeOnContentClick: false,
+			duration: 450,
+			direction: 'left',
+			menu: '.js-mul-ref-sliding-drawer',
+			keyboardShortcuts: false,
+			trigger: '.js-mul-ref-sliding-drawer-btn'
+		});
+
 
 	// LIBRARY EXAMPLES
 	//----------------------------------------------------------------------------------------------------
@@ -78,42 +91,31 @@ $(function() {
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
 
-		/* TODO: PLEASE CLEAN UP! - BEGINS */
+		// REFERENCE PAGES
 
-			// SIDEBAR SECTION
-			var jPM = jQuery.jPanelMenu({
-				menu: '.js-mul-sliding-sidebar',
-				trigger: '.js-mul-sliding-sidebar-btn',
-				duration: 450,
-				direction: 'left',
-				closeOnContentClick: false,
-				keyboardShortcuts: false
-			});
+			// ALTERNATE VIEWS BADGE
+			mulAlternateViewsBadge('js-mul-ref-alternate-views-badge', 'left');
 
-			jPM.on();
+			// DEVELOPER - SLIDING DRAWER INIT
+			mulRefSlidingDrawer.on();
 
+			// DEVELOPER - SLIDING DRAWER - SCROLL PANE
 			var windowHeight = jQuery(window).height();
-			mulScrollPaneCustom('js-mul-sliding-sidebar-scrollpane',{
+			mulScrollPaneCustom('js-mul-ref-sliding-drawer-scrollpane',{
 				setHeight: windowHeight,
 				advanced:{
 					updateOnContentResize: true
 				}
 			});
 
+			// DEVELOPER - SLIDING DRAWER - SCROLL PANE - CHANGE ON RESIZE OF WINDOW
 			jQuery(window).bind('resize', resizeWindow);
 			function resizeWindow(e) {
 				var newWindowHeight = jQuery(window).height();
-				jQuery('.js-mul-sliding-sidebar-scrollpane').css('height', newWindowHeight);
+				jQuery('.js-mul-ref-sliding-drawer-scrollpane').css('height', newWindowHeight);
 			}
 
-			// SMARTMENU TEST
-			jQuery('.mul-main-menu').smartmenus({
-				//subMenusSubOffsetX: "300"
-			});
 
-		/* PLEASE CLEAN UP! - ENDS */
-
-		
 		// JS LIBRARY INITS
 
 			// GOOGLE PRETTIFY INIT (for code snippet coloring/formating)

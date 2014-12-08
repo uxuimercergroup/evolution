@@ -1,75 +1,68 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Menus JS
+// Mercer Evolution - Core v2.5 - Menus JS Functions
 // DATE - June 13, 2014
 // AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 //--------------------------------------------------------------------------------------------------------
 
-// HEADER MENUS
-//--------------------------------------------------------------------------------------------------------
+// MENU OPTION DEFAULTS
+var mulMenuDefaults = {
+	subIndicators: true,
+	mainMenuSubOffsetX: 0,
+	subMenusSubOffsetX: 5,
+	subMenusSubOffsetY: 0,
+	subMenusMinWidth: '',
+	subMenusMaxWidth: '',
+	subIndicatorsText: '',
+	subIndicatorsPos: 'append',
+	keepInViewport: true
+};
 
-	// HEADER PROFILE MENU TOGGLE
-	var mulHeaderProfileMenuToggle = function(){
-		jQuery('.mul-profile-menu-icon.mul-icon-arrow-down2').hide();
-		jQuery('.js-mul-profile-menu-display').click(function() {
-			jQuery('.mul-profile-menu').slideToggle('fast');
-			jQuery('.mul-profile-menu-icon.mul-icon-arrow-right2').toggle();
-			jQuery('.mul-profile-menu-icon.mul-icon-arrow-down2').toggle();
-		});
-	}
 
-	// Header Profile Menu Init
-	mulHeaderProfileMenuToggle();
+// HOVER EVENT MENU
 
-	// HEADER MEGA MENU - MENU AND SEARCH TOGGLE
-	var mulHeaderMegaMenu = function(){
-		jQuery('.js-mul-mega-menu').click(function(){
-			if(jQuery(".js-mul-mega-menu-search-ctn").is(":visible")) {
-				jQuery('.js-mul-mega-menu-search').removeClass('mul-mega-menu-item-expand');
-				jQuery('.js-mul-mega-menu-search-ctn').slideUp(function(){
-					jQuery('.js-mul-mega-menu').addClass('mul-mega-menu-item-expand');
-					jQuery('.js-mul-mega-menu-ctn').slideToggle('fast');
-				});
-			} else {
-				jQuery(this).toggleClass('mul-mega-menu-item-expand');
-				jQuery('.js-mul-mega-menu-ctn').slideToggle('fast');
-			}
-		});
+// Menu hover function
+var mulMenuHover = function() {
+	
+	// Variable to define menu hover object based on data attribute value
+	var menuObject = jQuery('[data-menu="hover"]');
 
-		jQuery('.js-mul-mega-menu-search').click(function(){
-			if(jQuery(".js-mul-mega-menu-ctn").is(":visible")) {
-				jQuery('.js-mul-mega-menu').removeClass('mul-mega-menu-item-expand');
-				jQuery('.js-mul-mega-menu-ctn').slideUp(function(){
-					jQuery('.js-mul-mega-menu-search').addClass('mul-mega-menu-item-expand');
-					jQuery('.js-mul-mega-menu-search-ctn').slideToggle('fast');
-				});
-			} else {
-				jQuery(this).toggleClass('mul-mega-menu-item-expand');
-				jQuery('.js-mul-mega-menu-search-ctn').slideToggle('fast');
-			}
-		});
-	}
+	// Apply smartmenus to menu hover object
+	menuObject.smartmenus('destroy');
+	menuObject.smartmenus('menuHideAll');
+	menuObject.smartmenus(jQuery.extend({}, mulMenuDefaults));
+};
 
-	// Header Mega Menu Init
-	mulHeaderMegaMenu();
+// Menu hover init
+mulMenuHover();
 
-	// HEADER UTILITY MENU - LANGUAGE AND PROFILE TOGGLE
-	var mulHeaderUtilityMenu = function(){
-		jQuery('body').click(function(){ 
-			jQuery('.mul-utility-subnav').hide();
-		});
 
-		jQuery('.js-mul-menu-toggle').click(function(e) {
-			e.preventDefault();
-			if(!jQuery(this).hasClass('mul-active-menu')){
-				jQuery('.mul-utility-subnav').slideUp();
-				jQuery('.mul-active-menu').removeClass('mul-active-menu');
-				jQuery(this).addClass('mul-active-menu');
-			};
-			jQuery(this).siblings('.mul-utility-subnav').slideToggle();
-			e.stopPropagation();
+// CLICK EVENT MENU
+
+// Define menu click defaults
+var mulMenuClickDefaults = {
+	showOnClick: true,
+	hideOnClick: true
+};
+
+// Menu click function
+var mulMenuClick = function() {
+	
+	// Variable to define menu click object based on data attribute value
+	var menuObject = jQuery('[data-menu="click"]');
+
+	// Apply smartmenus to menu click object
+	menuObject.smartmenus('destroy');
+	menuObject.smartmenus('menuHideAll');
+	menuObject.smartmenus(jQuery.extend({}, mulMenuDefaults, mulMenuClickDefaults)).bind('click.smapi', function(e, item) {
+		var $item = $(item),
+			level = $item.parent().parent().dataSM('level'),
+			$sub = $item.parent().dataSM('sub');
+		if (level == 1 && $sub && $sub.dataSM('shown-before') && $sub.is(':visible')) {
+			$(this).smartmenus('menuHideAll');
 			return false;
-		});
-	}
+		}
+	});
+};
 
-	// Header Utility Menu Init
-	mulHeaderUtilityMenu();
+// Menu click init
+mulMenuClick();

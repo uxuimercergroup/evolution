@@ -1,14 +1,13 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<!-- INTRO SECTION - BEGINS -->
-	<section class="col-24">
-		<h1>{{ model.title }}</h1>
-		<p class="mul-intro-text">A front-end developer's quick reference for Evolution.</p>
-	</section>
-<!-- INTRO SECTION - ENDS -->
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
 
-<section class="col-24">
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24">
+		{{ model.reference-overview }}
 
 	<!-- QUICK REFERENCE TABS - BEGINS -->
 		<div class="mul-tabs js-mul-tabs-example">
@@ -812,8 +811,8 @@
 						<p class="mul-bold">(These instructions assume you are using Sublime Text 2 for Windows 7)</p>
 
 						<ol>
-							<li>Checkout <code>{{ global.version_number }}</code> directory from <code>$/MHRS.UIPrototypes/evolution/snippets</code> on <code>TFS</code>.</li>
-							<li>Copy the files from inside your local <code>{{ global.version_number }}</code> directory and paste them into the following directory on your Windows computer: <code>C:\Users\{Your_Username}\AppData\Roaming\Sublime Text 2\Packages\User</code></li>
+							<li>Checkout <code>evolution</code> project from <code>GitHub</code>.</li>
+							<li>Copy the files from inside your local <code>evolution/snippets</code> directory and paste them into the following directory on your Windows computer: <code>C:\Users\{Your_Username}\AppData\Roaming\Sublime Text 2\Packages\User</code></li>
 							<li>Open Sublime Text 2.</li>
 							<li>Go to Preferences > Key Bindings - User, this will open a preferences document in Sublime.</li>
 							<li>If you do not have any existing user key bindings then select all the code in this file and delete it. If you have existing user key bindings, insert the code from the next step between the "[ ]" in the document, making sure to seperate key binding calls with commas.</li>
@@ -893,7 +892,6 @@
 
 						<p>Furthermore, if a developer wants to add custom theme styles or variables (if using SASS) to their project, those can be added to the bottom of theme.css or theme.scss (if using SASS) in the section called <code>WEBSITE THEME STYLES</code>. These files are located at <code>assets/css/</code>.</p>
 
-
 						<h5>Theming Reference</h5>
 
 						<p>If a developer is using SASS they can use the <code>theme_variables.scss</code> file in the Evolution core as a reference for the theming variables used in <code>theme_variables.scss</code> at the site level <code>(assets/css/partials/global/theme_variables.scss)</code>. Developers who are using just CSS can use it as a CSS value reference. The file is located at <code>assets/css/core/global/</code>.</p>
@@ -908,5 +906,7 @@
 		</div>
 	<!-- QUICK REFERENCE TABS - ENDS -->
 
-</section>
+	</section>
+<!-- CONTENT SECTION - ENDS -->
+
 {% endblock %}

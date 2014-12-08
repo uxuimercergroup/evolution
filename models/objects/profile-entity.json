@@ -1,3 +1,42 @@
 {
-  "title": "Entity Profile"
+	"title": "Entity Profile",
+
+	"reference-overview": 
+		"<p>The Entity Profile makes up the core elements that live on a page. For example: icon, header, secondary header, navigation links.</p>",
+
+	"reference-usage": 
+		"<p>These profiles are differentiated from each other using a background color and unique icon used to indicate the status or type of page you are on. They are used for consistency as you navigate through the respective information within the profile itself.</p>",
+
+	"reference-details": 
+		"<p>Each profile consists of the following elements:</p><h3>Background color</h3><p>Each profile has a different gradient background color which is unique to that profile.</p><h3>Icon</h3><p>An icon aligned to the left of the Header and Subheader is used to uniquely identify the profile you are in. Some profiles have different color icons representing status.</p><h3>Indentifier (Header)</h3><p>Depending on which profile you are in, a unique header will coordinate with the profile.</p><h3>2nd Level Identifier (Subheader)</h3><p>The subheader will coordinate with the Header and can be anything from a specific location or status.</p><h3>Navigation links</h3><p>Navigates to other pages within the profile and are unique to each profile. A profile may or may not have links.</p><h3>Demographic Information</h3><p>This information appears in the header on the right hand side. This information can include types of information such as; user information (SSN, DOB), Office Locations, Premium $, Revenue $, Countries, etc.</p>",
+
+	"reference-mobile": 
+		"<p>When the profiles are viewed on mobile/tablet devices, the navigation links will appear as a slidedown menu. Users will click on a menu icon to view the navigation that can be toggled. The demographic information that may appear in a profile header will be displayed once the user clicks on the demographic icon next to the menu icon and can be toggled on and off. The Identifier and 2nd level Identifier (header and subheader) will ellipse if necessary.</p>",
+
+	"reference-technical": 
+		"<p>Technical details go here...</p>",
+
+	
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "false",
+	"reference-example-version-label":
+		"",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"",
+	"reference-code-html-content-block-post": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
 }

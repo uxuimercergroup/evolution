@@ -7,6 +7,49 @@
 // Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
 @include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
 
+	.mb-navb-off							{
+											height: 20px;
+		[class*="mul-icon"]						{display: none;}
+											}
+
+	/*--- HOMEPAGE ------------------------------------------------------------------------*/
+	.mul-alternate-views-badge.ui-tabs		{
+		.banding-section-1						{
+			h1										{
+													line-height: 45px;
+													padding-top: 0;
+													}
+			h3										{padding-bottom: 30px;}
+			.evo-icon								{display: none;}
+												}
+											}
+
+	.banding-section-3						{
+		.col-24									{
+			.col-6									{width: 47%;}
+			div:nth-child(6)						{clear: left;}
+												}
+											}
+
+	.banding-section-4						{
+		.mul-vertical-list						{
+			li										{
+				[class*="mul-icon"]						{margin-bottom: 62px;}
+													}
+												}
+											}
+
+	.banding-section-5						{
+		.mul-horizontal-list					{
+												margin-left: 8px;
+												text-align: left;
+			li										{margin: 0 0 8px 0;}
+			&:last-child							{
+				li										{margin: 0 0 8px 0;}
+													}
+												}
+											}
+
 	/*--- FOOTER --------------------------------------------------------------------------*/
 	.mul-footer							{
 		.mul-footer-adjust					{

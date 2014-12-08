@@ -53,6 +53,7 @@
 
 @import "core/global/helpers.js";
 @import "core/base/base.js";
+@import "core/base/header.js";
 @import "core/base/menus.js";
 @import "core/objects/accordion.js";
 @import "core/objects/advanced_filter.js";
@@ -62,6 +63,7 @@
 @import "core/objects/content_modal.js";
 @import "core/objects/datepicker.js";
 @import "core/objects/dialog.js";
+@import "core/objects/profile_containers.js";
 @import "core/objects/scroll_pane.js";
 @import "core/objects/slider.js";
 @import "core/objects/tables.js"; // Requires FooTables jQuery component plugins to be enabled

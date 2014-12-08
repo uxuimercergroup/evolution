@@ -1,3 +1,42 @@
 {
-  "title": "Support Container"
+	"title": "Support Container",
+
+	"reference-overview": 
+		"<p>The Support Container is a secondary containing element that can be used to \"support\" other elements on the screen.</p>",
+
+	"reference-usage": 
+		"<p>It should be used lower on the page in a more subserviant/supporting mode. It can list out for example; Quick Links, Reports, etc. and provide a link to more details.</p>",
+
+	"reference-details": 
+		"<h3>Components</h3><ul><li>The Support Container is comprised of the following four components:</li><ul><li>Border</li><li>Header</li><li>Horizontal Line</li><li>Content</li></ul><li>The border color (#6b90b8) should always be a solid, 1 pixel line.</li><li>The header size for Support Containers is h4.</li><li>The Horizontal Line directly under the Support Container's color should always be #C3D2E5.</li><li>The background color should always be #E9EEF5.</li><li>It sometimes can also include a link (on header right side) that may link to more information or a full list.</li><li>It can also include icons within the list that associate with the links/content.</li></ul><h3>Sizing and Layout</h3><ul><li>The content margins inside all Mercer Feature Containers will have 15 pixels of padding all around.</li><li>The padding inside a Support Container from the line under the header to the beginning of the actual content is also 15 pixels.</li><li>Support Container height and width are variable based on inside content height and width.</li></ul><h3>Grids</h3><ul><li>Feature Containers work within the Mercer Evolution Grid System.</li><li>Feature Containers can contain grids inside of them to display and section off data within the container.</li></ul>",
+
+	"reference-mobile": 
+		"<ul><li>In the mobile version of this container the width will shrink to span the width of the parent container.</li><li>Font size increases for mobile.</li></ul>",
+
+	"reference-technical": 
+		"<h3>Header</h3><p>Technical details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+
+	
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "false",
+	"reference-example-version-label":
+		"",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"<p>All containers start with base box and in this example we are using the following class <code>mul-support-ctn</code> to give more meaning to a basic box. For the header part of the container, adjust the header tag size in conjunction with the class of <code>mul-hdr-rule</code>. Recommended header tags are <code>h3</code>, <code>h4</code></p>",
+	"reference-code-html-content-block-post": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
 }

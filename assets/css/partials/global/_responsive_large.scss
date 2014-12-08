@@ -6,8 +6,39 @@
 
 // Landscape iPad, laptops and desktops
 @include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
-	
-	/*--- GLOBAL --------------------------------------------------------------------------*/
+
+	/*--- REFERENCE PAGES -----------------------------------------------------------------*/
+
+	// ALTERNATE VIEWS BADGE
+	.mul-ref-alternate-views-badge.ui-tabs
+											{
+		.mul-btn-group-horizontal				{
+			.mul-btn								{
+				a										{
+														padding: 8px 9px 5px 9px;
+					[class^="mul-icon-"]					{display: none;}
+														}
+													}
+												}
+		.ui-tabs-panel							{
+			p, ul, ol, li, dt, dd					{
+													font-size: ($baseFontSizeLargeBreakpoint + 2px);
+													line-height: ($baseLineHeightLargeBreakpoint + 2px);
+													}
+			.prettyprint							{
+				li 										{
+														font-size: $baseFontSizeLargeBreakpoint;
+														line-height: $baseLineHeightLargeBreakpoint;
+														}
+													}
+												}
+											}
+
+	// DEVELOPER - SLIDING DRAWER
+	.mul-ref-sliding-drawer					{
+		.mul-ref-sliding-drawer-hdr				{top: 39px;}
+		.mCustomScrollbar						{padding-top: 136px;}
+											}
 
 
 	/*--- HOME PAGE -----------------------------------------------------------------------*/
@@ -29,11 +60,11 @@
 											}
 
 	/*--- TYPE PAGE -----------------------------------------------------------------------*/
-	.type-table								{
-		td.type-example							{font-size: $baseFontSizeLargeBreakpoint !important;}
+	.mul-ref-type-table						{
+		td.mul-ref-type-example					{font-size: $baseFontSizeLargeBreakpoint !important;}
 											}
 
-	/*--- ICONS PAGE ----------------------------------------------------------------------------*/
+	/*--- ICONS PAGE ----------------------------------------------------------------------*/
 	#icons-ctn								{
 		#icon-font-filter						{width: 100%;}
 											}

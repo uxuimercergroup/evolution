@@ -1,3 +1,65 @@
 {
-  "title": "Log In Layout"
+	"title": "Log In Layout",
+
+	"reference-overview": 
+		"<p>The Log In page serves as the entry point into the product, and as such it provides an opportunity to set the visual tone for the rest of the application. The main concept behind the Employee Portal login page is the use of a large branding image (large in terms of dimension, not file size) as the background.</p><p>The background images used in the examples shown below are <strong>for illustrative purposes only</strong>; the background image will be determined on a project-by-project basis.</p> ",
+
+	"reference-usage": 
+		"<p>The Login Page layout should be used for all instances where user authentication is required in order to access the site, product or system.</p>",
+
+	"reference-details": 
+		"<p>There are three main components of the baseline Log In template:</p><dt>Background Image</dt><ul><li>The image in this example is a placeholder – each geography or business line should select a unique image that best meets its needs.</li><li>The dimensions of the image should be at least 2500px wide and 1600px tall</li> <li>The image will stretch as necessary to fit the width of the viewing screen.</li></ul><dt>Welcome Container</dt><ul><li>This serves as the focal point of the page. It contains a welcome/ greeting, along with the product name. There is space for an optional text overview. This can be turned on or off.</li><li>This container can also house one or two additional containers. In this example, the Log In container is always required. It contains the Inline Form that captures the authentication information, along with the [Enter] button. There is room beneath the [Enter] button for optional “Forgot Password” and/or “Forgot Username” links.</li><li>The second internal container in this example can be turned on or off. When off, the Log In container centers itself inside the larger Welcome Container. This example shows a “Create Account” container, but it can be used for anything.</li></ul><dt>Login Footer</dt><ul><li>This footer is unique to the login page. It is attached to the bottom of the screen, and runs the width of the screen. It contains a company logo on the left side, and then whatever text links are necessary for each geography or business line on the right side. This example shows a number of possibilities, but the content and structure should be defined at a geographic level.</li></ul> ",
+
+	"reference-mobile": 
+		"<ul><li>The individual containers within the Welcome Container will stack on top of each other.</li><li>The Buttons will span the width of the viewing screen.</li><li>The background image will shrink to fill the available screen real estate.</li><li>The footer links will stack on top of each other, and will be separated by a horizontal line.</ul>",
+
+	"reference-technical": 
+		"<p>Technical details go here. </p>",
+
+	
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "true",
+
+	"reference-example-version-label":
+		"Multiple Internal Containers",
+	"reference-example-version-content":
+		"<p>The overall Welcome container includes two internal containers: one is dedicated to Log In functionality, and the other can be used for any purpose. In this case, it used to offer non-members the ability to create an account.</p>",
+
+	"reference-example-version-label-2":
+		"Single Internal Container",
+	"reference-example-version-content-2":
+		"<p>This examples shows a single internal container, focused on Log In functionality.</p>",
+
+	"reference-example-version-label-3":
+		"Mother and Son",
+	"reference-example-version-content-3":
+		"<p>An example with a different background image: the \"Mother and Son\" background image.</p>",
+
+	"reference-example-version-label-4":
+		"Grandparents and Grandchildren Background",
+	"reference-example-version-content-4":
+		"<p>Structure is the same, but the background image has been changed to a \"Grandparents and Grandchildren\" image background treatment.</p>",
+		
+	"reference-example-version-label-5":
+		"Charts Background",
+	"reference-example-version-content-5":
+		"<p>Another example of a different background image. A \"Charts & Graphs\" image is used for this version.</p>",
+
+	"reference-get-code": "false",
+
+	"reference-code-html-content-block-pre": 
+		"",
+	"reference-code-html-content-block-post": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
 }

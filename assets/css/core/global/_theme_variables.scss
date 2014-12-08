@@ -135,6 +135,9 @@ $buttonHoverBackgroundEndColor: 			$gray-dark !default;
 $buttonHoverBorderColor:					$gray-mid-dark !default;
 $buttonActiveBackgroundStartColor:			$gray-dark !default;
 $buttonActiveBackgroundEndColor:			$gray-lighter !default;
+$buttonFocusBackgroundStartColor: 			$gray-lighter !default;
+$buttonFocusBackgroundEndColor: 			$gray-dark !default;
+$buttonFocusBorderColor:					$gray-mid-dark !default;
 $buttonShadowColor:							$transparent !default;
 $buttonFontColor:							$gray-darkest !default;
 $buttonBorderColor:							$gray-mid-light !default;
@@ -147,6 +150,8 @@ $buttonHoverPrimaryBackgroundStartColor:	$green-mid !default;
 $buttonHoverPrimaryBackgroundEndColor:		$green !default;
 $buttonActivePrimaryBackgroundStartColor:	$green !default;
 $buttonActivePrimaryBackgroundEndColor:		$green-mid !default;
+$buttonFocusPrimaryBackgroundStartColor:	$green-mid !default;
+$buttonFocusPrimaryBackgroundEndColor:		$green !default;
 $buttonPrimaryFontColor:					$white !default;
 $buttonPrimaryTextShadowColor:				$transparent !default;
 
@@ -171,60 +176,85 @@ $buttonHorzGroupFirstChildBorderLeftColor:	$gray-mid-light !default;
 // HEADER
 // ------------------------------------------------------------------------------------------
 
-// BASE
+// ICONS
+$headerIconBackgroundColor:					$gray-dark !default;
+$headerIconFontColor:						$white !default;
+$headerIconHoverBackgroundColor:			$gray-dark !default;
+$headerIconHoverFontColor:					$white !default;
+
+// MASTHEAD TEXT LOGO
 $mastheadBackgroundStartColor:				$blue-gray !default;
 $mastheadBackgroundEndColor:				$blue-gray-darker !default;
 $mastheadLogoLinkColor:						$white !default;
 
-// PROFILE MENU
-$mastheadProfileMenuBackgroundStartColor:	#4674a9 !default;
-$mastheadProfileMenuBackgroundEndColor:		#385882 !default;
-$mastheadProfileMenuBorderColor:			#385882 !default;
-$mastheadProfileMenuIconColor:				#c0d7f0 !default;
-$mastheadProfileMenuTextColor:				$white !default;
-$mastheadProfileMenuAvatarIconColor:		$white !default;
-$mastheadProfileMenuShadowColor:			$gray-darker !default;
-$mastheadProfileMenuHoverColor:				$blue-gray !default;
+// USER IDENTIFIER
+$userIdentifierBackgroundStartColor:		#4674a9 !default;
+$userIdentifierBackgroundEndColor:			#385882 !default;
+$userIdentifierFontColor:					$white !default;
+$userIdentifierMenuShadowColor:				$gray-darker !default;
+$userIdentifierMenuTextColor:				$white !default;
+$userIdentifierMenuHoverColor:				$blue-gray !default;
 
-// PROFILE SIMPLE
-$mastheadProfileSimpleTextColor:			$white !default;
-$mastheadProfileSimpleListBorderColor:		$white !default;
+// TOOLBAR
+$toolbarBackgroundStartColor:				$blue-gray !default;
+$toolbarBackgroundEndColor:					$blue-gray-darker !default;
+$toolbarMobileNavbarBackgroundColor:		$gray-lighter !default;
+$toolbarDropShadowColor:					$gray-darker !default;
+$toolbarLinkColor:							$white !default;
+$toolbarLinkHoverColor:						$white !default;
 
-// MEGA MENU UTILITY LINKS
-$megaMenuUtilityMenuPipedColor:				$gray-dark !default;
+// NAVBAR
+$navbarBackgroundGradientStartColor:		$gray-lightest !default;
+$navbarBackgroundGradientEndColor:			$gray-mid-light !default;
+$navbarBorderColor:							$gray-mid-dark !default;
+$navbarBorderBottomStyle:					solid !default;
+$navbarBorderColor:							$gray-mid-dark !default;
+$navbarFontHoverColor:						#002C77 !default;
 
-// MEGA MENU UTILITY MENU
-$megaMenuUtilityMenuBackgroundColor:		$gray-mid-light !default;
-$megaMenuUtilityMenuBorderColor:			$gray-mid-dark !default;
-$megaMenuUtilityMenuLinkBorderColor:		$gray-lighter !default;
-$megaMenuUtilityMenuLinkHoverColor:			$gray-lighter !default;
-
-// MEGA MENU UTILITY ITEM
-$megaMenuItemBackgroundColor:				$gray-dark !default;
-$megaMenuItemColor:							$white !default;
-
-// MEGA MENU
-$megaMenuContainerBackgroundColor: 			$gray-darker !default;
-$megaMenuContainerBorderTopColor: 			$gray-dark !default;
-$megaMenuContainerBorderBottomColor: 		$gray-dark !default;
-$megaMenuContainerSpotlightBackgroundColor: $gray-darkest !default;
-$megaMenuContainerSpotlightTextColor: 		$green-mid !default;
-$megaMenuContainerMenuContainerTextColor: 	$white !default;
-
-// MEGA MENU SEARCH BOX ICON
-$megaMenuSearchBoxIconColor: 				$gray-lightest !default;
+	// MENU OVERRIDES
+	$subMenuBackgroundColor:				$gray-lighter !default;
+	$subMenuBorderTopColor:					$gray-mid-dark !default;
 
 
-// NAVIGATION
+	// NAVBAR MESSAGE AREA
+	$navbarMessageBorderRightColor:			$gray-mid-dark !default;
+
+	// TEXT NAVBAR
+	$textNavbarBorderLeftColor:				$gray-mid-dark !default;
+	$textNavbarSubMenuHoverBackgroundColor:	$white !default;
+
+	// TABBED NAVBAR
+	$tabbedNavbarBorderLeftColor:			$white !default;
+	$tabbedNavbarHrefBorderLeftColor:		$gray-mid-light !default;
+
+	$tabbedNavbarActiveBackgroundStartColor:	$gray-lightest !default;
+	$tabbedNavbarActiveBackgroundEndColor:		$gray-mid-dark !default;
+	$tabbedNavbarSubMenuHoverBackgroundColor:	$white !default;
+
+// MENU SYSTEM
+
+	// MENUS
+	$menuBackgroundHoverColor: 				$white !default;
+	$menuDropShadowColor:					$gray-mid-dark !default;
+	$menuBackgroundColor:					$white !default;
+	$menuBorderColor:						$gray-mid-dark !default;
+	$menuBorderTopColor:					$gray-mid-dark !default;
+	$menuIndicatorColor1stLevel:			$gray-dark !default;
+	$menuFontColor:							#002C77 !default;
+	$menuHoverFontColor:					#002C77 !default;
+	$menuBorderTopColor2ndlevel:			$gray-mid-dark !default;
+
+
+	// MEGA MENU
+	$megaMenuBackgroundColor: 				$gray-darker !default;
+	$megaMenuBorderTopColor:				$gray-dark !default;
+	$megaMenuBorderBottomColor:				$gray-dark !default;
+	$megaMenuContentFontColor:				$white !default;
+
+
+// HERO BANNER
 // ------------------------------------------------------------------------------------------
-$navBackgroundStartColor:					$gray-lightest !default;
-$navBackgroundEndColor:						$gray-mid-light !default;
-$navBorderColor:							$gray-mid-dark !default;
-$navLinkColor:								$blue-sapphire !default;
-$navLinkBorderColor:						$white !default;
-$navActiveBackgroundStartColor:				$gray-lightest !default;
-$navActiveBackgroundEndColor:				$gray-mid-dark !default;
-$navBorderLeftColor:						$white !default;
+$heroBannerBackgroundColor:					$gray-lighter !default;
 
 
 // FOOTER
@@ -293,8 +323,8 @@ $tableTotalFontColor:						$black !default;
 // ACCORDION
 // ------------------------------------------------------------------------------------------
 $accordionBorderColor:						$gray-mid-light !default;
-$accordionHeaderBackgroundColor:			$blue-gray-lightest !default;
-$accordionHeaderFontColor:					$gray-darkest !default;
+$accordionHeaderBackgroundColor:			$gray-lightest !default;
+$accordionHeaderFontColor:					$blue-gray-dark !default;
 $accordionHeaderIconColor:					$blue-gray-dark !default;
 $accordionContentBackgroundColor:			$white !default;
 
@@ -328,6 +358,14 @@ $autocompleteItemBorderBottomColor:			$gray-lightest !default;
 $autocompleteItemHighlightText:				$tan !default;
 $autocompleteItemHoverBackgroundStartColor:	$tan-light !default;
 $autocompleteItemHoverBackgroundEndColor:	$tan-light !default;
+
+
+// CALL TO ACTION
+// ------------------------------------------------------------------------------------------
+$callToActionBackgroundColor:				$gray-dark !default;
+$callToActionTextColor:						$white !default;
+$callToActionHoverBackgroundColor:			$gray-darker !default;
+$callToActionIconColor:						$white !default;
 
 
 // CAROUSEL
@@ -388,6 +426,13 @@ $dialogHdrFontColor:						$baseHdrFontColor !default;
 $dialogContentBorderTopColor: 				$white !default;
 $dialogHdrBorderBottomColor:				$transparent !default;
 $dialogCloseIconColor:						$gray-darker !default;
+
+
+// IMAGE CONTENT OVERLAY
+// ------------------------------------------------------------------------------------------
+$imageContentOverlayBackgroundColor:		$gray-darker !default;
+$imageContentOverlayBorderBottomColor:		$gray-dark !default;
+$imageContentOverlayFontColor:				$white !default;
 
 
 // LOGIN LAYOUT
@@ -490,13 +535,13 @@ $tabsPanelBackgroundColor: 					$white !default;
 
 // TILES
 // ------------------------------------------------------------------------------------------
-$tilesBackgroundColor:						$blue-gray-lightest !default;
+$tilesBackgroundColor:						$gray-lightest !default;
 $tilesHeaderBorderTopColor:					$blue-sapphire-mid !default;
 $tilesHeaderBackgroundColor:				$transparent !default;
 $tilesHeaderFontColor:						$gray-darkest !default;
 $tilesBodyBackgroundColor:					$white !default;
-$tilesBodyBorderColor:						$gray-mid-light !default;
-$tilesOutsideBorderColor:					$gray-mid-light !default;
+$tilesBodyBorderColor:						$gray-light !default;
+$tilesOutsideBorderColor:					$gray-light !default;
 
 
 // TOOLTIP

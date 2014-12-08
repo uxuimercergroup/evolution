@@ -1,13 +1,6 @@
-{% if global.header == "sliding-nav" %}
-
-	<!-- HEADER WITH SLIDING NAVIGATION - BEGINS -->
-	{% include "/base/header-sliding-nav" %}
-	<!-- HEADER WITH SLIDING NAVIGATION - ENDS -->
-
-{% else %}
-
-	<!-- DEFAULT HEADER - BEGINS -->
-	{% include "/base/default-header" %}
-	<!-- DEFAULT HEADER - ENDS -->
-
-{% endif %}
+<header role="banner" class="mul-grid mul-header">
+	<div class="mul-header-adjust {% if global.type_of_navbar == 'toolbar' and global.toolbar_fixed == 'true' %}mul-toolbar-header-adjust{% endif %}">
+		{% include '/base/header/masthead' %}
+		{% include '/base/header/navbar' %}
+	</div>
+</header>

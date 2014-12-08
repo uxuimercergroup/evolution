@@ -1,193 +1,109 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<section class="col-24">
-	<!-- PAGE TITLE - BEGINS -->
-		<h1>{{ model.title }}</h1>
-	<!-- PAGE TITLE - ENDS -->
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
 
-		<i class="mul-icon-menu3 mul-sliding-sidebar-btn js-mul-sliding-sidebar-btn"></i>
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24 mul-alternate-views-badge mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-ref-alternate-views-badge">
 
-	<!-- TAB SECTION - BEGINS -->
-		<div class="js-mul-tabs-example mul-tabs tab-details-section">
-		<!-- TABS - BEGIN -->
-			<ul>
-			{% for item in global.page-tabs %}
-				<li class="{{ item.tab-classname }}">
-					<a href="#tabs-{% cycle '1', '2', '3', '4', '5', '6'%}">{{ item.tabs }}</a>
-				</li>
-			{% endfor %}
-			</ul>
-		<!-- TABS - END -->
+		{% include '/reference/reference-content' %}
 
-		<!-- TABS PANELS - BEGINS -->
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
+		{% if model.reference-get-code == "true" %}
+			<div id="mul-ref-alternate-views-badge-content-panel-get-code">
 
-			<!-- OVERVIEW TAB - BEGINS -->
-				<div id="tabs-1">
-					<p>{{ model.intro-text }}</p>
-				</div>
-			<!-- OVERVIEW TAB - ENDS -->
+				<h3 class="mul-hdr-rule">HTML</h3>
 
-			<!-- USAGE TAB - BEGINS -->
-				<div id="tabs-2">
-					<ul>
-						<li>The container will span the entire width of its parent container and be located immediately below the page title.</li>
-						<li>There should only ever be one Confirmation Message container on a page at a time.</li>
-						<li>
-							If there are multiple confirmations that need to get communicated, the page should display a single confirmation message container with multiple messages inside the container.
-						</li>
-						<li>
-							There are three additional types of configurations that should be supported:
-							<ul>
-								<li><strong>Optional Close</strong>
-									<ul>
-										<li>This configuration gives the user the ability to "close" the message container via the "close" icon in the upper right corner. When clicked, the container will dissolve and all content displayed below the container will shift up on the screen.</li>
-									</ul>
-								</li>
-								<li>
-									<strong>Timer Based Close</strong>
-									<ul>
-										<li>This configuration would be used for messages where it is not critical for the user to see or act on the message.</li>
-										<li>The container would remain open for 8 seconds before closing. This time frame is not editable, rather it remains consistent for all instances.</li>
-										<li>The amount of text displayed should be concise, to allow the user to read it before the container closes.</li>
-										<li>This configuration should not be used for the <a href="/base/boxes/message-attention">Attention</a> or <a href="/base/boxes/message-error">Error</a> containers.</li>
-									</ul>
-								</li>
-								<li><strong>In Page Display vs On Top of Page Display</strong> - Each message container (Error, Attention, and Confirmation) should have a setting that will determine where the message will display.
-									<ul>
-										<li>The default display will be as an item within the rest of the content within the screen (In Page Display). </li>
-										<li>There is an alternative configuration that allows the message container to display "on top of" the other content on the page. This would be used in cases where it is highly important that the user notice and acknowledge the message. In this case, the container should be centered on the screen, near the top of the browser. </li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li>
-							Title
-							<ul>
-								<li>The title should always contain the "green checkmark" icon</li>
-								<li>The title should always be "Confirmation"</li>
-								<li>The title should never be a link</li>
-							</ul>
-						</li>
+				{{ model.reference-code-html-content-block-pre }}
 
-						<li>
-							Message
-							<ul>
-								<li>The message should be able to support two different formats</li>
-								<li><strong>Paragraph Text</strong> - This can be multiple lines or even multiple paragraphs.</li>
-								<li><strong>List Items</strong> - This can be a single bulleted list item or multiple bulleted list items.</li>
-							</ul>
-						</li>
-						<li>
-							Colors
-							<ul>
-								<li>Confirmation Messages should adhere to the approved <a href="/base/colors">Mercer color palette</a> for all aspects of the container: Background, Border, Text</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			<!-- USAGE TAB - ENDS -->
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label }}</h4>
+				{% endif %}
+				{{ global.reference-get-code-start-tag }}{% include "/base/boxes/confirmation-ctn-default" %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post }}
 
-			<!-- DETAILS TAB - BEGINS -->
-				<div id="tabs-3">
-					<p>Details go here&hellip;</p>
-				</div>
-			<!-- DETAILS TAB - ENDS -->
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label-2 }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre-2 }}
+				{{ global.reference-get-code-start-tag }}{% include "/base/boxes/confirmation-ctn-default-close" %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post-2 }}
 
-			<!-- MOBILE TAB - BEGINS -->
-				<div id="tabs-4">
-					<ul>
-						<li>In the mobile version of this container the width will shrink to span the width of the parent container.</li>
-						<li>The placement of this container would remain the same as the desktop version.</li>
-						<li>Font size increases for mobile</li>
-					</ul>
-				</div>
-			<!-- MOBILE TAB - END -->
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label-3 }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre-3 }}
+				{{ global.reference-get-code-start-tag }}{% include "/base/boxes/confirmation-ctn-default-auto-close" %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post-3 }}
 
-			<!-- TECH TAB - BEGINS -->
-				<div id="tabs-5">
-					<h5>Cross browser compatibility</h5>
-					<p>IE9 doesn't crop background gradients on containers with rounded corners, so we square the corners of every container so it looks just like IE8.</p>
+				{% if model.reference-code-js == "true" %}
 
-					<h5 class="mul-hdr-rule">Dependencies</h5>
-					<table class="mul-table mul-table-borders" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
-						<thead>
-							<tr>
-								<th width="" scope="col">Library</th>
-								<th width="" scope="col">Location or Download</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>jQuery {{ global.jquery_version }}</td>
-								<td>assets/scripts/core/lib/jquery</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			<!-- TECH TAB - ENDS -->
+					<h3 class="mul-hdr-rule">JS</h3>
 
-			<!-- GET CODE - BEGINS -->
-				<div id="tabs-6" class="get-code-content-tab">
-					<section class="col-24">
+					{% if model.reference-example-versions == "true" %}
+						<h4>{{ model.reference-example-version-label }}</h4>
+					{% endif %}
+					{{ model.reference-code-js-content-block-pre }}
+					{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-js-content-block-post }}
 
-						<h5 class="mul-hdr-rule">HTML</h5>
-						<p>
-							All <a href="/base/boxes/message-confirmation">confirmation message</a>, <a href="/base/boxes/message-attention">attention message</a> and <a href="/base/boxes/message-error">error message</a> containers start with base box. In this example we are using the following class <code>mul-confirmation-ctn</code> to give more meaning to a basic box.
-						</p>
+				{% endif %}
 
-						<h5>Static version</h5>
-						<pre class="prettyprint linenums"><xmp>{% include "/base/boxes/confirmation-ctn-default" %}</xmp></pre>
+			</div>
+		{% endif %}
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
 
-						<h5>User-based close</h5>
-						<pre class="prettyprint linenums"><xmp>{% include "/base/boxes/confirmation-ctn-default-close" %}</xmp></pre>
-
-						<h5>Timer-based close</h5>
-						<pre class="prettyprint linenums"><xmp>{% include "/base/boxes/confirmation-ctn-default-auto-close" %}</xmp></pre>
-
-					</section>
-				</div>
-			<!-- GET CODE - ENDS -->
-		<!-- TABS PANELS - ENDS -->
-
-		</div>
-	<!-- TAB SECTION - ENDS -->
-
-<!-- CONFIRMATION MESSAGE EXAMPLES - BEGINS -->
-	<p class="mul-float-right">
-		<a href="javascript:;" class="mul-float-right" onclick="location.reload();">Refresh</a>
-	</p>
-
-	<div class="col-24 example-min-height">
-
-	<!-- CONFIRMATION MESSAGE CONTAINER - EXAMPLE - BEGINS -->
-		<h4 class="mul-hdr-dbl-rule example-main-hdr">Static Version</h4>
-		{% include "/base/boxes/confirmation-ctn-default" %}
-	<!-- CONFIRMATION MESSAGE CONTAINER - EXAMPLE - ENDS -->
-
-	<!-- CONFIRMATION MESSAGE CONTAINER WITH CLOSE - EXAMPLE - BEGINS -->
-		<h4 class="mul-hdr-dbl-rule example-main-hdr">User-Based Close</h4>
-		{% include "/base/boxes/confirmation-ctn-default-close" %}
-	<!-- CONFIRMATION MESSAGE CONTAINER WITH CLOSE - EXAMPLE - ENDS -->
-
-	<!-- CONFIRMATION MESSAGE CONTAINER WITH AUTO CLOSE - EXAMPLE - BEGINS -->
-		<h4 class="mul-hdr-dbl-rule example-main-hdr">Timer-Based Close</h4>
-		{% include "/base/boxes/confirmation-ctn-default-auto-close" %}
-	<!-- CONFIRMATION MESSAGE CONTAINER WITH AUTO CLOSE - EXAMPLE - ENDS -->
-
-	</div>
-<!-- CONFIRMATION MESSAGE EXAMPLES - ENDS -->
-
-</section>
-
-<!-- HIDDEN MENU - BEGINS -->
-	<section class="mul-sliding-sidebar mul-display-none js-mul-sliding-sidebar">
-		<div class="js-mul-sliding-sidebar-scrollpane">
-		{% for item in global.table-of-contents %}
-			{% include "sidebar-navbar" %}
-		{% endfor %}
-		</div>
 	</section>
-<!-- HIDDEN MENU - ENDS -->
+<!-- CONTENT SECTION - ENDS -->
+
+<!-- EXAMPLE SECTION - BEGINS -->
+	<section class="col-24 mul-ref-example">
+
+	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+		<h3 class="mul-hdr-dbl-rule mul-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
+	<!-- EXAMPLE SECTION - HEADER - ENDS -->
+
+	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+		<section class="mul-ref-example-content">
+
+			<a href="javascript:;" class="mul-float-right" onclick="location.reload();">Refresh</a>
+
+		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+
+			{% if model.reference-example-versions == "true" %}
+				<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
+			{% endif %}
+
+			{% include "/base/boxes/confirmation-ctn-default" %}
+
+		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+
+			{% if model.reference-example-versions == "true" %}
+				<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
+			{% endif %}
+
+			{% include "/base/boxes/confirmation-ctn-default-close" %}
+
+		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+
+			{% if model.reference-example-versions == "true" %}
+				<h4 class="mul-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
+			{% endif %}
+
+			{% include "/base/boxes/confirmation-ctn-default-auto-close" %}
+
+		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+		</section>
+	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
+
+	</section>
+<!-- EXAMPLE SECTION - ENDS -->
 
 {% endblock %}

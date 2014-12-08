@@ -1,32 +1,74 @@
 {
 	"site_title": "Mercer Evolution",
-	"version_number": "v2-5",
+	"version_number": "v2.5",
 	"jquery_version": "1.10.2",
 	"jquery_ui_version": "1.10.3",
 
-	"header" : "",
-	"user_profile" : "",
-	"footer" : "",
 
-	"ExampleSectionHeader" : "Example",
-	"AddtionalDetailSectionHeader" : "Additional Details",
+"HEADER OPTIONS": "",
+	"COMMENT": "Add 'toolbar' to the below to get a toolbar or blank for default navbar style",
+		"type_of_navbar": "toolbar",
 
-	"PrettifyStartTag" : "<pre class=\"prettyprint linenums\"><xmp>",
-	"PrettifyEndTag" : "</xmp></pre>",
+	"COMMENT": "Masthead configurations",
+		"masthead_logo_primary": "false",
+		"masthead_company_text": "true",
+		"COMMENT": "options: 'identifier' or 'logo' can be placed below",
+		"masthead_identifier_or_logo": "",
+
+	"COMMENT": "Navbar configurations",
+		"navbar_style": "text",
+		"navbar_left": "true",
+		"navbar_menu_icon_left": "false",
+		"navbar_right": "false",
+		"navbar_user_identifier": "false",
+		"navbar_column_width_left": "12",
+		"navbar_column_width_right": "12",
+		"navbar_message_area": "false",
+		"navbar_message_area_nopadding": "false",
+		"navbar_message_area_noborder": "true",
+		"navbar_group_icons": "false",
+
+	"COMMENT": "If toolbar is the type of navbar list above these are the configurations",
+		"toolbar_fixed": "true",
+		"toolbar_column_width_left": "4",
+		"toolbar_column_width_right": "20",
+		"toolbar_navigation": "true",
+		"toolbar_navigation_items": "true",
+		"toolbar_user_identifier": "false",
+		"toolbar_group_icons": "true",
+
+"FOOTER OPTIONS": "",
+	"COMMENT": "Leave blank to get default footer or add 'fat' if you want a fat footer",
+		"footer" : "",
 
 
-	"page-tabs" : [
-		{"tabs": "Overview"},
-		{"tabs": "Usage"},
-		{"tabs": "Details"},
-		{"tabs": "Mobile"},
-		{"tabs": "Technical"},
+	"reference-buttons" : [
 		{
-		"tabs": "Get Code",
-		"tab-classname": "get-code-tab"
+		"reference-button-label": "Overview",
+		"reference-button-icon": "list2"
+		},
+		{
+		"reference-button-label": "Usage",
+		"reference-button-icon": "insert-template"
+		},
+		{
+		"reference-button-label": "Details",
+		"reference-button-icon": "eye"
+		},
+		{
+		"reference-button-label": "Mobile",
+		"reference-button-icon": "mobile"
+		},
+		{
+		"reference-button-label": "Technical",
+		"reference-button-icon": "cogs"
 		}
 	],
-
+	"reference-button-label-get-code": "Get Code",
+	"reference-button-icon-get-code": "code",
+	"reference-example-hdr" : "Example",
+	"reference-get-code-start-tag" : "<pre class=\"prettyprint linenums\"><xmp>",
+	"reference-get-code-end-tag" : "</xmp></pre>",
 
 	"table-of-contents": [
 		{
@@ -43,8 +85,10 @@
 				{
 					"sub-section-hdr": "Navigation",				
 					"sub-section": [
-						{"link-name": "Masthead With Main Navigation", "url": "/base/product-header"},
-						{"link-name": "Masthead With Sliding Navigation", "url": "/base/product-header-sliding-nav"},
+						{"link-name": "Product Header", "url": "/base/product-header"},
+						{"link-name": "Masthead", "url": "/base/header/masthead"},
+						{"link-name": "Navigation Bar", "url": "/base/header/navbar"},
+						{"link-name": "Toolbar Header", "url": "/base/toolbar-header"},
 						{"link-name": "Thin Footer", "url": "/base/footer"},
 						{"link-name": "Fat Footer", "url": "/base/fat-footer"}
 					]
@@ -52,11 +96,9 @@
 				{
 					"sub-section-hdr": "Page Layouts",				
 					"sub-section": [
-						{"link-name": "Employer Portal Homepage", "url": "/base/layout-employee-portal-homepage"},
-						{"link-name": "Employee Portal Inner Page", "url": "/base/layout-employee-portal-innerpage"},
-						{"link-name": "Sidebar", "url": "/base/layout-sidebar"},
 						{"link-name": "Log In", "url": "/base/layout-login"},
-						{"link-name": "Hero Banner", "url": "/base/layout-hero-banner"}
+						{"link-name": "Hero Banner", "url": "/base/layout-hero-banner"},
+						{"link-name": "Banding Layout", "url": "/base/layout-banding"}
 					]
 				},
 				{
@@ -91,7 +133,8 @@
 				{"link-name": "Confirmation Message", "url": "/base/boxes/message-confirmation"},
 				{"link-name": "Error Message", "url": "/base/boxes/message-error"},
 				{"link-name": "Attention Message", "url": "/base/boxes/message-attention"},
-				{"link-name": "Tooltip", "url": "/objects/tooltip"}
+				{"link-name": "Tooltip", "url": "/objects/tooltip"},
+				{"link-name": "Highlight Container", "url": "/base/boxes/container-highlight"}
 			]
 		},
 
@@ -113,8 +156,7 @@
 						{"link-name": "Tile Container", "url": "/objects/container-tile"},
 						{"link-name": "Primary Summary Container", "url": "/objects/primary-summary"},
 						{"link-name": "Secondary Summary Container", "url": "/objects/secondary-summary"},
-						{"link-name": "Highlight Container", "url": "/base/boxes/container-highlight"},
-						{"link-name": "Pull Quote", "url": "/objects/pull-quote"}
+						{"link-name": "Image Content Overlay", "url": "/objects/image-content-overlay"}
 					]
 				}
 			]
@@ -123,7 +165,7 @@
 		{
 			"section-hdr": "Controls",
 			"main-section": [
-				{"link-name": "Accordian", "url": "/objects/accordion"},
+				{"link-name": "Accordion", "url": "/objects/accordion"},
 				{"link-name": "Alternate Views Badge", "url": "/objects/alternate-views-badge"},
 				{"link-name": "Buttons", "url": "/base/buttons"},
 				{"link-name": "Call To Action", "url": "/objects/call-to-action"},
@@ -390,21 +432,6 @@
 		"end_date": "24-Sep-2013",
 		"num_of": "6",
 		"Region": "LAC"
-		},
-		{
-		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
-		"task": "Review Local Appointment Issues",
-		"type_global": "Global",
-		"type_local": "Local",
-		"abbrev_first_name": "S.",
-		"first_name": "Scott",
-		"last_name": "Sizemore",
-		"company": "Resubi Exploration",
-		"location": "Italy",
-		"start_date": "29-Aug-2013",
-		"end_date": "26-Sep-2013",
-		"num_of": "1",
-		"Region": "APAC"
 		}
 	]
 }

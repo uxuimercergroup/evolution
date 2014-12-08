@@ -1,0 +1,36 @@
+<!-- DEVELOPER - SLIDING DRAWER - BEGINS -->
+	<section class="mul-ref-sliding-drawer mul-display-none js-mul-ref-sliding-drawer">
+		<div class="mul-grid mul-ref-sliding-drawer-hdr">
+
+			<div class="col-24 mul-small-mediaquery-grid">
+				<div class="col-23 first">
+					<h3>Developer Drawer</h3>
+				</div>
+				<div class="col-1">
+					<i class="mul-icon-cancel-circle mul-ref-sliding-drawer-close-btn js-mul-ref-sliding-drawer-btn" title="Close"></i>
+				</div>
+			</div>
+
+			<!-- QUICK REFERENCE - CALL TO ACTION - BEGINS -->
+			<a class="mul-call-to-action" data-palette-color="gray-darker" href="/quick-reference" title="Quick Reference">
+				<i class="mul-icon-code mul-icon-position-left" title="Contact Us"></i>
+				<span class="mul-call-to-action-text">Quick Reference</span>
+				<i class="mul-icon-arrow-right2 mul-icon-position-right" title="Quick Reference"></i>
+			</a>
+			<!-- QUICK REFERENCE - CALL TO ACTION - ENDS -->
+
+		</div>
+		<div class="js-mul-ref-sliding-drawer-scrollpane">
+
+			<!-- DEVELOPER - TOC - BEGINS -->
+			{% for item in global.table-of-contents limit:1 %}
+				{% include "/reference/toc-nav" %}
+			{% endfor %}
+			{% for item in global.table-of-contents offset:2 %}
+				{% include "/reference/toc-nav" %}
+			{% endfor %}
+			<!-- DEVELOPER - TOC - ENDS -->
+
+		</div>
+	</section>
+<!-- DEVELOPER - SLIDING DRAWER - ENDS -->
