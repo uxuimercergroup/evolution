@@ -1,5 +1,11 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<style type="text/css">
+${demo.css}
+		</style>
+		
+		
 
 <!-- PAGE TITLE - BEGINS -->
 	<h1>{{ model.title }}</h1>
@@ -63,19 +69,8 @@
 
 		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-		<!-- EXAMPLE SECTION - BOX - BEGINS -->
-			<div class="mul-box mul-box-rnd mul-ref-example-box">
-
-				{% if model.reference-example-versions == "true" %}
-					<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
-				{% endif %}
-
-				<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-					{ include '' }
-				<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-			</div>
-		<!-- EXAMPLE SECTION - BOX - ENDS -->
+			
+					<div id="basic-line" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
 		</section>
 	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
