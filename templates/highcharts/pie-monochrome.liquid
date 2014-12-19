@@ -5,7 +5,22 @@
 ${demo.css}
 		</style>
 <script type="text/javascript">
+	$(function () {
+		// Make monochrome colors and set them as default for all pies
+		Highcharts.getOptions().plotOptions.pie.colors = (function () {
+		    var colors = [],
+		        base = Highcharts.getOptions().colors[0],
+		        i;
 
+		    for (i = 0; i < 10; i += 1) {
+		        // Start out with a darkened base color (negative brighten), and end
+		        // up with a much brighter color
+		        colors.push(Highcharts.Color(base).brighten((i - 3) / 7).get());
+		    }
+		    return colors;
+		}());
+
+	});
 </script>
 <!-- PAGE TITLE - BEGINS -->
 	<h1>{{ model.title }}</h1>
@@ -68,7 +83,7 @@ ${demo.css}
 		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 		<!-- EXAMPLE SECTION - BOX - BEGINS -->
-				<div id="basic-line" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+				<div id="pie-monochrome" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 		<!-- EXAMPLE SECTION - BOX - ENDS -->
 
 		</section>

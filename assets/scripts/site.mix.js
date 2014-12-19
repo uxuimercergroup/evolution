@@ -12,7 +12,7 @@
 @import "lib/prettify/prettify.js";
 @import "lib/highcharts/highcharts.js"
 @import "lib/highcharts/modules/exporting.js"
-@import "lib/highcharts/themes/grid.js"
+@import "lib/highcharts/themes/evolution-theme.js"
 
 
 // =======================================================================================================
