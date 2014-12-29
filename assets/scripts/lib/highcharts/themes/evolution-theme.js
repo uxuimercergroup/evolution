@@ -4,7 +4,7 @@
  */
 
 Highcharts.theme = {
-	colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#810009', '#FF9655', '#FFF263', '#6AF9C4'],
+	colors: ['#00A8C8', '#124F9B', '#8CBD4F', '#70973F', '#B7CAE1', '#810009', '#FF9655', '#FFF263', '#6AF9C4'],
 	chart: {
 		backgroundColor: {
 			linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
@@ -20,13 +20,13 @@ Highcharts.theme = {
 	title: {
 		style: {
 			color: '#000',
-			font: 'bold 16px'
+			font: 'bold 16px "proxima_nova_ththin", arial, Tahoma, Geneva, sans-serif'
 		}
 	},
 	subtitle: {
 		style: {
 			color: '#666666',
-			font: 'bold 12px'
+			font: 'bold 12px "proxima_nova_ththin", arial, Tahoma, Geneva, sans-serif'
 		}
 	},
 	xAxis: {
@@ -36,14 +36,13 @@ Highcharts.theme = {
 		labels: {
 			style: {
 				color: '#000',
-				font: '11px'
+				font: '11px "proxima_nova_ththin", arial, Tahoma, Geneva, sans-serif'
 			}
 		},
 		title: {
 			style: {
 				color: '#333',
-				fontWeight: 'bold',
-				fontSize: '12px',
+				fontSize: '12px "proxima_nova_ththin", arial, Tahoma, Geneva, sans-serif'
 
 			}
 		}
@@ -57,20 +56,20 @@ Highcharts.theme = {
 		labels: {
 			style: {
 				color: '#000',
-				font: '11px'
+				font: '11px "proxima_nova_ththin", arial, Tahoma, Geneva, sans-serif'
 			}
 		},
 		title: {
 			style: {
 				color: '#333',
 				fontWeight: 'bold',
-				fontSize: '12px',
+				fontSize: '12px "proxima_nova_ththin", arial, Tahoma, Geneva, sans-serif',
 			}
 		}
 	},
 	legend: {
 		itemStyle: {
-			font: '9pt',
+			font: '9pt "proxima_nova_ththin", arial, Tahoma, Geneva, sans-serif',
 			color: 'black'
 
 		},
@@ -83,7 +82,8 @@ Highcharts.theme = {
 	},
 	labels: {
 		style: {
-			color: '#99b'
+			color: '#99b',
+			font: '"proxima_nova_ththin", arial, Tahoma, Geneva, sans-serif'
 		}
 	},
 
