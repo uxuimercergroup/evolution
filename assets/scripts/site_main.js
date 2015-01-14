@@ -469,6 +469,537 @@ $(function() {
 			    }]
 			});
 
+		$('#line-labels').highcharts({
+	        chart: {
+	            type: 'line'
+	        },
+	        title: {
+	            text: 'Monthly Average Temperature'
+	        },
+	        subtitle: {
+	            text: 'Source: WorldClimate.com'
+	        },
+	        xAxis: {
+	            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+	        },
+	        yAxis: {
+	            title: {
+	                text: 'Temperature (°C)'
+	            }
+	        },
+	        plotOptions: {
+	            line: {
+	                dataLabels: {
+	                    enabled: true
+	                },
+	                enableMouseTracking: false
+	            }
+	        },
+	        series: [{
+	            name: 'Tokyo',
+	            data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+	        }, {
+	            name: 'London',
+	            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+	        }]
+	    });
+
+	    $('#spline-inverted').highcharts({
+	        chart: {
+	            type: 'spline',
+	            inverted: true
+	        },
+	        title: {
+	            text: 'Atmosphere Temperature by Altitude'
+	        },
+	        subtitle: {
+	            text: 'According to the Standard Atmosphere Model'
+	        },
+	        xAxis: {
+	            reversed: false,
+	            title: {
+	                enabled: true,
+	                text: 'Altitude'
+	            },
+	            labels: {
+	                formatter: function () {
+	                    return this.value + 'km';
+	                }
+	            },
+	            maxPadding: 0.05,
+	            showLastLabel: true
+	        },
+	        yAxis: {
+	            title: {
+	                text: 'Temperature'
+	            },
+	            labels: {
+	                formatter: function () {
+	                    return this.value + '°';
+	                }
+	            },
+	            lineWidth: 2
+	        },
+	        legend: {
+	            enabled: false
+	        },
+	        tooltip: {
+	            headerFormat: '<b>{series.name}</b><br/>',
+	            pointFormat: '{point.x} km: {point.y}°C'
+	        },
+	        plotOptions: {
+	            spline: {
+	                marker: {
+	                    enable: false
+	                }
+	            }
+	        },
+	        series: [{
+	            name: 'Temperature',
+	            data: [[0, 15], [10, -50], [20, -56.5], [30, -46.5], [40, -22.1],
+	                [50, -2.5], [60, -27.7], [70, -55.7], [80, -76.5]]
+	        }]
+	    });
+
+		$('#spline-symbols').highcharts({
+	        chart: {
+	            type: 'spline'
+	        },
+	        title: {
+	            text: 'Monthly Average Temperature'
+	        },
+	        subtitle: {
+	            text: 'Source: WorldClimate.com'
+	        },
+	        xAxis: {
+	            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+	                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+	        },
+	        yAxis: {
+	            title: {
+	                text: 'Temperature'
+	            },
+	            labels: {
+	                formatter: function () {
+	                    return this.value + '°';
+	                }
+	            }
+	        },
+	        tooltip: {
+	            crosshairs: true,
+	            shared: true
+	        },
+	        plotOptions: {
+	            spline: {
+	                marker: {
+	                    radius: 4,
+	                    lineColor: '#666666',
+	                    lineWidth: 1
+	                }
+	            }
+	        },
+	        series: [{
+	            name: 'Tokyo',
+	            marker: {
+	                symbol: 'square'
+	            },
+	            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, {
+	                y: 26.5,
+	                marker: {
+	                    symbol: 'url(http://www.highcharts.com/demo/gfx/sun.png)'
+	                }
+	            }, 23.3, 18.3, 13.9, 9.6]
+
+	        }, {
+	            name: 'London',
+	            marker: {
+	                symbol: 'diamond'
+	            },
+	            data: [{
+	                y: 3.9,
+	                marker: {
+	                    symbol: 'url(http://www.highcharts.com/demo/gfx/snow.png)'
+	                }
+	            }, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+	        }]
+	    });
+
+		$('#spline-plot-bands').highcharts({
+	        chart: {
+	            type: 'spline'
+	        },
+	        title: {
+	            text: 'Wind speed during two days'
+	        },
+	        subtitle: {
+	            text: 'October 6th and 7th 2009 at two locations in Vik i Sogn, Norway'
+	        },
+	        xAxis: {
+	            type: 'datetime',
+	            labels: {
+	                overflow: 'justify'
+	            }
+	        },
+	        yAxis: {
+	            title: {
+	                text: 'Wind speed (m/s)'
+	            },
+	            min: 0,
+	            minorGridLineWidth: 0,
+	            gridLineWidth: 0,
+	            alternateGridColor: null,
+	            plotBands: [{ // Light air
+	                from: 0.3,
+	                to: 1.5,
+	                color: 'rgba(68, 170, 213, 0.1)',
+	                label: {
+	                    text: 'Light air',
+	                    style: {
+	                        color: '#606060'
+	                    }
+	                }
+	            }, { // Light breeze
+	                from: 1.5,
+	                to: 3.3,
+	                color: 'rgba(0, 0, 0, 0)',
+	                label: {
+	                    text: 'Light breeze',
+	                    style: {
+	                        color: '#606060'
+	                    }
+	                }
+	            }, { // Gentle breeze
+	                from: 3.3,
+	                to: 5.5,
+	                color: 'rgba(68, 170, 213, 0.1)',
+	                label: {
+	                    text: 'Gentle breeze',
+	                    style: {
+	                        color: '#606060'
+	                    }
+	                }
+	            }, { // Moderate breeze
+	                from: 5.5,
+	                to: 8,
+	                color: 'rgba(0, 0, 0, 0)',
+	                label: {
+	                    text: 'Moderate breeze',
+	                    style: {
+	                        color: '#606060'
+	                    }
+	                }
+	            }, { // Fresh breeze
+	                from: 8,
+	                to: 11,
+	                color: 'rgba(68, 170, 213, 0.1)',
+	                label: {
+	                    text: 'Fresh breeze',
+	                    style: {
+	                        color: '#606060'
+	                    }
+	                }
+	            }, { // Strong breeze
+	                from: 11,
+	                to: 14,
+	                color: 'rgba(0, 0, 0, 0)',
+	                label: {
+	                    text: 'Strong breeze',
+	                    style: {
+	                        color: '#606060'
+	                    }
+	                }
+	            }, { // High wind
+	                from: 14,
+	                to: 15,
+	                color: 'rgba(68, 170, 213, 0.1)',
+	                label: {
+	                    text: 'High wind',
+	                    style: {
+	                        color: '#606060'
+	                    }
+	                }
+	            }]
+	        },
+	        tooltip: {
+	            valueSuffix: ' m/s'
+	        },
+	        plotOptions: {
+	            spline: {
+	                lineWidth: 4,
+	                states: {
+	                    hover: {
+	                        lineWidth: 5
+	                    }
+	                },
+	                marker: {
+	                    enabled: false
+	                },
+	                pointInterval: 3600000, // one hour
+	                pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
+	            }
+	        },
+	        series: [{
+	            name: 'Hestavollane',
+	            data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 7.4, 6.9, 7.1,
+	                7.9, 7.9, 7.5, 6.7, 7.7, 7.7, 7.4, 7.0, 7.1, 5.8, 5.9, 7.4,
+	                8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 12.4, 12.1, 9.5, 7.5,
+	                7.1, 7.5, 8.1, 6.8, 3.4, 2.1, 1.9, 2.8, 2.9, 1.3, 4.4, 4.2,
+	                3.0, 3.0]
+
+	        }, {
+	            name: 'Voll',
+	            data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.3, 0.0,
+	                0.0, 0.4, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+	                0.0, 0.6, 1.2, 1.7, 0.7, 2.9, 4.1, 2.6, 3.7, 3.9, 1.7, 2.3,
+	                3.0, 3.3, 4.8, 5.0, 4.8, 5.0, 3.2, 2.0, 0.9, 0.4, 0.3, 0.5, 0.4]
+	        }],
+	        navigation: {
+	            menuItemStyle: {
+	                fontSize: '10px'
+	            }
+	        }
+	    });
+
+		$('#spline-irregular-time').highcharts({
+	        chart: {
+	            type: 'spline'
+	        },
+	        title: {
+	            text: 'Snow depth at Vikjafjellet, Norway'
+	        },
+	        subtitle: {
+	            text: 'Irregular time data in Highcharts JS'
+	        },
+	        xAxis: {
+	            type: 'datetime',
+	            dateTimeLabelFormats: { // don't display the dummy year
+	                month: '%e. %b',
+	                year: '%b'
+	            },
+	            title: {
+	                text: 'Date'
+	            }
+	        },
+	        yAxis: {
+	            title: {
+	                text: 'Snow depth (m)'
+	            },
+	            min: 0
+	        },
+	        tooltip: {
+	            headerFormat: '<b>{series.name}</b><br>',
+	            pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
+	        },
+
+	        series: [{
+	            name: 'Winter 2007-2008',
+	            // Define the data points. All series have a dummy year
+	            // of 1970/71 in order to be compared on the same x axis. Note
+	            // that in JavaScript, months start at 0 for January, 1 for February etc.
+	            data: [
+	                [Date.UTC(1970,  9, 27), 0   ],
+	                [Date.UTC(1970, 10, 10), 0.6 ],
+	                [Date.UTC(1970, 10, 18), 0.7 ],
+	                [Date.UTC(1970, 11,  2), 0.8 ],
+	                [Date.UTC(1970, 11,  9), 0.6 ],
+	                [Date.UTC(1970, 11, 16), 0.6 ],
+	                [Date.UTC(1970, 11, 28), 0.67],
+	                [Date.UTC(1971,  0,  1), 0.81],
+	                [Date.UTC(1971,  0,  8), 0.78],
+	                [Date.UTC(1971,  0, 12), 0.98],
+	                [Date.UTC(1971,  0, 27), 1.84],
+	                [Date.UTC(1971,  1, 10), 1.80],
+	                [Date.UTC(1971,  1, 18), 1.80],
+	                [Date.UTC(1971,  1, 24), 1.92],
+	                [Date.UTC(1971,  2,  4), 2.49],
+	                [Date.UTC(1971,  2, 11), 2.79],
+	                [Date.UTC(1971,  2, 15), 2.73],
+	                [Date.UTC(1971,  2, 25), 2.61],
+	                [Date.UTC(1971,  3,  2), 2.76],
+	                [Date.UTC(1971,  3,  6), 2.82],
+	                [Date.UTC(1971,  3, 13), 2.8 ],
+	                [Date.UTC(1971,  4,  3), 2.1 ],
+	                [Date.UTC(1971,  4, 26), 1.1 ],
+	                [Date.UTC(1971,  5,  9), 0.25],
+	                [Date.UTC(1971,  5, 12), 0   ]
+	            ]
+	        }, {
+	            name: 'Winter 2008-2009',
+	            data: [
+	                [Date.UTC(1970,  9, 18), 0   ],
+	                [Date.UTC(1970,  9, 26), 0.2 ],
+	                [Date.UTC(1970, 11,  1), 0.47],
+	                [Date.UTC(1970, 11, 11), 0.55],
+	                [Date.UTC(1970, 11, 25), 1.38],
+	                [Date.UTC(1971,  0,  8), 1.38],
+	                [Date.UTC(1971,  0, 15), 1.38],
+	                [Date.UTC(1971,  1,  1), 1.38],
+	                [Date.UTC(1971,  1,  8), 1.48],
+	                [Date.UTC(1971,  1, 21), 1.5 ],
+	                [Date.UTC(1971,  2, 12), 1.89],
+	                [Date.UTC(1971,  2, 25), 2.0 ],
+	                [Date.UTC(1971,  3,  4), 1.94],
+	                [Date.UTC(1971,  3,  9), 1.91],
+	                [Date.UTC(1971,  3, 13), 1.75],
+	                [Date.UTC(1971,  3, 19), 1.6 ],
+	                [Date.UTC(1971,  4, 25), 0.6 ],
+	                [Date.UTC(1971,  4, 31), 0.35],
+	                [Date.UTC(1971,  5,  7), 0   ]
+	            ]
+	        }, {
+	            name: 'Winter 2009-2010',
+	            data: [
+	                [Date.UTC(1970,  9,  9), 0   ],
+	                [Date.UTC(1970,  9, 14), 0.15],
+	                [Date.UTC(1970, 10, 28), 0.35],
+	                [Date.UTC(1970, 11, 12), 0.46],
+	                [Date.UTC(1971,  0,  1), 0.59],
+	                [Date.UTC(1971,  0, 24), 0.58],
+	                [Date.UTC(1971,  1,  1), 0.62],
+	                [Date.UTC(1971,  1,  7), 0.65],
+	                [Date.UTC(1971,  1, 23), 0.77],
+	                [Date.UTC(1971,  2,  8), 0.77],
+	                [Date.UTC(1971,  2, 14), 0.79],
+	                [Date.UTC(1971,  2, 24), 0.86],
+	                [Date.UTC(1971,  3,  4), 0.8 ],
+	                [Date.UTC(1971,  3, 18), 0.94],
+	                [Date.UTC(1971,  3, 24), 0.9 ],
+	                [Date.UTC(1971,  4, 16), 0.39],
+	                [Date.UTC(1971,  4, 21), 0   ]
+	            ]
+	        }]
+	    });
+
+		$('#line-log-axis').highcharts({
+
+        title: {
+            text: 'Logarithmic axis demo'
+        },
+
+        xAxis: {
+            tickInterval: 1
+        },
+
+        yAxis: {
+            type: 'logarithmic',
+            minorTickInterval: 0.1
+        },
+
+        tooltip: {
+            headerFormat: '<b>{series.name}</b><br />',
+            pointFormat: 'x = {point.x}, y = {point.y}'
+        },
+
+        series: [{
+            data: [1, 2, 4, 8, 16, 32, 64, 128, 256, 512],
+            pointStart: 1
+        }]
+    });
+
+		// Get the CSV and create the chart
+    	$.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=analytics.csv&callback=?', function (csv) {
+
+	        $('#line-ajax').highcharts({
+
+	            data: {
+	                csv: csv
+	            },
+
+	            title: {
+	                text: 'Daily visits at www.highcharts.com'
+	            },
+
+	            subtitle: {
+	                text: 'Source: Google Analytics'
+	            },
+
+	            xAxis: {
+	                tickInterval: 7 * 24 * 3600 * 1000, // one week
+	                tickWidth: 0,
+	                gridLineWidth: 1,
+	                labels: {
+	                    align: 'left',
+	                    x: 3,
+	                    y: -3
+	                }
+	            },
+
+	            yAxis: [{ // left y axis
+	                title: {
+	                    text: null
+	                },
+	                labels: {
+	                    align: 'left',
+	                    x: 3,
+	                    y: 16,
+	                    format: '{value:.,0f}'
+	                },
+	                showFirstLabel: false
+	            }, { // right y axis
+	                linkedTo: 0,
+	                gridLineWidth: 0,
+	                opposite: true,
+	                title: {
+	                    text: null
+	                },
+	                labels: {
+	                    align: 'right',
+	                    x: -3,
+	                    y: 16,
+	                    format: '{value:.,0f}'
+	                },
+	                showFirstLabel: false
+	            }],
+
+	            legend: {
+	                align: 'left',
+	                verticalAlign: 'top',
+	                y: 20,
+	                floating: true,
+	                borderWidth: 0
+	            },
+
+	            tooltip: {
+	                shared: true,
+	                crosshairs: true
+	            },
+
+	            plotOptions: {
+	                series: {
+	                    cursor: 'pointer',
+	                    point: {
+	                        events: {
+	                            click: function (e) {
+	                                hs.htmlExpand(null, {
+	                                    pageOrigin: {
+	                                        x: e.pageX,
+	                                        y: e.pageY
+	                                    },
+	                                    headingText: this.series.name,
+	                                    maincontentText: Highcharts.dateFormat('%A, %b %e, %Y', this.x) + ':<br/> ' +
+	                                        this.y + ' visits',
+	                                    width: 200
+	                                });
+	                            }
+	                        }
+	                    },
+	                    marker: {
+	                        lineWidth: 1
+	                    }
+	                }
+	            },
+
+	            series: [{
+	                name: 'All visits',
+	                lineWidth: 4,
+	                marker: {
+	                    radius: 4
+	                }
+	            }, {
+	                name: 'New visitors'
+	            }]
+	        });
+    	});
 
 		// Line - Time series - Zoomable
 		$('#line-zoomable').highcharts({
