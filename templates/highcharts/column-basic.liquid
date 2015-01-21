@@ -1,6 +1,7 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+{{ "highcharts.min.js" | asset_url | script_tag }}
 		<style type="text/css">
 ${demo.css}
 		</style>
