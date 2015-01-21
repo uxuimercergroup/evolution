@@ -1,9 +1,0 @@
-{
-  "title": "Grids",
-
-  "reference-overview": 
-  	"<p class='mul-intro-text'>We've come up with a system for using grids that automatically does all the math for you. Our box-sizing: border-box is designed so that borders and padding won't affect the overall width of the columns of a grid. In a sense, our grids are fluid and user responsive and designed to work with and adapt to any type of device, screen resolution, or browser. Smaller screen resolutions, such as that of a mobile device, will display grids as stacked so content won't be distorted and lost, no matter what device our users are on.</p>",
-
-  	"reference-grids-flow-opposite-content": 
-  		"<p>Add the class of <code>.mul-col-flow-opposite</code> to columns where you want content to display first on mobile but appear on the right on larger screens. You still need to put the column you want to display first on mobile first in the code order, so in the example below the code for the right sidebar is first in the code order before the left column.</p>"
-}
