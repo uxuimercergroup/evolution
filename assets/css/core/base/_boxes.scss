@@ -1,0 +1,265 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Base Box Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-boxes == true{
+
+	// BOX BASE SETUP
+	.evo-box					{
+								@include clearfix; // must clearfix the box to use grid cols inside evo-box
+								position: relative;
+								margin-bottom: $baseMargin;
+								background-color: $boxBackgroundColor;
+								border: $boxBorderSize $boxBorderStyle $boxBorderColor;
+								padding: $boxPadding $boxPadding 0 $boxPadding;
+		.evo-box-hdr				{
+									margin-bottom: $baseMargin;
+			.evo-hdr-rule				{
+										border-bottom: $boxHdrBorderSize $boxHdrBorderStyle $boxHdrBorderColor;
+										padding: 0 0 4px 0;
+										}
+									}
+		.evo-box-bdy				{padding-bottom: 1px;}
+								}
+
+	
+	// ADVANCED BOX SETUP
+	.evo-box-adv				{
+								@extend .evo-box;
+								background-color: $boxAdvancedBackgroundColor;
+								padding: 0;
+		& > .evo-box-hdr			{
+									background-color: $boxAdvancedHdrBackgroundColor;
+									padding: $boxPadding;
+									margin-bottom: $baseMargin;
+			.evo-hdr-rule				{
+										border-bottom: 0;
+										margin-bottom: 0;
+										}
+									}
+		& > .evo-box-bdy			{padding: 0 $boxPadding 1px $boxPadding;}
+		& > .evo-box-ftr			{padding: 0 $boxPadding 1px $boxPadding;}
+								}
+
+
+
+	// BOX WITH ROUNDED CORNERS
+	.evo-box-rnd				{
+								@include border-radius($baseBorderRadius);
+		.evo-box-hdr				{@include border-radius($baseBorderRadius $baseBorderRadius 0 0);}
+								}
+
+	// BOX WITH A DROP SHADOW
+	.evo-box-shadow				{@include box-shadow($boxVShadow, $boxHShadow, $boxShadowBlur, $boxShadowColor);}
+
+	// BOX WITH ROUNDED CORNERS WITH A DROP SHADOW
+	.evo-box-rnd-shadow			{
+								@extend .evo-box-rnd;
+								@extend .evo-box-shadow;
+		.evo-box-hdr				{@include border-radius($baseBorderRadius $baseBorderRadius 0 0);}
+								}
+
+
+	@if $use-message-boxes == true{
+
+		// MESSAGE BOX LAYOUT
+		.evo-error-ctn,
+		.evo-attention-ctn,
+		.evo-info-ctn,
+		.evo-confirmation-ctn
+									{
+									padding: 10px 10px 0 10px;
+			.evo-box-hdr				{margin-bottom: 4px;}
+			.evo-box-bdy				{
+				p							{margin-bottom: 10px;}
+										}
+									}
+
+		// MESSAGE BUILDERS
+		.evo-message-hdr			{
+									font-family: $fontSemiBoldStack;
+									font-size: $baseFontSize;
+									margin-top: 0;
+									}
+		.evo-close-action			{
+									top: -7px !important;
+									right: -7px;
+									cursor: pointer;
+									display: block;
+									float: right;
+									}
+
+
+		// ERROR MESSAGE
+		.evo-error-ctn				{
+									@extend .evo-box;
+									background-color: $errorBackgroundColor !important;
+									border-color: $errorBorderColor !important;
+									color: $errorFontColor;
+			.evo-message-hdr			{color: $errorHdr;}
+			a							{color: $errorFontColor;}
+									}
+		// ATTENTION MESSAGE
+		.evo-attention-ctn			{
+									@extend .evo-box;
+									background-color: $attentionBoxBackgroundColor !important;
+									border-color: $attentionBoxBorderColor !important;
+									color: $attentionBoxFontColor;
+			.evo-message-hdr			{color: $attentionHdr;}
+			a							{color: $attentionBoxFontColor;}
+									}
+
+		// INFO MESSAGE
+		.evo-info-ctn				{
+									@extend .evo-box;
+									background-color: $infoBoxBackgroundColor !important;
+									border-color: $infoBoxBorderColor !important;
+									color: $infoBoxFontColor;
+			.evo-message-hdr			{color: $infoHdr;}
+			a							{color: $infoBoxFontColor;}
+									}
+
+		// CONFIRMATION MESSAGE
+		.evo-confirmation-ctn		{
+									@extend .evo-box;
+									background-color: $confirmationBoxBackgroundColor !important;
+									border-color: $confirmationBoxBorderColor !important;
+									color: $confirmationBoxFontColor;
+			.evo-message-hdr			{color: $confirmationHdr;}
+			a							{color: $confirmationBoxFontColor;}
+									}
+
+		// MESSAGE BOXES IE9 FIXES
+		.ie9						{
+			
+			// MESSAGE BUILDERS
+			.evo-close-action			{right: -7px;}
+
+									}
+
+	}//endif
+
+
+	//--- CUSTOM BOXES -------------------------------------------------------------------------------------------------
+
+	// FEATURE CONTAINER
+	.evo-feature-ctn			{
+								background-color: $boxFeaturedBackgroundColor;
+		.evo-box-hdr				{
+			.evo-hdr-rule				{border-bottom-color: $boxFeaturedBorderBottomColor;}
+									}
+								}
+
+	// HIGHLIGHT CONTAINER
+	.evo-highlight-ctn			{
+								@extend .evo-attention-ctn;
+								@include border-radius(2px);
+		p							{margin-bottom: 10px;}
+								}
+	
+	// SIDEBAR CONTAINER
+	.evo-sidebar-ctn			{
+								background-color: $boxSidebarBackgroundColor;
+		.evo-box-hdr				{
+			.evo-hdr-rule				{border-bottom-color: $boxSidebarBorderBottomColor;}
+									}
+								}
+
+	// INLINE SEARCH CONTAINER
+	.evo-inline-search-ctn		{
+								background-color: $boxInlineSearchBackgroundColor;
+								border: $boxInlineSearchBorderSizeColor $boxInlineSearchBorderTypeColor $boxInlineSearchBorderColor;
+		.evo-form					{margin: 0 0 $baseMargin 0;}
+		.evo-form-inline			{
+			input[type="text"],
+			input[type="password"],
+			input[type="datetime"],
+			input[type="datetime-local"],
+			input[type="date"],
+			input[type="month"],
+			input[type="time"],
+			input[type="week"],
+			input[type="number"],
+			input[type="email"],
+			input[type="url"],
+			input[type="search"],
+			input[type="tel"],
+			input[type="color"],
+			select,
+			textarea					{
+										display: block;
+										width: 100%;
+										}
+									}
+								}
+
+	// SUPPORT CONTAINER
+	.evo-support-ctn			{
+								@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+								background-color: $boxSupportBackgroundColor;
+								border-color: $boxSupportBottomColor;
+		.evo-box-hdr				{
+			.evo-hdr-rule				{border-bottom-color: $boxSupportBorderBottomColor;}
+									}
+								}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			@if $use-message-boxes == true{
+
+				// MESSAGE BUILDERS
+				.evo-message-hdr	{font-size: $baseFontSizeLargeBreakpoint;}
+
+			}// endif
+
+			// INLINE SEARCH CONTAINER
+			.evo-inline-search-ctn
+								{
+				.evo-form			{
+									margin: 0 0 5px 0;
+					.evo-form-action	{
+										margin-top: 0;
+										padding-top: 18%;
+										}
+									}
+				.evo-form-inline	{
+									margin: 0;
+					label				{
+										vertical-align: top;
+										line-height: $boxInlineSearchLabelLineHeight;
+										}
+					input[type="text"],
+					input[type="password"],
+					input[type="datetime"],
+					input[type="datetime-local"],
+					input[type="date"],
+					input[type="month"],
+					input[type="time"],
+					input[type="week"],
+					input[type="number"],
+					input[type="email"],
+					input[type="url"],
+					input[type="search"],
+					input[type="tel"],
+					input[type="color"],
+					select,
+					textarea			{
+										display: inline-block;
+										width: auto;
+										}
+					.evo-form-action	{padding-top: 6%;}
+									}
+								}
+
+		}
+		
+	}// endif
+
+}//endif

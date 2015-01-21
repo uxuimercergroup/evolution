@@ -1,0 +1,42 @@
+{
+	"title": "Auto Suggest",
+
+	"reference-overview": 
+		"<p>The Auto Suggest add on feature automatically inputs suggested items for users while filling out any type of form. Auto Suggest text is generated from a pre-defined list as the user types content into the Form Field. This control works well when input speed is important for the user or when data might be entered in different ways.</p>",
+
+	"reference-usage": 
+		"<p>The Auto Suggest feature should be used when issues of ambiguity might arise (in place of a Text Input) while filling out a form. It’s great when extremely long lists of predefined data preclude the use of a drop down selection. It’s also quite useful when the user only has a certain amount of time to fill out a form.</p>",
+
+	"reference-details": 
+		"<ul><li>The Auto Suggest control should be able to support \"Starts With\" or \"Contains\" searches, although the preference is to default to \"Contains\" in order to maximize the return.</li><li>The matching text should be highlighted in the Suggested Values.</li><li>Suggest Values should be a Drop Down field.</li><li>The color of the Auto Suggest text should different itself from the standard black used in forms. It will default to #999999.</li><li>User should be able to turn Auto Suggest on or off.</li></ul>",
+
+	"reference-mobile": 
+		"<p>On a mobile device or tablet, when a user searches for content the Auto Suggest search results are restricted to show only 3 items. Input and text sizes have also increased on mobile.</p>",
+
+	"reference-technical": 
+		"<p>Technical details will go here...</p>",
+
+	
+	"reference-dependency": "true",
+	"reference-dependency-jquery": "true",
+	"reference-dependency-jquery-ui": "true",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "false",
+	"reference-example-version-label":
+		"",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"",
+	"reference-code-html-content-block-post": 
+		"",
+
+	"reference-code-js": "true",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
+}

@@ -1,0 +1,48 @@
+{
+	"title": "Single Select Drop Down",
+
+	"reference-overview": 
+		"<p>The Single Select Drop Down is a form element that functions like a <a href='/base/forms/radio-button'>Radio Button</a>. It allows the user to only select one answer to a question on a form.</p>",
+
+	"reference-usage": 
+		"<p>Use the Single Select Drop Down element when form questions have many possible answer choices, like age ranges or state residences. It allows you to conserve space on a page or application because the user has to click on the Single Select Drop Down in order to see the choices. The list retracts once the user makes a selection or clicks out of the Single Select Drop Down element.</p><h3>Radio Buttons vs. Single Select Drop Down</h3><p>These two form elements function pretty much the same way. The suggestion is to use <strong>Drop Down</strong> when the user doesn't need to know all of the alternative choices available (ie. selecting a \"State\" like Massachusetts. The other options don't matter) or useful for a long list.</p><p>Use <strong>Radio Buttons</strong> when the alternatives matter - when you want the user to see what they are not choosing. Radio buttons allow you to expand the selection and even use longer text.</p>",
+
+	"reference-details": 
+		"<p>The \"choose one...\" (lower case) option in the drop down should be the default selection and listed first. This will distinguish it from a a user selecting an actual value.</p><p>When the drop down menu is initially selected the Active State (see below) is highlighted using the \"Attention\" color.</p><h3>Margins</h3><p>In order to keep with Mercer consistency, the margins between Elements have been standardized:</p><ul><li>Use a 10 pixel bottom between the Element and next Field Label.</li><li>Use a 3 pixel bottom margin between a Label and an Input.</li></ul><h3>Labels</h3><p>All field labels should use Title Case. See the <a href='/copy-text-styleguide'>Copy/Text Style Guide narrative</a> for more detail.</p><h3>Active State</h3><p>The active state for any field should be indicated by the application of the \"Attention\" color to the border of the specific field the user has clicked into. See <a href='/base/colors'>Color Palette</a> for more details on \"Attention\" color.</p><h3>Required Fields</h3><p>All required fields should be denoted by placing the Required icon immediately to the left of the Field Label.</p><h3>Error Handling</h3><p>See the <a href='/base/forms/field-specific-error'>Field Specific Error Message</a> page for details.</p>",
+
+	"reference-mobile": 
+		"<h3>Header</h3><p>Mobile details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+
+	"reference-technical": 
+		"<p>Technical details go here...</p>",
+
+	
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "true",
+	"reference-example-version-label":
+		"Stacked Dropdown",
+	"reference-example-version-label-2":
+		"Inline Dropdown",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"",
+	"reference-code-html-content-block-post": 
+		"",
+	"reference-code-html-content-block-pre-2": 
+		"",
+	"reference-code-html-content-block-post-2": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
+}

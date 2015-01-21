@@ -1,0 +1,582 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.3 - Global Helpers Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+// TYPE HELPERS
+// ------------------------------------------------------------------------------------------
+
+// TEXT OVERFLOW
+.evo-text-overflow						{@include text-overflow;}
+
+// WORD BREAK
+.evo-word-break							{word-wrap: break-word;}
+
+// FOOTNOTES
+.evo-footnote							{color: $footnoteFontColor;}
+
+// NO BOLD STYLE
+.evo-nobold								{font-family: $fontRegularFamily;}
+
+// BOLD STYLE
+.evo-bold								{font-family: $fontSemiBoldFamily;}
+
+// NO BULLETED LISTS
+.evo-no-bullets							{
+										list-style: none;
+										margin-left: 0;
+										}
+
+
+// PAGE ELEMENT HELPERS
+// ------------------------------------------------------------------------------------------
+
+// BASIC IMAGE STYLES
+img										{
+										max-width: 100%;
+										height: auto;
+
+	&.evo-image-left						{
+											float: left;
+											margin-top: 5px;
+											margin-right: 20px;
+											}
+	&.evo-image-right						{
+											float: right;
+											margin-top: 5px;
+											margin-left: 20px;
+											}
+										}
+
+// KEYLINES
+
+// Use on elememts which need a keyline on the right
+.evo-keyline-right						{
+										padding-right: 20px;
+										border-right:1px solid $keylineRightBorderRightColor;
+	img										{margin-top:5px;}
+										}
+
+// Use on elements which need a keyline on the left
+.evo-keyline-left						{
+										padding-left: 20px;
+										border-left: 1px solid $keylineLeftBorderLeftColor;
+	img										{margin-top: 5px;}
+										}
+
+// Removes border on last keyline right
+.evo-keyline-right.last					{border-right: 0;}
+
+// Removes border and padding on first keyline left, make sure to add class of first
+.evo-keyline-left.first					{
+										border-left: 0;
+										padding-left: 0;
+										}
+
+// KEYLINE MEDIA QUERIES
+
+// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
+@if $use-small-only-mediaquery == true {
+
+	@media #{$small-only} {
+		
+		// KEYLINES
+		.evo-keyline-right,
+		.evo-keyline-left					{
+											padding-right:0;
+											padding-left:0;
+											border-right:0;
+											border-left:0;
+			img									{margin-top:0;}
+											}
+
+	}
+	
+}
+
+
+// LAYOUT HELPERS
+// ------------------------------------------------------------------------------------------
+
+// CLEAR FIX
+.evo-clearfix							{@include clearfix;}
+
+// ABSOLUTE CENTER
+// This will center an element horizontally and vertically
+.evo-align-absolute-center				{
+										position: relative;
+	.evo-align-absolute-center-element		{
+											margin: auto;
+											position: absolute;
+											top: 0;
+											left: 0;
+											bottom: 0;
+											right: 0;
+											}
+										}
+
+// LEFT AND RIGHT ALIGN TEXT
+.evo-align-center						{text-align: center !important;}
+.evo-align-left							{text-align: left !important;}
+.evo-align-right						{text-align: right !important;}
+
+
+// HORIZONTAL CENTERING FOR BLOCK ELEMENTS
+// Apply class to element that needs to be centered horizontally
+.evo-center-block						{
+										float: none !important;
+										display: block !important;
+										margin-right: auto !important;
+										margin-left: auto  !important;
+										}
+.evo-float-left							{float: left !important;}
+.evo-float-right						{float: right !important;}
+
+// HIDE ELEMENTS
+.evo-display-none						{display: none;}
+
+// WHITE SPACE NO WRAP
+.evo-nowrap								{white-space: nowrap !important;}
+
+
+// MARGIN ENABLERS/DISABLERS
+
+// ADD MARGIN
+.evo-margin								{margin: $baseMargin !important;}
+.evo-margin-top							{margin-top: $baseMargin !important;}
+.evo-margin-right						{margin-right: $baseMargin !important;}
+.evo-margin-bottom						{margin-bottom: $baseMargin !important;}
+.evo-margin-left						{margin-left: $baseMargin !important;}
+
+// SUBTRACT MARGIN
+.evo-no-margin							{margin: 0 !important;}
+.evo-no-margin-top						{margin-top: 0 !important;}
+.evo-no-margin-right					{margin-right: 0 !important;}
+.evo-no-margin-bottom					{margin-bottom: 0 !important;}
+.evo-no-margin-left						{margin-left: 0 !important;}
+
+// PADDING ENABLERS/DISABLERS
+
+// ADD PADDING
+.evo-padding							{padding: $basePadding !important;}
+.evo-padding-top						{padding-top: $basePadding !important;}
+.evo-padding-right						{padding-right: $basePadding !important;}
+.evo-padding-bottom						{padding-bottom: $basePadding !important;}
+.evo-padding-left						{padding-left: $basePadding !important;}
+
+// SUBTRACT PADDING
+.evo-no-padding							{padding:0 !important;}
+.evo-no-padding-top						{padding-top: 0 !important;}
+.evo-no-padding-right					{padding-right: 0 !important;}
+.evo-no-padding-bottom					{padding-bottom: 0 !important;}
+.evo-no-padding-left					{padding-left: 0 !important;}
+
+
+// SPACERS
+
+// MARGIN SPACERS
+.evo-spacer-margin-x-small				{margin: $spacerXSmall !important;}
+.evo-spacer-margin-small				{margin: $spacerSmall !important;}
+.evo-spacer-margin-medium				{margin: $spacerMedium !important;}
+.evo-spacer-margin-large				{margin: $spacerLarge !important;}
+.evo-spacer-margin-x-large				{margin: $spacerXLarge !important;}
+.evo-spacer-margin-xx-large				{margin: $spacerXXLarge !important;}
+.evo-spacer-margin-xxx-large			{margin: $spacerXXXLarge !important;}
+
+.evo-spacer-margin-top-x-small			{margin-top: $spacerXSmall !important;}
+.evo-spacer-margin-top-small			{margin-top: $spacerSmall !important;}
+.evo-spacer-margin-top-medium			{margin-top: $spacerMedium !important;}
+.evo-spacer-margin-top-large			{margin-top: $spacerLarge !important;}
+.evo-spacer-margin-top-x-large			{margin-top: $spacerXLarge !important;}
+.evo-spacer-margin-top-xx-large			{margin-top: $spacerXXLarge !important;}
+.evo-spacer-margin-top-xxx-large		{margin-top: $spacerXXXLarge !important;}
+
+.evo-spacer-margin-right-x-small		{margin-right: $spacerXSmall !important;}
+.evo-spacer-margin-right-small			{margin-right: $spacerSmall !important;}
+.evo-spacer-margin-right-medium			{margin-right: $spacerMedium !important;}
+.evo-spacer-margin-right-large			{margin-right: $spacerLarge !important;}
+.evo-spacer-margin-right-x-large		{margin-right: $spacerXLarge !important;}
+.evo-spacer-margin-right-xx-large		{margin-right: $spacerXXLarge !important;}
+.evo-spacer-margin-right-xxx-large		{margin-right: $spacerXXXLarge !important;}
+
+.evo-spacer-margin-bottom-x-small		{margin-bottom: $spacerXSmall !important;}
+.evo-spacer-margin-bottom-small			{margin-bottom: $spacerSmall !important;}
+.evo-spacer-margin-bottom-medium		{margin-bottom: $spacerMedium !important;}
+.evo-spacer-margin-bottom-large			{margin-bottom: $spacerLarge !important;}
+.evo-spacer-margin-bottom-x-large		{margin-bottom: $spacerXLarge !important;}
+.evo-spacer-margin-bottom-xx-large		{margin-bottom: $spacerXXLarge !important;}
+.evo-spacer-margin-bottom-xxx-large		{margin-bottom: $spacerXXXLarge !important;}
+
+.evo-spacer-margin-left-x-small			{margin-left: $spacerXSmall !important;}
+.evo-spacer-margin-left-small			{margin-left: $spacerSmall !important;}
+.evo-spacer-margin-left-medium			{margin-left: $spacerMedium !important;}
+.evo-spacer-margin-left-large			{margin-left: $spacerLarge !important;}
+.evo-spacer-margin-left-x-large			{margin-left: $spacerXLarge !important;}
+.evo-spacer-margin-left-xx-large		{margin-left: $spacerXXLarge !important;}
+.evo-spacer-margin-left-xxx-large		{margin-left: $spacerXXXLarge !important;}
+
+// PADDING SPACERS
+.evo-spacer-padding-x-small				{padding: $spacerXSmall !important;}
+.evo-spacer-padding-small				{padding: $spacerSmall !important;}
+.evo-spacer-padding-medium				{padding: $spacerMedium !important;}
+.evo-spacer-padding-large				{padding: $spacerLarge !important;}
+.evo-spacer-padding-x-large				{padding: $spacerXLarge !important;}
+.evo-spacer-padding-xx-large			{padding: $spacerXXLarge !important;}
+.evo-spacer-padding-xxx-large			{padding: $spacerXXXLarge !important;}
+
+.evo-spacer-padding-top-x-small			{padding-top: $spacerXSmall !important;}
+.evo-spacer-padding-top-small			{padding-top: $spacerSmall !important;}
+.evo-spacer-padding-top-medium			{padding-top: $spacerMedium !important;}
+.evo-spacer-padding-top-large			{padding-top: $spacerLarge !important;}
+.evo-spacer-padding-top-x-large			{padding-top: $spacerXLarge !important;}
+.evo-spacer-padding-top-xx-large		{padding-top: $spacerXXLarge !important;}
+.evo-spacer-padding-top-xxx-large		{padding-top: $spacerXXXLarge !important;}
+
+.evo-spacer-padding-right-x-small		{padding-right: $spacerXSmall !important;}
+.evo-spacer-padding-right-small			{padding-right: $spacerSmall !important;}
+.evo-spacer-padding-right-medium		{padding-right: $spacerMedium !important;}
+.evo-spacer-padding-right-large			{padding-right: $spacerLarge !important;}
+.evo-spacer-padding-right-x-large		{padding-right: $spacerXLarge !important;}
+.evo-spacer-padding-right-xx-large		{padding-right: $spacerXXLarge !important;}
+.evo-spacer-padding-right-xxx-large		{padding-right: $spacerXXXLarge !important;}
+
+.evo-spacer-padding-bottom-x-small		{padding-bottom: $spacerXSmall !important;}
+.evo-spacer-padding-bottom-small		{padding-bottom: $spacerSmall !important;}
+.evo-spacer-padding-bottom-medium		{padding-bottom: $spacerMedium !important;}
+.evo-spacer-padding-bottom-large		{padding-bottom: $spacerLarge !important;}
+.evo-spacer-padding-bottom-x-large		{padding-bottom: $spacerXLarge !important;}
+.evo-spacer-padding-bottom-xx-large		{padding-bottom: $spacerXXLarge !important;}
+.evo-spacer-padding-bottom-xxx-large	{padding-bottom: $spacerXXXLarge !important;}
+
+.evo-spacer-padding-left-x-small		{padding-left: $spacerXSmall !important;}
+.evo-spacer-padding-left-small			{padding-left: $spacerSmall !important;}
+.evo-spacer-padding-left-medium			{padding-left: $spacerMedium !important;}
+.evo-spacer-padding-left-large			{padding-left: $spacerLarge !important;}
+.evo-spacer-padding-left-x-large		{padding-left: $spacerXLarge !important;}
+.evo-spacer-padding-left-xx-large		{padding-left: $spacerXXLarge !important;}
+.evo-spacer-padding-left-xxx-large		{padding-left: $spacerXXXLarge !important;}
+
+
+// TABLE COLUMN WIDTHS ADJUSTS (PERCENTAGES)
+.evo-tbl-column-50						{width: #{tableColWidth(50)};} // Width of 50%, Halves
+.evo-tbl-column-33						{width: #{tableColWidth(33.3)};} // Width of 33.3%, Thirds
+.evo-tbl-column-25						{width: #{tableColWidth(25)};} // Width of 25%, Quarters
+.evo-tbl-column-20						{width: #{tableColWidth(20)};} // Width of 20%, Fifths
+.evo-tbl-column-16						{width: #{tableColWidth(16.6)};} // Width of 16.6%, Sixths
+.evo-tbl-column-14						{width: #{tableColWidth(14.2)};} // Width of 14.2%, Sevenths
+.evo-tbl-column-12						{width: #{tableColWidth(12.5)};} // Width of 12.5%, Eighths
+
+
+// RESPONSIVE HELPERS
+// ------------------------------------------------------------------------------------------
+
+// BREAKPOINTS
+// small media query = phones
+// medium media query = tablets
+// large media query = desktop
+
+
+// IE10 Metro responsive
+// Required for Windows 8 Metro split-screen snapping with IE10
+// Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+@-ms-viewport 							{width:device-width;}
+
+// IE10 on Windows Phone 8
+// IE10 on WP8 doesn't report CSS pixels, but actual device pixels. In
+// other words, say on a Lumia, you'll get 768px as the device width,
+// meaning users will see the tablet styles and not phone styles.
+//
+// Alternatively you can override this with JS (see source below), but
+// we won't be doing that here given our limited scope.
+//
+// Source: http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
+@media screen and (max-width: 400px) 	{
+	@-ms-viewport 							{width: 320px;}
+										}
+
+// MEDIA QUERY VISIBILITY HELPERS
+
+// VISIBLE HELPERS
+
+// Small media query
+@include responsive-hide(".evo-visible-small-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-show(".evo-visible-small-mediaquery");
+	}
+}
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-show('.evo-visible-small-mediaquery.evo-visible-medium-mediaquery');
+	}
+}
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-show('.evo-visible-small-mediaquery.evo-visible-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-show('.evo-visible-small-mediaquery.evo-visible-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-show('.evo-visible-small-mediaquery.evo-visible-xxlarge-mediaquery');
+	}
+}
+
+// Medium media query
+@include responsive-hide(".evo-visible-medium-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-show(".evo-visible-medium-mediaquery.evo-visible-small-mediaquery");
+	}
+}
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-show('.evo-visible-medium-mediaquery');
+	}
+}
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-show('.evo-visible-medium-mediaquery.evo-visible-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-show('.evo-visible-medium-mediaquery.evo-visible-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-show('.evo-visible-medium-mediaquery.evo-visible-xxlarge-mediaquery');
+	}
+}
+
+// Large media query
+@include responsive-hide(".evo-visible-large-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-show(".evo-visible-large-mediaquery.evo-visible-small-mediaquery");
+	}
+}
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-show('.evo-visible-large-mediaquery.evo-visible-medium-mediaquery');
+	}
+}
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-show('.evo-visible-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-show('.evo-visible-large-mediaquery.evo-visible-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-show('.evo-visible-large-mediaquery.evo-visible-xxlarge-mediaquery');
+	}
+}
+
+// X-Large media query
+@include responsive-hide(".evo-visible-xlarge-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-show(".evo-visible-xlarge-mediaquery.evo-visible-small-mediaquery");
+	}
+}
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-show('.evo-visible-xlarge-mediaquery.evo-visible-medium-mediaquery');
+	}
+}
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-show('.evo-visible-xlarge-mediaquery.evo-visible-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-show('.evo-visible-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-show('.evo-visible-xlarge-mediaquery.evo-visible-xxlarge-mediaquery');
+	}
+}
+
+// XX-Large media query
+@include responsive-hide(".evo-visible-xxlarge-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-show(".evo-visible-xxlarge-mediaquery.evo-visible-small-mediaquery");
+	}
+}
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-show('.evo-visible-xxlarge-mediaquery.evo-visible-medium-mediaquery');
+	}
+}
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-show('.evo-visible-xxlarge-mediaquery.evo-visible-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-show('.evo-visible-xxlarge-mediaquery.evo-visible-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-show('.evo-visible-xxlarge-mediaquery');
+	}
+}
+
+// HIDDEN HELPERS
+
+// Small media query
+@include responsive-show(".evo-hidden-small-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-hide(".evo-hidden-small-mediaquery");
+	}
+}
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-hide('.evo-hidden-small-mediaquery.evo-hidden-medium-mediaquery');
+	}
+}
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-hide('.evo-hidden-small-mediaquery.evo-hidden-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-hide('.evo-hidden-small-mediaquery.evo-hidden-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-hide('.evo-hidden-small-mediaquery.evo-hidden-xxlarge-mediaquery');
+	}
+}
+
+// Medium media query
+@include responsive-show(".evo-hidden-medium-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-hide(".evo-hidden-medium-mediaquery.evo-hidden-small-mediaquery");
+	}
+}
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-hide('.evo-hidden-medium-mediaquery');
+	}
+}
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-hide('.evo-hidden-medium-mediaquery.evo-hidden-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-hide('.evo-hidden-medium-mediaquery.evo-hidden-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-hide('.evo-hidden-medium-mediaquery.evo-hidden-xxlarge-mediaquery');
+	}
+}
+
+// Large media query
+@include responsive-show(".evo-hidden-large-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-hide(".evo-hidden-large-mediaquery.evo-hidden-small-mediaquery");
+	}
+}
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-hide('.evo-hidden-large-mediaquery.evo-hidden-medium-mediaquery');
+	}
+}
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-hide('.evo-hidden-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-hide('.evo-hidden-large-mediaquery.evo-hidden-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-hide('.evo-hidden-large-mediaquery.evo-hidden-xxlarge-mediaquery');
+	}
+}
+
+// X-Large media query
+@include responsive-show(".evo-hidden-xlarge-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-hide(".evo-hidden-xlarge-mediaquery.evo-hidden-small-mediaquery");
+	}
+}
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-hide('.evo-hidden-xlarge-mediaquery.evo-hidden-medium-mediaquery');
+	}
+}
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-hide('.evo-hidden-xlarge-mediaquery.evo-hidden-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-hide('.evo-hidden-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-hide('.evo-hidden-xxlarge-mediaquery.evo-hidden-xlarge-mediaquery');
+	}
+}
+
+// X-Large media query
+@include responsive-show(".evo-hidden-xxlarge-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-hide(".evo-hidden-xxlarge-mediaquery.evo-hidden-small-mediaquery");
+	}
+}
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-hide('.evo-hidden-xxlarge-mediaquery.evo-hidden-medium-mediaquery');
+	}
+}
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-hide('.evo-hidden-xxlarge-mediaquery.evo-hidden-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-hide('.evo-hidden-xxlarge-mediaquery.evo-hidden-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-hide('.evo-hidden-xxlarge-mediaquery');
+	}
+}

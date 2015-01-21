@@ -1,0 +1,126 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
+
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24 evo-alternate-views-badge evo-ref-alternate-views-badge" data-alternate-views-badge="js-evo-ref-alternate-views-badge">
+
+		{% include '/reference/reference-content' %}
+
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
+		{% if model.reference-get-code == "true" %}
+			<div id="evo-ref-alternate-views-badge-content-panel-get-code">
+
+				<h3 class="evo-hdr-rule">HTML</h3>
+
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{% include "/objects/mini-filter" %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post }}
+
+				{% if model.reference-code-js == "true" %}
+
+					<h3 class="evo-hdr-rule">JS</h3>
+
+					{% if model.reference-example-versions == "true" %}
+						<h4>{{ model.reference-example-version-label }}</h4>
+					{% endif %}
+					{{ model.reference-code-js-content-block-pre }}
+					{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-js-content-block-post }}
+
+				{% endif %}
+
+			</div>
+		{% endif %}
+	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
+
+	</section>
+<!-- CONTENT SECTION - ENDS -->
+
+<!-- EXAMPLE SECTION - BEGINS -->
+	<section class="col-24 evo-ref-example">
+
+	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+		<h3 class="evo-hdr-dbl-rule evo-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
+	<!-- EXAMPLE SECTION - HEADER - ENDS -->
+
+	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+		<section class="evo-ref-example-content">
+
+		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+
+			{% if model.reference-example-versions == "true" %}
+				<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
+			{% endif %}
+
+			<div class="col-24">
+				<div class="col-12 first">	
+					{% include "/objects/mini-filter" %}
+				</div>
+				<div class="col-12 evo-align-right evo-margin-bottom">
+					<a href="javascript:;" class="js-evo-toggle-content" data-evo-toggle="102">Show In Context</a>
+				</div>
+			</div>
+
+		<!-- INTERACTIVE DATA TABLE - EXAMPLE - BEGINS -->
+			<div class="js-evo-toggle-content evo-display-none col-24 first evo-margin-top" id="div102">
+				
+				<div class="evo-table-small-mediaquery">
+					<table class="evo-table evo-footable evo-table-pagination evo-table-borders evo-table-striped evo-table-hover" data-filter="#filter" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+						<caption>
+							<div class="col-19 first">
+								{% include "/objects/mini-filter" %}
+							</div>
+							<div class="col-5 evo-tbl-data-filter">
+								<input id="filter" type="text" tabindex="" title="Type to filter results." placeholder="Filter">
+							</div>
+						</caption>
+						<thead>
+							<tr>
+								<th class="col-10" data-sort-initial="true" scope="col"><a href="javascript:;">First Name</a></th>
+								<th class="col-10" scope="col"><a href="javascript:;">Clients</a></th>
+								<th class="col-4 evo-align-right" scope="col"><a href="javascript:;">Policies</a></th>
+							</tr>
+						</thead>
+						<tbody>
+							
+							{% for item in global.table_data %}
+							<tr>
+								<td>{{ item.first_name }}</td>
+								<td>{{ item.company }}</td>
+								<td class="evo-align-right">{{ item.num_of }}</td>
+							</tr>
+							{% endfor %}
+
+						</tbody>
+						<tfoot>
+							<tr class="evo-subtotal-row">
+								<td class="evo-align-right" colspan="2">Subtotal</td>
+								<td class="evo-align-right">23</td>
+							</tr>
+							<tr class="evo-total-row">
+								<td class="evo-align-right" colspan="2">Total</td>
+								<td class="evo-align-right">23</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+
+			</div>
+		<!-- INTERACTIVE DATA TABLE - EXAMPLE - ENDS -->
+
+		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+		</section>
+	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
+
+	</section>
+<!-- EXAMPLE SECTION - ENDS -->
+
+{% endblock %}

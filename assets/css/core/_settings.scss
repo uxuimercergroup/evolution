@@ -1,0 +1,83 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Core SASS Settings Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+// ==========================================================================================
+// DEFAULT CORE SASS SETTINGS
+// ==========================================================================================
+
+// These are the default Mercer Evolution core SASS settings. This is what will be turned on/off
+// from Mercer Evolution and included in the evolution library CSS file. These settings can be
+// modified on a project by project basis to customize an evolution CSS file for your project
+// based on what components you will need from Mercer Evolution.
+
+// GLOBAL SETTINGS
+// ------------------------------------------------------------------------------------------
+
+// LAYOUT SETTINGS
+// Default layout is 980px wide
+$use-grid-980:								true !default;
+$use-grid-1200:								false !default;
+
+// RESPONSIVE SETTINGS
+
+// MEDIA QUERY RANGES AND UP
+$use-small-up-mediaquery:					true !default; // 0px +
+$use-medium-up-mediaquery:					true !default; // 641px +
+$use-large-up-mediaquery:					true !default; // 1025px +
+$use-xlarge-up-mediaquery:					true !default; // 1441px +
+$use-xxlarge-up-mediaquery:					true !default; // 1921px +
+
+// MEDIA QUERY RANGES
+$use-small-only-mediaquery:					true !default; // 0px - 640px
+$use-medium-only-mediaquery:				true !default; // 641px - 1024px
+$use-large-only-mediaquery:					true !default; // 1025px - 1440px
+$use-xlarge-only-mediaquery:				true !default; // 1441px - 1920px
+$use-xxlarge-only-mediaquery:				true !default; // 1921px +
+
+// BASE SETTINGS
+// ------------------------------------------------------------------------------------------
+$use-type:									true !default;
+$use-boxes:									true !default;
+$use-buttons:								true !default;
+$use-fat-footer:							true !default;
+$use-footer:								true !default;
+$use-forms:									true !default;
+$use-header:								true !default;
+$use-hero-banner:							true !default;
+$use-icons:									true !default;
+$use-icon-image:							true !default;
+$use-icon-font:								true !default;
+$use-lists:									true !default;
+$use-inline-list:							true !default;
+$use-menus:									true !default;
+$use-message-boxes:							true !default;
+$use-nav:									true !default;
+$use-tables:								true !default;
+
+// OBJECTS SETTINGS
+// ------------------------------------------------------------------------------------------
+$use-accordion:								true !default;
+$use-advanced-filter:						true !default;
+$use-alternate-views-badge:					true !default;
+$use-autocomplete:							true !default;
+$use-banding-layout:						true !default;
+$use-call-to-action:						true !default;
+$use-carousel:								true !default;
+$use-content-modal:							true !default;
+$use-datepicker:							true !default;
+$use-dialog:								true !default;
+$use-image-content-overlay:					true !default;
+$use-login-layout:							true !default;
+$use-mini-filter:							true !default;
+$use-pagination:							true !default;
+$use-profile-containers:					true !default;
+$use-scrollpane:							true !default;
+$use-slider:								true !default;
+$use-stepper:								true !default;
+$use-summary-containers:					true !default;
+$use-tabs:									true !default;
+$use-tiles:									true !default;
+$use-tooltip:								true !default;

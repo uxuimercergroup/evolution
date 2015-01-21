@@ -1,0 +1,100 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Autocomplete Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-autocomplete == true{
+
+	.ui-helper-hidden-accessible
+							{display: none;}
+
+	// AUTOCOMPLETE
+	.ui-menu				{
+							@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+							@include box-shadow(0, 3px, 5px, $autocompleteShadowColor);
+							background-color: $autocompleteBackgroundColor;
+							border: $autocompleteBorderSize $autocompleteBorderStyle $autocompleteBorderColor;
+							border-top: 0;
+							display: block;
+							position: absolute;
+							z-index: $zindexAutocomplete;
+							padding: 0;
+							margin: 0;
+							width: auto;
+							list-style: none;
+							max-height: $autocompleteMaxHeight;
+							overflow-y: auto;
+							overflow-x: hidden;
+							outline: none;
+		.ui-menu-item			{
+								margin: 0;
+								padding: 0;
+								width: 100%;
+								font-size: $autocompleteItemFontSize;
+								font-family: $fontSemiBoldStack;
+			.ui-menu-item-highlight	{
+									color: $autocompleteItemHighlightText;
+									text-decoration: $autocompleteItemUnderlineText;
+									}
+			a 						{
+									@include text-overflow;
+									border-top: $autocompleteItemBorderTopSize $autocompleteItemBorderTopStyle $autocompleteItemBorderTopColor;
+									border-bottom: $autocompleteItemBorderBottomSize $autocompleteItemBorderBottomStyle $autocompleteItemBorderBottomColor;
+									color: $autocompleteItemFontColor;
+									cursor: pointer;
+									display: block;
+									text-decoration: none;
+									padding: 5px;
+									line-height: $autocompleteItemLinkLineHeight;
+									height: auto;
+									height: 32px;
+				.ui-menu-secondary		{
+										@include text-overflow;
+										margin-left: 5px;
+										display: inline;
+										}
+									}
+			.ui-state-focus			{@include background-gradient($autocompleteItemHoverBackgroundStartColor,$autocompleteItemHoverBackgroundEndColor);}
+								}
+
+		.ui-menu-item:first-child
+								{border-top: 0;}
+								
+		// Styles for autocomplete list item hover and active state on last item
+		.ui-menu-item:last-child
+								{
+								border-bottom: 0;
+			.ui-state-hover,
+			.ui-state-active		{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+								}
+							}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			// AUTOCOMPLETE
+			.ui-menu		{
+							max-height: $autocompleteMaxHeightLargeBreakpoint;
+				.ui-menu-item	{
+								font-size: $autocompleteItemFontSizeLargeBreakpoint;
+					a				{
+									line-height: $autocompleteItemLinkLineHeightLargeBreakpoint;
+						.ui-menu-secondary
+										{
+										margin-left: 0;
+										display: block;
+										}
+									}
+								}
+							}
+
+		}
+		
+	}// endif
+
+}//endif

@@ -1,0 +1,112 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Summary Containers Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-summary-containers == true{
+
+	// SUMMARY CONTAINER
+	.evo-summary-ctn						{
+											margin-bottom: $baseMargin;
+											width: 100%;
+		.evo-summary-ctn-row					{
+			div										{
+													color: $baseFontColor;
+													border-color: $summaryCtnBorderColor;
+													border-top-color: $summaryCtnBorderColorTop;
+													border-width: $summaryCtnBorderSize;
+													border-style: $summaryCtnBorderStyle;
+													display: block;
+													font-size: ($hdrH1FontSize + $summaryPrimaryCtnLargeFontSizeAdjust);
+													width: auto;
+													padding: $summaryCtnPadding;
+													text-align: center;
+				&:first-child							{border-top-color: $summaryCtnBorderFirstChildColorTop;}
+				a										{@include href-link($baseFontColor, none);}
+				.evo-main-text							{display: block;}
+				.evo-support-text						{
+														display: block;
+														font-size: ($baseFontSize - $summaryPrimaryCtnSupportFontSizeAdjust);
+														}
+				[class*="evo-icon-"]					{
+														color: $baseFontColor;
+														font-size: $summaryPrimaryCtnIconFontSize;
+														}
+													}
+
+			// SET AN ITEM TO ALERT STATE - NEGATIVE
+			.evo-summary-ctn-alert-negative,
+			.evo-summary-ctn-alert-negative a		{
+													@include href-link($summaryCtnAlertNegativeFontColor, none);
+													color: $summaryCtnAlertNegativeFontColor;
+				[class*="evo-icon-"]					{color: $summaryCtnAlertNegativeFontColor;}
+													}
+
+			// SET AN ITEM TO ALERT STATE - POSITIVE
+			.evo-summary-ctn-alert-positive,
+			.evo-summary-ctn-alert-positive a		{
+													@include href-link($summaryCtnAlertPositiveFontColor, none);
+													color: $summaryCtnAlertPositiveFontColor;
+				[class*="evo-icon-"]					{color: $summaryCtnAlertPositiveFontColor;}
+													}
+												}
+											}
+
+	// SECONDARY SUMMARY CONTAINER
+	.evo-secondary-summary-ctn				{
+		.evo-summary-ctn-row					{
+			div										{
+				.evo-main-text							{font-size: ($hdrH1FontSize + $summarySecondaryCtnLargeFontSizeAdjust);}
+				.evo-support-text						{font-size: ($baseFontSize - $summarySecondaryCtnSupportFontSizeAdjust);}
+				[class*="evo-icon-"]					{font-size: $summarySecondaryCtnIconFontSize;}
+													}
+												}
+											}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			// SUMMARY CONTAINER
+			.evo-summary-ctn				{
+											display: table;
+				.evo-summary-ctn-row			{
+												display: table-row;
+					div								{
+													display: table-cell;
+													width: 10%;
+													border-left-color: $summaryCtnBorderColorLeft;
+													border-bottom-color: $summaryCtnBorderColorBottom;
+						&:first-child					{
+														border-top-color: $summaryCtnBorderColorTop;
+														border-left-color: $summaryCtnBorderFirstChildColorLeft;
+														}
+						&:hover							{
+														@include transition(background-color $summaryCtnBorderHoverTransitionSpeed ease-in-out);
+														background-color: $summaryCtnBorderHoverBackgroundColor;
+														border-top-color: $summaryCtnBorderHoverBorderTopColor;
+														border-bottom-color: $summaryCtnBorderHoverBorderBottomColor;
+														}
+													}
+
+					// SET AN ITEM TO ALERT STATE - NEGATIVE
+					.evo-summary-ctn-alert-negative	{
+						&:hover							{background-color: $summaryCtnAlertNegativeHoverBackgroundColor;}
+													}
+
+					// SET AN ITEM TO ALERT STATE - POSITIVE
+					.evo-summary-ctn-alert-positive	{
+						&:hover							{background-color: $summaryCtnAlertPositiveHoverBackgroundColor;}
+													}
+												}
+											}
+
+		}
+
+	}//endif
+
+}//endif

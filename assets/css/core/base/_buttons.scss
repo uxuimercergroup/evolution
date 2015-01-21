@@ -1,0 +1,304 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Base Buttons Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-buttons == true{
+
+	// FOUNDATION BUTTON
+	.evo-btn
+		{
+		@include button(
+			$padding: rem-calc(12),
+			$radius: rem-calc(6),
+			$bg: $gray-mid-light);
+		}
+
+	// CORE BUTTON SETUP
+	.evo-btn										{
+													@include border-radius($buttonBorderRadius);
+													@include box-shadow($buttonVShadow, $buttonHShadow, $buttonShadowBlur, $buttonShadowColor);
+													@include text-shadow(0, 1px, 1px, $buttonTextShadowColor);
+													@include transition(box-shadow 0.15s ease-in-out 0s);
+													@include backface-visibility(hidden);
+													background-color: $buttonBackgroundColor;
+													margin-bottom: $buttonMarginBottom;
+													padding: $buttonPaddingTopBottom $buttonPaddingLeftRight;
+													position: relative;
+													display: inline-block;
+													float: left;
+													min-width: $buttonMinWidth;
+													font-size: $buttonFontSize;
+													line-height: $buttonLineHeight;
+													text-align: center;
+													color: $buttonFontColor;
+													border: $buttonBorderSize $buttonBorderStyle $buttonBorderColor;
+													font-family: $baseFontFamily;
+													font-weight: $buttonFontWeight;
+													cursor: pointer;
+													outline: none !important;
+
+		// BUTTON STATES
+		&:link,
+		&:visited
+														{
+														color: $buttonFontColor;
+														text-decoration: none !important;
+														}
+		&:hover											{
+														background-color: $buttonHoverBackgroundColor;
+														border: $buttonHoverBorderSize $buttonHoverBorderStyle $buttonHoverBorderColor;
+														}
+		&:focus											{
+														background-color: $buttonFocusBackgroundColor;
+														border-color: $buttonFocusBorderColor;
+														}
+		&:active										{
+														@include box-shadow(0, 0, 0, transparent);
+														@include transition(translate(0, 0));
+														background-color: buttonActiveBackgroundColor;
+														}
+
+		// DISABLED BUTTON
+		&.evo-btn-disabled,
+		&[disabled]										{
+														background-image: none;
+														background-color: $buttonDisabledBackgroundColor;
+														border-color: $buttonDisabledBorderColor;
+														color: $buttonDisabledFontColor;
+														cursor: default;
+			&:hover											{border-color: $buttonDisabledBorderColor;}
+														}
+													}
+
+	// PRIMARY BUTTON
+	.evo-btn-primary,
+	.evo-btn-primary:link,
+	.evo-btn-primary:visited						{
+													@include text-shadow(0, -1px, 1px, $buttonPrimaryTextShadowColor);
+													background-color: $buttonPrimaryBackgroundColor;
+													color: $buttonPrimaryFontColor;
+													}
+	.evo-btn-primary:hover							{background-color: $buttonHoverPrimaryBackgroundColor;}
+	.evo-btn-primary:focus							{background-color: $buttonFocusPrimaryBackgroundColor;}
+	.evo-btn-primary:active							{background-color: $buttonActivePrimaryBackgroundColor;}
+	.evo-btn-primary.evo-btn-disabled,
+	.evo-btn-primary[disabled]						{
+													background-image: none;
+													background-color: $buttonPrimaryDisabledBackgroundColor;
+													border-color: $buttonPrimaryDisabledBorderColor;
+													color: $buttonPrimaryDisabledFontColor;
+		&:hover											{border-color: $buttonPrimaryDisabledBorderColor;}
+													}
+
+	// FIRST CHILD BUTTON (IN A HORIZONTAL LAYOUT OF BUTTONS)
+	.evo-btn-first									{margin-left: 0;}
+
+	// 100% WIDE BUTTON												
+	.evo-btn-block									{
+													display: block;
+													width: 100%;
+													margin-left: 0;
+													margin-right: 0;
+													}
+
+	// BUTTON SIZE OPTIONS
+	.evo-btn-xxx-small								{
+													padding: ($buttonPaddingTopBottom/2) ($buttonPaddingLeftRight/2);
+													font-size: $buttonXXXSmallFontSize;
+													line-height: $buttonXXXSmallFontSize;
+													}
+	.evo-btn-xx-small								{
+													padding: ($buttonPaddingTopBottom/1.75) ($buttonPaddingLeftRight/1.75);
+													font-size: $buttonXXSmallFontSize;
+													line-height: $buttonXXSmallFontSize;
+													}
+	.evo-btn-x-small								{
+													padding: ($buttonPaddingTopBottom/1.5) ($buttonPaddingLeftRight/1.5);
+													font-size: $buttonXSmallFontSize;
+													line-height: $buttonXSmallFontSize;
+													}
+	.evo-btn-small									{
+													padding: ($buttonPaddingTopBottom/1.3) ($buttonPaddingLeftRight/1.3);
+													font-size: $buttonSmallFontSize;
+													line-height: $buttonSmallFontSize;
+													}
+	.evo-btn-medium									{font-size: $buttonMediumFontSize;}
+	.evo-btn-large									{
+													padding: ($buttonPaddingTopBottom*1.3) ($buttonPaddingLeftRight*1.3);
+													font-size: $buttonLargeFontSize;
+													line-height: $buttonLargeFontSize;
+													}
+	.evo-btn-x-large								{
+													padding: ($buttonPaddingTopBottom*1.5) ($buttonPaddingLeftRight*1.5);
+													font-size: $buttonXLargeFontSize;
+													line-height: $buttonXLargeFontSize;
+													}
+	.evo-btn-xx-large								{
+													padding: ($buttonPaddingTopBottom*1.75) ($buttonPaddingLeftRight*1.75);
+													font-size: $buttonXXLargeFontSize;
+													line-height: $buttonXXLargeFontSize;
+													}
+	.evo-btn-xxx-large								{
+													padding: ($buttonPaddingTopBottom*2) ($buttonPaddingLeftRight*2);
+													font-size: $buttonXXXLargeFontSize;
+													line-height: $buttonXXXLargeFontSize;
+													}
+
+	// SMALL BUTTON SIZES
+	.evo-btn-xxx-small,
+	.evo-btn-xx-small,
+	.evo-btn-x-small,
+	.evo-btn-small									{@include border-radius(#{$buttonBorderRadius/1.25});}
+
+	// NO MARGIN OPTION											
+	.evo-btn-nomargin								{margin-left: 0;}
+													
+	// BUTTON GROUP
+	.evo-btn-group-vertical							{
+													@include clearfix;
+		.evo-btn										{
+														@include border-radius(0);
+														display: block;
+														float: none;
+														border-top: 0;
+														margin-left: 0;
+														}
+		.evo-btn:first-child							{
+														@include border-radius($buttonBorderRadius $buttonBorderRadius 0 0);
+														border-top: $buttonVertGroupBorderTopSize $buttonVertGroupBorderTopStyle $buttonVertGroupBorderTopColor;
+														}
+		.evo-btn:last-child								{@include border-radius(0 0 $buttonBorderRadius $buttonBorderRadius);}
+													}
+	.evo-btn-group-horizontal						{
+													@include clearfix;
+		.evo-btn										{
+														@include border-radius(0);
+														float: left;
+														margin-left: 0;
+														border-top: $buttonHorzGroupBorderTopSize $buttonHorzGroupBorderTopStyle $buttonHorzGroupBorderTopColor;
+														border-bottom: $buttonHorzGroupBorderBottomSize $buttonHorzGroupBorderBottomStyle $buttonHorzGroupBorderBottomColor;
+														border-left: 0;
+														border-right: $buttonHorzGroupBorderRightSize $buttonHorzGroupBorderRightStyle $buttonHorzGroupBorderRightColor;
+														}
+		.evo-btn:first-child							{
+														@include border-radius($buttonBorderRadius 0 0 $buttonBorderRadius);
+														border-left: $buttonHorzGroupFirstChildBorderLeftSize $buttonHorzGroupFirstChildBorderLeftStyle $buttonHorzGroupFirstChildBorderLeftColor;
+														}
+		.evo-btn:last-child								{@include border-radius(0 $buttonBorderRadius $buttonBorderRadius 0);}
+													}
+
+	// SPECIAL BUTTONS FOR JQUERY UI DATEPICKER
+	.ui-datepicker-buttonpane						{
+		.ui-state-default								{
+														@extend .evo-btn;
+														font-size: $buttonXXSmallFontSize;
+														min-width: 52px;
+														float: none;
+														}
+
+		.ui-priority-primary							{@extend .evo-btn-primary;}
+		.ui-priority-primary:hover						{@extend .evo-btn-primary:hover;}
+		.ui-priority-primary:focus						{@extend .evo-btn-primary:focus;}
+
+		.ui-priority-secondary							{
+														@extend .evo-btn;
+														margin-left: 0;
+														}
+		.ui-priority-secondary:hover					{@extend .evo-btn:hover;}
+		.ui-priority-secondary:focus					{@extend .evo-btn:focus;}
+													}
+
+	// SPECIAL BUTTONS FOR JQUERY UI DIALOG
+	.ui-dialog-buttonpane							{
+		.ui-state-default								{
+														@extend .evo-btn;
+			&:first-child									{margin-left: 0;}
+														}
+		.ui-state-default.evo-btn-primary				{@extend .evo-btn-primary;}
+		.ui-state-default[disabled]						{@extend .evo-btn.evo-btn-disabled;}
+		.ui-state-default.evo-btn-primary[disabled]		{@extend .evo-btn-primary.evo-btn-disabled;}
+													}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			// CORE BUTTON SETUP
+			.evo-btn								{
+													margin-left: $fluidGridColumnWidth;
+													margin-bottom: 0;
+													padding: $buttonPaddingTopBottomLargeBreakpoint $buttonPaddingLeftRightLargeBreakpoint;
+													min-width: $buttonMinWidthLargeBreakpoint;
+													font-size: $buttonFontSizeLargeBreakpoint;
+													line-height: $buttonLineHeightLargeBreakpoint;
+													}
+
+			// FIRST CHILD BUTTON (IN A HORIZONTAL LAYOUT OF BUTTONS)
+			.evo-btn-first							{margin-left: 0;}
+
+			// BUTTON SIZE OPTIONS
+			.evo-btn-xxx-small						{
+													padding: ($buttonPaddingTopBottomLargeBreakpoint/2) ($buttonPaddingLeftRightLargeBreakpoint/2);
+													min-width: ($buttonMinWidthLargeBreakpoint/2.25);
+													font-size: $buttonXXXSmallFontSizeLargeBreakpoint;
+													line-height: $buttonXXXSmallFontSizeLargeBreakpoint;
+													}
+			.evo-btn-xx-small						{
+													padding: ($buttonPaddingTopBottomLargeBreakpoint/1.75) ($buttonPaddingLeftRightLargeBreakpoint/1.75);
+													min-width: ($buttonMinWidthLargeBreakpoint/1.75);
+													font-size: $buttonXXSmallFontSizeLargeBreakpoint;
+													line-height: $buttonXXSmallFontSizeLargeBreakpoint;
+													}
+			.evo-btn-x-small						{
+													padding: ($buttonPaddingTopBottomLargeBreakpoint/1.5) ($buttonPaddingLeftRightLargeBreakpoint/1.5);
+													min-width: ($buttonMinWidthLargeBreakpoint/1.5);
+													font-size: $buttonXSmallFontSizeLargeBreakpoint;
+													line-height: $buttonXSmallFontSizeLargeBreakpoint;
+													}
+			.evo-btn-small							{
+													padding: ($buttonPaddingTopBottomLargeBreakpoint/1.3) ($buttonPaddingLeftRightLargeBreakpoint/1.3);
+													min-width: ($buttonMinWidthLargeBreakpoint/1.25);
+													font-size: $buttonSmallFontSizeLargeBreakpoint;
+													line-height: $buttonSmallFontSizeLargeBreakpoint;
+													}
+			.evo-btn-medium							{font-size: $buttonMediumFontSizeLargeBreakpoint;}
+			.evo-btn-large							{
+													padding: ($buttonPaddingTopBottomLargeBreakpoint*1.3) ($buttonPaddingLeftRightLargeBreakpoint*1.3);
+													min-width: ($buttonMinWidthLargeBreakpoint*1.25);
+													font-size: $buttonLargeFontSizeLargeBreakpoint;
+													line-height: $buttonLargeFontSizeLargeBreakpoint;
+													}
+			.evo-btn-x-large						{
+													padding: ($buttonPaddingTopBottomLargeBreakpoint*1.5) ($buttonPaddingLeftRightLargeBreakpoint*1.5);
+													min-width: ($buttonMinWidthLargeBreakpoint*1.5);
+													font-size: $buttonXLargeFontSizeLargeBreakpoint;
+													line-height: $buttonXLargeFontSizeLargeBreakpoint;
+													}
+			.evo-btn-xx-large						{
+													padding: ($buttonPaddingTopBottomLargeBreakpoint*1.75) ($buttonPaddingLeftRightLargeBreakpoint*1.75);
+													min-width: ($buttonMinWidthLargeBreakpoint*1.75);
+													font-size: $buttonXXLargeFontSizeLargeBreakpoint;
+													line-height: $buttonXXLargeFontSizeLargeBreakpoint;
+													}
+			.evo-btn-xxx-large						{
+													padding: ($buttonPaddingTopBottomLargeBreakpoint*2) ($buttonPaddingLeftRightLargeBreakpoint*2);
+													min-width: ($buttonMinWidthLargeBreakpoint*2);
+													font-size: $buttonXXXLargeFontSizeLargeBreakpoint;
+													line-height: $buttonXXXLargeFontSizeLargeBreakpoint;
+													}
+
+			// SPECIAL BUTTONS FOR JQUERY UI DATEPICKER
+			.ui-datepicker-buttonpane				{
+				.ui-state-default						{font-size: $buttonXXSmallFontSizeLargeBreakpoint;}
+													}
+
+		}
+		
+	}// endif
+
+}//endif

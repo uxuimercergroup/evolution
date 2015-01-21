@@ -1,0 +1,42 @@
+{
+	"title": "Vertical Stepper",
+
+	"reference-overview": 
+		"<p>Use this control when presenting the user with a multi step flow. This component is related to the <a href='/objects/horizontal-stepper'>Horizontal Stepper</a>.</p>",
+
+	"reference-usage": 
+		"<p>The Vertical Stepper should be used when there is a small, finite number of steps.</p><p>Use the Vertical Stepper when you want to dedicate more of the prime screen real estate to the content in the multi-step workflow.</p><p>The Stepper is used in a mutli-step workflow to let the user know:</p><ul><li>How many steps are involved</li><li>Which steps have been completed</li><li>What the current step is</li><li>How many steps are remaining</li></ul>",
+
+	"reference-details": 
+		"<h3>States</h3><p>There are three possible states for a step:</p><ul><li>Completed</li><li>Current</li><li>Future</li></ul><h3>Labels</h3><ul><li>Limit the number of words in the label. Two or fewer words should be the goal.</li><li>Labels should not wrap within a container. If a step is too wide to fit on a line, it will bump to the next line.</li></ul><h3>Links</h3><ul><li>Completed Steps can be configured to be links to that step. Current Step and Future Steps should never be links</li><li>When a Completed Step is used as a link, the entire step/block should be a \"hot zone\" (ie., an active link)</li></ul><h3>Data Storage</h3><p>Any step that has valid data will be marked as completed.</p><p>Data entered by the user should be saved when the user clicks \"Back\" or \"Next.\"</p><p>If the user completes all steps up to and including Step 4, for example, then clicks to Step 1, all completed steps should retain their completed state.</p>",
+
+	"reference-mobile": 
+		"<h3>Responsiveness</h3><p>As the browser width decreases from the largest size down until the tablet size, the individual steps within the Vertical Stepper will wrap.</p><p>Once the browser width gets to the phone size, the Vertical Stepper control will only display the step numbers (no labels) with state color backgrounds across the top of the mobile screen.</p>",
+
+	"reference-technical": 
+		"<p>Technical details go here...</p>",
+
+	
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "false",
+	"reference-example-version-label":
+		"",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"",
+	"reference-code-html-content-block-post": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
+}

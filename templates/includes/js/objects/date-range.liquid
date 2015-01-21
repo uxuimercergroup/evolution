@@ -1,0 +1,13 @@
+// From date datepicker
+evoDatepickerRange('js-evo-datepicker-range-stacked-from',{
+	onClose: function(selectedDate) {
+		jQuery('#js-evo-datepicker-range-stacked-to').datepicker('option', 'minDate', selectedDate); // On calendar close, set the min date of the "To" calendar to the date picked in the "From" calendar
+	}
+});
+
+// To date datepicker
+evoDatepicker('js-evo-datepicker-range-stacked-to',{
+	onClose: function(selectedDate) {
+		jQuery('#js-evo-datepicker-range-stacked-from').datepicker('option', 'maxDate', selectedDate); // On calendar close, set the max date of the "From" calendar to the date picked in the "To" calendar
+	}
+});

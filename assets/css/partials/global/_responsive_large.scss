@@ -1,0 +1,79 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Site Responsive CSS - Large Media Query - 1025px - 1440px
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+// LARGE MEDIA QUERY RANGE AND UP - 1025px +
+@media #{$large-up} {
+
+	
+
+}
+
+// LARGE MEDIA QUERY RANGE - 1025px - 1440px
+@media #{$large-only} {
+
+	/*--- REFERENCE PAGES -----------------------------------------------------------------*/
+
+	// ALTERNATE VIEWS BADGE
+	.evo-ref-alternate-views-badge.ui-tabs
+											{
+		.evo-btn-group-horizontal				{
+			.evo-btn								{
+				a										{
+														padding: 8px 9px 5px 9px;
+					[class^="evo-icon-"]					{display: none;}
+														}
+													}
+												}
+		.ui-tabs-panel							{
+			p, ul, ol, li, dt, dd					{
+													font-size: ($baseFontSizeLargeBreakpoint + 2px);
+													line-height: ($baseLineHeightLargeBreakpoint + 2px);
+													}
+			.prettyprint							{
+				li 										{
+														font-size: $baseFontSizeLargeBreakpoint;
+														line-height: $baseLineHeightLargeBreakpoint;
+														}
+													}
+												}
+											}
+
+	// DEVELOPER - SLIDING DRAWER
+	.evo-ref-sliding-drawer					{
+		.evo-ref-sliding-drawer-hdr				{top: 39px;}
+		.mCustomScrollbar						{padding-top: 136px;}
+											}
+
+
+	/*--- HOME PAGE -----------------------------------------------------------------------*/
+
+	// MARKETING SECTION - HOMEPAGE
+	.marketing-ctn							{
+		.img-section							{border-bottom: 0;}
+		.mkt-text								{
+			h1										{
+													margin-top: 40px;
+				span									{display: inline-block;}
+													}
+			.evo-icon-adv							{
+													display: block;
+													margin-top: 35px;
+													margin-right: 232px;
+													}
+												}
+											}
+
+	/*--- TYPE PAGE -----------------------------------------------------------------------*/
+	.evo-ref-type-table						{
+		td.evo-ref-type-example					{font-size: $baseFontSizeLargeBreakpoint !important;}
+											}
+
+	/*--- ICONS PAGE ----------------------------------------------------------------------*/
+	#icons-ctn								{
+		#icon-font-filter						{width: 100%;}
+											}
+												
+}

@@ -1,0 +1,23 @@
+<footer class="evo-footer">
+	<div id="nav-bookmark" class="evo-footer-adjust">
+		<div class="col-24 evo-footer-content-ctn">
+			<div class="col-10 evo-footer-logo first">
+				<img src="{{ "mercer_logo_126x18.png" | asset_url }}" alt="Mercer" width="126" height="18" />
+			</div>
+			<div class="col-13 evo-footer-copyright">
+				<ul class="evo-horizontal-list evo-horizontal-list-piped">
+					<li>&copy; {{ 'now' | date: "%Y" }} Mercer LLC, All Rights Reserved</li>
+					<li>
+						<a href="http://foundation.zurb.com/docs/" target="_blank">Foundation {{ global.foundation_version }}</a>
+					</li>
+					<li>
+						<a href="/change-log">{{ global.version_number }}</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-1">
+				<i class="evo-icon-tools evo-ref-sliding-drawer-btn js-evo-ref-sliding-drawer-btn" title="Developer Drawer"></i>
+			</div>
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,164 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Base Grid Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+
+.evo-row
+	{
+	@include grid-row($behavior: nest);
+	margin-left: 0;
+	margin-right: 0;
+	& > li, dd
+		{margin-bottom: 0;}
+	& > li
+		{list-style-type: none;}
+	& > dd
+		{margin-left: 0;}
+	}
+
+.evo-row-margin-bottom
+	{
+	@media #{$small-up}		{margin-bottom: 10px;}
+	@media #{$medium-up}	{margin-bottom: 20px;}
+	@media #{$large-up}		{margin-bottom: 30px;}
+	}
+
+
+
+
+.columns	{outline: 1px solid $gray-mid-dark;}
+
+
+
+
+// BODY
+body							{@include background-gradient($bodyBackgroundStartColor, $bodyBackgroundEndColor);}
+
+.evo-body-background			{@include background-gradient($bodyBackgroundBodyStartColor, $bodyBackgroundBodyEndColor);}
+
+// PAGE LAYOUT GRID
+section[role="main"]			{
+								background-color: $gridBackgroundColor;
+								padding: $basePadding $gridSiteGutterPadding;
+								}
+
+// EMPLOYEE PORTAL HOMEPAGE GRID
+.evo-homepage-background section[role="main"]
+								{background-color: $transparent;}
+
+//=== MEDIA QUERIES =========================================================================
+
+// SMALL MEDIA QUERY RANGE - 0 - 640px
+@if $use-small-only-mediaquery == true {
+		
+	@media #{$small-only} {
+		
+		// USE EVO SMALL MEDIAQUERY GRID TO LAYOUT COLUMNS HORIZONTALLY IN SMALL MEDIA QUERY, PUT CLASS ON CONTAINER WHICH HOLDS COLS
+		.evo-small-mediaquery-grid
+								{
+								@include grid-fluid-span-x($gridColumns, $fluidGridColumnWidth, $fluidGridColumnWidth);
+								@include grid-fluid-col;
+								@include grid-fluid-offset-x($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth);
+								margin: 0 auto;
+								width: $gridWidth;
+			[class*="col-"].first	{margin-left: 0;}
+			.col-24					{
+									float: none;
+									padding: 0 0 1px 0; // fixes collapsing margins
+									min-height: $fluidGridColumnWidth;
+									margin-left: 0;
+									}
+								}
+
+		.evo-small-mediaquery-grid.evo-grid-nomargin
+								{
+								@include grid-nomargin-span-x($gridColumns, $fluidGridNoMarginColumnWidth, $fluidGridGutterWidth);
+								@include grid-nomargin-col;
+								@include clearfix;
+								}
+
+		.col-24					{@include clearfix;}
+
+	}
+}
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+@if $use-medium-up-mediaquery == true {
+		
+	@media #{$medium-up} {
+		
+		// GLOBAL SETUP
+		.evo-masthead-adjust,
+		.evo-footer-adjust,
+		.evo-hero-banner-adjust,
+		.evo-grid				{
+								@include grid-fluid-span-x($gridColumns, $fluidGridColumnWidth, $fluidGridColumnWidth);
+								@include grid-fluid-col;
+								@include grid-fluid-offset-x($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth);
+								@include clearfix;
+								margin: 0 auto;
+								width: $gridWidth;
+								min-width: $gridMinWidth;
+								
+								// If using 980 width layout
+								@if $use-grid-980 == true{
+									max-width: $gridMaxWidth980;
+								}
+								
+								// If using 1200 width layout
+								@if $use-grid-1200 == true{
+									max-width: $gridMaxWidth1200;
+								}
+
+			[class*="col-"].first	{margin-left:0;}
+			.col-24					{
+									@include clearfix;
+									float: none;
+									padding: 0 0 1px 0; // fixes collapsing margins
+									min-height: $fluidGridColumnWidth;
+									margin-left: 0;
+									}
+								}
+
+		// HTML SETUP
+		html					{
+								min-height: $htmlMinHeight;
+								height: auto !important;
+								height: $htmlMinHeight;
+								}
+
+		// GRID SETUP
+		.evo-grid				{
+								display: block;
+								text-align: left;
+								}
+								
+		.evo-grid-nomargin		{
+								@include grid-nomargin-span-x($gridColumns, $fluidGridNoMarginColumnWidth, $fluidGridGutterWidth);
+								@include grid-nomargin-col;
+								@include clearfix;
+								}
+
+		// PAGE LAYOUT GRID
+		section[role="main"]	{
+								height: auto !important;
+								height: $gridMinHeight;
+								min-height: $gridMinHeight;
+								padding: $basePadding $gridSiteGutterPadding 1px $gridSiteGutterPadding;
+								}
+
+		// GRID COLUMN FLOW OPPOSITE
+		// Add class of "evo-col-flow-opposite" to columns where you want content to display first on mobile but appear on the right on larger screens.
+		.evo-masthead-adjust,
+		.evo-footer-adjust,
+		.evo-hero-banner-adjust,
+		.evo-grid,
+		.evo-grid-nomargin		{
+			[class*="col-"].evo-col-flow-opposite
+									{float: right;}
+								}
+		
+	}
+}

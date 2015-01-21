@@ -1,0 +1,360 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Base Form Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-forms == true{
+
+	// GLOBAL FORM ELEMENTS
+	form											{margin: 0 0 $formMarginBottom 0;}
+	fieldset										{
+													border: 0;
+													padding: 0;
+													margin: 0;
+													}
+	label,
+	input,
+	select,
+	textarea										{
+													font-size: $baseFontSize;
+													line-height: $baseLineHeight;
+													}
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"],
+	select,
+	textarea										{
+													@include border-radius($baseInputBorderRadius);
+													@include box-shadow(inset 0, 1px, 1px, $baseInputShadowColor);
+													background-color: $baseInputBackgroundColor;
+													border: $baseInputBorderSize solid $baseInputBorderColor;
+													color: $baseInputColor;
+													display: inline-block;
+													height: auto;
+													padding: $baseInputPadding;
+													font-size: $baseFontSize;
+													vertical-align: middle;
+													width: 100%;
+													}
+
+	select											{padding: 1px 2px 2px 2px;}
+	label											{
+													color: $labelFontColor;
+													display: block;
+													font-family: $fontSemiBoldStack;
+													margin-bottom: $labelMarginBottom;
+													vertical-align: bottom;
+													}
+
+	input,
+	textarea										{@include placeholder();}
+	input:focus,
+	select:focus,
+	textarea:focus
+													{
+													@include box-shadow(0, 0, 5px, $inputFocusShadowColor);
+													border-color: $inputFocusBorderColor;
+													outline: 0;
+													}
+
+	legend											{padding: 0;}
+	fieldset ol										{
+													margin: 0;
+													padding: 0;
+													list-style-position: outside;
+													}
+	fieldset ol li									{
+													@include clearfix;
+													list-style-type:none;
+													padding: 0;
+													margin-bottom: $marginBottomFormElements;
+													}
+
+	input[type="hidden"]							{display:none;}
+	input[type="checkbox"],
+	input[type="radio"]								{
+													border:0;
+													display:inline;
+													width:$baseCheckboxRadioWidth;
+													}
+													
+	input[type="text"]								{
+		&:valid											{color:$inputValidTextColor;}
+		&:invalid										{color:$inputInvalidTextColor;}
+													}
+
+	// RIGHT ALIGN LABELS
+	.evo-form-label-right							{
+		label											{text-align: left;}
+													}
+
+	// RADIO AND CHECKBOX STYLES
+	.evo-checkbox,
+	.evo-radio										{
+													display: block;
+		label											{
+														font-family: $fontRegularStack;
+														font-size: $baseCheckboxRadioFontSize;
+														margin: 0 8px 0 0;
+														padding: 5px;
+			input											{
+															position: relative;
+															top: 1px;
+															}
+														}
+													}
+
+	.evo-checkbox									{
+		label											{margin-bottom: 2px;}
+													}
+
+	// EVO FORM
+	.evo-form										{
+		.evo-required									{
+			.evo-icon-evo-asterisk-small					{
+															margin-right: 0;
+															top: 2px;
+															}
+														}
+
+		// INLINE FORM ELEMENTS
+		.evo-form-inline-element						{
+														display:inline-block;
+														width:auto;
+														}
+		// FORM INFO TEXT
+		.evo-info										{color: $formInfoTextColor;}
+													}
+
+	// INLINE FORM
+	.evo-form-inline								{
+		label											{display: inline-block;}
+		input, select									{width: auto;}
+													}
+
+	// EVO FORM ACTION ROW
+	.evo-form-action								{
+													margin: 0;
+													padding: $formActionPaddingTop 0 0 0;
+													}
+
+	// FORM ERROR HANDLING
+	.evo-error										{
+		label											{color: $inputInvalidTextColor;}
+
+		.evo-checkbox,
+		.evo-radio										{
+			label											{color: $labelFontColor;}
+														}
+
+		.evo-required									{
+														color: $inputInvalidTextColor;
+			.evo-icon-color-gray-darker						{color: $errorBorderColor;}
+														}
+		input[type="text"],
+		input[type="password"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="date"],
+		input[type="month"],
+		input[type="time"],
+		input[type="week"],
+		input[type="number"],
+		input[type="email"],
+		input[type="url"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="color"],
+		select,
+		textarea										{
+														background-color: $errorBackgroundColor;
+														border-color: $errorBorderColor;
+														color: $inputInvalidTextColor;
+														}
+		input,
+		textarea										{@include placeholder($inputInvalidTextColor);}
+		.evo-info										{color: $inputInvalidTextColor;}
+													}
+
+	// EVO FORM TABLE LAYOUT
+	// Used on multi-column stacked form
+	.evo-form-table-layout							{
+		fieldset										{
+														display: block;
+			ol												{
+															display: block;
+				li												{
+																display: block;
+																padding: 0;
+																width: 100% !important;
+																vertical-align: top;
+																}
+				.evo-form-action								{
+																padding-bottom: 0;
+																}
+															}
+														}
+													}
+
+	// SELECTED CHECKBOX
+	// Highlights background element when a checkbox has been selected
+	.evo-selected-checkbox							{
+		.evo-checkbox									{
+			label											{
+															@include border-radius($selectedCheckboxBorderRadius);
+															padding: 10px;
+															margin: 0 0 10px 0;
+															border: 1px solid $selectedCheckboxBorderColor;
+															}
+
+			// WHEN SELECTED CHECKBOX IS CHECKED
+			.evo-selected-checkbox-checked					{
+															@include border-radius($selectedCheckboxBorderRadius);
+															background-color: $selectedCheckboxBackgroundColor;
+															border: 1px solid transparent;
+															}
+														}
+													}
+
+	// FORM IE9 FIXES
+	.ie9											{
+		
+		// GLOBAL FORM ELEMENTS
+		input											{line-height:$baseFontSize;}
+
+		// RADIO AND CHECKBOX STYLES
+		.evo-radio										{
+			label											{
+				input											{top: 3px;}
+															}
+														}
+		.evo-checkbox									{
+			label											{
+				input											{top: 2px;}
+															}
+														}
+													}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// SMALL MEDIA QUERY RANGE - 0 - 640px
+	@if $use-small-only-mediaquery == true {
+		
+		@media #{$small-only} {
+
+			// INLINE FORM
+			.evo-form-inline						{
+				[class*="col-"]							{
+														float: none;
+														width: 100%;
+														}
+													}
+
+		}
+
+	}//endif
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			// GLOBAL FORM ELEMENTS
+			label,
+			input,
+			select,
+			textarea								{
+													font-size: $baseFontSizeLargeBreakpoint;
+													line-height: $baseLineHeightLargeBreakpoint;
+													}
+
+			input[type="text"],
+			input[type="password"],
+			input[type="datetime"],
+			input[type="datetime-local"],
+			input[type="date"],
+			input[type="month"],
+			input[type="time"],
+			input[type="week"],
+			input[type="number"],
+			input[type="email"],
+			input[type="url"],
+			input[type="search"],
+			input[type="tel"],
+			input[type="color"],
+			select,
+			textarea								{font-size: $baseFontSizeLargeBreakpoint;}
+
+			// RIGHT ALIGN LABELS
+			.evo-form-label-right					{
+				label									{text-align: right;}
+													}
+
+			// RADIO AND CHECKBOX STYLES
+			.evo-checkbox,
+			.evo-radio								{
+				label									{
+														font-size: $baseCheckboxRadioFontSizeLargeBreakpoint;
+														padding: 2px 0 0 4px;
+														}
+													}
+
+			// INLINE FORM
+			.evo-form-inline						{
+				label									{
+														position: relative;
+														top: 2px;
+														}
+													}
+
+			// EVO FORM TABLE LAYOUT
+			// Used on multi-column stacked form
+			.evo-form-table-layout					{
+				fieldset								{
+														display: table;
+					ol										{
+															display: table-row;
+						li										{
+																display: table-cell;
+																padding: 0 $basePadding $basePadding 0;
+																width: 20% !important;
+																vertical-align: bottom;
+																}
+															}
+														}
+													}
+
+			// SELECTED CHECKBOX
+			// Highlights background element when a checkbox has been selected
+			.evo-selected-checkbox					{
+				.evo-checkbox							{
+					label									{
+															padding: 2px 0 0 4px;
+															margin: 0 3px 3px 0;
+															border: 1px solid transparent !important;
+															}
+														}
+													}
+
+			// FORM IE9 FIXES
+			.ie9									{
+				input									{line-height:$baseFontSizeLargeBreakpoint;}
+													}
+
+		}
+		
+	}// endif
+
+}//endif

@@ -1,0 +1,57 @@
+{
+  "title": "Browser Testing &amp; Support",
+
+  "reference-overview": 
+  	"<p class='evo-intro-text'>Evolution Library is a modern framework for modern browsers. As such, Evolution Library is intended for B Grade browsers and above. For F Grade browsers, which are explicitly unsupported and untested, elements will render differently from supported browsers.</p>",
+
+
+
+  "reference-browser-table-data": [
+		{
+		"browserType": "Internet Explorer",
+		"gradeA": "10, 11",
+		"gradeB": "9",
+		"gradeF": "8 and below"
+		},
+		{
+		"browserType": "FireFox",
+		"gradeA": "Latest version",
+		"gradeB": "10 and higher",
+		"gradeF": "9 and below"
+		},
+		{
+		"browserType": "Chrome",
+		"gradeA": "Latest version",
+		"gradeB": "--",
+		"gradeF": "--"
+		},
+		{
+		"browserType": "Safari",
+		"gradeA": "Latest version",
+		"gradeB": "6",
+		"gradeF": "5 and below"
+		},
+		{
+		"browserType": "Opera",
+		"gradeA": "Support coming",
+		"gradeB": "--",
+		"gradeF": "--"
+		}
+	],
+
+	"reference-browser-key-header": "Browser Grade",
+	"reference-browser-grade-a": "A - Supported version of modern browser",
+	"reference-browser-grade-b": "B - Minimum browser support",
+	"reference-browser-grade-f": "F - Explicitly unsupported and untested",
+
+	"reference-browser-faq-data": [
+		{
+		"reference-browser-faq-data-question": "Do you support IE Compatibility mode?",
+		"reference-browser-faq-data-answer": "We do not support IE Compatibility mode for any version of IE. IE Compatibility mode will make IE render as IE7 (or worse) which is not supported by Evolution. IE Compatibility mode is also not web standards compliant. Evolution supports IE9 and up, in standards mode. Lastly, through a meta tag, we tell IE to render at the highest version and standards mode available in the version of IE currently being used."
+		},
+		{
+		"reference-browser-faq-data-question": "Why are corners not rounded in IE9?",
+		"reference-browser-faq-data-answer": "IE9 has trouble applying rounded corners and gradients (which are applied using an IE filter since IE9 does not understand CSS3 gradient background). Since we want the buttons to look like buttons we have chosen the gradient of the button over the rounded corners. IE9 will have square corners everywhere."
+		}
+	]
+}

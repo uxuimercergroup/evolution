@@ -1,0 +1,42 @@
+<snippet>
+	<content><![CDATA[
+<!-- $1 TABLE - BEGINS -->
+	<div class="evo-table-small-mediaquery">
+		<table class="evo-table evo-footable evo-table-borders evo-table-striped evo-table-hover $2" data-filter="#$3" id="$4" border="0" cellpadding="0" cellspacing="0" title="$5" summary="$6">
+			<caption>
+				<div class="col-19 first">&nbsp;$7</div>
+				<div class="col-5 evo-tbl-data-filter">
+					<input id="$3" type="text" title="Type to filter results." tabindex="$8" placeholder="Filter" />
+				</div>
+			</caption>
+			<thead>
+				<tr>
+					<th class="$9" scope="col"><a href="javascript:;">$10</a></th>
+					<th class="$11" scope="col"><a href="javascript:;">$12</a></th>
+					<th class="$13" scope="col"><a href="javascript:;">$14</a></th>
+					<th class="$15" scope="col"><a href="javascript:;">$16</a></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="$17">$18</td>
+					<td class="$19">$20</td>
+					<td class="$21">$22</td>
+					<td class="$23">$24</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr class="$25">
+					$26
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+<!-- $1 TABLE - ENDS -->
+$27
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>table</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

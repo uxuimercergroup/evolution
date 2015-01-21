@@ -1,0 +1,26 @@
+<!-- TABLE WITH TOTAL ROW - BEGINS -->
+<div class="evo-table-small-mediaquery">
+	<table class="evo-table evo-table-borders evo-table-striped" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+		<thead>
+			<tr>
+				<th class="col-10" scope="col">First Name</th>
+				<th class="col-10" scope="col">Client</th>
+				<th class="col-4 evo-align-right" scope="col">Policies</th>
+			</tr>
+		</thead>
+		<tbody>{% for item in global.table_data %}
+			<tr>
+				<td>{{ item.first_name }}</td>
+				<td>{{ item.company }}</td>
+				<td class="evo-align-right">{{ item.num_of }}</td>
+			</tr>{% endfor %}
+		</tbody>
+		<tfoot>
+			<tr class="evo-total-row">
+				<td class="evo-align-right" colspan="2">Total</td>
+				<td class="evo-align-right">58</td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+<!-- TABLE WITH TOTAL ROW - ENDS -->

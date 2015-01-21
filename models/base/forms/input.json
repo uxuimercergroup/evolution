@@ -1,0 +1,60 @@
+{
+	"title": "Text Input",
+
+	"reference-overview": 
+		"<p>The Text Input element is the field in which the user can enter text on a form.</p>",
+
+	"reference-usage": 
+		"<p>Use the Text Input element when a user is required to enter a small amount of text on a form. For longer content, use the <a href='/base/forms/textarea'>Text Area</a> element.</p>",
+
+	"reference-details": 
+		"<ul><li>Text Input should default to the Attention/Highlight border color when the user clicks inside the box.</li><li>The Input Label should always be in Title Case.</li><li>Text Input should be adapted so it can be used with Placeholder Text if desired.</li><li>Text Input should be adapted so it can be used with an Icon preceding it if the designer wants to forgo a Label. An example of this would be using an icon of a cell phone for preceding a Text Input that requires the user to enter a phone number.</li><li>Text Input should be adapted so it can be used with a button, like if the Text Input is being used as a search function.</li><li>Text Input should be adapted so it can be used with add on text after the field, like adding the word, dollars or the abbreviation for pounds (lbs).</li></ul>",
+
+	"reference-mobile": 
+		"<p>The font size will increase slightly.</p><p>The input box will stretch 100% of the available width.</p>",
+
+	"reference-technical": 
+		"<h3>Cross browser compatibility</h3><p>IE9 doesn't support rounded corners on inputs, so we square the corners of the inputs.</p>",
+
+	
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "true",
+	"reference-example-version-label":
+		"Stacked",
+	"reference-example-version-label-2":
+		"Inline",
+	"reference-example-version-label-3":
+		"Placeholder Text",
+	"reference-example-version-label-4":
+		"Only Numbers",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"",
+	"reference-code-html-content-block-post": 
+		"",
+	"reference-code-html-content-block-pre-2": 
+		"",
+	"reference-code-html-content-block-post-2": 
+		"",
+	"reference-code-html-content-block-pre-3": 
+		"",
+	"reference-code-html-content-block-post-3": 
+		"",
+	"reference-code-html-content-block-pre-4": 
+		"",
+	"reference-code-html-content-block-post-4": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
+}

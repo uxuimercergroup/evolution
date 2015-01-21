@@ -1,0 +1,91 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Stepper Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-stepper == true{
+
+	// BADGE
+	.evo-badge				{
+							@include border-radius(100%);
+							background-color: $gray-mid-dark;
+							color: $white;
+							display: inline-block;
+							line-height: 1;
+							min-width: 23px;
+							padding: 3px 6px;
+							text-align: center;
+							white-space: nowrap;
+							}
+
+	// DEFAULT STEPPER
+	.evo-stepper			{
+							overflow: hidden;
+							margin: 0;
+		.evo-steps				{
+								color: $gray-mid-dark;
+								display: inline-block;
+								margin-left: $baseMargin;
+			a						{@include href-link($gray-mid-dark, none);}
+			.evo-stepper-text		{
+									display: none;
+									font-family: $fontSemiBoldFamily;
+									}
+			[class*="evo-icon"]		{
+									color: $gray-mid-dark;
+									margin: 0;
+									}
+								}
+
+		// COMPLETED STEP
+ 		.evo-stepper-completed	{
+			.evo-badge				{background-color: $green;}
+			[class*="evo-icon"]		{color: $green;}
+			.evo-stepper-text		{
+									color: $green;
+									font-family: $fontSemiBoldFamily;
+									}
+						 		}
+		// ACTIVE STEP
+ 		.evo-stepper-active		{
+			.evo-badge				{background-color: $tan-dark;}
+			[class*="evo-icon"]		{color: $tan-dark;}
+			.evo-stepper-text		{
+									color: $tan-dark;
+									font-family: $fontSemiBoldFamily;
+									}
+						 		}
+							}
+
+	// VERTICAL STEPPER
+	.evo-vertical-stepper	{
+							text-align: left;
+		.evo-steps				{
+								display: block;
+								margin-left: 0;
+								margin-bottom: 10px;
+			.evo-stepper-text		{display: inline-block;}
+			[class*="evo-icon"]		{display: none;}
+								}
+							}
+
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			.evo-stepper			{
+				.evo-steps				{
+					.evo-stepper-text		{display: inline-block;}
+										}
+									}
+
+		}
+
+	}//endif
+
+}//endif

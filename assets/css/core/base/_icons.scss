@@ -1,0 +1,623 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Base Icons Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-icons == true {
+
+	// IMAGE ICONS
+	@if $use-icon-image == true {
+
+		// IMAGE ICON DEFAULTS
+		.evo-image-icon							{
+												display: inline-block;
+												cursor: default;
+												position: relative;
+												background-position: 0 0;
+												background-repeat: no-repeat;
+												overflow:hidden;
+												}
+
+		// IMAGE ICON SIZE HELPERS
+		.evo-image-icon-size-small				{
+												width: 16px;
+												height: 16px;
+												}
+		.evo-image-icon-size-small.evo-image-icon-position-left,
+		.evo-image-icon-size-small.evo-image-icon-position-right
+												{top: 3px;}
+		.evo-image-icon-size-medium				{
+												width: 32px;
+												height: 32px;
+												}
+		.evo-image-icon-size-medium.evo-image-icon-position-left,
+		.evo-image-icon-size-medium.evo-image-icon-position-right
+												{top: 11px;}
+		.evo-image-icon-size-medium-large		{
+												width: 44px;
+												height: 44px;
+												}
+		.evo-image-icon-size-medium-large.evo-image-icon-position-left,
+		.evo-image-icon-size-medium-large.evo-image-icon-position-right
+												{top: 15px;}
+		.evo-image-icon-size-large				{
+												width: 49px;
+												height: 49px;
+												}
+		.evo-image-icon-size-large.evo-image-icon-position-left,
+		.evo-image-icon-size-large.evo-image-icon-position-right
+												{top: 20px;}
+		.evo-image-icon-size-x-large			{
+												width: 64px;
+												height: 64px;
+												}
+		.evo-image-icon-size-x-large.evo-image-icon-position-left,
+		.evo-image-icon-size-x-large.evo-image-icon-position-right
+												{top: 29px;}
+
+		// IMAGE ICON POSITIONING HELPERS
+		// Remember to put the icon code in the correct content order so the icon is before or after the label text
+		// If you want an icon on the left, then have the icon HTML code before the label text inside the label tag
+		// If you want an icon on the right, then have the icon HTML code after the label text inside the label tag
+		// If you want an icon on the top, then have the icon HTML code before the label text inside the label tag, and add the icon top positioning class to the icon HTML code
+		// If you want an icon on the bottom, then have the icon HTML code after the label text inside the label tag, and add the icon bottom positioning class to the icon HTML code
+		.evo-image-icon-position-left			{margin-right: 4px;}
+		.evo-image-icon-position-right			{margin-left: 4px;}
+		.evo-image-icon-position-top,
+		.evo-image-icon-position-bottom			{
+												display: block;
+												margin: 0 auto;
+												}
+		
+		// IMAGE ICON MISC HELPERS
+		// Loading image icon fallback since IE9 does not understand CSS3 animations
+		.evo-image-icon-loading-fallback		{display: none;}
+
+	}//endif
+
+
+	// ICON FONT
+	@if $use-icon-font == true {
+
+		// ICON FONT DEFAULTS
+		[class^="evo-icon-"]					{
+												speak: none;
+												font-style: normal;
+												font-weight: normal;
+												font-variant: normal;
+												text-transform: none;
+												font-size: $iconFontSize;
+												line-height: 1;
+												color: $iconFontColor;
+												display: inline-block;
+												text-decoration: none;
+												width: 1em;
+												text-align: center;
+												position: relative;
+												-webkit-font-smoothing: antialiased;
+												-moz-osx-font-smoothing: grayscale;
+												}
+
+		// ICON FONT AS LINKS
+		a[class^="evo-icon-"]					{
+												text-decoration: none !important;
+												color: $iconFontColor;
+												cursor: pointer;
+												}
+
+		// ICON FONT SIZE HELPERS
+		// There are four font icon sizes: small, medium, large, x-large. The default size of icons is the small size.
+		.evo-icon-size-small					{font-size: $iconFontSize;}
+		.evo-icon-size-small.evo-icon-position-left,
+		.evo-icon-size-small.evo-icon-position-right
+												{top: 2px;}
+		.evo-icon-size-medium					{font-size: ($iconFontSize*2);}
+		.evo-icon-size-medium.evo-icon-position-left,
+		.evo-icon-size-medium.evo-icon-position-right
+												{top: 10px;}
+		.evo-icon-size-large					{font-size: ($iconFontSize*3);}
+		.evo-icon-size-large.evo-icon-position-left,
+		.evo-icon-size-large.evo-icon-position-right
+												{top: 16px;}
+		.evo-icon-size-x-large					{font-size: ($iconFontSize*4);}
+		.evo-icon-size-x-large.evo-icon-position-left,
+		.evo-icon-size-x-large.evo-icon-position-right
+												{top: 24px;}
+
+		// ICON FONT POSITIONING HELPERS
+		// Remember to put the icon code in the correct content order so the icon is before or after the label text
+		// If you want an icon on the left, then have the icon HTML code before the label text inside the label tag
+		// If you want an icon on the right, then have the icon HTML code after the label text inside the label tag
+		// If you want an icon on the top, then have the icon HTML code before the label text inside the label tag, and add the icon top positioning class to the icon HTML code
+		// If you want an icon on the bottom, then have the icon HTML code after the label text inside the label tag, and add the icon bottom positioning class to the icon HTML code
+		.evo-icon-position-left					{margin-right: 5px;}
+		.evo-icon-position-right				{margin-left: 5px;}
+		.evo-icon-position-top,
+		.evo-icon-position-bottom				{
+												display: block;
+												margin: 0 auto;
+												}
+
+		// ICON FONT COLOR HELPERS
+
+		[class^="evo-icon-"].evo-icon-color-white,
+		a[class^="evo-icon-"].evo-icon-color-white
+												{color: $iconFontColorWhite !important;}
+
+		[class^="evo-icon-"].evo-icon-color-black,
+		a[class^="evo-icon-"].evo-icon-color-black
+												{color: $iconFontColorBlack !important;}
+
+		[class^="evo-icon-"].evo-icon-color-gray-darker,
+		a[class^="evo-icon-"].evo-icon-color-gray-darker
+												{color: $iconFontColorGrayDarker !important;}
+
+		[class^="evo-icon-"].evo-icon-color-disabled,
+		a[class^="evo-icon-"].evo-icon-color-disabled
+												{color: $iconFontColorDisabled !important;}
+
+		// ICON FONT COLOR HELPERS - MESSAGES
+		[class^="evo-icon-"].evo-icon-color-confirmation,
+		a[class^="evo-icon-"].evo-icon-color-confirmation
+												{color: $iconFontColorConfirmation !important;}
+
+		[class^="evo-icon-"].evo-icon-color-error,
+		a[class^="evo-icon-"].evo-icon-color-error
+												{color: $iconFontColorError !important;}
+
+		[class^="evo-icon-"].evo-icon-color-attention,
+		a[class^="evo-icon-"].evo-icon-color-attention
+												{color: $iconFontColorAttention !important;}
+
+		[class^="evo-icon-"].evo-icon-color-info,
+		a[class^="evo-icon-"].evo-icon-color-info
+												{color: $iconFontColorInfo !important;}
+
+		// ICON FONT STYLES
+		// Icon text shadows
+		.evo-icon-style-shadow					{@include text-shadow(1px, 1px, 1px, rgba(127, 127, 127, 0.6));}
+
+		// Icon background gradients
+		// Background gradients on icon fonts only works in WebKit browsers (Safari, Chrome). A fallback text color is provided for other browsers.
+		[class^="evo-icon-"].evo-icon-style-gradient,
+		a[class^="evo-icon-"].evo-icon-style-gradient
+												{
+												color: $iconFontColor;
+												background: -webkit-linear-gradient(top, $iconFontBackgroundStartColor, $iconFontBackgroundEndColor);
+												-webkit-background-clip: text;
+												-webkit-text-fill-color: transparent;
+												}
+		[class^="evo-icon-"].evo-icon-style-gradient-gray-darker,
+		a[class^="evo-icon-"].evo-icon-style-gradient-gray-darker
+												{
+												color:  $iconFontColorGrayDarker;
+												background: -webkit-linear-gradient(top, $iconFontGrayDarkerBackgroundStartColor, $iconFontGrayDarkerBackgroundEndColor);
+												-webkit-background-clip: text;
+												-webkit-text-fill-color: transparent;
+												}
+		[class^="evo-icon-"].evo-icon-style-gradient-confirmation,
+		a[class^="evo-icon-"].evo-icon-style-gradient-confirmation
+												{
+												color: $iconFontColorConfirmation;
+												background: -webkit-linear-gradient(top, $iconFontConfirmationBackgroundStartColor, $iconFontConfirmationBackgroundEndColor);
+												-webkit-background-clip: text;
+												-webkit-text-fill-color: transparent;
+												}
+		[class^="evo-icon-"].evo-icon-style-gradient-error,
+		a[class^="evo-icon-"].evo-icon-style-gradient-error
+												{
+												color: $iconFontColorError;
+												background: -webkit-linear-gradient(top, $iconFontErrorBackgroundStartColor, $iconFontErrorBackgroundEndColor);
+												-webkit-background-clip: text;
+												-webkit-text-fill-color: transparent;
+												}
+		[class^="evo-icon-"].evo-icon-style-gradient-attention,
+		a[class^="evo-icon-"].evo-icon-style-gradient-attention
+												{
+												color: $iconFontColorAttention;
+												background: -webkit-linear-gradient(top, $iconFontAttentionBackgroundStartColor, $iconFontAttentionBackgroundEndColor);
+												-webkit-background-clip: text;
+												-webkit-text-fill-color: transparent;
+												}
+		[class^="evo-icon-"].evo-icon-style-gradient-info,
+		a[class^="evo-icon-"].evo-icon-style-gradient-info
+												{
+												color: $iconFontColorInfo;
+												background: -webkit-linear-gradient(top, $iconFontInfoBackgroundStartColor, $iconFontInfoBackgroundEndColor);
+												-webkit-background-clip: text;
+												-webkit-text-fill-color: transparent;
+												}
+
+		// Icon Animation
+		@include keyframe(evo-icon-animation-rotate)
+												{
+			0% 										{@include rotate(0);}
+		 
+			100%									{@include rotate(360deg);}
+												}
+		.evo-icon-animation-rotate				{
+												@include animation(evo-icon-animation-rotate 1s infinite steps(8));
+												height: 1em;
+												}
+
+		// HIDE ICON LABEL TEXT BUT KEEP ACCESSIBLE
+		.evo-icon-hide-text						{
+												font: 0/0 a;
+												color: transparent !important;
+												text-shadow: none;
+												background-color: transparent !important;
+												border: 0;
+												}
+
+		// ADVANCED ICON FONT ON CIRCLE SHIELD DEFAULTS
+		.evo-icon-adv							{
+												@include box-shadow(0, 0, 2px, $iconFontAdvShadowColor);
+												@include border-radius(100%);
+												background-color: $iconFontAdvBackgroundColor;
+												width: $iconFontAdvSize;
+												height: $iconFontAdvSize;
+												padding: 6px 0;
+												display: block;
+												float: left;
+												border: 2px solid $iconFontAdvBorderColor;
+			[class*="evo-icon-"]					{
+													color: $iconFontAdvFontColor;
+													font-size: $iconFontSize;
+				&.evo-icon-adv-vert-adjust-down			{top: 1px;}
+				&.evo-icon-adv-vert-adjust-up			{bottom: 1px;}
+				&.evo-icon-adv-vert-adjust-left			{left: -1px;}
+				&.evo-icon-adv-vert-adjust-right		{right: -1px;}
+													}
+												}
+		
+		// ADVANCED ICON FONT ON CIRCLE SHIELD SIZE HELPERS
+		.evo-icon-adv-size-small				{
+												width: $iconFontAdvSize;
+												height: $iconFontAdvSize;
+												padding: 6px 0;
+			[class*="evo-icon-"]					{font-size: $iconFontSize;}
+												}
+		.evo-icon-adv-size-small-medium			{
+												width: ($iconFontAdvSize * 1.4);
+												height: ($iconFontAdvSize * 1.43);
+												padding: 8px 0;
+			[class*="evo-icon-"]					{font-size: ($iconFontSize*1.5);}
+												}
+		.evo-icon-adv-size-medium				{
+												width: ($iconFontAdvSize * 2);
+												height: ($iconFontAdvSize * 2);
+												padding: 14px 0;
+			[class*="evo-icon-"]					{font-size: (($iconFontSize*2) - 2);}
+												}
+		.evo-icon-adv-size-large				{
+												width: ($iconFontAdvSize * 3);
+												height: ($iconFontAdvSize * 3);
+												padding: 21px 0;
+			[class*="evo-icon-"]					{font-size: (($iconFontSize*3) - 2);}
+												}
+		.evo-icon-adv-size-x-large				{
+												width: ($iconFontAdvSize * 4);
+												height: ($iconFontAdvSize * 4);
+												padding: 27px 0;
+			[class*="evo-icon-"]					{font-size: (($iconFontSize*4) - 2);}
+												}
+
+		// ADVANCED ICON FONT ON CIRCLE SHIELD COLOR HELPERS
+		.evo-icon-adv.evo-icon-adv-color-gray-darker
+												{background-color: $iconFontAdvGrayDarkerBackgroundColor;}
+		.evo-icon-adv.evo-icon-adv-color-disabled
+												{
+												@include box-shadow(0, 0, 2px, $iconFontAdvDisabledShadowColor);
+												background-color: $iconFontAdvDisabledBackgroundColor;
+												}
+
+		// ICON FONT IE FIXES
+		.ie9									{
+
+			// Loading image icon fallback since IE8+9 do not understand CSS3 animations
+			.evo-image-icon-loading-fallback		{display: inline-block;}
+			.evo-icon-evo-loading					{display: none;}
+												}
+
+		// ICON FONT - CORE SET - FONT STACK
+		[class^="evo-icon-"]					{font-family: $evoIconFontStack;}
+
+		// ICON FONT - CORE SET - ICON CLASSES
+		.evo-icon-play:before {content: "\e042";}
+		.evo-icon-file:before {content: "\e07b";}
+		.evo-icon-file2:before {content: "\e08e";}
+		.evo-icon-stack:before {content: "\e096";}
+		.evo-icon-credit:before {content: "\e0d5";}
+		.evo-icon-clock:before {content: "\e101";}
+		.evo-icon-screen:before {content: "\e123";}
+		.evo-icon-mobile:before {content: "\e125";}
+		.evo-icon-tablet:before {content: "\e127";}
+		.evo-icon-bubbles:before {content: "\e152";}
+		.evo-icon-users:before {content: "\e18d";}
+		.evo-icon-users2:before {content: "\e198";}
+		.evo-icon-spinner:before {content: "\e1aa";}
+		.evo-icon-binoculars:before {content: "\e1b4";}
+		.evo-icon-zoomin:before {content: "\e1b8";}
+		.evo-icon-zoomout:before {content: "\e1b9";}
+		.evo-icon-wrench:before {content: "\e1d7";}
+		.evo-icon-tools:before {content: "\e1e9";}
+		.evo-icon-health:before {content: "\e1ee";}
+		.evo-icon-aid:before {content: "\e1ef";}
+		.evo-icon-bars:before {content: "\e205";}
+		.evo-icon-bars2:before {content: "\e206";}
+		.evo-icon-apple-fruit:before {content: "\e22e";}
+		.evo-icon-meter:before {content: "\e235";}
+		.evo-icon-meter-slow:before {content: "\e237";}
+		.evo-icon-meter-medium:before {content: "\e238";}
+		.evo-icon-balance:before {content: "\e23c";}
+		.evo-icon-briefcase:before {content: "\e259";}
+		.evo-icon-list:before {content: "\e29b";}
+		.evo-icon-tree:before {content: "\e2a8";}
+		.evo-icon-menu:before {content: "\e2b2";}
+		.evo-icon-arrow-up4:before {content: "\e3b0";}
+		.evo-icon-arrow-right4:before {content: "\e3b1";}
+		.evo-icon-arrow-down4:before {content: "\e3b2";}
+		.evo-icon-arrow-left4:before {content: "\e3b3";}
+		.evo-icon-arrow-right3:before {content: "\e3d3";}
+		.evo-icon-arrow-left3:before {content: "\e3d7";}
+		.evo-icon-camera:before {content: "\e04c";}
+		.evo-icon-megaphone:before {content: "\e060";}
+		.evo-icon-new:before {content: "\e061";}
+		.evo-icon-book:before {content: "\e071";}
+		.evo-icon-graduation:before {content: "\e076";}
+		.evo-icon-file3:before {content: "\e085";}
+		.evo-icon-file4:before {content: "\e086";}
+		.evo-icon-files:before {content: "\e08c";}
+		.evo-icon-file-plus:before {content: "\e087";}
+		.evo-icon-file-minus:before {content: "\e088";}
+		.evo-icon-file-download:before {content: "\e08d";}
+		.evo-icon-file-upload:before {content: "\e089";}
+		.evo-icon-file-check:before {content: "\e08a";}
+		.evo-icon-file-remove:before {content: "\e08b";}
+		.evo-icon-stack2:before {content: "\e097";}
+		.evo-icon-folder-plus:before {content: "\e0a4";}
+		.evo-icon-folder-minus:before {content: "\e0a5";}
+		.evo-icon-folder8:before {content: "\e0a6";}
+		.evo-icon-folder-remove:before {content: "\e0a7";}
+		.evo-icon-folder:before {content: "\e0a1";}
+		.evo-icon-folder-open:before {content: "\e0a2";}
+		.evo-icon-certificate:before {content: "\e0b1";}
+		.evo-icon-tag:before {content: "\e0b7";}
+		.evo-icon-tags:before {content: "\e0ba";}
+		.evo-icon-coins:before {content: "\e0d4";}
+		.evo-icon-calculate:before {content: "\e0d8";}
+		.evo-icon-calculate2:before {content: "\e0d7";}
+		.evo-icon-phone:before {content: "\e0dd";}
+		.evo-icon-contact-add:before {content: "\e0e0";}
+		.evo-icon-contact-remove:before {content: "\e0e1";}
+		.evo-icon-mail-send:before {content: "\e0f1";}
+		.evo-icon-envelop-opened:before {content: "\e0ef";}
+		.evo-icon-location:before {content: "\e0f3";}
+		.evo-icon-pushpin:before {content: "\e0f0";}
+		.evo-icon-location2:before {content: "\e0f7";}
+		.evo-icon-map:before {content: "\e0fc";}
+		.evo-icon-clock2:before {content: "\e102";}
+		.evo-icon-bell:before {content: "\e10c";}
+		.evo-icon-calendar:before {content: "\e116";}
+		.evo-icon-print:before {content: "\e119";}
+		.evo-icon-mouse:before {content: "\e11a";}
+		.evo-icon-disk:before {content: "\e135";}
+		.evo-icon-rotate:before {content: "\e13d";}
+		.evo-icon-rotate2:before {content: "\e13e";}
+		.evo-icon-bubble:before {content: "\e165";}
+		.evo-icon-drawer:before {content: "\e12e";}
+		.evo-icon-box-add:before {content: "\e130";}
+		.evo-icon-box-remove:before {content: "\e131";}
+		.evo-icon-bubble-locked:before {content: "\e172";}
+		.evo-icon-bubble-plus:before {content: "\e177";}
+		.evo-icon-bubble-minus:before {content: "\e178";}
+		.evo-icon-bubble-trash:before {content: "\e17a";}
+		.evo-icon-user:before {content: "\e188";}
+		.evo-icon-users3:before {content: "\e186";}
+		.evo-icon-user-plus:before {content: "\e187";}
+		.evo-icon-user-cancel:before {content: "\e18b";}
+		.evo-icon-user-block:before {content: "\e18c";}
+		.evo-icon-user-minus:before {content: "\e189";}
+		.evo-icon-user2:before {content: "\e199";}
+		.evo-icon-vcard:before {content: "\e19c";}
+		.evo-icon-busy:before {content: "\e1a5";}
+		.evo-icon-key:before {content: "\e1ca";}
+		.evo-icon-lock:before {content: "\e1d3";}
+		.evo-icon-unlocked:before {content: "\e1d4";}
+		.evo-icon-cogs:before {content: "\e1e0";}
+		.evo-icon-cog:before {content: "\e1e1";}
+		.evo-icon-hammer:before {content: "\e1e8";}
+		.evo-icon-bug:before {content: "\e1f2";}
+		.evo-icon-pie:before {content: "\e1f8";}
+		.evo-icon-pie2:before {content: "\e1f9";}
+		.evo-icon-pie3:before {content: "\e1fc";}
+		.evo-icon-stats:before {content: "\e1fe";}
+		.evo-icon-bars3:before {content: "\e203";}
+		.evo-icon-stats-up:before {content: "\e207";}
+		.evo-icon-chart:before {content: "\e20b";}
+		.evo-icon-gift:before {content: "\e211";}
+		.evo-icon-medal:before {content: "\e217";}
+		.evo-icon-fire:before {content: "\e23f";}
+		.evo-icon-lamp:before {content: "\e24d";}
+		.evo-icon-briefcase2:before {content: "\e258";}
+		.evo-icon-cube4:before {content: "\e269";}
+		.evo-icon-pyramid:before {content: "\e26b";}
+		.evo-icon-cylinder:before {content: "\e26c";}
+		.evo-icon-puzzle:before {content: "\e26e";}
+		.evo-icon-shield:before {content: "\e27e";}
+		.evo-icon-clipboard:before {content: "\e295";}
+		.evo-icon-list2:before {content: "\e29a";}
+		.evo-icon-numbered-list:before {content: "\e29c";}
+		.evo-icon-download:before {content: "\e2b8";}
+		.evo-icon-upload:before {content: "\e2b9";}
+		.evo-icon-globe:before {content: "\e2c4";}
+		.evo-icon-globe2:before {content: "\e2c5";}
+		.evo-icon-earth:before {content: "\e2c7";}
+		.evo-icon-network:before {content: "\e2c8";}
+		.evo-icon-link:before {content: "\e2c9";}
+		.evo-icon-link2:before {content: "\e2ca";}
+		.evo-icon-flag:before {content: "\e2d6";}
+		.evo-icon-attachment:before {content: "\e2d7";}
+		.evo-icon-eye:before {content: "\e2d9";}
+		.evo-icon-eye-blocked:before {content: "\e2da";}
+		.evo-icon-bookmark:before {content: "\e2e3";}
+		.evo-icon-bookmarks:before {content: "\e2e5";}
+		.evo-icon-thumbs-up:before {content: "\e310";}
+		.evo-icon-thumbs-down:before {content: "\e312";}
+		.evo-icon-question:before {content: "\e35d";}
+		.evo-icon-plus-circle:before {content: "\e360";}
+		.evo-icon-minus-circle:before {content: "\e362";}
+		.evo-icon-info:before {content: "\e363";}
+		.evo-icon-blocked:before {content: "\e364";}
+		.evo-icon-cancel-circle:before {content: "\e369";}
+		.evo-icon-cancel-circle2:before {content: "\e367";}
+		.evo-icon-checkmark-circle:before {content: "\e368";}
+		.evo-icon-checkmark:before {content: "\e372";}
+		.evo-icon-enter:before {content: "\e37d";}
+		.evo-icon-exit:before {content: "\e37e";}
+		.evo-icon-exit2:before {content: "\e37f";}
+		.evo-icon-volume-high:before {content: "\e38f";}
+		.evo-icon-loop:before {content: "\e3a5";}
+		.evo-icon-loop2:before {content: "\e3a8";}
+		.evo-icon-arrow-left2:before {content: "\e3c3";}
+		.evo-icon-arrow-up-left:before {content: "\e3c4";}
+		.evo-icon-arrow-up:before {content: "\e3c5";}
+		.evo-icon-arrow-up-right:before {content: "\e3c6";}
+		.evo-icon-arrow-right:before {content: "\e3c7";}
+		.evo-icon-arrow-down-right:before {content: "\e3c8";}
+		.evo-icon-arrow-down:before {content: "\e3c9";}
+		.evo-icon-arrow-down-left:before {content: "\e3ca";}
+		.evo-icon-arrow-left:before {content: "\e3cb";}
+		.evo-icon-menu2:before {content: "\e41d";}
+		.evo-icon-menu4:before {content: "\e41e";}
+		.evo-icon-menu-close:before {content: "\e41f";}
+		.evo-icon-menu-close2:before {content: "\e421";}
+		.evo-icon-enter2:before {content: "\e41c";}
+		.evo-icon-backspace:before {content: "\e420";}
+		.evo-icon-sort:before {content: "\e426";}
+		.evo-icon-filter:before {content: "\e446";}
+		.evo-icon-font-size:before {content: "\e448";}
+		.evo-icon-insert-template:before {content: "\e467";}
+		.evo-icon-table:before {content: "\e466";}
+		.evo-icon-share:before {content: "\e47b";}
+		.evo-icon-code:before {content: "\e480";}
+		.evo-icon-share2:before {content: "\e48c";}
+		.evo-icon-google-plus:before {content: "\e495";}
+		.evo-icon-facebook:before {content: "\e499";}
+		.evo-icon-twitter:before {content: "\e49e";}
+		.evo-icon-windows:before {content: "\e4c9";}
+		.evo-icon-file-pdf:before {content: "\e4e2";}
+		.evo-icon-file-openoffice:before {content: "\e4e3";}
+		.evo-icon-file-word:before {content: "\e4e4";}
+		.evo-icon-file-excel:before {content: "\e4e5";}
+		.evo-icon-file-zip:before {content: "\e4e6";}
+		.evo-icon-html5:before {content: "\e4ea";}
+		.evo-icon-css3:before {content: "\e4ec";}
+		.evo-icon-chrome:before {content: "\e4ed";}
+		.evo-icon-firefox:before {content: "\e4ee";}
+		.evo-icon-IE:before {content: "\e4ef";}
+		.evo-icon-safari:before {content: "\e4f1";}
+		.evo-icon-loop3:before {content: "\e3a9";}
+		.evo-icon-umbrella:before {content: "\e2f1";}
+		.evo-icon-star:before {content: "\e2fd";}
+		.evo-icon-star2:before {content: "\e2fe";}
+		.evo-icon-star3:before {content: "\e2fc";}
+		.evo-icon-heart:before {content: "\e304";}
+		.evo-icon-menu3:before {content: "\e2af";}
+		.evo-icon-accessibility:before {content: "\e277";}
+		.evo-icon-forward:before {content: "\e14d";}
+		.evo-icon-reply:before {content: "\e14e";}
+		.evo-icon-reply2:before {content: "\e14f";}
+		.evo-icon-database:before {content: "\e138";}
+		.evo-icon-watch:before {content: "\e105";}
+		.evo-icon-basket:before {content: "\e0ce";}
+		.evo-icon-bag:before {content: "\e0d2";}
+		.evo-icon-radio:before {content: "\e065";}
+		.evo-icon-office:before {content: "\e00b";}
+		.evo-icon-home:before {content: "\e003";}
+		.evo-icon-evo-task-reassign:before {content: "\e601";}
+		.evo-icon-evo-task-performance:before {content: "\e602";}
+		.evo-icon-evo-task-edit:before {content: "\e603";}
+		.evo-icon-evo-task-download:before {content: "\e604";}
+		.evo-icon-evo-double-greater-than:before {content: "\e605";}
+		.evo-icon-evo-dollar-sign:before {content: "\e606";}
+		.evo-icon-evo-document-edit:before {content: "\e607";}
+		.evo-icon-evo-directory-tree-centered:before {content: "\e608";}
+		.evo-icon-evo-directory-tree:before {content: "\e609";}
+		.evo-icon-evo-comment-edit:before {content: "\e60a";}
+		.evo-icon-evo-clipboard-x:before {content: "\e60b";}
+		.evo-icon-evo-asterisk-small:before {content: "\e60c";}
+		.evo-icon-evo-asterisk:before {content: "\e60d";}
+		.evo-icon-evo-arrow-doublearrow-right:before {content: "\e60e";}
+		.evo-icon-evo-arrow-doublearrow-left:before {content: "\e60f";}
+		.evo-icon-evo-arrow-circle-up:before {content: "\e610";}
+		.evo-icon-evo-arrow-circle-right:before {content: "\e611";}
+		.evo-icon-evo-arrow-circle-left:before {content: "\e612";}
+		.evo-icon-evo-report-arrow:before {content: "\e613";}
+		.evo-icon-evo-clipboard-minus:before {content: "\e614";}
+		.evo-icon-phone2:before {content: "\e0dc";}
+		.evo-icon-brush:before {content: "\e020";}
+		.evo-icon-image:before {content: "\e02b";}
+		.evo-icon-folder2:before {content: "\e09b";}
+		.evo-icon-folder-download:before {content: "\e09d";}
+		.evo-icon-folder-upload:before {content: "\e0a3";}
+		.evo-icon-call-incoming:before {content: "\e0e2";}
+		.evo-icon-call-outgoing:before {content: "\e0e3";}
+		.evo-icon-envelop:before {content: "\e0f2";}
+		.evo-icon-bubbles2:before {content: "\e16c";}
+		.evo-icon-bubble-check:before {content: "\e170";}
+		.evo-icon-address-book:before {content: "\e0e8";}
+		.evo-icon-search:before {content: "\e1ba";}
+		.evo-icon-expand:before {content: "\e1bf";}
+		.evo-icon-contract:before {content: "\e1c0";}
+		.evo-icon-meter-fast:before {content: "\e239";}
+		.evo-icon-grid:before {content: "\e2a0";}
+		.evo-icon-tree2:before {content: "\e2a6";}
+		.evo-icon-tree3:before {content: "\e2a7";}
+		.evo-icon-resize:before {content: "\e354";}
+		.evo-icon-warning:before {content: "\e357";}
+		.evo-icon-notification:before {content: "\e359";}
+		.evo-icon-arrow-up2:before {content: "\e3c0";}
+		.evo-icon-arrow-right2:before {content: "\e3c1";}
+		.evo-icon-arrow-down2:before {content: "\e3c2";}
+		.evo-icon-transmission:before {content: "\e424";}
+		.evo-icon-radio-checked:before {content: "\e438";}
+		.evo-icon-radio-unchecked:before {content: "\e439";}
+		.evo-icon-file-powerpoint:before {content: "\e4e7";}
+		.evo-icon-file-xml:before {content: "\e4e8";}
+		.evo-icon-file-css:before {content: "\e4e9";}
+		.evo-icon-undo:before {content: "\e14b";}
+		.evo-icon-redo:before {content: "\e14c";}
+		.evo-icon-evo-task-complete:before {content: "\e615";}
+		.evo-icon-evo-task-alert:before {content: "\e616";}
+		.evo-icon-evo-task:before {content: "\e617";}
+		.evo-icon-evo-clipboard-plus:before {content: "\e618";}
+		.evo-icon-evo-arrow-circle-down:before {content: "\e619";}
+		.evo-icon-evo-clipboard-edit:before {content: "\e61a";}
+		.evo-icon-evo-renewal:before {content: "\e61c";}
+		.evo-icon-evo-mmc-logo:before {content: "\e61d";}
+		.evo-icon-evo-mmc-globe:before {content: "\e61e";}
+		.evo-icon-evo-loading:before {content: "\e61f";}
+		.evo-icon-evo-library-locked:before {content: "\e620";}
+		.evo-icon-evo-library:before {content: "\e621";}
+		.evo-icon-evo-function:before {content: "\e622";}
+		.evo-icon-evo-flag-hollow:before {content: "\e623";}
+		.evo-icon-evo-experiment:before {content: "\e624";}
+		.evo-icon-evo-edit:before {content: "\e625";}
+		.evo-icon-evo-book-open:before {content: "\e626";}
+		.evo-icon-evo-box-check:before {content: "\e627";}
+		.evo-icon-evo-box-hollow:before {content: "\e628";}
+		.evo-icon-evo-checkbox-x:before {content: "\e629";}
+		.evo-icon-evo-clipboard:before {content: "\e62b";}
+		.evo-icon-calendar4:before {content: "\e62a";}
+		.evo-icon-evo-file3-small:before {content: "\e62c";}
+		.evo-icon-evo-task-cancelled:before {content: "\e62d";}
+		.evo-icon-evo-task-escalated:before {content: "\e62e";}
+		.evo-icon-enter3:before {content: "\e379";}
+		.evo-icon-exit3:before {content: "\e37a";}
+		.evo-icon-feed:before {content: "\e4a1";}
+
+	}//endif
+
+}//endif

@@ -1,0 +1,280 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Base Page Header Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-header == true{
+
+// ICON STYLES - BEGINS
+	.evo-header-icon	{
+		a					{
+			[class*="evo-icon"]	{
+								@include border-radius($headerIconRadius);
+								cursor: pointer;
+								padding: $headerIconPadding;
+								min-width: $headerIconMinWidth;
+								background-color: $headerIconBackgroundColor;
+								color: $headerIconFontColor;
+				&:hover				{
+									background-color: $headerIconHoverBackgroundColor;
+									color: $headerIconHoverFontColor;
+									}
+								}
+							}
+						}
+// ICON STYLES - ENDS
+
+// MAIN LOGO CONTAINER - BEGINS
+	.evo-logo			{
+		.evo-logo-col-2		{
+			a					{
+								@include href-link($mastheadLogoLinkColor, none);
+								@include text-overflow;
+								display: block;
+								font-weight: $mastheadLogoFontWeight;
+								font-size: $mastheadLogoFontSize;
+								line-height: $mastheadLogoLineHeight;
+								white-space: nowrap;
+								width: auto;
+								}
+				span			{font-family: $fontThinStack;}
+							}
+						}
+// MAIN LOGO CONTAINER - ENDS
+
+	.evo-header			{
+						@include clearfix;
+						min-height: 20px;
+						max-width: 100% !important;
+						margin: 0;
+
+		.evo-header-adjust	{
+							@include clearfix;
+
+		// USER IDENTIFIER CONTAINER - BEGINS
+			.evo-user-identifier-ctn
+								{
+								display: none;
+								position: relative;
+								}
+		// USER IDENTIFIER CONTAINER - ENDS
+
+		// MASTHEAD - BEGINS
+			.evo-masthead		{
+								@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
+								@include clearfix;
+
+			// MASTHEAD ADJUST - BEGINS
+				.evo-masthead-adjust
+									{
+									@include clearfix;
+					.evo-logo-col-1,
+					.evo-logo-col-2,
+					.evo-logo-col-3		{
+										float: left;
+										margin-left: 0;
+
+					// ICON STYLES OVERRIDES - BEGIN
+						li.evo-header-icon	{
+											border-bottom: 0;
+											float: left;
+											width: auto;
+								a				{
+												border: 0 !important;
+												padding: 0;
+									[class*="evo-icon"]
+													{margin-right: 4px;}
+												}
+							&:last-child		{
+								a					{
+									[class*="evo-icon"]	{margin-right: 0;}
+													}
+												}
+											}
+					// ICON STYLES OVERRIDES - END
+
+										}
+					.evo-logo-col-1		{display: none;}
+					.evo-logo-col-2		{
+										padding-left: $gridSiteGutterPadding;
+						a					{font-size: ($hdrH1FontSize - 10);}
+										}
+
+					.evo-logo-col-3		{
+										float: right;
+										padding-top: 12px;
+										padding-right: $gridSiteGutterPadding;
+						ul					{@include clearfix;}
+										}
+
+				// PRIMARY & SECONDARY LOGO - BEGINS
+					.evo-primary-logo,
+					.evo-secondary-logo	{
+						img					{
+											position: relative;
+											top: 14px;
+											}
+										}
+					.evo-secondary-logo	{
+										text-align: right;
+						img					{top: 17px;}
+										}
+				// PRIMARY & SECONDARY LOGO - ENDS
+
+									}
+
+			// MASTHEAD ADJUST - ENDS
+								}
+		// MASTHEAD - ENDS
+							}
+						}
+
+}// endif
+
+//=== MEDIA QUERIES =========================================================================
+
+// MEDIUM MEDIA QUERY RANGE - 641px - 1024px
+@if $use-medium-only-mediaquery == true {
+		
+	@media #{$medium-only} {
+		
+		// USER IDENTIFIER CONTAINER - BEGINS
+			.evo-user-identifier-ctn
+						{right: -10px;}
+		// USER IDENTIFIER CONTAINER - ENDS
+
+	}// endif
+
+}// endif
+
+// LARGE MEDIA QUERY RANGE - 1025px - 1440px
+@if $use-large-only-mediaquery == true {
+		
+	@media #{$large-only} {
+		
+		// USER IDENTIFIER CONTAINER - BEGINS
+			.evo-user-identifier-ctn
+						{right: 0;}
+		// USER IDENTIFIER CONTAINER - ENDS
+
+	}// endif
+
+}// endif
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+@if $use-medium-up-mediaquery == true {
+		
+	@media #{$medium-up} {
+
+		// USER IDENTIFIER CONTAINER - BEGINS
+			.evo-user-identifier-ctn
+						{
+						@include background-gradient($userIdentifierBackgroundStartColor,$userIdentifierBackgroundEndColor);
+						@include clearfix;
+						height: $mastheadContentHeight;
+						cursor: pointer;
+				li			{
+							width: 100% !important;
+							border-bottom: 0 !important;
+					a			{
+								padding: 0;
+						.sub-arrow	{display: none;}
+						.evo-user-identifier-ctn-indicator,
+						.evo-user-identifier-ctn-user-info,
+						.evo-user-identifier-ctn-avatar
+									{
+									padding-top: 10px;
+									color: $userIdentifierFontColor;
+									}
+						.evo-user-identifier-ctn-user-info
+									{
+							span		{
+										@include text-overflow;
+										display: block;
+										font-size: 11px;
+										}
+									}
+								}
+
+				// SUB-MENU - BEGINS
+					.evo-user-identifier-menu
+								{
+								@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+								@include box-shadow(0, 2px, 2px, $userIdentifierMenuShadowColor);
+								border: 0;
+								min-width: 100% !important;
+								max-width: 100% !important;
+								top: 52px !important;
+								background-color: $userIdentifierBackgroundEndColor;
+						li			{
+									border: 0;
+							a			{
+										@include href-link($userIdentifierMenuTextColor, none);
+										font-size: $userIdentifierMenuFontSize;
+										display: block;
+										padding: $userIdentifierMenuPadding;
+								&:hover		{
+											@include transition(background-color 0.3s ease-in-out);
+											background-color: $userIdentifierMenuHoverColor;
+											}
+										}
+							&:last-child
+										{
+								a			{
+									&:hover		{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+											}
+										}
+									}
+								}
+				// SUB-MENU - ENDS
+
+							}
+						}
+		// USER IDENTIFIER CONTAINER - ENDS
+
+		.evo-header		{
+			.evo-toolbar-header-adjust
+							{margin-bottom: 40px;}
+						}
+
+		.evo-header		{
+			.evo-header-adjust
+							{
+
+			// USER IDENTIFIER CONTAINER - BEGINS
+				.evo-user-identifier-ctn
+								{display: block;}
+			// USER IDENTIFIER CONTAINER - ENDS
+
+			// MASTHEAD - BEGINS
+				.evo-masthead	{
+					.evo-masthead-adjust
+									{
+									padding: 0 $gridSiteGutterPadding;
+									position: relative;
+						.evo-logo-col-1	{
+										display: inline-block;
+										margin-top: 2px;
+										padding-right: $gridSiteGutterPadding;
+										}
+						.evo-logo-col-2	{
+										margin-left: 0;
+										margin-right: 8px;
+										padding-left: 0;
+							a				{font-size: $mastheadLogoFontSizeLargeBreakpoint;}
+										}
+
+					// MOBILE NAVBAR CONTAINER - BEGINS
+						.evo-mb-navbar-ctn
+										{display: none;}
+					// MOBILE NAVBAR CONTAINER - ENDS
+
+									}
+								}
+			// MASTHEAD - ENDS
+							}
+						}
+	}// endif
+
+}// endif

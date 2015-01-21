@@ -1,0 +1,37 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css">
+${demo.css}
+		</style>
+<script type="text/javascript">
+
+</script>
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
+
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24">
+
+		<p>There are a few different types of area charts available to a user. More information coming...</p>
+
+		<p>Below is a list of line charts available to you when using Highcharts:</p> 
+
+		<ul>
+			<li><a href="/highcharts/area-basic">Basic area chart</a></li>
+			<li><a href="/highcharts/area-negative">Area chart with negative values</a></li>
+			<li><a href="/highcharts/area-stacked">Stacked area chart</a></li>
+			<li><a href="/highcharts/area-percentage">Area chart with negative values</a></li>
+			<li><a href="/highcharts/area-missing">Area chart with missing points</a></li>
+			<li><a href="/highcharts/area-inverted">Area chart with inverted axis</a></li>
+			<li><a href="/highcharts/area-spline">Spline area chart</a></li>
+			<li><a href="/highcharts/area-range">Ranged area chart</a></li>
+			<li><a href="/highcharts/area-range-line">Ranged area chart with line</a></li>
+			<li><a href="/highcharts/area-sparkline">Sparkline area</a></li>
+		</ul>
+
+	</section>
+<!-- CONTENT SECTION - ENDS -->
+
+{% endblock %}

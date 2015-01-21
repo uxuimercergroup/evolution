@@ -1,0 +1,109 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Alternate Views Badge Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-alternate-views-badge == true{
+
+	.evo-alternate-views-badge.ui-tabs					{
+		.evo-btn-group-horizontal							{
+															margin-left: 0;
+															margin-bottom: 14px;
+			.evo-btn											{
+																@include background-gradient($alternateViewsBadgeButtonBackgroundStartColor, $alternateViewsBadgeButtonBackgroundEndColor);
+																min-width: 1%;
+																float: none;
+																margin-bottom: 0;
+																padding: 0;
+																border-color: $alternateViewsBadgeButtonBorderColor;
+				[class^="evo-icon-"]								{
+																	top: 1px;
+																	color: $alternateViewsBadgeButtonIconColor;
+																	}
+				a													{
+																	position: relative;
+																	display: block;
+																	padding: 12px 9px 12px 14px; 
+																	outline: 0;
+																	color: $alternateViewsBadgeButtonLinkColor;
+																	text-decoration: none;
+					span												{display: none;}
+																	}
+				&:hover												{
+																	@include background-gradient($alternateViewsBadgeButtonHoverBackgroundStartColor, $alternateViewsBadgeButtonHoverBackgroundEndColor);
+					[class^="evo-icon-"]								{color: $alternateViewsBadgeButtonHoverIconColor;}
+					a													{color: $alternateViewsBadgeButtonHoverLinkColor;}
+																	}
+				&.ui-tabs-active									{
+																	@include background-gradient($alternateViewsBadgeButtonActiveBackgroundStartColor, $alternateViewsBadgeButtonActiveBackgroundEndColor);
+																	border-color: $alternateViewsBadgeButtonActiveBorderColor;
+					[class^="evo-icon-"]								{color: $alternateViewsBadgeButtonActiveIconColor;}
+					a													{color: $alternateViewsBadgeButtonActiveLinkColor;}
+																	}
+																}
+															}
+														}
+
+	// TEXT ONLY
+	.evo-alternate-views-badge-text-only.ui-tabs		{
+		.evo-btn-group-horizontal							{
+			.evo-btn											{
+				a													{
+																	padding: 13px 14px 12px 14px;
+					span												{display: inline;}
+																	}
+																}
+															}
+														}
+
+	// BADGE NAV POSITIONING
+	.evo-alternate-views-badge-position-left			{text-align: left;}
+	.evo-alternate-views-badge-position-center			{text-align: center;}
+	.evo-alternate-views-badge-position-right			{text-align: right;}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			.evo-alternate-views-badge.ui-tabs			{
+				.evo-btn-group-horizontal					{
+					.evo-btn									{
+						[class^="evo-icon-"]						{top: 2px;}
+						a											{
+																	padding: 8px 7px 9px 12px;
+																	top: -1px;
+							span										{display: inline;}
+																	}
+																}
+															}
+														}
+
+			// FULL BADGE
+			.evo-alternate-views-badge-full.ui-tabs		{
+				.evo-btn-group-horizontal					{
+					.evo-btn									{
+																min-width: 124px;
+						a											{padding-right: 12px;}
+																}
+															}
+														}
+
+			// TEXT ONLY
+			.evo-alternate-views-badge-text-only.ui-tabs
+														{
+				.evo-btn-group-horizontal					{
+					.evo-btn									{
+						a											{padding: 11px 12px 9px 12px;}
+																}
+															}
+														}
+
+		}
+		
+	}// endif
+
+}//endif

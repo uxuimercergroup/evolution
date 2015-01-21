@@ -1,0 +1,188 @@
+{% if global.type_of_navbar == "toolbar" %}
+<!-- TOOLBAR - BEGINS -->
+	<section class="evo-navbar evo-toolbar {% if global.toolbar_fixed == 'true' %}evo-toolbar-fixed{% endif %} ">
+		<div class="evo-navbar-adjust evo-toolbar-adjust">
+			<nav class="evo-text-nav">
+				<div class="col-{{ global.toolbar_column_width_left }} first evo-navbar-col-1">
+				<!-- LOGO SECTION - BEGINS -->
+					<section class="evo-logo evo-small-mediaquery-grid">
+						<div class="evo-logo-col-2">
+						{% if mixture.url != "index" %}
+							<a href="/index">MERCER <span>EVOLUTION</span></a>
+						{% endif %}
+						</div>
+						<div class="evo-logo-col-3 evo-header-icon {% if mixture.url == "index" %}mb-navb-off{% endif %}">
+							<a href="javascript:;" class="js-evo-header-mobile-menu-toggle" data-evo-header-mobile-menu-toggle="toolbar"><i class="evo-icon-menu3"></i></a>
+						</div>
+					</section>
+				<!-- LOGO SECTION - ENDS -->
+				</div>
+				<div class="col-{{ global.toolbar_column_width_right }} evo-navbar-col-2" id="evo-header-mobile-menu-toggle-toolbar">
+				{% if global.toolbar_group_icons == 'true' %}
+					<ul class="sm evo-nav-menus evo-menu-ctn" data-menu="click">
+						<li class="evo-header-icon evo-mega-menu">
+							<a href="javascript:;"><i class="evo-icon-evo-book-open"></i></a>
+							<ul class="mega-menu">
+								<li class="evo-mega-menu-adjust">
+								<!-- MEGA MENU CONTAINER - BEGINS -->
+									<div class="evo-mega-menu-ctn navbar-site-menu">
+										<section class="col-24">
+											<div class="col-6 first">
+												{% for item in global.table-of-contents limit:1 %}
+													{% include "/reference/toc-nav" %}
+												{% endfor %}
+											</div>
+											<div class="col-6">
+												{% for item in global.table-of-contents offset:2 limit:2 %}
+													{% include "/reference/toc-nav" %}
+												{% endfor %}
+											</div>
+											<div class="col-6">
+												{% for item in global.table-of-contents offset:4 limit:1 %}
+													{% include "/reference/toc-nav" %}
+												{% endfor %}
+											</div>
+											<div class="col-6">
+												{% for item in global.table-of-contents offset:5 %}
+													{% include "/reference/toc-nav" %}
+												{% endfor %}
+											</div>
+										</section>
+									</div>
+								<!-- MEGA MENU CONTAINER - ENDS -->
+								</li>
+							</ul>
+						</li>
+					</ul>
+				{% endif %}
+
+				{% if global.toolbar_navigation == 'true' %}
+					<ul class="sm evo-nav-menus evo-menu-ctn" data-menu="click">
+					{% if global.toolbar_navigation_items == 'true' %}
+						<li><a class="evo-navbar-no-pipe-left" href="/index">Home</a></li>
+						<li><a href="/browser-testing-support">Browser Support</a></li>
+						<li><a href="/quick-reference">Quick Reference</a></li>
+					{% endif %}
+
+					{% if global.toolbar_user_identifier == "true" %}
+						<li>
+							<a href="javascript:;">Arquimedez Pozo</a>
+							<ul class="evo-user-identifier-menu">
+								<li><a href="javascript:;">View Profile</a></li>
+								<li><a href="javascript:;">Change Language</a></li>
+								<li><a href="javascript:;">User Administration</a></li>
+								<li><a href="javascript:;">Log Out</a></li>
+							</ul>
+						</li>
+					{% endif %}
+					</ul>
+				{% endif %}
+				</div>
+			</nav>
+		</div>
+	</section>
+<!-- TOOLBAR - ENDS -->
+{% else %}
+<!-- NAVBAR - BEGINS -->
+	<section class="evo-navbar" id="evo-header-mobile-menu-toggle-navbar">
+		<div class="evo-navbar-adjust">
+		{% if global.navbar_style == "text" %}
+			<nav class="evo-text-nav">
+		{% else %}
+			<nav class="evo-tabbed-nav">
+		{% endif %}
+				<div class="col-{{ global.navbar_column_width_left }} first evo-navbar-col-1">
+					<ul class="sm evo-nav-menus evo-menu-ctn" data-menu="click">
+					{% if global.navbar_left == "false" || global.navbar_menu_icon_left == "false" %}
+						<li>&nbsp;</li>
+					{% endif %}
+
+					{% if global.navbar_menu_icon_left == "true" %}
+						<li class="evo-header-icon">
+							<a href="javascript:;"><i class="evo-icon-menu3"></i></a>
+						</li>
+					{% endif %}
+
+					{% if global.navbar_left == "true" %}
+						<li><a class="{% if mixture.url == "index" %}evo-navbar-item-active{% endif %}" href="/index">Home</a></li>
+						<li><a href="/browser-testing-support">Browser Support</a></li>
+						<li>
+							<a href="/toolkit">Toolkit</a>
+							<ul>
+								<li><a href="javascript:;">English</a></li>
+								<li><a href="javascript:;">Spanish</a></li>
+								<li>
+									<a href="javascript:;">German</a>
+									<ul>
+										<li><a href="javascript:;">English</a></li>
+										<li><a href="javascript:;">Spanish</a></li>
+										<li><a href="javascript:;">German</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						{% if global.navbar_user_identifier == "true" %}
+							<li>
+								<a href="javascript:;">Arquimedez Pozo</a>
+								<ul class="evo-user-identifier-menu">
+									<li><a href="javascript:;">View Profile</a></li>
+									<li><a href="javascript:;">Change Language</a></li>
+									<li><a href="javascript:;">User Administration</a></li>
+									<li><a href="javascript:;">Log Out</a></li>
+								</ul>
+							</li>
+						{% endif %}
+					{% endif %}
+					</ul>
+				</div>
+				<div class="col-{{ global.navbar_column_width_right }} evo-navbar-col-2">
+				{% if global.navbar_group_icons == "true" %}
+					<ul class="sm evo-nav-menus evo-menu-ctn" data-menu="click">
+						{% include "/base/header/navbar-group-icons" %}
+					</ul>
+				{% endif %}
+
+				{% if global.navbar_right == "true" %}
+					<ul class="sm evo-nav-menus evo-menu-ctn" data-menu="click">
+						<li><a class="{% if mixture.url == "index" %}evo-navbar-item-active{% endif %}" href="/index">Home</a></li>
+						<li><a href="/browser-testing-support">Browser Support</a></li>
+						<li>
+							<a href="/toolkit">Toolkit</a>
+							<ul>
+								<li><a href="javascript:;">English</a></li>
+								<li><a href="javascript:;">Spanish</a></li>
+								<li>
+									<a href="javascript:;">German</a>
+									<ul>
+										<li><a href="javascript:;">English</a></li>
+										<li><a href="javascript:;">Spanish</a></li>
+										<li><a href="javascript:;">German</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					{% if global.navbar_user_identifier == "true" %}
+						<li>
+							<a href="javascript:;">Arquimedez Pozo</a>
+							<ul class="evo-user-identifier-menu">
+								<li><a href="javascript:;">View Profile</a></li>
+								<li><a href="javascript:;">Change Language</a></li>
+								<li><a href="javascript:;">User Administration</a></li>
+								<li><a href="javascript:;">Log Out</a></li>
+							</ul>
+						</li>
+					{% endif %}
+					</ul>
+				{% endif %}
+
+				{% if global.navbar_message_area == "true" %}
+					<ul class="evo-navbar-message {% if global.navbar_message_area_noborder == "true" %}evo-navbar-message-noline{% endif %} {% if global.navbar_message_area_nopadding == "true" %}evo-navbar-message-nopadding{% endif %}">
+						{% include "/base/header/navbar-message-area" %}
+					</ul>
+				{% endif %}
+				</div>
+			</nav>
+		</div>
+	</section>
+<!-- NAVBAR - ENDS -->
+{% endif %}

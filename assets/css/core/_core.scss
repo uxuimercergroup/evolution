@@ -1,0 +1,124 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Core SASS Imports Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+// ==========================================================================================
+// TABLE OF CONTENTS
+// ==========================================================================================
+
+// GLOBAL
+//-------------------------------------------------------------------------------------------
+// COLOR VARIABLES............Global, brand, and other color variables
+// VARIABLES..................List of variables that control the library that are not theme variables
+// VARIABLES OVERRIDES........List of variables in which to override default core variables values
+
+// FOUNDATION
+//-------------------------------------------------------------------------------------------
+// NORMALIZE..................Reset all default browser styles to zero
+// FOUNDATION SETTINGS........Partial for calling in Foundation settings and functions
+// FOUNDATION.................Partial for calling in Foundation components
+
+// GLOBAL
+//-------------------------------------------------------------------------------------------
+// FUNCTIONS..................Functions used for SASS calculations
+// MIXINS.....................SASS mixins for help with styling
+// HELPERS....................Helper classes to aid in styling, all helper use is class based
+
+// BASE
+//-------------------------------------------------------------------------------------------
+// BOXES......................Global box container styles
+// BUTTONS....................Global button styles
+// FOOTER.....................Global footer and footer object styles
+// FORM.......................Global form and form elements styles
+// GRID.......................Mobile first grid based on 24 column layout
+// HEADER.....................Masthead and masthead object styles
+// HERO BANNER................Hero banner styles
+// ICONS......................Global icon styles
+// LISTS......................Global list styles including horizontal, vertical, and data lists
+// MENUS......................Global menus styles
+// NAV........................Global navigation styles
+// TABLES.....................Global data table styles
+// TYPE.......................Global typography styles, headers, body text, etc.
+
+// OBJECTS
+//-------------------------------------------------------------------------------------------
+// ACCORDION..................Accordion object styles (jQuery UI)
+// ADVANCED FILTER............Advanced filter object styles (jQuery UI)
+// ALTERNATE VIEWS BADGE......Alternate views badge object styles (Uses jQuery UI tabs)
+// AUTOCOMPLETE...............Auto suggest object styles (jQuery UI)
+// CALL TO ACTION.............Call to action styles
+// CAROUSEL...................Carousel object styles (Owl Carousel jQuery Plugin)
+// CONTENT MODAL..............Content modal object styles, (jQuery UI dialog w/jQuery UI tabs)
+// DATEPICKER.................Calendar object styles (jQuery UI)
+// DIALOG.....................Dialog/Modal object styles (jQuery UI)
+// IMAGE CONTENT OVERLAY......Image Content Overlay styles
+// LOGIN......................Login Page Layout styles
+// MINI FILTER................Mini Filter object styles
+// PAGINATION.................Pagination object styles
+// PROFILE CONTAINERS.........Profile Entity container styles
+// SCROLL PANE................Scroll pane styles (Malihu jQuery Custom Scrollbar Plugin)
+// SLIDER.....................Slider object styles (jQuery UI)
+// STEPPER....................Stepper (Horizontal and Vertical) styles
+// SUMMARY CONTAINERS.........Summary Containers styles
+// TABS.......................Tabs object styles (jQuery UI)
+// TILES......................Tile container styles
+// TOOLTIP....................Tooltip object styles (Tooltipster jQuery Plugin)
+
+
+// ==========================================================================================
+// CORE SASS IMPORTS
+// ==========================================================================================
+
+@import 
+		"global/color_variables",
+		"global/variables",
+		"global/variables_overrides",
+
+		"foundation/normalize",
+		"foundation/foundation/settings",
+		"foundation/foundation",
+
+		"global/functions",
+		"global/mixins",
+		"global/helpers",
+
+		"base/menus",
+		"base/boxes",
+		"base/buttons",
+		"base/footer",
+		"base/form",
+		"base/grid",
+		"base/nav",
+		"base/header",
+		"base/hero_banner",
+		"base/icons",
+		"base/lists",
+		"base/inline_lists",
+		"base/tables",
+		"base/type",
+		
+		"objects/accordion",
+		"objects/advanced_filter",
+		"objects/alternate_views_badge",
+		"objects/autocomplete",
+		"objects/layout_banding",
+		"objects/call_to_action",
+		"objects/carousel",
+		"objects/content_modal",
+		"objects/datepicker",
+		"objects/dialog",
+		"objects/image_content_overlay",
+		"objects/login",
+		"objects/mini_filter",
+		"objects/pagination",
+		"objects/profile_containers",
+		"objects/scroll_pane",
+		"objects/slider",
+		"objects/stepper",
+		"objects/summary_containers",
+		"objects/tabs",
+		"objects/tiles",
+		"objects/tooltip"
+		;

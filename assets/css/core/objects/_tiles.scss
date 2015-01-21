@@ -1,0 +1,92 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Tiles Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-tiles == true{
+
+	.evo-tile-ctn							{
+											@include border-radius($tilesBorderRadius);
+											background-color: $tilesBackgroundColor;
+											margin-bottom: $tilesMarginBottom;
+											border-color: $tilesOutsideBorderColor;
+
+		// CUSTOM TILE BORDER TOP COLOR LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE, BORDER IS APPLIED TO TILE CONTAINER HEADER
+		@each $color-name, $color in $color-palette 
+												{
+			&[data-palette-color="#{$color-name}"] 	{
+				.evo-box-hdr							{border-top-color: map-get($color, color);}							
+													}
+												}
+
+		.evo-box-hdr							{
+												@include border-radius($tilesBorderRadius $tilesBorderRadius 0 0);
+												border-top: 5px solid $tilesHeaderBorderTopColor;
+												background-color: $tilesHeaderBackgroundColor;
+												cursor: pointer;
+												position: relative;
+												margin-bottom: 0;
+
+			.evo-hdr-rule							{
+													color: $tilesHeaderFontColor;
+													padding-bottom: 0;
+													}
+			span									{
+													@include text-overflow;
+													display: block;
+													margin-right: 20px;
+													}
+			.evo-tile-icon-position					{
+													position: absolute;
+													top: 0;
+													bottom: 0;
+													right: 10px;
+													margin: auto;
+													height: 16px;
+													}
+												}
+		.evo-box-bdy							{
+												@include border-radius($tilesBodyBorderRadius);
+												display: none;
+												background-color: $tilesBodyBackgroundColor;
+												border-top: 1px solid $tilesBodyBorderColor;
+												padding: 0;
+												}
+
+		.evo-scroll-pane						{
+												height: $tilesScrollPaneHeight;
+			.mCSB_container							{padding: $basePadding 0 0 $basePadding;}
+												}
+
+		.evo-tile-default-expanded				{display: block;}
+											}
+
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			.evo-tile-ctn					{
+											@include border-radius($tilesOuterBorderRadiusLargeBreakpoint);
+											margin-bottom: $baseMargin;
+				.evo-box-hdr					{
+												@include border-radius(0);
+												cursor: default;
+					.evo-tile-icon-position			{display: none;}
+												}
+				.evo-box-bdy					{
+												@include border-radius(0);
+												border: 1px solid $tilesBodyBorderColor;
+												display: block;
+												margin: 0 7px 7px 7px;
+												}
+											}
+		}
+
+	}//endif
+
+}//endif

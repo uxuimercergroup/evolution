@@ -1,0 +1,89 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Image Content Overlay Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-image-content-overlay == true{
+
+	.evo-image-content-overlay-ctn
+								{
+								margin-bottom: $baseMargin;
+		.evo-image-content-overlay-ctn-adjust
+									{
+									@include clearfix;
+									margin: 0 auto;
+									padding: $basePadding $gridSiteGutterPadding 0 $gridSiteGutterPadding;
+									width: $gridWidth;
+									}
+								}
+
+	.evo-image-content-overlay	{
+								@include clearfix;
+								@include border-radius(20px 0 9px 9px);
+								position: relative;
+								margin-bottom: $baseMargin;
+								padding: $basePadding $basePadding 0 $basePadding;
+								min-height: 180px;
+								border: 0;
+								background-color: rgba($imageContentOverlayBackgroundColor, .6);
+								border-bottom: 9px solid $imageContentOverlayBorderBottomColor;
+
+		// CUSTOM IMAGE CONTENT OVERLAY BACKGROUND COLOR LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
+		@each $color-name, $color in $color-palette 
+									{
+			&[data-palette-color="#{$color-name}"]
+										{background-color: rgba(map-get($color, color), .6);}
+			&[data-palette-border-color="#{$color-name}"]
+										{border-bottom-color: map-get($color, color);}
+									}
+
+			h1, .h1, h2, .h2,
+			h3, .h3, h4, .h4,
+			h5, .h5, h6, .h6,
+			p, span, li, dt, dd, blockquote,
+			th, td, legend, hr, abbr,
+			a, a:link, a:visited, a:hover, a:active
+									{color: $imageContentOverlayFontColor;}
+
+			h1, .h1					{
+									font-family: $fontThinStack;
+									font-size: 54px;
+									line-height: 56px;
+									padding: 0;
+									}
+								}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			.evo-image-content-overlay-ctn
+								{
+				.evo-image-content-overlay-ctn-adjust
+									{
+									
+									// If using 980 width layout
+									@if $use-grid-980 == true{
+										max-width: $gridMaxWidth980;
+									}
+								
+									// If using 1200 width layout
+									@if $use-grid-1200 == true{
+										max-width: $gridMaxWidth1200;
+									}
+
+									}
+								}
+
+			.evo-image-content-overlay
+								{width: 70%;}
+
+		}
+		
+	}// endif
+
+}//endif

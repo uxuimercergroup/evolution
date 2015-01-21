@@ -1,0 +1,14 @@
+// Loading animation icon modal example click event
+var modalDialogLoadingIconExampleClickEvent = function(){
+	jQuery('#js-evo-dialog-loading-icon-example-btn').click(function() {
+		jQuery('#js-evo-dialog-loading-icon').dialog('open');
+	});
+}
+
+// Loading animation icon modal
+evoDialogModal("js-evo-dialog-loading-icon",{
+	dialogClass:'evo-dialog evo-dialog-modal evo-dialog-loading no-close-button'
+});
+
+// Loading animation icon modal example click event init
+modalDialogLoadingIconExampleClickEvent();

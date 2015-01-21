@@ -1,0 +1,48 @@
+{
+	"title": "Text Area",
+
+	"reference-overview": 
+		"<p>A Text Area is a form input field that gives the user the ability to enter a large amount of text.</p>",
+
+	"reference-usage": 
+		"<p>Use the Text Area element when a user is required to enter a large amount of text on a form. For shorter content, use the <a href='/base/forms/input'>Text Input</a> element.</p>",
+
+	"reference-details": 
+		"<ul><li>Text Area should default to the Attention/Highlight border color when the user clicks inside the field.</li><li>Text Area height size will be adaptable to the user’s content needs. For example, the box will increase in height as the user enters more and more content.</li><li>The Input Label should always be in Title Case.</li></ul>",
+
+	"reference-mobile": 
+		"<h3>Header</h3><p>Mobile details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+
+	"reference-technical": 
+		"<p>IE9 doesn't support rounded corners on inputs, so we square the corners of the inputs.</p>",
+
+	
+	"reference-dependency": "true",
+	"reference-dependency-jquery": "true",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "true",
+	"reference-example-version-label":
+		"Text Area",
+	"reference-example-version-label-2":
+		"Expanding Text Area",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"<p>To use an expanding textarea place <code>js-evo-textarea-expand</code> class on the textarea.</p>",
+	"reference-code-html-content-block-post": 
+		"",
+	"reference-code-html-content-block-pre-2": 
+		"",
+	"reference-code-html-content-block-post-2": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
+}

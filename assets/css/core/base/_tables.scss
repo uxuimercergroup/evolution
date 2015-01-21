@@ -1,0 +1,246 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Base Tables Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-tables == true{
+
+	// TABLE OVERFLOW FOR SMALL MEDIAQUERY
+	.evo-table-small-mediaquery		{
+									margin-bottom: $baseMargin;
+									overflow-x: auto;
+									overflow-y: hidden;
+									-ms-overflow-style: -ms-autohiding-scrollbar;
+									-webkit-overflow-scrolling: touch;
+		> table							{
+										margin-bottom: 0;
+										min-width: $tableMinWidth;
+										}
+									}
+
+	// BASIC TABLE STYLES
+	table							{
+									max-width: 100%;
+									background-color: transparent;
+									border-collapse: collapse;
+									border-spacing: 0;
+									}
+
+	// EVO TABLE
+	th, td							{text-align: left;}
+
+	.evo-table						{
+									color:$tableFontColor;
+									margin-bottom:$tableMarginBottom;
+									width: 100%;
+									border-bottom:1px $tableBorderStyle $tableBorderColor;
+									background-color:$tableBackgroundColor;
+		th,
+		td								{
+										font-size: $tableBaseFontSize;
+										padding: 5px 10px;
+										line-height: $tableBaseLineHeight;
+			input[type="checkbox"]			{display: block;}
+			a								{
+				&:link							{@include href-link($baseLinkColor, none);}
+				&:hover							{@include href-link-hover(underline);}
+											}
+										}
+		th								{
+										background-color: $tableThBackgroundColor;
+										border-top:1px solid $tableThBorderColor;
+										border-bottom:1px solid $tableThBorderColor;
+										color:$tableThFontColor;
+										font-family: $fontSemiBoldStack;
+										vertical-align: bottom;
+			&[class*="col-"]				{
+											float: none;
+											margin: 0;
+											}
+										}
+		caption							{
+										padding:1px 0 5px 0;
+										text-align:left;
+										vertical-align: bottom;
+			.evo-tbl-data-filter			{
+											max-width: $tableDataFilterMaxWidth;
+				input							{
+												height: $tableDataFilterHeight;
+												line-height: $tableDataFilterLineHeight;
+												margin: 0;
+												}
+											}
+										}
+		td								{
+										border-top:1px $tableTdBorderStyle $tableTdBorderColor;
+										vertical-align: top;
+										}
+
+		//SUB HEADER, THIS IS USED TO GROUP SECTIONS IN A TABLE
+		.evo-subheader-row				{
+										background-color: $tableSubHeaderBackgroundColor !important;
+										border: 1px solid $tableSubHeaderBorderColor;
+										color: $tableSubHeaderFontColor;
+										font-family: $fontSemiBoldStack;
+										}
+
+		// SUBTOTAL AND TOTAL HELPERS
+		.evo-subtotal-row,
+		.evo-total-row					{
+										font-family: $fontSemiBoldStack;
+			td								{border-top: 1px $tableBorderStyle $tableBorderColor;}
+										}
+		.evo-subtotal-row				{
+			td								{
+											background-color: $tableSubTotalBackgroundColor !important;
+											color: $tableSubTotalFontColor;
+											}
+										}
+		.evo-total-row					{
+			td								{
+											background-color: $tableTotalBackgroundColor !important;
+											color: $tableTotalFontColor;
+											}
+										}
+									}
+
+	// FOOTABLES
+	.evo-footable					{
+		th								{cursor: pointer;}
+
+		// SORTING CLASSES
+		.evo-highlight					{background-color: $tableOddTdSortedBackgroundColor !important;}
+		tbody > tr:nth-child(odd) > .evo-highlight
+										{background-color: $tableOddTdBackgroundColor !important;}
+
+		// IF COLUMN IS NOT SORTABLE TURN OFF POINTER CURSOR
+		th[data-sort-ignore="true"]		{cursor: default;}
+									}
+
+
+	// EVO TABLE BORDERS
+	.evo-table-borders				{
+									border: 1px $tableBorderStyle $tableBorderColor;
+		th								{
+										border-left: 1px solid $tableThBorderColor;
+										border-right: 1px solid $tableThBorderColor;
+										border-top: 1px solid $tableThBorderColor;
+										border-bottom: 1px solid $tableThBorderColor;
+										}
+		td								{border-left: 1px $tableBorderStyle $tableBorderColor;}
+									}
+
+	// EVO TABLE ROW STRIPING
+	.evo-table-striped				{
+		tbody > tr:nth-child(even) > td	{background-color:$tableOddTdBackgroundColor;}
+
+		// FALLBACK ROW STRIPING
+		.evo-even						{
+			td								{
+											background-color:$tableEvenTdBackgroundColor;
+
+				// SORTED COLUMN STYLES - EVEN
+				&[class*="sorting"]				{background-color:$tableEvenTdSortedBackgroundColor;}
+											}
+										}
+		.evo-odd						{
+			td								{
+											background-color:$tableOddTdBackgroundColor;
+
+				// SORTED COLUMN STYLES - ODD
+				&[class*="sorting"]				{background-color:$tableOddTdSortedBackgroundColor;}
+											}
+										}			
+									}
+
+	// EVO TABLE ROW HOVER
+	.evo-table-hover tbody tr:hover > td,
+	.evo-table-hover tbody tr:hover > td[class*="sorting"]
+									{background-color: $tableRowHoverColor;}
+
+
+	// EVO TABLE PAGINATION
+	.evo-table-pagination			{
+		.evo-pagination-row				{
+			td								{
+											border-top:1px solid $tableBorderColor;
+											border-right:1px solid transparent;
+											border-bottom:1px solid transparent;
+											border-left:1px solid transparent;
+											padding: 5px 0 0 0;
+											text-align:left;
+				.evo-pagination					{
+												position: relative;
+												left: -2px;
+												}
+											}
+										}
+									}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// SMALL MEDIA QUERY RANGE - 0 - 640px
+	@if $use-small-only-mediaquery == true {
+		
+		@media #{$small-only} {
+
+			// EVO TABLE IE9 FIXES
+			.ie9					{
+				
+				// EVO TABLE
+				.evo-table				{
+					caption					{
+						.evo-tbl-data-filter	{
+							input					{line-height: ($tableDataFilterLineHeight - 4);}
+												}
+											}
+										}
+									}
+
+		}
+
+	}//endif
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			// TABLE OVERFLOW FOR SMALL MEDIAQUERY
+			.evo-table-small-mediaquery
+									{
+									width: $tableMinWidthLargeBreakpoint;
+				> table					{min-width: $tableMinWidthLargeBreakpoint;}
+									}
+
+			// EVO TABLE
+			.evo-table				{
+				th,
+				td						{
+										font-size: $tableBaseFontSizeLargeBreakpoint;
+										line-height: $tableBaseLineHeightLargeBreakpoint;
+										}
+				caption					{
+					.evo-tbl-data-filter	{
+											max-width: 100%;
+						input					{
+												height: $tableDataFilterHeightLargeBreakpoint;
+												line-height: $tableDataFilterLineHeightLargeBreakpoint;
+												}
+											}
+										}
+									}
+
+			// EVO TABLE PAGINATION
+			.evo-table-pagination	{
+				.evo-pagination-row		{
+					td						{text-align:right;}
+										}
+									}
+
+		}
+		
+	}// endif
+
+}//endif

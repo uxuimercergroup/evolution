@@ -1,0 +1,56 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Mini Filter Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-mini-filter == true{
+
+	.evo-mini-filter						{
+											margin: 0 0 $miniFilterMarginBottom 0;
+		dt										{
+												font-family: $fontSemiBoldStack;
+												color: $miniFilterLabelFontColor;
+												}
+		dd										{
+			a.active								{
+													padding: $miniFilterActivePaddingTopBottom $miniFilterActivePaddingLeftRight;
+													background-color: $miniFilterActiveBackgroundColor;
+													color: $miniFilterActiveFontColor;
+													text-decoration: none;
+													cursor: default;
+				&:hover									{text-decoration: none;}
+													}
+												}
+											}
+
+	// MINI FILTER DROPDOWN MENU FOR SMALL MEDIAQUERY BREAKPOINT
+	.evo-mini-filter-dropdown				{
+											margin-bottom: $miniFilterMarginBottom;
+											max-width: $miniFilterDropDownMaxWidth;
+											}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			.evo-mini-filter				{
+											margin: 0;
+				dt, dd							{
+												font-size: $miniFilterFontSizeLargeBreakpoint;
+												line-height: $miniFilterFontSizeLargeBreakpoint;
+												}
+				dd								{
+												padding-left: 5px;
+												margin-right: 2px;
+												}
+											}
+
+		}
+		
+	}// endif
+
+}//endif

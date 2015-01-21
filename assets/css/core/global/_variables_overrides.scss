@@ -1,0 +1,1004 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Global Variables Overrides Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+// ==========================================================================================
+// VARIABLES OVERRIDES
+// ==========================================================================================
+
+// ==========================================================================================
+// GLOBAL
+// ==========================================================================================
+// $evo-include-html-classes:				true;
+
+
+// GLOBAL
+// ------------------------------------------------------------------------------------------
+
+// HTML MIN HEIGHT
+// $htmlMinHeight:							100%;
+
+// BORDER RADIUS SIZES
+// $borderRadiusXSmall:						2px;
+// $borderRadiusSmall:						4px;
+// $borderRadiusMedium:						8px;
+// $borderRadiusLarge:						12px;
+// $borderRadiusXLarge:						16px;
+
+// BASE VARIABLES
+// $baseMargin:								14px;
+// $basePadding:							14px;
+// $baseBorderRadius:						$borderRadiusMedium;
+
+// Z-INDEX MASTER LIST
+// Used for a bird's eye view of components dependent on the z-axis
+// $zindexLayoutLoginFooterBackground:		9994;
+// $zindexLayoutLoginFooter:				9995;
+// $zindexSlider:							9996;
+// $zindexDatepicker:						9997;
+// $zindexAutocomplete:						9998;
+// $zindexTooltip:							9999;
+// $zindexToolbar:							10000;
+// $zindexMenu:								10001;
+// $zindexDialogOverlay:					10002;
+// $zindexDialogPosition:					10003;
+
+
+// HELPERS
+// ------------------------------------------------------------------------------------------
+
+// FOOTNOTES
+// $footnoteFontColor:						$gray-darker;
+
+// KEYLINES
+// $keylineRightBorderRightColor: 			$gray-mid-light;
+// $keylineLeftBorderLeftColor:				$gray-mid-light;
+
+// SPACER SIZES
+// $spacerSize:								5px;
+// $spacerXSmall:							($spacerSize*1);
+// $spacerSmall:							($spacerSize*2);
+// $spacerMedium:							($spacerSize*3);
+// $spacerLarge:							($spacerSize*4);
+// $spacerXLarge:							($spacerSize*5);
+// $spacerXXLarge:							($spacerSize*6);
+// $spacerXXXLarge:							($spacerSize*7);
+
+
+// ==========================================================================================
+// BASE
+// ==========================================================================================
+
+// FONTS
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $baseFontStack:							arial, Tahoma, Geneva, sans-serif;
+// $baseFontFilePath:						"../fonts";
+
+// WEB FONTS
+
+	// Thin
+	// $fontThinFamily:							proxima_nova_ththin;
+	// $fontThinFilePath:						"#{$baseFontFilePath}/ProximaNova-Thin-webfont";
+	// $fontThinStack:							"#{$fontThinFamily}", $baseFontStack;
+
+	// Regular
+	// $fontRegularFamily:						proxima_nova_rgregular;
+	// $fontRegularFilePath:					"#{$baseFontFilePath}/ProximaNova-Reg-webfont";
+	// $fontRegularStack:						"#{$fontRegularFamily}", $baseFontStack;
+
+	// Bold
+	// $fontBoldFamily:							proxima_nova_rgbold;
+	// $fontBoldFilePath:						"#{$baseFontFilePath}/ProximaNova-Bold-webfont";
+	// $fontBoldStack:							"#{$fontBoldFamily}", $baseFontStack;
+
+	// Italic
+	// $fontItalicFamily:						proxima_novaregular_italic;
+	// $fontItalicFilePath:						"#{$baseFontFilePath}/ProximaNova-RegIt-webfont";
+	// $fontItalicStack:						"#{$fontItalicFamily}", $baseFontStack;
+
+	// Bold Italic
+	// $fontBoldItalicFamily:					proxima_novabold_italic;
+	// $fontBoldItalicFilePath:					"#{$baseFontFilePath}/ProximaNova-BoldIt-webfont";
+	// $fontBoldItalicStack:					"#{$fontBoldItalicFamily}", $baseFontStack;
+
+	// Semi-bold
+	// $fontSemiBoldFamily:						proxima_nova_ltsemibold;
+	// $fontSemiBoldFilePath:					"#{$baseFontFilePath}/ProximaNova-Sbold-webfont";
+	// $fontSemiBoldStack:						"#{$fontSemiBoldFamily}", $baseFontStack;
+
+// ICON FONTS
+
+	// Core icon font set
+	// $evoIconFontFamily:						evo_icon_font;
+	// $evoIconFontFilePath:					"#{$baseFontFilePath}/evo-icon-font";
+	// $evoIconFontStack:						"#{$evoIconFontFamily}";
+
+	// Site icon font set
+	// $evoIconSiteFontFamily:					evo_icon_font_site;
+	// $evoIconSiteFontFilePath:				"#{$baseFontFilePath}/evo-icon-font-site";
+	// $evoIconSiteFontStack:					"#{$evoIconSiteFontFamily}";
+
+
+// TYPOGRAPHY
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $baseFontFamily:							$fontRegularStack;
+// $baseFontSize:							16px;
+// $baseFontSizeDifference:					2;
+// $baseFontSizeDifferenceMediumBreakpoint:	2;
+// $baseFontSizeDifferenceLargeBreakpoint:	2;
+// $baseFontSizeLargeBreakpoint:			($baseFontSize - $baseFontSizeDifferenceLargeBreakpoint);
+// $baseLineHeight:		        			22px;
+// $baseLineHeightLargeBreakpoint:			($baseLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
+// $baseFontColor:							$gray-darkest;
+// $baseHdrFontColor:						$gray-darkest;
+
+// LINKS
+// $baseLinkColor:							$blue-sapphire;
+// $baseLinkVisitedColor:					$blue-sapphire;
+// $baseLinkHoverColor:						$gray-darker;
+
+// FONT WEIGHTS
+// $WeightBold100:							100;
+// $WeightBold200:							200;
+// $WeightBold300:							300;
+// $WeightBold400:							400;
+// $WeightBold500:							500;
+// $WeightBold600:							600;
+// $WeightBold700:							700;
+// $WeightBold800:							800;
+// $WeightBold900:							900;
+
+// HEADERS
+// $hdrH1FontSize:							34px;
+// $hdrH1FontSizeLargeBreakpoint:			($hdrH1FontSize - $baseFontSizeDifferenceLargeBreakpoint);
+// $hdrH1LineHeight:						($hdrH1FontSize + $baseFontSizeDifference);
+// $hdrH1LineHeightLargeBreakpoint:			($hdrH1LineHeight - $baseFontSizeDifferenceLargeBreakpoint);
+// $hdrH1PaddingTopBottom:					9px;
+
+// $hdrH2FontSize:							28px;
+// $hdrH2FontSizeLargeBreakpoint:			($hdrH2FontSize - $baseFontSizeDifferenceLargeBreakpoint);
+// $hdrH2LineHeight:						($hdrH2FontSize + $baseFontSizeDifference);
+// $hdrH2LineHeightLargeBreakpoint:			($hdrH2LineHeight - $baseFontSizeDifferenceLargeBreakpoint);
+// $hdrH2PaddingTopBottom:					6px;
+
+// $hdrH3FontSize:							24px;
+// $hdrH3FontSizeLargeBreakpoint:			($hdrH3FontSize - $baseFontSizeDifferenceLargeBreakpoint);
+// $hdrH3LineHeight:						($hdrH3FontSize + $baseFontSizeDifference);
+// $hdrH3LineHeightLargeBreakpoint:			($hdrH3LineHeight - $baseFontSizeDifferenceLargeBreakpoint);
+// $hdrH3PaddingTopBottom:					6px;
+
+// $hdrH4FontSize:							20px;
+// $hdrH4FontSizeLargeBreakpoint:			($hdrH4FontSize - $baseFontSizeDifferenceLargeBreakpoint);
+// $hdrH4LineHeight:						($hdrH4FontSize + $baseFontSizeDifference);
+// $hdrH4LineHeightLargeBreakpoint:			($hdrH4LineHeight - $baseFontSizeDifferenceLargeBreakpoint);
+// $hdrH4PaddingTopBottom:					3px;
+
+// $hdrH5FontSize:							16px;
+// $hdrH5FontSizeLargeBreakpoint:			($hdrH5FontSize - $baseFontSizeDifferenceLargeBreakpoint);
+
+// $hdrH6FontSize:							14px;
+// $hdrH6FontSizeLargeBreakpoint:			($hdrH6FontSize - $baseFontSizeDifferenceLargeBreakpoint);
+
+// $hdrRuleBorderSize:						1px;
+// $hdrRuleBorderStyle:						dotted;
+// $hdrRuleMarginBottom:					10px;
+// $hdrRuleBorderColor:						$gray-darker;
+
+// $hdrBackgroundColor:						$gray-mid-light;
+
+// PARAGRAPHS
+// $baseParagraphMarginBottom:				14px;
+
+// SMALL FONT SIZES
+// $smallFontSize:							14px;
+// $smallFontSizeLargeBreakpoint:			($smallFontSize - $baseFontSizeDifferenceLargeBreakpoint);
+
+// HORIZONTAL RULES
+// $hrHeight:								2px;
+// $hrMarginTopBottom:						$baseParagraphMarginBottom;
+// $hrBackgroundColor: 						$white;
+// $hrBorderTopColor:						$gray-mid-light;
+// $hrFontColor:							$white;
+
+// OTHER ELEMENTS
+// $abbrBorderBottomColor:					$black;
+// $textSelectionTextColor:					$white;
+// $textSelectionBackgroundColor:			$gray-darker;
+
+
+// GRID
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $gridWidth:								100%;
+// $gridMaxWidth980:						980px;
+// $gridMaxWidth1200:						1200px;
+// $gridMinWidth:							320px;
+// $gridMinHeight:							550px;
+// $gridSiteGutterPadding:					10px;
+// $gridColumns:							24;
+// $gridColumnWidth:						20px;
+// $gridGutterWidth:						20px;
+// $gridNoMarginColumnWidth:				39.15px;
+// $gridRowWidth:							($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+// $bodyBackgroundStartColor:				$white;
+// $bodyBackgroundEndColor:					$white;
+
+// FLUID GRID
+// $fluidGridColumnWidth:					percentage($gridColumnWidth/$gridRowWidth);
+// $fluidGridGutterWidth:					percentage($gridGutterWidth/$gridRowWidth);
+// $fluidGridNoMarginColumnWidth:			percentage($gridNoMarginColumnWidth/$gridRowWidth);
+
+// BODY BACKGROUND STYLE
+// $bodyBackgroundBodyStartColor:			$white;
+// $bodyBackgroundBodyEndColor:				$white;
+
+// GRID BACKGROUND COLOR
+// $gridBackgroundColor:					$white;
+
+
+// BOXES
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $boxBorderSize:							1px;
+// $boxBorderStyle:							solid;
+// $boxHdrBorderSize:						3px;
+// $boxHdrBorderStyle:						solid;
+// $boxBdyBorderTopSize:					1px;
+// $boxBdyBorderTopStyle:					solid;
+// $boxPadding:								$basePadding;
+// $boxVShadow:								1px;
+// $boxHShadow:								1px;
+// $boxShadowBlur:							1px;
+// $boxBackgroundColor:						$gray-lighter;
+// $boxBorderColor:							$gray-mid-light;
+// $boxHdrBorderColor:						$gray-mid-light;
+// $boxShadowColor:							$gray-darker;
+
+// ADVANCED BOX
+// $boxAdvancedBackgroundColor:				$transparent;
+// $boxAdvancedHdrBackgroundColor:			$gray-light;
+
+// MESSAGE BOXES
+// $msgBorderWidth:							1px;
+// $msgBorderStyle:							solid;
+
+// CUSTOM CONTAINERS
+// $boxInlineSearchBorderSizeColor:			1px;
+// $boxInlineSearchBorderTypeColor:			dotted;
+// $boxInlineSearchLabelLineHeight:			22px;
+
+// $boxFeaturedBackgroundColor:				$white;
+// $boxFeaturedBorderBottomColor:			$blue-gray-mid-dark;
+
+// $boxSidebarBackgroundColor:				$gray-lighter;
+// $boxSidebarBorderBottomColor:			$gray-mid-light;
+
+// $boxInlineSearchBackgroundColor:			$gray-lighter;
+// $boxInlineSearchBorderColor:				$gray-darker;
+
+// $boxSupportBackgroundColor:				$blue-gray-lighter;
+// $boxSupportBottomColor:					$blue-gray-mid-dark;
+// $boxSupportBorderBottomColor:			$blue-gray-mid-dark;
+
+
+// FORM
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $formMarginBottom:						$baseMargin;
+// $baseInputShadowColor:					$gray-lighter;
+// $baseInputBackgroundColor:				$white;
+// $baseInputBorderColor:					$gray-mid-light;
+// $baseInputColor:							$gray-darker;
+
+// FORM LABELS
+// $labelMarginBottom:						1px;
+// $baseInputBorderRadius:					$borderRadiusSmall;
+// $labelFontColor:							$black;
+
+// FORM INPUTS
+// $baseInputBorderSize:					1px;
+// $baseInputPadding:						2px;
+// $baseCheckboxRadioWidth:					auto;
+// $baseCheckboxRadioFontSize:				$baseFontSize;
+// $baseCheckboxRadioFontSizeLargeBreakpoint: ($baseCheckboxRadioFontSize - $baseFontSizeDifferenceLargeBreakpoint);
+
+// FORM INPUT FOCUS
+// $inputFocusShadowColor:					$tan-mid;
+// $inputFocusBorderColor:					$tan-dark;
+
+// FORM INPUT SPACING
+// $marginBottomFormElements:				10px;
+
+// FIELDHINTS
+// $placeholderTextColor:					$gray-mid-light;
+
+// FORM INFO TEXT
+// $formInfoTextColor:						$gray-darker;
+
+// FORM ACTION CONTAINER
+// $formActionPaddingTop:					10px;
+
+// FORM ERROR HANDLING
+// $inputValidTextColor:					$gray-darker;
+// $inputInvalidTextColor:					$red;
+
+// SELECTED CHECKBOX
+// $selectedCheckboxBorderRadius:			$borderRadiusSmall;
+// $selectedCheckboxBorderColor:			$gray-light;
+// $selectedCheckboxBackgroundColor:		$green-lightest;
+
+
+// BUTTONS
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $buttonHoverBorderSize:					1px;
+// $buttonHoverBorderStyle:					solid;
+// $buttonVShadow:							0;
+// $buttonHShadow:							0;
+// $buttonShadowBlur:						0;
+// $buttonMarginBottom:						5px;
+// $buttonBorderRadius:						$baseBorderRadius;
+// $buttonMinWidth:							100%;
+// $buttonMinWidthLargeBreakpoint:			100px;
+// $buttonPaddingTopBottom:					12px;
+// $buttonPaddingLeftRight:					17px;
+// $buttonPaddingTopBottomLargeBreakpoint:	7px;
+// $buttonPaddingLeftRightLargeBreakpoint:	12px;
+// $buttonFontSize:							18px;
+// $buttonLineHeight:						$buttonFontSize;
+// $buttonFontSizeLargeBreakpoint:			15px;
+// $buttonLineHeightLargeBreakpoint:		$buttonFontSizeLargeBreakpoint;
+// $buttonFontWeight:						normal;
+// $buttonBorderSize:						1px;
+// $buttonBorderStyle:						solid;
+
+// $buttonBackgroundColor:					$gray-light;
+// $buttonHoverBackgroundColor: 			$gray-mid-dark;
+// $buttonHoverBorderColor:					$gray-mid-dark;
+// $buttonActiveBackgroundColor:			$gray-mid-dark;
+// $buttonFocusBackgroundColor: 			$gray-mid-dark;
+// $buttonFocusBorderColor:					$gray-mid-dark;
+// $buttonShadowColor:						$transparent;
+// $buttonFontColor:						$gray-darkest;
+// $buttonBorderColor:						$gray-mid-light;
+// $buttonTextShadowColor:					$transparent;
+
+// PRIMARY BUTTON
+// $buttonPrimaryBackgroundColor:			$green-darker;
+// $buttonHoverPrimaryBackgroundColor:		$green;
+// $buttonActivePrimaryBackgroundColor:		$green;
+// $buttonFocusPrimaryBackgroundColor:		$green;
+// $buttonPrimaryFontColor:					$white;
+// $buttonPrimaryTextShadowColor:			$transparent;
+
+// BUTTON DISABLED
+// $buttonDisabledBackgroundColor:			$gray-lighter;
+// $buttonDisabledBorderColor:				$gray-mid-light;
+// $buttonDisabledFontColor:				$gray-darker;
+// $buttonPrimaryDisabledBackgroundColor:	$green-darker;
+// $buttonPrimaryDisabledBorderColor:		$gray-darker;
+// $buttonPrimaryDisabledFontColor:			$gray-lighter;
+
+// BUTTON SIZES
+// $buttonXXXSmallFontSize:					12px;
+// $buttonXXXSmallFontSizeLargeBreakpoint:	10px;
+// $buttonXXSmallFontSize:					14px;
+// $buttonXXSmallFontSizeLargeBreakpoint:	12px;
+// $buttonXSmallFontSize:					15px;
+// $buttonXSmallFontSizeLargeBreakpoint:	13px;
+// $buttonSmallFontSize:					16px;
+// $buttonSmallFontSizeLargeBreakpoint:		14px;
+// $buttonMediumFontSize:					$buttonFontSize;
+// $buttonMediumFontSizeLargeBreakpoint:	$buttonFontSizeLargeBreakpoint;
+// $buttonLargeFontSize:					20px;
+// $buttonLargeFontSizeLargeBreakpoint:		18px;
+// $buttonXLargeFontSize:					24px;
+// $buttonXLargeFontSizeLargeBreakpoint:	23px;
+// $buttonXXLargeFontSize:					28px;
+// $buttonXXLargeFontSizeLargeBreakpoint:	26px;
+// $buttonXXXLargeFontSize:					35px;
+// $buttonXXXLargeFontSizeLargeBreakpoint:	33px;
+
+// BUTTON GROUP VERTICAL
+// $buttonVertGroupBorderTopSize:			1px;
+// $buttonVertGroupBorderTopStyle:			solid;
+// $buttonVertGroupBorderTopColor:			$gray-mid-light;
+
+// BUTTON GROUP HORIZONTAL
+// $buttonHorzGroupBorderTopSize:			1px;
+// $buttonHorzGroupBorderTopStyle:			solid;
+// $buttonHorzGroupBorderBottomSize:		1px;
+// $buttonHorzGroupBorderBottomStyle:		solid;
+// $buttonHorzGroupBorderRightSize:			1px;
+// $buttonHorzGroupBorderRightStyle:		solid;
+// $buttonHorzGroupFirstChildBorderLeftSize: 1px;
+// $buttonHorzGroupFirstChildBorderLeftStyle: solid;
+// $buttonHorzGroupBorderTopColor:			$gray-mid-light;
+// $buttonHorzGroupBorderBottomColor:		$gray-mid-light;
+// $buttonHorzGroupBorderRightColor:		$gray-mid-light;
+// $buttonHorzGroupFirstChildBorderLeftColor: $gray-mid-light;
+
+
+// HEADER
+// ------------------------------------------------------------------------------------------
+
+// ICON STYLES
+// $headerIconRadius:						3px;
+// $headerIconPadding:						4px 10px 6px 6px;
+// $headerIconMinWidth:						28px;
+// $headerIconBackgroundColor:				$gray-dark;
+// $headerIconFontColor:					$white;
+// $headerIconHoverBackgroundColor:			$gray-dark;
+// $headerIconHoverFontColor:				$white;
+
+// BASE & LOGO STYLES
+// $mastheadContentHeight:					52px;
+// $mastheadLogoLineHeight:					52px;
+// $mastheadLogoFontWeight:					400;
+// $mastheadLogoFontSize:					24px;
+// $mastheadLogoFontSizeLargeBreakpoint:	33px;
+// $mastheadBackgroundStartColor:			$blue-gray;
+// $mastheadBackgroundEndColor:				$blue-gray-darker;
+// $mastheadLogoLinkColor:					$white;
+
+// USER IDENTIFIER
+// $userIdentifierMenuFontSize:				12px;
+// $userIdentifierMenuPadding:				6px 10px 6px 30px;
+// $userIdentifierBackgroundStartColor:		#4674a9;
+// $userIdentifierBackgroundEndColor:		#385882;
+// $userIdentifierFontColor:				$white;
+// $userIdentifierMenuShadowColor:			$gray-darker;
+// $userIdentifierMenuTextColor:			$white;
+// $userIdentifierMenuHoverColor:			$blue-gray;
+
+// TOOLBAR
+// $toolbarBackgroundStartColor:			$blue-gray;
+// $toolbarBackgroundEndColor:				$blue-gray-darker;
+// $toolbarMobileNavbarBackgroundColor:		$gray-lighter;
+// $toolbarDropShadowColor:					$gray-darker;
+// $toolbarLinkColor:						$white;
+// $toolbarLinkHoverColor:					$white;
+
+// NAVBAR
+// $navbarBackgroundGradientStartColor:		$gray-lightest;
+// $navbarBackgroundGradientEndColor:		$gray-mid-light;
+// $navbarBorderColor:						$gray-mid-dark;
+// $navbarBorderBottomStyle:				solid;
+// $navbarBorderColor:						$gray-mid-dark;
+// $navbarFontHoverColor:					#002C77;
+
+	// MENU OVERRIDES
+	// $subMenuBackgroundColor:					$gray-lighter;
+	// $subMenuBorderTopColor:					$gray-mid-dark;
+
+	// NAVBAR MESSAGE AREA
+	// $navbarMessageBorderRightColor:			$gray-mid-dark;
+
+	// TEXT NAVBAR
+	// $textNavbarBorderLeftColor:				$gray-mid-dark;
+	// $textNavbarSubMenuHoverBackgroundColor:	$white;
+
+	// TABBED NAVBAR
+	// $tabbedNavbarBorderLeftColor:			$white;
+	// $tabbedNavbarHrefBorderLeftColor:		$gray-mid-light;
+
+	// $tabbedNavbarActiveBackgroundStartColor:	$gray-lightest;
+	// $tabbedNavbarActiveBackgroundEndColor:	$gray-mid-dark;
+	// $tabbedNavbarSubMenuHoverBackgroundColor: $white;
+
+// SPOTLIGHT CONTAINER
+// $megaMenuContainerSpotlightBorderRadius: 4px;
+
+
+// MENU STYLES
+// ------------------------------------------------------------------------------------------
+// $menuLinkPadding:						7px 10px;
+
+// MENUS
+// $menuBackgroundHoverColor: 				$white;
+// $menuDropShadowColor:					$gray-mid-dark;
+// $menuBackgroundColor:					$white;
+// $menuBorderColor:						$gray-mid-dark;
+// $menuBorderTopColor:						$gray-mid-dark;
+// $menuIndicatorColor1stLevel:				$gray-dark;
+// $menuFontColor:							#002C77;
+// $menuHoverFontColor:						#002C77;
+// $menuBorderTopColor2ndlevel:				$gray-mid-dark;
+
+// MEGA MENU
+// $megaMenuBackgroundColor: 				$gray-darker;
+// $megaMenuBorderTopColor:					$gray-dark;
+// $megaMenuBorderBottomColor:				$gray-dark;
+// $megaMenuContentFontColor:				$white;
+
+
+// NAVIGATION
+// ------------------------------------------------------------------------------------------
+// $navbarBorderBottomWidth:				1px;
+// $navbarBorderBottomStyle:				solid;
+// $navbarMessageWidth:						200px;
+// $navbarMessagePadding:					9px 0 7px 0;
+// $navbarMessageInnerPadding:				2px 10px 2px 0;
+// $navbarMessageFontFamily:				$fontSemiBoldFamily;
+// $navbarMessageBorderRightWidth:			1px;
+// $navbarMessageBorderRightStyle:			dotted;
+
+
+// HERO BANNER
+// ------------------------------------------------------------------------------------------
+// $heroBannerBackgroundColor:				$gray-lighter;
+
+
+// FOOTER
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $footerBorderTopColor:					$gray-mid-light;
+// $footerFontColor:						$gray-darker;
+
+// FAT FOOTER
+// $fatFooterBackgroundColor:				$gray-darker;
+// $fatFooterFontColor:						$white;
+
+
+// ICONS
+// ------------------------------------------------------------------------------------------
+// $iconFontSize:							$baseFontSize;
+// $iconFontAdvSize:						32px;
+// $iconFontColor:							$blue-gray-dark;
+// $iconFontBackgroundStartColor:			$blue-gray-dark;
+// $iconFontBackgroundEndColor:				$blue-gray;
+// $iconFontAdvBackgroundColor:				$blue-gray-darkest;
+// $iconFontAdvShadowColor:					$gray-darkest;
+// $iconFontAdvBorderColor:					$gray-lighter;
+// $iconFontAdvFontColor:					$white;
+
+
+// LISTS
+// ------------------------------------------------------------------------------------------
+// $verticalListLineHeight:					18px;
+// $verticalListLineHeightLargeBreakpoint:	($verticalListLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
+// $dataListLineHeight:						22px;
+// $dataListLineHeightLargeBreakpoint:		($dataListLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
+// $horizontalListPipeBorderColor:			$gray-mid-light;
+// $definitionListHeaderColor:				$black;
+// $definitionDataListHeaderBorderColor:	$gray-mid-light;
+
+
+// TABLES
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $tableColWidthMultiplier: 				1%;
+// $tableBaseFontSize:						14px;
+// $tableBaseFontSizeLargeBreakpoint:		($tableBaseFontSize - $baseFontSizeDifferenceLargeBreakpoint);
+// $tableBaseLineHeight:					15px;
+// $tableBaseLineHeightLargeBreakpoint:		($tableBaseLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
+// $tableBorderStyle:						solid;
+// $tableTdBorderStyle:						solid;
+// $tableMarginBottom:						$baseMargin;
+// $tableMinWidth:							640px;
+// $tableMinWidthLargeBreakpoint:			100%;
+
+// $tableBackgroundColor:					$white;
+// $tableBorderColor:						$gray-mid-light;
+// $tableFontColor:							$black;
+// $tableThFontColor:						$black;
+// $tableThBackgroundColor:					$blue-gray-lighter;
+// $tableThBorderColor:						#A9BCD3;
+// $tableTdBorderColor:						$gray-mid-light;
+// $tableEvenTdBackgroundColor:				$white;
+// $tableEvenTdSortedBackgroundColor: 		$gray-lightest;
+// $tableOddTdBackgroundColor:				$gray-lightest;
+// $tableOddTdSortedBackgroundColor: 		$gray-lighter;
+// $tableRowHoverColor:						$tan-light;
+
+// OPTIONS
+// $tableDataFilterMaxWidth:				300px;
+// $tableDataFilterLineHeight:				22px;
+// $tableDataFilterLineHeightLargeBreakpoint: 16px;
+// $tableDataFilterHeight:					($tableDataFilterLineHeight + $baseFontSizeDifferenceLargeBreakpoint);
+// $tableDataFilterHeightLargeBreakpoint:	20px;
+
+// $tableSubHeaderBackgroundColor:			#E8F0F7;
+// $tableSubHeaderFontColor:				$gray-darkest;
+// $tableSubHeaderBorderColor:				#C3D2E5;
+// $tableSubTotalBackgroundColor:			$gray-lighter;
+// $tableSubTotalFontColor:					$gray-darkest;
+// $tableTotalBackgroundColor:				#E6E6E6;
+// $tableTotalFontColor:					$black;
+
+
+// ==========================================================================================
+// OBJECTS
+// ==========================================================================================
+
+// ACCORDION
+// ------------------------------------------------------------------------------------------
+// $accordionBorderColor:					$gray-mid-light;
+// $accordionHeaderBackgroundColor:			$gray-lightest;
+// $accordionHeaderFontColor:				$blue-gray-dark;
+// $accordionHeaderIconColor:				$blue-gray-dark;
+// $accordionContentBackgroundColor:		$white;
+
+
+// ADVANCED FILTER MODAL
+// ------------------------------------------------------------------------------------------
+// $advancedFilterModalWidth:				700px;
+
+
+// ALTERNATE VIEWS BADGE
+// ------------------------------------------------------------------------------------------
+// $alternateViewsBadgeButtonBackgroundStartColor: $white;
+// $alternateViewsBadgeButtonBackgroundEndColor: $gray-light;
+// $alternateViewsBadgeButtonBorderColor: #e1dfdf;
+// $alternateViewsBadgeButtonIconColor: $gray-mid-dark;
+// $alternateViewsBadgeButtonLinkColor: $gray-darker;
+// $alternateViewsBadgeButtonHoverBackgroundStartColor: $gray-lightest;
+// $alternateViewsBadgeButtonHoverBackgroundEndColor: $gray-mid-light;
+// $alternateViewsBadgeButtonHoverIconColor: $gray-darker;
+// $alternateViewsBadgeButtonHoverLinkColor: $gray-darkest;
+// $alternateViewsBadgeButtonActiveBackgroundStartColor: #fef8e3;
+// $alternateViewsBadgeButtonActiveBackgroundEndColor: #f5e6b0;
+// $alternateViewsBadgeButtonActiveBorderColor: #f0e2b3;
+// $alternateViewsBadgeButtonActiveIconColor: #edc557;
+// $alternateViewsBadgeButtonActiveLinkColor: $gray-darkest;
+
+
+// AUTOCOMPLETE
+// ------------------------------------------------------------------------------------------
+// $autocompleteBorderSize:					1px;
+// $autocompleteBorderStyle:				solid;
+// $autocompleteMaxHeight:					97px;
+// $autocompleteMaxHeightLargeBreakpoint:	193px;
+// $autocompleteItemFontSize:				$baseFontSize;
+// $autocompleteItemFontSizeLargeBreakpoint: $baseFontSizeLargeBreakpoint;
+// $autocompleteItemLinkLineHeight:			22px;
+// $autocompleteItemLinkLineHeightLargeBreakpoint:	($autocompleteItemLinkLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
+// $autocompleteItemBorderTopSize:			1px;
+// $autocompleteItemBorderTopStyle:			solid;
+// $autocompleteItemBorderBottomSize:		1px;
+// $autocompleteItemBorderBottomStyle:		solid;
+// $autocompleteItemUnderlineText:			underline;
+
+// $autocompleteShadowColor:				$gray-mid-light;
+// $autocompleteBackgroundColor:			$gray-lightest;
+// $autocompleteBorderColor:				$gray-mid-light;
+// $autocompleteItemFontColor:				$baseFontColor;
+// $autocompleteItemBorderTopColor:			$gray-lightest;
+// $autocompleteItemBorderBottomColor:		$gray-lightest;
+// $autocompleteItemHighlightText:			$tan;
+// $autocompleteItemHoverBackgroundStartColor: $tan-light;
+// $autocompleteItemHoverBackgroundEndColor: $tan-light;
+
+
+// CALL TO ACTION
+// ------------------------------------------------------------------------------------------
+// $callToActionBackgroundColor:			$gray-dark;
+// $callToActionTextColor:					$white;
+// $callToActionHoverBackgroundColor:		$gray-darker;
+// $callToActionIconColor:					$white;
+
+
+// CAROUSEL
+// ------------------------------------------------------------------------------------------
+// $carouselPageCircleBackgroundColor:		$gray-mid-light;
+// $carouselPageCircleHoverBackgroundColor:	$gray-dark;
+// $carouselPageCircleActiveBackgroundColor: $gray-darker;
+// $carouselPageCircleTextColor:			$white;
+// $carouselNavIconColor:					$gray-mid-light;
+// $carouselNavHoverIconColor:				$gray-dark;
+
+
+// CONTENT MODAL
+// ------------------------------------------------------------------------------------------
+// $contentModalUtilityBarWidth:			51px;
+// $contentModalUtilityBarTabsIconPositionTop: 9px;
+// $contentModalUtilityBarTabsPositionTop:	89px;
+// $contentModalUtilityBarTabsUtilityPositionBottom: 70px;
+// $contentModalUtilityBarTabsCloseIconPositionTop: 15px;
+// $contentModalUtilityBarTabsCloseIconPositionLeft: 9px;
+
+// $contentModalBackgroundColor:				$white;
+// $contentModalUtilityBarBackgroundStartColor: $blue-gray-darker;
+// $contentModalUtilityBarBackgroundEndColor: 	$blue-gray-darkest;
+// $contentModalUtilityBarTabsBorderColor:		$blue-gray-darkest;
+// $contentModalUtilityBarTabsAltBorderColor:	$blue-gray-light;
+// $contentModalUtilityBarTabsIconColor:		$white;
+// $contentModalUtilityBarTabsHoverBackgroundStartColor: $blue-gray-mid-dark;
+// $contentModalUtilityBarTabsHoverBackgroundEndColor: $blue-gray-dark;
+// $contentModalUtilityBarTabsActiveBackgroundColor: $white;
+// $contentModalUtilityBarTabsActiveIconColor:	$blue-gray-darker;
+
+
+// DATEPICKER
+// ------------------------------------------------------------------------------------------
+// $datepickerMarginTop:					5px;
+// $datepickerBorderRadius:					$baseBorderRadius;
+// $datepickerFontSize:						$baseFontSize;
+// $datepickerFontSizeLargeBreakpoint:		($datepickerFontSize - $baseFontSizeDifferenceLargeBreakpoint);
+// $datepickerHdrPaddingTopBottom:			4px;
+// $datepickerHdrFontSize:					$baseFontSize;
+// $datepickerHdrFontSizeLargeBreakpoint:	($datepickerHdrFontSize - $baseFontSizeDifferenceLargeBreakpoint);
+// $datepickerHdrSelectMenuFontSize:		$baseFontSize;
+// $datepickerHdrSelectMenuFontSizeLargeBreakpoint: ($datepickerHdrSelectMenuFontSize - $baseFontSizeDifferenceLargeBreakpoint);
+// $datepickerMessageFontSize:				13px;
+// $datepickerMessageFontSizeLargeBreakpoint: ($datepickerMessageFontSize - $baseFontSizeDifferenceLargeBreakpoint);
+// $datepickerMessageLineHeight:			($datepickerMessageFontSize + $baseFontSizeDifferenceLargeBreakpoint);
+// $datepickerMessageLineHeightLargeBreakpoint: ($datepickerMessageLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
+// $datepickerIconPositionTop:				5px;
+// $datepickerIconPositionLeft:				-22px;
+// $datepickerIconPositionTopLargeBreakpoint: 4px;
+// $datepickerIconPositionTopIE:			($datepickerIconPositionTop - 2);
+// $datepickerIconPositionLeftLargeBreakpoint: -20px;
+// $datepickerMinWidth:						110px;
+
+// $datepickerShadowColor:					$gray-darker;
+// $datepickerBackgroundColor:				$white;
+// $datepickerThFontColor:					$gray-darker;
+// $datepickerBorderColor:					$gray-lighter;
+// $datepickerLinkColor:					$gray-darker;
+// $datepickerHdrBackgroundStartColor:		$gray-lighter;
+// $datepickerHdrBackgroundEndColor:		$gray-mid-light;
+// $datepickerHdrFontColor:					$gray-darkest;
+// $datepickerHdrNavIconColor:				$blue-sapphire;
+// $datepickerTodayFontColor:				$green;
+// $datepickerTodayBackgroundColor: 		$green-lightest;
+// $datepickerCurrentDayBackgroundColor: 	$tan-mid;
+// $datepickerCurrentDayFontColor:			$tan;
+// $datepickerHoverBackgroundColor: 		$tan-light;
+// $datepickerDisabledFontColor:			$gray-mid-light;
+// $datepickerDisabledBackgroundColor:		$white;
+// $datepickerDisabledBorderColor:			$gray-lighter;
+// $datepickerMessageFontColor:				$gray-darkest;
+// $datepickerMessageBackgroundColor:		$tan-light;
+// $datepickerIconColor:					$gray-darker;
+
+
+// DIALOG/MODAL
+// ------------------------------------------------------------------------------------------
+// $dialogBorderRadius:						$baseBorderRadius;
+// $dialogOverlayBackgroundColorOpacity:	40;
+// $dialogWidth:							auto;
+// $dialogWidthLargeBreakpoint:				500px;
+// $dialogVShadow:							1px;
+// $dialogHShadow:							1px;
+// $dialogShadowBlur:						1px;
+// $dialogHdrPaddingTop:					15px;
+// $dialogHdrPaddingRight:					60px;
+// $dialogHdrPaddingBottom:					12px;
+// $dialogHdrPaddingLeft:					18px;
+// $dialogHdrBorderBottomSize:				0;
+// $dialogHdrBorderBottomStyle:				solid;
+// $dialogHdrFontSize:						18px;
+// $dialogHdrFontSizeLargeBreakpoint:		$hdrH3FontSizeLargeBreakpoint;
+// $dialogContentMaxHeightLargeBreakpoint:	430px;
+// $dialogContentPaddingTop:				12px;
+// $dialogContentPaddingLeftRight:			18px;
+// $dialogContentBorderTopSize:				1px;
+// $dialogContentBorderTopStyle:			solid;
+// $loadingModalWidthLargeBreakpoint:		350px;
+
+// $dialogOverlayBackgroundColor:			$black;
+// $dialogShadowColor:						$gray-darker;
+// $dialogBackgroundColor:					$white;
+// $dialogHdrFontColor:						$baseHdrFontColor;
+// $dialogContentBorderTopColor: 			$white;
+// $dialogHdrBorderBottomColor:				$transparent;
+// $dialogCloseIconColor:					$gray-darker;
+
+
+// IMAGE CONTENT OVERLAY
+// ------------------------------------------------------------------------------------------
+// $imageContentOverlayBackgroundColor:		$gray-darker;
+// $imageContentOverlayBorderBottomColor:	$gray-dark;
+// $imageContentOverlayFontColor:			$white;
+
+
+// LOGIN LAYOUT
+// ------------------------------------------------------------------------------------------
+// $layoutLoginBackgroundImageSrcPath:		"../images/login_bkgd.jpg";
+// $layoutLoginBackgroundColor:				$blue-gray;
+// $layoutLoginContainerTranslucentBackgroundColor: $gray-lighter;
+// $layoutLoginContainerSubHeaderColor:		$blue-gray-darkest;
+// $layoutLoginContainerHeaderColor:		$blue-gray-darkest;
+// $layoutLoginContainerBoxBackgroundColor:	$white;
+// $layoutLoginContainerBoxBorderColor:		$gray-dark;
+// $layoutLoginFooterTranslucentBackgroundColor: $black;
+// $layoutLoginFooterFontColor:				$white;
+// $layoutLoginFooterBorderColor:			$white;
+
+
+// MINI FILTER
+// ------------------------------------------------------------------------------------------
+// $miniFilterMarginBottom:					6px;
+// $miniFilterFontSizeLargeBreakpoint:		11px;
+// $miniFilterActivePaddingTopBottom: 		1px;
+// $miniFilterActivePaddingLeftRight: 		4px;
+// $miniFilterDropDownMaxWidth:				300px;
+
+// $miniFilterLabelFontColor:				$black;
+// $miniFilterActiveBackgroundColor: 		$tan-light;
+// $miniFilterActiveFontColor:				$black;
+
+
+// PAGINATION
+// ------------------------------------------------------------------------------------------
+// $paginationFontSize:						$baseFontSize;
+// $paginationFontSizeLargeBreakpoint:		12px;
+// $paginationBorderStyle:					solid;
+// $paginationLinkLineHeight:				.8em;
+// $paginationLinkMinWidth:					31px;
+// $paginationLinkMinWidthLargeBreakpoint:	28px;
+// $paginationLinkMaxHeight:				$paginationLinkMinWidth;
+// $paginationLinkMaxHeightLargeBreakpoint:	$paginationLinkMinWidthLargeBreakpoint;
+
+// $paginationBorderColor:					$gray-mid-light;
+// $paginationHoverBackgroundColor:			$tan-light;
+// $paginationActiveBackgroundColor:		$tan-light;
+// $paginationActiveFontColor:				$black;
+// $paginationLinkHoverColor:				$black;
+
+
+// PROFILE CONTAINERS
+// ------------------------------------------------------------------------------------------
+// $profileContainerHeaderFontSize:			$hdrH2FontSize;
+// $profileContainerHeaderFontSizeLargeBreakpoint: $hdrH1FontSize;
+// $profileContainerHeaderLineHeight:		$hdrH2LineHeight;
+// $profileContainerHeaderLineHeightLargeBreakpoint: $hdrH1LineHeightLargeBreakpoint;
+// $profileContainerDataListFontSize:		14px;
+// $profileContainerDataListFontSizeLargeBreakpoint: ($profileContainerDataListFontSize - $baseFontSizeDifferenceLargeBreakpoint);
+// $profileContainerDataListLineHeight:		18px;
+// $profileContainerDataListLineHeightLargeBreakpoint: ($profileContainerDataListLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
+
+// $profileContainerHdrColor:				$white;
+// $profileContainerSecondaryHdrColor:		$white;
+// $profileContainerDataListLabelFontColor:	$white;
+
+
+// SCROLL PANE
+// ------------------------------------------------------------------------------------------
+// $scrollPaneWidth:						auto;
+// $scrollPaneHeight:						300px;
+
+// $scrollPaneScrollbarRGBColor:			$black;
+// $scrollPaneScrollbarHexColor:			#666;
+
+
+// SLIDER
+// ------------------------------------------------------------------------------------------
+// $sliderBarBackgroundStartColor:			$gray-mid-light;
+// $sliderBarBackgroundEndColor:			$gray-mid-light;
+// $sliderBarRangeBackgroundColor:			$gray-darker;
+// $sliderHandleBackgroundStartColor:		$blue-gray-darker;
+// $sliderHandleBackgroundEndColor:			$blue-gray-darker;
+// $sliderHandleShadowColor: 				$gray-mid-light;
+// $sliderHandleBorderColor:				$white;
+// $sliderHandleFocusBackgroundStartColor:	$blue-gray-darker;
+// $sliderHandleFocusBackgroundEndColor:	$blue-gray-darker;
+// $sliderHandleHoverBackgroundStartColor:	$blue-gray-darkest;
+// $sliderHandleHoverBackgroundEndColor:	$blue-gray-darkest;
+// $sliderHandleActiveBackgroundStartColor:	$blue-gray-darkest;
+// $sliderHandleActiveBackgroundEndColor:	$blue-gray-darkest;
+
+
+// SUMMARY CONTAINER
+// ------------------------------------------------------------------------------------------
+// $summaryCtnBorderSize:					1px;
+// $summaryCtnBorderStyle:					dotted;
+// $summaryCtnPadding:						10px;
+// $summaryPrimaryCtnLargeFontSizeAdjust:	10;
+// $summaryPrimaryCtnSupportFontSizeAdjust:	3;
+// $summaryPrimaryCtnIconFontSize:			40px;
+// $summarySecondaryCtnLargeFontSizeAdjust:	2;
+// $summarySecondaryCtnSupportFontSizeAdjust: 3;
+// $summarySecondaryCtnIconFontSize:		30px;
+
+// $summaryCtnBorderColor:					$gray-darker;
+// $summaryCtnBorderColorTop:				$transparent;
+// $summaryCtnBorderColorBottom:			$transparent;
+// $summaryCtnBorderColorLeft:				$transparent;
+// $summaryCtnBorderFirstChildColorTop:		$gray-darker;
+// $summaryCtnBorderFirstChildColorLeft:	$gray-darker;
+// $summaryCtnBorderHoverTransitionSpeed:	250ms;
+// $summaryCtnBorderHoverBackgroundColor:	$tan-light;
+// $summaryCtnBorderHoverBorderTopColor:	$gray-darker;
+// $summaryCtnBorderHoverBorderBottomColor:	$gray-darker;
+// $summaryCtnAlertNegativeFontColor:		$red;
+// $summaryCtnAlertNegativeHoverBackgroundColor: $red-light;
+// $summaryCtnAlertPositiveFontColor:		$green;
+// $summaryCtnAlertPositiveHoverBackgroundColor: $green-lightest;
+
+
+// TABS
+// ------------------------------------------------------------------------------------------
+// $tabsSetMarginBottom:					18px;
+// $tabsNavHeight:							36px;
+// $tabsNavHeightLargeBreakpoint:			28px;
+// $tabsHeight:								34px;
+// $tabsHeightLargeBreakpoint:				26px;
+// $tabsPositonTop:							2px;
+// $tabsMarginRight:						2px;
+// $tabsMarginBottom:						1px;
+// $tabsPaddingTopBottom:					3px;
+// $tabsPaddingLeftRight:					10px;
+// $tabsBorderRadius:						$baseBorderRadius;
+// $tabsBorderSize:							1px;
+// $tabsBorderStyle:						solid;
+// $tabsFontSize:							14px;
+// $tabsFontSizeLargeBreakpoint:			($tabsFontSize - $baseFontSizeDifferenceLargeBreakpoint);
+// $tabsLineHeight:							26px;
+// $tabsLineHeightLargeBreakpoint:			22px;
+// $tabsFontWeight:							normal;
+// $tabsActivePositonTop:					2px;
+// $tabsActiveHeight:						35px;
+// $tabsActiveHeightLargeBreakpoint:		27px;
+// $tabsActivePaddingBottom:				1px;
+// $tabsPanelPadding:						$basePadding;
+// $tabsPanelBorderSize:					1px;
+// $tabsPanelBorderStyle:					solid;
+
+// $tabsBackgroundStartColor:				$gray-mid-light;
+// $tabsBackgroundEndColor:					$gray-lighter;
+// $tabsBorderColor:						$gray-mid-light;
+// $tabsFontColor:							$blue-sapphire-dark;
+// $tabsPagingNavBackgroundStartColor:		$white;
+// $tabsPagingNavBackgroundEndColor:		$white;
+// $tabsPagingNavLinkColor:					$gray-darker;
+// $tabsPagingNavHoverColor:				$blue-gray-dark;
+// $tabsSelectedTabFontColor:				$gray-lighter;
+// $tabsHoverBackgroundStartColor:			$gray-mid-dark;
+// $tabsHoverBackgroundEndColor:			$gray-lighter;
+// $tabsActiveFontColor:					$gray-darkest;
+// $tabsActiveBackgroundStartColor:			$white;
+// $tabsActiveBackgroundEndColor:			$white;
+// $tabsPanelBorderColor:					$gray-mid-light;
+// $tabsPanelBackgroundColor: 				$white;
+
+
+// TILES
+// ------------------------------------------------------------------------------------------
+// $tilesBorderRadius:						3px;
+// $tilesMarginBottom:						3px;
+// $tilesBodyBorderRadius:					0 0 3px 3px;
+// $tilesScrollPaneHeight:					400px;
+// $tilesOuterBorderRadiusLargeBreakpoint:	0;
+
+// $tilesBackgroundColor:					$gray-lightest;
+// $tilesHeaderBorderTopColor:				$blue-sapphire-mid;
+// $tilesHeaderBackgroundColor:				$transparent;
+// $tilesHeaderFontColor:					$gray-darkest;
+// $tilesBodyBackgroundColor:				$white;
+// $tilesBodyBorderColor:					$gray-light;
+// $tilesOutsideBorderColor:				$gray-light;
+
+
+// TOOLTIP
+// ------------------------------------------------------------------------------------------
+// $tooltipBorderRadius:					$borderRadiusXSmall;
+// $tooltipVShadow:							1px;
+// $tooltipHShadow:							1px;
+// $tooltipShadowBlur:						5px;
+// $tooltipBorderSize:						1px;
+// $tooltipBorderStyle:						solid;
+// $tooltipFontSize:						$baseFontSize;
+// $tooltipFontSizeLargeBreakpoint:			12px;
+// $tooltipLineHeight:						20px;
+// $tooltipLineHeightLargeBreakpoint:		14px;
+// $tooltipPaddingTopBottom:				5px;
+// $tooltipPaddingLeftRight:				8px;
+
+// $tooltipShadowColor:						$gray-mid-light;
+// $tooltipBorderColor:						$gray-mid-light;
+// $tooltipBackgroundColor:					$gray-light;
+// $tooltipFontColor:						$gray-darkest;

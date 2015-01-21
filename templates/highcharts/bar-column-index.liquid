@@ -1,0 +1,38 @@
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css">
+${demo.css}
+		</style>
+<script type="text/javascript">
+
+</script>
+<!-- PAGE TITLE - BEGINS -->
+	<h1>{{ model.title }}</h1>
+<!-- PAGE TITLE - ENDS -->
+
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="col-24">
+
+		<p>There are a few different types of bar &amp; column charts available to a user. More information coming...</p>
+
+		<p>Below is a list of line charts available to you when using Highcharts:</p> 
+
+		<ul>
+			<li><a href="/highcharts/bar-basic">Basic bar chart</a></li>
+			<li><a href="/highcharts/bar-stacked">Stacked bar chart</a></li>
+			<li><a href="/highcharts/column-basic">Basic column chart</a></li>
+			<li><a href="/highcharts/column-rotated-labels">Column chart with rotated labels</a></li>
+			<!-- <li><a href="/highcharts/line-ajax">Ajax loaded data, clickable points</a></li>
+			<li><a href="/highcharts/line-labels">With data labels</a></li>
+			<li><a href="/highcharts/line-zoomable">Time series, zoomable</a></li>
+			<li><a href="/highcharts/spline-inverted">Spline with inverted axes</a></li>
+			<li><a href="/highcharts/spline-symbols">Spline with symbols</a></li>
+			<li><a href="/highcharts/spline-irregular-time">Time data with irregular intervals</a></li>
+			<li><a href="/highcharts/line-log-axis">Logarithmic axis</a></li> -->
+		</ul>
+
+	</section>
+<!-- CONTENT SECTION - ENDS -->
+
+{% endblock %}
