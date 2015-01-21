@@ -1,0 +1,43 @@
+/*------------------------------------------------------------------------------------------
+Mercer Evolution - Red Scout Edition - Site CSS
+DATE - January 21, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+-------------------------------------------------------------------------------------------*/
+
+// ==========================================================================================
+// CORE SASS IMPORTS
+// ==========================================================================================
+
+@import	"../core/global/color_variables",
+		"../core/global/variables",
+		"../core/foundation/foundation/settings",
+		"../core/global/functions",
+		"../core/global/mixins";
+
+
+// ==========================================================================================
+// SITE IMPORTS
+// ==========================================================================================
+
+@import	"../partials/rs/global/site_settings",
+		"../partials/rs/global/site_variables",
+		"../partials/rs/global/site_functions",
+		"../partials/rs/base/site_icons";
+		
+
+/*=== WEBSITE STYLES ======================================================================*/
+
+/*--- SITE GLOBAL -------------------------------------------------------------------------*/
+
+// FIXES FLASH OF UNSTYLED CONTENT BUG - WHERE PAGE LOADS FASTER THAN JS AND MODERNIZR
+// HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
+html.evo-mod-js							{display:none;}
+										
+
+/*=== MEDIA QUERIES =========================================================================*/
+@import	"../partials/rs/global/responsive_small",
+		"../partials/rs/global/responsive_medium",
+		"../partials/rs/global/responsive_large",
+		"../partials/rs/global/responsive_xlarge",
+		"../partials/rs/global/responsive_xxlarge"
+		;
