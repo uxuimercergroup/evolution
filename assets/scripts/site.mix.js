@@ -10,9 +10,9 @@
 
 @import "lib/jquery/plugins/jquery.jpanelmenu.js";
 @import "lib/prettify/prettify.js";
-@import "lib/highcharts/highcharts.js"
-@import "lib/highcharts/modules/exporting.js"
-@import "lib/highcharts/themes/evolution-theme.js"
+@import "lib/highcharts/highcharts/highcharts.js"
+@import "lib/highcharts/highcharts/modules/exporting.js"
+@import "lib/highcharts/highcharts/themes/evolution-theme.js"
 
 
 // =======================================================================================================
