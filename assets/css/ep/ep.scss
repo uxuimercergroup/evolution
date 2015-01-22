@@ -1,0 +1,43 @@
+/*------------------------------------------------------------------------------------------
+Mercer Evolution - Employee Portal Family - Site CSS
+DATE - January 21, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+-------------------------------------------------------------------------------------------*/
+
+// ==========================================================================================
+// CORE SASS IMPORTS
+// ==========================================================================================
+
+@import	"../core/global/color_variables",
+		"../core/global/variables",
+		"../core/foundation/foundation/settings",
+		"../core/global/functions",
+		"../core/global/mixins";
+
+
+// ==========================================================================================
+// SITE IMPORTS
+// ==========================================================================================
+
+@import	"../partials/ep/global/site_settings",
+		"../partials/ep/global/site_variables",
+		"../partials/ep/global/site_functions",
+		"../partials/ep/base/site_icons";
+		
+
+/*=== WEBSITE STYLES ======================================================================*/
+
+/*--- SITE GLOBAL -------------------------------------------------------------------------*/
+
+// FIXES FLASH OF UNSTYLED CONTENT BUG - WHERE PAGE LOADS FASTER THAN JS AND MODERNIZR
+// HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
+html.evo-mod-js							{display:none;}
+
+
+/*=== MEDIA QUERIES =========================================================================*/
+@import	"../partials/ep/global/responsive_small",
+		"../partials/ep/global/responsive_medium",
+		"../partials/ep/global/responsive_large",
+		"../partials/ep/global/responsive_xlarge",
+		"../partials/ep/global/responsive_xxlarge"
+		;
