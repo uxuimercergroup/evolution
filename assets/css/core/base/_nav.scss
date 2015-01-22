@@ -192,7 +192,7 @@
 									// HOVER EFFECT FOR SUB-MENU - ENDS
 														}
 													}	
-								.evo-navbar-item-active	{font-family: $fontSemiBoldFamily;}
+								.evo-navbar-item-active	{font-family: $fontMediumFamily;}
 												}
 											}
 
@@ -250,7 +250,7 @@
 													border-left-color: $tabbedNavbarHrefBorderLeftColor;
 													display: block;
 													font-size: 14px;
-													font-family: $fontSemiBoldFamily;
+													font-family: $fontMediumFamily;
 									&:hover				{@include background-gradient($tabbedNavbarActiveBackgroundStartColor, $tabbedNavbarActiveBackgroundEndColor);}
 													}
 									ul				{

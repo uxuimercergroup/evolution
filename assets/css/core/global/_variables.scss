@@ -77,34 +77,39 @@ $baseFontFilePath:							"../fonts" !default;
 // WEB FONTS
 
 	// Thin
-	$fontThinFamily:							proxima_nova_ththin !default;
-	$fontThinFilePath:							"#{$baseFontFilePath}/ProximaNova-Thin-webfont" !default;
+	$fontThinFamily:							relativefaux !default;
+	$fontThinFilePath:							"#{$baseFontFilePath}/relative-faux_-webfont" !default;
 	$fontThinStack:								"#{$fontThinFamily}", $baseFontStack !default;
 
 	// Regular
-	$fontRegularFamily:							proxima_nova_rgregular !default;
-	$fontRegularFilePath:						"#{$baseFontFilePath}/ProximaNova-Reg-webfont" !default;
+	$fontRegularFamily:							relativebook !default;
+	$fontRegularFilePath:						"#{$baseFontFilePath}/relative-book-webfont" !default;
 	$fontRegularStack:							"#{$fontRegularFamily}", $baseFontStack !default;
 
-	// Bold
-	$fontBoldFamily:							proxima_nova_rgbold !default;
-	$fontBoldFilePath:							"#{$baseFontFilePath}/ProximaNova-Bold-webfont" !default;
-	$fontBoldStack:								"#{$fontBoldFamily}", $baseFontStack !default;
-
 	// Italic
-	$fontItalicFamily:							proxima_novaregular_italic !default;
-	$fontItalicFilePath:						"#{$baseFontFilePath}/ProximaNova-RegIt-webfont" !default;
+	$fontItalicFamily:							relativebook_italic !default;
+	$fontItalicFilePath:						"#{$baseFontFilePath}/relative-bookitalic-webfont" !default;
 	$fontItalicStack:							"#{$fontItalicFamily}", $baseFontStack !default;
 
-	// Bold Italic
-	$fontBoldItalicFamily:						proxima_novabold_italic !default;
-	$fontBoldItalicFilePath:					"#{$baseFontFilePath}/ProximaNova-BoldIt-webfont" !default;
-	$fontBoldItalicStack:						"#{$fontBoldItalicFamily}", $baseFontStack !default;
+	// Medium
+	$fontMediumFamily:							relativemedium !default;
+	$fontMediumFilePath:						"#{$baseFontFilePath}/relative-medium-webfont" !default;
+	$fontMediumStack:							"#{$fontMediumFamily}", $baseFontStack !default;
 
-	// Semi-bold
-	$fontSemiBoldFamily:						proxima_nova_ltsemibold !default;
-	$fontSemiBoldFilePath:						"#{$baseFontFilePath}/ProximaNova-Sbold-webfont" !default;
-	$fontSemiBoldStack:							"#{$fontSemiBoldFamily}", $baseFontStack !default;
+	// Medium Italic
+	$fontMediumItalicFamily:					relativemedium_italic !default;
+	$fontMediumItalicFilePath:					"#{$baseFontFilePath}/relative-mediumitalic_-webfont" !default;
+	$fontMediumItalicStack:						"#{$fontMediumItalicFamily}", $baseFontStack !default;
+
+	// Bold
+	$fontBoldFamily:							relativebold !default;
+	$fontBoldFilePath:							"#{$baseFontFilePath}/relative-bold-webfont" !default;
+	$fontBoldStack:								"#{$fontBoldFamily}", $baseFontStack !default;
+
+	// Bold Italic
+	$fontBoldItalicFamily:						relativebold_italic !default;
+	$fontBoldItalicFilePath:					"#{$baseFontFilePath}/relative-bolditalic-webfont" !default;
+	$fontBoldItalicStack:						"#{$fontBoldItalicFamily}", $baseFontStack !default;
 
 // ICON FONTS
 
@@ -525,7 +530,7 @@ $navbarBorderBottomStyle:					solid !default;
 $navbarMessageWidth:						200px !default;
 $navbarMessagePadding:						9px 0 7px 0 !default;
 $navbarMessageInnerPadding:					2px 10px 2px 0 !default;
-$navbarMessageFontFamily:					$fontSemiBoldFamily !default;
+$navbarMessageFontFamily:					$fontMediumFamily !default;
 $navbarMessageBorderRightWidth:				1px !default;
 $navbarMessageBorderRightStyle:				dotted !default;
 

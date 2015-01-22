@@ -31,6 +31,7 @@
 			a					{
 								@include href-link($mastheadLogoLinkColor, none);
 								@include text-overflow;
+								font-family: $fontMediumStack;
 								display: block;
 								font-weight: $mastheadLogoFontWeight;
 								font-size: $mastheadLogoFontSize;
@@ -38,7 +39,7 @@
 								white-space: nowrap;
 								width: auto;
 								}
-				span			{font-family: $fontThinStack;}
+				span			{font-family: $fontRegularStack;}
 							}
 						}
 // MAIN LOGO CONTAINER - ENDS

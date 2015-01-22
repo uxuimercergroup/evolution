@@ -95,7 +95,7 @@
 								margin:  0 2.3em;
 								line-height:  1.8em;
 								text-align:  center;
-								font-family:  $fontSemiBoldStack;
+								font-family:  $fontMediumStack;
 								color: $datepickerHdrFontColor;
 				select				{
 									float: left;
@@ -122,7 +122,7 @@
 								{
 				.ui-state-active	{
 									background-color: $datepickerCurrentDayBackgroundColor;
-									font-family:  $fontSemiBoldStack;
+									font-family:  $fontMediumStack;
 									color: $datepickerCurrentDayFontColor;
 									}
 								}
@@ -133,7 +133,7 @@
 				.ui-state-highlight	{
 									background-color: $datepickerTodayBackgroundColor;
 									color: $datepickerTodayFontColor;
-									font-family:  $fontSemiBoldStack;
+									font-family:  $fontMediumStack;
 									}
 								}
 

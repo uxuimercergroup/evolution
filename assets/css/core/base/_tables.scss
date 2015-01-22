@@ -52,7 +52,7 @@
 										border-top:1px solid $tableThBorderColor;
 										border-bottom:1px solid $tableThBorderColor;
 										color:$tableThFontColor;
-										font-family: $fontSemiBoldStack;
+										font-family: $fontMediumStack;
 										vertical-align: bottom;
 			&[class*="col-"]				{
 											float: none;
@@ -82,13 +82,13 @@
 										background-color: $tableSubHeaderBackgroundColor !important;
 										border: 1px solid $tableSubHeaderBorderColor;
 										color: $tableSubHeaderFontColor;
-										font-family: $fontSemiBoldStack;
+										font-family: $fontMediumStack;
 										}
 
 		// SUBTOTAL AND TOTAL HELPERS
 		.evo-subtotal-row,
 		.evo-total-row					{
-										font-family: $fontSemiBoldStack;
+										font-family: $fontMediumStack;
 			td								{border-top: 1px $tableBorderStyle $tableBorderColor;}
 										}
 		.evo-subtotal-row				{
