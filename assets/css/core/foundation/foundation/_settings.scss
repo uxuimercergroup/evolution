@@ -116,16 +116,16 @@ $font-family-sans-serif: relativebook, arial, Tahoma, Geneva, sans-serif;
 // $black       : #000000;
 
 // We use these as default colors throughout
-$primary-color: #008CBA;
-$secondary-color: #e7e7e7;
-$alert-color: #f04124;
-$success-color: #43AC6A;
-$warning-color: #f08a24;
-$info-color: #a0d3e8;
+$primary-color: $blue-gray-darker;
+$secondary-color: $gray-light;
+$alert-color: $red;
+$success-color: $green;
+$warning-color: $orange;
+$info-color: $blue-sapphire;
 
 // We use these to control various global styles
 // $body-bg: $white;
-// $body-font-color: $jet;
+$body-font-color: $gray-darkest;
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -183,11 +183,11 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 // $large: $large-up;
 
 // We use this as cursors values for enabling the option of having custom cursors in the whole site's stylesheet
-$cursor-crosshair-value: crosshair;
-$cursor-default-value: default;
-$cursor-pointer-value: pointer;
-$cursor-help-value: help;
-$cursor-text-value: text;
+// $cursor-crosshair-value: crosshair;
+// $cursor-default-value: default;
+// $cursor-pointer-value: pointer;
+// $cursor-help-value: help;
+// $cursor-text-value: text;
 
 // e. Typography
 // - - - - - - - - - - - - - - - - - - - - - - - - -

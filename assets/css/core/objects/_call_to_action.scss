@@ -7,7 +7,7 @@
 @if $use-call-to-action == true{
 
 	.evo-call-to-action			{
-								@include border-radius($borderRadiusSmall);
+								@include border-radius($global-radius);
 								display: table;
 								background-color: $callToActionBackgroundColor;
 								padding: 10px;

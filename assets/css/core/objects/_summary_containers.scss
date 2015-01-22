@@ -12,7 +12,7 @@
 											width: 100%;
 		.evo-summary-ctn-row					{
 			div										{
-													color: $baseFontColor;
+													color: $body-font-color;
 													border-color: $summaryCtnBorderColor;
 													border-top-color: $summaryCtnBorderColorTop;
 													border-width: $summaryCtnBorderSize;
@@ -23,14 +23,14 @@
 													padding: $summaryCtnPadding;
 													text-align: center;
 				&:first-child							{border-top-color: $summaryCtnBorderFirstChildColorTop;}
-				a										{@include href-link($baseFontColor, none);}
+				a										{@include href-link($body-font-color, none);}
 				.evo-main-text							{display: block;}
 				.evo-support-text						{
 														display: block;
 														font-size: ($baseFontSize - $summaryPrimaryCtnSupportFontSizeAdjust);
 														}
 				[class*="evo-icon-"]					{
-														color: $baseFontColor;
+														color: $body-font-color;
 														font-size: $summaryPrimaryCtnIconFontSize;
 														}
 													}

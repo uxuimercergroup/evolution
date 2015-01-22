@@ -45,7 +45,7 @@
 	.evo-dialog.ui-dialog			{
 									@include clearfix;
 									@include box-shadow($dialogVShadow, $dialogHShadow, $dialogShadowBlur, $dialogShadowColor);
-									@include border-radius($dialogBorderRadius);
+									@include border-radius($global-radius);
 									position: relative;
 									top: auto !important;
 									left: auto !important;

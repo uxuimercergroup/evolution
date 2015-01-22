@@ -175,7 +175,7 @@
 
 							&:last-child
 										{
-								a			{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+								a			{@include border-radius(0 0 $global-radius $global-radius);}
 										}
 							a			{
 										display: block;

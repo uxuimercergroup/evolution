@@ -201,7 +201,7 @@
 				// SUB-MENU - BEGINS
 					.evo-user-identifier-menu
 								{
-								@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+								@include border-radius(0 0 $global-radius $global-radius);
 								@include box-shadow(0, 2px, 2px, $userIdentifierMenuShadowColor);
 								border: 0;
 								min-width: 100% !important;
@@ -223,7 +223,7 @@
 							&:last-child
 										{
 								a			{
-									&:hover		{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+									&:hover		{@include border-radius(0 0 $global-radius $global-radius);}
 											}
 										}
 									}

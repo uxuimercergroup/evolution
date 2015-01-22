@@ -36,7 +36,7 @@
 	input[type="color"],
 	select,
 	textarea										{
-													@include border-radius($baseInputBorderRadius);
+													@include border-radius($global-radius);
 													@include box-shadow(inset 0, 1px, 1px, $baseInputShadowColor);
 													background-color: $baseInputBackgroundColor;
 													border: $baseInputBorderSize solid $baseInputBorderColor;
@@ -213,7 +213,7 @@
 	.evo-selected-checkbox							{
 		.evo-checkbox									{
 			label											{
-															@include border-radius($selectedCheckboxBorderRadius);
+															@include border-radius($global-radius);
 															padding: 10px;
 															margin: 0 0 10px 0;
 															border: 1px solid $selectedCheckboxBorderColor;
@@ -221,7 +221,7 @@
 
 			// WHEN SELECTED CHECKBOX IS CHECKED
 			.evo-selected-checkbox-checked					{
-															@include border-radius($selectedCheckboxBorderRadius);
+															@include border-radius($global-radius);
 															background-color: $selectedCheckboxBackgroundColor;
 															border: 1px solid transparent;
 															}

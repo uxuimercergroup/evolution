@@ -8,7 +8,7 @@
 
 	// DATEPICKER
 	.ui-datepicker		{
-						@include border-radius($datepickerBorderRadius);
+						@include border-radius($global-radius);
 						@include box-shadow(0, 0, 5px, $datepickerShadowColor);
 						width: 100%;
 						z-index: $zindexDatepicker;
@@ -49,7 +49,7 @@
 		.ui-datepicker-header
 							{
 							@include background-gradient($datepickerHdrBackgroundStartColor,$datepickerHdrBackgroundEndColor);
-							@include border-radius($datepickerBorderRadius $datepickerBorderRadius 0 0);
+							@include border-radius($global-radius $global-radius 0 0);
 							padding: $datepickerHdrPaddingTopBottom 0;
 							font-size: $datepickerHdrFontSize;
 							position: relative;
@@ -166,7 +166,6 @@
 								display: inline-block;
 								position:  relative;
 								top:  -2px;
-								font-family:  $baseFontFamily;
 								font-size:  $datepickerMessageFontSize;
 								line-height:  $datepickerMessageLineHeight;
 								color:  $datepickerMessageFontColor;

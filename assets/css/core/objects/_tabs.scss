@@ -13,7 +13,7 @@
 // Tabs variables
 $evo-margin-left: rem-calc(4) !default;
 $evo-margin-left-first-child: 0 !default;
-$evo-tabs-border-radius: $baseBorderRadius !default;
+$evo-tabs-border-radius: $global-radius !default;
 $evo-tabs-bg-color: $gray-light !default;
 $evo-tabs-font-size: 80% !default;
 $evo-tabs-padding: rem-calc(3) rem-calc(10) !default;
@@ -82,7 +82,7 @@ $evo-tabs-panel-bg-color: $white !default;
 																padding:0;
 																height:$tabsNavHeight;
 			.ui-state-default										{
-																	@include border-radius($tabsBorderRadius $tabsBorderRadius 0 0);
+																	@include border-radius($global-radius $global-radius 0 0);
 																	@include background-gradient($tabsBackgroundStartColor,$tabsBackgroundEndColor);
 																	list-style:none;
 																	float:left;
@@ -169,7 +169,7 @@ $evo-tabs-panel-bg-color: $white !default;
 																	}
 																}
 		.ui-tabs-panel											{
-																@include border-radius(0 $tabsBorderRadius $tabsBorderRadius $tabsBorderRadius);
+																@include border-radius(0 $global-radius $global-radius $global-radius);
 																padding:$tabsPanelPadding $tabsPanelPadding 0 $tabsPanelPadding;
 																border:$tabsPanelBorderSize $tabsPanelBorderStyle $tabsPanelBorderColor;
 																background-color:$tabsPanelBackgroundColor;
@@ -196,7 +196,7 @@ $evo-tabs-panel-bg-color: $white !default;
 																	}
 					.ui-state-active								{height:$tabsActiveHeightLargeBreakpoint;}
 																}
-				.ui-tabs-panel									{@include border-radius(0 $tabsBorderRadius $tabsBorderRadius $tabsBorderRadius);}
+				.ui-tabs-panel									{@include border-radius(0 $global-radius $global-radius $global-radius);}
 															}
 
 			// TABS IE9 FIXES

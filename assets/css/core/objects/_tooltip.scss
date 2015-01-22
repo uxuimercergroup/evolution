@@ -8,7 +8,7 @@
 
 	// EVO Tooltip global
 	.evo-tooltip 		{
-						@include border-radius($tooltipBorderRadius);
+						@include border-radius($global-radius);
 						@include box-shadow($tooltipVShadow, $tooltipHShadow, $tooltipShadowBlur, $tooltipShadowColor);
 						border:$tooltipBorderSize $tooltipBorderStyle $tooltipBorderColor;
 						background: $tooltipBackgroundColor;

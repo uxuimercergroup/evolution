@@ -16,17 +16,9 @@ $evo-include-html-classes:					true !default;
 // HTML MIN HEIGHT
 $htmlMinHeight:								100% !default;
 
-// BORDER RADIUS SIZES
-$borderRadiusXSmall:						2px !default;
-$borderRadiusSmall:							4px !default;
-$borderRadiusMedium:						8px !default;
-$borderRadiusLarge:							12px !default;
-$borderRadiusXLarge:						16px !default;
-
 // BASE VARIABLES
 $baseMargin:								14px !default;
 $basePadding:								14px !default;
-$baseBorderRadius:							$borderRadiusMedium !default;
 
 // Z-INDEX MASTER LIST
 // Used for a bird's eye view of components dependent on the z-axis
@@ -128,7 +120,6 @@ $baseFontFilePath:							"../fonts" !default;
 // ------------------------------------------------------------------------------------------
 
 // BASE
-$baseFontFamily:							$fontRegularStack !default;
 $baseFontSize:								16px !default;
 $baseFontSizeDifference:					2 !default;
 $baseFontSizeDifferenceMediumBreakpoint:	2 !default;
@@ -136,7 +127,6 @@ $baseFontSizeDifferenceLargeBreakpoint:		2 !default;
 $baseFontSizeLargeBreakpoint:				($baseFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
 $baseLineHeight:		        			22px !default;
 $baseLineHeightLargeBreakpoint:		        ($baseLineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$baseFontColor:								$gray-darkest !default;
 $baseHdrFontColor:							$gray-darkest !default;
 
 // LINKS
@@ -302,7 +292,6 @@ $baseInputColor:							$gray-darker !default;
 
 // FORM LABELS
 $labelMarginBottom:							1px !default;
-$baseInputBorderRadius:						$borderRadiusSmall !default;
 $labelFontColor:							$black !default;
 
 // FORM INPUTS
@@ -333,7 +322,6 @@ $inputValidTextColor:						$gray-darker !default;
 $inputInvalidTextColor:						$red !default;
 
 // SELECTED CHECKBOX
-$selectedCheckboxBorderRadius:				$borderRadiusSmall !default;
 $selectedCheckboxBorderColor:				$gray-light !default;
 $selectedCheckboxBackgroundColor:			$green-lightest !default;
 
@@ -348,7 +336,6 @@ $buttonVShadow:								0 !default;
 $buttonHShadow:								0 !default;
 $buttonShadowBlur:							0 !default;
 $buttonMarginBottom:						5px !default;
-$buttonBorderRadius:						$baseBorderRadius !default;
 $buttonMinWidth:							100% !default;
 $buttonMinWidthLargeBreakpoint:				100px !default;
 $buttonPaddingTopBottom:					12px !default;
@@ -675,7 +662,7 @@ $autocompleteItemUnderlineText:				underline !default;
 $autocompleteShadowColor:					$gray-mid-light !default;
 $autocompleteBackgroundColor:				$gray-lightest !default;
 $autocompleteBorderColor:					$gray-mid-light !default;
-$autocompleteItemFontColor:					$baseFontColor !default;
+$autocompleteItemFontColor:					$gray-darkest !default;
 $autocompleteItemBorderTopColor:			$gray-lightest !default;
 $autocompleteItemBorderBottomColor:			$gray-lightest !default;
 $autocompleteItemHighlightText:				$tan !default;
@@ -725,7 +712,6 @@ $contentModalUtilityBarTabsActiveIconColor:	$blue-gray-darker !default;
 // DATEPICKER
 // ------------------------------------------------------------------------------------------
 $datepickerMarginTop:						5px !default;
-$datepickerBorderRadius:					$baseBorderRadius !default;
 $datepickerFontSize:						$baseFontSize;
 $datepickerFontSizeLargeBreakpoint:			($datepickerFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
 $datepickerHdrPaddingTopBottom:				4px !default;
@@ -768,7 +754,6 @@ $datepickerIconColor:						$gray-darker !default;
 
 // DIALOG/MODAL
 // ------------------------------------------------------------------------------------------
-$dialogBorderRadius:						$baseBorderRadius !default;
 $dialogOverlayBackgroundColorOpacity:		40 !default;
 $dialogWidth:								auto !default;
 $dialogWidthLargeBreakpoint:				500px !default;
@@ -933,7 +918,6 @@ $tabsMarginRight:							2px !default;
 $tabsMarginBottom:							1px !default;
 $tabsPaddingTopBottom:						3px !default;
 $tabsPaddingLeftRight:						10px !default;
-$tabsBorderRadius:							$baseBorderRadius !default;
 $tabsBorderSize:							1px !default;
 $tabsBorderStyle:							solid !default;
 $tabsFontSize:								14px !default;
@@ -986,7 +970,6 @@ $tilesOutsideBorderColor:					$gray-light !default;
 
 // TOOLTIP
 // ------------------------------------------------------------------------------------------
-$tooltipBorderRadius:						$borderRadiusXSmall !default;
 $tooltipVShadow:							1px	!default;
 $tooltipHShadow:							1px	!default;
 $tooltipShadowBlur:							5px	!default;

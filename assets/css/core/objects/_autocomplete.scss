@@ -11,7 +11,7 @@
 
 	// AUTOCOMPLETE
 	.ui-menu				{
-							@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+							@include border-radius(0 0 $global-radius $global-radius);
 							@include box-shadow(0, 3px, 5px, $autocompleteShadowColor);
 							background-color: $autocompleteBackgroundColor;
 							border: $autocompleteBorderSize $autocompleteBorderStyle $autocompleteBorderColor;
@@ -66,7 +66,7 @@
 								{
 								border-bottom: 0;
 			.ui-state-hover,
-			.ui-state-active		{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+			.ui-state-active		{@include border-radius(0 0 $global-radius $global-radius);}
 								}
 							}
 

@@ -17,7 +17,7 @@
 
 	// CORE BUTTON SETUP
 	.evo-btn										{
-													@include border-radius($buttonBorderRadius);
+													@include border-radius($global-radius);
 													@include box-shadow($buttonVShadow, $buttonHShadow, $buttonShadowBlur, $buttonShadowColor);
 													@include text-shadow(0, 1px, 1px, $buttonTextShadowColor);
 													@include transition(box-shadow 0.15s ease-in-out 0s);
@@ -34,7 +34,6 @@
 													text-align: center;
 													color: $buttonFontColor;
 													border: $buttonBorderSize $buttonBorderStyle $buttonBorderColor;
-													font-family: $baseFontFamily;
 													font-weight: $buttonFontWeight;
 													cursor: pointer;
 													outline: none !important;
@@ -150,7 +149,7 @@
 	.evo-btn-xxx-small,
 	.evo-btn-xx-small,
 	.evo-btn-x-small,
-	.evo-btn-small									{@include border-radius(#{$buttonBorderRadius/1.25});}
+	.evo-btn-small									{@include border-radius($global-radius);}
 
 	// NO MARGIN OPTION											
 	.evo-btn-nomargin								{margin-left: 0;}
@@ -166,10 +165,10 @@
 														margin-left: 0;
 														}
 		.evo-btn:first-child							{
-														@include border-radius($buttonBorderRadius $buttonBorderRadius 0 0);
+														@include border-radius($global-radius $global-radius 0 0);
 														border-top: $buttonVertGroupBorderTopSize $buttonVertGroupBorderTopStyle $buttonVertGroupBorderTopColor;
 														}
-		.evo-btn:last-child								{@include border-radius(0 0 $buttonBorderRadius $buttonBorderRadius);}
+		.evo-btn:last-child								{@include border-radius(0 0 $global-radius $global-radius);}
 													}
 	.evo-btn-group-horizontal						{
 													@include clearfix;
@@ -183,10 +182,10 @@
 														border-right: $buttonHorzGroupBorderRightSize $buttonHorzGroupBorderRightStyle $buttonHorzGroupBorderRightColor;
 														}
 		.evo-btn:first-child							{
-														@include border-radius($buttonBorderRadius 0 0 $buttonBorderRadius);
+														@include border-radius($global-radius 0 0 $global-radius);
 														border-left: $buttonHorzGroupFirstChildBorderLeftSize $buttonHorzGroupFirstChildBorderLeftStyle $buttonHorzGroupFirstChildBorderLeftColor;
 														}
-		.evo-btn:last-child								{@include border-radius(0 $buttonBorderRadius $buttonBorderRadius 0);}
+		.evo-btn:last-child								{@include border-radius(0 $global-radius $global-radius 0);}
 													}
 
 	// SPECIAL BUTTONS FOR JQUERY UI DATEPICKER

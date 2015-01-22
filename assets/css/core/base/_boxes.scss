@@ -47,8 +47,8 @@
 
 	// BOX WITH ROUNDED CORNERS
 	.evo-box-rnd				{
-								@include border-radius($baseBorderRadius);
-		.evo-box-hdr				{@include border-radius($baseBorderRadius $baseBorderRadius 0 0);}
+								@include border-radius($global-radius);
+		.evo-box-hdr				{@include border-radius($global-radius $global-radius 0 0);}
 								}
 
 	// BOX WITH A DROP SHADOW
@@ -58,7 +58,7 @@
 	.evo-box-rnd-shadow			{
 								@extend .evo-box-rnd;
 								@extend .evo-box-shadow;
-		.evo-box-hdr				{@include border-radius($baseBorderRadius $baseBorderRadius 0 0);}
+		.evo-box-hdr				{@include border-radius($global-radius $global-radius 0 0);}
 								}
 
 
@@ -197,7 +197,7 @@
 
 	// SUPPORT CONTAINER
 	.evo-support-ctn			{
-								@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+								@include border-radius(0 0 $global-radius $global-radius);
 								background-color: $boxSupportBackgroundColor;
 								border-color: $boxSupportBottomColor;
 		.evo-box-hdr				{

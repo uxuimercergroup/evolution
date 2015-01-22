@@ -20,17 +20,9 @@
 // HTML MIN HEIGHT
 // $htmlMinHeight:							100%;
 
-// BORDER RADIUS SIZES
-// $borderRadiusXSmall:						2px;
-// $borderRadiusSmall:						4px;
-// $borderRadiusMedium:						8px;
-// $borderRadiusLarge:						12px;
-// $borderRadiusXLarge:						16px;
-
 // BASE VARIABLES
 // $baseMargin:								14px;
 // $basePadding:							14px;
-// $baseBorderRadius:						$borderRadiusMedium;
 
 // Z-INDEX MASTER LIST
 // Used for a bird's eye view of components dependent on the z-axis
@@ -127,7 +119,6 @@
 // ------------------------------------------------------------------------------------------
 
 // BASE
-// $baseFontFamily:							$fontRegularStack;
 // $baseFontSize:							16px;
 // $baseFontSizeDifference:					2;
 // $baseFontSizeDifferenceMediumBreakpoint:	2;
@@ -135,7 +126,6 @@
 // $baseFontSizeLargeBreakpoint:			($baseFontSize - $baseFontSizeDifferenceLargeBreakpoint);
 // $baseLineHeight:		        			22px;
 // $baseLineHeightLargeBreakpoint:			($baseLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
-// $baseFontColor:							$gray-darkest;
 // $baseHdrFontColor:						$gray-darkest;
 
 // LINKS
@@ -301,7 +291,6 @@
 
 // FORM LABELS
 // $labelMarginBottom:						1px;
-// $baseInputBorderRadius:					$borderRadiusSmall;
 // $labelFontColor:							$black;
 
 // FORM INPUTS
@@ -332,7 +321,6 @@
 // $inputInvalidTextColor:					$red;
 
 // SELECTED CHECKBOX
-// $selectedCheckboxBorderRadius:			$borderRadiusSmall;
 // $selectedCheckboxBorderColor:			$gray-light;
 // $selectedCheckboxBackgroundColor:		$green-lightest;
 
@@ -347,7 +335,6 @@
 // $buttonHShadow:							0;
 // $buttonShadowBlur:						0;
 // $buttonMarginBottom:						5px;
-// $buttonBorderRadius:						$baseBorderRadius;
 // $buttonMinWidth:							100%;
 // $buttonMinWidthLargeBreakpoint:			100px;
 // $buttonPaddingTopBottom:					12px;
@@ -674,7 +661,7 @@
 // $autocompleteShadowColor:				$gray-mid-light;
 // $autocompleteBackgroundColor:			$gray-lightest;
 // $autocompleteBorderColor:				$gray-mid-light;
-// $autocompleteItemFontColor:				$baseFontColor;
+// $autocompleteItemFontColor:				$gray-darkest;
 // $autocompleteItemBorderTopColor:			$gray-lightest;
 // $autocompleteItemBorderBottomColor:		$gray-lightest;
 // $autocompleteItemHighlightText:			$tan;
@@ -724,7 +711,6 @@
 // DATEPICKER
 // ------------------------------------------------------------------------------------------
 // $datepickerMarginTop:					5px;
-// $datepickerBorderRadius:					$baseBorderRadius;
 // $datepickerFontSize:						$baseFontSize;
 // $datepickerFontSizeLargeBreakpoint:		($datepickerFontSize - $baseFontSizeDifferenceLargeBreakpoint);
 // $datepickerHdrPaddingTopBottom:			4px;
@@ -767,7 +753,6 @@
 
 // DIALOG/MODAL
 // ------------------------------------------------------------------------------------------
-// $dialogBorderRadius:						$baseBorderRadius;
 // $dialogOverlayBackgroundColorOpacity:	40;
 // $dialogWidth:							auto;
 // $dialogWidthLargeBreakpoint:				500px;
@@ -932,7 +917,6 @@
 // $tabsMarginBottom:						1px;
 // $tabsPaddingTopBottom:					3px;
 // $tabsPaddingLeftRight:					10px;
-// $tabsBorderRadius:						$baseBorderRadius;
 // $tabsBorderSize:							1px;
 // $tabsBorderStyle:						solid;
 // $tabsFontSize:							14px;
@@ -985,7 +969,6 @@
 
 // TOOLTIP
 // ------------------------------------------------------------------------------------------
-// $tooltipBorderRadius:					$borderRadiusXSmall;
 // $tooltipVShadow:							1px;
 // $tooltipHShadow:							1px;
 // $tooltipShadowBlur:						5px;

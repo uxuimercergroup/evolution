@@ -8,7 +8,7 @@
 
 	// SLIDER
 	.evo-slider.ui-slider 			{
-									@include border-radius($baseBorderRadius);
+									@include border-radius($global-radius);
 									@include background-gradient($sliderBarBackgroundStartColor,$sliderBarBackgroundEndColor);
 									position: relative;
 									text-align: left;
@@ -44,7 +44,7 @@
 
 		// SLIDER RANGE
 		.ui-slider-range				{
-										@include border-radius($baseBorderRadius);
+										@include border-radius($global-radius);
 										position: absolute;
 										z-index: $zindexSlider;
 										display: block;
