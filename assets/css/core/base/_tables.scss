@@ -31,20 +31,22 @@
 	th, td							{text-align: left;}
 
 	.evo-table						{
-									color:$tableFontColor;
-									margin-bottom:$tableMarginBottom;
+									color: $tableFontColor;
+									margin-bottom: $tableMarginBottom;
 									width: 100%;
-									border-bottom:1px $tableBorderStyle $tableBorderColor;
-									background-color:$tableBackgroundColor;
+									border-bottom: 1px $tableBorderStyle $tableBorderColor;
+									background-color: $tableBackgroundColor;
 		th,
 		td								{
-										font-size: $tableBaseFontSize;
+										font-size: rem-calc(14);
 										padding: 5px 10px;
-										line-height: $tableBaseLineHeight;
 			input[type="checkbox"]			{display: block;}
 			a								{
-				&:link							{@include href-link($baseLinkColor, none);}
-				&:hover							{@include href-link-hover(underline);}
+				&:link							{
+												text-decoration: $anchor-text-decoration-hover;
+												color: $anchor-font-color;
+												}
+				&:hover							{text-decoration: $anchor-text-decoration;}
 											}
 										}
 		th								{
@@ -218,8 +220,7 @@
 			.evo-table				{
 				th,
 				td						{
-										font-size: $tableBaseFontSizeLargeBreakpoint;
-										line-height: $tableBaseLineHeightLargeBreakpoint;
+										font-size: rem-calc(14);
 										}
 				caption					{
 					.evo-tbl-data-filter	{

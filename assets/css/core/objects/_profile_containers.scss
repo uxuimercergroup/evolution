@@ -22,8 +22,7 @@
 									}
 			.evo-hdr-rule			{
 									@include text-overflow;
-									font-size: $profileContainerHeaderFontSize;
-									line-height: $profileContainerHeaderLineHeight;
+									font-size: $h2-font-size;
 									border-bottom: 0;
 									color: $profileContainerHdrColor;
 									padding: 0;
@@ -190,15 +189,14 @@
 			.evo-location-profile > .evo-box-hdr
 								{
 					.evo-hdr-rule	{
-									font-size: $profileContainerHeaderFontSizeLargeBreakpoint;
-									line-height: $profileContainerHeaderLineHeightLargeBreakpoint;
+									font-size: $h1-font-size;
 									}
 
 					.evo-data-list-ctn
 									{
-									font-size: $profileContainerDataListFontSizeLargeBreakpoint;
+									font-size: $profileContainerDataListFontSize;
 						li				{
-										line-height: $profileContainerDataListLineHeightLargeBreakpoint;
+										line-height: $profileContainerDataListLineHeight;
 										}
 									}
 								}

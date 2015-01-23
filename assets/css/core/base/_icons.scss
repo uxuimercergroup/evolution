@@ -87,7 +87,7 @@
 												font-weight: normal;
 												font-variant: normal;
 												text-transform: none;
-												font-size: $iconFontSize;
+												font-size: 1rem;
 												line-height: 1;
 												color: $iconFontColor;
 												display: inline-block;
@@ -108,19 +108,19 @@
 
 		// ICON FONT SIZE HELPERS
 		// There are four font icon sizes: small, medium, large, x-large. The default size of icons is the small size.
-		.evo-icon-size-small					{font-size: $iconFontSize;}
+		.evo-icon-size-small					{font-size: 1rem;}
 		.evo-icon-size-small.evo-icon-position-left,
 		.evo-icon-size-small.evo-icon-position-right
 												{top: 2px;}
-		.evo-icon-size-medium					{font-size: ($iconFontSize*2);}
+		.evo-icon-size-medium					{font-size: (1rem*2);}
 		.evo-icon-size-medium.evo-icon-position-left,
 		.evo-icon-size-medium.evo-icon-position-right
 												{top: 10px;}
-		.evo-icon-size-large					{font-size: ($iconFontSize*3);}
+		.evo-icon-size-large					{font-size: (1rem*3);}
 		.evo-icon-size-large.evo-icon-position-left,
 		.evo-icon-size-large.evo-icon-position-right
 												{top: 16px;}
-		.evo-icon-size-x-large					{font-size: ($iconFontSize*4);}
+		.evo-icon-size-x-large					{font-size: (1rem*4);}
 		.evo-icon-size-x-large.evo-icon-position-left,
 		.evo-icon-size-x-large.evo-icon-position-right
 												{top: 24px;}
@@ -263,7 +263,7 @@
 												border: 2px solid $iconFontAdvBorderColor;
 			[class*="evo-icon-"]					{
 													color: $iconFontAdvFontColor;
-													font-size: $iconFontSize;
+													font-size: 1rem;
 				&.evo-icon-adv-vert-adjust-down			{top: 1px;}
 				&.evo-icon-adv-vert-adjust-up			{bottom: 1px;}
 				&.evo-icon-adv-vert-adjust-left			{left: -1px;}
@@ -276,31 +276,31 @@
 												width: $iconFontAdvSize;
 												height: $iconFontAdvSize;
 												padding: 6px 0;
-			[class*="evo-icon-"]					{font-size: $iconFontSize;}
+			[class*="evo-icon-"]					{font-size: 1rem;}
 												}
 		.evo-icon-adv-size-small-medium			{
 												width: ($iconFontAdvSize * 1.4);
 												height: ($iconFontAdvSize * 1.43);
 												padding: 8px 0;
-			[class*="evo-icon-"]					{font-size: ($iconFontSize*1.5);}
+			[class*="evo-icon-"]					{font-size: (1rem*1.5);}
 												}
 		.evo-icon-adv-size-medium				{
 												width: ($iconFontAdvSize * 2);
 												height: ($iconFontAdvSize * 2);
 												padding: 14px 0;
-			[class*="evo-icon-"]					{font-size: (($iconFontSize*2) - 2);}
+			[class*="evo-icon-"]					{font-size: ((1rem*2) - rem-calc(2));}
 												}
 		.evo-icon-adv-size-large				{
 												width: ($iconFontAdvSize * 3);
 												height: ($iconFontAdvSize * 3);
 												padding: 21px 0;
-			[class*="evo-icon-"]					{font-size: (($iconFontSize*3) - 2);}
+			[class*="evo-icon-"]					{font-size: ((1rem*3) - rem-calc(2));}
 												}
 		.evo-icon-adv-size-x-large				{
 												width: ($iconFontAdvSize * 4);
 												height: ($iconFontAdvSize * 4);
 												padding: 27px 0;
-			[class*="evo-icon-"]					{font-size: (($iconFontSize*4) - 2);}
+			[class*="evo-icon-"]					{font-size: ((1rem*4) - rem-calc(2));}
 												}
 
 		// ADVANCED ICON FONT ON CIRCLE SHIELD COLOR HELPERS

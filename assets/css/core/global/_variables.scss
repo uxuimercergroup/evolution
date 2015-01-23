@@ -59,10 +59,10 @@ $spacerXXXLarge:							($spacerSize*7) !default;
 // BASE
 // ==========================================================================================
 
-// FONTS
+// TYPOGRAPHY
 // ------------------------------------------------------------------------------------------
 
-// BASE
+// BASE FONTS
 $baseFontStack:								arial, Tahoma, Geneva, sans-serif !default;
 $baseFontFilePath:							"../fonts" !default;
 
@@ -115,90 +115,28 @@ $baseFontFilePath:							"../fonts" !default;
 	$evoIconSiteFontFilePath:					"#{$baseFontFilePath}/evo-icon-font-site" !default;
 	$evoIconSiteFontStack:						"#{$evoIconSiteFontFamily}" !default;
 
-
-// TYPOGRAPHY
-// ------------------------------------------------------------------------------------------
-
-// BASE
-$baseFontSize:								16px !default;
-$baseFontSizeDifference:					2 !default;
-$baseFontSizeDifferenceMediumBreakpoint:	2 !default;
-$baseFontSizeDifferenceLargeBreakpoint:		2 !default;
-$baseFontSizeLargeBreakpoint:				($baseFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$baseLineHeight:		        			22px !default;
-$baseLineHeightLargeBreakpoint:		        ($baseLineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$baseHdrFontColor:							$gray-darkest !default;
-
 // LINKS
-$baseLinkColor:								$blue-sapphire !default;
-$baseLinkVisitedColor:						$blue-sapphire !default;
-$baseLinkHoverColor:						$gray-darker !default;
+$baseLinkVisitedColor:						$gray-dark !default;
 
 // FONT WEIGHTS
-$WeightBold100:								100 !default;
-$WeightBold200:								200 !default;
-$WeightBold300:								300 !default;
-$WeightBold400:								400 !default;
-$WeightBold500:								500 !default;
-$WeightBold600:								600 !default;
-$WeightBold700:								700 !default;
-$WeightBold800:								800 !default;
-$WeightBold900:								900 !default;
+$weightBold100:								100 !default;
+$weightBold200:								200 !default;
+$weightBold300:								300 !default;
+$weightBold400:								400 !default;
+$weightBold500:								500 !default;
+$weightBold600:								600 !default;
+$weightBold700:								700 !default;
+$weightBold800:								800 !default;
+$weightBold900:								900 !default;
 
 // HEADERS
-$hdrH1FontSize:								34px !default;
-$hdrH1FontSizeLargeBreakpoint:				($hdrH1FontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH1LineHeight:							($hdrH1FontSize + $baseFontSizeDifference) !default;
-$hdrH1LineHeightLargeBreakpoint:			($hdrH1LineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH1PaddingTopBottom:						9px !default;
-
-$hdrH2FontSize:								28px !default;
-$hdrH2FontSizeLargeBreakpoint:				($hdrH2FontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH2LineHeight:							($hdrH2FontSize + $baseFontSizeDifference) !default;
-$hdrH2LineHeightLargeBreakpoint:			($hdrH2LineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH2PaddingTopBottom:						6px !default;
-
-$hdrH3FontSize:								24px !default;
-$hdrH3FontSizeLargeBreakpoint:				($hdrH3FontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH3LineHeight:							($hdrH3FontSize + $baseFontSizeDifference) !default;
-$hdrH3LineHeightLargeBreakpoint:			($hdrH3LineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH3PaddingTopBottom:						6px !default;
-
-$hdrH4FontSize:								20px !default;
-$hdrH4FontSizeLargeBreakpoint:				($hdrH4FontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH4LineHeight:							($hdrH4FontSize + $baseFontSizeDifference) !default;
-$hdrH4LineHeightLargeBreakpoint:			($hdrH4LineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH4PaddingTopBottom:						3px !default;
-
-$hdrH5FontSize:								16px !default;
-$hdrH5FontSizeLargeBreakpoint:				($hdrH5FontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-
-$hdrH6FontSize:								14px !default;
-$hdrH6FontSizeLargeBreakpoint:				($hdrH6FontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-
 $hdrRuleBorderSize:							1px !default;
 $hdrRuleBorderStyle:						dotted !default;
 $hdrRuleMarginBottom:						10px !default;
 $hdrRuleBorderColor:						$gray-darker !default;
-
 $hdrBackgroundColor:						$gray-mid-light !default;
 
-// PARAGRAPHS
-$baseParagraphMarginBottom:					14px !default;
-
-// SMALL FONT SIZES
-$smallFontSize:								14px !default;
-$smallFontSizeLargeBreakpoint:				($smallFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-
-// HORIZONTAL RULES
-$hrHeight:									2px !default;
-$hrMarginTopBottom:							$baseParagraphMarginBottom !default;
-$hrBackgroundColor: 						$white !default;
-$hrBorderTopColor:							$gray-mid-light !default;
-$hrFontColor:								$white !default;
-
 // OTHER ELEMENTS
-$abbrBorderBottomColor:						$black !default;
 $textSelectionTextColor:					$white !default;
 $textSelectionBackgroundColor:				$gray-darker !default;
 
@@ -298,8 +236,6 @@ $labelFontColor:							$black !default;
 $baseInputBorderSize:						1px !default;
 $baseInputPadding:							2px !default;
 $baseCheckboxRadioWidth:					auto !default;
-$baseCheckboxRadioFontSize:					$baseFontSize !default;
-$baseCheckboxRadioFontSizeLargeBreakpoint:	($baseCheckboxRadioFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
 
 // FORM INPUT FOCUS
 $inputFocusShadowColor:						$tan-mid !default;
@@ -541,7 +477,6 @@ $fatFooterFontColor:						$white !default;
 
 // ICONS
 // ------------------------------------------------------------------------------------------
-$iconFontSize:								$baseFontSize !default;
 $iconFontAdvSize:							32px !default;
 $iconFontColor:								$blue-gray-dark !default;
 $iconFontBackgroundStartColor:				$blue-gray-dark !default;
@@ -554,10 +489,6 @@ $iconFontAdvFontColor:						$white !default;
 
 // LISTS
 // ------------------------------------------------------------------------------------------
-$verticalListLineHeight:					18px !default;
-$verticalListLineHeightLargeBreakpoint:		($verticalListLineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$dataListLineHeight:						22px !default;
-$dataListLineHeightLargeBreakpoint:			($dataListLineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
 $horizontalListPipeBorderColor:				$gray-mid-light !default;
 $definitionListHeaderColor:					$black !default;
 $definitionDataListHeaderBorderColor:		$gray-mid-light !default;
@@ -568,10 +499,6 @@ $definitionDataListHeaderBorderColor:		$gray-mid-light !default;
 
 // BASE
 $tableColWidthMultiplier: 					1% !default;
-$tableBaseFontSize:							14px !default;
-$tableBaseFontSizeLargeBreakpoint:			($tableBaseFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$tableBaseLineHeight:						15px !default;
-$tableBaseLineHeightLargeBreakpoint:		($tableBaseLineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
 $tableBorderStyle:							solid !default;
 $tableTdBorderStyle:						solid !default;
 $tableMarginBottom:							$baseMargin !default;
@@ -595,7 +522,7 @@ $tableRowHoverColor:						$tan-light !default;
 $tableDataFilterMaxWidth:					300px !default;
 $tableDataFilterLineHeight:					22px !default;
 $tableDataFilterLineHeightLargeBreakpoint:	16px !default;
-$tableDataFilterHeight:						($tableDataFilterLineHeight + $baseFontSizeDifferenceLargeBreakpoint) !default;
+$tableDataFilterHeight:						24px !default;
 $tableDataFilterHeightLargeBreakpoint:		20px !default;
 
 $tableSubHeaderBackgroundColor:				#E8F0F7 !default;
@@ -649,10 +576,8 @@ $autocompleteBorderSize:					1px !default;
 $autocompleteBorderStyle:					solid !default;
 $autocompleteMaxHeight:						97px !default;
 $autocompleteMaxHeightLargeBreakpoint:		193px !default;
-$autocompleteItemFontSize:					$baseFontSize !default;
-$autocompleteItemFontSizeLargeBreakpoint:	$baseFontSizeLargeBreakpoint !default;
 $autocompleteItemLinkLineHeight:			22px !default;
-$autocompleteItemLinkLineHeightLargeBreakpoint:	($autocompleteItemLinkLineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
+$autocompleteItemLinkLineHeightLargeBreakpoint:	20px !default;
 $autocompleteItemBorderTopSize:				1px !default;
 $autocompleteItemBorderTopStyle:			solid !default;
 $autocompleteItemBorderBottomSize:			1px !default;
@@ -712,17 +637,9 @@ $contentModalUtilityBarTabsActiveIconColor:	$blue-gray-darker !default;
 // DATEPICKER
 // ------------------------------------------------------------------------------------------
 $datepickerMarginTop:						5px !default;
-$datepickerFontSize:						$baseFontSize;
-$datepickerFontSizeLargeBreakpoint:			($datepickerFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
 $datepickerHdrPaddingTopBottom:				4px !default;
-$datepickerHdrFontSize:						$baseFontSize !default;
-$datepickerHdrFontSizeLargeBreakpoint:		($datepickerHdrFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$datepickerHdrSelectMenuFontSize:			$baseFontSize !default;
-$datepickerHdrSelectMenuFontSizeLargeBreakpoint: ($datepickerHdrSelectMenuFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
 $datepickerMessageFontSize:					13px !default;
-$datepickerMessageFontSizeLargeBreakpoint:	($datepickerMessageFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$datepickerMessageLineHeight:				($datepickerMessageFontSize + $baseFontSizeDifferenceLargeBreakpoint) !default;
-$datepickerMessageLineHeightLargeBreakpoint: ($datepickerMessageLineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
+$datepickerMessageLineHeight:				15px !default;
 $datepickerIconPositionTop:					5px;
 $datepickerIconPositionLeft:				-22px;
 $datepickerIconPositionTopLargeBreakpoint:	4px;
@@ -767,7 +684,7 @@ $dialogHdrPaddingLeft:						18px !default;
 $dialogHdrBorderBottomSize:					0 !default;
 $dialogHdrBorderBottomStyle:				solid !default;
 $dialogHdrFontSize:							18px !default;
-$dialogHdrFontSizeLargeBreakpoint:			$hdrH3FontSizeLargeBreakpoint !default;
+$dialogHdrFontSizeLargeBreakpoint:			24px !default;
 $dialogContentMaxHeightLargeBreakpoint:		430px !default;
 $dialogContentPaddingTop:					12px !default;
 $dialogContentPaddingLeftRight:				18px !default;
@@ -778,7 +695,7 @@ $loadingModalWidthLargeBreakpoint:			350px !default;
 $dialogOverlayBackgroundColor:				$black !default;
 $dialogShadowColor:							$gray-darker !default;
 $dialogBackgroundColor:						$white !default;
-$dialogHdrFontColor:						$baseHdrFontColor !default;
+$dialogHdrFontColor:						$gray-darkest !default;
 $dialogContentBorderTopColor: 				$white !default;
 $dialogHdrBorderBottomColor:				$transparent !default;
 $dialogCloseIconColor:						$gray-darker !default;
@@ -820,7 +737,6 @@ $miniFilterActiveFontColor:					$black !default;
 
 // PAGINATION
 // ------------------------------------------------------------------------------------------
-$paginationFontSize:						$baseFontSize !default;
 $paginationFontSizeLargeBreakpoint:			12px !default;
 $paginationBorderStyle:						solid !default;
 $paginationLinkLineHeight:					.8em !default;
@@ -838,14 +754,8 @@ $paginationLinkHoverColor:					$black !default;
 
 // PROFILE CONTAINERS
 // ------------------------------------------------------------------------------------------
-$profileContainerHeaderFontSize:			$hdrH2FontSize !default;
-$profileContainerHeaderFontSizeLargeBreakpoint: $hdrH1FontSize !default;
-$profileContainerHeaderLineHeight:			$hdrH2LineHeight !default;
-$profileContainerHeaderLineHeightLargeBreakpoint: $hdrH1LineHeightLargeBreakpoint !default;
 $profileContainerDataListFontSize:			14px !default;
-$profileContainerDataListFontSizeLargeBreakpoint: ($profileContainerDataListFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
 $profileContainerDataListLineHeight:		18px !default;
-$profileContainerDataListLineHeightLargeBreakpoint: ($profileContainerDataListLineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
 
 $profileContainerHdrColor:					$white !default;
 $profileContainerSecondaryHdrColor:			$white !default;
@@ -883,11 +793,7 @@ $sliderHandleActiveBackgroundEndColor:		$blue-gray-darkest !default;
 $summaryCtnBorderSize:						1px !default;
 $summaryCtnBorderStyle:						dotted !default;
 $summaryCtnPadding:							10px !default;
-$summaryPrimaryCtnLargeFontSizeAdjust:		10 !default;
-$summaryPrimaryCtnSupportFontSizeAdjust:	3 !default;
 $summaryPrimaryCtnIconFontSize:				40px !default;
-$summarySecondaryCtnLargeFontSizeAdjust:	2 !default;
-$summarySecondaryCtnSupportFontSizeAdjust:	3 !default;
 $summarySecondaryCtnIconFontSize:			30px !default;
 
 $summaryCtnBorderColor:						$gray-darker !default;
@@ -921,7 +827,6 @@ $tabsPaddingLeftRight:						10px !default;
 $tabsBorderSize:							1px !default;
 $tabsBorderStyle:							solid !default;
 $tabsFontSize:								14px !default;
-$tabsFontSizeLargeBreakpoint:				($tabsFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
 $tabsLineHeight:							26px !default;
 $tabsLineHeightLargeBreakpoint:				22px !default;
 $tabsFontWeight:							normal !default;
@@ -975,10 +880,6 @@ $tooltipHShadow:							1px	!default;
 $tooltipShadowBlur:							5px	!default;
 $tooltipBorderSize:							1px !default;
 $tooltipBorderStyle:						solid !default;
-$tooltipFontSize:							$baseFontSize !default;
-$tooltipFontSizeLargeBreakpoint:			12px !default;
-$tooltipLineHeight:							20px !default;
-$tooltipLineHeightLargeBreakpoint:			14px !default;
 $tooltipPaddingTopBottom:					5px !default;
 $tooltipPaddingLeftRight:					8px !default;
 

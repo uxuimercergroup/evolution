@@ -23,7 +23,7 @@
 		table				{
 							width: 100%;
 							border-collapse:  collapse;
-							font-size: $datepickerFontSize;
+							font-size: 1rem;
 							margin: 0;
 			th					{
 								background-color: $datepickerBackgroundColor;
@@ -51,7 +51,7 @@
 							@include background-gradient($datepickerHdrBackgroundStartColor,$datepickerHdrBackgroundEndColor);
 							@include border-radius($global-radius $global-radius 0 0);
 							padding: $datepickerHdrPaddingTopBottom 0;
-							font-size: $datepickerHdrFontSize;
+							font-size: 1rem;
 							position: relative;
 			.ui-icon			{
 								text-indent: -99999px;
@@ -99,7 +99,7 @@
 								color: $datepickerHdrFontColor;
 				select				{
 									float: left;
-									font-size: $datepickerHdrSelectMenuFontSize;
+									font-size: 1rem;
 									padding: 0;
 									margin: 2px 0 3px 0;
 									}
@@ -244,9 +244,9 @@
 						top: $datepickerIconPositionTop;
 						margin-left: $datepickerIconPositionLeft;
 						float: left;
-						font-size: $iconFontSize;
-						width: $iconFontSize;
-						height: $iconFontSize;
+						font-size: 1rem;
+						width: 1rem;
+						height: 1rem;
 						padding: 0;
 						border: 0;
 						color: transparent;
@@ -309,12 +309,12 @@
 						{
 
 				// DATEPICKER GLOBAL TABLE STYLES
-				table		{font-size: $datepickerFontSizeLargeBreakpoint;}
+				table		{font-size: 1rem;}
 
 				// DATEPICKER HEADER
 				.ui-datepicker-header
 							{
-							font-size: $datepickerHdrFontSizeLargeBreakpoint;
+							font-size: 1rem;
 
 					// DATEPICKER NAVIGATION
 					.ui-datepicker-prev,
@@ -328,16 +328,7 @@
 					// DATEPICKER TITLE
 					.ui-datepicker-title
 								{
-						select		{font-size: $datepickerHdrSelectMenuFontSizeLargeBreakpoint;}
-								}
-							}
-
-				// DATEPICKER MESSAGE AREA
-				.evo-datepicker-message
-							{
-					label		{
-								font-size: $datepickerMessageFontSizeLargeBreakpoint;
-								line-height: $datepickerMessageLineHeightLargeBreakpoint;
+						select		{font-size: 1rem;}
 								}
 							}
 						}

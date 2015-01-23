@@ -18,112 +18,60 @@
 // Site: http://www.icomoon.io
 // Documentation: http://icomoon.io/#docs
 
-
-// ==========================================================================================
-// FONTS
-// ==========================================================================================
-
-// WEB FONTS
-// ------------------------------------------------------------------------------------------
-
-// Thin
-// -------------------------------------------------
-@include font-face($fontThinFamily, $fontThinFilePath);
-
-// Regular
-// -------------------------------------------------
-@include font-face($fontRegularFamily, $fontRegularFilePath);
-
-// Italic
-// -------------------------------------------------
-@include font-face($fontItalicFamily, $fontItalicFilePath);
-
-// Medium
-// -------------------------------------------------
-@include font-face($fontMediumFamily, $fontMediumFilePath);
-
-// Medium Italic
-// -------------------------------------------------
-@include font-face($fontMediumItalicFamily, $fontMediumItalicFilePath);
-
-// Bold
-// -------------------------------------------------
-@include font-face($fontBoldFamily, $fontBoldFilePath);
-
-// Bold Italic
-// -------------------------------------------------
-@include font-face($fontBoldItalicFamily, $fontBoldItalicFilePath);
-
-
-// ICON FONTS
-// ------------------------------------------------------------------------------------------
-
-// EVO Icon Font
-// -------------------------------------------------
-@if $use-icon-font == true{
-	@include font-face($evoIconFontFamily, $evoIconFontFilePath);
-}//endif
-
-
-// ==========================================================================================
-// GLOBAL
-// ==========================================================================================
-
 @if $use-type == true{
+
+	// ==========================================================================================
+	// FONTS
+	// ==========================================================================================
+
+	// WEB FONTS
+	// ------------------------------------------------------------------------------------------
+
+	// Thin
+	// -------------------------------------------------
+	@include font-face($fontThinFamily, $fontThinFilePath);
+
+	// Regular
+	// -------------------------------------------------
+	@include font-face($fontRegularFamily, $fontRegularFilePath);
+
+	// Italic
+	// -------------------------------------------------
+	@include font-face($fontItalicFamily, $fontItalicFilePath);
+
+	// Medium
+	// -------------------------------------------------
+	@include font-face($fontMediumFamily, $fontMediumFilePath);
+
+	// Medium Italic
+	// -------------------------------------------------
+	@include font-face($fontMediumItalicFamily, $fontMediumItalicFilePath);
+
+	// Bold
+	// -------------------------------------------------
+	@include font-face($fontBoldFamily, $fontBoldFilePath);
+
+	// Bold Italic
+	// -------------------------------------------------
+	@include font-face($fontBoldItalicFamily, $fontBoldItalicFilePath);
+
+
+	// ICON FONTS
+	// ------------------------------------------------------------------------------------------
+
+	// EVO Icon Font
+	// -------------------------------------------------
+	@if $use-icon-font == true{
+		@include font-face($evoIconFontFamily, $evoIconFontFilePath);
+	}//endif
+
+
+	// ==========================================================================================
+	// GLOBAL
+	// ==========================================================================================
 
 	// Text selection color and background color
 	*							{@include type-selection($textSelectionTextColor,$textSelectionBackgroundColor);}
-
-	body						{
-								font-size: $baseFontSize;
-								}
-
-
-	// HEADERS
-	h1, .h1, h2, .h2,
-	h3, .h3, h4, .h4,
-	h5, .h5, h6, .h6			{
-								color: $baseHdrFontColor;
-								line-height: 20px;
-								margin: 0;
-								text-rendering: optimizelegibility; // Fix the character spacing for headings
-								}
-
-	h1, .h1						{
-								font-size: $hdrH1FontSize;
-								font-weight: $WeightBold400;
-								line-height: $hdrH1LineHeight;
-								padding: $hdrH1PaddingTopBottom 0;
-								}
-	h2, .h2						{
-								font-size: $hdrH2FontSize;
-								font-weight: $WeightBold400;
-								line-height: $hdrH2LineHeight;
-								padding: $hdrH2PaddingTopBottom 0;
-								}
-	h3, .h3						{
-								font-size: $hdrH3FontSize;
-								font-weight: $WeightBold400;
-								line-height: $hdrH3LineHeight;
-								padding: $hdrH3PaddingTopBottom 0;
-								}
-	h4, .h4						{
-								font-size: $hdrH4FontSize;
-								font-weight: $WeightBold200;
-								font-family: $fontMediumStack;
-								line-height: $hdrH4LineHeight;
-								padding: $hdrH4PaddingTopBottom 0;
-								}
-	h5, .h5						{
-								font-size: $hdrH5FontSize;
-								font-weight: $WeightBold200;
-								font-family: $fontMediumStack;
-								}
-	h6, .h6						{
-								font-size: $hdrH6FontSize;
-								font-weight: $WeightBold200;
-								font-family: $fontMediumStack;
-								}
 
 	.evo-h1-hdr-background,
 	.evo-h2-hdr-background,
@@ -170,58 +118,18 @@
 								}
 
 
-	// PARAGRAPH
-	p							{
-								line-height: $baseLineHeight;
-								margin: 0 0 $baseParagraphMarginBottom 0;
-								}
-
-
 	// INTRO TEXT, 2PX SIZES LARGER THAN THE BASE FONT
 	.evo-intro-text				{
-								font-size: ($baseFontSize + 2px);
-								line-height: ($baseLineHeight + 2px);
+								font-size: rem-calc(18);
 								}
 
-								
 	// SMALL TEXT
-	small						{font-size: $smallFontSize;}
 	p small						{
 								display: block;
-								line-height: $baseLineHeight/1.25;
+								line-height: 1.25;
 								}
 
-
-	// LIST ITEMS
-	ul,
-	ol							{
-								padding: 0;
-								margin: 0 0 10px 25px;
-								}
-	ul ul,
-	ul ol,
-	ol ol,
-	ol ul						{
-								margin-bottom: 0;
-								margin-top: 6px;
-								}
-
-	li							{
-								line-height: $baseLineHeight;
-								margin-bottom: 6px;
-								}
-
-	ul,
-	ol,
-	dl,
-	dialog						{margin-bottom: $baseParagraphMarginBottom;}
-
-	dl							{margin-bottom: 20px;}
-	dt,
-	dd							{line-height: $baseLineHeight;}
-	dt							{font-family: $fontMediumStack;}
-	dd							{margin-left: 10px;}
-							
+	// LIST ITEMS			
 	.evo-lower-alpha			{list-style-type: lower-alpha;}
 	.evo-upper-alpha			{list-style-type: upper-alpha;}							
 	.evo-lower-roman			{list-style-type: lower-roman;}
@@ -231,62 +139,27 @@
 
 	// BLOCKQUOTE
 	blockquote					{
-								margin: 0;
-								padding: 0 20px $baseParagraphMarginBottom 20px;
+								font-family: $fontThinStack;
 		p							{
-									margin: 0;
-									font-size: 150%;
-									line-height: $baseLineHeight;
-									font-family: $fontThinStack;
+									margin-bottom: rem-calc(10);
+									font-size: rem-calc(24);
+									line-height: 1.25;
 									}
-		.evo-author					{
-									font-size: 100%;
+		cite						{
 									text-align: right;
 									font-family: $fontMediumStack;
 									}
 								}
 
 
-	// TABLE
-	table						{font: inherit;}
-
-
 	// LINKS
 	a							{	
-		&:link						{
-									@include href-link($baseLinkColor, underline);
-									cursor: pointer;
-									}
 		&:visited					{color: $baseLinkVisitedColor;}
-		&:hover,
-		&:focus,
-		&:active					{@include href-link-hover(none);}
-		&:hover						{
-									@include href-link-hover(none);
-									color: $baseLinkHoverColor;
-									}
-								}
-
-
-	// HORIZONTAL RULES
-	hr							{
-								background-color: $hrBackgroundColor;
-								border: 0;
-								border-top: 1px solid $hrBorderTopColor;
-								clear: both;
-								color: $hrFontColor;
-								display: block;
-								height: $hrHeight;
-								margin: $hrMarginTopBottom 0;
 								}
 
 
 	// OTHER ELEMENTS
-	abbr						{
-								cursor: help;
-								border-bottom: 1px dotted $abbrBorderBottomColor;
-								}
-	sup, sub					{font-size: $smallFontSize;}
+	sup, sub					{font-size: $small-font-size;}
 	sup							{vertical-align: 4px;}
 	sub							{vertical-align: -5px;}
 	em							{
@@ -295,71 +168,3 @@
 								}
 
 }//endif
-
-//=== MEDIA QUERIES =========================================================================
-
-// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
-@if $use-medium-up-mediaquery == true {
-		
-	@media #{$medium-up} {
-
-		// GLOBAL
-		body				{font-size: $baseFontSizeLargeBreakpoint;}
-
-
-		// HEADERS
-		h1, .h1				{
-							font-size: $hdrH1FontSizeLargeBreakpoint;
-							line-height: $hdrH1LineHeightLargeBreakpoint;
-							}
-		h2, .h2				{
-							font-size: $hdrH2FontSizeLargeBreakpoint;
-							line-height: $hdrH2LineHeightLargeBreakpoint;
-							}
-		h3, .h3				{
-							font-size: $hdrH3FontSizeLargeBreakpoint;
-							line-height: $hdrH3LineHeightLargeBreakpoint;
-							}
-		h4, .h4				{
-							font-size: $hdrH4FontSizeLargeBreakpoint;
-							line-height: $hdrH4LineHeightLargeBreakpoint;
-							}
-		h5, .h5				{font-size: $hdrH5FontSizeLargeBreakpoint;}
-		h6, .h6				{font-size: $hdrH6FontSizeLargeBreakpoint;}
-
-
-		// PARAGRAPH
-		p					{
-							line-height: $baseLineHeightLargeBreakpoint;
-							}
-
-
-		// INTRO TEXT, 2PX SIZES LARGER THAN THE BASE FONT
-		.evo-intro-text		{
-							font-size: ($baseFontSizeLargeBreakpoint + 2px);
-							line-height: ($baseLineHeightLargeBreakpoint + 2px);
-							}
-
-
-		// SMALL TEXT
-		small				{font-size: $smallFontSizeLargeBreakpoint;}
-		p small				{line-height: $baseLineHeightLargeBreakpoint/1.5;}
-
-
-		// LIST ITEMS
-		li					{line-height: $baseLineHeightLargeBreakpoint;}
-		dt,
-		dd					{line-height: $baseLineHeightLargeBreakpoint;}
-
-
-		// BLOCKQUOTE
-		blockquote			{
-			p					{line-height: $baseLineHeightLargeBreakpoint;}
-							}
-
-
-		// OTHER ELEMENTS
-		sup, sub			{font-size: $smallFontSizeLargeBreakpoint;}
-	}
-	
-}// endif

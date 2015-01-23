@@ -136,8 +136,7 @@ $evo-tabs-panel-bg-color: $white !default;
 					&:hover													{color: $tabsPagingNavHoverColor;}
 					&:before												{
 																			font-family: $evoIconFontStack;
-																			font-size: $baseFontSize;
-																			line-height: $baseLineHeight;
+																			font-size: 1rem;
 																			}
 																		}
 																	}
@@ -190,8 +189,8 @@ $evo-tabs-panel-bg-color: $white !default;
 					.ui-state-default								{
 																	height:$tabsHeightLargeBreakpoint;
 						a												{
-																		font-size:$tabsFontSizeLargeBreakpoint;
-																		line-height:$tabsLineHeightLargeBreakpoint;
+																		font-size:$tabsFontSize;
+																		line-height:$tabsLineHeight;
 																		}
 																	}
 					.ui-state-active								{height:$tabsActiveHeightLargeBreakpoint;}
@@ -204,7 +203,7 @@ $evo-tabs-panel-bg-color: $white !default;
 				.evo-tabs.ui-tabs								{
 					.ui-tabs-nav									{
 						.ui-state-default								{
-							a												{line-height: ($tabsLineHeightLargeBreakpoint - 4)}
+							a												{line-height: ($tabsLineHeight - 4)}
 																		}
 																	}
 																}
@@ -216,7 +215,7 @@ $evo-tabs-panel-bg-color: $white !default;
 				.evo-tabs.ui-tabs								{
 					.ui-tabs-nav									{
 						.ui-state-default								{
-							a												{line-height: ($tabsLineHeightLargeBreakpoint - 4)}
+							a												{line-height: ($tabsLineHeight - 4)}
 																		}
 																	}
 																}

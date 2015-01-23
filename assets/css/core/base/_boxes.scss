@@ -80,7 +80,7 @@
 		// MESSAGE BUILDERS
 		.evo-message-hdr			{
 									font-family: $fontMediumStack;
-									font-size: $baseFontSize;
+									font-size: 1rem;
 									margin-top: 0;
 									}
 		.evo-close-action			{
@@ -215,7 +215,7 @@
 			@if $use-message-boxes == true{
 
 				// MESSAGE BUILDERS
-				.evo-message-hdr	{font-size: $baseFontSizeLargeBreakpoint;}
+				.evo-message-hdr	{font-size: 1rem;}
 
 			}// endif
 

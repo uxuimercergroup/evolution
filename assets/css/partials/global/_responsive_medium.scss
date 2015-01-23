@@ -29,14 +29,7 @@
 												}
 		.ui-tabs-panel							{
 			p, ul, ol, li, dt, dd					{
-													font-size: ($baseFontSizeLargeBreakpoint + 2px);
-													line-height: ($baseLineHeightLargeBreakpoint + 2px);
-													}
-			.prettyprint							{
-				li 										{
-														font-size: $baseFontSizeLargeBreakpoint;
-														line-height: $baseLineHeightLargeBreakpoint;
-														}
+													font-size: 1rem;
 													}
 												}
 											}
@@ -67,7 +60,7 @@
 
 	/*--- TYPE PAGE ------------------------------------------------------------------------*/
 	.evo-ref-type-table						{
-		td.evo-ref-type-example					{font-size: $baseFontSizeLargeBreakpoint !important;}
+		td.evo-ref-type-example					{font-size: 1rem !important;}
 											}
 
 }

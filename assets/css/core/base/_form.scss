@@ -17,8 +17,7 @@
 	input,
 	select,
 	textarea										{
-													font-size: $baseFontSize;
-													line-height: $baseLineHeight;
+													font-size: 1rem;
 													}
 	input[type="text"],
 	input[type="password"],
@@ -44,7 +43,7 @@
 													display: inline-block;
 													height: auto;
 													padding: $baseInputPadding;
-													font-size: $baseFontSize;
+													font-size: 1rem;
 													vertical-align: middle;
 													width: 100%;
 													}
@@ -106,7 +105,7 @@
 													display: block;
 		label											{
 														font-family: $fontRegularStack;
-														font-size: $baseCheckboxRadioFontSize;
+														font-size: 1rem;
 														margin: 0 8px 0 0;
 														padding: 5px;
 			input											{
@@ -232,7 +231,7 @@
 	.ie9											{
 		
 		// GLOBAL FORM ELEMENTS
-		input											{line-height:$baseFontSize;}
+		input											{line-height:1rem;}
 
 		// RADIO AND CHECKBOX STYLES
 		.evo-radio										{
@@ -276,8 +275,7 @@
 			input,
 			select,
 			textarea								{
-													font-size: $baseFontSizeLargeBreakpoint;
-													line-height: $baseLineHeightLargeBreakpoint;
+													font-size: 1rem;
 													}
 
 			input[type="text"],
@@ -295,7 +293,7 @@
 			input[type="tel"],
 			input[type="color"],
 			select,
-			textarea								{font-size: $baseFontSizeLargeBreakpoint;}
+			textarea								{font-size: 1rem;}
 
 			// RIGHT ALIGN LABELS
 			.evo-form-label-right					{
@@ -306,7 +304,7 @@
 			.evo-checkbox,
 			.evo-radio								{
 				label									{
-														font-size: $baseCheckboxRadioFontSizeLargeBreakpoint;
+														font-size: 1rem;
 														padding: 2px 0 0 4px;
 														}
 													}
@@ -350,7 +348,7 @@
 
 			// FORM IE9 FIXES
 			.ie9									{
-				input									{line-height:$baseFontSizeLargeBreakpoint;}
+				input									{line-height: 1rem;}
 													}
 
 		}

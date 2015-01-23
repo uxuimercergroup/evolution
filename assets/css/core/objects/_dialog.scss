@@ -65,7 +65,7 @@
 			// DIALOG TITLE BAR HEADER
 			.ui-dialog-title				{
 											font-family: $fontMediumStack;
-											font-weight: $WeightBold200;
+											font-weight: $weightBold200;
 											font-size: $dialogHdrFontSize;
 											color: $dialogHdrFontColor;
 											}
@@ -79,13 +79,13 @@
 											outline: 0;
 											background: transparent;
 											padding: 10px;
-											font-size: $iconFontSize;
+											font-size: 1rem;
 				&:before						{
 												font-family: $evoIconFontStack;
 												content: "\e369";
 												color: $dialogCloseIconColor;
-												height: $iconFontSize;
-												width: $iconFontSize;
+												height: 1rem;
+												width: 1rem;
 												}
 				.ui-button-text					{display: none;}
 											}

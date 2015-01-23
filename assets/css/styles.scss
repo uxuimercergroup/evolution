@@ -33,7 +33,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 // HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
 html.evo-mod-js							{display:none;}
 
-.see-context-link						{font-size: 13px;}
+.see-context-link						{font-size: rem-calc(13);}
 
 .img-border								{border: 1px solid $gray-mid-dark;}
 
@@ -77,13 +77,11 @@ html.evo-mod-js							{display:none;}
 											}
 	.ui-tabs-panel							{
 		p, ul, ol, li, dt, dd					{
-												font-size: ($baseFontSize + 2px);
-												line-height: ($baseLineHeight + 2px);
+												font-size: 1rem;
 												}
 		.prettyprint							{
 			li 										{
-													font-size: $baseFontSize;
-													line-height: $baseLineHeight;
+													font-size: 1rem;
 													}
 												}
 											}
@@ -106,7 +104,7 @@ html.evo-mod-js							{display:none;}
 																padding: 0 0 3px 0;
 							a										{
 																	color: $white;
-																	font-size: 12px;
+																	font-size: rem-calc(12);
 																	padding: 0;
 																	margin: 0;
 								&:hover									{background-color: $transparent;}
@@ -196,8 +194,8 @@ html.evo-mod-js							{display:none;}
 			a										{
 													color: $white;
 													display: block;
-													font-size: ($baseFontSize - 4);
-													line-height: 28px;
+													font-size: rem-calc(12);
+													line-height: rem-calc(28);
 													padding: 0 12px;
 				&:hover									{
 														@include href-link-hover(none);
@@ -210,7 +208,7 @@ html.evo-mod-js							{display:none;}
 
 
 /*--- HOMEPAGE ----------------------------------------------------------------------------*/
-[class*="banding-section"]				{font-size: ($baseFontSize + 1);}
+[class*="banding-section"]				{font-size: 1rem;}
 
 
 .evo-alternate-views-badge.ui-tabs		{
@@ -218,7 +216,7 @@ html.evo-mod-js							{display:none;}
 											@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
 		h1										{
 												color: $white;
-												font-size: ($baseFontSize + 35);
+												font-size: rem-calc(51);
 												font-family: $fontThinStack;
 												padding-top: 20px;
 												}
@@ -231,7 +229,7 @@ html.evo-mod-js							{display:none;}
 												color: $white;
 												display: inline-block;
 												top: -12px;
-												font-size: 140px;
+												font-size: rem-calc(140);
 												}
 		.evo-btn-group-horizontal				{@include clearfix;}
 											}
@@ -277,7 +275,7 @@ html.evo-mod-js							{display:none;}
 												}
 		li										{
 												color: $orange-dark;
-												font-size: ($baseFontSize + 8);
+												font-size: rem-calc(24);
 												margin-right: 85px;
 												margin-bottom: 35px;
 			&:last-child							{margin-right: 0;}
@@ -286,7 +284,7 @@ html.evo-mod-js							{display:none;}
 										}
 
 .banding-section-6						{
-										font-size: 14px;
+										font-size: 1em;
 	.hp-layout								{
 		h5										{margin-bottom: 7px;}
 		.evo-vertical-list						{margin-bottom: $baseMargin;}
@@ -325,7 +323,7 @@ html.evo-mod-js							{display:none;}
 
 /*--- TYPE PAGE ---------------------------------------------------------------------------*/
 .evo-ref-type-table						{
-	td.evo-ref-type-example					{font-size: $baseFontSize !important;}
+	td.evo-ref-type-example					{font-size: 1rem !important;}
 										}
 .evo-ref-hyphen-demo					{@include hyphens(auto);}
 
@@ -336,7 +334,7 @@ html.evo-mod-js							{display:none;}
 										}
 .icons-large-on							{
 	i[class^="evo-icon-"]					{
-											font-size: ($iconFontSize*3);
+											font-size: (1rem*3);
 											margin: 0 auto;
 											display: block;
 											}

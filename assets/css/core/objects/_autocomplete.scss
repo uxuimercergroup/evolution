@@ -31,7 +31,7 @@
 								margin: 0;
 								padding: 0;
 								width: 100%;
-								font-size: $autocompleteItemFontSize;
+								font-size: 1rem;
 								font-family: $fontMediumStack;
 			.ui-menu-item-highlight	{
 									color: $autocompleteItemHighlightText;
@@ -81,7 +81,7 @@
 			.ui-menu		{
 							max-height: $autocompleteMaxHeightLargeBreakpoint;
 				.ui-menu-item	{
-								font-size: $autocompleteItemFontSizeLargeBreakpoint;
+								font-size: 1rem;
 					a				{
 									line-height: $autocompleteItemLinkLineHeightLargeBreakpoint;
 						.ui-menu-secondary

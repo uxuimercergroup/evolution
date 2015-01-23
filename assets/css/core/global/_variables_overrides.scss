@@ -63,143 +63,86 @@
 // BASE
 // ==========================================================================================
 
-// FONTS
+// TYPOGRAPHY
 // ------------------------------------------------------------------------------------------
 
-// BASE
-// $baseFontStack:							arial, Tahoma, Geneva, sans-serif;
-// $baseFontFilePath:						"../fonts";
+// BASE FONTS
+// $baseFontStack:							arial, Tahoma, Geneva, sans-serif !default;
+// $baseFontFilePath:						"../fonts" !default;
 
 // WEB FONTS
 
 	// Thin
-	// $fontThinFamily:							proxima_nova_ththin;
-	// $fontThinFilePath:						"#{$baseFontFilePath}/ProximaNova-Thin-webfont";
-	// $fontThinStack:							"#{$fontThinFamily}", $baseFontStack;
+	// $fontThinFamily:							relativefaux !default;
+	// $fontThinFilePath:						"#{$baseFontFilePath}/relative-faux_-webfont" !default;
+	// $fontThinStack:							"#{$fontThinFamily}", $baseFontStack !default;
 
 	// Regular
-	// $fontRegularFamily:						proxima_nova_rgregular;
-	// $fontRegularFilePath:					"#{$baseFontFilePath}/ProximaNova-Reg-webfont";
-	// $fontRegularStack:						"#{$fontRegularFamily}", $baseFontStack;
-
-	// Bold
-	// $fontBoldFamily:							proxima_nova_rgbold;
-	// $fontBoldFilePath:						"#{$baseFontFilePath}/ProximaNova-Bold-webfont";
-	// $fontBoldStack:							"#{$fontBoldFamily}", $baseFontStack;
+	// $fontRegularFamily:						relativebook !default;
+	// $fontRegularFilePath:					"#{$baseFontFilePath}/relative-book-webfont" !default;
+	// $fontRegularStack:						"#{$fontRegularFamily}", $baseFontStack !default;
 
 	// Italic
-	// $fontItalicFamily:						proxima_novaregular_italic;
-	// $fontItalicFilePath:						"#{$baseFontFilePath}/ProximaNova-RegIt-webfont";
-	// $fontItalicStack:						"#{$fontItalicFamily}", $baseFontStack;
-
-	// Bold Italic
-	// $fontBoldItalicFamily:					proxima_novabold_italic;
-	// $fontBoldItalicFilePath:					"#{$baseFontFilePath}/ProximaNova-BoldIt-webfont";
-	// $fontBoldItalicStack:					"#{$fontBoldItalicFamily}", $baseFontStack;
+	// $fontItalicFamily:						relativebook_italic !default;
+	// $fontItalicFilePath:						"#{$baseFontFilePath}/relative-bookitalic-webfont" !default;
+	// $fontItalicStack:						"#{$fontItalicFamily}", $baseFontStack !default;
 
 	// Medium
-	// $fontMediumFamily:						proxima_nova_ltsemibold;
-	// $fontMediumFilePath:						"#{$baseFontFilePath}/ProximaNova-Sbold-webfont";
-	// $fontMediumStack:						"#{$fontMediumFamily}", $baseFontStack;
+	// $fontMediumFamily:						relativemedium !default;
+	// $fontMediumFilePath:						"#{$baseFontFilePath}/relative-medium-webfont" !default;
+	// $fontMediumStack:						"#{$fontMediumFamily}", $baseFontStack !default;
+
+	// Medium Italic
+	// $fontMediumItalicFamily:					relativemedium_italic !default;
+	// $fontMediumItalicFilePath:				"#{$baseFontFilePath}/relative-mediumitalic_-webfont" !default;
+	// $fontMediumItalicStack:					"#{$fontMediumItalicFamily}", $baseFontStack !default;
+
+	// Bold
+	// $fontBoldFamily:							relativebold !default;
+	// $fontBoldFilePath:						"#{$baseFontFilePath}/relative-bold-webfont" !default;
+	// $fontBoldStack:							"#{$fontBoldFamily}", $baseFontStack !default;
+
+	// Bold Italic
+	// $fontBoldItalicFamily:					relativebold_italic !default;
+	// $fontBoldItalicFilePath:					"#{$baseFontFilePath}/relative-bolditalic-webfont" !default;
+	// $fontBoldItalicStack:					"#{$fontBoldItalicFamily}", $baseFontStack !default;
 
 // ICON FONTS
 
 	// Core icon font set
-	// $evoIconFontFamily:						evo_icon_font;
-	// $evoIconFontFilePath:					"#{$baseFontFilePath}/evo-icon-font";
-	// $evoIconFontStack:						"#{$evoIconFontFamily}";
+	// $evoIconFontFamily:						evo_icon_font !default;
+	// $evoIconFontFilePath:					"#{$baseFontFilePath}/evo-icon-font" !default;
+	// $evoIconFontStack:						"#{$evoIconFontFamily}" !default;
 
 	// Site icon font set
-	// $evoIconSiteFontFamily:					evo_icon_font_site;
-	// $evoIconSiteFontFilePath:				"#{$baseFontFilePath}/evo-icon-font-site";
-	// $evoIconSiteFontStack:					"#{$evoIconSiteFontFamily}";
-
-
-// TYPOGRAPHY
-// ------------------------------------------------------------------------------------------
-
-// BASE
-// $baseFontSize:							16px;
-// $baseFontSizeDifference:					2;
-// $baseFontSizeDifferenceMediumBreakpoint:	2;
-// $baseFontSizeDifferenceLargeBreakpoint:	2;
-// $baseFontSizeLargeBreakpoint:			($baseFontSize - $baseFontSizeDifferenceLargeBreakpoint);
-// $baseLineHeight:		        			22px;
-// $baseLineHeightLargeBreakpoint:			($baseLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
-// $baseHdrFontColor:						$gray-darkest;
+	// $evoIconSiteFontFamily:					evo_icon_font_site !default;
+	// $evoIconSiteFontFilePath:				"#{$baseFontFilePath}/evo-icon-font-site" !default;
+	// $evoIconSiteFontStack:					"#{$evoIconSiteFontFamily}" !default;
 
 // LINKS
-// $baseLinkColor:							$blue-sapphire;
-// $baseLinkVisitedColor:					$blue-sapphire;
-// $baseLinkHoverColor:						$gray-darker;
+// $baseLinkVisitedColor:					$gray-dark !default;
 
 // FONT WEIGHTS
-// $WeightBold100:							100;
-// $WeightBold200:							200;
-// $WeightBold300:							300;
-// $WeightBold400:							400;
-// $WeightBold500:							500;
-// $WeightBold600:							600;
-// $WeightBold700:							700;
-// $WeightBold800:							800;
-// $WeightBold900:							900;
+// $weightBold100:							100 !default;
+// $weightBold200:							200 !default;
+// $weightBold300:							300 !default;
+// $weightBold400:							400 !default;
+// $weightBold500:							500 !default;
+// $weightBold600:							600 !default;
+// $weightBold700:							700 !default;
+// $weightBold800:							800 !default;
+// $weightBold900:							900 !default;
 
 // HEADERS
-// $hdrH1FontSize:							34px;
-// $hdrH1FontSizeLargeBreakpoint:			($hdrH1FontSize - $baseFontSizeDifferenceLargeBreakpoint);
-// $hdrH1LineHeight:						($hdrH1FontSize + $baseFontSizeDifference);
-// $hdrH1LineHeightLargeBreakpoint:			($hdrH1LineHeight - $baseFontSizeDifferenceLargeBreakpoint);
-// $hdrH1PaddingTopBottom:					9px;
-
-// $hdrH2FontSize:							28px;
-// $hdrH2FontSizeLargeBreakpoint:			($hdrH2FontSize - $baseFontSizeDifferenceLargeBreakpoint);
-// $hdrH2LineHeight:						($hdrH2FontSize + $baseFontSizeDifference);
-// $hdrH2LineHeightLargeBreakpoint:			($hdrH2LineHeight - $baseFontSizeDifferenceLargeBreakpoint);
-// $hdrH2PaddingTopBottom:					6px;
-
-// $hdrH3FontSize:							24px;
-// $hdrH3FontSizeLargeBreakpoint:			($hdrH3FontSize - $baseFontSizeDifferenceLargeBreakpoint);
-// $hdrH3LineHeight:						($hdrH3FontSize + $baseFontSizeDifference);
-// $hdrH3LineHeightLargeBreakpoint:			($hdrH3LineHeight - $baseFontSizeDifferenceLargeBreakpoint);
-// $hdrH3PaddingTopBottom:					6px;
-
-// $hdrH4FontSize:							20px;
-// $hdrH4FontSizeLargeBreakpoint:			($hdrH4FontSize - $baseFontSizeDifferenceLargeBreakpoint);
-// $hdrH4LineHeight:						($hdrH4FontSize + $baseFontSizeDifference);
-// $hdrH4LineHeightLargeBreakpoint:			($hdrH4LineHeight - $baseFontSizeDifferenceLargeBreakpoint);
-// $hdrH4PaddingTopBottom:					3px;
-
-// $hdrH5FontSize:							16px;
-// $hdrH5FontSizeLargeBreakpoint:			($hdrH5FontSize - $baseFontSizeDifferenceLargeBreakpoint);
-
-// $hdrH6FontSize:							14px;
-// $hdrH6FontSizeLargeBreakpoint:			($hdrH6FontSize - $baseFontSizeDifferenceLargeBreakpoint);
-
-// $hdrRuleBorderSize:						1px;
-// $hdrRuleBorderStyle:						dotted;
-// $hdrRuleMarginBottom:					10px;
-// $hdrRuleBorderColor:						$gray-darker;
-
-// $hdrBackgroundColor:						$gray-mid-light;
-
-// PARAGRAPHS
-// $baseParagraphMarginBottom:				14px;
-
-// SMALL FONT SIZES
-// $smallFontSize:							14px;
-// $smallFontSizeLargeBreakpoint:			($smallFontSize - $baseFontSizeDifferenceLargeBreakpoint);
-
-// HORIZONTAL RULES
-// $hrHeight:								2px;
-// $hrMarginTopBottom:						$baseParagraphMarginBottom;
-// $hrBackgroundColor: 						$white;
-// $hrBorderTopColor:						$gray-mid-light;
-// $hrFontColor:							$white;
+// $hdrRuleBorderSize:						1px !default;
+// $hdrRuleBorderStyle:						dotted !default;
+// $hdrRuleMarginBottom:					10px !default;
+// $hdrRuleBorderColor:						$gray-darker !default;
+// $hdrBackgroundColor:						$gray-mid-light !default;
 
 // OTHER ELEMENTS
-// $abbrBorderBottomColor:					$black;
-// $textSelectionTextColor:					$white;
-// $textSelectionBackgroundColor:			$gray-darker;
+// $textSelectionTextColor:					$white !default;
+// $textSelectionBackgroundColor:			$gray-darker !default;
 
 
 // GRID
@@ -297,8 +240,6 @@
 // $baseInputBorderSize:					1px;
 // $baseInputPadding:						2px;
 // $baseCheckboxRadioWidth:					auto;
-// $baseCheckboxRadioFontSize:				$baseFontSize;
-// $baseCheckboxRadioFontSizeLargeBreakpoint: ($baseCheckboxRadioFontSize - $baseFontSizeDifferenceLargeBreakpoint);
 
 // FORM INPUT FOCUS
 // $inputFocusShadowColor:					$tan-mid;
@@ -540,7 +481,6 @@
 
 // ICONS
 // ------------------------------------------------------------------------------------------
-// $iconFontSize:							$baseFontSize;
 // $iconFontAdvSize:						32px;
 // $iconFontColor:							$blue-gray-dark;
 // $iconFontBackgroundStartColor:			$blue-gray-dark;
@@ -553,10 +493,6 @@
 
 // LISTS
 // ------------------------------------------------------------------------------------------
-// $verticalListLineHeight:					18px;
-// $verticalListLineHeightLargeBreakpoint:	($verticalListLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
-// $dataListLineHeight:						22px;
-// $dataListLineHeightLargeBreakpoint:		($dataListLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
 // $horizontalListPipeBorderColor:			$gray-mid-light;
 // $definitionListHeaderColor:				$black;
 // $definitionDataListHeaderBorderColor:	$gray-mid-light;
@@ -567,10 +503,6 @@
 
 // BASE
 // $tableColWidthMultiplier: 				1%;
-// $tableBaseFontSize:						14px;
-// $tableBaseFontSizeLargeBreakpoint:		($tableBaseFontSize - $baseFontSizeDifferenceLargeBreakpoint);
-// $tableBaseLineHeight:					15px;
-// $tableBaseLineHeightLargeBreakpoint:		($tableBaseLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
 // $tableBorderStyle:						solid;
 // $tableTdBorderStyle:						solid;
 // $tableMarginBottom:						$baseMargin;
@@ -594,7 +526,7 @@
 // $tableDataFilterMaxWidth:				300px;
 // $tableDataFilterLineHeight:				22px;
 // $tableDataFilterLineHeightLargeBreakpoint: 16px;
-// $tableDataFilterHeight:					($tableDataFilterLineHeight + $baseFontSizeDifferenceLargeBreakpoint);
+// $tableDataFilterHeight:					24px;
 // $tableDataFilterHeightLargeBreakpoint:	20px;
 
 // $tableSubHeaderBackgroundColor:			#E8F0F7;
@@ -648,7 +580,6 @@
 // $autocompleteBorderStyle:				solid;
 // $autocompleteMaxHeight:					97px;
 // $autocompleteMaxHeightLargeBreakpoint:	193px;
-// $autocompleteItemFontSize:				$baseFontSize;
 // $autocompleteItemFontSizeLargeBreakpoint: $baseFontSizeLargeBreakpoint;
 // $autocompleteItemLinkLineHeight:			22px;
 // $autocompleteItemLinkLineHeightLargeBreakpoint:	($autocompleteItemLinkLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
@@ -711,17 +642,9 @@
 // DATEPICKER
 // ------------------------------------------------------------------------------------------
 // $datepickerMarginTop:					5px;
-// $datepickerFontSize:						$baseFontSize;
-// $datepickerFontSizeLargeBreakpoint:		($datepickerFontSize - $baseFontSizeDifferenceLargeBreakpoint);
 // $datepickerHdrPaddingTopBottom:			4px;
-// $datepickerHdrFontSize:					$baseFontSize;
-// $datepickerHdrFontSizeLargeBreakpoint:	($datepickerHdrFontSize - $baseFontSizeDifferenceLargeBreakpoint);
-// $datepickerHdrSelectMenuFontSize:		$baseFontSize;
-// $datepickerHdrSelectMenuFontSizeLargeBreakpoint: ($datepickerHdrSelectMenuFontSize - $baseFontSizeDifferenceLargeBreakpoint);
 // $datepickerMessageFontSize:				13px;
-// $datepickerMessageFontSizeLargeBreakpoint: ($datepickerMessageFontSize - $baseFontSizeDifferenceLargeBreakpoint);
-// $datepickerMessageLineHeight:			($datepickerMessageFontSize + $baseFontSizeDifferenceLargeBreakpoint);
-// $datepickerMessageLineHeightLargeBreakpoint: ($datepickerMessageLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
+// $datepickerMessageLineHeight:			15px;
 // $datepickerIconPositionTop:				5px;
 // $datepickerIconPositionLeft:				-22px;
 // $datepickerIconPositionTopLargeBreakpoint: 4px;
@@ -819,7 +742,6 @@
 
 // PAGINATION
 // ------------------------------------------------------------------------------------------
-// $paginationFontSize:						$baseFontSize;
 // $paginationFontSizeLargeBreakpoint:		12px;
 // $paginationBorderStyle:					solid;
 // $paginationLinkLineHeight:				.8em;
@@ -837,10 +759,6 @@
 
 // PROFILE CONTAINERS
 // ------------------------------------------------------------------------------------------
-// $profileContainerHeaderFontSize:			$hdrH2FontSize;
-// $profileContainerHeaderFontSizeLargeBreakpoint: $hdrH1FontSize;
-// $profileContainerHeaderLineHeight:		$hdrH2LineHeight;
-// $profileContainerHeaderLineHeightLargeBreakpoint: $hdrH1LineHeightLargeBreakpoint;
 // $profileContainerDataListFontSize:		14px;
 // $profileContainerDataListFontSizeLargeBreakpoint: ($profileContainerDataListFontSize - $baseFontSizeDifferenceLargeBreakpoint);
 // $profileContainerDataListLineHeight:		18px;
@@ -882,11 +800,7 @@
 // $summaryCtnBorderSize:					1px;
 // $summaryCtnBorderStyle:					dotted;
 // $summaryCtnPadding:						10px;
-// $summaryPrimaryCtnLargeFontSizeAdjust:	10;
-// $summaryPrimaryCtnSupportFontSizeAdjust:	3;
 // $summaryPrimaryCtnIconFontSize:			40px;
-// $summarySecondaryCtnLargeFontSizeAdjust:	2;
-// $summarySecondaryCtnSupportFontSizeAdjust: 3;
 // $summarySecondaryCtnIconFontSize:		30px;
 
 // $summaryCtnBorderColor:					$gray-darker;
@@ -976,8 +890,6 @@
 // $tooltipBorderStyle:						solid;
 // $tooltipFontSize:						$baseFontSize;
 // $tooltipFontSizeLargeBreakpoint:			12px;
-// $tooltipLineHeight:						20px;
-// $tooltipLineHeightLargeBreakpoint:		14px;
 // $tooltipPaddingTopBottom:				5px;
 // $tooltipPaddingLeftRight:				8px;
 
