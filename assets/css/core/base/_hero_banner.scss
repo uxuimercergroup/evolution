@@ -26,14 +26,11 @@
 													{
 													@include clearfix;
 													margin: 0 auto;
-													padding: $basePadding $gridSiteGutterPadding 0 $gridSiteGutterPadding;
-													width: $gridWidth;
 													min-height: 150px;
 													}
 												}
 				.evo-carousel.owl-carousel		{
 												margin-bottom: 0;
-						.owl-controls				{padding: 0 $gridSiteGutterPadding;}
 												}
 											}
 										}
@@ -54,26 +51,9 @@
 						.evo-hero-banner-content-item
 												{
 							.evo-hero-banner-content-item-adjust
-													{
-													min-height: 300px;
-
-													// If using 980 width layout
-													@if $use-grid-980 == true{
-														max-width: $gridMaxWidth980;
-													}
-												
-													// If using 1200 width layout
-													@if $use-grid-1200 == true{
-														max-width: $gridMaxWidth1200;
-													}
-
-													}
+													{min-height: 300px;}
 							.evo-image-content-overlay-ctn-adjust.evo-hero-banner-content-item-adjust
 													{padding-top: ($basePadding*3);}
-												}
-						.evo-carousel.owl-carousel
-												{
-								.owl-controls		{padding: 0 $gridSiteGutterPadding;}
 												}
 											}
 										}

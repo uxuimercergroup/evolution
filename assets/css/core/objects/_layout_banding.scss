@@ -9,10 +9,7 @@
 											margin: 0;
 											padding: 0;
 		[class*="banding-section-"]				{
-			.evo-grid								{
-													min-height: 200px;
-													padding: 50px $gridSiteGutterPadding 60px $gridSiteGutterPadding;
-													}
+			.evo-grid								{min-height: 200px;}
 
 			@each $color-name, $color in $color-palette
 													{

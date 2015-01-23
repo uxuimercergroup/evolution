@@ -17,12 +17,6 @@
 									position: relative;
 									bottom: 0;
 									height: 100% !important;
-									
-									// If using 980 width layout
-									@if $use-grid-980 == true{width:$gridMaxWidth980 !important;}
-									
-									// If using 1200 width layout
-									@if $use-grid-1200 == true{width:$gridMaxWidth1200 !important;}
 
 	.evo-dialog-content-scrolling		{max-height: 100% !important;}
 

@@ -13,8 +13,6 @@
 									{
 									@include clearfix;
 									margin: 0 auto;
-									padding: $basePadding $gridSiteGutterPadding 0 $gridSiteGutterPadding;
-									width: $gridWidth;
 									}
 								}
 
@@ -60,25 +58,6 @@
 	@if $use-medium-up-mediaquery == true {
 		
 		@media #{$medium-up} {
-
-			.evo-image-content-overlay-ctn
-								{
-				.evo-image-content-overlay-ctn-adjust
-									{
-									
-									// If using 980 width layout
-									@if $use-grid-980 == true{
-										max-width: $gridMaxWidth980;
-									}
-								
-									// If using 1200 width layout
-									@if $use-grid-1200 == true{
-										max-width: $gridMaxWidth1200;
-									}
-
-									}
-								}
-
 			.evo-image-content-overlay
 								{width: 70%;}
 

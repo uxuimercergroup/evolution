@@ -17,9 +17,6 @@
 // GLOBAL
 // ------------------------------------------------------------------------------------------
 
-// HTML MIN HEIGHT
-// $htmlMinHeight:							100%;
-
 // BASE VARIABLES
 // $baseMargin:								14px;
 // $basePadding:							14px;
@@ -202,37 +199,6 @@
 // $textSelectionBackgroundColor:			$gray-darker;
 
 
-// GRID
-// ------------------------------------------------------------------------------------------
-
-// BASE
-// $gridWidth:								100%;
-// $gridMaxWidth980:						980px;
-// $gridMaxWidth1200:						1200px;
-// $gridMinWidth:							320px;
-// $gridMinHeight:							550px;
-// $gridSiteGutterPadding:					10px;
-// $gridColumns:							24;
-// $gridColumnWidth:						20px;
-// $gridGutterWidth:						20px;
-// $gridNoMarginColumnWidth:				39.15px;
-// $gridRowWidth:							($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
-// $bodyBackgroundStartColor:				$white;
-// $bodyBackgroundEndColor:					$white;
-
-// FLUID GRID
-// $fluidGridColumnWidth:					percentage($gridColumnWidth/$gridRowWidth);
-// $fluidGridGutterWidth:					percentage($gridGutterWidth/$gridRowWidth);
-// $fluidGridNoMarginColumnWidth:			percentage($gridNoMarginColumnWidth/$gridRowWidth);
-
-// BODY BACKGROUND STYLE
-// $bodyBackgroundBodyStartColor:			$white;
-// $bodyBackgroundBodyEndColor:				$white;
-
-// GRID BACKGROUND COLOR
-// $gridBackgroundColor:					$white;
-
-
 // BOXES
 // ------------------------------------------------------------------------------------------
 
@@ -282,47 +248,8 @@
 // FORM
 // ------------------------------------------------------------------------------------------
 
-// BASE
-// $formMarginBottom:						$baseMargin;
-// $baseInputShadowColor:					$gray-lighter;
-// $baseInputBackgroundColor:				$white;
-// $baseInputBorderColor:					$gray-mid-light;
-// $baseInputColor:							$gray-darker;
-
-// FORM LABELS
-// $labelMarginBottom:						1px;
-// $labelFontColor:							$black;
-
-// FORM INPUTS
-// $baseInputBorderSize:					1px;
-// $baseInputPadding:						2px;
-// $baseCheckboxRadioWidth:					auto;
-// $baseCheckboxRadioFontSize:				$baseFontSize;
-// $baseCheckboxRadioFontSizeLargeBreakpoint: ($baseCheckboxRadioFontSize - $baseFontSizeDifferenceLargeBreakpoint);
-
-// FORM INPUT FOCUS
-// $inputFocusShadowColor:					$tan-mid;
-// $inputFocusBorderColor:					$tan-dark;
-
-// FORM INPUT SPACING
-// $marginBottomFormElements:				10px;
-
-// FIELDHINTS
-// $placeholderTextColor:					$gray-mid-light;
-
-// FORM INFO TEXT
-// $formInfoTextColor:						$gray-darker;
-
-// FORM ACTION CONTAINER
-// $formActionPaddingTop:					10px;
-
-// FORM ERROR HANDLING
-// $inputValidTextColor:					$gray-darker;
-// $inputInvalidTextColor:					$red;
-
-// SELECTED CHECKBOX
-// $selectedCheckboxBorderColor:			$gray-light;
-// $selectedCheckboxBackgroundColor:		$green-lightest;
+// $baseInputShadowColor:						$gray-lighter !default;
+// $inputFocusShadowColor:						$tan-mid !default;
 
 
 // BUTTONS
