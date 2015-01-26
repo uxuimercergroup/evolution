@@ -98,14 +98,12 @@
 										}
 					.evo-logo-col-1		{display: none;}
 					.evo-logo-col-2		{
-										padding-left: $gridSiteGutterPadding;
-						a					{font-size: 24px;}
+						a					{font-size: rem-calc(24);}
 										}
 
 					.evo-logo-col-3		{
 										float: right;
 										padding-top: 12px;
-										padding-right: $gridSiteGutterPadding;
 						ul					{@include clearfix;}
 										}
 
@@ -252,12 +250,10 @@
 				.evo-masthead	{
 					.evo-masthead-adjust
 									{
-									padding: 0 $gridSiteGutterPadding;
 									position: relative;
 						.evo-logo-col-1	{
 										display: inline-block;
 										margin-top: 2px;
-										padding-right: $gridSiteGutterPadding;
 										}
 						.evo-logo-col-2	{
 										margin-left: 0;

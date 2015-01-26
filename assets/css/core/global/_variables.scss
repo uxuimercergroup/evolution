@@ -13,8 +13,6 @@ $evo-include-html-classes:					true !default;
 // GLOBAL
 // ------------------------------------------------------------------------------------------
 
-// HTML MIN HEIGHT
-$htmlMinHeight:								100% !default;
 
 // BASE VARIABLES
 $baseMargin:								14px !default;
@@ -141,37 +139,6 @@ $textSelectionTextColor:					$white !default;
 $textSelectionBackgroundColor:				$gray-darker !default;
 
 
-// GRID
-// ------------------------------------------------------------------------------------------
-
-// BASE
-$gridWidth:									100% !default;
-$gridMaxWidth980:							980px !default;
-$gridMaxWidth1200:							1200px !default;
-$gridMinWidth:								320px !default;
-$gridMinHeight:								550px !default;
-$gridSiteGutterPadding:						10px !default;
-$gridColumns:								24 !default;
-$gridColumnWidth:							20px !default;
-$gridGutterWidth:							20px !default;
-$gridNoMarginColumnWidth:					39.15px !default;
-$gridRowWidth:								($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
-$bodyBackgroundStartColor:					$white !default;
-$bodyBackgroundEndColor:					$white !default;
-
-// FLUID GRID
-$fluidGridColumnWidth:						percentage($gridColumnWidth/$gridRowWidth);
-$fluidGridGutterWidth:						percentage($gridGutterWidth/$gridRowWidth);
-$fluidGridNoMarginColumnWidth:				percentage($gridNoMarginColumnWidth/$gridRowWidth);
-
-// BODY BACKGROUND STYLE
-$bodyBackgroundBodyStartColor:				$white !default;
-$bodyBackgroundBodyEndColor:				$white !default;
-
-// GRID BACKGROUND COLOR
-$gridBackgroundColor:						$white !default;
-
-
 // BOXES
 // ------------------------------------------------------------------------------------------
 
@@ -221,45 +188,8 @@ $boxSupportBorderBottomColor:				$blue-gray-mid-dark !default;
 // FORM
 // ------------------------------------------------------------------------------------------
 
-// BASE
-$formMarginBottom:							$baseMargin !default;
 $baseInputShadowColor:						$gray-lighter !default;
-$baseInputBackgroundColor:					$white !default;
-$baseInputBorderColor:						$gray-mid-light !default;
-$baseInputColor:							$gray-darker !default;
-
-// FORM LABELS
-$labelMarginBottom:							1px !default;
-$labelFontColor:							$black !default;
-
-// FORM INPUTS
-$baseInputBorderSize:						1px !default;
-$baseInputPadding:							2px !default;
-$baseCheckboxRadioWidth:					auto !default;
-
-// FORM INPUT FOCUS
 $inputFocusShadowColor:						$tan-mid !default;
-$inputFocusBorderColor:						$tan-dark !default;
-
-// FORM INPUT SPACING
-$marginBottomFormElements:					10px !default;
-
-// FIELDHINTS
-$placeholderTextColor:						$gray-mid-light !default;
-
-// FORM INFO TEXT
-$formInfoTextColor:							$gray-darker !default;
-
-// FORM ACTION CONTAINER
-$formActionPaddingTop:						10px !default;
-
-// FORM ERROR HANDLING
-$inputValidTextColor:						$gray-darker !default;
-$inputInvalidTextColor:						$red !default;
-
-// SELECTED CHECKBOX
-$selectedCheckboxBorderColor:				$gray-light !default;
-$selectedCheckboxBackgroundColor:			$green-lightest !default;
 
 
 // BUTTONS
