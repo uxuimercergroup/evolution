@@ -7,21 +7,21 @@
 // BUTTONS
 //--------------------------------------------------------------------------------------------------------
 
-	// EVO INTERACTIVE BUTTONS
-	var evoInteractiveButtons = function(){
-		var LoadingBtnClass = '.js-evo-btn-loading';
-		var LoadingBtnResetText = jQuery(LoadingBtnClass).html();
+	// EVO INTERACTIVE BUTTON
+	var evoInteractiveButton = function(){
+		var interactiveBtnDataAttr = '[data-evo-button="interactive"]';
+		var interactiveBtnResetText = jQuery(interactiveBtnDataAttr).html();
 		var d = 'disabled';
-		jQuery(LoadingBtnClass).click(function(){
-			jQuery(LoadingBtnClass).html('loading&hellip;').addClass(d).attr(d, d);
+		jQuery(interactiveBtnDataAttr).click(function(){
+			jQuery(interactiveBtnDataAttr).html('loading&hellip;').addClass(d).attr(d, d);
 				setTimeout(function () {
-				jQuery(LoadingBtnClass).html(LoadingBtnResetText).removeClass(d).removeAttr(d, d);
+					jQuery(interactiveBtnDataAttr).html(interactiveBtnResetText).removeClass(d).removeAttr(d, d);
 			}, 3000)
 		});
 	}
 
 	// Interactive Buttons Init
-	evoInteractiveButtons();
+	evoInteractiveButton();
 
 
 // FORMS

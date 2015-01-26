@@ -5,38 +5,50 @@
 	<h1>{{ model.title }}</h1>
 
 <!-- button sizes -->
+<!--
 <a href="javascript:;" class="button radius tiny evo-btn">Button 1</a><br>
 <a href="javascript:;" class="button radius small evo-btn">Button 2</a><br>
 <a href="javascript:;" class="button radius medium evo-btn">Button 3</a><br>
 <a href="javascript:;" class="button radius large evo-btn">Button 4</a>
 <br>
+-->
 
 <!-- a href buttons -->
+<!--
 <a href="javascript:;" class="button radius secondary">Secondary</a>
 <a href="javascript:;" class="button radius evo-btn-primary">Primary</a>
 <br>
+-->
 
 <!-- form buttons -->
+<!--
 <button class="button radius evo-btn">Evo Secondary</button>
 <button class="button radius evo-btn">Evo Primary</button>
 <br>
+-->
 
 <!-- form buttons -->
+<!--
 <input type="submit" class="button secondary radius evo-btn" value="Secondary">
 <input type="submit" class="button radius evo-btn evo-btn-primary" value="Primary">
 <br>
+-->
 
 <!-- Disabled Class -->
+<!--
 <a href="#" class="button disabled radius evo-btn evo-btn-disabled">Disabled Button</a>
 <a href="#" class="button disabled radius evo-btn evo-btn-primary evo-btn-disabled">Disabled Button</a>
+-->
 
 <!-- group buttons -->
+<!--
 <ul class="button-group radius">
 	<li><a href="#" class="button secondary evo-btn">Button 1</a></li>
 	<li><a href="#" class="button secondary evo-btn">Button 2</a></li>
 	<li><a href="#" class="button secondary evo-btn">Button 3</a></li>
 </ul>
 <br><br><br>
+-->
 
 <!-- Expand Class 
 <a href="#" class="button expand">Expanded Button</a>
@@ -62,41 +74,33 @@
 				{% endif %}
 				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-primary' %}{{ global.reference-get-code-end-tag }}
 				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/href-primary' %}{{ global.reference-get-code-end-tag }}
+				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-secondary' %}{{ global.reference-get-code-end-tag }}
+				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/href-secondary' %}{{ global.reference-get-code-end-tag }}
 				{{ model.reference-code-html-content-block-post }}
 
 				{% if model.reference-example-versions == "true" %}
 					<h4>{{ model.reference-example-version-label-2 }}</h4>
 				{% endif %}
 				{{ model.reference-code-html-content-block-pre-2 }}
-				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-secondary' %}{{ global.reference-get-code-end-tag }}
-				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/href-secondary' %}{{ global.reference-get-code-end-tag }}
+				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-primary-interactive' %}{{ global.reference-get-code-end-tag }}
+				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-secondary-interactive' %}{{ global.reference-get-code-end-tag }}
 				{{ model.reference-code-html-content-block-post-2 }}
 
 				{% if model.reference-example-versions == "true" %}
 					<h4>{{ model.reference-example-version-label-3 }}</h4>
 				{% endif %}
 				{{ model.reference-code-html-content-block-pre-3 }}
-				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-primary-interactive' %}{{ global.reference-get-code-end-tag }}
+				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-primary-disabled' %}{{ global.reference-get-code-end-tag }}
+				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-secondary-disabled' %}{{ global.reference-get-code-end-tag }}
 				{{ model.reference-code-html-content-block-post-3 }}
 
+
 				{% if model.reference-example-versions == "true" %}
-					<h4>{{ model.reference-example-version-label-4 }}</h4>
+					<h4>{{ model.reference-example-version-label-7 }}</h4>
 				{% endif %}
-				{{ model.reference-code-html-content-block-pre-4 }}
-				<ol>
-					<li><code>evo-btn-xxx-small</code></li>
-					<li><code>evo-btn-xx-small</code></li>
-					<li><code>evo-btn-x-small</code></li>
-					<li><code>evo-btn-small</code></li>
-					<li><code>evo-btn-medium</code></li>
-					<li><code>evo-btn-large</code></li>
-					<li><code>evo-btn-x-large</code></li>
-					<li><code>evo-btn-xx-large</code></li>
-					<li><code>evo-btn-xxx-large</code></li>
-				</ol>
-				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-primary' %}{{ global.reference-get-code-end-tag }}
-				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/href-primary' %}{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-html-content-block-post-4 }}
+				{{ model.reference-code-html-content-block-pre-7 }}
+				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-colors' %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post-7 }}
 
 				{% if model.reference-code-js == "true" %}
 
@@ -139,8 +143,83 @@
 						{% endif %}
 
 						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<a class="evo-btn evo-btn-medium evo-btn-first" id="" href="" tabindex="" title="Secondary">Secondary</a>
-							<button class="evo-btn evo-btn-medium evo-btn-primary" id="" name="" value="" type="" tabindex="" title="Primary">Primary</button>
+
+							<a href="" class="button radius secondary">Secondary a</a>
+
+							<button class="button radius secondary" id="" name="" value="" type="" tabindex="" title="">Secondary</button>
+
+							<a href="" class="button radius">Primary a</a>
+
+							<button class="button radius" id="" name="" value="" type="" tabindex="" title="">Primary</button>
+
+							<div class="row">
+
+								<a href="" class="button tiny radius secondary">Secondary tiny a</a>
+								<a href="" class="button small radius secondary">Secondary small a</a>
+								<a href="" class="button radius secondary">Secondary default a</a>
+								<a href="" class="button large radius secondary">Secondary large a</a>
+
+							</div>
+
+							<div class="row">
+
+								<button class="button tiny radius secondary" id="" name="" value="" type="" tabindex="" title="">Secondary tiny</button>
+								<button class="button small radius secondary" id="" name="" value="" type="" tabindex="" title="">Secondary small</button>
+								<button class="button radius secondary" id="" name="" value="" type="" tabindex="" title="">Secondary default</button>
+								<button class="button large radius secondary" id="" name="" value="" type="" tabindex="" title="">Secondary large</button>
+
+							</div>
+
+							<div class="row">
+
+								<a href="" class="button expand radius secondary">Secondary expanded a</a>
+								<a href="" class="button round secondary">Secondary round a</a>
+								<a href="" class="button radius secondary">Secondary radius a</a>
+
+							</div>
+
+							<div class="row">
+
+								<button class="button expand radius secondary" id="" name="" value="" type="" tabindex="" title="">Secondary expanded</button>
+								<button class="button round secondary" id="" name="" value="" type="" tabindex="" title="">Secondary round</button>
+								<button class="button radius secondary" id="" name="" value="" type="" tabindex="" title="">Secondary radius</button>
+
+							</div>
+
+							<div class="row">
+
+								<a href="" class="button tiny radius">Tiny a</a>
+								<a href="" class="button small radius">Small a</a>
+								<a href="" class="button radius">Default a</a>
+								<a href="" class="button large radius">Large a</a>
+
+							</div>
+
+							<div class="row">
+
+								<button class="button tiny radius" id="" name="" value="" type="" tabindex="" title="">Tiny</button>
+								<button class="button small radius" id="" name="" value="" type="" tabindex="" title="">Small</button>
+								<button class="button radius" id="" name="" value="" type="" tabindex="" title="">Default</button>
+								<button class="button large radius" id="" name="" value="" type="" tabindex="" title="">Large</button>
+
+							</div>
+
+							<div class="row">
+
+								<a href="" class="button expand radius">Expanded a</a>
+								<a href="" class="button round">Round a</a>
+								<a href="" class="button radius">Radius a</a>
+
+							</div>
+
+							<div class="row">
+
+								<button class="button expand radius" id="" name="" value="" type="" tabindex="" title="">Expanded</button>
+								<button class="button round" id="" name="" value="" type="" tabindex="" title="">Round</button>
+								<button class="button radius" id="" name="" value="" type="" tabindex="" title="">Radius</button>
+
+							</div>
+
 						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 					</div>
@@ -157,6 +236,7 @@
 						{% endif %}
 
 						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+							{% include '/base/buttons/button-secondary-interactive' %}
 							{% include '/base/buttons/button-primary-interactive' %}
 						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
@@ -175,8 +255,8 @@
 						{% endif %}
 
 						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<button class="evo-btn evo-btn-medium evo-btn-first evo-btn-disabled" id="" name="" value="" type="" disabled="disabled" tabindex="" title="loading&hellip;">loading&hellip;</button>
-							<button class="evo-btn evo-btn-medium evo-btn-primary evo-btn-disabled" id="" name="" value="" type="" disabled="disabled" tabindex="" title="loading&hellip;">loading&hellip;</button>
+							<button class="button radius secondary disabled" id="" name="" value="" type="" disabled="disabled" tabindex="" title="">Secondary disabled</button>
+							<button class="button radius disabled" id="" name="" value="" type="" disabled="disabled" tabindex="" title="">Primary disabled</button>
 						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 					</div>
@@ -195,9 +275,9 @@
 						{% endif %}
 
 						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<a class="evo-btn evo-btn-medium evo-btn-first" id="" href="" tabindex="" title="Cancel">Cancel</a>
-							<a class="evo-btn evo-btn-medium" id="" href="" tabindex="" title="Back">Back</a>
-							<button class="evo-btn evo-btn-medium evo-btn-primary" id="" name="" value="" type="" tabindex="" title="Save">Save</button>
+							<button class="button radius secondary" id="" name="" value="" type="" tabindex="" title="Cancel">Cancel</button>
+							<button class="button radius secondary" id="" name="" value="" type="" tabindex="" title="Back">Back</button>
+							<button class="button radius" id="" name="" value="" type="" tabindex="" title="Save">Save</button>
 						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 					</div>
@@ -211,12 +291,12 @@
 
 						{% if model.reference-example-versions == "true" %}
 							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-5 }}</h4>
-							<p>Each button has a minimum width of 100 pixels. This ensures consistency evo-even in cases where the label text is really short.</p>
+							<p>Each button has a minimum width of 100 pixels. This ensures consistency even in cases where the label text is really short.</p>
 						{% endif %}
 
 						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<a class="evo-btn evo-btn-medium evo-btn-first" id="" href="" tabindex="" title="Back">Back</a>
-							<button class="evo-btn evo-btn-medium evo-btn-primary" id="" name="" value="" type="" tabindex="" title="Go">Go</button>
+							<button class="button radius secondary" id="" name="" value="" type="" tabindex="" title="Back">Back</button>
+							<button class="button radius" id="" name="" value="" type="" tabindex="" title="Go">Go</button>
 						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 					</div>
@@ -229,68 +309,38 @@
 				<div class="evo-box evo-box-rnd evo-padding-bottom evo-ref-example-box">
 
 					{% if model.reference-example-versions == "true" %}
-						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-5 }}</h4>
+						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-6 }}</h4>
 						<p>The buttons are content aware, and the width of the button should be dynamic based on the label text.</p>
 					{% endif %}
 
 					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-						<button class="evo-btn evo-btn-medium evo-btn-primary evo-btn-first" id="" name="" value="" type="" tabindex="" title="Title Case Button With Alot Of Text">Title Case Button With Alot Of Text</button>
+						<button class="button radius" id="" name="" value="" type="" tabindex="" title="Title Case Button With Alot Of Text">Title Case Button With Alot Of Text</button>
 					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 				</div>
 			<!-- EXAMPLE SECTION - BOX - ENDS -->
 
 			</div>
+
 			<div class="col-24">
-				<hr />
-				<p>
-					<a href="javascript:;" class="js-evo-toggle-content" data-evo-toggle="2">
-						<i class="evo-icon-arrow-right3 evo-image-icon-position-left evo-image-icon-size-small"></i>Button Options
-					</a>
-				</p>
-				<div class="evo-ref-example-box evo-display-none" id="div2">
-					<h4 class="evo-hdr-rule">Button Sizes</h4>
 
-					<!-- BUTTON SIZES TABLE - BEGINS -->
-						<div class="evo-table-small-mediaquery">
-							<table class="evo-table evo-table-borders" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
-								<thead>
-									<tr>
-										<th class="col-4" scope="col">Size</th>
-										<th class="col-5" scope="col">Button Tag Primary</th>
-										<th class="col-5" scope="col">Button Tag Secondary</th>
-										<th class="col-5" scope="col">Link Tag Primary</th>
-										<th class="col-5" scope="col">Link Tag Secondary</th>
-									</tr>
-								</thead>
-								<tbody>
+			<!-- EXAMPLE SECTION - BOX - BEGINS -->
+				<div class="evo-box evo-box-rnd evo-padding-bottom evo-ref-example-box">
 
-									{% for item in model.reference-button-sizes-table-data %}
-									<tr>
-										<td class="evo-nowrap">
-											{{ item.button-size-label }}
-										</td>
-										<td>
-											<button class="evo-btn evo-btn-{{ item.button-size }} evo-btn-primary evo-btn-first" id="" name="" value="" type="" tabindex="" title="Button">Button</button>
-										</td>
-										<td>
-											<button class="evo-btn evo-btn-{{ item.button-size }} evo-btn-first" id="" name="" value="" type="" tabindex="" title="Button">Button</button>
-										</td>
-										<td>
-											<a class="evo-btn evo-btn-{{ item.button-size }} evo-btn-primary evo-btn-first" id="" href="" tabindex="" title="Button">Button</a>
-										</td>
-										<td>
-											<a class="evo-btn evo-btn-{{ item.button-size }} evo-btn-first" id="" href="" tabindex="" title="Button">Button</a>
-										</td>
-									</tr>
-									{% endfor %}
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-7 }}</h4>
+					{% endif %}
 
-								</tbody>
-							</table>
-						</div>
-					<!-- BUTTON SIZES TABLE - ENDS -->
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<button class="button radius secondary" id="" name="" value="" type="" tabindex="" title="">Secondary</button>
+						<button class="button radius success" id="" name="" value="" type="" tabindex="" title="">Success</button>
+						<button class="button radius alert" id="" name="" value="" type="" tabindex="" title="">Alert</button>
+						<button class="button radius info" id="" name="" value="" type="" tabindex="" title="">Info</button>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 				</div>
+			<!-- EXAMPLE SECTION - BOX - ENDS -->
+
 			</div>
 
 		</section>
