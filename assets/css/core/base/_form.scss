@@ -7,11 +7,19 @@
 //
 // @variables
 //
-$baseInputShadowColor:			$gray-lighter !default;
-$evo-input-focus-border-color:	$input-focus-border-color;
+$baseInputShadowColor: $gray-lighter !default;
+$evo-input-focus-border-color: $tan-mid !default;
 
 
 @if $use-forms == true{
+
+	input[type="text"],
+	select,
+	textarea				{
+							@include block-glowing-effect(
+								$glowing-effect-color: $evo-input-focus-border-color
+								);
+							}
 
 	// GLOBAL FORM ELEMENTS
 	input[type="text"],
