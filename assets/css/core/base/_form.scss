@@ -16,10 +16,18 @@ $evo-input-focus-border-color: $tan-mid !default;
 	input[type="text"],
 	select,
 	textarea				{
+							background-color: $white;
 							@include block-glowing-effect(
 								$glowing-effect-color: $evo-input-focus-border-color
 								);
+		&:hover					{
+								background-color: $white;
+								border-color: $tan-mid;
+								}
+		&:focus					{outline: 0;}
 							}
+
+
 
 	// GLOBAL FORM ELEMENTS
 	input[type="text"],
