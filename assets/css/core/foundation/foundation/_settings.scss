@@ -628,7 +628,7 @@ $form-label-font-color: scale-color($black, $lightness: 5%);
 // $input-bg-color: $white;
 $input-focus-bg-color: scale-color($white, $lightness: 0%);
 //$input-border-color: scale-color($white, $lightness: -20%);
-$input-focus-border-color: scale-color($inputFocusShadowColor, $lightness: -40%);
+$input-focus-border-color: scale-color($white, $lightness: -40%);
 // $input-border-style: solid;
 // $input-border-width: 1px;
 // $input-border-radius: $global-radius;
@@ -637,11 +637,11 @@ $input-focus-border-color: scale-color($inputFocusShadowColor, $lightness: -40%)
 // $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 
 // We use these to style the fieldset border and spacing.
-// $fieldset-border-style: solid;
-// $fieldset-border-width: 1px;
-// $fieldset-border-color: $gainsboro;
-// $fieldset-padding: rem-calc(20);
-// $fieldset-margin: rem-calc(18 0);
+$fieldset-border-style: solid;
+$fieldset-border-width: 0;
+$fieldset-border-color: transparent;
+$fieldset-padding: rem-calc(0);
+$fieldset-margin: rem-calc(0 0);
 
 // We use these to style the legends when you use them
 // $legend-bg: $white;

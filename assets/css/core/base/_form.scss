@@ -4,6 +4,13 @@
 // AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
+//
+// @variables
+//
+$baseInputShadowColor:			$gray-lighter !default;
+$evo-input-focus-border-color:	$input-focus-border-color;
+
+
 @if $use-forms == true{
 
 	// GLOBAL FORM ELEMENTS
@@ -30,6 +37,16 @@
 	label											{font-family: $fontMediumStack;}
 
 	input[type="hidden"]							{display:none;}
+
+	input[type="radio"],
+	input[type="checkbox"]							{position: relative;}
+
+	input[type="radio"]								{top: rem-calc(1.4);}
+	input[type="checkbox"]							{top: rem-calc(1.4);}
+
+	input[type="radio"] + label,
+	input[type="checkbox"] + label					{margin-left: rem-calc(.5);}
+
 
 	//=== MEDIA QUERIES =========================================================================
 

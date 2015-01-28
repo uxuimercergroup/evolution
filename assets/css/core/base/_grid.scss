@@ -17,7 +17,7 @@
 @if $use-small-only-mediaquery == true {
 		
 	@media #{$small-only} {
-
+		section[role=main]		{padding: rem-calc(10)}
 	}
 }
 
