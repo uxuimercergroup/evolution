@@ -12,7 +12,6 @@
 //-------------------------------------------------------------------------------------------
 // COLOR VARIABLES............Global, brand, and other color variables
 // VARIABLES..................List of variables that control the library that are not theme variables
-// VARIABLES OVERRIDES........List of variables in which to override default core variables values
 
 // FOUNDATION
 //-------------------------------------------------------------------------------------------
@@ -22,6 +21,7 @@
 
 // GLOBAL
 //-------------------------------------------------------------------------------------------
+// VARIABLES OVERRIDES........List of variables in which to override default core variables values
 // FUNCTIONS..................Functions used for SASS calculations
 // MIXINS.....................SASS mixins for help with styling
 // HELPERS....................Helper classes to aid in styling, all helper use is class based
@@ -74,11 +74,12 @@
 @import 
 		"global/color_variables",
 		"global/variables",
-		"global/variables_overrides",
 
 		"foundation/normalize",
 		"foundation/foundation/settings",
 		"foundation/foundation",
+
+		"global/variables_overrides",
 
 		"global/functions",
 		"global/mixins",

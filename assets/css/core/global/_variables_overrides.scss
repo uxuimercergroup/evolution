@@ -198,6 +198,11 @@ $evo-input-focus-border-color:				$tan-mid;
 // BUTTONS
 // ------------------------------------------------------------------------------------------
 
+// $evo-button-padding: 					$button-med; // Used to build padding for buttons Default: $button-med or rem-calc(16)
+// $evo-button-bg: 							$primary-color; // Background color. We can set false for a transparent background. Default: $primary-color.
+$evo-button-radius: 						10px; // If true, set to button radius which is $global-radius or explicitly set radius amount in px (ex. $radius:10px). Default:false.
+// $evo-button-full-width: 					false; // We can set true to remove side padding extend width. Default:false
+// $evo-button-disabled: 					false; // We can set true to create a disabled transparent button. Default:false
 // $evo-button-min-width: 					100;
 // $evo-button-font-color-visited:			$white;
 // $evo-button-font-color-alt-visited: 		$gray-darkest;
