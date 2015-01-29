@@ -7,7 +7,7 @@
 //
 // @variables
 //
-$baseInputShadowColor: $gray-lighter !default;
+$evo-base-input-shadow-color: $gray-lighter !default;
 $evo-input-focus-border-color: $tan-mid !default;
 
 
@@ -47,7 +47,7 @@ $evo-input-focus-border-color: $tan-mid !default;
 	select,
 	textarea										{
 													@include border-radius($global-radius);
-													@include box-shadow(inset 0, 1px, 1px, $baseInputShadowColor);
+													@include box-shadow(inset 0, 1px, 1px, $evo-base-input-shadow-color);
 													}
 
 	label											{font-family: $evo-font-medium-stack;}
@@ -55,7 +55,10 @@ $evo-input-focus-border-color: $tan-mid !default;
 	input[type="hidden"]							{display:none;}
 
 	input[type="radio"],
-	input[type="checkbox"]							{position: relative;}
+	input[type="checkbox"]							{
+													margin-bottom: rem-calc(18);
+													position: relative;
+													}
 
 	input[type="radio"]								{top: rem-calc(1.4);}
 	input[type="checkbox"]							{top: rem-calc(1.4);}

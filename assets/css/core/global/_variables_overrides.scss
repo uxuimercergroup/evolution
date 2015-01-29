@@ -94,6 +94,9 @@ $button-font-color-alt: $gray-darkest;
 // 11. Forms
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
+// We use this to set the base for lots of form spacing and positioning styles
+$form-spacing: rem-calc(12);
+
 // We use these to style the labels in different ways
 $form-label-font-color: scale-color($black, $lightness: 5%);
 $input-focus-bg-color: scale-color($white, $lightness: 0%);
@@ -301,8 +304,8 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // FORM
 // ------------------------------------------------------------------------------------------
 
-// $baseInputShadowColor:					$gray-lighter;
-// $evo-input-focus-border-color:			$tan-mid;
+//$evo-base-input-shadow-color: $gray-lighter !default;
+//$evo-input-focus-border-color: $tan-mid !default;
 
 
 // BUTTONS
