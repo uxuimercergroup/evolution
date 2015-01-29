@@ -78,6 +78,13 @@
 				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-groups' %}{{ global.reference-get-code-end-tag }}
 				{{ model.reference-code-html-content-block-post-11 }}
 
+				{% if model.reference-example-versions == "true" %}
+					<h4>{{ model.reference-example-version-label-12 }}</h4>
+				{% endif %}
+				{{ model.reference-code-html-content-block-pre-12 }}
+				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-groups' %}{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-html-content-block-post-12 }}
+
 				{% if model.reference-code-js == "true" %}
 
 					<h3 class="evo-hdr-rule">JS</h3>
@@ -240,6 +247,19 @@
 						<button class="button radius success evo-btn" id="" name="" value="" type="" tabindex="" title="">Success</button>
 						<button class="button radius alert evo-btn" id="" name="" value="" type="" tabindex="" title="">Alert</button>
 						<button class="button radius info evo-btn" id="" name="" value="" type="" tabindex="" title="">Info</button>
+
+						<h5>Custom Background Color</h5>
+						<button class="button radius evo-btn" data-evo-button-color="orange" id="" name="" value="" type="" tabindex="" title="">Orange</button>
+						<button class="button radius evo-btn" data-evo-button-color="purple" id="" name="" value="" type="" tabindex="" title="">Purple</button>
+						<button class="button radius evo-btn" data-evo-button-color="fuscia" id="" name="" value="" type="" tabindex="" title="">Fuscia</button>
+						<button class="button radius evo-btn" data-evo-button-color="blue-green" id="" name="" value="" type="" tabindex="" title="">Blue Green</button>
+
+						<h5>Custom Font Color</h5>
+						<button class="button radius secondary evo-btn" data-evo-button-font-color="orange" id="" name="" value="" type="" tabindex="" title="">Orange text</button>
+						<button class="button radius secondary evo-btn" data-evo-button-font-color="purple" id="" name="" value="" type="" tabindex="" title="">Purple text</button>
+						<button class="button radius secondary evo-btn" data-evo-button-font-color="fuscia" id="" name="" value="" type="" tabindex="" title="">Fuscia text</button>
+						<button class="button radius secondary evo-btn" data-evo-button-font-color="blue-green" id="" name="" value="" type="" tabindex="" title="">Blue Green text</button>
+
 					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 				</div>
@@ -402,6 +422,108 @@
 								<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
 								<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
 							</ul>
+						</div>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+				</div>
+			<!-- EXAMPLE SECTION - BOX - ENDS -->
+
+			</div>
+
+			<div class="col-24">
+
+			<!-- EXAMPLE SECTION - BOX - BEGINS -->
+				<div class="evo-box evo-box-rnd evo-padding-bottom evo-ref-example-box">
+
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-12 }}</h4>
+					{% endif %}
+
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<a href="" class="button radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
+							<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+							Secondary a
+							<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+						</a>
+						<button class="button radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
+							<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+							Secondary
+						</button>
+
+						<a href="" class="button radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
+							Primary a
+							<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+						</a>
+						<button class="button radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
+							<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+							Primary
+							<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+						</button>
+
+						<div class="col-24">
+							<a href="" class="button tiny radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								Secondary a
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</a>
+							<button class="button tiny radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								Secondary
+							</button>
+
+							<a href="" class="button tiny radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
+								Primary a
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</a>
+							<button class="button tiny radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								Primary
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</button>
+						</div>
+
+						<div class="col-24">
+							<a href="" class="button small radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								Secondary a
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</a>
+							<button class="button small radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								Secondary
+							</button>
+
+							<a href="" class="button small radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
+								Primary a
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</a>
+							<button class="button small radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								Primary
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</button>
+						</div>
+
+						<div class="col-24">
+							<a href="" class="button large radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								Secondary a
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</a>
+							<button class="button large radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								Secondary
+							</button>
+
+							<a href="" class="button large radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
+								Primary a
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</a>
+							<button class="button large radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								Primary
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</button>
 						</div>
 					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 

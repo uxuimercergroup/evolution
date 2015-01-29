@@ -74,6 +74,8 @@ $header-font-color: $gray-darkest;
 // We use these to style anchors
 $anchor-text-decoration: underline;
 $anchor-text-decoration-hover: none;
+$anchor-font-color: $blue-sapphire;
+$anchor-font-color-hover: scale-color($blue-sapphire, $lightness: -14%);
 
 // We use these to style the <hr> element
 $hr-border-color: $gray-mid-light;
@@ -314,7 +316,6 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $evo-button-min-width: 					100;
 // $evo-button-font-color-visited:			$button-font-color;
 // $evo-button-font-color-alt-visited: 		$button-font-color-alt;
-// $evo-button-datepicker-font-size: 		$button-font-tny;
 
 
 // HEADER

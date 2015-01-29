@@ -13,7 +13,6 @@
 	$evo-button-min-width: 100 !default;
 	$evo-button-font-color-visited:	$button-font-color !default;
 	$evo-button-font-color-alt-visited: $button-font-color-alt !default;
-	$evo-button-datepicker-font-size: $button-font-tny !default;
 
 
 	//
@@ -22,22 +21,94 @@
 
 	.evo-btn 						{
 									min-width: rem-calc($evo-button-min-width);
+
+		// LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
+		@each $color-name, $color in $color-palette 
+										{
+			
+			// CUSTOM BUTTON BACKGROUND COLOR
+			&[data-evo-button-color="#{$color-name}"]
+											{
+											background-color: map-get($color, color);
+				&:hover,
+				&:focus							{
+												background-color: scale-color(map-get($color, color), $lightness: $button-function-factor);
+												}
+											}
+			&[data-evo-button-color="#{$color-name}"].disabled
+											{
+				&:hover,
+				&:focus							{
+												background-color: map-get($color, color);
+												}
+											}
+
+			// CUSTOM BUTTON FONT COLOR
+			&[data-evo-button-font-color="#{$color-name}"],
+			&[data-evo-button-font-color="#{$color-name}"].disabled,
+			&[data-evo-button-font-color="#{$color-name}"].secondary,
+			&[data-evo-button-font-color="#{$color-name}"].secondary:visited
+											{
+											color: map-get($color, color);
+				&:hover,
+				&:focus							{
+												color: map-get($color, color);
+												}
+											}
+										}
+
+		// BUTTON VISITED LINK COLOR
 		&:visited						{
 										color: $evo-button-font-color-visited;
 										}
+		
+		// SECONDARY BUTTON
 		&.secondary						{
 			&:visited						{
 											color: $evo-button-font-color-alt-visited;
 											}
+										}
+
+		// BUTTON ICONS
+		&[data-evo-button-icons="both"],
+		&[data-evo-button-icons="left"],
+		&[data-evo-button-icons="right"]
+										{
+			[class^="evo-icon-"]			{
+											top: rem-calc(2);
+											line-height: inherit;
+											color: inherit;
+											}
+			.evo-icon-position-left			{
+											float: left;
+											margin-right: rem-calc(10);
+											}
+			.evo-icon-position-right		{
+											float: right;
+											margin-left: rem-calc(10);
+											}
+										}
+		&[data-evo-button-icons="both"]	{
+										padding-left: rem-calc(16);
+										padding-right: rem-calc(16);
+										}
+		&[data-evo-button-icons="left"]	{
+										padding-left: rem-calc(16);
+										}
+		&[data-evo-button-icons="right"]
+										{
+										padding-right: rem-calc(16);
 										}
 									}
 
 	// SPECIAL BUTTONS FOR JQUERY UI DATEPICKER
 	.ui-datepicker-buttonpane		{
 		.ui-state-default				{
-										@extend .evo-btn;
-										font-size: $evo-button-datepicker-font-size;
-										min-width: 52px;
+										@include button(
+											$padding: $button-tny,
+											$bg: $primary-color,
+											$radius: true
+										);
 										}
 									}
 
