@@ -10,12 +10,12 @@
 	.evo-box					{
 								@include clearfix; // must clearfix the box to use grid cols inside evo-box
 								position: relative;
-								margin-bottom: $baseMargin;
+								margin-bottom: $evo-base-margin;
 								background-color: $boxBackgroundColor;
 								border: $boxBorderSize $boxBorderStyle $boxBorderColor;
 								padding: $boxPadding $boxPadding 0 $boxPadding;
 		.evo-box-hdr				{
-									margin-bottom: $baseMargin;
+									margin-bottom: $evo-base-margin;
 			.evo-hdr-rule				{
 										border-bottom: $boxHdrBorderSize $boxHdrBorderStyle $boxHdrBorderColor;
 										padding: 0 0 4px 0;
@@ -33,7 +33,7 @@
 		& > .evo-box-hdr			{
 									background-color: $boxAdvancedHdrBackgroundColor;
 									padding: $boxPadding;
-									margin-bottom: $baseMargin;
+									margin-bottom: $evo-base-margin;
 			.evo-hdr-rule				{
 										border-bottom: 0;
 										margin-bottom: 0;
@@ -79,7 +79,7 @@
 
 		// MESSAGE BUILDERS
 		.evo-message-hdr			{
-									font-family: $fontMediumStack;
+									font-family: $evo-font-medium-stack;
 									font-size: 1rem;
 									margin-top: 0;
 									}
@@ -171,7 +171,7 @@
 	.evo-inline-search-ctn		{
 								background-color: $boxInlineSearchBackgroundColor;
 								border: $boxInlineSearchBorderSizeColor $boxInlineSearchBorderTypeColor $boxInlineSearchBorderColor;
-		.evo-form					{margin: 0 0 $baseMargin 0;}
+		.evo-form					{margin: 0 0 $evo-base-margin 0;}
 		.evo-form-inline			{
 			input[type="text"],
 			input[type="password"],

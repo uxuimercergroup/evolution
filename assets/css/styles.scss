@@ -157,7 +157,7 @@ html.evo-mod-js							{display:none;}
 											top: 0;
 											width: 250px;
 											min-width: 250px;
-											padding: $basePadding $basePadding 0 $basePadding;
+											padding: $evo-base-padding $evo-base-padding 0 $evo-base-padding;
 											background-color: $gray-dark;
 		h3										{
 												color: $white;
@@ -187,7 +187,7 @@ html.evo-mod-js							{display:none;}
 	h5										{margin-bottom: 4px;}
 
 	.evo-vertical-list						{
-											margin-bottom: $baseMargin;
+											margin-bottom: $evo-base-margin;
 		&:last-child							{margin-bottom: 100px;}
 		dd										{
 												margin: 0;
@@ -217,12 +217,12 @@ html.evo-mod-js							{display:none;}
 		h1										{
 												color: $white;
 												font-size: rem-calc(51);
-												font-family: $fontThinStack;
+												font-family: $evo-font-thin-stack;
 												padding-top: 20px;
 												}
 		h3										{
 												color: $white;
-												font-family: $fontThinStack;
+												font-family: $evo-font-thin-stack;
 												padding-bottom: 70px;
 												}
 		.evo-icon								{
@@ -287,7 +287,7 @@ html.evo-mod-js							{display:none;}
 										font-size: 1em;
 	.hp-layout								{
 		h5										{margin-bottom: 7px;}
-		.evo-vertical-list						{margin-bottom: $baseMargin;}
+		.evo-vertical-list						{margin-bottom: $evo-base-margin;}
 											}
 										}
 

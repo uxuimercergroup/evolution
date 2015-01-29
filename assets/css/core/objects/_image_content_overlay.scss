@@ -8,7 +8,7 @@
 
 	.evo-image-content-overlay-ctn
 								{
-								margin-bottom: $baseMargin;
+								margin-bottom: $evo-base-margin;
 		.evo-image-content-overlay-ctn-adjust
 									{
 									@include clearfix;
@@ -20,8 +20,8 @@
 								@include clearfix;
 								@include border-radius(20px 0 9px 9px);
 								position: relative;
-								margin-bottom: $baseMargin;
-								padding: $basePadding $basePadding 0 $basePadding;
+								margin-bottom: $evo-base-margin;
+								padding: $evo-base-padding $evo-base-padding 0 $evo-base-padding;
 								min-height: 180px;
 								border: 0;
 								background-color: rgba($imageContentOverlayBackgroundColor, .6);
@@ -45,7 +45,7 @@
 									{color: $imageContentOverlayFontColor;}
 
 			h1, .h1					{
-									font-family: $fontThinStack;
+									font-family: $evo-font-thin-stack;
 									font-size: 54px;
 									line-height: 56px;
 									padding: 0;

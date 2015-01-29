@@ -24,7 +24,7 @@ $evo-tabs-border-bottom: 0 !default;
 $evo-tabs-active-bg-color: $white !default;
 
 // Tabs panel variables
-$evo-tabs-panel-padding: $basePadding !default;
+$evo-tabs-panel-padding: $evo-base-padding !default;
 $evo-tabs-panel-border-size: 1px !default;
 $evo-tabs-panel-border-style: solid !default;
 $evo-tabs-panel-bg-color: $white !default;
@@ -135,7 +135,7 @@ $evo-tabs-panel-bg-color: $white !default;
 					&:active												{background: transparent;}
 					&:hover													{color: $tabsPagingNavHoverColor;}
 					&:before												{
-																			font-family: $evoIconFontStack;
+																			font-family: $evo-icon-font-stack;
 																			font-size: 1rem;
 																			}
 																		}

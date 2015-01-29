@@ -50,7 +50,7 @@
 	.evo-plan-profile,
 	.evo-location-profile
 								{
-		.evo-box-bdy				{padding-top: $basePadding;}
+		.evo-box-bdy				{padding-top: $evo-base-padding;}
 								}
 
 	// CLIENT CONTAINER HELPERS
@@ -128,7 +128,7 @@
 								li					{
 									a					{
 														font-size: 14px;
-														font-family: $fontRegularFamily;
+														font-family: $evo-font-regular-family;
 														}
 													}
 												}

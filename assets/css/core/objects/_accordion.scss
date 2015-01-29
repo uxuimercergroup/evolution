@@ -7,12 +7,12 @@
 @if $use-accordion == true{
 
 	.evo-accordion.ui-accordion	{
-								margin-bottom: $baseMargin;
+								margin-bottom: $evo-base-margin;
 								border: 1px solid $accordionBorderColor;
 								border-bottom: 0;
 		.ui-accordion-header		{
 									@include clearfix;
-									padding: 10px $basePadding 8px $basePadding;
+									padding: 10px $evo-base-padding 8px $evo-base-padding;
 									border-bottom: 1px solid $accordionBorderColor;
 									background-color: $accordionHeaderBackgroundColor;
 									color: $accordionHeaderFontColor;
@@ -22,7 +22,7 @@
 											@extend [class^="evo-icon-"];
 											float: right;
 											position: relative;
-											margin-left: $baseMargin;
+											margin-left: $evo-base-margin;
 											top: 1px;
 											cursor: pointer;
 											color: $accordionHeaderIconColor;
@@ -30,7 +30,7 @@
 										}
 									}
 		.ui-accordion-content		{
-									padding: $basePadding $basePadding 0 $basePadding;
+									padding: $evo-base-padding $evo-base-padding 0 $evo-base-padding;
 									border-bottom: 1px solid $accordionBorderColor;
 									background-color: $accordionContentBackgroundColor;
 									}

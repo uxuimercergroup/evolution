@@ -11,7 +11,7 @@
 						@include border-radius($global-radius);
 						@include box-shadow(0, 0, 5px, $datepickerShadowColor);
 						width: 100%;
-						z-index: $zindexDatepicker;
+						z-index: $evo-zindex-datepicker;
 						max-width: 268px;
 						margin-top: $datepickerMarginTop;
 						padding: 5px 4px;
@@ -72,7 +72,7 @@
 									{display: none;}
 				&:hover				{text-decoration: none;}
 				&:before			{
-									font-family: $evoIconFontStack;
+									font-family: $evo-icon-font-stack;
 									color: $datepickerHdrNavIconColor;
 									}
 								}
@@ -95,7 +95,7 @@
 								margin:  0 2.3em;
 								line-height:  1.8em;
 								text-align:  center;
-								font-family:  $fontMediumStack;
+								font-family:  $evo-font-medium-stack;
 								color: $datepickerHdrFontColor;
 				select				{
 									float: left;
@@ -122,7 +122,7 @@
 								{
 				.ui-state-active	{
 									background-color: $datepickerCurrentDayBackgroundColor;
-									font-family:  $fontMediumStack;
+									font-family:  $evo-font-medium-stack;
 									color: $datepickerCurrentDayFontColor;
 									}
 								}
@@ -133,7 +133,7 @@
 				.ui-state-highlight	{
 									background-color: $datepickerTodayBackgroundColor;
 									color: $datepickerTodayFontColor;
-									font-family:  $fontMediumStack;
+									font-family:  $evo-font-medium-stack;
 									}
 								}
 
@@ -253,7 +253,7 @@
 						background-color: transparent;
 						outline: 0;
 		&:before			{
-							font-family: $evoIconFontStack;
+							font-family: $evo-icon-font-stack;
 							content: "\e62a";
 							color: $datepickerIconColor;
 							position: relative;

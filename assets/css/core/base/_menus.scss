@@ -37,7 +37,7 @@
 				.evo-mega-menu-ctn	{
 									@include clearfix;
 									margin: 0 auto;
-									padding: $basePadding;
+									padding: $evo-base-padding;
 									color: $megaMenuContentFontColor;
 
 					h1, h2, h3,
@@ -49,7 +49,7 @@
 										@include clearfix;
 										@include border-radius($megaMenuContainerSpotlightBorderRadius);
 										background-color: $gray-darkest; //THEME
-										padding: $basePadding;
+										padding: $evo-base-padding;
 						.evo-horizontal-list
 											{
 							dd					{
@@ -60,7 +60,7 @@
 													}
 								a					{
 													color: #72BE44; //THEME
-													padding: $basePadding 0 0 0;
+													padding: $evo-base-padding 0 0 0;
 									[class*="evo-icon"]	{
 														background-color: $transparent; //THEME
 														color: #72BE44; //THEME
@@ -134,7 +134,7 @@
 									height: 16px;
 						&:before		{
 										content: "\e360"; // PLUS ICON
-										font-family: $evoIconFontStack;
+										font-family: $evo-icon-font-stack;
 										color: $menuIndicatorColor1stLevel;
 										}
 									}
@@ -168,7 +168,7 @@
 										}
 							a			{
 										display: block;
-										font-family: $fontRegularFamily;
+										font-family: $evo-font-regular-family;
 										padding-left: 17px;
 						// DEFAULT ARROW - BEGINS
 							.sub-arrow		{
@@ -238,7 +238,7 @@
 							.evo-horizontal-list
 												{
 								dd					{
-													margin-left: $baseMargin;
+													margin-left: $evo-base-margin;
 									&:first-child		{}
 									a					{
 														padding-top: 0;
@@ -290,7 +290,7 @@
 									right: -4px;
 									top: 2px;
 							&:before	{
-										font-family: $evoIconFontStack;
+										font-family: $evo-icon-font-stack;
 										content: "\e3c2"; // DOWN ARROW
 										}
 									}
@@ -310,7 +310,7 @@
 								max-width: 225px !important;
 								position: absolute;
 								top: -999999px;
-								z-index: $zindexMenu;
+								z-index: $evo-zindex-menu;
 								height: auto;
 								background-color: $menuBackgroundColor;
 								border-color: $menuBorderColor;
@@ -322,7 +322,7 @@
 							a			{
 										border-left: 0;
 										display: block;
-										font-family: $fontRegularFamily;
+										font-family: $evo-font-regular-family;
 										position: relative;
 										white-space: nowrap;
 										width: 100%;

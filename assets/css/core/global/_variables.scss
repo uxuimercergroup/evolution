@@ -13,131 +13,120 @@ $evo-include-html-classes:					true !default;
 // GLOBAL
 // ------------------------------------------------------------------------------------------
 
-
 // BASE VARIABLES
-$baseMargin:								14px !default;
-$basePadding:								14px !default;
+$evo-base-margin:							14px !default;
+$evo-base-padding:							14px !default;
 
 // Z-INDEX MASTER LIST
 // Used for a bird's eye view of components dependent on the z-axis
-$zindexLayoutLoginFooterBackground:			9994 !default;
-$zindexLayoutLoginFooter:					9995 !default;
-$zindexSlider:								9996 !default;
-$zindexDatepicker:							9997 !default;
-$zindexAutocomplete:						9998 !default;
-$zindexTooltip:								9999 !default;
-$zindexToolbar:								10000 !default;
-$zindexMenu:								10001 !default;
-$zindexDialogOverlay:						10002 !default;
-$zindexDialogPosition:						10003 !default;
+$evo-zindex-layout-login-footer-background:	9994 !default;
+$evo-zindex-layout-login-footer:			9995 !default;
+$evo-zindex-slider:							9996 !default;
+$evo-zindex-datepicker:						9997 !default;
+$evo-zindex-autocomplete:					9998 !default;
+$evo-zindex-tooltip:						9999 !default;
+$evo-zindex-toolbar:						10000 !default;
+$evo-zindex-menu:							10001 !default;
+$evo-zindex-dialog-overlay:					10002 !default;
+$evo-zindex-dialog-position:				10003 !default;
 
 
 // HELPERS
 // ------------------------------------------------------------------------------------------
 
-// FOOTNOTES
-$footnoteFontColor:							$gray-darker !default;
-
 // KEYLINES
-$keylineRightBorderRightColor: 				$gray-mid-light !default;
-$keylineLeftBorderLeftColor:				$gray-mid-light !default;
+$evo-keyline-right-border-right-color: 		$gray-mid-light !default;
+$evo-keyline-left-border-left-color:		$gray-mid-light !default;
 
 // SPACER SIZES
-$spacerSize:								5px !default;
-$spacerXSmall:								($spacerSize*1) !default;
-$spacerSmall:								($spacerSize*2) !default;
-$spacerMedium:								($spacerSize*3) !default;
-$spacerLarge:								($spacerSize*4) !default;
-$spacerXLarge:								($spacerSize*5) !default;
-$spacerXXLarge:								($spacerSize*6) !default;
-$spacerXXXLarge:							($spacerSize*7) !default;
+$evo-spacer-size:							5px !default;
+$evo-spacer-xsmall:							($evo-spacer-size*1) !default;
+$evo-spacer-small:							($evo-spacer-size*2) !default;
+$evo-spacer-medium:							($evo-spacer-size*3) !default;
+$evo-spacer-large:							($evo-spacer-size*4) !default;
+$evo-spacer-xlarge:							($evo-spacer-size*5) !default;
+$evo-spacer-xxlarge:						($evo-spacer-size*6) !default;
+$evo-spacer-xxxlarge:						($evo-spacer-size*7) !default;
 
-
-// ==========================================================================================
-// BASE
-// ==========================================================================================
 
 // TYPOGRAPHY
 // ------------------------------------------------------------------------------------------
 
 // BASE FONTS
-$baseFontStack:								arial, Tahoma, Geneva, sans-serif !default;
-$baseFontFilePath:							"../fonts" !default;
+$evo-base-font-stack:						arial, Tahoma, Geneva, sans-serif !default;
+$evo-base-font-file-path:					"../fonts" !default;
 
 // WEB FONTS
 
 	// Thin
-	$fontThinFamily:							relativefaux !default;
-	$fontThinFilePath:							"#{$baseFontFilePath}/relative-faux_-webfont" !default;
-	$fontThinStack:								"#{$fontThinFamily}", $baseFontStack !default;
+	$evo-font-thin-family:						relativefaux !default;
+	$evo-font-thin-file-path:					"#{$evo-base-font-file-path}/relative-faux_-webfont" !default;
+	$evo-font-thin-stack:						"#{$evo-font-thin-family}", $evo-base-font-stack !default;
 
 	// Regular
-	$fontRegularFamily:							relativebook !default;
-	$fontRegularFilePath:						"#{$baseFontFilePath}/relative-book-webfont" !default;
-	$fontRegularStack:							"#{$fontRegularFamily}", $baseFontStack !default;
+	$evo-font-regular-family:					relativebook !default;
+	$evo-font-regular-file-path:				"#{$evo-base-font-file-path}/relative-book-webfont" !default;
+	$evo-font-regular-stack:					"#{$evo-font-regular-family}", $evo-base-font-stack !default;
 
 	// Italic
-	$fontItalicFamily:							relativebook_italic !default;
-	$fontItalicFilePath:						"#{$baseFontFilePath}/relative-bookitalic-webfont" !default;
-	$fontItalicStack:							"#{$fontItalicFamily}", $baseFontStack !default;
+	$evo-font-italic-family:					relativebook_italic !default;
+	$evo-font-italic-file-path:					"#{$evo-base-font-file-path}/relative-bookitalic-webfont" !default;
+	$evo-font-italic-stack:						"#{$evo-font-italic-family}", $evo-base-font-stack !default;
 
 	// Medium
-	$fontMediumFamily:							relativemedium !default;
-	$fontMediumFilePath:						"#{$baseFontFilePath}/relative-medium-webfont" !default;
-	$fontMediumStack:							"#{$fontMediumFamily}", $baseFontStack !default;
+	$evo-font-medium-family:					relativemedium !default;
+	$evo-font-medium-file-path:					"#{$evo-base-font-file-path}/relative-medium-webfont" !default;
+	$evo-font-medium-stack:						"#{$evo-font-medium-family}", $evo-base-font-stack !default;
 
 	// Medium Italic
-	$fontMediumItalicFamily:					relativemedium_italic !default;
-	$fontMediumItalicFilePath:					"#{$baseFontFilePath}/relative-mediumitalic_-webfont" !default;
-	$fontMediumItalicStack:						"#{$fontMediumItalicFamily}", $baseFontStack !default;
+	$evo-font-medium-italic-family:				relativemedium_italic !default;
+	$evo-font-medium-italic-file-path:			"#{$evo-base-font-file-path}/relative-mediumitalic_-webfont" !default;
+	$evo-font-medium-italic-stack:				"#{$evo-font-medium-italic-family}", $evo-base-font-stack !default;
 
 	// Bold
-	$fontBoldFamily:							relativebold !default;
-	$fontBoldFilePath:							"#{$baseFontFilePath}/relative-bold-webfont" !default;
-	$fontBoldStack:								"#{$fontBoldFamily}", $baseFontStack !default;
+	$evo-font-bold-family:						relativebold !default;
+	$evo-font-bold-file-path:					"#{$evo-base-font-file-path}/relative-bold-webfont" !default;
+	$evo-font-bold-stack:						"#{$evo-font-bold-family}", $evo-base-font-stack !default;
 
 	// Bold Italic
-	$fontBoldItalicFamily:						relativebold_italic !default;
-	$fontBoldItalicFilePath:					"#{$baseFontFilePath}/relative-bolditalic-webfont" !default;
-	$fontBoldItalicStack:						"#{$fontBoldItalicFamily}", $baseFontStack !default;
+	$evo-font-bold-italic-family:				relativebold_italic !default;
+	$evo-font-bold-italic-file-path:			"#{$evo-base-font-file-path}/relative-bolditalic-webfont" !default;
+	$evo-font-bold-italic-stack:				"#{$evo-font-bold-italic-family}", $evo-base-font-stack !default;
 
 // ICON FONTS
 
 	// Core icon font set
-	$evoIconFontFamily:							evo_icon_font !default;
-	$evoIconFontFilePath:						"#{$baseFontFilePath}/evo-icon-font" !default;
-	$evoIconFontStack:							"#{$evoIconFontFamily}" !default;
+	$evo-icon-font-family:						evo_icon_font !default;
+	$evo-icon-font-file-path:					"#{$evo-base-font-file-path}/evo-icon-font" !default;
+	$evo-icon-font-stack:						"#{$evo-icon-font-family}" !default;
 
 	// Site icon font set
-	$evoIconSiteFontFamily:						evo_icon_font_site !default;
-	$evoIconSiteFontFilePath:					"#{$baseFontFilePath}/evo-icon-font-site" !default;
-	$evoIconSiteFontStack:						"#{$evoIconSiteFontFamily}" !default;
+	$evo-icon-site-font-family:					evo_icon_font_site !default;
+	$evo-icon-site-font-file-path:				"#{$evo-base-font-file-path}/evo-icon-font-site" !default;
+	$evo-icon-site-font-stack:					"#{$evo-icon-site-font-family}" !default;
 
 // LINKS
-$baseLinkVisitedColor:						$gray-dark !default;
+$evo-base-link-visited-color:				$gray-dark !default;
 
 // FONT WEIGHTS
-$weightBold100:								100 !default;
-$weightBold200:								200 !default;
-$weightBold300:								300 !default;
-$weightBold400:								400 !default;
-$weightBold500:								500 !default;
-$weightBold600:								600 !default;
-$weightBold700:								700 !default;
-$weightBold800:								800 !default;
-$weightBold900:								900 !default;
-
-// HEADERS
-$hdrRuleBorderSize:							1px !default;
-$hdrRuleBorderStyle:						dotted !default;
-$hdrRuleMarginBottom:						10px !default;
-$hdrRuleBorderColor:						$gray-darker !default;
-$hdrBackgroundColor:						$gray-mid-light !default;
+$evo-weight-bold-100:						100 !default;
+$evo-weight-bold-200:						200 !default;
+$evo-weight-bold-300:						300 !default;
+$evo-weight-bold-400:						400 !default;
+$evo-weight-bold-500:						500 !default;
+$evo-weight-bold-600:						600 !default;
+$evo-weight-bold-700:						700 !default;
+$evo-weight-bold-800:						800 !default;
+$evo-weight-bold-900:						900 !default;
 
 // OTHER ELEMENTS
-$textSelectionTextColor:					$white !default;
-$textSelectionBackgroundColor:				$gray-darker !default;
+$evo-text-selection-text-color:				$white !default;
+$evo-text-selection-background-color:		$gray-darker !default;
 
+
+// ==========================================================================================
+// BASE
+// ==========================================================================================
 
 // BOXES
 // ------------------------------------------------------------------------------------------
@@ -149,7 +138,7 @@ $boxHdrBorderSize:							3px !default;
 $boxHdrBorderStyle:							solid !default;
 $boxBdyBorderTopSize:						1px !default;
 $boxBdyBorderTopStyle:						solid !default;
-$boxPadding:								$basePadding !default;
+$boxPadding:								$evo-base-padding !default;
 $boxVShadow:								1px !default;
 $boxHShadow:								1px !default;
 $boxShadowBlur:								1px !default;
@@ -285,7 +274,7 @@ $navbarBorderBottomStyle:					solid !default;
 $navbarMessageWidth:						200px !default;
 $navbarMessagePadding:						9px 0 7px 0 !default;
 $navbarMessageInnerPadding:					2px 10px 2px 0 !default;
-$navbarMessageFontFamily:					$fontMediumFamily !default;
+$navbarMessageFontFamily:					$evo-font-medium-family !default;
 $navbarMessageBorderRightWidth:				1px !default;
 $navbarMessageBorderRightStyle:				dotted !default;
 
@@ -333,7 +322,7 @@ $definitionDataListHeaderBorderColor:		$gray-mid-light !default;
 $tableColWidthMultiplier: 					1% !default;
 $tableBorderStyle:							solid !default;
 $tableTdBorderStyle:						solid !default;
-$tableMarginBottom:							$baseMargin !default;
+$tableMarginBottom:							$evo-base-margin !default;
 $tableMinWidth:								640px !default;
 $tableMinWidthLargeBreakpoint:				100% !default;
 
@@ -666,7 +655,7 @@ $tabsActivePositonTop:						2px !default;
 $tabsActiveHeight:							35px !default;
 $tabsActiveHeightLargeBreakpoint:			27px !default;
 $tabsActivePaddingBottom:					1px !default;
-$tabsPanelPadding:							$basePadding !default;
+$tabsPanelPadding:							$evo-base-padding !default;
 $tabsPanelBorderSize:						1px !default;
 $tabsPanelBorderStyle:						solid !default;
 

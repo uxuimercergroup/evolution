@@ -13,8 +13,8 @@
 									position: relative;
 									text-align: left;
 									width: 97%;
-									margin-top: $baseMargin;
-									margin-bottom: $baseMargin;
+									margin-top: $evo-base-margin;
+									margin-bottom: $evo-base-margin;
 
 		// SLIDER HANDLE
 		.ui-slider-handle				{
@@ -24,7 +24,7 @@
 										border: 1px solid $sliderHandleBorderColor;
 										outline: none;
 										position: absolute;
-										z-index: $zindexSlider;
+										z-index: $evo-zindex-slider;
 										width: 20px;
 										height: 20px;
 										cursor: pointer;
@@ -46,7 +46,7 @@
 		.ui-slider-range				{
 										@include border-radius($global-radius);
 										position: absolute;
-										z-index: $zindexSlider;
+										z-index: $evo-zindex-slider;
 										display: block;
 										border: 0;
 										background-position: 0 0;
@@ -75,8 +75,8 @@
 									display: inline-block;
 									width: 6px;
 									height: 100px;
-									margin-left: ($baseMargin/2);
-									margin-right: ($baseMargin/2);
+									margin-left: ($evo-base-margin/2);
+									margin-right: ($evo-base-margin/2);
 		.ui-slider-handle				{
 										left: -7px;
 										margin-bottom: -3px;

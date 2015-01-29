@@ -12,14 +12,14 @@
 
 	// SITE ICON FONT
 	// ------------------------------------------------------------------------------------------
-	@include font-face($evoIconSiteFontFamily, $evoIconSiteFontFilePath);
+	@include font-face($evo-icon-site-font-family, $evo-icon-site-font-file-path);
 
 
 	// ICONS
 	// ------------------------------------------------------------------------------------------
 
 	// ICON FONT - SITE SET - FONT STACK
-	[class^="evo-icon-site-"]		{font-family: $evoIconSiteFontStack;}
+	[class^="evo-icon-site-"]		{font-family: $evo-icon-site-font-stack;}
 
 	// ICON FONT - SITE SET - ICON CLASSES
 	.evo-icon-site-home:before {content: "\e1000";}

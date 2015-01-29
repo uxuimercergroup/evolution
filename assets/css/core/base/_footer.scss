@@ -13,9 +13,9 @@
 											text-align: left;
 											color: $footerFontColor;
 		.evo-footer-adjust						{
-												margin-bottom: $baseMargin; 
+												margin-bottom: $evo-base-margin; 
 			.evo-footer-content-ctn					{
-													padding-top: $basePadding;
+													padding-top: $evo-base-padding;
 													border-top: 1px solid $footerBorderTopColor;
 				.evo-footer-logo						{
 					img										{
@@ -68,10 +68,10 @@
 												padding: 0;
 												margin-bottom: 0;
 			.evo-footer-content-ctn					{
-													padding: $basePadding 10px;
+													padding: $evo-base-padding 10px;
 													border-top: 0;
 				.evo-fat-footer-corp-content			{
-														margin-bottom: $baseMargin;
+														margin-bottom: $evo-base-margin;
 					.evo-fat-footer-logo					{
 															display: block;
 															margin-bottom: 10px;
@@ -84,7 +84,7 @@
 														}
 				dl										{
 														margin-top: 0;
-														margin-bottom: $baseMargin;
+														margin-bottom: $evo-base-margin;
 					dt										{
 															color: $fatFooterFontColor;
 															padding: 0 0 3px 0;

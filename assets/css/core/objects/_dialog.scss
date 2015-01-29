@@ -21,7 +21,7 @@
 									right: 0;
 									bottom: 0;
 									left: 0;
-									z-index: $zindexDialogPosition;
+									z-index: $evo-zindex-dialog-position;
 									-webkit-overflow-scrolling: touch;
 									outline: 0;
 									}
@@ -34,7 +34,7 @@
 									@include opacity($dialogOverlayBackgroundColorOpacity);
 									background-color: $dialogOverlayBackgroundColor;
 									position: fixed;
-									z-index: $zindexDialogOverlay;
+									z-index: $evo-zindex-dialog-overlay;
 									top :0;
 									left: 0;
 									bottom: 0;
@@ -64,8 +64,8 @@
 			
 			// DIALOG TITLE BAR HEADER
 			.ui-dialog-title				{
-											font-family: $fontMediumStack;
-											font-weight: $weightBold200;
+											font-family: $evo-font-medium-stack;
+											font-weight: $evo-weight-bold-200;
 											font-size: $dialogHdrFontSize;
 											color: $dialogHdrFontColor;
 											}
@@ -81,7 +81,7 @@
 											padding: 10px;
 											font-size: 1rem;
 				&:before						{
-												font-family: $evoIconFontStack;
+												font-family: $evo-icon-font-stack;
 												content: "\e369";
 												color: $dialogCloseIconColor;
 												height: 1rem;

@@ -37,7 +37,7 @@
 														margin-bottom: 5px;
 														color: $layoutLoginContainerHeaderColor;
 														text-align: center;
-					span									{font-family: $fontThinStack;}
+					span									{font-family: $evo-font-thin-stack;}
 														}
 				.evo-box-sub-text						{
 														width: 100%;
@@ -67,7 +67,7 @@
 		.evo-footer								{
 												@include backface-visibility(visible);
 												margin-bottom: 0;
-												margin-top: $baseMargin;
+												margin-top: $evo-base-margin;
 			.evo-layout-login-footer				{
 													@include translucent-background($layoutLoginFooterTranslucentBackgroundColor, .7);
 													max-width: 100%;
@@ -76,7 +76,7 @@
 													min-height: 0;
 													margin: 0;
 													padding: 0;
-													z-index: $zindexLayoutLoginFooter;
+													z-index: $evo-zindex-layout-login-footer;
 				.evo-layout-login-footer-logo,
 				.evo-layout-login-footer-copyright		{text-align: center;}
 				.evo-layout-login-footer-logo			{
@@ -147,7 +147,7 @@
 													position: fixed;
 													bottom: 0;
 													height: 38px;
-													z-index: $zindexLayoutLoginFooterBackground;
+													z-index: $evo-zindex-layout-login-footer-background;
 													}
 					.evo-layout-login-footer		{
 													position: fixed;

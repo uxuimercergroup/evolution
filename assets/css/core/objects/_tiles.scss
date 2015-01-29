@@ -56,7 +56,7 @@
 
 		.evo-scroll-pane						{
 												height: $tilesScrollPaneHeight;
-			.mCSB_container							{padding: $basePadding 0 0 $basePadding;}
+			.mCSB_container							{padding: $evo-base-padding 0 0 $evo-base-padding;}
 												}
 
 		.evo-tile-default-expanded				{display: block;}
@@ -72,7 +72,7 @@
 
 			.evo-tile-ctn					{
 											@include border-radius($tilesOuterBorderRadiusLargeBreakpoint);
-											margin-bottom: $baseMargin;
+											margin-bottom: $evo-base-margin;
 				.evo-box-hdr					{
 												@include border-radius(0);
 												cursor: default;

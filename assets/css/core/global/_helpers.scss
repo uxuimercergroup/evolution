@@ -13,14 +13,11 @@
 // WORD BREAK
 .evo-word-break							{word-wrap: break-word;}
 
-// FOOTNOTES
-.evo-footnote							{color: $footnoteFontColor;}
-
 // NO BOLD STYLE
-.evo-nobold								{font-family: $fontRegularFamily;}
+.evo-nobold								{font-family: $evo-font-regular-family;}
 
 // BOLD STYLE
-.evo-bold								{font-family: $fontMediumFamily;}
+.evo-bold								{font-family: $evo-font-medium-family;}
 
 // NO BULLETED LISTS
 .evo-no-bullets							{
@@ -54,14 +51,14 @@ img										{
 // Use on elememts which need a keyline on the right
 .evo-keyline-right						{
 										padding-right: 20px;
-										border-right:1px solid $keylineRightBorderRightColor;
+										border-right:1px solid $evo-keyline-right-border-right-color;
 	img										{margin-top:5px;}
 										}
 
 // Use on elements which need a keyline on the left
 .evo-keyline-left						{
 										padding-left: 20px;
-										border-left: 1px solid $keylineLeftBorderLeftColor;
+										border-left: 1px solid $evo-keyline-left-border-left-color;
 	img										{margin-top: 5px;}
 										}
 
@@ -143,11 +140,11 @@ img										{
 // MARGIN ENABLERS/DISABLERS
 
 // ADD MARGIN
-.evo-margin								{margin: $baseMargin !important;}
-.evo-margin-top							{margin-top: $baseMargin !important;}
-.evo-margin-right						{margin-right: $baseMargin !important;}
-.evo-margin-bottom						{margin-bottom: $baseMargin !important;}
-.evo-margin-left						{margin-left: $baseMargin !important;}
+.evo-margin								{margin: $evo-base-margin !important;}
+.evo-margin-top							{margin-top: $evo-base-margin !important;}
+.evo-margin-right						{margin-right: $evo-base-margin !important;}
+.evo-margin-bottom						{margin-bottom: $evo-base-margin !important;}
+.evo-margin-left						{margin-left: $evo-base-margin !important;}
 
 // SUBTRACT MARGIN
 .evo-no-margin							{margin: 0 !important;}
@@ -159,11 +156,11 @@ img										{
 // PADDING ENABLERS/DISABLERS
 
 // ADD PADDING
-.evo-padding							{padding: $basePadding !important;}
-.evo-padding-top						{padding-top: $basePadding !important;}
-.evo-padding-right						{padding-right: $basePadding !important;}
-.evo-padding-bottom						{padding-bottom: $basePadding !important;}
-.evo-padding-left						{padding-left: $basePadding !important;}
+.evo-padding							{padding: $evo-base-padding !important;}
+.evo-padding-top						{padding-top: $evo-base-padding !important;}
+.evo-padding-right						{padding-right: $evo-base-padding !important;}
+.evo-padding-bottom						{padding-bottom: $evo-base-padding !important;}
+.evo-padding-left						{padding-left: $evo-base-padding !important;}
 
 // SUBTRACT PADDING
 .evo-no-padding							{padding:0 !important;}
@@ -176,86 +173,86 @@ img										{
 // SPACERS
 
 // MARGIN SPACERS
-.evo-spacer-margin-x-small				{margin: $spacerXSmall !important;}
-.evo-spacer-margin-small				{margin: $spacerSmall !important;}
-.evo-spacer-margin-medium				{margin: $spacerMedium !important;}
-.evo-spacer-margin-large				{margin: $spacerLarge !important;}
-.evo-spacer-margin-x-large				{margin: $spacerXLarge !important;}
-.evo-spacer-margin-xx-large				{margin: $spacerXXLarge !important;}
-.evo-spacer-margin-xxx-large			{margin: $spacerXXXLarge !important;}
+.evo-spacer-margin-x-small				{margin: $evo-spacer-xsmall !important;}
+.evo-spacer-margin-small				{margin: $evo-spacer-small !important;}
+.evo-spacer-margin-medium				{margin: $evo-spacer-medium !important;}
+.evo-spacer-margin-large				{margin: $evo-spacer-large !important;}
+.evo-spacer-margin-x-large				{margin: $evo-spacer-xlarge !important;}
+.evo-spacer-margin-xx-large				{margin: $evo-spacer-xxlarge !important;}
+.evo-spacer-margin-xxx-large			{margin: $evo-spacer-xxxlarge !important;}
 
-.evo-spacer-margin-top-x-small			{margin-top: $spacerXSmall !important;}
-.evo-spacer-margin-top-small			{margin-top: $spacerSmall !important;}
-.evo-spacer-margin-top-medium			{margin-top: $spacerMedium !important;}
-.evo-spacer-margin-top-large			{margin-top: $spacerLarge !important;}
-.evo-spacer-margin-top-x-large			{margin-top: $spacerXLarge !important;}
-.evo-spacer-margin-top-xx-large			{margin-top: $spacerXXLarge !important;}
-.evo-spacer-margin-top-xxx-large		{margin-top: $spacerXXXLarge !important;}
+.evo-spacer-margin-top-x-small			{margin-top: $evo-spacer-xsmall !important;}
+.evo-spacer-margin-top-small			{margin-top: $evo-spacer-small !important;}
+.evo-spacer-margin-top-medium			{margin-top: $evo-spacer-medium !important;}
+.evo-spacer-margin-top-large			{margin-top: $evo-spacer-large !important;}
+.evo-spacer-margin-top-x-large			{margin-top: $evo-spacer-xlarge !important;}
+.evo-spacer-margin-top-xx-large			{margin-top: $evo-spacer-xxlarge !important;}
+.evo-spacer-margin-top-xxx-large		{margin-top: $evo-spacer-xxxlarge !important;}
 
-.evo-spacer-margin-right-x-small		{margin-right: $spacerXSmall !important;}
-.evo-spacer-margin-right-small			{margin-right: $spacerSmall !important;}
-.evo-spacer-margin-right-medium			{margin-right: $spacerMedium !important;}
-.evo-spacer-margin-right-large			{margin-right: $spacerLarge !important;}
-.evo-spacer-margin-right-x-large		{margin-right: $spacerXLarge !important;}
-.evo-spacer-margin-right-xx-large		{margin-right: $spacerXXLarge !important;}
-.evo-spacer-margin-right-xxx-large		{margin-right: $spacerXXXLarge !important;}
+.evo-spacer-margin-right-x-small		{margin-right: $evo-spacer-xsmall !important;}
+.evo-spacer-margin-right-small			{margin-right: $evo-spacer-small !important;}
+.evo-spacer-margin-right-medium			{margin-right: $evo-spacer-medium !important;}
+.evo-spacer-margin-right-large			{margin-right: $evo-spacer-large !important;}
+.evo-spacer-margin-right-x-large		{margin-right: $evo-spacer-xlarge !important;}
+.evo-spacer-margin-right-xx-large		{margin-right: $evo-spacer-xxlarge !important;}
+.evo-spacer-margin-right-xxx-large		{margin-right: $evo-spacer-xxxlarge !important;}
 
-.evo-spacer-margin-bottom-x-small		{margin-bottom: $spacerXSmall !important;}
-.evo-spacer-margin-bottom-small			{margin-bottom: $spacerSmall !important;}
-.evo-spacer-margin-bottom-medium		{margin-bottom: $spacerMedium !important;}
-.evo-spacer-margin-bottom-large			{margin-bottom: $spacerLarge !important;}
-.evo-spacer-margin-bottom-x-large		{margin-bottom: $spacerXLarge !important;}
-.evo-spacer-margin-bottom-xx-large		{margin-bottom: $spacerXXLarge !important;}
-.evo-spacer-margin-bottom-xxx-large		{margin-bottom: $spacerXXXLarge !important;}
+.evo-spacer-margin-bottom-x-small		{margin-bottom: $evo-spacer-xsmall !important;}
+.evo-spacer-margin-bottom-small			{margin-bottom: $evo-spacer-small !important;}
+.evo-spacer-margin-bottom-medium		{margin-bottom: $evo-spacer-medium !important;}
+.evo-spacer-margin-bottom-large			{margin-bottom: $evo-spacer-large !important;}
+.evo-spacer-margin-bottom-x-large		{margin-bottom: $evo-spacer-xlarge !important;}
+.evo-spacer-margin-bottom-xx-large		{margin-bottom: $evo-spacer-xxlarge !important;}
+.evo-spacer-margin-bottom-xxx-large		{margin-bottom: $evo-spacer-xxxlarge !important;}
 
-.evo-spacer-margin-left-x-small			{margin-left: $spacerXSmall !important;}
-.evo-spacer-margin-left-small			{margin-left: $spacerSmall !important;}
-.evo-spacer-margin-left-medium			{margin-left: $spacerMedium !important;}
-.evo-spacer-margin-left-large			{margin-left: $spacerLarge !important;}
-.evo-spacer-margin-left-x-large			{margin-left: $spacerXLarge !important;}
-.evo-spacer-margin-left-xx-large		{margin-left: $spacerXXLarge !important;}
-.evo-spacer-margin-left-xxx-large		{margin-left: $spacerXXXLarge !important;}
+.evo-spacer-margin-left-x-small			{margin-left: $evo-spacer-xsmall !important;}
+.evo-spacer-margin-left-small			{margin-left: $evo-spacer-small !important;}
+.evo-spacer-margin-left-medium			{margin-left: $evo-spacer-medium !important;}
+.evo-spacer-margin-left-large			{margin-left: $evo-spacer-large !important;}
+.evo-spacer-margin-left-x-large			{margin-left: $evo-spacer-xlarge !important;}
+.evo-spacer-margin-left-xx-large		{margin-left: $evo-spacer-xxlarge !important;}
+.evo-spacer-margin-left-xxx-large		{margin-left: $evo-spacer-xxxlarge !important;}
 
 // PADDING SPACERS
-.evo-spacer-padding-x-small				{padding: $spacerXSmall !important;}
-.evo-spacer-padding-small				{padding: $spacerSmall !important;}
-.evo-spacer-padding-medium				{padding: $spacerMedium !important;}
-.evo-spacer-padding-large				{padding: $spacerLarge !important;}
-.evo-spacer-padding-x-large				{padding: $spacerXLarge !important;}
-.evo-spacer-padding-xx-large			{padding: $spacerXXLarge !important;}
-.evo-spacer-padding-xxx-large			{padding: $spacerXXXLarge !important;}
+.evo-spacer-padding-x-small				{padding: $evo-spacer-xsmall !important;}
+.evo-spacer-padding-small				{padding: $evo-spacer-small !important;}
+.evo-spacer-padding-medium				{padding: $evo-spacer-medium !important;}
+.evo-spacer-padding-large				{padding: $evo-spacer-large !important;}
+.evo-spacer-padding-x-large				{padding: $evo-spacer-xlarge !important;}
+.evo-spacer-padding-xx-large			{padding: $evo-spacer-xxlarge !important;}
+.evo-spacer-padding-xxx-large			{padding: $evo-spacer-xxxlarge !important;}
 
-.evo-spacer-padding-top-x-small			{padding-top: $spacerXSmall !important;}
-.evo-spacer-padding-top-small			{padding-top: $spacerSmall !important;}
-.evo-spacer-padding-top-medium			{padding-top: $spacerMedium !important;}
-.evo-spacer-padding-top-large			{padding-top: $spacerLarge !important;}
-.evo-spacer-padding-top-x-large			{padding-top: $spacerXLarge !important;}
-.evo-spacer-padding-top-xx-large		{padding-top: $spacerXXLarge !important;}
-.evo-spacer-padding-top-xxx-large		{padding-top: $spacerXXXLarge !important;}
+.evo-spacer-padding-top-x-small			{padding-top: $evo-spacer-xsmall !important;}
+.evo-spacer-padding-top-small			{padding-top: $evo-spacer-small !important;}
+.evo-spacer-padding-top-medium			{padding-top: $evo-spacer-medium !important;}
+.evo-spacer-padding-top-large			{padding-top: $evo-spacer-large !important;}
+.evo-spacer-padding-top-x-large			{padding-top: $evo-spacer-xlarge !important;}
+.evo-spacer-padding-top-xx-large		{padding-top: $evo-spacer-xxlarge !important;}
+.evo-spacer-padding-top-xxx-large		{padding-top: $evo-spacer-xxxlarge !important;}
 
-.evo-spacer-padding-right-x-small		{padding-right: $spacerXSmall !important;}
-.evo-spacer-padding-right-small			{padding-right: $spacerSmall !important;}
-.evo-spacer-padding-right-medium		{padding-right: $spacerMedium !important;}
-.evo-spacer-padding-right-large			{padding-right: $spacerLarge !important;}
-.evo-spacer-padding-right-x-large		{padding-right: $spacerXLarge !important;}
-.evo-spacer-padding-right-xx-large		{padding-right: $spacerXXLarge !important;}
-.evo-spacer-padding-right-xxx-large		{padding-right: $spacerXXXLarge !important;}
+.evo-spacer-padding-right-x-small		{padding-right: $evo-spacer-xsmall !important;}
+.evo-spacer-padding-right-small			{padding-right: $evo-spacer-small !important;}
+.evo-spacer-padding-right-medium		{padding-right: $evo-spacer-medium !important;}
+.evo-spacer-padding-right-large			{padding-right: $evo-spacer-large !important;}
+.evo-spacer-padding-right-x-large		{padding-right: $evo-spacer-xlarge !important;}
+.evo-spacer-padding-right-xx-large		{padding-right: $evo-spacer-xxlarge !important;}
+.evo-spacer-padding-right-xxx-large		{padding-right: $evo-spacer-xxxlarge !important;}
 
-.evo-spacer-padding-bottom-x-small		{padding-bottom: $spacerXSmall !important;}
-.evo-spacer-padding-bottom-small		{padding-bottom: $spacerSmall !important;}
-.evo-spacer-padding-bottom-medium		{padding-bottom: $spacerMedium !important;}
-.evo-spacer-padding-bottom-large		{padding-bottom: $spacerLarge !important;}
-.evo-spacer-padding-bottom-x-large		{padding-bottom: $spacerXLarge !important;}
-.evo-spacer-padding-bottom-xx-large		{padding-bottom: $spacerXXLarge !important;}
-.evo-spacer-padding-bottom-xxx-large	{padding-bottom: $spacerXXXLarge !important;}
+.evo-spacer-padding-bottom-x-small		{padding-bottom: $evo-spacer-xsmall !important;}
+.evo-spacer-padding-bottom-small		{padding-bottom: $evo-spacer-small !important;}
+.evo-spacer-padding-bottom-medium		{padding-bottom: $evo-spacer-medium !important;}
+.evo-spacer-padding-bottom-large		{padding-bottom: $evo-spacer-large !important;}
+.evo-spacer-padding-bottom-x-large		{padding-bottom: $evo-spacer-xlarge !important;}
+.evo-spacer-padding-bottom-xx-large		{padding-bottom: $evo-spacer-xxlarge !important;}
+.evo-spacer-padding-bottom-xxx-large	{padding-bottom: $evo-spacer-xxxlarge !important;}
 
-.evo-spacer-padding-left-x-small		{padding-left: $spacerXSmall !important;}
-.evo-spacer-padding-left-small			{padding-left: $spacerSmall !important;}
-.evo-spacer-padding-left-medium			{padding-left: $spacerMedium !important;}
-.evo-spacer-padding-left-large			{padding-left: $spacerLarge !important;}
-.evo-spacer-padding-left-x-large		{padding-left: $spacerXLarge !important;}
-.evo-spacer-padding-left-xx-large		{padding-left: $spacerXXLarge !important;}
-.evo-spacer-padding-left-xxx-large		{padding-left: $spacerXXXLarge !important;}
+.evo-spacer-padding-left-x-small		{padding-left: $evo-spacer-xsmall !important;}
+.evo-spacer-padding-left-small			{padding-left: $evo-spacer-small !important;}
+.evo-spacer-padding-left-medium			{padding-left: $evo-spacer-medium !important;}
+.evo-spacer-padding-left-large			{padding-left: $evo-spacer-large !important;}
+.evo-spacer-padding-left-x-large		{padding-left: $evo-spacer-xlarge !important;}
+.evo-spacer-padding-left-xx-large		{padding-left: $evo-spacer-xxlarge !important;}
+.evo-spacer-padding-left-xxx-large		{padding-left: $evo-spacer-xxxlarge !important;}
 
 
 // TABLE COLUMN WIDTHS ADJUSTS (PERCENTAGES)
