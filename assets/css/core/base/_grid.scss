@@ -3,6 +3,12 @@
 // DATE - January 13, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+$evo-grid-device-padding: 0 rem-calc(10) !default;
+
 .evo-row-margin-bottom
 	{
 	@media #{$small-up}		{margin-bottom: 10px;}
@@ -10,6 +16,11 @@
 	@media #{$large-up}		{margin-bottom: 30px;}
 	}
 
+section[role=main]
+	{
+	@media #{$small-only}	{padding: $evo-grid-device-padding;}
+	@media #{$medium-only}	{padding: $evo-grid-device-padding;}
+	}
 
 //=== MEDIA QUERIES =========================================================================
 
@@ -17,7 +28,7 @@
 @if $use-small-only-mediaquery == true {
 		
 	@media #{$small-only} {
-		section[role=main]		{padding: rem-calc(10)}
+
 	}
 }
 
@@ -25,6 +36,6 @@
 @if $use-medium-up-mediaquery == true {
 		
 	@media #{$medium-up} {
-		
+
 	}
 }
