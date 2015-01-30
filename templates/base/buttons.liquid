@@ -82,7 +82,7 @@
 					<h4>{{ model.reference-example-version-label-12 }}</h4>
 				{% endif %}
 				{{ model.reference-code-html-content-block-pre-12 }}
-				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-groups' %}{{ global.reference-get-code-end-tag }}
+				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-icons' %}{{ global.reference-get-code-end-tag }}
 				{{ model.reference-code-html-content-block-post-12 }}
 
 				{% if model.reference-code-js == "true" %}
@@ -440,44 +440,24 @@
 					{% endif %}
 
 					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-						<a href="" class="button radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
-							<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-							Secondary a
-							<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-						</a>
-						<button class="button radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
-							<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-							Secondary
-						</button>
-
-						<a href="" class="button radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
-							Primary a
-							<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-						</a>
-						<button class="button radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
-							<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-							Primary
-							<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-						</button>
-
 						<div class="col-24">
 							<a href="" class="button tiny radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
 								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								Secondary a
+								<span class="evo-btn-text">Secondary a</span>
 								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
 							</a>
 							<button class="button tiny radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
 								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								Secondary
+								<span class="evo-btn-text">Secondary</span>
 							</button>
 
 							<a href="" class="button tiny radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
-								Primary a
+								<span class="evo-btn-text">Primary a</span>
 								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
 							</a>
 							<button class="button tiny radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
 								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								Primary
+								<span class="evo-btn-text">Primary</span>
 								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
 							</button>
 						</div>
@@ -485,21 +465,43 @@
 						<div class="col-24">
 							<a href="" class="button small radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
 								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								Secondary a
+								<span class="evo-btn-text">Secondary a</span>
 								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
 							</a>
 							<button class="button small radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
 								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								Secondary
+								<span class="evo-btn-text">Secondary</span>
 							</button>
 
 							<a href="" class="button small radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
-								Primary a
+								<span class="evo-btn-text">Primary a</span>
 								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
 							</a>
 							<button class="button small radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
 								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								Primary
+								<span class="evo-btn-text">Primary</span>
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</button>
+						</div>
+
+						<div class="col-24">
+							<a href="" class="button radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								<span class="evo-btn-text">Secondary a</span>
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</a>
+							<button class="button radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								<span class="evo-btn-text">Secondary</span>
+							</button>
+
+							<a href="" class="button radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
+								<span class="evo-btn-text">Primary a</span>
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</a>
+							<button class="button radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								<span class="evo-btn-text">Primary</span>
 								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
 							</button>
 						</div>
@@ -507,24 +509,78 @@
 						<div class="col-24">
 							<a href="" class="button large radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
 								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								Secondary a
+								<span class="evo-btn-text">Secondary a</span>
 								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
 							</a>
 							<button class="button large radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
 								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								Secondary
+								<span class="evo-btn-text">Secondary</span>
 							</button>
 
 							<a href="" class="button large radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
-								Primary a
+								<span class="evo-btn-text">Primary a</span>
 								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
 							</a>
 							<button class="button large radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
 								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								Primary
+								<span class="evo-btn-text">Primary<span>
 								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
 							</button>
 						</div>
+
+						<div class="col-24">
+							<button class="button expand radius secondary evo-btn" data-evo-button-icons="both" id="" name="" value="" type="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								<span class="evo-btn-text">Secondary expanded</span>
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</button>
+							<button class="button round secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								<span class="evo-btn-text">Secondary round</span>
+							</button>
+							<button class="button radius secondary evo-btn" data-evo-button-icons="right" id="" name="" value="" type="" tabindex="" title="">
+								<span class="evo-btn-text">Secondary radius</span>
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</button>
+						</div>
+
+						<div class="col-24">
+							<button class="button expand radius evo-btn" data-evo-button-icons="both" id="" name="" value="" type="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								<span class="evo-btn-text">Expanded</span>
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</button>
+							<button class="button round evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
+								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+								<span class="evo-btn-text">Round</span>
+							</button>
+							<button class="button radius evo-btn" data-evo-button-icons="right" id="" name="" value="" type="" tabindex="" title="">
+								<span class="evo-btn-text">Radius</span>
+								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+							</button>
+						</div>
+
+						<ul class="stack-for-small button-group radius">
+							<li>
+								<a href="" class="button radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
+									<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+									<span class="evo-btn-text">Secondary a</span>
+									<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+								</a>
+							</li>
+							<li>
+								<a href="" class="button radius evo-btn" data-evo-button-icons="left"  id="" tabindex="" title="">
+									<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+									<span class="evo-btn-text">Primary a</span>
+								</a>
+							</li>
+							<li>
+								<a href="" class="button radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
+									<span class="evo-btn-text">Primary a</span>
+									<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+								</a>
+							</li>
+						</ul>
 					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 				</div>
