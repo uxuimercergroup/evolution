@@ -536,6 +536,26 @@
         "directory": false
     },
     {
+        "key": "ep",
+        "name": "Ep",
+        "url": "/ep",
+        "directory": true,
+        "children": [
+            {
+                "key": "index",
+                "name": "Index",
+                "url": "/ep/index",
+                "directory": false
+            },
+            {
+                "key": "index-title-bar",
+                "name": "Index title bar",
+                "url": "/ep/index-title-bar",
+                "directory": false
+            }
+        ]
+    },
+    {
         "key": "error-handling",
         "name": "Error handling",
         "url": "/error-handling",
@@ -733,12 +753,6 @@
         "key": "icon-font",
         "name": "Icon font",
         "url": "/icon-font",
-        "directory": false
-    },
-    {
-        "key": "index-ep",
-        "name": "Index ep",
-        "url": "/index-ep",
         "directory": false
     },
     {

@@ -1,6 +1,13 @@
-<header role="banner" class="evo-grid evo-header">
-	<div class="evo-header-adjust {% if global.type_of_navbar == 'toolbar' and global.toolbar_fixed == 'true' %}evo-toolbar-header-adjust{% endif %}">
-		{% include 'ep/base/header/masthead' %}
-		{% include 'ep/base/header/navbar' %}
-	</div>
+<header role="banner">
+
+	{% if model.header == "title-bar" %}
+
+		{% include "ep/base/header/title-bar" %}
+
+	{% else %}
+
+		{% include "ep/base/header/menu-bar" %}
+
+	{% endif %}
+
 </header>
