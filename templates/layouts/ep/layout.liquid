@@ -78,9 +78,11 @@
 			<!-- OFF CANVAS INNER WRAPPER - BEGINS -->
 			<div class="inner-wrap">
 
+				{% if model.header == "true" %}
 				<!-- HEADER - BEGINS -->
-				{% include "ep/header" %}
+					{% include "ep/header" %}
 				<!-- HEADER - ENDS -->
+				{% endif %}
 
 				<!-- PAGE - BEGINS -->
 				<section role="main">
