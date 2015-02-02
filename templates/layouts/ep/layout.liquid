@@ -72,19 +72,33 @@
 	</head>
 	<body>
 
-		<!-- HEADER - BEGINS -->
-		{% include "ep/header" %}
-		<!-- HEADER - ENDS -->
+		<!-- OFF CANVAS WRAPPER - BEGINS -->
+		<div class="off-canvas-wrap" data-offcanvas>
 
-		<!-- PAGE - BEGINS -->
-		<section role="main" class="evo-grid">
-			{% block content %}{% endblock %}
-		</section>
-		<!-- PAGE - ENDS -->
+			<!-- OFF CANVAS INNER WRAPPER - BEGINS -->
+			<div class="inner-wrap">
 
-		<!-- FOOTER - BEGINS -->
-		{% include "ep/footer" %}
-		<!-- FOOTER - ENDS -->
+				<!-- HEADER - BEGINS -->
+				{% include "ep/header" %}
+				<!-- HEADER - ENDS -->
+
+				<!-- PAGE - BEGINS -->
+				<section role="main">
+					<div class="row">
+						{% block content %}{% endblock %}
+					</div>
+				</section>
+				<!-- PAGE - ENDS -->
+
+				<!-- FOOTER - BEGINS -->
+				<!-- { include "ep/footer" } -->
+				<!-- FOOTER - ENDS -->
+
+			</div>
+			<!-- OFF CANVAS INNER WRAPPER - ENDS -->
+
+		</div>
+		<!-- OFF CANVAS WRAPPER - ENDS -->
 
 		{% include "ep/scripts" %}
 
