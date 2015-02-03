@@ -75,6 +75,7 @@
 @import "core/lib/jquery/plugins/jquery.mousewheel.js";
 @import "core/lib/jquery/plugins/jquery.mCustomScrollbar.js";
 @import "core/lib/jquery/plugins/owl.carousel.js";
+@import "lib/jquery/plugins/jquery.autosize.input.js";
 // @import "core/lib/jquery/plugins/jquery.smartmenus.js"; // Marked for removal (Foundation replaces)
 // @import "core/lib/jquery/plugins/jquery.tooltipster.js"; // Marked for removal (Foundation replaces)
 // @import "core/lib/jquery/plugins/jquery.ui.dialog-clickoutside.js"; // Marked for removal (Foundation replaces)
