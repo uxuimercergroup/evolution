@@ -22,24 +22,13 @@
 	// HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
 	var evoFixFOUC = function() {
 		jQuery('html.evo-mod-js').show();
-	};
+	}
 
-
-	var evoKeypressShowHidden = function() {
-		$('.evo-form-conversational input').keypress(function(){
-			$(this).next('span').show().next().addClass('next');
-		});
-	};
-
-	var evoChangeShowHidden = function() {
-		$(".evo-form-conversational select").change(function(){
-			$(".next").show().next().addClass('next');
-        });
-	};
 
 // DOCUMENT READY
 //--------------------------------------------------------------------------------------------------------
 $(function() {
+
 
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
@@ -48,6 +37,4 @@ $(function() {
 		// HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
 		evoFixFOUC();
 
-		evoKeypressShowHidden();
-		evoChangeShowHidden();
 });
