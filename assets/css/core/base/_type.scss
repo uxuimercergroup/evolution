@@ -31,9 +31,6 @@
 	$evo-hdr-rule-border-color:					$gray-darker !default;
 	$evo-hdr-background-color:					$gray-mid-light !default;
 
-	// FOOTNOTES
-	$evo-footnote-font-color:					$gray-darker !default;
-
 
 	// ==========================================================================================
 	// FONTS
@@ -145,7 +142,7 @@
 								}
 
 	// FOOTNOTES
-	.evo-footnote				{color: $evo-footnote-font-color;}
+	.evo-footnote				{color: $small-font-color;}
 
 	// LIST ITEMS			
 	.evo-lower-alpha			{list-style-type: lower-alpha;}

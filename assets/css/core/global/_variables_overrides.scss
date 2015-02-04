@@ -24,7 +24,7 @@ $row-width: rem-calc(980);
 $font-family-sans-serif: relativebook, arial, Tahoma, Geneva, sans-serif;
 
 // We use these as default colors throughout
-$primary-color: $blue-gray;
+$primary-color: $blue-sapphire-dark;
 $secondary-color: $gray-light;
 $alert-color: $red;
 $success-color: $green;
@@ -70,15 +70,41 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 
 // We use these to control header font styles
 $header-font-color: $gray-darkest;
+$header-line-height: 1.2;
+
+// We use these to control header font sizes
+$h1-font-size: rem-calc(34);
+$h2-font-size: rem-calc(26);
+$h3-font-size: rem-calc(20);
+$h4-font-size: rem-calc(14);
+$h5-font-size: rem-calc(10);
+$h6-font-size: rem-calc(10);
+
+// We use these to control header size reduction on small screens
+$h1-font-reduction: 0;
+$h2-font-reduction: 0;
+$h3-font-reduction: 0;
+$h4-font-reduction: 0;
+$h5-font-reduction: 0;
+$h6-font-reduction: 0;
+
+// A general <small> styling
+$small-font-size: rem-calc(14);
+
+// We use these to style paragraphs
+$paragraph-line-height: 1.32;
 
 // We use these to style anchors
 $anchor-text-decoration: underline;
 $anchor-text-decoration-hover: none;
-$anchor-font-color: $blue-sapphire;
-$anchor-font-color-hover: scale-color($blue-sapphire, $lightness: -14%);
+$anchor-font-color: $blue-sapphire-dark;
+$anchor-font-color-hover: $blue-sapphire-dark;
 
 // We use these to style the <hr> element
 $hr-border-color: $gray-mid-light;
+
+// We use these to style lists
+$list-line-height: $paragraph-line-height;
 
 // We use these to style blockquotes
 $blockquote-border: 1px solid $gray-mid-light;
@@ -92,6 +118,9 @@ $acronym-underline: 1px dotted $black;
 // We use these to control button text styles.
 $button-font-color: $white;
 $button-font-color-alt: $gray-darkest;
+
+// We use this to set default opacity and cursor for disabled buttons.
+$button-disabled-opacity: 0.3;
 
 // 11. Forms
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -221,7 +250,7 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 	// $evo-icon-site-font-stack:				"#{$evo-icon-site-font-family}";
 
 // LINKS
-// $evo-base-link-visited-color:			$gray-dark;
+// $evo-base-link-visited-color:			$blue-sapphire-dark;
 
 // FONT WEIGHTS
 // $evo-weight-bold-100:					100;
@@ -252,9 +281,6 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $evo-hdr-rule-margin-bottom:				10px;
 // $evo-hdr-rule-border-color:				$gray-darker;
 // $evo-hdr-background-color:				$gray-mid-light;
-
-// FOOTNOTES
-// $evo-footnote-font-color:				$gray-darker;
 
 
 // BOXES
@@ -306,8 +332,8 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // FORM
 // ------------------------------------------------------------------------------------------
 
-//$evo-base-input-shadow-color: $gray-lighter !default;
-//$evo-input-focus-border-color: $tan-mid !default;
+//$evo-base-input-shadow-color: $gray-lighter;
+//$evo-input-focus-border-color: $tan-mid;
 
 
 // BUTTONS

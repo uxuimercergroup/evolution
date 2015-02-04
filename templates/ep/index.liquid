@@ -1,18 +1,116 @@
 {% layout "ep/layout" %}
 {% block content %}
 
-<p>This page uses a menu bar page header.</p>
+<!-- TYPE - BEGINS -->
+<h3 class="evo-hdr-rule">Type</h3>
 
-{{ 2 | lorem_ipsum:'p' }}
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+<h4>Header 4</h4>
+<h5>Header 5</h5>
+<h6>Header 6</h6>
+<p>Base font, lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+<ol>
+	<li><span>Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></li>
+	<li><span>Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing.</span></li>
+	<li><span>Ordered list item three</span></li>
+</ol>
+<ul>
+	<li><span>Unordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></li>
+	<li><span>Unordered list item two</span></li>
+	<li><span>Unordered list item three. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></li>
+</ul>
+<ol>
+	<li><span>Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></li>
+	<li><span>Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing.</span></li>
+	<li><span>Ordered list item three</span>
+		<ol>
+			<li><span>Ordered list level 2</span></li>
+			<li><span>Ordered list level 2</span></li>
+			<li><span>Ordered list level 2</span></li>
+		</ol>
+	</li>
+</ol>
+<ul>
+	<li><span>Unordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></li>
+	<li><span>Unordered list item two</span></li>
+	<li><span>Unordered list item three. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+		<ul>
+			<li><span>Unordered list level 2</span></li>
+			<li><span>Unordered list level 2</span></li>
+			<li><span>Unordered list level 2</span></li>
+		</ul>
+	</li>
+</ul>
+<dl>
+	<dt>Definition Term</dt>
+	<dd>Definition description. Lorem ipsum dolor sit amet, consectetur.</dd>
+	<dt>Definition Term</dt>
+	<dd>Definition description Lorem ipsum dolor sit amet, consectetur.</dd>
+	<dt>Definition Term</dt>
+	<dd>Definition description Lorem ipsum dolor sit amet, consectetur.</dd>
+</dl>
 
-<!-- CONVERSATIONAL FORM - BEGINS -->
-	{% include "ep/base/form-conversational" %}
-<!-- CONVERSATIONAL FORM - ENDS -->
+<p><small class="evo-footnote">Footnote, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</small></p>
+
+<hr />
+
+<p>
+	<a href="#" title="link">&lt;a&gt; anchor link</a>
+	<br /><a href="#" class="reverse" title="link" style="background-color: black;">&lt;a&gt; reverse color anchor link</a>
+	<br /><a href="#" class="alt" title="link">&lt;a&gt; custom color anchor link</a>
+	<br /> <abbr title="title">&lt;abbr&gt; abbreviation</abbr>
+	<br /> <em>&lt;em&gt; emphasis stress or italic</em>
+	<br /> <strong>&lt;strong&gt; strong importance or bold</strong>
+	<br />			
+	<small>&lt;small&gt; small print, footnotes, or form helper text</small>
+</p>
+
+<label class="small-text">Small label</label>
+
+<br />
+<!-- TYPE - ENDS -->
+
+<!-- BUTTONS - BEGINS -->
+<h3 class="evo-hdr-rule">Buttons</h3>
 
 <button class="button expand radius evo-btn" data-evo-button-icons="right" id="" name="" value="" type="" tabindex="" title="">
-	<span class="evo-btn-text">Expanded Button Icon Right</span>
+	<span class="evo-btn-text">Primary Icon Right</span>
 	<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
 </button>
+
+<button class="button expand radius secondary evo-btn" data-evo-button-icons="right" id="" name="" value="" type="" tabindex="" title="">
+	<span class="evo-btn-text">Secondary Icon Right</span>
+	<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+</button>
+
+<button class="button expand radius evo-btn" data-evo-button-color="white" data-evo-button-font-color="blue-sapphire-dark" data-evo-button-icons="right" id="" name="" value="" type="" tabindex="" title="">
+	<span class="evo-btn-text">Custom Color Icon Right</span>
+	<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+</button>
+
+<button class="button expand radius disabled evo-btn" data-evo-button-icons="right" id="" name="" value="" type="" disabled="disabled" tabindex="" title="">
+	<span class="evo-btn-text">Disabled Primary Icon Right</span>
+	<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+</button>
+
+<button class="button expand radius disabled secondary evo-btn" data-evo-button-icons="right" id="" name="" value="" type="" disabled="disabled" tabindex="" title="">
+	<span class="evo-btn-text">Disabled Secondary Icon Right</span>
+	<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+</button>
+
+<button class="button expand radius disabled evo-btn" data-evo-button-color="white" data-evo-button-font-color="blue-sapphire-dark" data-evo-button-icons="right" id="" name="" value="" type="" disabled="disabled" tabindex="" title="">
+	<span class="evo-btn-text">Disabled Custom Color Icon Right</span>
+	<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+</button>
+<!-- BUTTONS - ENDS -->
+
+<!-- CONVERSATIONAL FORM - BEGINS -->
+<h3 class="evo-hdr-rule">Conversational Form</h3>
+
+{% include "ep/base/form-conversational" %}
+<!-- CONVERSATIONAL FORM - ENDS -->
 
 
 

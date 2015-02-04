@@ -1,0 +1,62 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Employee Portal Family - Type Partial CSS
+// DATE - January 21, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+
+
+
+// ==========================================================================================
+// GLOBAL
+// ==========================================================================================
+
+// HEADERS
+h1							{
+							font-family: $evo-font-bold-stack;
+							letter-spacing: rem-calc(-.2);
+							}
+
+h2							{
+							font-family: $evo-font-medium-stack;
+							}
+
+h3							{
+							font-family: $evo-font-regular-stack;
+							}
+
+h4							{
+							font-family: $evo-font-regular-stack;
+							text-transform: uppercase;
+							letter-spacing: rem-calc(1);
+							}
+
+h5							{
+							font-family: $evo-font-regular-stack;
+							text-transform: uppercase;
+							letter-spacing: rem-calc(2);
+							}
+
+h6							{
+							font-family: $evo-font-bold-stack;
+							text-transform: uppercase;
+							letter-spacing: rem-calc(2);
+							}
+
+// SMALL TEXT
+small,
+.small-text,
+.evo-footnote				{
+							font-family: $evo-font-regular-stack;
+							}
+
+// LINKS
+a.reverse					{
+							color: $white;
+							}
+a.alt						{	
+							color: $pink-dark;
+							}
