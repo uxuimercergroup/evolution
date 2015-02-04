@@ -1,0 +1,54 @@
+{
+	"title": "Confirmation Message",
+
+	"reference-overview": 
+		"<p>The Confirmation Message container provides feedback to the user when he/she has successfully completed an action. Like the other message containers, it always displays immediately below the page title.</p>",
+
+	"reference-usage": 
+		"<p>The message container should be used when the user has successfully completed an action.</p><p>There are three additional types of configurations that should be supported:</p><ul><li><strong>Optional Close</strong><ul><li>This configuration gives the user the ability to \"close\" the message container via the \"close\" icon in the upper right corner. When clicked, the container will dissolve and all content displayed below the container will shift up on the screen.</li></ul></li><li><strong>Timer Based Close</strong><ul><li>This configuration would be used for messages where it is not critical for the user to see or act on the message.</li><li>The container would remain open for 8 seconds before closing. This time frame is not editable, rather it remains consistent for all instances.</li><li>The amount of text displayed should be concise, to allow the user to read it before the container closes.</li><li>This configuration should not be used for the <a href=\"/base/boxes/message-attention\">Attention</a> or <a href=\"/base/boxes/message-error\">Error</a> containers.</li></ul></li><li><strong>In Page Display vs On Top of Page Display</strong> - Each message container (Error, Attention, and Confirmation) should have a setting that will determine where the message will display.<ul><li>The default display will be as an item within the rest of the content within the screen (In Page Display).</li><li>There is an alternative configuration that allows the message container to display \"on top of\" the other content on the page. This would be used in cases where it is highly important that the user notice and acknowledge the message. In this case, the container should be centered on the screen, near the top of the browser.</li></ul>",
+
+	"reference-details": 
+		"<ul><li>The container will span the entire width of its parent container and be located immediately below the page title.</li><li>There should only ever be one Confirmation Message container on a page at a time.</li><li>If there are multiple confirmations that need to get communicated, the page should display a single confirmation message container with multiple messages inside the container.</li></li></ul></li><li>Title<ul><li>The title should always contain the \"green checkmark\" icon</li><li>The title should always be \"Confirmation\"</li><li>The title should never be a link</li></ul></li><li>Message<ul><li>The message should be able to support two different formats</li><li>Paragraph Text - This can be multiple lines or even multiple paragraphs.</li><li>List Items - This can be a single bulleted list item or multiple bulleted list items.</li></ul></li><li>Colors<ul><li>Confirmation Messages should adhere to the approved <a href=\"/base/colors\">Mercer color palette</a> for all aspects of the container: Background, Border, Text</li></ul></li></ul>",
+
+	"reference-mobile": 
+		"<ul><li>In the mobile version of this container the width will shrink to span the width of the parent container.</li><li>The placement of this container would remain the same as the desktop version.</li><li>Font size increases for mobile</li></ul>",
+
+	"reference-technical": 
+		"<h3>Cross browser compatibility</h3><p>IE9 doesn't crop background gradients on containers with rounded corners, so we square the corners of every container.</p>",
+
+	
+	"reference-dependency": "true",
+	"reference-dependency-jquery": "true",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "true",
+	"reference-example-version-label":
+		"Static version",
+	"reference-example-version-label-2":
+		"User-based close",
+	"reference-example-version-label-3":
+		"Timer-based close",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"<p>All <a href='/base/boxes/message-confirmation'>confirmation message</a>, <a href='/base/boxes/message-attention'>attention message</a> and <a href='/base/boxes/message-error'>error message</a> containers start with base box. In this example we are using the following class <code>evo-confirmation-ctn</code> to give more meaning to a basic box.</p>",
+	"reference-code-html-content-block-post": 
+		"",
+	"reference-code-html-content-block-pre-2": 
+		"",
+	"reference-code-html-content-block-post-2": 
+		"",
+	"reference-code-html-content-block-pre-3": 
+		"",
+	"reference-code-html-content-block-post-3": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
+}

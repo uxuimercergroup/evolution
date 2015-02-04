@@ -1,0 +1,42 @@
+{
+	"title": "Progress Bar",
+
+	"reference-overview": 
+		"<p>Progress Bar is used to provide graphical view of the progress of a specific step or action. It represents a static view of the current status. It is not intended to be a dynamic representation of the user's progress on the task or step.</p>",
+
+	"reference-usage": 
+		"<p>It should be used within a complex or multi-stepped process, one that is not expected to be completed within a single user session. Examples include Tasks, Implementations or Renewals.</p><p>If the task is simpler or will be completed within a single \"flow\", use one of the \"Stepper\" options - either <a href='/objects/horizontal-stepper'>Horizontal</a> or <a href='/objects/vertical-stepper'>Vertical</a> depending on the circumstance.</p>",
+
+	"reference-details": 
+		"<h3>States</h3><p>There are three states:</p><ul><li>Red - Needs Attention or Just Started</li><li>Yellow - Midpoint or In Progress</li><li>Green - Almost Completed</li></ul><h3>Variables</h3><p>Each of these states will be defined as variables as a specific percentage - with the total being 100%.</p><p>For example:</p><ul><li>Red = 33%</li><li>Yellow = 33%</li><li>Green = 34%</li></ul><h3>Colors</h3><p>The three colors are expressed as gradients - light to dark - within the imagery:</p><ul><li>Red - #fcdbd9 to #ba2c2b</li><li>Yellow - #fef8e3 to #f1d485</li><li>Green - #d6ebc to #2b7b05</li></ul><h3>Associated Text</h3><p>The actual percentage status number should be displayed to right of the Progress Bar, vertically aligned.</p><h3>Size</h3><ul><li>Size of Text</li><li>Size of Images</li><li>Anything else</li></ul>",
+
+	"reference-mobile": 
+		"<h3>Header</h3><p>Mobile details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+
+	"reference-technical": 
+		"<h3>Header</h3><p>Technical details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+
+	
+	"reference-dependency": "true",
+	"reference-dependency-jquery": "true",
+	"reference-dependency-jquery-ui": "true",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "true",
+	"reference-example-version-label":
+		"Version (Default, Option A, Option B, etc.)",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"",
+	"reference-code-html-content-block-post": 
+		"",
+
+	"reference-code-js": "true",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
+}

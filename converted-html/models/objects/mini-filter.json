@@ -1,0 +1,41 @@
+{
+	"title": "Mini Filter",
+
+	"reference-overview": 
+		"<p>The Mini-filter is intended to be used in conjunction with the <a href='/base/tables/interactive'>Interactive Data Table</a> when there is a small number (2-6) of common pre-defined filters to section out data. Essentially, this component provides users with quick access to commonly-viewed sections of data, so they aren't forced to enter multiple search criteria in order to access common views of data.</p>",
+	"reference-usage": 
+		"<p>The Mini-Filter should be used along with an <a href='/base/tables/interactive'>Interactive Data Table</a> when you want to give the user the option to quickly filter data into common categories.</p><h3>Number of Items</h3><p>This control should only be used when the number of pre-determined filters is less than 5-6 options. If the number of filter is higher than 6, then the component starts to occupy too much real estate and another option should be explored.</p>",
+
+	"reference-details": 
+		"<p>There are 3 main elements to this component:</p><ol><li><strong>Label</strong> - The actual name of the filter. The default value is \"View:\". Always display a colon after the label.</li><li><strong>Active Filter</strong> - This is the filter that is currently being viewed. It is displayed using the \"highlight\" style. There is only one Active Filter at a time.</li><li><strong>Inactive Filter</strong> - These are the other available filters that are not currently being displayed. They are displayed as links. The user can click an Inactive Filter link to view that specific filter. There may be one or many Inactive Filters.</li></ol>",
+
+	"reference-mobile": 
+		"<p>When a mini filter appears on a page that is viewed on mobile/tablet devices, the filter links will appear in a drop down menu with a label of 'View' for the form field.</p>",
+
+	"reference-technical": 
+		"<h3>Header</h3><p>Technical details go here. This is a <a href='/objects/mini-filter'>link</a>.</p><h4>Sub Header</h4><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li></ul><h4>Sub Header</h4><ol><li>List item 1</li><li>List item 2</li><li>List item 3</li></ol><dl><dt>Definiton term</dt><dd>Definiton description</dd><dd>Definiton description</dd><dd>Definiton description</dd></dl>",
+
+	
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "false",
+	"reference-example-version-label":
+		"",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"",
+	"reference-code-html-content-block-post": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
+}

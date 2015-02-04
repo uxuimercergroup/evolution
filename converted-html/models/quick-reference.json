@@ -1,0 +1,1527 @@
+{
+  "title": "Quick Reference",
+  "reference-overview": 
+    "<p class='evo-intro-text'>A front-end developer's quick reference for Evolution.</p>",
+
+
+
+  "color_variables_data": [
+    {
+    "sass_variable" : "$transparent",
+    "hex_value" : "transparent",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$white",
+    "hex_value" : "#FFF",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$black",
+    "hex_value" : "#000"
+    },
+    {
+    "sass_variable" : "$gray-darkest",
+    "hex_value" : "#333"
+    },
+    {
+    "sass_variable" : "$gray-darker",
+    "hex_value" : "#666"
+    },
+    {
+    "sass_variable" : "$gray-dark",
+    "hex_value" : "#999"
+    },
+    {
+    "sass_variable" : "$gray-mid-dark",
+    "hex_value" : "#B0B0B0"
+    },
+    {
+    "sass_variable" : "$gray-mid-light",
+    "hex_value" : "#CCC"
+    },
+    {
+    "sass_variable" : "$gray-light",
+    "hex_value" : "#E6E6E6",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$gray-lighter",
+    "hex_value" : "#EEE",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$gray-lightest",
+    "hex_value" : "#F8F8F8",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$blue-gray",
+    "hex_value" : "#23334C"
+    },
+    {
+    "sass_variable" : "$blue-gray-darkest",
+    "hex_value" : "#395A85"
+    },
+    {
+    "sass_variable" : "$blue-gray-darker",
+    "hex_value" : "#396EA8"
+    },
+    {
+    "sass_variable" : "$blue-gray-dark",
+    "hex_value" : "#517BAA"
+    },
+    {
+    "sass_variable" : "$blue-gray-mid-dark",
+    "hex_value" : "#6B90B8"
+    },
+    {
+    "sass_variable" : "$blue-gray-mid-light",
+    "hex_value" : "#A9BCD3"
+    },
+    {
+    "sass_variable" : "$blue-gray-light",
+    "hex_value" : "#C3D2E5",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$blue-gray-lighter",
+    "hex_value" : "#E9EEF5",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$blue-gray-lightest",
+    "hex_value" : "#E8F0F7",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$blue-sapphire",
+    "hex_value" : "#002C77"
+    },
+    {
+    "sass_variable" : "$blue-sapphire-dark",
+    "hex_value" : "#006D9E"
+    },
+    {
+    "sass_variable" : "$blue-sapphire-mid",
+    "hex_value" : "#00A8C8"
+    },
+    {
+    "sass_variable" : "$blue-sapphire-light",
+    "hex_value" : "#A6E2EF",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$purple",
+    "hex_value" : "#43276D"
+    },
+    {
+    "sass_variable" : "$purple-dark",
+    "hex_value" : "#595997"
+    },
+    {
+    "sass_variable" : "$purple-mid",
+    "hex_value" : "#6F83C1"
+    },
+    {
+    "sass_variable" : "$purple-light",
+    "hex_value" : "#C4CAE6",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$fuscia",
+    "hex_value" : "#560054"
+    },
+    {
+    "sass_variable" : "$fuscia-dark",
+    "hex_value" : "#932077"
+    },
+    {
+    "sass_variable" : "$fuscia-mid",
+    "hex_value" : "#CE3D95"
+    },
+    {
+    "sass_variable" : "$fuscia-light",
+    "hex_value" : "#E7B8D5",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$pink",
+    "hex_value" : "#A9194F"
+    },
+    {
+    "sass_variable" : "$pink-dark",
+    "hex_value" : "#ED2C67"
+    },
+    {
+    "sass_variable" : "$pink-light",
+    "hex_value" : "#F7B6BB",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$red",
+    "hex_value" : "#810009"
+    },
+    {
+    "sass_variable" : "$red-dark",
+    "hex_value" : "#BA2C2B"
+    },
+    {
+    "sass_variable" : "$red-mid",
+    "hex_value" : "#EF4E45"
+    },
+    {
+    "sass_variable" : "$red-light",
+    "hex_value" : "#FCDBD9",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$orange",
+    "hex_value" : "#C45F24"
+    },
+    {
+    "sass_variable" : "$orange-dark",
+    "hex_value" : "#F48132"
+    },
+    {
+    "sass_variable" : "$orange-mid",
+    "hex_value" : "#FAA45E"
+    },
+    {
+    "sass_variable" : "$orange-light",
+    "hex_value" : "#FCCFAB",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$tan",
+    "hex_value" : "#8E5501"
+    },
+    {
+    "sass_variable" : "$tan-dark",
+    "hex_value" : "#C6A54F"
+    },
+    {
+    "sass_variable" : "$tan-mid",
+    "hex_value" : "#F1D485"
+    },
+    {
+    "sass_variable" : "$tan-light",
+    "hex_value" : "#FEF8E3",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$green",
+    "hex_value" : "#005804"
+    },
+    {
+    "sass_variable" : "$green-darker",
+    "hex_value" : "#2D7B05"
+    },
+    {
+    "sass_variable" : "$green-dark",
+    "hex_value" : "#6EAA38"
+    },
+    {
+    "sass_variable" : "$green-mid",
+    "hex_value" : "#72BE44"
+    },
+    {
+    "sass_variable" : "$green-light",
+    "hex_value" : "#98E96C",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$green-lighter",
+    "hex_value" : "#BDDCA1",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$green-lightest",
+    "hex_value" : "#D6EBC3",
+    "default_text_color" : "true"
+    },
+    {
+    "sass_variable" : "$blue-green",
+    "hex_value" : "#004C4F"
+    },
+    {
+    "sass_variable" : "$blue-green-dark",
+    "hex_value" : "#008075"
+    },
+    {
+    "sass_variable" : "$blue-green-mid",
+    "hex_value" : "#0FB694"
+    },
+    {
+    "sass_variable" : "$blue-green-light",
+    "hex_value" : "#A7D9C8",
+    "default_text_color" : "true"
+    }
+  ],
+  "base_variables_data": [
+    {
+    "sass_variable" : "$baseMargin",
+    "function" : "Base Margin",
+    "value" : "14px"
+    },
+    {
+    "sass_variable" : "$basePadding",
+    "function" : "Base Padding",
+    "value" : "14px"
+    },
+    {
+    "sass_variable" : "$baseBorderRadius",
+    "function" : "Base Border Radius",
+    "value" : "8px"
+    },
+    {
+    "sass_variable" : "$baseBorderRadiusIE",
+    "function" : "Base Border Radius IE",
+    "value" : "0px"
+    },
+    {
+    "sass_variable" : "$baseFontFamily",
+    "function" : "Base Font Family",
+    "value" : "Proxima Nova Regular"
+    },
+    {
+    "sass_variable" : "$baseFontSize",
+    "function" : "Base Font Size",
+    "value" : "16px"
+    }
+  ],
+  "font_variables_data": [
+    {
+    "sass_variable" : "$fontThinStack",
+    "font" : "Font - Thin"
+    },
+    {
+    "sass_variable" : "$fontRegularStack",
+    "font" : "Font - Regular"
+    },
+    {
+    "sass_variable" : "$fontBoldStack",
+    "font" : "Font - Bold"
+    },
+    {
+    "sass_variable" : "$fontItalicStack",
+    "font" : "Font - Italic"
+    },
+    {
+    "sass_variable" : "$fontBoldItalicStack",
+    "font" : "Font - Bold Italic"
+    },
+    {
+    "sass_variable" : "$fontSemiBoldStack",
+    "font" : "Font - Semi-bold"
+    }
+  ],
+  "border_radius_variables_data": [
+    {
+    "sass_variable" : "$borderRadiusSmall",
+    "border_radius_size_title" : "Small",
+    "border_radius_size" : "4px"
+    },
+    {
+    "sass_variable" : "$borderRadiusMedium",
+    "border_radius_size_title" : "Medium",
+    "border_radius_size" : "8px"
+    },
+    {
+    "sass_variable" : "$borderRadiusLarge",
+    "border_radius_size_title" : "Large",
+    "border_radius_size" : "12px"
+    },
+    {
+    "sass_variable" : "$borderRadiusXLarge",
+    "border_radius_size_title" : "X-large",
+    "border_radius_size" : "16px"
+    }
+  ],
+  "helper_classes_type_data": [
+    {
+    "function_title" : "Text Overflow",
+    "class" : "evo-text-overflow"
+    },
+    {
+    "function_title" : "Footnotes",
+    "class" : "evo-footnote"
+    },
+    {
+    "function_title" : "No Bold Style",
+    "class" : "evo-nobold"
+    },
+    {
+    "function_title" : "Bold Style",
+    "class" : "evo-bold"
+    },
+    {
+    "function_title" : "No Bulleted Lists",
+    "class" : "evo-no-bullets"
+    },
+    {
+    "function_title" : "H1 - Mimic Styles",
+    "class" : "h1"
+    },
+    {
+    "function_title" : "H2 - Mimic Styles",
+    "class" : "h2"
+    },
+    {
+    "function_title" : "H3 - Mimic Styles",
+    "class" : "h3"
+    },
+    {
+    "function_title" : "H4 - Mimic Styles",
+    "class" : "h4"
+    },
+    {
+    "function_title" : "H5 - Mimic Styles",
+    "class" : "h5"
+    },
+    {
+    "function_title" : "H6 - Mimic Styles",
+    "class" : "h6"
+    },
+    {
+    "function_title" : "Header Background - H1",
+    "class" : "evo-h1-hdr-background"
+    },
+    {
+    "function_title" : "Header Background - H2",
+    "class" : "evo-h2-hdr-background"
+    },
+    {
+    "function_title" : "Header Background - H3",
+    "class" : "evo-h3-hdr-background"
+    },
+    {
+    "function_title" : "Header Background - H4",
+    "class" : "evo-h4-hdr-background"
+    },
+    {
+    "function_title" : "Header Rule",
+    "class" : "evo-hdr-rule"
+    },
+    {
+    "function_title" : "Header Double Rule",
+    "class" : "evo-hdr-dbl-rule"
+    },
+    {
+    "function_title" : "Introduction Paragraph",
+    "class" : "evo-intro-text"
+    },
+    {
+    "function_title" : "List - Lowercase Alphabet",
+    "class" : "evo-lower-alpha"
+    },
+    {
+    "function_title" : "List - Uppercase Alphabet",
+    "class" : "evo-upper-alpha"
+    },
+    {
+    "function_title" : "List - Lowercase Roman",
+    "class" : "evo-lower-roman"
+    },
+    {
+    "function_title" : "List - Uppercase Roman",
+    "class" : "evo-upper-roman"
+    },
+    {
+    "function_title" : "List - No Bullet Style",
+    "class" : "evo-list-style-none"
+    }
+  ],
+  "helper_classes_page_elements_data": [
+    {
+    "function_title" : "Image Float Left",
+    "class" : "evo-image-left"
+    },
+    {
+    "function_title" : "Image Float Right",
+    "class" : "evo-image-right"
+    },
+    {
+    "function_title" : "Keyline Left",
+    "class" : "evo-keyline-left"
+    },
+    {
+    "function_title" : "Keyline Right",
+    "class" : "evo-keyline-right"
+    }
+  ],
+  "helper_classes_layout_data": [
+    {
+    "function_title" : "Clear Fix",
+    "class" : "evo-clearfix"
+    },
+    {
+    "function_title" : "Align Absolute Center ('.evo-align-absolute-center' container around helper required)",
+    "class" : "evo-align-absolute-center-element"
+    },
+    {
+    "function_title" : "Center Align Inline",
+    "class" : "evo-align-center"
+    },
+    {
+    "function_title" : "Left Align Inline",
+    "class" : "evo-align-left"
+    },
+    {
+    "function_title" : "Right Align Inline",
+    "class" : "evo-align-right"
+    },
+    {
+    "function_title" : "Center Align Block",
+    "class" : "evo-center-block"
+    },
+    {
+    "function_title" : "Float Left",
+    "class" : "evo-float-left"
+    },
+    {
+    "function_title" : "Float Right",
+    "class" : "evo-float-right"
+    },
+    {
+    "function_title" : "Hide Elements",
+    "class" : "evo-display-none"
+    },
+    {
+    "function_title" : "White Space No Wrap",
+    "class" : "evo-nowrap"
+    },
+    {
+    "function_title" : "Add Margin Top",
+    "class" : "evo-margin-top"
+    },
+    {
+    "function_title" : "Add Margin Right",
+    "class" : "evo-margin-right"
+    },
+    {
+    "function_title" : "Add Margin Bottom",
+    "class" : "evo-margin-bottom"
+    },
+    {
+    "function_title" : "Add Margin Left",
+    "class" : "evo-margin-left"
+    },
+    {
+    "function_title" : "Subtract Margin (All Sides)",
+    "class" : "evo-no-margin"
+    },
+    {
+    "function_title" : "Subtract Margin Top",
+    "class" : "evo-no-margin-top"
+    },
+    {
+    "function_title" : "Subtract Margin Right",
+    "class" : "evo-no-margin-right"
+    },
+    {
+    "function_title" : "Subtract Margin Bottom",
+    "class" : "evo-no-margin-bottom"
+    },
+    {
+    "function_title" : "Subtract Margin Left",
+    "class" : "evo-no-margin-left"
+    },
+    {
+    "function_title" : "Add Padding Top",
+    "class" : "evo-padding-top"
+    },
+    {
+    "function_title" : "Add Padding Right",
+    "class" : "evo-padding-right"
+    },
+    {
+    "function_title" : "Add Padding Bottom",
+    "class" : "evo-padding-bottom"
+    },
+    {
+    "function_title" : "Add Padding Left",
+    "class" : "evo-padding-left"
+    },
+    {
+    "function_title" : "Subtract Padding (All Sides)",
+    "class" : "evo-no-padding"
+    },
+    {
+    "function_title" : "Subtract Padding Top",
+    "class" : "evo-no-padding-top"
+    },
+    {
+    "function_title" : "Subtract Padding Right",
+    "class" : "evo-no-padding-right"
+    },
+    {
+    "function_title" : "Subtract Padding Bottom",
+    "class" : "evo-no-padding-bottom"
+    },
+    {
+    "function_title" : "Subtract Padding Left",
+    "class" : "evo-no-padding-left"
+    },
+    {
+    "function_title" : "Spacer Margin X-small (All Sides)",
+    "class" : "evo-spacer-margin-x-small"
+    },
+    {
+    "function_title" : "Spacer Margin Small (All Sides)",
+    "class" : "evo-spacer-margin-small"
+    },
+    {
+    "function_title" : "Spacer Margin Medium (All Sides)",
+    "class" : "evo-spacer-margin-medium"
+    },
+    {
+    "function_title" : "Spacer Margin Large (All Sides)",
+    "class" : "evo-spacer-margin-large"
+    },
+    {
+    "function_title" : "Spacer Margin X-large (All Sides)",
+    "class" : "evo-spacer-margin-x-large"
+    },
+    {
+    "function_title" : "Spacer Margin XX-large (All Sides)",
+    "class" : "evo-spacer-margin-xx-large"
+    },
+    {
+    "function_title" : "Spacer Margin XXX-large (All Sides)",
+    "class" : "evo-spacer-margin-xxx-large"
+    },
+    {
+    "function_title" : "Spacer Margin Top X-small",
+    "class" : "evo-spacer-margin-top-x-small"
+    },
+    {
+    "function_title" : "Spacer Margin Top Small",
+    "class" : "evo-spacer-margin-top-small"
+    },
+    {
+    "function_title" : "Spacer Margin Top Medium",
+    "class" : "evo-spacer-margin-top-medium"
+    },
+    {
+    "function_title" : "Spacer Margin Top Large",
+    "class" : "evo-spacer-margin-top-large"
+    },
+    {
+    "function_title" : "Spacer Margin Top X-large",
+    "class" : "evo-spacer-margin-top-x-large"
+    },
+    {
+    "function_title" : "Spacer Margin Top XX-large",
+    "class" : "evo-spacer-margin-top-xx-large"
+    },
+    {
+    "function_title" : "Spacer Margin Top XXX-large",
+    "class" : "evo-spacer-margin-top-xxx-large"
+    },
+    {
+    "function_title" : "Spacer Margin Right X-small",
+    "class" : "evo-spacer-margin-top-x-small"
+    },
+    {
+    "function_title" : "Spacer Margin Right Small",
+    "class" : "evo-spacer-margin-right-small"
+    },
+    {
+    "function_title" : "Spacer Margin Right Medium",
+    "class" : "evo-spacer-margin-right-medium"
+    },
+    {
+    "function_title" : "Spacer Margin Right Large",
+    "class" : "evo-spacer-margin-right-large"
+    },
+    {
+    "function_title" : "Spacer Margin Right X-large",
+    "class" : "evo-spacer-margin-right-x-large"
+    },
+    {
+    "function_title" : "Spacer Margin Right XX-large",
+    "class" : "evo-spacer-margin-right-xx-large"
+    },
+    {
+    "function_title" : "Spacer Margin Right XXX-large",
+    "class" : "evo-spacer-margin-right-xxx-large"
+    },
+    {
+    "function_title" : "Spacer Margin Bottom X-small",
+    "class" : "evo-spacer-margin-bottom-x-small"
+    },
+    {
+    "function_title" : "Spacer Margin Bottom Small",
+    "class" : "evo-spacer-margin-bottom-small"
+    },
+    {
+    "function_title" : "Spacer Margin Bottom Medium",
+    "class" : "evo-spacer-margin-bottom-medium"
+    },
+    {
+    "function_title" : "Spacer Margin Bottom Large",
+    "class" : "evo-spacer-margin-bottom-large"
+    },
+    {
+    "function_title" : "Spacer Margin Bottom X-large",
+    "class" : "evo-spacer-margin-bottom-x-large"
+    },
+    {
+    "function_title" : "Spacer Margin Bottom XX-large",
+    "class" : "evo-spacer-margin-bottom-xx-large"
+    },
+    {
+    "function_title" : "Spacer Margin Bottom XXX-large",
+    "class" : "evo-spacer-margin-bottom-xxx-large"
+    },
+    {
+    "function_title" : "Spacer Margin Left X-small",
+    "class" : "evo-spacer-margin-left-x-small"
+    },
+    {
+    "function_title" : "Spacer Margin Left Small",
+    "class" : "evo-spacer-margin-left-small"
+    },
+    {
+    "function_title" : "Spacer Margin Left Medium",
+    "class" : "evo-spacer-margin-left-medium"
+    },
+    {
+    "function_title" : "Spacer Margin Left Large",
+    "class" : "evo-spacer-margin-left-large"
+    },
+    {
+    "function_title" : "Spacer Margin Left X-large",
+    "class" : "evo-spacer-margin-left-x-large"
+    },
+    {
+    "function_title" : "Spacer Margin Left XX-large",
+    "class" : "evo-spacer-margin-left-xx-large"
+    },
+    {
+    "function_title" : "Spacer Margin Left XXX-large",
+    "class" : "evo-spacer-margin-left-xxx-large"
+    },
+    {
+    "function_title" : "Spacer Padding X-small (All Sides)",
+    "class" : "evo-spacer-padding-x-small"
+    },
+    {
+    "function_title" : "Spacer Padding Small (All Sides)",
+    "class" : "evo-spacer-padding-small"
+    },
+    {
+    "function_title" : "Spacer Padding Medium (All Sides)",
+    "class" : "evo-spacer-padding-medium"
+    },
+    {
+    "function_title" : "Spacer Padding Large (All Sides)",
+    "class" : "evo-spacer-padding-large"
+    },
+    {
+    "function_title" : "Spacer Padding X-large (All Sides)",
+    "class" : "evo-spacer-padding-x-large"
+    },
+    {
+    "function_title" : "Spacer Padding XX-large (All Sides)",
+    "class" : "evo-spacer-padding-xx-large"
+    },
+    {
+    "function_title" : "Spacer Padding XXX-large (All Sides)",
+    "class" : "evo-spacer-padding-xxx-large"
+    },
+    {
+    "function_title" : "Spacer Padding Top X-small",
+    "class" : "evo-spacer-padding-top-x-small"
+    },
+    {
+    "function_title" : "Spacer Padding Top Small",
+    "class" : "evo-spacer-padding-top-small"
+    },
+    {
+    "function_title" : "Spacer Padding Top Medium",
+    "class" : "evo-spacer-padding-top-medium"
+    },
+    {
+    "function_title" : "Spacer Padding Top Large",
+    "class" : "evo-spacer-padding-top-large"
+    },
+    {
+    "function_title" : "Spacer Padding Top X-large",
+    "class" : "evo-spacer-padding-top-x-large"
+    },
+    {
+    "function_title" : "Spacer Padding Top XX-large",
+    "class" : "evo-spacer-padding-top-xx-large"
+    },
+    {
+    "function_title" : "Spacer Padding Top XXX-large",
+    "class" : "evo-spacer-padding-top-xxx-large"
+    },
+    {
+    "function_title" : "Spacer Padding Right X-small",
+    "class" : "evo-spacer-padding-top-x-small"
+    },
+    {
+    "function_title" : "Spacer Padding Right Small",
+    "class" : "evo-spacer-padding-right-small"
+    },
+    {
+    "function_title" : "Spacer Padding Right Medium",
+    "class" : "evo-spacer-padding-right-medium"
+    },
+    {
+    "function_title" : "Spacer Padding Right Large",
+    "class" : "evo-spacer-padding-right-large"
+    },
+    {
+    "function_title" : "Spacer Padding Right X-large",
+    "class" : "evo-spacer-padding-right-x-large"
+    },
+    {
+    "function_title" : "Spacer Padding Right XX-large",
+    "class" : "evo-spacer-padding-right-xx-large"
+    },
+    {
+    "function_title" : "Spacer Padding Right XXX-large",
+    "class" : "evo-spacer-padding-right-xxx-large"
+    },
+    {
+    "function_title" : "Spacer Padding Bottom X-small",
+    "class" : "evo-spacer-padding-bottom-x-small"
+    },
+    {
+    "function_title" : "Spacer Padding Bottom Small",
+    "class" : "evo-spacer-padding-bottom-small"
+    },
+    {
+    "function_title" : "Spacer Padding Bottom Medium",
+    "class" : "evo-spacer-padding-bottom-medium"
+    },
+    {
+    "function_title" : "Spacer Padding Bottom Large",
+    "class" : "evo-spacer-padding-bottom-large"
+    },
+    {
+    "function_title" : "Spacer Padding Bottom X-large",
+    "class" : "evo-spacer-padding-bottom-x-large"
+    },
+    {
+    "function_title" : "Spacer Padding Bottom XX-large",
+    "class" : "evo-spacer-padding-bottom-xx-large"
+    },
+    {
+    "function_title" : "Spacer Padding Bottom XXX-large",
+    "class" : "evo-spacer-padding-bottom-xxx-large"
+    },
+    {
+    "function_title" : "Spacer Padding Left X-small",
+    "class" : "evo-spacer-padding-left-x-small"
+    },
+    {
+    "function_title" : "Spacer Padding Left Small",
+    "class" : "evo-spacer-padding-left-small"
+    },
+    {
+    "function_title" : "Spacer Padding Left Medium",
+    "class" : "evo-spacer-padding-left-medium"
+    },
+    {
+    "function_title" : "Spacer Padding Left Large",
+    "class" : "evo-spacer-padding-left-large"
+    },
+    {
+    "function_title" : "Spacer Padding Left X-large",
+    "class" : "evo-spacer-padding-left-x-large"
+    },
+    {
+    "function_title" : "Spacer Padding Left XX-large",
+    "class" : "evo-spacer-padding-left-xx-large"
+    },
+    {
+    "function_title" : "Spacer Padding Left XXX-large",
+    "class" : "evo-spacer-padding-left-xxx-large"
+    },
+    {
+    "function_title" : "Table Column Width Halves",
+    "class" : "evo-tbl-column-50"
+    },
+    {
+    "function_title" : "Table Column Width Thirds",
+    "class" : "evo-tbl-column-33"
+    },
+    {
+    "function_title" : "Table Column Width Fourths",
+    "class" : "evo-tbl-column-25"
+    },
+    {
+    "function_title" : "Table Column Width Fifths",
+    "class" : "evo-tbl-column-20"
+    },
+    {
+    "function_title" : "Table Column Width Sixths",
+    "class" : "evo-tbl-column-16"
+    },
+    {
+    "function_title" : "Table Column Width Sevenths",
+    "class" : "evo-tbl-column-14"
+    },
+    {
+    "function_title" : "Table Column Width Eighths",
+    "class" : "evo-tbl-column-12"
+    }
+  ],
+  "helper_classes_responsive_data": [
+    {
+    "function_title" : "Visible Small Media Query",
+    "class" : "evo-visible-small-mediaquery"
+    },
+    {
+    "function_title" : "Visible Medium Media Query",
+    "class" : "evo-visible-medium-mediaquery"
+    },
+    {
+    "function_title" : "Visible Large Media Query",
+    "class" : "evo-visible-large-mediaquery"
+    },
+    {
+    "function_title" : "Hidden Small Media Query",
+    "class" : "evo-hidden-small-mediaquery"
+    },
+    {
+    "function_title" : "Hidden Medium Media Query",
+    "class" : "evo-hidden-medium-mediaquery"
+    },
+    {
+    "function_title" : "Hidden Large Media Query",
+    "class" : "evo-hidden-large-mediaquery"
+    }
+  ],
+  "helper_classes_icon_image": [
+    {
+    "function_title" : "Base Class",
+    "class" : "evo-image-icon"
+    },
+    {
+    "function_title" : "Size - Small",
+    "class" : "evo-image-icon-size-small"
+    },
+    {
+    "function_title" : "Size - Medium",
+    "class" : "evo-image-icon-size-medium"
+    },
+    {
+    "function_title" : "Size - Medium-large",
+    "class" : "evo-image-icon-size-medium-large"
+    },
+    {
+    "function_title" : "Size - Large",
+    "class" : "evo-image-icon-size-large"
+    },
+    {
+    "function_title" : "Size - X-large",
+    "class" : "evo-image-icon-size-x-large"
+    },
+    {
+    "function_title" : "Position Left",
+    "class" : "evo-image-icon-position-left"
+    },
+    {
+    "function_title" : "Position Right",
+    "class" : "evo-image-icon-position-right"
+    },
+    {
+    "function_title" : "Position Top",
+    "class" : "evo-image-icon-position-top"
+    },
+    {
+    "function_title" : "Position Bottom",
+    "class" : "evo-image-icon-position-bottom"
+    }
+  ],
+  "helper_classes_icon_font": [
+    {
+    "function_title" : "Size - Small",
+    "class" : "evo-icon-size-small"
+    },
+    {
+    "function_title" : "Size - Medium",
+    "class" : "evo-icon-size-medium"
+    },
+    {
+    "function_title" : "Size - Large",
+    "class" : "evo-icon-size-large"
+    },
+    {
+    "function_title" : "Size - X-large",
+    "class" : "evo-icon-size-x-large"
+    },
+    {
+    "function_title" : "Position Left",
+    "class" : "evo-icon-position-left"
+    },
+    {
+    "function_title" : "Position Right",
+    "class" : "evo-icon-position-right"
+    },
+    {
+    "function_title" : "Position Top",
+    "class" : "evo-icon-position-top"
+    },
+    {
+    "function_title" : "Position Bottom",
+    "class" : "evo-icon-position-bottom"
+    },
+    {
+    "function_title" : "Color - Black",
+    "class" : "evo-icon-color-black"
+    },
+    {
+    "function_title" : "Color Dark Gray",
+    "class" : "evo-icon-color-gray-darker"
+    },
+    {
+    "function_title" : "Color - Disabled",
+    "class" : "evo-icon-color-disabled"
+    },
+    {
+    "function_title" : "Color - Confirmation",
+    "class" : "evo-icon-color-confirmation"
+    },
+    {
+    "function_title" : "Color - Error",
+    "class" : "evo-icon-color-error"
+    },
+    {
+    "function_title" : "Color - Attention",
+    "class" : "evo-icon-color-attention"
+    },
+    {
+    "function_title" : "Color - Info",
+    "class" : "evo-icon-color-info"
+    },
+    {
+    "function_title" : "Style - Shadow",
+    "class" : "evo-icon-style-shadow"
+    },
+    {
+    "function_title" : "Style - Default Gradient",
+    "class" : "evo-icon-style-gradient"
+    },
+    {
+    "function_title" : "Style - Dark Gray Gradient",
+    "class" : "evo-icon-style-gradient-gray-darker"
+    },
+    {
+    "function_title" : "Style - Confirmation Gradient",
+    "class" : "evo-icon-style-gradient-confirmation"
+    },
+    {
+    "function_title" : "Style - Error Gradient",
+    "class" : "evo-icon-style-gradient-error"
+    },
+    {
+    "function_title" : "Style - Attention Gradient",
+    "class" : "evo-icon-style-gradient-attention"
+    },
+    {
+    "function_title" : "Style - Info Gradient",
+    "class" : "evo-icon-style-gradient-info"
+    },
+    {
+    "function_title" : "Hide Icon Text",
+    "class" : "evo-icon-hide-text"
+    }
+  ],
+  "helper_classes_icon_advanced": [
+    {
+    "function_title" : "Base Class",
+    "class" : "evo-icon-adv"
+    },
+    {
+    "function_title" : "Adjust Icon Down",
+    "class" : "evo-icon-adv-vert-adjust-down"
+    },
+    {
+    "function_title" : "Adjust Icon Up",
+    "class" : "evo-icon-adv-vert-adjust-up"
+    },
+    {
+    "function_title" : "Adjust Icon Left",
+    "class" : "evo-icon-adv-vert-adjust-left"
+    },
+    {
+    "function_title" : "Adjust Icon Right",
+    "class" : "evo-icon-adv-vert-adjust-right"
+    },
+    {
+    "function_title" : "Size - Small",
+    "class" : "evo-icon-adv-size-small"
+    },
+    {
+    "function_title" : "Size - Small-medium",
+    "class" : "evo-icon-adv-size-small-medium"
+    },
+    {
+    "function_title" : "Size - Medium",
+    "class" : "evo-icon-adv-size-medium"
+    },
+    {
+    "function_title" : "Size - Large",
+    "class" : "evo-icon-adv-size-large"
+    },
+    {
+    "function_title" : "Size - X-large",
+    "class" : "evo-icon-adv-size-x-large"
+    },
+    {
+    "function_title" : "Color - Dark Gray",
+    "class" : "evo-icon-adv-color-gray-darker"
+    },
+    {
+    "function_title" : "Color - Disabled",
+    "class" : "evo-icon-adv-color-disabled"
+    }
+  ],
+  "helper_classes_button": [
+    {
+    "function_title" : "Button Without Margin Left",
+    "class" : "evo-btn-nomargin"
+    },
+    {
+    "function_title" : "Disabled Button",
+    "class" : "evo-btn-disabled"
+    },
+    {
+    "function_title" : "Primary Button",
+    "class" : "evo-btn-primary"
+    },
+    {
+    "function_title" : "Layout - First Button",
+    "class" : "evo-btn-first"
+    },
+    {
+    "function_title" : "Size - Full Width (100%)",
+    "class" : "evo-btn-block"
+    },
+    {
+    "function_title" : "Size - XXX-small",
+    "class" : "evo-btn-xxx-small"
+    },
+    {
+    "function_title" : "Size - XX-small",
+    "class" : "evo-btn-xx-small"
+    },
+    {
+    "function_title" : "Size - X-small",
+    "class" : "evo-btn-x-small"
+    },
+    {
+    "function_title" : "Size - Small",
+    "class" : "evo-btn-small"
+    },
+    {
+    "function_title" : "Size - Medium",
+    "class" : "evo-btn-medium"
+    },
+    {
+    "function_title" : "Size - Large",
+    "class" : "evo-btn-large"
+    },
+    {
+    "function_title" : "Size - X-large",
+    "class" : "evo-btn-x-large"
+    },
+    {
+    "function_title" : "Size - XX-large",
+    "class" : "evo-btn-xx-large"
+    },
+    {
+    "function_title" : "Size - XXX-large",
+    "class" : "evo-btn-xxx-large"
+    }
+  ],
+  "helper_classes_form": [
+    {
+    "function_title" : "Base Class - Stacked Form",
+    "class" : "evo-form"
+    },
+    {
+    "function_title" : "Inline Form",
+    "class" : "evo-form-inline"
+    },
+     {
+    "function_title" : "Inline Form - Right Align Labels",
+    "class" : "evo-form-label-right"
+    },
+    {
+    "function_title" : "Multi-column Stacked Form",
+    "class" : "evo-form-table-layout"
+    }
+  ],
+  "helper_classes_list": [
+    {
+    "function_title" : "Horizontal List",
+    "class" : "evo-horizontal-list"
+    },
+    {
+    "function_title" : "Horizontal List Piped",
+    "class" : "evo-horizontal-list-piped"
+    },
+    {
+    "function_title" : "Vertical List",
+    "class" : "evo-vertical-list"
+    },
+    {
+    "function_title" : "Vertical List Bulleted",
+    "class" : "evo-vertical-list-bulleted"
+    },
+    {
+    "function_title" : "Data List",
+    "class" : "evo-data-list"
+    },
+    {
+    "function_title" : "Data List Bulleted",
+    "class" : "evo-data-list-bulleted"
+    }
+  ],
+  "sass_mixins_data": [
+    {
+    "function_title" : "Background Gradient Vertical",
+    "sass_mixin" : "@include background-gradient($startColor, $endColor);"
+    },
+    {
+    "function_title" : "Background Gradient Horizontal",
+    "sass_mixin" : "@include background-gradient-horizontal($startColor, $endColor);"
+    },
+    {
+    "function_title" : "Background Gradient Directional",
+    "sass_mixin" : "@include background-gradient-directional($startColor, $endColor, $deg);"
+    },
+    {
+    "function_title" : "Background Gradient Vertical - Three Colors",
+    "sass_mixin" : "@include background-gradient-vertical-three-colors($startColor, $midColor, $colorStop, $endColor);"
+    },
+    {
+    "function_title" : "Background Gradient Radial",
+    "sass_mixin" : "@include background-gradient-radial($innerColor, $outerColor);"
+    },
+    {
+    "function_title" : "Background Gradient IE Reset Filter",
+    "sass_mixin" : "@include ie-gradient-reset-filter;"
+    },
+    {
+    "function_title" : "Translucent Background",
+    "sass_mixin" : "@include translucent-background($hex-color: #fff, $alpha: 1);"
+    },
+    {
+    "function_title" : "Translucent Border",
+    "sass_mixin" : "@include translucent-border($hex-color: #fff, $alpha: 1);"
+    },
+    {
+    "function_title" : "Border Radius",
+    "sass_mixin" : "@include border-radius($radius);"
+    },
+    {
+    "function_title" : "Box Shadow",
+    "sass_mixin" : "@include box-shadow($h-shadow, $v-shadow, $blur, $color);"
+    },
+    {
+    "function_title" : "Text Shadow",
+    "sass_mixin" : "@include text-shadow($h-shadow, $v-shadow, $blur, $color);"
+    },
+    {
+    "function_title" : "Transition",
+    "sass_mixin" : "@include transition($transition);"
+    },
+    {
+    "function_title" : "Transform",
+    "sass_mixin" : "@include transform($transform);"
+    },
+    {
+    "function_title" : "Rotate",
+    "sass_mixin" : "@include rotate($degrees);"
+    },
+    {
+    "function_title" : "Scale",
+    "sass_mixin" : "@include scale($ratio);"
+    },
+    {
+    "function_title" : "Translate",
+    "sass_mixin" : "@include translate($x, $y);"
+    },
+    {
+    "function_title" : "Skew",
+    "sass_mixin" : "@include skew($x, $y);"
+    },
+    {
+    "function_title" : "Translate 3D",
+    "sass_mixin" : "@include translate3d($x, $y, $z);"
+    },
+    {
+    "function_title" : "Keyframe",
+    "sass_mixin" : "@include keyframe($animationName);"
+    },
+    {
+    "function_title" : "Animation",
+    "sass_mixin" : "@include animation($animationSettings);"
+    },
+    {
+    "function_title" : "Backface Visibility",
+    "sass_mixin" : "@include backface-visibility($visibility);"
+    },
+    {
+    "function_title" : "Background Clip",
+    "sass_mixin" : "@include background-clip($clip);"
+    },
+    {
+    "function_title" : "Background Size",
+    "sass_mixin" : "@include background-size($bkgd-size);"
+    },
+    {
+    "function_title" : "Box Sizing",
+    "sass_mixin" : "@include box-sizing($boxmodel);"
+    },
+    {
+    "function_title" : "User Select",
+    "sass_mixin" : "@include user-select($select);"
+    },
+    {
+    "function_title" : "Type Selection",
+    "sass_mixin" : "@include type-selection($text-color,$bkgd-color);"
+    },
+    {
+    "function_title" : "Resizable",
+    "sass_mixin" : "@include resizable($direction);"
+    },
+    {
+    "function_title" : "Hyphens",
+    "sass_mixin" : "@include hyphens($mode: auto);"
+    },
+    {
+    "function_title" : "Opacity",
+    "sass_mixin" : "@include opacity($opacity);"
+    },
+    {
+    "function_title" : "Clear Fix",
+    "sass_mixin" : "@include clearfix;"
+    },
+    {
+    "function_title" : "Align Center Block",
+    "sass_mixin" : "@include center-block;"
+    },
+    {
+    "function_title" : "Placeholder Text",
+    "sass_mixin" : "@include placeholder($color: $placeholderTextColor);"
+    },
+    {
+    "function_title" : "Text Overflow",
+    "sass_mixin" : "@include text-overflow;"
+    },
+    {
+    "function_title" : "Text Overflow Disabled",
+    "sass_mixin" : "@include text-overflow-disabled;"
+    },
+    {
+    "function_title" : "Hide Text/Image Replacement",
+    "sass_mixin" : "@include hide-text;"
+    },
+    {
+    "function_title" : "Font Face",
+    "sass_mixin" : "@include font-face($font-family, $file-path, $weight: normal, $style: normal);"
+    },
+    {
+    "function_title" : "Links",
+    "sass_mixin" : "@include href-link($baseLinkColor:#01417E, $baseLinkTextDeco:underline);"
+    },
+    {
+    "function_title" : "Links - Hover",
+    "sass_mixin" : "@include href-link-hover($baseLinkHoverTextDeco:none);"
+    },
+    {
+    "function_title" : "Text Size Adjust",
+    "sass_mixin" : "@include text-size-adjust;"
+    }
+  ],
+  "js_helper_classes_core_button_data": [
+    {
+    "function_title" : "Interactive Button",
+    "class" : "js-evo-btn-loading"
+    }
+  ],
+  "js_helper_classes_core_form_data": [
+    {
+    "function_title" : "Expanding Textarea",
+    "class" : "js-evo-textarea-expand"
+    },
+    {
+    "function_title" : "Input Numeric Mask",
+    "class" : "js-evo-numeric-mask"
+    },
+    {
+    "function_title" : "Input Autofocus",
+    "class" : "js-evo-autofocus"
+    }
+  ],
+  "js_helper_classes_core_interactive_data": [
+    {
+    "function_title" : "Fade Out - Timed",
+    "class" : "js-evo-fadeout-element"
+    },
+    {
+    "function_title" : "Fade In - Timed",
+    "class" : "js-evo-fadein-element"
+    }
+  ],
+  "js_helper_classes_scroll_pane_data": [
+    {
+    "function_title" : "Base Classes",
+    "class" : "evo-scroll-pane js-evo-scroll-pane"
+    },
+    {
+    "function_title" : "Horizontal Scrolling",
+    "class" : "js-evo-scroll-pane-horizontal"
+    },
+    {
+    "function_title" : "Horizontal and Vertical Scrolling",
+    "class" : "js-evo-scroll-pane-horizontal-vertical"
+    }
+  ],
+  "js_helper_classes_tooltip_data": [
+    {
+    "function_title" : "Base Class",
+    "class" : "js-evo-tooltip"
+    },
+    {
+    "function_title" : "Default - Position Top",
+    "class" : "js-evo-tooltip-hover-top"
+    },
+    {
+    "function_title" : "Default - Position Bottom",
+    "class" : "js-evo-tooltip-hover-bottom"
+    },
+    {
+    "function_title" : "Default - Position Left",
+    "class" : "js-evo-tooltip-hover-left"
+    },
+    {
+    "function_title" : "Default - Position Right",
+    "class" : "js-evo-tooltip-hover-right"
+    },
+    {
+    "function_title" : "Default - Position Top Left",
+    "class" : "js-evo-tooltip-hover-top-left"
+    },
+    {
+    "function_title" : "Default - Position Bottom Left",
+    "class" : "js-evo-tooltip-hover-bottom-left"
+    },
+    {
+    "function_title" : "Default - Position Top Right",
+    "class" : "js-evo-tooltip-hover-top-right"
+    },
+    {
+    "function_title" : "Default - Position Bottom Right",
+    "class" : "js-evo-tooltip-hover-bottom-right"
+    },
+    {
+    "function_title" : "Object - Position Top",
+    "class" : "js-evo-tooltip-hover-top-object"
+    },
+    {
+    "function_title" : "Object - Position Bottom",
+    "class" : "js-evo-tooltip-hover-bottom-object"
+    },
+    {
+    "function_title" : "Object - Position Left",
+    "class" : "js-evo-tooltip-hover-left-object"
+    },
+    {
+    "function_title" : "Object - Position Right",
+    "class" : "js-evo-tooltip-hover-right-object"
+    },
+    {
+    "function_title" : "Object - Position Top Left",
+    "class" : "js-evo-tooltip-hover-top-left-object"
+    },
+    {
+    "function_title" : "Object - Position Bottom Left",
+    "class" : "js-evo-tooltip-hover-bottom-left-object"
+    },
+    {
+    "function_title" : "Object - Position Top Right",
+    "class" : "js-evo-tooltip-hover-top-right-object"
+    },
+    {
+    "function_title" : "Object - Position Bottom Right",
+    "class" : "js-evo-tooltip-hover-bottom-right-object"
+    }
+  ],
+  "snippet_shortcut_data": [
+    {
+    "snippet_title" : "Grid - 1 Column",
+    "shortcut" : "alt+shift+1"
+    },
+    {
+    "snippet_title" : "Grid - 2 Column",
+    "shortcut" : "alt+shift+2"
+    },
+    {
+    "snippet_title" : "Grid - 3 Column",
+    "shortcut" : "alt+shift+3"
+    },
+    {
+    "snippet_title" : "Grid - Custom Columns",
+    "shortcut" : "alt+shift+c"
+    },
+    {
+    "snippet_title" : "Basic Container",
+    "shortcut" : "alt+b"
+    },
+    {
+    "snippet_title" : "Advanced Container",
+    "shortcut" : "alt+a"
+    },
+    {
+    "snippet_title" : "Button - Button Tag",
+    "shortcut" : "alt+shift+b"
+    },
+    {
+    "snippet_title" : "Button - Link Tag",
+    "shortcut" : "alt+shift+a"
+    },
+    {
+    "snippet_title" : "Form",
+    "shortcut" : "alt+f"
+    },
+    {
+    "snippet_title" : "Form Input Row",
+    "shortcut" : "alt+shift+i"
+    },
+    {
+    "snippet_title" : "Form Select Row",
+    "shortcut" : "alt+shift+s"
+    },
+    {
+    "snippet_title" : "Form Radio Button Row",
+    "shortcut" : "alt+shift+r"
+    },
+    {
+    "snippet_title" : "Form Checkbox Row",
+    "shortcut" : "alt+shift+x"
+    },
+    {
+    "snippet_title" : "Interactive Table",
+    "shortcut" : "alt+t"
+    },
+    {
+    "snippet_title" : "Tabs",
+    "shortcut" : "alt+shift+t"
+    },
+    {
+    "snippet_title" : "Tooltip",
+    "shortcut" : "alt+shift+p"
+    }
+  ]
+}

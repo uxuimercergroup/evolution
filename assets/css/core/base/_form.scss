@@ -77,10 +77,7 @@ $evo-input-focus-border-color: $tan-mid !default;
 
 // CONVERSATIONAL FORM - BEGINS
 	.evo-form-conversational						{
-													outline: 1px solid red;
-		label											{
-														font-size: rem-calc(20);
-														}
+		label											{font-size: rem-calc(20);}
 		input,
 		select											{
 														@include border-radius(0);
@@ -100,10 +97,10 @@ $evo-input-focus-border-color: $tan-mid !default;
 
 
 
-		input[type="data-autosize-input"]
-														{
-														width: 90px;
-														min-width: 90px;
+		input,
+		select											{
+														width: 60px;
+														min-width: 60px;
 														max-width: 300px;
 														transition: width 0.25s;
 														}
