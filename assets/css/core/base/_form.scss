@@ -97,15 +97,16 @@ $evo-input-focus-border-color: $tan-mid !default;
 
 
 
-		input,
-		select											{
+		input											{
+														@include transition(width 0.25s);
 														width: 60px;
 														min-width: 60px;
 														max-width: 300px;
-														transition: width 0.25s;
 														}
-		span	{display: none;}
-
+		select											{
+														min-width: 50px;
+														}
+		span											{display: none;}
 
 													}
 // CONVERSATIONAL FORM - ENDS
