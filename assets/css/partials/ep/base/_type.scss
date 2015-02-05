@@ -55,8 +55,75 @@ small,
 
 // LINKS
 a.reverse					{
-							color: $white;
+							color: $evo-ep-anchor-font-color-reverse;
 							}
 a.alt						{	
-							color: $pink-dark;
+							color: $evo-ep-anchor-font-color-alt;
+							}
+
+
+// ==========================================================================================
+// COSTS
+// ==========================================================================================
+
+.cost-number				{
+							font-family: $evo-font-bold-stack;
+							line-height: 1;
+							}
+
+.monthly-label				{
+							font-family: $evo-font-medium-stack;
+							font-size: rem-calc(16);
+							text-transform: uppercase;
+							}
+
+.total-label,
+.plan-label					{
+							display: block;
+							font-size: rem-calc(11);
+							}
+
+.large-cost					{
+							text-align: center;
+							color: $evo-ep-large-cost-font-color;
+	.cost-number				{
+								font-size: rem-calc(48);
+								letter-spacing: rem-calc(-2);
+		sup							{
+									vertical-align: rem-calc(16);
+									}
+								}
+	.monthly-label				{
+								position: relative;
+								left: rem-calc(-10);
+								vertical-align: rem-calc(4);
+								}
+	.total-label				{
+								position: relative;
+								top: rem-calc(-7);
+								}
+							}
+
+.small-cost					{
+							text-align: center;
+							color: $evo-ep-small-cost-font-color;
+	.cost-number				{
+								font-size: rem-calc(26);
+								letter-spacing: rem-calc(-.2);
+		sup							{
+									font-size: rem-calc(11);
+									vertical-align: rem-calc(4);
+									}
+								}
+	.monthly-label				{
+								font-family: $evo-font-bold-stack;
+								position: relative;
+								left: rem-calc(-5);
+								vertical-align: rem-calc(4);
+								text-transform: lowercase;
+								}
+							}
+
+.cost-reverse				{
+							color: $evo-ep-cost-reverse-font-color;
 							}
