@@ -8,7 +8,7 @@
 // @variables
 //
 $evo-base-input-shadow-color: $gray-lighter !default;
-$evo-input-focus-border-color: $tan-mid !default;
+$evo-input-focus-border-color: $topaz-mid !default;
 
 
 @if $use-forms == true{
@@ -30,7 +30,7 @@ $evo-input-focus-border-color: $tan-mid !default;
 								);
 		&:hover					{
 								background-color: $white;
-								border-color: $tan-mid;
+								border-color: $topaz-mid;
 								}
 		&:focus					{outline: 0;}
 							}

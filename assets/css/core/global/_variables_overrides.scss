@@ -24,15 +24,15 @@ $row-width: rem-calc(980);
 $font-family-sans-serif: relativebook, arial, Tahoma, Geneva, sans-serif;
 
 // We use these as default colors throughout
-$primary-color: $blue-sapphire-dark;
-$secondary-color: $gray-light;
-$alert-color: $red;
+$primary-color: $sapphire-dark;
+$secondary-color: $gray-lighter;
+$alert-color: $garnet;
 $success-color: $green;
-$warning-color: $orange;
-$info-color: $blue-sapphire;
+$warning-color: $citrine;
+$info-color: $sapphire;
 
 // We use these to control various global styles
-$body-font-color: $gray-darkest;
+$body-font-color: $gray-dark;
 
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -69,16 +69,16 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-color: $gray-darkest;
+$header-font-color: $gray-dark;
 $header-line-height: 1.2;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(34);
-$h2-font-size: rem-calc(26);
-$h3-font-size: rem-calc(20);
-$h4-font-size: rem-calc(14);
-$h5-font-size: rem-calc(10);
-$h6-font-size: rem-calc(10);
+$h1-font-size: rem-calc(40);
+$h2-font-size: rem-calc(32);
+$h3-font-size: rem-calc(24);
+$h4-font-size: rem-calc(22);
+$h5-font-size: rem-calc(19);
+$h6-font-size: rem-calc(16);
 
 // We use these to control header size reduction on small screens
 $h1-font-reduction: 0;
@@ -97,17 +97,17 @@ $paragraph-line-height: 1.32;
 // We use these to style anchors
 $anchor-text-decoration: underline;
 $anchor-text-decoration-hover: none;
-$anchor-font-color: $blue-sapphire-dark;
-$anchor-font-color-hover: $blue-sapphire-dark;
+$anchor-font-color: $sapphire-dark;
+$anchor-font-color-hover: $sapphire-dark;
 
 // We use these to style the <hr> element
-$hr-border-color: $gray-mid-light;
+$hr-border-color: $gray-mid;
 
 // We use these to style lists
 $list-line-height: $paragraph-line-height;
 
 // We use these to style blockquotes
-$blockquote-border: 1px solid $gray-mid-light;
+$blockquote-border: 1px solid $gray-mid;
 
 // Acronym styles
 $acronym-underline: 1px dotted $black;
@@ -117,7 +117,7 @@ $acronym-underline: 1px dotted $black;
 
 // We use these to control button text styles.
 $button-font-color: $white;
-$button-font-color-alt: $gray-darkest;
+$button-font-color-alt: $gray-dark;
 
 // We use this to set default opacity and cursor for disabled buttons.
 $button-disabled-opacity: 0.3;
@@ -179,8 +179,8 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // ------------------------------------------------------------------------------------------
 
 // KEYLINES
-// $evo-keyline-right-border-right-color: 	$gray-mid-light;
-// $evo-keyline-left-border-left-color:		$gray-mid-light;
+// $evo-keyline-right-border-right-color: 	$gray-mid;
+// $evo-keyline-left-border-left-color:		$gray-mid;
 
 // SPACER SIZES
 // $evo-spacer-size:						5px;
@@ -250,7 +250,7 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 	// $evo-icon-site-font-stack:				"#{$evo-icon-site-font-family}";
 
 // LINKS
-// $evo-base-link-visited-color:			$blue-sapphire-dark;
+// $evo-base-link-visited-color:			$sapphire-dark;
 
 // FONT WEIGHTS
 // $evo-weight-bold-100:					100;
@@ -280,7 +280,7 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $evo-hdr-rule-border-style:				dotted;
 // $evo-hdr-rule-margin-bottom:				10px;
 // $evo-hdr-rule-border-color:				$gray-darker;
-// $evo-hdr-background-color:				$gray-mid-light;
+// $evo-hdr-background-color:				$gray-mid;
 
 
 // BOXES
@@ -298,8 +298,8 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $boxHShadow:								1px;
 // $boxShadowBlur:							1px;
 // $boxBackgroundColor:						$gray-lighter;
-// $boxBorderColor:							$gray-mid-light;
-// $boxHdrBorderColor:						$gray-mid-light;
+// $boxBorderColor:							$gray-mid;
+// $boxHdrBorderColor:						$gray-mid;
 // $boxShadowColor:							$gray-darker;
 
 // ADVANCED BOX
@@ -319,7 +319,7 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $boxFeaturedBorderBottomColor:			$blue-gray-mid-dark;
 
 // $boxSidebarBackgroundColor:				$gray-lighter;
-// $boxSidebarBorderBottomColor:			$gray-mid-light;
+// $boxSidebarBorderBottomColor:			$gray-mid;
 
 // $boxInlineSearchBackgroundColor:			$gray-lighter;
 // $boxInlineSearchBorderColor:				$gray-darker;
@@ -386,29 +386,29 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 
 // NAVBAR
 // $navbarBackgroundGradientStartColor:		$gray-lightest;
-// $navbarBackgroundGradientEndColor:		$gray-mid-light;
-// $navbarBorderColor:						$gray-mid-dark;
+// $navbarBackgroundGradientEndColor:		$gray-mid;
+// $navbarBorderColor:						$gray-mid;
 // $navbarBorderBottomStyle:				solid;
-// $navbarBorderColor:						$gray-mid-dark;
+// $navbarBorderColor:						$gray-mid;
 // $navbarFontHoverColor:					#002C77;
 
 	// MENU OVERRIDES
 	// $subMenuBackgroundColor:					$gray-lighter;
-	// $subMenuBorderTopColor:					$gray-mid-dark;
+	// $subMenuBorderTopColor:					$gray-mid;
 
 	// NAVBAR MESSAGE AREA
-	// $navbarMessageBorderRightColor:			$gray-mid-dark;
+	// $navbarMessageBorderRightColor:			$gray-mid;
 
 	// TEXT NAVBAR
-	// $textNavbarBorderLeftColor:				$gray-mid-dark;
+	// $textNavbarBorderLeftColor:				$gray-mid;
 	// $textNavbarSubMenuHoverBackgroundColor:	$white;
 
 	// TABBED NAVBAR
 	// $tabbedNavbarBorderLeftColor:			$white;
-	// $tabbedNavbarHrefBorderLeftColor:		$gray-mid-light;
+	// $tabbedNavbarHrefBorderLeftColor:		$gray-mid;
 
 	// $tabbedNavbarActiveBackgroundStartColor:	$gray-lightest;
-	// $tabbedNavbarActiveBackgroundEndColor:	$gray-mid-dark;
+	// $tabbedNavbarActiveBackgroundEndColor:	$gray-mid;
 	// $tabbedNavbarSubMenuHoverBackgroundColor: $white;
 
 // SPOTLIGHT CONTAINER
@@ -421,14 +421,14 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 
 // MENUS
 // $menuBackgroundHoverColor: 				$white;
-// $menuDropShadowColor:					$gray-mid-dark;
+// $menuDropShadowColor:					$gray-mid;
 // $menuBackgroundColor:					$white;
-// $menuBorderColor:						$gray-mid-dark;
-// $menuBorderTopColor:						$gray-mid-dark;
+// $menuBorderColor:						$gray-mid;
+// $menuBorderTopColor:						$gray-mid;
 // $menuIndicatorColor1stLevel:				$gray-dark;
 // $menuFontColor:							#002C77;
 // $menuHoverFontColor:						#002C77;
-// $menuBorderTopColor2ndlevel:				$gray-mid-dark;
+// $menuBorderTopColor2ndlevel:				$gray-mid;
 
 // MEGA MENU
 // $megaMenuBackgroundColor: 				$gray-darker;
@@ -458,7 +458,7 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // ------------------------------------------------------------------------------------------
 
 // BASE
-// $footerBorderTopColor:					$gray-mid-light;
+// $footerBorderTopColor:					$gray-mid;
 // $footerFontColor:						$gray-darker;
 
 // FAT FOOTER
@@ -480,9 +480,9 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 
 // LISTS
 // ------------------------------------------------------------------------------------------
-// $horizontalListPipeBorderColor:			$gray-mid-light;
+// $horizontalListPipeBorderColor:			$gray-mid;
 // $definitionListHeaderColor:				$black;
-// $definitionDataListHeaderBorderColor:	$gray-mid-light;
+// $definitionDataListHeaderBorderColor:	$gray-mid;
 
 
 // TABLES
@@ -497,12 +497,12 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $tableMinWidthLargeBreakpoint:			100%;
 
 // $tableBackgroundColor:					$white;
-// $tableBorderColor:						$gray-mid-light;
+// $tableBorderColor:						$gray-mid;
 // $tableFontColor:							$black;
 // $tableThFontColor:						$black;
 // $tableThBackgroundColor:					$blue-gray-lighter;
 // $tableThBorderColor:						#A9BCD3;
-// $tableTdBorderColor:						$gray-mid-light;
+// $tableTdBorderColor:						$gray-mid;
 // $tableEvenTdBackgroundColor:				$white;
 // $tableEvenTdSortedBackgroundColor: 		$gray-lightest;
 // $tableOddTdBackgroundColor:				$gray-lightest;
@@ -531,7 +531,7 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 
 // ACCORDION
 // ------------------------------------------------------------------------------------------
-// $accordionBorderColor:					$gray-mid-light;
+// $accordionBorderColor:					$gray-mid;
 // $accordionHeaderBackgroundColor:			$gray-lightest;
 // $accordionHeaderFontColor:				$blue-gray-dark;
 // $accordionHeaderIconColor:				$blue-gray-dark;
@@ -548,10 +548,10 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $alternateViewsBadgeButtonBackgroundStartColor: $white;
 // $alternateViewsBadgeButtonBackgroundEndColor: $gray-light;
 // $alternateViewsBadgeButtonBorderColor: #e1dfdf;
-// $alternateViewsBadgeButtonIconColor: $gray-mid-dark;
+// $alternateViewsBadgeButtonIconColor: $gray-mid;
 // $alternateViewsBadgeButtonLinkColor: $gray-darker;
 // $alternateViewsBadgeButtonHoverBackgroundStartColor: $gray-lightest;
-// $alternateViewsBadgeButtonHoverBackgroundEndColor: $gray-mid-light;
+// $alternateViewsBadgeButtonHoverBackgroundEndColor: $gray-mid;
 // $alternateViewsBadgeButtonHoverIconColor: $gray-darker;
 // $alternateViewsBadgeButtonHoverLinkColor: $gray-darkest;
 // $alternateViewsBadgeButtonActiveBackgroundStartColor: #fef8e3;
@@ -576,9 +576,9 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $autocompleteItemBorderBottomStyle:		solid;
 // $autocompleteItemUnderlineText:			underline;
 
-// $autocompleteShadowColor:				$gray-mid-light;
+// $autocompleteShadowColor:				$gray-mid;
 // $autocompleteBackgroundColor:			$gray-lightest;
-// $autocompleteBorderColor:				$gray-mid-light;
+// $autocompleteBorderColor:				$gray-mid;
 // $autocompleteItemFontColor:				$gray-darkest;
 // $autocompleteItemBorderTopColor:			$gray-lightest;
 // $autocompleteItemBorderBottomColor:		$gray-lightest;
@@ -589,11 +589,11 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 
 // CAROUSEL
 // ------------------------------------------------------------------------------------------
-// $carouselPageCircleBackgroundColor:		$gray-mid-light;
+// $carouselPageCircleBackgroundColor:		$gray-mid;
 // $carouselPageCircleHoverBackgroundColor:	$gray-dark;
 // $carouselPageCircleActiveBackgroundColor: $gray-darker;
 // $carouselPageCircleTextColor:			$white;
-// $carouselNavIconColor:					$gray-mid-light;
+// $carouselNavIconColor:					$gray-mid;
 // $carouselNavHoverIconColor:				$gray-dark;
 
 
@@ -637,15 +637,15 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $datepickerBorderColor:					$gray-lighter;
 // $datepickerLinkColor:					$gray-darker;
 // $datepickerHdrBackgroundStartColor:		$gray-lighter;
-// $datepickerHdrBackgroundEndColor:		$gray-mid-light;
+// $datepickerHdrBackgroundEndColor:		$gray-mid;
 // $datepickerHdrFontColor:					$gray-darkest;
-// $datepickerHdrNavIconColor:				$blue-sapphire;
+// $datepickerHdrNavIconColor:				$sapphire;
 // $datepickerTodayFontColor:				$green;
 // $datepickerTodayBackgroundColor: 		$green-lightest;
 // $datepickerCurrentDayBackgroundColor: 	$tan-mid;
 // $datepickerCurrentDayFontColor:			$tan;
 // $datepickerHoverBackgroundColor: 		$tan-light;
-// $datepickerDisabledFontColor:			$gray-mid-light;
+// $datepickerDisabledFontColor:			$gray-mid;
 // $datepickerDisabledBackgroundColor:		$white;
 // $datepickerDisabledBorderColor:			$gray-lighter;
 // $datepickerMessageFontColor:				$gray-darkest;
@@ -729,7 +729,7 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $paginationLinkMaxHeight:				$paginationLinkMinWidth;
 // $paginationLinkMaxHeightLargeBreakpoint:	$paginationLinkMinWidthLargeBreakpoint;
 
-// $paginationBorderColor:					$gray-mid-light;
+// $paginationBorderColor:					$gray-mid;
 // $paginationHoverBackgroundColor:			$tan-light;
 // $paginationActiveBackgroundColor:		$tan-light;
 // $paginationActiveFontColor:				$black;
@@ -759,12 +759,12 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 
 // SLIDER
 // ------------------------------------------------------------------------------------------
-// $sliderBarBackgroundStartColor:			$gray-mid-light;
-// $sliderBarBackgroundEndColor:			$gray-mid-light;
+// $sliderBarBackgroundStartColor:			$gray-mid;
+// $sliderBarBackgroundEndColor:			$gray-mid;
 // $sliderBarRangeBackgroundColor:			$gray-darker;
 // $sliderHandleBackgroundStartColor:		$blue-gray-darker;
 // $sliderHandleBackgroundEndColor:			$blue-gray-darker;
-// $sliderHandleShadowColor: 				$gray-mid-light;
+// $sliderHandleShadowColor: 				$gray-mid;
 // $sliderHandleBorderColor:				$white;
 // $sliderHandleFocusBackgroundStartColor:	$blue-gray-darker;
 // $sliderHandleFocusBackgroundEndColor:	$blue-gray-darker;
@@ -792,8 +792,8 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $summaryCtnBorderHoverBackgroundColor:	$tan-light;
 // $summaryCtnBorderHoverBorderTopColor:	$gray-darker;
 // $summaryCtnBorderHoverBorderBottomColor:	$gray-darker;
-// $summaryCtnAlertNegativeFontColor:		$red;
-// $summaryCtnAlertNegativeHoverBackgroundColor: $red-light;
+// $summaryCtnAlertNegativeFontColor:		$garnet;
+// $summaryCtnAlertNegativeHoverBackgroundColor: $garnet-light;
 // $summaryCtnAlertPositiveFontColor:		$green;
 // $summaryCtnAlertPositiveHoverBackgroundColor: $green-lightest;
 
@@ -825,21 +825,21 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $tabsPanelBorderSize:					1px;
 // $tabsPanelBorderStyle:					solid;
 
-// $tabsBackgroundStartColor:				$gray-mid-light;
+// $tabsBackgroundStartColor:				$gray-mid;
 // $tabsBackgroundEndColor:					$gray-lighter;
-// $tabsBorderColor:						$gray-mid-light;
-// $tabsFontColor:							$blue-sapphire-dark;
+// $tabsBorderColor:						$gray-mid;
+// $tabsFontColor:							$sapphire-dark;
 // $tabsPagingNavBackgroundStartColor:		$white;
 // $tabsPagingNavBackgroundEndColor:		$white;
 // $tabsPagingNavLinkColor:					$gray-darker;
 // $tabsPagingNavHoverColor:				$blue-gray-dark;
 // $tabsSelectedTabFontColor:				$gray-lighter;
-// $tabsHoverBackgroundStartColor:			$gray-mid-dark;
+// $tabsHoverBackgroundStartColor:			$gray-mid;
 // $tabsHoverBackgroundEndColor:			$gray-lighter;
 // $tabsActiveFontColor:					$gray-darkest;
 // $tabsActiveBackgroundStartColor:			$white;
 // $tabsActiveBackgroundEndColor:			$white;
-// $tabsPanelBorderColor:					$gray-mid-light;
+// $tabsPanelBorderColor:					$gray-mid;
 // $tabsPanelBackgroundColor: 				$white;
 
 
@@ -852,7 +852,7 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $tilesOuterBorderRadiusLargeBreakpoint:	0;
 
 // $tilesBackgroundColor:					$gray-lightest;
-// $tilesHeaderBorderTopColor:				$blue-sapphire-mid;
+// $tilesHeaderBorderTopColor:				$sapphire-mid;
 // $tilesHeaderBackgroundColor:				$transparent;
 // $tilesHeaderFontColor:					$gray-darkest;
 // $tilesBodyBackgroundColor:				$white;
@@ -872,7 +872,7 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $tooltipPaddingTopBottom:				5px;
 // $tooltipPaddingLeftRight:				8px;
 
-// $tooltipShadowColor:						$gray-mid-light;
-// $tooltipBorderColor:						$gray-mid-light;
+// $tooltipShadowColor:						$gray-mid;
+// $tooltipBorderColor:						$gray-mid;
 // $tooltipBackgroundColor:					$gray-light;
 // $tooltipFontColor:						$gray-darkest;

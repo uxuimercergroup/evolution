@@ -9,7 +9,7 @@
 	// BADGE
 	.evo-badge				{
 							@include border-radius(100%);
-							background-color: $gray-mid-dark;
+							background-color: $gray-mid;
 							color: $white;
 							display: inline-block;
 							line-height: 1;
@@ -24,16 +24,16 @@
 							overflow: hidden;
 							margin: 0;
 		.evo-steps				{
-								color: $gray-mid-dark;
+								color: $gray-mid;
 								display: inline-block;
 								margin-left: $evo-base-margin;
-			a						{@include href-link($gray-mid-dark, none);}
+			a						{@include href-link($gray-mid, none);}
 			.evo-stepper-text		{
 									display: none;
 									font-family: $evo-font-medium-family;
 									}
 			[class*="evo-icon"]		{
-									color: $gray-mid-dark;
+									color: $gray-mid;
 									margin: 0;
 									}
 								}
@@ -49,10 +49,10 @@
 						 		}
 		// ACTIVE STEP
  		.evo-stepper-active		{
-			.evo-badge				{background-color: $tan-dark;}
-			[class*="evo-icon"]		{color: $tan-dark;}
+			.evo-badge				{background-color: $topaz-dark;}
+			[class*="evo-icon"]		{color: $topaz-dark;}
 			.evo-stepper-text		{
-									color: $tan-dark;
+									color: $topaz-dark;
 									font-family: $evo-font-medium-family;
 									}
 						 		}

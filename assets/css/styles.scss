@@ -35,7 +35,7 @@ html.evo-mod-js							{display:none;}
 
 .see-context-link						{font-size: rem-calc(13);}
 
-.img-border								{border: 1px solid $gray-mid-dark;}
+.img-border								{border: 1px solid $gray-mid;}
 
 
 
@@ -93,7 +93,7 @@ html.evo-mod-js							{display:none;}
 			.evo-nav-menus							{
 				.navbar-site-menu						{
 					h4										{
-															border-bottom: 1px dotted $gray-mid-light;
+															border-bottom: 1px dotted $gray-mid;
 															margin-bottom: 4px;
 															}
 					dl										{
@@ -139,7 +139,7 @@ html.evo-mod-js							{display:none;}
 .evo-ref-sliding-drawer-btn				{
 										@include border-radius(4px);
 										background-color: $gray-lightest;
-										border: 1px solid $gray-mid-light;
+										border: 1px solid $gray-mid;
 										padding: 5px 3px 5px 2px;
 										width: 28px;
 										height: 28px;
@@ -248,9 +248,9 @@ html.evo-mod-js							{display:none;}
 										}
 
 .banding-section-3						{
-										color: $blue-sapphire-dark;
-	h1, h3									{color: $blue-sapphire-dark;}
-	[class*="evo-icon"]						{color: $blue-sapphire-dark;}
+										color: $sapphire-dark;
+	h1, h3									{color: $sapphire-dark;}
+	[class*="evo-icon"]						{color: $sapphire-dark;}
 	.evo-icon-puzzle						{
 											@include rotate(35deg);
 											top: -7px;
@@ -274,7 +274,7 @@ html.evo-mod-js							{display:none;}
 			li										{margin-bottom: 0;}
 												}
 		li										{
-												color: $orange-dark;
+												color: $citrine-dark;
 												font-size: rem-calc(24);
 												margin-right: 85px;
 												margin-bottom: 35px;
@@ -359,11 +359,10 @@ html.evo-mod-js							{display:none;}
 	.color-block-02							{background-color: $gray-darkest;}
 	.color-block-03							{background-color: $gray-darker;}
 	.color-block-04							{background-color: $gray-dark;}
-	.color-block-05							{background-color: $gray-mid-dark;}
-	.color-block-06							{background-color: $gray-mid-light;}
-	.color-block-07							{background-color: $gray-light;}
-	.color-block-08							{background-color: $gray-lighter;}
-	.color-block-09							{background-color: $gray-lightest;}
+	.color-block-05							{background-color: $gray-mid;}
+	.color-block-06							{background-color: $gray-light;}
+	.color-block-07							{background-color: $gray-lighter;}
+	.color-block-08							{background-color: $gray-lightest;}
 										}
 
 .blue-gray
@@ -379,59 +378,60 @@ html.evo-mod-js							{display:none;}
 	.color-block-09							{background-color: $blue-gray-lightest;}
 										}
 
-.blue-sapphire
+.sapphire
 										{
-	.color-block-01							{background-color: $blue-sapphire;}
-	.color-block-02							{background-color: $blue-sapphire-dark;}
-	.color-block-03							{background-color: $blue-sapphire-mid;}
-	.color-block-04							{background-color: $blue-sapphire-light;}
+	.color-block-01							{background-color: $sapphire;}
+	.color-block-02							{background-color: $sapphire-dark;}
+	.color-block-03							{background-color: $sapphire-mid;}
+	.color-block-04							{background-color: $sapphire-light;}
 										}
 
-.purple
+.iolite
 										{
-	.color-block-01							{background-color: $purple;}
-	.color-block-02							{background-color: $purple-dark;}
-	.color-block-03							{background-color: $purple-mid;}
-	.color-block-04							{background-color: $purple-light;}
+	.color-block-01							{background-color: $iolite;}
+	.color-block-02							{background-color: $iolite-dark;}
+	.color-block-03							{background-color: $iolite-mid;}
+	.color-block-04							{background-color: $iolite-light;}
 										}
 
-.fuscia
+.amethyst
 										{
-	.color-block-01							{background-color: $fuscia;}
-	.color-block-02							{background-color: $fuscia-dark;}
-	.color-block-03							{background-color: $fuscia-mid;}
-	.color-block-04							{background-color: $fuscia-light;}
+	.color-block-01							{background-color: $amethyst;}
+	.color-block-02							{background-color: $amethyst-dark;}
+	.color-block-03							{background-color: $amethyst-mid;}
+	.color-block-04							{background-color: $amethyst-light;}
 										}
 
-.pink
+.ruby
 										{
-	.color-block-01							{background-color: $pink;}
-	.color-block-02							{background-color: $pink-dark;}
-	.color-block-03							{background-color: $pink-light;}
+	.color-block-01							{background-color: $ruby;}
+	.color-block-02							{background-color: $ruby-dark;}
+	.color-block-03							{background-color: $ruby-mid;}
+	.color-block-04							{background-color: $ruby-light;}
 										}
 
-.red
+.garnet
 										{
-	.color-block-01							{background-color: $red;}
-	.color-block-02							{background-color: $red-dark;}
-	.color-block-03							{background-color: $red-mid;}
-	.color-block-04							{background-color: $red-light;}
+	.color-block-01							{background-color: $garnet;}
+	.color-block-02							{background-color: $garnet-dark;}
+	.color-block-03							{background-color: $garnet-mid;}
+	.color-block-04							{background-color: $garnet-light;}
 										}
 
-.orange
+.citrine
 										{
-	.color-block-01							{background-color: $orange;}
-	.color-block-02							{background-color: $orange-dark;}
-	.color-block-03							{background-color: $orange-mid;}
-	.color-block-04							{background-color: $orange-light;}
+	.color-block-01							{background-color: $citrine;}
+	.color-block-02							{background-color: $citrine-dark;}
+	.color-block-03							{background-color: $citrine-mid;}
+	.color-block-04							{background-color: $citrine-light;}
 										}
 
-.tan
+.topaz
 										{
-	.color-block-01							{background-color: $tan;}
-	.color-block-02							{background-color: $tan-dark;}
-	.color-block-03							{background-color: $tan-mid;}
-	.color-block-04							{background-color: $tan-light;}
+	.color-block-01							{background-color: $topaz;}
+	.color-block-02							{background-color: $topaz-dark;}
+	.color-block-03							{background-color: $topaz-mid;}
+	.color-block-04							{background-color: $topaz-light;}
 										}
 
 .green
@@ -456,18 +456,18 @@ html.evo-mod-js							{display:none;}
 
 
 .colors									{
-										border: 1px dotted $gray-mid-light;
+										border: 1px dotted $gray-mid;
 										display: block;
 										height: 40px;
 										width: 100%;
 										}
 
-.evo-navbar-color						{@include background-gradient($gray-lightest, $gray-mid-light);}
+.evo-navbar-color						{@include background-gradient($gray-lightest, $gray-mid);}
 
 // TABLE COLORS
 .table-header-row						{background-color: $tableThBackgroundColor;}
 .table-subheader-row					{background-color: $tableSubHeaderBackgroundColor;}
-.table-header-row-color					{background-color: $blue-sapphire-light;}
+.table-header-row-color					{background-color: $sapphire-light;}
 .table-subheader-row-color				{background-color: #E8F0F7;}
 .table-data-row-01						{background-color: $white;}
 .table-data-row-02						{background-color: $tableOddTdBackgroundColor;}

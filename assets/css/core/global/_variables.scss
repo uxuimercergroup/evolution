@@ -35,8 +35,8 @@ $evo-zindex-dialog-position:				10003 !default;
 // ------------------------------------------------------------------------------------------
 
 // KEYLINES
-$evo-keyline-right-border-right-color: 		$gray-mid-light !default;
-$evo-keyline-left-border-left-color:		$gray-mid-light !default;
+$evo-keyline-right-border-right-color: 		$gray-mid !default;
+$evo-keyline-left-border-left-color:		$gray-mid !default;
 
 // SPACER SIZES
 $evo-spacer-size:							5px !default;
@@ -106,7 +106,7 @@ $evo-base-font-file-path:					"../fonts" !default;
 	$evo-icon-site-font-stack:					"#{$evo-icon-site-font-family}" !default;
 
 // LINKS
-$evo-base-link-visited-color:				$blue-sapphire-dark !default;
+$evo-base-link-visited-color:				$sapphire-dark !default;
 
 // FONT WEIGHTS
 $evo-weight-bold-100:						100 !default;
@@ -143,8 +143,8 @@ $boxVShadow:								1px !default;
 $boxHShadow:								1px !default;
 $boxShadowBlur:								1px !default;
 $boxBackgroundColor:						$gray-lighter !default;
-$boxBorderColor:							$gray-mid-light !default;
-$boxHdrBorderColor:							$gray-mid-light !default;
+$boxBorderColor:							$gray-mid !default;
+$boxHdrBorderColor:							$gray-mid !default;
 $boxShadowColor:							$gray-darker !default;
 
 // ADVANCED BOX
@@ -164,7 +164,7 @@ $boxFeaturedBackgroundColor:				$white !default;
 $boxFeaturedBorderBottomColor:				$blue-gray-mid-dark !default;
 
 $boxSidebarBackgroundColor:					$gray-lighter !default;
-$boxSidebarBorderBottomColor:				$gray-mid-light !default;
+$boxSidebarBorderBottomColor:				$gray-mid !default;
 
 $boxInlineSearchBackgroundColor:			$gray-lighter !default;
 $boxInlineSearchBorderColor:				$gray-darker !default;
@@ -216,29 +216,29 @@ $toolbarLinkHoverColor:						$white !default;
 
 // NAVBAR
 $navbarBackgroundGradientStartColor:		$gray-lightest !default;
-$navbarBackgroundGradientEndColor:			$gray-mid-light !default;
-$navbarBorderColor:							$gray-mid-dark !default;
+$navbarBackgroundGradientEndColor:			$gray-mid !default;
+$navbarBorderColor:							$gray-mid !default;
 $navbarBorderBottomStyle:					solid !default;
-$navbarBorderColor:							$gray-mid-dark !default;
+$navbarBorderColor:							$gray-mid !default;
 $navbarFontHoverColor:						#002C77 !default;
 
 	// MENU OVERRIDES
 	$subMenuBackgroundColor:				$gray-lighter !default;
-	$subMenuBorderTopColor:					$gray-mid-dark !default;
+	$subMenuBorderTopColor:					$gray-mid !default;
 
 	// NAVBAR MESSAGE AREA
-	$navbarMessageBorderRightColor:			$gray-mid-dark !default;
+	$navbarMessageBorderRightColor:			$gray-mid !default;
 
 	// TEXT NAVBAR
-	$textNavbarBorderLeftColor:				$gray-mid-dark !default;
+	$textNavbarBorderLeftColor:				$gray-mid !default;
 	$textNavbarSubMenuHoverBackgroundColor:	$white !default;
 
 	// TABBED NAVBAR
 	$tabbedNavbarBorderLeftColor:			$white !default;
-	$tabbedNavbarHrefBorderLeftColor:		$gray-mid-light !default;
+	$tabbedNavbarHrefBorderLeftColor:		$gray-mid !default;
 
 	$tabbedNavbarActiveBackgroundStartColor:	$gray-lightest !default;
-	$tabbedNavbarActiveBackgroundEndColor:		$gray-mid-dark !default;
+	$tabbedNavbarActiveBackgroundEndColor:		$gray-mid !default;
 	$tabbedNavbarSubMenuHoverBackgroundColor:	$white !default;
 
 // SPOTLIGHT CONTAINER
@@ -251,14 +251,14 @@ $menuLinkPadding:							7px 10px !default;
 
 // MENUS
 $menuBackgroundHoverColor: 					$white !default;
-$menuDropShadowColor:						$gray-mid-dark !default;
+$menuDropShadowColor:						$gray-mid !default;
 $menuBackgroundColor:						$white !default;
-$menuBorderColor:							$gray-mid-dark !default;
-$menuBorderTopColor:						$gray-mid-dark !default;
+$menuBorderColor:							$gray-mid !default;
+$menuBorderTopColor:						$gray-mid !default;
 $menuIndicatorColor1stLevel:				$gray-dark !default;
 $menuFontColor:								#002C77 !default;
 $menuHoverFontColor:						#002C77 !default;
-$menuBorderTopColor2ndlevel:				$gray-mid-dark !default;
+$menuBorderTopColor2ndlevel:				$gray-mid !default;
 
 // MEGA MENU
 $megaMenuBackgroundColor: 					$gray-darker !default;
@@ -288,7 +288,7 @@ $heroBannerBackgroundColor:					$gray-lighter !default;
 // ------------------------------------------------------------------------------------------
 
 // BASE
-$footerBorderTopColor:						$gray-mid-light !default;
+$footerBorderTopColor:						$gray-mid !default;
 $footerFontColor:							$gray-darker !default;
 
 // FAT FOOTER
@@ -303,16 +303,16 @@ $iconFontColor:								$blue-gray-dark !default;
 $iconFontBackgroundStartColor:				$blue-gray-dark !default;
 $iconFontBackgroundEndColor:				$blue-gray !default;
 $iconFontAdvBackgroundColor:				$blue-gray-darkest !default;
-$iconFontAdvShadowColor:					$gray-darkest !default;
+$iconFontAdvShadowColor:					$gray-darker !default;
 $iconFontAdvBorderColor:					$gray-lighter !default;
 $iconFontAdvFontColor:						$white !default;
 
 
 // LISTS
 // ------------------------------------------------------------------------------------------
-$horizontalListPipeBorderColor:				$gray-mid-light !default;
+$horizontalListPipeBorderColor:				$gray-mid !default;
 $definitionListHeaderColor:					$black !default;
-$definitionDataListHeaderBorderColor:		$gray-mid-light !default;
+$definitionDataListHeaderBorderColor:		$gray-mid !default;
 
 
 // TABLES
@@ -327,17 +327,17 @@ $tableMinWidth:								640px !default;
 $tableMinWidthLargeBreakpoint:				100% !default;
 
 $tableBackgroundColor:						$white !default;
-$tableBorderColor:							$gray-mid-light !default;
+$tableBorderColor:							$gray-mid !default;
 $tableFontColor:							$black !default;
 $tableThFontColor:							$black !default;
 $tableThBackgroundColor:					$blue-gray-lighter !default;
 $tableThBorderColor:						#A9BCD3 !default;
-$tableTdBorderColor:						$gray-mid-light !default;
+$tableTdBorderColor:						$gray-mid !default;
 $tableEvenTdBackgroundColor:				$white !default;
 $tableEvenTdSortedBackgroundColor: 			$gray-lightest !default;
 $tableOddTdBackgroundColor:					$gray-lightest !default;
 $tableOddTdSortedBackgroundColor: 			$gray-lighter !default;
-$tableRowHoverColor:						$tan-light !default;
+$tableRowHoverColor:						$topaz-light !default;
 
 // OPTIONS
 $tableDataFilterMaxWidth:					300px !default;
@@ -347,10 +347,10 @@ $tableDataFilterHeight:						24px !default;
 $tableDataFilterHeightLargeBreakpoint:		20px !default;
 
 $tableSubHeaderBackgroundColor:				#E8F0F7 !default;
-$tableSubHeaderFontColor:					$gray-darkest !default;
+$tableSubHeaderFontColor:					$gray-darker !default;
 $tableSubHeaderBorderColor:					#C3D2E5 !default;
 $tableSubTotalBackgroundColor:				$gray-lighter !default;
-$tableSubTotalFontColor:					$gray-darkest !default;
+$tableSubTotalFontColor:					$gray-darker !default;
 $tableTotalBackgroundColor:					#E6E6E6 !default;
 $tableTotalFontColor:						$black !default;
 
@@ -361,7 +361,7 @@ $tableTotalFontColor:						$black !default;
 
 // ACCORDION
 // ------------------------------------------------------------------------------------------
-$accordionBorderColor:						$gray-mid-light !default;
+$accordionBorderColor:						$gray-mid !default;
 $accordionHeaderBackgroundColor:			$gray-lightest !default;
 $accordionHeaderFontColor:					$blue-gray-dark !default;
 $accordionHeaderIconColor:					$blue-gray-dark !default;
@@ -378,17 +378,17 @@ $advancedFilterModalWidth:					700px !default;
 $alternateViewsBadgeButtonBackgroundStartColor: $white !default;
 $alternateViewsBadgeButtonBackgroundEndColor: $gray-light !default;
 $alternateViewsBadgeButtonBorderColor: #e1dfdf !default;
-$alternateViewsBadgeButtonIconColor: $gray-mid-dark !default;
+$alternateViewsBadgeButtonIconColor: $gray-mid !default;
 $alternateViewsBadgeButtonLinkColor: $gray-darker !default;
 $alternateViewsBadgeButtonHoverBackgroundStartColor: $gray-lightest !default;
-$alternateViewsBadgeButtonHoverBackgroundEndColor: $gray-mid-light !default;
+$alternateViewsBadgeButtonHoverBackgroundEndColor: $gray-mid !default;
 $alternateViewsBadgeButtonHoverIconColor: $gray-darker !default;
-$alternateViewsBadgeButtonHoverLinkColor: $gray-darkest !default;
+$alternateViewsBadgeButtonHoverLinkColor: $gray-darker !default;
 $alternateViewsBadgeButtonActiveBackgroundStartColor: #fef8e3 !default;
 $alternateViewsBadgeButtonActiveBackgroundEndColor: #f5e6b0 !default;
 $alternateViewsBadgeButtonActiveBorderColor: #f0e2b3 !default;
 $alternateViewsBadgeButtonActiveIconColor: #edc557 !default;
-$alternateViewsBadgeButtonActiveLinkColor: $gray-darkest !default;
+$alternateViewsBadgeButtonActiveLinkColor: $gray-darker !default;
 
 
 // AUTOCOMPLETE
@@ -405,24 +405,24 @@ $autocompleteItemBorderBottomSize:			1px !default;
 $autocompleteItemBorderBottomStyle:			solid !default;
 $autocompleteItemUnderlineText:				underline !default;
 
-$autocompleteShadowColor:					$gray-mid-light !default;
+$autocompleteShadowColor:					$gray-mid !default;
 $autocompleteBackgroundColor:				$gray-lightest !default;
-$autocompleteBorderColor:					$gray-mid-light !default;
-$autocompleteItemFontColor:					$gray-darkest !default;
+$autocompleteBorderColor:					$gray-mid !default;
+$autocompleteItemFontColor:					$gray-darker !default;
 $autocompleteItemBorderTopColor:			$gray-lightest !default;
 $autocompleteItemBorderBottomColor:			$gray-lightest !default;
-$autocompleteItemHighlightText:				$tan !default;
-$autocompleteItemHoverBackgroundStartColor:	$tan-light !default;
-$autocompleteItemHoverBackgroundEndColor:	$tan-light !default;
+$autocompleteItemHighlightText:				$topaz !default;
+$autocompleteItemHoverBackgroundStartColor:	$topaz-light !default;
+$autocompleteItemHoverBackgroundEndColor:	$topaz-light !default;
 
 
 // CAROUSEL
 // ------------------------------------------------------------------------------------------
-$carouselPageCircleBackgroundColor:			$gray-mid-light !default;
+$carouselPageCircleBackgroundColor:			$gray-mid !default;
 $carouselPageCircleHoverBackgroundColor:	$gray-dark !default;
 $carouselPageCircleActiveBackgroundColor:	$gray-darker !default;
 $carouselPageCircleTextColor:				$white !default;
-$carouselNavIconColor:						$gray-mid-light !default;
+$carouselNavIconColor:						$gray-mid !default;
 $carouselNavHoverIconColor:					$gray-dark !default;
 
 
@@ -466,19 +466,19 @@ $datepickerThFontColor:						$gray-darker !default;
 $datepickerBorderColor:						$gray-lighter !default;
 $datepickerLinkColor:						$gray-darker !default;
 $datepickerHdrBackgroundStartColor:			$gray-lighter !default;
-$datepickerHdrBackgroundEndColor:			$gray-mid-light !default;
-$datepickerHdrFontColor:					$gray-darkest !default;
-$datepickerHdrNavIconColor:					$blue-sapphire !default;
+$datepickerHdrBackgroundEndColor:			$gray-mid !default;
+$datepickerHdrFontColor:					$gray-darker !default;
+$datepickerHdrNavIconColor:					$sapphire !default;
 $datepickerTodayFontColor:					$green !default;
 $datepickerTodayBackgroundColor: 			$green-lightest !default;
-$datepickerCurrentDayBackgroundColor: 		$tan-mid !default;
-$datepickerCurrentDayFontColor:				$tan !default;
-$datepickerHoverBackgroundColor: 			$tan-light !default;
-$datepickerDisabledFontColor:				$gray-mid-light !default;
+$datepickerCurrentDayBackgroundColor: 		$topaz-mid !default;
+$datepickerCurrentDayFontColor:				$topaz !default;
+$datepickerHoverBackgroundColor: 			$topaz-light !default;
+$datepickerDisabledFontColor:				$gray-mid !default;
 $datepickerDisabledBackgroundColor:			$white !default;
 $datepickerDisabledBorderColor:				$gray-lighter !default;
-$datepickerMessageFontColor:				$gray-darkest !default;
-$datepickerMessageBackgroundColor:			$tan-light !default;
+$datepickerMessageFontColor:				$gray-darker !default;
+$datepickerMessageBackgroundColor:			$topaz-light !default;
 $datepickerIconColor:						$gray-darker !default;
 
 
@@ -508,7 +508,7 @@ $loadingModalWidthLargeBreakpoint:			350px !default;
 $dialogOverlayBackgroundColor:				$black !default;
 $dialogShadowColor:							$gray-darker !default;
 $dialogBackgroundColor:						$white !default;
-$dialogHdrFontColor:						$gray-darkest !default;
+$dialogHdrFontColor:						$gray-darker !default;
 $dialogContentBorderTopColor: 				$white !default;
 $dialogHdrBorderBottomColor:				$transparent !default;
 $dialogCloseIconColor:						$gray-darker !default;
@@ -544,7 +544,7 @@ $miniFilterActivePaddingLeftRight: 			4px !default;
 $miniFilterDropDownMaxWidth:				300px !default;
 
 $miniFilterLabelFontColor:					$black !default;
-$miniFilterActiveBackgroundColor: 			$tan-light !default;
+$miniFilterActiveBackgroundColor: 			$topaz-light !default;
 $miniFilterActiveFontColor:					$black !default;
 
 
@@ -558,9 +558,9 @@ $paginationLinkMinWidthLargeBreakpoint:		28px !default;
 $paginationLinkMaxHeight:					$paginationLinkMinWidth !default;
 $paginationLinkMaxHeightLargeBreakpoint:	$paginationLinkMinWidthLargeBreakpoint !default;
 
-$paginationBorderColor:						$gray-mid-light !default;
-$paginationHoverBackgroundColor:			$tan-light !default;
-$paginationActiveBackgroundColor:			$tan-light !default;
+$paginationBorderColor:						$gray-mid !default;
+$paginationHoverBackgroundColor:			$topaz-light !default;
+$paginationActiveBackgroundColor:			$topaz-light !default;
 $paginationActiveFontColor:					$black !default;
 $paginationLinkHoverColor:					$black !default;
 
@@ -586,12 +586,12 @@ $scrollPaneScrollbarHexColor:				#666 !default;
 
 // SLIDER
 // ------------------------------------------------------------------------------------------
-$sliderBarBackgroundStartColor:				$gray-mid-light !default;
-$sliderBarBackgroundEndColor:				$gray-mid-light !default;
+$sliderBarBackgroundStartColor:				$gray-mid !default;
+$sliderBarBackgroundEndColor:				$gray-mid !default;
 $sliderBarRangeBackgroundColor:				$gray-darker !default;
 $sliderHandleBackgroundStartColor:			$blue-gray-darker !default;
 $sliderHandleBackgroundEndColor:			$blue-gray-darker !default;
-$sliderHandleShadowColor: 					$gray-mid-light !default;
+$sliderHandleShadowColor: 					$gray-mid !default;
 $sliderHandleBorderColor:					$white !default;
 $sliderHandleFocusBackgroundStartColor:		$blue-gray-darker !default;
 $sliderHandleFocusBackgroundEndColor:		$blue-gray-darker !default;
@@ -616,11 +616,11 @@ $summaryCtnBorderColorLeft:					$transparent !default;
 $summaryCtnBorderFirstChildColorTop:		$gray-darker !default;
 $summaryCtnBorderFirstChildColorLeft:		$gray-darker !default;
 $summaryCtnBorderHoverTransitionSpeed:		250ms !default;
-$summaryCtnBorderHoverBackgroundColor:		$tan-light !default;
+$summaryCtnBorderHoverBackgroundColor:		$topaz-light !default;
 $summaryCtnBorderHoverBorderTopColor:		$gray-darker !default;
 $summaryCtnBorderHoverBorderBottomColor:	$gray-darker !default;
-$summaryCtnAlertNegativeFontColor:			$red !default;
-$summaryCtnAlertNegativeHoverBackgroundColor: $red-light !default;
+$summaryCtnAlertNegativeFontColor:			$garnet !default;
+$summaryCtnAlertNegativeHoverBackgroundColor: $garnet-light !default;
 $summaryCtnAlertPositiveFontColor:			$green !default;
 $summaryCtnAlertPositiveHoverBackgroundColor: $green-lightest !default;
 
@@ -651,21 +651,21 @@ $tabsPanelPadding:							$evo-base-padding !default;
 $tabsPanelBorderSize:						1px !default;
 $tabsPanelBorderStyle:						solid !default;
 
-$tabsBackgroundStartColor:					$gray-mid-light !default;
+$tabsBackgroundStartColor:					$gray-mid !default;
 $tabsBackgroundEndColor:					$gray-lighter !default;
-$tabsBorderColor:							$gray-mid-light !default;
-$tabsFontColor:								$blue-sapphire-dark !default;
+$tabsBorderColor:							$gray-mid !default;
+$tabsFontColor:								$sapphire-dark !default;
 $tabsPagingNavBackgroundStartColor:			$white !default;
 $tabsPagingNavBackgroundEndColor:			$white !default;
 $tabsPagingNavLinkColor:					$gray-darker !default;
 $tabsPagingNavHoverColor:					$blue-gray-dark !default;
 $tabsSelectedTabFontColor:					$gray-lighter !default;
-$tabsHoverBackgroundStartColor:				$gray-mid-dark !default;
+$tabsHoverBackgroundStartColor:				$gray-mid !default;
 $tabsHoverBackgroundEndColor:				$gray-lighter !default;
-$tabsActiveFontColor:						$gray-darkest !default;
+$tabsActiveFontColor:						$gray-darker !default;
 $tabsActiveBackgroundStartColor:			$white !default;
 $tabsActiveBackgroundEndColor:				$white !default;
-$tabsPanelBorderColor:						$gray-mid-light !default;
+$tabsPanelBorderColor:						$gray-mid !default;
 $tabsPanelBackgroundColor: 					$white !default;
 
 
@@ -678,9 +678,9 @@ $tilesScrollPaneHeight:						400px !default;
 $tilesOuterBorderRadiusLargeBreakpoint:		0 !default;
 
 $tilesBackgroundColor:						$gray-lightest !default;
-$tilesHeaderBorderTopColor:					$blue-sapphire-mid !default;
+$tilesHeaderBorderTopColor:					$sapphire-mid !default;
 $tilesHeaderBackgroundColor:				$transparent !default;
-$tilesHeaderFontColor:						$gray-darkest !default;
+$tilesHeaderFontColor:						$gray-darker !default;
 $tilesBodyBackgroundColor:					$white !default;
 $tilesBodyBorderColor:						$gray-light !default;
 $tilesOutsideBorderColor:					$gray-light !default;
@@ -696,7 +696,7 @@ $tooltipBorderStyle:						solid !default;
 $tooltipPaddingTopBottom:					5px !default;
 $tooltipPaddingLeftRight:					8px !default;
 
-$tooltipShadowColor:						$gray-mid-light !default;
-$tooltipBorderColor:						$gray-mid-light !default;
+$tooltipShadowColor:						$gray-mid !default;
+$tooltipBorderColor:						$gray-mid !default;
 $tooltipBackgroundColor:					$gray-light !default;
-$tooltipFontColor:							$gray-darkest !default;
+$tooltipFontColor:							$gray-darker !default;

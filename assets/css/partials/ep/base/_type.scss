@@ -15,35 +15,14 @@
 // ==========================================================================================
 
 // HEADERS
-h1							{
-							font-family: $evo-font-bold-stack;
-							letter-spacing: rem-calc(-.2);
-							}
-
-h2							{
-							font-family: $evo-font-medium-stack;
-							}
-
-h3							{
-							font-family: $evo-font-regular-stack;
-							}
-
-h4							{
-							font-family: $evo-font-regular-stack;
-							text-transform: uppercase;
-							letter-spacing: rem-calc(1);
-							}
-
-h5							{
-							font-family: $evo-font-regular-stack;
-							text-transform: uppercase;
-							letter-spacing: rem-calc(2);
-							}
-
+h1,
+h2,
+h3,
+h4,
+h5,
 h6							{
 							font-family: $evo-font-bold-stack;
 							text-transform: uppercase;
-							letter-spacing: rem-calc(2);
 							}
 
 // SMALL TEXT
@@ -63,7 +42,7 @@ a.alt						{
 
 
 // ==========================================================================================
-// COSTS
+// COSTS TYPOGRAPHY
 // ==========================================================================================
 
 .cost-number				{
@@ -126,4 +105,5 @@ a.alt						{
 
 .cost-reverse				{
 							color: $evo-ep-cost-reverse-font-color;
+	a							{color: $evo-ep-cost-reverse-font-color;}
 							}
