@@ -22,7 +22,7 @@
 	// HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
 	var evoFixFOUC = function() {
 		jQuery('html.evo-mod-js').show();
-	};
+	}
 
 	var evoFormToggleContent = function(){
 		jQuery('.js-evo-toggle-form-content').focus(function(){
@@ -32,9 +32,16 @@
 		});
 	};
 
+	var itemSelectionClassToggle = function (){
+		jQuery('.js-evo-category-highlight').click(function(event) {
+			jQuery(this).toggleClass('evo-category-highlight');
+		});
+	};
+
 // DOCUMENT READY
 //--------------------------------------------------------------------------------------------------------
 $(function() {
+
 
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
@@ -44,4 +51,5 @@ $(function() {
 		evoFixFOUC();
 
 		evoFormToggleContent();
+		itemSelectionClassToggle();
 });
