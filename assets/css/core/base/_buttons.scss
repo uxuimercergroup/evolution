@@ -103,6 +103,17 @@
 										padding-right: rem-calc(16);
 										}
 
+		&[data-evo-button-icons="left"].expand
+										{
+										padding-left: rem-calc(16);
+										padding-right: rem-calc(32);
+										}
+		&[data-evo-button-icons="right"].expand
+										{
+										padding-left: rem-calc(32);
+										padding-right: rem-calc(16);
+										}
+
 		&[data-evo-button-icons="both"].tiny,
 		&[data-evo-button-icons="left"].tiny,
 		&[data-evo-button-icons="right"].tiny
@@ -131,6 +142,17 @@
 										}
 		&[data-evo-button-icons="right"].tiny
 										{
+										padding-right: rem-calc(10);
+										}
+
+		&[data-evo-button-icons="left"].tiny.expand
+										{
+										padding-left: rem-calc(10);
+										padding-right: rem-calc(20);
+										}
+		&[data-evo-button-icons="right"].tiny.expand
+										{
+										padding-left: rem-calc(20);
 										padding-right: rem-calc(10);
 										}
 
@@ -165,6 +187,17 @@
 										padding-right: rem-calc(14);
 										}
 
+		&[data-evo-button-icons="left"].small.expand
+										{
+										padding-left: rem-calc(14);
+										padding-right: rem-calc(28);
+										}
+		&[data-evo-button-icons="right"].small.expand
+										{
+										padding-left: rem-calc(28);
+										padding-right: rem-calc(14);
+										}
+
 		&[data-evo-button-icons="both"].large,
 		&[data-evo-button-icons="left"].large,
 		&[data-evo-button-icons="right"].large
@@ -193,6 +226,17 @@
 										}
 		&[data-evo-button-icons="right"].large
 										{
+										padding-right: rem-calc(18);
+										}
+
+		&[data-evo-button-icons="left"].large.expand
+										{
+										padding-left: rem-calc(18);
+										padding-right: rem-calc(36);
+										}
+		&[data-evo-button-icons="right"].large.expand
+										{
+										padding-left: rem-calc(36);
 										padding-right: rem-calc(18);
 										}
 									}
