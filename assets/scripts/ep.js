@@ -27,7 +27,7 @@
 	var evoFormToggleContent = function(){
 		jQuery('.js-evo-toggle-form-content').focus(function(){
 			var id = 'form-item' + jQuery(this).attr('data-evo-form-toggle');
-			jQuery('#' + id).fadeToggle(800);
+			jQuery('#' + id).fadeToggle(2000);
 			return false;
 		});
 	};
