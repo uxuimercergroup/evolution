@@ -27,7 +27,7 @@ $font-family-sans-serif: relativebook, arial, Tahoma, Geneva, sans-serif;
 $primary-color: $sapphire-dark;
 $secondary-color: $gray-lighter;
 $alert-color: $garnet;
-$success-color: $green;
+$success-color: $emerald;
 $warning-color: $citrine;
 $info-color: $sapphire;
 
@@ -90,6 +90,7 @@ $h6-font-reduction: 0;
 
 // A general <small> styling
 $small-font-size: rem-calc(14);
+$small-font-color: $gray-dark;
 
 // We use these to style paragraphs
 $paragraph-line-height: 1.32;
@@ -640,8 +641,8 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $datepickerHdrBackgroundEndColor:		$gray-mid;
 // $datepickerHdrFontColor:					$gray-darkest;
 // $datepickerHdrNavIconColor:				$sapphire;
-// $datepickerTodayFontColor:				$green;
-// $datepickerTodayBackgroundColor: 		$green-lightest;
+// $datepickerTodayFontColor:				$emerald;
+// $datepickerTodayBackgroundColor: 		$emerald-light;
 // $datepickerCurrentDayBackgroundColor: 	$tan-mid;
 // $datepickerCurrentDayFontColor:			$tan;
 // $datepickerHoverBackgroundColor: 		$tan-light;
@@ -794,8 +795,8 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 // $summaryCtnBorderHoverBorderBottomColor:	$gray-darker;
 // $summaryCtnAlertNegativeFontColor:		$garnet;
 // $summaryCtnAlertNegativeHoverBackgroundColor: $garnet-light;
-// $summaryCtnAlertPositiveFontColor:		$green;
-// $summaryCtnAlertPositiveHoverBackgroundColor: $green-lightest;
+// $summaryCtnAlertPositiveFontColor:		$emerald;
+// $summaryCtnAlertPositiveHoverBackgroundColor: $emerald-light;
 
 
 // TABS

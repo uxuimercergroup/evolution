@@ -33,6 +33,10 @@ small,
 							}
 
 // LINKS
+a.link-small				{
+							font-size: rem-calc($evo-ep-anchor-font-size-small);
+							}
+
 a.reverse					{
 							color: $evo-ep-anchor-font-color-reverse;
 							}

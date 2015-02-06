@@ -120,7 +120,7 @@ html.evo-mod-js							{display:none;}
 // STYLES FOR THE DEMO SEARCH IN THE MENU NAVBAR
 .menu-search							{
 	.menu-search-btn						{
-											border-color: $green-darker;
+											border-color: $emerald-dark;
 											padding: 4px 9px;
 											margin-top: -1px;
 											min-width: 100%;
@@ -343,6 +343,8 @@ html.evo-mod-js							{display:none;}
 
 
 /*--- COLOR PAGE --------------------------------------------------------------------------*/
+
+// COLOR PALETTE SWATCH BOX
 .color-block
 										{
 										height: 50px;
@@ -434,27 +436,31 @@ html.evo-mod-js							{display:none;}
 	.color-block-04							{background-color: $topaz-light;}
 										}
 
-.green
+.peridot
 										{
-	.color-block-01							{background-color: $green;}
-	.color-block-02							{background-color: $green-darker;}
-	.color-block-03							{background-color: $green-dark;}
-	.color-block-04							{background-color: $green-mid;}
-	.color-block-05							{background-color: $green-light;}
-	.color-block-06							{background-color: $green-lighter;}
-	.color-block-07							{background-color: $green-lightest;}
+	.color-block-01							{background-color: $peridot;}
+	.color-block-02							{background-color: $peridot-dark;}
+	.color-block-03							{background-color: $peridot-mid;}
+	.color-block-04							{background-color: $peridot-light;}
 										}
 
-.blue-green
+.emerald
 										{
-	.color-block-01							{background-color: $blue-green;}
-	.color-block-02							{background-color: $blue-green-dark;}
-	.color-block-03							{background-color: $blue-green-mid;}
-	.color-block-04							{background-color: $blue-green-light;}
+	.color-block-01							{background-color: $emerald;}
+	.color-block-02							{background-color: $emerald-dark;}
+	.color-block-03							{background-color: $emerald-mid;}
+	.color-block-04							{background-color: $emerald-light;}
 										}
 
+.turquoise
+										{
+	.color-block-01							{background-color: $turquoise;}
+	.color-block-02							{background-color: $turquoise-dark;}
+	.color-block-03							{background-color: $turquoise-mid;}
+	.color-block-04							{background-color: $turquoise-light;}
+										}
 
-
+// COLOR SWATCH BOX
 .colors									{
 										border: 1px dotted $gray-mid;
 										display: block;
@@ -462,7 +468,12 @@ html.evo-mod-js							{display:none;}
 										width: 100%;
 										}
 
+// NAVBAR COLORS
 .evo-navbar-color						{@include background-gradient($gray-lightest, $gray-mid);}
+
+// BUTTON COLORS
+.btn-primary							{background-color: $sapphire-dark;}
+.btn-secondary							{background-color: $gray-lighter;}
 
 // TABLE COLORS
 .table-header-row						{background-color: $tableThBackgroundColor;}
