@@ -110,54 +110,88 @@
 <hr />
 
 <p>
-	<a href="#" title="link">&lt;a&gt; anchor link</a>
-	<br /><a href="#" class="link-small" title="link">&lt;a&gt; anchor link small - See Details</a>
-	<br /><a href="#" class="reverse" title="link" data-evo-background-color="sapphire-dark">&lt;a&gt; reverse color anchor link</a>
-	<br /><a href="#" class="alt" title="link">&lt;a&gt; custom color anchor link</a>
+	<a href="#" title="">&lt;a&gt; anchor link</a>
+	<br /><a href="#" class="evo-anchor-small" title="">&lt;a&gt; anchor link small - See Details</a>
+	<br /><a href="#" class="evo-anchor-reverse" title="" data-evo-background-color="sapphire-dark">&lt;a&gt; reverse color anchor link</a>
+	<br /><a href="#" class="evo-anchor-alt" title="">&lt;a&gt; custom color anchor link</a>
 	<br /> <abbr title="title">&lt;abbr&gt; abbreviation</abbr>
 	<br /> <em>&lt;em&gt; emphasis stress or italic</em>
 	<br /> <strong>&lt;strong&gt; strong importance or bold</strong>
 	<br />			
 	<small>&lt;small&gt; small print, footnotes, or form helper text</small>
-	<label class="small-text">Small label</label>
+	<label class="evo-small-text">Small label</label>
 </p>
 
 <br />
 
 <h3 class="evo-hdr-rule">Type - Cost</h3>
 
-<p class="large-cost">
-	<span class="cost-number">
+<p class="evo-large-cost">
+	<span class="evo-cost-number">
 		<sup>$</sup>200
 	</span>
-	<sub class="monthly-label">/mo</sub>
-	<span class="total-label">total cost</span>
+	<sub class="evo-monthly-label">/mo</sub>
+	<span class="evo-total-label">total cost</span>
 </p>
 
-<p class="large-cost cost-reverse" data-evo-background-color="garnet">
-	<span class="cost-number">
+<p class="evo-large-cost">
+	<span class="evo-cost-number" data-evo-font-color="ruby-mid">
 		<sup>$</sup>200
 	</span>
-	<sub class="monthly-label">/mo</sub>
-	<span class="total-label">total cost</span>
+	<sub class="evo-monthly-label" data-evo-font-color="ruby-mid">/mo</sub>
+	<span class="evo-total-label" data-evo-font-color="ruby-mid">total cost</span>
 </p>
 
-<p class="small-cost">
-	<span class="cost-number">
-		<sup>$</sup>125.00
+<p class="evo-large-cost">
+	<span class="evo-cost-number" data-evo-font-color="sapphire-mid">
+		<sup>$</sup>200
 	</span>
-	<sub class="monthly-label">/month</sub>
-	<span class="plan-label">Medical Plan Company B</span>
-	<a href="#" class="alt plan-label">The benefits in this plan are different from your selections</a>
+	<sub class="evo-monthly-label" data-evo-font-color="sapphire-mid">/mo</sub>
+	<span class="evo-total-label" data-evo-font-color="sapphire-mid">total cost</span>
 </p>
 
-<p class="small-cost cost-reverse" data-evo-background-color="garnet">
-	<span class="cost-number">
+<p class="evo-large-cost evo-cost-reverse" data-evo-background-color="garnet">
+	<span class="evo-cost-number">
+		<sup>$</sup>200
+	</span>
+	<sub class="evo-monthly-label">/mo</sub>
+	<span class="evo-total-label">total cost</span>
+</p>
+
+<p class="evo-small-cost">
+	<span class="evo-cost-number">
 		<sup>$</sup>125.00
 	</span>
-	<sub class="monthly-label">/month</sub>
-	<span class="plan-label">Medical Plan Company B</span>
-	<a href="#" class="alt plan-label">The benefits in this plan are different from your selections</a>
+	<sub class="evo-monthly-label">/month</sub>
+	<span class="evo-plan-label">Medical Plan Company B</span>
+	<a href="#" class="evo-plan-label">The benefits in this plan are different from your selections</a>
+</p>
+
+<p class="evo-small-cost">
+	<span class="evo-cost-number" data-evo-font-color="ruby-mid">
+		<sup>$</sup>125.00
+	</span>
+	<sub class="evo-monthly-label" data-evo-font-color="ruby-mid">/month</sub>
+	<span class="evo-plan-label" data-evo-font-color="ruby-mid">Medical Plan Company B</span>
+	<a href="#" class="evo-plan-label">The benefits in this plan are different from your selections</a>
+</p>
+
+<p class="evo-small-cost">
+	<span class="evo-cost-number" data-evo-font-color="sapphire-mid">
+		<sup>$</sup>125.00
+	</span>
+	<sub class="evo-monthly-label" data-evo-font-color="sapphire-mid">/month</sub>
+	<span class="evo-plan-label" data-evo-font-color="sapphire-mid">Medical Plan Company B</span>
+	<a href="#" class="evo-plan-label">The benefits in this plan are different from your selections</a>
+</p>
+
+<p class="evo-small-cost evo-cost-reverse" data-evo-background-color="garnet">
+	<span class="evo-cost-number">
+		<sup>$</sup>125.00
+	</span>
+	<sub class="evo-monthly-label">/month</sub>
+	<span class="evo-plan-label">Medical Plan Company B</span>
+	<a href="#" class="evo-plan-label">The benefits in this plan are different from your selections</a>
 </p>
 
 <br />
@@ -166,98 +200,98 @@
 <!-- COLORS - BEGINS -->
 <h3 class="evo-hdr-rule">Color Palette</h3>
 
-<div class="base evo-margin-bottom">
+<div class="evo-margin-bottom">
 	<h5>Base</h5>
-	<div class="color-block color-block-01">#000000</div>
-	<div class="color-block color-block-02">#FFFFFF</div>
+	<div class="color-block" data-evo-background-color="black">#000000</div>
+	<div class="color-block" data-evo-background-color="white">#FFFFFF</div>
 </div>
 
-<div class="gray evo-margin-bottom">
+<div class="evo-margin-bottom">
 	<h5>Gray</h5>
-	<div class="color-block color-block-03">#37424A</div>
-	<div class="color-block color-block-04">#404040</div>
-	<div class="color-block color-block-05">#808080</div>
-	<div class="color-block color-block-06">#BFBFBF</div>
+	<div class="color-block" data-evo-background-color="gray-darker">#37424A</div>
+	<div class="color-block" data-evo-background-color="gray-dark">#404040</div>
+	<div class="color-block" data-evo-background-color="gray-mid">#808080</div>
+	<div class="color-block" data-evo-background-color="gray-light">#BFBFBF</div>
 </div>
 
-<div class="sapphire evo-margin-bottom">
+<div class="evo-margin-bottom">
 	<h5>Sapphire</h5>
-	<div class="color-block color-block-01">#002C77</div>
-	<div class="color-block color-block-02">#006D9E</div>
-	<div class="color-block color-block-03">#00A8C8</div>
-	<div class="color-block color-block-04">#A6E2EF</div>
+	<div class="color-block" data-evo-background-color="sapphire">#002C77</div>
+	<div class="color-block" data-evo-background-color="sapphire-dark">#006D9E</div>
+	<div class="color-block" data-evo-background-color="sapphire-mid">#00A8C8</div>
+	<div class="color-block" data-evo-background-color="sapphire-light">#A6E2EF</div>
 </div>
 
-<div class="iolite evo-margin-bottom">
+<div class="evo-margin-bottom">
 	<h5>Iolite</h5>
-	<div class="color-block color-block-01">#43286D</div>
-	<div class="color-block color-block-02">#595998</div>
-	<div class="color-block color-block-03">#6F85C2</div>
-	<div class="color-block color-block-04">#C5CAE7</div>
+	<div class="color-block" data-evo-background-color="iolite">#43286D</div>
+	<div class="color-block" data-evo-background-color="iolite-dark">#595998</div>
+	<div class="color-block" data-evo-background-color="iolite-mid">#6F85C2</div>
+	<div class="color-block" data-evo-background-color="iolite-light">#C5CAE7</div>
 </div>
 
-<div class="amethyst evo-margin-bottom">
+<div class="evo-margin-bottom">
 	<h5>Amethyst</h5>
-	<div class="color-block color-block-01">#570054</div>
-	<div class="color-block color-block-02">#932077</div>
-	<div class="color-block color-block-03">#CF3D96</div>
-	<div class="color-block color-block-04">#E7B8D6</div>
+	<div class="color-block" data-evo-background-color="amethyst">#570054</div>
+	<div class="color-block" data-evo-background-color="amethyst-dark">#932077</div>
+	<div class="color-block" data-evo-background-color="amethyst-mid">#CF3D96</div>
+	<div class="color-block" data-evo-background-color="amethyst-light">#E7B8D6</div>
 </div>
 
-<div class="ruby evo-margin-bottom">
+<div class="evo-margin-bottom">
 	<h5>Ruby</h5>
-	<div class="color-block color-block-01">#690031</div>
-	<div class="color-block color-block-02">#A9194F</div>
-	<div class="color-block color-block-03">#ED2C67</div>
-	<div class="color-block color-block-04">#F7B6BB</div>
+	<div class="color-block" data-evo-background-color="ruby">#690031</div>
+	<div class="color-block" data-evo-background-color="ruby-dark">#A9194F</div>
+	<div class="color-block" data-evo-background-color="ruby-mid">#ED2C67</div>
+	<div class="color-block" data-evo-background-color="ruby-light">#F7B6BB</div>
 </div>
 
-<div class="garnet evo-margin-bottom">
+<div class="evo-margin-bottom">
 	<h5>Garnet</h5>
-	<div class="color-block color-block-01">#820009</div>
-	<div class="color-block color-block-02">#BB2C2B</div>
-	<div class="color-block color-block-03">#EF4E45</div>
-	<div class="color-block color-block-04">#F9BEAD</div>
+	<div class="color-block" data-evo-background-color="garnet">#820009</div>
+	<div class="color-block" data-evo-background-color="garnet-dark">#BB2C2B</div>
+	<div class="color-block" data-evo-background-color="garnet-mid">#EF4E45</div>
+	<div class="color-block" data-evo-background-color="garnet-light">#F9BEAD</div>
 </div>
 
-<div class="citrine evo-margin-bottom">
+<div class="evo-margin-bottom">
 	<h5>Citrine</h5>
-	<div class="color-block color-block-01">#8D380A</div>
-	<div class="color-block color-block-02">#C55F24</div>
-	<div class="color-block color-block-03">#F48132</div>
-	<div class="color-block color-block-04">#FCCFAB</div>
+	<div class="color-block" data-evo-background-color="citrine">#8D380A</div>
+	<div class="color-block" data-evo-background-color="citrine-dark">#C55F24</div>
+	<div class="color-block" data-evo-background-color="citrine-mid">#F48132</div>
+	<div class="color-block" data-evo-background-color="citrine-light">#FCCFAB</div>
 </div>
 
-<div class="topaz evo-margin-bottom">
+<div class="evo-margin-bottom">
 	<h5>Topaz</h5>
-	<div class="color-block color-block-01">#905501</div>
-	<div class="color-block color-block-02">#C98414</div>
-	<div class="color-block color-block-03">#FBAE17</div>
-	<div class="color-block color-block-04">#FFDDAC</div>
+	<div class="color-block" data-evo-background-color="topaz">#905501</div>
+	<div class="color-block" data-evo-background-color="topaz-dark">#C98414</div>
+	<div class="color-block" data-evo-background-color="topaz-mid">#FBAE17</div>
+	<div class="color-block" data-evo-background-color="topaz-light">#FFDDAC</div>
 </div>
 
-<div class="peridot evo-margin-bottom">
+<div class="evo-margin-bottom">
 	<h5>Peridot</h5>
-	<div class="color-block color-block-01">#516021</div>
-	<div class="color-block color-block-02">#838E30</div>
-	<div class="color-block color-block-03">#B3BA35</div>
-	<div class="color-block color-block-04">#D9D99F</div>
+	<div class="color-block" data-evo-background-color="peridot">#516021</div>
+	<div class="color-block" data-evo-background-color="peridot-dark">#838E30</div>
+	<div class="color-block" data-evo-background-color="peridot-mid">#B3BA35</div>
+	<div class="color-block" data-evo-background-color="peridot-light">#D9D99F</div>
 </div>
 
-<div class="emerald evo-margin-bottom">
+<div class="evo-margin-bottom">
 	<h5>Emerald</h5>
-	<div class="color-block color-block-01">#00582D</div>
-	<div class="color-block color-block-02">#128C3F</div>
-	<div class="color-block color-block-03">#72BE44</div>
-	<div class="color-block color-block-04">#BDDDA3</div>
+	<div class="color-block" data-evo-background-color="emerald">#00582D</div>
+	<div class="color-block" data-evo-background-color="emerald-dark">#128C3F</div>
+	<div class="color-block" data-evo-background-color="emerald-mid">#72BE44</div>
+	<div class="color-block" data-evo-background-color="emerald-light">#BDDDA3</div>
 </div>
 
-<div class="turquoise evo-margin-bottom">
+<div class="evo-margin-bottom">
 	<h5>Turquoise</h5>
-	<div class="color-block color-block-01">#004C50</div>
-	<div class="color-block color-block-02">#008075</div>
-	<div class="color-block color-block-03">#0FB694</div>
-	<div class="color-block color-block-04">#A7D9C8</div>
+	<div class="color-block" data-evo-background-color="turquoise">#004C50</div>
+	<div class="color-block" data-evo-background-color="turquoise-dark">#008075</div>
+	<div class="color-block" data-evo-background-color="turquoise-mid">#0FB694</div>
+	<div class="color-block" data-evo-background-color="turquoise-light">#A7D9C8</div>
 </div>
 
 <br />

@@ -149,9 +149,9 @@
 		a[class^="evo-icon-"].evo-icon-color-black
 												{color: $iconFontColorBlack !important;}
 
-		[class^="evo-icon-"].evo-icon-color-gray-darker,
-		a[class^="evo-icon-"].evo-icon-color-gray-darker
-												{color: $iconFontColorGrayDarker !important;}
+		[class^="evo-icon-"].evo-icon-color-gray-dark,
+		a[class^="evo-icon-"].evo-icon-color-gray-dark
+												{color: $iconFontColorGrayDark !important;}
 
 		[class^="evo-icon-"].evo-icon-color-disabled,
 		a[class^="evo-icon-"].evo-icon-color-disabled
@@ -188,11 +188,11 @@
 												-webkit-background-clip: text;
 												-webkit-text-fill-color: transparent;
 												}
-		[class^="evo-icon-"].evo-icon-style-gradient-gray-darker,
-		a[class^="evo-icon-"].evo-icon-style-gradient-gray-darker
+		[class^="evo-icon-"].evo-icon-style-gradient-gray-dark,
+		a[class^="evo-icon-"].evo-icon-style-gradient-gray-dark
 												{
-												color:  $iconFontColorGrayDarker;
-												background: -webkit-linear-gradient(top, $iconFontGrayDarkerBackgroundStartColor, $iconFontGrayDarkerBackgroundEndColor);
+												color:  $iconFontColorGrayDark;
+												background: -webkit-linear-gradient(top, $iconFontGrayDarkBackgroundStartColor, $iconFontGrayDarkBackgroundEndColor);
 												-webkit-background-clip: text;
 												-webkit-text-fill-color: transparent;
 												}
@@ -304,8 +304,8 @@
 												}
 
 		// ADVANCED ICON FONT ON CIRCLE SHIELD COLOR HELPERS
-		.evo-icon-adv.evo-icon-adv-color-gray-darker
-												{background-color: $iconFontAdvGrayDarkerBackgroundColor;}
+		.evo-icon-adv.evo-icon-adv-color-gray-dark
+												{background-color: $iconFontAdvGrayDarkBackgroundColor;}
 		.evo-icon-adv.evo-icon-adv-color-disabled
 												{
 												@include box-shadow(0, 0, 2px, $iconFontAdvDisabledShadowColor);
