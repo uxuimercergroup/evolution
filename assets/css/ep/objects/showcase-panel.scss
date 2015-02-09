@@ -1,0 +1,39 @@
+/*------------------------------------------------------------------------------------------
+Mercer Evolution - Employee Portal Family - Site CSS
+DATE - February, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+-------------------------------------------------------------------------------------------*/
+
+// SHOWCASE PANEL - BEGINS
+	$evo-form-showcase-panel-h-shadow: 0 !default;
+	$evo-form-showcase-panel-v-shadow: rem-calc(2) !default;
+	$evo-form-showcase-panel-blur: rem-calc(8) !default;
+	$evo-form-showcase-panel-color: $gray-mid !default;
+	$evo-form-showcase-panel-padding: rem-calc(25) 0 rem-calc(23) 0 !default;
+	$evo-form-showcase-panel-fixed-z-index: 1000 !default;
+
+	.evo-showcase-panel					{
+										@include box-shadow($evo-form-showcase-panel-h-shadow, $evo-form-showcase-panel-v-shadow, $evo-form-showcase-panel-blur, $evo-form-showcase-panel-color);
+		li									{
+											padding: $evo-form-showcase-panel-padding;
+			.evo-icon-adv						{
+												background-color: $white;
+												border: 0;
+												display: inline-block;
+												float: none;
+				[class*="evo-icon-"]					{
+														color: $emerald-dark;
+														top: 2px;
+														}
+												}
+											}
+										}
+	.evo-showcase-panel-fixed			{
+										position: fixed;
+										top: 0;
+										left: 0;
+										z-index: $evo-form-showcase-panel-fixed-z-index;
+										width: 100%;
+										margin-left: 0;
+										}
+// SHOWCASE PANEL - ENDS
