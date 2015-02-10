@@ -40,7 +40,7 @@
 @import 'core/foundation/foundation/foundation.tab.js';
 @import 'core/foundation/foundation/foundation.tooltip.js';
 @import 'core/foundation/foundation/foundation.topbar.js';
-@import 'core/foundation/foundation/foundation.slider.js';
+// @import 'core/foundation/foundation/foundation.slider.js'; // Using jQuery UI Slider instead
 
 
 // =======================================================================================================
@@ -112,6 +112,7 @@
 // @import "core/objects/content_modal.js"; // Keep but use Foundation Reveal + Tabs
 @import "core/objects/datepicker.js";
 // @import "core/objects/dialog.js"; // Marked for removal (Foundation replaces)
+@import "core/objects/off_canvas.js";
 // @import "core/objects/profile_containers.js"; // Marked for removal (Foundation replaces)
 @import "core/objects/scroll_pane.js";
 @import "core/objects/slider.js";

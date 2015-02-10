@@ -189,7 +189,7 @@
 		{{ "foundation.tab.js" | asset_url | script_tag }}
 		{{ "foundation.tooltip.js" | asset_url | script_tag }}
 		{{ "foundation.topbar.js" | asset_url | script_tag }}
-		{{ "foundation.slider.js" | asset_url | script_tag }}
+		<!-- {{ "foundation.slider.js" | asset_url | script_tag }} -->
 
 		<!--
 		// =======================================================================================================
@@ -301,6 +301,11 @@
 		-->
 
 		{{ "site_main.js" | asset_url | script_tag }}
+
+		<!-- FOUNDATION SCRIPTS INITIALIZATION -->
+		<script>
+			$(document).foundation();
+		</script>
 
 	</body>
 </html>
