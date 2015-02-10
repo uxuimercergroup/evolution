@@ -1,26 +1,27 @@
 /*------------------------------------------------------------------------------------------
-Mercer Evolution - Employee Portal Family - Site CSS
+Mercer Evolution - Employee Portal Family - Conversational Form Partial
 DATE - February 9, 2015
 AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 -------------------------------------------------------------------------------------------*/
 
+$evo-form-conversational-label-font-size: rem-calc(22) !default;
+$evo-form-conversational-label-color: $gray-dark !default;
+
+$evo-form-conversational-inputs-border-radius: 0 !default;
+$evo-form-conversational-inputs-bg-color: $gray-lightest !default;
+$evo-form-conversational-inputs-border: 0 !default;
+$evo-form-conversational-inputs-border-bottom-with: 1px !default;
+$evo-form-conversational-inputs-border-bottom-style: solid !default;
+$evo-form-conversational-inputs-border-bottom-color: $gray-light !default;
+
+$evo-form-conversational-input-transition-time: 0.25s !default;
+$evo-form-conversational-input-width: rem-calc(80) !default;
+$evo-form-conversational-input-min-width: rem-calc(80) !default;
+$evo-form-conversational-input-max-width: 300px !default;
+$evo-form-conversational-select-min-width: 50px !default;
+
+
 // CONVERSATIONAL FORM - BEGINS
-	$evo-form-conversational-label-font-size: rem-calc(22) !default;
-	$evo-form-conversational-label-color: $gray-dark !default;
-
-	$evo-form-conversational-inputs-border-radius: 0 !default;
-	$evo-form-conversational-inputs-bg-color: $gray-lightest !default;
-	$evo-form-conversational-inputs-border: 0 !default;
-	$evo-form-conversational-inputs-border-bottom-with: 1px !default;
-	$evo-form-conversational-inputs-border-bottom-style: solid !default;
-	$evo-form-conversational-inputs-border-bottom-color: $gray-light !default;
-
-	$evo-form-conversational-input-transition-time: 0.25s !default;
-	$evo-form-conversational-input-width: rem-calc(80) !default;
-	$evo-form-conversational-input-min-width: rem-calc(80) !default;
-	$evo-form-conversational-input-max-width: 300px !default;
-	$evo-form-conversational-select-min-width: 50px !default;
-
 	.evo-form-conversational						{
 		label											{
 														color: $evo-form-conversational-label-color;
