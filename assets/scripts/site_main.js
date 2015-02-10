@@ -98,6 +98,16 @@
 
 // DOCUMENT READY
 //--------------------------------------------------------------------------------------------------------
+
+$(document).foundation({
+
+	// FOUNDATION INITIALIZATIONS
+	//----------------------------------------------------------------------------------------------------
+
+	
+
+});
+
 $(function() {
 
 	// INITIALIZATIONS
@@ -441,7 +451,5 @@ $(function() {
 
 			// Advanced filter example
 			// evoAdvancedFilter('js-evo-advanced-filter-example');
-
-
-
+			
 });
