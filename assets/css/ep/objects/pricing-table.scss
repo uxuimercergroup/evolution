@@ -1,0 +1,85 @@
+/*------------------------------------------------------------------------------------------
+Mercer Evolution - Employee Portal Family - Site CSS
+DATE - February 10, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+-------------------------------------------------------------------------------------------*/
+
+// PRICING TABLE - BEGINS
+	.evo-price-table			{
+								@include clearfix;
+								padding: 0;
+								margin: 0;
+		[class*="small-block-grid-"]
+									{
+									background-color: $gray-lighter;
+									font-size: rem-calc(22);
+									padding: rem-calc(14) rem-calc(10) 0 rem-calc(10);
+									margin-bottom: rem-calc(2);
+									}
+
+		.evo-price-table-row		{
+
+		// ITEM LABEL - BEGINS
+			.evo-item-label-ctn			{
+				li							{
+											padding-bottom: 0;
+											}
+				.evo-item-label				{
+											color: $gray-light;
+											font-size: rem-calc(14);
+											text-transform: uppercase;
+											position: relative;
+											top: 6px;
+											}
+										}
+		// ITEM LABEL - ENDS
+			
+		// ITEM - BEGINS
+			.evo-item					{
+										color: $gray-dark;
+										}
+			.evo-item-amt				{
+										color: $gray-dark;
+										text-align: right;
+				.evo-item-amt-label			{
+											color: $gray-light;
+											font-size: rem-calc(14);
+											text-align: right;
+											position: relative;
+											top: -6px;
+											}
+										}
+		// ITEM - ENDS
+									}
+
+	// TOTAL ROW - BEGINS
+		.evo-price-table-break-down-row	{
+									@extend .evo-price-table-row;
+									background-color: $gray-light;
+			.break-down-label			{
+										@extend .evo-item;
+										text-transform: uppercase;
+										}
+			.break-down-amt				{
+										@extend .evo-item-amt;
+										}
+									}
+	// TOTAL ROW - ENDS
+
+	// TOTAL ROW - BEGINS
+		.evo-price-table-total-row	{
+									background-color: $gray-dark;
+			.total-label				{
+										@extend .evo-item;
+										color: $white;
+										text-transform: uppercase;
+										}
+			.total-amt					{
+										@extend .evo-item-amt;
+										color: $white;
+										}
+									}
+	// TOTAL ROW - ENDS
+
+								}
+// PRICING TABLE - ENDS
