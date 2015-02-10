@@ -56,6 +56,7 @@ $evo-input-focus-border-color: $topaz-mid !default;
 	textarea										{
 													@include border-radius($global-radius);
 													@include box-shadow(inset 0, 1px, 1px, $evo-base-input-shadow-color);
+													font-family: $evo-font-regular-stack;
 													}
 
 	label											{font-family: $evo-font-medium-stack;}
