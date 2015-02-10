@@ -4,21 +4,17 @@
 // AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
+//
+// @variables
+//
+$evo-button-min-width: 100 !default;
+$evo-button-font-color-visited:	$button-font-color !default;
+$evo-button-font-color-alt-visited: $button-font-color-alt !default;
+
+
 @if $use-buttons == true{
 
-	//
-	// @variables
-	//
-
-	$evo-button-min-width: 100 !default;
-	$evo-button-font-color-visited:	$button-font-color !default;
-	$evo-button-font-color-alt-visited: $button-font-color-alt !default;
-
-
-	//
 	// CORE BUTTON SETUP
-	//
-
 	.evo-btn 						{
 									min-width: rem-calc($evo-button-min-width);
 

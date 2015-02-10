@@ -4,7 +4,6 @@
 // AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
-
 //
 // @variables
 //
@@ -73,7 +72,7 @@ $evo-tabs-panel-bg-color: $white !default;
 
 
 
-
+	// OLD TABS USING JQUERY UI
 	.evo-tabs.ui-tabs										{
 															position:relative; // position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed")
 															margin-bottom:$tabsSetMarginBottom;

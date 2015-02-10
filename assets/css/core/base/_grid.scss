@@ -9,33 +9,42 @@
 //
 $evo-grid-device-padding: 0 rem-calc(10) !default;
 
-.evo-row-margin-bottom
-	{
-	@media #{$small-up}		{margin-bottom: 10px;}
-	@media #{$medium-up}	{margin-bottom: 20px;}
-	@media #{$large-up}		{margin-bottom: 30px;}
-	}
 
-section[role=main]
-	{
-	@media #{$small-only}	{padding: $evo-grid-device-padding;}
-	@media #{$medium-only}	{padding: $evo-grid-device-padding;}
-	}
+@if $use-grid == true{
 
-//=== MEDIA QUERIES =========================================================================
+	.evo-row-margin-bottom					{
+		@media #{$small-up}						{margin-bottom: 10px;}
+		@media #{$medium-up}					{margin-bottom: 20px;}
+		@media #{$large-up}						{margin-bottom: 30px;}
+											}
 
-// SMALL MEDIA QUERY RANGE - 0 - 640px
-@if $use-small-only-mediaquery == true {
-		
-	@media #{$small-only} {
+	section[role=main]						{
+		@media #{$small-only}					{padding: $evo-grid-device-padding;}
+		@media #{$medium-only}					{padding: $evo-grid-device-padding;}
+											}
 
-	}
-}
+	//=== MEDIA QUERIES =========================================================================
 
-// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
-@if $use-medium-up-mediaquery == true {
-		
-	@media #{$medium-up} {
+	// SMALL MEDIA QUERY RANGE - 0 - 640px
+	@if $use-small-only-mediaquery == true {
+			
+		@media #{$small-only} {
 
-	}
-}
+
+
+		}
+
+	}//endif
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+			
+		@media #{$medium-up} {
+
+
+
+		}
+
+	}//endif
+
+}//endif

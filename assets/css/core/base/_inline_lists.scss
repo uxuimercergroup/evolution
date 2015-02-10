@@ -11,11 +11,11 @@ $evo-include-html-inline-dl-list-classes: $evo-include-html-classes !default;
 
 $evo-inline-dl-list-margin-bottom: 0 !default;
 
-// used for defintion title styles
+// Used for defintion title styles
 $evo-inline-dl-list-dt-float: left !default;
 $evo-inline-dl-list-dt-margin: 0 rem-calc(10) 0 0 !default;
 
-// used to format the definition items
+// Used to format the definition items
 $evo-inline-dl-list-dd-float: left !default;
 $evo-inline-dl-list-dd-margin: 0 rem-calc(10) 0 0 !default;
 $evo-inline-dl-list-dd-display: block !default;
@@ -25,66 +25,63 @@ $evo-inline-dl-list-dd-last-child: 0 !default;
 // @mixins
 //
 // We use this mixin to create inline defintion lists
-@mixin evo-inline-dl-list {
-						@include clearfix;
-						margin-bottom: $evo-inline-dl-list-margin-bottom;
-	dt						{
-							float: $evo-inline-dl-list-dt-float;
-							margin: $evo-inline-dl-list-dt-margin;
-							}
-	& > dd					{
-							list-style: none;
-							float: $evo-inline-dl-list-dd-float;
-							margin: $evo-inline-dl-list-dd-margin;
-							display: $evo-inline-dl-list-dd-display;
-		a						{
-								text-decoration: none;
-			&:hover					{text-decoration: underline;}
-								}
-		&:last-child			{margin-right: $evo-inline-dl-list-dd-last-child;}
-							}
+@mixin evo-inline-dl-list 						{
+												@include clearfix;
+												margin-bottom: $evo-inline-dl-list-margin-bottom;
+	dt												{
+													float: $evo-inline-dl-list-dt-float;
+													margin: $evo-inline-dl-list-dt-margin;
+													}
+	& > dd											{
+													list-style: none;
+													float: $evo-inline-dl-list-dd-float;
+													margin: $evo-inline-dl-list-dd-margin;
+													display: $evo-inline-dl-list-dd-display;
+		a												{
+														text-decoration: none;
+			&:hover											{text-decoration: underline;}
+														}
+		&:last-child								{margin-right: $evo-inline-dl-list-dd-last-child;}
+												}
 }
 
-// DEFINITION LIST STYLES
-@include exports("evo-inline-dl-list") {
-	@if $evo-include-html-inline-dl-list-classes {
-		.evo-inline-dl-list
-							{@include evo-inline-dl-list();}
-		}
-	}
 
-//
-// @evolution specific
-//
 @if $use-inline-list == true{
 
+	// DEFINITION LIST STYLES
+	@include exports("evo-inline-dl-list") {
+		@if $evo-include-html-inline-dl-list-classes {
+
+			.evo-inline-dl-list					{@include evo-inline-dl-list();}
+
+		}// endif
+	}
+
 	// UNORDERED LIST STYLES
-	.evo-inline-list	{
-						@include inline-list;
-						margin-bottom: 0;
+	.evo-inline-list							{
+												@include inline-list;
+												margin-bottom: 0;
 		& > li
-							{
-							margin-bottom: 0;
-							margin-left: rem-calc(10);
-			&:first-child
-								{margin-left: $inline-list-default-float-list-margin;}
-			a					{
-								text-decoration: none;
-				&:hover				{text-decoration: underline;}
-								}
-							}
-						}
+													{
+													margin-bottom: 0;
+													margin-left: rem-calc(10);
+			&:first-child								{margin-left: $inline-list-default-float-list-margin;}
+			a											{
+														text-decoration: none;
+				&:hover										{text-decoration: underline;}
+														}
+													}
+												}
 
 	// ADD PIPE DELINATION TO LIST ITEMS
-	.evo-inline-list-pipes
-						{
+	.evo-inline-list-pipes						{
 		& > li,
-		& > dd				{
-							border-right: 1px solid $horizontalListPipeBorderColor;
-							padding-right: rem-calc(9);
-			&:last-child		{border-right: 0;}
-							}
-						}
+		& > dd										{
+													border-right: 1px solid $horizontalListPipeBorderColor;
+													padding-right: rem-calc(9);
+			&:last-child								{border-right: 0;}
+													}
+												}
 
 	//=== MEDIA QUERIES =========================================================================
 

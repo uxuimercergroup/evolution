@@ -18,19 +18,19 @@
 // Site: http://www.icomoon.io
 // Documentation: http://icomoon.io/#docs
 
+//
+// @variables
+//
+
+// HEADERS
+$evo-hdr-rule-border-size:					1px !default;
+$evo-hdr-rule-border-style:					dotted !default;
+$evo-hdr-rule-margin-bottom:				10px !default;
+$evo-hdr-rule-border-color:					$gray-mid !default;
+$evo-hdr-background-color:					$gray-lighter !default;
+
+
 @if $use-type == true{
-
-	//
-	// @variables
-	//
-
-	// HEADERS
-	$evo-hdr-rule-border-size:					1px !default;
-	$evo-hdr-rule-border-style:					dotted !default;
-	$evo-hdr-rule-margin-bottom:				10px !default;
-	$evo-hdr-rule-border-color:					$gray-mid !default;
-	$evo-hdr-background-color:					$gray-lighter !default;
-
 
 	// ==========================================================================================
 	// FONTS

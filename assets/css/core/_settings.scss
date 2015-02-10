@@ -16,11 +16,6 @@
 // GLOBAL SETTINGS
 // ------------------------------------------------------------------------------------------
 
-// LAYOUT SETTINGS
-// Default layout is 980px wide
-$use-grid-980:								true !default;
-$use-grid-1200:								false !default;
-
 // RESPONSIVE SETTINGS
 
 // MEDIA QUERY RANGES AND UP
@@ -39,6 +34,7 @@ $use-xxlarge-only-mediaquery:				true !default; // 1921px +
 
 // BASE SETTINGS
 // ------------------------------------------------------------------------------------------
+$use-grid:									true !default;
 $use-type:									true !default;
 $use-boxes:									true !default;
 $use-buttons:								true !default;
