@@ -119,3 +119,4 @@
 @import "core/objects/tables.js"; // Replaced with DataTables.js stuff
 // @import "core/objects/tabs.js"; // Marked for removal (Foundation replaces)
 // @import "core/objects/tooltip.js"; // Marked for removal (Foundation replaces)
+@import "core/objects/top_bar.js";
