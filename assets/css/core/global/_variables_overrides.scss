@@ -148,6 +148,49 @@ $glowing-effect-color: $input-focus-border-color;
 $select-bg-color: $white;
 $select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
 
+// 18. Off-canvas
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$tabbar-bg: $sapphire;
+$tabbar-height: rem-calc(45);
+$tabbar-line-height: $tabbar-height;
+$tabbar-color: $white;
+$tabbar-middle-padding: 0 rem-calc(10);
+
+// Off Canvas Divider Styles
+$tabbar-right-section-border: 0;
+$tabbar-left-section-border: 0;
+
+// Off Canvas Tab Bar Headers
+$tabbar-header-color: $white;
+$tabbar-header-line-height: $tabbar-height;
+$tabbar-header-margin: 0;
+
+// Off Canvas Menu Variables
+$off-canvas-width: rem-calc(275);
+$off-canvas-bg: $white;
+$off-canvas-bg-hover: $white;
+
+// Off Canvas Menu List Variables
+$off-canvas-label-padding: rem-calc(10) rem-calc(15);
+$off-canvas-label-color: $white;
+$off-canvas-label-text-transform: normal;
+$off-canvas-label-font-size: rem-calc(14);
+$off-canvas-label-font-weight: normal;
+$off-canvas-label-bg: $sapphire-dark;
+$off-canvas-label-border-top: 1px solid $sapphire-dark;
+$off-canvas-link-padding: rem-calc(15, 15);
+$off-canvas-link-color: $gray-mid;
+$off-canvas-link-border-bottom: 1px solid $gray-light;
+$off-canvas-back-bg: $sapphire-dark;
+$off-canvas-back-border-top: $off-canvas-label-border-top;
+$off-canvas-back-hover-bg: $sapphire-dark;
+$off-canvas-back-hover-border-top: 1px solid $sapphire-dark;
+
+// Off Canvas Back-Link Overlay
+$off-canvas-overlay-box-shadow: -1px 0 1px rgba($gray-mid, 0.5), 1px 0 1px rgba($gray-mid, 0.5);
+$off-canvas-overlay-background: rgba($white, 0.4);
+
 
 // ==========================================================================================
 // GLOBAL
