@@ -75,4 +75,7 @@ $(function() {
 		hidePlanComponent();
 		showPlanComponent();
 
+		// MASK NUMERIC
+		evoInputNumericMask();
+
 });
