@@ -33,7 +33,8 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 		"../partials/ep/objects/showcase_panel",
 		"../partials/ep/objects/item_selection_panel",
 		"../partials/ep/objects/pricing_table",
-		"../partials/ep/objects/item_highlight_ctn";
+		"../partials/ep/objects/item_highlight_ctn",
+		"../partials/ep/objects/category-hdr-ctn";
 
 /*=== WEBSITE STYLES ======================================================================*/
 
@@ -42,43 +43,6 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 // FIXES FLASH OF UNSTYLED CONTENT BUG - WHERE PAGE LOADS FASTER THAN JS AND MODERNIZR
 // HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
 html.evo-mod-js							{display:none;}
-
-
-
-.evo-hide-slider						{
-										background-color: rgba(255, 255, 255, 0.85);
-										position: absolute;
-										width: 100%;
-										padding: 64px 0;
-										text-align: center;
-										z-index: 10;
-										}
-
-/*--- CATEGORY LABEL -----------------------------------------------------------------------*/
-$evo-item-selection-panel-category-label-border-width: rem-calc(1) !default;
-$evo-item-selection-panel-category-label-border-style: solid !default;
-$evo-item-selection-panel-category-label-border-color: $gray-light !default;
-$evo-item-selection-panel-category-label-color: $gray-dark !default;
-$evo-item-selection-panel-category-label-margin: 18px 0 !default;
-$evo-item-selection-panel-category-label-padding: 15px !default;
-
-.evo-category-hdr-ctn					{
-	.evo-category-label						{
-											border-top: $evo-item-selection-panel-category-label-border-width $evo-item-selection-panel-category-label-border-style $evo-item-selection-panel-category-label-border-color;
-											color: $evo-item-selection-panel-category-label-color;
-											margin: $evo-item-selection-panel-category-label-margin;
-											padding-top: $evo-item-selection-panel-category-label-padding;
-											text-align: center;
-											}
-	[class*="evo-icon-"]					{
-											color: $gray-light;
-											float: right;
-											font-size: rem-calc(22);
-											position: relative;
-											top: rem-calc(12);
-											padding-bottom: 2px;
-											}
-										}
 
 
 /*--- COLOR PALETTE -----------------------------------------------------------------------*/
