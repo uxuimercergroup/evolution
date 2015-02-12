@@ -1,16 +1,26 @@
 <!-- CAROUSEL - BEGINS -->
-<div class="evo-hide-slider evo-display-none">
-	<a href="javascript:;" class="js-evo-enable-item" data-evo-font-color="ruby-mid">Add Plan</a>
-</div>
-<div class="evo-carousel" data-carousel="js-evo-carousel-example">
-	<div class="evo-carousel-item">
-		{% include 'ep/objects/highlight-ctn-label' %}
+	<div class="evo-carousel-wrapper">
+		<div class="evo-category-hdr-ctn">
+			<a href="javascript:;" class="js-evo-disable-item" data-evo-carousel-toggle="1">
+				<i class="evo-icon-cancel-circle2"></i>
+			</a>
+			<h6 class="evo-category-label">Skill Goals</h6>
+		</div>
+
+		<div class="evo-hide-slider evo-display-none" id="carousel-item1">
+			<a href="javascript:;" class="js-evo-enable-item" data-evo-font-color="ruby-mid">Add A Plan</a>
+		</div>
+
+		<div class="evo-carousel" data-carousel="js-evo-carousel-example">
+			<div class="evo-carousel-item">
+				{% include 'ep/objects/highlight-ctn-label' %}
+			</div>
+			<div class="evo-carousel-item">
+				{% include 'ep/objects/highlight-ctn' %}
+			</div>
+			<div class="evo-carousel-item">
+				{% include 'ep/objects/highlight-ctn' %}
+			</div>
+		</div>
 	</div>
-	<div class="evo-carousel-item">
-		{% include 'ep/objects/highlight-ctn' %}
-	</div>
-	<div class="evo-carousel-item">
-		{% include 'ep/objects/highlight-ctn' %}
-	</div>
-</div>
 <!-- CAROUSEL - ENDS -->

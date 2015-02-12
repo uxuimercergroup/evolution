@@ -23,15 +23,18 @@
 		});
 	}
 
+	// CAROUSEL SHOW/HIDE
 	var showPlanComponent = function (){
 		jQuery('.js-evo-disable-item').click(function() {
-			jQuery('.evo-hide-slider').show();
+			var id = 'carousel-item' + jQuery(this).attr('data-evo-carousel-toggle');
+			jQuery('#' + id).show();
+			return false;
 		});
 	};
 
 	var hidePlanComponent = function (){
 		jQuery('.js-evo-enable-item').click(function() {
-			jQuery('.evo-hide-slider').hide();
+			jQuery(this).parent().hide();
 		});
 	};
 
@@ -68,8 +71,11 @@ $(function() {
 			autoPlay: false
 		});
 
-		// plan show/hide component
+		// Carousel show/hide
 		hidePlanComponent();
 		showPlanComponent();
+
+		// MASK NUMERIC
+		evoInputNumericMask();
 
 });
