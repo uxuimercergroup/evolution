@@ -7,20 +7,19 @@
 //
 // @variables
 //
-$evo-grid-device-padding: 0 rem-calc(10) !default;
+$evo-grid-device-padding: rem-calc(10) rem-calc(10) 0 rem-calc(10) !default;
 
 
 @if $use-grid == true{
 
 	.evo-row-margin-bottom					{
-		@media #{$small-up}						{margin-bottom: 10px;}
-		@media #{$medium-up}					{margin-bottom: 20px;}
+		@media #{$small-only}					{margin-bottom: 10px;}
+		@media #{$medium-only}					{margin-bottom: 20px;}
 		@media #{$large-up}						{margin-bottom: 30px;}
 											}
 
 	section[role=main]						{
-		@media #{$small-only}					{padding: $evo-grid-device-padding;}
-		@media #{$medium-only}					{padding: $evo-grid-device-padding;}
+		@media #{$small-up}						{padding: $evo-grid-device-padding;}
 											}
 
 	//=== MEDIA QUERIES =========================================================================

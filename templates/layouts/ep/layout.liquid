@@ -102,7 +102,16 @@
 		</div>
 		<!-- OFF CANVAS WRAPPER - ENDS -->
 
-		{% include "ep/scripts" %}
+		<!-- EVOLUTION CORE SCRIPTS -->
+		{{ "evolution.js" | asset_url | script_tag }}
+
+		<!-- SITE SCRIPTS -->
+		{{ "ep.js" | asset_url | script_tag }}
+
+		<!-- FOUNDATION SCRIPTS INITIALIZATION -->
+		<script>
+			$(document).foundation();
+		</script>
 
 	</body>
 </html>

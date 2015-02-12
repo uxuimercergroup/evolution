@@ -167,14 +167,14 @@ $tabbar-header-line-height: $tabbar-height;
 $tabbar-header-margin: 0;
 
 // Off Canvas Menu Variables
-$off-canvas-width: rem-calc(275);
+$off-canvas-width: rem-calc(272);
 $off-canvas-bg: $white;
 $off-canvas-bg-hover: $white;
 
 // Off Canvas Menu List Variables
 $off-canvas-label-padding: rem-calc(10) rem-calc(15);
 $off-canvas-label-color: $white;
-$off-canvas-label-text-transform: normal;
+$off-canvas-label-text-transform: none;
 $off-canvas-label-font-size: rem-calc(14);
 $off-canvas-label-font-weight: normal;
 $off-canvas-label-bg: $sapphire-dark;
@@ -190,6 +190,16 @@ $off-canvas-back-hover-border-top: 1px solid $sapphire-dark;
 // Off Canvas Back-Link Overlay
 $off-canvas-overlay-box-shadow: -1px 0 1px rgba($gray-mid, 0.5), 1px 0 1px rgba($gray-mid, 0.5);
 $off-canvas-overlay-background: rgba($white, 0.4);
+
+// 34. Top Bar
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Background color for the top bar
+$topbar-bg-color: $sapphire;
+
+// Height and margin
+$topbar-height: rem-calc(45);
+$topbar-margin-bottom: 0;
 
 
 // ==========================================================================================
