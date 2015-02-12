@@ -40,6 +40,17 @@
 		});
 	}
 
+	var showPlanComponent = function (){
+		jQuery('.js-evo-disable-item').click(function() {
+			jQuery('.evo-hide-slider').show();
+		});
+	};
+
+	var hidePlanComponent = function (){
+		jQuery('.js-evo-enable-item').click(function() {
+			jQuery('.evo-hide-slider').hide();
+		});
+	};
 
 // DOCUMENT READY
 //--------------------------------------------------------------------------------------------------------
@@ -68,5 +79,14 @@ $(function() {
 
 		// ITEM SELECTION CLASS TOGGLE
 		itemSelectionClassToggle();
+
+		// Carousel example
+		evoCarousel('js-evo-carousel-example',{
+			autoPlay: false
+		});
+
+		// plan show/hide component
+		hidePlanComponent();
+		showPlanComponent();
 
 });

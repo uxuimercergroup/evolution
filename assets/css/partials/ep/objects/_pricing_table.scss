@@ -1,52 +1,88 @@
 /*------------------------------------------------------------------------------------------
-Mercer Evolution - Employee Portal Family - Pricing Table Partial
+Mercer Evolution - Employee Portal Family - Site CSS
 DATE - February 10, 2015
 AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 -------------------------------------------------------------------------------------------*/
 
+//
+// @variables
+//
+$evo-price-table-bg-color: $gray-lighter !default;
+$evo-price-table-base-font: rem-calc(22) !default;
+$evo-price-table-padding: rem-calc(12) rem-calc(0) !default;
+$evo-price-table-margin-bottom: rem-calc(2) !default;
+
+$evo-price-table-amt-font-color: $gray-dark !default;
+$evo-price-table-amt-text-align: right !default;
+
+$evo-price-table-amt-text-transform: uppercase !default;
+
+$evo-price-table-label-font-size: rem-calc(14) !default;
+$evo-price-table-label-position: relative !default;
+
+$evo-price-table-item-label-font-color: $gray-light !default;
+$evo-price-table-item-label-top-position: rem-calc(16) !default;
+
+$evo-price-table-time-value-label-color: $gray-light !default;
+$evo-price-table-time-value-label-text-align: right !default;
+$evo-price-table-time-value-label-top-position: -6px !default;
+
+$evo-price-table-break-down-row-bg-color: $gray-light !default;
+
+$evo-price-table-total-row-bg-color: $gray-dark !default;
+$evo-price-table-total-row-font-color: $white !default;
+
+
 // PRICING TABLE - BEGINS
 	.evo-price-table			{
 								@include clearfix;
-								padding: 0;
-								margin: 0;
 		[class*="small-block-grid-"]
 									{
-									background-color: $gray-lighter;
-									font-size: rem-calc(22);
-									padding: rem-calc(14) rem-calc(10) 0 rem-calc(10);
-									margin-bottom: rem-calc(2);
+									background-color: $evo-price-table-bg-color;
+									font-size: $evo-price-table-base-font;
+									padding: $evo-price-table-padding;
+									margin: 0;
+									margin-bottom: $evo-price-table-margin-bottom;
+			li							{padding-bottom: 0;}
+			.evo-item-amt,
+			.break-down-amt,
+			.total-amt					{
+										color: $evo-price-table-amt-font-color;
+										text-align: $evo-price-table-amt-text-align;
+										}
+			.evo-item-label,
+			.break-down-label,
+			.total-label				{text-transform: $evo-price-table-amt-text-transform;}
+
+			.evo-item-label,
+			.evo-time-value-label		{
+										font-size: $evo-price-table-label-font-size;
+										position: $evo-price-table-label-position;
+										}
 									}
 
 		.evo-price-table-row		{
 
 		// ITEM LABEL - BEGINS
-			.evo-item-label-ctn			{
-				li							{
-											padding-bottom: 0;
-											}
+			.evo-category-label			{
+										padding-top: 0;
+										padding-bottom: 0;
+										margin-top: 0;
+										margin-bottom: 0;
+				li							{padding-bottom: 0;}
 				.evo-item-label				{
-											color: $gray-light;
-											font-size: rem-calc(14);
-											text-transform: uppercase;
-											position: relative;
-											top: 6px;
+											color: $evo-price-table-item-label-font-color;
+											top: $evo-price-table-item-label-top-position;
 											}
 										}
 		// ITEM LABEL - ENDS
 			
 		// ITEM - BEGINS
-			.evo-item					{
-										color: $gray-dark;
-										}
 			.evo-item-amt				{
-										color: $gray-dark;
-										text-align: right;
-				.evo-item-amt-label			{
-											color: $gray-light;
-											font-size: rem-calc(14);
-											text-align: right;
-											position: relative;
-											top: -6px;
+				.evo-time-value-label		{
+											color: $evo-price-table-time-value-label-color;
+											text-align: $evo-price-table-time-value-label-text-align;
+											top: $evo-price-table-time-value-label-top-position;
 											}
 										}
 		// ITEM - ENDS
@@ -54,30 +90,17 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 
 	// TOTAL ROW - BEGINS
 		.evo-price-table-break-down-row	{
-									@extend .evo-price-table-row;
-									background-color: $gray-light;
-			.break-down-label			{
-										@extend .evo-item;
-										text-transform: uppercase;
-										}
-			.break-down-amt				{
-										@extend .evo-item-amt;
-										}
+										background-color: $evo-price-table-break-down-row-bg-color;
+			.break-down-label			{}
+			.break-down-amt				{}
 									}
 	// TOTAL ROW - ENDS
 
 	// TOTAL ROW - BEGINS
 		.evo-price-table-total-row	{
-									background-color: $gray-dark;
-			.total-label				{
-										@extend .evo-item;
-										color: $white;
-										text-transform: uppercase;
-										}
-			.total-amt					{
-										@extend .evo-item-amt;
-										color: $white;
-										}
+									background-color: $evo-price-table-total-row-bg-color;
+			.total-label				{color: $evo-price-table-total-row-font-color;}
+			.total-amt					{color: $evo-price-table-total-row-font-color;}
 									}
 	// TOTAL ROW - ENDS
 

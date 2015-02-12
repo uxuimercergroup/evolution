@@ -84,7 +84,7 @@
 											position: relative;
 											top: -25px;
 					[class*="evo-icon"]			{
-												top: 0;
+												top: -1px;
 												color: $carouselNavIconColor;
 						&:hover						{color: $carouselNavHoverIconColor;}
 												}
@@ -108,7 +108,7 @@
 					.owl-buttons		{
 						.owl-next,
 						.owl-prev			{
-							[class*="evo-icon"]	{top: 1px;}
+							[class*="evo-icon"]	{top: -1px;}
 											}
 										}
 									}
