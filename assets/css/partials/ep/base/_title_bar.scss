@@ -10,5 +10,42 @@
 
 
 .evo-title-bar				{
+							height: auto !important;
+							min-height: rem-calc(45);
 							
+	.evo-title-bar-icon-column	{
+								padding-left: 0;
+								padding-right: 0;
+		.evo-title-bar-icon			{
+									display: block;
+									width: rem-calc(45);
+									height: rem-calc(45);
+									padding-left: rem-calc(10);
+			[class*="evo-icon-"]		{
+										color: $white;
+										top: rem-calc(5);
+										left: rem-calc(-10);
+										}
+									}
+								}
+
+	.evo-title-bar-title-column	{
+								padding-left: 0;
+								padding-right: 0;
+		.evo-title-bar-title		{
+									margin-top: rem-calc(13);
+									margin-bottom: rem-calc(13);
+									color: $white;
+									}
+								}
+
+	.evo-title-bar-count-column	{
+								padding-left: 0;
+								padding-right: 10px;
+		.evo-title-bar-count		{
+									color: $white;
+									font-size: rem-calc(14);
+									}
+								}
+
 							}

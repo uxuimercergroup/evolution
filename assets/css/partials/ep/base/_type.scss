@@ -28,8 +28,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6							{
+h5							{
 							font-family: $evo-font-bold-stack;
 							text-transform: uppercase;
 							}
@@ -50,7 +49,9 @@ h5							{
 							letter-spacing: rem-calc(2);
 							}
 h6							{
-							letter-spacing: rem-calc(2);
+							font-family: $evo-font-regular-stack;
+							letter-spacing: rem-calc(1);
+							text-transform: uppercase;
 							}
 
 // SMALL TEXT
