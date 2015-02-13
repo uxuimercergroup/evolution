@@ -182,10 +182,10 @@ $off-canvas-label-border-top: 1px solid $sapphire-dark;
 $off-canvas-link-padding: rem-calc(15, 15);
 $off-canvas-link-color: $gray-mid;
 $off-canvas-link-border-bottom: 1px solid $gray-light;
-$off-canvas-back-bg: $sapphire-dark;
+$off-canvas-back-bg: $sapphire-mid;
 $off-canvas-back-border-top: $off-canvas-label-border-top;
-$off-canvas-back-hover-bg: $sapphire-dark;
-$off-canvas-back-hover-border-top: 1px solid $sapphire-dark;
+$off-canvas-back-hover-bg: $sapphire-mid;
+$off-canvas-back-hover-border-top: 1px solid $sapphire-mid;
 
 // Off Canvas Back-Link Overlay
 $off-canvas-overlay-box-shadow: -1px 0 1px rgba($gray-mid, 0.5), 1px 0 1px rgba($gray-mid, 0.5);
@@ -966,3 +966,189 @@ $topbar-margin-bottom: 0;
 // $tooltipBorderColor:						$gray-mid;
 // $tooltipBackgroundColor:					$gray-light;
 // $tooltipFontColor:						$gray-darkest;
+
+
+// ==========================================================================================
+// EMPLOYEE PORTAL OBJECTS
+// ==========================================================================================
+
+// ICONS
+// ------------------------------------------------------------------------------------------
+// $evo-clip-art-icon-size-tiny: 			rem-calc(30);
+// $evo-clip-art-icon-size-small: 			rem-calc(50);
+// $evo-clip-art-icon-size-medium: 			rem-calc(70);
+// $evo-clip-art-icon-size-large: 			rem-calc(100);
+// $evo-clip-art-icon-size-xlarge: 			rem-calc(150);
+
+
+// TYPE
+// ------------------------------------------------------------------------------------------
+
+// LINKS
+// $evo-anchor-font-color-reverse: 			$white;
+// $evo-anchor-font-color-alt: 				$ruby-mid;
+// $evo-anchor-font-size-small:				14;
+
+// COSTS
+// $evo-cost-reverse-font-color:			$white;
+// $evo-large-cost-font-color:				$gray-mid;
+// $evo-small-cost-font-color:				$gray-mid;
+
+
+// MENU BAR
+// ------------------------------------------------------------------------------------------
+// $evo-off-canvas-alert-background-color: 	$amethyst-mid;
+
+
+// TITLE BAR
+// ------------------------------------------------------------------------------------------
+// $evo-title-bar-icon-color: 				$white;
+// $evo-title-bar-font-color: 				$white;
+
+
+// CONVERSATIONAL FORM
+// ------------------------------------------------------------------------------------------
+// $evo-form-conversational-font-family: 	$evo-font-regular-family;
+// $evo-form-conversational-font-size: 		rem-calc(25);
+// $evo-form-conversational-label-color: 	$gray-mid;
+// $evo-form-conversational-select-color: 	$sapphire-mid;
+// $evo-form-conversational-inputs-border-radius: 0;
+// $evo-form-conversational-inputs-bg-color: $gray-lightest;
+// $evo-form-conversational-inputs-border: 	0;
+// $evo-form-conversational-inputs-border-bottom-with: 2px;
+// $evo-form-conversational-inputs-border-bottom-style: solid;
+// $evo-form-conversational-inputs-border-bottom-color: $sapphire-mid;
+// $evo-form-conversational-input-transition-time: 0.25s;
+// $evo-form-conversational-input-width: 	rem-calc(80);
+// $evo-form-conversational-input-min-width: rem-calc(80);
+// $evo-form-conversational-input-max-width: 300px;
+// $evo-form-conversational-select-min-width: 50px;
+
+
+// SHOWCASE PANEL
+// ------------------------------------------------------------------------------------------
+// $evo-form-showcase-panel-h-shadow: 		0;
+// $evo-form-showcase-panel-v-shadow: 		rem-calc(2);
+// $evo-form-showcase-panel-blur: 			rem-calc(8);
+// $evo-form-showcase-panel-color: 			$gray-mid;
+// $evo-form-showcase-panel-padding: 		3% 0;
+// $evo-form-showcase-panel-fixed-z-index: 	1000;
+// $evo-form-showcase-panel-font-color: 	$gray-dark;
+
+
+// ITEM SELECTION PANEL
+// ------------------------------------------------------------------------------------------
+// $evo-item-selection-panel-align: 		center;
+
+// $evo-item-selection-panel-container-color: $gray-dark;
+
+// $evo-item-selection-panel-container-img-border-radius: 100%;
+// $evo-item-selection-panel-container-img-border-width: rem-calc(3);
+// $evo-item-selection-panel-container-img-border-style: solid;
+// $evo-item-selection-panel-container-img-border-color: $gray-lighter;
+// $evo-item-selection-panel-container-img-padding: rem-calc(3);
+
+// $evo-item-selection-panel-container-item-label-font-size: rem-calc(14);
+// $evo-item-selection-panel-container-item-label-margin-top: rem-calc(5);
+
+// $evo-item-selection-panel-container-category-highlight-img-h-shadow: rem-calc(0);
+// $evo-item-selection-panel-container-category-highlight-img-v-shadow: rem-calc(2);
+// $evo-item-selection-panel-container-category-highlight-img-blur: rem-calc(6);
+// $evo-item-selection-panel-container-category-highlight-img-color: $gray-light;
+// $evo-item-selection-panel-container-category-highlight-img-border-color: $topaz-dark;
+
+
+// PRICING TABLE
+// ------------------------------------------------------------------------------------------
+// $evo-price-table-bg-color: 				$gray-lighter;
+// $evo-price-table-base-font: 				rem-calc(22);
+// $evo-price-table-padding: 				rem-calc(12) rem-calc(0);
+// $evo-price-table-margin-bottom: 			rem-calc(2);
+
+// $evo-price-table-amt-font-color: 		$gray-dark;
+// $evo-price-table-amt-text-align: 		right;
+
+// $evo-price-table-amt-text-transform: 	uppercase;
+
+// $evo-price-table-label-font-size: 		rem-calc(14);
+// $evo-price-table-label-position: 		relative;
+
+// $evo-price-table-item-label-font-color: 	$gray-light;
+// $evo-price-table-item-label-top-position: rem-calc(16);
+
+// $evo-price-table-time-value-label-color: $gray-light;
+// $evo-price-table-time-value-label-text-align: right;
+// $evo-price-table-time-value-label-top-position: -6px;
+
+// $evo-price-table-break-down-row-bg-color: $gray-light;
+
+// $evo-price-table-total-row-bg-color: 	$gray-dark;
+// $evo-price-table-total-row-font-color: 	$white;
+
+
+// ITEM HIGHLIGHT CONTAINER
+// ------------------------------------------------------------------------------------------
+// $evo-item-highlight-ctn-bgcolor: 		$gray-lightest;
+// $evo-item-highlight-ctn-border-width: 	3px;
+// $evo-item-highlight-ctn-border-style: 	solid;
+// $evo-item-highlight-ctn-border-color: 	$topaz-dark;
+// $evo-item-highlight-ctn-padding: 		rem-calc(10) rem-calc(18) rem-calc(3) rem-calc(18);
+// $evo-item-highlight-ctn-margin: 			0 10px;
+// $evo-item-highlight-ctn-min-height: 		100px;
+
+// $evo-item-highlight-ctn-tag-indicator-min-height: rem-calc(29);
+// $evo-item-highlight-ctn-tag-indicator-label-font-size: rem-calc(11);
+// $evo-item-highlight-ctn-tag-indicator-label-text-transform: uppercase;
+// $evo-item-highlight-ctn-tag-indicator-label-position: relative;
+// $evo-item-highlight-ctn-tag-indicator-label-position-top: -6px;
+// $evo-item-highlight-ctn-tag-indicator-label-position-left: -26px;
+// $evo-item-highlight-ctn-tag-indicator-label-padding: rem-calc(10) rem-calc(30) rem-calc(8) rem-calc(30);
+// $evo-item-highlight-ctn-tag-indicator-label-bgcolor: $sapphire-mid;
+// $evo-item-highlight-ctn-tag-indicator-label-letter-spacing: rem-calc(1);
+
+// $evo-item-highlight-ctn-highlight-ctn-link-font-size: rem-calc(12);
+// $evo-item-highlight-ctn-highlight-ctn-link-line-height: 0;
+// $evo-item-highlight-ctn-highlight-ctn-link-margin-top: rem-calc(8);
+
+
+// CATEGORY HEADER CONATAINER
+// ------------------------------------------------------------------------------------------
+// $evo-category-hdr-label-border-width: 	rem-calc(1);
+// $evo-category-hdr-label-border-style: 	solid;
+// $evo-category-hdr-label-border-color: 	$gray-light;
+// $evo-category-hdr-label-color: 			$gray-dark;
+// $evo-category-hdr-label-margin: 			18px 0;
+// $evo-category-hdr-label-padding: 		15px;
+
+// $evo-category-hdr-label-icon-color: 		$gray-light;
+// $evo-category-hdr-label-icon-float: 		right;
+// $evo-category-hdr-label-icon-font-size: 	rem-calc(22);
+// $evo-category-hdr-label-icon-position: 	relative;
+// $evo-category-hdr-label-icon-position-top: rem-calc(12);
+// $evo-category-hdr-label-icon-padding-bottom: 2px;
+
+// $evo-carousel-disable-bgcolor: 			rgba(255, 255, 255, 0.90);
+// $evo-carousel-disable-position: 			absolute;
+// $evo-carousel-disable-position-left: 	0;
+// $evo-carousel-disable-position-right: 	0;
+// $evo-carousel-disable-padding: 			64px 0;
+// $evo-carousel-disable-z-index: 			1;
+// $evo-carousel-disable-text-align: 		center;
+
+// $evo-carousel-disable-link-font-size: 	rem-calc(14);
+// $evo-carousel-disable-link-text-transform: uppercase;
+
+
+// FORM WORKSHEET
+// ------------------------------------------------------------------------------------------
+// $evo-worksheat-font-family: 				$evo-font-regular-family;
+// $evo-worksheat-font-size: 				rem-calc(25);
+// $evo-worksheat-label-color: 				$gray-mid;
+// $evo-worksheat-inputs-border-radius: 	0;
+// $evo-worksheat-inputs-bg-color: 			$gray-lightest;
+// $evo-worksheat-inputs-border: 			0;
+// $evo-worksheat-inputs-border-bottom-with: 2px;
+// $evo-worksheat-inputs-border-bottom-style: solid;
+// $evo-worksheat-inputs-border-bottom-color: $sapphire-mid;
+// $evo-worksheat-input-color: 				$sapphire-mid;
+

@@ -9,14 +9,14 @@
 //
 
 // LINKS
-$evo-ep-anchor-font-color-reverse: 			$white !default;
-$evo-ep-anchor-font-color-alt: 				$ruby-mid !default;
-$evo-ep-anchor-font-size-small:				14 !default;
+$evo-anchor-font-color-reverse: 			$white !default;
+$evo-anchor-font-color-alt: 				$ruby-mid !default;
+$evo-anchor-font-size-small:				14 !default;
 
 // COSTS
-$evo-ep-cost-reverse-font-color:			$white !default;
-$evo-ep-large-cost-font-color:				$gray-mid !default;
-$evo-ep-small-cost-font-color:				$gray-mid !default;
+$evo-cost-reverse-font-color:				$white !default;
+$evo-large-cost-font-color:					$gray-mid !default;
+$evo-small-cost-font-color:					$gray-mid !default;
 
 
 // ==========================================================================================
@@ -63,14 +63,14 @@ small,
 
 // LINKS
 a.evo-anchor-small			{
-							font-size: rem-calc($evo-ep-anchor-font-size-small);
+							font-size: rem-calc($evo-anchor-font-size-small);
 							}
 
 a.evo-anchor-reverse		{
-							color: $evo-ep-anchor-font-color-reverse;
+							color: $evo-anchor-font-color-reverse;
 							}
 a.evo-anchor-alt			{	
-							color: $evo-ep-anchor-font-color-alt;
+							color: $evo-anchor-font-color-alt;
 							}
 
 
@@ -97,7 +97,7 @@ a.evo-anchor-alt			{
 
 .evo-large-cost				{
 							text-align: center;
-							color: $evo-ep-large-cost-font-color;
+							color: $evo-large-cost-font-color;
 	.evo-cost-number			{
 								font-size: rem-calc(48);
 								letter-spacing: rem-calc(-2);
@@ -118,7 +118,7 @@ a.evo-anchor-alt			{
 
 .evo-small-cost				{
 							text-align: center;
-							color: $evo-ep-small-cost-font-color;
+							color: $evo-small-cost-font-color;
 	.evo-cost-number			{
 								font-size: rem-calc(26);
 								letter-spacing: rem-calc(-.2);
@@ -137,6 +137,6 @@ a.evo-anchor-alt			{
 							}
 
 .evo-cost-reverse			{
-							color: $evo-ep-cost-reverse-font-color;
-	a							{color: $evo-ep-cost-reverse-font-color;}
+							color: $evo-cost-reverse-font-color;
+	a							{color: $evo-cost-reverse-font-color;}
 							}
