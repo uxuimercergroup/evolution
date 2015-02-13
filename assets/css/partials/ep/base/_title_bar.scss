@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Employee Portal Family - Menu Bar Partial
+// Mercer Evolution - Employee Portal Family - Title Bar Partial
 // DATE - January 21, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
@@ -7,6 +7,8 @@
 //
 // @variables
 //
+$evo-title-bar-icon-color: $white !default;
+$evo-title-bar-font-color: $white !default;
 
 
 .evo-title-bar				{
@@ -22,7 +24,7 @@
 									height: rem-calc(45);
 									padding-left: rem-calc(10);
 			[class*="evo-icon-"]		{
-										color: $white;
+										color: $evo-title-bar-icon-color;
 										top: rem-calc(5);
 										left: rem-calc(-10);
 										}
@@ -35,7 +37,7 @@
 		.evo-title-bar-title		{
 									margin-top: rem-calc(13);
 									margin-bottom: rem-calc(13);
-									color: $white;
+									color: $evo-title-bar-font-color;
 									}
 								}
 
@@ -43,7 +45,7 @@
 								padding-left: 0;
 								padding-right: 10px;
 		.evo-title-bar-count		{
-									color: $white;
+									color: $evo-title-bar-font-color;
 									font-size: rem-calc(14);
 									}
 								}

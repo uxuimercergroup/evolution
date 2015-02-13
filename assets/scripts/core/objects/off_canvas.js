@@ -13,7 +13,7 @@ $(document).foundation({
 		// open_method: 'move', 
 		// Should the menu close when a menu link is clicked?
 		// [ true | false ]
-		close_on_click : true
+		// close_on_click : false
 	}
 
 });

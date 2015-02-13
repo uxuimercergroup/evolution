@@ -7,8 +7,37 @@
 //
 // @variables
 //
+$evo-clip-art-icon-size-tiny: rem-calc(30) !default;
+$evo-clip-art-icon-size-small: rem-calc(50) !default;
+$evo-clip-art-icon-size-medium: rem-calc(70) !default;
+$evo-clip-art-icon-size-large: rem-calc(100) !default;
+$evo-clip-art-icon-size-xlarge: rem-calc(150) !default;
 
 
+// ==========================================================================================
+// CLIP ART ICONS
+// ==========================================================================================
+
+.evo-clip-art-icon-size-tiny		{
+									width: $evo-clip-art-icon-size-tiny;
+									height: $evo-clip-art-icon-size-tiny;
+									}
+.evo-clip-art-icon-size-small		{
+									width: $evo-clip-art-icon-size-small;
+									height: $evo-clip-art-icon-size-small;
+									}
+.evo-clip-art-icon-size-medium		{
+									width: $evo-clip-art-icon-size-medium;
+									height: $evo-clip-art-icon-size-medium;
+									}
+.evo-clip-art-icon-size-large		{
+									width: $evo-clip-art-icon-size-large;
+									height: $evo-clip-art-icon-size-large;
+									}
+.evo-clip-art-icon-size-xlarge		{
+									width: $evo-clip-art-icon-size-xlarge;
+									height: $evo-clip-art-icon-size-xlarge;
+									}
 
 
 // ==========================================================================================
