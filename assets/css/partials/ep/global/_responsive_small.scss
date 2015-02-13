@@ -14,6 +14,11 @@
 // SMALL MEDIA QUERY RANGE - 0px - 640px
 @media #{$small-only} {
 
-	
+	$reveal-position-top: rem-calc(0);
+
+	.evo-reveal-modal			{
+								@include border-radius(0);
+								top: $reveal-position-top;
+								}
 
 }

@@ -46,6 +46,24 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 // HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
 html.evo-mod-js							{display:none;}
 
+.evo-login-template						{
+										background: url(../images/ep/background2.png) no-repeat center center fixed $sapphire-dark;
+										color: $white;
+										padding: rem-calc(0) rem-calc(15) rem-calc(15) rem-calc(15);
+										height: 1000px;
+										margin-left: -10px;
+										margin-right: -10px;
+										text-align: center;
+	.evo-login-content-ctn					{
+											margin-top: rem-calc(100);
+		img										{}
+		p										{}
+											}
+										}
+
+/*--- REVEAL/MODAL ------------------------------------------------------------------------*/
+.reveal-modal-bg						{position: fixed;}
+.reveal-modal							{z-index: 10000;}
 
 /*--- COLOR PALETTE -----------------------------------------------------------------------*/
 
