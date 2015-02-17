@@ -38,6 +38,55 @@
 		});
 	};
 
+	// RANGE SLIDER - CONTRIBUTIONS
+
+	// Pass data attribute value of slider range object
+	var evoSliderContributions = function(objectDataValue) {
+		
+		// Variable to define slider range object based on data attribute value
+		var sliderDataValue = jQuery('[data-slider='+objectDataValue+']');
+
+		// Slider Contribution values
+		var userContributionValue = 5;
+		var companyContributionValue = 3;
+		var peerContributionValue = 3;
+
+
+		// Slider Max value
+		var sliderMax = 20;
+
+		// Slider
+		sliderDataValue.slider({
+			animate: true, // Animated slide on/off
+			min: 0, // Min value to show on slider
+			max: sliderMax, // Max value to show on slider
+			orientation: "horizontal", // Orientation: horizontal (default) or vertical
+			step: 1, // Determines the size or amount of each interval or step the slider takes between the min and max
+			value: userContributionValue, // Start value for the slider handle
+			range: "min",
+			slide: function (event, ui) {
+				jQuery('.ui-slider-handle .evo-slider-tooltip', this).html(ui.value+'%');
+			},
+			create: function (event, ui) {
+				$('.ui-slider-handle', this).html('<span class="evo-slider-tooltip">' + ui.value + '%</span>');
+				$('.ui-slider-handle .evo-slider-tooltip', this).hide();
+			},
+			start: function (event, ui) {
+				$('.ui-slider-handle .evo-slider-tooltip', this).fadeIn(250);
+			},
+			stop: function (event, ui) {
+				$('.ui-slider-handle .evo-slider-tooltip', this).fadeOut(500);
+			}
+		});
+
+		// Slider Markers
+		var sliderMultiplier = 100 / sliderMax;
+		$('.evo-slider-marker-user').css({ marginLeft: (userContributionValue * sliderMultiplier) + '%' });
+		$('.evo-slider-marker-company').css({ marginLeft: (companyContributionValue * sliderMultiplier)+'%' });
+		$('.evo-slider-marker-peers').css({ marginLeft: (peerContributionValue * sliderMultiplier) + '%' });
+
+	};
+
 // DOCUMENT READY
 //--------------------------------------------------------------------------------------------------------
 
@@ -66,16 +115,16 @@ $(function() {
 		// ITEM SELECTION CLASS TOGGLE
 		itemSelectionClassToggle();
 
-		// Carousel example
-		evoCarousel('js-evo-carousel-example',{
+		// CAROUSEL
+		evoCarousel('js-evo-ep-carousel',{
 			autoPlay: false
 		});
 
-		// Carousel show/hide
+		// CAROUSEL SHOW/HIDE
 		hidePlanComponent();
 		showPlanComponent();
 
-		// MASK NUMERIC
-		evoInputNumericMask();
+		// RANGE SLIDER - CONTRIBUTIONS
+		evoSliderContributions('js-evo-slider-contributions');
 
 });
