@@ -49,7 +49,7 @@
 		// Slider Contribution values
 		var userContributionValue = 5;
 		var companyContributionValue = 3;
-		var peerContributionValue = 3;
+		var peerContributionValue = 7;
 
 
 		// Slider Max value
@@ -65,25 +65,28 @@
 			value: userContributionValue, // Start value for the slider handle
 			range: "min",
 			slide: function (event, ui) {
-				jQuery('.ui-slider-handle .evo-slider-tooltip', this).html(ui.value+'%');
+				userContributionValue = ui.value;
+				jQuery('.ui-slider-handle .evo-slider-tooltip', this).html(userContributionValue+'%');
+				jQuery('<span class="evo-slider-tooltip-arrow"></span>').appendTo('.ui-slider-handle .evo-slider-tooltip');
 			},
 			create: function (event, ui) {
-				$('.ui-slider-handle', this).html('<span class="evo-slider-tooltip">' + ui.value + '%</span>');
-				$('.ui-slider-handle .evo-slider-tooltip', this).hide();
+				jQuery('.ui-slider-handle', this).html('<span class="evo-slider-tooltip">' + userContributionValue + '%</span>');
+				jQuery('<span class="evo-slider-tooltip-arrow"></span>').appendTo('.ui-slider-handle .evo-slider-tooltip');
+				jQuery('.ui-slider-handle .evo-slider-tooltip', this).hide();
 			},
 			start: function (event, ui) {
-				$('.ui-slider-handle .evo-slider-tooltip', this).fadeIn(250);
+				jQuery('.ui-slider-handle .evo-slider-tooltip', this).fadeIn('fast');
 			},
 			stop: function (event, ui) {
-				$('.ui-slider-handle .evo-slider-tooltip', this).fadeOut(500);
+				jQuery('.ui-slider-handle .evo-slider-tooltip', this).fadeOut('fast');
 			}
 		});
 
 		// Slider Markers
 		var sliderMultiplier = 100 / sliderMax;
-		$('.evo-slider-marker-user').css({ marginLeft: (userContributionValue * sliderMultiplier) + '%' });
-		$('.evo-slider-marker-company').css({ marginLeft: (companyContributionValue * sliderMultiplier)+'%' });
-		$('.evo-slider-marker-peers').css({ marginLeft: (peerContributionValue * sliderMultiplier) + '%' });
+		$('.js-evo-slider-marker-user').css({ marginLeft: (userContributionValue * sliderMultiplier) + '%' });
+		$('.js-evo-slider-marker-company').css({ marginLeft: (companyContributionValue * sliderMultiplier)+'%' });
+		$('.js-evo-slider-marker-peers').css({ marginLeft: (peerContributionValue * sliderMultiplier) + '%' });
 
 	};
 
