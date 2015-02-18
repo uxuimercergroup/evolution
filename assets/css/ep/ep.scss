@@ -37,7 +37,9 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 		"../partials/ep/objects/item_highlight_ctn",
 		"../partials/ep/objects/category_hdr_ctn",
 		"../partials/ep/objects/form_worksheet",
-		"../partials/ep/objects/slider_contributions";
+		"../partials/ep/objects/slider_contributions",
+		"../partials/ep/objects/reveal_modal",
+		"../partials/ep/objects/stream";
 
 /*=== WEBSITE STYLES ======================================================================*/
 
@@ -48,6 +50,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 html.evo-mod-js							{display:none;}
 
 .evo-login-template						{
+										display: none;
 										background: url(../images/ep/background2.png) no-repeat center center fixed $sapphire-dark;
 										color: $white;
 										padding: rem-calc(0) rem-calc(15) rem-calc(15) rem-calc(15);
@@ -61,10 +64,6 @@ html.evo-mod-js							{display:none;}
 		p										{}
 											}
 										}
-
-/*--- REVEAL/MODAL ------------------------------------------------------------------------*/
-.reveal-modal-bg						{position: fixed;}
-.reveal-modal							{z-index: 10000;}
 
 /*--- COLOR PALETTE -----------------------------------------------------------------------*/
 

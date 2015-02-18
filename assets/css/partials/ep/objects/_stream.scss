@@ -1,0 +1,146 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Global Color Variables Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+//
+//@variables
+//
+
+
+@-webkit-keyframes pulse-animation			{
+											0%		{-webkit-transform: scale(1);}
+											30%		{-webkit-transform: scale(1);}
+											40%		{-webkit-transform: scale(1.08);}
+											50%		{-webkit-transform: scale(1);}
+											60%		{-webkit-transform: scale(1);}
+											70%		{-webkit-transform: scale(1.05);}
+											80%		{-webkit-transform: scale(1);}
+											100%	{-webkit-transform: scale(1);}
+											}
+
+.evo-connection-line		{
+							position: absolute;
+							left: 0;
+							right: 0;
+							top: 25%;
+							border-top: 1px solid $gray-dark;
+							}
+.evo-connection-line-right	{
+							position: absolute;
+							right: 0;
+							top: 25%;
+							width: 50%;
+							border-top: 1px solid $gray-dark;
+							}
+.evo-connection-line-left	{
+							position: absolute;
+							left: 0;
+							top: 25%;
+							width: 50%;
+							border-top: 1px solid $gray-dark;
+							}
+.evo-connector-left-bottom
+							{
+							border-top: 1px solid $gray-dark;
+							border-left: 1px solid $gray-dark;
+							display: block;
+							height: 40px;
+							position: relative;
+							left: 54%;
+							top: 24px;
+							width: auto;
+							}
+.evo-connector-center
+							{
+							border-bottom: 1px solid $gray-dark;
+							display: block;
+							height: 20px;
+							position: relative;
+							top: 5px;
+							width: auto;
+							}
+.evo-connector-right-bottom
+							{
+							border-bottom: 1px solid $gray-dark;
+							border-right: 1px solid $gray-dark;
+							display: block;
+							height: 40px;
+							position: relative;
+							right: 54%;
+							top: -15px;
+							width: auto;
+							}
+
+
+.evo-stream-item-ctn		{
+							position: relative;
+							text-align: center;
+	[data-evo-active-open="pulse-animation"]
+								{
+								-webkit-animation-name: 'pulse-animation';
+								-webkit-animation-duration: 1000ms;
+								-webkit-transform-origin: 70% 70%;
+								-webkit-animation-iteration-count: infinite;
+								-webkit-animation-timing-function: linear;
+								}
+
+	.evo-icon-ctn				{
+								position: relative;
+								width: auto;
+								z-index: 2;
+									@include border-radius(100%);
+									background-color: $white;
+									border: 1px solid $gray-dark;
+									padding: rem-calc(12);
+		img							{max-width: $evo-clip-art-icon-size-medium;}
+								}
+
+	.evo-content-ctn			{
+								padding: 0 rem-calc(15);
+		.h3							{
+									font-size: rem-calc(12);
+									letter-spacing: 1px;
+									margin-top: rem-calc(10);
+									}
+		.h4							{
+									font-size: rem-calc(10);
+									letter-spacing: 0.5px;
+									}
+		.h5							{
+									font-size: rem-calc(9);
+									text-transform: lowercase;
+									letter-spacing: 0.5px;
+									}
+		.evo-progress				{height: rem-calc(10);}
+								}
+							}
+
+
+
+
+.evo-stream-completed-steps-ctn
+							{
+							@include border-radius(10);
+							border: 1px solid $gray-dark;
+							padding: rem-calc(15);
+							text-align: center;
+	.h6							{margin-bottom: rem-calc(15);}
+	.evo-stream-item-ctn		{
+								margin-bottom: rem-calc(25);
+		&:last-child				{margin-bottom: 0;}
+								}
+	.evo-stream-item-placeholder-ctn
+								{
+		.evo-icon-ctn				{
+									border-color: $gray-light;
+									border-style: dashed;
+									width: $evo-clip-art-icon-size-large;
+									height: $evo-clip-art-icon-size-large;
+									}
+								}
+							}
+
+.evo-stream-item-future-step-ctn
+							{opacity: 0.4;}

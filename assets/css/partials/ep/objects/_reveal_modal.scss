@@ -1,0 +1,22 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Global Color Variables Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+//
+//@variables
+//
+$reveal-position-top: rem-calc(0);
+
+.reveal-modal-bg				{position: fixed;}
+.reveal-modal					{z-index: 10000;}
+
+
+// SMALL MEDIA QUERY RANGE - 0px - 640px
+@media #{$small-only} {
+	.evo-reveal-modal			{
+								@include border-radius(0);
+								top: $reveal-position-top;
+								}
+}
