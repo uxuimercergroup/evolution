@@ -7,41 +7,64 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //
 // @variables
 //
-$evo-form-showcase-panel-h-shadow: 0 !default;
-$evo-form-showcase-panel-v-shadow: rem-calc(2) !default;
-$evo-form-showcase-panel-blur: rem-calc(8) !default;
-$evo-form-showcase-panel-color: $gray-mid !default;
-$evo-form-showcase-panel-padding: 3% 0 !default;
-$evo-form-showcase-panel-fixed-z-index: 1000 !default;
-$evo-form-showcase-panel-font-color: $gray-dark !default;
+$evo-showcase-panel-shadow-h: 0 !default;
+$evo-showcase-panel-shadow-v: rem-calc(2) !default;
+$evo-showcase-panel-shadow-blur: rem-calc(8) !default;
+$evo-showcase-panel-shadow-color: $gray-mid !default;
+$evo-showcase-panel-fixed-z-index: 1000 !default;
 
 
 // SHOWCASE PANEL - BEGINS
 	.evo-showcase-panel					{
-										@include box-shadow($evo-form-showcase-panel-h-shadow, $evo-form-showcase-panel-v-shadow, $evo-form-showcase-panel-blur, $evo-form-showcase-panel-color);
+										@include box-shadow($evo-showcase-panel-shadow-h, $evo-showcase-panel-shadow-v, $evo-showcase-panel-shadow-blur, $evo-showcase-panel-shadow-color);
 		li									{
-											padding: $evo-form-showcase-panel-padding;
+											min-height: rem-calc(100);
+											padding: rem-calc(10) 0;
 			.evo-icon-adv						{
-												background-color: $white;
+												top: rem-calc(4);
 												border: 0;
 												display: inline-block;
 												float: none;
-				[class*="evo-icon-"]					{
-														color: $emerald-dark;
-														top: 2px;
+
+				// LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
+				@each $color-name, $color in $color-palette 
+													{
+
+						// CUSTOM SPOT BACKGROUND COLOR FOR SHOWCASE ICONS
+						&[data-evo-showcase-panel-icon-background-color="#{$color-name}"]
+														{
+														background-color: map-get($color, color);
 														}
+													}
+
+				[class*="evo-icon-"]				{
+													top: 2px;
+
+					// LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
+					@each $color-name, $color in $color-palette 
+														{
+
+							// CUSTOM SPOT FONT COLOR FOR SHOWCASE ICONS
+							&[data-evo-showcase-panel-icon-color="#{$color-name}"]
+															{
+															color: map-get($color, color);
+															}
+														}
+													}
 												}
 											}
-										}
-	[data-evo-showcase-font-color=white]
-										{
-		li									{color: $evo-form-showcase-panel-font-color;}
+		.evo-large-cost						{
+											padding: rem-calc(19) 0;
+											}
+		.evo-small-cost						{
+											padding: rem-calc(30) 0;
+											}
 										}
 	.evo-showcase-panel-fixed			{
 										position: fixed;
 										top: 0;
 										left: 0;
-										z-index: $evo-form-showcase-panel-fixed-z-index;
+										z-index: $evo-showcase-panel-fixed-z-index;
 										width: 100%;
 										margin-left: 0;
 										}
