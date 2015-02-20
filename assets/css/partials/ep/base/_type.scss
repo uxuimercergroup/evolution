@@ -29,28 +29,32 @@ h2,
 h3,
 h4,
 h5							{
-							font-family: $evo-font-bold-stack;
 							text-transform: uppercase;
 							}
 
 h1							{
-							letter-spacing: rem-calc(2);
+							font-family: $evo-font-bold-stack;
+							letter-spacing: rem-calc(6);
 							}
 h2							{
-							letter-spacing: rem-calc(2);
+							font-family: $evo-font-regular-stack;
+							letter-spacing: rem-calc(4);
 							}
 h3							{
-							letter-spacing: rem-calc(2);
+							font-family: $evo-font-regular-stack;
+							letter-spacing: rem-calc(4);
 							}
 h4							{
-							letter-spacing: rem-calc(2);
+							font-family: $evo-font-bold-stack;
+							letter-spacing: rem-calc(4);
 							}
 h5							{
-							letter-spacing: rem-calc(2);
+							font-family: $evo-font-regular-stack;
+							letter-spacing: rem-calc(4);
 							}
 h6							{
-							font-family: $evo-font-regular-stack;
-							letter-spacing: rem-calc(1);
+							font-family: $evo-font-bold-stack;
+							letter-spacing: rem-calc(2);
 							text-transform: uppercase;
 							}
 

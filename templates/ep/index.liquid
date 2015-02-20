@@ -8,11 +8,12 @@
 	<li><a class="js-evo-scroll-to-location" href="#section-showcase-panel">Showcase Panel</a></li>
 	<li><a class="js-evo-scroll-to-location" href="#section-item-selection-panel">Item Selection Panel</a></li>
 	<li><a class="js-evo-scroll-to-location" href="#section-carousel">Carousel</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-carousel-add-remove-plan">Carousel with Add/Remove Plan</a></li>
 	<li><a class="js-evo-scroll-to-location" href="#section-pricing-table">Pricing Table</a></li>
 	<li><a class="js-evo-scroll-to-location" href="#section-range-slider">Range Slider</a></li>
 	<li><a class="js-evo-scroll-to-location" href="#section-conversational-form">Conversational Form</a></li>
 	<li><a class="js-evo-scroll-to-location" href="#section-compact-form">Compact Form</a></li>
-	<li><a class="js-evo-scroll-to-location" href="#section-inverse-stacked-form">Worksheet Form</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-worksheet-form">Worksheet Form</a></li>
 	<li><a class="js-evo-scroll-to-location" href="#section-title-bar">Title Bar</a></li>
 	<li><a class="js-evo-scroll-to-location" href="#section-stream">Stream</a></li>
 	<li><a class="js-evo-scroll-to-location" href="#section-login-template">Login Template</a></li>
@@ -46,9 +47,16 @@
 <!-- CAROUSEL - BEGINS -->
 <div id="section-carousel" class="section">
 	<h4 class="evo-hdr-rule">Carousel<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
-	{% include 'ep/objects/carousel' %}
+	{% include '/objects/carousel' %}
 </div>
 <!-- CAROUSEL - ENDS -->
+
+<!-- CAROUSEL WITH ADD/REMOVE PLAN - BEGINS -->
+<div id="section-carousel-add-remove-plan" class="section">
+	<h4 class="evo-hdr-rule">Carousel with Add/Remove Plan Component<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+	{% include 'ep/objects/carousel' %}
+</div>
+<!-- CAROUSEL WITH ADD/REMOVE PLAN - ENDS -->
 
 <!-- PRICING TABLE - BEGINS -->
 <div id="section-pricing-table" class="section">
@@ -78,12 +86,12 @@
 </div>
 <!-- COMPACT FORM - ENDS -->
 
-<!-- INVERSE STACKED FORM - BEGINS -->
-<div id="section-inverse-stacked-form" class="section">
+<!-- WORKSHEET FORM - BEGINS -->
+<div id="section-worksheet-form" class="section">
 	<h4 class="evo-hdr-rule">Worksheet Form<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
 	{% include 'ep/objects/form-worksheet' %}
 </div>
-<!-- INVERSE STACKED FORM - ENDS -->
+<!-- WORKSHEET FORM - ENDS -->
 
 <!-- TITLE BAR - BEGINS -->
 <div id="section-title-bar" class="section">

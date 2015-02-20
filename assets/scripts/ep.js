@@ -39,10 +39,17 @@
 		jQuery('.js-evo-scroll-to-location').click(function(e){
 			var scrollToLocationValue = jQuery(this).attr('href');
 			jQuery('html, body').animate({
-				scrollTop: jQuery(scrollToLocationValue).offset().top - 60
+				scrollTop: jQuery(scrollToLocationValue).offset().top - 180
 			}, 500);
 			e.preventDefault();
 		});
+	}
+
+	// SHOWCASE PANEL POSITION FIXED CHECK
+	var evoShowcasePanelFixed = function(){
+		if (jQuery('[data-evo-showcase-panel-fixed]').length) {
+			jQuery('header[role="banner"]').addClass('evo-showcase-panel-fixed-header-adjust');
+		}
 	}
 
 	// FORM TOGGLE CONTENT
@@ -61,7 +68,7 @@
 		});
 	}
 
-	// CAROUSEL SHOW/HIDE
+	// ADD/REMOVE PLAN COMPONENT SHOW/HIDE
 	var showPlanComponent = function (){
 		jQuery('.js-evo-disable-item').click(function() {
 			var id = 'carousel-item' + jQuery(this).attr('data-evo-carousel-toggle');
@@ -158,6 +165,9 @@ $(function() {
 		// SCROLL TO LOCATION
 		evoScrollToLocation();
 
+		// SHOWCASE PANEL POSITION FIXED CHECK
+		evoShowcasePanelFixed();
+
 		// FORM TOGGLE CONTENT
 		evoFormToggleContent();
 
@@ -165,11 +175,16 @@ $(function() {
 		itemSelectionClassToggle();
 
 		// CAROUSEL
+		evoCarousel('js-evo-carousel-example',{
+			autoPlay: false
+		});
+
+		// CAROUSEL WITH ADD/REMOVE PLAN
 		evoCarousel('js-evo-ep-carousel',{
 			autoPlay: false
 		});
 
-		// CAROUSEL SHOW/HIDE
+		// ADD/REMOVE PLAN COMPONENT SHOW/HIDE
 		hidePlanComponent();
 		showPlanComponent();
 

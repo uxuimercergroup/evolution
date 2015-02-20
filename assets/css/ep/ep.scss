@@ -36,7 +36,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 		"../partials/ep/objects/pricing_table",
 		"../partials/ep/objects/item_highlight_ctn",
 		"../partials/ep/objects/category_hdr_ctn",
-		"../partials/ep/objects/form_worksheet",
+		"../partials/ep/objects/worksheet_form",
 		"../partials/ep/objects/slider_contributions",
 		"../partials/ep/objects/reveal_modal",
 		"../partials/ep/objects/login_template",
@@ -62,7 +62,7 @@ html.evo-mod-js							{display:none;}
 											padding-right: rem-calc(20);
 		[class*="evo-icon"]						{
 												display: block;
-												height: rem-calc(27);
+												height: rem-calc(26);
 												width: rem-calc(30);
 												right: rem-calc(-20);
 			&:before								{

@@ -11,7 +11,7 @@ $evo-showcase-panel-shadow-h: 0 !default;
 $evo-showcase-panel-shadow-v: rem-calc(2) !default;
 $evo-showcase-panel-shadow-blur: rem-calc(8) !default;
 $evo-showcase-panel-shadow-color: $gray-mid !default;
-$evo-showcase-panel-fixed-z-index: 1000 !default;
+$evo-showcase-panel-fixed-z-index: 10001 !default;
 
 
 // SHOWCASE PANEL - BEGINS
@@ -55,17 +55,24 @@ $evo-showcase-panel-fixed-z-index: 1000 !default;
 											}
 		.evo-large-cost						{
 											padding: rem-calc(19) 0;
+											position: relative;
+											top: rem-calc(4);
 											}
 		.evo-small-cost						{
 											padding: rem-calc(30) 0;
 											}
 										}
-	.evo-showcase-panel-fixed			{
+	[data-evo-showcase-panel-fixed]		{
 										position: fixed;
-										top: 0;
+										top: rem-calc(45);
 										left: 0;
 										z-index: $evo-showcase-panel-fixed-z-index;
 										width: 100%;
 										margin-left: 0;
+										}
+
+	.evo-showcase-panel-fixed-header-adjust
+										{
+										margin-bottom: rem-calc(145);
 										}
 // SHOWCASE PANEL - ENDS

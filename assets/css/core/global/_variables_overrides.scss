@@ -70,15 +70,15 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 
 // We use these to control header font styles
 $header-font-color: $gray-dark;
-$header-line-height: 1.2;
+$header-line-height: 1.4;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(40);
-$h2-font-size: rem-calc(32);
+$h1-font-size: rem-calc(36);
+$h2-font-size: rem-calc(28);
 $h3-font-size: rem-calc(24);
-$h4-font-size: rem-calc(22);
-$h5-font-size: rem-calc(19);
-$h6-font-size: rem-calc(14);
+$h4-font-size: rem-calc(18);
+$h5-font-size: rem-calc(14);
+$h6-font-size: rem-calc(12);
 
 // We use these to control header size reduction on small screens
 $h1-font-reduction: 0;
@@ -213,7 +213,7 @@ $reveal-box-shadow: 0 0 10px rgba($black,.4);
 
 // We use these to style the reveal close button
 $reveal-close-font-size: 1rem;
-$reveal-close-top: rem-calc(22);
+$reveal-close-top: rem-calc(25);
 $reveal-close-side: rem-calc(21);
 
 // We use these to control the modal border
@@ -1131,16 +1131,16 @@ $topbar-margin-bottom: 0;
 
 // FORM WORKSHEET
 // ------------------------------------------------------------------------------------------
-// $evo-worksheat-font-family: 				$evo-font-regular-family;
-// $evo-worksheat-font-size: 				rem-calc(25);
-// $evo-worksheat-label-color: 				$gray-mid;
-// $evo-worksheat-inputs-border-radius: 	0;
-// $evo-worksheat-inputs-bg-color: 			$gray-lightest;
-// $evo-worksheat-inputs-border: 			0;
-// $evo-worksheat-inputs-border-bottom-with: 2px;
-// $evo-worksheat-inputs-border-bottom-style: solid;
-// $evo-worksheat-inputs-border-bottom-color: $sapphire-mid;
-// $evo-worksheat-input-color: 				$sapphire-mid;
+// $evo-form-worksheet-font-family: $evo-font-regular-family;
+// $evo-form-worksheet-font-size: rem-calc(25);
+// $evo-form-worksheet-label-color: $gray-mid;
+// $evo-form-worksheet-inputs-border-radius: 0;
+// $evo-form-worksheet-inputs-bg-color: $gray-lightest;
+// $evo-form-worksheet-inputs-border: 0;
+// $evo-form-worksheet-inputs-border-bottom-with: 2px;
+// $evo-form-worksheet-inputs-border-bottom-style: solid;
+// $evo-form-worksheet-inputs-border-bottom-color: $sapphire-mid;
+// $evo-form-worksheet-input-color: $sapphire-mid;
 
 
 // SLIDER CONTRIBUTIONS
