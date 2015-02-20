@@ -36,6 +36,7 @@ $evo-price-table-total-row-font-color: $white !default;
 // PRICING TABLE - BEGINS
 	.evo-price-table			{
 								@include clearfix;
+								padding-bottom: rem-calc(20);
 		[class*="small-block-grid-"]
 									{
 									background-color: $evo-price-table-bg-color;

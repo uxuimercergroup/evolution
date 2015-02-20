@@ -7,6 +7,27 @@
 		jQuery('html.evo-mod-js').show();
 	}
 
+	// SCROLL TO TOP
+	var evoScrollToTop = function(){
+		jQuery('.js-evo-scroll-to-top').click(function(e){
+			jQuery('body,html').animate({
+				scrollTop: 0
+			}, 500);
+			e.preventDefault();
+		});
+	}
+
+	// SCROLL TO LOCATION
+	var evoScrollToLocation = function(){
+		jQuery('.js-evo-scroll-to-location').click(function(e){
+			var scrollToLocationValue = jQuery(this).attr('href');
+			jQuery('html, body').animate({
+				scrollTop: jQuery(scrollToLocationValue).offset().top - 60
+			}, 500);
+			e.preventDefault();
+		});
+	}
+
 	// FORM TOGGLE CONTENT
 	var evoFormToggleContent = function(){
 		jQuery('.js-evo-toggle-form-content').focus(function(){
@@ -28,6 +49,7 @@
 		jQuery('.js-evo-disable-item').click(function() {
 			var id = 'carousel-item' + jQuery(this).attr('data-evo-carousel-toggle');
 			jQuery('#' + id).show();
+			jQuery(this).css('visibility', 'hidden');
 			return false;
 		});
 	};
@@ -35,6 +57,7 @@
 	var hidePlanComponent = function (){
 		jQuery('.js-evo-enable-item').click(function() {
 			jQuery(this).parent().hide();
+			jQuery('.js-evo-disable-item').css('visibility', 'visible');
 		});
 	};
 
@@ -44,7 +67,7 @@
 	var evoSliderContributions = function(objectDataValue) {
 		
 		// Variable to define slider range object based on data attribute value
-		var sliderDataValue = jQuery('[data-slider='+objectDataValue+']');
+		var sliderDataValue = jQuery('[data-evo-slider='+objectDataValue+']');
 
 		// Slider Contribution values
 		var userContributionValue = 5;
@@ -111,6 +134,12 @@ $(function() {
 		// FIXES FLASH OF UNSTYLED CONTENT BUG - WHERE PAGE LOADS FASTER THAN JS AND MODERNIZR
 		// HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
 		evoFixFOUC();
+
+		// SCROLL TO TOP
+		evoScrollToTop();
+
+		// SCROLL TO LOCATION
+		evoScrollToLocation();
 
 		// FORM TOGGLE CONTENT
 		evoFormToggleContent();

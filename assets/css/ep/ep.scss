@@ -39,6 +39,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 		"../partials/ep/objects/form_worksheet",
 		"../partials/ep/objects/slider_contributions",
 		"../partials/ep/objects/reveal_modal",
+		"../partials/ep/objects/login_template",
 		"../partials/ep/objects/stream";
 
 /*=== WEBSITE STYLES ======================================================================*/
@@ -49,19 +50,27 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 // HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
 html.evo-mod-js							{display:none;}
 
-.evo-login-template						{
-										display: none;
-										background: url(../images/ep/background2.png) no-repeat center center fixed $sapphire-dark;
-										color: $white;
-										padding: rem-calc(0) rem-calc(15) rem-calc(15) rem-calc(15);
-										height: 1000px;
-										margin-left: -10px;
-										margin-right: -10px;
-										text-align: center;
-	.evo-login-content-ctn					{
-											margin-top: rem-calc(100);
-		img										{}
-		p										{}
+/*--- SITE SPECIFIC -----------------------------------------------------------------------*/
+.toc									{
+										margin-bottom: rem-calc(60);
+										}
+
+.section								{
+										margin-bottom: rem-calc(60);
+	.evo-hdr-rule							{
+											margin-bottom: rem-calc(30);
+											padding-right: rem-calc(20);
+		[class*="evo-icon"]						{
+												display: block;
+												height: rem-calc(27);
+												width: rem-calc(30);
+												right: rem-calc(-20);
+			&:before								{
+													position: relative;
+													top: rem-calc(5);
+													left: rem-calc(2);
+													}
+												}
 											}
 										}
 
@@ -70,13 +79,12 @@ html.evo-mod-js							{display:none;}
 // COLOR PALETTE SWATCH BOX
 .color-block
 										{
-										height: 50px;
+										height: rem-calc(50);
 										text-align: center;
 										color: $white;
-										padding-top: 15px;
-										text-shadow: 1px 1px 1px $gray-darkest;
+										padding-top: rem-calc(15);
+										text-shadow: rem-calc(1) rem-calc(1) rem-calc(1) $gray-darkest;
 										}
-
 
 /*=== MEDIA QUERIES =========================================================================*/
 @import	"../partials/ep/global/responsive_small",

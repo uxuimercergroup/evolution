@@ -1,145 +1,130 @@
 {% layout "ep/layout" %}
 {% block content %}
 
-<!-- TITLE BAR - BEGINS -->
-<h3 class="evo-hdr-rule">Title Bar</h3>
-<p><a href="/ep/index-title-bar">Demo of Title Bar</a></p>
-<!-- TITLE BAR - ENDS -->
-
-<!-- TYPE - BEGINS -->
-<h3 class="evo-hdr-rule">Type</h3>
-{% include "ep/base/type" %}
-<!-- TYPE - ENDS -->
-
-<br />
-
-<!-- COLORS - BEGINS -->
-<h3 class="evo-hdr-rule">Color Palette</h3>
-{% include "ep/base/colors" %}
-<!-- COLORS - ENDS -->
-
-<br />
+<!-- TABLE OF CONTENTS - BEGINS -->
+<h4 class="evo-hdr-rule">Table of Contents</h4>
+<ul class="evo-data-list toc">
+	<li><a class="js-evo-scroll-to-location" href="#section-buttons">Buttons</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-showcase-panel">Showcase Panel</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-item-selection-panel">Item Selection Panel</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-carousel">Carousel</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-pricing-table">Pricing Table</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-range-slider">Range Slider</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-conversational-form">Conversational Form</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-compact-form">Compact Form</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-inverse-stacked-form">Worksheet Form</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-title-bar">Title Bar</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-stream">Stream</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-login-template">Login Template</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-modal">Modal</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-type">Type</a></li>
+	<li><a class="js-evo-scroll-to-location" href="#section-color-palette">Color Palette</a></li>
+</ul>
+<!-- TABLE OF CONTENTS - ENDS -->
 
 <!-- BUTTONS - BEGINS -->
-<h3 class="evo-hdr-rule">Buttons</h3>
-{% include "ep/base/buttons" %}
+<div id="section-buttons" class="section">
+	<h4 class="evo-hdr-rule">Buttons<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+	{% include "ep/base/buttons" %}
+</div>
 <!-- BUTTONS - ENDS -->
 
-<!-- COMPACT FORM - BEGINS -->
-<h3 class="evo-hdr-rule">Compact Form</h3>
-{% include "base/forms/form-compact" %}
-<!-- COMPACT FORM - ENDS -->
-
-<!-- CONVERSATIONAL FORM - BEGINS -->
-<h3 class="evo-hdr-rule">Conversational Form</h3>
-{% include "ep/objects/form-conversational" %}
-<!-- CONVERSATIONAL FORM - ENDS -->
-
 <!-- SHOWCASE PANEL - BEGINS -->
-<h3 class="evo-hdr-rule">Showcase Panel</h3>
-{% include "ep/objects/showcase-panel" %}
+<div id="section-showcase-panel" class="section">
+	<h4 class="evo-hdr-rule">Showcase Panel<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+	{% include "ep/objects/showcase-panel" %}
+</div>
 <!-- SHOWCASE PANEL - ENDS -->
 
-<br />
-
 <!-- ITEM SELECTION PANEL - BEGINS -->
-<h3 class="evo-hdr-rule">Item Selection Panel</h3>
-{% include "ep/objects/item-selection-panel" %}
+<div id="section-item-selection-panel" class="section">
+	<h4 class="evo-hdr-rule">Item Selection Panel<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+	{% include "ep/objects/item-selection-panel" %}
+</div>
 <!-- ITEM SELECTION PANEL - ENDS -->
 
-<br />
-
-<!-- PRICING TABLE - BEGINS -->
-<h3 class="evo-hdr-rule">Pricing Table</h3>
-{% include "ep/objects/pricing-table" %}
-<!-- PRICING TABLE - ENDS -->
-
-<br />
-
 <!-- CAROUSEL - BEGINS -->
-<h3 class="evo-hdr-rule">Carousel</h3>
-{% include 'ep/objects/carousel' %}
+<div id="section-carousel" class="section">
+	<h4 class="evo-hdr-rule">Carousel<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+	{% include 'ep/objects/carousel' %}
+</div>
 <!-- CAROUSEL - ENDS -->
 
-<br />
+<!-- PRICING TABLE - BEGINS -->
+<div id="section-pricing-table" class="section">
+	<h4 class="evo-hdr-rule">Pricing Table<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+	{% include "ep/objects/pricing-table" %}
+</div>
+<!-- PRICING TABLE - ENDS -->
+
+<!-- RANGE SLIDER - CONTRIBUTIONS - BEGINS -->
+<div id="section-range-slider" class="section">
+	<h4 class="evo-hdr-rule">Range Slider - Contributions<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+	{% include 'ep/objects/slider-contributions' %}
+</div>
+<!-- RANGE SLIDER - CONTRIBUTIONS - ENDS -->
+
+<!-- CONVERSATIONAL FORM - BEGINS -->
+<div id="section-conversational-form" class="section">
+	<h4 class="evo-hdr-rule">Conversational Form<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+	{% include "ep/objects/form-conversational" %}
+</div>
+<!-- CONVERSATIONAL FORM - ENDS -->
+
+<!-- COMPACT FORM - BEGINS -->
+<div id="section-compact-form" class="section">
+<h4 class="evo-hdr-rule">Compact Form<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+{% include "base/forms/form-compact" %}
+</div>
+<!-- COMPACT FORM - ENDS -->
 
 <!-- INVERSE STACKED FORM - BEGINS -->
-<h3 class="evo-hdr-rule">Worksheet Form</h3>
-{% include 'ep/objects/form-worksheet' %}
+<div id="section-inverse-stacked-form" class="section">
+	<h4 class="evo-hdr-rule">Worksheet Form<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+	{% include 'ep/objects/form-worksheet' %}
+</div>
 <!-- INVERSE STACKED FORM - ENDS -->
 
-<br>
+<!-- TITLE BAR - BEGINS -->
+<div id="section-title-bar" class="section">
+	<h4 class="evo-hdr-rule">Title Bar<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+	<p><a href="/ep/index-title-bar">Demo of Title Bar</a></p>
+</div>
+<!-- TITLE BAR - ENDS -->
 
-<!-- REVEAL/MODAL - BEGINS -->
-<h3 class="evo-hdr-rule">Reveal Modal</h3>
-{% include 'ep/objects/reveal-modal' %}
-<!-- REVEAL/MODAL - ENDS -->
-
-<br><br><br>
+<!-- STREAM - BEGINS -->
+<div id="section-stream" class="section">
+	<h4 class="evo-hdr-rule">Stream<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+	{% include 'ep/objects/stream' %}
+</div>
+<!-- STREAM - ENDS -->
 
 <!-- LOGIN TEMPLATE - BEGINS -->
-<h3 class="evo-hdr-rule">Login Template</h3>
-<div class="evo-login-template">
-	<div class="row">
-		<div class="small-12 columns">
-			<div class="evo-login-content-ctn">			
-				<img src="{{ "mercer_logo_reverse_188x28.png" | asset_url }}">
-				<p>Mercer helps you make the most of your future by helping you take action on your health, wealth, and career today.</p>
-			</div>
-	<!-- FORM COMPACT - BEGINS -->
-		<form>
-			<fieldset>
-				<div class="row">
-					<div class="small-12 columns">
-						<label>
-							<input type="text" placeholder="Placeholder text" />
-						</label>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="small-12 columns">
-						<label>
-							<input type="text" placeholder="Placeholder text" />
-						</label>
-					</div>
-				</div>
-
-				<div class="row evo-btn-row">
-					<div class="small-12 columns">
-						<button class="button expand radius show-for-small-only evo-btn" data-evo-button-color="white" data-evo-button-font-color="sapphire-dark" data-evo-button-icons="right" id="" name="" value="" type="" tabindex="13" title="Log In">
-							<span class="evo-btn-text">Log In</span>
-							<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-						</button>
-						<button class="button radius show-for-medium-up evo-btn" data-evo-button-color="white" data-evo-button-font-color="sapphire-dark" data-evo-button-icons="right" id="" name="" value="" type="" tabindex="13" title="Log In">
-							<span class="evo-btn-text">Log In</span>
-							<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-						</button>
-					</div>
-				</div>
-			</fieldset>
-		</form>
-	<!-- FORM COMPACT - ENDS -->
-			<a href="javascript:;" data-evo-font-color="white">Creat an account</a>
-		</div>
-	</div>
+<div id="section-login-template" class="section">
+	<h4 class="evo-hdr-rule">Login Template<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+	{% include 'ep/objects/login-template' %}
 </div>
 <!-- LOGIN TEMPLATE - ENDS -->
 
-<br />
+<!-- MODAL - BEGINS -->
+<div id="section-modal" class="section">
+	<h4 class="evo-hdr-rule">Modal<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+	{% include 'ep/objects/reveal-modal' %}
+</div>
+<!-- MODAL - ENDS -->
 
-<!-- SLIDER CONTRIBUTIONS - BEGINS -->
-<h3 class="evo-hdr-rule">Range Slider - Contributions</h3>
-{% include 'ep/objects/slider-contributions' %}
-<!-- SLIDER CONTRIBUTIONS - ENDS -->
+<!-- TYPE - BEGINS -->
+<div id="section-type" class="section">
+	<h4 class="evo-hdr-rule">Type<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+	{% include "ep/base/type" %}
+</div>
+<!-- TYPE - ENDS -->
 
-<br />
+<!-- COLORS - BEGINS -->
+<div id="section-color-palette" class="section">
+	<h4 class="evo-hdr-rule">Color Palette<a href="#top" class="evo-icon-arrow-up2 right js-evo-scroll-to-top" title="Back To Top"></a></h4>
+	{% include "ep/base/colors" %}
+</div>
+<!-- COLORS - ENDS -->
 
-<!-- STREAM - BEGINS -->
-<h3 class="evo-hdr-rule">Stream</h3>
-{% include 'ep/objects/stream' %}
-<!-- STREAM - ENDS -->
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 {% endblock %}

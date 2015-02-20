@@ -7,10 +7,13 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //
 // @variables
 //
+$evo-contributions-slider-background-start-color: $gray-light !default;
+$evo-contributions-slider-background-end-color: $gray-light !default;
 $evo-contributions-slider-handle-background-start-color: $citrine-mid !default;
 $evo-contributions-slider-handle-background-end-color: $citrine-mid !default;
 $evo-contributions-slider-handle-shadow-color: $black !default;
 $evo-contributions-slider-handle-border-color: $white !default;
+$evo-contributions-slider-range-background-color: $gray-mid !default;
 $evo-contributions-slider-tick-marker-color: $gray-light !default;
 $evo-contributions-slider-tooltip-background-color: $gray-dark !default;
 $evo-contributions-slider-tooltip-font-color: $white !default;
@@ -23,6 +26,7 @@ $evo-contributions-slider-tooltip-font-color: $white !default;
 	
 	// SLIDER
 	.evo-slider.ui-slider			{
+									@include background-gradient($evo-contributions-slider-background-start-color,$evo-contributions-slider-background-end-color);
 									@include border-radius(0);
 									width: 100%;
 									position: relative;
@@ -63,6 +67,12 @@ $evo-contributions-slider-tooltip-font-color: $white !default;
 												border-top: rem-calc(10) solid rgba($evo-contributions-slider-tooltip-background-color, .9);
 												}
 											}
+										}
+
+		// SLIDER RANGE
+		.ui-slider-range				{
+										@include border-radius(0);
+										background-color: $evo-contributions-slider-range-background-color;
 										}
 									}
 

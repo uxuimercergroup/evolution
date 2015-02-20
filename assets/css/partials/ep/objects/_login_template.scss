@@ -1,0 +1,38 @@
+/*------------------------------------------------------------------------------------------
+Mercer Evolution - Employee Portal Family - Login Template Partial
+DATE - February, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+-------------------------------------------------------------------------------------------*/
+
+//
+// @variables
+//
+$evo-login-template-background-color: $sapphire-dark !default;
+$evo-login-template-font-color: $white !default;
+
+
+.evo-login-template						{
+										background: $evo-login-template-background-color;
+										color: $evo-login-template-font-color;
+										padding: rem-calc(20);
+										margin-left: rem-calc(-10);
+										margin-right: rem-calc(-10);
+										text-align: center;
+	.evo-login-content-ctn					{
+		img										{
+												margin-bottom: rem-calc(14);
+												}
+		p										{
+												font-size: rem-calc(28);
+												line-height: 1.1;
+												}
+											}
+	form									{
+		.evo-btn-row							{
+			.evo-btn								{
+													margin-left: auto;
+													margin-right: auto;
+													}
+												}
+											}
+										}
