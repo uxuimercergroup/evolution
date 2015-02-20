@@ -280,9 +280,9 @@
           this.locked = false;
         }
         if (animData.pop) {
-          css.top = $(root_element).scrollTop() - el.data('offset') + 'px'; //adding root_element instead of window for scrolling offset if modal trigger is below the fold
+          css.top = $(window).scrollTop() - el.data('offset') + 'px'; //adding root_element instead of window for scrolling offset if modal trigger is below the fold
           var end_css = {
-            top: $(root_element).scrollTop() + el.data('css-top') + 'px', //adding root_element instead of window for scrolling offset if modal trigger is below the fold
+            top: $(window).scrollTop() + el.data('css-top') + 'px', //adding root_element instead of window for scrolling offset if modal trigger is below the fold
             opacity: 1
           };
 
@@ -298,7 +298,7 @@
         }
 
         if (animData.fade) {
-          css.top = $(root_element).scrollTop() + el.data('css-top') + 'px'; //adding root_element instead of window for scrolling offset if modal trigger is below the fold
+          css.top = $(window).scrollTop() + el.data('css-top') + 'px'; //adding root_element instead of window for scrolling offset if modal trigger is below the fold
           var end_css = {opacity: 1};
 
           return setTimeout(function () {
@@ -339,7 +339,7 @@
         }
         if (animData.pop) {
           var end_css = {
-            top: - $(root_element).scrollTop() - el.data('offset') + 'px', //adding root_element instead of window for scrolling offset if modal trigger is below the fold
+            top: - $(window).scrollTop() - el.data('offset') + 'px', //adding root_element instead of window for scrolling offset if modal trigger is below the fold
             opacity: 0
           };
 

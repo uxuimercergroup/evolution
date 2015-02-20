@@ -7,17 +7,24 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //
 //@variables
 //
-$evo-reveal-position-top: rem-calc(0) !default;
 
 
-.reveal-modal-bg				{position: fixed;}
-.reveal-modal					{z-index: 10000;}
+.reveal-modal-bg				{
+								z-index: 10002;
+								}
+.evo-reveal-modal				{
+								z-index: 10003;
+	.evo-reveal-modal-hdr			{
+									margin: 0 rem-calc(26) rem-calc(20) 0;
+									}
+								}
 
 
 // SMALL MEDIA QUERY RANGE - 0px - 640px
 @media #{$small-only} {
+
 	.evo-reveal-modal			{
 								@include border-radius(0);
-								top: $evo-reveal-position-top;
 								}
+
 }
