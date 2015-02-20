@@ -27,11 +27,12 @@ $evo-worksheat-input-color: $sapphire-mid !default;
 										font-size: $evo-worksheat-font-size;
 										color: $evo-worksheat-label-color;
 										margin-bottom: rem-calc(0.75);
-										margin-left: 16px;
 			.evo-input-value-amt			{
 											float: left;
 											padding-right: rem-calc(5);
-											margin-left: -16px;
+											width: rem-calc(20);
+											position: relative;
+											top: rem-calc(-4);
 											}
 			input[type="text"]				{
 											@include border-radius($evo-worksheat-inputs-border-radius);
@@ -40,12 +41,27 @@ $evo-worksheat-input-color: $sapphire-mid !default;
 											border-bottom: $evo-worksheat-inputs-border-bottom-with $evo-worksheat-inputs-border-bottom-style $evo-worksheat-inputs-border-bottom-color;
 											color: $evo-worksheat-input-color;
 											font-size: $evo-worksheat-font-size;
-
-											margin: 0 0 rem-calc(2) rem-calc(10);
-											width: 98%;
-											margin-left: -16px;
+											margin-bottom: rem-calc(2);
+											width: 93%;
 											}
 										}
 									}
 
 								}
+
+//=== MEDIA QUERIES =========================================================================
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+@media #{$medium-up} {
+
+	.form-stacked-inverse		{
+		.row						{
+			label						{
+				input[type="text"]			{
+											width: 96%;
+											}
+										}
+									}
+								}
+
+}
