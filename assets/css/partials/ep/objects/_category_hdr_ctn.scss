@@ -14,23 +14,6 @@ $evo-category-hdr-label-color: $gray-dark !default;
 $evo-category-hdr-label-margin: 18px 0 !default;
 $evo-category-hdr-label-padding: 15px !default;
 
-$evo-category-hdr-label-icon-color: $gray-light !default;
-$evo-category-hdr-label-icon-float: right !default;
-$evo-category-hdr-label-icon-font-size: rem-calc(22) !default;
-$evo-category-hdr-label-icon-position: relative !default;
-$evo-category-hdr-label-icon-position-top: rem-calc(12) !default;
-$evo-category-hdr-label-icon-padding-bottom: 2px !default;
-
-$evo-carousel-disable-bgcolor: rgba(255, 255, 255, 0.90) !default;
-$evo-carousel-disable-position: absolute !default;
-$evo-carousel-disable-position-left: 0 !default;
-$evo-carousel-disable-position-right: 0 !default;
-$evo-carousel-disable-padding: 64px 0 !default;
-$evo-carousel-disable-z-index: 1 !default;
-$evo-carousel-disable-text-align: center !default;
-
-$evo-carousel-disable-link-font-size: rem-calc(14) !default;
-$evo-carousel-disable-link-text-transform: uppercase !default;
 
 .evo-category-hdr-ctn					{
 	.evo-category-label						{
@@ -39,29 +22,5 @@ $evo-carousel-disable-link-text-transform: uppercase !default;
 											margin: $evo-category-hdr-label-margin;
 											padding-top: $evo-category-hdr-label-padding;
 											text-align: center;
-											}
-	[class*="evo-icon-"]					{
-											color: $evo-category-hdr-label-icon-color;
-											float: $evo-category-hdr-label-icon-float;
-											font-size: $evo-category-hdr-label-icon-font-size;
-											position: $evo-category-hdr-label-icon-position;
-											top: $evo-category-hdr-label-icon-position-top;
-											padding-bottom: $evo-category-hdr-label-icon-padding-bottom;
-											}
-										}
-
-.evo-carousel-wrapper					{
-	.evo-hide-slider						{
-											background-color: $evo-carousel-disable-bgcolor;
-											position: $evo-carousel-disable-position;
-											left: $evo-carousel-disable-position-left;
-											right: $evo-carousel-disable-position-right;
-											padding: $evo-carousel-disable-padding;
-											text-align: $evo-carousel-disable-text-align;
-											z-index: $evo-carousel-disable-z-index;
-		a										{
-												font-size: $evo-carousel-disable-link-font-size;
-												text-transform: $evo-carousel-disable-link-text-transform;
-												}
 											}
 										}
