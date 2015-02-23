@@ -34,6 +34,10 @@ $info-color: $sapphire;
 // We use these to control various global styles
 $body-font-color: $gray-dark;
 
+// We use these to make sure border radius matches unless we want it different.
+$global-radius: 3px;
+$global-rounded: 1000px;
+
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -1167,6 +1171,7 @@ $topbar-margin-bottom: 0;
 
 // LOGIN TEMPLATE
 // ------------------------------------------------------------------------------------------
-// $evo-login-template-background-color: 	$sapphire-dark;
-// $evo-login-template-font-color: 			$white;
+// $evo-login-template-background-color: 	$sapphire;
+// $evo-login-template-font-color:			$white;
+// $evo-login-template-background-image-src-path: "../images/login_custom_bkgd_3.jpg";
 

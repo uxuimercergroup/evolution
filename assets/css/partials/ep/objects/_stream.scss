@@ -202,7 +202,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 									}
 
 	.evo-stream-completed-steps-ctn	{
-									@include border-radius(4px);
+									@include border-radius($global-radius);
 									border: 1px solid $gray-lighter;
 									margin-bottom: rem-calc(0);
 		.evo-stream-item-ctn-placeholder{

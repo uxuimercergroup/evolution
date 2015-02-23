@@ -7,32 +7,75 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //
 // @variables
 //
-$evo-login-template-background-color: $sapphire-dark !default;
+$evo-login-template-background-color: $sapphire !default;
 $evo-login-template-font-color: $white !default;
+$evo-login-template-background-image-src-path: "../images/login_custom_bkgd_3.jpg" !default;
 
 
-.evo-login-template						{
-										background: $evo-login-template-background-color;
-										color: $evo-login-template-font-color;
-										padding: rem-calc(20);
-										margin-left: rem-calc(-10);
-										margin-right: rem-calc(-10);
-										text-align: center;
-	.evo-login-content-ctn					{
-		img										{
-												margin-bottom: rem-calc(14);
-												}
-		p										{
-												font-size: rem-calc(28);
-												line-height: 1.1;
-												}
+.evo-login-template-layout				{
+										@include ie-gradient-reset-filter;
+										background: url("#{$evo-login-template-background-image-src-path}") no-repeat center center fixed $evo-login-template-background-color;
+										@include background-size(cover);
+										height: 100%;
+										width: 100%;
+
+	section[role="main"]					{
+											padding-top: rem-calc(10);
+											background-color: transparent;
 											}
-	form									{
-		.evo-btn-row							{
-			.evo-btn								{
-													margin-left: auto;
-													margin-right: auto;
+
+	.evo-login-template						{
+											@include translucent-background($evo-login-template-background-color, .9);
+											@include border-radius($global-radius);
+											color: $evo-login-template-font-color;
+											padding: rem-calc(20);
+											text-align: center;
+											margin: rem-calc(45) auto 0 auto;
+											width: 100%;
+											max-width: 560px;
+											min-width: 0;
+		.evo-login-content-ctn					{
+			img										{
+													margin-bottom: rem-calc(14);
+													}
+												}
+		form									{
+			.evo-btn-row							{
+				.columns								{
+														display: inline-block;
+														}
 													}
 												}
 											}
 										}
+
+//=== MEDIA QUERIES =========================================================================
+		
+
+@media #{$medium-up} {
+
+.evo-login-template-layout				{
+	.evo-login-template						{
+											margin-top: rem-calc(100);
+											}
+										}
+
+}
+
+@media #{$small-only} {
+
+	
+
+}
+
+@media #{$medium-only} {
+
+	
+
+}
+
+@media #{$large-only} {
+
+	
+
+}

@@ -70,7 +70,7 @@
 		{{ "modernizr.js" | asset_url | script_tag }}
 
 	</head>
-	<body id="top" {% if mixture.url == "ep/stream" %}data-evo-background-color="sapphire-mid"{% endif %}>
+	<body id="top" {% if mixture.url == "ep/login" %}class="evo-login-template-layout"{% endif %} {% if mixture.url == "ep/stream" %}data-evo-background-color="sapphire-mid"{% endif %}>
 
 		<!-- OFF CANVAS WRAPPER - BEGINS -->
 		<div class="off-canvas-wrap evo-off-canvas-wrap" data-offcanvas>

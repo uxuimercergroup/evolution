@@ -46,7 +46,9 @@ $evo-button-font-color-alt-visited: $button-font-color-alt !default;
 			&[data-evo-button-font-color="#{$color-name}"].secondary:visited
 											{
 											color: map-get($color, color);
+				&:visited,
 				&:hover,
+				&:active,
 				&:focus							{
 												color: map-get($color, color);
 												}

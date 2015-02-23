@@ -43,7 +43,7 @@ $evo-contributions-slider-tooltip-font-color: $white !default;
 										top: rem-calc(-9) !important;
 										margin-left: rem-calc(-11);
 			.evo-slider-tooltip				{
-											@include border-radius(rem-calc(3) rem-calc(3) 0 0);
+											@include border-radius($global-radius $global-radius 0 0);
 											background-color: rgba($evo-contributions-slider-tooltip-background-color, .9);
 											position: absolute;
 											top: rem-calc(-45);
