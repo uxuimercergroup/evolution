@@ -62,26 +62,26 @@
 	}
 
 	// ITEM SELECTION CLASS TOGGLE
-	var itemSelectionClassToggle = function (){
+	var evoItemSelectionClassToggle = function (){
 		jQuery('.js-evo-category-highlight').click(function(event) {
 			jQuery(this).toggleClass('evo-category-highlight');
 		});
 	}
 
-	// ADD/REMOVE PLAN COMPONENT SHOW/HIDE
-	var showPlanComponent = function (){
-		jQuery('.js-evo-disable-item').click(function() {
-			var id = 'carousel-item' + jQuery(this).attr('data-evo-carousel-toggle');
+	// ADD/REMOVE PLAN COMPONENT DISABLE/ENABLE
+	var evoShowPlanComponent = function (){
+		jQuery('.js-evo-add-remove-plan-component-disable').click(function() {
+			var id = 'evo-add-remove-plan-component-item-' + jQuery(this).attr('data-evo-add-remove-plan-component-item-toggle');
 			jQuery('#' + id).show();
 			jQuery(this).css('visibility', 'hidden');
 			return false;
 		});
 	};
 
-	var hidePlanComponent = function (){
-		jQuery('.js-evo-enable-item').click(function() {
+	var evoHidePlanComponent = function (){
+		jQuery('.js-evo-add-remove-plan-component-enable').click(function() {
 			jQuery(this).parent().hide();
-			jQuery('.js-evo-disable-item').css('visibility', 'visible');
+			jQuery('.js-evo-add-remove-plan-component-disable').css('visibility', 'visible');
 		});
 	};
 
@@ -172,21 +172,21 @@ $(function() {
 		evoFormToggleContent();
 
 		// ITEM SELECTION CLASS TOGGLE
-		itemSelectionClassToggle();
+		evoItemSelectionClassToggle();
 
 		// CAROUSEL
 		evoCarousel('js-evo-carousel-example',{
 			autoPlay: false
 		});
 
-		// CAROUSEL WITH ADD/REMOVE PLAN
-		evoCarousel('js-evo-ep-carousel',{
+		// ADD/REMOVE PLAN COMPONENT CAROUSEL
+		evoCarousel('js-evo-add-remove-plan-component-carousel',{
 			autoPlay: false
 		});
 
-		// ADD/REMOVE PLAN COMPONENT SHOW/HIDE
-		hidePlanComponent();
-		showPlanComponent();
+		// ADD/REMOVE PLAN COMPONENT DISABLE/ENABLE
+		evoHidePlanComponent();
+		evoShowPlanComponent();
 
 		// RANGE SLIDER - CONTRIBUTIONS
 		evoSliderContributions('js-evo-slider-contributions');
