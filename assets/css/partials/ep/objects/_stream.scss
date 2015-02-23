@@ -132,16 +132,15 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 	.evo-stream-content-ctn			{
 									background-color: $transparent;
 									padding: 0 rem-calc(10);
-		.h3								{
+		.h6								{
 										color: $white;
-										font-size: rem-calc(11.5);
-										letter-spacing: 0.5px;
 										margin-top: rem-calc(10);
 										}
 		.h4								{
 										color: $white;
 										font-size: rem-calc(10);
 										letter-spacing: 0.5px;
+										margin-bottom: 3px;
 										}
 		.h5								{
 										color: $white;
@@ -149,29 +148,35 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 										text-transform: lowercase;
 										letter-spacing: 0.5px;
 										}
-		.evo-progress					{height: rem-calc(10);}
+		.evo-progress					{
+										background-color: $sapphire-light;
+										border: 0;
+										height: rem-calc(6);
+										padding: 0;
+										margin-bottom: 15px;
+			.meter							{background-color: $white;}
+										}
 									}
 								}
 
 
 .evo-stream-item-ctn-diabled	{
 								@include opacity(40);
-	.evo-stream-icon-ctn			{
-		a								{}
-									}
 	.evo-stream-content-ctn			{
 		.evo-progress					{display: none;}
 									}
 								}
 
+.evo-stream-hdr					{
+								color: $white;
+								font-size: rem-calc(8);
+								margin-bottom: rem-calc(18);
+								}
+
+
 .evo-stream-completed-steps-ctn	{
 								border-bottom: 1px dotted $white;
-								padding: rem-calc(15);
 								margin-bottom: rem-calc(25);
-	.h6								{
-									color: $white;
-									margin-bottom: rem-calc(18);
-									}
 	.evo-stream-item-ctn			{
 									margin-top: rem-calc(50);
 		&:first-of-type					{margin-top: rem-calc(0);}
@@ -201,10 +206,13 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 		.evo-stream-message-menu-right	{top: 25%;}
 									}
 
+	.evo-stream-hdr					{font-size: rem-calc(12);}
+
 	.evo-stream-completed-steps-ctn	{
 									@include border-radius($global-radius);
 									border: 1px solid $gray-lighter;
 									margin-bottom: rem-calc(0);
+									padding: rem-calc(15);
 		.evo-stream-item-ctn-placeholder{
 										display: block;
 			.evo-stream-icon-ctn			{
