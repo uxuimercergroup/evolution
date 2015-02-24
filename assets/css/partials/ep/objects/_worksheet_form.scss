@@ -34,8 +34,10 @@ $evo-form-worksheet-input-color: $sapphire-mid !default;
 											position: relative;
 											top: rem-calc(-4);
 											}
-			input[type="text"]				{
+			input[type="text"],
+			input[type="number"]			{
 											@include border-radius($evo-form-worksheet-inputs-border-radius);
+											padding: 0 rem-calc(6);
 											background-color: $evo-form-worksheet-inputs-bg-color;
 											border: $evo-form-worksheet-inputs-border;
 											border-bottom: $evo-form-worksheet-inputs-border-bottom-with $evo-form-worksheet-inputs-border-bottom-style $evo-form-worksheet-inputs-border-bottom-color;
@@ -57,7 +59,8 @@ $evo-form-worksheet-input-color: $sapphire-mid !default;
 	.evo-form-worksheet			{
 		.row						{
 			label						{
-				input[type="text"]			{
+				input[type="text"],
+				input[type="number"]		{
 											width: 96%;
 											}
 										}
