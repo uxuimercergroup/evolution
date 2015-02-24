@@ -78,6 +78,15 @@ $evo-input-focus-border-color: $topaz-mid !default;
 
 	//=== MEDIA QUERIES =========================================================================
 
+	// REMOVE ZOOM OF FORMS ELEMENTS ON IOS DEVICES
+	@media screen and (-webkit-min-device-pixel-ratio:0) { 
+		select:focus,
+		textarea:focus,
+		input:focus 								{
+													font-size: rem-calc(16);
+													}
+	}
+
 	// SMALL MEDIA QUERY RANGE - 0 - 640px
 	@if $use-small-only-mediaquery == true {
 		
