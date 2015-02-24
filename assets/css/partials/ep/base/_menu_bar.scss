@@ -76,11 +76,13 @@ $evo-off-canvas-alert-background-color: $amethyst-mid !default;
 				.evo-off-canvas-list-item-label
 											{
 											position: relative;
-											top: rem-calc(-5);
-											left: rem-calc(-10);
+											margin-left: rem-calc(30);
+											top: rem-calc(8);
+											left: rem-calc(-15);
 					[class*="evo-icon-"]		{
-												top: rem-calc(7);
-												left: rem-calc(-5);
+												position: absolute;
+												top: rem-calc(-6);
+												left: rem-calc(-30);
 												}
 											}
 										}
