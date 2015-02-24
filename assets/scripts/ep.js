@@ -125,7 +125,7 @@
 				jQuery('.ui-slider-handle .evo-slider-tooltip', this).fadeIn('fast');
 			},
 			stop: function (event, ui) {
-				jQuery('.ui-slider-handle .evo-slider-tooltip', this).fadeOut('fast');
+				jQuery('.ui-slider-handle .evo-slider-tooltip', this).fadeOut(1000);
 			}
 		});
 

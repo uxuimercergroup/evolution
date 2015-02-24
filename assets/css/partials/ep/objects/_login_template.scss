@@ -7,9 +7,9 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //
 // @variables
 //
-$evo-login-template-background-color: $sapphire !default;
+$evo-login-template-background-color: $sapphire-dark !default;
 $evo-login-template-font-color: $white !default;
-$evo-login-template-background-image-src-path: "../images/login_custom_bkgd_3.jpg" !default;
+$evo-login-template-background-image-src-path: "../images/ep/login_grid_mono_color_bkgd.jpg" !default;
 
 
 .evo-login-template-layout				{
@@ -18,21 +18,27 @@ $evo-login-template-background-image-src-path: "../images/login_custom_bkgd_3.jp
 										@include background-size(cover);
 										height: 100%;
 										width: 100%;
+										display: table;
+
+	.evo-off-canvas-wrap					{
+											display: table-cell;
+											vertical-align: middle;
+											}
 
 	section[role="main"]					{
-											padding-top: rem-calc(10);
+											padding: rem-calc(10);
 											background-color: transparent;
 											}
 
 	.evo-login-template						{
-											@include translucent-background($evo-login-template-background-color, .9);
-											@include border-radius($global-radius);
+											@include translucent-background(desaturate($evo-login-template-background-color, 35%), .8);
+											@include border-radius($global-radius*2);
 											color: $evo-login-template-font-color;
 											padding: rem-calc(20);
 											text-align: center;
-											margin: rem-calc(30) auto;
+											margin: 0 auto;
 											width: 100%;
-											max-width: 560px;
+											max-width: 460px;
 											min-width: 0;
 		.evo-login-content-ctn					{
 			img										{
@@ -50,15 +56,10 @@ $evo-login-template-background-image-src-path: "../images/login_custom_bkgd_3.jp
 										}
 
 //=== MEDIA QUERIES =========================================================================
-		
 
 @media #{$medium-up} {
 
-.evo-login-template-layout				{
-	.evo-login-template						{
-											margin: rem-calc(100) auto;
-											}
-										}
+	
 
 }
 
