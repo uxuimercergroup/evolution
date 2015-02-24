@@ -170,13 +170,17 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 .evo-stream-hdr					{
 								color: $white;
 								font-size: rem-calc(8);
-								margin-bottom: rem-calc(18);
+								margin-bottom: rem-calc(0);
 								}
 
+.evo-stream-hdr-margin-bottom	{margin-bottom: rem-calc(30);}
+.evo-stream-hdr-margin-top		{
+								margin-top: rem-calc(20);
+								margin-bottom: rem-calc(3);
+								}
 
 .evo-stream-completed-steps-ctn	{
 								border-bottom: 1px dotted $white;
-								margin-bottom: rem-calc(25);
 	.evo-stream-item-ctn			{
 									margin-top: rem-calc(50);
 		&:first-of-type					{margin-top: rem-calc(0);}
@@ -193,14 +197,6 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 
 // MEDIUM MEDIA QUERY RANGE AND UP - 641px +
 @media #{$medium-up} {
-
-}
-
-
-
-// LARGE MEDIA QUERY RANGE AND UP - 1025px +
-@media #{$large-up} {
-
 	.evo-stream-item-ctn			{
 		.evo-stream-message-menu		{top: 27%;}
 		.evo-stream-message-menu-right	{top: 25%;}
@@ -211,7 +207,6 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 	.evo-stream-completed-steps-ctn	{
 									@include border-radius($global-radius);
 									border: 1px solid $gray-lighter;
-									margin-bottom: rem-calc(0);
 									padding: rem-calc(15);
 		.evo-stream-item-ctn-placeholder{
 										display: block;

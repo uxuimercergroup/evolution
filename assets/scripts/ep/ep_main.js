@@ -114,9 +114,21 @@
 
 		// Slider Markers
 		var sliderMultiplier = 100 / sliderMax;
-		$('.js-evo-slider-marker-user').css({ marginLeft: (userContributionValue * sliderMultiplier) + '%' });
-		$('.js-evo-slider-marker-company').css({ marginLeft: (companyContributionValue * sliderMultiplier)+'%' });
-		$('.js-evo-slider-marker-peers').css({ marginLeft: (peerContributionValue * sliderMultiplier) + '%' });
+		jQuery('.js-evo-slider-marker-user').css({ marginLeft: (userContributionValue * sliderMultiplier) + '%' });
+		jQuery('.js-evo-slider-marker-company').css({ marginLeft: (companyContributionValue * sliderMultiplier)+'%' });
+		jQuery('.js-evo-slider-marker-peers').css({ marginLeft: (peerContributionValue * sliderMultiplier) + '%' });
+
+		// STREAM SCROLL TO RECOMMEND SECTION
+		var evoScrollToStreamRecommendSection = function() {		
+			jQuery(window).load(function () {
+				jQuery('#top').delay(5000) //wait 5 seconds
+					.animate({
+						//animate jQuery's custom "scrollTop" style
+						//grab the value as the offset of #second from the top of the page
+						'scrollTop': jQuery('#evo-recommended-section').offset().top
+				}, 300); //animate over 300ms, change this to however long you want it to animate for
+			});
+		};
 
 	};
 
@@ -173,5 +185,8 @@ $(function() {
 
 		// RANGE SLIDER - CONTRIBUTIONS
 		evoSliderContributions('js-evo-slider-contributions');
+
+		// STREAM SCROLL TO RECOMMEND SECTION
+		evoScrollToStreamRecommendSection();
 
 });
