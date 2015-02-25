@@ -7,14 +7,15 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //
 // @variables
 //
-$evo-login-template-background-color: $sapphire-dark !default;
-$evo-login-template-font-color: $white !default;
-$evo-login-template-background-image-src-path: "../images/ep/login_grid_mono_color_bkgd.jpg" !default;
+$evo-login-template-layout-background-color: $sapphire-dark !default;
+$evo-login-template-layout-background-image-src-path: "../images/ep/login_grid_mono_color_bkgd.jpg" !default;
+$evo-login-template-background-color: $white !default;
+$evo-login-template-font-color: $gray-dark !default;
 
 
 .evo-login-template-layout				{
 										@include ie-gradient-reset-filter;
-										background: url("#{$evo-login-template-background-image-src-path}") no-repeat center center fixed $evo-login-template-background-color;
+										background: url("#{$evo-login-template-layout-background-image-src-path}") no-repeat center center fixed $evo-login-template-layout-background-color;
 										@include background-size(cover);
 										height: 100%;
 										width: 100%;
