@@ -134,19 +134,16 @@
 		jQuery('.js-evo-slider-marker-user').css({ marginLeft: (userContributionValue * sliderMultiplier) + '%' });
 		jQuery('.js-evo-slider-marker-company').css({ marginLeft: (companyContributionValue * sliderMultiplier)+'%' });
 		jQuery('.js-evo-slider-marker-peers').css({ marginLeft: (peerContributionValue * sliderMultiplier) + '%' });
+	};
 
-		// STREAM SCROLL TO RECOMMEND SECTION
-		var evoScrollToStreamRecommendSection = function() {		
-			jQuery(window).load(function () {
-				jQuery('#top').delay(5000) //wait 5 seconds
-					.animate({
-						//animate jQuery's custom "scrollTop" style
-						//grab the value as the offset of #second from the top of the page
-						'scrollTop': jQuery('#evo-recommended-section').offset().top
-				}, 300); //animate over 300ms, change this to however long you want it to animate for
-			});
-		};
-
+	// STREAM SCROLL TO RECOMMEND SECTION
+	var evoScrollToStreamRecommendSection = function() {
+		jQuery(window).load(function () {
+			jQuery('body').delay(3000) // 3 seconds
+				.animate({
+					'scrollTop': jQuery('#evo-recommended-section').offset().top - 55
+			}, 400);
+		});
 	};
 
 // DOCUMENT READY

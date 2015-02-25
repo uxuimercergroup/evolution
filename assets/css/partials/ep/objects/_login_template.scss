@@ -32,7 +32,7 @@ $evo-login-template-font-color: $gray-dark !default;
 											}
 
 	.evo-login-template						{
-											@include translucent-background(desaturate($evo-login-template-background-color, 35%), .8);
+											@include translucent-background(desaturate($evo-login-template-background-color, 35%), .85);
 											@include border-radius($global-radius*2);
 											color: $evo-login-template-font-color;
 											padding: rem-calc(20);
