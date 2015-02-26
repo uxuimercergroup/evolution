@@ -138,12 +138,12 @@
 
 	// STREAM SCROLL TO RECOMMEND SECTION
 	var evoScrollToStreamRecommendSection = function() {
-		jQuery(window).load(function () {
+		jQuery(window).load(function(){
 			var recommendedSection = jQuery('#evo-recommended-section');
 			if (recommendedSection.length) {
-				jQuery('body').delay(3000) // 3 seconds
+				jQuery('html, body').delay(3000) // 3 seconds
 					.animate({
-						'scrollTop': jQuery('#evo-recommended-section').offset().top - 55
+						scrollTop: jQuery('#evo-recommended-section').offset().top - 55
 				}, 400);
 			}
 		});
