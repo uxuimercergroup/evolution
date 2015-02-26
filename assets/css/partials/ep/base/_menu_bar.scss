@@ -25,7 +25,7 @@ $evo-off-canvas-alert-background-color: $amethyst-mid !default;
 .evo-menu-bar				{
 							position: fixed;
 							width: 100%;
-							z-index: 9999;
+							z-index: 900;
 
 	.left-off-canvas-toggle		{
 								display: block;
@@ -115,4 +115,15 @@ $evo-off-canvas-alert-background-color: $amethyst-mid !default;
 									}
 								}
 
+							}
+
+// MENU BAR IE9 FIXES
+.ie9						{
+
+	.left-off-canvas-menu		{
+								left: (-$off-canvas-width);
+								}
+	.move-right > .inner-wrap	{
+								left: $off-canvas-width;
+								}
 							}

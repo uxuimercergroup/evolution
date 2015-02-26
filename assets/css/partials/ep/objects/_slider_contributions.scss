@@ -7,10 +7,8 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //
 // @variables
 //
-$evo-contributions-slider-background-start-color: $gray-light !default;
-$evo-contributions-slider-background-end-color: $gray-light !default;
-$evo-contributions-slider-handle-background-start-color: $citrine-mid !default;
-$evo-contributions-slider-handle-background-end-color: $citrine-mid !default;
+$evo-contributions-slider-background-color: $gray-light !default;
+$evo-contributions-slider-handle-background-color: $citrine-mid !default;
 $evo-contributions-slider-handle-shadow-color: $black !default;
 $evo-contributions-slider-handle-border-color: $white !default;
 $evo-contributions-slider-range-background-color: $gray-mid !default;
@@ -26,21 +24,26 @@ $evo-contributions-slider-tooltip-font-color: $white !default;
 	
 	// SLIDER
 	.evo-slider.ui-slider			{
-									@include background-gradient($evo-contributions-slider-background-start-color,$evo-contributions-slider-background-end-color);
+									@include ie-gradient-reset-filter;
 									@include border-radius(0);
+									background-color: $evo-contributions-slider-background-color !important;
+									background-image: none;
 									width: 100%;
 									position: relative;
-									z-index: 9995;
+									z-index: 800;
 									margin-bottom: 0;
 		// SLIDER HANDLE
 		.ui-slider-handle				{
-										@include background-gradient($evo-contributions-slider-handle-background-start-color,$evo-contributions-slider-handle-background-end-color);
+										@include ie-gradient-reset-filter;
 										@include box-shadow(0, 1px, 3px, $evo-contributions-slider-handle-shadow-color);
+										background-color: $evo-contributions-slider-handle-background-color !important;
+										background-image: none;
 										width: rem-calc(24) !important;
 										height: rem-calc(24) !important;
 										border-width: rem-calc(3);
 										border-color: $evo-contributions-slider-handle-border-color;
 										top: rem-calc(-9) !important;
+										z-index: 802;
 										margin-left: rem-calc(-11);
 			.evo-slider-tooltip				{
 											@include border-radius($global-radius $global-radius 0 0);
@@ -73,13 +76,14 @@ $evo-contributions-slider-tooltip-font-color: $white !default;
 		.ui-slider-range				{
 										@include border-radius(0);
 										background-color: $evo-contributions-slider-range-background-color;
+										z-index: 801;
 										}
 									}
 
 	// SLIDER MARKERS
 	.evo-slider-markers				{
 									position: relative;
-									z-index: 9994;
+									z-index: 799;
 		span							{
 										position: absolute;
 										display: block;

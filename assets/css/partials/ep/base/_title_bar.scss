@@ -10,6 +10,13 @@
 $evo-title-bar-icon-color: $white !default;
 $evo-title-bar-font-color: $white !default;
 
+.f-topbar-fixed				{
+	header[role="banner"]		{
+		.fixed						{
+									z-index: 900;
+									}
+								}
+							}
 
 .evo-title-bar				{
 							height: auto !important;
