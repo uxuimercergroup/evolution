@@ -9,6 +9,7 @@
 //
 $evo-base-input-shadow-color: $gray-lighter !default;
 $evo-input-focus-border-color: $topaz-mid !default;
+$evo-form-placholder-font-color: #AAA !default;
 
 
 @if $use-forms == true{
@@ -34,8 +35,6 @@ $evo-input-focus-border-color: $topaz-mid !default;
 								}
 		&:focus					{outline: 0;}
 							}
-
-
 
 	// GLOBAL FORM ELEMENTS
 	input[type="text"],
@@ -75,6 +74,23 @@ $evo-input-focus-border-color: $topaz-mid !default;
 	input[type="radio"] + label,
 	input[type="checkbox"] + label					{margin-left: rem-calc(.5);}
 
+
+	// PLACEHOLDER
+	
+	// Webkit
+	::-webkit-input-placeholder						{color: $evo-form-placholder-font-color;}
+
+	// Firefox 4-18
+	:-moz-placeholder								{color: $evo-form-placholder-font-color;}
+
+	// Firefox 19+
+	::-moz-placeholder								{color: $evo-form-placholder-font-color;}
+
+	// IE10+
+	:-ms-input-placeholder							{color: $evo-form-placholder-font-color !important;}
+	
+	// IE9
+	.placeholder									{color: $evo-form-placholder-font-color !important;}
 
 	//=== MEDIA QUERIES =========================================================================
 

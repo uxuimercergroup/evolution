@@ -27,6 +27,14 @@
 // FORMS
 //--------------------------------------------------------------------------------------------------------
 
+	// PLACEHOLDER ATTRIBUTE POLYFILL FOR IE9
+	var evoFormPlaceholderPolyFill = function(){
+		jQuery('input, textarea').placeholder();
+	}
+
+	// Placeholder Attribute Polyfill for IE9 Init
+	evoFormPlaceholderPolyFill();
+
 	// TEXTAREA EXPAND
 	jQuery.fn.textareaExpander = function(minHeight, maxHeight){
 
