@@ -45,6 +45,17 @@
 		});
 	}
 
+	// OFF CANVAS IE POSITION FIX FOR FIXED ELEMENTS
+	var evoOffCanvasIEPositionFix = function(){
+		jQuery(document)
+		.on('open.fndtn.offcanvas', '[data-offcanvas]', function() {
+			jQuery('.evo-menu-bar, [data-evo-showcase-panel-fixed]').css('position', 'absolute');
+		})
+		.on('close.fndtn.offcanvas', '[data-offcanvas]', function() {
+			jQuery('.evo-menu-bar, [data-evo-showcase-panel-fixed]').css('position', 'fixed');
+		})
+	}
+
 	// SHOWCASE PANEL POSITION FIXED CHECK
 	var evoShowcasePanelFixed = function(){
 		if (jQuery('[data-evo-showcase-panel-fixed]').length) {
@@ -176,6 +187,9 @@ $(function() {
 
 		// SCROLL TO LOCATION
 		evoScrollToLocation();
+
+		// OFF CANVAS IE POSITION FIX FOR FIXED ELEMENTS
+		evoOffCanvasIEPositionFix();
 
 		// SHOWCASE PANEL POSITION FIXED CHECK
 		evoShowcasePanelFixed();
