@@ -152,6 +152,13 @@ $fieldset-border-color: transparent;
 $fieldset-padding: rem-calc(0);
 $fieldset-margin: rem-calc(0 0);
 
+// We use these to style the error states for inputs and labels
+$input-error-message-padding: rem-calc(4 0 0 0);
+$input-error-message-font-style: normal;
+$input-error-message-font-color: $garnet-dark;
+$input-error-message-bg-color: $transparent;
+$input-error-message-font-color-alt: $garnet-dark;
+
 // We use this to style the glowing effect of inputs when focused
 $glowing-effect-color: $input-focus-border-color;
 

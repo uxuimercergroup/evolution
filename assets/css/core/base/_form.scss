@@ -14,6 +14,20 @@ $evo-form-placholder-font-color: #AAA !default;
 
 @if $use-forms == true{
 
+	[data-abide]			{
+		.error					{
+			label					{
+									color: $garnet-dark;
+				input,
+				select,
+				textarea				{border-color: $garnet-dark;}
+					small					{
+						[class^="evo-icon-"]	{color: $garnet-dark !important;}
+											}
+									}
+								}
+							}
+
 	form					{
 		.button					{
 								@media #{$small-up}		{margin-top: 3px;}

@@ -1,48 +1,36 @@
 <!-- FORM STACKED - BEGINS -->
-<form>
+<form data-abide>
 	<fieldset>
 		<div class="row">
 			<div class="large-8 columns">
 				<label>
-					Input Label
-					<input type="text" placeholder="Placeholder text" tabindex="" title="" />
+					<small><i class="evo-icon-evo-asterisk-small evo-icon-color-gray-dark"></i></small>Input Label
+					<input type="text" placeholder="Placeholder text" tabindex="" title="" required />
+					<small class="error">Houston we have a problem.</small>
 				</label>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="large-4 columns">
-				<div class="row collapse">
-					<label>Input Label</label>
-					<div class="small-9 columns">
-						<input type="text" placeholder="Placeholder text" tabindex="" title="" />
-					</div>
-					<div class="small-3 columns">
-						<span class="postfix">.com</span>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
 			<div class="large-8 columns">
 				<label>
-					Select Box
-					<select tabindex="" title="">
-						<option value="default">Choose one&#8230;</option>
+					<small><i class="evo-icon-evo-asterisk-small evo-icon-color-gray-dark"></i></small>Select Box
+					<select tabindex="" title="" required>
+						<option value="">Choose one&#8230;</option>
 						<option value="husker">Star Lord</option>
 						<option value="starbuck">Groot</option>
 						<option value="hotdog">Rocket Raccoon</option>
 						<option value="apollo">Gamora</option>
 					</select>
 				</label>
+				<small class="error">Houston we have a problem.</small>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="large-6 columns">
 				<label>Choose Your Favorite</label>
-				<input type="radio" name="pokemon" value="Red" id="pokemonRed" tabindex="" title="" />
+				<input checked type="radio" name="pokemon" value="Red" id="pokemonRed" tabindex="" title="" />
 				<label for="pokemonRed">Red</label>
 				<input type="radio" name="pokemon" value="Blue" id="pokemonBlue" tabindex="" title="" />
 				<label for="pokemonBlue">Blue</label>
@@ -51,19 +39,23 @@
 
 		<div class="row">
 			<div class="large-6 columns">
-				<label>Check these out</label>
-				<input id="checkbox1" type="checkbox" tabindex="" title="" />
+				<label>
+					<small><i class="evo-icon-evo-asterisk-small evo-icon-color-gray-dark"></i></small>Check these out
+				</label>
+				<input id="checkbox1" type="checkbox" tabindex="" title="" required />
 				<label for="checkbox1">Checkbox 1</label>
-				<input id="checkbox2" type="checkbox" tabindex="" title="" />
+				<input id="checkbox2" type="checkbox" tabindex="" title="" required />
 				<label for="checkbox2">Checkbox 2</label>
+				<small class="error">Houston we have a problem.</small>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="large-8 columns">
 				<label>
-					Textarea Label
-					<textarea placeholder="Placeholder text" tabindex="" title=""></textarea>
+					<small><i class="evo-icon-evo-asterisk-small evo-icon-color-gray-dark"></i></small>Textarea Label
+					<textarea placeholder="Placeholder text" tabindex="" title="" required ></textarea>
+					<small class="error">Houston we have a problem.</small>
 				</label>
 			</div>
 		</div>
