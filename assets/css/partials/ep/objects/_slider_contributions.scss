@@ -147,6 +147,21 @@ $evo-contributions-slider-tooltip-font-color: $white !default;
 									}
 								}
 
+// SLIDER IE9 FIXES
+.ie9							{
+	.evo-contributions-slider		{
+		
+		// SLIDER
+		.evo-slider.ui-slider			{
+			
+			// SLIDER HANDLE
+			.ui-slider-handle				{
+											top: rem-calc(-11) !important;
+											}
+										}
+									}
+								}
+
 //=== MEDIA QUERIES =========================================================================
 
 // MEDIUM MEDIA QUERY RANGE AND UP - 641px +

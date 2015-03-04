@@ -106,13 +106,15 @@ a.evo-anchor-alt			{
 								font-size: rem-calc(48);
 								letter-spacing: rem-calc(-2);
 		sup							{
-									vertical-align: rem-calc(16);
+									position: relative;
+									top: rem-calc(-19);
+									left: rem-calc(-1);
 									}
 								}
 	.evo-monthly-label			{
 								position: relative;
 								left: rem-calc(-10);
-								vertical-align: rem-calc(4);
+								top: rem-calc(-5);
 								}
 	.evo-total-label			{
 								position: relative;
@@ -128,14 +130,16 @@ a.evo-anchor-alt			{
 								letter-spacing: rem-calc(-.2);
 		sup							{
 									font-size: rem-calc(11);
-									vertical-align: rem-calc(4);
+									position: relative;
+									top: rem-calc(-6);
+									left: rem-calc(-1);
 									}
 								}
 	.evo-monthly-label			{
 								font-family: $evo-font-bold-stack;
 								position: relative;
 								left: rem-calc(-5);
-								vertical-align: rem-calc(4);
+								top: rem-calc(-5);
 								text-transform: lowercase;
 								}
 							}
