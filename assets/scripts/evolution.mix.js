@@ -26,19 +26,19 @@
 // =======================================================================================================
 
 @import 'core/foundation/foundation/foundation.alert.js';
-@import 'core/foundation/foundation/foundation.accordion.js';
+// @import 'core/foundation/foundation/foundation.accordion.js';
 @import 'core/foundation/foundation/foundation.clearing.js';
 @import 'core/foundation/foundation/foundation.abide.js';
-@import 'core/foundation/foundation/foundation.dropdown.js';
-@import 'core/foundation/foundation/foundation.equalizer.js';
-@import 'core/foundation/foundation/foundation.interchange.js';
-@import 'core/foundation/foundation/foundation.joyride.js';
-@import 'core/foundation/foundation/foundation.magellan.js';
+// @import 'core/foundation/foundation/foundation.dropdown.js';
+// @import 'core/foundation/foundation/foundation.equalizer.js';
+// @import 'core/foundation/foundation/foundation.interchange.js';
+// @import 'core/foundation/foundation/foundation.joyride.js';
+// @import 'core/foundation/foundation/foundation.magellan.js';
 @import 'core/foundation/foundation/foundation.offcanvas.js';
-@import 'core/foundation/foundation/foundation.orbit.js';
+// @import 'core/foundation/foundation/foundation.orbit.js';
 @import 'core/foundation/foundation/foundation.reveal.js';
-@import 'core/foundation/foundation/foundation.tab.js';
-@import 'core/foundation/foundation/foundation.tooltip.js';
+// @import 'core/foundation/foundation/foundation.tab.js';
+// @import 'core/foundation/foundation/foundation.tooltip.js';
 @import 'core/foundation/foundation/foundation.topbar.js';
 // @import 'core/foundation/foundation/foundation.slider.js'; // Using jQuery UI Slider instead
 
