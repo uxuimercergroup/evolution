@@ -23,20 +23,17 @@ $evo-button-font-color-alt-visited: $button-font-color-alt !default;
 										{
 			
 			// CUSTOM BUTTON BACKGROUND COLOR
-			&[data-evo-button-color="#{$color-name}"]
+			&[data-evo-background-color="#{$color-name}"]:hover
 											{
-											background-color: map-get($color, color);
-				&:hover							{
-												background-color: scale-color(map-get($color, color), $lightness: $button-function-factor);
-												}
+											background-color: scale-color(map-get($color, color), $lightness: $button-function-factor) !important;
 											}
-			&[data-evo-button-color="#{$color-name}"].disabled:hover
+			&[data-evo-background-color="#{$color-name}"].disabled:hover
 											{
-											background-color: map-get($color, color);
+											background-color: map-get($color, color) !important;
 											}
 
 			// CUSTOM BUTTON FONT COLOR
-			&[data-evo-button-font-color="#{$color-name}"]
+			&[data-evo-font-color="#{$color-name}"]
 											{
 											color: map-get($color, color) !important;
 											}
