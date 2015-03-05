@@ -19,7 +19,7 @@ $evo-button-font-color-alt-visited: $button-font-color-alt !default;
 									min-width: rem-calc($evo-button-min-width);
 
 		// LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
-		@each $color-name, $color in $color-palette-buttons 
+		@each $color-name, $color in $color-palette 
 										{
 			
 			// CUSTOM BUTTON BACKGROUND COLOR
