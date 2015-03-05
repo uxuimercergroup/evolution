@@ -26,19 +26,19 @@
 // =======================================================================================================
 
 @import 'core/foundation/foundation/foundation.alert.js';
-// @import 'core/foundation/foundation/foundation.accordion.js';
+@import 'core/foundation/foundation/foundation.accordion.js';
 @import 'core/foundation/foundation/foundation.clearing.js';
 @import 'core/foundation/foundation/foundation.abide.js';
-// @import 'core/foundation/foundation/foundation.dropdown.js';
-// @import 'core/foundation/foundation/foundation.equalizer.js';
-// @import 'core/foundation/foundation/foundation.interchange.js';
-// @import 'core/foundation/foundation/foundation.joyride.js';
-// @import 'core/foundation/foundation/foundation.magellan.js';
+@import 'core/foundation/foundation/foundation.dropdown.js';
+@import 'core/foundation/foundation/foundation.equalizer.js';
+@import 'core/foundation/foundation/foundation.interchange.js';
+@import 'core/foundation/foundation/foundation.joyride.js';
+@import 'core/foundation/foundation/foundation.magellan.js';
 @import 'core/foundation/foundation/foundation.offcanvas.js';
-// @import 'core/foundation/foundation/foundation.orbit.js';
+@import 'core/foundation/foundation/foundation.orbit.js';
 @import 'core/foundation/foundation/foundation.reveal.js';
-// @import 'core/foundation/foundation/foundation.tab.js';
-// @import 'core/foundation/foundation/foundation.tooltip.js';
+@import 'core/foundation/foundation/foundation.tab.js';
+@import 'core/foundation/foundation/foundation.tooltip.js';
 @import 'core/foundation/foundation/foundation.topbar.js';
 // @import 'core/foundation/foundation/foundation.slider.js'; // Using jQuery UI Slider instead
 
@@ -74,8 +74,8 @@
 @import "core/lib/jquery/plugins/jquery.maskedinput.js";
 @import "core/lib/jquery/plugins/jquery.mousewheel.js";
 @import "core/lib/jquery/plugins/jquery.mCustomScrollbar.js";
+@import "core/lib/jquery/plugins/jquery.autosize.input.js";
 @import "core/lib/jquery/plugins/owl.carousel.js";
-@import "lib/jquery/plugins/jquery.autosize.input.js";
 // @import "core/lib/jquery/plugins/jquery.smartmenus.js"; // Marked for removal (Foundation replaces)
 // @import "core/lib/jquery/plugins/jquery.tooltipster.js"; // Marked for removal (Foundation replaces)
 // @import "core/lib/jquery/plugins/jquery.ui.dialog-clickoutside.js"; // Marked for removal (Foundation replaces)
