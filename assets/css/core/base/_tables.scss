@@ -1,14 +1,14 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Base Tables Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Base Tables Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-tables == true{
 
 	// TABLE OVERFLOW FOR SMALL MEDIAQUERY
-	.mul-table-small-mediaquery		{
-									margin-bottom: $baseMargin;
+	.evo-table-small-mediaquery		{
+									margin-bottom: $evo-base-margin;
 									overflow-x: auto;
 									overflow-y: hidden;
 									-ms-overflow-style: -ms-autohiding-scrollbar;
@@ -27,24 +27,26 @@
 									border-spacing: 0;
 									}
 
-	// MUL TABLE
+	// EVO TABLE
 	th, td							{text-align: left;}
 
-	.mul-table						{
-									color:$tableFontColor;
-									margin-bottom:$tableMarginBottom;
+	.evo-table						{
+									color: $tableFontColor;
+									margin-bottom: $tableMarginBottom;
 									width: 100%;
-									border-bottom:1px $tableBorderStyle $tableBorderColor;
-									background-color:$tableBackgroundColor;
+									border-bottom: 1px $tableBorderStyle $tableBorderColor;
+									background-color: $tableBackgroundColor;
 		th,
 		td								{
-										font-size: $tableBaseFontSize;
+										font-size: rem-calc(14);
 										padding: 5px 10px;
-										line-height: $tableBaseLineHeight;
 			input[type="checkbox"]			{display: block;}
 			a								{
-				&:link							{@include href-link($baseLinkColor, none);}
-				&:hover							{@include href-link-hover(underline);}
+				&:link							{
+												text-decoration: $anchor-text-decoration-hover;
+												color: $anchor-font-color;
+												}
+				&:hover							{text-decoration: $anchor-text-decoration;}
 											}
 										}
 		th								{
@@ -52,7 +54,7 @@
 										border-top:1px solid $tableThBorderColor;
 										border-bottom:1px solid $tableThBorderColor;
 										color:$tableThFontColor;
-										font-family: $fontSemiBoldStack;
+										font-family: $evo-font-medium-stack;
 										vertical-align: bottom;
 			&[class*="col-"]				{
 											float: none;
@@ -63,7 +65,7 @@
 										padding:1px 0 5px 0;
 										text-align:left;
 										vertical-align: bottom;
-			.mul-tbl-data-filter			{
+			.evo-tbl-data-filter			{
 											max-width: $tableDataFilterMaxWidth;
 				input							{
 												height: $tableDataFilterHeight;
@@ -78,26 +80,26 @@
 										}
 
 		//SUB HEADER, THIS IS USED TO GROUP SECTIONS IN A TABLE
-		.mul-subheader-row				{
+		.evo-subheader-row				{
 										background-color: $tableSubHeaderBackgroundColor !important;
 										border: 1px solid $tableSubHeaderBorderColor;
 										color: $tableSubHeaderFontColor;
-										font-family: $fontSemiBoldStack;
+										font-family: $evo-font-medium-stack;
 										}
 
 		// SUBTOTAL AND TOTAL HELPERS
-		.mul-subtotal-row,
-		.mul-total-row					{
-										font-family: $fontSemiBoldStack;
+		.evo-subtotal-row,
+		.evo-total-row					{
+										font-family: $evo-font-medium-stack;
 			td								{border-top: 1px $tableBorderStyle $tableBorderColor;}
 										}
-		.mul-subtotal-row				{
+		.evo-subtotal-row				{
 			td								{
 											background-color: $tableSubTotalBackgroundColor !important;
 											color: $tableSubTotalFontColor;
 											}
 										}
-		.mul-total-row					{
+		.evo-total-row					{
 			td								{
 											background-color: $tableTotalBackgroundColor !important;
 											color: $tableTotalFontColor;
@@ -106,12 +108,12 @@
 									}
 
 	// FOOTABLES
-	.mul-footable					{
+	.evo-footable					{
 		th								{cursor: pointer;}
 
 		// SORTING CLASSES
-		.mul-highlight					{background-color: $tableOddTdSortedBackgroundColor !important;}
-		tbody > tr:nth-child(odd) > .mul-highlight
+		.evo-highlight					{background-color: $tableOddTdSortedBackgroundColor !important;}
+		tbody > tr:nth-child(odd) > .evo-highlight
 										{background-color: $tableOddTdBackgroundColor !important;}
 
 		// IF COLUMN IS NOT SORTABLE TURN OFF POINTER CURSOR
@@ -119,8 +121,8 @@
 									}
 
 
-	// MUL TABLE BORDERS
-	.mul-table-borders				{
+	// EVO TABLE BORDERS
+	.evo-table-borders				{
 									border: 1px $tableBorderStyle $tableBorderColor;
 		th								{
 										border-left: 1px solid $tableThBorderColor;
@@ -131,12 +133,12 @@
 		td								{border-left: 1px $tableBorderStyle $tableBorderColor;}
 									}
 
-	// MUL TABLE ROW STRIPING
-	.mul-table-striped				{
+	// EVO TABLE ROW STRIPING
+	.evo-table-striped				{
 		tbody > tr:nth-child(even) > td	{background-color:$tableOddTdBackgroundColor;}
 
 		// FALLBACK ROW STRIPING
-		.mul-even						{
+		.evo-even						{
 			td								{
 											background-color:$tableEvenTdBackgroundColor;
 
@@ -144,7 +146,7 @@
 				&[class*="sorting"]				{background-color:$tableEvenTdSortedBackgroundColor;}
 											}
 										}
-		.mul-odd						{
+		.evo-odd						{
 			td								{
 											background-color:$tableOddTdBackgroundColor;
 
@@ -154,15 +156,15 @@
 										}			
 									}
 
-	// MUL TABLE ROW HOVER
-	.mul-table-hover tbody tr:hover > td,
-	.mul-table-hover tbody tr:hover > td[class*="sorting"]
+	// EVO TABLE ROW HOVER
+	.evo-table-hover tbody tr:hover > td,
+	.evo-table-hover tbody tr:hover > td[class*="sorting"]
 									{background-color: $tableRowHoverColor;}
 
 
-	// MUL TABLE PAGINATION
-	.mul-table-pagination			{
-		.mul-pagination-row				{
+	// EVO TABLE PAGINATION
+	.evo-table-pagination			{
+		.evo-pagination-row				{
 			td								{
 											border-top:1px solid $tableBorderColor;
 											border-right:1px solid transparent;
@@ -170,7 +172,7 @@
 											border-left:1px solid transparent;
 											padding: 5px 0 0 0;
 											text-align:left;
-				.mul-pagination					{
+				.evo-pagination					{
 												position: relative;
 												left: -2px;
 												}
@@ -180,19 +182,18 @@
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
-	@if $use-small-mediaquery == true {
+	// SMALL MEDIA QUERY RANGE - 0 - 640px
+	@if $use-small-only-mediaquery == true {
+		
+		@media #{$small-only} {
 
-		@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
-
-			// MUL TABLE IE8+9 FIXES
-			.ie8,
+			// EVO TABLE IE9 FIXES
 			.ie9					{
 				
-				// MUL TABLE
-				.mul-table				{
+				// EVO TABLE
+				.evo-table				{
 					caption					{
-						.mul-tbl-data-filter	{
+						.evo-tbl-data-filter	{
 							input					{line-height: ($tableDataFilterLineHeight - 4);}
 												}
 											}
@@ -203,27 +204,26 @@
 
 	}//endif
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		@media #{$medium-up} {
 
 			// TABLE OVERFLOW FOR SMALL MEDIAQUERY
-			.mul-table-small-mediaquery
+			.evo-table-small-mediaquery
 									{
 									width: $tableMinWidthLargeBreakpoint;
 				> table					{min-width: $tableMinWidthLargeBreakpoint;}
 									}
 
-			// MUL TABLE
-			.mul-table				{
+			// EVO TABLE
+			.evo-table				{
 				th,
 				td						{
-										font-size: $tableBaseFontSizeLargeBreakpoint;
-										line-height: $tableBaseLineHeightLargeBreakpoint;
+										font-size: rem-calc(14);
 										}
 				caption					{
-					.mul-tbl-data-filter	{
+					.evo-tbl-data-filter	{
 											max-width: 100%;
 						input					{
 												height: $tableDataFilterHeightLargeBreakpoint;
@@ -233,9 +233,9 @@
 										}
 									}
 
-			// MUL TABLE PAGINATION
-			.mul-table-pagination	{
-				.mul-pagination-row		{
+			// EVO TABLE PAGINATION
+			.evo-table-pagination	{
+				.evo-pagination-row		{
 					td						{text-align:right;}
 										}
 									}

@@ -1,11 +1,11 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Slider JS
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Slider JS
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //--------------------------------------------------------------------------------------------------------
 
 // Define slider defaults
-var mulSliderDefaults = {
+var evoSliderDefaults = {
 	animate: true, // Animated slide on/off
 	min: 0, // Min value to show on slider
 	max: 100, // Max value to show on slider
@@ -16,18 +16,18 @@ var mulSliderDefaults = {
 
 // Slider function:
 // Pass data attribute value of slider object and any slider options you want to add/override
-var mulSlider = function(objectDataValue, options) {
+var evoSlider = function(objectDataValue, options) {
 	
 	// Variable to define slider object based on data attribute value
 	var sliderDataValue = jQuery('[data-slider='+objectDataValue+']');
 
 	// Apply slider and any default or custom slider options
-	sliderDataValue.slider(jQuery.extend({},mulSliderDefaults,options));
+	sliderDataValue.slider(jQuery.extend({},evoSliderDefaults,options));
 };
 
 
 // Define slider range defaults
-var mulSliderRangeDefaults = {
+var evoSliderRangeDefaults = {
 	animate: true, // Animated slide true/false
 	min: 0, // Min value to show on slider
 	max: 100, // Max value to show on slider
@@ -39,24 +39,24 @@ var mulSliderRangeDefaults = {
 
 // Slider range function:
 // Pass data attribute value of slider range object and any slider range options you want to add/override
-var mulSliderRange = function(objectDataValue, options) {
+var evoSliderRange = function(objectDataValue, options) {
 	
 	// Variable to define slider range object based on data attribute value
 	var sliderDataValue = jQuery('[data-slider='+objectDataValue+']');
 
 	// Apply slider range and any default or custom slider range options
-	sliderDataValue.slider(jQuery.extend({},mulSliderRangeDefaults,options));
+	sliderDataValue.slider(jQuery.extend({},evoSliderRangeDefaults,options));
 
 	// Apply slider range label values to the corresponding slider range input of the slider range object
 	sliderDataValue.slider({
 		slide: function(event, ui) {
-			sliderDataValue.parent().find('.mul-slider-range-input').val(ui.values[0]+" - "+ui.values[1]);
+			sliderDataValue.parent().find('.evo-slider-range-input').val(ui.values[0]+" - "+ui.values[1]);
 		}
 	});
 };
 
 // Define slider range - single handle defaults
-var mulSliderRangeSingleHandleDefaults = {
+var evoSliderRangeSingleHandleDefaults = {
 	animate: true, // Animated slide true/false
 	min: 0, // Min value to show on slider
 	max: 100, // Max value to show on slider
@@ -67,18 +67,18 @@ var mulSliderRangeSingleHandleDefaults = {
 
 // Slider range - single handle function:
 // Pass data attribute value of slider range - single handle object and any slider range - single handle options you want to add/override
-var mulSliderRangeSingleHandle = function(objectDataValue, options) {
+var evoSliderRangeSingleHandle = function(objectDataValue, options) {
 	
 	// Variable to define slider range - single handle object based on data attribute value
 	var sliderDataValue = jQuery('[data-slider='+objectDataValue+']');
 
 	// Apply slider range - single handle and any default or custom slider range - single handle options
-	sliderDataValue.slider(jQuery.extend({},mulSliderRangeSingleHandleDefaults,options));
+	sliderDataValue.slider(jQuery.extend({},evoSliderRangeSingleHandleDefaults,options));
 
 	// Apply slider range - single handle label values to the corresponding slider range - single handle input of the slider range - single handle object
 	sliderDataValue.slider({
 		slide: function(event, ui) {
-			sliderDataValue.parent().find('.mul-slider-range-input').val(ui.value);
+			sliderDataValue.parent().find('.evo-slider-range-input').val(ui.value);
 		}
 	});
 };

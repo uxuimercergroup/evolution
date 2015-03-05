@@ -1,19 +1,26 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Site Responsive CSS - Small Media Query - 320px-767px
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Site Responsive CSS - Small Media Query - 0px - 640px
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
-// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
-@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+// SMALL MEDIA QUERY RANGE AND UP - 0px +
+@media #{$small-up} {
+
+	
+
+}
+
+// SMALL MEDIA QUERY RANGE - 0px - 640px
+@media #{$small-only} {
 
 	.mb-navb-off							{
 											height: 20px;
-		[class*="mul-icon"]						{display: none;}
+		[class*="evo-icon"]						{display: none;}
 											}
 
 	/*--- HOMEPAGE ------------------------------------------------------------------------*/
-	.mul-alternate-views-badge.ui-tabs		{
+	.evo-alternate-views-badge.ui-tabs		{
 		.banding-section-1						{
 			h1										{
 													line-height: 45px;
@@ -32,15 +39,15 @@
 											}
 
 	.banding-section-4						{
-		.mul-vertical-list						{
+		.evo-vertical-list						{
 			li										{
-				[class*="mul-icon"]						{margin-bottom: 62px;}
+				[class*="evo-icon"]						{margin-bottom: 62px;}
 													}
 												}
 											}
 
 	.banding-section-5						{
-		.mul-horizontal-list					{
+		.evo-horizontal-list					{
 												margin-left: 8px;
 												text-align: left;
 			li										{margin: 0 0 8px 0;}
@@ -51,11 +58,11 @@
 											}
 
 	/*--- FOOTER --------------------------------------------------------------------------*/
-	.mul-footer							{
-		.mul-footer-adjust					{
-			.mul-footer-content-ctn				{
-				.mul-footer-copyright				{
-					.mul-horizontal-list-piped			{
+	.evo-footer							{
+		.evo-footer-adjust					{
+			.evo-footer-content-ctn				{
+				.evo-footer-copyright				{
+					.evo-horizontal-list-piped			{
 						li									{
 															display: block;
 															border: 0;

@@ -6,15 +6,15 @@
 <!-- PAGE TITLE - ENDS -->
 
 <!-- CONTENT SECTION - BEGINS -->
-	<section class="col-24 mul-alternate-views-badge mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-ref-alternate-views-badge">
+	<section class="col-24 evo-alternate-views-badge evo-ref-alternate-views-badge" data-alternate-views-badge="js-evo-ref-alternate-views-badge">
 
 		{% include '/reference/reference-content' %}
 
 	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
 		{% if model.reference-get-code == "true" %}
-			<div id="mul-ref-alternate-views-badge-content-panel-get-code">
+			<div id="evo-ref-alternate-views-badge-content-panel-get-code">
 
-				<h3 class="mul-hdr-rule">HTML</h3>
+				<h3 class="evo-hdr-rule">HTML</h3>
 
 				{{ model.reference-code-html-content-block-pre }}
 
@@ -26,7 +26,7 @@
 
 				{% if model.reference-code-js == "true" %}
 
-					<h3 class="mul-hdr-rule">JS</h3>
+					<h3 class="evo-hdr-rule">JS</h3>
 
 					{% if model.reference-example-versions == "true" %}
 						<h4>{{ model.reference-example-version-label }}</h4>
@@ -45,19 +45,19 @@
 <!-- CONTENT SECTION - ENDS -->
 
 <!-- EXAMPLE SECTION - BEGINS -->
-	<section class="col-24 mul-ref-example">
+	<section class="col-24 evo-ref-example">
 
 	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
-		<h3 class="mul-hdr-dbl-rule mul-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
+		<h3 class="evo-hdr-dbl-rule evo-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
 	<!-- EXAMPLE SECTION - HEADER - ENDS -->
 
 	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
-		<section class="mul-ref-example-content">
+		<section class="evo-ref-example-content">
 
 		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 
 			{% if model.reference-example-versions == "true" %}
-				<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
+				<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
 			{% endif %}
 
 			{% include '/base/tables/table-static' %}

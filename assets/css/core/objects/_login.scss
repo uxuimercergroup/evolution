@@ -1,13 +1,13 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Login Layout Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Login Layout Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-login-layout == true{
 
 	// CLASS USED ON BODY FOR LOGIN LAYOUT
-	.mul-layout-login						{
+	.evo-layout-login						{
 											@include ie-gradient-reset-filter;
 											background: url("#{$layoutLoginBackgroundImageSrcPath}") no-repeat center center fixed $layoutLoginBackgroundColor;
 											@include background-size(cover);
@@ -18,44 +18,44 @@
 		section[role="main"]					{background-color: transparent;}
 		
 		// LOGIN CONTAINER
-		.mul-layout-login-ctn					{
+		.evo-layout-login-ctn					{
 												@include translucent-background($layoutLoginContainerTranslucentBackgroundColor, .9);
 												position: relative;
 												top: 0;
 												margin-bottom: 0;
 												padding: 20px 20px 3px 20px;
 												border: 0;
-			.mul-box-hdr							{
+			.evo-box-hdr							{
 													margin: 0 0 10px 0;
-				.mul-box-sub-hdr						{
+				.evo-box-sub-hdr						{
 														margin-bottom: 5px;
 														line-height: 1em;
 														color: $layoutLoginContainerSubHeaderColor;
 														text-align: center;
 														}
-				.mul-box-main-hdr						{
+				.evo-box-main-hdr						{
 														margin-bottom: 5px;
 														color: $layoutLoginContainerHeaderColor;
 														text-align: center;
-					span									{font-family: $fontThinStack;}
+					span									{font-family: $evo-font-thin-stack;}
 														}
-				.mul-box-sub-text						{
+				.evo-box-sub-text						{
 														width: 100%;
 														margin: 0 auto;
 														text-align: center;
 														}
-				.mul-box.mul-error-ctn,
-				.mul-box.mul-attention-ctn,
-				.mul-box.mul-info-ctn,
-				.mul-box.mul-confirmation-ctn			{margin-bottom: 0;}
+				.evo-box.evo-error-ctn,
+				.evo-box.evo-attention-ctn,
+				.evo-box.evo-info-ctn,
+				.evo-box.evo-confirmation-ctn			{margin-bottom: 0;}
 													}
-			.mul-box-bdy							{
-				.mul-box								{
+			.evo-box-bdy							{
+				.evo-box								{
 														background-color: $layoutLoginContainerBoxBackgroundColor;
 														border: 1px solid $layoutLoginContainerBoxBorderColor;
 														min-height: 210px;
-					.mul-form								{margin-bottom: 15px;}
-					.mul-layout-login-create-account		{
+					.evo-form								{margin-bottom: 15px;}
+					.evo-layout-login-create-account		{
 															margin-bottom: 15px;
 						p										{margin-bottom: 19px;}
 															}
@@ -64,11 +64,11 @@
 												}
 
 		// LOGIN FOOTER
-		.mul-footer								{
+		.evo-footer								{
 												@include backface-visibility(visible);
 												margin-bottom: 0;
-												margin-top: $baseMargin;
-			.mul-layout-login-footer				{
+												margin-top: $evo-base-margin;
+			.evo-layout-login-footer				{
 													@include translucent-background($layoutLoginFooterTranslucentBackgroundColor, .7);
 													max-width: 100%;
 													position: relative;
@@ -76,21 +76,21 @@
 													min-height: 0;
 													margin: 0;
 													padding: 0;
-													z-index: $zindexLayoutLoginFooter;
-				.mul-layout-login-footer-logo,
-				.mul-layout-login-footer-copyright		{text-align: center;}
-				.mul-layout-login-footer-logo			{
+													z-index: $evo-zindex-layout-login-footer;
+				.evo-layout-login-footer-logo,
+				.evo-layout-login-footer-copyright		{text-align: center;}
+				.evo-layout-login-footer-logo			{
 														height: auto;
 														padding: 10px 10px 5px 10px;
 														}
-				.mul-layout-login-footer-copyright		{
+				.evo-layout-login-footer-copyright		{
 														color: $layoutLoginFooterFontColor;
 														height: auto;
 					a										{
 															color: $layoutLoginFooterFontColor;
 															text-decoration: none;
 															}
-					.mul-horizontal-list-piped				{
+					.evo-horizontal-list-piped				{
 															border-top: 1px solid $layoutLoginFooterBorderColor;
 						li										{
 																padding: 0;
@@ -100,7 +100,7 @@
 																	padding: 8px 10px;
 																	}
 																}
-						.mul-layout-login-footer-copyright-text	{padding: 8px 10px;}
+						.evo-layout-login-footer-copyright-text	{padding: 8px 10px;}
 															}
 														}
 													}
@@ -109,30 +109,30 @@
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		@media #{$medium-up} {
 
 			// CLASS USED ON BODY FOR LOGIN LAYOUT
-			.mul-layout-login				{
+			.evo-layout-login				{
 				
 				// LOGIN CONTAINER
-				.mul-layout-login-ctn			{
+				.evo-layout-login-ctn			{
 												top: 100px;
 												margin: 0 auto;
 												width: 100%;
 												max-width: 560px;
 												min-width: 0;
 												padding-top: 30px;
-					.mul-box-hdr					{
-						.mul-box-sub-text				{width: 75%;}
+					.evo-box-hdr					{
+						.evo-box-sub-text				{width: 75%;}
 													}
-					.mul-box-bdy					{
-						.mul-box						{
-							.mul-layout-login-create-account
+					.evo-box-bdy					{
+						.evo-box						{
+							.evo-layout-login-create-account
 															{
-								.mul-layout-login-create-account-btn
+								.evo-layout-login-create-account-btn
 																{width: 60%;}
 															}
 														}
@@ -140,28 +140,28 @@
 												}
 
 				// LOGIN FOOTER
-				.mul-footer						{
-					.mul-layout-login-footer-bkgd	{
+				.evo-footer						{
+					.evo-layout-login-footer-bkgd	{
 													@include translucent-background($layoutLoginFooterTranslucentBackgroundColor, .5);
 													width: 100%;
 													position: fixed;
 													bottom: 0;
 													height: 38px;
-													z-index: $zindexLayoutLoginFooterBackground;
+													z-index: $evo-zindex-layout-login-footer-background;
 													}
-					.mul-layout-login-footer		{
+					.evo-layout-login-footer		{
 													position: fixed;
-						.mul-layout-login-footer-logo,
-						.mul-layout-login-footer-copyright
+						.evo-layout-login-footer-logo,
+						.evo-layout-login-footer-copyright
 														{
 														height: 38px;
 														padding: 10px 10px 0 10px;
 														}
-						.mul-layout-login-footer-logo	{text-align: left;}
-						.mul-layout-login-footer-copyright
+						.evo-layout-login-footer-logo	{text-align: left;}
+						.evo-layout-login-footer-copyright
 														{
 														text-align: right;
-							.mul-horizontal-list-piped		{
+							.evo-horizontal-list-piped		{
 															border-top: 0;
 								li								{
 																padding-left: 8px;
@@ -170,7 +170,7 @@
 																	padding: 0;
 																	}
 																}
-								.mul-layout-login-footer-copyright-text
+								.evo-layout-login-footer-copyright-text
 																{padding: 0 0 0 8px;}
 															}
 														}

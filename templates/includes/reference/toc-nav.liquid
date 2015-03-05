@@ -1,9 +1,9 @@
 <!-- TOC - SECTION HEADER - BEGINS -->
-	<h4 class="mul-hdr-rule">{{ item.section-hdr | upcase }}</h4>
+	<h4 class="evo-hdr-rule">{{ item.section-hdr | upcase }}</h4>
 <!-- TOC - SECTION HEADER - ENDS -->
 
 <!-- TOC - SECTION - BEGINS -->
-	<dl class="mul-vertical-list">
+	<dl class="evo-vertical-list">
 		{% for item in item.main-section %}
 			<dd><a href="{{ item.url }}">{{ item.link-name }}</a></dd>
 		{% endfor %}
@@ -13,7 +13,7 @@
 <!-- TOC - SUB-SECTION - BEGINS -->
 	{% for item in item.sub-section-group %}
 		<h5>{{ item.sub-section-hdr }}</h5>
-		<dl class="mul-vertical-list">
+		<dl class="evo-vertical-list">
 			{% for item in item.sub-section %}
 				<dd><a href="{{ item.url }}">{{ item.link-name }}</a></dd>
 			{% endfor %}

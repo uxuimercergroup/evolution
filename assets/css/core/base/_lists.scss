@@ -1,13 +1,14 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Base Lists Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Base Lists Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
-@if $use-lists == true{
 
+@if $use-lists == true{
+/*
 	// HORIZONTAL LISTS
-	.mul-horizontal-list					{
+	.evo-horizontal-list					{
 											padding: 0;
 											margin: 0;
 		dt										{color: $definitionListHeaderColor;}
@@ -22,7 +23,7 @@
 												}
 											}
 
-	.mul-horizontal-list-piped				{
+	.evo-horizontal-list-piped				{
 		dt										{padding: 0 0 6px 0;}
 		dd, li									{
 												border-top: 1px solid $horizontalListPipeBorderColor;
@@ -36,7 +37,7 @@
 											}
 
 	// VERTICAL LISTS
-	.mul-vertical-list						{
+	.evo-vertical-list						{
 											padding: 0;
 											margin: 0;
 		dt										{
@@ -45,7 +46,6 @@
 												}
 		dd, li									{
 												list-style-type: none;
-												line-height: $verticalListLineHeight;
 												margin: 0 0 6px 0;
 												padding: 0;
 			a										{
@@ -55,18 +55,18 @@
 												}
 											}
 
-	.mul-vertical-list-bulleted				{
-											@extend .mul-vertical-list;
+	.evo-vertical-list-bulleted				{
+											@extend .evo-vertical-list;
 		dd, li									{
 												display: list-item;
 												list-style: disc;
 												margin-left: 18px;
 												}
 											}
-
+*/
 	// DATA LISTS
-	.mul-data-list-ctn						{margin: 0 0 $baseMargin 0;}
-	.mul-data-list							{
+	.evo-data-list-ctn						{margin: 0 0 $evo-base-margin 0;}
+	.evo-data-list							{
 											list-style: none;
 											margin: 0;
 											padding: 0;
@@ -77,20 +77,19 @@
 												border-bottom: 1px solid $definitionDataListHeaderBorderColor;
 												}
 		dd, li									{
-												line-height: $dataListLineHeight;
 												margin-bottom: 6px;
 												margin-left: 0;
-			.mul-data-list-label					{
-													font-family: $fontSemiBoldStack;
+			.evo-data-list-label					{
+													font-family: $evo-font-medium-stack;
 													padding: 0;
 													margin: 0;
 													}
-			.mul-data-list-label,
-			.mul-data-list-item						{display: block;}
+			.evo-data-list-label,
+			.evo-data-list-item						{display: block;}
 												}
 											}
 
-	.mul-data-list-bulleted					{
+	.evo-data-list-bulleted					{
 		dd, li									{
 												display: list-item;
 												list-style: disc;
@@ -100,58 +99,52 @@
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
-
+		@media #{$medium-up} {
+/*
 			// HORIZONTAL LISTS
-			.mul-horizontal-list			{
+			.evo-horizontal-list			{
 				dt, dd, li						{
 												display: inline-block;
 												margin: 0 5px 0 0;
 												}
 											}
 
-			.mul-horizontal-list-piped		{
+			.evo-horizontal-list-piped		{
 				dt								{padding: 0;}
 				dd, li							{
 												border-top: 0;
 												border-left: 1px solid $horizontalListPipeBorderColor;
 												padding: 0 0 0 8px;
 					&:first-child,
-					&.mul-first-child				{
+					&.evo-first-child				{
 													border-left: 0;
 													padding-left: 0;
 													}
 												}
 											}
 
-			// VERTICAL LISTS
-			.mul-vertical-list				{
-				dd, li							{line-height: $verticalListLineHeightLargeBreakpoint;}
-											}
-
 			// DATA LISTS
-			.mul-data-list					{
+			.evo-data-list					{
 				dd, li							{
-												line-height: $dataListLineHeightLargeBreakpoint;
 												margin-bottom: 0;
-					.mul-data-list-label			{padding-right: 5px;}
-					.mul-data-list-label,
-					.mul-data-list-item				{display: inline-block;}
+					.evo-data-list-label			{padding-right: 5px;}
+					.evo-data-list-label,
+					.evo-data-list-item				{display: inline-block;}
 												}
 											}
 
 			// DATA LISTS HELPERS
-			.mul-data-list-stacked			{
+			.evo-data-list-stacked			{
 				dd, li							{
 												margin-bottom: 6px;
-					.mul-data-list-label,
-					.mul-data-list-item				{display: block;}
+					.evo-data-list-label,
+					.evo-data-list-item				{display: block;}
 												}
 											}
-
+*/
 		}
 		
 	}// endif

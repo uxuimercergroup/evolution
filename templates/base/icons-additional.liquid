@@ -12,7 +12,7 @@
 <!-- CONTENT SECTION - ENDS -->
 
 <!-- EXAMPLE SECTION - BEGINS -->
-	<section class="col-24 mul-ref-example">
+	<section class="col-24 evo-ref-example">
 
 		<!-- EXAMPLE SECTION - ICON FONT - BEGINS -->
 		<script>
@@ -30,16 +30,16 @@
 			
 		</script>
 
-		<div class="mul-table-small-mediaquery">
-			<table class="mul-table mul-footable mul-table-borders mul-table-striped mul-table-hover" data-filter="#icon-font-filter" id="icons-ctn" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+		<div class="evo-table-small-mediaquery">
+			<table class="evo-table evo-footable evo-table-borders evo-table-striped evo-table-hover" data-filter="#icon-font-filter" id="icons-ctn" border="0" cellpadding="0" cellspacing="0" title="" summary="">
 				<caption>
 					<div class="col-19 first">
-						<form class="mul-form mul-form-inline mul-no-margin-bottom" id="" name="" method="" action="" title="">
+						<form class="evo-form evo-form-inline evo-no-margin-bottom" id="" name="" method="" action="" title="">
 							<fieldset>
 								<ol>
-									<li class="mul-no-margin-bottom">
-										<div class="mul-checkbox mul-no-margin-bottom">
-											<label class="mul-no-margin-bottom" for="large-switch-checkbox">
+									<li class="evo-no-margin-bottom">
+										<div class="evo-checkbox evo-no-margin-bottom">
+											<label class="evo-no-margin-bottom" for="large-switch-checkbox">
 												<input id="large-switch-checkbox" type="checkbox" onclick="toggleLargeIcons(this.checked)" title="Show Large Icons" /> Show Large Icons
 											</label>
 										</div>
@@ -48,18 +48,18 @@
 							</fieldset>
 						</form>
 					</div>
-					<div class="col-5 mul-tbl-data-filter">
+					<div class="col-5 evo-tbl-data-filter">
 						<input id="icon-font-filter" type="text" placeholder="Filter" tabindex="" title="Type to filter results." />
 					</div>
 				</caption>
 				<thead>
 					<tr>
 						<th class="col-4" data-sort-initial="true" scope="col"><a href="javascript:;">Name</a></th>
-						<th class="col-2 mul-align-center" scope="col"><a href="javascript:;">Blue</a></th>
-						<th class="col-2 mul-align-center" scope="col"><a href="javascript:;">Gray</a></th>
-						<th class="col-2 mul-align-center" scope="col"><a href="javascript:;">Disabled</a></th>
-						<th class="col-2 mul-align-center" scope="col"><a href="javascript:;">Reverse</a></th>
-						<th class="col-4 mul-align-center" scope="col"><a href="javascript:;">Specific Use Color</a></th>
+						<th class="col-2 evo-align-center" scope="col"><a href="javascript:;">Blue</a></th>
+						<th class="col-2 evo-align-center" scope="col"><a href="javascript:;">Gray</a></th>
+						<th class="col-2 evo-align-center" scope="col"><a href="javascript:;">Disabled</a></th>
+						<th class="col-2 evo-align-center" scope="col"><a href="javascript:;">Reverse</a></th>
+						<th class="col-4 evo-align-center" scope="col"><a href="javascript:;">Specific Use Color</a></th>
 						<th class="col-8" scope="col"><a href="javascript:;">Keywords</a></th>
 					</tr>
 				</thead>
@@ -68,15 +68,15 @@
 					{% for item in model.icons %}
 					<tr>
 						<td>{{ item.properties.name }}</td>
-						<td class="mul-align-center"><i class="mul-icon-site-{{ item.properties.name }}"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span></td>
-						<td class="mul-align-center"><i class="mul-icon-site-{{ item.properties.name }} mul-icon-color-gray-darker"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span></td>
-						<td class="mul-align-center"><i class="mul-icon-site-{{ item.properties.name }} mul-icon-color-disabled"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span></td>
-						<td class="mul-align-center icon-table-cell-reverse-background"><i class="mul-icon-site-{{ item.properties.name }} mul-icon-color-white"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span></td>
-						<td class="mul-align-center">
-							<i class="mul-icon-site-{{ item.properties.name }} mul-icon-color-confirmation mul-icon-position-left"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span>
-							<i class="mul-icon-site-{{ item.properties.name }} mul-icon-color-error mul-icon-position-left"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span>
-							<i class="mul-icon-site-{{ item.properties.name }} mul-icon-color-attention mul-icon-position-left"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span>
-							<i class="mul-icon-site-{{ item.properties.name }} mul-icon-color-info mul-icon-position-left"></i><span class="mul-icon-hide-text">{{ item.properties.name }}</span>
+						<td class="evo-align-center"><i class="evo-icon-site-{{ item.properties.name }}"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
+						<td class="evo-align-center"><i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-gray-dark"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
+						<td class="evo-align-center"><i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-disabled"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
+						<td class="evo-align-center icon-table-cell-reverse-background"><i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-white"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
+						<td class="evo-align-center">
+							<i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-confirmation evo-icon-position-left"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span>
+							<i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-error evo-icon-position-left"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span>
+							<i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-attention evo-icon-position-left"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span>
+							<i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-info evo-icon-position-left"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span>
 						</td>
 						<td>{{ item.icon.tags | join: ', ' }}</td>
 					</tr>

@@ -1,15 +1,15 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Carousel Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Carousel Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-carousel == true{
 
-	.mul-carousel.owl-carousel	{
+	.evo-carousel.owl-carousel	{
 								display: none;
 								position: relative;
-								margin-bottom: $baseMargin;
+								margin-bottom: $evo-base-margin;
 								width: 100%;
 								-ms-touch-action: pan-y;
 		.owl-wrapper-outer			{
@@ -83,8 +83,8 @@
 											padding: 1px 0 2px 0;
 											position: relative;
 											top: -25px;
-					[class*="mul-icon"]			{
-												top: 0;
+					[class*="evo-icon"]			{
+												top: -1px;
 												color: $carouselNavIconColor;
 						&:hover						{color: $carouselNavHoverIconColor;}
 												}
@@ -97,18 +97,18 @@
 
 	//=== MEDIA QUERIES =========================================================================
 
-	/// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		@media #{$medium-up} {
 
-			.mul-carousel.owl-carousel
+			.evo-carousel.owl-carousel
 								{
 				.owl-controls		{
 					.owl-buttons		{
 						.owl-next,
 						.owl-prev			{
-							[class*="mul-icon"]	{top: 1px;}
+							[class*="evo-icon"]	{top: -1px;}
 											}
 										}
 									}

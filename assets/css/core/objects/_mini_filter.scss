@@ -1,15 +1,15 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Mini Filter Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Mini Filter Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-mini-filter == true{
 
-	.mul-mini-filter						{
+	.evo-mini-filter						{
 											margin: 0 0 $miniFilterMarginBottom 0;
 		dt										{
-												font-family: $fontSemiBoldStack;
+												font-family: $evo-font-medium-stack;
 												color: $miniFilterLabelFontColor;
 												}
 		dd										{
@@ -25,19 +25,19 @@
 											}
 
 	// MINI FILTER DROPDOWN MENU FOR SMALL MEDIAQUERY BREAKPOINT
-	.mul-mini-filter-dropdown				{
+	.evo-mini-filter-dropdown				{
 											margin-bottom: $miniFilterMarginBottom;
 											max-width: $miniFilterDropDownMaxWidth;
 											}
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		@media #{$medium-up} {
 
-			.mul-mini-filter				{
+			.evo-mini-filter				{
 											margin: 0;
 				dt, dd							{
 												font-size: $miniFilterFontSizeLargeBreakpoint;

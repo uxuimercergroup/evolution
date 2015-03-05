@@ -1,0 +1,183 @@
+/*------------------------------------------------------------------------------------------
+Mercer Evolution - Employee Portal Family - Slider Contributions Partial
+DATE - February, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+-------------------------------------------------------------------------------------------*/
+
+//
+// @variables
+//
+$evo-contributions-slider-background-color: $gray-light !default;
+$evo-contributions-slider-handle-background-color: $citrine-mid !default;
+$evo-contributions-slider-handle-shadow-color: $black !default;
+$evo-contributions-slider-handle-border-color: $white !default;
+$evo-contributions-slider-range-background-color: $gray-mid !default;
+$evo-contributions-slider-tick-marker-color: $gray-light !default;
+$evo-contributions-slider-tooltip-background-color: $gray-dark !default;
+$evo-contributions-slider-tooltip-font-color: $white !default;
+
+.evo-contributions-slider		{
+								padding: rem-calc(12) rem-calc(10) rem-calc(9) rem-calc(10);
+	.evo-contributions-slider-hdr	{
+									margin-bottom: rem-calc(16);
+									}
+	
+	// SLIDER
+	.evo-slider.ui-slider			{
+									@include ie-gradient-reset-filter;
+									@include border-radius(0);
+									background-color: $evo-contributions-slider-background-color !important;
+									background-image: none;
+									width: 100%;
+									position: relative;
+									z-index: 800;
+									margin-bottom: 0;
+		// SLIDER HANDLE
+		.ui-slider-handle				{
+										@include ie-gradient-reset-filter;
+										@include box-shadow(0, 1px, 3px, $evo-contributions-slider-handle-shadow-color);
+										background-color: $evo-contributions-slider-handle-background-color !important;
+										background-image: none;
+										width: rem-calc(24) !important;
+										height: rem-calc(24) !important;
+										border-width: rem-calc(3);
+										border-color: $evo-contributions-slider-handle-border-color;
+										top: rem-calc(-9) !important;
+										z-index: 802;
+										margin-left: rem-calc(-11);
+			.evo-slider-tooltip				{
+											@include border-radius($global-radius $global-radius 0 0);
+											background-color: rgba($evo-contributions-slider-tooltip-background-color, .9);
+											position: absolute;
+											top: rem-calc(-45);
+											left: rem-calc(-10);
+											display: block;
+											padding: rem-calc(3);
+											width: rem-calc(40);
+											height: rem-calc(30);
+											color: $evo-contributions-slider-tooltip-font-color;
+											text-align: center;
+											font-size: rem-calc(16);
+				.evo-slider-tooltip-arrow		{
+												display: block;
+												width: 0; 
+												height: 0;
+												position: absolute;
+												top: rem-calc(30);
+												left: 0;
+												border-left: rem-calc(20) solid transparent !important;
+												border-right: rem-calc(20) solid transparent !important;
+												border-top: rem-calc(10) solid rgba($evo-contributions-slider-tooltip-background-color, .9);
+												}
+											}
+										}
+
+		// SLIDER RANGE
+		.ui-slider-range				{
+										@include border-radius(0);
+										background-color: $evo-contributions-slider-range-background-color;
+										z-index: 801;
+										}
+									}
+
+	// SLIDER MARKERS
+	.evo-slider-markers				{
+									position: relative;
+									z-index: 799;
+		span							{
+										position: absolute;
+										display: block;
+										margin: rem-calc(-13) 0 0 0;
+										width: rem-calc(2);
+										height: rem-calc(20);
+										}							
+									}
+
+	// SLIDER TICKS
+	.evo-slider-tick-ctn			{
+									margin-top: rem-calc(7);
+		.evo-slider-tick-number			{
+										position: relative;
+										font-size: rem-calc(12);
+										}
+		.evo-slider-tick-number-min		{
+										left: rem-calc(-5);
+										}
+		.evo-slider-tick-number-max		{
+										right: rem-calc(-10);
+										}
+		.evo-slider-tick-marker			{
+										position: absolute;
+										display: block;
+										margin: rem-calc(-28) 0 0 0;
+										width: rem-calc(1);
+										height: rem-calc(10);
+										background-color: $evo-contributions-slider-tick-marker-color;
+										}
+		.evo-slider-tick-number-min-marker
+										{
+										left: rem-calc(5);
+										}
+		.evo-slider-tick-number-max-marker
+										{
+										right: rem-calc(10);
+										}
+									}
+
+	// SLIDER KEY
+	.evo-slider-key					{
+									position: relative;
+									left: rem-calc(-5);
+									padding-top: rem-calc(6);
+									font-size: rem-calc(12);
+		.evo-slider-key-row				{
+										@include clearfix;
+										display: block;
+										margin-bottom: rem-calc(3);
+										}
+		.evo-slider-key-block,
+		.evo-slider-key-label			{
+										float: left;
+										}
+		.evo-slider-key-block			{
+										width: rem-calc(18);
+										height: rem-calc(18);
+										margin-right: rem-calc(5);
+										}
+									}
+								}
+
+// SLIDER IE9 FIXES
+.ie9							{
+	.evo-contributions-slider		{
+		
+		// SLIDER
+		.evo-slider.ui-slider			{
+			
+			// SLIDER HANDLE
+			.ui-slider-handle				{
+											top: rem-calc(-11) !important;
+											}
+										}
+									}
+								}
+
+//=== MEDIA QUERIES =========================================================================
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+@media #{$medium-up} {
+
+.evo-contributions-slider		{
+
+	// SLIDER KEY
+	.evo-slider-key					{
+									padding-top: rem-calc(6);
+									font-size: rem-calc(12);
+		.evo-slider-key-row				{
+										display: inline-block;
+										margin-right: rem-calc(10);
+										}
+									}
+								}
+
+}

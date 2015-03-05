@@ -1,0 +1,78 @@
+/*------------------------------------------------------------------------------------------
+Mercer Evolution - Employee Portal Family - Showcase Panel Partial
+DATE - February, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+-------------------------------------------------------------------------------------------*/
+
+//
+// @variables
+//
+$evo-showcase-panel-shadow-h: 0 !default;
+$evo-showcase-panel-shadow-v: rem-calc(2) !default;
+$evo-showcase-panel-shadow-blur: rem-calc(8) !default;
+$evo-showcase-panel-shadow-color: $gray-mid !default;
+$evo-showcase-panel-fixed-z-index: 900 !default;
+
+
+// SHOWCASE PANEL - BEGINS
+	.evo-showcase-panel					{
+										@include box-shadow($evo-showcase-panel-shadow-h, $evo-showcase-panel-shadow-v, $evo-showcase-panel-shadow-blur, $evo-showcase-panel-shadow-color);
+		li									{
+											min-height: rem-calc(100);
+											padding: rem-calc(10) 0;
+			.evo-icon-adv						{
+												top: rem-calc(4);
+												border: 0;
+												display: inline-block;
+												float: none;
+
+				// LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
+				@each $color-name, $color in $color-palette 
+													{
+
+						// CUSTOM SPOT BACKGROUND COLOR FOR SHOWCASE ICONS
+						&[data-evo-showcase-panel-icon-background-color="#{$color-name}"]
+														{
+														background-color: map-get($color, color);
+														}
+													}
+
+				[class*="evo-icon-"]				{
+													top: 2px;
+
+					// LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
+					@each $color-name, $color in $color-palette 
+														{
+
+							// CUSTOM SPOT FONT COLOR FOR SHOWCASE ICONS
+							&[data-evo-showcase-panel-icon-color="#{$color-name}"]
+															{
+															color: map-get($color, color);
+															}
+														}
+													}
+												}
+											}
+		.evo-large-cost						{
+											padding: rem-calc(19) 0;
+											position: relative;
+											top: rem-calc(4);
+											}
+		.evo-small-cost						{
+											padding: rem-calc(30) 0;
+											}
+										}
+	[data-evo-showcase-panel-fixed]		{
+										position: fixed;
+										top: rem-calc(45);
+										left: 0;
+										z-index: $evo-showcase-panel-fixed-z-index;
+										width: 100%;
+										margin-left: 0;
+										}
+
+	.evo-showcase-panel-fixed-header-adjust
+										{
+										margin-bottom: rem-calc(145);
+										}
+// SHOWCASE PANEL - ENDS

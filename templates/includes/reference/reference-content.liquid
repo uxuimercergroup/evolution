@@ -1,36 +1,55 @@
-<!-- CONTENT SECTION - TOGGLE BUTTONS - BEGINS -->
-	<ul class="mul-btn-group-horizontal">{% for item in global.reference-buttons %}<li class="mul-btn"><a href="#mul-ref-alternate-views-badge-content-panel-{% cycle '1', '2', '3', '4', '5' %}"><i class="mul-icon-{{ item.reference-button-icon }} mul-icon-position-left" title="{{ item.reference-button-label }}"></i><span>{{ item.reference-button-label }}</span></a></li>{% endfor %}{% if model.reference-get-code == "true" %}<li class="mul-btn"><a href="#mul-ref-alternate-views-badge-content-panel-get-code"><i class="mul-icon-{{ global.reference-button-icon-get-code }} mul-icon-position-left" title="{{ global.reference-button-label-get-code }}"></i><span>{{ global.reference-button-label-get-code }}</span></a></li>{% endif %}</ul>
+<dl class="tabs evo-tabs" data-tab>
+{% for item in global.reference-buttons %}
+	<dd>
+		<a href="#panel{% cycle '1', '2', '3', '4', '5' %}">
+			<i class="evo-icon-{{ item.reference-button-icon }} evo-icon-position-left" title="{{ item.reference-button-label }}"></i>
+			{{ item.reference-button-label }}
+		</a>
+	</dd>
+{% endfor %}
 
-<!-- CONTENT SECTION - TOGGLE BUTTONS - ENDS -->
-
-<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
-	<div id="mul-ref-alternate-views-badge-content-panel-1">
+{% if model.reference-get-code == "true" %}
+	<dd>
+		<a href="#panel5">
+			<i class="evo-icon-{{ global.reference-button-icon-get-code }} evo-icon-position-left" title="{{ global.reference-button-label-get-code }}"></i>
+			{{ global.reference-button-label-get-code }}
+		</a>
+	</dd>
+{% endif %}
+</dl>
+<div class="tabs-content evo-tabs-content">
+<!-- REFERENCE OVERVIEW - BEGINS -->
+	<div class="content active" id="panel1">
 		{{ model.reference-overview }}
 	</div>
-<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
+<!-- REFERENCE OVERVIEW - ENDS -->
 
-<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
-	<div id="mul-ref-alternate-views-badge-content-panel-2">
+<!-- REFERENCE USAGE - BEGINS -->
+	<div class="content" id="panel2">
 		{{ model.reference-usage }}
 	</div>
-<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
+<!-- REFERENCE USAGE - ENDS -->
 
-<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
-	<div id="mul-ref-alternate-views-badge-content-panel-3">
+<!-- REFERENCE DETAILS - BEGINS -->
+	<div class="content" id="panel3">
 		{{ model.reference-details }}
 	</div>
-<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
+<!-- REFERENCE DETAILS - ENDS -->
 
-<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
-	<div id="mul-ref-alternate-views-badge-content-panel-4">
+<!-- REFERENCE MOBILE - BEGINS -->
+	<div class="content" id="panel4">
 		{{ model.reference-mobile }}
 	</div>
-<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
+<!-- REFERENCE MOBILE - ENDS -->
 
-<!-- CONTENT SECTION - CONTENT PANEL - BEGINS -->
-	<div id="mul-ref-alternate-views-badge-content-panel-5">
+<!-- REFERENCE TECHNICAL - BEGINS -->
+	<div class="content" id="panel5">
 		{{ model.reference-technical }}
-		
+	</div>
+<!-- REFERENCE TECHNICAL - ENDS -->
+
+<!-- REFERENCE DEPENDECY - BEGINS -->
+	<div class="content" id="panel6">
 		{% if model.reference-dependency == "true" %}
 		<!-- DEPENDENCY LIST - BEGINS -->
 		<h3>Dependencies</h3>
@@ -47,6 +66,6 @@
 		</ul>
 		<!-- DEPENDENCY LIST - ENDS -->
 		{% endif %}
-
 	</div>
-<!-- CONTENT SECTION - CONTENT PANEL - ENDS -->
+<!-- REFERENCE DEPENDECY - ENDS -->
+</div>

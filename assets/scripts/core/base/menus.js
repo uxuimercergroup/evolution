@@ -1,11 +1,11 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Menus JS Functions
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Menus JS Functions
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //--------------------------------------------------------------------------------------------------------
 
 // MENU OPTION DEFAULTS
-var mulMenuDefaults = {
+var evoMenuDefaults = {
 	subIndicators: true,
 	mainMenuSubOffsetX: 0,
 	subMenusSubOffsetX: 5,
@@ -21,7 +21,7 @@ var mulMenuDefaults = {
 // HOVER EVENT MENU
 
 // Menu hover function
-var mulMenuHover = function() {
+var evoMenuHover = function() {
 	
 	// Variable to define menu hover object based on data attribute value
 	var menuObject = jQuery('[data-menu="hover"]');
@@ -29,23 +29,23 @@ var mulMenuHover = function() {
 	// Apply smartmenus to menu hover object
 	menuObject.smartmenus('destroy');
 	menuObject.smartmenus('menuHideAll');
-	menuObject.smartmenus(jQuery.extend({}, mulMenuDefaults));
+	menuObject.smartmenus(jQuery.extend({}, evoMenuDefaults));
 };
 
 // Menu hover init
-mulMenuHover();
+evoMenuHover();
 
 
 // CLICK EVENT MENU
 
 // Define menu click defaults
-var mulMenuClickDefaults = {
+var evoMenuClickDefaults = {
 	showOnClick: true,
 	hideOnClick: true
 };
 
 // Menu click function
-var mulMenuClick = function() {
+var evoMenuClick = function() {
 	
 	// Variable to define menu click object based on data attribute value
 	var menuObject = jQuery('[data-menu="click"]');
@@ -53,7 +53,7 @@ var mulMenuClick = function() {
 	// Apply smartmenus to menu click object
 	menuObject.smartmenus('destroy');
 	menuObject.smartmenus('menuHideAll');
-	menuObject.smartmenus(jQuery.extend({}, mulMenuDefaults, mulMenuClickDefaults)).bind('click.smapi', function(e, item) {
+	menuObject.smartmenus(jQuery.extend({}, evoMenuDefaults, evoMenuClickDefaults)).bind('click.smapi', function(e, item) {
 		var $item = $(item),
 			level = $item.parent().parent().dataSM('level'),
 			$sub = $item.parent().dataSM('sub');
@@ -65,4 +65,4 @@ var mulMenuClick = function() {
 };
 
 // Menu click init
-mulMenuClick();
+evoMenuClick();

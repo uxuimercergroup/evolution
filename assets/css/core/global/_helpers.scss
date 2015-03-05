@@ -1,29 +1,26 @@
 //-------------------------------------------------------------------------------------------
 // Mercer Evolution - Core v2.3 - Global Helpers Partial
-// DATE - February 21, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 // TYPE HELPERS
 // ------------------------------------------------------------------------------------------
 
 // TEXT OVERFLOW
-.mul-text-overflow						{@include text-overflow;}
+.evo-text-overflow						{@include text-overflow;}
 
 // WORD BREAK
-.mul-word-break							{word-wrap: break-word;}
-
-// FOOTNOTES
-.mul-footnote							{color: $footnoteFontColor;}
+.evo-word-break							{word-wrap: break-word;}
 
 // NO BOLD STYLE
-.mul-nobold								{font-family: $fontRegularFamily;}
+.evo-nobold								{font-family: $evo-font-regular-family;}
 
 // BOLD STYLE
-.mul-bold								{font-family: $fontSemiBoldFamily;}
+.evo-bold								{font-family: $evo-font-medium-family;}
 
 // NO BULLETED LISTS
-.mul-no-bullets							{
+.evo-no-bullets							{
 										list-style: none;
 										margin-left: 0;
 										}
@@ -37,12 +34,12 @@ img										{
 										max-width: 100%;
 										height: auto;
 
-	&.mul-image-left						{
+	&.evo-image-left						{
 											float: left;
 											margin-top: 5px;
 											margin-right: 20px;
 											}
-	&.mul-image-right						{
+	&.evo-image-right						{
 											float: right;
 											margin-top: 5px;
 											margin-left: 20px;
@@ -52,24 +49,24 @@ img										{
 // KEYLINES
 
 // Use on elememts which need a keyline on the right
-.mul-keyline-right						{
+.evo-keyline-right						{
 										padding-right: 20px;
-										border-right:1px solid $keylineRightBorderRightColor;
+										border-right:1px solid $evo-keyline-right-border-right-color;
 	img										{margin-top:5px;}
 										}
 
 // Use on elements which need a keyline on the left
-.mul-keyline-left						{
+.evo-keyline-left						{
 										padding-left: 20px;
-										border-left: 1px solid $keylineLeftBorderLeftColor;
+										border-left: 1px solid $evo-keyline-left-border-left-color;
 	img										{margin-top: 5px;}
 										}
 
 // Removes border on last keyline right
-.mul-keyline-right.last					{border-right: 0;}
+.evo-keyline-right.last					{border-right: 0;}
 
 // Removes border and padding on first keyline left, make sure to add class of first
-.mul-keyline-left.first					{
+.evo-keyline-left.first					{
 										border-left: 0;
 										padding-left: 0;
 										}
@@ -77,12 +74,13 @@ img										{
 // KEYLINE MEDIA QUERIES
 
 // Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
-@if $use-small-mediaquery == true {
-	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+@if $use-small-only-mediaquery == true {
+
+	@media #{$small-only} {
 		
 		// KEYLINES
-		.mul-keyline-right,
-		.mul-keyline-left					{
+		.evo-keyline-right,
+		.evo-keyline-left					{
 											padding-right:0;
 											padding-left:0;
 											border-right:0;
@@ -91,6 +89,7 @@ img										{
 											}
 
 	}
+	
 }
 
 
@@ -98,13 +97,13 @@ img										{
 // ------------------------------------------------------------------------------------------
 
 // CLEAR FIX
-.mul-clearfix							{@include clearfix;}
+.evo-clearfix							{@include clearfix;}
 
 // ABSOLUTE CENTER
 // This will center an element horizontally and vertically
-.mul-align-absolute-center				{
+.evo-align-absolute-center				{
 										position: relative;
-	.mul-align-absolute-center-element		{
+	.evo-align-absolute-center-element		{
 											margin: auto;
 											position: absolute;
 											top: 0;
@@ -115,155 +114,155 @@ img										{
 										}
 
 // LEFT AND RIGHT ALIGN TEXT
-.mul-align-center						{text-align: center !important;}
-.mul-align-left							{text-align: left !important;}
-.mul-align-right						{text-align: right !important;}
+.evo-align-center						{text-align: center !important;}
+.evo-align-left							{text-align: left !important;}
+.evo-align-right						{text-align: right !important;}
 
 
 // HORIZONTAL CENTERING FOR BLOCK ELEMENTS
 // Apply class to element that needs to be centered horizontally
-.mul-center-block						{
+.evo-center-block						{
 										float: none !important;
 										display: block !important;
 										margin-right: auto !important;
 										margin-left: auto  !important;
 										}
-.mul-float-left							{float: left !important;}
-.mul-float-right						{float: right !important;}
+.evo-float-left							{float: left !important;}
+.evo-float-right						{float: right !important;}
 
 // HIDE ELEMENTS
-.mul-display-none						{display: none;}
+.evo-display-none						{display: none;}
 
 // WHITE SPACE NO WRAP
-.mul-nowrap								{white-space: nowrap !important;}
+.evo-nowrap								{white-space: nowrap !important;}
 
 
 // MARGIN ENABLERS/DISABLERS
 
 // ADD MARGIN
-.mul-margin								{margin: $baseMargin !important;}
-.mul-margin-top							{margin-top: $baseMargin !important;}
-.mul-margin-right						{margin-right: $baseMargin !important;}
-.mul-margin-bottom						{margin-bottom: $baseMargin !important;}
-.mul-margin-left						{margin-left: $baseMargin !important;}
+.evo-margin								{margin: $evo-base-margin !important;}
+.evo-margin-top							{margin-top: $evo-base-margin !important;}
+.evo-margin-right						{margin-right: $evo-base-margin !important;}
+.evo-margin-bottom						{margin-bottom: $evo-base-margin !important;}
+.evo-margin-left						{margin-left: $evo-base-margin !important;}
 
 // SUBTRACT MARGIN
-.mul-no-margin							{margin: 0 !important;}
-.mul-no-margin-top						{margin-top: 0 !important;}
-.mul-no-margin-right					{margin-right: 0 !important;}
-.mul-no-margin-bottom					{margin-bottom: 0 !important;}
-.mul-no-margin-left						{margin-left: 0 !important;}
+.evo-no-margin							{margin: 0 !important;}
+.evo-no-margin-top						{margin-top: 0 !important;}
+.evo-no-margin-right					{margin-right: 0 !important;}
+.evo-no-margin-bottom					{margin-bottom: 0 !important;}
+.evo-no-margin-left						{margin-left: 0 !important;}
 
 // PADDING ENABLERS/DISABLERS
 
 // ADD PADDING
-.mul-padding							{padding: $basePadding !important;}
-.mul-padding-top						{padding-top: $basePadding !important;}
-.mul-padding-right						{padding-right: $basePadding !important;}
-.mul-padding-bottom						{padding-bottom: $basePadding !important;}
-.mul-padding-left						{padding-left: $basePadding !important;}
+.evo-padding							{padding: $evo-base-padding !important;}
+.evo-padding-top						{padding-top: $evo-base-padding !important;}
+.evo-padding-right						{padding-right: $evo-base-padding !important;}
+.evo-padding-bottom						{padding-bottom: $evo-base-padding !important;}
+.evo-padding-left						{padding-left: $evo-base-padding !important;}
 
 // SUBTRACT PADDING
-.mul-no-padding							{padding:0 !important;}
-.mul-no-padding-top						{padding-top: 0 !important;}
-.mul-no-padding-right					{padding-right: 0 !important;}
-.mul-no-padding-bottom					{padding-bottom: 0 !important;}
-.mul-no-padding-left					{padding-left: 0 !important;}
+.evo-no-padding							{padding:0 !important;}
+.evo-no-padding-top						{padding-top: 0 !important;}
+.evo-no-padding-right					{padding-right: 0 !important;}
+.evo-no-padding-bottom					{padding-bottom: 0 !important;}
+.evo-no-padding-left					{padding-left: 0 !important;}
 
 
 // SPACERS
 
 // MARGIN SPACERS
-.mul-spacer-margin-x-small				{margin: $spacerXSmall !important;}
-.mul-spacer-margin-small				{margin: $spacerSmall !important;}
-.mul-spacer-margin-medium				{margin: $spacerMedium !important;}
-.mul-spacer-margin-large				{margin: $spacerLarge !important;}
-.mul-spacer-margin-x-large				{margin: $spacerXLarge !important;}
-.mul-spacer-margin-xx-large				{margin: $spacerXXLarge !important;}
-.mul-spacer-margin-xxx-large			{margin: $spacerXXXLarge !important;}
+.evo-spacer-margin-x-small				{margin: $evo-spacer-xsmall !important;}
+.evo-spacer-margin-small				{margin: $evo-spacer-small !important;}
+.evo-spacer-margin-medium				{margin: $evo-spacer-medium !important;}
+.evo-spacer-margin-large				{margin: $evo-spacer-large !important;}
+.evo-spacer-margin-x-large				{margin: $evo-spacer-xlarge !important;}
+.evo-spacer-margin-xx-large				{margin: $evo-spacer-xxlarge !important;}
+.evo-spacer-margin-xxx-large			{margin: $evo-spacer-xxxlarge !important;}
 
-.mul-spacer-margin-top-x-small			{margin-top: $spacerXSmall !important;}
-.mul-spacer-margin-top-small			{margin-top: $spacerSmall !important;}
-.mul-spacer-margin-top-medium			{margin-top: $spacerMedium !important;}
-.mul-spacer-margin-top-large			{margin-top: $spacerLarge !important;}
-.mul-spacer-margin-top-x-large			{margin-top: $spacerXLarge !important;}
-.mul-spacer-margin-top-xx-large			{margin-top: $spacerXXLarge !important;}
-.mul-spacer-margin-top-xxx-large		{margin-top: $spacerXXXLarge !important;}
+.evo-spacer-margin-top-x-small			{margin-top: $evo-spacer-xsmall !important;}
+.evo-spacer-margin-top-small			{margin-top: $evo-spacer-small !important;}
+.evo-spacer-margin-top-medium			{margin-top: $evo-spacer-medium !important;}
+.evo-spacer-margin-top-large			{margin-top: $evo-spacer-large !important;}
+.evo-spacer-margin-top-x-large			{margin-top: $evo-spacer-xlarge !important;}
+.evo-spacer-margin-top-xx-large			{margin-top: $evo-spacer-xxlarge !important;}
+.evo-spacer-margin-top-xxx-large		{margin-top: $evo-spacer-xxxlarge !important;}
 
-.mul-spacer-margin-right-x-small		{margin-right: $spacerXSmall !important;}
-.mul-spacer-margin-right-small			{margin-right: $spacerSmall !important;}
-.mul-spacer-margin-right-medium			{margin-right: $spacerMedium !important;}
-.mul-spacer-margin-right-large			{margin-right: $spacerLarge !important;}
-.mul-spacer-margin-right-x-large		{margin-right: $spacerXLarge !important;}
-.mul-spacer-margin-right-xx-large		{margin-right: $spacerXXLarge !important;}
-.mul-spacer-margin-right-xxx-large		{margin-right: $spacerXXXLarge !important;}
+.evo-spacer-margin-right-x-small		{margin-right: $evo-spacer-xsmall !important;}
+.evo-spacer-margin-right-small			{margin-right: $evo-spacer-small !important;}
+.evo-spacer-margin-right-medium			{margin-right: $evo-spacer-medium !important;}
+.evo-spacer-margin-right-large			{margin-right: $evo-spacer-large !important;}
+.evo-spacer-margin-right-x-large		{margin-right: $evo-spacer-xlarge !important;}
+.evo-spacer-margin-right-xx-large		{margin-right: $evo-spacer-xxlarge !important;}
+.evo-spacer-margin-right-xxx-large		{margin-right: $evo-spacer-xxxlarge !important;}
 
-.mul-spacer-margin-bottom-x-small		{margin-bottom: $spacerXSmall !important;}
-.mul-spacer-margin-bottom-small			{margin-bottom: $spacerSmall !important;}
-.mul-spacer-margin-bottom-medium		{margin-bottom: $spacerMedium !important;}
-.mul-spacer-margin-bottom-large			{margin-bottom: $spacerLarge !important;}
-.mul-spacer-margin-bottom-x-large		{margin-bottom: $spacerXLarge !important;}
-.mul-spacer-margin-bottom-xx-large		{margin-bottom: $spacerXXLarge !important;}
-.mul-spacer-margin-bottom-xxx-large		{margin-bottom: $spacerXXXLarge !important;}
+.evo-spacer-margin-bottom-x-small		{margin-bottom: $evo-spacer-xsmall !important;}
+.evo-spacer-margin-bottom-small			{margin-bottom: $evo-spacer-small !important;}
+.evo-spacer-margin-bottom-medium		{margin-bottom: $evo-spacer-medium !important;}
+.evo-spacer-margin-bottom-large			{margin-bottom: $evo-spacer-large !important;}
+.evo-spacer-margin-bottom-x-large		{margin-bottom: $evo-spacer-xlarge !important;}
+.evo-spacer-margin-bottom-xx-large		{margin-bottom: $evo-spacer-xxlarge !important;}
+.evo-spacer-margin-bottom-xxx-large		{margin-bottom: $evo-spacer-xxxlarge !important;}
 
-.mul-spacer-margin-left-x-small			{margin-left: $spacerXSmall !important;}
-.mul-spacer-margin-left-small			{margin-left: $spacerSmall !important;}
-.mul-spacer-margin-left-medium			{margin-left: $spacerMedium !important;}
-.mul-spacer-margin-left-large			{margin-left: $spacerLarge !important;}
-.mul-spacer-margin-left-x-large			{margin-left: $spacerXLarge !important;}
-.mul-spacer-margin-left-xx-large		{margin-left: $spacerXXLarge !important;}
-.mul-spacer-margin-left-xxx-large		{margin-left: $spacerXXXLarge !important;}
+.evo-spacer-margin-left-x-small			{margin-left: $evo-spacer-xsmall !important;}
+.evo-spacer-margin-left-small			{margin-left: $evo-spacer-small !important;}
+.evo-spacer-margin-left-medium			{margin-left: $evo-spacer-medium !important;}
+.evo-spacer-margin-left-large			{margin-left: $evo-spacer-large !important;}
+.evo-spacer-margin-left-x-large			{margin-left: $evo-spacer-xlarge !important;}
+.evo-spacer-margin-left-xx-large		{margin-left: $evo-spacer-xxlarge !important;}
+.evo-spacer-margin-left-xxx-large		{margin-left: $evo-spacer-xxxlarge !important;}
 
 // PADDING SPACERS
-.mul-spacer-padding-x-small				{padding: $spacerXSmall !important;}
-.mul-spacer-padding-small				{padding: $spacerSmall !important;}
-.mul-spacer-padding-medium				{padding: $spacerMedium !important;}
-.mul-spacer-padding-large				{padding: $spacerLarge !important;}
-.mul-spacer-padding-x-large				{padding: $spacerXLarge !important;}
-.mul-spacer-padding-xx-large			{padding: $spacerXXLarge !important;}
-.mul-spacer-padding-xxx-large			{padding: $spacerXXXLarge !important;}
+.evo-spacer-padding-x-small				{padding: $evo-spacer-xsmall !important;}
+.evo-spacer-padding-small				{padding: $evo-spacer-small !important;}
+.evo-spacer-padding-medium				{padding: $evo-spacer-medium !important;}
+.evo-spacer-padding-large				{padding: $evo-spacer-large !important;}
+.evo-spacer-padding-x-large				{padding: $evo-spacer-xlarge !important;}
+.evo-spacer-padding-xx-large			{padding: $evo-spacer-xxlarge !important;}
+.evo-spacer-padding-xxx-large			{padding: $evo-spacer-xxxlarge !important;}
 
-.mul-spacer-padding-top-x-small			{padding-top: $spacerXSmall !important;}
-.mul-spacer-padding-top-small			{padding-top: $spacerSmall !important;}
-.mul-spacer-padding-top-medium			{padding-top: $spacerMedium !important;}
-.mul-spacer-padding-top-large			{padding-top: $spacerLarge !important;}
-.mul-spacer-padding-top-x-large			{padding-top: $spacerXLarge !important;}
-.mul-spacer-padding-top-xx-large		{padding-top: $spacerXXLarge !important;}
-.mul-spacer-padding-top-xxx-large		{padding-top: $spacerXXXLarge !important;}
+.evo-spacer-padding-top-x-small			{padding-top: $evo-spacer-xsmall !important;}
+.evo-spacer-padding-top-small			{padding-top: $evo-spacer-small !important;}
+.evo-spacer-padding-top-medium			{padding-top: $evo-spacer-medium !important;}
+.evo-spacer-padding-top-large			{padding-top: $evo-spacer-large !important;}
+.evo-spacer-padding-top-x-large			{padding-top: $evo-spacer-xlarge !important;}
+.evo-spacer-padding-top-xx-large		{padding-top: $evo-spacer-xxlarge !important;}
+.evo-spacer-padding-top-xxx-large		{padding-top: $evo-spacer-xxxlarge !important;}
 
-.mul-spacer-padding-right-x-small		{padding-right: $spacerXSmall !important;}
-.mul-spacer-padding-right-small			{padding-right: $spacerSmall !important;}
-.mul-spacer-padding-right-medium		{padding-right: $spacerMedium !important;}
-.mul-spacer-padding-right-large			{padding-right: $spacerLarge !important;}
-.mul-spacer-padding-right-x-large		{padding-right: $spacerXLarge !important;}
-.mul-spacer-padding-right-xx-large		{padding-right: $spacerXXLarge !important;}
-.mul-spacer-padding-right-xxx-large		{padding-right: $spacerXXXLarge !important;}
+.evo-spacer-padding-right-x-small		{padding-right: $evo-spacer-xsmall !important;}
+.evo-spacer-padding-right-small			{padding-right: $evo-spacer-small !important;}
+.evo-spacer-padding-right-medium		{padding-right: $evo-spacer-medium !important;}
+.evo-spacer-padding-right-large			{padding-right: $evo-spacer-large !important;}
+.evo-spacer-padding-right-x-large		{padding-right: $evo-spacer-xlarge !important;}
+.evo-spacer-padding-right-xx-large		{padding-right: $evo-spacer-xxlarge !important;}
+.evo-spacer-padding-right-xxx-large		{padding-right: $evo-spacer-xxxlarge !important;}
 
-.mul-spacer-padding-bottom-x-small		{padding-bottom: $spacerXSmall !important;}
-.mul-spacer-padding-bottom-small		{padding-bottom: $spacerSmall !important;}
-.mul-spacer-padding-bottom-medium		{padding-bottom: $spacerMedium !important;}
-.mul-spacer-padding-bottom-large		{padding-bottom: $spacerLarge !important;}
-.mul-spacer-padding-bottom-x-large		{padding-bottom: $spacerXLarge !important;}
-.mul-spacer-padding-bottom-xx-large		{padding-bottom: $spacerXXLarge !important;}
-.mul-spacer-padding-bottom-xxx-large	{padding-bottom: $spacerXXXLarge !important;}
+.evo-spacer-padding-bottom-x-small		{padding-bottom: $evo-spacer-xsmall !important;}
+.evo-spacer-padding-bottom-small		{padding-bottom: $evo-spacer-small !important;}
+.evo-spacer-padding-bottom-medium		{padding-bottom: $evo-spacer-medium !important;}
+.evo-spacer-padding-bottom-large		{padding-bottom: $evo-spacer-large !important;}
+.evo-spacer-padding-bottom-x-large		{padding-bottom: $evo-spacer-xlarge !important;}
+.evo-spacer-padding-bottom-xx-large		{padding-bottom: $evo-spacer-xxlarge !important;}
+.evo-spacer-padding-bottom-xxx-large	{padding-bottom: $evo-spacer-xxxlarge !important;}
 
-.mul-spacer-padding-left-x-small		{padding-left: $spacerXSmall !important;}
-.mul-spacer-padding-left-small			{padding-left: $spacerSmall !important;}
-.mul-spacer-padding-left-medium			{padding-left: $spacerMedium !important;}
-.mul-spacer-padding-left-large			{padding-left: $spacerLarge !important;}
-.mul-spacer-padding-left-x-large		{padding-left: $spacerXLarge !important;}
-.mul-spacer-padding-left-xx-large		{padding-left: $spacerXXLarge !important;}
-.mul-spacer-padding-left-xxx-large		{padding-left: $spacerXXXLarge !important;}
+.evo-spacer-padding-left-x-small		{padding-left: $evo-spacer-xsmall !important;}
+.evo-spacer-padding-left-small			{padding-left: $evo-spacer-small !important;}
+.evo-spacer-padding-left-medium			{padding-left: $evo-spacer-medium !important;}
+.evo-spacer-padding-left-large			{padding-left: $evo-spacer-large !important;}
+.evo-spacer-padding-left-x-large		{padding-left: $evo-spacer-xlarge !important;}
+.evo-spacer-padding-left-xx-large		{padding-left: $evo-spacer-xxlarge !important;}
+.evo-spacer-padding-left-xxx-large		{padding-left: $evo-spacer-xxxlarge !important;}
 
 
 // TABLE COLUMN WIDTHS ADJUSTS (PERCENTAGES)
-.mul-tbl-column-50						{width: #{tableColWidth(50)};} // Width of 50%, Halves
-.mul-tbl-column-33						{width: #{tableColWidth(33.3)};} // Width of 33.3%, Thirds
-.mul-tbl-column-25						{width: #{tableColWidth(25)};} // Width of 25%, Quarters
-.mul-tbl-column-20						{width: #{tableColWidth(20)};} // Width of 20%, Fifths
-.mul-tbl-column-16						{width: #{tableColWidth(16.6)};} // Width of 16.6%, Sixths
-.mul-tbl-column-14						{width: #{tableColWidth(14.2)};} // Width of 14.2%, Sevenths
-.mul-tbl-column-12						{width: #{tableColWidth(12.5)};} // Width of 12.5%, Eighths
+.evo-tbl-column-50						{width: #{tableColWidth(50)};} // Width of 50%, Halves
+.evo-tbl-column-33						{width: #{tableColWidth(33.3)};} // Width of 33.3%, Thirds
+.evo-tbl-column-25						{width: #{tableColWidth(25)};} // Width of 25%, Quarters
+.evo-tbl-column-20						{width: #{tableColWidth(20)};} // Width of 20%, Fifths
+.evo-tbl-column-16						{width: #{tableColWidth(16.6)};} // Width of 16.6%, Sixths
+.evo-tbl-column-14						{width: #{tableColWidth(14.2)};} // Width of 14.2%, Sevenths
+.evo-tbl-column-12						{width: #{tableColWidth(12.5)};} // Width of 12.5%, Eighths
 
 
 // RESPONSIVE HELPERS
@@ -298,111 +297,283 @@ img										{
 // VISIBLE HELPERS
 
 // Small media query
-@include responsive-hide(".mul-visible-small-mediaquery");
-@if $use-small-mediaquery == true {
-	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
-		@include responsive-show(".mul-visible-small-mediaquery");
+@include responsive-hide(".evo-visible-small-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-show(".evo-visible-small-mediaquery");
 	}
 }
-@if $use-medium-mediaquery == true {
-	@include media-query(screen, both, $mediumMediaQueryBreakpointMin, $mediumMediaQueryBreakpointMax) {
-		@include responsive-show('.mul-visible-small-mediaquery.mul-visible-medium-mediaquery');
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-show('.evo-visible-small-mediaquery.evo-visible-medium-mediaquery');
 	}
 }
-@if $use-large-mediaquery == true {
-	@include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
-		@include responsive-show('.mul-visible-small-mediaquery.mul-visible-large-mediaquery');
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-show('.evo-visible-small-mediaquery.evo-visible-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-show('.evo-visible-small-mediaquery.evo-visible-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-show('.evo-visible-small-mediaquery.evo-visible-xxlarge-mediaquery');
 	}
 }
 
 // Medium media query
-@include responsive-hide(".mul-visible-medium-mediaquery");
-@if $use-small-mediaquery == true {
-	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
-		@include responsive-show(".mul-visible-medium-mediaquery.mul-visible-small-mediaquery");
+@include responsive-hide(".evo-visible-medium-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-show(".evo-visible-medium-mediaquery.evo-visible-small-mediaquery");
 	}
 }
-@if $use-medium-mediaquery == true {
-	@include media-query(screen, both, $mediumMediaQueryBreakpointMin, $mediumMediaQueryBreakpointMax) {
-		@include responsive-show('.mul-visible-medium-mediaquery');
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-show('.evo-visible-medium-mediaquery');
 	}
 }
-@if $use-large-mediaquery == true {
-	@include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
-		@include responsive-show('.mul-visible-medium-mediaquery.mul-visible-large-mediaquery');
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-show('.evo-visible-medium-mediaquery.evo-visible-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-show('.evo-visible-medium-mediaquery.evo-visible-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-show('.evo-visible-medium-mediaquery.evo-visible-xxlarge-mediaquery');
 	}
 }
 
 // Large media query
-@include responsive-hide(".mul-visible-large-mediaquery");
-@if $use-small-mediaquery == true {
-	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
-		@include responsive-show(".mul-visible-large-mediaquery.mul-visible-small-mediaquery");
+@include responsive-hide(".evo-visible-large-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-show(".evo-visible-large-mediaquery.evo-visible-small-mediaquery");
 	}
 }
-@if $use-medium-mediaquery == true {
-	@include media-query(screen, both, $mediumMediaQueryBreakpointMin, $mediumMediaQueryBreakpointMax) {
-		@include responsive-show('.mul-visible-large-mediaquery.mul-visible-medium-mediaquery');
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-show('.evo-visible-large-mediaquery.evo-visible-medium-mediaquery');
 	}
 }
-@if $use-large-mediaquery == true {
-	@include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
-		@include responsive-show('.mul-visible-large-mediaquery');
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-show('.evo-visible-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-show('.evo-visible-large-mediaquery.evo-visible-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-show('.evo-visible-large-mediaquery.evo-visible-xxlarge-mediaquery');
+	}
+}
+
+// X-Large media query
+@include responsive-hide(".evo-visible-xlarge-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-show(".evo-visible-xlarge-mediaquery.evo-visible-small-mediaquery");
+	}
+}
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-show('.evo-visible-xlarge-mediaquery.evo-visible-medium-mediaquery');
+	}
+}
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-show('.evo-visible-xlarge-mediaquery.evo-visible-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-show('.evo-visible-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-show('.evo-visible-xlarge-mediaquery.evo-visible-xxlarge-mediaquery');
+	}
+}
+
+// XX-Large media query
+@include responsive-hide(".evo-visible-xxlarge-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-show(".evo-visible-xxlarge-mediaquery.evo-visible-small-mediaquery");
+	}
+}
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-show('.evo-visible-xxlarge-mediaquery.evo-visible-medium-mediaquery');
+	}
+}
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-show('.evo-visible-xxlarge-mediaquery.evo-visible-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-show('.evo-visible-xxlarge-mediaquery.evo-visible-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-show('.evo-visible-xxlarge-mediaquery');
 	}
 }
 
 // HIDDEN HELPERS
 
 // Small media query
-@include responsive-show(".mul-hidden-small-mediaquery");
-@if $use-small-mediaquery == true {
-	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
-		@include responsive-hide(".mul-hidden-small-mediaquery");
+@include responsive-show(".evo-hidden-small-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-hide(".evo-hidden-small-mediaquery");
 	}
 }
-@if $use-medium-mediaquery == true {
-	@include media-query(screen, both, $mediumMediaQueryBreakpointMin, $mediumMediaQueryBreakpointMax) {
-		@include responsive-hide('.mul-hidden-small-mediaquery.mul-hidden-medium-mediaquery');
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-hide('.evo-hidden-small-mediaquery.evo-hidden-medium-mediaquery');
 	}
 }
-@if $use-large-mediaquery == true {
-	@include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
-		@include responsive-hide('.mul-hidden-small-mediaquery.mul-hidden-large-mediaquery');
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-hide('.evo-hidden-small-mediaquery.evo-hidden-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-hide('.evo-hidden-small-mediaquery.evo-hidden-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-hide('.evo-hidden-small-mediaquery.evo-hidden-xxlarge-mediaquery');
 	}
 }
 
 // Medium media query
-@include responsive-show(".mul-hidden-medium-mediaquery");
-@if $use-small-mediaquery == true {
-	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
-		@include responsive-hide(".mul-hidden-medium-mediaquery.mul-hidden-small-mediaquery");
+@include responsive-show(".evo-hidden-medium-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-hide(".evo-hidden-medium-mediaquery.evo-hidden-small-mediaquery");
 	}
 }
-@if $use-medium-mediaquery == true {
-	@include media-query(screen, both, $mediumMediaQueryBreakpointMin, $mediumMediaQueryBreakpointMax) {
-		@include responsive-hide('.mul-hidden-medium-mediaquery');
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-hide('.evo-hidden-medium-mediaquery');
 	}
 }
-@if $use-large-mediaquery == true {
-	@include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
-		@include responsive-hide('.mul-hidden-medium-mediaquery.mul-hidden-large-mediaquery');
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-hide('.evo-hidden-medium-mediaquery.evo-hidden-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-hide('.evo-hidden-medium-mediaquery.evo-hidden-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-hide('.evo-hidden-medium-mediaquery.evo-hidden-xxlarge-mediaquery');
 	}
 }
 
 // Large media query
-@include responsive-show(".mul-hidden-large-mediaquery");
-@if $use-small-mediaquery == true {
-	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
-		@include responsive-hide(".mul-hidden-large-mediaquery.mul-hidden-small-mediaquery");
+@include responsive-show(".evo-hidden-large-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-hide(".evo-hidden-large-mediaquery.evo-hidden-small-mediaquery");
 	}
 }
-@if $use-medium-mediaquery == true {
-	@include media-query(screen, both, $mediumMediaQueryBreakpointMin, $mediumMediaQueryBreakpointMax) {
-		@include responsive-hide('.mul-hidden-large-mediaquery.mul-hidden-medium-mediaquery');
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-hide('.evo-hidden-large-mediaquery.evo-hidden-medium-mediaquery');
 	}
 }
-@if $use-large-mediaquery == true {
-	@include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
-		@include responsive-hide('.mul-hidden-large-mediaquery');
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-hide('.evo-hidden-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-hide('.evo-hidden-large-mediaquery.evo-hidden-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-hide('.evo-hidden-large-mediaquery.evo-hidden-xxlarge-mediaquery');
+	}
+}
+
+// X-Large media query
+@include responsive-show(".evo-hidden-xlarge-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-hide(".evo-hidden-xlarge-mediaquery.evo-hidden-small-mediaquery");
+	}
+}
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-hide('.evo-hidden-xlarge-mediaquery.evo-hidden-medium-mediaquery');
+	}
+}
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-hide('.evo-hidden-xlarge-mediaquery.evo-hidden-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-hide('.evo-hidden-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-hide('.evo-hidden-xxlarge-mediaquery.evo-hidden-xlarge-mediaquery');
+	}
+}
+
+// X-Large media query
+@include responsive-show(".evo-hidden-xxlarge-mediaquery");
+@if $use-small-only-mediaquery == true {
+	@media #{$small-only} {
+		@include responsive-hide(".evo-hidden-xxlarge-mediaquery.evo-hidden-small-mediaquery");
+	}
+}
+@if $use-medium-only-mediaquery == true {
+	@media #{$medium-only} {
+		@include responsive-hide('.evo-hidden-xxlarge-mediaquery.evo-hidden-medium-mediaquery');
+	}
+}
+@if $use-large-only-mediaquery == true {
+	@media #{$large-only} {
+		@include responsive-hide('.evo-hidden-xxlarge-mediaquery.evo-hidden-large-mediaquery');
+	}
+}
+@if $use-xlarge-only-mediaquery == true {
+	@media #{$xlarge-only} {
+		@include responsive-hide('.evo-hidden-xxlarge-mediaquery.evo-hidden-xlarge-mediaquery');
+	}
+}
+@if $use-xxlarge-only-mediaquery == true {
+	@media #{$xxlarge-only} {
+		@include responsive-hide('.evo-hidden-xxlarge-mediaquery');
 	}
 }

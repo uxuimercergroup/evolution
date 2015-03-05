@@ -1,12 +1,12 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Tiles Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Tiles Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-tiles == true{
 
-	.mul-tile-ctn							{
+	.evo-tile-ctn							{
 											@include border-radius($tilesBorderRadius);
 											background-color: $tilesBackgroundColor;
 											margin-bottom: $tilesMarginBottom;
@@ -16,11 +16,11 @@
 		@each $color-name, $color in $color-palette 
 												{
 			&[data-palette-color="#{$color-name}"] 	{
-				.mul-box-hdr							{border-top-color: map-get($color, color);}							
+				.evo-box-hdr							{border-top-color: map-get($color, color);}							
 													}
 												}
 
-		.mul-box-hdr							{
+		.evo-box-hdr							{
 												@include border-radius($tilesBorderRadius $tilesBorderRadius 0 0);
 												border-top: 5px solid $tilesHeaderBorderTopColor;
 												background-color: $tilesHeaderBackgroundColor;
@@ -28,7 +28,7 @@
 												position: relative;
 												margin-bottom: 0;
 
-			.mul-hdr-rule							{
+			.evo-hdr-rule							{
 													color: $tilesHeaderFontColor;
 													padding-bottom: 0;
 													}
@@ -37,7 +37,7 @@
 													display: block;
 													margin-right: 20px;
 													}
-			.mul-tile-icon-position					{
+			.evo-tile-icon-position					{
 													position: absolute;
 													top: 0;
 													bottom: 0;
@@ -46,7 +46,7 @@
 													height: 16px;
 													}
 												}
-		.mul-box-bdy							{
+		.evo-box-bdy							{
 												@include border-radius($tilesBodyBorderRadius);
 												display: none;
 												background-color: $tilesBodyBackgroundColor;
@@ -54,31 +54,31 @@
 												padding: 0;
 												}
 
-		.mul-scroll-pane						{
+		.evo-scroll-pane						{
 												height: $tilesScrollPaneHeight;
-			.mCSB_container							{padding: $basePadding 0 0 $basePadding;}
+			.mCSB_container							{padding: $evo-base-padding 0 0 $evo-base-padding;}
 												}
 
-		.mul-tile-default-expanded				{display: block;}
+		.evo-tile-default-expanded				{display: block;}
 											}
 
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
 
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
-
-			.mul-tile-ctn					{
+			.evo-tile-ctn					{
 											@include border-radius($tilesOuterBorderRadiusLargeBreakpoint);
-											margin-bottom: $baseMargin;
-				.mul-box-hdr					{
+											margin-bottom: $evo-base-margin;
+				.evo-box-hdr					{
 												@include border-radius(0);
 												cursor: default;
-					.mul-tile-icon-position			{display: none;}
+					.evo-tile-icon-position			{display: none;}
 												}
-				.mul-box-bdy					{
+				.evo-box-bdy					{
 												@include border-radius(0);
 												border: 1px solid $tilesBodyBorderColor;
 												display: block;

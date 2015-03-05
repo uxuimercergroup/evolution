@@ -1,15 +1,15 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Content Modal JS
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Content Modal JS
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //--------------------------------------------------------------------------------------------------------
 
 // Define content modal defaults
-var mulContentModalDefaults = {
+var evoContentModalDefaults = {
 	autoOpen:false, // Control if content modal auto opens
 	closeOnEscape:true, // Control if user can close content modal with escape key, default is true
 	closeText:'Close', // Content modal close text, set to nothing if using close button
-	dialogClass:'mul-dialog mul-content-modal', // Additional classes added to content modal.
+	dialogClass:'evo-dialog evo-content-modal', // Additional classes added to content modal.
 	draggable: false, // Control if content modal is draggable, default is false
 	height:'auto', // Control height of the content modal, we set to 'auto' and allow the content to set the height
 	modal:true, // Control if content modal is a modal type, default is true
@@ -19,15 +19,15 @@ var mulContentModalDefaults = {
 	close: function() { // Events for when dialog closes
 
 		// Remove class from body to allow for overflow hidden, so you can scroll content in document again
-		jQuery('html').removeClass('mul-dialog-open');
+		jQuery('html').removeClass('evo-dialog-open');
 
 		// Remove container around dialog for positioning properly
-		jQuery(this).parent().unwrap('<div class="mul-dialog-position-ctn"></div>');
+		jQuery(this).parent().unwrap('<div class="evo-dialog-position-ctn"></div>');
 	}
 };
 
 // Modal dialog function, pass id of modal dialog and any modal dialog options you want to add/override
-var mulContentModal = function(id, options) {
+var evoContentModal = function(id, options) {
 	
 	// Variable to define id of dialog
 	var contentModalId = jQuery('#'+id);
@@ -39,18 +39,18 @@ var mulContentModal = function(id, options) {
 	if (!contentModalId.is(':data(dialog)')) {
 	
 		// Make specific dialog resource div into a dialog and add modal dialog default options and then pass in any additional or overriding options
-		contentModalId.dialog(jQuery.extend({},mulContentModalDefaults,options));
+		contentModalId.dialog(jQuery.extend({},evoContentModalDefaults,options));
 		contentModalId.dialog({
 			open: function() { // Events for when dialog opens
 
 				// Add class to body to allow for overflow hidden, and so you can not scroll content behind modal
-				jQuery('html').addClass('mul-dialog-open');
+				jQuery('html').addClass('evo-dialog-open');
 
 				// Add container around dialog for positioning properly
-				jQuery(this).parent().wrap('<div class="mul-dialog-position-ctn"></div>');
+				jQuery(this).parent().wrap('<div class="evo-dialog-position-ctn"></div>');
 
 				// Content modal tabbed nav
-				jQuery('.js-mul-content-modal-tabs').tabs({
+				jQuery('.js-evo-content-modal-tabs').tabs({
 					active: 0, // Set the first tab of the content modal to be active
 					activate: function(event, ui){ // When tab is activated apply scroll pane to tab panel
 						var contentModalTabContentHeight = jQuery(ui.newPanel).height(); // tab panel content height
@@ -58,7 +58,7 @@ var mulContentModal = function(id, options) {
 
 						// if tab content height is greater than viewport height, show scrollbars
 						if(contentModalTabContentHeight > contentModalTabMaxContentHeight) {
-							jQuery('#'+id).addClass('mul-dialog-content-scrolling'); // Add classes required for auto-scroll
+							jQuery('#'+id).addClass('evo-dialog-content-scrolling'); // Add classes required for auto-scroll
 						}
 
 						// On tab selection scroll to top of scroll pane
@@ -74,13 +74,13 @@ var mulContentModal = function(id, options) {
 
 				// If content modal content container height is greater than content modal content container max height then add functionality for scrolling
 				if(contentModalContentHeight > contentModalMaxContentHeight) {
-					jQuery(this).addClass('mul-dialog-content-scrolling'); // Add classes required for auto-scroll
+					jQuery(this).addClass('evo-dialog-content-scrolling'); // Add classes required for auto-scroll
 				}
 			}
 		});
 
 		// Close dialog click event used by dialog buttons or links, closes only specific dialog with id passed in
-		jQuery('.js-mul-dialog-close').click(function(){
+		jQuery('.js-evo-dialog-close').click(function(){
 			jQuery('#'+id).dialog('close');
 		});
 	}

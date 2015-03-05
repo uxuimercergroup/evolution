@@ -1,0 +1,26 @@
+/*------------------------------------------------------------------------------------------
+Mercer Evolution - Employee Portal Family - Category Header Container Partial
+DATE - February 12, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+-------------------------------------------------------------------------------------------*/
+
+//
+// @variables
+//
+$evo-category-hdr-label-border-width: rem-calc(1) !default;
+$evo-category-hdr-label-border-style: solid !default;
+$evo-category-hdr-label-border-color: $gray-light !default;
+$evo-category-hdr-label-color: $gray-dark !default;
+$evo-category-hdr-label-margin: 18px 0 !default;
+$evo-category-hdr-label-padding: 15px !default;
+
+
+.evo-category-hdr-ctn					{
+	.evo-category-label						{
+											border-top: $evo-category-hdr-label-border-width $evo-category-hdr-label-border-style $evo-category-hdr-label-border-color;
+											color: $evo-category-hdr-label-color;
+											margin: $evo-category-hdr-label-margin;
+											padding-top: $evo-category-hdr-label-padding;
+											text-align: center;
+											}
+										}

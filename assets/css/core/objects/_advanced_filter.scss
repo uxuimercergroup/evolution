@@ -1,25 +1,25 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Advanced Filter Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Advanced Filter Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-advanced-filter == true{
 
 	// ADVANCED FILTER MODAL BUTTON AND ICON
-	.mul-tbl-data-filter		{
-		.mul-icon-filter			{
+	.evo-tbl-data-filter		{
+		.evo-icon-filter			{
 									cursor: pointer;
 									top: 2px;
 									}
 								}
 
 	// ADVANCED FILTER MODAL
-	.mul-advanced-filter-modal.mul-dialog.ui-dialog
+	.evo-advanced-filter-modal.evo-dialog.ui-dialog
 								{
 								width: $advancedFilterModalWidth !important;
-		.mul-advanced-filter-form	{
-			.mul-match-question			{
+		.evo-advanced-filter-form	{
+			.evo-match-question			{
 										margin-top: 2px;
 										margin-bottom: 25px;
 				select						{
@@ -29,8 +29,8 @@
 											margin-right: 6px;
 											}
 										}
-			.mul-icon-plus-circle,
-			.mul-icon-minus-circle		{
+			.evo-icon-plus-circle,
+			.evo-icon-minus-circle		{
 										cursor: pointer;
 										top: 5px;
 										left: 5px;

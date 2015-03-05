@@ -1,16 +1,16 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Base Menus Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Base Menus Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-menus == true{
 
 	// MEGA MENU - BEGINS
-		li.mul-mega-menu{
+		li.evo-mega-menu{
 			.sub-arrow		{display: none !important;}
 			a.highlighted	{
-				[class*="mul-icon"]
+				[class*="evo-icon"]
 								{
 								@include border-radius($headerIconRadius $headerIconRadius 0 0);
 								padding-bottom: 12px;
@@ -25,37 +25,32 @@
 							border: 0;
 							border-top-width: 4px;
 							border-top-style: solid;
+							border-top-color: $megaMenuBorderTopColor;
 							border-bottom-width: 4px;
 							border-bottom-style: solid;
+							border-bottom-color: $megaMenuBorderBottomColor;
 
 		// MEGA MENU CONTENT - BEGINS
-			.mul-mega-menu-adjust
+			.evo-mega-menu-adjust
 								{
 								border-top-style: none;
-				.mul-mega-menu-ctn	{
+				.evo-mega-menu-ctn	{
 									@include clearfix;
 									margin: 0 auto;
-									padding: $basePadding;
-									width: $gridWidth;
+									padding: $evo-base-padding;
+									color: $megaMenuContentFontColor;
 
-										// If using 980 width layout
-										@if $use-grid-980 == true{
-											max-width: $gridMaxWidth980;
-										}
-										
-										// If using 1200 width layout
-										@if $use-grid-1200 == true{
-											max-width: $gridMaxWidth1200;
-										}
+					h1, h2, h3,
+					h4, h5, h6			{color: $megaMenuContentFontColor;}
 
 				// SPOTLIGHT CONTAINER - BEGINS
-					.mul-mega-menu-spotlight-ctn
+					.evo-mega-menu-spotlight-ctn
 										{
 										@include clearfix;
 										@include border-radius($megaMenuContainerSpotlightBorderRadius);
 										background-color: $gray-darkest; //THEME
-										padding: $basePadding;
-						.mul-horizontal-list
+										padding: $evo-base-padding;
+						.evo-horizontal-list
 											{
 							dd					{
 												margin-left: 0;
@@ -65,8 +60,8 @@
 													}
 								a					{
 													color: #72BE44; //THEME
-													padding: $basePadding 0 0 0;
-									[class*="mul-icon"]	{
+													padding: $evo-base-padding 0 0 0;
+									[class*="evo-icon"]	{
 														background-color: $transparent; //THEME
 														color: #72BE44; //THEME
 														padding: 0;
@@ -75,7 +70,7 @@
 														}
 									&:hover				{
 														background-color: $transparent; //THEME
-										[class*="mul-icon"]	{color: #72BE44;} //THEME
+										[class*="evo-icon"]	{color: #72BE44;} //THEME
 														}
 													}
 												}
@@ -85,7 +80,7 @@
 
 									}
 
-				.mul-mega-menu-groups
+				.evo-mega-menu-groups
 									{
 					dt					{
 										color: $megaMenuContentFontColor;
@@ -93,8 +88,8 @@
 										}
 					dd					{
 										margin: 0;
-										border-top: 1px dotted $gray-mid-dark; //THEME
-						&:last-child		{border-bottom: 1px dotted $gray-mid-dark;} //THEME
+										border-top: 1px dotted $gray-mid; //THEME
+						&:last-child		{border-bottom: 1px dotted $gray-mid;} //THEME
 						a					{
 											color: $megaMenuContentFontColor; //THEME
 											line-height: 30px;
@@ -113,7 +108,7 @@
 	// MEGA MENU - ENDS
 
 	// MENU STYLES - BEGINS
-		.mul-nav-menus	{
+		.evo-nav-menus	{
 						direction: ltr;
 						height: auto;
 						line-height: normal;
@@ -124,6 +119,7 @@
 							display: block;
 							width: 100%;
 							margin: 0;
+							border-bottom: 1px dotted $menuBorderTopColor;
 				a				{
 								display: block;
 								padding: $menuLinkPadding;
@@ -138,10 +134,12 @@
 									height: 16px;
 						&:before		{
 										content: "\e360"; // PLUS ICON
-										font-family: $mulIconFontStack;
+										font-family: $evo-icon-font-stack;
+										color: $menuIndicatorColor1stLevel;
 										}
 									}
 				// DEFAULT ARROW - ENDS
+					&:hover			{color: $menuHoverFontColor;}
 								}
 					ul			{
 								@include clearfix;
@@ -162,14 +160,15 @@
 									border-bottom: 0;
 									border-top-width: 1px;
 									border-top-style: dotted;
+									border-top-color: $menuBorderTopColor2ndlevel;
 
 							&:last-child
 										{
-								a			{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+								a			{@include border-radius(0 0 $global-radius $global-radius);}
 										}
 							a			{
 										display: block;
-										font-family: $fontRegularFamily;
+										font-family: $evo-font-regular-family;
 										padding-left: 17px;
 						// DEFAULT ARROW - BEGINS
 							.sub-arrow		{
@@ -188,15 +187,14 @@
 
 //=== MEDIA QUERIES =========================================================================
 
-@if $use-small-mediaquery == true {
-	
-	// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
-	@include media-query(screen, max, "", $smallMediaQueryBreakpointMax) {
+// SMALL MEDIA QUERY RANGE - 0 - 640px
+@if $use-small-only-mediaquery == true {
+		
+	@media #{$small-only} {
 
 	// MENU STYLES - BEGINS
-		.mul-nav-menus	{
+		.evo-nav-menus	{
 			li				{
-				a				{}
 				ul				{
 								margin-left: 0 !important;
 								margin-top: 0 !important;
@@ -213,13 +211,13 @@
 }// endif
 
 
-// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+@if $use-medium-up-mediaquery == true {
 	
-	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+	@media #{$medium-up} {
 
 	// MEGA MENU - BEGINS
-		li.mul-mega-menu{
+		li.evo-mega-menu{
 						position: static !important;
 			ul.mega-menu	{
 							margin-left: 0 !important;
@@ -230,23 +228,23 @@
 							margin-top: 8px !important;
 
 			// MEGA MENU CONTENT - BEGINS
-				.mul-mega-menu-adjust
+				.evo-mega-menu-adjust
 									{
-					.mul-mega-menu-ctn	{
+					.evo-mega-menu-ctn	{
 
 					// SPOTLIGHT CONTAINER - BEGINS
-						.mul-mega-menu-spotlight-ctn
+						.evo-mega-menu-spotlight-ctn
 											{
-							.mul-horizontal-list
+							.evo-horizontal-list
 												{
 								dd					{
-													margin-left: $baseMargin;
+													margin-left: $evo-base-margin;
 									&:first-child		{}
 									a					{
 														padding-top: 0;
-										[class*="mul-icon"]	{}
+										[class*="evo-icon"]	{}
 										&:hover				{
-											[class*="mul-icon"]	{}
+											[class*="evo-icon"]	{}
 															}
 														}
 													}
@@ -255,7 +253,7 @@
 					// SPOTLIGHT CONTAINER - ENDS
 										}
 
-					.mul-mega-menu-groups
+					.evo-mega-menu-groups
 										{
 						dt					{}
 						dd					{
@@ -274,7 +272,7 @@
 	// MEGA MENU - ENDS
 
 	// MENU STYLES - BEGINS
-		.mul-nav-menus	{
+		.evo-nav-menus	{
 			li				{
 							direction: ltr;
 							float: left;
@@ -283,6 +281,8 @@
 							position: relative;
 							width: auto;
 				a				{
+					&:hover			{background-color: $menuBackgroundHoverColor;}
+
 					// DEFAULT ARROW - BEGINS
 						.sub-arrow	{
 									position: relative;
@@ -290,7 +290,7 @@
 									right: -4px;
 									top: 2px;
 							&:before	{
-										font-family: $mulIconFontStack;
+										font-family: $evo-icon-font-stack;
 										content: "\e3c2"; // DOWN ARROW
 										}
 									}
@@ -310,8 +310,10 @@
 								max-width: 225px !important;
 								position: absolute;
 								top: -999999px;
-								z-index: $zindexMenu;
+								z-index: $evo-zindex-menu;
 								height: auto;
+								background-color: $menuBackgroundColor;
+								border-color: $menuBorderColor;
 					>li				{
 									border-left: 0;
 									border-right: 0;
@@ -320,7 +322,7 @@
 							a			{
 										border-left: 0;
 										display: block;
-										font-family: $fontRegularFamily;
+										font-family: $evo-font-regular-family;
 										position: relative;
 										white-space: nowrap;
 										width: 100%;
@@ -340,10 +342,9 @@
 							}
 						}
 
-
-		nav.mul-text-nav
+		nav.evo-text-nav
 						{
-			.mul-nav-menus	{
+			.evo-nav-menus	{
 				> li			{
 					> .has-submenu + ul
 									{margin-top: 9px !important;}

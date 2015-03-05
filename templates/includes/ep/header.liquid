@@ -1,0 +1,13 @@
+<header {% if model.header_type != "title-bar" %}class="evo-menu-bar-header"{% endif %} role="banner">
+
+	{% if model.header_type == "title-bar" %}
+
+		{% include "ep/base/header/title-bar" %}
+
+	{% else %}
+
+		{% include "ep/base/header/menu-bar" %}
+
+	{% endif %}
+
+</header>

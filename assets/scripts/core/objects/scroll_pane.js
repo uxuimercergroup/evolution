@@ -1,7 +1,7 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Scroll Pane JS
-// DATE - May 30, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Scroll Pane JS
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //--------------------------------------------------------------------------------------------------------
 
 // SCROLL PANE
@@ -15,7 +15,7 @@
 
 //--------------------------------------------------------------------------------------------------------
 
-	var mulScrollPaneDefaults = {
+	var evoScrollPaneDefaults = {
 		setWidth: false,
 		setHeight: false,
 		setTop: 0,
@@ -71,27 +71,27 @@
 
 
 	// Default Scroll Pane
-	var mulScrollPane = function(){		
-		jQuery('.js-mul-scroll-pane').mCustomScrollbar(jQuery.extend({},mulScrollPaneDefaults));
+	var evoScrollPane = function(){		
+		jQuery('.js-evo-scroll-pane').mCustomScrollbar(jQuery.extend({},evoScrollPaneDefaults));
 	}
 
 	// Initialize Default Scroll Pane
-	mulScrollPane();
+	evoScrollPane();
 
 
 	// Custom Scroll Pane Function
-	var mulScrollPaneCustom = function(scrollPaneCustomClass, options){
+	var evoScrollPaneCustom = function(scrollPaneCustomClass, options){
 
 		// Variable to define custom class of scroll pane
 		var scrollPaneCustom = jQuery('.'+scrollPaneCustomClass);
 
 		// Make specific dialog resource div into a dialog and add modal dialog default options and then pass in any additional or overriding options
-		scrollPaneCustom.mCustomScrollbar(jQuery.extend({},mulScrollPaneDefaults,options));
+		scrollPaneCustom.mCustomScrollbar(jQuery.extend({},evoScrollPaneDefaults,options));
 		
 	}
 
 	// Horizontal Scroll Pane Initialization
-	mulScrollPaneCustom('js-mul-scroll-pane-horizontal',{
+	evoScrollPaneCustom('js-evo-scroll-pane-horizontal',{
 		axis:"x",
 		mouseWheel:{
 			axis:"x"
@@ -102,7 +102,7 @@
 	});
 
 	// Horizontal + Vertical Scroll Pane Initialization
-	mulScrollPaneCustom('js-mul-scroll-pane-horizontal-vertical',{
+	evoScrollPaneCustom('js-evo-scroll-pane-horizontal-vertical',{
 		axis:"yx",
 		advanced:{
 			autoExpandHorizontalScroll: true

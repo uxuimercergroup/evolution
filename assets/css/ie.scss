@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------------------------------
 Mercer Evolution - Site IE CSS
-DATE - June 13, 2014
-AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+DATE - January 13, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 -------------------------------------------------------------------------------------------*/
 
 // ==========================================================================================
@@ -9,7 +9,6 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 // ==========================================================================================
 
 @import	"core/global/color_variables",
-		"core/global/theme_variables",
 		"core/global/variables",
 		"core/global/functions",
 		"core/global/mixins";
@@ -19,35 +18,18 @@ AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
 // SITE IMPORTS
 // ==========================================================================================
 
-@import	"partials/global/variables",
-		"partials/global/functions";
+@import	"partials/global/site_settings",
+		"partials/global/site_variables",
+		"partials/global/site_functions";
 
 
 /*=== WEBSITE IE STYLES ===================================================================*/
-
-// ==========================================================================================
-// IE CATCH ALL FIXES (IE8+)
-// ==========================================================================================
-
-
-// ==========================================================================================
-// IE8 FIXES 
-// ==========================================================================================
-.ie8						{
-
-							}
 
 // ==========================================================================================
 // IE9 FIXES 
 // ==========================================================================================
 .ie9						{
 
-	/*--- REFERENCE PAGES ---------------------------------------------------------------------*/
-
-	// DEVELOPER - SLIDING DRAWER
-	.mul-ref-sliding-drawer-btn	{
-								border-radius: $baseBorderRadiusIE;
-								}
-
+	
 
 							}

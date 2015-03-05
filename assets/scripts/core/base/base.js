@@ -1,31 +1,39 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Base JS Functions
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Base JS Functions
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //--------------------------------------------------------------------------------------------------------
 
 // BUTTONS
 //--------------------------------------------------------------------------------------------------------
 
-	// MUL INTERACTIVE BUTTONS
-	var mulInteractiveButtons = function(){
-		var LoadingBtnClass = '.js-mul-btn-loading';
-		var LoadingBtnResetText = jQuery(LoadingBtnClass).html();
+	// EVO INTERACTIVE BUTTON
+	var evoInteractiveButton = function(){
+		var interactiveBtnDataAttr = '[data-evo-button="interactive"]';
+		var interactiveBtnResetText = jQuery(interactiveBtnDataAttr).html();
 		var d = 'disabled';
-		jQuery(LoadingBtnClass).click(function(){
-			jQuery(LoadingBtnClass).html('loading&hellip;').addClass(d).attr(d, d);
+		jQuery(interactiveBtnDataAttr).click(function(){
+			jQuery(interactiveBtnDataAttr).html('loading&hellip;').addClass(d).attr(d, d);
 				setTimeout(function () {
-				jQuery(LoadingBtnClass).html(LoadingBtnResetText).removeClass(d).removeAttr(d, d);
+					jQuery(interactiveBtnDataAttr).html(interactiveBtnResetText).removeClass(d).removeAttr(d, d);
 			}, 3000)
 		});
 	}
 
 	// Interactive Buttons Init
-	mulInteractiveButtons();
+	evoInteractiveButton();
 
 
 // FORMS
 //--------------------------------------------------------------------------------------------------------
+
+	// PLACEHOLDER ATTRIBUTE POLYFILL FOR IE9
+	var evoFormPlaceholderPolyFill = function(){
+		jQuery('input, textarea').placeholder();
+	}
+
+	// Placeholder Attribute Polyfill for IE9 Init
+	evoFormPlaceholderPolyFill();
 
 	// TEXTAREA EXPAND
 	jQuery.fn.textareaExpander = function(minHeight, maxHeight){
@@ -74,49 +82,49 @@
 		 }
 	}
 
-	var mulTextareaExpand = function(){
-		jQuery('.js-mul-textarea-expand').textareaExpander();
+	var evoTextareaExpand = function(){
+		jQuery('.js-evo-textarea-expand').textareaExpander();
 	}
 
 	// Textarea Expand Init
-	mulTextareaExpand();
+	evoTextareaExpand();
 
 	// SELECTED CHECKBOX
-	var mulSelectedCheckbox = function(){
-		jQuery(".js-mul-selected-checkbox input[type='checkbox']").on('change', function() {
-			jQuery(this).parent().toggleClass('mul-selected-checkbox-checked', this.checked);
+	var evoSelectedCheckbox = function(){
+		jQuery(".js-evo-selected-checkbox input[type='checkbox']").on('change', function() {
+			jQuery(this).parent().toggleClass('evo-selected-checkbox-checked', this.checked);
 		});
 	}
 
 	// Selected Checkbox Init
-	mulSelectedCheckbox();
+	evoSelectedCheckbox();
 
 
 // CONTAINERS
 //--------------------------------------------------------------------------------------------------------
 
 	// TILES CONTAINER TOGGLE CHECK	
-	var mulTilesContainerToggleCheck = function(){
+	var evoTilesContainerToggleCheck = function(){
 		var $window = $(window),
-			$html = $('.js-mul-width-check');
+			$html = $('.js-evo-width-check');
 
 		$window.resize(function resize() {
 			if ($window.width() > 500) {
-				return $html.removeClass('js-mul-toggle-content-icon');
+				return $html.removeClass('js-evo-toggle-content-icon');
 			}
 
 		}).trigger('resize');
 	}
 
 	// Tiles Container Toggle Check Init
-	mulTilesContainerToggleCheck();
+	evoTilesContainerToggleCheck();
 
 	// MESSAGE CONTAINER CLOSE EVENT
-	var mulMessageContainerClose = function(){
-		jQuery('.js-mul-close-ctn').click(function(){
+	var evoMessageContainerClose = function(){
+		jQuery('.js-evo-close-ctn').click(function(){
 			jQuery(this).parent().parent().fadeOut(400);
 		});
 	}
 
 	// Message Container Close Init
-	mulMessageContainerClose();
+	evoMessageContainerClose();

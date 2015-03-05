@@ -1,8 +1,9 @@
 {
-	"site_title": "Mercer Evolution",
-	"version_number": "v2.5",
-	"jquery_version": "1.10.2",
-	"jquery_ui_version": "1.10.3",
+	"site_title": "Mercer Evolution - Employee Portal Family",
+	"version_number": "2.6.1-rs",
+	"jquery_version": "2.1.1",
+	"jquery_ui_version": "1.11.2",
+	"foundation_version": "5.5",
 
 
 "HEADER OPTIONS": "",
@@ -30,12 +31,12 @@
 
 	"COMMENT": "If toolbar is the type of navbar list above these are the configurations",
 		"toolbar_fixed": "true",
-		"toolbar_column_width_left": "4",
-		"toolbar_column_width_right": "20",
-		"toolbar_navigation": "true",
-		"toolbar_navigation_items": "true",
+		"toolbar_column_width_left": "12",
+		"toolbar_column_width_right": "12",
+		"toolbar_navigation": "false",
+		"toolbar_navigation_items": "false",
 		"toolbar_user_identifier": "false",
-		"toolbar_group_icons": "true",
+		"toolbar_group_icons": "false",
 
 "FOOTER OPTIONS": "",
 	"COMMENT": "Leave blank to get default footer or add 'fat' if you want a fat footer",
@@ -168,7 +169,6 @@
 				{"link-name": "Accordion", "url": "/objects/accordion"},
 				{"link-name": "Alternate Views Badge", "url": "/objects/alternate-views-badge"},
 				{"link-name": "Buttons", "url": "/base/buttons"},
-				{"link-name": "Call To Action", "url": "/objects/call-to-action"},
 				{"link-name": "Calendar", "url": "/objects/calendar"},
 				{"link-name": "Calendar Date Range", "url": "/objects/date-range"},
 				{"link-name": "Carousel", "url": "/objects/carousel"},
@@ -232,7 +232,6 @@
 			"main-section": [
 				{"link-name": "Stacked", "url": "/base/forms/stacked"},
 				{"link-name": "Inline", "url": "/base/forms/inline"},
-				{"link-name": "Multi-Column Stacked", "url": "/base/forms/multi-col-stacked"},
 				{"link-name": "Compact", "url": "/base/forms/compact"}
 			],
 
@@ -240,11 +239,6 @@
 				{
 					"sub-section-hdr": "Form Elements",				
 					"sub-section": [
-						{"link-name": "Text Input", "url": "/base/forms/input"},
-						{"link-name": "Textarea", "url": "/base/forms/textarea"},
-						{"link-name": "Radio Buttons", "url": "/base/forms/radio-button"},
-						{"link-name": "Checkboxes", "url": "/base/forms/checkbox"},
-						{"link-name": "Single Select Drop Down", "url": "/base/forms/drop-down"},
 						{"link-name": "HTML5 Form Elements", "url": "/base/forms/elements-html5"}
 					]
 				},
@@ -269,7 +263,7 @@
 
 	"table_data": [
 		{
-		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"checkbox": "<input type='checkbox'  class='js-evo-select-all-checkbox-item'>",
 		"task": "Create RFP/RFI",
 		"type_global": "Global",
 		"type_local": "Local",
@@ -284,7 +278,7 @@
 		"Region": "EuroPac"
 		},
 		{
-		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"checkbox": "<input type='checkbox'  class='js-evo-select-all-checkbox-item'>",
 		"task": "Create RFP/RFI",
 		"type_global": "Global",
 		"type_local": "Local",
@@ -299,7 +293,7 @@
 		"Region": "North America"
 		},
 		{
-		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"checkbox": "<input type='checkbox'  class='js-evo-select-all-checkbox-item'>",
 		"task": "Peer Review Savings Results",
 		"type_global": "Global",
 		"type_local": "Local",
@@ -314,7 +308,7 @@
 		"Region": "LAC"
 		},
 		{
-		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"checkbox": "<input type='checkbox'  class='js-evo-select-all-checkbox-item'>",
 		"task": "Conduct the HQ Client Kickoff Meeting",
 		"type_global": "Global",
 		"type_local": "Local",
@@ -329,7 +323,7 @@
 		"Region": "APAC"
 		},
 		{
-		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"checkbox": "<input type='checkbox'  class='js-evo-select-all-checkbox-item'>",
 		"task": "Conduct the HQ Client Kickoff Meeting",
 		"type_global": "Global",
 		"type_local": "Local",
@@ -344,7 +338,7 @@
 		"Region": "EuroPac"
 		},
 		{
-		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"checkbox": "<input type='checkbox'  class='js-evo-select-all-checkbox-item'>",
 		"task": "Develop Rules of the Road Governance Approach",
 		"type_global": "Global",
 		"type_local": "Local",
@@ -359,7 +353,7 @@
 		"Region": "South America"
 		},
 		{
-		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"checkbox": "<input type='checkbox'  class='js-evo-select-all-checkbox-item'>",
 		"task": "Peer Review Savings Results",
 		"type_global": "Global",
 		"type_local": "Local",
@@ -374,7 +368,7 @@
 		"Region": "LAC"
 		},
 		{
-		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"checkbox": "<input type='checkbox'  class='js-evo-select-all-checkbox-item'>",
 		"task": "Complete and Send Implementation Toolkit",
 		"type_global": "Global",
 		"type_local": "Local",
@@ -389,7 +383,7 @@
 		"Region": "APAC"
 		},
 		{
-		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"checkbox": "<input type='checkbox'  class='js-evo-select-all-checkbox-item'>",
 		"task": "Review Local Appointment Issues",
 		"type_global": "Global",
 		"type_local": "Local",
@@ -404,7 +398,7 @@
 		"Region": "EuroPac"
 		},
 		{
-		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"checkbox": "<input type='checkbox'  class='js-evo-select-all-checkbox-item'>",
 		"task": "Conduct the HQ Client Kickoff Meeting",
 		"type_global": "Global",
 		"type_local": "Local",
@@ -419,7 +413,7 @@
 		"Region": "North America"
 		},
 		{
-		"checkbox": "<input type='checkbox'  class='js-mul-select-all-checkbox-item'>",
+		"checkbox": "<input type='checkbox'  class='js-evo-select-all-checkbox-item'>",
 		"task": "Peer Review Savings Results",
 		"type_global": "Global",
 		"type_local": "Local",

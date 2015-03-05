@@ -1,221 +1,132 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Global Variables Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Global Variables Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 // ==========================================================================================
 // GLOBAL
 // ==========================================================================================
-
-// RESPONSIVE VARIABLES
-// ------------------------------------------------------------------------------------------
-
-// BREAKPOINTS
-// small media query = phones
-// medium media query = tablets
-// large media query = desktop
-$smallMediaQueryBreakpointMax:				767px !default;
-$mediumMediaQueryBreakpointMin:				768px !default;
-$mediumMediaQueryBreakpointMax:				979px !default;
-$largeMediaQueryBreakpointMin:				980px !default;
+$evo-include-html-classes:					true !default;
 
 
 // GLOBAL
 // ------------------------------------------------------------------------------------------
 
-// HTML MIN HEIGHT
-$htmlMinHeight:								100% !default;
-
-// BORDER RADIUS SIZES
-$borderRadiusXSmall:						2px !default;
-$borderRadiusSmall:							4px !default;
-$borderRadiusMedium:						8px !default;
-$borderRadiusLarge:							12px !default;
-$borderRadiusXLarge:						16px !default;
-
 // BASE VARIABLES
-$baseMargin:								14px !default;
-$basePadding:								14px !default;
-$baseBorderRadius:							$borderRadiusMedium !default;
-$baseBorderRadiusIE:						0 !default;
+$evo-base-margin:							14px !default;
+$evo-base-padding:							14px !default;
 
 // Z-INDEX MASTER LIST
 // Used for a bird's eye view of components dependent on the z-axis
-$zindexLayoutLoginFooterBackground:			9994 !default;
-$zindexLayoutLoginFooter:					9995 !default;
-$zindexSlider:								9996 !default;
-$zindexDatepicker:							9997 !default;
-$zindexAutocomplete:						9998 !default;
-$zindexTooltip:								9999 !default;
-$zindexToolbar:								10000 !default;
-$zindexMenu:								10001 !default;
-$zindexDialogOverlay:						10002 !default;
-$zindexDialogPosition:						10003 !default;
+$evo-zindex-layout-login-footer-background:	9994 !default;
+$evo-zindex-layout-login-footer:			9995 !default;
+$evo-zindex-slider:							9996 !default;
+$evo-zindex-datepicker:						9997 !default;
+$evo-zindex-autocomplete:					9998 !default;
+$evo-zindex-tooltip:						9999 !default;
+$evo-zindex-toolbar:						10000 !default;
+$evo-zindex-menu:							10001 !default;
+$evo-zindex-dialog-overlay:					10003 !default;
+$evo-zindex-dialog-position:				10004 !default;
 
 
 // HELPERS
 // ------------------------------------------------------------------------------------------
 
+// KEYLINES
+$evo-keyline-right-border-right-color: 		$gray-mid !default;
+$evo-keyline-left-border-left-color:		$gray-mid !default;
+
 // SPACER SIZES
-$spacerSize:								5px !default;
-$spacerXSmall:								($spacerSize*1) !default;
-$spacerSmall:								($spacerSize*2) !default;
-$spacerMedium:								($spacerSize*3) !default;
-$spacerLarge:								($spacerSize*4) !default;
-$spacerXLarge:								($spacerSize*5) !default;
-$spacerXXLarge:								($spacerSize*6) !default;
-$spacerXXXLarge:							($spacerSize*7) !default;
-
-
-// ==========================================================================================
-// BASE
-// ==========================================================================================
-
-// FONTS
-// ------------------------------------------------------------------------------------------
-
-// BASE
-$baseFontStack:								arial, Tahoma, Geneva, sans-serif !default;
-$baseFontFilePath:							"../fonts" !default;
-
-// WEB FONTS
-
-	// Thin
-	$fontThinFamily:							proxima_nova_ththin !default;
-	$fontThinFilePath:							"#{$baseFontFilePath}/ProximaNova-Thin-webfont" !default;
-	$fontThinStack:								"#{$fontThinFamily}", $baseFontStack !default;
-
-	// Regular
-	$fontRegularFamily:							proxima_nova_rgregular !default;
-	$fontRegularFilePath:						"#{$baseFontFilePath}/ProximaNova-Reg-webfont" !default;
-	$fontRegularStack:							"#{$fontRegularFamily}", $baseFontStack !default;
-
-	// Bold
-	$fontBoldFamily:							proxima_nova_rgbold !default;
-	$fontBoldFilePath:							"#{$baseFontFilePath}/ProximaNova-Bold-webfont" !default;
-	$fontBoldStack:								"#{$fontBoldFamily}", $baseFontStack !default;
-
-	// Italic
-	$fontItalicFamily:							proxima_novaregular_italic !default;
-	$fontItalicFilePath:						"#{$baseFontFilePath}/ProximaNova-RegIt-webfont" !default;
-	$fontItalicStack:							"#{$fontItalicFamily}", $baseFontStack !default;
-
-	// Bold Italic
-	$fontBoldItalicFamily:						proxima_novabold_italic !default;
-	$fontBoldItalicFilePath:					"#{$baseFontFilePath}/ProximaNova-BoldIt-webfont" !default;
-	$fontBoldItalicStack:						"#{$fontBoldItalicFamily}", $baseFontStack !default;
-
-	// Semi-bold
-	$fontSemiBoldFamily:						proxima_nova_ltsemibold !default;
-	$fontSemiBoldFilePath:						"#{$baseFontFilePath}/ProximaNova-Sbold-webfont" !default;
-	$fontSemiBoldStack:							"#{$fontSemiBoldFamily}", $baseFontStack !default;
-
-// ICON FONTS
-
-	// Core icon font set
-	$mulIconFontFamily:							mul_icon_font !default;
-	$mulIconFontFilePath:						"#{$baseFontFilePath}/mul-icon-font" !default;
-	$mulIconFontStack:							"#{$mulIconFontFamily}" !default;
-
-	// Site icon font set
-	$mulIconSiteFontFamily:						mul_icon_font_site !default;
-	$mulIconSiteFontFilePath:					"#{$baseFontFilePath}/mul-icon-font-site" !default;
-	$mulIconSiteFontStack:						"#{$mulIconSiteFontFamily}" !default;
+$evo-spacer-size:							5px !default;
+$evo-spacer-xsmall:							($evo-spacer-size*1) !default;
+$evo-spacer-small:							($evo-spacer-size*2) !default;
+$evo-spacer-medium:							($evo-spacer-size*3) !default;
+$evo-spacer-large:							($evo-spacer-size*4) !default;
+$evo-spacer-xlarge:							($evo-spacer-size*5) !default;
+$evo-spacer-xxlarge:						($evo-spacer-size*6) !default;
+$evo-spacer-xxxlarge:						($evo-spacer-size*7) !default;
 
 
 // TYPOGRAPHY
 // ------------------------------------------------------------------------------------------
 
-// BASE
-$baseFontFamily:							$fontRegularStack !default;
-$baseFontSize:								16px !default;
-$baseFontSizeDifference:					2 !default;
-$baseFontSizeDifferenceMediumBreakpoint:	2 !default;
-$baseFontSizeDifferenceLargeBreakpoint:		2 !default;
-$baseFontSizeLargeBreakpoint:				($baseFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$baseLineHeight:		        			22px !default;
-$baseLineHeightLargeBreakpoint:		        ($baseLineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
+// BASE FONTS
+$evo-base-font-stack:						arial, Tahoma, Geneva, sans-serif !default;
+$evo-base-font-file-path:					"../fonts" !default;
+
+// WEB FONTS
+
+	// Thin
+	$evo-font-thin-family:						relativefaux !default;
+	$evo-font-thin-file-path:					"#{$evo-base-font-file-path}/relative-faux-webfont" !default;
+	$evo-font-thin-stack:						"#{$evo-font-thin-family}", $evo-base-font-stack !default;
+
+	// Regular
+	$evo-font-regular-family:					relativebook !default;
+	$evo-font-regular-file-path:				"#{$evo-base-font-file-path}/relative-book-webfont" !default;
+	$evo-font-regular-stack:					"#{$evo-font-regular-family}", $evo-base-font-stack !default;
+
+	// Italic
+	$evo-font-italic-family:					relativebook_italic !default;
+	$evo-font-italic-file-path:					"#{$evo-base-font-file-path}/relative-bookitalic-webfont" !default;
+	$evo-font-italic-stack:						"#{$evo-font-italic-family}", $evo-base-font-stack !default;
+
+	// Medium
+	$evo-font-medium-family:					relativemedium !default;
+	$evo-font-medium-file-path:					"#{$evo-base-font-file-path}/relative-medium-webfont" !default;
+	$evo-font-medium-stack:						"#{$evo-font-medium-family}", $evo-base-font-stack !default;
+
+	// Medium Italic
+	$evo-font-medium-italic-family:				relativemedium_italic !default;
+	$evo-font-medium-italic-file-path:			"#{$evo-base-font-file-path}/relative-mediumitalic-webfont" !default;
+	$evo-font-medium-italic-stack:				"#{$evo-font-medium-italic-family}", $evo-base-font-stack !default;
+
+	// Bold
+	$evo-font-bold-family:						relativebold !default;
+	$evo-font-bold-file-path:					"#{$evo-base-font-file-path}/relative-bold-webfont" !default;
+	$evo-font-bold-stack:						"#{$evo-font-bold-family}", $evo-base-font-stack !default;
+
+	// Bold Italic
+	$evo-font-bold-italic-family:				relativebold_italic !default;
+	$evo-font-bold-italic-file-path:			"#{$evo-base-font-file-path}/relative-bolditalic-webfont" !default;
+	$evo-font-bold-italic-stack:				"#{$evo-font-bold-italic-family}", $evo-base-font-stack !default;
+
+// ICON FONTS
+
+	// Core icon font set
+	$evo-icon-font-family:						evo_icon_font !default;
+	$evo-icon-font-file-path:					"#{$evo-base-font-file-path}/evo-icon-font" !default;
+	$evo-icon-font-stack:						"#{$evo-icon-font-family}" !default;
+
+	// Site icon font set
+	$evo-icon-site-font-family:					evo_icon_font_site !default;
+	$evo-icon-site-font-file-path:				"#{$evo-base-font-file-path}/evo-icon-font-site" !default;
+	$evo-icon-site-font-stack:					"#{$evo-icon-site-font-family}" !default;
+
+// LINKS
+$evo-base-link-visited-color:				$sapphire-dark !default;
 
 // FONT WEIGHTS
-$WeightBold100:								100 !default;
-$WeightBold200:								200 !default;
-$WeightBold300:								300 !default;
-$WeightBold400:								400 !default;
-$WeightBold500:								500 !default;
-$WeightBold600:								600 !default;
-$WeightBold700:								700 !default;
-$WeightBold800:								800 !default;
-$WeightBold900:								900 !default;
+$evo-weight-bold-100:						100 !default;
+$evo-weight-bold-200:						200 !default;
+$evo-weight-bold-300:						300 !default;
+$evo-weight-bold-400:						400 !default;
+$evo-weight-bold-500:						500 !default;
+$evo-weight-bold-600:						600 !default;
+$evo-weight-bold-700:						700 !default;
+$evo-weight-bold-800:						800 !default;
+$evo-weight-bold-900:						900 !default;
 
-// HEADERS
-$hdrH1FontSize:								34px !default;
-$hdrH1FontSizeLargeBreakpoint:				($hdrH1FontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH1LineHeight:							($hdrH1FontSize + $baseFontSizeDifference) !default;
-$hdrH1LineHeightLargeBreakpoint:			($hdrH1LineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH1PaddingTopBottom:						9px !default;
-
-$hdrH2FontSize:								28px !default;
-$hdrH2FontSizeLargeBreakpoint:				($hdrH2FontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH2LineHeight:							($hdrH2FontSize + $baseFontSizeDifference) !default;
-$hdrH2LineHeightLargeBreakpoint:			($hdrH2LineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH2PaddingTopBottom:						6px !default;
-
-$hdrH3FontSize:								24px !default;
-$hdrH3FontSizeLargeBreakpoint:				($hdrH3FontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH3LineHeight:							($hdrH3FontSize + $baseFontSizeDifference) !default;
-$hdrH3LineHeightLargeBreakpoint:			($hdrH3LineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH3PaddingTopBottom:						6px !default;
-
-$hdrH4FontSize:								20px !default;
-$hdrH4FontSizeLargeBreakpoint:				($hdrH4FontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH4LineHeight:							($hdrH4FontSize + $baseFontSizeDifference) !default;
-$hdrH4LineHeightLargeBreakpoint:			($hdrH4LineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$hdrH4PaddingTopBottom:						3px !default;
-
-$hdrH5FontSize:								16px !default;
-$hdrH5FontSizeLargeBreakpoint:				($hdrH5FontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-
-$hdrH6FontSize:								14px !default;
-$hdrH6FontSizeLargeBreakpoint:				($hdrH6FontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-
-$hdrRuleBorderSize:							1px !default;
-$hdrRuleBorderStyle:						dotted !default;
-$hdrRuleMarginBottom:						10px !default;
-
-// PARAGRAPHS
-$baseParagraphMarginBottom:					14px !default;
-
-// SMALL FONT SIZES
-$smallFontSize:								14px !default;
-$smallFontSizeLargeBreakpoint:				($smallFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-
-// HORIZONTAL RULES
-$hrHeight:									2px !default;
-$hrMarginTopBottom:							$baseParagraphMarginBottom !default;
+// OTHER ELEMENTS
+$evo-text-selection-text-color:				$white !default;
+$evo-text-selection-background-color:		$gray-darker !default;
 
 
-// GRID
-// ------------------------------------------------------------------------------------------
-
+// ==========================================================================================
 // BASE
-$gridWidth:									100% !default;
-$gridMaxWidth980:							980px !default;
-$gridMaxWidth1200:							1200px !default;
-$gridMinWidth:								320px !default;
-$gridMinHeight:								550px !default;
-$gridSiteGutterPadding:						10px !default;
-$gridColumns:								24 !default;
-$gridColumnWidth:							20px !default;
-$gridGutterWidth:							20px !default;
-$gridNoMarginColumnWidth:					39.15px !default;
-$gridRowWidth:								($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
-
-// FLUID GRID
-$fluidGridColumnWidth:						percentage($gridColumnWidth/$gridRowWidth);
-$fluidGridGutterWidth:						percentage($gridGutterWidth/$gridRowWidth);
-$fluidGridNoMarginColumnWidth:				percentage($gridNoMarginColumnWidth/$gridRowWidth);
-
+// ==========================================================================================
 
 // BOXES
 // ------------------------------------------------------------------------------------------
@@ -227,10 +138,18 @@ $boxHdrBorderSize:							3px !default;
 $boxHdrBorderStyle:							solid !default;
 $boxBdyBorderTopSize:						1px !default;
 $boxBdyBorderTopStyle:						solid !default;
-$boxPadding:								$basePadding !default;
+$boxPadding:								$evo-base-padding !default;
 $boxVShadow:								1px !default;
 $boxHShadow:								1px !default;
 $boxShadowBlur:								1px !default;
+$boxBackgroundColor:						$gray-lighter !default;
+$boxBorderColor:							$gray-mid !default;
+$boxHdrBorderColor:							$gray-mid !default;
+$boxShadowColor:							$gray-darker !default;
+
+// ADVANCED BOX
+$boxAdvancedBackgroundColor:				$transparent !default;
+$boxAdvancedHdrBackgroundColor:				$gray-light !default;
 
 // MESSAGE BOXES
 $msgBorderWidth:							1px !default;
@@ -241,92 +160,18 @@ $boxInlineSearchBorderSizeColor:			1px !default;
 $boxInlineSearchBorderTypeColor:			dotted !default;
 $boxInlineSearchLabelLineHeight:			22px !default;
 
+$boxFeaturedBackgroundColor:				$white !default;
+$boxFeaturedBorderBottomColor:				$blue-gray-mid-dark !default;
 
-// FORM
-// ------------------------------------------------------------------------------------------
+$boxSidebarBackgroundColor:					$gray-lighter !default;
+$boxSidebarBorderBottomColor:				$gray-mid !default;
 
-// BASE
-$formMarginBottom:							$baseMargin !default;
+$boxInlineSearchBackgroundColor:			$gray-lighter !default;
+$boxInlineSearchBorderColor:				$gray-darker !default;
 
-// FORM LABELS
-$labelMarginBottom:							1px !default;
-$baseInputBorderRadius:						$borderRadiusSmall !default;
-
-// FORM INPUTS
-$baseInputBorderSize:						1px !default;
-$baseInputPadding:							2px !default;
-$baseCheckboxRadioWidth:					auto !default;
-$baseCheckboxRadioFontSize:					$baseFontSize !default;
-$baseCheckboxRadioFontSizeLargeBreakpoint:	($baseCheckboxRadioFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-
-// FORM INPUT SPACING
-$marginBottomFormElements:					10px !default;
-
-// FORM ACTION CONTAINER
-$formActionPaddingTop:						10px !default;
-
-// SELECTED CHECKBOX
-$selectedCheckboxBorderRadius:				$borderRadiusSmall !default;
-
-
-// BUTTONS
-// ------------------------------------------------------------------------------------------
-
-// BASE
-$buttonHoverBorderSize:						1px !default;
-$buttonHoverBorderStyle:					solid !default;
-$buttonVShadow:								0 !default;
-$buttonHShadow:								0 !default;
-$buttonShadowBlur:							0 !default;
-$buttonMarginBottom:						5px !default;
-$buttonBorderRadius:						$baseBorderRadius !default;
-$buttonMinWidth:							100% !default;
-$buttonMinWidthLargeBreakpoint:				100px !default;
-$buttonPaddingTopBottom:					12px !default;
-$buttonPaddingLeftRight:					17px !default;
-$buttonPaddingTopBottomLargeBreakpoint:		7px !default;
-$buttonPaddingLeftRightLargeBreakpoint:		12px !default;
-$buttonFontSize:							18px !default;
-$buttonLineHeight:							$buttonFontSize !default;
-$buttonFontSizeLargeBreakpoint:				15px !default;
-$buttonLineHeightLargeBreakpoint:			$buttonFontSizeLargeBreakpoint !default;
-$buttonFontWeight:							normal !default;
-$buttonBorderSize:							1px !default;
-$buttonBorderStyle:							solid !default;
-
-// BUTTON SIZES
-$buttonXXXSmallFontSize:					12px !default;
-$buttonXXXSmallFontSizeLargeBreakpoint:		10px !default;
-$buttonXXSmallFontSize:						14px !default;
-$buttonXXSmallFontSizeLargeBreakpoint:		12px !default;
-$buttonXSmallFontSize:						15px !default;
-$buttonXSmallFontSizeLargeBreakpoint:		13px !default;
-$buttonSmallFontSize:						16px !default;
-$buttonSmallFontSizeLargeBreakpoint:		14px !default;
-$buttonMediumFontSize:						$buttonFontSize !default;
-$buttonMediumFontSizeLargeBreakpoint:		$buttonFontSizeLargeBreakpoint !default;
-$buttonLargeFontSize:						20px !default;
-$buttonLargeFontSizeLargeBreakpoint:		18px !default;
-$buttonXLargeFontSize:						24px !default;
-$buttonXLargeFontSizeLargeBreakpoint:		23px !default;
-$buttonXXLargeFontSize:						28px !default;
-$buttonXXLargeFontSizeLargeBreakpoint:		26px !default;
-$buttonXXXLargeFontSize:					35px !default;
-$buttonXXXLargeFontSizeLargeBreakpoint:		33px !default;
-
-// BUTTON GROUP VERTICAL
-$buttonVertGroupBorderTopSize:				1px !default;
-$buttonVertGroupBorderTopStyle:				solid !default;
-
-// BUTTON GROUP HORIZONTAL
-$buttonHorzGroupBorderTopSize:				1px !default;
-$buttonHorzGroupBorderTopStyle:				solid !default;
-$buttonHorzGroupBorderBottomSize:			1px !default;
-$buttonHorzGroupBorderBottomStyle:			solid !default;
-$buttonHorzGroupBorderRightSize:			1px !default;
-$buttonHorzGroupBorderRightStyle:			solid !default;
-$buttonHorzGroupFirstChildBorderLeftSize:	1px !default;
-$buttonHorzGroupFirstChildBorderLeftStyle:	solid !default;
+$boxSupportBackgroundColor:					$blue-gray-lighter !default;
+$boxSupportBottomColor:						$blue-gray-mid-dark !default;
+$boxSupportBorderBottomColor:				$blue-gray-mid-dark !default;
 
 
 // HEADER
@@ -336,6 +181,10 @@ $buttonHorzGroupFirstChildBorderLeftStyle:	solid !default;
 $headerIconRadius:							3px !default;
 $headerIconPadding:							4px 10px 6px 6px !default;
 $headerIconMinWidth:						28px !default;
+$headerIconBackgroundColor:					$gray-dark !default;
+$headerIconFontColor:						$white !default;
+$headerIconHoverBackgroundColor:			$gray-dark !default;
+$headerIconHoverFontColor:					$white !default;
 
 // BASE & LOGO STYLES
 $mastheadContentHeight:						52px !default;
@@ -343,10 +192,54 @@ $mastheadLogoLineHeight:					52px !default;
 $mastheadLogoFontWeight:					400 !default;
 $mastheadLogoFontSize:						24px !default;
 $mastheadLogoFontSizeLargeBreakpoint:		33px !default;
+$mastheadBackgroundStartColor:				$blue-gray !default;
+$mastheadBackgroundEndColor:				$blue-gray-darker !default;
+$mastheadLogoLinkColor:						$white !default;
 
 // USER IDENTIFIER
 $userIdentifierMenuFontSize:				12px !default;
 $userIdentifierMenuPadding:					6px 10px 6px 30px !default;
+$userIdentifierBackgroundStartColor:		#4674a9 !default;
+$userIdentifierBackgroundEndColor:			#385882 !default;
+$userIdentifierFontColor:					$white !default;
+$userIdentifierMenuShadowColor:				$gray-darker !default;
+$userIdentifierMenuTextColor:				$white !default;
+$userIdentifierMenuHoverColor:				$blue-gray !default;
+
+// TOOLBAR
+$toolbarBackgroundStartColor:				$blue-gray !default;
+$toolbarBackgroundEndColor:					$blue-gray-darker !default;
+$toolbarMobileNavbarBackgroundColor:		$gray-lighter !default;
+$toolbarDropShadowColor:					$gray-darker !default;
+$toolbarLinkColor:							$white !default;
+$toolbarLinkHoverColor:						$white !default;
+
+// NAVBAR
+$navbarBackgroundGradientStartColor:		$gray-lightest !default;
+$navbarBackgroundGradientEndColor:			$gray-mid !default;
+$navbarBorderColor:							$gray-mid !default;
+$navbarBorderBottomStyle:					solid !default;
+$navbarBorderColor:							$gray-mid !default;
+$navbarFontHoverColor:						#002C77 !default;
+
+	// MENU OVERRIDES
+	$subMenuBackgroundColor:				$gray-lighter !default;
+	$subMenuBorderTopColor:					$gray-mid !default;
+
+	// NAVBAR MESSAGE AREA
+	$navbarMessageBorderRightColor:			$gray-mid !default;
+
+	// TEXT NAVBAR
+	$textNavbarBorderLeftColor:				$gray-mid !default;
+	$textNavbarSubMenuHoverBackgroundColor:	$white !default;
+
+	// TABBED NAVBAR
+	$tabbedNavbarBorderLeftColor:			$white !default;
+	$tabbedNavbarHrefBorderLeftColor:		$gray-mid !default;
+
+	$tabbedNavbarActiveBackgroundStartColor:	$gray-lightest !default;
+	$tabbedNavbarActiveBackgroundEndColor:		$gray-mid !default;
+	$tabbedNavbarSubMenuHoverBackgroundColor:	$white !default;
 
 // SPOTLIGHT CONTAINER
 $megaMenuContainerSpotlightBorderRadius: 	4px !default;
@@ -356,6 +249,23 @@ $megaMenuContainerSpotlightBorderRadius: 	4px !default;
 // ------------------------------------------------------------------------------------------
 $menuLinkPadding:							7px 10px !default;
 
+// MENUS
+$menuBackgroundHoverColor: 					$white !default;
+$menuDropShadowColor:						$gray-mid !default;
+$menuBackgroundColor:						$white !default;
+$menuBorderColor:							$gray-mid !default;
+$menuBorderTopColor:						$gray-mid !default;
+$menuIndicatorColor1stLevel:				$gray-dark !default;
+$menuFontColor:								#002C77 !default;
+$menuHoverFontColor:						#002C77 !default;
+$menuBorderTopColor2ndlevel:				$gray-mid !default;
+
+// MEGA MENU
+$megaMenuBackgroundColor: 					$gray-darker !default;
+$megaMenuBorderTopColor:					$gray-dark !default;
+$megaMenuBorderBottomColor:					$gray-dark !default;
+$megaMenuContentFontColor:					$white !default;
+
 
 // NAVIGATION
 // ------------------------------------------------------------------------------------------
@@ -364,23 +274,45 @@ $navbarBorderBottomStyle:					solid !default;
 $navbarMessageWidth:						200px !default;
 $navbarMessagePadding:						9px 0 7px 0 !default;
 $navbarMessageInnerPadding:					2px 10px 2px 0 !default;
-$navbarMessageFontFamily:					$fontSemiBoldFamily !default;
+$navbarMessageFontFamily:					$evo-font-medium-family !default;
 $navbarMessageBorderRightWidth:				1px !default;
 $navbarMessageBorderRightStyle:				dotted !default;
 
 
+// HERO BANNER
+// ------------------------------------------------------------------------------------------
+$heroBannerBackgroundColor:					$gray-lighter !default;
+
+
+// FOOTER
+// ------------------------------------------------------------------------------------------
+
+// BASE
+$footerBorderTopColor:						$gray-mid !default;
+$footerFontColor:							$gray-darker !default;
+
+// FAT FOOTER
+$fatFooterBackgroundColor:					$gray-darker !default;
+$fatFooterFontColor:						$white !default;
+
+
 // ICONS
 // ------------------------------------------------------------------------------------------
-$iconFontSize:								$baseFontSize !default;
 $iconFontAdvSize:							32px !default;
+$iconFontColor:								$blue-gray-dark !default;
+$iconFontBackgroundStartColor:				$blue-gray-dark !default;
+$iconFontBackgroundEndColor:				$blue-gray !default;
+$iconFontAdvBackgroundColor:				$blue-gray-darkest !default;
+$iconFontAdvShadowColor:					$gray-darker !default;
+$iconFontAdvBorderColor:					$gray-lighter !default;
+$iconFontAdvFontColor:						$white !default;
 
 
 // LISTS
 // ------------------------------------------------------------------------------------------
-$verticalListLineHeight:					18px !default;
-$verticalListLineHeightLargeBreakpoint:		($verticalListLineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$dataListLineHeight:						22px !default;
-$dataListLineHeightLargeBreakpoint:			($dataListLineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
+$horizontalListPipeBorderColor:				$gray-mid !default;
+$definitionListHeaderColor:					$black !default;
+$definitionDataListHeaderBorderColor:		$gray-mid !default;
 
 
 // TABLES
@@ -388,31 +320,75 @@ $dataListLineHeightLargeBreakpoint:			($dataListLineHeight - $baseFontSizeDiffer
 
 // BASE
 $tableColWidthMultiplier: 					1% !default;
-$tableBaseFontSize:							14px !default;
-$tableBaseFontSizeLargeBreakpoint:			($tableBaseFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$tableBaseLineHeight:						15px !default;
-$tableBaseLineHeightLargeBreakpoint:		($tableBaseLineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
 $tableBorderStyle:							solid !default;
 $tableTdBorderStyle:						solid !default;
-$tableMarginBottom:							$baseMargin !default;
-$tableMinWidth:								$mediumMediaQueryBreakpointMin !default;
+$tableMarginBottom:							$evo-base-margin !default;
+$tableMinWidth:								640px !default;
 $tableMinWidthLargeBreakpoint:				100% !default;
+
+$tableBackgroundColor:						$white !default;
+$tableBorderColor:							$gray-mid !default;
+$tableFontColor:							$black !default;
+$tableThFontColor:							$black !default;
+$tableThBackgroundColor:					$blue-gray-lighter !default;
+$tableThBorderColor:						#A9BCD3 !default;
+$tableTdBorderColor:						$gray-mid !default;
+$tableEvenTdBackgroundColor:				$white !default;
+$tableEvenTdSortedBackgroundColor: 			$gray-lightest !default;
+$tableOddTdBackgroundColor:					$gray-lightest !default;
+$tableOddTdSortedBackgroundColor: 			$gray-lighter !default;
+$tableRowHoverColor:						$topaz-light !default;
 
 // OPTIONS
 $tableDataFilterMaxWidth:					300px !default;
 $tableDataFilterLineHeight:					22px !default;
 $tableDataFilterLineHeightLargeBreakpoint:	16px !default;
-$tableDataFilterHeight:						($tableDataFilterLineHeight + $baseFontSizeDifferenceLargeBreakpoint) !default;
+$tableDataFilterHeight:						24px !default;
 $tableDataFilterHeightLargeBreakpoint:		20px !default;
+
+$tableSubHeaderBackgroundColor:				#E8F0F7 !default;
+$tableSubHeaderFontColor:					$gray-darker !default;
+$tableSubHeaderBorderColor:					#C3D2E5 !default;
+$tableSubTotalBackgroundColor:				$gray-lighter !default;
+$tableSubTotalFontColor:					$gray-darker !default;
+$tableTotalBackgroundColor:					#E6E6E6 !default;
+$tableTotalFontColor:						$black !default;
 
 
 // ==========================================================================================
 // OBJECTS
 // ==========================================================================================
 
+// ACCORDION
+// ------------------------------------------------------------------------------------------
+$accordionBorderColor:						$gray-mid !default;
+$accordionHeaderBackgroundColor:			$gray-lightest !default;
+$accordionHeaderFontColor:					$blue-gray-dark !default;
+$accordionHeaderIconColor:					$blue-gray-dark !default;
+$accordionContentBackgroundColor:			$white !default;
+
+
 // ADVANCED FILTER MODAL
 // ------------------------------------------------------------------------------------------
 $advancedFilterModalWidth:					700px !default;
+
+
+// ALTERNATE VIEWS BADGE
+// ------------------------------------------------------------------------------------------
+$alternateViewsBadgeButtonBackgroundStartColor: $white !default;
+$alternateViewsBadgeButtonBackgroundEndColor: $gray-light !default;
+$alternateViewsBadgeButtonBorderColor: #e1dfdf !default;
+$alternateViewsBadgeButtonIconColor: $gray-mid !default;
+$alternateViewsBadgeButtonLinkColor: $gray-darker !default;
+$alternateViewsBadgeButtonHoverBackgroundStartColor: $gray-lightest !default;
+$alternateViewsBadgeButtonHoverBackgroundEndColor: $gray-mid !default;
+$alternateViewsBadgeButtonHoverIconColor: $gray-darker !default;
+$alternateViewsBadgeButtonHoverLinkColor: $gray-darker !default;
+$alternateViewsBadgeButtonActiveBackgroundStartColor: #fef8e3 !default;
+$alternateViewsBadgeButtonActiveBackgroundEndColor: #f5e6b0 !default;
+$alternateViewsBadgeButtonActiveBorderColor: #f0e2b3 !default;
+$alternateViewsBadgeButtonActiveIconColor: #edc557 !default;
+$alternateViewsBadgeButtonActiveLinkColor: $gray-darker !default;
 
 
 // AUTOCOMPLETE
@@ -421,15 +397,33 @@ $autocompleteBorderSize:					1px !default;
 $autocompleteBorderStyle:					solid !default;
 $autocompleteMaxHeight:						97px !default;
 $autocompleteMaxHeightLargeBreakpoint:		193px !default;
-$autocompleteItemFontSize:					$baseFontSize !default;
-$autocompleteItemFontSizeLargeBreakpoint:	$baseFontSizeLargeBreakpoint !default;
 $autocompleteItemLinkLineHeight:			22px !default;
-$autocompleteItemLinkLineHeightLargeBreakpoint:	($autocompleteItemLinkLineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
+$autocompleteItemLinkLineHeightLargeBreakpoint:	20px !default;
 $autocompleteItemBorderTopSize:				1px !default;
 $autocompleteItemBorderTopStyle:			solid !default;
 $autocompleteItemBorderBottomSize:			1px !default;
 $autocompleteItemBorderBottomStyle:			solid !default;
 $autocompleteItemUnderlineText:				underline !default;
+
+$autocompleteShadowColor:					$gray-mid !default;
+$autocompleteBackgroundColor:				$gray-lightest !default;
+$autocompleteBorderColor:					$gray-mid !default;
+$autocompleteItemFontColor:					$gray-darker !default;
+$autocompleteItemBorderTopColor:			$gray-lightest !default;
+$autocompleteItemBorderBottomColor:			$gray-lightest !default;
+$autocompleteItemHighlightText:				$topaz !default;
+$autocompleteItemHoverBackgroundStartColor:	$topaz-light !default;
+$autocompleteItemHoverBackgroundEndColor:	$topaz-light !default;
+
+
+// CAROUSEL
+// ------------------------------------------------------------------------------------------
+$carouselPageCircleBackgroundColor:			$gray-light !default;
+$carouselPageCircleHoverBackgroundColor:	$gray-dark !default;
+$carouselPageCircleActiveBackgroundColor:	$gray-darker !default;
+$carouselPageCircleTextColor:				$white !default;
+$carouselNavIconColor:						$gray-mid !default;
+$carouselNavHoverIconColor:					$gray-dark !default;
 
 
 // CONTENT MODAL
@@ -441,22 +435,24 @@ $contentModalUtilityBarTabsUtilityPositionBottom: 70px !default;
 $contentModalUtilityBarTabsCloseIconPositionTop: 15px !default;
 $contentModalUtilityBarTabsCloseIconPositionLeft: 9px !default;
 
+$contentModalBackgroundColor:				$white !default;
+$contentModalUtilityBarBackgroundStartColor: $blue-gray-darker !default;
+$contentModalUtilityBarBackgroundEndColor: 	$blue-gray-darkest !default;
+$contentModalUtilityBarTabsBorderColor:		$blue-gray-darkest !default;
+$contentModalUtilityBarTabsAltBorderColor:	$blue-gray-light !default;
+$contentModalUtilityBarTabsIconColor:		$white !default;
+$contentModalUtilityBarTabsHoverBackgroundStartColor: $blue-gray-mid-dark !default;
+$contentModalUtilityBarTabsHoverBackgroundEndColor: $blue-gray-dark !default;
+$contentModalUtilityBarTabsActiveBackgroundColor: $white !default;
+$contentModalUtilityBarTabsActiveIconColor:	$blue-gray-darker !default;
+
 
 // DATEPICKER
 // ------------------------------------------------------------------------------------------
 $datepickerMarginTop:						5px !default;
-$datepickerBorderRadius:					$baseBorderRadius !default;
-$datepickerFontSize:						$baseFontSize;
-$datepickerFontSizeLargeBreakpoint:			($datepickerFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
 $datepickerHdrPaddingTopBottom:				4px !default;
-$datepickerHdrFontSize:						$baseFontSize !default;
-$datepickerHdrFontSizeLargeBreakpoint:		($datepickerHdrFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$datepickerHdrSelectMenuFontSize:			$baseFontSize !default;
-$datepickerHdrSelectMenuFontSizeLargeBreakpoint: ($datepickerHdrSelectMenuFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
 $datepickerMessageFontSize:					13px !default;
-$datepickerMessageFontSizeLargeBreakpoint:	($datepickerMessageFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
-$datepickerMessageLineHeight:				($datepickerMessageFontSize + $baseFontSizeDifferenceLargeBreakpoint) !default;
-$datepickerMessageLineHeightLargeBreakpoint: ($datepickerMessageLineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
+$datepickerMessageLineHeight:				15px !default;
 $datepickerIconPositionTop:					5px;
 $datepickerIconPositionLeft:				-22px;
 $datepickerIconPositionTopLargeBreakpoint:	4px;
@@ -464,10 +460,30 @@ $datepickerIconPositionTopIE:				($datepickerIconPositionTop - 2) !default;
 $datepickerIconPositionLeftLargeBreakpoint:	-20px;
 $datepickerMinWidth:						110px !default;
 
+$datepickerShadowColor:						$gray-darker !default;
+$datepickerBackgroundColor:					$white !default;
+$datepickerThFontColor:						$gray-darker !default;
+$datepickerBorderColor:						$gray-lighter !default;
+$datepickerLinkColor:						$gray-darker !default;
+$datepickerHdrBackgroundStartColor:			$gray-lighter !default;
+$datepickerHdrBackgroundEndColor:			$gray-mid !default;
+$datepickerHdrFontColor:					$gray-darker !default;
+$datepickerHdrNavIconColor:					$sapphire !default;
+$datepickerTodayFontColor:					$emerald !default;
+$datepickerTodayBackgroundColor: 			$emerald-light !default;
+$datepickerCurrentDayBackgroundColor: 		$topaz-mid !default;
+$datepickerCurrentDayFontColor:				$topaz !default;
+$datepickerHoverBackgroundColor: 			$topaz-light !default;
+$datepickerDisabledFontColor:				$gray-mid !default;
+$datepickerDisabledBackgroundColor:			$white !default;
+$datepickerDisabledBorderColor:				$gray-lighter !default;
+$datepickerMessageFontColor:				$gray-darker !default;
+$datepickerMessageBackgroundColor:			$topaz-light !default;
+$datepickerIconColor:						$gray-darker !default;
+
 
 // DIALOG/MODAL
 // ------------------------------------------------------------------------------------------
-$dialogBorderRadius:						$baseBorderRadius !default;
 $dialogOverlayBackgroundColorOpacity:		40 !default;
 $dialogWidth:								auto !default;
 $dialogWidthLargeBreakpoint:				500px !default;
@@ -481,13 +497,42 @@ $dialogHdrPaddingLeft:						18px !default;
 $dialogHdrBorderBottomSize:					0 !default;
 $dialogHdrBorderBottomStyle:				solid !default;
 $dialogHdrFontSize:							18px !default;
-$dialogHdrFontSizeLargeBreakpoint:			$hdrH3FontSizeLargeBreakpoint !default;
+$dialogHdrFontSizeLargeBreakpoint:			24px !default;
 $dialogContentMaxHeightLargeBreakpoint:		430px !default;
 $dialogContentPaddingTop:					12px !default;
 $dialogContentPaddingLeftRight:				18px !default;
 $dialogContentBorderTopSize:				1px !default;
 $dialogContentBorderTopStyle:				solid !default;
 $loadingModalWidthLargeBreakpoint:			350px !default;
+
+$dialogOverlayBackgroundColor:				$black !default;
+$dialogShadowColor:							$gray-darker !default;
+$dialogBackgroundColor:						$white !default;
+$dialogHdrFontColor:						$gray-darker !default;
+$dialogContentBorderTopColor: 				$white !default;
+$dialogHdrBorderBottomColor:				$transparent !default;
+$dialogCloseIconColor:						$gray-darker !default;
+
+
+// IMAGE CONTENT OVERLAY
+// ------------------------------------------------------------------------------------------
+$imageContentOverlayBackgroundColor:		$gray-darker !default;
+$imageContentOverlayBorderBottomColor:		$gray-dark !default;
+$imageContentOverlayFontColor:				$white !default;
+
+
+// LOGIN LAYOUT
+// ------------------------------------------------------------------------------------------
+$layoutLoginBackgroundImageSrcPath:			"../images/login_bkgd.jpg" !default;
+$layoutLoginBackgroundColor:				$blue-gray !default;
+$layoutLoginContainerTranslucentBackgroundColor: $gray-lighter !default;
+$layoutLoginContainerSubHeaderColor:		$blue-gray-darkest !default;
+$layoutLoginContainerHeaderColor:			$blue-gray-darkest !default;
+$layoutLoginContainerBoxBackgroundColor:	$white !default;
+$layoutLoginContainerBoxBorderColor:		$gray-dark !default;
+$layoutLoginFooterTranslucentBackgroundColor: $black !default;
+$layoutLoginFooterFontColor:				$white !default;
+$layoutLoginFooterBorderColor:				$white !default;
 
 
 // MINI FILTER
@@ -498,10 +543,13 @@ $miniFilterActivePaddingTopBottom: 			1px !default;
 $miniFilterActivePaddingLeftRight: 			4px !default;
 $miniFilterDropDownMaxWidth:				300px !default;
 
+$miniFilterLabelFontColor:					$black !default;
+$miniFilterActiveBackgroundColor: 			$topaz-light !default;
+$miniFilterActiveFontColor:					$black !default;
+
 
 // PAGINATION
 // ------------------------------------------------------------------------------------------
-$paginationFontSize:						$baseFontSize !default;
 $paginationFontSizeLargeBreakpoint:			12px !default;
 $paginationBorderStyle:						solid !default;
 $paginationLinkLineHeight:					.8em !default;
@@ -510,17 +558,21 @@ $paginationLinkMinWidthLargeBreakpoint:		28px !default;
 $paginationLinkMaxHeight:					$paginationLinkMinWidth !default;
 $paginationLinkMaxHeightLargeBreakpoint:	$paginationLinkMinWidthLargeBreakpoint !default;
 
+$paginationBorderColor:						$gray-mid !default;
+$paginationHoverBackgroundColor:			$topaz-light !default;
+$paginationActiveBackgroundColor:			$topaz-light !default;
+$paginationActiveFontColor:					$black !default;
+$paginationLinkHoverColor:					$black !default;
+
 
 // PROFILE CONTAINERS
 // ------------------------------------------------------------------------------------------
-$profileContainerHeaderFontSize:			$hdrH2FontSize !default;
-$profileContainerHeaderFontSizeLargeBreakpoint: $hdrH1FontSize !default;
-$profileContainerHeaderLineHeight:			$hdrH2LineHeight !default;
-$profileContainerHeaderLineHeightLargeBreakpoint: $hdrH1LineHeightLargeBreakpoint !default;
 $profileContainerDataListFontSize:			14px !default;
-$profileContainerDataListFontSizeLargeBreakpoint: ($profileContainerDataListFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
 $profileContainerDataListLineHeight:		18px !default;
-$profileContainerDataListLineHeightLargeBreakpoint: ($profileContainerDataListLineHeight - $baseFontSizeDifferenceLargeBreakpoint) !default;
+
+$profileContainerHdrColor:					$white !default;
+$profileContainerSecondaryHdrColor:			$white !default;
+$profileContainerDataListLabelFontColor:	$white !default;
 
 
 // SCROLL PANE
@@ -528,18 +580,49 @@ $profileContainerDataListLineHeightLargeBreakpoint: ($profileContainerDataListLi
 $scrollPaneWidth:							auto !default;
 $scrollPaneHeight:							300px !default;
 
+$scrollPaneScrollbarRGBColor:				$black !default;
+$scrollPaneScrollbarHexColor:				#666 !default;
+
+
+// SLIDER
+// ------------------------------------------------------------------------------------------
+$sliderBarBackgroundStartColor:				$gray-mid !default;
+$sliderBarBackgroundEndColor:				$gray-mid !default;
+$sliderBarRangeBackgroundColor:				$gray-darker !default;
+$sliderHandleBackgroundStartColor:			$blue-gray-darker !default;
+$sliderHandleBackgroundEndColor:			$blue-gray-darker !default;
+$sliderHandleShadowColor: 					$gray-mid !default;
+$sliderHandleBorderColor:					$white !default;
+$sliderHandleFocusBackgroundStartColor:		$blue-gray-darker !default;
+$sliderHandleFocusBackgroundEndColor:		$blue-gray-darker !default;
+$sliderHandleHoverBackgroundStartColor:		$blue-gray-darkest !default;
+$sliderHandleHoverBackgroundEndColor:		$blue-gray-darkest !default;
+$sliderHandleActiveBackgroundStartColor:	$blue-gray-darkest !default;
+$sliderHandleActiveBackgroundEndColor:		$blue-gray-darkest !default;
+
 
 // SUMMARY CONTAINER
 // ------------------------------------------------------------------------------------------
 $summaryCtnBorderSize:						1px !default;
 $summaryCtnBorderStyle:						dotted !default;
 $summaryCtnPadding:							10px !default;
-$summaryPrimaryCtnLargeFontSizeAdjust:		10 !default;
-$summaryPrimaryCtnSupportFontSizeAdjust:	3 !default;
 $summaryPrimaryCtnIconFontSize:				40px !default;
-$summarySecondaryCtnLargeFontSizeAdjust:	2 !default;
-$summarySecondaryCtnSupportFontSizeAdjust:	3 !default;
 $summarySecondaryCtnIconFontSize:			30px !default;
+
+$summaryCtnBorderColor:						$gray-darker !default;
+$summaryCtnBorderColorTop:					$transparent !default;
+$summaryCtnBorderColorBottom:				$transparent !default;
+$summaryCtnBorderColorLeft:					$transparent !default;
+$summaryCtnBorderFirstChildColorTop:		$gray-darker !default;
+$summaryCtnBorderFirstChildColorLeft:		$gray-darker !default;
+$summaryCtnBorderHoverTransitionSpeed:		250ms !default;
+$summaryCtnBorderHoverBackgroundColor:		$topaz-light !default;
+$summaryCtnBorderHoverBorderTopColor:		$gray-darker !default;
+$summaryCtnBorderHoverBorderBottomColor:	$gray-darker !default;
+$summaryCtnAlertNegativeFontColor:			$garnet !default;
+$summaryCtnAlertNegativeHoverBackgroundColor: $garnet-light !default;
+$summaryCtnAlertPositiveFontColor:			$emerald !default;
+$summaryCtnAlertPositiveHoverBackgroundColor: $emerald-light !default;
 
 
 // TABS
@@ -554,11 +637,9 @@ $tabsMarginRight:							2px !default;
 $tabsMarginBottom:							1px !default;
 $tabsPaddingTopBottom:						3px !default;
 $tabsPaddingLeftRight:						10px !default;
-$tabsBorderRadius:							$baseBorderRadius !default;
 $tabsBorderSize:							1px !default;
 $tabsBorderStyle:							solid !default;
 $tabsFontSize:								14px !default;
-$tabsFontSizeLargeBreakpoint:				($tabsFontSize - $baseFontSizeDifferenceLargeBreakpoint) !default;
 $tabsLineHeight:							26px !default;
 $tabsLineHeightLargeBreakpoint:				22px !default;
 $tabsFontWeight:							normal !default;
@@ -566,9 +647,26 @@ $tabsActivePositonTop:						2px !default;
 $tabsActiveHeight:							35px !default;
 $tabsActiveHeightLargeBreakpoint:			27px !default;
 $tabsActivePaddingBottom:					1px !default;
-$tabsPanelPadding:							$basePadding !default;
+$tabsPanelPadding:							$evo-base-padding !default;
 $tabsPanelBorderSize:						1px !default;
 $tabsPanelBorderStyle:						solid !default;
+
+$tabsBackgroundStartColor:					$gray-mid !default;
+$tabsBackgroundEndColor:					$gray-lighter !default;
+$tabsBorderColor:							$gray-mid !default;
+$tabsFontColor:								$sapphire-dark !default;
+$tabsPagingNavBackgroundStartColor:			$white !default;
+$tabsPagingNavBackgroundEndColor:			$white !default;
+$tabsPagingNavLinkColor:					$gray-darker !default;
+$tabsPagingNavHoverColor:					$blue-gray-dark !default;
+$tabsSelectedTabFontColor:					$gray-lighter !default;
+$tabsHoverBackgroundStartColor:				$gray-mid !default;
+$tabsHoverBackgroundEndColor:				$gray-lighter !default;
+$tabsActiveFontColor:						$gray-darker !default;
+$tabsActiveBackgroundStartColor:			$white !default;
+$tabsActiveBackgroundEndColor:				$white !default;
+$tabsPanelBorderColor:						$gray-mid !default;
+$tabsPanelBackgroundColor: 					$white !default;
 
 
 // TILES
@@ -579,18 +677,26 @@ $tilesBodyBorderRadius:						0 0 3px 3px !default;
 $tilesScrollPaneHeight:						400px !default;
 $tilesOuterBorderRadiusLargeBreakpoint:		0 !default;
 
+$tilesBackgroundColor:						$gray-lightest !default;
+$tilesHeaderBorderTopColor:					$sapphire-mid !default;
+$tilesHeaderBackgroundColor:				$transparent !default;
+$tilesHeaderFontColor:						$gray-darker !default;
+$tilesBodyBackgroundColor:					$white !default;
+$tilesBodyBorderColor:						$gray-light !default;
+$tilesOutsideBorderColor:					$gray-light !default;
+
 
 // TOOLTIP
 // ------------------------------------------------------------------------------------------
-$tooltipBorderRadius:						$borderRadiusXSmall !default;
 $tooltipVShadow:							1px	!default;
 $tooltipHShadow:							1px	!default;
 $tooltipShadowBlur:							5px	!default;
 $tooltipBorderSize:							1px !default;
 $tooltipBorderStyle:						solid !default;
-$tooltipFontSize:							$baseFontSize !default;
-$tooltipFontSizeLargeBreakpoint:			12px !default;
-$tooltipLineHeight:							20px !default;
-$tooltipLineHeightLargeBreakpoint:			14px !default;
 $tooltipPaddingTopBottom:					5px !default;
 $tooltipPaddingLeftRight:					8px !default;
+
+$tooltipShadowColor:						$gray-mid !default;
+$tooltipBorderColor:						$gray-mid !default;
+$tooltipBackgroundColor:					$gray-light !default;
+$tooltipFontColor:							$gray-darker !default;

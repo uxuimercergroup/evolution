@@ -1,105 +1,91 @@
 
-GENERAL SETUP FOR WORKING WITH UX/UI LIBRARY
+GENERAL SETUP FOR WORKING WITH EVOLUTION LIBRARY
 -------------------------------------------------------
 1. Go to the following page and download Mixture (http://mixture.io/)
 
-2. Mixture requires a license key. We have bulk licenses but you may need a license key purchased for you. Please contact Jeff Tudor (jeff.tudor@mercer.com) to request a license/purchase a license.
+2. Edit your computer's host file. When editing your computers host file always do so as an admin or it won't save. On Windows you can download and install a utility called Hostsman (http://www.abelhadigital.com/hostsman) to accomplish this easily, just remember to run as administrator in the program. On a Mac, you can use the Terminal to edit the computers host file, for more info check out this link: http://osxdaily.com/2012/08/07/edit-hosts-file-mac-os-x/
 
-3. Redeem your license by logging in to Mixture's site at https://accounts.mixture.io/login
-
-4. Edit your computer's host file. When editing your computers host file always do so as an admin or it won't save. On Windows you can download and install a utility called Hostsman (http://www.abelhadigital.com/hostsman) to accomplish this easily, just remember to run as administrator in the program. On a Mac, you can use the Terminal to edit the computers host file, for more info check out this link: http://osxdaily.com/2012/08/07/edit-hosts-file-mac-os-x/
-
-5. If you are on Windows 7 and you have installed Hostsman please do the following:
+3. If you are on Windows 7 and you have installed Hostsman please do the following:
 	1. Open the program
 	2. Click on the "Hosts" nav menu item
 	3. Select "Run as Administrator" from the above menu
 	4. There will be a notification window that comes up, select "Yes"
 	5. Look to the bottom of the program and click on "Editor"
 	6. In the new window you want to click the green "+" sign in the top left
-	7. Paste "mul.mercerhrs.com" in box that your cursor is in
+	7. Paste "project.mercerhrs.com" in box that your cursor is in
 	8. Click the "Add" button to the right
 	9. Once you have done that you just need to save it buy clicking the "Save" icon in the top left of the program
 
-6. Now open Mixture and in the bottom left of the program window click the "Open/New" button
-7. Find and select the folder for the project that you are looking to work with (you will only 
+4. Now open Mixture and in the bottom left of the program window click the "Open/New" button
+5. Find and select the folder for the project that you are looking to work with (you will only 
    need to do this once, the next time you open Mixture you will click the "Recent" button and find your project listed there)
-8. Now you just need to click "View Locally" and you should be able to view your project in a web browser.
+6. Let Mixture compile and run until it displays "Everything is a-okay!"
+7. Now you just need to click "View Locally" and you should be able to view your project in a web browser.
 
 
-SETUP A PROJECT WITH A MIXTURE BOILERPLATE USING MUL UX/UI LIBRARY
+SETUP A PROJECT WITH A MIXTURE BOILERPLATE USING EVOLUTION LIBRARY
 ======================================================================================================
 
-The following instructions will help you setup Mixture to use our custom MUL Boilerplate which allows a UI developer to start a project using the UX/UI Library. This boilerplate has been developed to accelerate the development of sites for our group and to provide a consistent starting point for rapid prototyping and development.
+The following instructions will help you setup Mixture to use our Evolution Boilerplate which allows a UI developer to start a project using the Evolution Library. This boilerplate has been developed to accelerate the development of sites for our group and to provide a consistent starting point for rapid prototyping and development.
 
 Setup Instructions
 
-1.  Download Mixture (http://mixture.io/)
-2.  If on Windows 7, once Mixture is installed set it up to always be run as administrator.  You can do so by following these steps:
+1. Download Mixture (http://mixture.io/)
+2. If on Windows 7, once Mixture is installed set it up to always be run as administrator.  You can do so by following these steps:
 
-	a.  Run as administrator in Window 7 - http://technet.microsoft.com/en-us/magazine/ff431742.aspx
-	b.  On the Start menu, locate the program that you want to always run as an administrator. 
-	c.  Right-click the application's shortcut and then click Properties. 
-	d.  In the Properties dialog box, click the Compatibility tab. 
-	e.  Do one of the following: 
+    a.  Run as administrator in Window 7 - http://technet.microsoft.com/en-us/magazine/ff431742.aspx
+    b.  On the Start menu, locate the program that you want to always run as an administrator. 
+    c.  Right-click the application's shortcut and then click Properties. 
+    d.  In the Properties dialog box, click the Compatibility tab. 
+    e.  Do one of the following: 
 
-			1.  To apply the setting to the currently logged-on user, select the Run This Program As An Administrator check box, and then click OK. 
-			2.  To apply the setting to all users on the computer and regardless of which shortcut is used to start the application, click Change Setting For All Users to display the Properties dialog box for the application's .exe file, select the Run This Program As An Administrator check box, and then click OK twice.
+            1.  To apply the setting to the currently logged-on user, select the Run This Program As An Administrator check box, and then click OK. 
+            2.  To apply the setting to all users on the computer and regardless of which shortcut is used to start the application, click Change Setting For All Users to display the Properties dialog box for the application's .exe file, select the Run This Program As An Administrator check box, and then click OK twice.
 
-3.  Sign up for Mixture after installing software.
-4.  Mixture requires a license key. We have bulk licenses but you may need a license key purchased for you. Please contact Jeff Tudor (jeff.tudor@mercer.com) to request a license/purchase a license.
-5.  Redeem your license by logging in to Mixture's site at https://accounts.mixture.io/login
-6.  At the Mixture account site (https://accounts.mixture.io/login), click on the "Boilerplates" link in the top navigation.
-7.  Under "Add a boilerplate" entering the following info into the fields
+3. Download latest Evolution Boilerplate ZIP from https://github.com/uxuimercergroup/evolution-boilerplate/releases
+4. Unzip the file to your computer.
+5. Now open Mixture and in the bottom left of the program window click the "Open/New" button
+6. Find and select the folder where you unzipped the Evolution Boilerplate files (you will only 
+   need to do this once, the next time you open Mixture you will click the "Recent" button and find your project listed there)
+7. Let Mixture compile and run until it displays "Everything is a-okay!"
+8. In Mixture, click on "Settings", this will open the Mixture settings in your text editor of choice.
+9. In the settings files for this Mixture project you can change the following:
 
-	a.  Name: MUL Boilerplate
-	b.  GitHub repository URL: https://github.com/mgholmes/mul_mixture_boilerplate (NOTE: this will be updated later with a UI Development shared GitHub account, not my own - Matt)
-	c.  Description: A custom Mixture boilerplate using the MUL UX/UI Library.
+    a.  "projectName" – name your project something else if you want
+    b.  "projectDescription" – give your project a description that displays in Mixture
 
-8.  Click "Confirm & Add". You should have a boilerplate listed at the bottom of the page. Keep the boilerplate private.
-9.  Open Mixture and sign in with your account info.
-10. In your preferred operating system, create a directory for a new project that will use the MUL boilerplate.
-11. In Mixture, click on "Private".
-12. Click on the "MUL Boilerplate" and a dialog window will come up asking for a directory where you will download the boilerplate.
-13. Choose the directory you created in step 9. Mixture will download the MUL boilerplate into that directory.
-14. Once Mixture is done downloading the MUL boilerplate it will create a project in Mixture with the name of the directory where you downloaded the boilerplate.
-15. In Mixture, click on "Settings", this will open the Mixture settings in your text editor of choice.
-16. In the settings files for this Mixture project you can change the following:
+10. In the settings file look for this entry:
 
-	a.  "projectName" – name your project something else if you want
-	b.  "projectDescription" – give your project a description that displays in Mixture
+    a.  "serverHostname": "project.mercerhrs.com"
+    b.  Change this address to the name of the project you are working on, for example if the project name is "Sample Site" change the serverHostname to: samplesite.mercerhrs.com
 
-17. In the settings file look for this entry:
+11. Save the Mixture settings file and close.
+12. Let Mixture compile and run until it displays "Everything is a-okay!"
+13. Edit your computer's host file to point your localhost (127.0.0.1) to your serverHostname setting in Mixture, for example:
 
-	a.  "serverHostname": "project.mercerhrs.com"
-	b.  Change this address to the name of the project you are working on, for example if the project name is "Sample Site" change the serverHostname to: samplesite.mercerhrs.com
+    a.  127.0.0.1   samplesite.mercerhrs.com
 
-18. Save the Mixture settings file and close.
-19. Edit your computers host file to point your localhost (127.0.0.1) to your serverHostname setting in Mixture, for example:
+14. When editing your computers host file always do so as an admin or it won't save. On Windows you can download and install a utility called Hostsman (http://www.abelhadigital.com/hostsman) to accomplish this easily, just remember to run as administrator in the program. On a Mac, you can use the Terminal to edit the computers host file, for more info check out this link: http://osxdaily.com/2012/08/07/edit-hosts-file-mac-os-x/
+15. If you are on Windows 7 and are using Hostsman follow these steps:
 
-	a.  127.0.0.1 	samplesite.mercerhrs.com
+    a.  Open the program
+    b.  Click on the "Hosts" nav menu item
+    c.  Select "Run as Administrator" from the above menu
+    d.  There will be a notification window that comes up, select "Yes"
+    e.  Look to the bottom of the program and click on "Editor"
+    f.  In the new window you want to click the green "+" sign in the top left
+    g.  Type the Mixture serverHostname  (for example, samplesite.mercerhrs.com) in box that your cursor is in
+    h.  Click the "Add" button to the right
+    i.  Once you have done that you just need to save it by clicking the "Save" icon in the top left of the program
 
-20. When editing your computers host file always do so as an admin or it won't save. On Windows you can download and install a utility called Hostsman (http://www.abelhadigital.com/hostsman) to accomplish this easily, just remember to run as administrator in the program. On a Mac, you can use the Terminal to edit the computers host file, for more info check out this link: http://osxdaily.com/2012/08/07/edit-hosts-file-mac-os-x/
-21. If you are on Windows 7 and are using Hostsman follow these steps:
+16. Save your host file if you haven't already done so.
+17. In Mixture, click on "View locally".
+18. If everything is setup correctly you should see the Evolution Boilerplate in your browser at the serverHostname you specified in the Mixture settings (samplesite.mercerhrs.com in these instructions).
+19. You can now start developing your project in your editor of choice using the Evolution Boilerplate as a starting point.
+20. For more information about how to use Mixture and take advantage of its features please visit:
 
-	a.  Open the program
-	b.  Click on the "Hosts" nav menu item
-	c.  Select "Run as Administrator" from the above menu
-	d.  There will be a notification window that comes up, select "Yes"
-	e.  Look to the bottom of the program and click on "Editor"
-	f.  In the new window you want to click the green "+" sign in the top left
-	g.  Type the Mixture serverHostname  (for example, samplesite.mercerhrs.com) in box that your cursor is in
-	h.  Click the "Add" button to the right
-	i.  Once you have done that you just need to save it by clicking the "Save" icon in the top left of the program
-
-22. Save your host file if you haven't already done so.
-23. In Mixture, click on "View locally".
-24. If everything is setup correctly you should see the MUL boilerplate in your browser at the serverHostname you specified in the Mixture settings (samplesite.mercerhrs.com in these instructions).
-25. You can now start developing your project in your editor of choice using the MUL boilerplate as a starting point.
-26. For more information about how to use Mixture and take advantage of its features please visit:
-
-	a.  http://mixture.io/
-	b.  Mixture documentation: http://docs.mixture.io/
-	c.  Account login: https://accounts.mixture.io/login
+    a.  http://mixture.io/
+    b.  Mixture documentation: http://docs.mixture.io/
 
 
 OTHER NOTES
@@ -144,14 +130,6 @@ Replace {yourprojectname} with the name of the project you are working on, for e
 samplesite.mercerhrs.com
 
 
-Files Names
--------------------------------------------------------------------
-Mixture liquid file names must use a dash in the file name, not underscores. For example:
-comp-modal.liquid
-
-Underscores in the .liquid file names break on Windows.
-
-
 Settings - mixture.json
 -------------------------------------------------------------------
 {
@@ -163,9 +141,9 @@ Settings - mixture.json
     "preprocessorScriptOutput": "assets/scripts",
     "preprocessorStyleOutput": "assets/css",
     "projectName": "Project name",
-    "projectDescription": "Project description - built with Mercer Evolution 2.5",
+    "projectDescription": "Project description - built with Mercer Evolution 2.6",
     "publishedId": null,
-    "serverHostname": "mul.mercerhrs.com",
+    "serverHostname": "project.mercerhrs.com",
     "serverPort": null,
     "templateDirectory": "templates",
     "templateDefaultLayout": "layout",
@@ -195,7 +173,7 @@ Settings - mixture.json
         "lineNumbers": false,
         "debugInfo": false,
         "globbing": false,
-        "useLibSass": true
+        "useLibSass": false
     },
     "sitemap": true,
     "convertHtml": {
@@ -209,7 +187,4 @@ Settings - mixture.json
     "optimiseSVG": true,
     "reload": 0
 }
-
- *** SETTINGS NOTES ***
-
  

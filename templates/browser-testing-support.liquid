@@ -12,13 +12,13 @@
 <!-- CONTENT SECTION - ENDS -->
 
 <!-- EXAMPLE SECTION - BEGINS -->
-	<section class="col-24 mul-ref-example">
+	<section class="col-24 evo-ref-example">
 
 		<div class="col-16 first">
 
 		<!-- BROWSER GRADING TABLE - BEGINS -->
-			<div class="mul-table-small-mediaquery">
-				<table class="mul-table mul-table-borders mul-table-striped mul-table-hover" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+			<div class="evo-table-small-mediaquery">
+				<table class="evo-table evo-table-borders evo-table-striped evo-table-hover" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
 					<thead>
 						<tr>
 							<th class="" scope="col">&nbsp;</th>
@@ -30,7 +30,7 @@
 					<tbody>
 						{% for item in model.reference-browser-table-data %}
 						<tr>
-							<td class="mul-bold">{{ item.browserType }}</td>
+							<td class="evo-bold">{{ item.browserType }}</td>
 							<td class="">{{ item.gradeA }}</td>
 							<td class="">{{ item.gradeB }}</td>
 							<td class="">{{ item.gradeF }}</td>
@@ -42,12 +42,12 @@
 		<!-- BROWSER GRADING TABLE - ENDS -->
 
 		<!-- BROWSER SUPPORT FAQ - BEGINS -->
-			<h3 class="mul-hdr-rule">FAQ's</h3>
-			<ul class="mul-data-list mul-data-list-stacked">
+			<h3 class="evo-hdr-rule">FAQ's</h3>
+			<ul class="evo-data-list evo-data-list-stacked">
 				{% for item in model.reference-browser-faq-data %}
 				<li>
-					<span class="mul-data-list-label">{{ item.reference-browser-faq-data-question }}</span>
-					<span class="mul-data-list-item">{{ item.reference-browser-faq-data-answer }}</span>
+					<span class="evo-data-list-label">{{ item.reference-browser-faq-data-question }}</span>
+					<span class="evo-data-list-item">{{ item.reference-browser-faq-data-answer }}</span>
 				</li>
 				{% endfor %}
 			</ul>
@@ -58,7 +58,7 @@
 
 		<!-- BROWSER GRADING KEY - BEGINS -->
 			<h5>{{ model.reference-browser-key-header }}</h5>
-			<ul class="mul-data-list">
+			<ul class="evo-data-list">
 				<li>{{ model.reference-browser-grade-a }}</li>
 				<li>{{ model.reference-browser-grade-b }}</li>
 				<li>{{ model.reference-browser-grade-f }}</li>

@@ -1,42 +1,42 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Site Responsive CSS - Medium Media Query - 768px-979px
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Site Responsive CSS - Medium Media Query - 641px - 1024px
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
-// Portrait iPad, portrait tablets, Low-resolution laptops and desktops
-@include media-query(screen, both, $mediumMediaQueryBreakpointMin, $mediumMediaQueryBreakpointMax) {
+// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+@media #{$medium-up} {
+
+	
+
+}
+
+// MEDIUM MEDIA QUERY RANGE - 641px - 1024px
+@media #{$medium-only} {
 
 	/*--- REFERENCE PAGES -----------------------------------------------------------------*/
 
 	// ALTERNATE VIEWS BADGE
-	.mul-ref-alternate-views-badge.ui-tabs
+	.evo-ref-alternate-views-badge.ui-tabs
 											{
-		.mul-btn-group-horizontal				{
-			.mul-btn								{
+		.evo-btn-group-horizontal				{
+			.evo-btn								{
 				a										{
 														padding: 8px 9px 5px 9px;
-					[class^="mul-icon-"]					{display: none;}
+					[class^="evo-icon-"]					{display: none;}
 														}
 													}
 												}
 		.ui-tabs-panel							{
 			p, ul, ol, li, dt, dd					{
-													font-size: ($baseFontSizeLargeBreakpoint + 2px);
-													line-height: ($baseLineHeightLargeBreakpoint + 2px);
-													}
-			.prettyprint							{
-				li 										{
-														font-size: $baseFontSizeLargeBreakpoint;
-														line-height: $baseLineHeightLargeBreakpoint;
-														}
+													font-size: 1rem;
 													}
 												}
 											}
 
 	// DEVELOPER - SLIDING DRAWER
-	.mul-ref-sliding-drawer					{
-		.mul-ref-sliding-drawer-hdr				{top: 39px;}
+	.evo-ref-sliding-drawer					{
+		.evo-ref-sliding-drawer-hdr				{top: 39px;}
 		.mCustomScrollbar						{padding-top: 136px;}
 											}
 											
@@ -51,7 +51,7 @@
 													margin-top: 40px;
 				span									{display: inline-block;}
 													}
-			.mul-icon-adv							{
+			.evo-icon-adv							{
 													margin-top: 35px;
 													margin-right: 80px;
 													}
@@ -59,8 +59,8 @@
 											}
 
 	/*--- TYPE PAGE ------------------------------------------------------------------------*/
-	.mul-ref-type-table						{
-		td.mul-ref-type-example					{font-size: $baseFontSizeLargeBreakpoint !important;}
+	.evo-ref-type-table						{
+		td.evo-ref-type-example					{font-size: 1rem !important;}
 											}
 
 }

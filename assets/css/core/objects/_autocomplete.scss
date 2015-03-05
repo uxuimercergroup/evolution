@@ -1,7 +1,7 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Autocomplete Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Autocomplete Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-autocomplete == true{
@@ -11,14 +11,14 @@
 
 	// AUTOCOMPLETE
 	.ui-menu				{
-							@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+							@include border-radius(0 0 $global-radius $global-radius);
 							@include box-shadow(0, 3px, 5px, $autocompleteShadowColor);
 							background-color: $autocompleteBackgroundColor;
 							border: $autocompleteBorderSize $autocompleteBorderStyle $autocompleteBorderColor;
 							border-top: 0;
 							display: block;
 							position: absolute;
-							z-index: $zindexAutocomplete;
+							z-index: $evo-zindex-autocomplete;
 							padding: 0;
 							margin: 0;
 							width: auto;
@@ -31,8 +31,8 @@
 								margin: 0;
 								padding: 0;
 								width: 100%;
-								font-size: $autocompleteItemFontSize;
-								font-family: $fontSemiBoldStack;
+								font-size: 1rem;
+								font-family: $evo-font-medium-stack;
 			.ui-menu-item-highlight	{
 									color: $autocompleteItemHighlightText;
 									text-decoration: $autocompleteItemUnderlineText;
@@ -66,27 +66,22 @@
 								{
 								border-bottom: 0;
 			.ui-state-hover,
-			.ui-state-active		{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+			.ui-state-active		{@include border-radius(0 0 $global-radius $global-radius);}
 								}
-							}
-
-	// AUTOCOMPLETE IE9 FIXES
-	.ie9					{
-		.ui-menu				{border-radius: $baseBorderRadiusIE;}
 							}
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		@media #{$medium-up} {
 
 			// AUTOCOMPLETE
 			.ui-menu		{
 							max-height: $autocompleteMaxHeightLargeBreakpoint;
 				.ui-menu-item	{
-								font-size: $autocompleteItemFontSizeLargeBreakpoint;
+								font-size: 1rem;
 					a				{
 									line-height: $autocompleteItemLinkLineHeightLargeBreakpoint;
 						.ui-menu-secondary

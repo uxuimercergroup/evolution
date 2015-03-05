@@ -3,21 +3,21 @@
 
 	// FIXES FLASH OF UNSTYLED CONTENT BUG - WHERE PAGE LOADS FASTER THAN JS AND MODERNIZR
 	// HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
-	var mulFixFOUC = function() {
-		jQuery('html.mul-mod-js').show();
+	var evoFixFOUC = function() {
+		jQuery('html.evo-mod-js').show();
 	}
 
 	// REFERENCE PAGES
 
 		// DEVELOPER - SLIDING DRAWER
-		var mulRefSlidingDrawer = jQuery.jPanelMenu({
+		var evoRefSlidingDrawer = jQuery.jPanelMenu({
 			animated: true,
 			closeOnContentClick: false,
 			duration: 450,
 			direction: 'left',
-			menu: '.js-mul-ref-sliding-drawer',
+			menu: '.js-evo-ref-sliding-drawer',
 			keyboardShortcuts: false,
-			trigger: '.js-mul-ref-sliding-drawer-btn'
+			trigger: '.js-evo-ref-sliding-drawer-btn'
 		});
 
 
@@ -27,11 +27,13 @@
 		// CONTENT MODAL
 
 			// Content modal example click event
+			/*
 			var contentModalExampleClickEvent = function(){
-				jQuery('#js-mul-content-modal-example-btn').click(function() {
-					jQuery('#js-mul-content-modal-example').dialog('open');
+				jQuery('#js-evo-content-modal-example-btn').click(function() {
+					jQuery('#js-evo-content-modal-example').dialog('open');
 				});
 			}
+			*/
 
 		
 		// DIALOG/MODAL
@@ -39,54 +41,74 @@
 			// MODAL
 
 				// Modal dialog with short content example click event
+				/*
 				var modalDialogShortExampleClickEvent = function(){
-					jQuery('#js-mul-dialog-modal-example-btn').click(function() {
-						jQuery('#js-mul-dialog-modal-example').dialog('open');
+					jQuery('#js-evo-dialog-modal-example-btn').click(function() {
+						jQuery('#js-evo-dialog-modal-example').dialog('open');
 					});
 				}
+				*/
 
 				// Modal dialog with long content example click event
+				/*
 				var modalDialogLongExampleClickEvent = function(){
-					jQuery('#js-mul-dialog-modal-long-example-btn').click(function() {
-						jQuery('#js-mul-dialog-modal-long-example').dialog('open');
+					jQuery('#js-evo-dialog-modal-long-example-btn').click(function() {
+						jQuery('#js-evo-dialog-modal-long-example').dialog('open');
 					});
 				}
+				*/
 
 				// Modal dialog with long content and fixed buttons (jQuery UI generated) example click event
+				/*
 				var modalDialogLongFixedExampleClickEvent = function(){
-					jQuery('#js-mul-dialog-modal-long-fixed-buttons-example-btn').click(function() {
-						jQuery('#js-mul-dialog-modal-long-fixed-buttons-example').dialog('open');
+					jQuery('#js-evo-dialog-modal-long-fixed-buttons-example-btn').click(function() {
+						jQuery('#js-evo-dialog-modal-long-fixed-buttons-example').dialog('open');
 					});
 				}
+				*/
 
 				// Modal dialog with click outside example click event
+				/*
 				var modalDialogClickOutsideExampleClickEvent = function(){
-					jQuery('#js-mul-dialog-modal-clickoutside-example-btn').click(function() {
-						jQuery('#js-mul-dialog-modal-clickoutside-example').dialog('open');
+					jQuery('#js-evo-dialog-modal-clickoutside-example-btn').click(function() {
+						jQuery('#js-evo-dialog-modal-clickoutside-example').dialog('open');
 					});
 				}
+				*/
 
 			// LOADING ANIMATION MODAL
 
 				// Loading animation image modal example click event
+				/*
 				var modalDialogLoadingImageExampleClickEvent = function(){
-					jQuery('#js-mul-dialog-loading-example-btn').click(function() {
-						jQuery('#js-mul-dialog-loading').dialog('open');
+					jQuery('#js-evo-dialog-loading-example-btn').click(function() {
+						jQuery('#js-evo-dialog-loading').dialog('open');
 					});
 				}
+				*/
 
 				// Loading animation icon modal example click event
+				/*
 				var modalDialogLoadingIconExampleClickEvent = function(){
-					jQuery('#js-mul-dialog-loading-icon-example-btn').click(function() {
-						jQuery('#js-mul-dialog-loading-icon').dialog('open');
+					jQuery('#js-evo-dialog-loading-icon-example-btn').click(function() {
+						jQuery('#js-evo-dialog-loading-icon').dialog('open');
 					});
 				}
-
+				*/
 
 // DOCUMENT READY
 //--------------------------------------------------------------------------------------------------------
-$(function() {
 
+$(document).foundation({
+
+	// FOUNDATION INITIALIZATIONS
+	//----------------------------------------------------------------------------------------------------
+
+	
+
+});
+
+$(function() {
 
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
@@ -94,14 +116,14 @@ $(function() {
 		// REFERENCE PAGES
 
 			// ALTERNATE VIEWS BADGE
-			mulAlternateViewsBadge('js-mul-ref-alternate-views-badge', 'left');
+			// evoAlternateViewsBadge('js-evo-ref-alternate-views-badge', 'left');
 
 			// DEVELOPER - SLIDING DRAWER INIT
-			mulRefSlidingDrawer.on();
+			evoRefSlidingDrawer.on();
 
 			// DEVELOPER - SLIDING DRAWER - SCROLL PANE
 			var windowHeight = jQuery(window).height();
-			mulScrollPaneCustom('js-mul-ref-sliding-drawer-scrollpane',{
+			evoScrollPaneCustom('js-evo-ref-sliding-drawer-scrollpane',{
 				setHeight: windowHeight,
 				advanced:{
 					updateOnContentResize: true
@@ -112,7 +134,7 @@ $(function() {
 			jQuery(window).bind('resize', resizeWindow);
 			function resizeWindow(e) {
 				var newWindowHeight = jQuery(window).height();
-				jQuery('.js-mul-ref-sliding-drawer-scrollpane').css('height', newWindowHeight);
+				jQuery('.js-evo-ref-sliding-drawer-scrollpane').css('height', newWindowHeight);
 			}
 
 
@@ -124,7 +146,7 @@ $(function() {
 
 		// FIXES FLASH OF UNSTYLED CONTENT BUG - WHERE PAGE LOADS FASTER THAN JS AND MODERNIZR
 		// HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
-		mulFixFOUC();
+		evoFixFOUC();
 
 
 	// LIBRARY EXAMPLES
@@ -133,23 +155,25 @@ $(function() {
 		// ACCORDION
 
 			// Accordion - default
-			mulAccordion('js-mul-accordion-example');
+			// evoAccordion('js-evo-accordion-example');
 
 			// Accordion - icons
-			mulAccordion('js-mul-accordion-icons-example', {
-				icons: {'header': 'mul-icon-plus-circle', 'activeHeader': 'mul-icon-minus-circle'}
+			/*
+			evoAccordion('js-evo-accordion-icons-example', {
+				icons: {'header': 'evo-icon-plus-circle', 'activeHeader': 'evo-icon-minus-circle'}
 			});
+			*/
 
 		// ALTERNATE VIEWS BADGE
 
 			// Alternate views badge - full
-			mulAlternateViewsBadge('js-mul-alternate-views-badge-full-example', 'center');
+			// evoAlternateViewsBadge('js-evo-alternate-views-badge-full-example', 'center');
 
 			// Alternate views badge - text only
-			mulAlternateViewsBadge('js-mul-alternate-views-badge-text-only-example', 'left');
+			// evoAlternateViewsBadge('js-evo-alternate-views-badge-text-only-example', 'left');
 
 			// Alternate views badge - text only
-			mulAlternateViewsBadge('js-mul-alternate-views-badge-icon-only-example', 'right');
+			// evoAlternateViewsBadge('js-evo-alternate-views-badge-icon-only-example', 'right');
 
 		// AUTO SUGGEST
 			
@@ -188,7 +212,7 @@ $(function() {
 			];
 
 			//  Auto Suggest init
-			mulAutocomplete('js-mul-autocomplete-example',{
+			evoAutocomplete('js-evo-autocomplete-example',{
 				source: autoCompleteExampleData
 			});
 
@@ -196,16 +220,16 @@ $(function() {
 		// CALENDAR
 
 			// Read only input
-			mulDatepicker('js-mul-datepicker-example-readonly');
+			evoDatepicker('js-evo-datepicker-example-readonly');
 		 
 			// Default example
-			mulDatepicker('js-mul-datepicker-example-default');
+			evoDatepicker('js-evo-datepicker-example-default');
 			
 			// Calendar with message
-			mulDatepicker('js-mul-datepicker-example-message');
+			evoDatepicker('js-evo-datepicker-example-message');
 			
 			// Masked date input
-			mulDatepicker('js-mul-datepicker-example-masked');
+			evoDatepicker('js-evo-datepicker-example-masked');
 
 
 		// CALENDAR - DATE RANGE
@@ -213,16 +237,16 @@ $(function() {
 			// Stacked
 
 			// From date datepicker
-			mulDatepickerRange('js-mul-datepicker-range-stacked-from',{
+			evoDatepickerRange('js-evo-datepicker-range-stacked-from',{
 				onClose: function(selectedDate) {
-					jQuery('#js-mul-datepicker-range-stacked-to').datepicker('option', 'minDate', selectedDate); // On calendar close, set the min date of the "To" calendar to the date picked in the "From" calendar
+					jQuery('#js-evo-datepicker-range-stacked-to').datepicker('option', 'minDate', selectedDate); // On calendar close, set the min date of the "To" calendar to the date picked in the "From" calendar
 				}
 			});
 
 			// To date datepicker
-			mulDatepicker('js-mul-datepicker-range-stacked-to',{
+			evoDatepicker('js-evo-datepicker-range-stacked-to',{
 				onClose: function(selectedDate) {
-					jQuery('#js-mul-datepicker-range-stacked-from').datepicker( 'option', 'maxDate', selectedDate); // On calendar close, set the max date of the "From" calendar to the date picked in the "To" calendar
+					jQuery('#js-evo-datepicker-range-stacked-from').datepicker( 'option', 'maxDate', selectedDate); // On calendar close, set the max date of the "From" calendar to the date picked in the "To" calendar
 				}
 			});
 
@@ -231,16 +255,16 @@ $(function() {
 			// Left Aligned
 
 			// From date datepicker
-			mulDatepickerRange('js-mul-datepicker-range-left-aligned-from',{
+			evoDatepickerRange('js-evo-datepicker-range-left-aligned-from',{
 				onClose: function(selectedDate) {
-					jQuery('#js-mul-datepicker-range-left-aligned-to').datepicker('option', 'minDate', selectedDate); // On calendar close, set the min date of the "To" calendar to the date picked in the "From" calendar
+					jQuery('#js-evo-datepicker-range-left-aligned-to').datepicker('option', 'minDate', selectedDate); // On calendar close, set the min date of the "To" calendar to the date picked in the "From" calendar
 				}
 			});
 
 			// To date datepicker
-			mulDatepicker('js-mul-datepicker-range-left-aligned-to',{
+			evoDatepicker('js-evo-datepicker-range-left-aligned-to',{
 				onClose: function(selectedDate) {
-					jQuery('#js-mul-datepicker-range-left-aligned-from').datepicker('option', 'maxDate', selectedDate); // On calendar close, set the max date of the "From" calendar to the date picked in the "To" calendar
+					jQuery('#js-evo-datepicker-range-left-aligned-from').datepicker('option', 'maxDate', selectedDate); // On calendar close, set the max date of the "From" calendar to the date picked in the "To" calendar
 				}
 			});
 
@@ -249,16 +273,16 @@ $(function() {
 			// Right Aligned
 			
 			// From date datepicker
-			mulDatepickerRange('js-mul-datepicker-range-right-aligned-from',{
+			evoDatepickerRange('js-evo-datepicker-range-right-aligned-from',{
 				onClose: function(selectedDate) {
-					jQuery('#js-mul-datepicker-range-right-aligned-to').datepicker('option', 'minDate', selectedDate); // On calendar close, set the min date of the "To" calendar to the date picked in the "From" calendar
+					jQuery('#js-evo-datepicker-range-right-aligned-to').datepicker('option', 'minDate', selectedDate); // On calendar close, set the min date of the "To" calendar to the date picked in the "From" calendar
 				}
 			});
 
 			// To date datepicker
-			mulDatepicker('js-mul-datepicker-range-right-aligned-to',{
+			evoDatepicker('js-evo-datepicker-range-right-aligned-to',{
 				onClose: function(selectedDate) {
-					jQuery('#js-mul-datepicker-range-right-aligned-from').datepicker('option', 'maxDate', selectedDate); // On calendar close, set the max date of the "From" calendar to the date picked in the "To" calendar
+					jQuery('#js-evo-datepicker-range-right-aligned-from').datepicker('option', 'maxDate', selectedDate); // On calendar close, set the max date of the "From" calendar to the date picked in the "To" calendar
 				}
 			});
 
@@ -266,19 +290,21 @@ $(function() {
 		// CAROUSEL
 
 			// Carousel example
-			mulCarousel('js-mul-carousel-example');
+			evoCarousel('js-evo-carousel-example');
 
 
 		// CONTENT MODAL
 
 			// Content modal example
-			mulContentModal('js-mul-content-modal-example',{
+			/*
+			evoContentModal('js-evo-content-modal-example',{
 				clickOutside: true, // Clicking outside content modal closes content modal, false turns off this option
-				clickOutsideTrigger: '#js-mul-content-modal-example-btn'
+				clickOutsideTrigger: '#js-evo-content-modal-example-btn'
 			});
+			*/
 
 			// Content modal example click event init
-			contentModalExampleClickEvent();
+			// contentModalExampleClickEvent();
 
 		
 		// DIALOG/MODAL
@@ -286,23 +312,24 @@ $(function() {
 			// MODAL
 
 				// Modal dialog with short content example
-				mulDialogModal('js-mul-dialog-modal-example');
+				// evoDialogModal('js-evo-dialog-modal-example');
 
 				// Modal dialog with short content example click event init
-				modalDialogShortExampleClickEvent();
+				// modalDialogShortExampleClickEvent();
 
 				//----
 
 				// Modal dialog with long content example
-				mulDialogModal('js-mul-dialog-modal-long-example');
+				// evoDialogModal('js-evo-dialog-modal-long-example');
 
 				// Modal dialog with long content example click event init
-				modalDialogLongExampleClickEvent();
+				// modalDialogLongExampleClickEvent();
 
 				//----
 
 				// Modal dialog with long content and fixed buttons (jQuery UI generated) example
-				mulDialogModal('js-mul-dialog-modal-long-fixed-buttons-example',{
+				/*
+				evoDialogModal('js-evo-dialog-modal-long-fixed-buttons-example',{
 					buttons: { // Define buttons at bottom of dialog, buttons stay fixed to bottom on dialog with scrolling content div
 						'cancel' : { // Define name of button
 							text: 'Cancel', // Text of the button
@@ -314,54 +341,61 @@ $(function() {
 						'save' : {
 							text: 'Save',
 							priority: 'primary',
-							"class": 'mul-btn-primary', // Add class to button option. Add class of "mul-btn-primary" for primary button styles
+							"class": 'evo-btn-primary', // Add class to button option. Add class of "evo-btn-primary" for primary button styles
 							click: function() {
 								jQuery(this).dialog('close');
 							}
 						}
 					}
 				});
+				*/
 
 				// Modal dialog with long content and fixed buttons (jQuery UI generated) example click event init
-				modalDialogLongFixedExampleClickEvent();
+				// modalDialogLongFixedExampleClickEvent();
 
 				//----
 
 				// Modal dialog click outside to close example
-				mulDialogModal('js-mul-dialog-modal-clickoutside-example',{
+				/*
+				evoDialogModal('js-evo-dialog-modal-clickoutside-example',{
 
 					// Click outside option: click outside modal to close it
 					clickOutside: true, // clicking outside the dialog will close it
-					clickOutsideTrigger: '#js-mul-dialog-modal-clickoutside-example-btn' // Element (id or class) that triggers the dialog opening 
+					clickOutsideTrigger: '#js-evo-dialog-modal-clickoutside-example-btn' // Element (id or class) that triggers the dialog opening 
 
 				});
+				*/
 
 				// Modal dialog with click outside example click event init
-				modalDialogClickOutsideExampleClickEvent();
+				// modalDialogClickOutsideExampleClickEvent();
 
 			// LOADING ANIMATION MODAL
 
 				// Loading animation image modal
-				mulDialogModal('js-mul-dialog-loading',{
-					dialogClass:'mul-dialog mul-dialog-modal mul-dialog-loading no-close-button'
+				/*
+				evoDialogModal('js-evo-dialog-loading',{
+					dialogClass:'evo-dialog evo-dialog-modal evo-dialog-loading no-close-button'
 				});
+				*/
 
 				// Loading animation image modal click example event init
-				modalDialogLoadingImageExampleClickEvent();
+				// modalDialogLoadingImageExampleClickEvent();
 
 				// Loading animation icon modal
-				mulDialogModal('js-mul-dialog-loading-icon',{
-					dialogClass:'mul-dialog mul-dialog-modal mul-dialog-loading no-close-button'
+				/*
+				evoDialogModal('js-evo-dialog-loading-icon',{
+					dialogClass:'evo-dialog evo-dialog-modal evo-dialog-loading no-close-button'
 				});
+				*/
 
 				// Loading animation icon modal example click event init
-				modalDialogLoadingIconExampleClickEvent();
+				// modalDialogLoadingIconExampleClickEvent();
 
 
 		// SCROLL PANE
 
 			// Custom scroll pane example
-			mulScrollPaneCustom('js-mul-scroll-pane-custom-example',{
+			evoScrollPaneCustom('js-evo-scroll-pane-custom-example',{
 				setHeight: 200
 			});
 
@@ -369,39 +403,39 @@ $(function() {
 		// SLIDER
 
 			// Slider example - horizontal (default)
-			mulSlider('js-mul-slider-horizontal-example');
+			evoSlider('js-evo-slider-horizontal-example');
 
 			// Slider range example - horizontal (default)
-			mulSliderRange('js-mul-slider-range-horizontal-example');
+			evoSliderRange('js-evo-slider-range-horizontal-example');
 
 			// Slider range example - horizontal - fixed min
-			mulSliderRangeSingleHandle('js-mul-slider-range-horizontal-min-example',{
+			evoSliderRangeSingleHandle('js-evo-slider-range-horizontal-min-example',{
 				range: 'min'
 			});
 
 			// Slider range example - horizontal - fixed max
-			mulSliderRangeSingleHandle('js-mul-slider-range-horizontal-max-example',{
+			evoSliderRangeSingleHandle('js-evo-slider-range-horizontal-max-example',{
 				range: 'max'
 			});
 
 			// Slider example - vertical
-			mulSlider('js-mul-slider-vertical-example',{
+			evoSlider('js-evo-slider-vertical-example',{
 				orientation: 'vertical'
 			});
 
 			// Slider range example - vertical
-			mulSliderRange('js-mul-slider-range-vertical-example',{
+			evoSliderRange('js-evo-slider-range-vertical-example',{
 				orientation: 'vertical'
 			});
 
 			// Slider range example - vertical - fixed min
-			mulSliderRangeSingleHandle('js-mul-slider-range-vertical-min-example',{
+			evoSliderRangeSingleHandle('js-evo-slider-range-vertical-min-example',{
 				orientation: 'vertical',
 				range: 'min'
 			});
 
 			// Slider range example - vertical - fixed max
-			mulSliderRangeSingleHandle('js-mul-slider-range-vertical-max-example',{
+			evoSliderRangeSingleHandle('js-evo-slider-range-vertical-max-example',{
 				orientation: 'vertical',
 				range: 'max'
 			});
@@ -410,12 +444,12 @@ $(function() {
 		// TABS
 
 			// Tabs example
-			mulTabs('js-mul-tabs-example');
+			// evoTabs('js-evo-tabs-example');
 
 		
 		// ADVANCED FILTER
 
 			// Advanced filter example
-			mulAdvancedFilter('js-mul-advanced-filter-example');
-
+			// evoAdvancedFilter('js-evo-advanced-filter-example');
+			
 });

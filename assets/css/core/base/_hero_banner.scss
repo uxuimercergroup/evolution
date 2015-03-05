@@ -1,17 +1,17 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Base Hero Banner Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Base Hero Banner Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-hero-banner == true{
 
 	// HERO BANNER
-	.mul-hero-banner				{
-		.mul-hero-banner-adjust			{
+	.evo-hero-banner				{
+		.evo-hero-banner-adjust			{
 										max-width: 100%;
-			.mul-hero-banner-content-ctn	{
-				.mul-hero-banner-content-item	{
+			.evo-hero-banner-content-ctn	{
+				.evo-hero-banner-content-item	{
 												margin-bottom: 0;
 												background-color: $heroBannerBackgroundColor;
 
@@ -22,18 +22,15 @@
 														{background-color: map-get($color, color);}
 													}
 
-					.mul-hero-banner-content-item-adjust
+					.evo-hero-banner-content-item-adjust
 													{
 													@include clearfix;
 													margin: 0 auto;
-													padding: $basePadding $gridSiteGutterPadding 0 $gridSiteGutterPadding;
-													width: $gridWidth;
 													min-height: 150px;
 													}
 												}
-				.mul-carousel.owl-carousel		{
+				.evo-carousel.owl-carousel		{
 												margin-bottom: 0;
-						.owl-controls				{padding: 0 $gridSiteGutterPadding;}
 												}
 											}
 										}
@@ -41,39 +38,22 @@
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		@media #{$medium-up} {
 
 			// HERO BANNER
-			.mul-hero-banner		{
-				.mul-hero-banner-adjust	{
-					.mul-hero-banner-content-ctn
+			.evo-hero-banner		{
+				.evo-hero-banner-adjust	{
+					.evo-hero-banner-content-ctn
 											{
-						.mul-hero-banner-content-item
+						.evo-hero-banner-content-item
 												{
-							.mul-hero-banner-content-item-adjust
-													{
-													min-height: 300px;
-
-													// If using 980 width layout
-													@if $use-grid-980 == true{
-														max-width: $gridMaxWidth980;
-													}
-												
-													// If using 1200 width layout
-													@if $use-grid-1200 == true{
-														max-width: $gridMaxWidth1200;
-													}
-
-													}
-							.mul-image-content-overlay-ctn-adjust.mul-hero-banner-content-item-adjust
-													{padding-top: ($basePadding*3);}
-												}
-						.mul-carousel.owl-carousel
-												{
-								.owl-controls		{padding: 0 $gridSiteGutterPadding;}
+							.evo-hero-banner-content-item-adjust
+													{min-height: 300px;}
+							.evo-image-content-overlay-ctn-adjust.evo-hero-banner-content-item-adjust
+													{padding-top: ($evo-base-padding*3);}
 												}
 											}
 										}

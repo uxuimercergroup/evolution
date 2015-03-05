@@ -1,16 +1,16 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Advanced Filter JS
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Advanced Filter JS
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //--------------------------------------------------------------------------------------------------------
 
-var mulAdvancedFilter = function(id) {
+var evoAdvancedFilter = function(id) {
 	
 	var advancedFilterModalId = jQuery("#"+id);
 
 	// ADVANCED FILTER DIALOG - OPTIONS
-	mulDialogModal(id,{
-		dialogClass:'mul-dialog mul-dialog-modal mul-advanced-filter-modal' // Additional classes added to advanced filter modal.
+	evoDialogModal(id,{
+		dialogClass:'evo-dialog evo-dialog-modal evo-advanced-filter-modal' // Additional classes added to advanced filter modal.
 	});
 
 	// OPEN ADVANCED FILTER DIALOG
@@ -24,17 +24,17 @@ var mulAdvancedFilter = function(id) {
 	});
 
 	// CLONE ROW FUNCTION
-	var mulAdvancedFilterAddRule = function(id) {
+	var evoAdvancedFilterAddRule = function(id) {
 
 		// CLONE ROW
-		var itemRow = jQuery('.js-mul-advanced-filter-form-rules-template-row');
-		var newRow	= jQuery(itemRow).clone(true, true).removeClass('js-mul-advanced-filter-form-rules-template-row');
+		var itemRow = jQuery('.js-evo-advanced-filter-form-rules-template-row');
+		var newRow	= jQuery(itemRow).clone(true, true).removeClass('js-evo-advanced-filter-form-rules-template-row');
 
 		// APPEND CLONED ROW
-		jQuery('#'+id+' .js-mul-advanced-filter-form-rules').append(newRow);
+		jQuery('#'+id+' .js-evo-advanced-filter-form-rules').append(newRow);
 
 		// REMOVE TABLE ENTRY ROW CLICK EVENT
-		jQuery('.js-mul-advanced-filter-remove-rule').click(function(){
+		jQuery('.js-evo-advanced-filter-remove-rule').click(function(){
 			jQuery($(this).parent()).remove();
 		});
 
@@ -47,44 +47,44 @@ var mulAdvancedFilter = function(id) {
 		// If dialog content container height is greater than dialog content container max height then add functionality for scrolling
 		if(dialogContentHeight > dialogMaxContentHeight) {
 
-			advancedFilterModalId.addClass('mul-dialog-content-scrolling'); // Add classes required for auto-scroll
+			advancedFilterModalId.addClass('evo-dialog-content-scrolling'); // Add classes required for auto-scroll
 				
-			var dialogScrollFooterExists = advancedFilterModalId.parent().children('.mul-dialog-scrolling-footer').length; // See if auto-scroll footer already exists
+			var dialogScrollFooterExists = advancedFilterModalId.parent().children('.evo-dialog-scrolling-footer').length; // See if auto-scroll footer already exists
 
 			// If auto-scroll footer does not already exist
 			if(dialogScrollFooterExists == 0) {
 				var dialogScrollFooter=document.createElement('div'); // create auto-scroll footer gutter div
-				jQuery(dialogScrollFooter).attr('class','mul-dialog-scrolling-footer'); // Add class to auto-scroll footer gutter div
+				jQuery(dialogScrollFooter).attr('class','evo-dialog-scrolling-footer'); // Add class to auto-scroll footer gutter div
 				advancedFilterModalId.parent().append(dialogScrollFooter); // Add auto-scroll footer to bottom of modal
 			}
 
-			jQuery('#'+id+' .js-mul-advanced-filter-form').addClass('mul-no-margin-bottom');
+			jQuery('#'+id+' .js-evo-advanced-filter-form').addClass('evo-no-margin-bottom');
 		}
 
 	};
 
 	// Used when the user wants to add an addition filter to advanced filter modal
-	jQuery(".js-mul-advanced-filter-add-rule").click(function(){
-		mulAdvancedFilterAddRule(id);
+	jQuery(".js-evo-advanced-filter-add-rule").click(function(){
+		evoAdvancedFilterAddRule(id);
 	});
 
 	// TOGGLE DIFFERENT CALENDAR OPTIONS
 	// Used to show date range section or a single calendar option
 	var advancedFilterDateRangeToggle = function () {
-		jQuery('.js-mul-advanced-filter-single-datepicker, .js-advanced-filter-mul-datepicker-range').hide();
+		jQuery('.js-evo-advanced-filter-single-datepicker, .js-advanced-filter-evo-datepicker-range').hide();
 		switch ($(this).val()) {
 			case '1':
-				jQuery('.js-advanced-filter-mul-datepicker-range').show();
+				jQuery('.js-advanced-filter-evo-datepicker-range').show();
 			break;
 			case '2':
-				jQuery('.js-mul-advanced-filter-single-datepicker').show();
+				jQuery('.js-evo-advanced-filter-single-datepicker').show();
 			break;
 			case '3':
-				jQuery('.js-mul-advanced-filter-single-datepicker').show();
+				jQuery('.js-evo-advanced-filter-single-datepicker').show();
 			break;
 		}
 	};
-	jQuery('.js-mul-advanced-filter-datepicker-toggle').change(advancedFilterDateRangeToggle);
+	jQuery('.js-evo-advanced-filter-datepicker-toggle').change(advancedFilterDateRangeToggle);
 
 	// OPEN ATTENTION CONTAINER
 	// Once the advanced filter close an attention container will appear letting the user know

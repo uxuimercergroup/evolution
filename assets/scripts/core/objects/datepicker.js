@@ -1,11 +1,11 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Datepicker JS
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Datepicker JS
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //--------------------------------------------------------------------------------------------------------
 
 // Define datepicker defaults
-var mulDatepickerDefaults = {
+var evoDatepickerDefaults = {
 	autoSize: true, // auto-size the date input field for date format choosen
 	buttonText: "Choose Date", // Title text of the button image
 	changeMonth: true,
@@ -21,15 +21,15 @@ var mulDatepickerDefaults = {
 	beforeShow: function(input, inst) {
 		
 		// If datepicker input has masked option enabled, change date format to mm/dd/yy.
-		var datepickerMaskedInput = jQuery(this).hasClass("mul-datepicker-masked-input"); // set variable to check if datepicker input has class for masked input option
+		var datepickerMaskedInput = jQuery(this).hasClass("evo-datepicker-masked-input"); // set variable to check if datepicker input has class for masked input option
 		if (datepickerMaskedInput) {
 			jQuery(this).datepicker("option", "dateFormat", "mm/dd/yy").mask("99/99/9999",{placeholder:"_"}); // If masked input option class then mask input for specified format of mm/dd/yyyy in datepicker call
 		};
 		
-		// If datepicker calendar has message option enabled, append to calendar. Gets label from "data-mul-datepicker-message-label" attribute on datepicker input in HTML
-		var datepickerMessageLabel = jQuery(this).attr("data-mul-datepicker-message-label");
+		// If datepicker calendar has message option enabled, append to calendar. Gets label from "data-evo-datepicker-message-label" attribute on datepicker input in HTML
+		var datepickerMessageLabel = jQuery(this).attr("data-evo-datepicker-message-label");
 		var appendDatepickerMessage = function () {
-			jQuery("<div class='mul-datepicker-message'><label>" + datepickerMessageLabel + "</label></div>").appendTo(".ui-datepicker");
+			jQuery("<div class='evo-datepicker-message'><label>" + datepickerMessageLabel + "</label></div>").appendTo(".ui-datepicker");
 		};
 		if (datepickerMessageLabel) {
 			setTimeout(appendDatepickerMessage, 10); // If a datepicker message label is available, show the datepicker message after generating datepicker
@@ -37,10 +37,10 @@ var mulDatepickerDefaults = {
 	},
 	onChangeMonthYear: function () {
 		
-		// If datepicker calendar has message option enabled, append to calendar. Gets label from "data-mul-datepicker-message-label" attribute on datepicker input in HTML
-		var datepickerMessageLabel = jQuery(this).attr("data-mul-datepicker-message-label");
+		// If datepicker calendar has message option enabled, append to calendar. Gets label from "data-evo-datepicker-message-label" attribute on datepicker input in HTML
+		var datepickerMessageLabel = jQuery(this).attr("data-evo-datepicker-message-label");
 		var appendDatepickerMessage = function () {
-			jQuery("<div class='mul-datepicker-message'><label>" + datepickerMessageLabel + "</label></div>").appendTo(".ui-datepicker");
+			jQuery("<div class='evo-datepicker-message'><label>" + datepickerMessageLabel + "</label></div>").appendTo(".ui-datepicker");
 		};
 		if (datepickerMessageLabel) {
 			setTimeout(appendDatepickerMessage, 10); // If a datepicker message label is available, Show the datepicker message after generating datepicker on month/year change
@@ -49,13 +49,13 @@ var mulDatepickerDefaults = {
 };
 
 // Datepicker function, pass id of datepicker input and any datepicker options you want to override
-var mulDatepicker = function(id, options) {
+var evoDatepicker = function(id, options) {
 	var datepickerId = jQuery("#"+id);
-	datepickerId.datepicker(jQuery.extend({},mulDatepickerDefaults,options));
+	datepickerId.datepicker(jQuery.extend({},evoDatepickerDefaults,options));
 };
 
 // Define datepicker date range defaults
-var mulDatepickerRangeDefaults = {
+var evoDatepickerRangeDefaults = {
 	autoSize: true, // auto-size the date input field for date format choosen
 	buttonText: "Choose Date", // Title text of the button image
 	changeMonth: true,
@@ -71,15 +71,15 @@ var mulDatepickerRangeDefaults = {
 	beforeShow: function(input, inst) {
 		
 		// If datepicker input has masked option enabled, change date format to mm/dd/yy.
-		var datepickerMaskedInput = jQuery(this).hasClass("mul-datepicker-masked-input"); // set variable to check if datepicker input has class for masked input option
+		var datepickerMaskedInput = jQuery(this).hasClass("evo-datepicker-masked-input"); // set variable to check if datepicker input has class for masked input option
 		if (datepickerMaskedInput) {
 			jQuery(this).datepicker("option", "dateFormat", "mm/dd/yy").mask("99/99/9999",{placeholder:"_"}); // If masked input option class then mask input for specified format of mm/dd/yyyy in datepicker call
 		};
 		
-		// If datepicker calendar has message option enabled, append to calendar. Gets label from "data-mul-datepicker-message-label" attribute on datepicker input in HTML
-		var datepickerMessageLabel = jQuery(this).attr("data-mul-datepicker-message-label");
+		// If datepicker calendar has message option enabled, append to calendar. Gets label from "data-evo-datepicker-message-label" attribute on datepicker input in HTML
+		var datepickerMessageLabel = jQuery(this).attr("data-evo-datepicker-message-label");
 		var appendDatepickerMessage = function () {
-			jQuery("<div class='mul-datepicker-message'><label>" + datepickerMessageLabel + "</label></div>").appendTo(".ui-datepicker");
+			jQuery("<div class='evo-datepicker-message'><label>" + datepickerMessageLabel + "</label></div>").appendTo(".ui-datepicker");
 		};
 		if (datepickerMessageLabel) {
 			setTimeout(appendDatepickerMessage, 10); // If a datepicker message label is available, show the datepicker message after generating datepicker
@@ -87,10 +87,10 @@ var mulDatepickerRangeDefaults = {
 	},
 	onChangeMonthYear: function () {
 		
-		// If datepicker calendar has message option enabled, append to calendar. Gets label from "data-mul-datepicker-message-label" attribute on datepicker input in HTML
-		var datepickerMessageLabel = jQuery(this).attr("data-mul-datepicker-message-label");
+		// If datepicker calendar has message option enabled, append to calendar. Gets label from "data-evo-datepicker-message-label" attribute on datepicker input in HTML
+		var datepickerMessageLabel = jQuery(this).attr("data-evo-datepicker-message-label");
 		var appendDatepickerMessage = function () {
-			jQuery("<div class='mul-datepicker-message'><label>" + datepickerMessageLabel + "</label></div>").appendTo(".ui-datepicker");
+			jQuery("<div class='evo-datepicker-message'><label>" + datepickerMessageLabel + "</label></div>").appendTo(".ui-datepicker");
 		};
 		if (datepickerMessageLabel) {
 			setTimeout(appendDatepickerMessage, 10); // If a datepicker message label is available, Show the datepicker message after generating datepicker on month/year change
@@ -99,7 +99,7 @@ var mulDatepickerRangeDefaults = {
 };
 
 // Datepicker date range function, pass id of datepicker input and any datepicker date range options you want to override
-var mulDatepickerRange = function(id, options) {
+var evoDatepickerRange = function(id, options) {
 	var datepickerId = jQuery("#"+id);
-	datepickerId.datepicker(jQuery.extend({},mulDatepickerRangeDefaults,options));
+	datepickerId.datepicker(jQuery.extend({},evoDatepickerRangeDefaults,options));
 };

@@ -1,20 +1,20 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Slider Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Slider Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-slider == true{
 
 	// SLIDER
-	.mul-slider.ui-slider 			{
-									@include border-radius($baseBorderRadius);
+	.evo-slider.ui-slider 			{
+									@include border-radius($global-radius);
 									@include background-gradient($sliderBarBackgroundStartColor,$sliderBarBackgroundEndColor);
 									position: relative;
 									text-align: left;
 									width: 97%;
-									margin-top: $baseMargin;
-									margin-bottom: $baseMargin;
+									margin-top: $evo-base-margin;
+									margin-bottom: $evo-base-margin;
 
 		// SLIDER HANDLE
 		.ui-slider-handle				{
@@ -24,7 +24,7 @@
 										border: 1px solid $sliderHandleBorderColor;
 										outline: none;
 										position: absolute;
-										z-index: $zindexSlider;
+										z-index: $evo-zindex-slider;
 										width: 20px;
 										height: 20px;
 										cursor: pointer;
@@ -44,9 +44,9 @@
 
 		// SLIDER RANGE
 		.ui-slider-range				{
-										@include border-radius($baseBorderRadius);
+										@include border-radius($global-radius);
 										position: absolute;
-										z-index: $zindexSlider;
+										z-index: $evo-zindex-slider;
 										display: block;
 										border: 0;
 										background-position: 0 0;
@@ -55,7 +55,7 @@
 									}
 	
 	// SLIDER HORIZONTAL
-	.mul-slider.ui-slider-horizontal
+	.evo-slider.ui-slider-horizontal
 									{
 									height: 6px;
 		.ui-slider-handle				{
@@ -71,12 +71,12 @@
 									}
 
 	// SLIDER VERTICAL
-	.mul-slider.ui-slider-vertical 	{
+	.evo-slider.ui-slider-vertical 	{
 									display: inline-block;
 									width: 6px;
 									height: 100px;
-									margin-left: ($baseMargin/2);
-									margin-right: ($baseMargin/2);
+									margin-left: ($evo-base-margin/2);
+									margin-right: ($evo-base-margin/2);
 		.ui-slider-handle				{
 										left: -7px;
 										margin-bottom: -3px;
@@ -90,8 +90,8 @@
 									}
 
 	// SLIDER RANGE LABEL
-	.mul-slider-range				{
-		.mul-slider-range-label			{
+	.evo-slider-range				{
+		.evo-slider-range-label			{
 										@include clearfix;
 			label,
 			input							{float: left;}
@@ -108,21 +108,10 @@
 
 	// SLIDER IE9 FIXES
 	.ie9							{
-		
-		// SLIDER
-		.mul-slider.ui-slider 			{
-										border-radius:$baseBorderRadiusIE;
-			
-			// SLIDER HANDLE
-			.ui-slider-handle				{border-radius:$baseBorderRadiusIE;}
-
-			// SLIDER RANGE
-			.ui-slider-range				{border-radius:$baseBorderRadiusIE;}
-										}
 
 		// SLIDER RANGE LABEL
-		.mul-slider-range				{
-			.mul-slider-range-label			{
+		.evo-slider-range				{
+			.evo-slider-range-label			{
 				input[type="text"]				{padding-top: 1px;}
 											}
 										}
@@ -130,13 +119,13 @@
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		@media #{$medium-up} {
 
 			// SLIDER
-			.mul-slider.ui-slider 	{
+			.evo-slider.ui-slider 	{
 									width: 100%;
 										
 				// SLIDER HANDLE
@@ -147,7 +136,7 @@
 									}
 
 			// SLIDER HORIZONTAL
-			.mul-slider.ui-slider-horizontal
+			.evo-slider.ui-slider-horizontal
 									{
 				.ui-slider-handle		{
 										top: -5px;
@@ -155,7 +144,7 @@
 									}
 
 			// SLIDER VERTICAL
-			.mul-slider.ui-slider-vertical
+			.evo-slider.ui-slider-vertical
 									{
 									width: 6px;
 				.ui-slider-handle		{

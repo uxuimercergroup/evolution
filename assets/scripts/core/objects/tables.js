@@ -1,7 +1,7 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Interactive Table JS
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Interactive Table JS
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //--------------------------------------------------------------------------------------------------------
 
 // Interative tables use a jQuery plugin library called FooTables. Please refer to the FooTable reference
@@ -11,13 +11,13 @@
 //
 // http://fooplugins.com/footable-demos/
 
-var mulInteractiveTable = function() {
+var evoInteractiveTable = function() {
 
-	// MUL FOOTABLES DATA TABLE
+	// EVO FOOTABLES DATA TABLE
 	function fooTables(){
-		jQuery('.mul-footable').footable({
+		jQuery('.evo-footable').footable({
 			addRowToggle: true
-		}).trigger('.mul-footable-toggle');
+		}).trigger('.evo-footable-toggle');
 	};
 
 	// THIS IS THE FOOTABLE INIT
@@ -25,29 +25,29 @@ var mulInteractiveTable = function() {
 
 	// FOOTABLE SORTING
 	// THIS HANDLES THE ONLOAD DEFAULT SORT
-	var colIndexReady = $('.js-mul-footable-sorted').index();
+	var colIndexReady = $('.js-evo-footable-sorted').index();
 
-	$('.js-mul-footable-sorted').ready(function() {
-		$('.mul-footable tbody tr').each(function() {
+	$('.js-evo-footable-sorted').ready(function() {
+		$('.evo-footable tbody tr').each(function() {
 			$(this).find('td').each(function(i) {
 				if (i == colIndexReady) {
-					$(this).addClass('mul-highlight');
+					$(this).addClass('evo-highlight');
 				} else {
-					$(this).removeClass('mul-highlight');
+					$(this).removeClass('evo-highlight');
 				}
 			});
 		});
 	});
 
 	// THIS HANDLES THE CLICK EVENT FOR SORTING
-	$('.mul-footable thead th').click(function() {
+	$('.evo-footable thead th').click(function() {
 		var colIndex = $(this).index();
-		$('.mul-footable tbody tr').each(function() {
+		$('.evo-footable tbody tr').each(function() {
 			$(this).find('td').each(function(i) {
 				if (i == colIndex) {
-					$(this).addClass('mul-highlight');
+					$(this).addClass('evo-highlight');
 				} else {
-					$(this).removeClass('mul-highlight');
+					$(this).removeClass('evo-highlight');
 				}
 			});
 		});
@@ -56,4 +56,4 @@ var mulInteractiveTable = function() {
 }
 
 // Interactive Tables Init (FooTables)
-mulInteractiveTable();
+evoInteractiveTable();

@@ -1,51 +1,46 @@
 <!DOCTYPE HTML>
-<!--[if IE 8]><html class="no-js ie8"><![endif]-->
-<!--[if IE 9]><html class="no-js ie9"><![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js ie-gt-9" lang="en"><!--<![endif]-->
+<!--[if IE 9]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
 	<head>
 
-		<!-- CHARACTER SET -->
 		<meta charset="utf-8" />
-
-		<!-- ALWAYS FORCE LATEST IE RENDERING ENGINE (EVEN IN INTRANET) -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-		<!-- TITLE AND PAGE META DATA -->
 		<title>{% block title %}{{ global.site_title }}{% endblock %}</title>
 		<meta name="keywords" content="{% block meta_keywords %}{% endblock %}" />
 		<meta name="description" content="{% block meta_description %}{% endblock %}" />
-		<meta name="robots" content="index, follow" />
 
-		<!-- MOBILE OPTIMIZATIONS -->
-		<meta name="HandheldFriendly" content="True" />
-		<meta name="MobileOptimized" content="320" />
-
-		<!-- Viewport setting for responsiveness -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-
-		<!-- Mobile Internet Explorer font smoothing for easy reading -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="cleartype" content="on" />
 		
 		<!-- Mobile touch icons - http://goo.gl/6nVq0 -->
-		<!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
-		<!-- <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png" /> -->
-		<!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
-		<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" /> -->
-		<!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
-		<!-- <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120-precomposed.png" /> -->
-		<!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
-		<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" /> -->
-		<!-- For the iPad mini and the first and second-generation iPad on iOS ≥ 7: -->
-		<!-- <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76-precomposed.png" /> -->
-		<!-- For the iPad mini and the first and second-generation iPad on iOS ≤ 6: -->
-		<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" /> -->
+		<!-- For Chrome for Android: -->
+		<!-- <link rel="icon" sizes="192x192" href="touch-icon-192x192.png"> -->
+		<!-- For iPhone 6 Plus with @3× display: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="180x180" href="apple-touch-icon-180x180-precomposed.png"> -->
+		<!-- For iPad with @2× display running iOS ≥ 7: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png"> -->
+		<!-- For iPad with @2× display running iOS ≤ 6: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png"> -->
+		<!-- For iPhone with @2× display running iOS ≥ 7: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120-precomposed.png"> -->
+		<!-- For iPhone with @2× display running iOS ≤ 6: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png"> -->
+		<!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76-precomposed.png"> -->
+		<!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png"> -->
 		<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-		<!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" /> -->
-		<!-- For nokia devices: -->
-		<!-- <link rel="shortcut icon" href="apple-touch-icon-precomposed.png" /> -->
+		<!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"> --><!-- 57×57px -->
+
 		<!-- Tile icon for Win8 (144x144 + tile color) -->
-		<!-- <meta name="msapplication-TileImage" content="apple-touch-icon-144x144-precomposed.png" /> -->
-		<!-- <meta name="msapplication-TileColor" content="#002C77" /> -->
+		<!-- <meta name="msapplication-TileImage" content="apple-touch-icon-144x144-precomposed.png"> -->
+		<!-- <meta name="msapplication-TileColor" content="#002C77"> -->
+
+		<!-- Add to homescreen for Chrome on Android -->
+		<!--
+        <meta name="mobile-web-app-capable" content="yes">
+        -->
 
 		<!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
 		<!--
@@ -55,40 +50,36 @@
 		-->
 
 		<!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
-        <!--
+		<!--
         <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
-        -->
+    	-->
 
 		<!-- FAVICON -->
 		<link rel="shortcut icon" href="/favicon.ico" />
 
-		<!-- MERCER EVOLUTION CORE STYLES -->
+		<!-- EVOLUTION CORE STYLES -->
 		{{ "evolution.css" | asset_url | stylesheet_tag }}
-
-		<!-- SITE THEME STYLES -->
-		{{ "theme.css" | asset_url | stylesheet_tag }}
 
 		<!-- SITE STYLES -->
 		{{ "styles.css" | asset_url | stylesheet_tag }}
 
 		<!-- SITE IE CONDITIONAL STYLES -->
-		<!--[if IE]>{{ "ie.css" | asset_url | stylesheet_tag }}<![endif]-->
+		<!--[if IE 9]>{{ "ie.css" | asset_url | stylesheet_tag }}<![endif]-->
 
 		<!-- GOOGLE PRETTIFY STYLES FOR PRETTY CODE PRINTING -->
 		{{ "prettify.css" | asset_url | stylesheet_tag }}
 
 		<!-- MODERNIZR - USED TO CHECK HTML & CSS3 SUPPORT IN BROWSERS -->
-		{{ "modernizr_2.6.2.js" | asset_url | script_tag }}
-
-		<!-- RESPOND.JS - A FAST & LIGHTWEIGHT POLYFILL FOR MIN/MAX-WIDTH CSS3 MEDIA QUERIES (FOR IE 6-8, AND MORE) - https://github.com/scottjehl/Respond -->
-		{{ "respond_1.3.0.js" | asset_url | script_tag }}
+		{{ "modernizr.js" | asset_url | script_tag }}
 
 	</head>
-	<body class="mul-layout-login mul-layout-login-background-2-demo">
+	<body class="evo-layout-login evo-layout-login-background-2-demo">
 
 		<!-- PAGE - BEGINS -->
-		<section role="main" class="mul-grid">
-			{% block content %}{% endblock %}
+		<section role="main">
+			<div class="row">
+				{% block content %}{% endblock %}
+			</div>
 		</section>
 		<!-- PAGE - ENDS -->
 
@@ -96,11 +87,7 @@
 		{% include "/base/layout-login-footer" %}
 		<!-- FOOTER - ENDS -->
 
-		<!-- MERCER EVOLUTION CORE SCRIPTS -->
-		{{ "evolution.js" | asset_url | script_tag }}
-
-		<!-- SITE SCRIPTS -->
-		{{ "site.js" | asset_url | script_tag }}
+		{% include "scripts" %}
 
 	</body>
 </html>

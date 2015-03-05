@@ -1,19 +1,19 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Base Navigation Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Base Navigation Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-nav == true{
 
 	// NAVBAR - BEGINS
-		.mul-navbar			{
+		.evo-navbar			{
 							display: none;
-			.mul-navbar-adjust	{
+			.evo-navbar-adjust	{
 				nav					{
 					li					{
 						a					{
-							.mul-user-identifier-support-text
+							.evo-user-identifier-support-text
 												{display: block;}
 											}
 										}
@@ -23,23 +23,25 @@
 	// NAVBAR - ENDS
 
 	// TOOLBAR - BEGINS
-		.mul-toolbar		{
+		.evo-toolbar		{
+							@include background-gradient-horizontal($toolbarBackgroundStartColor, $toolbarBackgroundEndColor);
 							display: block;
-			.mul-toolbar-adjust	{
+			.evo-toolbar-adjust	{
 								margin: 0;
 								width: 100%;
-				.mul-logo			{
+				.evo-logo			{
 									@include clearfix;
 									display: block;
-					.mul-logo-col-2		{margin-left: 0;}
-					.mul-logo-col-3		{
+					.evo-logo-col-2		{margin-left: 0;}
+					.evo-logo-col-3		{
 										float: right;
 										padding-top: 12px;
-										padding-right: $gridSiteGutterPadding;
 										}
 									}
-				.mul-navbar-col-1	{padding-left: $gridSiteGutterPadding;}
-				.mul-navbar-col-2	{display: none;}
+				.evo-navbar-col-2	{
+									background-color: $toolbarMobileNavbarBackgroundColor;
+									display: none;
+									}
 								}
 							}
 	// TOOLBAR - ENDS	
@@ -47,24 +49,25 @@
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		@media #{$medium-up} {
 
-			.mul-navbar			{
+			.evo-navbar			{
+								@include background-gradient($navbarBackgroundGradientStartColor, $navbarBackgroundGradientEndColor);
 								@include clearfix;
 								border-bottom-width: $navbarBorderBottomWidth;
 								border-bottom-style: $navbarBorderBottomStyle;
 								display: block;
 								width: 100%;
-				.mul-navbar-adjust	{
+								border-bottom-color: $navbarBorderColor;
+				.evo-navbar-adjust	{
 									@include clearfix;
 									max-width: 980px;
 									margin: 0 auto;
-									padding: 0 $gridSiteGutterPadding;
-					.mul-navbar-col-1	{
-						.mul-nav-menus		{display: block;}
+					.evo-navbar-col-1	{
+						.evo-nav-menus		{display: block;}
 										}
 
 				// GENERAL NAVBAR - BEGINS
@@ -79,32 +82,39 @@
 													display: block;
 													padding: 0;
 													text-decoration: none;
-									.mul-user-identifier-support-text
+									&:hover				{color: $navbarFontHoverColor;}
+									.evo-user-identifier-support-text
 														{display: none;}
 													}
 												}
 						// HEADER ICON OVERRIDES - BEGINS
-							.mul-header-icon	{
+							.evo-header-icon	{
 								a:last-child		{
-									[class*="mul-icon"]	{margin-right: 0;}
+									[class*="evo-icon"]	{margin-right: 0;}
 													}
-									a				{
+								a					{
 													padding: 0;
-										[class*="mul-icon"]
+									[class*="evo-icon"]
 														{margin-right: 4px;}
-										&:hover			{@include background-gradient($transparent, $transparent);}
+										&:hover			{
+														@include background-gradient($transparent, $transparent);
+											[class*="evo-icon"]
+															{color: $headerIconHoverFontColor;}
+														}
 													}
 												}
 						// HEADER ICON OVERRIDES - BEGINS
 											}
 					// MENU OVERRIDES - BEGINS
-						.mul-nav-menus		{
+						.evo-nav-menus		{
 							li					{
 								ul					{
+													background-color: $subMenuBackgroundColor;
 									li					{
+														border-top-color: $subMenuBorderTopColor;
 										a					{
 															@include border-radius(0);
-															font-family: $fontRegularFamily;
+															font-family: $evo-font-regular-family;
 															}
 										&:last-child		{
 											a					{@include border-radius(0 0 4px 4px);}
@@ -115,12 +125,12 @@
 											}
 					// MENU OVERRIDES - ENDS
 
-						.mul-navbar-col-2	{
-							.mul-menu-ctn		{float: right;}
-							.mul-navbar-no-pipe-left
+						.evo-navbar-col-2	{
+							.evo-menu-ctn		{float: right;}
+							.evo-navbar-no-pipe-left
 												{border-left: 0;}
 											}
-						.mul-navbar-message	{
+						.evo-navbar-message	{
 											float: right;
 											margin: 0;
 							li					{
@@ -131,20 +141,21 @@
 													@include text-overflow;
 													border-right-style: $navbarMessageBorderRightStyle;
 													border-right-width: $navbarMessageBorderRightWidth;
+													border-right-color: $navbarMessageBorderRightColor;
 													display: block;
-													font-family: $navbarMessageFontFamily;
+													font-family: $evo-font-medium-family;
 													padding: $navbarMessageInnerPadding;
 													width: $navbarMessageWidth;
 													}
 												}
 											}
-						.mul-navbar-message-noline
+						.evo-navbar-message-noline
 											{
 							li					{
 								span				{border-right: 0;}
 												}
 											}
-						.mul-navbar-message-nopadding
+						.evo-navbar-message-nopadding
 											{
 							li					{
 								span				{padding-right: 0;}
@@ -154,7 +165,7 @@
 				// GENERAL NAVBAR - ENDS
 
 				// TEXT NAVBAR - BEGINS
-					nav.mul-text-nav	{
+					nav.evo-text-nav	{
 						ul					{
 							li					{
 												padding: 9px 0;
@@ -162,6 +173,7 @@
 								a					{
 													border-left-style: dotted;
 													border-left-width: 1px;
+													border-left-color: $textNavbarBorderLeftColor;
 													padding: 2px 10px;
 									&:hover				{background-color: $transparent;}
 													}
@@ -169,36 +181,39 @@
 									li					{
 									// HOVER EFFECT FOR SUB-MENU - BEGINS
 										a					{
-											&:hover				{@include transition(background-color 0.3s ease-in-out);}
+											&:hover				{
+																@include transition(background-color 0.3s ease-in-out);
+																background-color: $textNavbarSubMenuHoverBackgroundColor;
+																}
 															}
 									// HOVER EFFECT FOR SUB-MENU - ENDS
 														}
 													}	
-								.mul-navbar-item-active	{font-family: $fontSemiBoldFamily;}
+								.evo-navbar-item-active	{font-family: $evo-font-medium-family;}
 												}
 											}
 
 					// ICON STYLES OVERRIDES - BEGIN
-						li.mul-header-icon	{
+						li.evo-header-icon	{
 											border: 0 !important;
 											padding: 0;
 											margin: 7px 0;
 								a				{
 												border: 0 !important;
 												padding: 0;
-									[class*="mul-icon"]
+									[class*="evo-icon"]
 													{margin-right: 4px;}
 												}
 							&:last-child		{
 								a					{
-									[class*="mul-icon"]	{margin-right: 0;}
+									[class*="evo-icon"]	{margin-right: 0;}
 													}
 												}
 											}
 					// ICON STYLES OVERRIDES - END
 
 					// MENU OVERRIDES - BEGINS
-						.mul-nav-menus		{
+						.evo-nav-menus		{
 							li					{
 								ul					{
 									li					{
@@ -216,7 +231,7 @@
 				// TEXT NAVBAR - ENDS
 
 				// TABBED NAVBAR - BEGINS
-					nav.mul-tabbed-nav	{
+					nav.evo-tabbed-nav	{
 						ul					{
 											@include clearfix;
 											margin: 0;
@@ -224,13 +239,16 @@
 							li					{
 												border-left-width: 1px;
 												border-left-style: solid;
+												border-left-color: $tabbedNavbarBorderLeftColor;
 												margin: 0;
 								a					{
 													border-left-width: 1px;
 													border-left-style: solid;
+													border-left-color: $tabbedNavbarHrefBorderLeftColor;
 													display: block;
 													font-size: 14px;
-													font-family: $fontSemiBoldFamily;
+													font-family: $evo-font-medium-family;
+									&:hover				{@include background-gradient($tabbedNavbarActiveBackgroundStartColor, $tabbedNavbarActiveBackgroundEndColor);}
 													}
 									ul				{
 										li				{
@@ -242,14 +260,18 @@
 															}
 														}
 													}
+								.evo-navbar-item-active
+													{@include background-gradient($tabbedNavbarActiveBackgroundStartColor, $tabbedNavbarActiveBackgroundEndColor);}
 								&:last-child		{
 													border-right-width: 1px;
 													border-right-style: solid;
+													border-right-color: $tabbedNavbarHrefBorderLeftColor;
 									a					{
 														border-right-width: 1px;
 														border-right-style: solid;
+														border-right-color: $tabbedNavbarBorderLeftColor;
 														}
-									&.mul-navbar-message{
+									&.evo-navbar-message{
 										span				{
 															border-right: 0;
 															padding-right: 0;
@@ -259,7 +281,7 @@
 												}
 											}
 					// ICON-MENU STYLES OVERRIDES - BEGIN
-						.mul-nav-menus		{
+						.evo-nav-menus		{
 							li					{
 								a					{padding: 12px 10px 11px 10px;}
 								ul					{
@@ -272,7 +294,7 @@
 														}
 													}
 												}
-							li.mul-header-icon	{
+							li.evo-header-icon	{
 												border-left: 0;
 												border-right: 0;
 												padding: 0;
@@ -281,13 +303,13 @@
 													border-left: 0;
 													border-right: 0;
 													padding: 0;
-										[class*="mul-icon"]
+										[class*="evo-icon"]
 														{margin-right: 4px;}
 										&:hover			{@include background-gradient($transparent, $transparent);}
 													}
 								&:last-child		{
 									a					{
-										[class*="mul-icon"]	{margin-right: 0;}
+										[class*="evo-icon"]	{margin-right: 0;}
 														}
 													}
 												}
@@ -299,32 +321,45 @@
 								}
 
 		// TOOLBAR - BEGINS
-			.mul-toolbar		{
+			.evo-toolbar		{
+								@include background-gradient-horizontal($toolbarBackgroundStartColor, $toolbarBackgroundEndColor);
 								border-bottom: 0;
-				.mul-toolbar-adjust
+				.evo-toolbar-adjust
 									{
 									padding: 0 5px;
 									margin: 0;
 									max-width: 100%;
 									margin-bottom: 1px;
-					.mul-logo			{
-						.mul-logo-col-2		{
+					.evo-logo			{
+						.evo-logo-col-2		{
 											margin-top: 4px;
 											margin-left: 0;
 							a					{line-height: 32px;}
 											}
-						.mul-logo-col-3		{display: none;}
+						.evo-logo-col-3		{display: none;}
 										}
-					.mul-navbar-col-1	{padding-left: 0;}			
-					.mul-navbar-col-2	{
+					.evo-navbar-col-1	{padding-left: 0;}			
+					.evo-navbar-col-2	{
 										display: block;
 										background-color: $transparent;
 										}
 
 				// TEXT NAVBAR - BEGINS
-					nav.mul-text-nav	{
+					nav.evo-text-nav	{
 						ul					{
 							li					{
+								a					{
+													color: $toolbarLinkColor;
+									&:hover				{color: $toolbarLinkHoverColor;}
+													}
+								ul					{
+									li					{
+										a					{
+															color: $menuFontColor;
+											&:hover				{color: $menuHoverFontColor;}
+															}
+														}
+													}
 								&:first-child		{
 									a					{border-left: 0;}
 													}
@@ -338,12 +373,16 @@
 		// TOOLBAR - ENDS
 
 		// TOOLBAR FIXED - BEGINS
-			.mul-toolbar-fixed	{
+			.evo-toolbar-fixed	{
 								position: fixed;
 								top: 0;
 								left: 0;
-								z-index: $zindexToolbar;
+								z-index: $evo-zindex-toolbar;
 								}
+
+			// This class is used when the user starts to scroll, js will add this class to the navbar to create a drop shadow.
+			.evo-toolbar-fixed-shadow
+								{@include box-shadow(0, 0, 15px, $toolbarDropShadowColor);}
 		// TOOLBAR FIXED - ENDS
 
 		}

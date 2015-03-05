@@ -1,12 +1,79 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Tabs Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Tabs Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+
+/* TODO: TABS.SCSS - come back and change the background color options and even color options to use the entire color palette with a data attribute */
+// Tabs variables
+$evo-margin-left: rem-calc(4) !default;
+$evo-margin-left-first-child: 0 !default;
+$evo-tabs-border-radius: $global-radius !default;
+$evo-tabs-bg-color: $gray-light !default;
+$evo-tabs-font-size: 80% !default;
+$evo-tabs-padding: rem-calc(3) rem-calc(10) !default;
+$evo-tabs-hover-bg-color: $gray-mid !default;
+$evo-tabs-border-size: 1px !default;
+$evo-tabs-border-style: solid !default;
+$evo-tabs-border-bottom: 0 !default;
+$evo-tabs-active-bg-color: $white !default;
+
+// Tabs panel variables
+$evo-tabs-panel-padding: $evo-base-padding !default;
+$evo-tabs-panel-border-size: 1px !default;
+$evo-tabs-panel-border-style: solid !default;
+$evo-tabs-panel-bg-color: $white !default;
+
 
 @if $use-tabs == true{
 
-	.mul-tabs.ui-tabs										{
+	.evo-tabs			{
+		// TAB STYLES
+		dd					{
+							margin-left: $evo-margin-left;
+			&:first-child		{margin-left: $evo-margin-left-first-child;}
+			a					{
+								@include border-radius(rem-calc($evo-tabs-border-radius) rem-calc($evo-tabs-border-radius) 0 0);
+								background-color: $evo-tabs-bg-color;
+								border: $evo-tabs-border-size $evo-tabs-border-style $tabsBorderColor;
+								border-bottom: $evo-tabs-border-bottom;
+								color: $tabsFontColor;
+								font-size: $evo-tabs-font-size;
+								padding: $evo-tabs-padding;
+								position: relative;
+								text-decoration: none;
+				&:hover				{background-color: $evo-tabs-hover-bg-color;}
+								}
+							}
+		// ACTIVE TAB STYLES
+		dd.active			{
+			a					{
+								background-color: $evo-tabs-active-bg-color;
+								top: 2px;
+								margin-top: -1px;
+								}
+							}
+						}
+
+	.evo-tabs-content	{
+		.content			{
+							@include border-radius(0 $evo-tabs-border-radius $evo-tabs-border-radius $evo-tabs-border-radius);
+							padding: $evo-tabs-panel-padding $evo-tabs-panel-padding 0 $evo-tabs-panel-padding;
+							border: $evo-tabs-panel-border-size $evo-tabs-panel-border-style $tabsPanelBorderColor;
+							background-color: $evo-tabs-panel-bg-color;
+							}
+						}
+
+
+
+
+
+	// OLD TABS USING JQUERY UI
+	.evo-tabs.ui-tabs										{
 															position:relative; // position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed")
 															margin-bottom:$tabsSetMarginBottom;
 		.ui-tabs-nav											{
@@ -14,7 +81,7 @@
 																padding:0;
 																height:$tabsNavHeight;
 			.ui-state-default										{
-																	@include border-radius($tabsBorderRadius $tabsBorderRadius 0 0);
+																	@include border-radius($global-radius $global-radius 0 0);
 																	@include background-gradient($tabsBackgroundStartColor,$tabsBackgroundEndColor);
 																	list-style:none;
 																	float:left;
@@ -67,9 +134,8 @@
 					&:active												{background: transparent;}
 					&:hover													{color: $tabsPagingNavHoverColor;}
 					&:before												{
-																			font-family: $mulIconFontStack;
-																			font-size: $baseFontSize;
-																			line-height: $baseLineHeight;
+																			font-family: $evo-icon-font-stack;
+																			font-size: 1rem;
 																			}
 																		}
 																	}
@@ -101,7 +167,7 @@
 																	}
 																}
 		.ui-tabs-panel											{
-																@include border-radius(0 $tabsBorderRadius $tabsBorderRadius $tabsBorderRadius);
+																@include border-radius(0 $global-radius $global-radius $global-radius);
 																padding:$tabsPanelPadding $tabsPanelPadding 0 $tabsPanelPadding;
 																border:$tabsPanelBorderSize $tabsPanelBorderStyle $tabsPanelBorderColor;
 																background-color:$tabsPanelBackgroundColor;
@@ -109,45 +175,34 @@
 		.ui-tabs-hide											{display:none;}
 															}
 
-	// TABS IE9 FIXES
-	.ie9													{
-		.mul-tabs.ui-tabs										{
-			.ui-tabs-nav											{
-				.ui-state-default										{border-radius:$baseBorderRadiusIE;}
-																	}
-			.ui-tabs-panel											{border-radius:$baseBorderRadiusIE;}
-																}
-															}
-
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		@media #{$medium-up} {
 
-			.mul-tabs.ui-tabs								{
+			.evo-tabs.ui-tabs								{
 				.ui-tabs-nav									{
 																height:$tabsNavHeightLargeBreakpoint;
 					.ui-state-default								{
 																	height:$tabsHeightLargeBreakpoint;
 						a												{
-																		font-size:$tabsFontSizeLargeBreakpoint;
-																		line-height:$tabsLineHeightLargeBreakpoint;
+																		font-size:$tabsFontSize;
+																		line-height:$tabsLineHeight;
 																		}
 																	}
 					.ui-state-active								{height:$tabsActiveHeightLargeBreakpoint;}
 																}
-				.ui-tabs-panel									{@include border-radius(0 $tabsBorderRadius $tabsBorderRadius $tabsBorderRadius);}
+				.ui-tabs-panel									{@include border-radius(0 $global-radius $global-radius $global-radius);}
 															}
 
-			// TABS IE8+9 FIXES
-			.ie8,
+			// TABS IE9 FIXES
 			.ie9											{
-				.mul-tabs.ui-tabs								{
+				.evo-tabs.ui-tabs								{
 					.ui-tabs-nav									{
 						.ui-state-default								{
-							a												{line-height: ($tabsLineHeightLargeBreakpoint - 4)}
+							a												{line-height: ($tabsLineHeight - 4)}
 																		}
 																	}
 																}
@@ -156,10 +211,10 @@
 			// TABS FIREFOX (3.5+) FIXES
 			body:not(:-moz-handler-blocked) 				{
 
-				.mul-tabs.ui-tabs								{
+				.evo-tabs.ui-tabs								{
 					.ui-tabs-nav									{
 						.ui-state-default								{
-							a												{line-height: ($tabsLineHeightLargeBreakpoint - 4)}
+							a												{line-height: ($tabsLineHeight - 4)}
 																		}
 																	}
 																}

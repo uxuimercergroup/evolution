@@ -1,30 +1,37 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Base Page Header Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Base Page Header Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-header == true{
 
 // ICON STYLES - BEGINS
-	.mul-header-icon	{
+	.evo-header-icon	{
 		a					{
-			[class*="mul-icon"]	{
+			[class*="evo-icon"]	{
 								@include border-radius($headerIconRadius);
 								cursor: pointer;
 								padding: $headerIconPadding;
 								min-width: $headerIconMinWidth;
+								background-color: $headerIconBackgroundColor;
+								color: $headerIconFontColor;
+				&:hover				{
+									background-color: $headerIconHoverBackgroundColor;
+									color: $headerIconHoverFontColor;
+									}
 								}
 							}
 						}
 // ICON STYLES - ENDS
 
 // MAIN LOGO CONTAINER - BEGINS
-	.mul-logo			{
-		.mul-logo-col-2		{
+	.evo-logo			{
+		.evo-logo-col-2		{
 			a					{
 								@include href-link($mastheadLogoLinkColor, none);
 								@include text-overflow;
+								font-family: $evo-font-medium-stack;
 								display: block;
 								font-weight: $mastheadLogoFontWeight;
 								font-size: $mastheadLogoFontSize;
@@ -32,22 +39,22 @@
 								white-space: nowrap;
 								width: auto;
 								}
-				span			{font-family: $fontThinStack;}
+				span			{font-family: $evo-font-regular-stack;}
 							}
 						}
 // MAIN LOGO CONTAINER - ENDS
 
-	.mul-header			{
+	.evo-header			{
 						@include clearfix;
 						min-height: 20px;
 						max-width: 100% !important;
 						margin: 0;
 
-		.mul-header-adjust	{
+		.evo-header-adjust	{
 							@include clearfix;
 
 		// USER IDENTIFIER CONTAINER - BEGINS
-			.mul-user-identifier-ctn
+			.evo-user-identifier-ctn
 								{
 								display: none;
 								position: relative;
@@ -55,61 +62,60 @@
 		// USER IDENTIFIER CONTAINER - ENDS
 
 		// MASTHEAD - BEGINS
-			.mul-masthead		{
+			.evo-masthead		{
+								@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
 								@include clearfix;
 
 			// MASTHEAD ADJUST - BEGINS
-				.mul-masthead-adjust
+				.evo-masthead-adjust
 									{
 									@include clearfix;
-					.mul-logo-col-1,
-					.mul-logo-col-2,
-					.mul-logo-col-3		{
+					.evo-logo-col-1,
+					.evo-logo-col-2,
+					.evo-logo-col-3		{
 										float: left;
 										margin-left: 0;
 
 					// ICON STYLES OVERRIDES - BEGIN
-						li.mul-header-icon	{
+						li.evo-header-icon	{
 											border-bottom: 0;
 											float: left;
 											width: auto;
 								a				{
 												border: 0 !important;
 												padding: 0;
-									[class*="mul-icon"]
+									[class*="evo-icon"]
 													{margin-right: 4px;}
 												}
 							&:last-child		{
 								a					{
-									[class*="mul-icon"]	{margin-right: 0;}
+									[class*="evo-icon"]	{margin-right: 0;}
 													}
 												}
 											}
 					// ICON STYLES OVERRIDES - END
 
 										}
-					.mul-logo-col-1		{display: none;}
-					.mul-logo-col-2		{
-										padding-left: $gridSiteGutterPadding;
-						a					{font-size: ($hdrH1FontSize - 10);}
+					.evo-logo-col-1		{display: none;}
+					.evo-logo-col-2		{
+						a					{font-size: rem-calc(24);}
 										}
 
-					.mul-logo-col-3		{
+					.evo-logo-col-3		{
 										float: right;
 										padding-top: 12px;
-										padding-right: $gridSiteGutterPadding;
 						ul					{@include clearfix;}
 										}
 
 				// PRIMARY & SECONDARY LOGO - BEGINS
-					.mul-primary-logo,
-					.mul-secondary-logo	{
+					.evo-primary-logo,
+					.evo-secondary-logo	{
 						img					{
 											position: relative;
 											top: 14px;
 											}
 										}
-					.mul-secondary-logo	{
+					.evo-secondary-logo	{
 										text-align: right;
 						img					{top: 17px;}
 										}
@@ -127,13 +133,13 @@
 
 //=== MEDIA QUERIES =========================================================================
 
-// Portrait iPad, portrait tablets, Low-resolution laptops and desktops
-@if $use-medium-mediaquery == true {
-	
-	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+// MEDIUM MEDIA QUERY RANGE - 641px - 1024px
+@if $use-medium-only-mediaquery == true {
+		
+	@media #{$medium-only} {
 		
 		// USER IDENTIFIER CONTAINER - BEGINS
-			.mul-user-identifier-ctn
+			.evo-user-identifier-ctn
 						{right: -10px;}
 		// USER IDENTIFIER CONTAINER - ENDS
 
@@ -141,13 +147,13 @@
 
 }// endif
 
-// Landscape iPad, laptops and desktops
-@if $use-large-mediaquery == true {
-	
-	@include media-query(screen, min, $largeMediaQueryBreakpointMin, "") {
+// LARGE MEDIA QUERY RANGE - 1025px - 1440px
+@if $use-large-only-mediaquery == true {
+		
+	@media #{$large-only} {
 		
 		// USER IDENTIFIER CONTAINER - BEGINS
-			.mul-user-identifier-ctn
+			.evo-user-identifier-ctn
 						{right: 0;}
 		// USER IDENTIFIER CONTAINER - ENDS
 
@@ -155,13 +161,15 @@
 
 }// endif
 
-// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
-	
-	@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+@if $use-medium-up-mediaquery == true {
+		
+	@media #{$medium-up} {
+
 		// USER IDENTIFIER CONTAINER - BEGINS
-			.mul-user-identifier-ctn
+			.evo-user-identifier-ctn
 						{
+						@include background-gradient($userIdentifierBackgroundStartColor,$userIdentifierBackgroundEndColor);
 						@include clearfix;
 						height: $mastheadContentHeight;
 						cursor: pointer;
@@ -171,11 +179,14 @@
 					a			{
 								padding: 0;
 						.sub-arrow	{display: none;}
-						.mul-user-identifier-ctn-indicator,
-						.mul-user-identifier-ctn-user-info,
-						.mul-user-identifier-ctn-avatar
-									{padding-top: 10px;}
-						.mul-user-identifier-ctn-user-info
+						.evo-user-identifier-ctn-indicator,
+						.evo-user-identifier-ctn-user-info,
+						.evo-user-identifier-ctn-avatar
+									{
+									padding-top: 10px;
+									color: $userIdentifierFontColor;
+									}
+						.evo-user-identifier-ctn-user-info
 									{
 							span		{
 										@include text-overflow;
@@ -186,26 +197,31 @@
 								}
 
 				// SUB-MENU - BEGINS
-					.mul-user-identifier-menu
+					.evo-user-identifier-menu
 								{
-								@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+								@include border-radius(0 0 $global-radius $global-radius);
 								@include box-shadow(0, 2px, 2px, $userIdentifierMenuShadowColor);
 								border: 0;
 								min-width: 100% !important;
 								max-width: 100% !important;
 								top: 52px !important;
+								background-color: $userIdentifierBackgroundEndColor;
 						li			{
 									border: 0;
 							a			{
+										@include href-link($userIdentifierMenuTextColor, none);
 										font-size: $userIdentifierMenuFontSize;
 										display: block;
 										padding: $userIdentifierMenuPadding;
-								&:hover		{@include transition(background-color 0.3s ease-in-out);}
+								&:hover		{
+											@include transition(background-color 0.3s ease-in-out);
+											background-color: $userIdentifierMenuHoverColor;
+											}
 										}
 							&:last-child
 										{
 								a			{
-									&:hover		{@include border-radius(0 0 $baseBorderRadius $baseBorderRadius);}
+									&:hover		{@include border-radius(0 0 $global-radius $global-radius);}
 											}
 										}
 									}
@@ -216,32 +232,30 @@
 						}
 		// USER IDENTIFIER CONTAINER - ENDS
 
-		.mul-header		{
-			.mul-toolbar-header-adjust
+		.evo-header		{
+			.evo-toolbar-header-adjust
 							{margin-bottom: 40px;}
 						}
 
-		.mul-header		{
-			.mul-header-adjust
+		.evo-header		{
+			.evo-header-adjust
 							{
 
 			// USER IDENTIFIER CONTAINER - BEGINS
-				.mul-user-identifier-ctn
+				.evo-user-identifier-ctn
 								{display: block;}
 			// USER IDENTIFIER CONTAINER - ENDS
 
 			// MASTHEAD - BEGINS
-				.mul-masthead	{
-					.mul-masthead-adjust
+				.evo-masthead	{
+					.evo-masthead-adjust
 									{
-									padding: 0 $gridSiteGutterPadding;
 									position: relative;
-						.mul-logo-col-1	{
+						.evo-logo-col-1	{
 										display: inline-block;
 										margin-top: 2px;
-										padding-right: $gridSiteGutterPadding;
 										}
-						.mul-logo-col-2	{
+						.evo-logo-col-2	{
 										margin-left: 0;
 										margin-right: 8px;
 										padding-left: 0;
@@ -249,7 +263,7 @@
 										}
 
 					// MOBILE NAVBAR CONTAINER - BEGINS
-						.mul-mb-navbar-ctn
+						.evo-mb-navbar-ctn
 										{display: none;}
 					// MOBILE NAVBAR CONTAINER - ENDS
 

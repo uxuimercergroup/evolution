@@ -1,0 +1,96 @@
+/*------------------------------------------------------------------------------------------
+Mercer Evolution - Employee Portal Family - Site CSS
+DATE - January 21, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+-------------------------------------------------------------------------------------------*/
+
+// ==========================================================================================
+// CORE SASS IMPORTS
+// ==========================================================================================
+
+@import	"../core/global/color_variables",
+		"../core/foundation/foundation/settings",
+		"../core/global/variables",
+		"../core/global/functions",
+		"../core/global/mixins";
+
+// ==========================================================================================
+// SITE IMPORTS
+// ==========================================================================================
+
+@import	"../partials/ep/global/site_settings",
+		"../partials/ep/global/site_variables",
+		"../partials/ep/global/site_functions",
+		"../partials/ep/base/site_icons",
+		"../partials/ep/base/type",
+		"../partials/ep/base/menu_bar",
+		"../partials/ep/base/title_bar";
+
+// ==========================================================================================
+// SITE COMPONENT IMPORTS
+// ==========================================================================================
+
+@import	"../partials/ep/objects/conversational_form",
+		"../partials/ep/objects/showcase_panel",
+		"../partials/ep/objects/item_selection_panel",
+		"../partials/ep/objects/pricing_table",
+		"../partials/ep/objects/item_highlight_ctn",
+		"../partials/ep/objects/category_hdr_ctn",
+		"../partials/ep/objects/add_remove_plan_component",
+		"../partials/ep/objects/worksheet_form",
+		"../partials/ep/objects/slider_contributions",
+		"../partials/ep/objects/reveal_modal",
+		"../partials/ep/objects/login_template",
+		"../partials/ep/objects/stream";
+
+/*=== WEBSITE STYLES ======================================================================*/
+
+/*--- SITE GLOBAL -------------------------------------------------------------------------*/
+
+// FIXES FLASH OF UNSTYLED CONTENT BUG - WHERE PAGE LOADS FASTER THAN JS AND MODERNIZR
+// HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
+html.evo-mod-js							{display:none;}
+
+/*--- SITE SPECIFIC -----------------------------------------------------------------------*/
+.toc									{
+										margin-bottom: rem-calc(60);
+										}
+
+.section								{
+										margin-bottom: rem-calc(60);
+	.evo-hdr-rule							{
+											margin-bottom: rem-calc(30);
+											padding-right: rem-calc(20);
+		[class*="evo-icon"]						{
+												display: block;
+												height: rem-calc(26);
+												width: rem-calc(30);
+												right: rem-calc(-20);
+			&:before								{
+													position: relative;
+													top: rem-calc(5);
+													left: rem-calc(2);
+													}
+												}
+											}
+										}
+
+/*--- COLOR PALETTE -----------------------------------------------------------------------*/
+
+// COLOR PALETTE SWATCH BOX
+.color-block
+										{
+										height: rem-calc(50);
+										text-align: center;
+										color: $white;
+										padding-top: rem-calc(15);
+										text-shadow: rem-calc(1) rem-calc(1) rem-calc(1) $gray-darkest;
+										}
+
+/*=== MEDIA QUERIES =========================================================================*/
+@import	"../partials/ep/global/responsive_small",
+		"../partials/ep/global/responsive_medium",
+		"../partials/ep/global/responsive_large",
+		"../partials/ep/global/responsive_xlarge",
+		"../partials/ep/global/responsive_xxlarge"
+		;

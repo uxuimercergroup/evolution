@@ -1,0 +1,26 @@
+/*------------------------------------------------------------------------------------------
+Mercer Evolution - Employee Portal Family - Reveal Modal Partial
+DATE - February, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+-------------------------------------------------------------------------------------------*/
+
+//
+//@variables
+//
+
+
+.evo-reveal-modal				{
+	.evo-reveal-modal-hdr			{
+									margin: 0 rem-calc(26) rem-calc(20) 0;
+									}
+								}
+
+
+// SMALL MEDIA QUERY RANGE - 0px - 640px
+@media #{$small-only} {
+
+	.evo-reveal-modal			{
+								@include border-radius(0);
+								}
+
+}

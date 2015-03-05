@@ -1,17 +1,17 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Datepicker Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Datepicker Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-datepicker == true{
 
 	// DATEPICKER
 	.ui-datepicker		{
-						@include border-radius($datepickerBorderRadius);
+						@include border-radius($global-radius);
 						@include box-shadow(0, 0, 5px, $datepickerShadowColor);
 						width: 100%;
-						z-index: $zindexDatepicker;
+						z-index: $evo-zindex-datepicker;
 						max-width: 268px;
 						margin-top: $datepickerMarginTop;
 						padding: 5px 4px;
@@ -23,7 +23,7 @@
 		table				{
 							width: 100%;
 							border-collapse:  collapse;
-							font-size: $datepickerFontSize;
+							font-size: 1rem;
 							margin: 0;
 			th					{
 								background-color: $datepickerBackgroundColor;
@@ -49,9 +49,9 @@
 		.ui-datepicker-header
 							{
 							@include background-gradient($datepickerHdrBackgroundStartColor,$datepickerHdrBackgroundEndColor);
-							@include border-radius($datepickerBorderRadius $datepickerBorderRadius 0 0);
+							@include border-radius($global-radius $global-radius 0 0);
 							padding: $datepickerHdrPaddingTopBottom 0;
-							font-size: $datepickerHdrFontSize;
+							font-size: 1rem;
 							position: relative;
 			.ui-icon			{
 								text-indent: -99999px;
@@ -72,7 +72,7 @@
 									{display: none;}
 				&:hover				{text-decoration: none;}
 				&:before			{
-									font-family: $mulIconFontStack;
+									font-family: $evo-icon-font-stack;
 									color: $datepickerHdrNavIconColor;
 									}
 								}
@@ -95,11 +95,11 @@
 								margin:  0 2.3em;
 								line-height:  1.8em;
 								text-align:  center;
-								font-family:  $fontSemiBoldStack;
+								font-family:  $evo-font-medium-stack;
 								color: $datepickerHdrFontColor;
 				select				{
 									float: left;
-									font-size: $datepickerHdrSelectMenuFontSize;
+									font-size: 1rem;
 									padding: 0;
 									margin: 2px 0 3px 0;
 									}
@@ -122,7 +122,7 @@
 								{
 				.ui-state-active	{
 									background-color: $datepickerCurrentDayBackgroundColor;
-									font-family:  $fontSemiBoldStack;
+									font-family:  $evo-font-medium-stack;
 									color: $datepickerCurrentDayFontColor;
 									}
 								}
@@ -133,7 +133,7 @@
 				.ui-state-highlight	{
 									background-color: $datepickerTodayBackgroundColor;
 									color: $datepickerTodayFontColor;
-									font-family:  $fontSemiBoldStack;
+									font-family:  $evo-font-medium-stack;
 									}
 								}
 
@@ -158,7 +158,7 @@
 							}
 
 		// DATEPICKER MESSAGE AREA
-		.mul-datepicker-message
+		.evo-datepicker-message
 							{
 							clear: left;
 							margin-bottom: -2px;
@@ -166,7 +166,6 @@
 								display: inline-block;
 								position:  relative;
 								top:  -2px;
-								font-family:  $baseFontFamily;
 								font-size:  $datepickerMessageFontSize;
 								line-height:  $datepickerMessageLineHeight;
 								color:  $datepickerMessageFontColor;
@@ -245,16 +244,16 @@
 						top: $datepickerIconPositionTop;
 						margin-left: $datepickerIconPositionLeft;
 						float: left;
-						font-size: $iconFontSize;
-						width: $iconFontSize;
-						height: $iconFontSize;
+						font-size: 1rem;
+						width: 1rem;
+						height: 1rem;
 						padding: 0;
 						border: 0;
 						color: transparent;
 						background-color: transparent;
 						outline: 0;
 		&:before			{
-							font-family: $mulIconFontStack;
+							font-family: $evo-icon-font-stack;
 							content: "\e62a";
 							color: $datepickerIconColor;
 							position: relative;
@@ -264,18 +263,17 @@
 						}
 
 	// DATEPICKER CONTAINER
-	.mul-datepicker-ctn	{
+	.evo-datepicker-ctn	{
 		input				{
 							width: 100%;
 							min-width: $datepickerMinWidth;
 							float: left !important;
-							padding: $baseInputPadding !important;
 							}
 						}
 
 	// DATEPICKER RANGE
-	.mul-form-inline	{
-		.mul-datepicker-range
+	.evo-form-inline	{
+		.evo-datepicker-range
 							{
 			input				{width: 48.85%;}
 							}
@@ -290,46 +288,32 @@
 							{top: $datepickerIconPositionTop - 3;}
 						}
 
-	.ie8,
+	// DATEPICKER IE9 FIXES
 	.ie9				{
-		
+
 		// DATEPICKER ICON
 		.ui-datepicker-trigger
 							{top: $datepickerIconPositionTopIE;}
 						}
 
-	// DATEPICKER IE8 FIXES
-	.ie8				{
-
-		// DATEPICKER
-		.ui-datepicker		{border-color: $datepickerIE8BorderColor;} // This provides a border for IE8 since it can not render a box-shadow
-						}
-
-	// DATEPICKER IE9 FIXES
-	.ie9				{
-
-		// DATEPICKER
-		.ui-datepicker		{border-radius: $baseBorderRadiusIE !important;}
-						}
-
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		@media #{$medium-up} {
 
 			// DATEPICKER
 			.ui-datepicker
 						{
 
 				// DATEPICKER GLOBAL TABLE STYLES
-				table		{font-size: $datepickerFontSizeLargeBreakpoint;}
+				table		{font-size: 1rem;}
 
 				// DATEPICKER HEADER
 				.ui-datepicker-header
 							{
-							font-size: $datepickerHdrFontSizeLargeBreakpoint;
+							font-size: 1rem;
 
 					// DATEPICKER NAVIGATION
 					.ui-datepicker-prev,
@@ -343,16 +327,7 @@
 					// DATEPICKER TITLE
 					.ui-datepicker-title
 								{
-						select		{font-size: $datepickerHdrSelectMenuFontSizeLargeBreakpoint;}
-								}
-							}
-
-				// DATEPICKER MESSAGE AREA
-				.mul-datepicker-message
-							{
-					label		{
-								font-size: $datepickerMessageFontSizeLargeBreakpoint;
-								line-height: $datepickerMessageLineHeightLargeBreakpoint;
+						select		{font-size: 1rem;}
 								}
 							}
 						}

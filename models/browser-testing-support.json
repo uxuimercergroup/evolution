@@ -2,7 +2,7 @@
   "title": "Browser Testing &amp; Support",
 
   "reference-overview": 
-  	"<p class='mul-intro-text'>Evolution Library is a modern framework for modern browsers. As such, Evolution Library is intended for B Grade browsers and above. For F Grade browsers, which are explicitly unsupported and untested, elements will render differently from supported browsers.</p>",
+  	"<p class='evo-intro-text'>Evolution Library is a modern framework for modern browsers. As such, Evolution Library is intended for B Grade browsers and above. For F Grade browsers, which are explicitly unsupported and untested, elements will render differently from supported browsers.</p>",
 
 
 
@@ -46,12 +46,12 @@
 
 	"reference-browser-faq-data": [
 		{
-		"reference-browser-faq-data-question": "Why are corners no longer rounded in IE9?",
-		"reference-browser-faq-data-answer": "IE9 has trouble applying rounded corners and gradients (which are applied using an IE filter since IE9 does not understand CSS3 gradient background). Since we want the buttons for example to look like buttons we have chosen the gradient of the button over the rounded corners. So for rounded corners IE8 and IE9 should have the same display, square corners everywhere."
+		"reference-browser-faq-data-question": "Do you support IE Compatibility mode?",
+		"reference-browser-faq-data-answer": "We do not support IE Compatibility mode for any version of IE. IE Compatibility mode will make IE render as IE7 (or worse) which is not supported by Evolution. IE Compatibility mode is also not web standards compliant. Evolution supports IE9 and up, in standards mode. Lastly, through a meta tag, we tell IE to render at the highest version and standards mode available in the version of IE currently being used."
 		},
 		{
-		"reference-browser-faq-data-question": "Is Evolution Library Responsive?",
-		"reference-browser-faq-data-answer": "IE8 does not have support for media queries which are used for responsive web design but we provide a script to accomplish this in IE called respond.js.You should not worry about responsiveness with IE8 however as there are not many mobile devices that use IE8 as their browser. IE9 understands media queries and should work."
+		"reference-browser-faq-data-question": "Why are corners not rounded in IE9?",
+		"reference-browser-faq-data-answer": "IE9 has trouble applying rounded corners and gradients (which are applied using an IE filter since IE9 does not understand CSS3 gradient background). Since we want the buttons to look like buttons we have chosen the gradient of the button over the rounded corners. IE9 will have square corners everywhere."
 		}
 	]
 }

@@ -1,11 +1,11 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Accordion JS
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Accordion JS
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //--------------------------------------------------------------------------------------------------------
 
 // Define accordion defaults
-var mulAccordionDefaults = {
+var evoAccordionDefaults = {
 	active: 0,  // first accordian panel is active by default
 	animate: 200, // animation speed of accordian in milliseconds
 	collapsible: true, // Whether all the sections can be closed at once. Allows collapsing the active section.
@@ -18,11 +18,11 @@ var mulAccordionDefaults = {
 
 // Accordion function:
 // Pass data attribute value of accordion object, and any accordion options you want to add/override
-var mulAccordion = function(objectDataValue, options) {
+var evoAccordion = function(objectDataValue, options) {
 	
 	// Variable to define accordion object based on data attribute value
 	var accordionDataValue = jQuery('[data-accordion='+objectDataValue+']');
 
 	// Apply accordion to accordion object and any default or custom options
-	accordionDataValue.accordion(jQuery.extend({},mulAccordionDefaults,options));
+	accordionDataValue.accordion(jQuery.extend({},evoAccordionDefaults,options));
 };

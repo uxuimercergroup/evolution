@@ -1,7 +1,7 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Carousel JS
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Carousel JS
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //--------------------------------------------------------------------------------------------------------
 
 // Extends jQuery OwlCarousel v1.3.3
@@ -12,7 +12,7 @@
 // https://github.com/OwlFonk/OwlCarousel
 
 // Define carousel defaults
-var mulCarouselDefaults = {
+var evoCarouselDefaults = {
 	addClassActive: false, // Add "active" classes on visible items. Works with any numbers of items on screen.
 	autoHeight: true, // Add height to owl-wrapper-outer so you can use diffrent heights on slides. Use it only for one item per page setting.
 	autoPlay: true, // Change to any integrer for example autoPlay : 5000 to play every 5 seconds. If you set autoPlay: true default speed will be 5 seconds.
@@ -25,8 +25,8 @@ var mulCarouselDefaults = {
 	lazyLoad: false, // Delays loading of images. Images outside of viewport won't be loaded before user scrolls to them. Great for mobile devices to speed up page loadings. IMG need special markup class="lazyOwl" and data-src="your img path"
 	navigation: true, // Display "next" and "prev" buttons
 	navigationText: [
-		'<i class="mul-icon-arrow-left4 mul-icon-position-left" title="Previous"></i>',
-		'<i class="mul-icon-arrow-right4 mul-icon-position-right" title="Next"></i>'
+		'<i class="evo-icon-arrow-left4 evo-icon-position-left" title="Previous"></i>',
+		'<i class="evo-icon-arrow-right4 evo-icon-position-right" title="Next"></i>'
 	], // You can cusomize your own text for navigation. To get empty buttons use navigationText : false. Also HTML can be used here.
 	pagination: true, // Show pagination
 	paginationNumbers: false, // Show numbers inside pagination buttons
@@ -46,11 +46,11 @@ var mulCarouselDefaults = {
 
 // Carousel function:
 // Pass data attribute value of carousel object, and any tabs options you want to add/override
-var mulCarousel = function(objectDataValue, options) {
+var evoCarousel = function(objectDataValue, options) {
 	
 	// Variable to define carousel object based on data attribute value
 	var carouselDataValue = jQuery('[data-carousel='+objectDataValue+']');
 
 	// Apply owl carousel to carousel object and any default or custom options
-	carouselDataValue.owlCarousel(jQuery.extend({},mulCarouselDefaults,options));
+	carouselDataValue.owlCarousel(jQuery.extend({},evoCarouselDefaults,options));
 };

@@ -1,7 +1,7 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Accordion Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Accordion Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-banding-layout == true{
@@ -9,10 +9,7 @@
 											margin: 0;
 											padding: 0;
 		[class*="banding-section-"]				{
-			.mul-grid								{
-													min-height: 200px;
-													padding: 50px $gridSiteGutterPadding 60px $gridSiteGutterPadding;
-													}
+			.evo-grid								{min-height: 200px;}
 
 			@each $color-name, $color in $color-palette
 													{
@@ -24,10 +21,10 @@
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		@media #{$medium-up} {
 
 			
 

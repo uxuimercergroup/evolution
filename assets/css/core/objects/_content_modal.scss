@@ -1,12 +1,12 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Content Modal Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Content Modal Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-content-modal == true{
 
-.mul-content-modal.mul-dialog.ui-dialog
+.evo-content-modal.evo-dialog.ui-dialog
 									{
 									@include border-radius(0);
 									background-color: $contentModalBackgroundColor;
@@ -17,18 +17,12 @@
 									position: relative;
 									bottom: 0;
 									height: 100% !important;
-									
-									// If using 980 width layout
-									@if $use-grid-980 == true{width:$gridMaxWidth980 !important;}
-									
-									// If using 1200 width layout
-									@if $use-grid-1200 == true{width:$gridMaxWidth1200 !important;}
 
-	.mul-dialog-content-scrolling		{max-height: 100% !important;}
+	.evo-dialog-content-scrolling		{max-height: 100% !important;}
 
-	.mul-content-modal-ctn				{
+	.evo-content-modal-ctn				{
 										padding: 0;
-		.mul-content-modal-util-bar			{
+		.evo-content-modal-util-bar			{
 											@include background-gradient-horizontal($contentModalUtilityBarBackgroundStartColor, $contentModalUtilityBarBackgroundEndColor);
 											position: fixed;
 											top: 0;
@@ -36,7 +30,7 @@
 											height: 100%;
 			
 			// MODAL TABS NAVBAR
-			.mul-content-modal-tabs				{
+			.evo-content-modal-tabs				{
 												list-style: none;
 												margin: 0;
 												padding: 0;
@@ -68,7 +62,7 @@
 
 				// MODAL TABS NAVBAR ACTIVE
 				.ui-tabs-active,
-				.mul-content-modal-navbar-active	{
+				.evo-content-modal-navbar-active	{
 					a									{
 														background-color: $contentModalUtilityBarTabsActiveBackgroundColor;
 						&:before							{color: $contentModalUtilityBarTabsActiveIconColor;}
@@ -77,13 +71,13 @@
 													}
 
 												}
-			.mul-content-modal-tab-navbar		{top: $contentModalUtilityBarTabsPositionTop;}
-			.mul-content-modal-tab-util-bar		{bottom: $contentModalUtilityBarTabsUtilityPositionBottom;}
+			.evo-content-modal-tab-navbar		{top: $contentModalUtilityBarTabsPositionTop;}
+			.evo-content-modal-tab-util-bar		{bottom: $contentModalUtilityBarTabsUtilityPositionBottom;}
 											}
 										}
 
 	// MODAL CONTENT AREA
-	.mul-content-modal-main-content		{
+	.evo-content-modal-main-content		{
 										padding: 5px 0 5px ($contentModalUtilityBarWidth - 2);
 										}
 
@@ -93,9 +87,9 @@
 										border: 0 !important;
 		.ui-dialog-title					{display: none;}
 		.ui-dialog-titlebar-close			{
-											font-size: ($iconFontSize*2);
-											height: ($iconFontSize*2);
-											width: ($iconFontSize*2);
+											font-size: (1rem*2);
+											height: (1rem*2);
+											width: (1rem*2);
 											position: absolute;
 											top: $contentModalUtilityBarTabsCloseIconPositionTop;
 											left: $contentModalUtilityBarTabsCloseIconPositionLeft;
@@ -110,11 +104,11 @@
 	// CONTENT MODAL FIREFOX (3.5+) FIXES
 	body:not(:-moz-handler-blocked) {
 
-		.mul-content-modal.mul-dialog.ui-dialog
+		.evo-content-modal.evo-dialog.ui-dialog
 										{
 
-			.mul-content-modal-ctn			{
-				.mul-content-modal-util-bar		{position: absolute;}
+			.evo-content-modal-ctn			{
+				.evo-content-modal-util-bar		{position: absolute;}
 											}
 
 			// MODAL TITLE BAR
@@ -124,10 +118,9 @@
 										}
 									}
 
-	// CONTENT MODAL IE8+9 FIXES
-	.ie8,
+	// CONTENT MODAL IE9 FIXES
 	.ie9							{
-		.mul-content-modal.mul-dialog.ui-dialog
+		.evo-content-modal.evo-dialog.ui-dialog
 										{
 
 			// MODAL TITLE BAR

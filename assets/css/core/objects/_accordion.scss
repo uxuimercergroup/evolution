@@ -1,28 +1,28 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Accordion Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Accordion Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-accordion == true{
 
-	.mul-accordion.ui-accordion	{
-								margin-bottom: $baseMargin;
+	.evo-accordion.ui-accordion	{
+								margin-bottom: $evo-base-margin;
 								border: 1px solid $accordionBorderColor;
 								border-bottom: 0;
 		.ui-accordion-header		{
 									@include clearfix;
-									padding: 10px $basePadding 8px $basePadding;
+									padding: 10px $evo-base-padding 8px $evo-base-padding;
 									border-bottom: 1px solid $accordionBorderColor;
 									background-color: $accordionHeaderBackgroundColor;
 									color: $accordionHeaderFontColor;
 									cursor: pointer;
 			&.ui-accordion-icons		{
 				.ui-accordion-header-icon	{
-											@extend [class^="mul-icon-"];
+											@extend [class^="evo-icon-"];
 											float: right;
 											position: relative;
-											margin-left: $baseMargin;
+											margin-left: $evo-base-margin;
 											top: 1px;
 											cursor: pointer;
 											color: $accordionHeaderIconColor;
@@ -30,7 +30,7 @@
 										}
 									}
 		.ui-accordion-content		{
-									padding: $basePadding $basePadding 0 $basePadding;
+									padding: $evo-base-padding $evo-base-padding 0 $evo-base-padding;
 									border-bottom: 1px solid $accordionBorderColor;
 									background-color: $accordionContentBackgroundColor;
 									}
@@ -38,10 +38,10 @@
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		@media #{$medium-up} {
 
 			
 

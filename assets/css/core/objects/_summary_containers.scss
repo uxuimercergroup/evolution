@@ -1,80 +1,80 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Summary Containers Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Summary Containers Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-summary-containers == true{
 
 	// SUMMARY CONTAINER
-	.mul-summary-ctn						{
-											margin-bottom: $baseMargin;
+	.evo-summary-ctn						{
+											margin-bottom: $evo-base-margin;
 											width: 100%;
-		.mul-summary-ctn-row					{
+		.evo-summary-ctn-row					{
 			div										{
-													color: $baseFontColor;
+													color: $body-font-color;
 													border-color: $summaryCtnBorderColor;
 													border-top-color: $summaryCtnBorderColorTop;
 													border-width: $summaryCtnBorderSize;
 													border-style: $summaryCtnBorderStyle;
 													display: block;
-													font-size: ($hdrH1FontSize + $summaryPrimaryCtnLargeFontSizeAdjust);
+													font-size: 44px;
 													width: auto;
 													padding: $summaryCtnPadding;
 													text-align: center;
 				&:first-child							{border-top-color: $summaryCtnBorderFirstChildColorTop;}
-				a										{@include href-link($baseFontColor, none);}
-				.mul-main-text							{display: block;}
-				.mul-support-text						{
+				a										{@include href-link($body-font-color, none);}
+				.evo-main-text							{display: block;}
+				.evo-support-text						{
 														display: block;
-														font-size: ($baseFontSize - $summaryPrimaryCtnSupportFontSizeAdjust);
+														font-size: (1rem - rem-calc(3));
 														}
-				[class*="mul-icon-"]					{
-														color: $baseFontColor;
+				[class*="evo-icon-"]					{
+														color: $body-font-color;
 														font-size: $summaryPrimaryCtnIconFontSize;
 														}
 													}
 
 			// SET AN ITEM TO ALERT STATE - NEGATIVE
-			.mul-summary-ctn-alert-negative,
-			.mul-summary-ctn-alert-negative a		{
+			.evo-summary-ctn-alert-negative,
+			.evo-summary-ctn-alert-negative a		{
 													@include href-link($summaryCtnAlertNegativeFontColor, none);
 													color: $summaryCtnAlertNegativeFontColor;
-				[class*="mul-icon-"]					{color: $summaryCtnAlertNegativeFontColor;}
+				[class*="evo-icon-"]					{color: $summaryCtnAlertNegativeFontColor;}
 													}
 
 			// SET AN ITEM TO ALERT STATE - POSITIVE
-			.mul-summary-ctn-alert-positive,
-			.mul-summary-ctn-alert-positive a		{
+			.evo-summary-ctn-alert-positive,
+			.evo-summary-ctn-alert-positive a		{
 													@include href-link($summaryCtnAlertPositiveFontColor, none);
 													color: $summaryCtnAlertPositiveFontColor;
-				[class*="mul-icon-"]					{color: $summaryCtnAlertPositiveFontColor;}
+				[class*="evo-icon-"]					{color: $summaryCtnAlertPositiveFontColor;}
 													}
 												}
 											}
 
 	// SECONDARY SUMMARY CONTAINER
-	.mul-secondary-summary-ctn				{
-		.mul-summary-ctn-row					{
+	.evo-secondary-summary-ctn				{
+		.evo-summary-ctn-row					{
 			div										{
-				.mul-main-text							{font-size: ($hdrH1FontSize + $summarySecondaryCtnLargeFontSizeAdjust);}
-				.mul-support-text						{font-size: ($baseFontSize - $summarySecondaryCtnSupportFontSizeAdjust);}
-				[class*="mul-icon-"]					{font-size: $summarySecondaryCtnIconFontSize;}
+				.evo-main-text							{font-size: 36px;}
+				.evo-support-text						{font-size: (1rem - rem-calc(3));}
+				[class*="evo-icon-"]					{font-size: $summarySecondaryCtnIconFontSize;}
 													}
 												}
 											}
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
-
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
 
 			// SUMMARY CONTAINER
-			.mul-summary-ctn				{
+			.evo-summary-ctn				{
 											display: table;
-				.mul-summary-ctn-row			{
+				.evo-summary-ctn-row			{
 												display: table-row;
 					div								{
 													display: table-cell;
@@ -94,12 +94,12 @@
 													}
 
 					// SET AN ITEM TO ALERT STATE - NEGATIVE
-					.mul-summary-ctn-alert-negative	{
+					.evo-summary-ctn-alert-negative	{
 						&:hover							{background-color: $summaryCtnAlertNegativeHoverBackgroundColor;}
 													}
 
 					// SET AN ITEM TO ALERT STATE - POSITIVE
-					.mul-summary-ctn-alert-positive	{
+					.evo-summary-ctn-alert-positive	{
 						&:hover							{background-color: $summaryCtnAlertPositiveHoverBackgroundColor;}
 													}
 												}

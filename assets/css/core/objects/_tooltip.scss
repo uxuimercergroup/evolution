@@ -1,14 +1,14 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Tooltip Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Tooltip Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-tooltip == true{
 
-	// MUL Tooltip global
-	.mul-tooltip 		{
-						@include border-radius($tooltipBorderRadius);
+	// EVO Tooltip global
+	.evo-tooltip 		{
+						@include border-radius($global-radius);
 						@include box-shadow($tooltipVShadow, $tooltipHShadow, $tooltipShadowBlur, $tooltipShadowColor);
 						border:$tooltipBorderSize $tooltipBorderStyle $tooltipBorderColor;
 						background: $tooltipBackgroundColor;
@@ -17,21 +17,20 @@
 						font-size: 0;
 						line-height: 0;
 						position: absolute;
-						z-index: $zindexTooltip;
+						z-index: $evo-zindex-tooltip;
 						pointer-events: none;
 						width: auto;
 						overflow: visible;
 	
-		// Mul Tooltip content
+		// EVO Tooltip content
 		.tooltipster-content
 							{
-							font-size: $tooltipFontSize;
-							line-height: $tooltipLineHeight;
+							font-size: 1rem;
 							padding: $tooltipPaddingTopBottom $tooltipPaddingLeftRight;
 							overflow: hidden;
 							}
 
-		// MUL Tooltip arrows - global
+		// EVO Tooltip arrows - global
 		// By default, the arrow will inherit the same colors and border as what is set on the main tooltip itself.
 		.tooltipster-arrow 	{
 							display: block;
@@ -53,7 +52,7 @@
 							}
 						}
 
-	// MUL Tooltip arrows
+	// EVO Tooltip arrows
 	.tooltipster-arrow-top,
 	.tooltipster-arrow-top-right,
 	.tooltipster-arrow-top-left
@@ -170,13 +169,13 @@
 							}
 						}
 
-	// MUL Tooltip icon
-	.mul-tooltip-icon 	{
+	// EVO Tooltip icon
+	.evo-tooltip-icon 	{
 						cursor: help;
 						margin-left: 4px;
 						}
 
-	// MUL Tooltip Animations
+	// EVO Tooltip Animations
 
 	// Fade animation
 	.tooltipster-fade 	{
@@ -316,7 +315,7 @@
 						opacity: 0;
 						}
 
-	// Mul Tooltip content changing
+	// EVO Tooltip content changing
 	// CSS transition for when contenting is changing in a tooltip that is still open. The only properties that will NOT transition are: width, height, top, and left
 	.tooltipster-content-changing
 						{
@@ -328,29 +327,21 @@
 						transform: scale(1.1, 1.1);
 						}
 
-	// TOOLTIP IE9 FIXES
-	.ie9				{
-		.mul-tooltip 		{
-							border-radius:$baseBorderRadiusIE;
-							}
-						}
-
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		@media #{$medium-up} {
 
-			// MUL Tooltip global
-			.mul-tooltip
+			// EVO Tooltip global
+			.evo-tooltip
 						{
 			
-				// Mul Tooltip content
+				// EVO Tooltip content
 				.tooltipster-content
 							{
-							font-size: $tooltipFontSizeLargeBreakpoint;
-							line-height: $tooltipLineHeightLargeBreakpoint;
+							font-size: 1rem;
 							}
 						}
 

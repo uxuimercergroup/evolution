@@ -1,31 +1,31 @@
 <!-- MASTHEAD - BEGINS -->
 {% if global.type_of_navbar != 'toolbar' %}
-	<section class="mul-masthead">
-		<div class="mul-masthead-adjust">
-			<section class="col-18 first mul-logo mul-small-mediaquery-grid">
+	<section class="evo-masthead">
+		<div class="evo-masthead-adjust">
+			<section class="col-18 first evo-logo evo-small-mediaquery-grid">
 			{% if global.masthead_logo_primary == 'true' %}
-				<div class="mul-logo-col-1">
+				<div class="evo-logo-col-1">
 					{% include '/base/header/company-logo-primary' %}
 				</div>
 			{% endif %}
 
 			{% if global.masthead_company_text == 'true' %}
-				<div class="mul-logo-col-2">
+				<div class="evo-logo-col-2">
 					<a href="/index">MERCER <span>EVOLUTION</span></a>
 				</div>
 			{% endif %}
 
-				<div class="mul-logo-col-3 mul-mb-navbar-ctn">
+				<div class="evo-logo-col-3 evo-mb-navbar-ctn">
 				<!-- MOBILE MENU ICON - BEGINS -->
-					<ul class="sm mul-nav-menus mul-menu-ctn" data-menu="click">
-						<li class="mul-header-icon">
-							<a href="javascript:;" class="js-mul-header-mobile-menu-toggle" data-mul-header-mobile-menu-toggle="navbar"><i class="mul-icon-menu3"></i></a>
+					<ul class="sm evo-nav-menus evo-menu-ctn" data-menu="click">
+						<li class="evo-header-icon">
+							<a href="javascript:;" class="js-evo-header-mobile-menu-toggle" data-evo-header-mobile-menu-toggle="navbar"><i class="evo-icon-menu3"></i></a>
 						</li>
 					</ul>
 				<!-- MOBILE MENU ICON - ENDS -->
 				</div>
 			</section>
-			<section class="col-6 mul-hidden-small-mediaquery">
+			<section class="col-6 evo-hidden-small-mediaquery">
 			{% if global.masthead_identifier_or_logo == 'identifier' %}
 				{% include '/base/header/user-identifier' %}
 			{% elseif global.masthead_identifier_or_logo == 'logo' %}

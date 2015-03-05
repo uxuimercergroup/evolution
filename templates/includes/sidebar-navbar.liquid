@@ -1,7 +1,7 @@
-	<h4 class="mul-hdr-rule">{{ item.section-hdr | upcase }}</h4>
+	<h4 class="evo-hdr-rule">{{ item.section-hdr | upcase }}</h4>
 
 <!-- SECTION - BEGINS -->
-	<ul class="mul-vertical-list">
+	<ul class="evo-vertical-list">
 		{% for item in item.main-section %}
 		<li><a href="{{ item.url }}">{{ item.link-name }}</a></li>
 		{% endfor %}
@@ -12,7 +12,7 @@
 <!-- SUB-SECTION - BEGINS -->
 	{% for item in item.sub-section-group %}
 		<h5>{{ item.sub-section-hdr }}</h5>
-		<ul class="mul-vertical-list">
+		<ul class="evo-vertical-list">
 			{% for item in item.sub-section %}
 			<li><a href="{{ item.url }}">{{ item.link-name }}</a></li>
 			{% endfor %}

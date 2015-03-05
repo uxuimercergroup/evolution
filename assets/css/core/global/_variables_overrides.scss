@@ -1,0 +1,1185 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Global Variables Overrides Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+// ==========================================================================================
+// VARIABLES OVERRIDES
+// ==========================================================================================
+
+// ==========================================================================================
+// FOUNDATION OVERRIDES
+// ==========================================================================================
+
+// b. Grid
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$include-xl-html-grid-classes: true;
+$row-width: rem-calc(980);
+
+// c. Global
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// We use these to define default font stacks
+$font-family-sans-serif: relativebook, arial, Tahoma, Geneva, sans-serif;
+
+// We use these as default colors throughout
+$primary-color: $sapphire-dark;
+$secondary-color: $gray-lighter;
+$alert-color: $garnet;
+$success-color: $emerald;
+$warning-color: $citrine;
+$info-color: $sapphire;
+
+// We use these to control various global styles
+$body-font-color: $gray-dark;
+
+// We use these to make sure border radius matches unless we want it different.
+$global-radius: 3px;
+$global-rounded: 1000px;
+
+// d. Media Query Ranges
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$small-range: (0em, 40em);
+$medium-range: (40.063em, 64em);
+$large-range: (64.063em, 90em);
+$xlarge-range: (90.063em, 120em);
+$xxlarge-range: (120.063em, 99999999em);
+
+$screen: "only screen";
+
+$landscape: "#{$screen} and (orientation: landscape)";
+$portrait: "#{$screen} and (orientation: portrait)";
+
+$small-up: $screen;
+$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
+
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
+
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
+$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
+
+$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
+$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
+
+$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
+$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+
+// e. Typography
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $include-html-type-classes: $include-html-classes;
+
+// We use these to control header font styles
+$header-font-color: $gray-dark;
+$header-line-height: 1.4;
+
+// We use these to control header font sizes
+$h1-font-size: rem-calc(36);
+$h2-font-size: rem-calc(28);
+$h3-font-size: rem-calc(24);
+$h4-font-size: rem-calc(18);
+$h5-font-size: rem-calc(14);
+$h6-font-size: rem-calc(12);
+
+// We use these to control header size reduction on small screens
+$h1-font-reduction: 0;
+$h2-font-reduction: 0;
+$h3-font-reduction: 0;
+$h4-font-reduction: 0;
+$h5-font-reduction: 0;
+$h6-font-reduction: 0;
+
+// A general <small> styling
+$small-font-size: rem-calc(14);
+$small-font-color: $gray-dark;
+
+// We use these to style paragraphs
+$paragraph-line-height: 1.32;
+
+// We use these to style anchors
+$anchor-text-decoration: underline;
+$anchor-text-decoration-hover: none;
+$anchor-font-color: $sapphire-dark;
+$anchor-font-color-hover: $sapphire-dark;
+
+// We use these to style the <hr> element
+$hr-border-color: $gray-mid;
+
+// We use these to style lists
+$list-line-height: $paragraph-line-height;
+
+// We use these to style blockquotes
+$blockquote-border: 1px solid $gray-mid;
+
+// Acronym styles
+$acronym-underline: 1px dotted $black;
+
+// 05. Buttons
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// We use these to build padding for buttons.
+$button-tny: rem-calc(10);
+$button-sml: rem-calc(12);
+$button-med: rem-calc(14);
+$button-lrg: rem-calc(16);
+
+// We use these to control button text styles.
+$button-font-color: $white;
+$button-font-color-alt: $gray-dark;
+
+// We use this to set default opacity and cursor for disabled buttons.
+$button-disabled-opacity: 0.3;
+
+// 11. Forms
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// We use this to set the base for lots of form spacing and positioning styles
+$form-spacing: rem-calc(12);
+
+// We use these to style the labels in different ways
+$form-label-font-color: scale-color($black, $lightness: 5%);
+$input-font-size: rem-calc(16);
+$input-focus-bg-color: scale-color($white, $lightness: 0%);
+$input-focus-border-color: scale-color($white, $lightness: -40%);
+
+// We use these to style the fieldset border and spacing.
+$fieldset-border-style: solid;
+$fieldset-border-width: 0;
+$fieldset-border-color: transparent;
+$fieldset-padding: rem-calc(0);
+$fieldset-margin: rem-calc(0 0);
+
+// We use these to style the error states for inputs and labels
+$input-error-message-padding: rem-calc(4 0 0 0);
+$input-error-message-font-style: normal;
+$input-error-message-font-color: $garnet-dark;
+$input-error-message-bg-color: $transparent;
+$input-error-message-font-color-alt: $garnet-dark;
+
+// We use this to style the glowing effect of inputs when focused
+$glowing-effect-color: $input-focus-border-color;
+
+// Select variables
+$select-bg-color: $white;
+$select-hover-bg-color: scale-color($select-bg-color, $lightness: 0%);
+
+// 18. Off-canvas
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$tabbar-bg: $sapphire;
+$tabbar-height: rem-calc(45);
+$tabbar-line-height: $tabbar-height;
+$tabbar-color: $white;
+$tabbar-middle-padding: 0 rem-calc(10);
+
+// Off Canvas Divider Styles
+$tabbar-right-section-border: 0;
+$tabbar-left-section-border: 0;
+
+// Off Canvas Tab Bar Headers
+$tabbar-header-color: $white;
+$tabbar-header-line-height: $tabbar-height;
+$tabbar-header-margin: 0;
+
+// Off Canvas Menu Variables
+$off-canvas-width: rem-calc(272);
+$off-canvas-bg: $white;
+$off-canvas-bg-hover: $white;
+
+// Off Canvas Menu List Variables
+$off-canvas-label-padding: rem-calc(10) rem-calc(15);
+$off-canvas-label-color: $white;
+$off-canvas-label-text-transform: none;
+$off-canvas-label-font-size: rem-calc(14);
+$off-canvas-label-font-weight: normal;
+$off-canvas-label-bg: $sapphire-dark;
+$off-canvas-label-border-top: 1px solid $sapphire-dark;
+$off-canvas-link-padding: rem-calc(15, 15);
+$off-canvas-link-color: $gray-mid;
+$off-canvas-link-border-bottom: 1px solid $gray-light;
+$off-canvas-back-bg: $sapphire-mid;
+$off-canvas-back-border-top: $off-canvas-label-border-top;
+$off-canvas-back-hover-bg: $sapphire-mid;
+$off-canvas-back-hover-border-top: 1px solid $sapphire-mid;
+
+// Off Canvas Back-Link Overlay
+$off-canvas-overlay-box-shadow: -1px 0 1px rgba($gray-mid, 0.5), 1px 0 1px rgba($gray-mid, 0.5);
+$off-canvas-overlay-background: rgba($white, 0.4);
+
+// 25. Reveal
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// We use these to control the style of the reveal overlay.
+$reveal-overlay-bg: rgba($black, .45);
+
+// We use these to control the style of the modal itself.
+$reveal-modal-bg: $white;
+$reveal-position-top: rem-calc(100);
+$reveal-default-width: 100%;
+$reveal-max-width: rem-calc(500);
+$reveal-modal-padding: rem-calc(14);
+$reveal-box-shadow: 0 0 10px rgba($black,.4);
+
+// We use these to style the reveal close button
+$reveal-close-font-size: 1rem;
+$reveal-close-top: rem-calc(25);
+$reveal-close-side: rem-calc(21);
+
+// We use these to control the modal border
+$reveal-border-color: $white;
+
+// 34. Top Bar
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Background color for the top bar
+$topbar-bg-color: $sapphire;
+
+// Height and margin
+$topbar-height: rem-calc(45);
+$topbar-margin-bottom: 0;
+
+
+// ==========================================================================================
+// GLOBAL
+// ==========================================================================================
+// $evo-include-html-classes:				true;
+
+
+// GLOBAL
+// ------------------------------------------------------------------------------------------
+
+// BASE VARIABLES
+// $evo-base-margin:						14px;
+// $evo-base-padding:						14px;
+
+// Z-INDEX MASTER LIST
+// Used for a bird's eye view of components dependent on the z-axis
+// $evo-zindex-layout-login-footer-background: 9994;
+// $evo-zindex-layout-login-footer:			9995;
+// $evo-zindex-slider:						9996;
+// $evo-zindex-datepicker:					9997;
+// $evo-zindex-autocomplete:				9998;
+// $evo-zindex-tooltip:						9999;
+// $evo-zindex-toolbar:						10000;
+// $evo-zindex-menu:						10001;
+// $evo-zindex-dialog-overlay:				10002;
+// $evo-zindex-dialog-position:				10003;
+
+
+// HELPERS
+// ------------------------------------------------------------------------------------------
+
+// KEYLINES
+// $evo-keyline-right-border-right-color: 	$gray-mid;
+// $evo-keyline-left-border-left-color:		$gray-mid;
+
+// SPACER SIZES
+// $evo-spacer-size:						5px;
+// $evo-spacer-xsmall:						($evo-spacer-size*1);
+// $evo-spacer-small:						($evo-spacer-size*2);
+// $evo-spacer-medium:						($evo-spacer-size*3);
+// $evo-spacer-large:						($evo-spacer-size*4);
+// $evo-spacer-xlarge:						($evo-spacer-size*5);
+// $evo-spacer-xxlarge:						($evo-spacer-size*6);
+// $evo-spacer-xxxlarge:					($evo-spacer-size*7);
+
+
+// TYPOGRAPHY
+// ------------------------------------------------------------------------------------------
+
+// BASE FONTS
+// $evo-base-font-stack:					arial, Tahoma, Geneva, sans-serif;
+// $evo-base-font-file-path:				"../fonts";
+
+// WEB FONTS
+
+	// Thin
+	// $evo-font-thin-family:					relativefaux;
+	// $evo-font-thin-file-path:				"#{$evo-base-font-file-path}/relative-faux_-webfont";
+	// $evo-font-thin-stack:					"#{$evo-font-thin-family}", $evo-base-font-stack;
+
+	// Regular
+	// $evo-font-regular-family:				relativebook;
+	// $evo-font-regular-file-path:				"#{$evo-base-font-file-path}/relative-book-webfont";
+	// $evo-font-regular-stack:					"#{$evo-font-regular-family}", $evo-base-font-stack;
+
+	// Italic
+	// $evo-font-italic-family:					relativebook_italic;
+	// $evo-font-italic-file-path:				"#{$evo-base-font-file-path}/relative-bookitalic-webfont";
+	// $evo-font-italic-stack:					"#{$evo-font-italic-family}", $evo-base-font-stack;
+
+	// Medium
+	// $evo-font-medium-family:					relativemedium;
+	// $evo-font-medium-file-path:				"#{$evo-base-font-file-path}/relative-medium-webfont";
+	// $evo-font-medium-stack:					"#{$evo-font-medium-family}", $evo-base-font-stack;
+
+	// Medium Italic
+	// $evo-font-medium-italic-family:			relativemedium_italic;
+	// $evo-font-medium-italic-file-path:		"#{$evo-base-font-file-path}/relative-mediumitalic_-webfont";
+	// $evo-font-medium-italic-stack:			"#{$evo-font-medium-italic-family}", $evo-base-font-stack;
+
+	// Bold
+	// $evo-font-bold-family:					relativebold;
+	// $evo-font-bold-file-path:				"#{$evo-base-font-file-path}/relative-bold-webfont";
+	// $evo-font-bold-stack:					"#{$evo-font-bold-family}", $evo-base-font-stack;
+
+	// Bold Italic
+	// $evo-font-bold-italic-family:			relativebold_italic;
+	// $evo-font-bold-italic-file-path:			"#{$evo-base-font-file-path}/relative-bolditalic-webfont";
+	// $evo-font-bold-italic-stack:				"#{$evo-font-bold-italic-family}", $evo-base-font-stack;
+
+// ICON FONTS
+
+	// Core icon font set
+	// $evo-icon-font-family:					evo_icon_font;
+	// $evo-icon-font-file-path:				"#{$evo-base-font-file-path}/evo-icon-font";
+	// $evo-icon-font-stack:					"#{$evo-icon-font-family}";
+
+	// Site icon font set
+	// $evo-icon-site-font-family:				evo_icon_font_site;
+	// $evo-icon-site-font-file-path:			"#{$evo-base-font-file-path}/evo-icon-font-site";
+	// $evo-icon-site-font-stack:				"#{$evo-icon-site-font-family}";
+
+// LINKS
+// $evo-base-link-visited-color:			$sapphire-dark;
+
+// FONT WEIGHTS
+// $evo-weight-bold-100:					100;
+// $evo-weight-bold-200:					200;
+// $evo-weight-bold-300:					300;
+// $evo-weight-bold-400:					400;
+// $evo-weight-bold-500:					500;
+// $evo-weight-bold-600:					600;
+// $evo-weight-bold-700:					700;
+// $evo-weight-bold-800:					800;
+// $evo-weight-bold-900:					900;
+
+// OTHER ELEMENTS
+// $evo-text-selection-text-color:			$white;
+// $evo-text-selection-background-color:	$gray-darker;
+
+
+// ==========================================================================================
+// BASE
+// ==========================================================================================
+
+// TYPOGRAPHY
+// ------------------------------------------------------------------------------------------
+
+// HEADERS
+// $evo-hdr-rule-border-size:				1px;
+// $evo-hdr-rule-border-style:				dotted;
+// $evo-hdr-rule-margin-bottom:				10px;
+// $evo-hdr-rule-border-color:				$gray-darker;
+// $evo-hdr-background-color:				$gray-mid;
+
+
+// BOXES
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $boxBorderSize:							1px;
+// $boxBorderStyle:							solid;
+// $boxHdrBorderSize:						3px;
+// $boxHdrBorderStyle:						solid;
+// $boxBdyBorderTopSize:					1px;
+// $boxBdyBorderTopStyle:					solid;
+// $boxPadding:								$evo-base-padding;
+// $boxVShadow:								1px;
+// $boxHShadow:								1px;
+// $boxShadowBlur:							1px;
+// $boxBackgroundColor:						$gray-lighter;
+// $boxBorderColor:							$gray-mid;
+// $boxHdrBorderColor:						$gray-mid;
+// $boxShadowColor:							$gray-darker;
+
+// ADVANCED BOX
+// $boxAdvancedBackgroundColor:				$transparent;
+// $boxAdvancedHdrBackgroundColor:			$gray-light;
+
+// MESSAGE BOXES
+// $msgBorderWidth:							1px;
+// $msgBorderStyle:							solid;
+
+// CUSTOM CONTAINERS
+// $boxInlineSearchBorderSizeColor:			1px;
+// $boxInlineSearchBorderTypeColor:			dotted;
+// $boxInlineSearchLabelLineHeight:			22px;
+
+// $boxFeaturedBackgroundColor:				$white;
+// $boxFeaturedBorderBottomColor:			$blue-gray-mid-dark;
+
+// $boxSidebarBackgroundColor:				$gray-lighter;
+// $boxSidebarBorderBottomColor:			$gray-mid;
+
+// $boxInlineSearchBackgroundColor:			$gray-lighter;
+// $boxInlineSearchBorderColor:				$gray-darker;
+
+// $boxSupportBackgroundColor:				$blue-gray-lighter;
+// $boxSupportBottomColor:					$blue-gray-mid-dark;
+// $boxSupportBorderBottomColor:			$blue-gray-mid-dark;
+
+
+// FORM
+// ------------------------------------------------------------------------------------------
+
+//$evo-base-input-shadow-color: $gray-lighter;
+//$evo-input-focus-border-color: $tan-mid;
+//$evo-form-placholder-font-color: #AAA;
+
+
+// BUTTONS
+// ------------------------------------------------------------------------------------------
+
+// $evo-button-min-width: 					100;
+// $evo-button-font-color-visited:			$button-font-color;
+// $evo-button-font-color-alt-visited: 		$button-font-color-alt;
+
+
+// HEADER
+// ------------------------------------------------------------------------------------------
+
+// ICON STYLES
+// $headerIconRadius:						3px;
+// $headerIconPadding:						4px 10px 6px 6px;
+// $headerIconMinWidth:						28px;
+// $headerIconBackgroundColor:				$gray-dark;
+// $headerIconFontColor:					$white;
+// $headerIconHoverBackgroundColor:			$gray-dark;
+// $headerIconHoverFontColor:				$white;
+
+// BASE & LOGO STYLES
+// $mastheadContentHeight:					52px;
+// $mastheadLogoLineHeight:					52px;
+// $mastheadLogoFontWeight:					400;
+// $mastheadLogoFontSize:					24px;
+// $mastheadLogoFontSizeLargeBreakpoint:	33px;
+// $mastheadBackgroundStartColor:			$blue-gray;
+// $mastheadBackgroundEndColor:				$blue-gray-darker;
+// $mastheadLogoLinkColor:					$white;
+
+// USER IDENTIFIER
+// $userIdentifierMenuFontSize:				12px;
+// $userIdentifierMenuPadding:				6px 10px 6px 30px;
+// $userIdentifierBackgroundStartColor:		#4674a9;
+// $userIdentifierBackgroundEndColor:		#385882;
+// $userIdentifierFontColor:				$white;
+// $userIdentifierMenuShadowColor:			$gray-darker;
+// $userIdentifierMenuTextColor:			$white;
+// $userIdentifierMenuHoverColor:			$blue-gray;
+
+// TOOLBAR
+// $toolbarBackgroundStartColor:			$blue-gray;
+// $toolbarBackgroundEndColor:				$blue-gray-darker;
+// $toolbarMobileNavbarBackgroundColor:		$gray-lighter;
+// $toolbarDropShadowColor:					$gray-darker;
+// $toolbarLinkColor:						$white;
+// $toolbarLinkHoverColor:					$white;
+
+// NAVBAR
+// $navbarBackgroundGradientStartColor:		$gray-lightest;
+// $navbarBackgroundGradientEndColor:		$gray-mid;
+// $navbarBorderColor:						$gray-mid;
+// $navbarBorderBottomStyle:				solid;
+// $navbarBorderColor:						$gray-mid;
+// $navbarFontHoverColor:					#002C77;
+
+	// MENU OVERRIDES
+	// $subMenuBackgroundColor:					$gray-lighter;
+	// $subMenuBorderTopColor:					$gray-mid;
+
+	// NAVBAR MESSAGE AREA
+	// $navbarMessageBorderRightColor:			$gray-mid;
+
+	// TEXT NAVBAR
+	// $textNavbarBorderLeftColor:				$gray-mid;
+	// $textNavbarSubMenuHoverBackgroundColor:	$white;
+
+	// TABBED NAVBAR
+	// $tabbedNavbarBorderLeftColor:			$white;
+	// $tabbedNavbarHrefBorderLeftColor:		$gray-mid;
+
+	// $tabbedNavbarActiveBackgroundStartColor:	$gray-lightest;
+	// $tabbedNavbarActiveBackgroundEndColor:	$gray-mid;
+	// $tabbedNavbarSubMenuHoverBackgroundColor: $white;
+
+// SPOTLIGHT CONTAINER
+// $megaMenuContainerSpotlightBorderRadius: 4px;
+
+
+// MENU STYLES
+// ------------------------------------------------------------------------------------------
+// $menuLinkPadding:						7px 10px;
+
+// MENUS
+// $menuBackgroundHoverColor: 				$white;
+// $menuDropShadowColor:					$gray-mid;
+// $menuBackgroundColor:					$white;
+// $menuBorderColor:						$gray-mid;
+// $menuBorderTopColor:						$gray-mid;
+// $menuIndicatorColor1stLevel:				$gray-dark;
+// $menuFontColor:							#002C77;
+// $menuHoverFontColor:						#002C77;
+// $menuBorderTopColor2ndlevel:				$gray-mid;
+
+// MEGA MENU
+// $megaMenuBackgroundColor: 				$gray-darker;
+// $megaMenuBorderTopColor:					$gray-dark;
+// $megaMenuBorderBottomColor:				$gray-dark;
+// $megaMenuContentFontColor:				$white;
+
+
+// NAVIGATION
+// ------------------------------------------------------------------------------------------
+// $navbarBorderBottomWidth:				1px;
+// $navbarBorderBottomStyle:				solid;
+// $navbarMessageWidth:						200px;
+// $navbarMessagePadding:					9px 0 7px 0;
+// $navbarMessageInnerPadding:				2px 10px 2px 0;
+// $navbarMessageFontFamily:				$fontMediumFamily;
+// $navbarMessageBorderRightWidth:			1px;
+// $navbarMessageBorderRightStyle:			dotted;
+
+
+// HERO BANNER
+// ------------------------------------------------------------------------------------------
+// $heroBannerBackgroundColor:				$gray-lighter;
+
+
+// FOOTER
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $footerBorderTopColor:					$gray-mid;
+// $footerFontColor:						$gray-darker;
+
+// FAT FOOTER
+// $fatFooterBackgroundColor:				$gray-darker;
+// $fatFooterFontColor:						$white;
+
+
+// ICONS
+// ------------------------------------------------------------------------------------------
+// $iconFontAdvSize:						32px;
+// $iconFontColor:							$blue-gray-dark;
+// $iconFontBackgroundStartColor:			$blue-gray-dark;
+// $iconFontBackgroundEndColor:				$blue-gray;
+// $iconFontAdvBackgroundColor:				$blue-gray-darkest;
+// $iconFontAdvShadowColor:					$gray-darkest;
+// $iconFontAdvBorderColor:					$gray-lighter;
+// $iconFontAdvFontColor:					$white;
+
+
+// LISTS
+// ------------------------------------------------------------------------------------------
+// $horizontalListPipeBorderColor:			$gray-mid;
+// $definitionListHeaderColor:				$black;
+// $definitionDataListHeaderBorderColor:	$gray-mid;
+
+
+// TABLES
+// ------------------------------------------------------------------------------------------
+
+// BASE
+// $tableColWidthMultiplier: 				1%;
+// $tableBorderStyle:						solid;
+// $tableTdBorderStyle:						solid;
+// $tableMarginBottom:						$evo-base-margin;
+// $tableMinWidth:							640px;
+// $tableMinWidthLargeBreakpoint:			100%;
+
+// $tableBackgroundColor:					$white;
+// $tableBorderColor:						$gray-mid;
+// $tableFontColor:							$black;
+// $tableThFontColor:						$black;
+// $tableThBackgroundColor:					$blue-gray-lighter;
+// $tableThBorderColor:						#A9BCD3;
+// $tableTdBorderColor:						$gray-mid;
+// $tableEvenTdBackgroundColor:				$white;
+// $tableEvenTdSortedBackgroundColor: 		$gray-lightest;
+// $tableOddTdBackgroundColor:				$gray-lightest;
+// $tableOddTdSortedBackgroundColor: 		$gray-lighter;
+// $tableRowHoverColor:						$tan-light;
+
+// OPTIONS
+// $tableDataFilterMaxWidth:				300px;
+// $tableDataFilterLineHeight:				22px;
+// $tableDataFilterLineHeightLargeBreakpoint: 16px;
+// $tableDataFilterHeight:					24px;
+// $tableDataFilterHeightLargeBreakpoint:	20px;
+
+// $tableSubHeaderBackgroundColor:			#E8F0F7;
+// $tableSubHeaderFontColor:				$gray-darkest;
+// $tableSubHeaderBorderColor:				#C3D2E5;
+// $tableSubTotalBackgroundColor:			$gray-lighter;
+// $tableSubTotalFontColor:					$gray-darkest;
+// $tableTotalBackgroundColor:				#E6E6E6;
+// $tableTotalFontColor:					$black;
+
+
+// ==========================================================================================
+// OBJECTS
+// ==========================================================================================
+
+// ACCORDION
+// ------------------------------------------------------------------------------------------
+// $accordionBorderColor:					$gray-mid;
+// $accordionHeaderBackgroundColor:			$gray-lightest;
+// $accordionHeaderFontColor:				$blue-gray-dark;
+// $accordionHeaderIconColor:				$blue-gray-dark;
+// $accordionContentBackgroundColor:		$white;
+
+
+// ADVANCED FILTER MODAL
+// ------------------------------------------------------------------------------------------
+// $advancedFilterModalWidth:				700px;
+
+
+// ALTERNATE VIEWS BADGE
+// ------------------------------------------------------------------------------------------
+// $alternateViewsBadgeButtonBackgroundStartColor: $white;
+// $alternateViewsBadgeButtonBackgroundEndColor: $gray-light;
+// $alternateViewsBadgeButtonBorderColor: #e1dfdf;
+// $alternateViewsBadgeButtonIconColor: $gray-mid;
+// $alternateViewsBadgeButtonLinkColor: $gray-darker;
+// $alternateViewsBadgeButtonHoverBackgroundStartColor: $gray-lightest;
+// $alternateViewsBadgeButtonHoverBackgroundEndColor: $gray-mid;
+// $alternateViewsBadgeButtonHoverIconColor: $gray-darker;
+// $alternateViewsBadgeButtonHoverLinkColor: $gray-darkest;
+// $alternateViewsBadgeButtonActiveBackgroundStartColor: #fef8e3;
+// $alternateViewsBadgeButtonActiveBackgroundEndColor: #f5e6b0;
+// $alternateViewsBadgeButtonActiveBorderColor: #f0e2b3;
+// $alternateViewsBadgeButtonActiveIconColor: #edc557;
+// $alternateViewsBadgeButtonActiveLinkColor: $gray-darkest;
+
+
+// AUTOCOMPLETE
+// ------------------------------------------------------------------------------------------
+// $autocompleteBorderSize:					1px;
+// $autocompleteBorderStyle:				solid;
+// $autocompleteMaxHeight:					97px;
+// $autocompleteMaxHeightLargeBreakpoint:	193px;
+// $autocompleteItemFontSizeLargeBreakpoint: $baseFontSizeLargeBreakpoint;
+// $autocompleteItemLinkLineHeight:			22px;
+// $autocompleteItemLinkLineHeightLargeBreakpoint:	($autocompleteItemLinkLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
+// $autocompleteItemBorderTopSize:			1px;
+// $autocompleteItemBorderTopStyle:			solid;
+// $autocompleteItemBorderBottomSize:		1px;
+// $autocompleteItemBorderBottomStyle:		solid;
+// $autocompleteItemUnderlineText:			underline;
+
+// $autocompleteShadowColor:				$gray-mid;
+// $autocompleteBackgroundColor:			$gray-lightest;
+// $autocompleteBorderColor:				$gray-mid;
+// $autocompleteItemFontColor:				$gray-darkest;
+// $autocompleteItemBorderTopColor:			$gray-lightest;
+// $autocompleteItemBorderBottomColor:		$gray-lightest;
+// $autocompleteItemHighlightText:			$tan;
+// $autocompleteItemHoverBackgroundStartColor: $tan-light;
+// $autocompleteItemHoverBackgroundEndColor: $tan-light;
+
+
+// CAROUSEL
+// ------------------------------------------------------------------------------------------
+// $carouselPageCircleBackgroundColor:		$gray-light;
+// $carouselPageCircleHoverBackgroundColor:	$gray-dark;
+// $carouselPageCircleActiveBackgroundColor: $gray-darker;
+// $carouselPageCircleTextColor:			$white;
+// $carouselNavIconColor:					$gray-mid;
+// $carouselNavHoverIconColor:				$gray-dark;
+
+
+// CONTENT MODAL
+// ------------------------------------------------------------------------------------------
+// $contentModalUtilityBarWidth:			51px;
+// $contentModalUtilityBarTabsIconPositionTop: 9px;
+// $contentModalUtilityBarTabsPositionTop:	89px;
+// $contentModalUtilityBarTabsUtilityPositionBottom: 70px;
+// $contentModalUtilityBarTabsCloseIconPositionTop: 15px;
+// $contentModalUtilityBarTabsCloseIconPositionLeft: 9px;
+
+// $contentModalBackgroundColor:				$white;
+// $contentModalUtilityBarBackgroundStartColor: $blue-gray-darker;
+// $contentModalUtilityBarBackgroundEndColor: 	$blue-gray-darkest;
+// $contentModalUtilityBarTabsBorderColor:		$blue-gray-darkest;
+// $contentModalUtilityBarTabsAltBorderColor:	$blue-gray-light;
+// $contentModalUtilityBarTabsIconColor:		$white;
+// $contentModalUtilityBarTabsHoverBackgroundStartColor: $blue-gray-mid-dark;
+// $contentModalUtilityBarTabsHoverBackgroundEndColor: $blue-gray-dark;
+// $contentModalUtilityBarTabsActiveBackgroundColor: $white;
+// $contentModalUtilityBarTabsActiveIconColor:	$blue-gray-darker;
+
+
+// DATEPICKER
+// ------------------------------------------------------------------------------------------
+// $datepickerMarginTop:					5px;
+// $datepickerHdrPaddingTopBottom:			4px;
+// $datepickerMessageFontSize:				13px;
+// $datepickerMessageLineHeight:			15px;
+// $datepickerIconPositionTop:				5px;
+// $datepickerIconPositionLeft:				-22px;
+// $datepickerIconPositionTopLargeBreakpoint: 4px;
+// $datepickerIconPositionTopIE:			($datepickerIconPositionTop - 2);
+// $datepickerIconPositionLeftLargeBreakpoint: -20px;
+// $datepickerMinWidth:						110px;
+
+// $datepickerShadowColor:					$gray-darker;
+// $datepickerBackgroundColor:				$white;
+// $datepickerThFontColor:					$gray-darker;
+// $datepickerBorderColor:					$gray-lighter;
+// $datepickerLinkColor:					$gray-darker;
+// $datepickerHdrBackgroundStartColor:		$gray-lighter;
+// $datepickerHdrBackgroundEndColor:		$gray-mid;
+// $datepickerHdrFontColor:					$gray-darkest;
+// $datepickerHdrNavIconColor:				$sapphire;
+// $datepickerTodayFontColor:				$emerald;
+// $datepickerTodayBackgroundColor: 		$emerald-light;
+// $datepickerCurrentDayBackgroundColor: 	$tan-mid;
+// $datepickerCurrentDayFontColor:			$tan;
+// $datepickerHoverBackgroundColor: 		$tan-light;
+// $datepickerDisabledFontColor:			$gray-mid;
+// $datepickerDisabledBackgroundColor:		$white;
+// $datepickerDisabledBorderColor:			$gray-lighter;
+// $datepickerMessageFontColor:				$gray-darkest;
+// $datepickerMessageBackgroundColor:		$tan-light;
+// $datepickerIconColor:					$gray-darker;
+
+
+// DIALOG/MODAL
+// ------------------------------------------------------------------------------------------
+// $dialogOverlayBackgroundColorOpacity:	40;
+// $dialogWidth:							auto;
+// $dialogWidthLargeBreakpoint:				500px;
+// $dialogVShadow:							1px;
+// $dialogHShadow:							1px;
+// $dialogShadowBlur:						1px;
+// $dialogHdrPaddingTop:					15px;
+// $dialogHdrPaddingRight:					60px;
+// $dialogHdrPaddingBottom:					12px;
+// $dialogHdrPaddingLeft:					18px;
+// $dialogHdrBorderBottomSize:				0;
+// $dialogHdrBorderBottomStyle:				solid;
+// $dialogHdrFontSize:						18px;
+// $dialogHdrFontSizeLargeBreakpoint:		$hdrH3FontSizeLargeBreakpoint;
+// $dialogContentMaxHeightLargeBreakpoint:	430px;
+// $dialogContentPaddingTop:				12px;
+// $dialogContentPaddingLeftRight:			18px;
+// $dialogContentBorderTopSize:				1px;
+// $dialogContentBorderTopStyle:			solid;
+// $loadingModalWidthLargeBreakpoint:		350px;
+
+// $dialogOverlayBackgroundColor:			$black;
+// $dialogShadowColor:						$gray-darker;
+// $dialogBackgroundColor:					$white;
+// $dialogHdrFontColor:						$baseHdrFontColor;
+// $dialogContentBorderTopColor: 			$white;
+// $dialogHdrBorderBottomColor:				$transparent;
+// $dialogCloseIconColor:					$gray-darker;
+
+
+// IMAGE CONTENT OVERLAY
+// ------------------------------------------------------------------------------------------
+// $imageContentOverlayBackgroundColor:		$gray-darker;
+// $imageContentOverlayBorderBottomColor:	$gray-dark;
+// $imageContentOverlayFontColor:			$white;
+
+
+// LOGIN LAYOUT
+// ------------------------------------------------------------------------------------------
+// $layoutLoginBackgroundImageSrcPath:		"../images/login_bkgd.jpg";
+// $layoutLoginBackgroundColor:				$blue-gray;
+// $layoutLoginContainerTranslucentBackgroundColor: $gray-lighter;
+// $layoutLoginContainerSubHeaderColor:		$blue-gray-darkest;
+// $layoutLoginContainerHeaderColor:		$blue-gray-darkest;
+// $layoutLoginContainerBoxBackgroundColor:	$white;
+// $layoutLoginContainerBoxBorderColor:		$gray-dark;
+// $layoutLoginFooterTranslucentBackgroundColor: $black;
+// $layoutLoginFooterFontColor:				$white;
+// $layoutLoginFooterBorderColor:			$white;
+
+
+// MINI FILTER
+// ------------------------------------------------------------------------------------------
+// $miniFilterMarginBottom:					6px;
+// $miniFilterFontSizeLargeBreakpoint:		11px;
+// $miniFilterActivePaddingTopBottom: 		1px;
+// $miniFilterActivePaddingLeftRight: 		4px;
+// $miniFilterDropDownMaxWidth:				300px;
+
+// $miniFilterLabelFontColor:				$black;
+// $miniFilterActiveBackgroundColor: 		$tan-light;
+// $miniFilterActiveFontColor:				$black;
+
+
+// PAGINATION
+// ------------------------------------------------------------------------------------------
+// $paginationFontSizeLargeBreakpoint:		12px;
+// $paginationBorderStyle:					solid;
+// $paginationLinkLineHeight:				.8em;
+// $paginationLinkMinWidth:					31px;
+// $paginationLinkMinWidthLargeBreakpoint:	28px;
+// $paginationLinkMaxHeight:				$paginationLinkMinWidth;
+// $paginationLinkMaxHeightLargeBreakpoint:	$paginationLinkMinWidthLargeBreakpoint;
+
+// $paginationBorderColor:					$gray-mid;
+// $paginationHoverBackgroundColor:			$tan-light;
+// $paginationActiveBackgroundColor:		$tan-light;
+// $paginationActiveFontColor:				$black;
+// $paginationLinkHoverColor:				$black;
+
+
+// PROFILE CONTAINERS
+// ------------------------------------------------------------------------------------------
+// $profileContainerDataListFontSize:		14px;
+// $profileContainerDataListFontSizeLargeBreakpoint: ($profileContainerDataListFontSize - $baseFontSizeDifferenceLargeBreakpoint);
+// $profileContainerDataListLineHeight:		18px;
+// $profileContainerDataListLineHeightLargeBreakpoint: ($profileContainerDataListLineHeight - $baseFontSizeDifferenceLargeBreakpoint);
+
+// $profileContainerHdrColor:				$white;
+// $profileContainerSecondaryHdrColor:		$white;
+// $profileContainerDataListLabelFontColor:	$white;
+
+
+// SCROLL PANE
+// ------------------------------------------------------------------------------------------
+// $scrollPaneWidth:						auto;
+// $scrollPaneHeight:						300px;
+
+// $scrollPaneScrollbarRGBColor:			$black;
+// $scrollPaneScrollbarHexColor:			#666;
+
+
+// SLIDER
+// ------------------------------------------------------------------------------------------
+// $sliderBarBackgroundStartColor:			$gray-mid;
+// $sliderBarBackgroundEndColor:			$gray-mid;
+// $sliderBarRangeBackgroundColor:			$gray-darker;
+// $sliderHandleBackgroundStartColor:		$blue-gray-darker;
+// $sliderHandleBackgroundEndColor:			$blue-gray-darker;
+// $sliderHandleShadowColor: 				$gray-mid;
+// $sliderHandleBorderColor:				$white;
+// $sliderHandleFocusBackgroundStartColor:	$blue-gray-darker;
+// $sliderHandleFocusBackgroundEndColor:	$blue-gray-darker;
+// $sliderHandleHoverBackgroundStartColor:	$blue-gray-darkest;
+// $sliderHandleHoverBackgroundEndColor:	$blue-gray-darkest;
+// $sliderHandleActiveBackgroundStartColor:	$blue-gray-darkest;
+// $sliderHandleActiveBackgroundEndColor:	$blue-gray-darkest;
+
+
+// SUMMARY CONTAINER
+// ------------------------------------------------------------------------------------------
+// $summaryCtnBorderSize:					1px;
+// $summaryCtnBorderStyle:					dotted;
+// $summaryCtnPadding:						10px;
+// $summaryPrimaryCtnIconFontSize:			40px;
+// $summarySecondaryCtnIconFontSize:		30px;
+
+// $summaryCtnBorderColor:					$gray-darker;
+// $summaryCtnBorderColorTop:				$transparent;
+// $summaryCtnBorderColorBottom:			$transparent;
+// $summaryCtnBorderColorLeft:				$transparent;
+// $summaryCtnBorderFirstChildColorTop:		$gray-darker;
+// $summaryCtnBorderFirstChildColorLeft:	$gray-darker;
+// $summaryCtnBorderHoverTransitionSpeed:	250ms;
+// $summaryCtnBorderHoverBackgroundColor:	$tan-light;
+// $summaryCtnBorderHoverBorderTopColor:	$gray-darker;
+// $summaryCtnBorderHoverBorderBottomColor:	$gray-darker;
+// $summaryCtnAlertNegativeFontColor:		$garnet;
+// $summaryCtnAlertNegativeHoverBackgroundColor: $garnet-light;
+// $summaryCtnAlertPositiveFontColor:		$emerald;
+// $summaryCtnAlertPositiveHoverBackgroundColor: $emerald-light;
+
+
+// TABS
+// ------------------------------------------------------------------------------------------
+// $tabsSetMarginBottom:					18px;
+// $tabsNavHeight:							36px;
+// $tabsNavHeightLargeBreakpoint:			28px;
+// $tabsHeight:								34px;
+// $tabsHeightLargeBreakpoint:				26px;
+// $tabsPositonTop:							2px;
+// $tabsMarginRight:						2px;
+// $tabsMarginBottom:						1px;
+// $tabsPaddingTopBottom:					3px;
+// $tabsPaddingLeftRight:					10px;
+// $tabsBorderSize:							1px;
+// $tabsBorderStyle:						solid;
+// $tabsFontSize:							14px;
+// $tabsFontSizeLargeBreakpoint:			($tabsFontSize - $baseFontSizeDifferenceLargeBreakpoint);
+// $tabsLineHeight:							26px;
+// $tabsLineHeightLargeBreakpoint:			22px;
+// $tabsFontWeight:							normal;
+// $tabsActivePositonTop:					2px;
+// $tabsActiveHeight:						35px;
+// $tabsActiveHeightLargeBreakpoint:		27px;
+// $tabsActivePaddingBottom:				1px;
+// $tabsPanelPadding:						$evo-base-padding;
+// $tabsPanelBorderSize:					1px;
+// $tabsPanelBorderStyle:					solid;
+
+// $tabsBackgroundStartColor:				$gray-mid;
+// $tabsBackgroundEndColor:					$gray-lighter;
+// $tabsBorderColor:						$gray-mid;
+// $tabsFontColor:							$sapphire-dark;
+// $tabsPagingNavBackgroundStartColor:		$white;
+// $tabsPagingNavBackgroundEndColor:		$white;
+// $tabsPagingNavLinkColor:					$gray-darker;
+// $tabsPagingNavHoverColor:				$blue-gray-dark;
+// $tabsSelectedTabFontColor:				$gray-lighter;
+// $tabsHoverBackgroundStartColor:			$gray-mid;
+// $tabsHoverBackgroundEndColor:			$gray-lighter;
+// $tabsActiveFontColor:					$gray-darkest;
+// $tabsActiveBackgroundStartColor:			$white;
+// $tabsActiveBackgroundEndColor:			$white;
+// $tabsPanelBorderColor:					$gray-mid;
+// $tabsPanelBackgroundColor: 				$white;
+
+
+// TILES
+// ------------------------------------------------------------------------------------------
+// $tilesBorderRadius:						3px;
+// $tilesMarginBottom:						3px;
+// $tilesBodyBorderRadius:					0 0 3px 3px;
+// $tilesScrollPaneHeight:					400px;
+// $tilesOuterBorderRadiusLargeBreakpoint:	0;
+
+// $tilesBackgroundColor:					$gray-lightest;
+// $tilesHeaderBorderTopColor:				$sapphire-mid;
+// $tilesHeaderBackgroundColor:				$transparent;
+// $tilesHeaderFontColor:					$gray-darkest;
+// $tilesBodyBackgroundColor:				$white;
+// $tilesBodyBorderColor:					$gray-light;
+// $tilesOutsideBorderColor:				$gray-light;
+
+
+// TOOLTIP
+// ------------------------------------------------------------------------------------------
+// $tooltipVShadow:							1px;
+// $tooltipHShadow:							1px;
+// $tooltipShadowBlur:						5px;
+// $tooltipBorderSize:						1px;
+// $tooltipBorderStyle:						solid;
+// $tooltipFontSize:						$baseFontSize;
+// $tooltipFontSizeLargeBreakpoint:			12px;
+// $tooltipPaddingTopBottom:				5px;
+// $tooltipPaddingLeftRight:				8px;
+
+// $tooltipShadowColor:						$gray-mid;
+// $tooltipBorderColor:						$gray-mid;
+// $tooltipBackgroundColor:					$gray-light;
+// $tooltipFontColor:						$gray-darkest;
+
+
+// ==========================================================================================
+// EMPLOYEE PORTAL OBJECTS
+// ==========================================================================================
+
+// ICONS
+// ------------------------------------------------------------------------------------------
+// $evo-clip-art-icon-size-tiny: 			rem-calc(30);
+// $evo-clip-art-icon-size-small: 			rem-calc(50);
+// $evo-clip-art-icon-size-medium: 			rem-calc(70);
+// $evo-clip-art-icon-size-large: 			rem-calc(100);
+// $evo-clip-art-icon-size-xlarge: 			rem-calc(150);
+
+
+// TYPE
+// ------------------------------------------------------------------------------------------
+
+// LINKS
+// $evo-anchor-font-color-reverse: 			$white;
+// $evo-anchor-font-color-alt: 				$ruby-mid;
+// $evo-anchor-font-size-small:				14;
+
+// COSTS
+// $evo-cost-reverse-font-color:			$white;
+// $evo-large-cost-font-color:				$gray-mid;
+// $evo-small-cost-font-color:				$gray-mid;
+
+
+// MENU BAR
+// ------------------------------------------------------------------------------------------
+// $evo-off-canvas-alert-background-color: 	$amethyst-mid;
+
+
+// TITLE BAR
+// ------------------------------------------------------------------------------------------
+// $evo-title-bar-icon-color: 				$white;
+// $evo-title-bar-font-color: 				$white;
+
+
+// CONVERSATIONAL FORM
+// ------------------------------------------------------------------------------------------
+// $evo-form-conversational-font-family: 	$evo-font-regular-family;
+// $evo-form-conversational-font-size: 		rem-calc(25);
+// $evo-form-conversational-label-color: 	$gray-mid;
+// $evo-form-conversational-select-color: 	$sapphire-mid;
+// $evo-form-conversational-inputs-border-radius: 0;
+// $evo-form-conversational-inputs-bg-color: $gray-lightest;
+// $evo-form-conversational-inputs-border: 	0;
+// $evo-form-conversational-inputs-border-bottom-with: 2px;
+// $evo-form-conversational-inputs-border-bottom-style: solid;
+// $evo-form-conversational-inputs-border-bottom-color: $sapphire-mid;
+// $evo-form-conversational-input-transition-time: 0.25s;
+// $evo-form-conversational-input-width: 	rem-calc(80);
+// $evo-form-conversational-input-min-width: rem-calc(80);
+// $evo-form-conversational-input-max-width: 300px;
+// $evo-form-conversational-select-min-width: 50px;
+
+
+// SHOWCASE PANEL
+// ------------------------------------------------------------------------------------------
+// $evo-showcase-panel-shadow-h: 			0;
+// $evo-showcase-panel-shadow-v: 			rem-calc(2);
+// $evo-showcase-panel-shadow-blur: 		rem-calc(8);
+// $evo-showcase-panel-shadow-color: 		$gray-mid;
+// $evo-showcase-panel-fixed-z-index: 		1000;
+
+
+// ITEM SELECTION PANEL
+// ------------------------------------------------------------------------------------------
+// $evo-item-selection-panel-align: 		center;
+
+// $evo-item-selection-panel-container-color: $gray-dark;
+
+// $evo-item-selection-panel-container-img-border-radius: 100%;
+// $evo-item-selection-panel-container-img-border-width: rem-calc(3);
+// $evo-item-selection-panel-container-img-border-style: solid;
+// $evo-item-selection-panel-container-img-border-color: $gray-lighter;
+// $evo-item-selection-panel-container-img-padding: rem-calc(3);
+
+// $evo-item-selection-panel-container-item-label-font-size: rem-calc(14);
+// $evo-item-selection-panel-container-item-label-margin-top: rem-calc(5);
+
+// $evo-item-selection-panel-container-category-highlight-img-h-shadow: rem-calc(0);
+// $evo-item-selection-panel-container-category-highlight-img-v-shadow: rem-calc(2);
+// $evo-item-selection-panel-container-category-highlight-img-blur: rem-calc(6);
+// $evo-item-selection-panel-container-category-highlight-img-color: $gray-light;
+// $evo-item-selection-panel-container-category-highlight-img-border-color: $topaz-dark;
+
+
+// PRICING TABLE
+// ------------------------------------------------------------------------------------------
+// $evo-price-table-bg-color: 				$gray-lighter;
+// $evo-price-table-base-font: 				rem-calc(22);
+// $evo-price-table-padding: 				rem-calc(12) rem-calc(0);
+// $evo-price-table-margin-bottom: 			rem-calc(2);
+
+// $evo-price-table-amt-font-color: 		$gray-dark;
+// $evo-price-table-amt-text-align: 		right;
+
+// $evo-price-table-amt-text-transform: 	uppercase;
+
+// $evo-price-table-label-font-size: 		rem-calc(14);
+// $evo-price-table-label-position: 		relative;
+
+// $evo-price-table-item-label-font-color: 	$gray-light;
+// $evo-price-table-item-label-top-position: rem-calc(16);
+
+// $evo-price-table-time-value-label-color: $gray-light;
+// $evo-price-table-time-value-label-text-align: right;
+// $evo-price-table-time-value-label-top-position: -6px;
+
+// $evo-price-table-break-down-row-bg-color: $gray-light;
+
+// $evo-price-table-total-row-bg-color: 	$gray-dark;
+// $evo-price-table-total-row-font-color: 	$white;
+
+
+// ITEM HIGHLIGHT CONTAINER
+// ------------------------------------------------------------------------------------------
+// $evo-item-highlight-ctn-bgcolor: 		$gray-lightest;
+// $evo-item-highlight-ctn-border-width: 	3px;
+// $evo-item-highlight-ctn-border-style: 	solid;
+// $evo-item-highlight-ctn-border-color: 	$topaz-dark;
+// $evo-item-highlight-ctn-padding: 		rem-calc(10) rem-calc(18) rem-calc(3) rem-calc(18);
+// $evo-item-highlight-ctn-margin: 			0 10px;
+// $evo-item-highlight-ctn-min-height: 		100px;
+
+// $evo-item-highlight-ctn-tag-indicator-min-height: rem-calc(29);
+// $evo-item-highlight-ctn-tag-indicator-label-font-size: rem-calc(11);
+// $evo-item-highlight-ctn-tag-indicator-label-text-transform: uppercase;
+// $evo-item-highlight-ctn-tag-indicator-label-position: relative;
+// $evo-item-highlight-ctn-tag-indicator-label-position-top: -6px;
+// $evo-item-highlight-ctn-tag-indicator-label-position-left: -26px;
+// $evo-item-highlight-ctn-tag-indicator-label-padding: rem-calc(10) rem-calc(30) rem-calc(8) rem-calc(30);
+// $evo-item-highlight-ctn-tag-indicator-label-bgcolor: $sapphire-mid;
+// $evo-item-highlight-ctn-tag-indicator-label-letter-spacing: rem-calc(1);
+
+// $evo-item-highlight-ctn-highlight-ctn-link-font-size: rem-calc(12);
+// $evo-item-highlight-ctn-highlight-ctn-link-line-height: 0;
+// $evo-item-highlight-ctn-highlight-ctn-link-margin-top: rem-calc(8);
+
+
+// CATEGORY HEADER CONTAINER
+// ------------------------------------------------------------------------------------------
+// $evo-category-hdr-label-border-width: 	rem-calc(1);
+// $evo-category-hdr-label-border-style: 	solid;
+// $evo-category-hdr-label-border-color: 	$gray-light;
+// $evo-category-hdr-label-color: 			$gray-dark;
+// $evo-category-hdr-label-margin: 			18px 0;
+// $evo-category-hdr-label-padding: 		15px;
+
+
+// 	ADD/REMOVE PLAN COMPONENT
+// ------------------------------------------------------------------------------------------
+// $evo-add-remove-plan-component-icon-color: $gray-light;
+// $evo-add-remove-plan-component-icon-float: right;
+// $evo-add-remove-plan-component-icon-font-size: rem-calc(22);
+// $evo-add-remove-plan-component-icon-position: relative;
+// $evo-add-remove-plan-component-icon-position-top: rem-calc(12);
+// $evo-add-remove-plan-component-icon-padding-bottom: 2px;
+
+// $evo-add-remove-plan-component-overlay-bgcolor: rgba(255, 255, 255, 0.90);
+// $evo-add-remove-plan-component-overlay-position: absolute;
+// $evo-add-remove-plan-component-overlay-position-left: 0;
+// $evo-add-remove-plan-component-overlay-position-right: 0;
+// $evo-add-remove-plan-component-overlay-padding: 64px 0;
+// $evo-add-remove-plan-component-overlay-z-index: 1;
+// $evo-add-remove-plan-component-overlay-text-align: center;
+
+// $evo-add-remove-plan-component-overlay-link-font-size: rem-calc(14);
+// $evo-add-remove-plan-component-overlay-link-text-transform: uppercase;
+
+
+// FORM WORKSHEET
+// ------------------------------------------------------------------------------------------
+// $evo-form-worksheet-font-family: $evo-font-regular-family;
+// $evo-form-worksheet-font-size: rem-calc(25);
+// $evo-form-worksheet-label-color: $gray-mid;
+// $evo-form-worksheet-inputs-border-radius: 0;
+// $evo-form-worksheet-inputs-bg-color: $gray-lightest;
+// $evo-form-worksheet-inputs-border: 0;
+// $evo-form-worksheet-inputs-border-bottom-with: 2px;
+// $evo-form-worksheet-inputs-border-bottom-style: solid;
+// $evo-form-worksheet-inputs-border-bottom-color: $sapphire-mid;
+// $evo-form-worksheet-input-color: $sapphire-mid;
+
+
+// SLIDER CONTRIBUTIONS
+// ------------------------------------------------------------------------------------------
+// $evo-contributions-slider-background-color: $gray-light;
+// $evo-contributions-slider-handle-background-color: $citrine-mid;
+// $evo-contributions-slider-handle-shadow-color: $black;
+// $evo-contributions-slider-handle-border-color: $white;
+// $evo-contributions-slider-range-background-color: $gray-mid;
+// $evo-contributions-slider-tick-marker-color: $gray-light;
+// $evo-contributions-slider-tooltip-background-color: $gray-dark;
+// $evo-contributions-slider-tooltip-font-color: $white;
+
+
+// REVEAL MODAL
+// ------------------------------------------------------------------------------------------
+
+
+
+// LOGIN TEMPLATE
+// ------------------------------------------------------------------------------------------
+// $evo-login-template-layout-background-color: $sapphire-dark;
+// $evo-login-template-layout-background-image-src-path: "../images/ep/login_grid_mono_color_bkgd.jpg";
+// $evo-login-template-background-color: $white;
+// $evo-login-template-font-color: $sapphire-dark;
+

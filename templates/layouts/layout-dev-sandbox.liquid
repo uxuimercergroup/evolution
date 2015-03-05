@@ -1,51 +1,46 @@
 <!DOCTYPE HTML>
-<!--[if IE 8]><html class="no-js ie8"><![endif]-->
-<!--[if IE 9]><html class="no-js ie9"><![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js ie-gt-9" lang="en"><!--<![endif]-->
+<!--[if IE 9]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
 	<head>
 
-		<!-- CHARACTER SET -->
 		<meta charset="utf-8" />
-
-		<!-- ALWAYS FORCE LATEST IE RENDERING ENGINE (EVEN IN INTRANET) -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-		<!-- TITLE AND PAGE META DATA -->
 		<title>{% block title %}{{ global.site_title }}{% endblock %}</title>
 		<meta name="keywords" content="{% block meta_keywords %}{% endblock %}" />
 		<meta name="description" content="{% block meta_description %}{% endblock %}" />
-		<meta name="robots" content="index, follow" />
 
-		<!-- MOBILE OPTIMIZATIONS -->
-		<meta name="HandheldFriendly" content="True" />
-		<meta name="MobileOptimized" content="320" />
-
-		<!-- Viewport setting for responsiveness -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-
-		<!-- Mobile Internet Explorer font smoothing for easy reading -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="cleartype" content="on" />
 		
 		<!-- Mobile touch icons - http://goo.gl/6nVq0 -->
-		<!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
-		<!-- <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png" /> -->
-		<!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
-		<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" /> -->
-		<!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
-		<!-- <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120-precomposed.png" /> -->
-		<!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
-		<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" /> -->
-		<!-- For the iPad mini and the first and second-generation iPad on iOS ≥ 7: -->
-		<!-- <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76-precomposed.png" /> -->
-		<!-- For the iPad mini and the first and second-generation iPad on iOS ≤ 6: -->
-		<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" /> -->
+		<!-- For Chrome for Android: -->
+		<!-- <link rel="icon" sizes="192x192" href="touch-icon-192x192.png"> -->
+		<!-- For iPhone 6 Plus with @3× display: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="180x180" href="apple-touch-icon-180x180-precomposed.png"> -->
+		<!-- For iPad with @2× display running iOS ≥ 7: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png"> -->
+		<!-- For iPad with @2× display running iOS ≤ 6: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png"> -->
+		<!-- For iPhone with @2× display running iOS ≥ 7: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120-precomposed.png"> -->
+		<!-- For iPhone with @2× display running iOS ≤ 6: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png"> -->
+		<!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76-precomposed.png"> -->
+		<!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6: -->
+		<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png"> -->
 		<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-		<!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" /> -->
-		<!-- For nokia devices: -->
-		<!-- <link rel="shortcut icon" href="apple-touch-icon-precomposed.png" /> -->
+		<!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"> --><!-- 57×57px -->
+
 		<!-- Tile icon for Win8 (144x144 + tile color) -->
-		<!-- <meta name="msapplication-TileImage" content="apple-touch-icon-144x144-precomposed.png" /> -->
-		<!-- <meta name="msapplication-TileColor" content="#002C77" /> -->
+		<!-- <meta name="msapplication-TileImage" content="apple-touch-icon-144x144-precomposed.png"> -->
+		<!-- <meta name="msapplication-TileColor" content="#002C77"> -->
+
+		<!-- Add to homescreen for Chrome on Android -->
+		<!--
+        <meta name="mobile-web-app-capable" content="yes">
+        -->
 
 		<!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
 		<!--
@@ -55,40 +50,35 @@
 		-->
 
 		<!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
-        <!--
+		<!--
         <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
-        -->
+    	-->
 
 		<!-- FAVICON -->
 		<link rel="shortcut icon" href="/favicon.ico" />
 
-		<!-- MERCER EVOLUTION CORE STYLES -->
+		<!-- EVOLUTION CORE STYLES -->
 		{{ "evolution.css" | asset_url | stylesheet_tag }}
-
-		<!-- SITE THEME STYLES -->
-		{{ "theme.css" | asset_url | stylesheet_tag }}
 
 		<!-- SITE STYLES -->
 		{{ "styles.css" | asset_url | stylesheet_tag }}
 
 		<!-- SITE IE CONDITIONAL STYLES -->
-		<!--[if IE]>{{ "ie.css" | asset_url | stylesheet_tag }}<![endif]-->
+		<!--[if IE 9]>{{ "ie.css" | asset_url | stylesheet_tag }}<![endif]-->
 
 		<!-- GOOGLE PRETTIFY STYLES FOR PRETTY CODE PRINTING -->
 		{{ "prettify.css" | asset_url | stylesheet_tag }}
 
 		<!-- MODERNIZR - USED TO CHECK HTML & CSS3 SUPPORT IN BROWSERS -->
-		{{ "modernizr_2.6.2.js" | asset_url | script_tag }}
-
-		<!-- RESPOND.JS - A FAST & LIGHTWEIGHT POLYFILL FOR MIN/MAX-WIDTH CSS3 MEDIA QUERIES (FOR IE 6-8, AND MORE) - https://github.com/scottjehl/Respond -->
-		{{ "respond_1.3.0.js" | asset_url | script_tag }}
+		{{ "modernizr.js" | asset_url | script_tag }}
 
 	</head>
 	<body>
+		
 		<!-- HEADER - BEGINS -->
 		<!-- { include "header" } -->
-		<header role="banner" class="mul-grid mul-header">
-			<div class="mul-header-adjust">
+		<header role="banner" class="evo-grid evo-header">
+			<div class="evo-header-adjust">
 			{% include '/demos/base/header/masthead-v1' %}
 			{% include '/demos/base/header/masthead-v2' %}
 			{% include '/demos/base/header/masthead-v3' %}
@@ -117,45 +107,109 @@
 		<!-- HEADER - ENDS -->
 
 		<!-- PAGE - BEGINS -->
-		<section role="main" class="mul-grid">
-			{% block content %}{% endblock %}
+		<section role="main">
+			<div class="row">
+				{% block content %}{% endblock %}
+			</div>
 		</section>
 		<!-- PAGE - ENDS -->
 
 		<!-- FOOTER - BEGINS -->
 		<!-- { include "footer" } -->
 
-		<footer class="mul-footer">
-			<div id="nav-bookmark" class="mul-footer-adjust">
-				<div class="col-24 mul-footer-content-ctn">
-					<div class="col-14 mul-footer-logo first">
+		<footer class="evo-footer">
+			<div id="nav-bookmark" class="evo-footer-adjust">
+				<div class="col-24 evo-footer-content-ctn">
+					<div class="col-10 evo-footer-logo first">
 						<img src="{{ "mercer_logo_126x18.png" | asset_url }}" alt="Mercer" width="126" height="18" />
 					</div>
-					<div class="col-10 mul-footer-copyright">
-						<ul class="mul-horizontal-list mul-horizontal-list-piped">
+					<div class="col-13 evo-footer-copyright">
+						<ul class="evo-horizontal-list evo-horizontal-list-piped">
 							<li>&copy; {{ 'now' | date: "%Y" }} Mercer LLC, All Rights Reserved</li>
+							<li>
+								<a href="http://foundation.zurb.com/docs/" target="_blank">Foundation {{ global.foundation_version }}</a>
+							</li>
 							<li>
 								<a href="/change-log">{{ global.version_number }}</a>
 							</li>
 						</ul>
+					</div>
+					<div class="col-1">
+						<i class="evo-icon-tools evo-ref-sliding-drawer-btn js-evo-ref-sliding-drawer-btn" title="Developer Drawer"></i>
 					</div>
 				</div>
 			</div>
 		</footer>
 		<!-- FOOTER - ENDS -->
 
-		
-		<!-- MERCER EVOLUTION CORE SCRIPTS -->
+		<!-- DEVELOPER - SLIDING DRAWER - BEGINS -->
+		{% include "/reference/developer-sliding-drawer" %}
+		<!-- DEVELOPER - SLIDING DRAWER - ENDS -->
+
+		<!-- EVOLUTION CORE SCRIPTS -->
 		<!-- {{ "evolution.js" | asset_url | script_tag }} -->
 
 		<!--
 		// =======================================================================================================
-		// JQUERY/JQUERY UI LIBRARIES
+		// FOUNDATION VENDOR LIBRARIES
 		// =======================================================================================================
 		-->
 
-		{{ "jquery_1.10.2.js" | asset_url | script_tag }}
-		{{ "jquery_ui_1.10.3.js" | asset_url | script_tag }}
+		{{ "jquery.js" | asset_url | script_tag }}
+		{{ "jquery.cookie.js" | asset_url | script_tag }}
+		{{ "placeholder.js" | asset_url | script_tag }}
+		{{ "fastclick.js" | asset_url | script_tag }}
+
+		<!--
+		// =======================================================================================================
+		// FOUNDATION CORE LIBRARIES
+		// =======================================================================================================
+		-->
+
+		{{ "assets/scripts/core/foundation/foundation/foundation.js" | asset_url | script_tag }}
+
+		<!--
+		// =======================================================================================================
+		// FOUNDATION PLUGIN LIBRARIES
+		// =======================================================================================================
+		-->
+
+		{{ "foundation.alert.js" | asset_url | script_tag }}
+		{{ "foundation.accordion.js" | asset_url | script_tag }}
+		{{ "foundation.clearing.js" | asset_url | script_tag }}
+		{{ "foundation.abide.js" | asset_url | script_tag }}
+		{{ "foundation.dropdown.js" | asset_url | script_tag }}
+		{{ "foundation.equalizer.js" | asset_url | script_tag }}
+		{{ "foundation.interchange.js" | asset_url | script_tag }}
+		{{ "foundation.joyride.js" | asset_url | script_tag }}
+		{{ "foundation.magellan.js" | asset_url | script_tag }}
+		{{ "foundation.offcanvas.js" | asset_url | script_tag }}
+		{{ "foundation.orbit.js" | asset_url | script_tag }}
+		{{ "foundation.reveal.js" | asset_url | script_tag }}
+		{{ "foundation.tab.js" | asset_url | script_tag }}
+		{{ "foundation.tooltip.js" | asset_url | script_tag }}
+		{{ "foundation.topbar.js" | asset_url | script_tag }}
+		<!-- {{ "foundation.slider.js" | asset_url | script_tag }} -->
+
+		<!--
+		// =======================================================================================================
+		// JQUERY UI LIBRARIES
+		// =======================================================================================================
+		-->
+
+		<!--
+		// jQuery UI Custom Build (http://jqueryui.com/download/), includes:
+		// Core
+		// Widget
+		// Mouse
+		// Position
+		// Autocomplete
+		// Datepicker
+		// Menu
+		// Slider
+		-->
+
+		{{ "jquery-ui.js" | asset_url | script_tag }}
 
 		<!--
 		// =======================================================================================================
@@ -166,22 +220,22 @@
 		<!--
 		// jQuery UI mobile plugins
 		-->
-		{{ "jquery.ui.touchpunch.js" | asset_url | script_tag }} <!-- Enables the use of touch events on sites using the jQuery UI user interface library, https://github.com/furf/jquery-ui-touch-punch -->
+		{{ "jquery.ui.touch-punch.js" | asset_url | script_tag }} <!-- Enables the use of touch events on sites using the jQuery UI user interface library, https://github.com/furf/jquery-ui-touch-punch -->
 
 		<!--
 		// jQuery Component plugins
 		-->
-		{{ "jquery.footables.core.js" | asset_url | script_tag }}
-		{{ "jquery.footables.filter.js" | asset_url | script_tag }}
-		{{ "jquery.footables.sorting.js" | asset_url | script_tag }}
+		{{ "footable.js" | asset_url | script_tag }}
+		{{ "footable.filter.js" | asset_url | script_tag }}
+		{{ "footable.sort.js" | asset_url | script_tag }}
 		{{ "jquery.maskedinput.js" | asset_url | script_tag }}
 		{{ "jquery.mousewheel.js" | asset_url | script_tag }}
-		{{ "jquery.mcustomscrollbar.js" | asset_url | script_tag }}
-		{{ "jquery.owlcarousel.js" | asset_url | script_tag }}
-		{{ "jquery.smartmenus.js" | asset_url | script_tag }}
-		{{ "jquery.tooltipster.js" | asset_url | script_tag }}
-		{{ "jquery.ui.dialog.clickoutside.js" | asset_url | script_tag }}
-		{{ "jquery.ui.tabs.paging.js" | asset_url | script_tag }}
+		{{ "jquery.mCustomScrollbar.js" | asset_url | script_tag }}
+		{{ "owl.carousel.js" | asset_url | script_tag }}
+		<!-- {{ "jquery.smartmenus.js" | asset_url | script_tag }} -->
+		<!-- {{ "jquery.tooltipster.js" | asset_url | script_tag }} -->
+		<!-- {{ "jquery.ui.dialog-clickoutside.js" | asset_url | script_tag }} -->
+		<!-- {{ "jquery.ui.tabs.paging.js" | asset_url | script_tag }} -->
 
 		<!--
 		// =======================================================================================================
@@ -189,7 +243,7 @@
 		// =======================================================================================================
 		-->
 
-		{{ "jquery.placeholder.js" | asset_url | script_tag }} <!-- HTML5 placeholder polyfill for IE8+, depends on jQuery, https://github.com/matoilic/jquery.placeholder -->
+		
 
 		<!--
 		// =======================================================================================================
@@ -207,22 +261,22 @@
 
 		{{ "helpers.js" | asset_url | script_tag }}
 		{{ "base.js" | asset_url | script_tag }}
-		{{ "header.js" | asset_url | script_tag }}
-		{{ "menus.js" | asset_url | script_tag }}
-		{{ "accordion.js" | asset_url | script_tag }}
-		{{ "advanced_filter.js" | asset_url | script_tag }}
-		{{ "alternate-views-badge.js" | asset_url | script_tag }}
+		<!-- {{ "header.js" | asset_url | script_tag }} -->
+		<!-- {{ "menus.js" | asset_url | script_tag }} -->
+		<!-- {{ "accordion.js" | asset_url | script_tag }} -->
+		<!-- {{ "advanced_filter.js" | asset_url | script_tag }} -->
+		<!-- {{ "alternate_views_badge.js" | asset_url | script_tag }} -->
 		{{ "autocomplete.js" | asset_url | script_tag }}
 		{{ "carousel.js" | asset_url | script_tag }}
-		{{ "content_modal.js" | asset_url | script_tag }}
+		<!-- {{ "content_modal.js" | asset_url | script_tag }} -->
 		{{ "datepicker.js" | asset_url | script_tag }}
-		{{ "dialog.js" | asset_url | script_tag }}
-		{{ "profile_containers.js" | asset_url | script_tag }}
+		<!-- {{ "dialog.js" | asset_url | script_tag }} -->
+		<!-- {{ "profile_containers.js" | asset_url | script_tag }} -->
 		{{ "scroll_pane.js" | asset_url | script_tag }}
 		{{ "slider.js" | asset_url | script_tag }}
 		{{ "tables.js" | asset_url | script_tag }} <!-- Requires FooTables jQuery component plugins to be enabled -->
-		{{ "tabs.js" | asset_url | script_tag }}
-		{{ "tooltip.js" | asset_url | script_tag }}
+		<!-- {{ "tabs.js" | asset_url | script_tag }} -->
+		<!-- {{ "tooltip.js" | asset_url | script_tag }} -->
 
 		
 		<!-- SITE SCRIPTS -->
@@ -230,10 +284,13 @@
 
 		<!--
 		// =======================================================================================================
-		// JAVASCRIPT LIBRARIES
+		// SITE JAVASCRIPT LIBRARIES
 		// =======================================================================================================
 		-->
-
+		
+		{{ "highcharts-lib.js" | asset_url | script_tag }}
+		{{ "exporting.js" | asset_url | script_tag }}
+		{{ "evolution-theme.js" | asset_url | script_tag }}
 		{{ "jquery.jpanelmenu.js" | asset_url | script_tag }}
 		{{ "prettify.js" | asset_url | script_tag }}
 
@@ -244,6 +301,11 @@
 		-->
 
 		{{ "site_main.js" | asset_url | script_tag }}
+
+		<!-- FOUNDATION SCRIPTS INITIALIZATION -->
+		<script>
+			$(document).foundation();
+		</script>
 
 	</body>
 </html>

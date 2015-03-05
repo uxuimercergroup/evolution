@@ -6,15 +6,15 @@
 <!-- PAGE TITLE - ENDS -->
 
 <!-- CONTENT SECTION - BEGINS -->
-	<section class="col-24 mul-alternate-views-badge mul-ref-alternate-views-badge" data-alternate-views-badge="js-mul-ref-alternate-views-badge">
+	<section class="col-24 evo-alternate-views-badge evo-ref-alternate-views-badge" data-alternate-views-badge="js-evo-ref-alternate-views-badge">
 
 		{% include '/reference/reference-content' %}
 
 	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
 		{% if model.reference-get-code == "true" %}
-			<div id="mul-ref-alternate-views-badge-content-panel-get-code">
+			<div id="evo-ref-alternate-views-badge-content-panel-get-code">
 
-				<h3 class="mul-hdr-rule">HTML</h3>
+				<h3 class="evo-hdr-rule">HTML</h3>
 
 				{% if model.reference-example-versions == "true" %}
 					<h4>{{ model.reference-example-version-label }}</h4>
@@ -25,7 +25,7 @@
 
 				{% if model.reference-code-js == "true" %}
 
-					<h3 class="mul-hdr-rule">JS</h3>
+					<h3 class="evo-hdr-rule">JS</h3>
 
 					{% if model.reference-example-versions == "true" %}
 						<h4>{{ model.reference-example-version-label }}</h4>
@@ -44,10 +44,10 @@
 <!-- CONTENT SECTION - ENDS -->
 
 <!-- NOT RESPONSIVE - ATTENTION MESSAGE - BEGINS -->
-	<div class="mul-box mul-box-rnd mul-attention-ctn mul-visible-small-mediaquery">
-		<div class="mul-box-hdr">
-			<h6 class="mul-message-hdr">
-				<i class="mul-icon-warning mul-icon-size-small mul-icon-color-attention mul-icon-position-left"></i>Attention
+	<div class="evo-box evo-box-rnd evo-attention-ctn evo-visible-small-mediaquery">
+		<div class="evo-box-hdr">
+			<h6 class="evo-message-hdr">
+				<i class="evo-icon-warning evo-icon-size-small evo-icon-color-attention evo-icon-position-left"></i>Attention
 			</h6>
 		</div>
 		<div class="box-bdy">
@@ -58,44 +58,44 @@
 
 <!-- EXAMPLE SECTION - BEGINS -->
 
-	<section class="col-24 mul-ref-example mul-hidden-small-mediaquery">
+	<section class="col-24 evo-ref-example evo-hidden-small-mediaquery">
 
 	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
-		<h3 class="mul-hdr-dbl-rule mul-ref-example-hdr">{{ global.reference-example-hdr }} (Click the "filter" icon to view)</h3>
+		<h3 class="evo-hdr-dbl-rule evo-ref-example-hdr">{{ global.reference-example-hdr }} (Click the "filter" icon to view)</h3>
 	<!-- EXAMPLE SECTION - HEADER - ENDS -->
 
 	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
-		<section class="mul-ref-example-content">
+		<section class="evo-ref-example-content">
 
 		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 
 			{% if model.reference-example-versions == "true" %}
-				<h4 class="mul-hdr-rule">{{ model.reference-example-version-label }}</h4>
+				<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
 			{% endif %}
 
 			<!-- ADVANCED FILTER - ATTENTION MESSAGE CONTAINER - BEGINS -->
-				<div class="mul-box mul-box-rnd mul-attention-ctn mul-display-none" id="js-mul-advanced-filter-example-attention-ctn">
-					<div class="col-22 first mul-box-hdr">
-						<h6 class="mul-message-hdr">
-							<i class="mul-icon-warning mul-icon-size-small mul-icon-color-attention mul-icon-position-left"></i>Attention
+				<div class="evo-box evo-box-rnd evo-attention-ctn evo-display-none" id="js-evo-advanced-filter-example-attention-ctn">
+					<div class="col-22 first evo-box-hdr">
+						<h6 class="evo-message-hdr">
+							<i class="evo-icon-warning evo-icon-size-small evo-icon-color-attention evo-icon-position-left"></i>Attention
 						</h6>
 						<div class="box-bdy">
 							<p>These results have been filtered.</p>
 						</div>
 					</div>
-					<div class="col-2 mul-align-right">
-						<a class="mul-icon-mul-edit mul-icon-size-small mul-icon-color-gray-darker mul-icon-position-right" id="js-mul-advanced-filter-example-edit-btn" href="javascript:;" title="Edit Filter"></a>
-						<a class="mul-icon-minus-circle mul-icon-size-small mul-icon-color-error mul-icon-position-right" id="js-mul-advanced-filter-example-close-btn" href="javascript:;" title="Delete Filter"></a>
+					<div class="col-2 evo-align-right">
+						<a class="evo-icon-evo-edit evo-icon-size-small evo-icon-color-gray-darker evo-icon-position-right" id="js-evo-advanced-filter-example-edit-btn" href="javascript:;" title="Edit Filter"></a>
+						<a class="evo-icon-minus-circle evo-icon-size-small evo-icon-color-error evo-icon-position-right" id="js-evo-advanced-filter-example-close-btn" href="javascript:;" title="Delete Filter"></a>
 					</div>
 				</div>
 			<!-- ADVANCED FILTER - ATTENTION MESSAGE CONTAINER - ENDS -->
 
 			<!-- ADVANCED FILTER - CONFIRMATION MESSAGE CONTAINER WITH CLOSE - BEGINS -->
-				<div class="mul-box mul-box-rnd mul-display-none mul-confirmation-ctn js-mul-fadeout-element" id="js-mul-advanced-filter-example-confirmation-ctn">
-					<div class="mul-box-hdr">
-						<i class="mul-icon-cancel-circle mul-icon-size-small mul-icon-color-gray-darker mul-icon-position-right mul-close-action js-mul-close-ctn" title="Close"><span class="mul-icon-hide-text">Close</span></i>
-						<h6 class="mul-message-hdr">
-							<i class="mul-icon-checkmark-circle mul-icon-size-small mul-icon-color-confirmation mul-icon-position-left"></i>Confirmation
+				<div class="evo-box evo-box-rnd evo-display-none evo-confirmation-ctn js-evo-fadeout-element" id="js-evo-advanced-filter-example-confirmation-ctn">
+					<div class="evo-box-hdr">
+						<i class="evo-icon-cancel-circle evo-icon-size-small evo-icon-color-gray-darker evo-icon-position-right evo-close-action js-evo-close-ctn" title="Close"><span class="evo-icon-hide-text">Close</span></i>
+						<h6 class="evo-message-hdr">
+							<i class="evo-icon-checkmark-circle evo-icon-size-small evo-icon-color-confirmation evo-icon-position-left"></i>Confirmation
 						</h6>
 					</div>
 					<div class="box-bdy">
@@ -104,17 +104,17 @@
 				</div>
 			<!-- ADVANCED FILTER - CONFIRMATION MESSAGE CONTAINER WITH CLOSE - ENDS -->
 
-			<div class="mul-table-small-mediaquery">
-				<table class="mul-table mul-footable mul-table-borders mul-table-striped mul-table-hover" data-filter="#filter" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+			<div class="evo-table-small-mediaquery">
+				<table class="evo-table evo-footable evo-table-borders evo-table-striped evo-table-hover" data-filter="#filter" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
 					<caption>
 						<div class="col-19 first">&nbsp;</div>
-						<div class="col-5 mul-tbl-data-filter">
+						<div class="col-5 evo-tbl-data-filter">
 							<div class="col-24">
 								<div class="col-21 first">
 									{% include '/base/tables/table-quick-filter' %}
 								</div>
 								<div class="col-3">
-									<i class="mul-icon-filter" id="js-mul-advanced-filter-example-action-btn" title="Advanced Filter"></i>
+									<i class="evo-icon-filter" id="js-evo-advanced-filter-example-action-btn" title="Advanced Filter"></i>
 								</div>
 							</div>
 						</div>
@@ -122,7 +122,7 @@
 					<thead>
 						<tr>
 							<th class="col-1" scope="col" data-sort-ignore="true">
-								<input type="checkbox" class="js-mul-select-all-checkboxes">
+								<input type="checkbox" class="js-evo-select-all-checkboxes">
 							</th>
 							<th class="col-6" scope="col"><a href="javascript:;">Task</a></th>
 							<th class="col-2" scope="col"><a href="javascript:;">Type</a></th>
@@ -131,8 +131,8 @@
 								<a href="javascript:;">Location</a>
 							</th>
 							<th class="col-4" data-sort-initial="ascending" scope="col"><a href="javascript:;">Assigned To</a></th>
-							<th class="col-3 mul-nowrap mul-align-right" scope="col"><a href="javascript:;">Start Date</a></th>
-							<th class="col-3 mul-nowrap mul-align-right" scope="col"><a href="javascript:;">End Date</a></th>
+							<th class="col-3 evo-nowrap evo-align-right" scope="col"><a href="javascript:;">Start Date</a></th>
+							<th class="col-3 evo-nowrap evo-align-right" scope="col"><a href="javascript:;">End Date</a></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -149,8 +149,8 @@
 							<td>
 								{{ item.abbrev_first_name}} {{ item.last_name}}
 							</td>
-							<td class="mul-nowrap mul-align-right">{{ item.start_date }}</td>
-							<td class="mul-nowrap mul-align-right">{{ item.end_date }}</td>
+							<td class="evo-nowrap evo-align-right">{{ item.start_date }}</td>
+							<td class="evo-nowrap evo-align-right">{{ item.end_date }}</td>
 						</tr>
 						{% endfor %}
 						

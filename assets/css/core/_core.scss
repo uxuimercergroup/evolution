@@ -1,7 +1,7 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Core SASS Imports Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Core SASS Imports Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 // ==========================================================================================
@@ -11,11 +11,18 @@
 // GLOBAL
 //-------------------------------------------------------------------------------------------
 // COLOR VARIABLES............Global, brand, and other color variables
-// THEME VARIABLES............List of default theme variables that control the default theme of the library
+
+// FOUNDATION
+//-------------------------------------------------------------------------------------------
+// NORMALIZE..................Reset all default browser styles to zero
+// FOUNDATION SETTINGS........Partial for calling in Foundation settings and functions
+// FOUNDATION.................Partial for calling in Foundation components
+
+// GLOBAL
+//-------------------------------------------------------------------------------------------
 // VARIABLES..................List of variables that control the library that are not theme variables
 // FUNCTIONS..................Functions used for SASS calculations
 // MIXINS.....................SASS mixins for help with styling
-// NORMALIZE..................Reset all default browser styles to zero
 // HELPERS....................Helper classes to aid in styling, all helper use is class based
 
 // BASE
@@ -40,7 +47,6 @@
 // ADVANCED FILTER............Advanced filter object styles (jQuery UI)
 // ALTERNATE VIEWS BADGE......Alternate views badge object styles (Uses jQuery UI tabs)
 // AUTOCOMPLETE...............Auto suggest object styles (jQuery UI)
-// CALL TO ACTION.............Call to action styles
 // CAROUSEL...................Carousel object styles (Owl Carousel jQuery Plugin)
 // CONTENT MODAL..............Content modal object styles, (jQuery UI dialog w/jQuery UI tabs)
 // DATEPICKER.................Calendar object styles (jQuery UI)
@@ -63,17 +69,17 @@
 // CORE SASS IMPORTS
 // ==========================================================================================
 
-// NOTE #1: Make sure color variables partial is called before theme variables partial since theme variables partial requires color variables partial
-// NOTE #2: Make sure theme variables partial is called before variables partial since variables partial requires theme variables partial
-// NOTE #3: Make sure color variables, theme variables, and variables partials are called before mixins partial since mixins partial requires all three
-// NOTE #4: Make sure mixins partial is called before all other partials (excluding color variables, theme variables, variables, and functions) since all other partials require mixins partial
+@import 
+		"global/color_variables",
 
-@import "global/color_variables",
-		"global/theme_variables",
+		"foundation/normalize",
+		"foundation/foundation/settings",
+		"foundation/foundation",
+
 		"global/variables",
+
 		"global/functions",
 		"global/mixins",
-		"global/normalize",
 		"global/helpers",
 
 		"base/menus",
@@ -87,6 +93,7 @@
 		"base/hero_banner",
 		"base/icons",
 		"base/lists",
+		"base/inline_lists",
 		"base/tables",
 		"base/type",
 		
@@ -95,7 +102,6 @@
 		"objects/alternate_views_badge",
 		"objects/autocomplete",
 		"objects/layout_banding",
-		"objects/call_to_action",
 		"objects/carousel",
 		"objects/content_modal",
 		"objects/datepicker",

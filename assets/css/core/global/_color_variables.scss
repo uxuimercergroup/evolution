@@ -1,42 +1,35 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Global Color Variables Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Global Color Variables Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
+// ==========================================================================================
 // BASE COLORS
-// ------------------------------------------------------------------------------------------
+// ==========================================================================================
+
 $transparent:								transparent !default;
-
-$white:										#FFF !default;
-
-$black:										#000 !default;
-$blue-gray:									#23334C !default;
-$blue-sapphire:								#002C77 !default;
-$purple:									#43276D !default;
-$fuscia:									#560054 !default;
-$pink:										#A9194F !default;
-$red:										#810009 !default;
-$orange:									#C45F24 !default;
-$tan:										#8E5501 !default;
-$green:										#005804 !default;
-$blue-green:								#004C4F !default;
-
+$white:										#FFFFFF !default;
+$black:										#000000 !default;
 
 // GRAY COLORS
 // ------------------------------------------------------------------------------------------
-$gray-darkest:								lighten($black, 20%) !default;		// #333
-$gray-darker:								lighten($black, 40%) !default;		// #666	
-$gray-dark:									lighten($black, 60%) !default;		// #999
-$gray-mid-dark:								lighten($black, 69%) !default;		// #B0B0B0
-$gray-mid-light:							lighten($black, 80%) !default;		// #CCC
-$gray-light:								lighten($black, 90%) !default;		// #E6E6E6
-$gray-lighter:								lighten($black, 93.5%) !default;	// #EEE
-$gray-lightest:								lighten($black, 97%) !default;		// #F8F8F8
+$gray-darkest:								#202020 !default;
+$gray-darker:								#37424A !default;
+$gray-dark:									#404040 !default;
+$gray-mid:									#808080 !default;
+$gray-light:								#BFBFBF !default;
+$gray-lighter:								#EEEEEE !default;
+$gray-lightest:								#F8F8F8 !default;
 
+
+// ==========================================================================================
+// EVOLUTION COLORS
+// ==========================================================================================
 
 // BLUE GRAY COLORS
 // ------------------------------------------------------------------------------------------
+$blue-gray:									#23334C !default;
 $blue-gray-darkest:							#395A85 !default;
 $blue-gray-darker:							#396EA8 !default;
 $blue-gray-dark:							#517BAA !default;
@@ -47,166 +40,161 @@ $blue-gray-lighter:							#E9EEF5 !default;
 $blue-gray-lightest:						#E8F0F7 !default;
 
 
-// BLUE SAPPHIRE COLORS
+// ==========================================================================================
+// MMC COLOR SPECTRUM COLORS
+// ==========================================================================================
+
+// SAPPHIRE COLORS
 // ------------------------------------------------------------------------------------------
-$blue-sapphire-dark:						#006D9E !default;
-$blue-sapphire-mid:							#00A8C8 !default;
-$blue-sapphire-light:						#A6E2EF !default;
+$sapphire:									#002C77 !default;
+$sapphire-dark:								#006D9E !default;
+$sapphire-mid:								#00A8C8 !default;
+$sapphire-light:							#A6E2EF !default;
 
-
-// PURPLE COLORS
+// IOLITE COLORS
 // ------------------------------------------------------------------------------------------
-$purple-dark:								#595997 !default;
-$purple-mid:								#6F83C1 !default;
-$purple-light:								#C4CAE6 !default;
+$iolite:									#43286D !default;
+$iolite-dark:								#595998 !default;
+$iolite-mid:								#6F85C2 !default;
+$iolite-light:								#C5CAE7 !default;
 
-
-// FUSCIA COLORS
+// AMETHYST COLORS
 // ------------------------------------------------------------------------------------------
-$fuscia-dark:								#932077 !default;
-$fuscia-mid:								#CE3D95 !default;
-$fuscia-light:								#E7B8D5 !default;
+$amethyst:									#570054 !default;
+$amethyst-dark:								#932077 !default;
+$amethyst-mid:								#CF3D96 !default;
+$amethyst-light:							#E7B8D6 !default;
 
-
-// PINK COLORS
+// RUBY COLORS
 // ------------------------------------------------------------------------------------------
-$pink-dark:									#ED2C67 !default;
-$pink-light:								#F7B6BB !default;
+$ruby:										#690031 !default;
+$ruby-dark:									#A9194F !default;
+$ruby-mid:									#ED2C67 !default;
+$ruby-light:								#F7B6BB !default;
 
-
-// RED COLORS
+// GARNET COLORS
 // ------------------------------------------------------------------------------------------
-$red-dark:									#BA2C2B !default;
-$red-mid:									#EF4E45 !default;
-$red-light:									#FCDBD9 !default;
+$garnet:									#820009 !default;
+$garnet-dark:								#BB2C2B !default;
+$garnet-mid:								#EF4E45 !default;
+$garnet-light:								#F9BEAD !default;
 
-
-// ORANGE COLORS
+// CITRINE COLORS
 // ------------------------------------------------------------------------------------------
-$orange-dark:								#F48132 !default;
-$orange-mid:								#FAA45E !default;
-$orange-light:								#FCCFAB !default;
+$citrine:									#8D380A !default;
+$citrine-dark:								#C55F24 !default;
+$citrine-mid:								#F48132 !default;
+$citrine-light:								#FCCFAB !default;
 
-
-// TAN COLORS
+// TOPAZ COLORS
 // ------------------------------------------------------------------------------------------
-$tan-dark:									#C6A54F !default;
-$tan-mid:									#F1D485 !default;
-$tan-light:									#FEF8E3 !default;
+$topaz:										#905501 !default;
+$topaz-dark:								#C98414 !default;
+$topaz-mid:									#FBAE17 !default;
+$topaz-light:								#FFDDAC !default;
 
-
-// GREEN COLORS
+// PERIDOT COLORS
 // ------------------------------------------------------------------------------------------
-$green-darker:								#2D7B05 !default;
-$green-dark:								#6EAA38 !default;
-$green-mid:									#72BE44 !default;
-$green-light:								#98E96C !default;
-$green-lighter:								#BDDCA1 !default;
-$green-lightest:							#D6EBC3 !default;
+$peridot:									#516021 !default;
+$peridot-dark:								#838E30 !default;
+$peridot-mid:								#B3BA35 !default;
+$peridot-light:								#D9D99F !default;
 
-
-// BLUE GREEN COLORS
+// EMERALD COLORS
 // ------------------------------------------------------------------------------------------
-$blue-green-dark:							#008075 !default;
-$blue-green-mid:							#0FB694 !default;
-$blue-green-light:							#A7D9C8 !default;
+$emerald:									#00582D !default;
+$emerald-dark:								#128C3F !default;
+$emerald-mid:								#72BE44 !default;
+$emerald-light:								#BDDDA3 !default;
+
+// TURQUOISE COLORS
+// ------------------------------------------------------------------------------------------
+$turquoise:									#004C50 !default;
+$turquoise-dark:							#008075 !default;
+$turquoise-mid:								#0FB694 !default;
+$turquoise-light:							#A7D9C8 !default;
 
 
+// ==========================================================================================
 // BRAND COLORS
-// ------------------------------------------------------------------------------------------
+// ==========================================================================================
 
 // ICONS
 $iconFontColorWhite:						$white !default;
 $iconFontColorBlack:						$black !default;
-$iconFontColorGrayDarker:					$gray-darker !default;
-$iconFontColorDisabled:						$gray-mid-light !default;
-$iconFontColorConfirmation:					$green !default;
-$iconFontColorError:						$red-dark !default;
-$iconFontColorAttention:					$tan-dark !default;
-$iconFontColorInfo:							$blue-sapphire !default;
-$iconFontGrayDarkerBackgroundStartColor:	$gray-mid-light !default;
-$iconFontGrayDarkerBackgroundEndColor:		$gray-darker !default;
-$iconFontConfirmationBackgroundStartColor:	$green-mid !default;
-$iconFontConfirmationBackgroundEndColor:	$green !default;
-$iconFontErrorBackgroundStartColor:			$red-mid !default;
-$iconFontErrorBackgroundEndColor:			$red-dark !default;
-$iconFontAttentionBackgroundStartColor:		$tan-mid !default;
-$iconFontAttentionBackgroundEndColor:		$tan-dark !default;
-$iconFontInfoBackgroundStartColor:			$blue-sapphire-mid !default;
-$iconFontInfoBackgroundEndColor:			$blue-sapphire !default;
-$iconFontAdvGrayDarkerBackgroundStartColor:	$gray-dark !default;	
-$iconFontAdvGrayDarkerBackgroundEndColor:	$gray-darkest !default;
-$iconFontAdvGrayDarkerBackgroundColor:		$gray-darker !default;
-$iconFontAdvDisabledBackgroundStartColor:	$gray-light !default;
-$iconFontAdvDisabledBackgroundEndColor:		$gray-mid-light !default;
-$iconFontAdvDisabledBackgroundColor:		$gray-mid-light !default;
-$iconFontAdvDisabledShadowColor:			$gray-dark !default;
+$iconFontColorGrayDark:						$gray-dark !default;
+$iconFontColorDisabled:						$gray-light !default;
+$iconFontColorConfirmation:					$emerald !default;
+$iconFontColorError:						$garnet-dark !default;
+$iconFontColorAttention:					$topaz-dark !default;
+$iconFontColorInfo:							$sapphire !default;
+$iconFontGrayDarkBackgroundStartColor:		$gray-mid !default;
+$iconFontGrayDarkBackgroundEndColor:		$gray-dark !default;
+$iconFontConfirmationBackgroundStartColor:	$emerald-mid !default;
+$iconFontConfirmationBackgroundEndColor:	$emerald !default;
+$iconFontErrorBackgroundStartColor:			$garnet-mid !default;
+$iconFontErrorBackgroundEndColor:			$garnet-dark !default;
+$iconFontAttentionBackgroundStartColor:		$topaz-mid !default;
+$iconFontAttentionBackgroundEndColor:		$topaz-dark !default;
+$iconFontInfoBackgroundStartColor:			$sapphire-mid !default;
+$iconFontInfoBackgroundEndColor:			$sapphire !default;
+$iconFontAdvGrayDarkBackgroundColor:		$gray-dark !default;
+$iconFontAdvDisabledBackgroundColor:		$gray-light !default;
+$iconFontAdvDisabledShadowColor:			$gray-light !default;
 
 // MESSAGE BOXES
-$errorBackgroundColor:						$red-light !default;
-$errorBorderColor:							$red-dark !default;
-$errorFontColor:							$black !default;
-$errorHdr:									$red !default;
+$errorBackgroundColor:						$garnet-light !default;
+$errorBorderColor:							$garnet-dark !default;
+$errorFontColor:							$gray-dark !default;
+$errorHdr:									$garnet !default;
 
-$attentionBoxBackgroundColor:				$tan-light !default;
-$attentionBoxBorderColor:					$tan-dark !default;
-$attentionBoxFontColor:						$black !default;
-$attentionHdr:								$tan !default;
+$attentionBoxBackgroundColor:				$topaz-light !default;
+$attentionBoxBorderColor:					$topaz-dark !default;
+$attentionBoxFontColor:						$gray-dark !default;
+$attentionHdr:								$topaz !default;
 
-$infoBoxBackgroundColor:					$blue-sapphire-light !default;
-$infoBoxBorderColor:						$blue-sapphire-dark !default;
-$infoBoxFontColor:							$black !default;
-$infoHdr:									$blue-sapphire !default;
+$infoBoxBackgroundColor:					$sapphire-light !default;
+$infoBoxBorderColor:						$sapphire-dark !default;
+$infoBoxFontColor:							$gray-dark !default;
+$infoHdr:									$sapphire !default;
 
-$confirmationBoxBackgroundColor:			$green-lightest !default;
-$confirmationBoxBorderColor:				$green-darker !default;
-$confirmationBoxFontColor:					$black !default;
-$confirmationHdr:							$green !default;
+$confirmationBoxBackgroundColor:			$emerald-light !default;
+$confirmationBoxBorderColor:				$emerald-dark !default;
+$confirmationBoxFontColor:					$gray-dark !default;
+$confirmationHdr:							$emerald !default;
 
 // PROFILE CONTAINERS
-$profileContainerUserHdrBackgroundColor:	$blue-sapphire-mid !default;
+$profileContainerUserHdrBackgroundColor:	$sapphire-mid !default;
 $profileContainerClientInactiveHdrBackgroundColor: $gray-dark !default;
-$profileContainerClientActiveHdrBackgroundColor: $purple !default;
-$profileContainerClientProspectiveHdrBackgroundColor: $purple-mid !default;
-$profileContainerProductHdrBackgroundColor: $orange !default;
-$profileContainerPlanHdrBackgroundColor:	$orange-mid !default;
+$profileContainerClientActiveHdrBackgroundColor: $iolite !default;
+$profileContainerClientProspectiveHdrBackgroundColor: $iolite-mid !default;
+$profileContainerProductHdrBackgroundColor: $citrine !default;
+$profileContainerPlanHdrBackgroundColor:	$citrine-mid !default;
 $profileContainerLocationPlanHdrBackgroundColor: $blue-gray-mid-light !default;
 
 
+// ==========================================================================================
 // COLOR PALETTE ARRAY
-// ------------------------------------------------------------------------------------------
+// ==========================================================================================
+
 $color-palette: (
 
 	// BASE COLORS
 	transparent: 			(color: $transparent),
-
 	white: 					(color: $white),
-
 	black: 					(color: $black),
-	blue-gray: 				(color: $blue-gray),
-	blue-sapphire: 			(color: $blue-sapphire),
-	purple: 				(color: $purple),
-	fuscia: 				(color: $fuscia),
-	pink: 					(color: $pink),
-	red: 					(color: $red),
-	orange: 				(color: $orange),
-	tan: 					(color: $tan),
-	green: 					(color: $green),
-	blue-green: 			(color: $blue-green),
-
 
 	// GRAY COLORS
 	gray-darkest: 			(color: $gray-darkest),
 	gray-darker: 			(color: $gray-darker),
 	gray-dark: 				(color: $gray-dark),
-	gray-mid-dark: 			(color: $gray-mid-dark),
-	gray-mid-light: 		(color: $gray-mid-light),
+	gray-mid: 				(color: $gray-mid),
 	gray-light: 			(color: $gray-light),
 	gray-lighter: 			(color: $gray-lighter),
 	gray-lightest: 			(color: $gray-lightest),
 
-
 	// BLUE GRAY COLORS
+	blue-gray: 				(color: $blue-gray),
 	blue-gray-darkest: 		(color: $blue-gray-darkest),
 	blue-gray-darker: 		(color: $blue-gray-darker),
 	blue-gray-dark: 		(color: $blue-gray-dark),
@@ -216,60 +204,144 @@ $color-palette: (
 	blue-gray-lighter: 		(color: $blue-gray-lighter),
 	blue-gray-lightest: 	(color: $blue-gray-lightest),
 
+	// SAPPHIRE COLORS
+	sapphire: 				(color: $sapphire),
+	sapphire-dark: 			(color: $sapphire-dark),
+	sapphire-mid: 			(color: $sapphire-mid),
+	sapphire-light: 		(color: $sapphire-light),
 
-	// BLUE SAPPHIRE COLORS
-	blue-sapphire-dark: 	(color: $blue-sapphire-dark),
-	blue-sapphire-mid: 		(color: $blue-sapphire-mid),
-	blue-sapphire-light: 	(color: $blue-sapphire-light),
+	// IOLITE COLORS
+	iolite: 				(color: $iolite),
+	iolite-dark: 			(color: $iolite-dark),
+	iolite-mid: 			(color: $iolite-mid),
+	iolite-light: 			(color: $iolite-light),
 
+	// AMETHYST COLORS
+	amethyst: 				(color: $amethyst),
+	amethyst-dark: 			(color: $amethyst-dark),
+	amethyst-mid: 			(color: $amethyst-mid),
+	amethyst-light: 		(color: $amethyst-light),
 
-	// PURPLE COLORS
-	purple-dark: 			(color: $purple-dark),
-	purple-mid: 			(color: $purple-mid),
-	purple-light: 			(color: $purple-light),
+	// RUBY COLORS
+	ruby: 					(color: $ruby),
+	ruby-dark: 				(color: $ruby-dark),
+	ruby-mid: 				(color: $ruby-mid),
+	ruby-light: 			(color: $ruby-light),
 
+	// GARNET COLORS
+	garnet: 				(color: $garnet),
+	garnet-dark: 			(color: $garnet-dark),
+	garnet-mid: 			(color: $garnet-mid),
+	garnet-light: 			(color: $garnet-light),
 
-	// FUSCIA COLORS
-	fuscia-dark: 			(color: $fuscia-dark),
-	fuscia-mid: 			(color: $fuscia-mid),
-	fuscia-light: 			(color: $fuscia-light),
+	// CITRINE COLORS
+	citrine: 				(color: $citrine),
+	citrine-dark:			(color: $citrine-dark),
+	citrine-mid:			(color: $citrine-mid),
+	citrine-light:			(color: $citrine-light),
 
+	// TOPAZ COLORS
+	topaz: 					(color: $topaz),
+	topaz-dark:				(color: $topaz-dark),
+	topaz-mid:				(color: $topaz-mid),
+	topaz-light: 			(color: $topaz-light),
 
-	// PINK COLORS
-	pink-dark: 				(color: $pink-dark),
-	pink-light: 			(color: $pink-light),
+	// PERIDOT COLORS
+	peridot: 				(color: $peridot),
+	peridot-dark:			(color: $peridot-dark),
+	peridot-mid:			(color: $peridot-mid),
+	peridot-light:			(color: $peridot-light),
 
+	// EMERALD COLORS
+	emerald: 				(color: $emerald),
+	emerald-dark:			(color: $emerald-dark),
+	emerald-mid:			(color: $emerald-mid),
+	emerald-light:			(color: $emerald-light),
 
-	// RED COLORS
-	red-dark: 				(color: $red-dark),
-	red-mid: 				(color: $red-mid),
-	red-light: 				(color: $red-light),
-
-
-	// ORANGE COLORS
-	orange-dark:			(color: $orange-dark),
-	orange-mid:				(color: $orange-mid),
-	orange-light:			(color: $orange-light),
-
-
-	// TAN COLORS
-	tan-dark:				(color: $tan-dark),
-	tan-mid:				(color: $tan-mid),
-	tan-light: 				(color: $tan-light),
-
-
-	// GREEN COLORS
-	green-darker: 			(color: $green-darker),
-	green-dark:				(color: $green-dark),
-	green-mid:				(color: $green-mid),
-	green-light:			(color: $green-light),
-	green-lighter:			(color: $green-lighter),
-	green-lightest:			(color: $green-lightest),
-
-
-	// BLUE GREEN COLORS
-	blue-green-dark:		(color: $blue-green-dark),
-	blue-green-mid:			(color: $blue-green-mid),
-	blue-green-light:		(color: $blue-green-light)
+	// TURQUOISE COLORS
+	turquoise: 				(color: $turquoise),
+	turquoise-dark:			(color: $turquoise-dark),
+	turquoise-mid:			(color: $turquoise-mid),
+	turquoise-light:		(color: $turquoise-light)
 
 );
+
+$color-palette-buttons: (
+
+	// BASE COLORS
+	transparent: 			(color: $transparent),
+	white: 					(color: $white),
+	black: 					(color: $black),
+
+	// GRAY COLORS
+	gray-darkest: 			(color: $gray-darkest),
+	gray-darker: 			(color: $gray-darker),
+	gray-dark: 				(color: $gray-dark),
+	gray-mid: 				(color: $gray-mid),
+	gray-light: 			(color: $gray-light),
+	gray-lighter: 			(color: $gray-lighter),
+	gray-lightest: 			(color: $gray-lightest),
+
+	// SAPPHIRE COLORS
+	sapphire: 				(color: $sapphire),
+	sapphire-dark: 			(color: $sapphire-dark),
+
+	// IOLITE COLORS
+	iolite: 				(color: $iolite),
+	iolite-dark: 			(color: $iolite-dark),
+
+	// AMETHYST COLORS
+	amethyst: 				(color: $amethyst),
+	amethyst-dark: 			(color: $amethyst-dark),
+
+	// RUBY COLORS
+	ruby: 					(color: $ruby),
+	ruby-dark: 				(color: $ruby-dark),
+
+	// GARNET COLORS
+	garnet: 				(color: $garnet),
+	garnet-dark: 			(color: $garnet-dark),
+
+	// CITRINE COLORS
+	citrine: 				(color: $citrine),
+	citrine-dark:			(color: $citrine-dark),
+
+	// TOPAZ COLORS
+	topaz: 					(color: $topaz),
+	topaz-dark:				(color: $topaz-dark),
+
+	// PERIDOT COLORS
+	peridot: 				(color: $peridot),
+	peridot-dark:			(color: $peridot-dark),
+
+	// EMERALD COLORS
+	emerald: 				(color: $emerald),
+	emerald-dark:			(color: $emerald-dark),
+
+	// TURQUOISE COLORS
+	turquoise: 				(color: $turquoise),
+	turquoise-dark:			(color: $turquoise-dark)
+
+);
+
+// ==========================================================================================
+// CUSTOM SPOT COLORS FOR ELEMENTS
+// ==========================================================================================
+
+// LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
+@each $color-name, $color in $color-palette 
+							{
+
+	// CUSTOM SPOT FONT COLOR FOR TEXT AND LINKS
+	[data-evo-font-color="#{$color-name}"]
+								{
+								color: map-get($color, color) !important;
+								}
+
+	// CUSTOM SPOT BACKGROUND COLOR FOR CONTAINERS AND BOXES
+	[data-evo-background-color="#{$color-name}"]
+								{
+								background-color: map-get($color, color);
+								}
+
+							}

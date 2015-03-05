@@ -1,102 +1,101 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Profile Containers Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Profile Containers Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-profile-containers == true{
 
-	.mul-user-profile > .mul-box-hdr,
-	.mul-client-profile-inactive > .mul-box-hdr,
-	.mul-client-profile-active > .mul-box-hdr,
-	.mul-client-profile-prospective > .mul-box-hdr,
-	.mul-product-profile > .mul-box-hdr,
-	.mul-plan-profile > .mul-box-hdr,
-	.mul-location-profile > .mul-box-hdr
+	.evo-user-profile > .evo-box-hdr,
+	.evo-client-profile-inactive > .evo-box-hdr,
+	.evo-client-profile-active > .evo-box-hdr,
+	.evo-client-profile-prospective > .evo-box-hdr,
+	.evo-product-profile > .evo-box-hdr,
+	.evo-plan-profile > .evo-box-hdr,
+	.evo-location-profile > .evo-box-hdr
 								{
 								color: $profileContainerHdrColor;
 								margin-bottom: 0;
-			.mul-profile-icon		{
+			.evo-profile-icon		{
 									float: left;
 									margin-right: 10px;
 									}
-			.mul-hdr-rule			{
+			.evo-hdr-rule			{
 									@include text-overflow;
-									font-size: $profileContainerHeaderFontSize;
-									line-height: $profileContainerHeaderLineHeight;
+									font-size: $h2-font-size;
 									border-bottom: 0;
 									color: $profileContainerHdrColor;
 									padding: 0;
 									}
-			.mul-secondary-hdr		{
+			.evo-secondary-hdr		{
 									@include text-overflow;
 									color: $profileContainerSecondaryHdrColor;
 									}
 			
-			.mul-data-list-ctn		{
+			.evo-data-list-ctn		{
 									font-size: $profileContainerDataListFontSize;
 									margin-bottom: 0;
 				li						{
 										line-height: $profileContainerDataListLineHeight;
-					.mul-data-list-label	{color: $profileContainerDataListLabelFontColor;}
+					.evo-data-list-label	{color: $profileContainerDataListLabelFontColor;}
 										}
 									}
 								}
 
-	.mul-user-profile,
-	.mul-client-profile-inactive,
-	.mul-client-profile-active,
-	.mul-client-profile-prospective,
-	.mul-product-profile,
-	.mul-plan-profile,
-	.mul-location-profile
+	.evo-user-profile,
+	.evo-client-profile-inactive,
+	.evo-client-profile-active,
+	.evo-client-profile-prospective,
+	.evo-product-profile,
+	.evo-plan-profile,
+	.evo-location-profile
 								{
-		.mul-box-bdy				{padding-top: $basePadding;}
+		.evo-box-bdy				{padding-top: $evo-base-padding;}
 								}
 
 	// CLIENT CONTAINER HELPERS
-	.mul-box-adv.mul-user-profile > .mul-box-hdr 
+	.evo-box-adv.evo-user-profile > .evo-box-hdr 
 								{background-color: $profileContainerUserHdrBackgroundColor !important;}
 
-	.mul-box-adv.mul-client-profile-inactive > .mul-box-hdr
+	.evo-box-adv.evo-client-profile-inactive > .evo-box-hdr
 								{background-color: $profileContainerClientInactiveHdrBackgroundColor !important;}
 
-	.mul-box-adv.mul-client-profile-active > .mul-box-hdr
+	.evo-box-adv.evo-client-profile-active > .evo-box-hdr
 								{background-color: $profileContainerClientActiveHdrBackgroundColor !important;}
 
-	.mul-box-adv.mul-client-profile-prospective > .mul-box-hdr
+	.evo-box-adv.evo-client-profile-prospective > .evo-box-hdr
 								{background-color: $profileContainerClientProspectiveHdrBackgroundColor !important;}
 
-	.mul-box-adv.mul-product-profile > .mul-box-hdr
+	.evo-box-adv.evo-product-profile > .evo-box-hdr
 								{background-color: $profileContainerProductHdrBackgroundColor !important;}
 
-	.mul-box-adv.mul-plan-profile > .mul-box-hdr
+	.evo-box-adv.evo-plan-profile > .evo-box-hdr
 								{background-color: $profileContainerPlanHdrBackgroundColor !important;}
 
-	.mul-box-adv.mul-location-profile > .mul-box-hdr
+	.evo-box-adv.evo-location-profile > .evo-box-hdr
 								{background-color: $profileContainerLocationPlanHdrBackgroundColor !important;}
 
 
-	.mul-user-profile,
-	.mul-client-profile-inactive,
-	.mul-client-profile-active,
-	.mul-client-profile-prospective,
-	.mul-product-profile,
-	.mul-plan-profile,
-	.mul-location-profile
+	.evo-user-profile,
+	.evo-client-profile-inactive,
+	.evo-client-profile-active,
+	.evo-client-profile-prospective,
+	.evo-product-profile,
+	.evo-plan-profile,
+	.evo-location-profile
 						{
-		.mul-entity-profile-mb-navbar
+		.evo-entity-profile-mb-navbar
 							{
-							@include background-gradient($gray-lightest, $gray-mid-light);
+							@include background-gradient($gray-lightest, $gray-mid);
 							@include clearfix;
-							border-bottom: 1px solid $gray-mid-dark;
+							border-bottom: 1px solid $gray-mid;
 							display: block;
 							width: 100%;
 			ul					{float: right;}
 							}
-		.mul-navbar			{
-			.mul-navbar-adjust	{
-				.mul-menu-ctn		{
+		.evo-navbar			{
+			.evo-navbar-adjust	{
+				.evo-menu-ctn		{
 									@include background-gradient(#e7e7e7, #ccc);
 									display: block;
 									}
@@ -106,29 +105,30 @@
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
-			.mul-user-profile,
-			.mul-client-profile-inactive,
-			.mul-client-profile-active,
-			.mul-client-profile-prospective,
-			.mul-product-profile,
-			.mul-plan-profile,
-			.mul-location-profile
+		@media #{$medium-up} {
+			
+			.evo-user-profile,
+			.evo-client-profile-inactive,
+			.evo-client-profile-active,
+			.evo-client-profile-prospective,
+			.evo-product-profile,
+			.evo-plan-profile,
+			.evo-location-profile
 								{
-				.mul-entity-profile-mb-navbar
+				.evo-entity-profile-mb-navbar
 									{display: none;}
-				.mul-navbar			{
-					.mul-navbar-adjust	{
+				.evo-navbar			{
+					.evo-navbar-adjust	{
 					// GENERAL NAVBAR - BEGINS	
 						nav					{
 							ul					{
 								li					{
 									a					{
 														font-size: 14px;
-														font-family: $fontRegularFamily;
+														font-family: $evo-font-regular-family;
 														}
 													}
 												}
@@ -136,7 +136,7 @@
 					// GENERAL NAVBAR - ENDS
 
 					// TEXT NAVBAR - BEGINS
-						nav.mul-text-nav	{
+						nav.evo-text-nav	{
 							ul					{
 								li					{
 													padding-top: 6px;
@@ -144,7 +144,7 @@
 													}
 												}
 						// MENU OVERRIDES - BEGINS
-							.mul-nav-menus		{
+							.evo-nav-menus		{
 								li					{
 									ul					{top: 24px !important;}
 													}
@@ -154,7 +154,7 @@
 					// TEXT NAVBAR - ENDS
 
 					// TABBED NAVBAR - BEGINS
-						nav.mul-tabbed-nav	{
+						nav.evo-tabbed-nav	{
 							ul					{
 								li					{
 									a					{
@@ -168,7 +168,7 @@
 													}
 												}
 						// MENU OVERRIDES - BEGINS
-							.mul-nav-menus		{
+							.evo-nav-menus		{
 								li					{
 									ul					{top: 31px !important;}
 													}
@@ -180,24 +180,23 @@
 									}
 								}
 
-			.mul-user-profile > .mul-box-hdr,
-			.mul-client-profile-inactive > .mul-box-hdr,
-			.mul-client-profile-active > .mul-box-hdr,
-			.mul-client-profile-prospective > .mul-box-hdr,
-			.mul-product-profile > .mul-box-hdr,
-			.mul-plan-profile > .mul-box-hdr,
-			.mul-location-profile > .mul-box-hdr
+			.evo-user-profile > .evo-box-hdr,
+			.evo-client-profile-inactive > .evo-box-hdr,
+			.evo-client-profile-active > .evo-box-hdr,
+			.evo-client-profile-prospective > .evo-box-hdr,
+			.evo-product-profile > .evo-box-hdr,
+			.evo-plan-profile > .evo-box-hdr,
+			.evo-location-profile > .evo-box-hdr
 								{
-					.mul-hdr-rule	{
-									font-size: $profileContainerHeaderFontSizeLargeBreakpoint;
-									line-height: $profileContainerHeaderLineHeightLargeBreakpoint;
+					.evo-hdr-rule	{
+									font-size: $h1-font-size;
 									}
 
-					.mul-data-list-ctn
+					.evo-data-list-ctn
 									{
-									font-size: $profileContainerDataListFontSizeLargeBreakpoint;
+									font-size: $profileContainerDataListFontSize;
 						li				{
-										line-height: $profileContainerDataListLineHeightLargeBreakpoint;
+										line-height: $profileContainerDataListLineHeight;
 										}
 									}
 								}

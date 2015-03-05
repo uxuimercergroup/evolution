@@ -1,23 +1,23 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.5 - Alternate Views Badge Partial
-// DATE - June 13, 2014
-// AUTHOR - Doug Fraize, Matthew Holmes, Vinod Bhatt
+// Mercer Evolution - Core v2.6 - Alternate Views Badge Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
 @if $use-alternate-views-badge == true{
 
-	.mul-alternate-views-badge.ui-tabs					{
-		.mul-btn-group-horizontal							{
+	.evo-alternate-views-badge.ui-tabs					{
+		.evo-btn-group-horizontal							{
 															margin-left: 0;
 															margin-bottom: 14px;
-			.mul-btn											{
+			.evo-btn											{
 																@include background-gradient($alternateViewsBadgeButtonBackgroundStartColor, $alternateViewsBadgeButtonBackgroundEndColor);
 																min-width: 1%;
 																float: none;
 																margin-bottom: 0;
 																padding: 0;
 																border-color: $alternateViewsBadgeButtonBorderColor;
-				[class^="mul-icon-"]								{
+				[class^="evo-icon-"]								{
 																	top: 1px;
 																	color: $alternateViewsBadgeButtonIconColor;
 																	}
@@ -32,13 +32,13 @@
 																	}
 				&:hover												{
 																	@include background-gradient($alternateViewsBadgeButtonHoverBackgroundStartColor, $alternateViewsBadgeButtonHoverBackgroundEndColor);
-					[class^="mul-icon-"]								{color: $alternateViewsBadgeButtonHoverIconColor;}
+					[class^="evo-icon-"]								{color: $alternateViewsBadgeButtonHoverIconColor;}
 					a													{color: $alternateViewsBadgeButtonHoverLinkColor;}
 																	}
 				&.ui-tabs-active									{
 																	@include background-gradient($alternateViewsBadgeButtonActiveBackgroundStartColor, $alternateViewsBadgeButtonActiveBackgroundEndColor);
 																	border-color: $alternateViewsBadgeButtonActiveBorderColor;
-					[class^="mul-icon-"]								{color: $alternateViewsBadgeButtonActiveIconColor;}
+					[class^="evo-icon-"]								{color: $alternateViewsBadgeButtonActiveIconColor;}
 					a													{color: $alternateViewsBadgeButtonActiveLinkColor;}
 																	}
 																}
@@ -46,9 +46,9 @@
 														}
 
 	// TEXT ONLY
-	.mul-alternate-views-badge-text-only.ui-tabs		{
-		.mul-btn-group-horizontal							{
-			.mul-btn											{
+	.evo-alternate-views-badge-text-only.ui-tabs		{
+		.evo-btn-group-horizontal							{
+			.evo-btn											{
 				a													{
 																	padding: 13px 14px 12px 14px;
 					span												{display: inline;}
@@ -58,21 +58,21 @@
 														}
 
 	// BADGE NAV POSITIONING
-	.mul-alternate-views-badge-position-left			{text-align: left;}
-	.mul-alternate-views-badge-position-center			{text-align: center;}
-	.mul-alternate-views-badge-position-right			{text-align: right;}
+	.evo-alternate-views-badge-position-left			{text-align: left;}
+	.evo-alternate-views-badge-position-center			{text-align: center;}
+	.evo-alternate-views-badge-position-right			{text-align: right;}
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// Portrait iPad, portrait tablets, Low-resolution laptops and desktops, Landscape iPad, laptops and desktops
-	@if $use-medium-mediaquery == true or $use-large-mediaquery == true {
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
 		
-		@include media-query(screen, min, $mediumMediaQueryBreakpointMin, "") {
+		@media #{$medium-up} {
 
-			.mul-alternate-views-badge.ui-tabs			{
-				.mul-btn-group-horizontal					{
-					.mul-btn									{
-						[class^="mul-icon-"]						{top: 2px;}
+			.evo-alternate-views-badge.ui-tabs			{
+				.evo-btn-group-horizontal					{
+					.evo-btn									{
+						[class^="evo-icon-"]						{top: 2px;}
 						a											{
 																	padding: 8px 7px 9px 12px;
 																	top: -1px;
@@ -83,9 +83,9 @@
 														}
 
 			// FULL BADGE
-			.mul-alternate-views-badge-full.ui-tabs		{
-				.mul-btn-group-horizontal					{
-					.mul-btn									{
+			.evo-alternate-views-badge-full.ui-tabs		{
+				.evo-btn-group-horizontal					{
+					.evo-btn									{
 																min-width: 124px;
 						a											{padding-right: 12px;}
 																}
@@ -93,10 +93,10 @@
 														}
 
 			// TEXT ONLY
-			.mul-alternate-views-badge-text-only.ui-tabs
+			.evo-alternate-views-badge-text-only.ui-tabs
 														{
-				.mul-btn-group-horizontal					{
-					.mul-btn									{
+				.evo-btn-group-horizontal					{
+					.evo-btn									{
 						a											{padding: 11px 12px 9px 12px;}
 																}
 															}
