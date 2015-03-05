@@ -1,6 +1,7 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+{{ "highcharts.min.js" | asset_url | script_tag }}
 		<style type="text/css">
 ${demo.css}
 		</style>
@@ -45,6 +46,16 @@ ${demo.css}
 			</div>
 		{% endif %}
 	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
+		<h4>Other Similar Charts</h4>
+		<ul>
+			<li><a href="/highcharts/line-basic">Basic line chart</a></li>
+			<li><a href="/highcharts/line-ajax">Ajax loaded data, clickable points</a></li>
+			<li><a href="/highcharts/line-labels">With data labels</a></li>
+			<li><a href="/highcharts/line-zoomable">Time series, zoomable</a></li>
+			<li><a href="/highcharts/spline-symbols">Spline with symbols</a></li>
+			<li><a href="/highcharts/spline-irregular-time">Time data with irregular intervals</a></li>
+			<li><a href="/highcharts/line-log-axis">Logarithmic axis</a></li>
+		</ul>
 
 	</section>
 <!-- CONTENT SECTION - ENDS -->
@@ -73,17 +84,6 @@ ${demo.css}
 
 		</section>
 	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
-
-		<h4>Other Similar Charts</h4>
-		<ul>
-			<li><a href="/highcharts/line-basic">Basic line chart</a></li>
-			<li><a href="/highcharts/line-ajax">Ajax loaded data, clickable points</a></li>
-			<li><a href="/highcharts/line-labels">With data labels</a></li>
-			<li><a href="/highcharts/line-zoomable">Time series, zoomable</a></li>
-			<li><a href="/highcharts/spline-symbols">Spline with symbols</a></li>
-			<li><a href="/highcharts/spline-irregular-time">Time data with irregular intervals</a></li>
-			<li><a href="/highcharts/line-log-axis">Logarithmic axis</a></li>
-		</ul>
 
 	</section>
 <!-- EXAMPLE SECTION - ENDS -->
