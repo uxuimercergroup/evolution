@@ -14,16 +14,15 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 		"core/global/functions",
 		"core/global/mixins";
 
-
 // ==========================================================================================
 // SITE IMPORTS
 // ==========================================================================================
 
-@import	"partials/global/site_settings",
-		"partials/global/site_variables",
-		"partials/global/site_functions",
-		"partials/base/site_icons";
-		
+@import	"partials/global/settings",
+		"partials/global/variables_overrides",
+		"partials/global/variables",
+		"partials/global/functions",
+		"partials/base/icons";
 
 /*=== WEBSITE STYLES ======================================================================*/
 
@@ -419,7 +418,6 @@ html.evo-mod-js							{display:none;}
 
 .evo-footable.color-vars-quick-reference-table .evo-highlight
 										{background-color: inherit !important;}
-										
 
 /*=== MEDIA QUERIES =========================================================================*/
 @import	"partials/global/responsive_small",
