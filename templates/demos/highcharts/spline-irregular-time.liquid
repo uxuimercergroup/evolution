@@ -1,10 +1,12 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-{{ "highcharts.min.js" | asset_url | script_tag }}
 		<style type="text/css">
 ${demo.css}
 		</style>
+<script type="text/javascript">
+
+</script>
 <!-- PAGE TITLE - BEGINS -->
 	<h1>{{ model.title }}</h1>
 <!-- PAGE TITLE - ENDS -->
@@ -44,17 +46,6 @@ ${demo.css}
 		{% endif %}
 	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
 
-		<h4>Other Similar Charts</h4>
-		<ul>
-			<li><a href="/highcharts/line-basic">Basic line chart</a></li>
-			<li><a href="/highcharts/line-ajax">Ajax loaded data, clickable points</a></li>
-			<li><a href="/highcharts/line-labels">With data labels</a></li>
-			<li><a href="/highcharts/spline-inverted">Spline with inverted axes</a></li>
-			<li><a href="/highcharts/spline-symbols">Spline with symbols</a></li>
-			<li><a href="/highcharts/spline-irregular-time">Time data with irregular intervals</a></li>
-			<li><a href="/highcharts/line-log-axis">Logarithmic axis</a></li>
-		</ul>
-
 	</section>
 <!-- CONTENT SECTION - ENDS -->
 
@@ -77,11 +68,22 @@ ${demo.css}
 		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 		<!-- EXAMPLE SECTION - BOX - BEGINS -->
-				<div id="line-zoomable" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+				<div id="spline-irregular-time" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 		<!-- EXAMPLE SECTION - BOX - ENDS -->
 
 		</section>
 	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
+
+		<h4>Other Similar Charts</h4>
+		<ul>
+			<li><a href="/demos/highcharts/line-basic">Basic line chart</a></li>
+			<li><a href="/demos/highcharts/line-ajax">Ajax loaded data, clickable points</a></li>
+			<li><a href="/demos/highcharts/line-labels">With data labels</a></li>
+			<li><a href="/demos/highcharts/line-zoomable">Time series, zoomable</a></li>
+			<li><a href="/demos/highcharts/spline-inverted">Spline with inverted axes</a></li>
+			<li><a href="/demos/highcharts/spline-symbols">Spline with symbols</a></li>
+			<li><a href="/demos/highcharts/line-log-axis">Logarithmic axis</a></li>
+		</ul>
 
 	</section>
 <!-- EXAMPLE SECTION - ENDS -->
