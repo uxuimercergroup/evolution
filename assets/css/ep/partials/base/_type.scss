@@ -20,8 +20,48 @@ $evo-small-cost-font-color:					$gray-mid !default;
 
 
 // ==========================================================================================
+// FONTS
+// ==========================================================================================
+
+// WEB FONTS
+// ------------------------------------------------------------------------------------------
+
+// Thin
+// -------------------------------------------------
+@include font-face($evo-font-thin-family, $evo-font-thin-file-path);
+
+// Regular
+// -------------------------------------------------
+@include font-face($evo-font-regular-family, $evo-font-regular-file-path);
+
+// Italic
+// -------------------------------------------------
+@include font-face($evo-font-italic-family, $evo-font-italic-file-path);
+
+// Medium
+// -------------------------------------------------
+@include font-face($evo-font-medium-family, $evo-font-medium-file-path);
+
+// Medium Italic
+// -------------------------------------------------
+@include font-face($evo-font-medium-italic-family, $evo-font-medium-italic-file-path);
+
+// Bold
+// -------------------------------------------------
+@include font-face($evo-font-bold-family, $evo-font-bold-file-path);
+
+// Bold Italic
+// -------------------------------------------------
+@include font-face($evo-font-bold-italic-family, $evo-font-bold-italic-file-path);
+
+
+// ==========================================================================================
 // GLOBAL
 // ==========================================================================================
+
+body						{
+							font-family: $evo-font-regular-stack;
+							}
 
 // HEADERS
 h1,
@@ -34,28 +74,40 @@ h6							{
 							}
 
 h1							{
+							font-size: $h1-font-size;
 							font-family: $evo-font-bold-stack;
 							letter-spacing: rem-calc(6);
 							}
 h2							{
+							font-size: $h2-font-size;
 							font-family: $evo-font-regular-stack;
 							letter-spacing: rem-calc(4);
 							}
 h3							{
+							font-size: $h3-font-size;
 							font-family: $evo-font-regular-stack;
 							letter-spacing: rem-calc(4);
 							}
 h4							{
+							font-size: $h4-font-size;
 							font-family: $evo-font-bold-stack;
 							letter-spacing: rem-calc(4);
 							}
 h5							{
+							font-size: $h5-font-size;
 							font-family: $evo-font-regular-stack;
 							letter-spacing: rem-calc(4);
 							}
 h6							{
+							font-size: $h6-font-size;
 							font-family: $evo-font-bold-stack;
 							letter-spacing: rem-calc(2);
+							}
+
+b, strong, th, thead,
+dt, legend					{
+							font-family: $evo-font-medium-stack;
+							font-weight: normal;
 							}
 
 // SMALL TEXT
@@ -63,6 +115,14 @@ small,
 .evo-small-text,
 .evo-footnote				{
 							font-family: $evo-font-regular-stack;
+							}
+
+// BLOCKQUOTE
+blockquote					{
+							font-family: $evo-font-thin-stack;
+	cite						{
+								font-family: $evo-font-medium-stack;
+								}
 							}
 
 // LINKS
@@ -75,6 +135,11 @@ a.evo-anchor-reverse		{
 							}
 a.evo-anchor-alt			{	
 							color: $evo-anchor-font-color-alt;
+							}
+
+// OTHER ELEMENTS
+em							{
+							font-family: $evo-font-italic-stack;
 							}
 
 

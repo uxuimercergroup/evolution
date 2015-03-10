@@ -55,10 +55,6 @@ $evo-hdr-background-color:					$gray-lighter !default;
 	// -------------------------------------------------
 	@include font-face($evo-font-medium-family, $evo-font-medium-file-path);
 
-	// Medium Italic
-	// -------------------------------------------------
-	@include font-face($evo-font-medium-italic-family, $evo-font-medium-italic-file-path);
-
 	// Bold
 	// -------------------------------------------------
 	@include font-face($evo-font-bold-family, $evo-font-bold-file-path);
@@ -84,6 +80,23 @@ $evo-hdr-background-color:					$gray-lighter !default;
 
 	// Text selection color and background color
 	*							{@include type-selection($evo-text-selection-text-color,$evo-text-selection-background-color);}
+
+	// HEADERS
+	h1, .h1						{
+								}
+	h2, .h2						{
+								}
+	h3, .h3						{
+								}
+	h4, .h4						{
+								font-family: $evo-font-medium-stack;
+								}
+	h5, .h5						{
+								font-family: $evo-font-medium-stack;
+								}
+	h6, .h6						{
+								font-family: $evo-font-medium-stack;
+								}
 
 	.evo-h1-hdr-background,
 	.evo-h2-hdr-background,

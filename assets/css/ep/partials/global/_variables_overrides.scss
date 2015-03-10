@@ -8,14 +8,70 @@
 // FAMILY VARIABLES OVERRIDES
 // ==========================================================================================
 
-// ICONS
-// ------------------------------------------------------------------------------------------
-// $evo-clip-art-icon-size-tiny: 			rem-calc(30);
-// $evo-clip-art-icon-size-small: 			rem-calc(50);
-// $evo-clip-art-icon-size-medium: 			rem-calc(70);
-// $evo-clip-art-icon-size-large: 			rem-calc(100);
-// $evo-clip-art-icon-size-xlarge: 			rem-calc(150);
+// ==========================================================================================
+// FOUNDATION
+// ==========================================================================================
 
+// e. Typography
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// We use these to control header font sizes
+$h1-font-size: rem-calc(36);
+$h2-font-size: rem-calc(28);
+$h3-font-size: rem-calc(24);
+$h4-font-size: rem-calc(18);
+$h5-font-size: rem-calc(14);
+$h6-font-size: rem-calc(12);
+
+
+// ==========================================================================================
+// GLOBAL
+// ==========================================================================================
+
+// TYPOGRAPHY
+// ------------------------------------------------------------------------------------------
+
+// WEB FONTS
+
+	// Thin
+	$evo-font-thin-family:						relativefaux;
+	$evo-font-thin-file-path:					"#{$evo-base-font-file-path}/relative-faux-webfont";
+	$evo-font-thin-stack:						"#{$evo-font-thin-family}", $evo-base-font-stack;
+
+	// Regular
+	$evo-font-regular-family:					relativebook;
+	$evo-font-regular-file-path:				"#{$evo-base-font-file-path}/relative-book-webfont";
+	$evo-font-regular-stack:					"#{$evo-font-regular-family}", $evo-base-font-stack;
+
+	// Italic
+	$evo-font-italic-family:					relativebook_italic;
+	$evo-font-italic-file-path:					"#{$evo-base-font-file-path}/relative-bookitalic-webfont";
+	$evo-font-italic-stack:						"#{$evo-font-italic-family}", $evo-base-font-stack;
+
+	// Medium
+	$evo-font-medium-family:					relativemedium;
+	$evo-font-medium-file-path:					"#{$evo-base-font-file-path}/relative-medium-webfont";
+	$evo-font-medium-stack:						"#{$evo-font-medium-family}", $evo-base-font-stack;
+
+	// Medium Italic
+	$evo-font-medium-italic-family:				relativemedium_italic;
+	$evo-font-medium-italic-file-path:			"#{$evo-base-font-file-path}/relative-mediumitalic-webfont";
+	$evo-font-medium-italic-stack:				"#{$evo-font-medium-italic-family}", $evo-base-font-stack;
+
+	// Bold
+	$evo-font-bold-family:						relativebold;
+	$evo-font-bold-file-path:					"#{$evo-base-font-file-path}/relative-bold-webfont";
+	$evo-font-bold-stack:						"#{$evo-font-bold-family}", $evo-base-font-stack;
+
+	// Bold Italic
+	$evo-font-bold-italic-family:				relativebold_italic;
+	$evo-font-bold-italic-file-path:			"#{$evo-base-font-file-path}/relative-bolditalic-webfont";
+	$evo-font-bold-italic-stack:				"#{$evo-font-bold-italic-family}", $evo-base-font-stack;
+
+
+// ==========================================================================================
+// BASE
+// ==========================================================================================
 
 // TYPE
 // ------------------------------------------------------------------------------------------
@@ -31,6 +87,15 @@
 // $evo-small-cost-font-color:				$gray-mid;
 
 
+// ICONS
+// ------------------------------------------------------------------------------------------
+// $evo-clip-art-icon-size-tiny: 			rem-calc(30);
+// $evo-clip-art-icon-size-small: 			rem-calc(50);
+// $evo-clip-art-icon-size-medium: 			rem-calc(70);
+// $evo-clip-art-icon-size-large: 			rem-calc(100);
+// $evo-clip-art-icon-size-xlarge: 			rem-calc(150);
+
+
 // MENU BAR
 // ------------------------------------------------------------------------------------------
 // $evo-off-canvas-alert-background-color: 	$amethyst-mid;
@@ -40,6 +105,41 @@
 // ------------------------------------------------------------------------------------------
 // $evo-title-bar-icon-color: 				$white;
 // $evo-title-bar-font-color: 				$white;
+
+
+// ==========================================================================================
+// OBJECTS
+// ==========================================================================================
+
+// ADD/REMOVE PLAN COMPONENT
+// ------------------------------------------------------------------------------------------
+// $evo-add-remove-plan-component-icon-color: $gray-light;
+// $evo-add-remove-plan-component-icon-float: right;
+// $evo-add-remove-plan-component-icon-font-size: rem-calc(22);
+// $evo-add-remove-plan-component-icon-position: relative;
+// $evo-add-remove-plan-component-icon-position-top: rem-calc(12);
+// $evo-add-remove-plan-component-icon-padding-bottom: 2px;
+
+// $evo-add-remove-plan-component-overlay-bgcolor: rgba(255, 255, 255, 0.90);
+// $evo-add-remove-plan-component-overlay-position: absolute;
+// $evo-add-remove-plan-component-overlay-position-left: 0;
+// $evo-add-remove-plan-component-overlay-position-right: 0;
+// $evo-add-remove-plan-component-overlay-padding: 64px 0;
+// $evo-add-remove-plan-component-overlay-z-index: 1;
+// $evo-add-remove-plan-component-overlay-text-align: center;
+
+// $evo-add-remove-plan-component-overlay-link-font-size: rem-calc(14);
+// $evo-add-remove-plan-component-overlay-link-text-transform: uppercase;
+
+
+// CATEGORY HEADER CONTAINER
+// ------------------------------------------------------------------------------------------
+// $evo-category-hdr-label-border-width: 	rem-calc(1);
+// $evo-category-hdr-label-border-style: 	solid;
+// $evo-category-hdr-label-border-color: 	$gray-light;
+// $evo-category-hdr-label-color: 			$gray-dark;
+// $evo-category-hdr-label-margin: 			18px 0;
+// $evo-category-hdr-label-padding: 		15px;
 
 
 // CONVERSATIONAL FORM
@@ -61,13 +161,29 @@
 // $evo-form-conversational-select-min-width: 50px;
 
 
-// SHOWCASE PANEL
+// ITEM HIGHLIGHT CONTAINER
 // ------------------------------------------------------------------------------------------
-// $evo-showcase-panel-shadow-h: 			0;
-// $evo-showcase-panel-shadow-v: 			rem-calc(2);
-// $evo-showcase-panel-shadow-blur: 		rem-calc(8);
-// $evo-showcase-panel-shadow-color: 		$gray-mid;
-// $evo-showcase-panel-fixed-z-index: 		1000;
+// $evo-item-highlight-ctn-bgcolor: 		$gray-lightest;
+// $evo-item-highlight-ctn-border-width: 	3px;
+// $evo-item-highlight-ctn-border-style: 	solid;
+// $evo-item-highlight-ctn-border-color: 	$topaz-dark;
+// $evo-item-highlight-ctn-padding: 		rem-calc(10) rem-calc(18) rem-calc(3) rem-calc(18);
+// $evo-item-highlight-ctn-margin: 			0 10px;
+// $evo-item-highlight-ctn-min-height: 		100px;
+
+// $evo-item-highlight-ctn-tag-indicator-min-height: rem-calc(29);
+// $evo-item-highlight-ctn-tag-indicator-label-font-size: rem-calc(11);
+// $evo-item-highlight-ctn-tag-indicator-label-text-transform: uppercase;
+// $evo-item-highlight-ctn-tag-indicator-label-position: relative;
+// $evo-item-highlight-ctn-tag-indicator-label-position-top: -6px;
+// $evo-item-highlight-ctn-tag-indicator-label-position-left: -26px;
+// $evo-item-highlight-ctn-tag-indicator-label-padding: rem-calc(10) rem-calc(30) rem-calc(8) rem-calc(30);
+// $evo-item-highlight-ctn-tag-indicator-label-bgcolor: $sapphire-mid;
+// $evo-item-highlight-ctn-tag-indicator-label-letter-spacing: rem-calc(1);
+
+// $evo-item-highlight-ctn-highlight-ctn-link-font-size: rem-calc(12);
+// $evo-item-highlight-ctn-highlight-ctn-link-line-height: 0;
+// $evo-item-highlight-ctn-highlight-ctn-link-margin-top: rem-calc(8);
 
 
 // ITEM SELECTION PANEL
@@ -90,6 +206,14 @@
 // $evo-item-selection-panel-container-category-highlight-img-blur: rem-calc(6);
 // $evo-item-selection-panel-container-category-highlight-img-color: $gray-light;
 // $evo-item-selection-panel-container-category-highlight-img-border-color: $topaz-dark;
+
+
+// LOGIN TEMPLATE
+// ------------------------------------------------------------------------------------------
+// $evo-login-template-layout-background-color: $sapphire-dark;
+// $evo-login-template-layout-background-image-src-path: "../images/ep/login_grid_mono_color_bkgd.jpg";
+// $evo-login-template-background-color: $white;
+// $evo-login-template-font-color: $sapphire-dark;
 
 
 // PRICING TABLE
@@ -120,60 +244,25 @@
 // $evo-price-table-total-row-font-color: 	$white;
 
 
-// ITEM HIGHLIGHT CONTAINER
+// SHOWCASE PANEL
 // ------------------------------------------------------------------------------------------
-// $evo-item-highlight-ctn-bgcolor: 		$gray-lightest;
-// $evo-item-highlight-ctn-border-width: 	3px;
-// $evo-item-highlight-ctn-border-style: 	solid;
-// $evo-item-highlight-ctn-border-color: 	$topaz-dark;
-// $evo-item-highlight-ctn-padding: 		rem-calc(10) rem-calc(18) rem-calc(3) rem-calc(18);
-// $evo-item-highlight-ctn-margin: 			0 10px;
-// $evo-item-highlight-ctn-min-height: 		100px;
-
-// $evo-item-highlight-ctn-tag-indicator-min-height: rem-calc(29);
-// $evo-item-highlight-ctn-tag-indicator-label-font-size: rem-calc(11);
-// $evo-item-highlight-ctn-tag-indicator-label-text-transform: uppercase;
-// $evo-item-highlight-ctn-tag-indicator-label-position: relative;
-// $evo-item-highlight-ctn-tag-indicator-label-position-top: -6px;
-// $evo-item-highlight-ctn-tag-indicator-label-position-left: -26px;
-// $evo-item-highlight-ctn-tag-indicator-label-padding: rem-calc(10) rem-calc(30) rem-calc(8) rem-calc(30);
-// $evo-item-highlight-ctn-tag-indicator-label-bgcolor: $sapphire-mid;
-// $evo-item-highlight-ctn-tag-indicator-label-letter-spacing: rem-calc(1);
-
-// $evo-item-highlight-ctn-highlight-ctn-link-font-size: rem-calc(12);
-// $evo-item-highlight-ctn-highlight-ctn-link-line-height: 0;
-// $evo-item-highlight-ctn-highlight-ctn-link-margin-top: rem-calc(8);
+// $evo-showcase-panel-shadow-h: 			0;
+// $evo-showcase-panel-shadow-v: 			rem-calc(2);
+// $evo-showcase-panel-shadow-blur: 		rem-calc(8);
+// $evo-showcase-panel-shadow-color: 		$gray-mid;
+// $evo-showcase-panel-fixed-z-index: 		1000;
 
 
-// CATEGORY HEADER CONTAINER
+// SLIDER CONTRIBUTIONS
 // ------------------------------------------------------------------------------------------
-// $evo-category-hdr-label-border-width: 	rem-calc(1);
-// $evo-category-hdr-label-border-style: 	solid;
-// $evo-category-hdr-label-border-color: 	$gray-light;
-// $evo-category-hdr-label-color: 			$gray-dark;
-// $evo-category-hdr-label-margin: 			18px 0;
-// $evo-category-hdr-label-padding: 		15px;
-
-
-// ADD/REMOVE PLAN COMPONENT
-// ------------------------------------------------------------------------------------------
-// $evo-add-remove-plan-component-icon-color: $gray-light;
-// $evo-add-remove-plan-component-icon-float: right;
-// $evo-add-remove-plan-component-icon-font-size: rem-calc(22);
-// $evo-add-remove-plan-component-icon-position: relative;
-// $evo-add-remove-plan-component-icon-position-top: rem-calc(12);
-// $evo-add-remove-plan-component-icon-padding-bottom: 2px;
-
-// $evo-add-remove-plan-component-overlay-bgcolor: rgba(255, 255, 255, 0.90);
-// $evo-add-remove-plan-component-overlay-position: absolute;
-// $evo-add-remove-plan-component-overlay-position-left: 0;
-// $evo-add-remove-plan-component-overlay-position-right: 0;
-// $evo-add-remove-plan-component-overlay-padding: 64px 0;
-// $evo-add-remove-plan-component-overlay-z-index: 1;
-// $evo-add-remove-plan-component-overlay-text-align: center;
-
-// $evo-add-remove-plan-component-overlay-link-font-size: rem-calc(14);
-// $evo-add-remove-plan-component-overlay-link-text-transform: uppercase;
+// $evo-contributions-slider-background-color: $gray-light;
+// $evo-contributions-slider-handle-background-color: $citrine-mid;
+// $evo-contributions-slider-handle-shadow-color: $black;
+// $evo-contributions-slider-handle-border-color: $white;
+// $evo-contributions-slider-range-background-color: $gray-mid;
+// $evo-contributions-slider-tick-marker-color: $gray-light;
+// $evo-contributions-slider-tooltip-background-color: $gray-dark;
+// $evo-contributions-slider-tooltip-font-color: $white;
 
 
 // FORM WORKSHEET
@@ -189,22 +278,3 @@
 // $evo-form-worksheet-inputs-border-bottom-color: $sapphire-mid;
 // $evo-form-worksheet-input-color: $sapphire-mid;
 
-
-// SLIDER CONTRIBUTIONS
-// ------------------------------------------------------------------------------------------
-// $evo-contributions-slider-background-color: $gray-light;
-// $evo-contributions-slider-handle-background-color: $citrine-mid;
-// $evo-contributions-slider-handle-shadow-color: $black;
-// $evo-contributions-slider-handle-border-color: $white;
-// $evo-contributions-slider-range-background-color: $gray-mid;
-// $evo-contributions-slider-tick-marker-color: $gray-light;
-// $evo-contributions-slider-tooltip-background-color: $gray-dark;
-// $evo-contributions-slider-tooltip-font-color: $white;
-
-
-// LOGIN TEMPLATE
-// ------------------------------------------------------------------------------------------
-// $evo-login-template-layout-background-color: $sapphire-dark;
-// $evo-login-template-layout-background-image-src-path: "../images/ep/login_grid_mono_color_bkgd.jpg";
-// $evo-login-template-background-color: $white;
-// $evo-login-template-font-color: $sapphire-dark;
