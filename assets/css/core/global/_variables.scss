@@ -59,33 +59,38 @@ $evo-base-font-file-path:					"../fonts" !default;
 // WEB FONTS
 
 	// Thin
-	$evo-font-thin-family:						proxima_nova_ththin !default;
-	$evo-font-thin-file-path:					"#{$evo-base-font-file-path}/ProximaNova-Thin-webfont" !default;
+	$evo-font-thin-family:						relativefaux !default;
+	$evo-font-thin-file-path:					"#{$evo-base-font-file-path}/relative-faux-webfont" !default;
 	$evo-font-thin-stack:						"#{$evo-font-thin-family}", $evo-base-font-stack !default;
 
 	// Regular
-	$evo-font-regular-family:					proxima_nova_rgregular !default;
-	$evo-font-regular-file-path:				"#{$evo-base-font-file-path}/ProximaNova-Reg-webfont" !default;
+	$evo-font-regular-family:					relativebook !default;
+	$evo-font-regular-file-path:				"#{$evo-base-font-file-path}/relative-book-webfont" !default;
 	$evo-font-regular-stack:					"#{$evo-font-regular-family}", $evo-base-font-stack !default;
 
 	// Italic
-	$evo-font-italic-family:					proxima_novaregular_italic !default;
-	$evo-font-italic-file-path:					"#{$evo-base-font-file-path}/ProximaNova-RegIt-webfont" !default;
+	$evo-font-italic-family:					relativebook_italic !default;
+	$evo-font-italic-file-path:					"#{$evo-base-font-file-path}/relative-bookitalic-webfont" !default;
 	$evo-font-italic-stack:						"#{$evo-font-italic-family}", $evo-base-font-stack !default;
 
 	// Medium
-	$evo-font-medium-family:					proxima_nova_ltsemibold !default;
-	$evo-font-medium-file-path:					"#{$evo-base-font-file-path}/ProximaNova-Sbold-webfont" !default;
+	$evo-font-medium-family:					relativemedium !default;
+	$evo-font-medium-file-path:					"#{$evo-base-font-file-path}/relative-medium-webfont" !default;
 	$evo-font-medium-stack:						"#{$evo-font-medium-family}", $evo-base-font-stack !default;
 
+	// Medium Italic
+	$evo-font-medium-italic-family:				relativemedium_italic !default;
+	$evo-font-medium-italic-file-path:			"#{$evo-base-font-file-path}/relative-mediumitalic-webfont" !default;
+	$evo-font-medium-italic-stack:				"#{$evo-font-medium-italic-family}", $evo-base-font-stack !default;
+
 	// Bold
-	$evo-font-bold-family:						proxima_nova_rgbold !default;
-	$evo-font-bold-file-path:					"#{$evo-base-font-file-path}/ProximaNova-Bold-webfont" !default;
+	$evo-font-bold-family:						relativebold !default;
+	$evo-font-bold-file-path:					"#{$evo-base-font-file-path}/relative-bold-webfont" !default;
 	$evo-font-bold-stack:						"#{$evo-font-bold-family}", $evo-base-font-stack !default;
 
 	// Bold Italic
-	$evo-font-bold-italic-family:				proxima_novabold_italic !default;
-	$evo-font-bold-italic-file-path:			"#{$evo-base-font-file-path}/ProximaNova-BoldIt-webfont" !default;
+	$evo-font-bold-italic-family:				relativebold_italic !default;
+	$evo-font-bold-italic-file-path:			"#{$evo-base-font-file-path}/relative-bolditalic-webfont" !default;
 	$evo-font-bold-italic-stack:				"#{$evo-font-bold-italic-family}", $evo-base-font-stack !default;
 
 // ICON FONTS
@@ -114,7 +119,7 @@ $evo-weight-bold-700:						700 !default;
 $evo-weight-bold-800:						800 !default;
 $evo-weight-bold-900:						900 !default;
 
-// OTHER ELEMENTS
+// TEXT SELECTION
 $evo-text-selection-text-color:				$white !default;
 $evo-text-selection-background-color:		$gray-darker !default;
 

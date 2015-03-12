@@ -29,6 +29,11 @@ $evo-hdr-rule-margin-bottom:				10px !default;
 $evo-hdr-rule-border-color:					$gray-mid !default;
 $evo-hdr-background-color:					$gray-lighter !default;
 
+// LINKS
+$evo-anchor-font-color-reverse: 			$white !default;
+$evo-anchor-font-color-alt: 				$ruby-mid !default;
+$evo-anchor-font-size-small:				14 !default;
+
 
 @if $use-type == true{
 
@@ -54,6 +59,10 @@ $evo-hdr-background-color:					$gray-lighter !default;
 	// Medium
 	// -------------------------------------------------
 	@include font-face($evo-font-medium-family, $evo-font-medium-file-path);
+
+	// Medium Italic
+	// -------------------------------------------------
+	@include font-face($evo-font-medium-italic-family, $evo-font-medium-italic-file-path);
 
 	// Bold
 	// -------------------------------------------------
@@ -82,20 +91,38 @@ $evo-hdr-background-color:					$gray-lighter !default;
 	*							{@include type-selection($evo-text-selection-text-color,$evo-text-selection-background-color);}
 
 	// HEADERS
-	h1, .h1						{
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6							{
+								text-transform: uppercase;
 								}
-	h2, .h2						{
+
+	h1							{
+								font-family: $evo-font-bold-stack;
+								letter-spacing: rem-calc(6);
 								}
-	h3, .h3						{
+	h2							{
+								font-family: $evo-font-regular-stack;
+								letter-spacing: rem-calc(4);
 								}
-	h4, .h4						{
-								font-family: $evo-font-medium-stack;
+	h3							{
+								font-family: $evo-font-regular-stack;
+								letter-spacing: rem-calc(4);
 								}
-	h5, .h5						{
-								font-family: $evo-font-medium-stack;
+	h4							{
+								font-family: $evo-font-bold-stack;
+								letter-spacing: rem-calc(4);
 								}
-	h6, .h6						{
-								font-family: $evo-font-medium-stack;
+	h5							{
+								font-family: $evo-font-regular-stack;
+								letter-spacing: rem-calc(4);
+								}
+	h6							{
+								font-family: $evo-font-bold-stack;
+								letter-spacing: rem-calc(2);
 								}
 
 	.evo-h1-hdr-background,
@@ -136,6 +163,8 @@ $evo-hdr-background-color:					$gray-lighter !default;
 								margin-bottom: $evo-hdr-rule-margin-bottom;
 								}
 
+	
+	// BOLD AND OTHER TYPES OF HEADERS
 	b, strong, th, thead,
 	dt, legend					{
 								font-family: $evo-font-medium-stack;
@@ -143,14 +172,16 @@ $evo-hdr-background-color:					$gray-lighter !default;
 								}
 
 
-	// INTRO TEXT, 2PX SIZES LARGER THAN THE BASE FONT
+	// INTRO TEXT
 	.evo-intro-text				{
 								font-size: rem-calc(18);
 								}
 
 	// SMALL TEXT
-	p small						{
-								display: block;
+	small,
+	.evo-small-text,
+	.evo-footnote				{
+								font-family: $evo-font-regular-stack;
 								line-height: 1.25;
 								}
 
@@ -184,6 +215,10 @@ $evo-hdr-background-color:					$gray-lighter !default;
 	a							{	
 		&:visited					{color: $evo-base-link-visited-color;}
 								}
+
+	a.evo-anchor-small			{font-size: rem-calc($evo-anchor-font-size-small);}
+	a.evo-anchor-reverse		{color: $evo-anchor-font-color-reverse;}
+	a.evo-anchor-alt			{color: $evo-anchor-font-color-alt;}
 
 
 	// OTHER ELEMENTS
