@@ -212,7 +212,6 @@ html.evo-mod-js							{display:none;}
 
 .evo-alternate-views-badge.ui-tabs		{
 	.banding-section-1						{
-											@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
 		h1										{
 												color: $white;
 												font-size: rem-calc(51);

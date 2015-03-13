@@ -240,13 +240,85 @@ $table-row-font-color: $body-font-color;
 
 // 34. Top Bar
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-
 // Background color for the top bar
-$topbar-bg-color: $sapphire;
+$topbar-bg-color: $gray-dark;
+$topbar-bg: $topbar-bg-color;
 
 // Height and margin
-$topbar-height: rem-calc(45);
-$topbar-margin-bottom: 0;
+$topbar-height: rem-calc(40);
+// $topbar-margin-bottom: 0;
+
+// Controlling the styles for the title in the top bar
+// $topbar-title-weight: $font-weight-normal;
+// $topbar-title-font-size: rem-calc(17);
+
+// Style the top bar dropdown elements
+// $topbar-dropdown-bg: $oil;
+// $topbar-dropdown-link-color: $white;
+// $topbar-dropdown-link-bg: $oil;
+// $topbar-dropdown-link-bg-hover: $oil;
+// $topbar-dropdown-link-weight: $font-weight-normal;
+// $topbar-dropdown-toggle-size: 5px;
+// $topbar-dropdown-toggle-color: $white;
+// $topbar-dropdown-toggle-alpha: 0.4;
+
+// Set the link colors and styles for top-level nav
+$topbar-link-color: $white;
+$topbar-link-color-hover: $white;
+// $topbar-link-color-active: $white;
+// $topbar-link-color-active-hover: $white;
+// $topbar-link-weight: $font-weight-normal;
+// $topbar-link-font-size: rem-calc(13);
+// $topbar-link-hover-lightness: -10%; // Darken by 10%
+$topbar-link-bg: $topbar-bg;
+// $topbar-link-bg-color-hover: $charcoal;
+$topbar-link-bg-hover: $gray-mid;
+$topbar-link-bg-active: $sapphire-dark;
+// $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
+// $topbar-link-font-family: $body-font-family;
+// $topbar-link-text-transform: none;
+// $topbar-link-padding: ($topbar-height / 3);
+// $topbar-back-link-size: $h5-font-size;
+// $topbar-link-dropdown-padding: 20px;
+
+// $topbar-button-font-size: 0.75rem;
+// $topbar-button-top: 7px;
+
+// $topbar-dropdown-label-color: $monsoon;
+// $topbar-dropdown-label-text-transform: uppercase;
+// $topbar-dropdown-label-font-weight: $font-weight-bold;
+// $topbar-dropdown-label-font-size: rem-calc(10);
+// $topbar-dropdown-label-bg: $oil;
+
+// Top menu icon styles
+// $topbar-menu-link-transform: uppercase;
+// $topbar-menu-link-font-size: rem-calc(13);
+// $topbar-menu-link-weight: $font-weight-bold;
+// $topbar-menu-link-color: $white;
+// $topbar-menu-icon-color: $white;
+// $topbar-menu-link-color-toggled: $jumbo;
+// $topbar-menu-icon-color-toggled: $jumbo;
+
+// Transitions and breakpoint styles
+// $topbar-transition-speed: 300ms;
+// Using rem-calc for the below breakpoint causes issues with top bar
+// $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
+// $topbar-media-query: $medium-up;
+
+// Divider Styles
+// $topbar-divider-border-bottom: solid 1px  scale-color($topbar-bg-color, $lightness: 13%);
+// $topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
+
+// Sticky Class
+// $topbar-sticky-class: ".sticky";
+// $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
+
+// I BELIEVE THESE ARE USED FOR EP PROJECT
+// $topbar-bg-color: $sapphire;
+
+// Height and margin
+// $topbar-height: rem-calc(45);
+// $topbar-margin-bottom: 0;
 
 
 // ==========================================================================================
@@ -450,105 +522,19 @@ $topbar-margin-bottom: 0;
 // ------------------------------------------------------------------------------------------
 
 // ICON STYLES
-// $headerIconRadius:						3px;
-// $headerIconPadding:						4px 10px 6px 6px;
-// $headerIconMinWidth:						28px;
-// $headerIconBackgroundColor:				$gray-dark;
-// $headerIconFontColor:					$white;
-// $headerIconHoverBackgroundColor:			$gray-dark;
-// $headerIconHoverFontColor:				$white;
-
 // BASE & LOGO STYLES
-// $mastheadContentHeight:					52px;
-// $mastheadLogoLineHeight:					52px;
-// $mastheadLogoFontWeight:					400;
-// $mastheadLogoFontSize:					24px;
-// $mastheadLogoFontSizeLargeBreakpoint:	33px;
-// $mastheadBackgroundStartColor:			$blue-gray;
-// $mastheadBackgroundEndColor:				$blue-gray-darker;
-// $mastheadLogoLinkColor:					$white;
-
 // USER IDENTIFIER
-// $userIdentifierMenuFontSize:				12px;
-// $userIdentifierMenuPadding:				6px 10px 6px 30px;
-// $userIdentifierBackgroundStartColor:		#4674a9;
-// $userIdentifierBackgroundEndColor:		#385882;
-// $userIdentifierFontColor:				$white;
-// $userIdentifierMenuShadowColor:			$gray-darker;
-// $userIdentifierMenuTextColor:			$white;
-// $userIdentifierMenuHoverColor:			$blue-gray;
-
 // TOOLBAR
-// $toolbarBackgroundStartColor:			$blue-gray;
-// $toolbarBackgroundEndColor:				$blue-gray-darker;
-// $toolbarMobileNavbarBackgroundColor:		$gray-lighter;
-// $toolbarDropShadowColor:					$gray-darker;
-// $toolbarLinkColor:						$white;
-// $toolbarLinkHoverColor:					$white;
-
 // NAVBAR
-// $navbarBackgroundGradientStartColor:		$gray-lightest;
-// $navbarBackgroundGradientEndColor:		$gray-mid;
-// $navbarBorderColor:						$gray-mid;
-// $navbarBorderBottomStyle:				solid;
-// $navbarBorderColor:						$gray-mid;
-// $navbarFontHoverColor:					#002C77;
-
-	// MENU OVERRIDES
-	// $subMenuBackgroundColor:					$gray-lighter;
-	// $subMenuBorderTopColor:					$gray-mid;
-
-	// NAVBAR MESSAGE AREA
-	// $navbarMessageBorderRightColor:			$gray-mid;
-
-	// TEXT NAVBAR
-	// $textNavbarBorderLeftColor:				$gray-mid;
-	// $textNavbarSubMenuHoverBackgroundColor:	$white;
-
-	// TABBED NAVBAR
-	// $tabbedNavbarBorderLeftColor:			$white;
-	// $tabbedNavbarHrefBorderLeftColor:		$gray-mid;
-
-	// $tabbedNavbarActiveBackgroundStartColor:	$gray-lightest;
-	// $tabbedNavbarActiveBackgroundEndColor:	$gray-mid;
-	// $tabbedNavbarSubMenuHoverBackgroundColor: $white;
-
 // SPOTLIGHT CONTAINER
-// $megaMenuContainerSpotlightBorderRadius: 4px;
 
 
 // MENU STYLES
 // ------------------------------------------------------------------------------------------
-// $menuLinkPadding:						7px 10px;
-
-// MENUS
-// $menuBackgroundHoverColor: 				$white;
-// $menuDropShadowColor:					$gray-mid;
-// $menuBackgroundColor:					$white;
-// $menuBorderColor:						$gray-mid;
-// $menuBorderTopColor:						$gray-mid;
-// $menuIndicatorColor1stLevel:				$gray-dark;
-// $menuFontColor:							#002C77;
-// $menuHoverFontColor:						#002C77;
-// $menuBorderTopColor2ndlevel:				$gray-mid;
-
-// MEGA MENU
-// $megaMenuBackgroundColor: 				$gray-darker;
-// $megaMenuBorderTopColor:					$gray-dark;
-// $megaMenuBorderBottomColor:				$gray-dark;
-// $megaMenuContentFontColor:				$white;
 
 
 // NAVIGATION
 // ------------------------------------------------------------------------------------------
-// $navbarBorderBottomWidth:				1px;
-// $navbarBorderBottomStyle:				solid;
-// $navbarMessageWidth:						200px;
-// $navbarMessagePadding:					9px 0 7px 0;
-// $navbarMessageInnerPadding:				2px 10px 2px 0;
-// $navbarMessageFontFamily:				$fontMediumFamily;
-// $navbarMessageBorderRightWidth:			1px;
-// $navbarMessageBorderRightStyle:			dotted;
 
 
 // HERO BANNER

@@ -1,0 +1,56 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.6 - Base Navigation Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+//-------------------------------------------------------------------------------------------
+
+@if $use-top-bar == true{
+
+	.evo-top-bar			{
+		.top-bar-section		{
+
+		// GLOBAL NAV OVERRIDES - BEGIN
+			ul						{
+				li						{
+					&.active				{}
+					a						{
+											text-decoration: none;
+						[class*="evo-icon-"]	{
+												color: $white;
+												top: rem-calc(3);
+												}
+											}
+										}
+									}
+		// GLOBAL NAV OVERRIDES - END
+
+		// LEFT NAV OVERRIDES - BEGIN
+			ul.left					{
+
+									}
+		// LEFT NAV OVERRIDES - END
+
+		// RIGHT NAV OVERRIDES - BEGIN
+			ul.right				{
+
+									}
+		// RIGHT NAV OVERRIDES - END
+								}
+							}
+	
+
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+
+
+		}
+		
+	}// endif
+
+}// endif

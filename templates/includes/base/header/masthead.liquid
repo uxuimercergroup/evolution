@@ -1,40 +1,36 @@
 <!-- MASTHEAD - BEGINS -->
-{% if global.type_of_navbar != 'toolbar' %}
-	<section class="evo-masthead">
-		<div class="evo-masthead-adjust">
-			<section class="col-18 first evo-logo evo-small-mediaquery-grid">
-			{% if global.masthead_logo_primary == 'true' %}
-				<div class="evo-logo-col-1">
-					{% include '/base/header/company-logo-primary' %}
-				</div>
-			{% endif %}
+	<div class="evo-masthead">
+		<div class="row collapse">
+		<!-- LEFT COLUMN - BEGINS -->
+			<div class="small-8 columns evo-left">
+				<h1>
+					<a href="javascript:;"><img src="{{ "mercer_logo_170x25.png" | asset_url }}"></a>
+				</h1>
+			</div>
+		<!-- LEFT COLUMN - ENDS -->
 
-			{% if global.masthead_company_text == 'true' %}
-				<div class="evo-logo-col-2">
-					<a href="/index">MERCER <span>EVOLUTION</span></a>
-				</div>
-			{% endif %}
+		<!-- RIGHT COLUMN - BEGINS -->
+			<div class="small-4 columns evo-right">
+				<a data-dropdown="drop" aria-controls="drop", aria-expanded="false" class="dropdown right evo-profile-ctn">
+					<div class="row">
+						<div class="small-9 columns">
+							<span class="evo-title">Arquimedez Pozo</span>
+							<span class="evo-sub-title">Front-end Developer</span>
+						</div>
+						<div class="small-3 columns">
+							<i class="evo-icon-user evo-icon-size-medium" title="Arquimedez Pozo"></i>
+						</div>
+					</div>
+				</a>
+				<ul id="drop" data-dropdown-content class="f-dropdown" role="menu" aria-hidden="false" tabindex="-1">
+					<li><a href="#">View Profile</a></li>
+					<li><a href="#">Change Language</a></li>
+					<li><a href="#">User Administration</a></li>
+					<li><a href="#">Log Out</a></li>
+				</ul>
+			</div>
+		<!-- LEFT COLUMN - ENDS -->
 
-				<div class="evo-logo-col-3 evo-mb-navbar-ctn">
-				<!-- MOBILE MENU ICON - BEGINS -->
-					<ul class="sm evo-nav-menus evo-menu-ctn" data-menu="click">
-						<li class="evo-header-icon">
-							<a href="javascript:;" class="js-evo-header-mobile-menu-toggle" data-evo-header-mobile-menu-toggle="navbar"><i class="evo-icon-menu3"></i></a>
-						</li>
-					</ul>
-				<!-- MOBILE MENU ICON - ENDS -->
-				</div>
-			</section>
-			<section class="col-6 evo-hidden-small-mediaquery">
-			{% if global.masthead_identifier_or_logo == 'identifier' %}
-				{% include '/base/header/user-identifier' %}
-			{% elseif global.masthead_identifier_or_logo == 'logo' %}
-				{% include '/base/header/company-logo-secondary' %}
-			{% else %}
-
-			{% endif %}
-			</section>
 		</div>
-	</section>
-{% endif %}
+	</div>
 <!-- MASTHEAD - ENDS -->
