@@ -23,6 +23,10 @@ $row-width: rem-calc(980);
 // We use these to define default font stacks
 $font-family-sans-serif: relativebook, arial, Tahoma, Geneva, sans-serif;
 
+// We use these to define default font weights
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+
 // We use these as default colors throughout
 $primary-color: $sapphire-dark;
 $secondary-color: $gray-lighter;
@@ -110,6 +114,7 @@ $hr-border-color: $gray-mid;
 
 // We use these to style lists
 $list-line-height: $paragraph-line-height;
+$definition-list-header-weight: $font-weight-normal;
 
 // We use these to style blockquotes
 $blockquote-border: 1px solid $gray-mid;
