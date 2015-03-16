@@ -1,5 +1,5 @@
 <div class="contain-to-grid">
-	<nav class="top-bar evo-top-bar" data-topbar role="navigation">
+	<nav class="top-bar evo-top-bar" data-topbar role="navigation" data-options="is_hover: false">
 		<ul class="title-area">
 			<li class="name"></li>
 			<li class="toggle-topbar menu-icon">
@@ -44,18 +44,43 @@
 				<li>
 					<a href="/index">Home</a>
 				</li>
-				<li>
-					<a href="/browser-testing-support">Browser Support</a>
+				<li class="has-dropdown">
+					<a href="javascript:;">Browser Support</a>
+					<ul class="dropdown">
+						<li><a href="/browser-testing-support">Sub menu item</a></li>
+						<li><a href="javascript:;">Sub menu item</a></li>
+						<li><a href="javascript:;">Sub menu item</a></li>
+					</ul>
 				</li>
 				<li>
 					<a href="quick-reference">Quick Reference</a>
 				</li>
 				<li class="evo-mega-menu">
-					<a class="" data-dropdown="mega-menu-1"><i class="evo-icon-evo-book-open"></i></a>
+					<a data-dropdown="mega-menu-1"><i class="evo-icon-evo-book-open"></i></a>
 					<div id="mega-menu-1" class="large f-dropdown content open evo-mega-menu-ctn">
 						<div class="row">
 							<div class="small-12 columns">
-								<h4>This is a header</h4>
+								<h4>Mega Menu 1 Header</h4>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="small-6 columns">
+								{{ 1 | lorem_ipsum:'p' }}
+							</div>
+							<div class="small-6 columns">
+								{{ 1 | lorem_ipsum:'p' }}
+							</div>
+						</div>
+
+					</div>
+				</li>
+				<li class="evo-mega-menu">
+					<a data-dropdown="mega-menu-2"><i class="evo-icon-evo-book-open"></i></a>
+					<div id="mega-menu-2" class="large f-dropdown content open evo-mega-menu-ctn">
+						<div class="row">
+							<div class="small-12 columns">
+								<h4>Mega Menu 2 Header</h4>
 							</div>
 						</div>
 						
