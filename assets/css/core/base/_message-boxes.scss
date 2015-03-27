@@ -1,0 +1,27 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.7 - Base Box Partial
+// DATE - January 13, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+// MESSAGE BOX VARS
+$evo-message-box-padding-left: rem-calc(31) !default;
+$evo-message-box-icon-margin-top: -9px !default;
+$evo-message-box-icon-position: absolute !default;
+$evo-message-box-icon-position-top: 50% !default;
+$evo-message-box-icon-position-left: rem-calc(10) !default;
+
+
+@if $use-message-boxes == true{
+
+	.evo-message-boxes			{
+								padding-left: $evo-message-box-padding-left;
+		[class*="evo-icon-"]		{margin-top: $evo-message-box-icon-margin-top;}
+		[class*="evo-icon-position-left"]
+									{
+									position: $evo-message-box-icon-position;
+									top: $evo-message-box-icon-position-top !important;
+									left: $evo-message-box-icon-position-left;
+									}
+								}
+}//endif

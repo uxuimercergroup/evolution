@@ -131,47 +131,24 @@ $evo-text-selection-background-color:		$gray-darker !default;
 // BOXES
 // ------------------------------------------------------------------------------------------
 
-// BASE
-$boxBorderSize:								1px !default;
-$boxBorderStyle:							solid !default;
-$boxHdrBorderSize:							3px !default;
-$boxHdrBorderStyle:							solid !default;
-$boxBdyBorderTopSize:						1px !default;
-$boxBdyBorderTopStyle:						solid !default;
-$boxPadding:								$evo-base-padding !default;
-$boxVShadow:								1px !default;
-$boxHShadow:								1px !default;
-$boxShadowBlur:								1px !default;
-$boxBackgroundColor:						$gray-lighter !default;
-$boxBorderColor:							$gray-mid !default;
-$boxHdrBorderColor:							$gray-mid !default;
-$boxShadowColor:							$gray-darker !default;
-
-// ADVANCED BOX
-$boxAdvancedBackgroundColor:				$transparent !default;
-$boxAdvancedHdrBackgroundColor:				$gray-light !default;
-
-// MESSAGE BOXES
-$msgBorderWidth:							1px !default;
-$msgBorderStyle:							solid !default;
 
 // CUSTOM CONTAINERS
 $boxInlineSearchBorderSizeColor:			1px !default;
 $boxInlineSearchBorderTypeColor:			dotted !default;
 $boxInlineSearchLabelLineHeight:			22px !default;
 
-$boxFeaturedBackgroundColor:				$white !default;
-$boxFeaturedBorderBottomColor:				$blue-gray-mid-dark !default;
+	$boxFeaturedBackgroundColor:				$white !default;
+	$boxFeaturedBorderBottomColor:				$blue-gray-mid-dark !default;
 
-$boxSidebarBackgroundColor:					$gray-lighter !default;
-$boxSidebarBorderBottomColor:				$gray-mid !default;
+	$boxSidebarBackgroundColor:					$gray-lighter !default;
+	$boxSidebarBorderBottomColor:				$gray-mid !default;
 
-$boxInlineSearchBackgroundColor:			$gray-lighter !default;
-$boxInlineSearchBorderColor:				$gray-darker !default;
+	$boxInlineSearchBackgroundColor:			$gray-lighter !default;
+	$boxInlineSearchBorderColor:				$gray-darker !default;
 
-$boxSupportBackgroundColor:					$blue-gray-lighter !default;
-$boxSupportBottomColor:						$blue-gray-mid-dark !default;
-$boxSupportBorderBottomColor:				$blue-gray-mid-dark !default;
+	$boxSupportBackgroundColor:					$blue-gray-lighter !default;
+	$boxSupportBottomColor:						$blue-gray-mid-dark !default;
+	$boxSupportBorderBottomColor:				$blue-gray-mid-dark !default;
 
 
 // HEADER
@@ -517,26 +494,7 @@ $sliderHandleActiveBackgroundEndColor:		$blue-gray-darkest !default;
 
 // SUMMARY CONTAINER
 // ------------------------------------------------------------------------------------------
-$summaryCtnBorderSize:						1px !default;
-$summaryCtnBorderStyle:						dotted !default;
-$summaryCtnPadding:							10px !default;
-$summaryPrimaryCtnIconFontSize:				40px !default;
-$summarySecondaryCtnIconFontSize:			30px !default;
 
-$summaryCtnBorderColor:						$gray-darker !default;
-$summaryCtnBorderColorTop:					$transparent !default;
-$summaryCtnBorderColorBottom:				$transparent !default;
-$summaryCtnBorderColorLeft:					$transparent !default;
-$summaryCtnBorderFirstChildColorTop:		$gray-darker !default;
-$summaryCtnBorderFirstChildColorLeft:		$gray-darker !default;
-$summaryCtnBorderHoverTransitionSpeed:		250ms !default;
-$summaryCtnBorderHoverBackgroundColor:		$topaz-light !default;
-$summaryCtnBorderHoverBorderTopColor:		$gray-darker !default;
-$summaryCtnBorderHoverBorderBottomColor:	$gray-darker !default;
-$summaryCtnAlertNegativeFontColor:			$garnet !default;
-$summaryCtnAlertNegativeHoverBackgroundColor: $garnet-light !default;
-$summaryCtnAlertPositiveFontColor:			$emerald !default;
-$summaryCtnAlertPositiveHoverBackgroundColor: $emerald-light !default;
 
 
 // TABS
@@ -582,22 +540,6 @@ $tabsActiveBackgroundEndColor:				$white !default;
 $tabsPanelBorderColor:						$gray-mid !default;
 $tabsPanelBackgroundColor: 					$white !default;
 
-
-// TILES
-// ------------------------------------------------------------------------------------------
-$tilesBorderRadius:							3px !default;
-$tilesMarginBottom:							3px !default;
-$tilesBodyBorderRadius:						0 0 3px 3px !default;
-$tilesScrollPaneHeight:						400px !default;
-$tilesOuterBorderRadiusLargeBreakpoint:		0 !default;
-
-$tilesBackgroundColor:						$gray-lightest !default;
-$tilesHeaderBorderTopColor:					$sapphire-mid !default;
-$tilesHeaderBackgroundColor:				$transparent !default;
-$tilesHeaderFontColor:						$gray-darker !default;
-$tilesBodyBackgroundColor:					$white !default;
-$tilesBodyBorderColor:						$gray-light !default;
-$tilesOutsideBorderColor:					$gray-light !default;
 
 
 // TOOLTIP

@@ -1,209 +1,110 @@
 //-------------------------------------------------------------------------------------------
 // Mercer Evolution - Core v2.6 - Base Box Partial
 // DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
+
+// VARS **************************************************
+$evo-box-hdr-rule-size: 3px !default;
+$evo-box-hdr-rule-style: solid !default;
+$evo-box-hdr-rule-color: $gray-mid !default;
+$evo-box-hdr-rule-padding: 0 0 4px 0 !default;
+$evo-box-radius: $global-radius !default;
+$evo-box-border-width: 1px !default;
+$evo-box-border-style: solid !default;
+$evo-box-border-color: $gray-light !default;
+
+$evo-vertical-shadow: 0 !default;
+$evo-horizontal-shadow: 3px !default;
+$evo-blur-shadow: 6px !default;
+$evo-color-shadow: $gray-light !default;
+$evo-box-body-text-align: left !default;
+
+
+// MIXINS **************************************************
+@mixin evo-box(
+		$hdr-bdr-btm-width:$evo-box-hdr-rule-size,
+		$hdr-bdr-btm-style:$evo-box-hdr-rule-style,
+		$hdr-bdr-btm-color:$evo-box-hdr-rule-color,
+		$hdr-rule-padding:$evo-box-hdr-rule-padding,
+		$box-radius: $evo-box-radius,
+		$box-border-width: $evo-box-border-width,
+		$box-border-style: $evo-box-border-style,
+		$box-border-color: $evo-box-border-color,
+		$box-text-align: $evo-box-body-text-align
+	)
+	{
+	@include border-radius($box-radius);
+	border: $box-border-width $box-border-style $box-border-color;
+	position: relative;
+	text-align: $box-text-align;
+		.evo-box-hdr			{
+			.evo-hdr-rule			{
+									border-bottom: $hdr-bdr-btm-width $hdr-bdr-btm-style $hdr-bdr-btm-color;
+									padding: $hdr-rule-padding;
+									}
+								}
+		.evo-box-bdy,
+		.evo-box-ftr			{padding-bottom: 1px;}
+	}
+
+// TODO: MOVE THIS FROM BOXES.SCSS TO HELPER.SCSS, MAKE IT GLOBAL
+@mixin evo-box-shadow(
+		$vert-shadow:$evo-vertical-shadow,
+		$horz-shadow:$evo-horizontal-shadow,
+		$shadow-blur:$evo-blur-shadow,
+		$shadow-color:$evo-color-shadow
+	)
+	{
+		@include box-shadow($vert-shadow, $horz-shadow, $shadow-blur, $shadow-color);
+	}
+
+// EXPORTS **************************************************
+@include exports("evo-box") {}
+@include exports("evo-box-shadow") {}
+
 
 @if $use-boxes == true{
 
 	// BOX BASE SETUP
 	.evo-box					{
-								@include clearfix; // must clearfix the box to use grid cols inside evo-box
-								position: relative;
-								margin-bottom: $evo-base-margin;
-								background-color: $boxBackgroundColor;
-								border: $boxBorderSize $boxBorderStyle $boxBorderColor;
-								padding: $boxPadding $boxPadding 0 $boxPadding;
-		.evo-box-hdr				{
-									margin-bottom: $evo-base-margin;
-			.evo-hdr-rule				{
-										border-bottom: $boxHdrBorderSize $boxHdrBorderStyle $boxHdrBorderColor;
-										padding: 0 0 4px 0;
-										}
-									}
-		.evo-box-bdy				{padding-bottom: 1px;}
+								@include panel();
+								@include evo-box();
 								}
-
-	
-	// ADVANCED BOX SETUP
-	.evo-box-adv				{
-								@extend .evo-box;
-								background-color: $boxAdvancedBackgroundColor;
-								padding: 0;
-		& > .evo-box-hdr			{
-									background-color: $boxAdvancedHdrBackgroundColor;
-									padding: $boxPadding;
-									margin-bottom: $evo-base-margin;
-			.evo-hdr-rule				{
-										border-bottom: 0;
-										margin-bottom: 0;
-										}
-									}
-		& > .evo-box-bdy			{padding: 0 $boxPadding 1px $boxPadding;}
-		& > .evo-box-ftr			{padding: 0 $boxPadding 1px $boxPadding;}
-								}
-
-
-
-	// BOX WITH ROUNDED CORNERS
-	.evo-box-rnd				{
-								@include border-radius($global-radius);
-		.evo-box-hdr				{@include border-radius($global-radius $global-radius 0 0);}
-								}
-
-	// BOX WITH A DROP SHADOW
-	.evo-box-shadow				{@include box-shadow($boxVShadow, $boxHShadow, $boxShadowBlur, $boxShadowColor);}
-
-	// BOX WITH ROUNDED CORNERS WITH A DROP SHADOW
-	.evo-box-rnd-shadow			{
-								@extend .evo-box-rnd;
-								@extend .evo-box-shadow;
-		.evo-box-hdr				{@include border-radius($global-radius $global-radius 0 0);}
-								}
-
-
-	@if $use-message-boxes == true{
-
-		// MESSAGE BOX LAYOUT
-		.evo-error-ctn,
-		.evo-attention-ctn,
-		.evo-info-ctn,
-		.evo-confirmation-ctn
-									{
-									padding: 10px 10px 0 10px;
-			.evo-box-hdr				{margin-bottom: 4px;}
-			.evo-box-bdy				{
-				p							{margin-bottom: 10px;}
-										}
-									}
-
-		// MESSAGE BUILDERS
-		.evo-message-hdr			{
-									font-family: $evo-font-medium-stack;
-									font-size: 1rem;
-									margin-top: 0;
-									}
-		.evo-close-action			{
-									top: -7px !important;
-									right: -7px;
-									cursor: pointer;
-									display: block;
-									float: right;
-									}
-
-
-		// ERROR MESSAGE
-		.evo-error-ctn				{
-									@extend .evo-box;
-									background-color: $errorBackgroundColor !important;
-									border-color: $errorBorderColor !important;
-									color: $errorFontColor;
-			.evo-message-hdr			{color: $errorHdr;}
-			a							{color: $errorFontColor;}
-									}
-		// ATTENTION MESSAGE
-		.evo-attention-ctn			{
-									@extend .evo-box;
-									background-color: $attentionBoxBackgroundColor !important;
-									border-color: $attentionBoxBorderColor !important;
-									color: $attentionBoxFontColor;
-			.evo-message-hdr			{color: $attentionHdr;}
-			a							{color: $attentionBoxFontColor;}
-									}
-
-		// INFO MESSAGE
-		.evo-info-ctn				{
-									@extend .evo-box;
-									background-color: $infoBoxBackgroundColor !important;
-									border-color: $infoBoxBorderColor !important;
-									color: $infoBoxFontColor;
-			.evo-message-hdr			{color: $infoHdr;}
-			a							{color: $infoBoxFontColor;}
-									}
-
-		// CONFIRMATION MESSAGE
-		.evo-confirmation-ctn		{
-									@extend .evo-box;
-									background-color: $confirmationBoxBackgroundColor !important;
-									border-color: $confirmationBoxBorderColor !important;
-									color: $confirmationBoxFontColor;
-			.evo-message-hdr			{color: $confirmationHdr;}
-			a							{color: $confirmationBoxFontColor;}
-									}
-
-		// MESSAGE BOXES IE9 FIXES
-		.ie9						{
-			
-			// MESSAGE BUILDERS
-			.evo-close-action			{right: -7px;}
-
-									}
-
-	}//endif
-
-
-	//--- CUSTOM BOXES -------------------------------------------------------------------------------------------------
+	.evo-box-shadow				{@include evo-box-shadow();}
 
 	// FEATURE CONTAINER
 	.evo-feature-ctn			{
-								background-color: $boxFeaturedBackgroundColor;
-		.evo-box-hdr				{
-			.evo-hdr-rule				{border-bottom-color: $boxFeaturedBorderBottomColor;}
-									}
+								@include panel($bg:$boxFeaturedBackgroundColor);
+								@include evo-box($hdr-bdr-btm-color:$boxFeaturedBorderBottomColor);
 								}
 
-	// HIGHLIGHT CONTAINER
-	.evo-highlight-ctn			{
-								@extend .evo-attention-ctn;
-								@include border-radius(2px);
-		p							{margin-bottom: 10px;}
-								}
-	
 	// SIDEBAR CONTAINER
 	.evo-sidebar-ctn			{
-								background-color: $boxSidebarBackgroundColor;
-		.evo-box-hdr				{
-			.evo-hdr-rule				{border-bottom-color: $boxSidebarBorderBottomColor;}
-									}
-								}
-
-	// INLINE SEARCH CONTAINER
-	.evo-inline-search-ctn		{
-								background-color: $boxInlineSearchBackgroundColor;
-								border: $boxInlineSearchBorderSizeColor $boxInlineSearchBorderTypeColor $boxInlineSearchBorderColor;
-		.evo-form					{margin: 0 0 $evo-base-margin 0;}
-		.evo-form-inline			{
-			input[type="text"],
-			input[type="password"],
-			input[type="datetime"],
-			input[type="datetime-local"],
-			input[type="date"],
-			input[type="month"],
-			input[type="time"],
-			input[type="week"],
-			input[type="number"],
-			input[type="email"],
-			input[type="url"],
-			input[type="search"],
-			input[type="tel"],
-			input[type="color"],
-			select,
-			textarea					{
-										display: block;
-										width: 100%;
-										}
-									}
+								@include panel($bg:$boxSidebarBackgroundColor);
+								@include evo-box($hdr-bdr-btm-color:$boxSidebarBorderBottomColor);
 								}
 
 	// SUPPORT CONTAINER
 	.evo-support-ctn			{
-								@include border-radius(0 0 $global-radius $global-radius);
-								background-color: $boxSupportBackgroundColor;
-								border-color: $boxSupportBottomColor;
-		.evo-box-hdr				{
-			.evo-hdr-rule				{border-bottom-color: $boxSupportBorderBottomColor;}
-									}
+								@include panel($bg:$boxSupportBackgroundColor);
+								@include evo-box($hdr-bdr-btm-color:$boxSupportBorderBottomColor,$box-radius:0 0 $global-radius $global-radius,$box-border-color:$boxSupportBorderBottomColor);
 								}
+
+	// HIGHLIGHT CONTAINER
+	.evo-highlight-ctn			{
+								@include panel($bg:$warning-color);
+								@include evo-box($box-text-align:center);
+								}
+	
+	// INLINE SEARCH CONTAINER
+	.evo-inline-search-ctn		{
+								@include panel($bg:$boxInlineSearchBackgroundColor);
+								@include evo-box($box-radius:0,$box-border-style:dotted,$box-border-color:$boxInlineSearchBorderColor);
+		form						{margin-bottom: $evo-base-margin;}
+								}
+
+
 
 	//=== MEDIA QUERIES =========================================================================
 
@@ -212,51 +113,12 @@
 		
 		@media #{$medium-up} {
 
-			@if $use-message-boxes == true{
-
-				// MESSAGE BUILDERS
-				.evo-message-hdr	{font-size: 1rem;}
-
-			}// endif
-
 			// INLINE SEARCH CONTAINER
-			.evo-inline-search-ctn
-								{
-				.evo-form			{
-									margin: 0 0 5px 0;
-					.evo-form-action	{
-										margin-top: 0;
-										padding-top: 18%;
+			.evo-inline-search-ctn		{
+				form						{
+					.evo-btn-row				{text-align: center;}
+											}
 										}
-									}
-				.evo-form-inline	{
-									margin: 0;
-					label				{
-										vertical-align: top;
-										line-height: $boxInlineSearchLabelLineHeight;
-										}
-					input[type="text"],
-					input[type="password"],
-					input[type="datetime"],
-					input[type="datetime-local"],
-					input[type="date"],
-					input[type="month"],
-					input[type="time"],
-					input[type="week"],
-					input[type="number"],
-					input[type="email"],
-					input[type="url"],
-					input[type="search"],
-					input[type="tel"],
-					input[type="color"],
-					select,
-					textarea			{
-										display: inline-block;
-										width: auto;
-										}
-					.evo-form-action	{padding-top: 6%;}
-									}
-								}
 
 		}
 		

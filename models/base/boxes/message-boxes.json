@@ -1,5 +1,5 @@
 {
-	"title": "Confirmation Message",
+	"title": "Message Boxes",
 
 	"reference-overview": 
 		"<p>The Confirmation Message container provides feedback to the user when he/she has successfully completed an action. Like the other message containers, it always displays immediately below the page title.</p>",
@@ -17,24 +17,24 @@
 		"<h3>Cross browser compatibility</h3><p>IE9 doesn't crop background gradients on containers with rounded corners, so we square the corners of every container.</p>",
 
 	
-	"reference-dependency": "true",
-	"reference-dependency-jquery": "true",
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
 	"reference-dependency-jquery-ui": "false",
 	"reference-dependency-list": 
 		"",
 
 	"reference-example-versions": "true",
-	"reference-example-version-label":
-		"Static version",
-	"reference-example-version-label-2":
-		"User-based close",
-	"reference-example-version-label-3":
-		"Timer-based close",
+
+	"reference-example-version-label": "Confirmation",
+	"reference-example-version-label-2": "Attention",
+	"reference-example-version-label-3": "Error",
+	"reference-example-version-label-4": "Information",
+	"reference-example-version-label-5": "General",
 
 	"reference-get-code": "true",
 
 	"reference-code-html-content-block-pre": 
-		"<p>All <a href='/base/boxes/message-confirmation'>confirmation message</a>, <a href='/base/boxes/message-attention'>attention message</a> and <a href='/base/boxes/message-error'>error message</a> containers start with base box. In this example we are using the following class <code>evo-confirmation-ctn</code> to give more meaning to a basic box.</p>",
+		"<p>If you would like to make any of the message boxes have a timed fade out effect you can add <code>js-evo-fadeout-element</code> class.</p>",
 	"reference-code-html-content-block-post": 
 		"",
 	"reference-code-html-content-block-pre-2": 

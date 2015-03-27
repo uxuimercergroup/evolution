@@ -8,7 +8,7 @@
 
 "FOOTER OPTIONS": "",
 	"COMMENT": "Leave blank to get default footer or add 'fat' if you want a fat footer",
-		"footer" : "",
+		"footer" : "fat",
 
 
 	"reference-buttons" : [
@@ -99,11 +99,8 @@
 		{
 			"section-hdr": "Messaging",
 			"main-section": [
-				{"link-name": "Confirmation Message", "url": "/base/boxes/message-confirmation"},
-				{"link-name": "Error Message", "url": "/base/boxes/message-error"},
-				{"link-name": "Attention Message", "url": "/base/boxes/message-attention"},
-				{"link-name": "Tooltip", "url": "/objects/tooltip"},
-				{"link-name": "Highlight Container", "url": "/base/boxes/container-highlight"}
+				{"link-name": "Message Boxes", "url": "/base/boxes/message-boxes"},
+				{"link-name": "Tooltip", "url": "/objects/tooltip"}
 			]
 		},
 
@@ -111,23 +108,15 @@
 			"section-hdr": "Containers",
 			"main-section": [
 				{"link-name": "Basic Container", "url": "/base/boxes/container-basic"},
-				{"link-name": "Advanced Container", "url": "/base/boxes/container-advanced"}
-			],
-
-			"sub-section-group": [
-				{
-					"sub-section-hdr": "Custom Containers",				
-					"sub-section": [
-						{"link-name": "Feature Container", "url": "/base/boxes/container-feature"},
-						{"link-name": "Sidebar Container", "url": "/base/boxes/container-sidebar"},
-						{"link-name": "Support Container", "url": "/base/boxes/container-support"},
-						{"link-name": "Inline Search Container", "url": "/objects/inline-search"},
-						{"link-name": "Tile Container", "url": "/objects/container-tile"},
-						{"link-name": "Primary Summary Container", "url": "/objects/primary-summary"},
-						{"link-name": "Secondary Summary Container", "url": "/objects/secondary-summary"},
-						{"link-name": "Image Content Overlay", "url": "/objects/image-content-overlay"}
-					]
-				}
+				{"link-name": "Feature Container", "url": "/base/boxes/container-feature"},
+				{"link-name": "Highlight Container", "url": "/base/boxes/container-highlight"},
+				{"link-name": "Image Content Overlay", "url": "/objects/image-content-overlay"},
+				{"link-name": "Inline Search Container", "url": "/objects/inline-search"},
+				{"link-name": "Primary Summary Container", "url": "/objects/primary-summary"},
+				{"link-name": "Secondary Summary Container", "url": "/objects/secondary-summary"},
+				{"link-name": "Sidebar Container", "url": "/base/boxes/container-sidebar"},
+				{"link-name": "Support Container", "url": "/base/boxes/container-support"},
+				{"link-name": "Tile Container", "url": "/objects/container-tile"}
 			]
 		},
 

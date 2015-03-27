@@ -9,26 +9,22 @@
 	.evo-footer								{
 											@include clearfix;
 											@include backface-visibility(hidden);
-											position: relative;
-											text-align: left;
 											color: $footerFontColor;
-		.evo-footer-adjust						{
-												margin-bottom: $evo-base-margin; 
-			.evo-footer-content-ctn					{
-													padding-top: $evo-base-padding;
-													border-top: 1px solid $footerBorderTopColor;
-				.evo-footer-logo						{
-					img										{
-															margin-bottom: 5px;
-															@include center-block;
-															}
-														}
-				.evo-footer-copyright					{
-														text-align: center;
-														font-size: $small-font-size;
-														}
+											font-size: $small-font-size;
+											position: relative;
+											text-align: center;
+
+		.evo-inline-list						{
+												width: 100%;
+			li										{
+													width: 100%;
+				&:last-child							{padding-right: 0;}
 													}
 												}
+											}
+	.evo-footer-border-top					{
+											border-top: 1px solid $footerBorderTopColor;
+											padding-top: $evo-base-padding;
 											}
 
 	//=== MEDIA QUERIES =========================================================================
@@ -37,77 +33,61 @@
 	@if $use-medium-up-mediaquery == true {
 		
 		@media #{$medium-up} {
-
-			.evo-footer						{
-				.evo-footer-adjust				{
-					.evo-footer-content-ctn			{
-						.evo-footer-logo				{
-							img								{margin: 0;}
-														}
-						.evo-footer-copyright			{
-														text-align:right;
-														font-size: $small-font-size;
-														}
-													}
-												}
-											}
 
 		}
 		
 	}//endif
 
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-large-up-mediaquery == true {
+		
+		@media #{$large-up} {
+
+			.evo-footer								{
+													text-align: left;
+				.evo-inline-list						{
+														width: auto;
+					li										{width: auto;}
+														}
+													}
+
+		}
+		
+	}//endif
+
+
+
 }//endif
 
 @if $use-fat-footer == true{
 
-	// FAT FOOTER
-	.evo-fat-footer							{
-											background-color: $fatFooterBackgroundColor;
-											color: $fatFooterFontColor;
-		.evo-footer-adjust						{
-												padding: 0;
-												margin-bottom: 0;
-			.evo-footer-content-ctn					{
-													padding: $evo-base-padding 10px;
-													border-top: 0;
-				.evo-fat-footer-corp-content			{
-														margin-bottom: $evo-base-margin;
-					.evo-fat-footer-logo					{
-															display: block;
-															margin-bottom: 10px;
-															}
-					.evo-group-icon-set						{
-															@include clearfix;
-															width: 100%;
-						.evo-icon-adv							{margin-right: 7px;}
-															}
-														}
-				dl										{
-														margin-top: 0;
-														margin-bottom: $evo-base-margin;
-					dt										{
-															color: $fatFooterFontColor;
-															padding: 0 0 3px 0;
-															}
-					> dd									{
-															list-style-type: none;
-															margin: 0;
-															padding: 0 0 5px 0;
-						a										{
-																@include href-link($fatFooterFontColor, underline);
-																display: block;
-							&:hover									{@include href-link-hover(none);}
-																}
-						&:last-child							{padding-bottom: 0;}
-															}
-														}
-				.evo-footer-copyright					{
-														text-align: left !important;
-					.evo-copyright-text						{margin: 0;}
-														}
-													}
-												}
-											}
+	.evo-footer-fat			{
+							background-color: $fatFooterBackgroundColor;
+							color: $fatFooterFontColor;
+							padding: rem-calc(15) rem-calc(10) 0 rem-calc(10);
+							text-align: left;
+		.evo-group-icon-set		{
+								margin-top: rem-calc(10);
+			a						{
+									margin-left: rem-calc(5);
+				&:first-child			{margin-left: 0;}
+									}
+								}
+		.evo-footer-fat-sections
+								{
+								margin-top: rem-calc(20);
+			&:first-child			{margin-top: rem-calc(30);}
+			.evo-footer-fat-sections-hdr,
+			a						{color: $fatFooterFontColor;}
+			a						{
+									display: block;
+									width: 100%;
+									}
+								}
+		.evo-footer-fat-copyright
+								{margin-top: rem-calc(30);}
+							}
+
 
 	//=== MEDIA QUERIES =========================================================================
 
@@ -116,15 +96,19 @@
 		
 		@media #{$medium-up} {
 
-		// FAT FOOTER
-		.evo-fat-footer						{
-											margin-top: 0;
-			.evo-footer-adjust					{
-				.evo-footer-content-ctn				{
-					dl									{margin-bottom: 10px;}
-													}
-												}
+			.evo-footer-fat			{
+									padding: rem-calc(15) 0 0 0;
+				.evo-footer-fat-sections
+										{
+										margin-top: 0;
+					&:first-child			{margin-top: 0;}
+					a						{
+											color: $fatFooterFontColor;
+											display: block;
+											width: 100%;
 											}
+										}
+									}
 
 		}
 

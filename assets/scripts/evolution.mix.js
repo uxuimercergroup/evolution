@@ -32,7 +32,7 @@
 @import 'core/foundation/foundation/foundation.dropdown.js';
 @import 'core/foundation/foundation/foundation.equalizer.js';
 @import 'core/foundation/foundation/foundation.interchange.js';
-@import 'core/foundation/foundation/foundation.joyride.js';
+// @import 'core/foundation/foundation/foundation.joyride.js';
 @import 'core/foundation/foundation/foundation.magellan.js';
 @import 'core/foundation/foundation/foundation.offcanvas.js';
 @import 'core/foundation/foundation/foundation.orbit.js';

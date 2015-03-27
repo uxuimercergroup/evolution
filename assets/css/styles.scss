@@ -36,6 +36,11 @@ html.evo-mod-js							{display:none;}
 
 .img-border								{border: 1px solid $gray-mid;}
 
+code									{
+										@include border-radius(rem-calc(4));
+										background-color: $topaz-light;
+										border: 0;
+										}
 
 
 /*--- DEMO STYLES -------------------------------------------------------------------------*/
@@ -311,11 +316,30 @@ html.evo-mod-js							{display:none;}
 
 
 /*--- LAYOUT/GRIDS PAGE -------------------------------------------------------------------*/
-.unit									{
-										@include border-radius(3px);
-										margin-bottom:15px;
-										background-color:#e7e7e7;
-										border:1px solid #ccc;
+.grid-demo-styles						{
+	.row									{
+											border: 1px solid $gray-light;
+											margin-bottom: $evo-base-margin;
+											margin-left: 0 !important;
+											margin-right: 0 !important;
+											}
+	.columns								{background-color: $gray-lightest;}
+	.columns:nth-child(2n)					{background-color: $gray-lighter;}
+
+	[class*="evo-icon-"]					{top: 3px;}
+
+	[class*="small-block-grid-"]			{
+		li										{
+												background-color: $gray-lightest;
+												border-top: 1px solid $gray-light;
+												border-right: 1px solid $gray-light;
+												border-bottom: 1px solid $gray-light;
+												padding-top: rem-calc($evo-base-padding);
+												text-align: center;
+			&:nth-child(2n)							{background-color: $gray-lighter;}
+			&:first-child							{border-left: 1px solid $gray-light;}
+												}
+											}
 										}
 
 

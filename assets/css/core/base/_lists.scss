@@ -6,64 +6,7 @@
 
 
 @if $use-lists == true{
-/*
-	// HORIZONTAL LISTS
-	.evo-horizontal-list					{
-											padding: 0;
-											margin: 0;
-		dt										{color: $definitionListHeaderColor;}
-		dd, li									{
-												display: block;
-												padding: 0;
-												margin: 0;
-			a										{
-				&:link									{@include href-link($baseLinkColor, none);}
-				&:hover									{@include href-link-hover(underline);}
-													}
-												}
-											}
 
-	.evo-horizontal-list-piped				{
-		dt										{padding: 0 0 6px 0;}
-		dd, li									{
-												border-top: 1px solid $horizontalListPipeBorderColor;
-												padding: 6px 0;
-			&:first-child							{
-													padding-top: 0;
-													border-top: 0;
-													}
-			&:last-child							{padding-bottom: 0;}
-												}
-											}
-
-	// VERTICAL LISTS
-	.evo-vertical-list						{
-											padding: 0;
-											margin: 0;
-		dt										{
-												margin: 0 0 6px 0;
-												color: $definitionListHeaderColor;
-												}
-		dd, li									{
-												list-style-type: none;
-												margin: 0 0 6px 0;
-												padding: 0;
-			a										{
-				&:link									{@include href-link($baseLinkColor, none);}
-				&:hover									{@include href-link-hover(underline);}
-													}
-												}
-											}
-
-	.evo-vertical-list-bulleted				{
-											@extend .evo-vertical-list;
-		dd, li									{
-												display: list-item;
-												list-style: disc;
-												margin-left: 18px;
-												}
-											}
-*/
 	// DATA LISTS
 	.evo-data-list-ctn						{margin: 0 0 $evo-base-margin 0;}
 	.evo-data-list							{
@@ -103,48 +46,7 @@
 	@if $use-medium-up-mediaquery == true {
 		
 		@media #{$medium-up} {
-/*
-			// HORIZONTAL LISTS
-			.evo-horizontal-list			{
-				dt, dd, li						{
-												display: inline-block;
-												margin: 0 5px 0 0;
-												}
-											}
 
-			.evo-horizontal-list-piped		{
-				dt								{padding: 0;}
-				dd, li							{
-												border-top: 0;
-												border-left: 1px solid $horizontalListPipeBorderColor;
-												padding: 0 0 0 8px;
-					&:first-child,
-					&.evo-first-child				{
-													border-left: 0;
-													padding-left: 0;
-													}
-												}
-											}
-
-			// DATA LISTS
-			.evo-data-list					{
-				dd, li							{
-												margin-bottom: 0;
-					.evo-data-list-label			{padding-right: 5px;}
-					.evo-data-list-label,
-					.evo-data-list-item				{display: inline-block;}
-												}
-											}
-
-			// DATA LISTS HELPERS
-			.evo-data-list-stacked			{
-				dd, li							{
-												margin-bottom: 6px;
-					.evo-data-list-label,
-					.evo-data-list-item				{display: block;}
-												}
-											}
-*/
 		}
 		
 	}// endif

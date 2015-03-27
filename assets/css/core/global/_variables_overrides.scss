@@ -30,10 +30,10 @@ $font-weight-bold: bold;
 // We use these as default colors throughout
 $primary-color: $sapphire-dark;
 $secondary-color: $gray-lighter;
-$alert-color: $garnet;
-$success-color: $emerald;
-$warning-color: $citrine;
-$info-color: $sapphire;
+$alert-color: $garnet-light;
+$success-color: $emerald-light;
+$warning-color: $topaz-light;
+$info-color: $blue-gray-lighter;
 
 // We use these to control various global styles
 $body-font-color: $gray-dark;
@@ -121,6 +121,50 @@ $blockquote-border: 1px solid $gray-mid;
 
 // Acronym styles
 $acronym-underline: 1px dotted $black;
+
+
+// 02. Alert Boxes
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $include-html-alert-classes: $include-html-classes;
+
+// We use this to control alert padding.
+// $alert-padding-top: rem-calc(14);
+// $alert-padding-default-float: $alert-padding-top;
+// $alert-padding-opposite-direction: $alert-padding-top + rem-calc(10);
+// $alert-padding-bottom: $alert-padding-top;
+
+// We use these to control text style.
+// $alert-font-weight: $font-weight-normal;
+// $alert-font-size: rem-calc(13);
+// $alert-font-color: $white;
+// $alert-font-color-alt: scale-color($secondary-color, $lightness: -66%);
+
+// We use this for close hover effect.
+// $alert-function-factor: -14%;
+
+// We use these to control border styles.
+// $alert-border-style: solid;
+// $alert-border-width: 1px;
+// $alert-border-color: scale-color($primary-color, $lightness: $alert-function-factor);
+// $alert-bottom-margin: rem-calc(20);
+
+// We use these to style the close buttons
+// $alert-close-color: $oil;
+// $alert-close-top: 50%;
+// $alert-close-position: rem-calc(4);
+// $alert-close-font-size: rem-calc(22);
+// $alert-close-opacity: 0.3;
+// $alert-close-opacity-hover: 0.5;
+// $alert-close-padding: 9px 6px 4px;
+
+// We use this to control border radius
+// $alert-radius: $global-radius;
+
+// We use this to control transition effects
+// $alert-transition-speed: 300ms;
+// $alert-transition-ease: ease-out;
+
 
 // 05. Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -215,6 +259,31 @@ $off-canvas-back-hover-border-top: 1px solid $sapphire-mid;
 $off-canvas-overlay-box-shadow: -1px 0 1px rgba($gray-mid, 0.5), 1px 0 1px rgba($gray-mid, 0.5);
 $off-canvas-overlay-background: rgba($white, 0.4);
 
+// 21. Panels
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $include-html-panel-classes: $include-html-classes;
+
+// We use these to control the background and border styles
+// $panel-bg: scale-color($white, $lightness: -5%);
+// $panel-border-style: solid;
+// $panel-border-size: 1px;
+
+// We use this % to control how much we darken things on hover
+// $panel-function-factor: -11%;
+// $panel-border-color: scale-color($panel-bg, $lightness: $panel-function-factor);
+
+// We use these to set default inner padding and bottom margin
+// $panel-margin-bottom: rem-calc(20);
+$panel-padding: rem-calc(20) rem-calc(20) 0 rem-calc(20);
+
+// We use these to set default font colors
+// $panel-font-color: $oil;
+// $panel-font-color-alt: $white;
+
+// $panel-header-adjust: true;
+// $callout-panel-link-color: $primary-color;
+
 // 25. Reveal
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -242,6 +311,25 @@ $reveal-border-color: $white;
 
 // These control the row padding and font styles
 $table-row-font-color: $body-font-color;
+
+
+// 31. Tabs
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$tabs-navigation-padding: rem-calc(8);
+$tabs-navigation-bg-color: $gray-lighter;
+$tabs-navigation-active-bg-color: $white;
+$tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -8%);
+$tabs-navigation-font-color: $gray-darkest;
+$tabs-navigation-active-font-color: $tabs-navigation-font-color;
+// $tabs-navigation-font-size: rem-calc(16);
+// $tabs-navigation-font-family: $body-font-family;
+
+// $tabs-content-margin-bottom: rem-calc(24);
+// $tabs-content-padding: ($column-gutter/2);
+
+// $tabs-vertical-navigation-margin-bottom: 1.25rem;
+
 
 // 34. Top Bar
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -938,19 +1026,10 @@ $topbar-link-bg-active: $sapphire-dark;
 
 // TILES
 // ------------------------------------------------------------------------------------------
-// $tilesBorderRadius:						3px;
-// $tilesMarginBottom:						3px;
-// $tilesBodyBorderRadius:					0 0 3px 3px;
-// $tilesScrollPaneHeight:					400px;
-// $tilesOuterBorderRadiusLargeBreakpoint:	0;
-
-// $tilesBackgroundColor:					$gray-lightest;
-// $tilesHeaderBorderTopColor:				$sapphire-mid;
-// $tilesHeaderBackgroundColor:				$transparent;
-// $tilesHeaderFontColor:					$gray-darkest;
-// $tilesBodyBackgroundColor:				$white;
-// $tilesBodyBorderColor:					$gray-light;
-// $tilesOutsideBorderColor:				$gray-light;
+// $evo-tile-scroll-panel-height:			400px !default;
+// $evo-tile-header-border-top-color:		$gray-light !default;
+// $evo-tile-body-background-color:			$white !default;
+// $evo-tile-body-border-color:				$gray-light !default;
 
 
 // TOOLTIP
