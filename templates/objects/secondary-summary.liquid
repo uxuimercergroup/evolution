@@ -12,38 +12,36 @@
 
 	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
 		{% if model.reference-get-code == "true" %}
-			<div id="evo-ref-alternate-views-badge-content-panel-get-code">
 
-				<h3 class="evo-hdr-rule">HTML</h3>
+			<h3 class="evo-hdr-rule">HTML</h3>
+
+			{% if model.reference-example-versions == "true" %}
+				<h4>{{ model.reference-example-version-label }}</h4>
+			{% endif %}
+			{{ model.reference-code-html-content-block-pre }}
+			{{ global.reference-get-code-start-tag }}{% include '/objects/secondary-summary-ctn' %}{{ global.reference-get-code-end-tag }}
+			{{ model.reference-code-html-content-block-post }}
+
+			{% if model.reference-example-versions == "true" %}
+				<h4>{{ model.reference-example-version-label-2 }}</h4>
+			{% endif %}
+			{{ model.reference-code-html-content-block-pre-2 }}
+			{{ global.reference-get-code-start-tag }}{% include '/objects/secondary-summary-icons-ctn' %}{{ global.reference-get-code-end-tag }}
+			{{ model.reference-code-html-content-block-post-2 }}
+
+			{% if model.reference-code-js == "true" %}
+
+				<h3 class="evo-hdr-rule">JS</h3>
 
 				{% if model.reference-example-versions == "true" %}
 					<h4>{{ model.reference-example-version-label }}</h4>
 				{% endif %}
-				{{ model.reference-code-html-content-block-pre }}
-				{{ global.reference-get-code-start-tag }}{% include '/objects/secondary-summary-ctn' %}{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-html-content-block-post }}
+				{{ model.reference-code-js-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-js-content-block-post }}
 
-				{% if model.reference-example-versions == "true" %}
-					<h4>{{ model.reference-example-version-label-2 }}</h4>
-				{% endif %}
-				{{ model.reference-code-html-content-block-pre-2 }}
-				{{ global.reference-get-code-start-tag }}{% include '/objects/secondary-summary-icons-ctn' %}{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-html-content-block-post-2 }}
+			{% endif %}
 
-				{% if model.reference-code-js == "true" %}
-
-					<h3 class="evo-hdr-rule">JS</h3>
-
-					{% if model.reference-example-versions == "true" %}
-						<h4>{{ model.reference-example-version-label }}</h4>
-					{% endif %}
-					{{ model.reference-code-js-content-block-pre }}
-					{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
-					{{ model.reference-code-js-content-block-post }}
-
-				{% endif %}
-
-			</div>
 		{% endif %}
 	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
 		

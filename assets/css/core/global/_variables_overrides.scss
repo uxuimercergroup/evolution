@@ -122,6 +122,21 @@ $blockquote-border: 1px solid $gray-mid;
 // Acronym styles
 $acronym-underline: 1px dotted $black;
 
+// 01. Accordion
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $include-html-accordion-classes: $include-html-classes;
+
+// $accordion-navigation-padding: rem-calc(16);
+$accordion-navigation-bg-color: $gray-lightest;
+// $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
+$accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -12%);
+// $accordion-navigation-font-color: $jet;
+// $accordion-navigation-font-size: rem-calc(16);
+// $accordion-navigation-font-family: $body-font-family;
+
+// $accordion-content-padding: ($column-gutter/2);
+// $accordion-content-active-bg-color: $white;
 
 // 02. Alert Boxes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -309,8 +324,34 @@ $reveal-border-color: $white;
 // 30. Tables
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
+// $include-html-table-classes: $include-html-classes;
+
+// These control the background color for the table and even rows
+// $table-bg: $white;
+$table-even-row-bg: $gray-lightest;
+
+// These control the table cell border style
+// $table-border-style: solid;
+// $table-border-size: 1px;
+$table-border-color: $gray-light;
+
+// These control the table head styles
+$table-head-bg: $blue-gray-lighter;
+$table-head-font-size: rem-calc(13);
+$table-head-font-color: $blue-gray-darkest;
+// $table-head-font-weight: $font-weight-bold;
+// $table-head-padding: rem-calc(8 10 10);
+
 // These control the row padding and font styles
+// $table-row-padding: rem-calc(9 10);
+$table-row-font-size: rem-calc(13);
 $table-row-font-color: $body-font-color;
+// $table-line-height: rem-calc(18);
+
+// These are for controlling the layout, display and margin of tables
+// $table-layout: auto;
+// $table-display: table-cell;
+// $table-margin-bottom: rem-calc(20);
 
 
 // 31. Tabs

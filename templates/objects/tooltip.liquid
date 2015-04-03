@@ -1,162 +1,161 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<!-- PAGE TITLE - BEGINS -->
-	<h1>{{ model.title }}</h1>
-<!-- PAGE TITLE - ENDS -->
+<section class="row">
+	<div class="small-12 columns">
 
-<!-- CONTENT SECTION - BEGINS -->
-	<section class="col-24 evo-alternate-views-badge evo-ref-alternate-views-badge" data-alternate-views-badge="js-evo-ref-alternate-views-badge">
+	<!-- PAGE TITLE - BEGINS -->
+		<h1>{{ model.title }}</h1>
+	<!-- PAGE TITLE - ENDS -->
 
 		{% include '/reference/reference-content' %}
 
 	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
 		{% if model.reference-get-code == "true" %}
-			<div id="evo-ref-alternate-views-badge-content-panel-get-code">
+			<h3 class="evo-hdr-rule">HTML</h3>
 
-				<h3 class="evo-hdr-rule">HTML</h3>
+			{% if model.reference-example-versions == "true" %}
+				<h4>{{ model.reference-example-version-label }}</h4>
+			{% endif %}
+			{{ model.reference-code-html-content-block-pre }}
+			{{ global.reference-get-code-start-tag }}{% include "/objects/tooltip-default" %}{{ global.reference-get-code-end-tag }}
+			{{ model.reference-code-html-content-block-post }}
+
+			{% if model.reference-example-versions == "true" %}
+				<h4>{{ model.reference-example-version-label-2 }}</h4>
+			{% endif %}
+			{{ model.reference-code-html-content-block-pre-2 }}
+			{{ global.reference-get-code-start-tag }}{% include "/objects/tooltip-abbr" %}{{ global.reference-get-code-end-tag }}
+			{{ model.reference-code-html-content-block-post-2 }}
+
+			{% if model.reference-example-versions == "true" %}
+				<h4>{{ model.reference-example-version-label-3 }}</h4>
+			{% endif %}
+			{{ model.reference-code-html-content-block-pre-3 }}
+			{{ global.reference-get-code-start-tag }}{% include "/objects/tooltip-group" %}{{ global.reference-get-code-end-tag }}
+			{{ model.reference-code-html-content-block-post-3 }}
+
+			{% if model.reference-example-versions == "true" %}
+				<h4>{{ model.reference-example-version-label-4 }}</h4>
+			{% endif %}
+			{{ model.reference-code-html-content-block-pre-4 }}
+			{{ global.reference-get-code-start-tag }}{% include "/objects/tooltip-input" %}{{ global.reference-get-code-end-tag }}
+			{{ model.reference-code-html-content-block-post-4 }}
+
+			{% if model.reference-code-js == "true" %}
+
+				<h3 class="evo-hdr-rule">JS</h3>
 
 				{% if model.reference-example-versions == "true" %}
 					<h4>{{ model.reference-example-version-label }}</h4>
 				{% endif %}
-				{{ model.reference-code-html-content-block-pre }}
-				{{ global.reference-get-code-start-tag }}{% include "/objects/tooltip-default" %}{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-html-content-block-post }}
+				{{ model.reference-code-js-content-block-pre }}
+				{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
+				{{ model.reference-code-js-content-block-post }}
 
-				{% if model.reference-example-versions == "true" %}
-					<h4>{{ model.reference-example-version-label-2 }}</h4>
-				{% endif %}
-				{{ model.reference-code-html-content-block-pre-2 }}
-				{{ global.reference-get-code-start-tag }}{% include "/objects/tooltip-abbr" %}{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-html-content-block-post-2 }}
+			{% endif %}
 
-				{% if model.reference-example-versions == "true" %}
-					<h4>{{ model.reference-example-version-label-3 }}</h4>
-				{% endif %}
-				{{ model.reference-code-html-content-block-pre-3 }}
-				{{ global.reference-get-code-start-tag }}{% include "/objects/tooltip-group" %}{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-html-content-block-post-3 }}
-
-				{% if model.reference-example-versions == "true" %}
-					<h4>{{ model.reference-example-version-label-4 }}</h4>
-				{% endif %}
-				{{ model.reference-code-html-content-block-pre-4 }}
-				{{ global.reference-get-code-start-tag }}{% include "/objects/tooltip-input" %}{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-html-content-block-post-4 }}
-
-				{% if model.reference-code-js == "true" %}
-
-					<h3 class="evo-hdr-rule">JS</h3>
-
-					{% if model.reference-example-versions == "true" %}
-						<h4>{{ model.reference-example-version-label }}</h4>
-					{% endif %}
-					{{ model.reference-code-js-content-block-pre }}
-					{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
-					{{ model.reference-code-js-content-block-post }}
-
-				{% endif %}
-
-			</div>
 		{% endif %}
 	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
+		
+	</div>
+</section>
 
-	</section>
-<!-- CONTENT SECTION - ENDS -->
 
 <!-- EXAMPLE SECTION - BEGINS -->
-	<section class="col-24 evo-ref-example">
+	<section class="row">
+		<div class="small-12 columns evo-ref-example">
 
-	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
-		<h3 class="evo-hdr-dbl-rule evo-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
-	<!-- EXAMPLE SECTION - HEADER - ENDS -->
+		<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+			<h3 class="evo-hdr-dbl-rule evo-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
+		<!-- EXAMPLE SECTION - HEADER - ENDS -->
 
-	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
-		<section class="evo-ref-example-content">
+		<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+			<section class="evo-ref-example-content">
 
-			<div class="col-24">
-				<div class="col-8 first">
-					
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-ref-example-box">
+				<div class="col-24">
+					<div class="col-8 first">
+						
+					<!-- EXAMPLE SECTION - BOX - BEGINS -->
+						<div class="evo-box evo-box-rnd evo-ref-example-box">
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
-						{% endif %}
+							{% if model.reference-example-versions == "true" %}
+								<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
+							{% endif %}
 
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<p>{% include "/objects/tooltip-default" %}</p>
-							<p>{% include "/objects/tooltip-abbr" %}</p>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+							<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+								<p>{% include "/objects/tooltip-default" %}</p>
+								<p>{% include "/objects/tooltip-abbr" %}</p>
+							<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
-
-				</div>
-				<div class="col-8">
-
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-ref-example-box">
-
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							{% include "/objects/tooltip-group" %}
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+						</div>
+					<!-- EXAMPLE SECTION - BOX - ENDS -->
 
 					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
+					<div class="col-8">
 
-				</div>
-				<div class="col-8">
+					<!-- EXAMPLE SECTION - BOX - BEGINS -->
+						<div class="evo-box evo-box-rnd evo-ref-example-box">
 
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-ref-example-box">
+							{% if model.reference-example-versions == "true" %}
+								<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
+							{% endif %}
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
-						{% endif %}
+							<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+								{% include "/objects/tooltip-group" %}
+							<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<form class="evo-form evo-no-margin-bottom" id="" name="" method="" action="" title="">
-								<fieldset>
-									<ol>
-										<li>
-											<label for="">Basic Text Input:</label>
-											{% include "/objects/tooltip-input" %}
-										</li>
-
-										<li class="evo-form-action"></li>
-									</ol>
-								</fieldset>
-							</form>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+						</div>
+					<!-- EXAMPLE SECTION - BOX - ENDS -->
 
 					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
+					<div class="col-8">
+
+					<!-- EXAMPLE SECTION - BOX - BEGINS -->
+						<div class="evo-box evo-box-rnd evo-ref-example-box">
+
+							{% if model.reference-example-versions == "true" %}
+								<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
+							{% endif %}
+
+							<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+								<form class="evo-form evo-no-margin-bottom" id="" name="" method="" action="" title="">
+									<fieldset>
+										<ol>
+											<li>
+												<label for="">Basic Text Input:</label>
+												{% include "/objects/tooltip-input" %}
+											</li>
+
+											<li class="evo-form-action"></li>
+										</ol>
+									</fieldset>
+								</form>
+							<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+						</div>
+					<!-- EXAMPLE SECTION - BOX - ENDS -->
+
+					</div>
+				</div>
+				<div class="col-24">
+
+				<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
+					{% endif %}
+
+					<p>Lorem <abbr class="js-evo-tooltip js-evo-tooltip-hover-top" title="This is a tooltip.">ipsum dolor</abbr> sit amet, consectetur adipisicing elit. Saepe, iusto, esse, asperiores placeat molestias sequi aut eum sunt dolores consectetur dolorem nulla qui earum amet corporis tempore hic explicabo veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, iusto, esse, asperiores placeat molestias sequi aut eum sunt <a class="js-evo-tooltip js-evo-tooltip-hover-left" href="javascript:;" title="And another tooltip.">dolores</a> consectetur dolorem nulla qui <a class="js-evo-tooltip js-evo-tooltip-hover-right" href="javascript:;" title="And another tooltip.">earum</a> amet corporis tempore hic explicabo veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, iusto, esse, asperiores placeat molestias sequi aut eum sunt dolores consectetur dolorem nulla qui earum <a class="js-evo-tooltip js-evo-tooltip-hover-bottom" href="javascript:;" title="This is the last tooltip in this paragraph.">amet</a> corporis tempore hic explicabo veniam.</p>
+
+				<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 				</div>
-			</div>
-			<div class="col-24">
 
-			<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+			</section>
+		<!-- EXAMPLE SECTION - CONTENT - ENDS -->
 
-				{% if model.reference-example-versions == "true" %}
-					<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
-				{% endif %}
-
-				<p>Lorem <abbr class="js-evo-tooltip js-evo-tooltip-hover-top" title="This is a tooltip.">ipsum dolor</abbr> sit amet, consectetur adipisicing elit. Saepe, iusto, esse, asperiores placeat molestias sequi aut eum sunt dolores consectetur dolorem nulla qui earum amet corporis tempore hic explicabo veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, iusto, esse, asperiores placeat molestias sequi aut eum sunt <a class="js-evo-tooltip js-evo-tooltip-hover-left" href="javascript:;" title="And another tooltip.">dolores</a> consectetur dolorem nulla qui <a class="js-evo-tooltip js-evo-tooltip-hover-right" href="javascript:;" title="And another tooltip.">earum</a> amet corporis tempore hic explicabo veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, iusto, esse, asperiores placeat molestias sequi aut eum sunt dolores consectetur dolorem nulla qui earum <a class="js-evo-tooltip js-evo-tooltip-hover-bottom" href="javascript:;" title="This is the last tooltip in this paragraph.">amet</a> corporis tempore hic explicabo veniam.</p>
-
-			<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-			</div>
-
-		</section>
-	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
-
+		</div>
 	</section>
 <!-- EXAMPLE SECTION - ENDS -->
-
 {% endblock %}

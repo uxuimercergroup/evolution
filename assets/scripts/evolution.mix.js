@@ -95,7 +95,6 @@
 
 @import "core/lib/mobile/ios-orientationchange-fix.js"; // iOS orientation change fix for zooming, https://github.com/scottjehl/iOS-Orientationchange-Fix
 
-
 // =======================================================================================================
 // CORE JS LIBRARIES
 // =======================================================================================================
@@ -120,3 +119,6 @@
 // @import "core/objects/tabs.js"; // Marked for removal (Foundation replaces)
 // @import "core/objects/tooltip.js"; // Marked for removal (Foundation replaces)
 @import "core/objects/top_bar.js";
+
+@import "core/lib/datatables/jquery.dataTables.js";
+@import "core/lib/datatables/datatables.foundation.js";

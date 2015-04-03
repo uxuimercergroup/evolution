@@ -12,7 +12,23 @@ $evo-summary-ctn-cell-color: $gray-light !default;
 $evo-summary-ctn-cell-border-top-color: $white !default;
 $evo-summary-ctn-cell-border-bottom-color: $white !default;
 $evo-summary-ctn-cell-padding-top: rem-calc(10) !default;
-
+$evo-summary-ctn-cell-border-width: 1px !default;
+$evo-summary-ctn-cell-border-style: dotted !default;
+$evo-summary-ctn-cell-border-color: $gray-light !default;
+$evo-summary-cell-text-icon-font-size: rem-calc(44) !default;
+$evo-summary-cell-text-support-font-size: (1rem - rem-calc(3)) !default;
+$evo-summary-cell-text-alignment: center !default;
+$evo-summary-cell-hover-background-color: $topaz-light !default;
+$evo-summary-cell-hover-border-top-color: $gray-light !default;
+$evo-summary-cell-hover-border-bottom-color: $gray-light !default;
+$evo-summary-cell-hover-transition-time: 400ms !default;
+$evo-summary-cell-alert-font-color: $garnet-dark !default;
+$evo-summary-cell-alert-icon-color: $garnet-dark !default;
+$evo-summary-cell-alert-hover-background-color: $garnet-light !default;
+$evo-summary-cell-positive-font-color: $emerald-dark !default;
+$evo-summary-cell-positive-icon-color: $emerald-dark !default;
+$evo-summary-cell-positive-hover-background-color: $emerald-light !default;
+$evo-secondary-summary-cell-font-size: rem-calc(32) !default;
 
 @if $use-summary-containers == true{
 
@@ -28,33 +44,40 @@ $evo-summary-ctn-cell-padding-top: rem-calc(10) !default;
 													border-bottom-color: $evo-summary-ctn-cell-border-bottom-color;
 													cursor: pointer;
 													padding-top: $evo-summary-ctn-cell-padding-top;
-				&:first-child							{border-left: 1px dotted $gray-light;}
+
+				&:first-child							{border-left: $evo-summary-ctn-cell-border-width $evo-summary-ctn-cell-border-style $evo-summary-ctn-cell-border-color;}
 				.evo-main-text,
 				.evo-support-text						{
 														display: block;
-														text-align: center;
+														text-align: $evo-summary-cell-text-alignment;
 														}
 				.evo-main-text,
-				[class*="evo-icon-"]					{font-size: rem-calc(44);}
-				.evo-support-text						{font-size: (1rem - rem-calc(3));}
-				[class*="evo-icon-"]					{color: $body-font-color;}
+				[class*="evo-icon-"]					{font-size: $evo-summary-cell-text-icon-font-size;}
+				.evo-support-text						{font-size: $evo-summary-cell-text-support-font-size;}
+				[class*="evo-icon-"],
+				a										{
+														color: $body-font-color;
+														text-decoration: none;
+														}
 				&:hover									{
-														@include transition(background-color 400ms ease-in-out);
-														background-color: $topaz-light;
-														border-top-color: $gray-light;
-														border-bottom-color: $gray-light;
+														@include transition(background-color $evo-summary-cell-hover-transition-time ease-in-out);
+														background-color: $evo-summary-cell-hover-background-color;
+														border-top-color: $evo-summary-cell-hover-border-top-color;
+														border-bottom-color: $evo-summary-cell-hover-border-bottom-color;
 														}
 													}
 												}
 			.evo-summary-alert					{
-												color: $garnet-dark;
-				[class*="evo-icon-"]				{color: $garnet-dark;}
-				&:hover								{background-color: $garnet-light;}
+												color: $evo-summary-cell-alert-font-color;
+				[class*="evo-icon-"],
+				a									{color: $evo-summary-cell-alert-icon-color;}
+				&:hover								{background-color: $evo-summary-cell-alert-hover-background-color;}
 												}
 			.evo-summary-positive				{
-												color: $emerald-dark;
-				[class*="evo-icon-"]				{color: $emerald-dark;}
-				&:hover								{background-color: $emerald-light;}
+												color: $evo-summary-cell-positive-font-color;
+				[class*="evo-icon-"],
+				a									{color: $evo-summary-cell-positive-icon-color;}
+				&:hover								{background-color: $evo-summary-cell-positive-hover-background-color;}
 												}
 
 											}
@@ -64,7 +87,7 @@ $evo-summary-ctn-cell-padding-top: rem-calc(10) !default;
 		ul										{
 			li										{
 				.evo-main-text,							
-				[class*="evo-icon-"]					{font-size: rem-calc(32);}
+				[class*="evo-icon-"]					{font-size: $evo-secondary-summary-cell-font-size;}
 													}
 												}
 											}

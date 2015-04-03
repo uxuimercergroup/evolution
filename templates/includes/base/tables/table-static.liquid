@@ -1,20 +1,20 @@
 <!-- STATIC DATA TABLE - BEGINS -->
 <div class="evo-table-small-mediaquery">
-	<table class="evo-table evo-table-borders evo-table-striped" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+	<table class="evo-table" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
 		<thead>
 			<tr>
-				<th class="col-8" scope="col">First Name</th>
-				<th class="col-8" scope="col">Last Name</th>
-				<th class="col-8" scope="col">Start Date</th>
+				<th scope="column">First Name</th>
+				<th scope="column">Last Name</th>
+				<th scope="column">Start Date</th>
 			</tr>
 		</thead>
 		<tbody>
 
 			{% for item in global.table_data %}
 			<tr>
-				<td>{{ item.first_name }}</td>
-				<td>{{ item.last_name }}</td>
-				<td>{{ item.start_date }}</td>
+				<td scope="row">{{ item.first_name }}</td>
+				<td scope="row">{{ item.last_name }}</td>
+				<td scope="row">{{ item.start_date }}</td>
 			</tr>
 			{% endfor %}
 			

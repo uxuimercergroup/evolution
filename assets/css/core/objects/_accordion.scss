@@ -4,12 +4,44 @@
 // AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //-------------------------------------------------------------------------------------------
 
+
+// @VARS
+$evo-accordion-border-color: $gray-light !default;
+$evo-accordion-navigation-font-color: $gray-darkest !default;
+
+
+
+$accordionHeaderBackgroundColor: $gray-lightest !default;
+$accordionHeaderIconColor: $blue-gray-dark !default;
+$accordionContentBackgroundColor: $white !default;
+
+
 @if $use-accordion == true{
 
+	.evo-accordion			{
+							margin-bottom: $evo-base-margin;
+							border: 1px solid $evo-accordion-border-color;
+							border-top: 0;
+							margin-left: 0;
+		.evo-accordian-navigation
+								{
+			a						{
+									border-top: 1px solid $evo-accordion-border-color;
+									color: $evo-accordion-navigation-font-color;
+									text-decoration: none;
+				[class*="evo-icon"]	{
+									float: right;
+									top: rem-calc(3);
+									}
+									}
+			.evo-content			{
+									border-top: 1px solid $evo-accordion-border-color;
+									padding-bottom: 0;
+									}
+								}
+							}
+/*
 	.evo-accordion.ui-accordion	{
-								margin-bottom: $evo-base-margin;
-								border: 1px solid $accordionBorderColor;
-								border-bottom: 0;
 		.ui-accordion-header		{
 									@include clearfix;
 									padding: 10px $evo-base-padding 8px $evo-base-padding;
@@ -35,7 +67,7 @@
 									background-color: $accordionContentBackgroundColor;
 									}
 								}
-
+*/
 	//=== MEDIA QUERIES =========================================================================
 
 	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +

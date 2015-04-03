@@ -7,6 +7,14 @@
 		jQuery('html.evo-mod-js').show();
 	}
 
+	// ACCORDION ICON TOGGLE
+	var accordionIconToggle = function(){
+		jQuery('.accordion a').on('click',function(){
+			jQuery('.active a').children('.evo-icon-minus-circle, .evo-icon-plus-circle').toggleClass('evo-icon-minus-circle evo-icon-plus-circle');
+			jQuery(this).children('.evo-icon-minus-circle, .evo-icon-plus-circle').toggleClass('evo-icon-minus-circle evo-icon-plus-circle');
+		});
+	};
+
 	// REFERENCE PAGES
 
 		// DEVELOPER - SLIDING DRAWER
@@ -23,6 +31,53 @@
 
 	// LIBRARY EXAMPLES
 	//----------------------------------------------------------------------------------------------------
+		// DATATABLES
+		jQuery('#evo-datatble-example').DataTable({
+			searching: true,
+
+			order: [[1, 'desc']],
+			columns: [
+    			{orderable: false},
+    			{orderable: true},
+    			{orderable: true},
+    			{orderable: true},
+    			{orderable: true},
+    			{orderable: true}
+			],
+
+			language: {
+			    sSearch: '',
+			    searchPlaceholder: "Filters",
+			    sSearch: '<i class="evo-icon-filter" id="js-mul-advanced-filter-example-action-btn" title="Advanced Filter"></i>'
+			}
+		});
+
+		// FILTER ONLY EXAMPLE
+		jQuery('#evo-datatble-filter-only-example').DataTable({
+			searching: true,
+			paging: false,
+			info: false,
+			ordering: false,
+			language: {
+			    sSearch: '',
+			    searchPlaceholder: "Filters"
+			}
+		});
+
+		// ADVANCED FILTER EXAMPLE
+		jQuery('#evo-datatble-adv-filter-example').DataTable({
+			searching: true,
+			paging: false,
+			info: false,
+			ordering: false,
+			language: {
+			    sSearch: '',
+			    searchPlaceholder: "Filters",
+			    sSearch: '<i class="evo-icon-filter" data-reveal-id="advanced-filter" title="Advanced Filter"></i>'
+			}
+		});
+
+
 
 		// CONTENT MODAL
 
@@ -157,6 +212,7 @@ $(function() {
 			// evoAccordion('js-evo-accordion-example');
 
 			// Accordion - icons
+			accordionIconToggle();
 			/*
 			evoAccordion('js-evo-accordion-icons-example', {
 				icons: {'header': 'evo-icon-plus-circle', 'activeHeader': 'evo-icon-minus-circle'}

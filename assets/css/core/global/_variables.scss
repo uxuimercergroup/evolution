@@ -206,57 +206,9 @@ $definitionListHeaderColor:					$black !default;
 $definitionDataListHeaderBorderColor:		$gray-mid !default;
 
 
-// TABLES
-// ------------------------------------------------------------------------------------------
-
-// BASE
-$tableColWidthMultiplier: 					1% !default;
-$tableBorderStyle:							solid !default;
-$tableTdBorderStyle:						solid !default;
-$tableMarginBottom:							$evo-base-margin !default;
-$tableMinWidth:								640px !default;
-$tableMinWidthLargeBreakpoint:				100% !default;
-
-$tableBackgroundColor:						$white !default;
-$tableBorderColor:							$gray-mid !default;
-$tableFontColor:							$black !default;
-$tableThFontColor:							$black !default;
-$tableThBackgroundColor:					$blue-gray-lighter !default;
-$tableThBorderColor:						#A9BCD3 !default;
-$tableTdBorderColor:						$gray-mid !default;
-$tableEvenTdBackgroundColor:				$white !default;
-$tableEvenTdSortedBackgroundColor: 			$gray-lightest !default;
-$tableOddTdBackgroundColor:					$gray-lightest !default;
-$tableOddTdSortedBackgroundColor: 			$gray-lighter !default;
-$tableRowHoverColor:						$topaz-light !default;
-
-// OPTIONS
-$tableDataFilterMaxWidth:					300px !default;
-$tableDataFilterLineHeight:					22px !default;
-$tableDataFilterLineHeightLargeBreakpoint:	16px !default;
-$tableDataFilterHeight:						24px !default;
-$tableDataFilterHeightLargeBreakpoint:		20px !default;
-
-$tableSubHeaderBackgroundColor:				#E8F0F7 !default;
-$tableSubHeaderFontColor:					$gray-darker !default;
-$tableSubHeaderBorderColor:					#C3D2E5 !default;
-$tableSubTotalBackgroundColor:				$gray-lighter !default;
-$tableSubTotalFontColor:					$gray-darker !default;
-$tableTotalBackgroundColor:					#E6E6E6 !default;
-$tableTotalFontColor:						$black !default;
-
-
 // ==========================================================================================
 // OBJECTS
 // ==========================================================================================
-
-// ACCORDION
-// ------------------------------------------------------------------------------------------
-$accordionBorderColor:						$gray-mid !default;
-$accordionHeaderBackgroundColor:			$gray-lightest !default;
-$accordionHeaderFontColor:					$blue-gray-dark !default;
-$accordionHeaderIconColor:					$blue-gray-dark !default;
-$accordionContentBackgroundColor:			$white !default;
 
 
 // ADVANCED FILTER MODAL
