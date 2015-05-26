@@ -19,9 +19,57 @@ $evo-form-conversational-inputs-border-bottom-style: solid !default;
 $evo-form-conversational-inputs-border-bottom-color: $sapphire-mid !default;
 $evo-form-conversational-input-transition-time: 0.25s !default;
 $evo-form-conversational-input-width: rem-calc(80) !default;
-$evo-form-conversational-input-min-width: rem-calc(80) !default;
+$evo-form-conversational-input-min-width: rem-calc(50) !default;
 $evo-form-conversational-input-max-width: 300px !default;
 $evo-form-conversational-select-min-width: 50px !default;
+
+
+.dropdown			{
+					background-color: $evo-form-conversational-inputs-bg-color;
+					border-bottom: $evo-form-conversational-inputs-border-bottom-with $evo-form-conversational-inputs-border-bottom-style $evo-form-conversational-inputs-border-bottom-color;
+					color: $evo-form-conversational-select-color;
+					font-size: $evo-form-conversational-font-size;
+					display: inline-block;
+					height: 33px;
+					line-height: 32px;
+					padding: 0 7px;
+					cursor: pointer;
+					position: relative;
+
+	span.selected		{
+						display: inline-block;
+						width: auto;
+						min-width: $evo-form-conversational-input-min-width;
+						}
+
+	ul					{ 
+						@include box-shadow(2px, 4px, 8px, $gray-light);
+						background-color: $white;
+						border: 1px solid $gray-light;
+						display: none;
+						list-style: none;
+						padding: 0;
+						margin: 0; 
+						position: absolute;
+						top: 0;
+						left: -1px;
+						z-index: 5;
+						width: auto;
+		li					{ 
+							border-top: 1px solid $gray-light;
+							font-size: $evo-form-conversational-font-size;
+							list-style: none;
+							padding: 0;
+							margin: 0;
+							padding: 15px;
+							white-space: nowrap;
+			&:first-child		{border-top: 0;}
+							}
+		//li.selected			{display: none;}
+		li:hover			{background-color: $gray-lighter;}
+						}
+					}
+
 
 
 // CONVERSATIONAL FORM - BEGINS
@@ -60,3 +108,13 @@ $evo-form-conversational-select-min-width: 50px !default;
 
 										}
 // CONVERSATIONAL FORM - ENDS
+
+// CONVERSATIONAL FORM ERROR HANDLING - BEGINS
+	.evo-convo-error	{
+		input,
+		select,
+		.dropdown			{border-bottom-color: $garnet-dark;}
+						}
+	.evo-convo-error-text
+						{color: $garnet-dark;}
+// CONVERSATIONAL FORM ERROR HANDLING - ENDS

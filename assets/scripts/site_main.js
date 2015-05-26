@@ -15,9 +15,17 @@
 		});
 	};
 
+	// NAVIGATION TEST
+	var mobileNavMenuToggle = function(){
+		jQuery('#js-evo-mobile-nav').click(function(event) {
+			jQuery('.js-evo-mobile-menu-ctn').slideToggle('fast');
+		});
+	};
+
 	// REFERENCE PAGES
 
 		// DEVELOPER - SLIDING DRAWER
+		/*
 		var evoRefSlidingDrawer = jQuery.jPanelMenu({
 			animated: true,
 			closeOnContentClick: false,
@@ -27,6 +35,7 @@
 			keyboardShortcuts: false,
 			trigger: '.js-evo-ref-sliding-drawer-btn'
 		});
+		*/
 
 
 	// LIBRARY EXAMPLES
@@ -173,7 +182,7 @@ $(function() {
 			// evoAlternateViewsBadge('js-evo-ref-alternate-views-badge', 'left');
 
 			// DEVELOPER - SLIDING DRAWER INIT
-			evoRefSlidingDrawer.on();
+			// evoRefSlidingDrawer.on();
 
 			// DEVELOPER - SLIDING DRAWER - SCROLL PANE
 			var windowHeight = jQuery(window).height();
@@ -495,6 +504,9 @@ $(function() {
 				range: 'max'
 			});
 
+
+		// NAVIGATION TEST
+			mobileNavMenuToggle();
 
 		// TABS
 

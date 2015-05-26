@@ -5,7 +5,9 @@
 			<div class="large-8 columns">
 				<div class="row">
 					<div class="large-4 columns">
-						<label class="inline right">Input Label</label>
+						<label class="inline right">
+							<small><i class="evo-icon-evo-asterisk-small"></i></small>Input Label:
+						</label>
 					</div>
 					<div class="large-8 columns">
 						<input type="text" placeholder="Placeholder text" tabindex="" title="" />
@@ -18,17 +20,12 @@
 			<div class="large-8 columns">
 				<div class="row">
 					<div class="large-4 columns">
-						<label class="inline right">Input Label</label>
+						<label class="inline right">
+							<small><i class="evo-icon-evo-asterisk-small"></i></small>Input Label:
+						</label>
 					</div>
 					<div class="large-8 columns">				
-						<div class="row collapse">
-							<div class="small-9 columns">
-								<input type="text" placeholder="Placeholder text" tabindex="" title="" />
-							</div>
-							<div class="small-3 columns">
-								<span class="postfix">.com</span>
-							</div>
-						</div>
+						<input type="text" placeholder="Placeholder text" tabindex="" title="" />
 					</div>
 				</div>
 			</div>
@@ -38,11 +35,13 @@
 			<div class="large-8 columns">
 				<div class="row">
 					<div class="large-4 columns">
-						<label class="inline right">Select Box</label>
+						<label class="inline right">
+							<small><i class="evo-icon-evo-asterisk-small"></i></small>Select Box:
+						</label>
 					</div>
 					<div class="large-8 columns">
 						<select tabindex="" title="">
-							<option value="default">Choose one&#8230;</option>
+							<option value="default">choose one&#8230;</option>
 							<option value="husker">Star Lord</option>
 							<option value="starbuck">Groot</option>
 							<option value="hotdog">Rocket Raccoon</option>
@@ -57,7 +56,9 @@
 			<div class="large-8 columns">
 				<div class="row">
 					<div class="large-4 columns">
-						<label class="right">Choose Your Favorite</label>
+						<label class="right">
+							<small><i class="evo-icon-evo-asterisk-small"></i></small>Choose Your Favorite:
+						</label>
 					</div>
 					<div class="large-8 columns">
 						<input type="radio" name="pokemon" value="Red" id="pokemonRed" tabindex="" title="" />
@@ -73,7 +74,9 @@
 			<div class="large-8 columns">
 				<div class="row">
 					<div class="large-4 columns">
-						<label class="right">Check these out</label>
+						<label class="right">
+							<small><i class="evo-icon-evo-asterisk-small"></i></small>Check These Out:
+						</label>
 					</div>
 					<div class="large-8 columns">				
 						<input id="checkbox1" type="checkbox" tabindex="" title="" />
@@ -89,12 +92,34 @@
 			<div class="large-8 columns">
 				<div class="row">
 					<div class="large-4 columns">
-						<label class="right">Textarea Label</label>
+						<label class="right">
+							<small><i class="evo-icon-evo-asterisk-small"></i></small>Textarea Label:
+						</label>
 					</div>
 					<div class="large-8 columns">
 						<textarea placeholder="Placeholder text" tabindex="" title=""></textarea>	
 					</div>
 				</div>
+			</div>
+		</div>
+
+		<div class="row evo-datepicker-ctn evo-datepicker-range evo-small-mediaquery-grid">
+			<div class="large-8 columns">
+				<div class="row">
+					<div class="large-4 columns">
+						<label class="evo-required right" for="js-evo-datepicker-range-left-aligned-from">
+							<small><i class="evo-icon-evo-asterisk-small"></i></small>Date:
+						</label>
+					</div>
+					<div class="large-8 columns">
+						<div class="small-6 columns evo-datepicker-first">
+							<input id="js-evo-datepicker-range-left-aligned-from" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="From" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" class="hasDatepicker" size="10"><button type="button" class="ui-datepicker-trigger">Choose Date</button>
+						</div>
+						<div class="small-6 columns evo-datepicker-last">
+							<input id="js-evo-datepicker-range-left-aligned-to" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="To" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" class="hasDatepicker" size="10"><button type="button" class="ui-datepicker-trigger">Choose Date</button>
+						</div>
+					</div>
+				</div>				
 			</div>
 		</div>
 

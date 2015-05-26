@@ -1,89 +1,138 @@
 <!-- FORM LEFT ALIGNED - BEGINS -->
-<form class="evo-form evo-form-inline" id="" name="" method="" action="" title="">
+<form data-abide novalidation="novalidation">
 	<fieldset>
-		<ol>
-			<li class="evo-error">
-				<label class="col-10 first" for="">Basic Text Input:</label>
-				<input class="col-14" id="" name="" value="" type="text" tabindex="" title="" />
-				<span class="col-24">
-					<small class="offset-10 col-14 evo-info">This is form error text.</small>
-				</span>
-			</li>
-
-			<li class="evo-error">
-				<label class="col-10 first evo-required" for=""><i class="evo-icon-evo-asterisk-small evo-icon-color-gray-darker evo-icon-position-left"></i>Label:</label>
-				<select class="col-14" id="" tabindex="" title="">
-					<option selected="selected" value="Select an item">choose one&hellip;</option>
-					<option value="">One</option>
-					<option value="">Two</option>
-					<option value="">Three</option>
-				</select>
-				<span class="col-24">
-					<small class="offset-10 col-14 evo-info">This is form error text.</small>
-				</span>
-			</li>
-			<li class="evo-error">
-				<label class="evo-radio-label col-10 first evo-required"><i class="evo-icon-evo-asterisk-small evo-icon-color-gray-darker evo-icon-position-left"></i>Label Posed as a Question?</label>
-				<div class="evo-radio col-14">
-					<label for="question1b">
-						<input id="question1b" name="question" value="" type="radio" tabindex="" title="" /> Yes
-					</label>
-					<label for="question2b">
-						<input id="question2b" name="question" value="" type="radio" tabindex="" title="" /> No
-					</label>
+		<div class="row">
+			<div class="large-8 columns error">
+				<div class="row">
+					<div class="large-4 columns">
+						<label class="inline">
+							<small><i class="evo-icon-evo-asterisk-small"></i></small>Input Label:
+						</label>
+					</div>
+					<div class="large-8 columns">
+						<input type="text" placeholder="Placeholder text" tabindex="" title="" />
+						<small class="error">Houston we have a problem.</small>
+					</div>
 				</div>
-				<span class="col-24">
-					<small class="offset-10 col-14 evo-info">This is form error text.</small>
-				</span>
-			</li>
+			</div>
+		</div>
 
-			<li class="evo-error">
-				<label class="evo-checkbox-label col-10 first evo-required"><i class="evo-icon-evo-asterisk-small evo-icon-color-gray-darker evo-icon-position-left"></i>Year of Original Appointment:</label>
-				<div class="evo-checkbox col-14">
-					<label for="2009b">
-						<input id="2009b" name="" value="" type="checkbox" tabindex="" title="" /> 2009
-					</label>
-
-					<label for="2010b">
-						<input id="2010b" name="" value="" type="checkbox" tabindex="" title="" /> 2010
-					</label>
-
-					<label for="2011b">
-						<input id="2011b" name="" value="" type="checkbox" tabindex="" title="" /> 2011
-					</label>
-
-					<label for="2012b">
-						<input id="2012b" name="" value="" type="checkbox" tabindex="" title="" /> 2012
-					</label>
+		<div class="row">
+			<div class="large-8 columns error">
+				<div class="row">
+					<div class="large-4 columns">
+						<label class="inline">
+							<small><i class="evo-icon-evo-asterisk-small"></i></small>Input Label:
+						</label>
+					</div>
+					<div class="large-8 columns">				
+						<input type="text" placeholder="Placeholder text" tabindex="" title="" />
+						<small class="error">Houston we have a problem.</small>
+					</div>
 				</div>
-				<span class="col-24">
-					<small class="offset-10 col-14 evo-info">This is form error text.</small>
-				</span>
-			</li>
-			<li class="evo-error">
-				<label class="col-10 first evo-required" for=""><i class="evo-icon-evo-asterisk-small evo-icon-color-gray-darker evo-icon-position-left"></i>Comments:</label>
-				<textarea class="col-14" id="" name="" tabindex="" title=""></textarea>
-				<span class="col-24">
-					<small class="offset-10 col-14 evo-info">This is form error text.</small>
-				</span>
-			</li>
-			<li class="evo-error">
-				<label class="col-10 first evo-required" for="js-evo-datepicker-range-left-aligned-from">
-					<i class="evo-icon-evo-asterisk-small evo-icon-color-gray-darker evo-icon-position-left"></i>Label:
-				</label>
-				<div class="col-14 evo-datepicker-ctn evo-datepicker-range evo-small-mediaquery-grid">
-					<input class="col-12 first" id="js-evo-datepicker-range-left-aligned-from" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="From" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" />
-					<input class="col-12" id="js-evo-datepicker-range-left-aligned-to" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="To" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" />
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-8 columns error">
+				<div class="row">
+					<div class="large-4 columns">
+						<label class="inline">
+							<small><i class="evo-icon-evo-asterisk-small"></i></small>Select Box:
+						</label>
+					</div>
+					<div class="large-8 columns">
+						<select tabindex="" title="">
+							<option value="default">Choose one&#8230;</option>
+							<option value="husker">Star Lord</option>
+							<option value="starbuck">Groot</option>
+							<option value="hotdog">Rocket Raccoon</option>
+							<option value="apollo">Gamora</option>
+						</select>
+						<small class="error">Houston we have a problem.</small>
+					</div>
 				</div>
-				<span class="col-24">
-					<small class="offset-10 col-14 evo-info">This is form error text.</small>
-				</span>
-			</li>
-			<li class="evo-form-action">
-				<button class="evo-btn evo-btn-medium evo-btn-first" id="" name="" value="" type="button" tabindex="" title="Cancel">Cancel</button>
-				<button class="evo-btn evo-btn-medium evo-btn-primary" id="" name="" value="" type="button" tabindex="" title="Save">Save</button>
-			</li>
-		</ol>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-8 columns">
+				<div class="row">
+					<div class="large-4 columns">
+						<label>Choose Your Favorite</label>
+					</div>
+					<div class="large-8 columns">
+						<input type="radio" name="pokemon" value="Red" id="pokemonRed" tabindex="" title="" />
+						<label for="pokemonRed">Red</label>
+						<input type="radio" name="pokemon" value="Blue" id="pokemonBlue" tabindex="" title="" />
+						<label for="pokemonBlue">Blue</label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-8 columns error">
+				<div class="row">
+					<div class="large-4 columns">
+						<label>
+							<small><i class="evo-icon-evo-asterisk-small"></i></small>Check these out:
+						</label>
+					</div>
+					<div class="large-8 columns">				
+						<input id="checkbox1" type="checkbox" tabindex="" title="" />
+						<label for="checkbox1">Checkbox 1</label>
+						<input id="checkbox2" type="checkbox" tabindex="" title="" />
+						<label for="checkbox2">Checkbox 2</label>
+						<small class="error">Houston we have a problem.</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-8 columns error">
+				<div class="row">
+					<div class="large-4 columns">
+						<label>
+							<small><i class="evo-icon-evo-asterisk-small"></i></small>Textarea Label:
+						</label>
+					</div>
+					<div class="large-8 columns">
+						<textarea placeholder="Placeholder text" tabindex="" title=""></textarea>
+						<small class="error">Houston we have a problem.</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row evo-datepicker-ctn evo-datepicker-range evo-small-mediaquery-grid">
+			<div class="large-8 columns error">
+				<div class="row">
+					<div class="large-4 columns">
+						<label class="evo-required" for="js-evo-datepicker-range-left-aligned-from">
+							<small><i class="evo-icon-evo-asterisk-small"></i></small>Date:
+						</label>
+					</div>
+					<div class="large-8 columns">
+						<div class="small-6 columns evo-datepicker-first">
+							<input id="js-evo-datepicker-range-left-aligned-from" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="From" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" class="hasDatepicker" size="10"><button type="button" class="ui-datepicker-trigger">Choose Date</button>
+						</div>
+						<div class="small-6 columns evo-datepicker-last">
+							<input id="js-evo-datepicker-range-left-aligned-to" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="To" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" class="hasDatepicker" size="10"><button type="button" class="ui-datepicker-trigger">Choose Date</button>
+						</div>
+						<small class="error">Houston we have a problem.</small>
+					</div>
+				</div>				
+			</div>
+		</div>
+
+		<div class="row evo-btn-row">
+			<div class="small-12 columns">
+				<button class="button radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="Cancel">Cancel</button>
+				<button class="button radius evo-btn" id="" name="" value="" type="" tabindex="" title="Save">Save</button>
+			</div>
+		</div>
 	</fieldset>
 </form>
 <!-- FORM LEFT ALIGNED - ENDS -->

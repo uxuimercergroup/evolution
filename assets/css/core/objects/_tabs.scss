@@ -38,7 +38,7 @@ $evo-tabs-panel-bg-color: $white !default;
 			&:last-child		{margin-right: 0;}
 			a					{
 								@include border-radius(rem-calc(4) rem-calc(4) 0 0);
-								border: 1px solid $gray-light;
+								border: 1px solid $gray-mid;
 								border-bottom: 0;
 								text-decoration: none;
 				[class*="evo-icon"]
@@ -61,7 +61,7 @@ $evo-tabs-panel-bg-color: $white !default;
 // BASIC TABS CONTENT - BEGIN
 	.evo-tabs-content			{
 								@include border-radius(0 rem-calc(4) rem-calc(4) rem-calc(4));
-								border: 1px solid $gray-light;
+								border: 1px solid $gray-mid;
 		>.content					{padding: rem-calc(16) rem-calc(16) 0 rem-calc(16);}
 								}
 // BASIC TABS CONTENT - END
@@ -73,9 +73,9 @@ $evo-tabs-panel-bg-color: $white !default;
 							margin-right: 0;
 			a					{
 								@include border-radius(0);
-								border: 1px solid $gray-light;
+								border: 1px solid $gray-mid;
 								border-right: 0;
-				.text				{display: none;}
+				.evo-text			{display: none;}
 								}
 			&:first-child		{
 				a					{@include border-radius(rem-calc(4) 0 0 rem-calc(4));}
@@ -83,7 +83,7 @@ $evo-tabs-panel-bg-color: $white !default;
 			&:last-child		{
 				a					{
 									@include border-radius(0 rem-calc(4) rem-calc(4) 0);
-									border-right: 1px solid $gray-light;
+									border-right: 1px solid $gray-mid;
 									}
 								}
 							}
@@ -102,7 +102,7 @@ $evo-tabs-panel-bg-color: $white !default;
 
 
 // VERTICAL TABS - BEGIN
-	.evo-vertical		{
+	.evo-vertical-tabs	{
 		li.tab-title		{
 							margin-right: 0;
 			a					{@include border-radius(0);}
@@ -160,7 +160,7 @@ $evo-tabs-panel-bg-color: $white !default;
 			.evo-tabs-grouped	{
 				li.tab-title		{
 					a					{
-						.text				{display: inline-block;}
+						.evo-text			{display: inline-block;}
 										}
 									}
 								}

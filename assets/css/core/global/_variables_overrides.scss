@@ -27,7 +27,7 @@ $font-family-sans-serif: relativebook, arial, Tahoma, Geneva, sans-serif;
 $font-weight-normal: normal;
 $font-weight-bold: bold;
 
-// We use these as default colors throughout
+// We use these as default colors throughout, Message container colors
 $primary-color: $sapphire-dark;
 $secondary-color: $gray-lighter;
 $alert-color: $garnet-light;
@@ -36,7 +36,7 @@ $warning-color: $topaz-light;
 $info-color: $blue-gray-lighter;
 
 // We use these to control various global styles
-$body-font-color: $gray-dark;
+$body-font-color: $black;
 
 // We use these to make sure border radius matches unless we want it different.
 $global-radius: 3px;
@@ -77,16 +77,16 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-color: $gray-dark;
+$header-font-color: $black;
 $header-line-height: 1.4;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(36);
-$h2-font-size: rem-calc(28);
-$h3-font-size: rem-calc(24);
-$h4-font-size: rem-calc(18);
-$h5-font-size: rem-calc(14);
-$h6-font-size: rem-calc(12);
+$h1-font-size: rem-calc(38);
+$h2-font-size: rem-calc(30);
+$h3-font-size: rem-calc(22);
+$h4-font-size: rem-calc(16);
+$h5-font-size: rem-calc(16);
+$h6-font-size: rem-calc(14);
 
 // We use these to control header size reduction on small screens
 $h1-font-reduction: 0;
@@ -102,6 +102,7 @@ $small-font-color: $gray-dark;
 
 // We use these to style paragraphs
 $paragraph-line-height: 1.32;
+$paragraph-margin-bottom: rem-calc(26);
 
 // We use these to style anchors
 $anchor-text-decoration: underline;
@@ -151,26 +152,26 @@ $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-colo
 
 // We use these to control text style.
 // $alert-font-weight: $font-weight-normal;
-// $alert-font-size: rem-calc(13);
+$alert-font-size: rem-calc(14);
 // $alert-font-color: $white;
-// $alert-font-color-alt: scale-color($secondary-color, $lightness: -66%);
+$alert-font-color-alt: scale-color($secondary-color, $lightness: -100%);
 
 // We use this for close hover effect.
 // $alert-function-factor: -14%;
 
 // We use these to control border styles.
 // $alert-border-style: solid;
-// $alert-border-width: 1px;
+$alert-border-width: 0;
 // $alert-border-color: scale-color($primary-color, $lightness: $alert-function-factor);
 // $alert-bottom-margin: rem-calc(20);
 
 // We use these to style the close buttons
-// $alert-close-color: $oil;
-// $alert-close-top: 50%;
+$alert-close-color: $black;
+$alert-close-top: rem-calc(26);
 // $alert-close-position: rem-calc(4);
 // $alert-close-font-size: rem-calc(22);
-// $alert-close-opacity: 0.3;
-// $alert-close-opacity-hover: 0.5;
+$alert-close-opacity: 0.8;
+$alert-close-opacity-hover: 1;
 // $alert-close-padding: 9px 6px 4px;
 
 // We use this to control border radius
@@ -202,10 +203,10 @@ $button-disabled-opacity: 0.3;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use this to set the base for lots of form spacing and positioning styles
-$form-spacing: rem-calc(12);
+$form-spacing: rem-calc(14);
 
 // We use these to style the labels in different ways
-$form-label-font-color: scale-color($black, $lightness: 5%);
+$form-label-font-color: scale-color($black, $lightness: 0%);
 $input-font-size: rem-calc(16);
 $input-focus-bg-color: scale-color($white, $lightness: 0%);
 $input-focus-border-color: scale-color($white, $lightness: -40%);
@@ -290,7 +291,7 @@ $off-canvas-overlay-background: rgba($white, 0.4);
 
 // We use these to set default inner padding and bottom margin
 // $panel-margin-bottom: rem-calc(20);
-$panel-padding: rem-calc(20) rem-calc(20) 0 rem-calc(20);
+$panel-padding: rem-calc(14);
 
 // We use these to set default font colors
 // $panel-font-color: $oil;
@@ -370,6 +371,34 @@ $tabs-navigation-active-font-color: $tabs-navigation-font-color;
 // $tabs-content-padding: ($column-gutter/2);
 
 // $tabs-vertical-navigation-margin-bottom: 1.25rem;
+
+
+// 33. Tooltips
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $include-html-tooltip-classes: $include-html-classes;
+
+// $has-tip-border-bottom: dotted 1px $iron;
+// $has-tip-font-weight: $font-weight-bold;
+// $has-tip-font-color: $oil;
+// $has-tip-border-bottom-hover: dotted 1px scale-color($primary-color, $lightness: -55%);
+// $has-tip-font-color-hover: $primary-color;
+// $has-tip-cursor-type: help;
+
+// $tooltip-padding: rem-calc(12);
+$tooltip-bg: $gray-lighter;
+// $tooltip-font-size: rem-calc(14);
+// $tooltip-font-weight: $font-weight-normal;
+// $tooltip-font-color: $white;
+// $tooltip-line-height: 1.3;
+// $tooltip-close-font-size: rem-calc(10);
+// $tooltip-close-font-weight: $font-weight-normal;
+// $tooltip-close-font-color: $monsoon;
+// $tooltip-font-size-sml: rem-calc(14);
+// $tooltip-radius: $global-radius;
+// $tooltip-rounded: $global-rounded;
+// $tooltip-pip-size: 5px;
+// $tooltip-max-width: 300px;
 
 
 // 34. Top Bar
@@ -629,7 +658,6 @@ $topbar-link-bg-active: $sapphire-dark;
 // $boxSidebarBorderBottomColor:			$gray-mid;
 
 // $boxInlineSearchBackgroundColor:			$gray-lighter;
-// $boxInlineSearchBorderColor:				$gray-darker;
 
 // $boxSupportBackgroundColor:				$blue-gray-lighter;
 // $boxSupportBottomColor:					$blue-gray-mid-dark;
@@ -811,12 +839,12 @@ $topbar-link-bg-active: $sapphire-dark;
 
 // CAROUSEL
 // ------------------------------------------------------------------------------------------
-// $carouselPageCircleBackgroundColor:		$gray-light;
-// $carouselPageCircleHoverBackgroundColor:	$gray-dark;
-// $carouselPageCircleActiveBackgroundColor: $gray-darker;
-// $carouselPageCircleTextColor:			$white;
-// $carouselNavIconColor:					$gray-mid;
-// $carouselNavHoverIconColor:				$gray-dark;
+// $evo-carousel-page-circle-bgcolor: $gray-light;
+// $evo-carousel-page-circle-bgcolor-hover: $gray-dark;
+// $evo-carousel-page-circle-bgcolor-active: $gray-darker;
+// $evo-carousel-page-circle-text-color: $white;
+// $evo-carousel-nav-icon-color: $gray-mid;
+// $evo-carousel-nav-icon-color-hover: $gray-dark;
 
 
 // CONTENT MODAL
@@ -842,37 +870,39 @@ $topbar-link-bg-active: $sapphire-dark;
 
 // DATEPICKER
 // ------------------------------------------------------------------------------------------
-// $datepickerMarginTop:					5px;
-// $datepickerHdrPaddingTopBottom:			4px;
-// $datepickerMessageFontSize:				13px;
-// $datepickerMessageLineHeight:			15px;
-// $datepickerIconPositionTop:				5px;
-// $datepickerIconPositionLeft:				-22px;
-// $datepickerIconPositionTopLargeBreakpoint: 4px;
-// $datepickerIconPositionTopIE:			($datepickerIconPositionTop - 2);
-// $datepickerIconPositionLeftLargeBreakpoint: -20px;
-// $datepickerMinWidth:						110px;
+// $evo-datepicker-margin-top: rem-calc(5) !default;
+// $evo-datepicker-hdr-padding-top-bottom: rem-calc(4) !default;
+// $evo-datepicker-message-font-size: rem-calc(13) !default;
+// $evo-datepicker-message-line-height: rem-calc(15) !default;
+// $evo-datepicker-icon-position-top: rem-calc(8);
+// $evo-datepicker-icon-position-left: rem-calc(-22);
+// $evo-datepicker-icon-position-large-breakpoint: rem-calc(8);
+// $evo-datepicker-icon-position-top-IE: ($evo-datepicker-icon-position-top - 2) !default;
+// $evo-datepicker-icon-position-left-large-breakpoint: rem-calc(-20);
+// $evo-datepicker-min-width: rem-calc(110) !default;
 
-// $datepickerShadowColor:					$gray-darker;
-// $datepickerBackgroundColor:				$white;
-// $datepickerThFontColor:					$gray-darker;
-// $datepickerBorderColor:					$gray-lighter;
-// $datepickerLinkColor:					$gray-darker;
-// $datepickerHdrBackgroundStartColor:		$gray-lighter;
-// $datepickerHdrBackgroundEndColor:		$gray-mid;
-// $datepickerHdrFontColor:					$gray-darkest;
-// $datepickerHdrNavIconColor:				$sapphire;
-// $datepickerTodayFontColor:				$emerald;
-// $datepickerTodayBackgroundColor: 		$emerald-light;
-// $datepickerCurrentDayBackgroundColor: 	$tan-mid;
-// $datepickerCurrentDayFontColor:			$tan;
-// $datepickerHoverBackgroundColor: 		$tan-light;
-// $datepickerDisabledFontColor:			$gray-mid;
-// $datepickerDisabledBackgroundColor:		$white;
-// $datepickerDisabledBorderColor:			$gray-lighter;
-// $datepickerMessageFontColor:				$gray-darkest;
-// $datepickerMessageBackgroundColor:		$tan-light;
-// $datepickerIconColor:					$gray-darker;
+
+// COLORS
+// $evo-datepicker-shadow-color: $gray-darker !default;
+// $evo-datepicker-bgcolor: $white !default;
+// $evo-datepicker-th-font-color: $gray-darker !default;
+// $evo-datepicker-border-color: $gray-lighter !default;
+// $evo-datepicker-link-color: $gray-darker !default;
+// $evo-datepicker-hdr-bgcolor-start: $gray-lightest !default;
+// $evo-datepicker-hdr-bgcolor-end: $gray-light !default;
+// $evo-datepicker-hdr-font-color: $gray-darker !default;
+// $evo-datepicker-hdr-nav-icon-color: $sapphire !default;
+// $evo-datepicker-today-font-color: $emerald !default;
+// $evo-datepicker-today-bgcolor: $emerald-light !default;
+// $evo-datepicker-current-day-bgcolor: $topaz-mid !default;
+// $evo-datepicker-current-day-font-color: $topaz !default;
+// $evo-datepicker-hover-bgcolor: $topaz-light !default;
+// $evo-datepicker-disabled-font-color: $gray-mid !default;
+// $evo-datepicker-disabled-bgcolor: $white !default;
+// $evo-datepicker-disabled-border-color: $gray-lighter !default;
+// $evo-datepicker-message-font-color: $gray-darker !default;
+// $evo-datepicker-message-bgcolor: $topaz-light !default;
+// $evo-datepicker-icon-color: $gray-darker !default;
 
 
 // DIALOG/MODAL

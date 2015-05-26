@@ -5,7 +5,7 @@
 //-------------------------------------------------------------------------------------------
 
 @if $use-tooltip == true{
-
+/*
 	// EVO Tooltip global
 	.evo-tooltip 		{
 						@include border-radius($global-radius);
@@ -326,14 +326,14 @@
 						-ms-transform: scale(1.1, 1.1);
 						transform: scale(1.1, 1.1);
 						}
-
+*/
 	//=== MEDIA QUERIES =========================================================================
 
 	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
 	@if $use-medium-up-mediaquery == true {
 		
 		@media #{$medium-up} {
-
+/*
 			// EVO Tooltip global
 			.evo-tooltip
 						{
@@ -344,7 +344,7 @@
 							font-size: 1rem;
 							}
 						}
-
+*/
 		}
 		
 	}// endif

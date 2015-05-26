@@ -122,23 +122,11 @@
 			step: 1, // Determines the size or amount of each interval or step the slider takes between the min and max
 			value: userContributionValue, // Start value for the slider handle
 			range: "min",
-			slide: function (event, ui) {
-				userContributionValue = ui.value;
-				jQuery('.ui-slider-handle .evo-slider-tooltip', this).html(userContributionValue+'%');
-				jQuery('<span class="evo-slider-tooltip-arrow"></span>').appendTo('.ui-slider-handle .evo-slider-tooltip');
-			},
-			create: function (event, ui) {
-				jQuery('.ui-slider-handle', this).html('<span class="evo-slider-tooltip">' + userContributionValue + '%</span>');
-				jQuery('<span class="evo-slider-tooltip-arrow"></span>').appendTo('.ui-slider-handle .evo-slider-tooltip');
-				jQuery('.ui-slider-handle .evo-slider-tooltip', this).hide();
-			},
-			start: function (event, ui) {
-				jQuery('.ui-slider-handle .evo-slider-tooltip', this).fadeIn('fast');
-			},
-			stop: function (event, ui) {
-				jQuery('.ui-slider-handle .evo-slider-tooltip', this).fadeOut(1000);
+			slide: function(event, ui){
+				jQuery('#amount').html(ui.value);
 			}
 		});
+		jQuery('#amount').html(jQuery(sliderDataValue).slider('value'));
 
 		// Slider Markers
 		var sliderMultiplier = 100 / sliderMax;
@@ -158,6 +146,38 @@
 				}, 400);
 			}
 		});
+	};
+
+	// SELECT DIV BOX
+	var selectDropDown = function() {
+		jQuery('.dropdown').click(function() {
+			jQuery(this).children('ul').slideToggle(150);
+			if (jQuery(this).hasClass('open')) {
+				jQuery(this).removeClass('open');
+				return false;
+			} else {
+				jQuery(this).addClass('open');
+				return false;
+			}
+			return false;
+			}).hover(function(){},function() {
+				jQuery(this).children('ul').slideUp(150);
+				jQuery(this).removeClass('open');
+			});
+
+			jQuery('.dropdown ul li').click(function() {
+				var sitem = jQuery(this).html();
+				var sid = jQuery(this).attr('id');
+				var id = 'form-item' + jQuery(this).attr('data-evo-form-toggle');
+
+				jQuery('#' + id).fadeToggle(2000);
+				jQuery(this).siblings('li').removeClass('selected');
+				jQuery(this).addClass('selected');
+				jQuery(this).parent('ul').siblings('span.selected').html(sitem);
+				jQuery(this).parent('ul').siblings('input').val(sid);
+
+
+			});
 	};
 
 // DOCUMENT READY
@@ -219,5 +239,8 @@ $(function() {
 
 		// STREAM SCROLL TO RECOMMEND SECTION
 		evoScrollToStreamRecommendSection();
+
+		// SELECT DIV BOX
+		selectDropDown();
 
 });

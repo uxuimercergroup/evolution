@@ -102,15 +102,15 @@ $evo-anchor-font-size-small:				14 !default;
 
 	h1							{
 								font-family: $evo-font-bold-stack;
-								letter-spacing: rem-calc(6);
+								letter-spacing: rem-calc(8);
 								}
 	h2							{
 								font-family: $evo-font-regular-stack;
-								letter-spacing: rem-calc(4);
+								letter-spacing: rem-calc(8);
 								}
 	h3							{
 								font-family: $evo-font-regular-stack;
-								letter-spacing: rem-calc(4);
+								letter-spacing: rem-calc(6);
 								}
 	h4							{
 								font-family: $evo-font-bold-stack;
@@ -122,7 +122,8 @@ $evo-anchor-font-size-small:				14 !default;
 								}
 	h6							{
 								font-family: $evo-font-bold-stack;
-								letter-spacing: rem-calc(2);
+								letter-spacing: rem-calc(4);
+								color: #808080;
 								}
 
 	.evo-h1-hdr-background,

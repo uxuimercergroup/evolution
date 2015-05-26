@@ -31,24 +31,6 @@ $evo-zindex-dialog-overlay:					10003 !default;
 $evo-zindex-dialog-position:				10004 !default;
 
 
-// HELPERS
-// ------------------------------------------------------------------------------------------
-
-// KEYLINES
-$evo-keyline-right-border-right-color: 		$gray-mid !default;
-$evo-keyline-left-border-left-color:		$gray-mid !default;
-
-// SPACER SIZES
-$evo-spacer-size:							5px !default;
-$evo-spacer-xsmall:							($evo-spacer-size*1) !default;
-$evo-spacer-small:							($evo-spacer-size*2) !default;
-$evo-spacer-medium:							($evo-spacer-size*3) !default;
-$evo-spacer-large:							($evo-spacer-size*4) !default;
-$evo-spacer-xlarge:							($evo-spacer-size*5) !default;
-$evo-spacer-xxlarge:						($evo-spacer-size*6) !default;
-$evo-spacer-xxxlarge:						($evo-spacer-size*7) !default;
-
-
 // TYPOGRAPHY
 // ------------------------------------------------------------------------------------------
 
@@ -144,7 +126,6 @@ $boxInlineSearchLabelLineHeight:			22px !default;
 	$boxSidebarBorderBottomColor:				$gray-mid !default;
 
 	$boxInlineSearchBackgroundColor:			$gray-lighter !default;
-	$boxInlineSearchBorderColor:				$gray-darker !default;
 
 	$boxSupportBackgroundColor:					$blue-gray-lighter !default;
 	$boxSupportBottomColor:						$blue-gray-mid-dark !default;
@@ -259,16 +240,6 @@ $autocompleteItemHoverBackgroundStartColor:	$topaz-light !default;
 $autocompleteItemHoverBackgroundEndColor:	$topaz-light !default;
 
 
-// CAROUSEL
-// ------------------------------------------------------------------------------------------
-$carouselPageCircleBackgroundColor:			$gray-light !default;
-$carouselPageCircleHoverBackgroundColor:	$gray-dark !default;
-$carouselPageCircleActiveBackgroundColor:	$gray-darker !default;
-$carouselPageCircleTextColor:				$white !default;
-$carouselNavIconColor:						$gray-mid !default;
-$carouselNavHoverIconColor:					$gray-dark !default;
-
-
 // CONTENT MODAL
 // ------------------------------------------------------------------------------------------
 $contentModalUtilityBarWidth:				51px !default;
@@ -288,41 +259,6 @@ $contentModalUtilityBarTabsHoverBackgroundStartColor: $blue-gray-mid-dark !defau
 $contentModalUtilityBarTabsHoverBackgroundEndColor: $blue-gray-dark !default;
 $contentModalUtilityBarTabsActiveBackgroundColor: $white !default;
 $contentModalUtilityBarTabsActiveIconColor:	$blue-gray-darker !default;
-
-
-// DATEPICKER
-// ------------------------------------------------------------------------------------------
-$datepickerMarginTop:						5px !default;
-$datepickerHdrPaddingTopBottom:				4px !default;
-$datepickerMessageFontSize:					13px !default;
-$datepickerMessageLineHeight:				15px !default;
-$datepickerIconPositionTop:					5px;
-$datepickerIconPositionLeft:				-22px;
-$datepickerIconPositionTopLargeBreakpoint:	4px;
-$datepickerIconPositionTopIE:				($datepickerIconPositionTop - 2) !default;
-$datepickerIconPositionLeftLargeBreakpoint:	-20px;
-$datepickerMinWidth:						110px !default;
-
-$datepickerShadowColor:						$gray-darker !default;
-$datepickerBackgroundColor:					$white !default;
-$datepickerThFontColor:						$gray-darker !default;
-$datepickerBorderColor:						$gray-lighter !default;
-$datepickerLinkColor:						$gray-darker !default;
-$datepickerHdrBackgroundStartColor:			$gray-lighter !default;
-$datepickerHdrBackgroundEndColor:			$gray-mid !default;
-$datepickerHdrFontColor:					$gray-darker !default;
-$datepickerHdrNavIconColor:					$sapphire !default;
-$datepickerTodayFontColor:					$emerald !default;
-$datepickerTodayBackgroundColor: 			$emerald-light !default;
-$datepickerCurrentDayBackgroundColor: 		$topaz-mid !default;
-$datepickerCurrentDayFontColor:				$topaz !default;
-$datepickerHoverBackgroundColor: 			$topaz-light !default;
-$datepickerDisabledFontColor:				$gray-mid !default;
-$datepickerDisabledBackgroundColor:			$white !default;
-$datepickerDisabledBorderColor:				$gray-lighter !default;
-$datepickerMessageFontColor:				$gray-darker !default;
-$datepickerMessageBackgroundColor:			$topaz-light !default;
-$datepickerIconColor:						$gray-darker !default;
 
 
 // DIALOG/MODAL

@@ -42,6 +42,7 @@ $evo-secondary-summary-cell-font-size: rem-calc(32) !default;
 													border-left: 0;
 													border-top-color: $evo-summary-ctn-cell-border-top-color;
 													border-bottom-color: $evo-summary-ctn-cell-border-bottom-color;
+
 													cursor: pointer;
 													padding-top: $evo-summary-ctn-cell-padding-top;
 
@@ -99,6 +100,20 @@ $evo-secondary-summary-cell-font-size: rem-calc(32) !default;
 		
 		@media #{$medium-up} {
 
+			// SUMMARY CONTAINER
+/*
+			.evo-summary-ctn						{
+				ul										{
+					li										{
+															border: $evo-summary-ctn-cell-width $evo-summary-ctn-cell-style $evo-summary-ctn-cell-color;
+															border-left: 0;
+															border-top-color: $evo-summary-ctn-cell-border-top-color;
+															border-bottom-color: $evo-summary-ctn-cell-border-bottom-color;
+						&:first-child							{border-left: $evo-summary-ctn-cell-border-width $evo-summary-ctn-cell-border-style $evo-summary-ctn-cell-border-color;}
+															}
+														}
+													}
+*/
 
 		}
 

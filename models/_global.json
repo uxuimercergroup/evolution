@@ -8,7 +8,7 @@
 
 "FOOTER OPTIONS": "",
 	"COMMENT": "Leave blank to get default footer or add 'fat' if you want a fat footer",
-		"footer" : "fat",
+		"footer" : "",
 
 
 	"reference-buttons" : [
@@ -69,30 +69,7 @@
 						{"link-name": "Hero Banner", "url": "/base/layout-hero-banner"},
 						{"link-name": "Banding Layout", "url": "/base/layout-banding"}
 					]
-				},
-				{
-					"sub-section-hdr": "Profile Containers",				
-					"sub-section": [
-						{"link-name": "Entity Profile", "url": "/objects/profile-entity"},
-						{"link-name": "Prospective Client Profile", "url": "/objects/profile-prospective-client"},
-						{"link-name": "Active Client Profile", "url": "/objects/profile-client"},
-						{"link-name": "Inactive Client Profile", "url": "/objects/profile-inactive-client"},
-						{"link-name": "User Profile", "url": "/objects/profile-user"},
-						{"link-name": "Location Profile", "url": "/objects/profile-location"},
-						{"link-name": "Product Profile", "url": "/objects/profile-product"},
-						{"link-name": "Plan Profile", "url": "/objects/profile-plan"}
-					]
 				}
-			]
-		},
-
-		{
-			"section-hdr": "Narratives",
-			"main-section": [
-				{"link-name": "Page Error Messaging & Handling", "url": "/error-handling"},
-				{"link-name": "Search vs. Browse vs. Filter", "url": "/search-browse-filter"},
-				{"link-name": "Copy/Text Style Guide", "url": "/copy-text-styleguide"},
-				{"link-name": "Icon Fonts", "url": "/icon-font"}
 			]
 		},
 
@@ -112,8 +89,7 @@
 				{"link-name": "Highlight Container", "url": "/base/boxes/container-highlight"},
 				{"link-name": "Image Content Overlay", "url": "/objects/image-content-overlay"},
 				{"link-name": "Inline Search Container", "url": "/objects/inline-search"},
-				{"link-name": "Primary Summary Container", "url": "/objects/primary-summary"},
-				{"link-name": "Secondary Summary Container", "url": "/objects/secondary-summary"},
+				{"link-name": "Summary Containers", "url": "/objects/summary-containers"},
 				{"link-name": "Sidebar Container", "url": "/base/boxes/container-sidebar"},
 				{"link-name": "Support Container", "url": "/base/boxes/container-support"},
 				{"link-name": "Tile Container", "url": "/objects/container-tile"}
@@ -132,9 +108,7 @@
 				{"link-name": "Mini Filter", "url": "/objects/mini-filter"},
 				{"link-name": "Tab Set", "url": "/objects/tabs"},
 				{"link-name": "Scoll Pane", "url": "/objects/scroll-pane"},
-				{"link-name": "Slider", "url": "/objects/slider"},
-				{"link-name": "Horizontal Stepper", "url": "/objects/horizontal-stepper"},
-				{"link-name": "Vertical Stepper", "url": "/objects/vertical-stepper"}
+				{"link-name": "Slider", "url": "/objects/slider"}
 			],
 
 			"sub-section-group": [
@@ -147,8 +121,7 @@
 				{
 					"sub-section-hdr": "Windows",				
 					"sub-section": [
-						{"link-name": "Modal Window", "url": "/objects/modal"},
-						{"link-name": "Content Modal", "url": "/objects/content-modal"}
+						{"link-name": "Modal Window", "url": "/objects/modal"}
 					]
 				},
 				{
@@ -176,9 +149,7 @@
 						{"link-name": "Subheader Row", "url": "/base/tables/subheader"},
 						{"link-name": "Subtotal Row", "url": "/base/tables/subtotal"},
 						{"link-name": "Total Row", "url": "/base/tables/total"},
-						{"link-name": "Pagination", "url": "/objects/pagination"},
-						{"link-name": "Quick Filter", "url": "/base/tables/quick-filter"},
-						{"link-name": "Advanced Filter Modal", "url": "/objects/advanced-filter"}
+						{"link-name": "Quick Filter", "url": "/base/tables/quick-filter"}
 					]
 				}
 			]
@@ -203,13 +174,6 @@
 					"sub-section-hdr": "Error Handling",				
 					"sub-section": [
 						{"link-name": "Field Specific Error", "url": "/base/forms/field-specific-error"}
-					]
-				},
-				{
-					"sub-section-hdr": "Form Add Ons",				
-					"sub-section": [
-						{"link-name": "Auto Suggest", "url": "/objects/auto-suggest"},
-						{"link-name": "Selected Checkbox", "url": "/base/forms/selected-checkbox"}
 					]
 				}
 			]

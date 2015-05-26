@@ -27,50 +27,42 @@
 <!-- CONTENT SECTION - ENDS -->
 
 <!-- EXAMPLE SECTION - BEGINS -->
-	<ul class="tabs" data-tab>
+	<ul class="tabs evo-tabs" data-tab>
 		<li class="tab-title active"><a href="#panel1">Icon Font</a></li>
 		<li class="tab-title"><a href="#panel2">Icon Font Options</a></li>
-		<li class="tab-title"><a href="#panel3">Graphic Icons</a></li>
+		<li class="tab-title"><a href="#panel3">Photo Icons</a></li>
 	</ul>
-	<div class="tabs-content">
+	<div class="tabs-content evo-tabs-content">
 	<!-- ICON FONT ICONS - BEGINS -->
 		<div class="content active" id="panel1">
 
 			<h3 class="evo-hdr-rule">Icon Font</h3>
 			{{ model.reference-icon-font-content }}
 
+			<section class="row">
+				<div class="small-9 columns">
+					<label for="large-switch-checkbox">
+						<input id="large-switch-checkbox" type="checkbox" onclick="toggleLargeIcons(this.checked)" title="Show Large Icons" />
+						Show Large Icons
+					</label>
+				</div>
+				<div class="small-3 columns">
+					<input id="icon-font-filter" type="text" placeholder="Filter" tabindex="" title="Type to filter results." />
+				</div>
+			</section>
+
 			<div class="evo-table-small-mediaquery">
-				<table class="evo-table evo-footable evo-table-borders evo-table-striped evo-table-hover" data-filter="#icon-font-filter" id="icons-ctn" border="0" cellpadding="0" cellspacing="0" title="" summary="">
-					<caption>
-						<div class="col-19 first">
-							<form class="evo-form evo-form-inline evo-no-margin-bottom" id="" name="" method="" action="" title="">
-								<fieldset>
-									<ol>
-										<li class="evo-no-margin-bottom">
-											<div class="evo-checkbox evo-no-margin-bottom">
-												<label class="evo-no-margin-bottom" for="large-switch-checkbox">
-													<input id="large-switch-checkbox" type="checkbox" onclick="toggleLargeIcons(this.checked)" title="Show Large Icons" /> Show Large Icons
-												</label>
-											</div>
-										</li>
-									</ol>
-								</fieldset>
-							</form>
-						</div>
-						<div class="col-5 evo-tbl-data-filter">
-							<input id="icon-font-filter" type="text" placeholder="Filter" tabindex="" title="Type to filter results." />
-						</div>
-					</caption>
+				<table class="evo-table evo-footable evo-table-hover" data-filter="#icon-font-filter" id="icons-ctn" border="0" cellpadding="0" cellspacing="0" title="" summary="">
 					<thead>
 						<tr>
-							<th class="col-4" data-sort-initial="ascending" scope="col"><a href="javascript:;">Name</a></th>
-							<th class="col-2 evo-align-center" scope="col"><a href="javascript:;">Blue</a></th>
-							<th class="col-2 evo-align-center" scope="col"><a href="javascript:;">Gray</a></th>
-							<th class="col-2 evo-align-center" scope="col"><a href="javascript:;">Disabled</a></th>
-							<th class="col-2 evo-align-center" scope="col"><a href="javascript:;">Reverse</a></th>
-							<th class="col-4 evo-align-center" scope="col"><a href="javascript:;">Specific Use Color</a></th>
-							<th class="col-4" scope="col"><a href="javascript:;">Class</a></th>
-							<th class="col-4" scope="col"><a href="javascript:;">Keywords</a></th>
+							<th data-sort-initial="ascending" scope="col"><a href="javascript:;">Name</a></th>
+							<th class="evo-align-center" scope="col"><a href="javascript:;">Blue</a></th>
+							<th class="evo-align-center" scope="col"><a href="javascript:;">Gray</a></th>
+							<th class="evo-align-center" scope="col"><a href="javascript:;">Disabled</a></th>
+							<th class="evo-align-center" scope="col"><a href="javascript:;">Reverse</a></th>
+							<th class="evo-align-center" scope="col"><a href="javascript:;">Specific Use Color</a></th>
+							<th scope="col"><a href="javascript:;">Class</a></th>
+							<th scope="col"><a href="javascript:;">Keywords</a></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -78,10 +70,22 @@
 						{% for item in model.icons %}
 						<tr>
 							<td>{{ item.properties.name }}</td>
-							<td class="evo-align-center"><i class="evo-icon-{{ item.properties.name }}"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
-							<td class="evo-align-center"><i class="evo-icon-{{ item.properties.name }} evo-icon-color-gray-dark"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
-							<td class="evo-align-center"><i class="evo-icon-{{ item.properties.name }} evo-icon-color-disabled"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
-							<td class="evo-align-center icon-table-cell-reverse-background"><i class="evo-icon-{{ item.properties.name }} evo-icon-color-white"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
+							<td class="evo-align-center">
+								<i class="evo-icon-{{ item.properties.name }}"></i>
+								<span class="evo-icon-hide-text">{{ item.properties.name }}</span>
+							</td>
+							<td class="evo-align-center">
+								<i class="evo-icon-{{ item.properties.name }} evo-icon-color-gray-dark"></i>
+								<span class="evo-icon-hide-text">{{ item.properties.name }}</span>
+							</td>
+							<td class="evo-align-center">
+								<i class="evo-icon-{{ item.properties.name }} evo-icon-color-disabled"></i>
+								<span class="evo-icon-hide-text">{{ item.properties.name }}</span>
+							</td>
+							<td class="evo-align-center icon-table-cell-reverse-background">
+								<i class="evo-icon-{{ item.properties.name }} evo-icon-color-white"></i>
+								<span class="evo-icon-hide-text">{{ item.properties.name }}</span>
+							</td>
 							<td class="evo-align-center">
 								<i class="evo-icon-{{ item.properties.name }} evo-icon-color-confirmation evo-icon-position-left"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span>
 								<i class="evo-icon-{{ item.properties.name }} evo-icon-color-error evo-icon-position-left"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span>
@@ -106,54 +110,42 @@
 
 				<div class="row">
 					<div class="small-3 columns">
-						<a class="evo-icon-search evo-icon-position-left" href="javascript:;" title="Search"></a>Label with an icon on the left
+						<label>
+							<a class="evo-icon-search evo-icon-position-left" href="javascript:;" title="Search"></a>I am content
+						</label>
 					</div>
 					<div class="small-3 columns">
-						Label with an icon on the right<i class="evo-icon-search evo-icon-position-right" title="Search"></i>
+						<label>
+							More content here<i class="evo-icon-search evo-icon-position-right" title="Search"></i>
+						</label>
 					</div>
 					<div class="small-3 columns">
-						<i class="evo-icon-search evo-icon-position-top" title="Search"></i>Label with an icon on the top
+						<label>
+							<i class="evo-icon-search evo-icon-position-top" title="Search"></i>Some additional content
+						</label>
 					</div>
 					<div class="small-3 columns">
-						Label with an icon on the bottom<i class="evo-icon-search evo-icon-position-bottom" title="Search"></i>
+						<label>
+							The last content<i class="evo-icon-search evo-icon-position-bottom" title="Search"></i>
+						</label>
 					</div>
 				</div>
 
-				<div class="col-24">
-					<label class="col-6 first">
-						<a class="evo-icon-search evo-icon-position-left" href="javascript:;" title="Search"></a>Label with an icon on the left
-					</label>
-
-					<label class="col-6">
-						Label with an icon on the right<i class="evo-icon-search evo-icon-position-right" title="Search"></i>
-					</label>
-
-					<label class="col-6 evo-align-center">
-						<i class="evo-icon-search evo-icon-position-top" title="Search"></i>Label with an icon on the top
-					</label>
-
-					<label class="col-6 evo-align-center">
-						Label with an icon on the bottom<i class="evo-icon-search evo-icon-position-bottom" title="Search"></i>
-					</label>
-				</div>
-				<div class="col-24">
-					<form class="evo-form" id="" name="" method="" action="" title="">
-						<fieldset>
-							<ol>
-								<li class="col-6 first">
-									<label for="email"><i class="evo-icon-envelop evo-icon-size-small evo-icon-position-left" title="Email Address"></i>Email Address:</label>
-									<input id="email" name="" value="" tabindex="" type="text" placeholder="example@email.com" title="Enter your email address." />
-								</li>
-								<li class="col-6">
-									<label for="">Tooltip icons:</label>
-									<a class="evo-icon-evo-task-reassign evo-icon-position-left js-evo-tooltip js-evo-tooltip-hover-top-object" href="javascript:;" title="Reassign"></a>
-									<a class="evo-icon-evo-task-download evo-icon-position-left js-evo-tooltip js-evo-tooltip-hover-top-object" href="javascript:;" title="Delegate"></a>
-									<a class="evo-icon-bubble evo-icon-position-left js-evo-tooltip js-evo-tooltip-hover-top-object" href="javascript:;" title="Comment"></a>
-									<a class="evo-icon-share evo-icon-position-left js-evo-tooltip js-evo-tooltip-hover-top-object" href="javascript:;" title="Export"></a>
-								</li>
-							</ol>
-						</fieldset>
-					</form>
+				<div class="row">
+					<div class="large-12 columns">
+						<form data-abide>
+							<fieldset>
+								<div class="row">
+									<div class="large-3 columns">
+										<label for="email">
+											<i class="evo-icon-envelop evo-icon-size-small evo-icon-position-left" title="Email Address"></i>Email Address:
+											<input id="email" name="" value="" tabindex="" type="text" placeholder="example@email.com" title="Enter your email address." />
+										</label>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
 				</div>
 
 				<h4>Rules</h4>
@@ -166,87 +158,87 @@
 				</ul>
 
 				<h3 class="evo-hdr-rule">Icon Sizes</h3>
-				<div class="col-24">
-					<label class="col-6 evo-align-center first">
+				<div class="row">
+					<label class="large-3 evo-align-center columns">
 						<a class="evo-icon-search evo-icon-size-small evo-icon-position-top" href="javascript:;" title="Small"></a>Small
 					</label>
 
-					<label class="col-6 evo-align-center">
+					<label class="large-3 evo-align-center columns">
 						<i class="evo-icon-search evo-icon-size-medium evo-icon-position-top" title="Medium"></i>Medium
 					</label>
 
-					<label class="col-6 evo-align-center">
+					<label class="large-3 evo-align-center columns">
 						<i class="evo-icon-search evo-icon-size-large evo-icon-position-top" title="Large"></i>Large
 					</label>
 
-					<label class="col-6 evo-align-center">
+					<label class="large-3 evo-align-center columns">
 						<i class="evo-icon-search evo-icon-size-x-large evo-icon-position-top" title="X-large"></i>X-large
 					</label>
 				</div>
 
 				<h3 class="evo-hdr-rule">Icon Only (with accessible text)</h3>
-				<div class="col-24">
-					<label class="col-6 evo-align-center first">
+				<div class="row">
+					<label class="large-3 evo-align-center columns">
 						<a class="evo-icon-search evo-icon-size-small evo-icon-position-top" href="javascript:;" title="Small"><span class="evo-icon-hide-text">Small</span></a>
 					</label>
 
-					<label class="col-6 evo-align-center">
+					<label class="large-3 evo-align-center columns">
 						<i class="evo-icon-search evo-icon-size-medium evo-icon-position-top" title="Medium"><span class="evo-icon-hide-text">Medium</span></i>
 					</label>
 
-					<label class="col-6 evo-align-center">
+					<label class="large-3 evo-align-center columns">
 						<i class="evo-icon-search evo-icon-size-large evo-icon-position-top" title="Large"><span class="evo-icon-hide-text">Large</span></i>
 					</label>
 
-					<label class="col-6 evo-align-center">
+					<label class="large-3 evo-align-center columns">
 						<i class="evo-icon-search evo-icon-size-x-large evo-icon-position-top" title="X-large"><span class="evo-icon-hide-text">X-large</span></i>
 					</label>
 				</div>
 
 				<h3 class="evo-hdr-rule">Icon Styles</h3>
 				<h4>Text Shadow</h4>
-				<div class="col-24">
-					<label class="col-6 evo-align-center first">
+				<div class="row">
+					<label class="large-3 columns evo-align-center">
 						<a class="evo-icon-search evo-icon-size-small evo-icon-style-shadow evo-icon-position-top" href="javascript:;" title="Small"></a>Small
 					</label>
 
-					<label class="col-6 evo-align-center">
+					<label class="large-3 columns evo-align-center">
 						<i class="evo-icon-search evo-icon-size-medium evo-icon-style-shadow evo-icon-position-top" title="Medium"></i>Medium
 					</label>
 
-					<label class="col-6 evo-align-center">
+					<label class="large-3 columns evo-align-center">
 						<i class="evo-icon-search evo-icon-size-large evo-icon-style-shadow evo-icon-position-top" title="Large"></i>Large
 					</label>
 
-					<label class="col-6 evo-align-center">
+					<label class="large-3 columns evo-align-center">
 						<i class="evo-icon-search evo-icon-size-x-large evo-icon-style-shadow evo-icon-position-top" title="X-large"></i>X-large
 					</label>
 				</div>
 
 				<h4>Background Gradient</h4>
 				<p>Webkit only (Safari, Chrome) with fallback font color for other browsers.</p>
-				<div class="col-24">
-					<label class="col-4 evo-align-center first">
+				<div class="row">
+					<label class="large-2 columns evo-align-center">
 						<a class="evo-icon-checkmark-circle evo-icon-size-medium evo-icon-style-gradient-confirmation evo-icon-position-top" href="javascript:;" title="Positive Icon"></a>Positive Icon
 					</label>
 
-					<label class="col-4 evo-align-center">
+					<label class="large-2 columns evo-align-center">
 						<i class="evo-icon-notification evo-icon-size-medium evo-icon-style-gradient-error evo-icon-position-top" title="Negative Icon"></i>Negative Icon
 					</label>
 
-					<label class="col-4 evo-align-center">
+					<label class="large-2 columns evo-align-center">
 						<i class="evo-icon-warning evo-icon-size-medium evo-icon-style-gradient-attention evo-icon-position-top" title="Warning Icon"></i>Warning Icon
 					</label>
 
-					<label class="col-4 evo-align-center">
+					<label class="large-2 columns evo-align-center">
 						<i class="evo-icon-question evo-icon-size-medium evo-icon-style-gradient-info evo-icon-position-top" title="Info Icon"></i>Info Icon
 					</label>
 
-					<label class="col-4 evo-align-center">
+					<label class="large-2 columns evo-align-center">
 						<i class="evo-icon-menu3 evo-icon-size-medium evo-icon-style-gradient evo-icon-position-top" title="Blue Icon"></i>Blue Icon
 					</label>
 
-					<label class="col-4 evo-align-center">
+					<label class="large-2 columns evo-align-center">
 						<i class="evo-icon-menu3 evo-icon-size-medium evo-icon-style-gradient-gray-dark evo-icon-position-top" title="Gray Icon"></i>Gray Icon
 					</label>
 				</div>
@@ -254,321 +246,264 @@
 				<br />
 
 				<h3 class="evo-hdr-rule">Icon Colors</h3>
-				<div class="col-24 evo-margin-bottom">
-					<label class="col-4 first">
+				<div class="row evo-margin-bottom">
+					<label class="large-2 columns">
 						<a class="evo-icon-checkmark-circle evo-icon-size-small evo-icon-color-confirmation evo-icon-position-left" href="javascript:;" title="Positive Icon"></a>Positive Icon
 					</label>
 
-					<label class="col-4">
+					<label class="large-2 columns">
 						<i class="evo-icon-notification evo-icon-size-small evo-icon-color-error evo-icon-position-left" title="Negative Icon"></i>Negative Icon
 					</label>
 
-					<label class="col-4">
+					<label class="large-2 columns">
 						<i class="evo-icon-warning evo-icon-size-small evo-icon-color-attention evo-icon-position-left" title="Warning Icon"></i>Warning Icon
 					</label>
 
-					<label class="col-4">
+					<label class="large-2 columns">
 						<i class="evo-icon-question evo-icon-size-small evo-icon-color-info evo-icon-position-left" title="Info Icon"></i>Info Icon
 					</label>
 
-					<label class="col-4">
+					<label class="large-2 columns">
 						<i class="evo-icon-menu3 evo-icon-size-small evo-icon-position-left" title="Blue Icon"></i>Blue Icon
 					</label>
 
-					<label class="col-4">
+					<label class="large-2 columns">
 						<i class="evo-icon-menu3 evo-icon-size-small evo-icon-color-gray-dark evo-icon-position-left" title="Gray Icon"></i>Gray Icon
 					</label>
 				</div>
 
 				<h3 class="evo-hdr-rule">Icons As Links</h3>
-				<div class="col-24 evo-margin-bottom">
-					<label class="col-4 first">
+				<div class="row evo-margin-bottom">
+					<label class="large-2 columns">
 						<a class="evo-icon-checkmark-circle evo-icon-size-small evo-icon-color-confirmation evo-icon-position-left" href="javascript:;" title="Positive Icon"></a>Positive Icon
 					</label>
 
-					<label class="col-4">
+					<label class="large-2 columns">
 						<a class="evo-icon-notification evo-icon-size-small evo-icon-color-error evo-icon-position-left" href="javascript:;" title="Negative Icon"></a>Negative Icon
 					</label>
 
-					<label class="col-4">
+					<label class="large-2 columns">
 						<a class="evo-icon-warning evo-icon-size-small evo-icon-color-attention evo-icon-position-left" href="javascript:;" title="Warning Icon"></a>Warning Icon
 					</label>
 
-					<label class="col-4">
+					<label class="large-2 columns">
 						<a class="evo-icon-question evo-icon-size-small evo-icon-color-info evo-icon-position-left" href="javascript:;" title="Info Icon"></a>Info Icon
 					</label>
 
-					<label class="col-4">
+					<label class="large-2 columns">
 						<a class="evo-icon-menu3 evo-icon-size-small evo-icon-position-left" href="javascript:;" title="Blue Icon"></a>Blue Icon
 					</label>
 
-					<label class="col-4">
+					<label class="large-2 columns">
 						<a class="evo-icon-menu3 evo-icon-size-small evo-icon-color-gray-dark evo-icon-position-left" href="javascript:;" title="Gray Icon"></a>Gray Icon
 					</label>
 				</div>
-				<div class="col-24 evo-margin-bottom">
-					<label class="col-4 first">
+				<div class="row evo-margin-bottom">
+					<label class="large-2 columns">
 						<a class="evo-icon-checkmark-circle evo-icon-size-small evo-icon-style-gradient-confirmation evo-icon-position-left" href="javascript:;" title="Positive Icon"></a>Positive Icon
 					</label>
 
-					<label class="col-4">
+					<label class="large-2 columns">
 						<a class="evo-icon-notification evo-icon-size-small evo-icon-style-gradient-error evo-icon-position-left" href="javascript:;" title="Negative Icon"></a>Negative Icon
 					</label>
 
-					<label class="col-4">
+					<label class="large-2 columns">
 						<a class="evo-icon-warning evo-icon-size-small evo-icon-style-gradient-attention evo-icon-position-left" href="javascript:;" title="Warning Icon"></a>Warning Icon
 					</label>
 
-					<label class="col-4">
+					<label class="large-2 columns">
 						<a class="evo-icon-question evo-icon-size-small evo-icon-style-gradient-info evo-icon-position-left" href="javascript:;" title="Info Icon"></a>Info Icon
 					</label>
 
-					<label class="col-4">
+					<label class="large-2 columns">
 						<a class="evo-icon-menu3 evo-icon-size-small evo-icon-style-gradient evo-icon-position-left" href="javascript:;" title="Blue Icon"></a>Blue Icon
 					</label>
 
-					<label class="col-4">
+					<label class="large-2 columns">
 						<a class="evo-icon-menu3 evo-icon-size-small evo-icon-style-gradient-gray-dark evo-icon-position-left" href="javascript:;" title="Gray Icon"></a>Gray Icon
 					</label>
 				</div>
 
 				<h3 class="evo-hdr-rule">Advanced Icons On Circle Shields</h3>
 				<h4>Small</h4>
-				<div class="col-24 evo-margin-bottom">
-					<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+				<div class="row evo-margin-bottom">
+					<div class="large-12">
+						<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+					</div>
 				</div>
 
 				<h4>Small Medium</h4>
-				<div class="col-24 evo-margin-bottom">
-					<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+				<div class="row evo-margin-bottom">
+					<div class="large-12">
+						<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+					</div>
 				</div>
 
 				<h4>Medium</h4>
-				<div class="col-24 evo-margin-bottom">
-					<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+				<div class="row evo-margin-bottom">
+					<div class="large-12">
+						<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+					</div>
 				</div>
 
 				<h4>Large</h4>
-				<div class="col-24 evo-margin-bottom">
-					<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+				<div class="row evo-margin-bottom">
+					<div class="large-12">
+						<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+					</div>
 				</div>
 
 				<h4>X-large</h4>
-				<div class="col-24 evo-margin-bottom">
-					<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+				<div class="row evo-margin-bottom">
+					<div class="large-12">
+						<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+					</div>
 				</div>
 
 				<h4>Small</h4>
-				<div class="col-24 evo-margin-bottom">
-					<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+				<div class="row evo-margin-bottom">
+					<div class="large-12">
+						<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+					</div>
 				</div>
 
 				<h4>Small Medium</h4>
-				<div class="col-24 evo-margin-bottom">
-					<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+				<div class="row evo-margin-bottom">
+					<div class="large-12">
+						<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+					</div>
 				</div>
 
 				<h4>Medium</h4>
-				<div class="col-24 evo-margin-bottom">
-					<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+				<div class="row evo-margin-bottom">
+					<div class="large-12">
+						<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+					</div>
 				</div>
 
 				<h4>Large</h4>
-				<div class="col-24 evo-margin-bottom">
-					<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+				<div class="row evo-margin-bottom">
+					<div class="large-12">
+						<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+					</div>
 				</div>
 
 				<h4>X-large</h4>
-				<div class="col-24 evo-margin-bottom">
-					<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+				<div class="row evo-margin-bottom">
+					<div class="large-12">
+						<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-adv-color-gray-dark evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+					</div>
 				</div>
 
 				<h4>Small</h4>
-				<div class="col-24 evo-margin-bottom">
-					<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+				<div class="row evo-margin-bottom">
+					<div class="large-12">
+						<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-small evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+					</div>
 				</div>
 
 				<h4>Small Medium</h4>
-				<div class="col-24 evo-margin-bottom">
-					<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+				<div class="row evo-margin-bottom">
+					<div class="large-12">
+						<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-small-medium evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+					</div>
 				</div>
 
 				<h4>Medium</h4>
-				<div class="col-24 evo-margin-bottom">
-					<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+				<div class="row evo-margin-bottom">
+					<div class="large-12">
+						<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-medium evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+					</div>
 				</div>
 
 				<h4>Large</h4>
-				<div class="col-24 evo-margin-bottom">
-					<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+				<div class="row evo-margin-bottom">
+					<div class="large-12">
+						<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-large evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+					</div>
 				</div>
 
 				<h4>X-large</h4>
-				<div class="col-24 evo-margin-bottom">
-					<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
-					<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+				<div class="row evo-margin-bottom">
+					<div class="large-12">
+						<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Contact Us"><i class="evo-icon-phone2"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Browse"><i class="evo-icon-mouse"></i></a>
+						<a class="evo-icon-adv evo-icon-adv-size-x-large evo-icon-adv-color-disabled evo-icon-position-left" href="javascript:;" title="Chat With Us"><i class="evo-icon-bubble"></i></a>
+					</div>
 				</div>
 		</div>
 	<!-- ICON FONT OPTIONS - ENDS -->
 
-	<!-- CUSTOM GRAPHIC ICONS - BEGINS -->
+	<!-- CUSTOM PHOTO ICONS - BEGINS -->
 		<div class="content" id="panel3">
 
-			<h3 class="evo-hdr-rule">Custom Graphic Icons</h3>
+			<section class="evo-spacer-margin-bottom-xxx-large">
+				<div class="evo-float-right">
+					<i class="evo-icon-folder-download"></i>
+					<a href="/assets/images/photo-icons/career/career-photo-icons.zip">Download</a>
+				</div>
+				<h3 class="evo-hdr-rule">Career Icons</h3>
+				<ul class="slarge-block-grid-9">
+				{% for item in model.photo-icons-career %}
+					<li><img src="/assets/images/photo-icons/career/{{ item.img-name }}" alt="" width="80" height="80" title="Client" /></li>
+				{% endfor %}
+				</ul>
+			</section>
 
-			<div class="evo-table-small-mediaquery">
-				<table class="evo-table evo-footable evo-table-borders evo-table-striped evo-table-hover" data-filter="#custom-graphic-icons-filter" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
-					<caption>
-						<div class="col-20 first">&nbsp;</div>
-						<div class="col-4 evo-tbl-data-filter">
-							<input id="custom-graphic-icons-filter" type="text" placeholder="Filter" tabindex="" title="Type to filter results." />
-						</div>
-					</caption>
-					<thead>
-						<tr>
-							<th class="color-col"><a href="javascript:;">Example</a></th>
-							<th><a href="javascript:;">Function</a></th>
-							<th><a href="javascript:;">File Name</a></th>
-							<th><a href="javascript:;">Size</a></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><img src="{{ "icon_client_large.png" | asset_url }}" alt="" width="49" height="49" title="Client" /></td>
-							<td>Client icon</td>
-							<td>icon_client_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_product_plan_large.png" | asset_url }}" alt="" width="49" height="49" title="Product Plan" /></td>
-							<td>Product plan icon</td>
-							<td>icon_product_plan_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_product_profile_large.png" | asset_url }}" alt="" width="49" height="49" title="Product Profile" /></td>
-							<td>Product profile icon</td>
-							<td>icon_product_profile_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_user_active_large.png" | asset_url }}" alt="" width="49" height="49" title="Active User" /></td>
-							<td>Generic user icon for an active or current user.</td>
-							<td>icon_user_active_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_user_dependent_large.png" | asset_url }}" alt="" width="49" height="49" title="Dependent User" /></td>
-							<td>Generic user icon used to denote a dependent to a primary user.</td>
-							<td>icon_user_dependent_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_user_generic_large.png" | asset_url }}" alt="" width="49" height="49" title="Inactive User" /></td>
-							<td>Generic user icon to be used when user image is not available. Can also denote an Inactive user.</td>
-							<td>icon_user_generic_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_user_termed_large.png" | asset_url }}" alt="" width="49" height="49" title="Terminated User" /></td>
-							<td>Generic user icon for a Termed. Can also be used to denote when an error condition occurs at a user level.</td>
-							<td>icon_user_termed_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_flag_australia_large.png" | asset_url }}" alt="" width="49" height="49" title="Australia" /></td>
-							<td>Australian Flag</td>
-							<td>icon_flag_australia_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_flag_brazil_large.png" | asset_url }}" alt="" width="49" height="49" title="Brazil" /></td>
-							<td>Brazlian Flag</td>
-							<td>icon_flag_brazil_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_flag_canada_large.png" | asset_url }}" alt="" width="49" height="49" title="Canada" /></td>
-							<td>Canadian Flag</td>
-							<td>icon_flag_canada_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_flag_chile_large.png" | asset_url }}" alt="" width="49" height="49" title="Chile" /></td>
-							<td>Chilean Flag</td>
-							<td>icon_flag_chile_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_flag_china_large.png" | asset_url }}" alt="" width="49" height="49" title="China" /></td>
-							<td>Chinese Flag</td>
-							<td>icon_flag_china_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_flag_germany_large.png" | asset_url }}" alt="" width="49" height="49" title="Germany" /></td>
-							<td>German Flag</td>
-							<td>icon_flag_germany_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_flag_india_large.png" | asset_url }}" alt="" width="49" height="49" title="India" /></td>
-							<td>Indian Flag</td>
-							<td>icon_flag_india_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_flag_israel_large.png" | asset_url }}" alt="" width="49" height="49" title="Israel" /></td>
-							<td>Israeli Flag</td>
-							<td>icon_flag_israel_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_flag_saudi_arabia_large.png" | asset_url }}" alt="" width="49" height="49" title="Saudi Arabia" /></td>
-							<td>Saudi Arabian Flag</td>
-							<td>icon_flag_saudi_arabia_large.png</td>
-							<td>49x49</td>
-						</tr>
-						<tr>
-							<td><img src="{{ "icon_flag_usa_large.png" | asset_url }}" alt="" width="49" height="49" title="U.S.A." /></td>
-							<td>American Flag</td>
-							<td>icon_flag_usa_large.png</td>
-							<td>49x49</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+			<section class="evo-spacer-margin-bottom-xxx-large">
+				<div class="evo-float-right">
+					<i class="evo-icon-folder-download"></i>
+					<a href="/assets/images/photo-icons/career/health-photo-icons.zip">Download</a>
+				</div>
+				<h3 class="evo-hdr-rule">Health Icons</h3>
+				<ul class="slarge-block-grid-9">
+				{% for item in model.photo-icons-health %}
+					<li><img src="/assets/images/photo-icons/health/{{ item.img-name }}" alt="" width="80" height="80" title="Client" /></li>
+				{% endfor %}
+				</ul>
+			</section>
 
+			<section>
+				<div class="evo-float-right">
+					<i class="evo-icon-folder-download"></i>
+					<a href="/assets/images/photo-icons/career/wealth-photo-icons.zip">Download</a>
+				</div>
+				<h3 class="evo-hdr-rule">Wealth Icons</h3>
+				<ul class="slarge-block-grid-9">
+				{% for item in model.photo-icons-wealth %}
+					<li><img src="/assets/images/photo-icons/wealth/{{ item.img-name }}" alt="" width="80" height="80" title="Client" /></li>
+				{% endfor %}
+				</ul>
+			</section>
 		</div>
-	<!-- CUSTOM GRAPHIC ICONS - ENDS -->
+	<!-- CUSTOM PHOTO ICONS - ENDS -->
 	</div>
 {% endblock %}

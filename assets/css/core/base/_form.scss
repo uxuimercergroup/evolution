@@ -8,7 +8,7 @@
 // @variables
 //
 $evo-base-input-shadow-color: $gray-lighter !default;
-$evo-input-focus-border-color: $topaz-mid !default;
+$evo-input-focus-border-color: $sapphire-light !default;
 $evo-form-placholder-font-color: #AAA !default;
 
 
@@ -16,36 +16,46 @@ $evo-form-placholder-font-color: #AAA !default;
 
 	[data-abide]			{
 		.error					{
-			label					{
-									color: $garnet-dark;
-				input,
-				select,
-				textarea				{border-color: $garnet-dark;}
-					small					{
-						[class^="evo-icon-"]	{color: $garnet-dark !important;}
-											}
-									}
+			label					{color: $garnet-dark;}
+			input,
+			select,
+			textarea				{border-color: $garnet-dark;}
+			input + label			{color: $body-font-color;}
 								}
 							}
 
 	form					{
 		.button					{
-								@media #{$small-up}		{margin-top: 3px;}
-								@media #{$medium-up}	{margin-top: 8px;}
-								@media #{$large-up}		{margin-top: 13px;}
+			@media #{$small-up}		{margin-top: 3px;}
+			@media #{$medium-up}	{margin-top: 8px;}
+			@media #{$large-up}		{margin-top: 13px;}
 								}
+		.evo-datepicker-first	{padding-left: 0 !important;}
+		.evo-datepicker-last	{padding-right: 0 !important;} /* TODO: Verify is this is the right way to do this - form.scss*/
 							}
 
 	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"],
+	input[type="text"][readonly],
 	select,
 	textarea				{
 							background-color: $white;
-							@include block-glowing-effect(
-								$glowing-effect-color: $evo-input-focus-border-color
-								);
+							@include block-glowing-effect($glowing-effect-color: $evo-input-focus-border-color);
 		&:hover					{
 								background-color: $white;
-								border-color: $topaz-mid;
+								border-color: $sapphire-light;
 								}
 		&:focus					{outline: 0;}
 							}
@@ -70,9 +80,17 @@ $evo-form-placholder-font-color: #AAA !default;
 													@include border-radius($global-radius);
 													@include box-shadow(inset 0, 1px, 1px, $evo-base-input-shadow-color);
 													font-family: $evo-font-regular-stack;
+													margin-top: rem-calc(3);
 													}
 
-	label											{font-family: $evo-font-medium-stack;}
+	label											{
+													font-family: $evo-font-medium-stack;
+													font-size: rem-calc(16);
+													/* TODO: Make sure this is the correct place for this. */
+		small											{
+			[class^="evo-icon-"]							{color: $garnet-dark !important;}
+														}
+													}
 
 	input[type="hidden"]							{display:none;}
 
@@ -82,11 +100,14 @@ $evo-form-placholder-font-color: #AAA !default;
 													position: relative;
 													}
 
-	input[type="radio"]								{top: rem-calc(1.4);}
-	input[type="checkbox"]							{top: rem-calc(1.4);}
+	input[type="checkbox"]							{top: rem-calc(-0.6);}
 
 	input[type="radio"] + label,
-	input[type="checkbox"] + label					{margin-left: rem-calc(.5);}
+	input[type="checkbox"] + label					{
+													color: $gray-dark !important; /* TODO: FInd this in the override vars */
+													font-family: $evo-font-regular-family;
+													margin-left: rem-calc(.5);
+													}
 
 
 	// PLACEHOLDER

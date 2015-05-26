@@ -35,10 +35,9 @@ $evo-table-total-font-color: $black !default;
 						overflow-y: hidden;
 						-ms-overflow-style: -ms-autohiding-scrollbar;
 						-webkit-overflow-scrolling: touch;
-						width: 100%;
 
 		.evo-table			{
-							min-width: 980px;
+							min-width: 768px;
 			th					{
 								border: $evo-table-border-width $evo-table-border-style $evo-table-border-header-color;
 								border-left: 0;
@@ -109,6 +108,11 @@ $evo-table-total-font-color: $black !default;
 		
 		@media #{$medium-up} {
 
+			.mul-table-small-mediaquery
+									{
+									width: 100%;
+				> table					{min-width: 100%;}
+									}
 
 		}
 		

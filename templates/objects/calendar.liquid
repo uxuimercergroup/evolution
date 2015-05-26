@@ -71,100 +71,92 @@
 	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
 		<section class="evo-ref-example-content">
 
-			<div class="col-24">
-				<div class="col-6 first">
-
+			<section class="row">
+				<div class="large-3 columns">
 				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-ref-example-box">
+					<div class="evo-box evo-ref-example-box">
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
-						{% endif %}
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
+					{% endif %}
 
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<form class="evo-form evo-form-inline" id="" name="" method="" action="" title="">
-								<fieldset>
-									<ol>
-										<li>{% include '/objects/calendar' %}</li>
-									</ol>
-								</fieldset>
-							</form>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<form>
+							<fieldset>
+								<div class="row">
+									{% include '/objects/calendar' %}
+								</div>
+							</fieldset>
+						</form>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 					</div>
 				<!-- EXAMPLE SECTION - BOX - ENDS -->
-					
 				</div>
-				<div class="col-6">
-
+				<div class="large-3 columns">
 				<!-- EXAMPLE SECTION - BOX - BEGINS -->
 					<div class="evo-box evo-box-rnd evo-ref-example-box">
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
-						{% endif %}
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
+					{% endif %}
 
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<form class="evo-form evo-form-inline" id="" name="" method="" action="" title="">
-								<fieldset>
-									<ol>
-										<li>{% include '/objects/calendar-date-input' %}</li>
-									</ol>
-								</fieldset>
-							</form>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<form>
+							<fieldset>
+								<div class="row">
+									{% include '/objects/calendar-date-input' %}
+								</div>
+							</fieldset>
+						</form>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
-					
+				<!-- EXAMPLE SECTION - BOX - ENDS -->					
 				</div>
-				<div class="col-6">
-
+				<div class="large-3 columns">
 				<!-- EXAMPLE SECTION - BOX - BEGINS -->
 					<div class="evo-box evo-box-rnd evo-ref-example-box">
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
-						{% endif %}
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
+					{% endif %}
 
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<form class="evo-form evo-form-inline" id="" name="" method="" action="" title="">
-								<fieldset>
-									<ol>
-										<li>{% include '/objects/calendar-message' %}</li>
-									</ol>
-								</fieldset>
-							</form>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<form>
+							<fieldset>
+								<div class="row">
+									{% include '/objects/calendar-message' %}
+								</div>
+							</fieldset>
+						</form>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 					</div>
 				<!-- EXAMPLE SECTION - BOX - ENDS -->
-					
 				</div>
-				<div class="col-6">
-
+				<div class="large-3 columns">
 				<!-- EXAMPLE SECTION - BOX - BEGINS -->
 					<div class="evo-box evo-box-rnd evo-ref-example-box">
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-4 }}</h4>
-						{% endif %}
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-4 }}</h4>
+					{% endif %}
 
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<form class="evo-form evo-form-inline" id="" name="" method="" action="" title="">
-								<fieldset>
-									<ol>
-										<li>{% include '/objects/calendar-date-input-masked' %}</li>
-									</ol>
-								</fieldset>
-							</form>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<form>
+							<fieldset>
+								<div class="row">
+									{% include '/objects/calendar-date-input-masked' %}
+								</div>
+							</fieldset>
+						</form>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 					</div>
 				<!-- EXAMPLE SECTION - BOX - ENDS -->
-					
 				</div>
-			</div>
+			</section>
 
 		</section>
 	<!-- EXAMPLE SECTION - CONTENT - ENDS -->

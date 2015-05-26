@@ -6,13 +6,22 @@
 
 @if $use-header == true{
 
+	.evo-header				{
+		.evo-header-adjust		{
+								position: relative;
+								}
+							}
+
 	.evo-masthead			{
 							@include background-gradient-horizontal($gray-light, $gray-lightest);
 
+	// LEFT COLUNM NAV ITEMS - BEGIN
 		.evo-left				{
 			h1						{margin: 0;}
 								}
+	// LEFT COLUNM NAV ITEMS - END
 
+	// RIGHT COLUNM NAV ITEMS - BEGIN
 		.evo-right				{
 								text-align: right;
 			.evo-profile-ctn		{									
@@ -28,7 +37,22 @@
 				.evo-title				{display: block;}
 									}
 								}
+	// RIGHT COLUNM NAV ITEMS - END
 
+	// MOBILE NAV MENU - BEGINS
+		.evo-mobile-menu		{
+								@include border-radius(rem-calc(4));
+								background-color: $gray-light;
+								height: rem-calc(28);
+								width: rem-calc(28);
+								float: right;
+								margin: rem-calc(12) rem-calc(10) rem-calc(0) rem-calc(0);
+								text-align: center;
+			[class*="evo-icon"]		{top: rem-calc(3);}
+								}
+	// MOBILE NAV MENU - ENDS
+
+	// MENU ITEMS - BEGIN
 		.f-dropdown:before,
 		.f-dropdown:after		{
 								display: none !important; // removes the arrow from mega menu that comes by default
@@ -55,8 +79,82 @@
 										}
 									}
 								}
+	// MENU ITEMS - END
 							}
 
+// MOBILE MENU CONTAINER - BEGIN
+/*
+	.evo-masthead			{
+							position: fixed;
+							width: 100%;
+							z-index: 10;
+							}
+*/
+	.evo-menu-viewport		{
+							position: fixed;
+							right: 0;
+							width: 100%;
+							display: block;
+							z-index: 10000;
+	
+		.evo-mb-menu-ctn		{
+								@include clearfix;
+								background-color: $gray-dark;
+								position: fixed;
+								z-index: 10;
+								top: rem-calc(50);
+								height: auto;
+								min-height: 100%;
+								margin: 0;
+								width: 100% !important;
+
+			// VERTICAL TABS - BEGIN
+				.evo-vertical-tabs	{
+									background-color: $black;
+									width: rem-calc(50);
+					li.tab-title		{
+										margin-right: 0;
+						a					{@include border-radius(0);}
+										}
+					li:last-child		{
+						a					{border-bottom: 1px solid $gray-light;}
+										}
+					li.active			{
+						a					{top: 0;}
+										}
+									}
+				.evo-tabs-content	{
+									@include border-radius(0);
+									background-color: $white;
+									border: 0;
+									position: absolute;
+									right: 0;
+									top: 0;
+									bottom: 0;
+									left: 50px;
+									padding-right: 33px;
+									overflow-y: auto;
+					.content			{
+					.evo-tier-2				{
+											list-style-type: none;
+											margin-left: 0;
+							li					{
+								a					{
+													border-bottom: 1px solid $gray-light;
+													display: block;
+													line-height: rem-calc(35);
+													text-decoration: none;
+													}
+												}
+											}
+										}
+									}
+			// VERTICAL TABS - END
+								}
+							}
+// MOBILE MENU CONTAINER - END
+
+// MEGA MENU - BEGIN
 	.evo-mega-menu			{
 		.f-dropdown:before,
 		.f-dropdown:after		{
@@ -64,14 +162,23 @@
 								}
 		.f-dropdown				{margin-top: 0;}
 		.f-open-dropdown		{
+								background-color: $gray-lighter;
+								border-left: 0;
+								border-right: 0;
+								border-top-width: 5px;
+								border-bottom-width: 5px;
+								border-top-color: $black;
+								border-bottom-color: $black;
+
 								left: 0px !important;
 								max-width: none;
 								}
 		.evo-mega-menu-ctn		{
-								@include box-shadow(0, 4px, 5px, $gray-light);
+								//@include box-shadow(0, 4px, 5px, $gray-light);
 								padding-bottom: 0;
 								}
 							}
+// MEGA MENU - END
 
 }// endif
 
@@ -82,7 +189,6 @@
 		
 	@media #{$medium-only} {
 
-
 	}// endif
 
 }// endif
@@ -92,7 +198,6 @@
 		
 	@media #{$large-only} {
 
-
 	}// endif
 
 }// endif
@@ -101,7 +206,6 @@
 @if $use-medium-up-mediaquery == true {
 		
 	@media #{$medium-up} {
-
 
 	}// endif
 

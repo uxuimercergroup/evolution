@@ -1,8 +1,26 @@
 //-------------------------------------------------------------------------------------------
 // Mercer Evolution - Core v2.3 - Global Helpers Partial
 // DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
+
+
+// @VARS
+// ------------------------------------------------------------------------------------------
+// KEYLINES
+$evo-keyline-right-border-right-color: 		$gray-mid !default;
+$evo-keyline-left-border-left-color:		$gray-mid !default;
+
+// SPACER SIZES
+$evo-spacer-size:							5px !default;
+$evo-spacer-xsmall:							($evo-spacer-size*1) !default;
+$evo-spacer-small:							($evo-spacer-size*2) !default;
+$evo-spacer-medium:							($evo-spacer-size*3) !default;
+$evo-spacer-large:							($evo-spacer-size*4) !default;
+$evo-spacer-xlarge:							($evo-spacer-size*5) !default;
+$evo-spacer-xxlarge:						($evo-spacer-size*6) !default;
+$evo-spacer-xxxlarge:						($evo-spacer-size*7) !default;
+
 
 // COLOR HELPERS
 // ------------------------------------------------------------------------------------------

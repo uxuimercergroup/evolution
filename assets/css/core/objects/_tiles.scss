@@ -13,8 +13,9 @@ $evo-tile-body-border-color: $gray-light !default;
 @if $use-tiles == true{
 
 	.evo-tile-ctn							{
-											@include panel($padding:20px 0 0 0);
+											@include panel($padding: 14px 0 0 0);
 											@include evo-box($box-radius:0,$hdr-bdr-btm-width:0,$box-border-color:$evo-tile-body-border-color);
+											position: relative;
 		// Custom tile border top color loop, gets color from global color palette
 		@each $color-name, $color in $color-palette 
 												{
@@ -24,28 +25,36 @@ $evo-tile-body-border-color: $gray-light !default;
 												}
 		.evo-tile-hdr-stripe					{
 												border-top: 5px solid $evo-tile-header-border-top-color;
-												position: relative;
-												top: rem-calc(-20);
-												margin: 0 auto;
+												position: absolute;
+												top: 0;
+												left: 0;
+												right: 0;
 												}
 		.evo-box-hdr							{
 												padding-left: rem-calc(13);
 												padding-right: rem-calc(10);
-			h1, h2, h3, h4, h5, h6					{margin-bottom: rem-calc(15);}
+			[class*="evo-icon-"]					{
+													cursor: pointer;
+													display: inline-block;
+													}
+			h1, h2, h3, h4, h5, h6					{margin-bottom: rem-calc(8);}
 												}
 		.evo-box-bdy							{
 												background-color: $evo-tile-body-background-color;
 												border-top: 1px solid $evo-tile-body-border-color;
-												margin-top: rem-calc(10);
+												display: none;
+												margin-top: rem-calc(8);
 												}
 		.evo-scroll-pane						{
 												height: $evo-tile-scroll-panel-height;
 			.mCSB_container							{padding: $evo-base-padding 0 0 $evo-base-padding;}
 												}
-
-		.evo-tile-default-expanded				{display: block;}
 											}
 
+	// 
+	.evo-title-ctn-expanded					{
+		.evo-box-bdy							{display: block;}
+											}
 
 	//=== MEDIA QUERIES =========================================================================
 
@@ -55,15 +64,18 @@ $evo-tile-body-border-color: $gray-light !default;
 		@media #{$medium-up} {
 
 			.evo-tile-ctn							{
-													@include panel($padding:20px);
+													@include panel($padding: 14px);
 													@include evo-box($box-radius:0,$hdr-bdr-btm-width:0,$box-border-color:$evo-tile-body-border-color);
-				.evo-tile-hdr-stripe					{margin: 0 rem-calc(-20);}
 				.evo-box-hdr							{
 														padding-left: rem-calc(1);
 														padding-right: rem-calc(0);
+					[class*="evo-icon-"]					{display: none;}
 					h1, h2, h3, h4, h5, h6					{margin-bottom: 0;}
 														}
-				.evo-box-bdy							{border: 1px solid $evo-tile-body-border-color;}
+				.evo-box-bdy							{
+														border: 1px solid $evo-tile-body-border-color;
+														display: block;
+														}
 													}
 		}
 

@@ -7,17 +7,17 @@
 // VARS **************************************************
 $evo-box-hdr-rule-size: 3px !default;
 $evo-box-hdr-rule-style: solid !default;
-$evo-box-hdr-rule-color: $gray-mid !default;
-$evo-box-hdr-rule-padding: 0 0 4px 0 !default;
+$evo-box-hdr-rule-color: $gray-mid-dark !default;
+$evo-box-hdr-rule-padding: 0 0 6px 0 !default;
 $evo-box-radius: $global-radius !default;
 $evo-box-border-width: 1px !default;
 $evo-box-border-style: solid !default;
-$evo-box-border-color: $gray-light !default;
+$evo-box-border-color: $gray-mid !default;
 
 $evo-vertical-shadow: 0 !default;
 $evo-horizontal-shadow: 3px !default;
 $evo-blur-shadow: 6px !default;
-$evo-color-shadow: $gray-light !default;
+$evo-color-shadow: $gray-mid !default;
 $evo-box-body-text-align: left !default;
 
 
@@ -39,6 +39,8 @@ $evo-box-body-text-align: left !default;
 	position: relative;
 	text-align: $box-text-align;
 		.evo-box-hdr			{
+								margin-bottom: 12px; /* TODO: Make this a variable */
+			// h1, h2, h3, h4, h5, h6	{margin-top: 0;}
 			.evo-hdr-rule			{
 									border-bottom: $hdr-bdr-btm-width $hdr-bdr-btm-style $hdr-bdr-btm-color;
 									padding: $hdr-rule-padding;
@@ -46,6 +48,7 @@ $evo-box-body-text-align: left !default;
 								}
 		.evo-box-bdy,
 		.evo-box-ftr			{padding-bottom: 1px;}
+		.evo-box-ftr			{margin-top: rem-calc(14);}
 	}
 
 // TODO: MOVE THIS FROM BOXES.SCSS TO HELPER.SCSS, MAKE IT GLOBAL
@@ -93,15 +96,22 @@ $evo-box-body-text-align: left !default;
 
 	// HIGHLIGHT CONTAINER
 	.evo-highlight-ctn			{
-								@include panel($bg:$warning-color);
-								@include evo-box($box-text-align:center);
+								@include panel($bg:#F7F0B2);
+								@include evo-box($box-text-align:center,$box-border-width:0);
 								}
 	
 	// INLINE SEARCH CONTAINER
 	.evo-inline-search-ctn		{
 								@include panel($bg:$boxInlineSearchBackgroundColor);
-								@include evo-box($box-radius:0,$box-border-style:dotted,$box-border-color:$boxInlineSearchBorderColor);
-		form						{margin-bottom: $evo-base-margin;}
+								@include evo-box($box-radius:0,$box-border-width:0);
+		form						{
+									margin-bottom: 0;
+			.evo-margin-reset			{
+				label,
+				input,
+				select						{margin-bottom: 0;}
+										}
+									}
 								}
 
 
