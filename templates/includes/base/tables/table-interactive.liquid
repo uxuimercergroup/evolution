@@ -12,7 +12,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			{% for item in global.browser_data %}
+		{% for item in global.browser_data %}
 			<tr>
 				<td scope="row" class="checkbox"><input type="checkbox" class="js-evo-select-all-checkbox-item"></td>
 				<td scope="row">{{ item.renderingEngine }}</td>
@@ -21,7 +21,7 @@
 				<td scope="row" class="text-center">{{ item.engine }}</td>
 				<td scope="row" class="text-center">{{ item.cssGrade }}</td>
 			</tr>
-			{% endfor %}
+		{% endfor %}
 		</tbody>
 	</table>
 </div>
