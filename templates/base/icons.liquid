@@ -31,6 +31,7 @@
 		<li class="tab-title active"><a href="#panel1">Icon Font</a></li>
 		<li class="tab-title"><a href="#panel2">Icon Font Options</a></li>
 		<li class="tab-title"><a href="#panel3">Photo Icons</a></li>
+		<li class="tab-title"><a href="#panel4">Vector Icons</a></li>
 	</ul>
 	<div class="tabs-content evo-tabs-content">
 	<!-- ICON FONT ICONS - BEGINS -->
@@ -505,5 +506,38 @@
 			</section>
 		</div>
 	<!-- CUSTOM PHOTO ICONS - ENDS -->
+
+	<!-- VECTOR ICONS - BEGINS -->
+		<div class="content" id="panel4">
+
+			<section class="evo-spacer-margin-bottom-xxx-large">
+				<h3 class="evo-hdr-rule">Career Icons</h3>
+				<ul class="slarge-block-grid-9">
+				{% for item in model.vector-icons-career %}
+					<li><img src="/assets/images/vector-icons/career/{{ item.img-name }}" alt="" width="80" height="80" title="" /></li>
+				{% endfor %}
+				</ul>
+			</section>
+
+			<section class="evo-spacer-margin-bottom-xxx-large">
+				<h3 class="evo-hdr-rule">Health Icons</h3>
+				<ul class="slarge-block-grid-9">
+				{% for item in model.vector-icons-health %}
+					<li><img src="/assets/images/vector-icons/health/{{ item.img-name }}" alt="" width="80" height="80" title="" /></li>
+				{% endfor %}
+				</ul>
+			</section>
+
+			<section class="evo-spacer-margin-bottom-xxx-large">
+				<h3 class="evo-hdr-rule">Wealth Icons</h3>
+				<ul class="slarge-block-grid-9">
+				{% for item in model.vector-icons-wealth %}
+					<li><img src="/assets/images/vector-icons/wealth/{{ item.img-name }}" alt="" width="80" height="80" title="" /></li>
+				{% endfor %}
+				</ul>
+			</section>
+
+		</div>
+	<!-- VECTOR ICONS - ENDS -->
 	</div>
 {% endblock %}

@@ -70,26 +70,20 @@
 
 		<!-- INTERACTIVE DATA TABLE - EXAMPLE - BEGINS -->
 			<div class="js-evo-toggle-content evo-display-none col-24 first evo-margin-top" id="div102">
-				
+
 				<div class="evo-table-small-mediaquery">
-					<table class="evo-table evo-footable evo-table-pagination evo-table-borders evo-table-striped evo-table-hover" data-filter="#filter" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
-						<caption>
-							<div class="col-19 first">
-								{% include "/objects/mini-filter" %}
-							</div>
-							<div class="col-5 evo-tbl-data-filter">
-								<input id="filter" type="text" tabindex="" title="Type to filter results." placeholder="Filter">
-							</div>
-						</caption>
+					<div style="float: left; position: relative; top: 16px;">
+						{% include "/objects/mini-filter" %}
+					</div>
+					<table cellpadding="0" cellspacing="0" border="0" class="tdisplay evo-table evo-table-hover" id="evo-datatble-filter-only-example">
 						<thead>
 							<tr>
-								<th class="col-10" data-sort-initial="true" scope="col"><a href="javascript:;">First Name</a></th>
-								<th class="col-10" scope="col"><a href="javascript:;">Clients</a></th>
-								<th class="col-4 evo-align-right" scope="col"><a href="javascript:;">Policies</a></th>
+								<th scope="column"><a href="javascript:;">First Name</a></th>
+								<th scope="column" class="text-center"><a href="javascript:;">Clients</a></th>
+								<th scope="column" class="evo-align-right"><a href="javascript:;">Policies</a></th>
 							</tr>
 						</thead>
 						<tbody>
-							
 							{% for item in global.table_data %}
 							<tr>
 								<td>{{ item.first_name }}</td>
@@ -97,8 +91,8 @@
 								<td class="evo-align-right">{{ item.num_of }}</td>
 							</tr>
 							{% endfor %}
-
 						</tbody>
+						<!--
 						<tfoot>
 							<tr class="evo-subtotal-row">
 								<td class="evo-align-right" colspan="2">Subtotal</td>
@@ -109,9 +103,9 @@
 								<td class="evo-align-right">23</td>
 							</tr>
 						</tfoot>
+						-->
 					</table>
 				</div>
-
 			</div>
 		<!-- INTERACTIVE DATA TABLE - EXAMPLE - ENDS -->
 

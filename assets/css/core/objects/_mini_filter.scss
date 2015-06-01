@@ -7,7 +7,7 @@
 
 // @VARS
 // ------------------------------------------------------------------------------------------
-$evo-mini-filter-active-padding-left-right: 4px !default;
+$evo-mini-filter-active-padding-left-right: 7px !default;
 $evo-mini-filter-active-bgcolor: $topaz-light !default;
 $evo-mini-filter-active-font-color: $black !default;
 
@@ -30,7 +30,7 @@ $miniFilterDropDownMaxWidth:				300px !default;
 		.evo-mini-filter-active					{
 												background-color: $evo-mini-filter-active-bgcolor;
 												color: $evo-mini-filter-active-font-color;
-												padding: 0 $evo-mini-filter-active-padding-left-right 1px $evo-mini-filter-active-padding-left-right;
+												padding: 1px $evo-mini-filter-active-padding-left-right 2px $evo-mini-filter-active-padding-left-right;
 												text-decoration: none;
 			&:hover									{
 													cursor: default;

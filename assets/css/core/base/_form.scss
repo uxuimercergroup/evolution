@@ -84,15 +84,16 @@ $evo-form-placholder-font-color: #AAA !default;
 													}
 
 	label											{
-													font-family: $evo-font-medium-stack;
-													font-size: rem-calc(16);
+													font-family: $evo-font-medium-family;
+													//font-weight: bold;
+													font-size: rem-calc(17);
 													/* TODO: Make sure this is the correct place for this. */
 		small											{
 			[class^="evo-icon-"]							{color: $garnet-dark !important;}
 														}
 													}
 
-	input[type="hidden"]							{display:none;}
+	input[type="hidden"]							{display: none;}
 
 	input[type="radio"],
 	input[type="checkbox"]							{
@@ -106,6 +107,7 @@ $evo-form-placholder-font-color: #AAA !default;
 	input[type="checkbox"] + label					{
 													color: $gray-dark !important; /* TODO: FInd this in the override vars */
 													font-family: $evo-font-regular-family;
+													font-weight: normal;
 													margin-left: rem-calc(.5);
 													}
 
@@ -113,19 +115,19 @@ $evo-form-placholder-font-color: #AAA !default;
 	// PLACEHOLDER
 	
 	// Webkit
-	::-webkit-input-placeholder						{color: $evo-form-placholder-font-color;}
+	::-webkit-input-placeholder						{color: $evo-form-placholder-font-color; font-weight: normal !important;}
 
 	// Firefox 4-18
-	:-moz-placeholder								{color: $evo-form-placholder-font-color;}
+	:-moz-placeholder								{color: $evo-form-placholder-font-color; font-weight: normal !important;}
 
 	// Firefox 19+
-	::-moz-placeholder								{color: $evo-form-placholder-font-color;}
+	::-moz-placeholder								{color: $evo-form-placholder-font-color; font-weight: normal !important;}
 
 	// IE10+
-	:-ms-input-placeholder							{color: $evo-form-placholder-font-color !important;}
+	:-ms-input-placeholder							{color: $evo-form-placholder-font-color !important; font-weight: normal !important;}
 	
 	// IE9
-	.placeholder									{color: $evo-form-placholder-font-color !important;}
+	.placeholder									{color: $evo-form-placholder-font-color !important; font-weight: normal !important;}
 
 	//=== MEDIA QUERIES =========================================================================
 

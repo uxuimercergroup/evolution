@@ -113,7 +113,10 @@ $evo-table-total-font-color: $black !default;
 			.evo-table-small-mediaquery
 									{
 									width: 100%;
-				> table					{min-width: 100%;}
+				> table					{
+										min-width: 100%;
+										width: 100%;
+										}
 									}
 
 		}

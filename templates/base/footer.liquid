@@ -54,7 +54,20 @@
 		<section class="evo-ref-example-content">
 
 		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-			{% include "/base/default-footer" %}
+		<footer class="evo-footer">
+			<div class="row collapse evo-footer-border-top">
+				<div class="small-12 medium-12 large-4 columns">
+					<img src="{{ "mercer_logo_126x18.png" | asset_url }}" alt="Mercer" width="126" height="18" />
+				</div>
+				<div class="small-12 medium-12 large-8 columns">
+					<ul class="evo-inline-list evo-inline-list-pipes right">
+						<li>Contact Us</li>
+						<li>Privacy Policy</li>
+						<li>Terms of Use</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 		</section>
