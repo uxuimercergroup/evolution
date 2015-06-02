@@ -8,13 +8,13 @@
 $evo-summary-ctn-margin-bottom: $evo-base-margin !default;
 $evo-summary-ctn-cell-width: 1px !default;
 $evo-summary-ctn-cell-style: dotted !default;
-$evo-summary-ctn-cell-color: $gray-light !default;
+$evo-summary-ctn-cell-color: $gray-mid-dark !default;
 $evo-summary-ctn-cell-border-top-color: $white !default;
 $evo-summary-ctn-cell-border-bottom-color: $white !default;
 $evo-summary-ctn-cell-padding-top: rem-calc(10) !default;
 $evo-summary-ctn-cell-border-width: 1px !default;
 $evo-summary-ctn-cell-border-style: dotted !default;
-$evo-summary-ctn-cell-border-color: $gray-light !default;
+$evo-summary-ctn-cell-border-color: $gray-mid-dark !default;
 $evo-summary-cell-text-icon-font-size: rem-calc(44) !default;
 $evo-summary-cell-text-support-font-size: (1rem - rem-calc(3)) !default;
 $evo-summary-cell-text-alignment: center !default;
@@ -33,55 +33,43 @@ $evo-secondary-summary-cell-font-size: rem-calc(32) !default;
 @if $use-summary-containers == true{
 
 	// SUMMARY CONTAINER
-	.evo-summary-ctn						{
-											margin-bottom: $evo-summary-ctn-margin-bottom;
-		ul										{
-												margin: 0;
-			li										{
-													border: $evo-summary-ctn-cell-width $evo-summary-ctn-cell-style $evo-summary-ctn-cell-color;
-													border-left: 0;
-													border-top-color: $evo-summary-ctn-cell-border-top-color;
-													border-bottom-color: $evo-summary-ctn-cell-border-bottom-color;
-
-													cursor: pointer;
-													padding-top: $evo-summary-ctn-cell-padding-top;
-
-				&:first-child							{border-left: $evo-summary-ctn-cell-border-width $evo-summary-ctn-cell-border-style $evo-summary-ctn-cell-border-color;}
+	.evo-summary-ctn					{
+										margin-bottom: $evo-summary-ctn-margin-bottom;
+		ul									{
+											margin: 0;
+			li									{
+												border: $evo-summary-ctn-cell-width $evo-summary-ctn-cell-style $evo-summary-ctn-cell-color;
+												border-top: 0;
+												cursor: pointer;
+												padding-top: $evo-summary-ctn-cell-padding-top;
+				&:first-child						{border-top: $evo-summary-ctn-cell-width $evo-summary-ctn-cell-style $evo-summary-ctn-cell-color;}
 				.evo-main-text,
-				.evo-support-text						{
-														display: block;
-														text-align: $evo-summary-cell-text-alignment;
-														}
+				.evo-support-text					{
+													display: block;
+													text-align: $evo-summary-cell-text-alignment;
+													}
 				.evo-main-text,
-				[class*="evo-icon-"]					{font-size: $evo-summary-cell-text-icon-font-size;}
-				.evo-support-text						{font-size: $evo-summary-cell-text-support-font-size;}
+				[class*="evo-icon-"]				{font-size: $evo-summary-cell-text-icon-font-size;}
+				.evo-support-text					{font-size: $evo-summary-cell-text-support-font-size;}
 				[class*="evo-icon-"],
-				a										{
-														color: $body-font-color;
-														text-decoration: none;
-														}
-				&:hover									{
-														@include transition(background-color $evo-summary-cell-hover-transition-time ease-in-out);
-														background-color: $evo-summary-cell-hover-background-color;
-														border-top-color: $evo-summary-cell-hover-border-top-color;
-														border-bottom-color: $evo-summary-cell-hover-border-bottom-color;
-														}
+				a									{
+													color: $body-font-color;
+													text-decoration: none;
 													}
 												}
-			.evo-summary-alert					{
-												color: $evo-summary-cell-alert-font-color;
-				[class*="evo-icon-"],
-				a									{color: $evo-summary-cell-alert-icon-color;}
-				&:hover								{background-color: $evo-summary-cell-alert-hover-background-color;}
-												}
-			.evo-summary-positive				{
-												color: $evo-summary-cell-positive-font-color;
-				[class*="evo-icon-"],
-				a									{color: $evo-summary-cell-positive-icon-color;}
-				&:hover								{background-color: $evo-summary-cell-positive-hover-background-color;}
-												}
-
 											}
+			.evo-summary-alert				{
+											color: $evo-summary-cell-alert-font-color;
+				[class*="evo-icon-"],
+				a								{color: $evo-summary-cell-alert-icon-color;}
+											}
+			.evo-summary-positive			{
+											color: $evo-summary-cell-positive-font-color;
+				[class*="evo-icon-"],
+				a								{color: $evo-summary-cell-positive-icon-color;}
+											}
+
+										}
 
 	// SECONDARY SUMMARY CONTAINER
 	.evo-secondary-summary-ctn				{
@@ -101,19 +89,34 @@ $evo-secondary-summary-cell-font-size: rem-calc(32) !default;
 		@media #{$medium-up} {
 
 			// SUMMARY CONTAINER
-/*
-			.evo-summary-ctn						{
-				ul										{
-					li										{
-															border: $evo-summary-ctn-cell-width $evo-summary-ctn-cell-style $evo-summary-ctn-cell-color;
-															border-left: 0;
+			.evo-summary-ctn					{
+				ul									{
+					li									{
+														border: $evo-summary-ctn-cell-width $evo-summary-ctn-cell-style $evo-summary-ctn-cell-color;
+														border-left: 0;
+														border-top-color: $evo-summary-ctn-cell-border-top-color;
+														border-bottom-color: $evo-summary-ctn-cell-border-bottom-color;
+						&:first-child						{
 															border-top-color: $evo-summary-ctn-cell-border-top-color;
-															border-bottom-color: $evo-summary-ctn-cell-border-bottom-color;
-						&:first-child							{border-left: $evo-summary-ctn-cell-border-width $evo-summary-ctn-cell-border-style $evo-summary-ctn-cell-border-color;}
+															border-left: $evo-summary-ctn-cell-border-width $evo-summary-ctn-cell-border-style $evo-summary-ctn-cell-border-color;
+															}
+						&:hover								{
+															@include transition(background-color $evo-summary-cell-hover-transition-time ease-in-out);
+															background-color: $evo-summary-cell-hover-background-color;
+															border-top-color: $evo-summary-ctn-cell-color;
+															border-bottom-color: $evo-summary-ctn-cell-color;
 															}
 														}
 													}
-*/
+
+					.evo-summary-alert				{
+						&:hover							{background-color: $evo-summary-cell-alert-hover-background-color;}
+													}
+					.evo-summary-positive			{
+						&:hover							{background-color: $evo-summary-cell-positive-hover-background-color;}
+													}
+
+												}
 
 		}
 

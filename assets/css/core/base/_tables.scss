@@ -7,22 +7,17 @@
 // @VARS
 $evo-table-border-width: rem-calc(1) !default;
 $evo-table-border-style: solid !default;
-
 $evo-table-border-header-color: $white !default;
 $evo-table-border-color: $white !default; /* TODO: Fix to be final, seems to match up with a foundation one tables.scss */
-
 $evo-table-header-padding: rem-calc(12) rem-calc(10) rem-calc(11) rem-calc(10) !default;
 
 // OPTIONS
 $evo-table-row-hover-color: $gray-mid-light !default;
-
 $evo-table-subheader-bg-color: #E8F0F7 !default;
 $evo-table-subheader-font-color: $gray-darker !default;
 $evo-table-subheader-border-color: #C3D2E5 !default;
-
 $evo-table-subtotal-bg-color: $gray-lighter !default;
 $evo-table-subtotal-font-color: $gray-darker !default;
-
 $evo-table-total-bg-color: #E6E6E6 !default;
 $evo-table-total-font-color: $black !default;
 
@@ -41,15 +36,16 @@ $evo-table-total-font-color: $black !default;
 			th					{
 								border: $evo-table-border-width $evo-table-border-style $evo-table-border-header-color;
 								border-left: 0;
+								color: $white;  /* TODO: Fix this to be final tables.scss */
 								font-family: $evo-font-regular-family !important; /* TODO: Fix this to be final tables.scss */
 								padding: $evo-table-header-padding;
 								vertical-align: bottom;
-				&:hover				{text-decoration: underline;}
 				&:first-child		{border-left: $evo-table-border-width $evo-table-border-style $evo-table-border-header-color;}
 				a					{
 									color: $white !important; /* TODO: Fix this to be final tables.scss */
+									display: block;
 									text-decoration: none;
-					&:hover				{text-decoration: none;}
+					&:hover				{text-decoration: underline;}
 									}
 								}
 			td					{border: $evo-table-border-width $evo-table-border-style $evo-table-border-color;}

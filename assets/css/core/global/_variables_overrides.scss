@@ -1027,26 +1027,30 @@ $topbar-link-bg-active: $sapphire-dark;
 
 // SUMMARY CONTAINER
 // ------------------------------------------------------------------------------------------
-// $summaryCtnBorderSize:					1px;
-// $summaryCtnBorderStyle:					dotted;
-// $summaryCtnPadding:						10px;
-// $summaryPrimaryCtnIconFontSize:			40px;
-// $summarySecondaryCtnIconFontSize:		30px;
-
-// $summaryCtnBorderColor:					$gray-darker;
-// $summaryCtnBorderColorTop:				$transparent;
-// $summaryCtnBorderColorBottom:			$transparent;
-// $summaryCtnBorderColorLeft:				$transparent;
-// $summaryCtnBorderFirstChildColorTop:		$gray-darker;
-// $summaryCtnBorderFirstChildColorLeft:	$gray-darker;
-// $summaryCtnBorderHoverTransitionSpeed:	250ms;
-// $summaryCtnBorderHoverBackgroundColor:	$tan-light;
-// $summaryCtnBorderHoverBorderTopColor:	$gray-darker;
-// $summaryCtnBorderHoverBorderBottomColor:	$gray-darker;
-// $summaryCtnAlertNegativeFontColor:		$garnet;
-// $summaryCtnAlertNegativeHoverBackgroundColor: $garnet-light;
-// $summaryCtnAlertPositiveFontColor:		$emerald;
-// $summaryCtnAlertPositiveHoverBackgroundColor: $emerald-light;
+// $evo-summary-ctn-margin-bottom: $evo-base-margin !default;
+// $evo-summary-ctn-cell-width: 1px !default;
+// $evo-summary-ctn-cell-style: dotted !default;
+// $evo-summary-ctn-cell-color: $gray-mid-dark !default;
+// $evo-summary-ctn-cell-border-top-color: $white !default;
+// $evo-summary-ctn-cell-border-bottom-color: $white !default;
+// $evo-summary-ctn-cell-padding-top: rem-calc(10) !default;
+// $evo-summary-ctn-cell-border-width: 1px !default;
+// $evo-summary-ctn-cell-border-style: dotted !default;
+// $evo-summary-ctn-cell-border-color: $gray-mid-dark !default;
+// $evo-summary-cell-text-icon-font-size: rem-calc(44) !default;
+// $evo-summary-cell-text-support-font-size: (1rem - rem-calc(3)) !default;
+// $evo-summary-cell-text-alignment: center !default;
+// $evo-summary-cell-hover-background-color: $topaz-light !default;
+// $evo-summary-cell-hover-border-top-color: $gray-light !default;
+// $evo-summary-cell-hover-border-bottom-color: $gray-light !default;
+// $evo-summary-cell-hover-transition-time: 400ms !default;
+// $evo-summary-cell-alert-font-color: $garnet-dark !default;
+// $evo-summary-cell-alert-icon-color: $garnet-dark !default;
+// $evo-summary-cell-alert-hover-background-color: $garnet-light !default;
+// $evo-summary-cell-positive-font-color: $emerald-dark !default;
+// $evo-summary-cell-positive-icon-color: $emerald-dark !default;
+// $evo-summary-cell-positive-hover-background-color: $emerald-light !default;
+// $evo-secondary-summary-cell-font-size: rem-calc(32) !default;
 
 
 // TABS
