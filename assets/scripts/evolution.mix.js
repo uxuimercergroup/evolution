@@ -68,9 +68,8 @@
 @import "core/lib/jquery/plugins/jquery.ui.touch-punch.js"; // Enables the use of touch events on sites using the jQuery UI user interface library, https://github.com/furf/jquery-ui-touch-punch
 
 // jQuery Component plugins
-@import "core/lib/jquery/plugins/footable.js"; // Marked for removal (DataTables.js replaces)
-@import "core/lib/jquery/plugins/footable.filter.js"; // Marked for removal (DataTables.js replaces)
-@import "core/lib/jquery/plugins/footable.sort.js"; // Marked for removal (DataTables.js replaces)
+@import "core/lib/jquery/plugins/jquery.dataTables.js";
+@import "core/lib/jquery/plugins/datatables.foundation.js";
 @import "core/lib/jquery/plugins/jquery.maskedinput.js";
 @import "core/lib/jquery/plugins/jquery.mousewheel.js";
 @import "core/lib/jquery/plugins/jquery.mCustomScrollbar.js";
@@ -115,10 +114,7 @@
 // @import "core/objects/profile_containers.js"; // Marked for removal (Foundation replaces)
 @import "core/objects/scroll_pane.js";
 @import "core/objects/slider.js";
-@import "core/objects/tables.js"; // Marked for removal Replaced with DataTables.js stuff
+// @import "core/objects/tables.js"; // Marked for removal Replaced with DataTables.js stuff
 // @import "core/objects/tabs.js"; // Marked for removal (Foundation replaces)
 // @import "core/objects/tooltip.js"; // Marked for removal (Foundation replaces)
 @import "core/objects/top_bar.js";
-
-@import "core/lib/datatables/jquery.dataTables.js";
-@import "core/lib/datatables/datatables.foundation.js";

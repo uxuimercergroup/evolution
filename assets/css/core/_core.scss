@@ -17,6 +17,7 @@
 // NORMALIZE..................Reset all default browser styles to zero
 // FOUNDATION SETTINGS........Partial for calling in Foundation settings and functions
 // FOUNDATION.................Partial for calling in Foundation components
+// FOUNDATION DATATABLES......Partial for DataTables for Foundation
 
 // GLOBAL
 //-------------------------------------------------------------------------------------------
@@ -74,11 +75,9 @@
 		"foundation/normalize",
 		"foundation/foundation/settings",
 		"foundation/foundation",
+		"foundation/plugins/datatables_foundation",
 
 		"global/variables",
-
-		"datatables/datatables-foundation",
-
 		"global/functions",
 		"global/mixins",
 		"global/helpers",

@@ -69,7 +69,7 @@ $evo-table-total-font-color: $black !default;
 		.evo-subtotal-row,
 		.evo-total-row			{
 								font-family: $evo-font-medium-stack;
-	td								{border-top: $evo-table-border-width $evo-table-border-style $evo-table-border-color;}
+			td						{border-top: $evo-table-border-width $evo-table-border-style $evo-table-border-color;}
 								}
 		.evo-subtotal-row		{
 			td						{
@@ -87,12 +87,13 @@ $evo-table-total-font-color: $black !default;
 							}
 
 		// ADVANCED FILTER ICON PLACEMENT
-		.dataTables_filter		{
-			[class*="evo-icon-"]	{
-									float: right;
-									margin: rem-calc(9) 0 0 rem-calc(8);
-									}
+		.dataTables_filter	{
+			[class*="evo-icon-"]
+								{
+								float: right;
+								margin: rem-calc(9) 0 0 rem-calc(8);
 								}
+							}
 
 		.evo-table-hover tbody tr:hover > td
 							{background-color: $evo-table-row-hover-color;}
@@ -107,13 +108,13 @@ $evo-table-total-font-color: $black !default;
 		@media #{$medium-up} {
 
 			.evo-table-small-mediaquery
-									{
-									width: 100%;
-				> table					{
-										min-width: 100%;
-										width: 100%;
-										}
-									}
+						{
+						width: 100%;
+				> table		{
+							min-width: 100%;
+							width: 100%;
+							}
+						}
 
 		}
 		
