@@ -1,7 +1,7 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.6 - Base JS Functions
-// DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// Mercer Evolution - Core v2.7 - Base JS Functions
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
 //--------------------------------------------------------------------------------------------------------
 
 // BUTTONS

@@ -1,7 +1,7 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.6 - Slider JS
-// DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// Mercer Evolution - Core v2.7 - Slider JS
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
 //--------------------------------------------------------------------------------------------------------
 
 // Define slider defaults

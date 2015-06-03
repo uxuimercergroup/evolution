@@ -1,6 +1,6 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.6 - Alternate Views Badge JS
-// DATE - January 13, 2015
+// Mercer Evolution - Core v2.7 - Alternate Views Badge JS
+// DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 //--------------------------------------------------------------------------------------------------------
 

@@ -1,7 +1,7 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.6 - Carousel JS
-// DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// Mercer Evolution - Core v2.7 - Carousel JS
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
 //--------------------------------------------------------------------------------------------------------
 
 // Extends jQuery OwlCarousel v1.3.3

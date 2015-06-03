@@ -1,7 +1,7 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.6 - Foundation - Off Canvas JS
-// DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// Mercer Evolution - Core v2.7 - Foundation - Off Canvas JS
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
 //--------------------------------------------------------------------------------------------------------
 
 $(document).foundation({

@@ -1,7 +1,7 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.6 - Core JS
-// DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// Mercer Evolution - Core v2.7 - Core JS
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
 //--------------------------------------------------------------------------------------------------------
 
 // =======================================================================================================
@@ -115,7 +115,7 @@
 // @import "core/objects/profile_containers.js"; // Marked for removal (Foundation replaces)
 @import "core/objects/scroll_pane.js";
 @import "core/objects/slider.js";
-@import "core/objects/tables.js"; // Replaced with DataTables.js stuff
+@import "core/objects/tables.js"; // Marked for removal Replaced with DataTables.js stuff
 // @import "core/objects/tabs.js"; // Marked for removal (Foundation replaces)
 // @import "core/objects/tooltip.js"; // Marked for removal (Foundation replaces)
 @import "core/objects/top_bar.js";

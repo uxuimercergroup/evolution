@@ -1,12 +1,13 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.3 - Global Helpers Partial
-// DATE - January 13, 2015
+// Mercer Evolution - Core v2.7 - Global Helpers Partial
+// DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
 
 // @VARS
 // ------------------------------------------------------------------------------------------
+
 // KEYLINES
 $evo-keyline-right-border-right-color: 		$gray-mid !default;
 $evo-keyline-left-border-left-color:		$gray-mid !default;
@@ -291,16 +292,6 @@ img										{
 .evo-spacer-padding-left-x-large		{padding-left: $evo-spacer-xlarge !important;}
 .evo-spacer-padding-left-xx-large		{padding-left: $evo-spacer-xxlarge !important;}
 .evo-spacer-padding-left-xxx-large		{padding-left: $evo-spacer-xxxlarge !important;}
-
-
-// TABLE COLUMN WIDTHS ADJUSTS (PERCENTAGES)
-.evo-tbl-column-50						{width: #{tableColWidth(50)};} // Width of 50%, Halves
-.evo-tbl-column-33						{width: #{tableColWidth(33.3)};} // Width of 33.3%, Thirds
-.evo-tbl-column-25						{width: #{tableColWidth(25)};} // Width of 25%, Quarters
-.evo-tbl-column-20						{width: #{tableColWidth(20)};} // Width of 20%, Fifths
-.evo-tbl-column-16						{width: #{tableColWidth(16.6)};} // Width of 16.6%, Sixths
-.evo-tbl-column-14						{width: #{tableColWidth(14.2)};} // Width of 14.2%, Sevenths
-.evo-tbl-column-12						{width: #{tableColWidth(12.5)};} // Width of 12.5%, Eighths
 
 
 // RESPONSIVE HELPERS
