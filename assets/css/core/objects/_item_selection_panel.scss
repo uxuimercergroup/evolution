@@ -6,15 +6,22 @@ AUTHOR - Doug Fraize, Matthew Holmes
 
 //
 // @variables
+//
 $evo-item-selection-panel-align: center !default;
+
 $evo-item-selection-panel-container-color: $gray-dark !default;
+
 $evo-item-selection-panel-container-img-border-radius: 100% !default;
 $evo-item-selection-panel-container-img-border-width: rem-calc(3) !default;
 $evo-item-selection-panel-container-img-border-style: solid !default;
 $evo-item-selection-panel-container-img-border-color: $gray-lighter !default;
 $evo-item-selection-panel-container-img-padding: rem-calc(3) !default;
+$evo-item-selection-panel-container-img-width: rem-calc(80);
+$evo-item-selection-panel-container-img-height: rem-calc(80);
+
 $evo-item-selection-panel-container-item-label-font-size: rem-calc(14) !default;
 $evo-item-selection-panel-container-item-label-margin-top: rem-calc(5) !default;
+
 $evo-item-selection-panel-container-category-highlight-img-h-shadow: rem-calc(0) !default;
 $evo-item-selection-panel-container-category-highlight-img-v-shadow: rem-calc(2) !default;
 $evo-item-selection-panel-container-category-highlight-img-blur: rem-calc(6) !default;
@@ -36,6 +43,8 @@ $evo-item-selection-panel-container-category-highlight-img-border-color: $topaz-
 														@include border-radius($evo-item-selection-panel-container-img-border-radius);
 														border: $evo-item-selection-panel-container-img-border-width $evo-item-selection-panel-container-img-border-style $evo-item-selection-panel-container-img-border-color;
 														padding: $evo-item-selection-panel-container-img-padding;
+														width: $evo-item-selection-panel-container-img-width;
+														height: $evo-item-selection-panel-container-img-height;
 														}
 					span								{
 														display: block;

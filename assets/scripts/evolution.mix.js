@@ -111,7 +111,6 @@
 // @import "core/objects/profile_containers.js"; // Marked for removal (Foundation replaces)
 @import "core/objects/scroll_pane.js";
 @import "core/objects/slider.js";
-// @import "core/objects/tables.js"; // Marked for removal Replaced with DataTables.js stuff
 // @import "core/objects/tabs.js"; // Marked for removal (Foundation replaces)
 // @import "core/objects/tooltip.js"; // Marked for removal (Foundation replaces)
 @import "core/objects/top_bar.js";

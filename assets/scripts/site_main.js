@@ -22,6 +22,13 @@
 		});
 	};
 
+	// ITEM SELECTION CLASS TOGGLE
+	var evoItemSelectionClassToggle = function (){
+		jQuery('.js-evo-category-highlight').click(function(event) {
+			jQuery(this).toggleClass('evo-category-highlight');
+		});
+	}
+
 	// REFERENCE PAGES
 
 		// DEVELOPER - SLIDING DRAWER
@@ -504,6 +511,8 @@ $(function() {
 				range: 'max'
 			});
 
+		// ITEM SELECTION CLASS TOGGLE
+			evoItemSelectionClassToggle();
 
 		// NAVIGATION TEST
 			mobileNavMenuToggle();
