@@ -130,57 +130,25 @@ $acronym-underline: 1px dotted $black;
 
 $accordion-navigation-padding: rem-calc(14);
 $accordion-navigation-bg-color: $gray-lightest;
-// $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
 $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -12%);
-// $accordion-navigation-font-color: $jet;
-// $accordion-navigation-font-size: rem-calc(16);
-// $accordion-navigation-font-family: $body-font-family;
 
-// $accordion-content-padding: ($column-gutter/2);
 $accordion-content-active-bg-color: $gray-lightest;
 
 // 02. Alert Boxes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-alert-classes: $include-html-classes;
-
-// We use this to control alert padding.
-// $alert-padding-top: rem-calc(14);
-// $alert-padding-default-float: $alert-padding-top;
-// $alert-padding-opposite-direction: $alert-padding-top + rem-calc(10);
-// $alert-padding-bottom: $alert-padding-top;
-
 // We use these to control text style.
-// $alert-font-weight: $font-weight-normal;
 $alert-font-size: rem-calc(14);
-// $alert-font-color: $white;
 $alert-font-color-alt: scale-color($secondary-color, $lightness: -100%);
 
-// We use this for close hover effect.
-// $alert-function-factor: -14%;
-
 // We use these to control border styles.
-// $alert-border-style: solid;
 $alert-border-width: 0;
-// $alert-border-color: scale-color($primary-color, $lightness: $alert-function-factor);
-// $alert-bottom-margin: rem-calc(20);
 
 // We use these to style the close buttons
 $alert-close-color: $black;
 $alert-close-top: rem-calc(26);
-// $alert-close-position: rem-calc(4);
-// $alert-close-font-size: rem-calc(22);
 $alert-close-opacity: 0.8;
 $alert-close-opacity-hover: 1;
-// $alert-close-padding: 9px 6px 4px;
-
-// We use this to control border radius
-// $alert-radius: $global-radius;
-
-// We use this to control transition effects
-// $alert-transition-speed: 300ms;
-// $alert-transition-ease: ease-out;
-
 
 // 05. Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -278,27 +246,8 @@ $off-canvas-overlay-background: rgba($white, 0.4);
 // 21. Panels
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-panel-classes: $include-html-classes;
-
-// We use these to control the background and border styles
-// $panel-bg: scale-color($white, $lightness: -5%);
-// $panel-border-style: solid;
-// $panel-border-size: 1px;
-
-// We use this % to control how much we darken things on hover
-// $panel-function-factor: -11%;
-// $panel-border-color: scale-color($panel-bg, $lightness: $panel-function-factor);
-
 // We use these to set default inner padding and bottom margin
-// $panel-margin-bottom: rem-calc(20);
 $panel-padding: rem-calc(14);
-
-// We use these to set default font colors
-// $panel-font-color: $oil;
-// $panel-font-color-alt: $white;
-
-// $panel-header-adjust: true;
-// $callout-panel-link-color: $primary-color;
 
 // 25. Reveal
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -325,15 +274,11 @@ $reveal-border-color: $white;
 // 30. Tables
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-table-classes: $include-html-classes;
-
 // These control the background color for the table and even rows
 $table-bg: $gray-lightest;
 $table-even-row-bg: $gray-lighter;
 
 // These control the table cell border style
-// $table-border-style: solid;
-// $table-border-size: 1px;
 $table-border-color: $white;
 
 // These control the table head styles
@@ -341,19 +286,11 @@ $table-head-bg: $gray-mid-dark;
 $table-head-font-size: rem-calc(14);
 $table-head-font-color: $blue-gray-darkest;
 $table-head-font-weight: $font-weight-normal;
-// $table-head-padding: rem-calc(8 10 10);
 
 // These control the row padding and font styles
 $table-row-padding: rem-calc(12 10);
 $table-row-font-size: rem-calc(14);
 $table-row-font-color: $body-font-color;
-// $table-line-height: rem-calc(18);
-
-// These are for controlling the layout, display and margin of tables
-// $table-layout: auto;
-// $table-display: table-cell;
-// $table-margin-bottom: rem-calc(20);
-
 
 // 31. Tabs
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -364,124 +301,28 @@ $tabs-navigation-active-bg-color: $white;
 $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -8%);
 $tabs-navigation-font-color: $gray-darkest;
 $tabs-navigation-active-font-color: $tabs-navigation-font-color;
-// $tabs-navigation-font-size: rem-calc(16);
-// $tabs-navigation-font-family: $body-font-family;
-
-// $tabs-content-margin-bottom: rem-calc(24);
-// $tabs-content-padding: ($column-gutter/2);
-
-// $tabs-vertical-navigation-margin-bottom: 1.25rem;
-
 
 // 33. Tooltips
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-tooltip-classes: $include-html-classes;
-
-// $has-tip-border-bottom: dotted 1px $iron;
-// $has-tip-font-weight: $font-weight-bold;
-// $has-tip-font-color: $oil;
-// $has-tip-border-bottom-hover: dotted 1px scale-color($primary-color, $lightness: -55%);
-// $has-tip-font-color-hover: $primary-color;
-// $has-tip-cursor-type: help;
-
-// $tooltip-padding: rem-calc(12);
 $tooltip-bg: $gray-lighter;
-// $tooltip-font-size: rem-calc(14);
-// $tooltip-font-weight: $font-weight-normal;
-// $tooltip-font-color: $white;
-// $tooltip-line-height: 1.3;
-// $tooltip-close-font-size: rem-calc(10);
-// $tooltip-close-font-weight: $font-weight-normal;
-// $tooltip-close-font-color: $monsoon;
-// $tooltip-font-size-sml: rem-calc(14);
-// $tooltip-radius: $global-radius;
-// $tooltip-rounded: $global-rounded;
-// $tooltip-pip-size: 5px;
-// $tooltip-max-width: 300px;
-
 
 // 34. Top Bar
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+
 // Background color for the top bar
 $topbar-bg-color: $gray-dark;
 $topbar-bg: $topbar-bg-color;
 
 // Height and margin
 $topbar-height: rem-calc(40);
-// $topbar-margin-bottom: 0;
-
-// Controlling the styles for the title in the top bar
-// $topbar-title-weight: $font-weight-normal;
-// $topbar-title-font-size: rem-calc(17);
-
-// Style the top bar dropdown elements
-// $topbar-dropdown-bg: $oil;
-// $topbar-dropdown-link-color: $white;
-// $topbar-dropdown-link-bg: $oil;
-// $topbar-dropdown-link-bg-hover: $oil;
-// $topbar-dropdown-link-weight: $font-weight-normal;
-// $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: $white;
-// $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
 $topbar-link-color: $white;
 $topbar-link-color-hover: $white;
-// $topbar-link-color-active: $white;
-// $topbar-link-color-active-hover: $white;
-// $topbar-link-weight: $font-weight-normal;
-// $topbar-link-font-size: rem-calc(13);
-// $topbar-link-hover-lightness: -10%; // Darken by 10%
 $topbar-link-bg: $topbar-bg;
-// $topbar-link-bg-color-hover: $charcoal;
 $topbar-link-bg-hover: $gray-mid;
 $topbar-link-bg-active: $sapphire-dark;
-// $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
-// $topbar-link-font-family: $body-font-family;
-// $topbar-link-text-transform: none;
-// $topbar-link-padding: ($topbar-height / 3);
-// $topbar-back-link-size: $h5-font-size;
-// $topbar-link-dropdown-padding: 20px;
-
-// $topbar-button-font-size: 0.75rem;
-// $topbar-button-top: 7px;
-
-// $topbar-dropdown-label-color: $monsoon;
-// $topbar-dropdown-label-text-transform: uppercase;
-// $topbar-dropdown-label-font-weight: $font-weight-bold;
-// $topbar-dropdown-label-font-size: rem-calc(10);
-// $topbar-dropdown-label-bg: $oil;
-
-// Top menu icon styles
-// $topbar-menu-link-transform: uppercase;
-// $topbar-menu-link-font-size: rem-calc(13);
-// $topbar-menu-link-weight: $font-weight-bold;
-// $topbar-menu-link-color: $white;
-// $topbar-menu-icon-color: $white;
-// $topbar-menu-link-color-toggled: $jumbo;
-// $topbar-menu-icon-color-toggled: $jumbo;
-
-// Transitions and breakpoint styles
-// $topbar-transition-speed: 300ms;
-// Using rem-calc for the below breakpoint causes issues with top bar
-// $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
-// $topbar-media-query: $medium-up;
-
-// Divider Styles
-// $topbar-divider-border-bottom: solid 1px  scale-color($topbar-bg-color, $lightness: 13%);
-// $topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
-
-// Sticky Class
-// $topbar-sticky-class: ".sticky";
-// $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
-
-// I BELIEVE THESE ARE USED FOR EP PROJECT
-// $topbar-bg-color: $sapphire;
-
-// Height and margin
-// $topbar-height: rem-calc(45);
-// $topbar-margin-bottom: 0;
 
 
 // ==========================================================================================

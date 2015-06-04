@@ -7,13 +7,15 @@
 $(document).foundation({
 
 	// OFF CANVAS
+	/*
 	offcanvas : {
 		// Sets method in which offcanvas opens.
 		// [ move | overlap_single | overlap ]
-		// open_method: 'move', 
+		open_method: 'move', 
 		// Should the menu close when a menu link is clicked?
 		// [ true | false ]
-		// close_on_click : false
+		close_on_click : false
 	}
+	*/
 
 });

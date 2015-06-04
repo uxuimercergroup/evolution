@@ -52,9 +52,11 @@ $evo-off-canvas-alert-background-color: $amethyst-mid !default;
 	.off-canvas-list			{
 		li							{
 			label						{
+										@include box-sizing(border-box);
 										line-height: 1.25;
 										}
 			a							{
+										@include box-sizing(border-box);
 										display: block;
 										font-size: rem-calc(18);
 										text-decoration: none;

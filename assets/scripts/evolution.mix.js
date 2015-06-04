@@ -75,7 +75,6 @@
 @import "core/lib/jquery/plugins/jquery.mCustomScrollbar.js";
 @import "core/lib/jquery/plugins/jquery.autosize.input.js";
 @import "core/lib/jquery/plugins/owl.carousel.js";
-// @import "core/lib/jquery/plugins/jquery.smartmenus.js"; // Marked for removal (Foundation replaces)
 // @import "core/lib/jquery/plugins/jquery.tooltipster.js"; // Marked for removal (Foundation replaces)
 // @import "core/lib/jquery/plugins/jquery.ui.dialog-clickoutside.js"; // Marked for removal (Foundation replaces)
 // @import "core/lib/jquery/plugins/jquery.ui.tabs.paging.js"; // Marked for removal (Foundation replaces)
@@ -100,8 +99,6 @@
 
 @import "core/global/helpers.js";
 @import "core/base/base.js";
-// @import "core/base/header.js"; // Marked for removal (Need to research. Foundation?)
-// @import "core/base/menus.js"; // Marked for removal (Foundation replaces)
 // @import "core/objects/accordion.js"; // Marked for removal (Foundation replaces)
 // @import "core/objects/advanced_filter.js"; // Keep but use Foundation Reveal
 // @import "core/objects/alternate_views_badge.js"; // Keep but use Foundation Tabs
