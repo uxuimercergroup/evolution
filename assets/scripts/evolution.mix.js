@@ -31,11 +31,11 @@
 @import 'core/foundation/foundation/foundation.abide.js';
 @import 'core/foundation/foundation/foundation.dropdown.js';
 @import 'core/foundation/foundation/foundation.equalizer.js';
-@import 'core/foundation/foundation/foundation.interchange.js';
-// @import 'core/foundation/foundation/foundation.joyride.js';
-@import 'core/foundation/foundation/foundation.magellan.js';
+// @import 'core/foundation/foundation/foundation.interchange.js'; // Not for this release
+// @import 'core/foundation/foundation/foundation.joyride.js'; // Not for this release
+// @import 'core/foundation/foundation/foundation.magellan.js'; // Not for this release
 @import 'core/foundation/foundation/foundation.offcanvas.js';
-@import 'core/foundation/foundation/foundation.orbit.js';
+// @import 'core/foundation/foundation/foundation.orbit.js'; // Not for this release
 @import 'core/foundation/foundation/foundation.reveal.js';
 @import 'core/foundation/foundation/foundation.tab.js';
 @import 'core/foundation/foundation/foundation.tooltip.js';
