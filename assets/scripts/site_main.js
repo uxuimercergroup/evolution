@@ -22,6 +22,23 @@
 		});
 	}
 
+	// ADD/REMOVE PLAN COMPONENT DISABLE/ENABLE
+	var evoShowPlanComponent = function (){
+		jQuery('.js-evo-add-remove-plan-component-disable').click(function() {
+			var id = 'evo-add-remove-plan-component-item-' + jQuery(this).attr('data-evo-add-remove-plan-component-item-toggle');
+			jQuery('#' + id).show();
+			jQuery(this).css('visibility', 'hidden');
+			return false;
+		});
+	};
+
+	var evoHidePlanComponent = function (){
+		jQuery('.js-evo-add-remove-plan-component-enable').click(function() {
+			jQuery(this).parent().hide();
+			jQuery('.js-evo-add-remove-plan-component-disable').css('visibility', 'visible');
+		});
+	};
+	
 
 	// LIBRARY EXAMPLES
 	//----------------------------------------------------------------------------------------------------
@@ -466,6 +483,10 @@ $(function() {
 
 		// ITEM SELECTION CLASS TOGGLE
 			evoItemSelectionClassToggle();
+
+		// ADD/REMOVE PLAN COMPONENT DISABLE/ENABLE
+			evoHidePlanComponent();
+			evoShowPlanComponent();
 
 		// TABS
 
