@@ -75,23 +75,21 @@
 	</head>
 	<body>
 
-		<div class="evo-page-wrapper">
-			<!-- HEADER - BEGINS -->
-			{% include "/base/default-header-profile-menu" %}
-			<!-- HEADER - ENDS -->
+		<!-- HEADER - BEGINS -->
+		{% include "/base/default-header-profile-menu" %}
+		<!-- HEADER - ENDS -->
 
-			<!-- PAGE - BEGINS -->
-			<section role="main">
-				<div class="row">
-					{% block content %}{% endblock %}
-				</div>
-			</section>
-			<!-- PAGE - ENDS -->
+		<!-- PAGE - BEGINS -->
+		<section role="main">
+			<div class="row">
+				{% block content %}{% endblock %}
+			</div>
+		</section>
+		<!-- PAGE - ENDS -->
 
-			<!-- FOOTER - BEGINS -->
-			{% include "footer" %}
-			<!-- FOOTER - BEGINS -->
-		</div>
+		<!-- FOOTER - BEGINS -->
+		{% include "footer" %}
+		<!-- FOOTER - BEGINS -->
 
 		{% include "scripts" %}
 

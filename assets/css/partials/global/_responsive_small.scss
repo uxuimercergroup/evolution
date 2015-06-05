@@ -14,21 +14,14 @@
 // SMALL MEDIA QUERY RANGE - 0px - 640px
 @media #{$small-only} {
 
-	.mb-navb-off							{
-											height: 20px;
-		[class*="evo-icon"]						{display: none;}
-											}
-
 	/*--- HOMEPAGE ------------------------------------------------------------------------*/
-	.evo-alternate-views-badge.ui-tabs		{
-		.banding-section-1						{
-			h1										{
-													line-height: 45px;
-													padding-top: 0;
-													}
-			h3										{padding-bottom: 30px;}
-			.evo-icon								{display: none;}
+	.banding-section-1						{
+		h1										{
+												line-height: 45px;
+												padding-top: 0;
 												}
+		h3										{padding-bottom: 30px;}
+		.evo-icon								{display: none;}
 											}
 
 	.banding-section-3						{

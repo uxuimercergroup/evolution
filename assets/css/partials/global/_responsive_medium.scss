@@ -12,34 +12,7 @@
 }
 
 // MEDIUM MEDIA QUERY RANGE - 641px - 1024px
-@media #{$medium-only} {
-
-	/*--- REFERENCE PAGES -----------------------------------------------------------------*/
-
-	// ALTERNATE VIEWS BADGE
-	.evo-ref-alternate-views-badge.ui-tabs
-											{
-		.evo-btn-group-horizontal				{
-			.evo-btn								{
-				a										{
-														padding: 8px 9px 5px 9px;
-					[class^="evo-icon-"]					{display: none;}
-														}
-													}
-												}
-		.ui-tabs-panel							{
-			p, ul, ol, li, dt, dd					{
-													font-size: 1rem;
-													}
-												}
-											}
-
-	// DEVELOPER - SLIDING DRAWER
-	.evo-ref-sliding-drawer					{
-		.evo-ref-sliding-drawer-hdr				{top: 39px;}
-		.mCustomScrollbar						{padding-top: 136px;}
-											}
-											
+@media #{$medium-only} {					
 
 	/*--- HOME PAGE -----------------------------------------------------------------------*/
 

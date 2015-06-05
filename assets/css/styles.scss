@@ -32,10 +32,7 @@ AUTHOR - Doug Fraize, Matthew Holmes
 // HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
 html.evo-mod-js							{display:none;}
 
-.see-context-link						{font-size: rem-calc(13);}
-
-.img-border								{border: 1px solid $gray-mid;}
-
+// CODE CONTENT STYLES
 code									{
 										@include border-radius(rem-calc(4));
 										background-color: $topaz-light;
@@ -43,94 +40,7 @@ code									{
 										}
 
 
-/*--- DEMO STYLES -------------------------------------------------------------------------*/
-.evo-masthead			{
-	.evo-masthead-adjust	{
-		.evo-logo-col-1			{
-			.evo-primary-logo		{
-				[class*="evo-icon"]		{
-										color: $white;
-										top: 6px;
-										}
-									}
-								}
-							}
-						}
-
-
 /*--- REFERENCE PAGES ---------------------------------------------------------------------*/
-
-// ALTERNATE VIEWS BADGE
-.evo-ref-alternate-views-badge.ui-tabs	{
-										margin-top: 5px;
-	.evo-btn-group-horizontal				{
-		.evo-btn								{
-												@include background-gradient($gray-lighter, $gray-lighter);
-												border-color: $gray-light;
-												font-size: 13px;
-			a										{
-													padding: 13px 9px 14px 14px; 
-				[class^="evo-icon-"]					{display: block;}
-													}
-			&:hover									{@include background-gradient($gray-light, $gray-light);}
-			&.ui-tabs-active						{
-													@include background-gradient(#fef8e3, #fef8e3);
-													border-color: #f9eec7;
-													}
-												}
-											}
-	.ui-tabs-panel							{
-		p, ul, ol, li, dt, dd					{
-												font-size: 1rem;
-												}
-		.prettyprint							{
-			li 										{
-													font-size: 1rem;
-													}
-												}
-											}
-										}
-// NAVBAR
-.evo-navbar								{
-	.evo-navbar-adjust						{
-		nav.evo-text-nav						{
-			.evo-nav-menus							{
-				.navbar-site-menu						{
-					h4										{
-															border-bottom: 1px dotted $gray-mid;
-															margin-bottom: 4px;
-															}
-					dl										{
-															margin: 0 0 5px 0;
-															padding: 0;
-						dd										{
-																margin: 0;
-																padding: 0 0 3px 0;
-							a										{
-																	color: $white;
-																	font-size: rem-calc(12);
-																	padding: 0;
-																	margin: 0;
-								&:hover									{background-color: $transparent;}
-																	}
-																}
-															}
-														}
-													}
-												}
-											}
-										}
-
-// STYLES FOR THE DEMO SEARCH IN THE MENU NAVBAR
-.menu-search							{
-	.menu-search-btn						{
-											border-color: $emerald-dark;
-											padding: 4px 9px;
-											margin-top: -1px;
-											min-width: 100%;
-		[class*='evo-icon']						{color: $white !important;}
-											}
-										}
 
 // EXAMPLES
 .evo-ref-example						{
@@ -139,103 +49,29 @@ code									{
 	.evo-ref-example-box					{background-color: $white;}
 										}
 
-// DEVELOPER - SLIDING DRAWER
-.evo-ref-sliding-drawer-btn				{
-										@include border-radius(4px);
-										background-color: $gray-lightest;
-										border: 1px solid $gray-mid;
-										padding: 5px 3px 5px 2px;
-										width: 28px;
-										height: 28px;
-										float: right;
-										top: -5px;
-										cursor: pointer;
-										}
-.evo-ref-sliding-drawer					{
-										@include box-shadow(inset 0, 0, 10px, #000);
-										background-color: $gray-darkest;
-										overflow-y: hidden !important;
-	.evo-ref-sliding-drawer-hdr				{
-											@include box-shadow(0, 0, 10px, #000);
-											position: fixed;
-											top: 0;
-											width: 250px;
-											min-width: 250px;
-											padding: $evo-base-padding $evo-base-padding 0 $evo-base-padding;
-											background-color: $gray-dark;
-		h3										{
-												color: $white;
-												padding: 0 0 7px 0;
-												position: relative;
-												top: -4px;
-												}
-		.evo-ref-sliding-drawer-close-btn		{
-												color: $white;
-												cursor: pointer;
-												top: 0;
-												right: 12px;
-												}
-											}
-
-	.mCustomScrollbar						{
-											padding-top: 103px;
-		.mCSB_container							{margin-right: 0;}
-											}
-
-	h4,
-	h5										{
-											color: $white;
-											padding-left: 10px;
-											}
-	h4:first-child							{margin-top: 7px;}
-	h5										{margin-bottom: 4px;}
-
-	.evo-vertical-list						{
-											margin-bottom: $evo-base-margin;
-		&:last-child							{margin-bottom: 100px;}
-		dd										{
-												margin: 0;
-			a										{
-													color: $white;
-													display: block;
-													font-size: rem-calc(12);
-													line-height: rem-calc(28);
-													padding: 0 12px;
-				&:hover									{
-														@include href-link-hover(none);
-														background-color: $gray-darker;
-														}
-													}
-												}
-											}
-										}
-
 
 /*--- HOMEPAGE ----------------------------------------------------------------------------*/
 [class*="banding-section"]				{font-size: 1rem;}
 
-
-.evo-alternate-views-badge.ui-tabs		{
-	.banding-section-1						{
-		h1										{
-												color: $white;
-												font-size: rem-calc(51);
-												font-family: $evo-font-thin-stack;
-												padding-top: 20px;
-												}
-		h3										{
-												color: $white;
-												font-family: $evo-font-thin-stack;
-												padding-bottom: 70px;
-												}
-		.evo-icon								{
-												color: $white;
-												display: inline-block;
-												top: -12px;
-												font-size: rem-calc(140);
-												}
-		.evo-btn-group-horizontal				{@include clearfix;}
+.banding-section-1						{
+	h1										{
+											color: $white;
+											font-size: rem-calc(51);
+											font-family: $evo-font-thin-stack;
+											padding-top: 20px;
 											}
+	h3										{
+											color: $white;
+											font-family: $evo-font-thin-stack;
+											padding-bottom: 70px;
+											}
+	.evo-icon								{
+											color: $white;
+											display: inline-block;
+											top: -12px;
+											font-size: rem-calc(140);
+											}
+	.evo-btn-group-horizontal				{@include clearfix;}
 										}
 
 .banding-section-2						{

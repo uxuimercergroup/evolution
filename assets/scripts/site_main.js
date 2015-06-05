@@ -15,34 +15,12 @@
 		});
 	};
 
-	// NAVIGATION TEST
-	var mobileNavMenuToggle = function(){
-		jQuery('#js-evo-mobile-nav').click(function(event) {
-			jQuery('.js-evo-mobile-menu-ctn').slideToggle('fast');
-		});
-	};
-
 	// ITEM SELECTION CLASS TOGGLE
 	var evoItemSelectionClassToggle = function (){
 		jQuery('.js-evo-category-highlight').click(function(event) {
 			jQuery(this).toggleClass('evo-category-highlight');
 		});
 	}
-
-	// REFERENCE PAGES
-
-		// DEVELOPER - SLIDING DRAWER
-		/*
-		var evoRefSlidingDrawer = jQuery.jPanelMenu({
-			animated: true,
-			closeOnContentClick: false,
-			duration: 450,
-			direction: 'left',
-			menu: '.js-evo-ref-sliding-drawer',
-			keyboardShortcuts: false,
-			trigger: '.js-evo-ref-sliding-drawer-btn'
-		});
-		*/
 
 
 	// LIBRARY EXAMPLES
@@ -182,31 +160,6 @@ $(function() {
 
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
-
-		// REFERENCE PAGES
-
-			// ALTERNATE VIEWS BADGE
-			// evoAlternateViewsBadge('js-evo-ref-alternate-views-badge', 'left');
-
-			// DEVELOPER - SLIDING DRAWER INIT
-			// evoRefSlidingDrawer.on();
-
-			// DEVELOPER - SLIDING DRAWER - SCROLL PANE
-			var windowHeight = jQuery(window).height();
-			evoScrollPaneCustom('js-evo-ref-sliding-drawer-scrollpane',{
-				setHeight: windowHeight,
-				advanced:{
-					updateOnContentResize: true
-				}
-			});
-
-			// DEVELOPER - SLIDING DRAWER - SCROLL PANE - CHANGE ON RESIZE OF WINDOW
-			jQuery(window).bind('resize', resizeWindow);
-			function resizeWindow(e) {
-				var newWindowHeight = jQuery(window).height();
-				jQuery('.js-evo-ref-sliding-drawer-scrollpane').css('height', newWindowHeight);
-			}
-
 
 		// JS LIBRARY INITS
 
@@ -513,9 +466,6 @@ $(function() {
 
 		// ITEM SELECTION CLASS TOGGLE
 			evoItemSelectionClassToggle();
-
-		// NAVIGATION TEST
-			mobileNavMenuToggle();
 
 		// TABS
 

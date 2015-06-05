@@ -75,27 +75,21 @@
 	</head>
 	<body>
 
-		<div class="evo-page-wrapper">
-			<!-- HEADER - BEGINS -->
-			{% include "header" %}
-			<!-- HEADER - ENDS -->
+		<!-- HEADER - BEGINS -->
+		{% include "header" %}
+		<!-- HEADER - ENDS -->
 
-			<!-- PAGE - BEGINS -->
-			<section role="main">
-				<div class="row">
-					{% block content %}{% endblock %}
-				</div>
-			</section>
-			<!-- PAGE - ENDS -->
+		<!-- PAGE - BEGINS -->
+		<section role="main">
+			<div class="row">
+				{% block content %}{% endblock %}
+			</div>
+		</section>
+		<!-- PAGE - ENDS -->
 
-			<!-- FOOTER - BEGINS -->
-			{% include "footer" %}
-			<!-- FOOTER - ENDS -->
-		</div>
-
-		<!-- DEVELOPER - SLIDING DRAWER - BEGINS -->
-		{% include "/reference/developer-sliding-drawer" %}
-		<!-- DEVELOPER - SLIDING DRAWER - ENDS -->
+		<!-- FOOTER - BEGINS -->
+		{% include "footer" %}
+		<!-- FOOTER - ENDS -->
 
 		{% include "scripts" %}
 

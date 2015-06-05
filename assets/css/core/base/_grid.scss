@@ -22,11 +22,6 @@ $evo-grid-device-padding: rem-calc(20) rem-calc(10) 0 rem-calc(10) !default;
 		@media #{$small-up}			{padding: $evo-grid-device-padding;}
 								}
 
-	.evo-page-wrapper			{
-								min-height: 100%;
-								position: relative;
-								}
-
 	//=== MEDIA QUERIES =========================================================================
 
 	// SMALL MEDIA QUERY RANGE - 0 - 640px
