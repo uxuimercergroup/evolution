@@ -144,12 +144,6 @@
             "key": "masthead",
             "name": "Masthead",
             "url": "/base/header/masthead"
-          },
-          {
-            "directory": false,
-            "key": "navbar",
-            "name": "Navbar",
-            "url": "/base/header/navbar"
           }
         ],
         "directory": true,
@@ -212,6 +206,20 @@
         "key": "lists",
         "name": "Lists",
         "url": "/base/lists"
+      },
+      {
+        "children": [
+          {
+            "directory": false,
+            "key": "navbar",
+            "name": "Navbar",
+            "url": "/base/navigation/navbar"
+          }
+        ],
+        "directory": true,
+        "key": "navigation",
+        "name": "Navigation",
+        "url": "/base/navigation"
       },
       {
         "directory": false,
