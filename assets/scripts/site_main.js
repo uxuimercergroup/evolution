@@ -38,6 +38,47 @@
 			jQuery('.js-evo-add-remove-plan-component-disable').css('visibility', 'visible');
 		});
 	};
+
+	// FORM TOGGLE CONTENT
+	var evoFormToggleContent = function(){
+		jQuery('.js-evo-toggle-form-content').focus(function(){
+			var id = 'form-item' + jQuery(this).attr('data-evo-form-toggle');
+			jQuery('#' + id).fadeToggle(2000);
+			return false;
+		});
+	}
+
+	// SELECT DIV BOX
+	var selectDropDown = function() {
+		jQuery('.dropdown').click(function() {
+			jQuery(this).children('ul').slideToggle(150);
+			if (jQuery(this).hasClass('open')) {
+				jQuery(this).removeClass('open');
+				return false;
+			} else {
+				jQuery(this).addClass('open');
+				return false;
+			}
+			return false;
+			}).hover(function(){},function() {
+				jQuery(this).children('ul').slideUp(150);
+				jQuery(this).removeClass('open');
+			});
+
+			jQuery('.dropdown ul li').click(function() {
+				var sitem = jQuery(this).html();
+				var sid = jQuery(this).attr('id');
+				var id = 'form-item' + jQuery(this).attr('data-evo-form-toggle');
+
+				jQuery('#' + id).fadeToggle(2000);
+				jQuery(this).siblings('li').removeClass('selected');
+				jQuery(this).addClass('selected');
+				jQuery(this).parent('ul').siblings('span.selected').html(sitem);
+				jQuery(this).parent('ul').siblings('input').val(sid);
+
+
+			});
+	};
 	
 
 	// LIBRARY EXAMPLES
@@ -487,6 +528,12 @@ $(function() {
 		// ADD/REMOVE PLAN COMPONENT DISABLE/ENABLE
 			evoHidePlanComponent();
 			evoShowPlanComponent();
+
+		// FORM TOGGLE CONTENT
+			evoFormToggleContent();
+
+		// SELECT DIV BOX
+			selectDropDown();
 
 		// TABS
 
