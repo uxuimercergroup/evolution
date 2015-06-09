@@ -7,11 +7,6 @@
 // ==========================================================================================
 // GLOBAL
 // ==========================================================================================
-$evo-include-html-classes:					true !default;
-
-
-// GLOBAL
-// ------------------------------------------------------------------------------------------
 
 // BASE VARIABLES
 $evo-base-margin:							14px !default;
@@ -87,24 +82,6 @@ $evo-base-font-file-path:					"../fonts" !default;
 	$evo-icon-site-font-file-path:				"#{$evo-base-font-file-path}/evo-icon-font-site" !default;
 	$evo-icon-site-font-stack:					"#{$evo-icon-site-font-family}" !default;
 
-// LINKS
-$evo-base-link-visited-color:				$sapphire-dark !default;
-
-// FONT WEIGHTS
-$evo-weight-bold-100:						100 !default;
-$evo-weight-bold-200:						200 !default;
-$evo-weight-bold-300:						300 !default;
-$evo-weight-bold-400:						400 !default;
-$evo-weight-bold-500:						500 !default;
-$evo-weight-bold-600:						600 !default;
-$evo-weight-bold-700:						700 !default;
-$evo-weight-bold-800:						800 !default;
-$evo-weight-bold-900:						900 !default;
-
-// TEXT SELECTION
-$evo-text-selection-text-color:				$white !default;
-$evo-text-selection-background-color:		$gray-darker !default;
-
 
 // ==========================================================================================
 // BASE
@@ -149,7 +126,6 @@ $definitionDataListHeaderBorderColor:		$gray-mid !default;
 // ==========================================================================================
 // OBJECTS
 // ==========================================================================================
-
 
 // ADVANCED FILTER MODAL
 // ------------------------------------------------------------------------------------------
@@ -326,11 +302,6 @@ $sliderHandleActiveBackgroundStartColor:	$blue-gray-darkest !default;
 $sliderHandleActiveBackgroundEndColor:		$blue-gray-darkest !default;
 
 
-// SUMMARY CONTAINER
-// ------------------------------------------------------------------------------------------
-
-
-
 // TABS
 // ------------------------------------------------------------------------------------------
 $tabsSetMarginBottom:						18px !default;
@@ -373,7 +344,6 @@ $tabsActiveBackgroundStartColor:			$white !default;
 $tabsActiveBackgroundEndColor:				$white !default;
 $tabsPanelBorderColor:						$gray-mid !default;
 $tabsPanelBackgroundColor: 					$white !default;
-
 
 
 // TOOLTIP

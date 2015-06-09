@@ -7,12 +7,19 @@
 //
 // @variables
 //
+$evo-header-toolbar-background-color: $gray-dark;
+$evo-header-toolbar-font-color: $white;
+$evo-header-toolbar-link-color: $gray-mid;
 
+@if $use-header-toolbar == true{
 
-
-@if $use-toolbar-header == true{
-
-	
+	.evo-header-toolbar					{
+										background-color: $evo-header-toolbar-background-color;
+										color: $evo-header-toolbar-font-color;
+		a									{
+											color: $evo-header-toolbar-link-color;
+											}
+										}
 
 	//=== MEDIA QUERIES =========================================================================
 

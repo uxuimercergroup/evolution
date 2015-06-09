@@ -7,8 +7,6 @@
 //
 // @variables
 //
-$evo-include-html-inline-dl-list-classes: $evo-include-html-classes !default;
-
 $evo-inline-dl-list-margin-bottom: 0 !default;
 
 // Used for defintion title styles
@@ -45,17 +43,18 @@ $evo-inline-dl-list-dd-last-child: 0 !default;
 												}
 }
 
+//
+// @exports
+//
+@include exports("evo-inline-dl-list") {}
+
 
 @if $use-inline-list == true{
 
 	// DEFINITION LIST STYLES
-	@include exports("evo-inline-dl-list") {
-		@if $evo-include-html-inline-dl-list-classes {
-
-			.evo-inline-dl-list					{@include evo-inline-dl-list();}
-
-		}// endif
-	}
+	.evo-inline-dl-list							{
+												@include evo-inline-dl-list();
+												}
 
 	// UNORDERED LIST STYLES
 	.evo-inline-list							{

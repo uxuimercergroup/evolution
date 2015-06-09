@@ -22,17 +22,22 @@
 // @variables
 //
 
+// TEXT SELECTION
+$evo-text-selection-text-color: $white !default;
+$evo-text-selection-background-color: $gray-darker !default;
+
 // HEADERS
-$evo-hdr-rule-border-size:					1px !default;
-$evo-hdr-rule-border-style:					dotted !default;
-$evo-hdr-rule-margin-bottom:				10px !default;
-$evo-hdr-rule-border-color:					$gray-mid !default;
-$evo-hdr-background-color:					$gray-lighter !default;
+$evo-hdr-rule-border-size: 1px !default;
+$evo-hdr-rule-border-style:	dotted !default;
+$evo-hdr-rule-margin-bottom: 10px !default;
+$evo-hdr-rule-border-color:	$gray-mid !default;
+$evo-hdr-background-color: $gray-lighter !default;
 
 // LINKS
-$evo-anchor-font-color-reverse: 			$white !default;
-$evo-anchor-font-color-alt: 				$ruby-mid !default;
-$evo-anchor-font-size-small:				14 !default;
+$evo-anchor-font-color-visited: $sapphire-dark !default;
+$evo-anchor-font-size-small: 14 !default;
+$evo-anchor-font-color-reverse: $white !default;
+$evo-anchor-font-color-alt: $ruby-mid !default;
 
 
 @if $use-type == true{
@@ -214,7 +219,7 @@ $evo-anchor-font-size-small:				14 !default;
 
 	// LINKS
 	a							{	
-		&:visited					{color: $evo-base-link-visited-color;}
+		&:visited					{color: $evo-anchor-font-color-visited;}
 								}
 
 	a.evo-anchor-small			{font-size: rem-calc($evo-anchor-font-size-small);}

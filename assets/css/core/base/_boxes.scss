@@ -89,7 +89,7 @@ text-align: $box-text-align;
 	$box-shadow-color: $evo-box-shadow-color
 )
 {
-	@include box-shadow($box-shadow-vertical, $box-shadow-horizontal, $box-shadow-blur, $box-shadow-color);
+@include box-shadow($box-shadow-vertical, $box-shadow-horizontal, $box-shadow-blur, $box-shadow-color);
 }
 
 //
@@ -158,11 +158,12 @@ text-align: $box-text-align;
 		@media #{$medium-up} {
 
 			// INLINE SEARCH CONTAINER
-			.evo-inline-search-ctn		{
-				form						{
-					.evo-btn-row				{text-align: center;}
-											}
-										}
+			.evo-inline-search-ctn
+								{
+				form				{
+					.evo-btn-row		{text-align: center;}
+									}
+								}
 
 		}
 		

@@ -328,11 +328,6 @@ $topbar-link-bg-active: $sapphire-dark;
 // ==========================================================================================
 // GLOBAL
 // ==========================================================================================
-// $evo-include-html-classes:				true;
-
-
-// GLOBAL
-// ------------------------------------------------------------------------------------------
 
 // BASE VARIABLES
 // $evo-base-margin:						14px;
@@ -426,24 +421,6 @@ $topbar-link-bg-active: $sapphire-dark;
 	// $evo-icon-site-font-file-path:			"#{$evo-base-font-file-path}/evo-icon-font-site";
 	// $evo-icon-site-font-stack:				"#{$evo-icon-site-font-family}";
 
-// LINKS
-// $evo-base-link-visited-color:			$sapphire-dark;
-
-// FONT WEIGHTS
-// $evo-weight-bold-100:					100;
-// $evo-weight-bold-200:					200;
-// $evo-weight-bold-300:					300;
-// $evo-weight-bold-400:					400;
-// $evo-weight-bold-500:					500;
-// $evo-weight-bold-600:					600;
-// $evo-weight-bold-700:					700;
-// $evo-weight-bold-800:					800;
-// $evo-weight-bold-900:					900;
-
-// TEXT SELECTION
-// $evo-text-selection-text-color:			$white;
-// $evo-text-selection-background-color:	$gray-darker;
-
 
 // ==========================================================================================
 // BASE
@@ -452,54 +429,64 @@ $topbar-link-bg-active: $sapphire-dark;
 // TYPOGRAPHY
 // ------------------------------------------------------------------------------------------
 
+// TEXT SELECTION
+// $evo-text-selection-text-color:			$white;
+// $evo-text-selection-background-color:	$gray-darker;
+
 // HEADERS
 // $evo-hdr-rule-border-size:				1px;
 // $evo-hdr-rule-border-style:				dotted;
 // $evo-hdr-rule-margin-bottom:				10px;
-// $evo-hdr-rule-border-color:				$gray-darker;
-// $evo-hdr-background-color:				$gray-mid;
+// $evo-hdr-rule-border-color:				$gray-mid;
+// $evo-hdr-background-color:				$gray-lighter;
+
+// LINKS
+// $evo-anchor-font-color-visited:			$sapphire-dark;
+// $evo-anchor-font-size-small:				14;
+// $evo-anchor-font-color-reverse: 			$white;
+// $evo-anchor-font-color-alt: 				$ruby-mid;
 
 
 // BOXES
 // ------------------------------------------------------------------------------------------
 
 // CORE BOX
-// $evo-box-hdr-rule-size: 3px;
-// $evo-box-hdr-rule-style: solid;
-// $evo-box-hdr-rule-color: $gray-mid-dark;
-// $evo-box-hdr-rule-padding: 0 0 6px 0;
-// $evo-box-radius: $global-radius;
-// $evo-box-border-width: 1px;
-// $evo-box-border-style: solid;
-// $evo-box-border-color: $gray-mid;
-// $evo-box-body-text-align: left;
+// $evo-box-hdr-rule-size: 					3px;
+// $evo-box-hdr-rule-style:					solid;
+// $evo-box-hdr-rule-color: 				$gray-mid-dark;
+// $evo-box-hdr-rule-padding: 				0 0 6px 0;
+// $evo-box-radius: 						$global-radius;
+// $evo-box-border-width: 					1px;
+// $evo-box-border-style: 					solid;
+// $evo-box-border-color: 					$gray-mid;
+// $evo-box-body-text-align: 				left;
 
 // CORE BOX SHADOW
-// $evo-box-shadow-vertical: 0;
-// $evo-box-shadow-horizontal: 3px;
-// $evo-box-shadow-blur: 6px;
-// $evo-box-shadow-color: $gray-mid;
+// $evo-box-shadow-vertical: 				0;
+// $evo-box-shadow-horizontal: 				3px;
+// $evo-box-shadow-blur: 					6px;
+// $evo-box-shadow-color: 					$gray-mid;
 
 // CUSTOM BOXES
 
 // FEATURE CONTAINER
-// $evo-box-featured-background-color:	$white;
-// $evo-box-featured-hdr-rule-color: $blue-gray-mid-dark;
+// $evo-box-featured-background-color:		$white;
+// $evo-box-featured-hdr-rule-color: 		$blue-gray-mid-dark;
 
 // SIDEBAR CONTAINER
-// $evo-box-sidebar-background-color: $gray-lighter;
-// $evo-box-sidebar-hdr-rule-color: $gray-mid;
+// $evo-box-sidebar-background-color: 		$gray-lighter;
+// $evo-box-sidebar-hdr-rule-color:		 	$gray-mid;
 
 // SUPPORT CONTAINER
-// $evo-box-support-background-color: $blue-gray-lighter;
-// $evo-box-support-border-color: $blue-gray-mid-dark;
-// $evo-box-support-hdr-rule-color: $blue-gray-mid-dark;
+// $evo-box-support-background-color: 		$blue-gray-lighter;
+// $evo-box-support-border-color: 			$blue-gray-mid-dark;
+// $evo-box-support-hdr-rule-color: 		$blue-gray-mid-dark;
 
 // HIGHLIGHT CONTAINER
-// $evo-box-highlight-background-color: $evo-highlight-color;
+// $evo-box-highlight-background-color: 	$evo-highlight-color;
 
 // INLINE SEARCH CONTAINER
-// $evo-box-inline-search-background-color: $gray-lighter;
+// $evo-box-inline-search-background-color:	$gray-lighter;
 
 
 // FORM

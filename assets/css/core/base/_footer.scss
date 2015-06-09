@@ -6,26 +6,26 @@
 
 @if $use-footer == true{
 
-	.evo-footer								{
-											@include clearfix;
-											@include backface-visibility(hidden);
-											color: $footerFontColor;
-											font-size: $small-font-size;
-											position: relative;
-											text-align: center;
+	.evo-footer						{
+									@include clearfix;
+									@include backface-visibility(hidden);
+									color: $footerFontColor;
+									font-size: $small-font-size;
+									position: relative;
+									text-align: center;
 
-		.evo-inline-list						{
-												width: 100%;
-			li										{
-													width: 100%;
-				&:last-child							{padding-right: 0;}
-													}
-												}
+		.evo-inline-list				{
+										width: 100%;
+			li								{
+											width: 100%;
+				&:last-child					{padding-right: 0;}
 											}
-	.evo-footer-border-top					{
-											border-top: 1px solid $footerBorderTopColor;
-											padding-top: $evo-base-padding;
-											}
+										}
+									}
+	.evo-footer-border-top			{
+									border-top: 1px solid $footerBorderTopColor;
+									padding-top: $evo-base-padding;
+									}
 
 	//=== MEDIA QUERIES =========================================================================
 
@@ -38,18 +38,18 @@
 		
 	}//endif
 
-	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	// LARGE MEDIA QUERY RANGE AND UP - 1025px +
 	@if $use-large-up-mediaquery == true {
 		
 		@media #{$large-up} {
 
-			.evo-footer								{
-													text-align: left;
-				.evo-inline-list						{
-														width: auto;
-					li										{width: auto;}
-														}
-													}
+			.evo-footer				{
+									text-align: left;
+				.evo-inline-list		{
+										width: auto;
+					li						{width: auto;}
+										}
+									}
 
 		}
 		
@@ -61,33 +61,31 @@
 
 @if $use-fat-footer == true{
 
-	.evo-footer-fat			{
-							background-color: $fatFooterBackgroundColor;
-							color: $fatFooterFontColor;
-							margin-bottom: -24px;
-							padding: rem-calc(15) rem-calc(10) 0 rem-calc(10);
-							text-align: left;
-		.evo-group-icon-set		{
-								margin-top: rem-calc(10);
-			a						{
-									margin-left: rem-calc(5);
-				&:first-child			{margin-left: 0;}
-									}
-								}
-		.evo-footer-fat-sections
-								{
-								margin-top: rem-calc(20);
-			&:first-child			{margin-top: rem-calc(30);}
+	.evo-footer-fat					{
+									background-color: $fatFooterBackgroundColor;
+									color: $fatFooterFontColor;
+									margin-bottom: rem-calc(-24);
+									padding: rem-calc(15) rem-calc(10) 0 rem-calc(10);
+									text-align: left;
+		.evo-group-icon-set				{
+										margin-top: rem-calc(10);
+			a								{
+											margin-left: rem-calc(5);
+				&:first-child					{margin-left: 0;}
+											}
+										}
+		.evo-footer-fat-sections		{
+										margin-top: rem-calc(20);
+			&:first-child					{margin-top: rem-calc(30);}
 			.evo-footer-fat-sections-hdr,
-			a						{color: $fatFooterFontColor;}
-			a						{
-									display: block;
-									width: 100%;
+			a								{color: $fatFooterFontColor;}
+			a								{
+											display: block;
+											width: 100%;
+											}
+										}
+		.evo-footer-fat-copyright		{margin-top: rem-calc(30);}
 									}
-								}
-		.evo-footer-fat-copyright
-								{margin-top: rem-calc(30);}
-							}
 
 
 	//=== MEDIA QUERIES =========================================================================
