@@ -463,54 +463,51 @@ $topbar-link-bg-active: $sapphire-dark;
 // BOXES
 // ------------------------------------------------------------------------------------------
 
-// BASE
-// $boxBorderSize:							1px;
-// $boxBorderStyle:							solid;
-// $boxHdrBorderSize:						3px;
-// $boxHdrBorderStyle:						solid;
-// $boxBdyBorderTopSize:					1px;
-// $boxBdyBorderTopStyle:					solid;
-// $boxPadding:								$evo-base-padding;
-// $boxVShadow:								1px;
-// $boxHShadow:								1px;
-// $boxShadowBlur:							1px;
-// $boxBackgroundColor:						$gray-lighter;
-// $boxBorderColor:							$gray-mid;
-// $boxHdrBorderColor:						$gray-mid;
-// $boxShadowColor:							$gray-darker;
+// CORE BOX
+// $evo-box-hdr-rule-size: 3px;
+// $evo-box-hdr-rule-style: solid;
+// $evo-box-hdr-rule-color: $gray-mid-dark;
+// $evo-box-hdr-rule-padding: 0 0 6px 0;
+// $evo-box-radius: $global-radius;
+// $evo-box-border-width: 1px;
+// $evo-box-border-style: solid;
+// $evo-box-border-color: $gray-mid;
+// $evo-box-body-text-align: left;
 
-// ADVANCED BOX
-// $boxAdvancedBackgroundColor:				$transparent;
-// $boxAdvancedHdrBackgroundColor:			$gray-light;
+// CORE BOX SHADOW
+// $evo-box-shadow-vertical: 0;
+// $evo-box-shadow-horizontal: 3px;
+// $evo-box-shadow-blur: 6px;
+// $evo-box-shadow-color: $gray-mid;
 
-// MESSAGE BOXES
-// $msgBorderWidth:							1px;
-// $msgBorderStyle:							solid;
+// CUSTOM BOXES
 
-// CUSTOM CONTAINERS
-// $boxInlineSearchBorderSizeColor:			1px;
-// $boxInlineSearchBorderTypeColor:			dotted;
-// $boxInlineSearchLabelLineHeight:			22px;
+// FEATURE CONTAINER
+// $evo-box-featured-background-color:	$white;
+// $evo-box-featured-hdr-rule-color: $blue-gray-mid-dark;
 
-// $boxFeaturedBackgroundColor:				$white;
-// $boxFeaturedBorderBottomColor:			$blue-gray-mid-dark;
+// SIDEBAR CONTAINER
+// $evo-box-sidebar-background-color: $gray-lighter;
+// $evo-box-sidebar-hdr-rule-color: $gray-mid;
 
-// $boxSidebarBackgroundColor:				$gray-lighter;
-// $boxSidebarBorderBottomColor:			$gray-mid;
+// SUPPORT CONTAINER
+// $evo-box-support-background-color: $blue-gray-lighter;
+// $evo-box-support-border-color: $blue-gray-mid-dark;
+// $evo-box-support-hdr-rule-color: $blue-gray-mid-dark;
 
-// $boxInlineSearchBackgroundColor:			$gray-lighter;
+// HIGHLIGHT CONTAINER
+// $evo-box-highlight-background-color: $evo-highlight-color;
 
-// $boxSupportBackgroundColor:				$blue-gray-lighter;
-// $boxSupportBottomColor:					$blue-gray-mid-dark;
-// $boxSupportBorderBottomColor:			$blue-gray-mid-dark;
+// INLINE SEARCH CONTAINER
+// $evo-box-inline-search-background-color: $gray-lighter;
 
 
 // FORM
 // ------------------------------------------------------------------------------------------
 
-//$evo-base-input-shadow-color: $gray-lighter;
-//$evo-input-focus-border-color: $tan-mid;
-//$evo-form-placholder-font-color: #AAA;
+//$evo-base-input-shadow-color: 			$gray-lighter;
+//$evo-input-focus-border-color: 			$tan-mid;
+//$evo-form-placholder-font-color: 			#aaa;
 
 
 // BUTTONS
@@ -524,12 +521,7 @@ $topbar-link-bg-active: $sapphire-dark;
 // HEADER
 // ------------------------------------------------------------------------------------------
 
-// ICON STYLES
-// BASE & LOGO STYLES
-// USER IDENTIFIER
-// TOOLBAR
-// NAVBAR
-// SPOTLIGHT CONTAINER
+
 
 
 // MENU STYLES
@@ -710,38 +702,38 @@ $topbar-link-bg-active: $sapphire-dark;
 
 // DATEPICKER
 // ------------------------------------------------------------------------------------------
-// $evo-datepicker-margin-top: rem-calc(5) !default;
-// $evo-datepicker-hdr-padding-top-bottom: rem-calc(4) !default;
-// $evo-datepicker-message-font-size: rem-calc(13) !default;
-// $evo-datepicker-message-line-height: rem-calc(15) !default;
+// $evo-datepicker-margin-top: rem-calc(5);
+// $evo-datepicker-hdr-padding-top-bottom: rem-calc(4);
+// $evo-datepicker-message-font-size: rem-calc(13);
+// $evo-datepicker-message-line-height: rem-calc(15);
 // $evo-datepicker-icon-position-top: rem-calc(8);
 // $evo-datepicker-icon-position-left: rem-calc(-22);
 // $evo-datepicker-icon-position-large-breakpoint: rem-calc(12);
-// $evo-datepicker-icon-position-top-IE: ($evo-datepicker-icon-position-top - 2) !default;
+// $evo-datepicker-icon-position-top-IE: ($evo-datepicker-icon-position-top - 2);
 // $evo-datepicker-icon-position-left-large-breakpoint: rem-calc(-20);
-// $evo-datepicker-min-width: rem-calc(110) !default;
+// $evo-datepicker-min-width: rem-calc(110);
 
 // COLORS
-// $evo-datepicker-shadow-color: $gray-darker !default;
-// $evo-datepicker-bgcolor: $white !default;
-// $evo-datepicker-th-font-color: $gray-darker !default;
-// $evo-datepicker-border-color: $gray-lighter !default;
-// $evo-datepicker-link-color: $gray-dark !default;
-// $evo-datepicker-hdr-bgcolor-start: $gray-mid-light !default;
-// $evo-datepicker-hdr-bgcolor-end: $gray-mid-light !default;
-// $evo-datepicker-hdr-font-color: $gray-darker !default;
-// $evo-datepicker-hdr-nav-icon-color: $gray-mid-dark !default;
-// $evo-datepicker-today-font-color: $gray-mid-light !default;
-// $evo-datepicker-today-bgcolor: $gray-dark !default;
-// $evo-datepicker-current-day-bgcolor: #FFF3C5 !default;
-// $evo-datepicker-current-day-font-color: $gray-dark !default;
-// $evo-datepicker-hover-bgcolor: $gray-lighter !default;
-// $evo-datepicker-disabled-font-color: $gray-mid !default;
-// $evo-datepicker-disabled-bgcolor: $white !default;
-// $evo-datepicker-disabled-border-color: $gray-lighter !default;
-// $evo-datepicker-message-font-color: $gray-dark !default;
-// $evo-datepicker-message-bgcolor: #FFF3C5 !default;
-// $evo-datepicker-icon-color: $gray-mid-dark !default;
+// $evo-datepicker-shadow-color: $gray-darker;
+// $evo-datepicker-bgcolor: $white;
+// $evo-datepicker-th-font-color: $gray-darker;
+// $evo-datepicker-border-color: $gray-lighter;
+// $evo-datepicker-link-color: $gray-dark;
+// $evo-datepicker-hdr-bgcolor-start: $gray-mid-light;
+// $evo-datepicker-hdr-bgcolor-end: $gray-mid-light;
+// $evo-datepicker-hdr-font-color: $gray-darker;
+// $evo-datepicker-hdr-nav-icon-color: $gray-mid-dark;
+// $evo-datepicker-today-font-color: $gray-mid-light;
+// $evo-datepicker-today-bgcolor: $gray-dark;
+// $evo-datepicker-current-day-bgcolor: #FFF3C5;
+// $evo-datepicker-current-day-font-color: $gray-dark;
+// $evo-datepicker-hover-bgcolor: $gray-lighter;
+// $evo-datepicker-disabled-font-color: $gray-mid;
+// $evo-datepicker-disabled-bgcolor: $white;
+// $evo-datepicker-disabled-border-color: $gray-lighter;
+// $evo-datepicker-message-font-color: $gray-dark;
+// $evo-datepicker-message-bgcolor: #FFF3C5;
+// $evo-datepicker-icon-color: $gray-mid-dark;
 
 
 // DIALOG/MODAL
@@ -867,30 +859,30 @@ $topbar-link-bg-active: $sapphire-dark;
 
 // SUMMARY CONTAINER
 // ------------------------------------------------------------------------------------------
-// $evo-summary-ctn-margin-bottom: $evo-base-margin !default;
-// $evo-summary-ctn-cell-width: 1px !default;
-// $evo-summary-ctn-cell-style: dotted !default;
-// $evo-summary-ctn-cell-color: $gray-mid-dark !default;
-// $evo-summary-ctn-cell-border-top-color: $white !default;
-// $evo-summary-ctn-cell-border-bottom-color: $white !default;
-// $evo-summary-ctn-cell-padding-top: rem-calc(10) !default;
-// $evo-summary-ctn-cell-border-width: 1px !default;
-// $evo-summary-ctn-cell-border-style: dotted !default;
-// $evo-summary-ctn-cell-border-color: $gray-mid-dark !default;
-// $evo-summary-cell-text-icon-font-size: rem-calc(44) !default;
-// $evo-summary-cell-text-support-font-size: (1rem - rem-calc(3)) !default;
-// $evo-summary-cell-text-alignment: center !default;
-// $evo-summary-cell-hover-background-color: $topaz-light !default;
-// $evo-summary-cell-hover-border-top-color: $gray-light !default;
-// $evo-summary-cell-hover-border-bottom-color: $gray-light !default;
-// $evo-summary-cell-hover-transition-time: 400ms !default;
-// $evo-summary-cell-alert-font-color: $garnet-dark !default;
-// $evo-summary-cell-alert-icon-color: $garnet-dark !default;
-// $evo-summary-cell-alert-hover-background-color: $garnet-light !default;
-// $evo-summary-cell-positive-font-color: $emerald-dark !default;
-// $evo-summary-cell-positive-icon-color: $emerald-dark !default;
-// $evo-summary-cell-positive-hover-background-color: $emerald-light !default;
-// $evo-secondary-summary-cell-font-size: rem-calc(32) !default;
+// $evo-summary-ctn-margin-bottom: $evo-base-margin;
+// $evo-summary-ctn-cell-width: 1px;
+// $evo-summary-ctn-cell-style: dotted;
+// $evo-summary-ctn-cell-color: $gray-mid-dark;
+// $evo-summary-ctn-cell-border-top-color: $white;
+// $evo-summary-ctn-cell-border-bottom-color: $white;
+// $evo-summary-ctn-cell-padding-top: rem-calc(10);
+// $evo-summary-ctn-cell-border-width: 1px;
+// $evo-summary-ctn-cell-border-style: dotted;
+// $evo-summary-ctn-cell-border-color: $gray-mid-dark;
+// $evo-summary-cell-text-icon-font-size: rem-calc(44);
+// $evo-summary-cell-text-support-font-size: (1rem - rem-calc(3));
+// $evo-summary-cell-text-alignment: center;
+// $evo-summary-cell-hover-background-color: $topaz-light;
+// $evo-summary-cell-hover-border-top-color: $gray-light;
+// $evo-summary-cell-hover-border-bottom-color: $gray-light;
+// $evo-summary-cell-hover-transition-time: 400ms;
+// $evo-summary-cell-alert-font-color: $garnet-dark;
+// $evo-summary-cell-alert-icon-color: $garnet-dark;
+// $evo-summary-cell-alert-hover-background-color: $garnet-light;
+// $evo-summary-cell-positive-font-color: $emerald-dark;
+// $evo-summary-cell-positive-icon-color: $emerald-dark;
+// $evo-summary-cell-positive-hover-background-color: $emerald-light;
+// $evo-secondary-summary-cell-font-size: rem-calc(32);
 
 
 // TABS
@@ -940,10 +932,10 @@ $topbar-link-bg-active: $sapphire-dark;
 
 // TILES
 // ------------------------------------------------------------------------------------------
-// $evo-tile-scroll-panel-height:			400px !default;
-// $evo-tile-header-border-top-color:		$gray-light !default;
-// $evo-tile-body-background-color:			$white !default;
-// $evo-tile-body-border-color:				$gray-light !default;
+// $evo-tile-scroll-panel-height:			400px;
+// $evo-tile-header-border-top-color:		$gray-light;
+// $evo-tile-body-background-color:			$white;
+// $evo-tile-body-border-color:				$gray-light;
 
 
 // TOOLTIP

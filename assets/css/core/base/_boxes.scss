@@ -4,7 +4,11 @@
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
-// VARS **************************************************
+//
+// @variables
+//
+
+// CORE BOX
 $evo-box-hdr-rule-size: 3px !default;
 $evo-box-hdr-rule-style: solid !default;
 $evo-box-hdr-rule-color: $gray-mid-dark !default;
@@ -13,96 +17,128 @@ $evo-box-radius: $global-radius !default;
 $evo-box-border-width: 1px !default;
 $evo-box-border-style: solid !default;
 $evo-box-border-color: $gray-mid !default;
-
-$evo-vertical-shadow: 0 !default;
-$evo-horizontal-shadow: 3px !default;
-$evo-blur-shadow: 6px !default;
-$evo-color-shadow: $gray-mid !default;
 $evo-box-body-text-align: left !default;
 
+// CORE BOX SHADOW
+$evo-box-shadow-vertical: 0 !default;
+$evo-box-shadow-horizontal: 3px !default;
+$evo-box-shadow-blur: 6px !default;
+$evo-box-shadow-color: $gray-mid !default;
 
-// MIXINS **************************************************
+// CUSTOM BOXES
+
+// FEATURE CONTAINER
+$evo-box-featured-background-color:	$white !default;
+$evo-box-featured-hdr-rule-color: $blue-gray-mid-dark !default;
+
+// SIDEBAR CONTAINER
+$evo-box-sidebar-background-color: $gray-lighter !default;
+$evo-box-sidebar-hdr-rule-color: $gray-mid !default;
+
+// SUPPORT CONTAINER
+$evo-box-support-background-color: $blue-gray-lighter !default;
+$evo-box-support-border-color: $blue-gray-mid-dark !default;
+$evo-box-support-hdr-rule-color: $blue-gray-mid-dark !default;
+
+// HIGHLIGHT CONTAINER
+$evo-box-highlight-background-color: $evo-highlight-color !default;
+
+// INLINE SEARCH CONTAINER
+$evo-box-inline-search-background-color: $gray-lighter !default;
+
+
+//
+// @mixins
+//
+
+// CORE BOX MIXIN
 @mixin evo-box(
-		$hdr-bdr-btm-width: $evo-box-hdr-rule-size,
-		$hdr-bdr-btm-style: $evo-box-hdr-rule-style,
-		$hdr-bdr-btm-color: $evo-box-hdr-rule-color,
-		$hdr-rule-padding: $evo-box-hdr-rule-padding,
-		$box-radius: $evo-box-radius,
-		$box-border-width: $evo-box-border-width,
-		$box-border-style: $evo-box-border-style,
-		$box-border-color: $evo-box-border-color,
-		$box-text-align: $evo-box-body-text-align
-	)
-	{
-	@include border-radius($box-radius);
-	border: $box-border-width $box-border-style $box-border-color;
-	position: relative;
-	text-align: $box-text-align;
-		.evo-box-hdr			{
-								margin-bottom: 12px; /* TODO: Make this a variable */
-			// h1, h2, h3, h4, h5, h6	{margin-top: 0;}
-			.evo-hdr-rule			{
-									border-bottom: $hdr-bdr-btm-width $hdr-bdr-btm-style $hdr-bdr-btm-color;
-									padding: $hdr-rule-padding;
-									}
+	$hdr-bdr-btm-width: $evo-box-hdr-rule-size,
+	$hdr-bdr-btm-style: $evo-box-hdr-rule-style,
+	$hdr-bdr-btm-color: $evo-box-hdr-rule-color,
+	$hdr-rule-padding: $evo-box-hdr-rule-padding,
+	$box-radius: $evo-box-radius,
+	$box-border-width: $evo-box-border-width,
+	$box-border-style: $evo-box-border-style,
+	$box-border-color: $evo-box-border-color,
+	$box-text-align: $evo-box-body-text-align
+)
+{
+@include border-radius($box-radius);
+border: $box-border-width $box-border-style $box-border-color;
+position: relative;
+text-align: $box-text-align;
+	.evo-box-hdr			{
+							margin-bottom: rem-calc(12); /* TODO: Make this a variable */
+		.evo-hdr-rule			{
+								border-bottom: $hdr-bdr-btm-width $hdr-bdr-btm-style $hdr-bdr-btm-color;
+								padding: $hdr-rule-padding;
 								}
-		.evo-box-bdy,
-		.evo-box-ftr			{padding-bottom: 1px;}
-		.evo-box-ftr			{margin-top: rem-calc(14);}
-	}
+							}
+	.evo-box-bdy,
+	.evo-box-ftr			{padding-bottom: 1px;}
+	.evo-box-ftr			{margin-top: rem-calc(14);}
+}
 
 // TODO: MOVE THIS FROM BOXES.SCSS TO HELPER.SCSS, MAKE IT GLOBAL
+// CORE BOX SHADOW MIXIN
 @mixin evo-box-shadow(
-		$vert-shadow:$evo-vertical-shadow,
-		$horz-shadow:$evo-horizontal-shadow,
-		$shadow-blur:$evo-blur-shadow,
-		$shadow-color:$evo-color-shadow
-	)
-	{
-		@include box-shadow($vert-shadow, $horz-shadow, $shadow-blur, $shadow-color);
-	}
+	$box-shadow-vertical: $evo-box-shadow-vertical,
+	$box-shadow-horizontal: $evo-box-shadow-horizontal,
+	$box-shadow-blur: $evo-box-shadow-blur,
+	$box-shadow-color: $evo-box-shadow-color
+)
+{
+	@include box-shadow($box-shadow-vertical, $box-shadow-horizontal, $box-shadow-blur, $box-shadow-color);
+}
 
-// EXPORTS **************************************************
+//
+// @exports
+//
+
+// CORE BOX EXPORTS
 @include exports("evo-box") {}
 @include exports("evo-box-shadow") {}
 
 
 @if $use-boxes == true{
 
-	// BOX BASE SETUP
+	// CORE BOX
 	.evo-box					{
 								@include panel();
 								@include evo-box();
 								}
+
+	// CORE BOX SHADOW
 	.evo-box-shadow				{@include evo-box-shadow();}
 
 	// FEATURE CONTAINER
 	.evo-feature-ctn			{
-								@include panel($bg:$boxFeaturedBackgroundColor);
-								@include evo-box($hdr-bdr-btm-color:$boxFeaturedBorderBottomColor);
+								@include panel($bg:$evo-box-featured-background-color);
+								@include evo-box($hdr-bdr-btm-color:$evo-box-featured-hdr-rule-color);
 								}
 
 	// SIDEBAR CONTAINER
 	.evo-sidebar-ctn			{
-								@include panel($bg:$boxSidebarBackgroundColor);
-								@include evo-box($hdr-bdr-btm-color:$boxSidebarBorderBottomColor);
+								@include panel($bg:$evo-box-sidebar-background-color);
+								@include evo-box($hdr-bdr-btm-color:$evo-box-sidebar-hdr-rule-color);
 								}
 
 	// SUPPORT CONTAINER
 	.evo-support-ctn			{
-								@include panel($bg:$boxSupportBackgroundColor);
-								@include evo-box($hdr-bdr-btm-color:$boxSupportBorderBottomColor,$box-radius:0 0 $global-radius $global-radius,$box-border-color:$boxSupportBorderBottomColor);
+								@include panel($bg:$evo-box-support-background-color);
+								@include evo-box($hdr-bdr-btm-color:$evo-box-support-hdr-rule-color,$box-radius:0 0 $evo-box-radius $evo-box-radius,$box-border-color:$evo-box-support-border-color);
 								}
 
 	// HIGHLIGHT CONTAINER
 	.evo-highlight-ctn			{
-								@include panel($bg:#F7F0B2);
+								@include panel($bg:$evo-box-highlight-background-color);
 								@include evo-box($box-text-align:center,$box-border-width:0);
 								}
 	
 	// INLINE SEARCH CONTAINER
 	.evo-inline-search-ctn		{
-								@include panel($bg:$boxInlineSearchBackgroundColor);
+								@include panel($bg:$evo-box-inline-search-background-color);
 								@include evo-box($box-radius:0,$box-border-width:0);
 		form						{
 									margin-bottom: 0;
@@ -113,8 +149,6 @@ $evo-box-body-text-align: left !default;
 										}
 									}
 								}
-
-
 
 	//=== MEDIA QUERIES =========================================================================
 

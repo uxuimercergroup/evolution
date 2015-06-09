@@ -4,37 +4,27 @@
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
+//
+// @variables
+//
+
+
+
 @if $use-toolbar-header == true{
 
 	
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// MEDIUM MEDIA QUERY RANGE - 641px - 1024px
-	@if $use-medium-only-mediaquery == true {
-			
-		@media #{$medium-only} {
-
-		}// endif
-
-	}// endif
-
-	// LARGE MEDIA QUERY RANGE - 1025px - 1440px
-	@if $use-large-only-mediaquery == true {
-			
-		@media #{$large-only} {
-
-		}// endif
-
-	}// endif
-
 	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
 	@if $use-medium-up-mediaquery == true {
-			
+		
 		@media #{$medium-up} {
 
-		}// endif
+			
 
+		}
+		
 	}// endif
 
 }// endif
