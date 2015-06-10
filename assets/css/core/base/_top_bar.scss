@@ -1,44 +1,12 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.7 - Base Navigation Partial
+// Mercer Evolution - Core v2.7 - Base Top Bar Partial
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
 @if $use-top-bar == true{
 
-	.evo-top-bar			{
-		.top-bar-section		{
-
-		// GLOBAL NAV OVERRIDES - BEGIN
-			ul						{
-				li						{
-					&.active				{}
-					a						{
-											text-decoration: none;
-						[class*="evo-icon-"]	{
-												color: $white;
-												top: rem-calc(3);
-												}
-											}
-										}
-									}
-		// GLOBAL NAV OVERRIDES - END
-
-		// LEFT NAV OVERRIDES - BEGIN
-			ul.left					{
-
-									}
-		// LEFT NAV OVERRIDES - END
-
-		// RIGHT NAV OVERRIDES - BEGIN
-			ul.right				{
-
-									}
-		// RIGHT NAV OVERRIDES - END
-								}
-							}
 	
-
 
 	//=== MEDIA QUERIES =========================================================================
 
