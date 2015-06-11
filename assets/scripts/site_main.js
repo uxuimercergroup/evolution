@@ -535,6 +535,11 @@ $(function() {
 		// SELECT DIV BOX
 			selectDropDown();
 
+		// ADD/REMOVE PLAN COMPONENT CAROUSEL
+			evoCarousel('js-evo-add-remove-plan-component-carousel',{
+				autoPlay: false
+			});
+
 		// TABS
 
 			// Tabs example

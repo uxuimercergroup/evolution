@@ -1,0 +1,70 @@
+/*------------------------------------------------------------------------------------------
+Mercer Evolution - Employee Portal Family - Worksheet Form Partial
+DATE - June 3, 2015
+AUTHOR - Doug Fraize, Matthew Holmes
+-------------------------------------------------------------------------------------------*/
+
+//
+// @variables
+//
+$evo-form-worksheet-font-family: $evo-font-regular-family !default;
+$evo-form-worksheet-font-size: rem-calc(25) !default;
+$evo-form-worksheet-label-color: $gray-mid !default;
+$evo-form-worksheet-inputs-border-radius: 0 !default;
+$evo-form-worksheet-inputs-bg-color: $gray-lightest !default;
+$evo-form-worksheet-inputs-border: 0 !default;
+$evo-form-worksheet-inputs-border-bottom-with: 2px !default;
+$evo-form-worksheet-inputs-border-bottom-style: solid !default;
+$evo-form-worksheet-inputs-border-bottom-color: $sapphire-mid !default;
+$evo-form-worksheet-input-color: $sapphire-mid !default;
+
+
+.evo-form-worksheet				{
+	.row							{
+									margin-bottom: rem-calc(15);
+		label							{
+										font-family: $evo-form-worksheet-font-family;
+										font-size: $evo-form-worksheet-font-size;
+										color: $evo-form-worksheet-label-color;
+										margin-bottom: rem-calc(0.75);
+			.evo-input-value-amt			{
+											float: left;
+											padding-right: rem-calc(5);
+											width: rem-calc(20);
+											position: relative;
+											top: rem-calc(-4);
+											}
+			input[type="text"],
+			input[type="number"]			{
+											@include border-radius($evo-form-worksheet-inputs-border-radius);
+											padding: 0 rem-calc(6);
+											background-color: $evo-form-worksheet-inputs-bg-color;
+											border: $evo-form-worksheet-inputs-border;
+											border-bottom: $evo-form-worksheet-inputs-border-bottom-with $evo-form-worksheet-inputs-border-bottom-style $evo-form-worksheet-inputs-border-bottom-color;
+											color: $evo-form-worksheet-input-color;
+											font-size: $evo-form-worksheet-font-size;
+											margin-bottom: rem-calc(2);
+											width: 93%;
+											}
+										}
+									}
+
+								}
+
+//=== MEDIA QUERIES =========================================================================
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+@media #{$medium-up} {
+
+	.evo-form-worksheet			{
+		.row						{
+			label						{
+				input[type="text"],
+				input[type="number"]		{
+											width: 96%;
+											}
+										}
+									}
+								}
+
+}
