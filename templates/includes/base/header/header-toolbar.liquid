@@ -1,10 +1,10 @@
-<header role="banner" class="evo-header">
+<header role="banner" class="evo-header evo-header-toolbar">
 
-	<!-- HEADER TOOLBAR WIDTH ADJUST - BEGINS -->
-	<div class="row collapse">
+	<!-- HEADER TOOLBAR TOPBAR CONTAINER - BEGINS -->
+	<div class="fixed hide-for-small">
 
 		<!-- HEADER TOOLBAR TOPBAR - BEGINS -->
-		<nav class="top-bar hide-for-small" data-topbar role="navigation" data-options="is_hover: false">
+		<nav class="top-bar" data-topbar role="navigation" aria-hidden="true">
 			
 			<!-- HEADER TOOLBAR TOPBAR TITLE AREA - BEGINS -->
 			<ul class="title-area">
@@ -19,39 +19,89 @@
 
 				<!-- HEADER TOOLBAR TOPBAR RIGHT NAV SECTION - BEGINS -->
 				<ul class="right">
+					<li class="divider"></li>
 					<li class="active">
 						<a href="#">Right Button Active</a>
 					</li>
+					<li class="divider"></li>
 					<li class="has-dropdown">
-						<a href="#">Right Button Dropdown</a>
+						<a>Right Button Dropdown</a>
 						<ul class="dropdown">
 							<li>
 								<label>Level One</label>
 							</li>
 							<li class="has-dropdown">
-								<a href="#">First link in dropdown</a>
+								<a href="#">link with subs</a>
 								<ul class="dropdown">
 									<li>
 										<label>Level Two</label>
-										<a href="#">First link in dropdown</a>
 									</li>
+									<li class="has-dropdown">
+										<a href="#">link with subs</a>
+										<ul class="dropdown">
+											<li>
+												<label>Level Three</label>
+											</li>
+											<li class="has-dropdown">
+												<a href="#">link with subs</a>
+												<ul class="dropdown">
+													<li>
+														<label>Level Four</label>
+													</li>
+													<li>
+														<a href="#">link</a>
+													</li>
+													<li class="divider"></li>
+													<li>
+														<a href="#">link</a>
+													</li>
+													<li class="divider"></li>
+													<li>
+														<a href="#">link</a>
+													</li>
+												</ul>
+											</li>
+											<li class="divider"></li>
+											<li>
+												<a href="#">link</a>
+											</li>
+											<li class="divider"></li>
+											<li>
+												<a href="#">link</a>
+											</li>
+										</ul>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="#">link</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="#">link</a>
+									</li>
+									<li class="divider"></li>
 								</ul>
 							</li>
+							<li class="divider"></li>
 							<li class="active">
 								<a href="#">Active link in dropdown</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">link</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">link</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">link</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<!-- HEADER TOOLBAR TOPBAR RIGHT NAV SECTION - ENDS -->
-
-				<!-- HEADER TOOLBAR TOPBAR LEFT NAV SECTION - BEGINS -->
-				<ul class="left">
-					<li>
-						<a href="#">Left Nav Button</a>
-					</li>
-				</ul>
-				<!-- HEADER TOOLBAR TOPBAR LEFT NAV SECTION - ENDS -->
 
 			</section>
 			<!-- HEADER TOOLBAR TOPBAR NAV SECTIONS - ENDS -->
@@ -60,24 +110,22 @@
 		<!-- HEADER TOOLBAR TOPBAR - ENDS -->
 
 	</div>
-	<!-- HEADER TOOLBAR WIDTH ADJUST - ENDS -->
+	<!-- HEADER TOOLBAR TOPBAR CONTAINER - ENDS -->
 
 </header>
 
-
 <br />
 <br />
 <br />
 <br />
 
+<header role="banner" class="evo-header">
 
-<header role="banner" class="evo-header evo-header-toolbar">
-
-	<!-- HEADER TOOLBAR WIDTH ADJUST - BEGINS -->
-	<div class="row collapse evo-header-toolbar-adjust">
+	<!-- HEADER TOOLBAR TOPBAR CONTAINER - BEGINS -->
+	<div class="hide-for-small">
 
 		<!-- HEADER TOOLBAR TOPBAR - BEGINS -->
-		<nav class="top-bar hide-for-small evo-header-toolbar-topbar" data-topbar role="navigation" data-options="is_hover: false">
+		<nav class="top-bar" data-topbar role="navigation" aria-hidden="true">
 			
 			<!-- HEADER TOOLBAR TOPBAR TITLE AREA - BEGINS -->
 			<ul class="title-area">
@@ -92,23 +140,16 @@
 
 				<!-- HEADER TOOLBAR TOPBAR RIGHT NAV SECTION - BEGINS -->
 				<ul class="right">
+					<li class="divider"></li>
 					<li class="active">
 						<a href="#">Right Button Active</a>
 					</li>
+					<li class="divider"></li>
 					<li class="has-dropdown">
-						<a href="#">Right Button Dropdown</a>
+						<a>Right Button Dropdown</a>
 						<ul class="dropdown">
 							<li>
 								<label>Level One</label>
-							</li>
-							<li class="has-dropdown">
-								<a href="#">First link in dropdown</a>
-								<ul class="dropdown">
-									<li>
-										<label>Level Two</label>
-										<a href="#">First link in dropdown</a>
-									</li>
-								</ul>
 							</li>
 							<li class="active">
 								<a href="#">Active link in dropdown</a>
@@ -120,9 +161,11 @@
 
 				<!-- HEADER TOOLBAR TOPBAR LEFT NAV SECTION - BEGINS -->
 				<ul class="left">
+					<li class="divider"></li>
 					<li>
 						<a href="#">Left Nav Button</a>
 					</li>
+					<li class="divider"></li>
 				</ul>
 				<!-- HEADER TOOLBAR TOPBAR LEFT NAV SECTION - ENDS -->
 
@@ -133,6 +176,263 @@
 		<!-- HEADER TOOLBAR TOPBAR - ENDS -->
 
 	</div>
-	<!-- HEADER TOOLBAR WIDTH ADJUST - ENDS -->
+	<!-- HEADER TOOLBAR TOPBAR CONTAINER - ENDS -->
+
+</header>
+
+<br />
+<br />
+<br />
+<br />
+
+<header role="banner" class="evo-header">
+
+	<!-- HEADER TOOLBAR TOPBAR CONTAINER - BEGINS -->
+	<div class="contain-to-grid sticky hide-for-small">
+
+		<!-- HEADER TOOLBAR TOPBAR - BEGINS -->
+		<nav class="top-bar" data-topbar role="navigation" aria-hidden="true">
+			
+			<!-- HEADER TOOLBAR TOPBAR TITLE AREA - BEGINS -->
+			<ul class="title-area">
+				<li class="name">
+					<h1><a href="#">Mercer <span>Evolution</span></a></h1>
+				</li>
+			</ul>
+			<!-- HEADER TOOLBAR TOPBAR TITLE AREA - ENDS -->
+
+			<!-- HEADER TOOLBAR TOPBAR NAV SECTIONS - BEGINS -->
+			<section class="top-bar-section">
+
+				<!-- HEADER TOOLBAR TOPBAR RIGHT NAV SECTION - BEGINS -->
+				<ul class="right">
+					<li class="divider"></li>
+					<li class="active">
+						<a href="#">Right Button Active</a>
+					</li>
+					<li class="divider"></li>
+					<li class="has-dropdown">
+						<a>Right Button Dropdown</a>
+						<ul class="dropdown">
+							<li>
+								<label>Level One</label>
+							</li>
+							<li class="active">
+								<a href="#">Active link in dropdown</a>
+							</li>
+						</ul>
+					</li>
+					<li class="divider"></li>
+				</ul>
+				<!-- HEADER TOOLBAR TOPBAR RIGHT NAV SECTION - ENDS -->
+
+				<!-- HEADER TOOLBAR TOPBAR LEFT NAV SECTION - BEGINS -->
+				<ul class="left">
+					<li class="divider"></li>
+					<li>
+						<a href="#">Left Nav Button</a>
+					</li>
+					<li class="divider"></li>
+				</ul>
+				<!-- HEADER TOOLBAR TOPBAR LEFT NAV SECTION - ENDS -->
+
+			</section>
+			<!-- HEADER TOOLBAR TOPBAR NAV SECTIONS - ENDS -->
+
+		</nav>
+		<!-- HEADER TOOLBAR TOPBAR - ENDS -->
+
+	</div>
+	<!-- HEADER TOOLBAR TOPBAR CONTAINER - ENDS -->
+
+</header>
+
+<br />
+<br />
+<br />
+<br />
+
+<header role="banner" class="evo-header">
+
+	<!-- HEADER TOOLBAR TOPBAR CONTAINER - BEGINS -->
+	<div class="contain-to-grid hide-for-small">
+
+		<!-- HEADER TOOLBAR TOPBAR - BEGINS -->
+		<nav class="top-bar" data-topbar role="navigation" aria-hidden="true">
+			
+			<!-- HEADER TOOLBAR TOPBAR TITLE AREA - BEGINS -->
+			<ul class="title-area">
+				<li class="name">
+					
+				</li>
+			</ul>
+			<!-- HEADER TOOLBAR TOPBAR TITLE AREA - ENDS -->
+
+			<!-- HEADER TOOLBAR TOPBAR NAV SECTIONS - BEGINS -->
+			<section class="top-bar-section">
+
+				<!-- HEADER TOOLBAR TOPBAR LEFT NAV SECTION - BEGINS -->
+				<ul class="left">
+					<li class="divider"></li>
+					<li>
+						<a href="#">Left Nav Button</a>
+					</li>
+					<li class="divider"></li>
+					<li class="has-dropdown">
+						<a>Left Button Dropdown</a>
+						<ul class="dropdown">
+							<li>
+								<label>Level One</label>
+							</li>
+							<li class="active">
+								<a href="#">Active link in dropdown</a>
+							</li>
+						</ul>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">Left Nav Button</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">Left Nav Button</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">Left Nav Button</a>
+					</li>
+					<li class="divider"></li>
+				</ul>
+				<!-- HEADER TOOLBAR TOPBAR LEFT NAV SECTION - ENDS -->
+
+			</section>
+			<!-- HEADER TOOLBAR TOPBAR NAV SECTIONS - ENDS -->
+
+		</nav>
+		<!-- HEADER TOOLBAR TOPBAR - ENDS -->
+
+	</div>
+	<!-- HEADER TOOLBAR TOPBAR CONTAINER - ENDS -->
+
+</header>
+
+<br />
+<br />
+<br />
+<br />
+
+<header role="banner" class="evo-header">
+
+	<!-- HEADER TOOLBAR TOPBAR CONTAINER - BEGINS -->
+	<div class="contain-to-grid hide-for-small">
+
+		<!-- HEADER TOOLBAR TOPBAR - BEGINS -->
+		<nav class="top-bar hide-for-small" data-topbar>
+			
+			<!-- HEADER TOOLBAR TOPBAR TITLE AREA - BEGINS -->
+			<ul class="title-area">
+				<li class="name">
+					<h1><a href="#">Mercer <span>Evolution</span></a></h1>
+				</li>
+			</ul>
+			<!-- HEADER TOOLBAR TOPBAR TITLE AREA - ENDS -->
+
+			<!-- HEADER TOOLBAR TOPBAR NAV SECTIONS - BEGINS -->
+			<section class="top-bar-section">
+
+				<!-- HEADER TOOLBAR TOPBAR RIGHT NAV SECTION - BEGINS -->
+				<ul class="right">
+					<li class="divider"></li>
+					<li class="has-dropdown">
+						<a>Right Button Dropdown</a>
+						<ul class="dropdown">
+							<li>
+								<label>Level One</label>
+							</li>
+							<li class="active">
+								<a href="#">Active link in dropdown</a>
+							</li>
+						</ul>
+					</li>
+					<li class="divider"></li>
+				</ul>
+				<!-- HEADER TOOLBAR TOPBAR RIGHT NAV SECTION - ENDS -->
+
+			</section>
+			<!-- HEADER TOOLBAR TOPBAR NAV SECTIONS - ENDS -->
+
+		</nav>
+		<!-- HEADER TOOLBAR TOPBAR - ENDS -->
+
+		<!-- HEADER TOOLBAR TOPBAR - BEGINS -->
+		<nav class="top-bar" data-topbar role="navigation" aria-hidden="true">
+			
+			<!-- HEADER TOOLBAR TOPBAR TITLE AREA - BEGINS -->
+			<ul class="title-area">
+				<li class="name">
+					
+				</li>
+			</ul>
+			<!-- HEADER TOOLBAR TOPBAR TITLE AREA - ENDS -->
+
+			<!-- HEADER TOOLBAR TOPBAR NAV SECTIONS - BEGINS -->
+			<section class="top-bar-section">
+
+				<!-- HEADER TOOLBAR TOPBAR RIGHT NAV SECTION - BEGINS -->
+				<ul class="right">
+					<li class="divider"></li>
+					<li>
+						<a href="#">Right Nav Button</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">Right Nav Button</a>
+					</li>
+					<li class="divider"></li>
+				</ul>
+				<!-- HEADER TOOLBAR TOPBAR RIGHT NAV SECTION - ENDS -->
+
+				<!-- HEADER TOOLBAR TOPBAR LEFT NAV SECTION - BEGINS -->
+				<ul class="left">
+					<li class="divider"></li>
+					<li>
+						<a href="#">Left Nav Button</a>
+					</li>
+					<li class="divider"></li>
+					<li class="has-dropdown">
+						<a>Left Button Dropdown</a>
+						<ul class="dropdown">
+							<li>
+								<label>Level One</label>
+							</li>
+							<li class="active">
+								<a href="#">Active link in dropdown</a>
+							</li>
+						</ul>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">Left Nav Button</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">Left Nav Button</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">Left Nav Button</a>
+					</li>
+					<li class="divider"></li>
+				</ul>
+				<!-- HEADER TOOLBAR TOPBAR LEFT NAV SECTION - ENDS -->
+
+			</section>
+			<!-- HEADER TOOLBAR TOPBAR NAV SECTIONS - ENDS -->
+
+		</nav>
+		<!-- HEADER TOOLBAR TOPBAR - ENDS -->
+
+	</div>
+	<!-- HEADER TOOLBAR TOPBAR CONTAINER - ENDS -->
 
 </header>

@@ -7,23 +7,14 @@
 //
 // @variables
 //
-$evo-header-toolbar-background-color: $gray-dark !default;
-$evo-header-toolbar-grid-device-padding: 0 rem-calc(10) !default;
-$evo-header-toolbar-adjust-max-width: $row-width !default;
+
 
 @if $use-header-toolbar == true{
 
 	.evo-header-toolbar					{
-										background-color: $evo-header-toolbar-background-color;
-										padding: $evo-header-toolbar-grid-device-padding;
-
-		// HEADER TOOLBAR WIDTH ADJUST
-		.evo-header-toolbar-adjust			{
-											max-width: $evo-header-toolbar-adjust-max-width;
-											}
 
 		// HEADER TOOLBAR TOPBAR
-		.evo-header-toolbar-topbar			{
+		.topbar								{
 
 											}
 										}
