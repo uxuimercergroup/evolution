@@ -4,9 +4,42 @@
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
+//
+// @variables
+//
+$evo-top-bar-anchor-decoration: none !default;
+$evo-top-bar-title-area-name-font-family: $evo-font-regular-stack !default;
+$evo-top-bar-title-area-name-font-color: $white !default;
+$evo-top-bar-title-area-name-link-color: $white !default;
+$evo-top-bar-title-area-sub-name-font-family: $evo-font-regular-stack !default;
+
 @if $use-top-bar == true{
 
-	
+	.evo-top-bar					{
+
+		// TOP BAR CORE
+		a								{
+										text-decoration: $evo-top-bar-anchor-decoration;
+										}
+
+		// TOP BAR TITLE AREA
+		.title-area						{
+			.name							{
+				h1								{
+												font-family: $evo-top-bar-title-area-name-font-family;
+												color: $evo-top-bar-title-area-name-font-color;
+					a								{
+													color: $evo-top-bar-title-area-name-link-color;
+													}
+					.evo-top-bar-sub-name			{
+													font-family: $evo-top-bar-title-area-sub-name-font-family;
+													}
+												}
+											}
+										}
+
+
+									}	
 
 	//=== MEDIA QUERIES =========================================================================
 
