@@ -596,9 +596,24 @@ $topbar-dropdown-arrows: false; //Set false to remove the \00bb >> text from dro
 
 // LISTS
 // ------------------------------------------------------------------------------------------
-// $horizontalListPipeBorderColor:			$gray-mid;
-// $definitionListHeaderColor:				$black;
-// $definitionDataListHeaderBorderColor:	$gray-mid;
+// $evo-inline-dl-list-margin-bottom: 0 !default;
+
+// Used for defintion title styles
+// $evo-inline-dl-list-dt-float: left !default;
+// $evo-inline-dl-list-dt-margin: 0 rem-calc(10) 0 0 !default;
+
+// Used to format the definition items
+// $evo-inline-dl-list-dd-float: left !default;
+// $evo-inline-dl-list-dd-margin: 0 rem-calc(10) 0 0 !default;
+// $evo-inline-dl-list-dd-display: block !default;
+// $evo-inline-dl-list-dd-last-child: 0 !default;
+
+// Used for the vertical pipe in lists
+// $evo-horizontal-list-pipe-border-color: $gray-mid !default;
+
+// Used for defintion list headers
+// $evo-definition-list-hdr-color: $black !default;
+// $evo-definition-list-hdr-border-color: $gray-mid !default;
 
 
 // TABLES

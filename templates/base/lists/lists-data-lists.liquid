@@ -89,113 +89,93 @@
 	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
 		<section class="evo-ref-example-content">
 
-			<div class="col-24">
-				<div class="col-8 first">
+			<section class="row">
+				<div class="small-12 columns">
 
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-ref-example-box">
+					<section class="row">
+						<div class="small-4 columns">
+						<!-- EXAMPLE SECTION - BOX - BEGINS -->
+							<div class="evo-box evo-box-rnd evo-ref-example-box">
+								{% if model.reference-example-versions == "true" %}
+									<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
+								{% endif %}
+								<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+									{% include '/base/lists/list-data-default' %}
+								<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+							</div>
+						<!-- EXAMPLE SECTION - BOX - ENDS -->
+						</div>
+						<div class="small-4 columns">
+						<!-- EXAMPLE SECTION - BOX - BEGINS -->
+							<div class="evo-box evo-box-rnd evo-ref-example-box">
+								{% if model.reference-example-versions == "true" %}
+									<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
+								{% endif %}
+								<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+									{% include '/base/lists/list-data-default-stacked' %}
+								<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+							</div>
+						<!-- EXAMPLE SECTION - BOX - ENDS -->
+						</div>
+						<div class="small-4 columns">
+						<!-- EXAMPLE SECTION - BOX - BEGINS -->
+							<div class="evo-box evo-box-rnd evo-ref-example-box">
+								{% if model.reference-example-versions == "true" %}
+									<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
+								{% endif %}
+								<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+									{% include '/base/lists/list-data-default-stacked-bulleted' %}
+								<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+							</div>
+						<!-- EXAMPLE SECTION - BOX - ENDS -->							
+						</div>
+					</section>
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							{% include '/base/lists/list-data-default' %}
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
-					
 				</div>
-				<div class="col-8">
+			</section>
 
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-ref-example-box">
-
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							{% include '/base/lists/list-data-default-stacked' %}
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
-					
+			<section class="row">
+				<div class="small-12 columns">
+					<section class="row">
+						<div class="small-4 columns">
+						<!-- EXAMPLE SECTION - BOX - BEGINS -->
+							<div class="evo-box evo-box-rnd evo-ref-example-box">
+								{% if model.reference-example-versions == "true" %}
+									<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-4 }}</h4>
+								{% endif %}
+								<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+									{% include '/base/lists/list-data-definition' %}
+								<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+							</div>
+						<!-- EXAMPLE SECTION - BOX - ENDS -->
+						</div>
+						<div class="small-4 columns">
+						<!-- EXAMPLE SECTION - BOX - BEGINS -->
+							<div class="evo-box evo-box-rnd evo-ref-example-box">
+								{% if model.reference-example-versions == "true" %}
+									<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-5 }}</h4>
+								{% endif %}
+								<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+									{% include '/base/lists/list-data-definition-stacked' %}
+								<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+							</div>
+						<!-- EXAMPLE SECTION - BOX - ENDS -->
+						</div>
+						<div class="small-4 columns">
+						<!-- EXAMPLE SECTION - BOX - BEGINS -->
+							<div class="evo-box evo-box-rnd evo-ref-example-box">
+								{% if model.reference-example-versions == "true" %}
+									<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-6 }}</h4>
+								{% endif %}
+								<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+									{% include '/base/lists/list-data-definition-stacked-bulleted' %}
+								<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+							</div>
+						<!-- EXAMPLE SECTION - BOX - ENDS -->
+						</div>
+					</section>			
 				</div>
-				<div class="col-8">
-
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-ref-example-box">
-
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							{% include '/base/lists/list-data-default-stacked-bulleted' %}
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
-					
-				</div>
-			</div>
-
-			<div class="col-24">
-				<div class="col-8 first">
-
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-ref-example-box">
-
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-4 }}</h4>
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							{% include '/base/lists/list-data-definition' %}
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
-					
-				</div>
-				<div class="col-8">
-
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-ref-example-box">
-
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-5 }}</h4>
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							{% include '/base/lists/list-data-definition-stacked' %}
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
-					
-				</div>
-				<div class="col-8">
-
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-ref-example-box">
-
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-6 }}</h4>
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							{% include '/base/lists/list-data-definition-stacked-bulleted' %}
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
-					
-				</div>
-			</div>
+			</section>
 
 		</section>
 	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
