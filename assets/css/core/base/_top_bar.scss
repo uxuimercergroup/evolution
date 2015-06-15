@@ -38,6 +38,24 @@ $evo-top-bar-title-area-sub-name-font-family: $evo-font-regular-stack !default;
 											}
 										}
 
+		// TOP BAR NAV SECTION
+		.top-bar-section				{
+			ul 								{
+				li								{
+					>a								{
+
+						// TOP BAR NAV SECTION ICONS
+						&[class^=evo-icon-]				{
+														font-family: $evo-icon-font-stack;
+														}
+						&[class^="evo-icon-site-"]		{
+														font-family: $evo-icon-site-font-stack;
+														}
+													}
+												}
+											}
+										}
+
 
 									}	
 
