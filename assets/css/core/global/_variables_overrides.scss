@@ -317,7 +317,7 @@ $topbar-bg-color: $gray-dark;
 $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-$topbar-height: rem-calc(55);
+$topbar-height: rem-calc(56);
 $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -351,7 +351,7 @@ $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
 $topbar-dropdown-link-bg: $topbar-bg;
 $topbar-dropdown-link-bg-hover: $gray-mid-dark;
 $topbar-dropdown-link-weight: $font-weight-normal;
-$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-size: 0px;
 $topbar-dropdown-toggle-color: $topbar-link-color;
 $topbar-dropdown-toggle-alpha: 1;
 
@@ -367,8 +367,8 @@ $topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: 
 
 // Sticky Class
 $topbar-sticky-class: ".sticky";
-$topbar-arrows: false; //Set false to remove the triangle icon from the menu item
-$topbar-dropdown-arrows: false; //Set false to remove the \00bb >> text from dropdown subnavigation li//
+$topbar-arrows: true; //Set false to remove the triangle icon from the menu item
+$topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from dropdown subnavigation li//
 
 
 // ==========================================================================================
@@ -376,8 +376,17 @@ $topbar-dropdown-arrows: false; //Set false to remove the \00bb >> text from dro
 // ==========================================================================================
 
 // BASE VARIABLES
-// $evo-base-margin:						14px;
-// $evo-base-padding:						14px;
+
+	// LAYOUT
+	// $evo-base-margin:					rem-calc(14);
+	// $evo-base-padding:					rem-calc(14);
+
+	// SHADOWS
+	// $evo-base-shadow-base-color: 		$black;
+	// $evo-base-shadow-horizontal: 		0;
+	// $evo-base-shadow-vertical: 			rem-calc(3);
+	// $evo-base-shadow-blur: 				rem-calc(3);
+	// $evo-base-shadow-color:				scale-color($evo-base-shadow-base-color, $lightness: 75%);
 
 // Z-INDEX MASTER LIST
 // Used for a bird's eye view of components dependent on the z-axis
@@ -554,7 +563,10 @@ $topbar-dropdown-arrows: false; //Set false to remove the \00bb >> text from dro
 // HEADER
 // ------------------------------------------------------------------------------------------
 
-
+// $evo-header-container-box-shadow-horizontal: $evo-base-shadow-horizontal;
+// $evo-header-container-box-shadow-vertical: $evo-base-shadow-vertical;
+// $evo-header-container-box-shadow-blur: 	$evo-base-shadow-blur;
+// $evo-header-container-box-shadow-color: 	$evo-base-shadow-color;
 
 
 // MENU STYLES
@@ -596,24 +608,24 @@ $topbar-dropdown-arrows: false; //Set false to remove the \00bb >> text from dro
 
 // LISTS
 // ------------------------------------------------------------------------------------------
-// $evo-inline-dl-list-margin-bottom: 0 !default;
+// $evo-inline-dl-list-margin-bottom: 0;
 
 // Used for defintion title styles
-// $evo-inline-dl-list-dt-float: left !default;
-// $evo-inline-dl-list-dt-margin: 0 rem-calc(10) 0 0 !default;
+// $evo-inline-dl-list-dt-float: left;
+// $evo-inline-dl-list-dt-margin: 0 rem-calc(10) 0 0;
 
 // Used to format the definition items
-// $evo-inline-dl-list-dd-float: left !default;
-// $evo-inline-dl-list-dd-margin: 0 rem-calc(10) 0 0 !default;
-// $evo-inline-dl-list-dd-display: block !default;
-// $evo-inline-dl-list-dd-last-child: 0 !default;
+// $evo-inline-dl-list-dd-float: left;
+// $evo-inline-dl-list-dd-margin: 0 rem-calc(10) 0 0;
+// $evo-inline-dl-list-dd-display: block;
+// $evo-inline-dl-list-dd-last-child: 0;
 
 // Used for the vertical pipe in lists
-// $evo-horizontal-list-pipe-border-color: $gray-mid !default;
+// $evo-horizontal-list-pipe-border-color: $gray-mid;
 
 // Used for defintion list headers
-// $evo-definition-list-hdr-color: $black !default;
-// $evo-definition-list-hdr-border-color: $gray-mid !default;
+// $evo-definition-list-hdr-color: $black;
+// $evo-definition-list-hdr-border-color: $gray-mid;
 
 
 // TABLES

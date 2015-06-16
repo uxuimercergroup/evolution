@@ -9,8 +9,17 @@
 // ==========================================================================================
 
 // BASE VARIABLES
-$evo-base-margin:							14px !default;
-$evo-base-padding:							14px !default;
+
+	// LAYOUT
+	$evo-base-margin:							rem-calc(14) !default;
+	$evo-base-padding:							rem-calc(14) !default;
+
+	// SHADOWS
+	$evo-base-shadow-base-color: 				$black !default;
+	$evo-base-shadow-horizontal: 				0 !default;
+	$evo-base-shadow-vertical: 				 	rem-calc(3) !default;
+	$evo-base-shadow-blur: 				 		rem-calc(3) !default;
+	$evo-base-shadow-color:						scale-color($evo-base-shadow-base-color, $lightness: 75%) !default;
 
 // Z-INDEX MASTER LIST
 // Used for a bird's eye view of components dependent on the z-axis
