@@ -10,6 +10,9 @@ $evo-message-box-icon-margin-top: -9px !default;
 $evo-message-box-icon-position: absolute !default;
 $evo-message-box-icon-position-top: rem-calc(25) !default;
 $evo-message-box-icon-position-left: rem-calc(10) !default;
+$evo-message-box-font-color: $white;
+
+$evo-message-box-warning-font-color: $black;
 
 @if $use-message-boxes == true{
 
@@ -17,14 +20,26 @@ $evo-message-box-icon-position-left: rem-calc(10) !default;
 								padding-left: $evo-message-box-padding-left;
 		[class^="evo-icon-"]		{
 									margin-top: $evo-message-box-icon-margin-top;
-									color: $gray-mid;
+									color: $white;
 									}
 		[class*="evo-icon-position-left"]
 									{
 									position: $evo-message-box-icon-position;
 									top: $evo-message-box-icon-position-top !important;
 									left: $evo-message-box-icon-position-left;
+									color: $evo-message-box-font-color;
 									}
+		a							{color: $evo-message-box-font-color;}
+								}
+
+	.warning					{
+								color: $evo-message-box-warning-font-color !important;
+		a							{color: $evo-message-box-warning-font-color;}
+								}
+
+	.info						{
+		a							{color: $black;}
+		[class^="evo-icon-"]		{color: $sapphire;}
 								}
 
 }//endif

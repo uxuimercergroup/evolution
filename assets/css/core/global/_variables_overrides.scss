@@ -30,10 +30,11 @@ $font-weight-bold: bold;
 // We use these as default colors throughout, Message container colors
 $primary-color: $sapphire-dark;
 $secondary-color: $gray-lighter;
-$alert-color: $garnet-light;
-$success-color: $emerald-light;
-$warning-color: $topaz-light;
-$info-color: $blue-gray-lighter;
+
+$alert-color: #D23E3D;
+$success-color: #60A736;
+$warning-color: #E9CE70;
+$info-color: #A6E2EF;
 
 // We use these to control various global styles
 $body-font-color: $black;
@@ -138,7 +139,9 @@ $accordion-content-active-bg-color: $gray-lightest;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to control text style.
+$alert-font-weight: bold;
 $alert-font-size: rem-calc(14);
+$alert-font-color: $white;
 $alert-font-color-alt: scale-color($secondary-color, $lightness: -100%);
 
 // We use these to control border styles.
@@ -154,10 +157,10 @@ $alert-close-opacity-hover: 1;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to build padding for buttons.
-$button-tny: rem-calc(10);
-$button-sml: rem-calc(12);
-$button-med: rem-calc(14);
-$button-lrg: rem-calc(16);
+$button-tny: rem-calc(8);
+$button-sml: rem-calc(10);
+$button-med: rem-calc(12);
+$button-lrg: rem-calc(14);
 
 // We use these to control button text styles.
 $button-font-family: inherit;
@@ -543,6 +546,16 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 // INLINE SEARCH CONTAINER
 // $evo-box-inline-search-background-color:	$gray-lighter;
 
+// MESSAGE BOXES
+// ------------------------------------------------------------------------------------------
+// $evo-message-box-padding-left: rem-calc(33) !default;
+// $evo-message-box-icon-margin-top: -9px !default;
+// $evo-message-box-icon-position: absolute !default;
+// $evo-message-box-icon-position-top: rem-calc(25) !default;
+// $evo-message-box-icon-position-left: rem-calc(10) !default;
+// $evo-message-box-font-color: $white;
+
+// $evo-message-box-warning-font-color: $black;
 
 // FORM
 // ------------------------------------------------------------------------------------------
