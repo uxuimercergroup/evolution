@@ -316,8 +316,8 @@ $tooltip-bg: $gray-lighter;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: $gray-dark;
-$topbar-bg: $topbar-bg-color;
+$topbar-bg-color: $black;
+$topbar-bg: scale-color($topbar-bg-color, $lightness: 25%);
 
 // Height and margin
 $topbar-height: rem-calc(56);
@@ -328,18 +328,18 @@ $topbar-title-weight: $font-weight-normal;
 $topbar-title-font-size: rem-calc(22);
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: $gray-mid-light;
-$topbar-link-color-hover: $white;
-$topbar-link-color-active: $white;
-$topbar-link-color-active-hover: $white;
+$topbar-link-color: scale-color($topbar-bg-color, $lightness: 84%);
+$topbar-link-color-hover: scale-color($topbar-bg-color, $lightness: 100%);
+$topbar-link-color-active: scale-color($topbar-bg-color, $lightness: 100%);
+$topbar-link-color-active-hover: scale-color($topbar-bg-color, $lightness: 100%);
 $topbar-link-weight: $font-weight-normal;
 $topbar-link-font-size: rem-calc(16);
 $topbar-link-hover-lightness: 0;
 $topbar-link-bg: $transparent;
 $topbar-link-bg-hover: $transparent;
 $topbar-link-bg-color-hover: $transparent;
-$topbar-link-bg-active: $transparent;
-$topbar-link-bg-active-hover: $transparent;
+$topbar-link-bg-active: scale-color($topbar-bg-color, $lightness: 30%);
+$topbar-link-bg-active-hover: $topbar-link-bg-active;
 $topbar-link-text-transform: none;
 $topbar-link-padding: ($topbar-height / 3);
 $topbar-back-link-size: rem-calc(22);
@@ -349,24 +349,24 @@ $topbar-button-top: 7px;
 
 // Style the top bar dropdown elements
 $topbar-dropdown-bg: $topbar-bg;
-$topbar-dropdown-link-color: $white;
+$topbar-dropdown-link-color: $topbar-link-color;
 $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
-$topbar-dropdown-link-bg: $topbar-bg;
-$topbar-dropdown-link-bg-hover: $gray-mid-dark;
+$topbar-dropdown-link-bg: scale-color($topbar-bg-color, $lightness: 40%);
+$topbar-dropdown-link-bg-hover: scale-color($topbar-bg-color, $lightness: 45%);
 $topbar-dropdown-link-weight: $font-weight-normal;
 $topbar-dropdown-toggle-size: 0px;
 $topbar-dropdown-toggle-color: $topbar-link-color;
 $topbar-dropdown-toggle-alpha: 1;
 
-$topbar-dropdown-label-color: $gray-light;
+$topbar-dropdown-label-color: scale-color($topbar-bg-color, $lightness: 84%);
 $topbar-dropdown-label-text-transform: uppercase;
 $topbar-dropdown-label-font-weight: $font-weight-normal;
 $topbar-dropdown-label-font-size: rem-calc(12);
-$topbar-dropdown-label-bg: $gray-darker;
+$topbar-dropdown-label-bg: scale-color($topbar-bg-color, $lightness: 25%);
 
 // Divider Styles
-$topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 13%);
-$topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
+$topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 30%);
+$topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: 30%);
 
 // Sticky Class
 $topbar-sticky-class: ".sticky";
@@ -546,13 +546,14 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 // INLINE SEARCH CONTAINER
 // $evo-box-inline-search-background-color:	$gray-lighter;
 
+
 // MESSAGE BOXES
 // ------------------------------------------------------------------------------------------
-// $evo-message-box-padding-left: rem-calc(33) !default;
-// $evo-message-box-icon-margin-top: -9px !default;
-// $evo-message-box-icon-position: absolute !default;
-// $evo-message-box-icon-position-top: rem-calc(25) !default;
-// $evo-message-box-icon-position-left: rem-calc(10) !default;
+// $evo-message-box-padding-left: rem-calc(33);
+// $evo-message-box-icon-margin-top: -9px;
+// $evo-message-box-icon-position: absolute;
+// $evo-message-box-icon-position-top: rem-calc(25);
+// $evo-message-box-icon-position-left: rem-calc(10);
 // $evo-message-box-font-color: $white;
 
 // $evo-message-box-warning-font-color: $black;
@@ -580,10 +581,6 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 // $evo-header-container-box-shadow-vertical: $evo-base-shadow-vertical;
 // $evo-header-container-box-shadow-blur: 	$evo-base-shadow-blur;
 // $evo-header-container-box-shadow-color: 	$evo-base-shadow-color;
-
-
-// MENU STYLES
-// ------------------------------------------------------------------------------------------
 
 
 // NAVIGATION
@@ -678,6 +675,33 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 // $tableSubTotalFontColor:					$gray-darkest;
 // $tableTotalBackgroundColor:				#E6E6E6;
 // $tableTotalFontColor:					$black;
+
+
+// TOP BAR
+// ------------------------------------------------------------------------------------------
+// $evo-top-bar-anchor-decoration: none;
+// $evo-top-bar-title-area-name-font-family: $evo-font-regular-stack;
+// $evo-top-bar-title-area-name-font-color: scale-color($topbar-bg-color, $lightness: 100%);
+// $evo-top-bar-title-area-name-link-color: scale-color($topbar-bg-color, $lightness: 100%);
+// $evo-top-bar-title-area-sub-name-font-family: $evo-font-regular-stack;
+// $evo-top-bar-section-anchor-icon-color: 	$topbar-link-color;
+// $evo-top-bar-section-anchor-hover-icon-color: $topbar-link-color-hover;
+// $evo-top-bar-section-anchor-active-icon-color: $topbar-link-color-active;
+// $evo-top-bar-section-dropdown-active-background-color: $topbar-link-bg-active;
+// $evo-top-bar-section-dropdown-label-padding-bottom: rem-calc(8);
+// $evo-top-bar-section-dropdown-border-radius: 0 0 $global-radius $global-radius;
+// $evo-top-bar-section-dropdown-anchor-active-background-color: $topbar-link-bg-active;
+// $evo-top-bar-section-dropdown-box-shadow-horizontal: $evo-base-shadow-horizontal;
+// $evo-top-bar-section-dropdown-box-shadow-vertical: $evo-base-shadow-vertical;
+// $evo-top-bar-section-dropdown-box-shadow-blur: $evo-base-shadow-blur;
+// $evo-top-bar-section-dropdown-box-shadow-color: $evo-base-shadow-color;
+// $evo-top-bar-section-dropdown-icon: 	'\e3c2';
+// $evo-top-bar-section-dropdown-icon-position-top: rem-calc(1);
+// $evo-top-bar-section-dropdown-icon-margin-right: rem-calc(28);
+// $evo-top-bar-section-dropdown-icon-padding-right: $topbar-link-padding;
+// $evo-top-bar-section-dropdown-sub-icon: '\e3c1';
+// $evo-top-bar-section-dropdown-sub-icon-position-top: rem-calc(1);
+// $evo-top-bar-section-dropdown-sub-icon-position-right: rem-calc(-1);
 
 
 // ==========================================================================================
