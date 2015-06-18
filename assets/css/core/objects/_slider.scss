@@ -4,118 +4,162 @@
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
+
+//
+// @variables
+//
+$evo-slider-background-color: $gray-light !default;
+$evo-slider-handle-background-color: $citrine-mid !default;
+$evo-slider-handle-shadow-color: $black !default;
+$evo-slider-handle-border-color: $white !default;
+$evo-slider-range-background-color: $gray-mid !default;
+$evo-slider-tick-marker-color: $gray-light !default;
+$evo-slider-handle-shadow-color: $gray-mid-dark !default;
+
+
+
 @if $use-slider == true{
 
+.evo-contributions-slider		{
+								padding: rem-calc(12) rem-calc(10) rem-calc(9) rem-calc(10);
+	.evo-contributions-slider-hdr	{
+									margin-bottom: rem-calc(15);
+		.evo-slider-value				{
+										color: $citrine-mid;
+										font-size: rem-calc(18);
+										padding-left: rem-calc(5);
+										position: relative;
+										top: 1px;
+										}
+									}
+	
 	// SLIDER
-	.evo-slider.ui-slider 			{
-									@include border-radius($global-radius);
-									@include background-gradient($sliderBarBackgroundStartColor,$sliderBarBackgroundEndColor);
+	.evo-slider.ui-slider			{
+									@include ie-gradient-reset-filter;
+									@include border-radius(0);
+									background-color: $evo-slider-background-color !important;
+									background-image: none;
+									height: 6px;
+									width: 100%;
 									position: relative;
-									text-align: left;
-									width: 97%;
-									margin-top: $evo-base-margin;
-									margin-bottom: $evo-base-margin;
-
+									z-index: 800;
+									margin-bottom: 0;
 		// SLIDER HANDLE
 		.ui-slider-handle				{
+										@include ie-gradient-reset-filter;
 										@include border-radius(30px);
-										@include background-gradient($sliderHandleBackgroundStartColor,$sliderHandleBackgroundEndColor);
-										@include box-shadow(0, 1px, 3px, $sliderHandleShadowColor);
-										border: 1px solid $sliderHandleBorderColor;
+										@include box-shadow(0, 1px, 3px, $evo-slider-handle-shadow-color);
+										@include box-shadow(0, 1px, 3px, $evo-slider-handle-shadow-color);
+										background-color: $evo-slider-handle-background-color !important;
+										background-image: none;
+										border: rem-calc(3) solid $evo-slider-handle-border-color;
+										cursor: pointer;
+										width: rem-calc(24) !important;
+										height: rem-calc(24) !important;
+										margin-left: rem-calc(-11);	
 										outline: none;
 										position: absolute;
+										top: rem-calc(-9) !important;
 										z-index: $evo-zindex-slider;
-										width: 20px;
-										height: 20px;
-										cursor: pointer;
-										}										
-		.ui-state-focus					{
-										@include background-gradient($sliderHandleFocusBackgroundStartColor,$sliderHandleFocusBackgroundEndColor);
-										border: 1px solid $sliderHandleBorderColor;
-										}
-		.ui-state-hover					{
-										@include background-gradient($sliderHandleHoverBackgroundStartColor,$sliderHandleHoverBackgroundEndColor);
-										border: 1px solid $sliderHandleBorderColor;
-										}
-		.ui-state-active 				{
-										@include background-gradient($sliderHandleActiveBackgroundStartColor,$sliderHandleActiveBackgroundEndColor);
-										border: 1px solid $sliderHandleBorderColor;
 										}
 
 		// SLIDER RANGE
 		.ui-slider-range				{
-										@include border-radius($global-radius);
+										@include border-radius(0);
+										background-color: $evo-slider-range-background-color;
+										z-index: 801;
+										}
+									}
+
+	// SLIDER MARKERS
+	.evo-slider-markers				{
+									position: relative;
+									z-index: 799;
+		span							{
 										position: absolute;
-										z-index: $evo-zindex-slider;
 										display: block;
-										border: 0;
-										background-position: 0 0;
-										background-color: $sliderBarRangeBackgroundColor;
-										}
-									}
-	
-	// SLIDER HORIZONTAL
-	.evo-slider.ui-slider-horizontal
-									{
-									height: 6px;
-		.ui-slider-handle				{
-										top: -7px;
-										margin-left: -3px;
-										}
-		.ui-slider-range				{
-										top: 0;
-										height: 100%;
-										}
-		.ui-slider-range-min			{left: 0;}
-		.ui-slider-range-max			{right: 0;}
+										margin: rem-calc(-19) 0 0 0;
+										width: rem-calc(2);
+										height: rem-calc(32);
+										}							
 									}
 
-	// SLIDER VERTICAL
-	.evo-slider.ui-slider-vertical 	{
-									display: inline-block;
-									width: 6px;
-									height: 100px;
-									margin-left: ($evo-base-margin/2);
-									margin-right: ($evo-base-margin/2);
-		.ui-slider-handle				{
-										left: -7px;
-										margin-bottom: -3px;
+	// SLIDER TICKS
+	.evo-slider-tick-ctn			{
+									margin-top: rem-calc(7);
+		.evo-slider-tick-number			{
+										position: relative;
+										font-size: rem-calc(12);
 										}
-		.ui-slider-range				{
-										left: 0;
-										width: 100%;
+		.evo-slider-tick-number-min		{
+										left: rem-calc(-5);
 										}
-		.ui-slider-range-min			{bottom: 0;}
-		.ui-slider-range-max			{top: 0;}
+		.evo-slider-tick-number-max		{
+										right: rem-calc(-10);
+										}
+		.evo-slider-tick-marker			{
+										position: absolute;
+										display: block;
+										margin: rem-calc(-28) 0 0 0;
+										width: rem-calc(1);
+										height: rem-calc(10);
+										background-color: $evo-slider-tick-marker-color;
+										}
+		.evo-slider-tick-number-min-marker
+										{
+										left: rem-calc(5);
+										}
+		.evo-slider-tick-number-max-marker
+										{
+										right: rem-calc(10);
+										}
 									}
 
-	// SLIDER RANGE LABEL
-	.evo-slider-range				{
-		.evo-slider-range-label			{
+	// SLIDER KEY
+	.evo-slider-key					{
+									font-size: rem-calc(12);
+									left: rem-calc(-5);
+									padding-top: rem-calc(6);
+									position: relative;
+
+		.evo-slider-key-row				{
 										@include clearfix;
-			label,
-			input							{float: left;}
-			input[type="text"]				{
-											@include border-radius(0);
-											@include box-shadow(0, 0, 0, transparent);
-											border: 0;
-											padding: 0 0 0 5px;
-											margin: 0;
-											width: 40%;
+										display: inline-block;
+										margin-right: rem-calc(10);
+										margin-bottom: rem-calc(3);
+										margin-top: rem-calc(10);
+										}
+		.evo-slider-key-block,
+		.evo-slider-key-label			{
+										float: left;
+										}
+		.evo-slider-key-block			{
+										@include border-radius(rem-calc(2));
+										width: rem-calc(13);
+										height: rem-calc(13);
+										margin-right: rem-calc(5);
+										position: relative;
+										top: 2px;
+										}
+									}
+								}
+
+// SLIDER IE9 FIXES
+.ie9							{
+	.evo-contributions-slider		{
+		
+		// SLIDER
+		.evo-slider.ui-slider			{
+			
+			// SLIDER HANDLE
+			.ui-slider-handle				{
+											top: rem-calc(-11) !important;
 											}
 										}
 									}
+								}
 
-	// SLIDER IE9 FIXES
-	.ie9							{
 
-		// SLIDER RANGE LABEL
-		.evo-slider-range				{
-			.evo-slider-range-label			{
-				input[type="text"]				{padding-top: 1px;}
-											}
-										}
-									}
 
 	//=== MEDIA QUERIES =========================================================================
 
@@ -124,34 +168,14 @@
 		
 		@media #{$medium-up} {
 
-			// SLIDER
-			.evo-slider.ui-slider 	{
-									width: 100%;
-										
-				// SLIDER HANDLE
-				.ui-slider-handle		{
-										width: 16px;
-										height: 16px;
-										}
-									}
+			.evo-contributions-slider		{
 
-			// SLIDER HORIZONTAL
-			.evo-slider.ui-slider-horizontal
-									{
-				.ui-slider-handle		{
-										top: -5px;
-										}
-									}
-
-			// SLIDER VERTICAL
-			.evo-slider.ui-slider-vertical
-									{
-									width: 6px;
-				.ui-slider-handle		{
-										left: -5px;
-										}
-									}
-
+				// SLIDER KEY
+				.evo-slider-key					{
+												padding-top: rem-calc(6);
+												font-size: rem-calc(12);
+												}
+											}
 		}
 		
 	}// endif

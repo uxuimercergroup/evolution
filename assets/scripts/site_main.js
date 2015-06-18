@@ -79,6 +79,46 @@
 
 			});
 	};
+
+
+	// RANGE SLIDER - CONTRIBUTIONS
+
+	// Pass data attribute value of slider range object
+	var evoSliderContributions = function(objectDataValue) {
+		
+		// Variable to define slider range object based on data attribute value
+		var sliderDataValue = jQuery('[data-evo-slider='+objectDataValue+']');
+
+		// Slider Contribution values
+		var userContributionValue = 5;
+		var companyContributionValue = 3;
+		var peerContributionValue = 7;
+
+
+		// Slider Max value
+		var sliderMax = 20;
+
+		// Slider
+		sliderDataValue.slider({
+			animate: true, // Animated slide on/off
+			min: 0, // Min value to show on slider
+			max: sliderMax, // Max value to show on slider
+			orientation: "horizontal", // Orientation: horizontal (default) or vertical
+			step: 1, // Determines the size or amount of each interval or step the slider takes between the min and max
+			value: userContributionValue, // Start value for the slider handle
+			range: "min",
+			slide: function(event, ui){
+				jQuery('#amount').html(ui.value);
+			}
+		});
+		jQuery('#amount').html(jQuery(sliderDataValue).slider('value'));
+
+		// Slider Markers
+		var sliderMultiplier = 100 / sliderMax;
+		jQuery('.js-evo-slider-marker-user').css({ marginLeft: (userContributionValue * sliderMultiplier) + '%' });
+		jQuery('.js-evo-slider-marker-company').css({ marginLeft: (companyContributionValue * sliderMultiplier)+'%' });
+		jQuery('.js-evo-slider-marker-peers').css({ marginLeft: (peerContributionValue * sliderMultiplier) + '%' });
+	};
 	
 
 	// LIBRARY EXAMPLES
@@ -539,6 +579,9 @@ $(function() {
 			evoCarousel('js-evo-add-remove-plan-component-carousel',{
 				autoPlay: false
 			});
+
+		// RANGE SLIDER - CONTRIBUTIONS
+			evoSliderContributions('js-evo-slider');
 
 		// TABS
 
