@@ -110,13 +110,8 @@ $evo-top-bar-section-dropdown-sub-icon-position-right: rem-calc(-1) !default;
 					.has-dropdown					{
 						
 						// TOP BAR NAV DROPDOWN MENU ACTIVE MENU
-						&.hover							{
-
-							// TOP BAR NAV DROPDOWN MENU ACTIVE MENU LINK
-							> a,
-							> a:hover						{
-															background-color: $evo-top-bar-section-dropdown-active-background-color;
-															}
+						&.not-click:hover				{
+														background-color: $evo-top-bar-section-dropdown-active-background-color;
 														}
 						> a								{
 							

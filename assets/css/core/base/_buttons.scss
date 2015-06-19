@@ -18,21 +18,6 @@ $evo-button-font-color-alt-visited: $button-font-color-alt !default;
 	.evo-btn 						{
 									min-width: rem-calc($evo-button-min-width);
 
-		// LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
-		@each $color-name, $color in $color-palette 
-										{
-			
-			// CUSTOM BUTTON BACKGROUND COLOR
-			&[data-evo-background-color="#{$color-name}"]:hover
-											{background-color: scale-color(map-get($color, color), $lightness: $button-function-factor) !important;}
-			&[data-evo-background-color="#{$color-name}"].disabled:hover
-											{background-color: map-get($color, color) !important;}
-
-			// CUSTOM BUTTON FONT COLOR
-			&[data-evo-font-color="#{$color-name}"]
-											{color: map-get($color, color) !important;}
-										}
-
 		// BUTTON VISITED LINK COLOR
 		&:visited						{color: $evo-button-font-color-visited;}
 		
