@@ -24,15 +24,6 @@ $evo-grid-device-padding: rem-calc(20) rem-calc(10) 0 rem-calc(10) !default;
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// SMALL MEDIA QUERY RANGE - 0 - 640px
-	@if $use-small-only-mediaquery == true {
-			
-		@media #{$small-only} {
-
-		}
-
-	}//endif
-
 	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
 	@if $use-medium-up-mediaquery == true {
 			

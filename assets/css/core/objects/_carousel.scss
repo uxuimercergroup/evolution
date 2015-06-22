@@ -4,16 +4,15 @@
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
-
-// VARS
-// ------------------------------------------------------------------------------------------
+//
+// @variables
+//
 $evo-carousel-page-circle-bgcolor: $gray-light !default;
 $evo-carousel-page-circle-bgcolor-hover: $gray-dark !default;
 $evo-carousel-page-circle-bgcolor-active: $gray-darker !default;
 $evo-carousel-page-circle-text-color: $white !default;
 $evo-carousel-nav-icon-color: $gray-mid !default;
 $evo-carousel-nav-icon-color-hover: $gray-dark !default;
-
 
 
 @if $use-carousel == true{

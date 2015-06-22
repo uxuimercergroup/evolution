@@ -4,14 +4,14 @@
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
-// @VARS
+//
+// @variables
+//
 $evo-table-border-width: rem-calc(1) !default;
 $evo-table-border-style: solid !default;
 $evo-table-border-header-color: $white !default;
 $evo-table-border-color: $white !default; /* TODO: Fix to be final, seems to match up with a foundation one tables.scss */
 $evo-table-header-padding: rem-calc(12) rem-calc(10) rem-calc(11) rem-calc(10) !default;
-
-// OPTIONS
 $evo-table-row-hover-color: $gray-mid-light !default;
 $evo-table-subheader-bg-color: #E8F0F7 !default;
 $evo-table-subheader-font-color: $gray-darker !default;

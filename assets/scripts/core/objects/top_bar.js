@@ -6,9 +6,9 @@
 
 $(document).foundation({
 
-	// TOP BAR
-	topbar : {
-		// sticky_class : 'sticky',
+	// FOUNDATION TOP BAR OPTIONS
+	topbar: {
+		// sticky_class: 'sticky', // Class used on sticky container around top bar, make sure it matches sass variable
 		// custom_back_text: true, // Set this to false and it will pull the top level link name as the back text
 		// back_text: 'Back', // Define what you want your custom back text to be if custom_back_text: true
 		// is_hover: true,

@@ -99,7 +99,7 @@
 
 @import "core/global/helpers.js";
 @import "core/base/base.js";
-// @import "core/objects/accordion.js"; // Marked for removal (Foundation replaces)
+@import "core/objects/accordion.js";
 // @import "core/objects/advanced_filter.js"; // Marked for removal
 // @import "core/objects/alternate_views_badge.js"; // Marked for removal (Foundation replaces)
 @import "core/objects/autocomplete.js";

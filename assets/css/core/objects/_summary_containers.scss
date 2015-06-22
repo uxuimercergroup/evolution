@@ -4,7 +4,9 @@
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
-// @VARS
+//
+// @variables
+//
 $evo-summary-ctn-margin-bottom: $evo-base-margin !default;
 $evo-summary-ctn-cell-width: 1px !default;
 $evo-summary-ctn-cell-style: dotted !default;
@@ -30,56 +32,57 @@ $evo-summary-cell-positive-icon-color: $emerald-dark !default;
 $evo-summary-cell-positive-hover-background-color: $emerald-light !default;
 $evo-secondary-summary-cell-font-size: rem-calc(32) !default;
 
+
 @if $use-summary-containers == true{
 
 	// SUMMARY CONTAINER
-	.evo-summary-ctn					{
-										margin-bottom: $evo-summary-ctn-margin-bottom;
-		ul									{
-											margin: 0;
-			li									{
-												border: $evo-summary-ctn-cell-width $evo-summary-ctn-cell-style $evo-summary-ctn-cell-color;
-												border-top: 0;
-												cursor: pointer;
-												padding-top: $evo-summary-ctn-cell-padding-top;
-				&:first-child						{border-top: $evo-summary-ctn-cell-width $evo-summary-ctn-cell-style $evo-summary-ctn-cell-color;}
+	.evo-summary-ctn							{
+												margin-bottom: $evo-summary-ctn-margin-bottom;
+		ul											{
+													margin: 0;
+			li											{
+														border: $evo-summary-ctn-cell-width $evo-summary-ctn-cell-style $evo-summary-ctn-cell-color;
+														border-top: 0;
+														cursor: pointer;
+														padding-top: $evo-summary-ctn-cell-padding-top;
+				&:first-child								{border-top: $evo-summary-ctn-cell-width $evo-summary-ctn-cell-style $evo-summary-ctn-cell-color;}
 				.evo-main-text,
-				.evo-support-text					{
-													display: block;
-													text-align: $evo-summary-cell-text-alignment;
-													}
+				.evo-support-text							{
+															display: block;
+															text-align: $evo-summary-cell-text-alignment;
+															}
 				.evo-main-text,
-				[class*="evo-icon-"]				{font-size: $evo-summary-cell-text-icon-font-size;}
-				.evo-support-text					{font-size: $evo-summary-cell-text-support-font-size;}
+				[class*="evo-icon-"]						{font-size: $evo-summary-cell-text-icon-font-size;}
+				.evo-support-text							{font-size: $evo-summary-cell-text-support-font-size;}
 				[class*="evo-icon-"],
-				a									{
-													color: $body-font-color;
-													text-decoration: none;
+				a											{
+															color: $body-font-color;
+															text-decoration: none;
+															}
+														}
 													}
-												}
-											}
-			.evo-summary-alert				{
-											color: $evo-summary-cell-alert-font-color;
+			.evo-summary-alert						{
+													color: $evo-summary-cell-alert-font-color;
 				[class*="evo-icon-"],
-				a								{color: $evo-summary-cell-alert-icon-color;}
-											}
-			.evo-summary-positive			{
-											color: $evo-summary-cell-positive-font-color;
+				a										{color: $evo-summary-cell-alert-icon-color;}
+													}
+			.evo-summary-positive					{
+													color: $evo-summary-cell-positive-font-color;
 				[class*="evo-icon-"],
-				a								{color: $evo-summary-cell-positive-icon-color;}
-											}
+				a										{color: $evo-summary-cell-positive-icon-color;}
+													}
 
-										}
+												}
 
 	// SECONDARY SUMMARY CONTAINER
-	.evo-secondary-summary-ctn				{
-		ul										{
-			li										{
+	.evo-secondary-summary-ctn					{
+		ul											{
+			li											{
 				.evo-main-text,							
-				[class*="evo-icon-"]					{font-size: $evo-secondary-summary-cell-font-size;}
+				[class*="evo-icon-"]						{font-size: $evo-secondary-summary-cell-font-size;}
+														}
 													}
 												}
-											}
 
 	//=== MEDIA QUERIES =========================================================================
 

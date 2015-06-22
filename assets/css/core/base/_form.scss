@@ -14,25 +14,25 @@ $evo-form-placholder-font-color: #AAA !default;
 
 @if $use-forms == true{
 
-	[data-abide]			{
-		.error					{
-			label					{color: $garnet-dark;}
+	[data-abide]									{
+		.error											{
+			label											{color: $garnet-dark;}
 			input,
 			select,
-			textarea				{border-color: $garnet-dark;}
-			input + label			{color: $body-font-color;}
-								}
-							}
+			textarea										{border-color: $garnet-dark;}
+			input + label									{color: $body-font-color;}
+														}
+													}
 
-	form					{
-		.button					{
-			@media #{$small-up}		{margin-top: 3px;}
-			@media #{$medium-up}	{margin-top: 8px;}
-			@media #{$large-up}		{margin-top: 13px;}
-								}
-		.evo-datepicker-first	{padding-left: 0 !important;}
-		.evo-datepicker-last	{padding-right: 0 !important;} /* TODO: Verify is this is the right way to do this - form.scss*/
-							}
+	form											{
+		.button											{
+			@media #{$small-up}								{margin-top: 3px;}
+			@media #{$medium-up}							{margin-top: 8px;}
+			@media #{$large-up}								{margin-top: 13px;}
+														}
+		.evo-datepicker-first							{padding-left: 0 !important;}
+		.evo-datepicker-last							{padding-right: 0 !important;} /* TODO: Verify is this is the right way to do this - form.scss*/
+													}
 
 	input[type="text"],
 	input[type="password"],
@@ -50,15 +50,15 @@ $evo-form-placholder-font-color: #AAA !default;
 	input[type="color"],
 	input[type="text"][readonly],
 	select,
-	textarea				{
-							background-color: $white;
-							@include block-glowing-effect($glowing-effect-color: $evo-input-focus-border-color);
-		&:hover					{
-								background-color: $white;
-								border-color: $sapphire-light;
-								}
-		&:focus					{outline: 0;}
-							}
+	textarea										{
+													background-color: $white;
+													@include block-glowing-effect($glowing-effect-color: $evo-input-focus-border-color);
+		&:hover											{
+														background-color: $white;
+														border-color: $sapphire-light;
+														}
+		&:focus											{outline: 0;}
+													}
 
 	// GLOBAL FORM ELEMENTS
 	input[type="text"],
@@ -85,7 +85,6 @@ $evo-form-placholder-font-color: #AAA !default;
 
 	label											{
 													font-family: $evo-font-medium-family;
-													//font-weight: bold;
 													font-size: rem-calc(17);
 													/* TODO: Make sure this is the correct place for this. */
 		small											{
@@ -139,17 +138,6 @@ $evo-form-placholder-font-color: #AAA !default;
 													font-size: rem-calc(16);
 													}
 	}
-
-	// SMALL MEDIA QUERY RANGE - 0 - 640px
-	@if $use-small-only-mediaquery == true {
-		
-		@media #{$small-only} {
-
-			
-
-		}
-
-	}//endif
 
 	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
 	@if $use-medium-up-mediaquery == true {

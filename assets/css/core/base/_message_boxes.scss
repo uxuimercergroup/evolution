@@ -1,18 +1,20 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.7 - Base Box Partial
+// Mercer Evolution - Core v2.7 - Message Boxes Partial
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
-// MESSAGE BOX VARS
+//
+// @variables
+//
 $evo-message-box-padding-left: rem-calc(33) !default;
 $evo-message-box-icon-margin-top: -9px !default;
 $evo-message-box-icon-position: absolute !default;
 $evo-message-box-icon-position-top: rem-calc(25) !default;
 $evo-message-box-icon-position-left: rem-calc(10) !default;
 $evo-message-box-font-color: $white;
-
 $evo-message-box-warning-font-color: $black;
+
 
 @if $use-message-boxes == true{
 

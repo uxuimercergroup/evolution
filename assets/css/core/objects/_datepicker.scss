@@ -4,9 +4,9 @@
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
-
-// DATEPICKER
-// ------------------------------------------------------------------------------------------
+//
+// @variables
+//
 $evo-datepicker-margin-top: rem-calc(5) !default;
 $evo-datepicker-hdr-padding-top-bottom: rem-calc(4) !default;
 $evo-datepicker-message-font-size: rem-calc(13) !default;
@@ -17,8 +17,6 @@ $evo-datepicker-icon-position-large-breakpoint: rem-calc(12);
 $evo-datepicker-icon-position-top-IE: ($evo-datepicker-icon-position-top - 2) !default;
 $evo-datepicker-icon-position-left-large-breakpoint: rem-calc(-20);
 $evo-datepicker-min-width: rem-calc(110) !default;
-
-// COLORS
 $evo-datepicker-shadow-color: $gray-darker !default;
 $evo-datepicker-bgcolor: $white !default;
 $evo-datepicker-th-font-color: $gray-darker !default;
