@@ -100,11 +100,11 @@
 @import "core/global/helpers.js";
 @import "core/base/base.js";
 // @import "core/objects/accordion.js"; // Marked for removal (Foundation replaces)
-// @import "core/objects/advanced_filter.js"; // Keep but use Foundation Reveal
-// @import "core/objects/alternate_views_badge.js"; // Keep but use Foundation Tabs
+// @import "core/objects/advanced_filter.js"; // Marked for removal
+// @import "core/objects/alternate_views_badge.js"; // Marked for removal (Foundation replaces)
 @import "core/objects/autocomplete.js";
 @import "core/objects/carousel.js";
-// @import "core/objects/content_modal.js"; // Keep but use Foundation Reveal + Tabs
+// @import "core/objects/content_modal.js"; // Marked for removal
 @import "core/objects/datepicker.js";
 // @import "core/objects/dialog.js"; // Marked for removal (Foundation replaces)
 @import "core/objects/off_canvas.js";

@@ -38,27 +38,13 @@
 					{{ model.reference-code-html-content-block-post-3 }}
 
 					{% if model.reference-code-js == "true" %}
-						<h3 class="evo-hdr-rule">JS</h3>
+					<h3 class="evo-hdr-rule">JS</h3>
 
 						{% if model.reference-example-versions == "true" %}
 							<h4>{{ model.reference-example-version-label }}</h4>
 						{% endif %}
 						{{ model.reference-code-js-content-block-pre }}
-						{{ global.reference-get-code-start-tag }}{% include '/js/objects/alternate-views-badge' %}{{ global.reference-get-code-end-tag }}
-						{{ model.reference-code-js-content-block-post }}
-
-						{% if model.reference-example-versions == "true" %}
-							<h4>{{ model.reference-example-version-label-2 }}</h4>
-						{% endif %}
-						{{ model.reference-code-js-content-block-pre }}
-						{{ global.reference-get-code-start-tag }}{% include '/js/objects/alternate-views-badge-icon-only' %}{{ global.reference-get-code-end-tag }}
-						{{ model.reference-code-js-content-block-post }}
-
-						{% if model.reference-example-versions == "true" %}
-							<h4>{{ model.reference-example-version-label-3 }}</h4>
-						{% endif %}
-						{{ model.reference-code-js-content-block-pre }}
-						{{ global.reference-get-code-start-tag }}{% include '/js/objects/alternate-views-badge-text-only' %}{{ global.reference-get-code-end-tag }}
+						{{ global.reference-get-code-start-tag }}{ include '/js/' }{{ global.reference-get-code-end-tag }}
 						{{ model.reference-code-js-content-block-post }}
 					{% endif %}
 				</div>

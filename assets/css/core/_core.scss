@@ -45,28 +45,29 @@
 
 // OBJECTS
 //-------------------------------------------------------------------------------------------
-// ACCORDION..................Accordion object styles (jQuery UI)
-// ADVANCED FILTER............Advanced filter object styles (jQuery UI)
-// ALTERNATE VIEWS BADGE......Alternate views badge object styles (Uses jQuery UI tabs)
+// ACCORDION..................Accordion object styles
+// ADD/REMOVE PLAN............Add/remove plan object styles
 // AUTOCOMPLETE...............Auto suggest object styles (jQuery UI)
 // CAROUSEL...................Carousel object styles (Owl Carousel jQuery Plugin)
-// CONTENT MODAL..............Content modal object styles, (jQuery UI dialog w/jQuery UI tabs)
+// CATEGORY HEADER CONTAINER..Category header container object styles
+// CONVERSATIONAL FORM........Conversational form object styles
 // DATEPICKER.................Calendar object styles (jQuery UI)
-// DIALOG.....................Dialog/Modal object styles (jQuery UI)
+// DIALOG.....................Dialog/Modal object styles
 // IMAGE CONTENT OVERLAY......Image Content Overlay styles
-// ITEM SELECTION PANEL.......Used to select individual items
+// ITEM HIGHLIGHT CONTAINER...Item highlight container object styles
+// ITEM SELECTION PANEL.......Item selection panel object styles
+// LAYOUT BANDING.............Banding Page Layout styles
 // LOGIN......................Login Page Layout styles
 // MINI FILTER................Mini Filter object styles
-// PAGINATION.................Pagination object styles
-// PROFILE CONTAINERS.........Profile Entity container styles
+// PRICING TABLE..............Pricing table object styles
 // SCROLL PANE................Scroll pane styles (Malihu jQuery Custom Scrollbar Plugin)
 // SHOWCASE PANEL.............Showing comparison of content
 // SLIDER.....................Slider object styles (jQuery UI)
-// STEPPER....................Stepper (Horizontal and Vertical) styles
 // SUMMARY CONTAINERS.........Summary Containers styles
-// TABS.......................Tabs object styles (jQuery UI)
+// TABS.......................Tabs object styles
 // TILES......................Tile container styles
-// TOOLTIP....................Tooltip object styles (Tooltipster jQuery Plugin)
+// TOOLTIP....................Tooltip object styles
+// WORKSHEET FORM.............Worksheet form object styles
 
 
 // ==========================================================================================
@@ -86,6 +87,8 @@
 		"global/mixins",
 		"global/helpers",
 
+		"base/type",
+		"base/icons",
 		"base/boxes",
 		"base/buttons",
 		"base/footer",
@@ -94,37 +97,28 @@
 		"base/header",
 		"base/header_toolbar",
 		"base/hero_banner",
-		"base/icons",
 		"base/lists",
 		"base/message_boxes",
 		"base/tables",
 		"base/top_bar",
-		"base/type",
 		
 		"objects/accordion",
 		"objects/add_remove_plan_component",
-		"objects/advanced_filter",
-		"objects/alternate_views_badge",
 		"objects/autocomplete",
-		"objects/layout_banding",
 		"objects/carousel",
 		"objects/category_hdr_ctn",
-		"objects/content_modal",
 		"objects/conversational_form",
 		"objects/datepicker",
-		"objects/dialog",
-		"objects/item_highlight_ctn",
 		"objects/image_content_overlay",
+		"objects/item_highlight_ctn",
 		"objects/item_selection_panel",
+		"objects/layout_banding",
 		"objects/login",
 		"objects/mini_filter",
-		"objects/pagination",
 		"objects/pricing_table",
-		"objects/profile_containers",
 		"objects/scroll_pane",
 		"objects/showcase_panel",
 		"objects/slider",
-		"objects/stepper",
 		"objects/summary_containers",
 		"objects/tabs",
 		"objects/tiles",

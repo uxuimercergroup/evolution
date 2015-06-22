@@ -4,15 +4,12 @@
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
-/* TODO: Put vars in vars file accordian.scss */
-
-// @VARS
+//
+// @variables
+//
 $evo-accordion-border-color: $gray-mid !default;
 $evo-accordion-navigation-font-color: $gray-darkest !default;
-
-$accordionHeaderIconColor: $blue-gray-dark !default;
-$accordionContentBackgroundColor: $gray-lightest !default;
-
+$evo-accordion-navigation-active-background-color: $gray-lightest !default;
 
 @if $use-accordion == true{
 
@@ -36,7 +33,7 @@ $accordionContentBackgroundColor: $gray-lightest !default;
 			.evo-content			{padding-top: 0;}
 								}
 		.evo-accordian-navigation.active>a
-								{background: $gray-lightest;}
+								{background: $evo-accordion-navigation-active-background-color;}
 							}
 
 	//=== MEDIA QUERIES =========================================================================

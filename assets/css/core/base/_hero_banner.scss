@@ -15,13 +15,6 @@
 												margin-bottom: 0;
 												background-color: $heroBannerBackgroundColor;
 
-					// CUSTOM HERO BANNER BACKGROUND COLOR LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
-					@each $color-name, $color in $color-palette 
-													{
-						&[data-palette-color="#{$color-name}"]
-														{background-color: map-get($color, color);}
-													}
-
 					.evo-hero-banner-content-item-adjust
 													{
 													@include clearfix;

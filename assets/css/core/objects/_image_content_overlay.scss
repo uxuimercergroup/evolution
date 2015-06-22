@@ -26,25 +26,15 @@
 								border: 0;
 								background-color: rgba($imageContentOverlayBackgroundColor, .6);
 								border-bottom: 9px solid $imageContentOverlayBorderBottomColor;
-
-		// CUSTOM IMAGE CONTENT OVERLAY BACKGROUND COLOR LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
-		@each $color-name, $color in $color-palette 
-									{
-			&[data-palette-color="#{$color-name}"]
-										{background-color: rgba(map-get($color, color), .6);}
-			&[data-palette-border-color="#{$color-name}"]
-										{border-bottom-color: map-get($color, color);}
-									}
-
-			h1, .h1, h2, .h2,
-			h3, .h3, h4, .h4,
-			h5, .h5, h6, .h6,
-			p, span, li, dt, dd, blockquote,
-			th, td, legend, hr, abbr,
-			a, a:link, a:visited, a:hover, a:active
+		h1, .h1, h2, .h2,
+		h3, .h3, h4, .h4,
+		h5, .h5, h6, .h6,
+		p, span, li, dt, dd, blockquote,
+		th, td, legend, hr, abbr,
+		a, a:link, a:visited, a:hover, a:active
 									{color: $imageContentOverlayFontColor;}
 
-			h1, .h1					{
+		h1, .h1						{
 									font-family: $evo-font-thin-stack;
 									font-size: 54px;
 									line-height: 56px;

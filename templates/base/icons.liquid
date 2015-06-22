@@ -57,11 +57,11 @@
 					<thead>
 						<tr>
 							<th data-sort-initial="ascending" scope="col"><a href="javascript:;">Name</a></th>
-							<th class="evo-align-center" scope="col"><a href="javascript:;">Blue</a></th>
-							<th class="evo-align-center" scope="col"><a href="javascript:;">Gray</a></th>
-							<th class="evo-align-center" scope="col"><a href="javascript:;">Disabled</a></th>
-							<th class="evo-align-center" scope="col"><a href="javascript:;">Reverse</a></th>
-							<th class="evo-align-center" scope="col"><a href="javascript:;">Specific Use Color</a></th>
+							<th class="text-center" scope="col"><a href="javascript:;">Blue</a></th>
+							<th class="text-center" scope="col"><a href="javascript:;">Gray</a></th>
+							<th class="text-center" scope="col"><a href="javascript:;">Disabled</a></th>
+							<th class="text-center" scope="col"><a href="javascript:;">Reverse</a></th>
+							<th class="text-center" scope="col"><a href="javascript:;">Specific Use Color</a></th>
 							<th scope="col"><a href="javascript:;">Class</a></th>
 							<th scope="col"><a href="javascript:;">Keywords</a></th>
 						</tr>
@@ -71,23 +71,23 @@
 						{% for item in model.icons %}
 						<tr>
 							<td>{{ item.properties.name }}</td>
-							<td class="evo-align-center">
+							<td class="text-center">
 								<i class="evo-icon-{{ item.properties.name }}"></i>
 								<span class="evo-icon-hide-text">{{ item.properties.name }}</span>
 							</td>
-							<td class="evo-align-center">
+							<td class="text-center">
 								<i class="evo-icon-{{ item.properties.name }} evo-icon-color-gray-dark"></i>
 								<span class="evo-icon-hide-text">{{ item.properties.name }}</span>
 							</td>
-							<td class="evo-align-center">
+							<td class="text-center">
 								<i class="evo-icon-{{ item.properties.name }} evo-icon-color-disabled"></i>
 								<span class="evo-icon-hide-text">{{ item.properties.name }}</span>
 							</td>
-							<td class="evo-align-center icon-table-cell-reverse-background">
+							<td class="text-center icon-table-cell-reverse-background">
 								<i class="evo-icon-{{ item.properties.name }} evo-icon-color-white"></i>
 								<span class="evo-icon-hide-text">{{ item.properties.name }}</span>
 							</td>
-							<td class="evo-align-center">
+							<td class="text-center">
 								<i class="evo-icon-{{ item.properties.name }} evo-icon-color-confirmation evo-icon-position-left"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span>
 								<i class="evo-icon-{{ item.properties.name }} evo-icon-color-error evo-icon-position-left"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span>
 								<i class="evo-icon-{{ item.properties.name }} evo-icon-color-attention evo-icon-position-left"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span>
@@ -160,38 +160,38 @@
 
 				<h3 class="evo-hdr-rule">Icon Sizes</h3>
 				<div class="row">
-					<label class="large-3 evo-align-center columns">
+					<label class="large-3 columns text-center">
 						<a class="evo-icon-search evo-icon-size-small evo-icon-position-top" href="javascript:;" title="Small"></a>Small
 					</label>
 
-					<label class="large-3 evo-align-center columns">
+					<label class="large-3 columns text-center">
 						<i class="evo-icon-search evo-icon-size-medium evo-icon-position-top" title="Medium"></i>Medium
 					</label>
 
-					<label class="large-3 evo-align-center columns">
+					<label class="large-3 columns text-center">
 						<i class="evo-icon-search evo-icon-size-large evo-icon-position-top" title="Large"></i>Large
 					</label>
 
-					<label class="large-3 evo-align-center columns">
+					<label class="large-3 columns text-center">
 						<i class="evo-icon-search evo-icon-size-x-large evo-icon-position-top" title="X-large"></i>X-large
 					</label>
 				</div>
 
 				<h3 class="evo-hdr-rule">Icon Only (with accessible text)</h3>
 				<div class="row">
-					<label class="large-3 evo-align-center columns">
+					<label class="large-3 columns text-center">
 						<a class="evo-icon-search evo-icon-size-small evo-icon-position-top" href="javascript:;" title="Small"><span class="evo-icon-hide-text">Small</span></a>
 					</label>
 
-					<label class="large-3 evo-align-center columns">
+					<label class="large-3 columns text-center">
 						<i class="evo-icon-search evo-icon-size-medium evo-icon-position-top" title="Medium"><span class="evo-icon-hide-text">Medium</span></i>
 					</label>
 
-					<label class="large-3 evo-align-center columns">
+					<label class="large-3 columns text-center">
 						<i class="evo-icon-search evo-icon-size-large evo-icon-position-top" title="Large"><span class="evo-icon-hide-text">Large</span></i>
 					</label>
 
-					<label class="large-3 evo-align-center columns">
+					<label class="large-3 columns text-center">
 						<i class="evo-icon-search evo-icon-size-x-large evo-icon-position-top" title="X-large"><span class="evo-icon-hide-text">X-large</span></i>
 					</label>
 				</div>
@@ -199,19 +199,19 @@
 				<h3 class="evo-hdr-rule">Icon Styles</h3>
 				<h4>Text Shadow</h4>
 				<div class="row">
-					<label class="large-3 columns evo-align-center">
+					<label class="large-3 columns text-center">
 						<a class="evo-icon-search evo-icon-size-small evo-icon-style-shadow evo-icon-position-top" href="javascript:;" title="Small"></a>Small
 					</label>
 
-					<label class="large-3 columns evo-align-center">
+					<label class="large-3 columns text-center">
 						<i class="evo-icon-search evo-icon-size-medium evo-icon-style-shadow evo-icon-position-top" title="Medium"></i>Medium
 					</label>
 
-					<label class="large-3 columns evo-align-center">
+					<label class="large-3 columns text-center">
 						<i class="evo-icon-search evo-icon-size-large evo-icon-style-shadow evo-icon-position-top" title="Large"></i>Large
 					</label>
 
-					<label class="large-3 columns evo-align-center">
+					<label class="large-3 columns text-center">
 						<i class="evo-icon-search evo-icon-size-x-large evo-icon-style-shadow evo-icon-position-top" title="X-large"></i>X-large
 					</label>
 				</div>
@@ -219,27 +219,27 @@
 				<h4>Background Gradient</h4>
 				<p>Webkit only (Safari, Chrome) with fallback font color for other browsers.</p>
 				<div class="row">
-					<label class="large-2 columns evo-align-center">
+					<label class="large-2 columns text-center">
 						<a class="evo-icon-checkmark-circle evo-icon-size-medium evo-icon-style-gradient-confirmation evo-icon-position-top" href="javascript:;" title="Positive Icon"></a>Positive Icon
 					</label>
 
-					<label class="large-2 columns evo-align-center">
+					<label class="large-2 columns text-center">
 						<i class="evo-icon-notification evo-icon-size-medium evo-icon-style-gradient-error evo-icon-position-top" title="Negative Icon"></i>Negative Icon
 					</label>
 
-					<label class="large-2 columns evo-align-center">
+					<label class="large-2 columns text-center">
 						<i class="evo-icon-warning evo-icon-size-medium evo-icon-style-gradient-attention evo-icon-position-top" title="Warning Icon"></i>Warning Icon
 					</label>
 
-					<label class="large-2 columns evo-align-center">
+					<label class="large-2 columns text-center">
 						<i class="evo-icon-question evo-icon-size-medium evo-icon-style-gradient-info evo-icon-position-top" title="Info Icon"></i>Info Icon
 					</label>
 
-					<label class="large-2 columns evo-align-center">
+					<label class="large-2 columns text-center">
 						<i class="evo-icon-menu3 evo-icon-size-medium evo-icon-style-gradient evo-icon-position-top" title="Blue Icon"></i>Blue Icon
 					</label>
 
-					<label class="large-2 columns evo-align-center">
+					<label class="large-2 columns text-center">
 						<i class="evo-icon-menu3 evo-icon-size-medium evo-icon-style-gradient-gray-dark evo-icon-position-top" title="Gray Icon"></i>Gray Icon
 					</label>
 				</div>
@@ -467,7 +467,7 @@
 		<div class="content" id="panel3">
 
 			<section class="evo-spacer-margin-bottom-xxx-large">
-				<div class="evo-float-right">
+				<div class="right">
 					<i class="evo-icon-folder-download"></i>
 					<a href="/assets/images/photo-icons/career/career-photo-icons.zip">Download</a>
 				</div>
@@ -480,7 +480,7 @@
 			</section>
 
 			<section class="evo-spacer-margin-bottom-xxx-large">
-				<div class="evo-float-right">
+				<div class="right">
 					<i class="evo-icon-folder-download"></i>
 					<a href="/assets/images/photo-icons/career/health-photo-icons.zip">Download</a>
 				</div>
@@ -493,7 +493,7 @@
 			</section>
 
 			<section>
-				<div class="evo-float-right">
+				<div class="right">
 					<i class="evo-icon-folder-download"></i>
 					<a href="/assets/images/photo-icons/career/wealth-photo-icons.zip">Download</a>
 				</div>
