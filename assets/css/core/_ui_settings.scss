@@ -1,16 +1,16 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.7 - Core SASS Settings Partial
+// Mercer Evolution - Core v2.7 - Core UI SASS Settings Partial
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
 // ==========================================================================================
-// DEFAULT CORE SASS SETTINGS
+// DEFAULT CORE UI SASS SETTINGS
 // ==========================================================================================
 
-// These are the default Mercer Evolution core SASS settings. This is what will be turned on/off
-// from Mercer Evolution and included in the evolution library CSS file. These settings can be
-// modified on a project by project basis to customize an evolution CSS file for your project
+// These are the default Mercer Evolution core UI SASS settings. This is what will be turned on/off
+// from Mercer Evolution and included in the evolution UI library CSS file. These settings can be
+// modified on a project by project basis to customize an evolution UI CSS file for your project
 // based on what components you will need from Mercer Evolution.
 
 // GLOBAL SETTINGS
@@ -32,13 +32,26 @@ $use-large-only-mediaquery:					true !default; // 1025px - 1440px
 $use-xlarge-only-mediaquery:				true !default; // 1441px - 1920px
 $use-xxlarge-only-mediaquery:				true !default; // 1921px +
 
-// BASE SETTINGS
+// OBJECTS SETTINGS
 // ------------------------------------------------------------------------------------------
-$use-boxes:									true !default;
-$use-buttons:								true !default;
-$use-grid:									true !default;
-$use-forms:									true !default;
-$use-icons:									true !default;
-$use-lists:									true !default;
-$use-tables:								true !default;
-$use-type:									true !default;
+$use-accordion:								true !default;
+$use-autocomplete:							true !default;
+$use-banding-layout:						true !default;
+$use-carousel:								true !default;
+$use-datepicker:							true !default;
+$use-dialog:								true !default;
+$use-fat-footer:							true !default;
+$use-footer:								true !default;
+$use-header:								true !default;
+$use-hero-banner:							true !default;
+$use-image-content-overlay:					true !default;
+$use-login-layout:							true !default;
+$use-message-boxes:							true !default;
+$use-mini-filter:							true !default;
+$use-scrollpane:							true !default;
+$use-slider:								true !default;
+$use-summary-containers:					true !default;
+$use-tabs:									true !default;
+$use-tiles:									true !default;
+$use-tooltip:								true !default;
+$use-top-bar:								true !default;
