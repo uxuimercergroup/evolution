@@ -54,75 +54,20 @@
 		<section class="evo-ref-example-content">
 
 		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-			{% if model.reference-example-versions == "true" %}
-				<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
-			{% endif %}
-				<p>{{ model.reference-example-description }}</p>
-				<p><img src="{{ "navbar_menu_1.png" | asset_url }}" width="980" height="50" /></p>
-		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-			{% if model.reference-example-versions == "true" %}
-				<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-1 }}</h4>
-			{% endif %}
-				<p>{{ model.reference-example-description-1 }}</p>
-				<p><img src="{{ "navbar_menu_2.png" | asset_url }}" width="980" height="50" /></p>
-		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-			{% if model.reference-example-versions == "true" %}
-				<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
-			{% endif %}
-				<p>{{ model.reference-example-description-2 }}</p>
-				<p><img src="{{ "navbar_menu_3.png" | asset_url }}" width="980" height="50" /></p>
-		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-			{% if model.reference-example-versions == "true" %}
-				<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
-			{% endif %}
-				<p>{{ model.reference-example-description-3 }}</p>
-				<p><img src="{{ "navbar_menu_4.png" | asset_url }}" width="980" height="50" /></p>
-		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-			{% if model.reference-example-versions == "true" %}
-				<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-4 }}</h4>
-			{% endif %}
-				<p>{{ model.reference-example-description-4 }}</p>
-				<p><img src="{{ "navbar_menu_5.png" | asset_url }}" width="980" height="50" /></p>
-		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-			{% if model.reference-example-versions == "true" %}
-				<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-5 }}</h4>
-			{% endif %}
-				<p>{{ model.reference-example-description-5 }}</p>
-				<p><img src="{{ "navbar_menu_6.png" | asset_url }}" width="980" height="50" /></p>
-		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-			{% if model.reference-example-versions == "true" %}
-				<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-6 }}</h4>
-			{% endif %}
-				<p>{{ model.reference-example-description-6 }}</p>
-				<p><img src="{{ "navbar_tabs_1.png" | asset_url }}" width="980" height="50" /></p>
-		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-			{% if model.reference-example-versions == "true" %}
-				<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-7 }}</h4>
-			{% endif %}
-				<p>{{ model.reference-example-description-7 }}</p>
-				<p><img src="{{ "navbar_tabs_2.png" | asset_url }}" width="980" height="50" /></p>
-		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-			{% if model.reference-example-versions == "true" %}
-				<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-8 }}</h4>
-			{% endif %}
-				<p>{{ model.reference-example-description-8 }}</p>
-				<p><img src="{{ "navbar_tabs_3.png" | asset_url }}" width="980" height="50" /></p>
+			<section class="col-24 evo-spacer-margin-bottom-xxx-large">	
+				{% if model.reference-example-versions == "true" %}
+					<h4 class="evo-hdr-rule">
+						<a href="/demos/product-header" class="right see-context-link" target="_blank">See in context</a>
+						{{ model.reference-example-version-label }}
+					</h4>
+				{% endif %}
+					<p>{{ model.reference-example-description}}</p>
+					<p>
+						<a href="/demos/product-header" class="right see-context-link" target="_blank">
+							<img src="{{ "navbar_tabs_3.png" | asset_url }}" width="980" height="50" />
+						</a>
+					</p>
+			</section>
 		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 		
 		</section>
