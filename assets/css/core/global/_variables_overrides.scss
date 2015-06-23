@@ -21,7 +21,7 @@ $row-width: rem-calc(980);
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-$font-family-sans-serif: relativebook, arial, Tahoma, Geneva, sans-serif;
+$font-family-sans-serif: proxima_nova_rgregular, arial, Tahoma, Geneva, sans-serif;
 
 // We use these to define default font weights
 $font-weight-normal: normal;
@@ -453,39 +453,34 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 // WEB FONTS
 
 	// Thin
-	// $evo-font-thin-family:					relativefaux;
-	// $evo-font-thin-file-path:				"#{$evo-base-font-file-path}/relative-faux_-webfont";
-	// $evo-font-thin-stack:					"#{$evo-font-thin-family}", $evo-base-font-stack;
+	// $evo-font-thin-family:				proxima_nova_ththin;
+	// $evo-font-thin-file-path:			"#{$evo-base-font-file-path}/ProximaNova-Thin-webfont";
+	// $evo-font-thin-stack:				"#{$evo-font-thin-family}", $evo-base-font-stack;
 
 	// Regular
-	// $evo-font-regular-family:				relativebook;
-	// $evo-font-regular-file-path:				"#{$evo-base-font-file-path}/relative-book-webfont";
-	// $evo-font-regular-stack:					"#{$evo-font-regular-family}", $evo-base-font-stack;
+	// $evo-font-regular-family:			proxima_nova_rgregular;
+	// $evo-font-regular-file-path:			"#{$evo-base-font-file-path}/ProximaNova-Reg-webfont";
+	// $evo-font-regular-stack:				"#{$evo-font-regular-family}", $evo-base-font-stack;
 
 	// Italic
-	// $evo-font-italic-family:					relativebook_italic;
-	// $evo-font-italic-file-path:				"#{$evo-base-font-file-path}/relative-bookitalic-webfont";
-	// $evo-font-italic-stack:					"#{$evo-font-italic-family}", $evo-base-font-stack;
+	// $evo-font-italic-family:				proxima_novaregular_italic;
+	// $evo-font-italic-file-path:			"#{$evo-base-font-file-path}/ProximaNova-RegIt-webfont";
+	// $evo-font-italic-stack:				"#{$evo-font-italic-family}", $evo-base-font-stack;
 
 	// Medium
-	// $evo-font-medium-family:					relativemedium;
-	// $evo-font-medium-file-path:				"#{$evo-base-font-file-path}/relative-medium-webfont";
-	// $evo-font-medium-stack:					"#{$evo-font-medium-family}", $evo-base-font-stack;
-
-	// Medium Italic
-	// $evo-font-medium-italic-family:			relativemedium_italic;
-	// $evo-font-medium-italic-file-path:		"#{$evo-base-font-file-path}/relative-mediumitalic_-webfont";
-	// $evo-font-medium-italic-stack:			"#{$evo-font-medium-italic-family}", $evo-base-font-stack;
+	// $evo-font-medium-family:				proxima_nova_ltsemibold;
+	// $evo-font-medium-file-path:			"#{$evo-base-font-file-path}/ProximaNova-Sbold-webfont";
+	// $evo-font-medium-stack:				"#{$evo-font-medium-family}", $evo-base-font-stack;
 
 	// Bold
-	// $evo-font-bold-family:					relativebold;
-	// $evo-font-bold-file-path:				"#{$evo-base-font-file-path}/relative-bold-webfont";
-	// $evo-font-bold-stack:					"#{$evo-font-bold-family}", $evo-base-font-stack;
+	// $evo-font-bold-family:				proxima_nova_rgbold;
+	// $evo-font-bold-file-path:			"#{$evo-base-font-file-path}/ProximaNova-Bold-webfont";
+	// $evo-font-bold-stack:				"#{$evo-font-bold-family}", $evo-base-font-stack;
 
 	// Bold Italic
-	// $evo-font-bold-italic-family:			relativebold_italic;
-	// $evo-font-bold-italic-file-path:			"#{$evo-base-font-file-path}/relative-bolditalic-webfont";
-	// $evo-font-bold-italic-stack:				"#{$evo-font-bold-italic-family}", $evo-base-font-stack;
+	// $evo-font-bold-italic-family:		proxima_novabold_italic;
+	// $evo-font-bold-italic-file-path:		"#{$evo-base-font-file-path}/ProximaNova-BoldIt-webfont";
+	// $evo-font-bold-italic-stack:			"#{$evo-font-bold-italic-family}", $evo-base-font-stack;
 
 // ICON FONTS
 

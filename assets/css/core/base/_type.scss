@@ -65,10 +65,6 @@ $evo-anchor-font-color-alt: $ruby-mid !default;
 	// -------------------------------------------------
 	@include font-face($evo-font-medium-family, $evo-font-medium-file-path);
 
-	// Medium Italic
-	// -------------------------------------------------
-	@include font-face($evo-font-medium-italic-family, $evo-font-medium-italic-file-path);
-
 	// Bold
 	// -------------------------------------------------
 	@include font-face($evo-font-bold-family, $evo-font-bold-file-path);
