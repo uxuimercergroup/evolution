@@ -16,8 +16,11 @@ $evo-tile-body-border-color: $gray-light !default;
 @if $use-tiles == true{
 
 	.evo-tile-ctn							{
-											@include panel($padding: 14px 0 0 0);
-											@include evo-box($box-radius:0,$hdr-bdr-btm-width:0,$box-border-color:$evo-tile-body-border-color);
+											@include border-radius(0);
+											border-color: $evo-tile-body-border-color;
+											padding: rem-calc(14) 0 0 0;
+		.evo-hdr-rule							{border-width: 0;}
+
 											position: relative;
 		// Custom tile border top color loop, gets color from global color palette
 		@each $color-name, $color in $color-palette 
@@ -67,8 +70,7 @@ $evo-tile-body-border-color: $gray-light !default;
 		@media #{$medium-up} {
 
 			.evo-tile-ctn					{
-											@include panel($padding: rem-calc(14) rem-calc(7) rem-calc(7) rem-calc(7));
-											@include evo-box($box-radius:0,$hdr-bdr-btm-width:0,$box-border-color:$evo-tile-body-border-color);
+											padding: rem-calc(14) rem-calc(7) rem-calc(7) rem-calc(7);
 				.evo-box-hdr					{
 												padding-left: rem-calc(2);
 												padding-right: rem-calc(0);
