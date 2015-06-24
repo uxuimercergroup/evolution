@@ -35,6 +35,12 @@ $evo-spacer-xxxlarge:						($evo-spacer-size*7) !default;
 											color: map-get($color, color) !important;
 											}
 
+	// CUSTOM SPOT BORDER COLOR FOR CONTAINERS AND BOXES
+	[data-evo-border-color="#{$color-name}"]
+											{
+											border-color: map-get($color, color) !important;
+											}
+
 	// CUSTOM SPOT BACKGROUND COLOR FOR CONTAINERS AND BOXES
 	[data-evo-background-color="#{$color-name}"]
 											{

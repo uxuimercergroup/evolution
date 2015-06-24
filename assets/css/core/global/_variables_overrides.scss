@@ -105,6 +105,12 @@ $small-font-color: $gray-dark;
 $paragraph-line-height: 1.32;
 $paragraph-margin-bottom: rem-calc(26);
 
+// We use these to style <code> tags
+$code-color: $black;
+$code-background-color: $topaz-light;
+$code-border-size: 0;
+$code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
+
 // We use these to style anchors
 $anchor-text-decoration: underline;
 $anchor-text-decoration-hover: none;
@@ -688,6 +694,12 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 // $autocompleteItemHoverBackgroundEndColor: $tan-light;
 
 
+// BANDING LAYOUT
+// ------------------------------------------------------------------------------------------
+// $evo-banding-layout-ctn-min-height: 		rem-calc(200);
+// $evo-banding-layout-ctn-padding: 		rem-calc(50) rem-calc(10) rem-calc(60) rem-calc(10);
+
+
 // CAROUSEL
 // ------------------------------------------------------------------------------------------
 // $evo-carousel-page-circle-bgcolor: 		$gray-light;
@@ -952,7 +964,7 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 
 // TILES
 // ------------------------------------------------------------------------------------------
-// $evo-tile-scroll-panel-height:			400px;
+// $evo-tile-scroll-panel-height:			rem-calc(400);
 // $evo-tile-header-border-top-color:		$gray-light;
 // $evo-tile-body-background-color:			$white;
 // $evo-tile-body-border-color:				$gray-light;

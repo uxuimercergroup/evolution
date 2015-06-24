@@ -7,7 +7,7 @@
 //
 // @variables
 //
-$evo-tile-scroll-panel-height: 400px !default;
+$evo-tile-scroll-panel-height: rem-calc(400) !default;
 $evo-tile-header-border-top-color: $gray-light !default;
 $evo-tile-body-background-color: $white !default;
 $evo-tile-body-border-color: $gray-light !default;
@@ -22,15 +22,9 @@ $evo-tile-body-border-color: $gray-light !default;
 		.evo-hdr-rule							{border-width: 0;}
 
 											position: relative;
-		// Custom tile border top color loop, gets color from global color palette
-		@each $color-name, $color in $color-palette 
-												{
-			&[data-palette-color="#{$color-name}"] 	{
-				.evo-tile-hdr-stripe					{border-top-color: map-get($color, color);}							
-													}
-												}
 		.evo-tile-hdr-stripe					{
 												border-top: 5px solid $evo-tile-header-border-top-color;
+												border-color: $evo-tile-body-border-color;
 												position: absolute;
 												top: 0;
 												left: 0;

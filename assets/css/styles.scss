@@ -34,8 +34,6 @@ html.evo-mod-js							{display:none;}
 // CODE CONTENT STYLES
 code									{
 										@include border-radius(rem-calc(4));
-										background-color: $topaz-light;
-										border: 0;
 										}
 
 
@@ -50,14 +48,11 @@ code									{
 
 
 /*--- HOMEPAGE ----------------------------------------------------------------------------*/
-[class*="banding-section"]				{font-size: 1rem;}
-
-.banding-section-1						{
+.hp-banding-section-1					{
 	h1										{
 											color: $white;
 											font-size: rem-calc(51);
 											font-family: $evo-font-thin-stack;
-											padding-top: 20px;
 											}
 	h3										{
 											color: $white;
@@ -73,7 +68,7 @@ code									{
 	.evo-btn-group-horizontal				{@include clearfix;}
 										}
 
-.banding-section-2						{
+.hp-banding-section-2					{
 	h1										{
 											text-align: center;
 											margin-bottom: 20px;
@@ -85,7 +80,7 @@ code									{
 	h3, p									{text-align: center;}
 										}
 
-.banding-section-3						{
+.hp-banding-section-3					{
 										color: $sapphire-dark;
 	h1, h3									{color: $sapphire-dark;}
 	[class*="evo-icon"]						{color: $sapphire-dark;}
@@ -95,7 +90,7 @@ code									{
 											}
 										}
 
-.banding-section-4						{
+.hp-banding-section-4					{
 	li										{line-height: 20px;}
 	[class*="evo-icon"]						{
 											color: $gray-darkest;
@@ -104,7 +99,7 @@ code									{
 											}
 										}
 
-.banding-section-5						{
+.hp-banding-section-5					{
 	h1, p									{text-align: center;}
 	.evo-horizontal-list					{
 											text-align: center;
@@ -121,7 +116,7 @@ code									{
 											}
 										}
 
-.banding-section-6						{
+.hp-banding-section-6					{
 										font-size: 1em;
 	.hp-layout								{
 		h5										{margin-bottom: 7px;}

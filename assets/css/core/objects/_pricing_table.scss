@@ -26,71 +26,88 @@ $evo-price-table-total-row-bg-color: $gray-dark !default;
 $evo-price-table-total-row-font-color: $white !default;
 
 
-.evo-price-table			{
-							@include clearfix;
-							padding-bottom: rem-calc(20);
-	[class*="small-block-grid-"]
-								{
-								background-color: $evo-price-table-bg-color;
-								font-size: $evo-price-table-base-font;
-								padding: $evo-price-table-padding;
-								margin: 0;
-								margin-bottom: $evo-price-table-margin-bottom;
-		li							{padding-bottom: 0;}
-		.evo-item-amt,
-		.break-down-amt,
-		.total-amt					{
-									color: $evo-price-table-amt-font-color;
-									text-align: $evo-price-table-amt-text-align;
-									}
-		.evo-item-label,
-		.break-down-label,
-		.total-label				{text-transform: $evo-price-table-amt-text-transform;}
+@if $use-pricing-table == true{
 
-		.evo-item-label,
-		.evo-time-value-label		{
-									font-size: $evo-price-table-label-font-size;
-									position: $evo-price-table-label-position;
-									}
-								}
-
-	.evo-price-table-row		{
-
-		// ITEM LABEL
-		.evo-category-label			{
-									padding-top: 0;
-									padding-bottom: 0;
-									margin-top: 0;
-									margin-bottom: 0;
+	.evo-price-table			{
+								@include clearfix;
+								padding-bottom: rem-calc(20);
+		[class*="small-block-grid-"]
+									{
+									background-color: $evo-price-table-bg-color;
+									font-size: $evo-price-table-base-font;
+									padding: $evo-price-table-padding;
+									margin: 0;
+									margin-bottom: $evo-price-table-margin-bottom;
 			li							{padding-bottom: 0;}
-			.evo-item-label				{
-										color: $evo-price-table-item-label-font-color;
-										top: $evo-price-table-item-label-top-position;
+			.evo-item-amt,
+			.break-down-amt,
+			.total-amt					{
+										color: $evo-price-table-amt-font-color;
+										text-align: $evo-price-table-amt-text-align;
 										}
-									}
-		
-		// ITEM
-		.evo-item-amt				{
+			.evo-item-label,
+			.break-down-label,
+			.total-label				{text-transform: $evo-price-table-amt-text-transform;}
+
+			.evo-item-label,
 			.evo-time-value-label		{
-										color: $evo-price-table-time-value-label-color;
-										text-align: $evo-price-table-time-value-label-text-align;
-										top: $evo-price-table-time-value-label-top-position;
+										font-size: $evo-price-table-label-font-size;
+										position: $evo-price-table-label-position;
 										}
 									}
+
+		.evo-price-table-row		{
+
+			// ITEM LABEL
+			.evo-category-label			{
+										padding-top: 0;
+										padding-bottom: 0;
+										margin-top: 0;
+										margin-bottom: 0;
+				li							{padding-bottom: 0;}
+				.evo-item-label				{
+											color: $evo-price-table-item-label-font-color;
+											top: $evo-price-table-item-label-top-position;
+											}
+										}
+			
+			// ITEM
+			.evo-item-amt				{
+				.evo-time-value-label		{
+											color: $evo-price-table-time-value-label-color;
+											text-align: $evo-price-table-time-value-label-text-align;
+											top: $evo-price-table-time-value-label-top-position;
+											}
+										}
+									}
+
+		// BREAK DOWN ROW
+		.evo-price-table-break-down-row	{
+										background-color: $evo-price-table-break-down-row-bg-color;
+			.break-down-label			{}
+			.break-down-amt				{}
+									}
+
+		// TOTAL ROW
+		.evo-price-table-total-row	{
+									background-color: $evo-price-table-total-row-bg-color;
+			.total-label				{color: $evo-price-table-total-row-font-color;}
+			.total-amt					{color: $evo-price-table-total-row-font-color;}
+									}
+
 								}
 
-	// BREAK DOWN ROW
-	.evo-price-table-break-down-row	{
-									background-color: $evo-price-table-break-down-row-bg-color;
-		.break-down-label			{}
-		.break-down-amt				{}
-								}
+	//=== MEDIA QUERIES =========================================================================
 
-	// TOTAL ROW
-	.evo-price-table-total-row	{
-								background-color: $evo-price-table-total-row-bg-color;
-		.total-label				{color: $evo-price-table-total-row-font-color;}
-		.total-amt					{color: $evo-price-table-total-row-font-color;}
-								}
+	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
 
-							}
+			
+
+		}
+		
+	}// endif
+
+}// endif
