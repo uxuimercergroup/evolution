@@ -5,7 +5,7 @@
 //-------------------------------------------------------------------------------------------
 
 // ==========================================================================================
-// GLOBAL
+// EVO CORE - GLOBAL
 // ==========================================================================================
 
 // BASE VARIABLES
@@ -88,25 +88,8 @@ $evo-base-font-file-path:					"../fonts" !default;
 
 
 // ==========================================================================================
-// BASE
+// EVO CORE - BASE
 // ==========================================================================================
-
-// HERO BANNER
-// ------------------------------------------------------------------------------------------
-$heroBannerBackgroundColor:					$gray-lighter !default;
-
-
-// FOOTER
-// ------------------------------------------------------------------------------------------
-
-// BASE
-$footerBorderTopColor:						$gray-mid !default;
-$footerFontColor:							$gray-darker !default;
-
-// FAT FOOTER
-$fatFooterBackgroundColor:					$gray-darker !default;
-$fatFooterFontColor:						$white !default;
-
 
 // ICONS
 // ------------------------------------------------------------------------------------------
@@ -121,7 +104,7 @@ $iconFontAdvFontColor:						$white !default;
 
 
 // ==========================================================================================
-// OBJECTS
+// EVO UI - OBJECTS
 // ==========================================================================================
 
 // ADVANCED FILTER MODAL
@@ -223,6 +206,23 @@ $dialogHdrFontColor:						$gray-darker !default;
 $dialogContentBorderTopColor: 				$white !default;
 $dialogHdrBorderBottomColor:				$transparent !default;
 $dialogCloseIconColor:						$gray-darker !default;
+
+
+// FOOTER
+// ------------------------------------------------------------------------------------------
+
+// BASE
+$footerBorderTopColor:						$gray-mid !default;
+$footerFontColor:							$gray-darker !default;
+
+// FAT FOOTER
+$fatFooterBackgroundColor:					$gray-darker !default;
+$fatFooterFontColor:						$white !default;
+
+
+// HERO BANNER
+// ------------------------------------------------------------------------------------------
+$heroBannerBackgroundColor:					$gray-lighter !default;
 
 
 // IMAGE CONTENT OVERLAY

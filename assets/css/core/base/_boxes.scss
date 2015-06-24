@@ -25,25 +25,25 @@ $evo-box-shadow-blur: 6px !default;
 $evo-box-shadow-color: $gray-mid !default;
 
 // CUSTOM BOXES
-// ---------------------------------------------------------------------------
-	// FEATURE CONTAINER
-	$evo-box-featured-background-color:	$white !default;
-	$evo-box-featured-hdr-rule-color: $blue-gray-mid-dark !default;
 
-	// SIDEBAR CONTAINER
-	$evo-box-sidebar-background-color: $gray-lighter !default;
-	$evo-box-sidebar-hdr-rule-color: $gray-mid !default;
+// FEATURE CONTAINER
+$evo-box-featured-background-color:	$white !default;
+$evo-box-featured-hdr-rule-color: $blue-gray-mid-dark !default;
 
-	// SUPPORT CONTAINER
-	$evo-box-support-background-color: $blue-gray-lighter !default;
-	$evo-box-support-border-color: $blue-gray-mid-dark !default;
-	$evo-box-support-hdr-rule-color: $blue-gray-mid-dark !default;
+// SIDEBAR CONTAINER
+$evo-box-sidebar-background-color: $gray-lighter !default;
+$evo-box-sidebar-hdr-rule-color: $gray-mid !default;
 
-	// HIGHLIGHT CONTAINER
-	$evo-box-highlight-background-color: $evo-highlight-color !default;
+// SUPPORT CONTAINER
+$evo-box-support-background-color: $blue-gray-lighter !default;
+$evo-box-support-border-color: $blue-gray-mid-dark !default;
+$evo-box-support-hdr-rule-color: $blue-gray-mid-dark !default;
 
-	// INLINE SEARCH CONTAINER
-	$evo-box-inline-search-background-color: $gray-lighter !default;
+// HIGHLIGHT CONTAINER
+$evo-box-highlight-background-color: $evo-highlight-color !default;
+
+// INLINE SEARCH CONTAINER
+$evo-box-inline-search-background-color: $gray-lighter !default;
 
 
 @if $use-boxes == true{
