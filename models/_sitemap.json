@@ -44,12 +44,6 @@
             "key": "container-support",
             "name": "Container Support",
             "url": "/base/boxes/container-support"
-          },
-          {
-            "directory": false,
-            "key": "message-boxes",
-            "name": "Message Boxes",
-            "url": "/base/boxes/message-boxes"
           }
         ],
         "directory": true,
@@ -74,18 +68,6 @@
         "key": "corp-logos",
         "name": "Corp Logos",
         "url": "/base/corp-logos"
-      },
-      {
-        "directory": false,
-        "key": "fat-footer",
-        "name": "Fat Footer",
-        "url": "/base/fat-footer"
-      },
-      {
-        "directory": false,
-        "key": "footer",
-        "name": "Footer",
-        "url": "/base/footer"
       },
       {
         "children": [
@@ -144,20 +126,6 @@
         "url": "/base/grids"
       },
       {
-        "children": [
-          {
-            "directory": false,
-            "key": "masthead",
-            "name": "Masthead",
-            "url": "/base/header/masthead"
-          }
-        ],
-        "directory": true,
-        "key": "header",
-        "name": "Header",
-        "url": "/base/header"
-      },
-      {
         "directory": false,
         "key": "icons",
         "name": "Icons",
@@ -168,24 +136,6 @@
         "key": "icons-additional",
         "name": "Icons Additional",
         "url": "/base/icons-additional"
-      },
-      {
-        "directory": false,
-        "key": "layout-banding",
-        "name": "Layout Banding",
-        "url": "/base/layout-banding"
-      },
-      {
-        "directory": false,
-        "key": "layout-hero-banner",
-        "name": "Layout Hero Banner",
-        "url": "/base/layout-hero-banner"
-      },
-      {
-        "directory": false,
-        "key": "layout-login",
-        "name": "Layout Login",
-        "url": "/base/layout-login"
       },
       {
         "children": [
@@ -217,35 +167,9 @@
         "children": [
           {
             "directory": false,
-            "key": "navbar",
-            "name": "Navbar",
-            "url": "/base/navigation/navbar"
-          }
-        ],
-        "directory": true,
-        "key": "navigation",
-        "name": "Navigation",
-        "url": "/base/navigation"
-      },
-      {
-        "directory": false,
-        "key": "product-header",
-        "name": "Product Header",
-        "url": "/base/product-header"
-      },
-      {
-        "children": [
-          {
-            "directory": false,
             "key": "interactive",
             "name": "Interactive",
             "url": "/base/tables/interactive"
-          },
-          {
-            "directory": false,
-            "key": "pricing-table",
-            "name": "Pricing Table",
-            "url": "/base/tables/pricing-table"
           },
           {
             "directory": false,
@@ -282,12 +206,6 @@
         "key": "tables",
         "name": "Tables",
         "url": "/base/tables"
-      },
-      {
-        "directory": false,
-        "key": "toolbar-header",
-        "name": "Toolbar Header",
-        "url": "/base/toolbar-header"
       },
       {
         "directory": false,
@@ -743,12 +661,6 @@
       },
       {
         "directory": false,
-        "key": "batch-actions",
-        "name": "Batch Actions",
-        "url": "/objects/batch-actions"
-      },
-      {
-        "directory": false,
         "key": "calendar",
         "name": "Calendar",
         "url": "/objects/calendar"
@@ -778,16 +690,56 @@
         "url": "/objects/date-range"
       },
       {
-        "directory": false,
-        "key": "descriptive-hover",
-        "name": "Descriptive Hover",
-        "url": "/objects/descriptive-hover"
+        "children": [
+          {
+            "directory": false,
+            "key": "fat-footer",
+            "name": "Fat Footer",
+            "url": "/objects/footer/fat-footer"
+          },
+          {
+            "directory": false,
+            "key": "footer",
+            "name": "Footer",
+            "url": "/objects/footer/footer"
+          }
+        ],
+        "directory": true,
+        "key": "footer",
+        "name": "Footer",
+        "url": "/objects/footer"
       },
       {
         "directory": false,
         "key": "form-worksheet",
         "name": "Form Worksheet",
         "url": "/objects/form-worksheet"
+      },
+      {
+        "children": [
+          {
+            "directory": false,
+            "key": "masthead",
+            "name": "Masthead",
+            "url": "/objects/header/masthead"
+          },
+          {
+            "directory": false,
+            "key": "product-header",
+            "name": "Product Header",
+            "url": "/objects/header/product-header"
+          },
+          {
+            "directory": false,
+            "key": "toolbar-header",
+            "name": "Toolbar Header",
+            "url": "/objects/header/toolbar-header"
+          }
+        ],
+        "directory": true,
+        "key": "header",
+        "name": "Header",
+        "url": "/objects/header"
       },
       {
         "directory": false,
@@ -815,9 +767,33 @@
       },
       {
         "directory": false,
+        "key": "layout-banding",
+        "name": "Layout Banding",
+        "url": "/objects/layout-banding"
+      },
+      {
+        "directory": false,
+        "key": "layout-hero-banner",
+        "name": "Layout Hero Banner",
+        "url": "/objects/layout-hero-banner"
+      },
+      {
+        "directory": false,
+        "key": "layout-login",
+        "name": "Layout Login",
+        "url": "/objects/layout-login"
+      },
+      {
+        "directory": false,
         "key": "load-animation",
         "name": "Load Animation",
         "url": "/objects/load-animation"
+      },
+      {
+        "directory": false,
+        "key": "message-boxes",
+        "name": "Message Boxes",
+        "url": "/objects/message-boxes"
       },
       {
         "directory": false,
@@ -832,10 +808,30 @@
         "url": "/objects/modal"
       },
       {
+        "children": [
+          {
+            "directory": false,
+            "key": "navbar",
+            "name": "Navbar",
+            "url": "/objects/navigation/navbar"
+          }
+        ],
+        "directory": true,
+        "key": "navigation",
+        "name": "Navigation",
+        "url": "/objects/navigation"
+      },
+      {
         "directory": false,
         "key": "pagination",
         "name": "Pagination",
         "url": "/objects/pagination"
+      },
+      {
+        "directory": false,
+        "key": "pricing-table",
+        "name": "Pricing Table",
+        "url": "/objects/pricing-table"
       },
       {
         "directory": false,
@@ -890,12 +886,6 @@
         "key": "progress-bar",
         "name": "Progress Bar",
         "url": "/objects/progress-bar"
-      },
-      {
-        "directory": false,
-        "key": "pull-quote",
-        "name": "Pull Quote",
-        "url": "/objects/pull-quote"
       },
       {
         "directory": false,

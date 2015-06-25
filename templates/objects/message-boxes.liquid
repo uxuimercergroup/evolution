@@ -23,28 +23,28 @@
 					{% if model.reference-example-versions == "true" %}
 						<h4>{{ model.reference-example-version-label }}</h4>
 					{% endif %}
-					{{ global.reference-get-code-start-tag }}{% include "/base/boxes/confirmation-message-box" %}{{ global.reference-get-code-end-tag }}
+					{{ global.reference-get-code-start-tag }}{% include "/objects/message-boxes/confirmation-message-box" %}{{ global.reference-get-code-end-tag }}
 					{{ model.reference-code-html-content-block-post }}
 
 
 					{% if model.reference-example-versions == "true" %}
 						<h4>{{ model.reference-example-version-label-2 }}</h4>
 					{% endif %}
-					{{ global.reference-get-code-start-tag }}{% include "/base/boxes/attention-message-box" %}{{ global.reference-get-code-end-tag }}
+					{{ global.reference-get-code-start-tag }}{% include "/objects/message-boxes/attention-message-box" %}{{ global.reference-get-code-end-tag }}
 					{{ model.reference-code-html-content-block-post }}
 
 
 					{% if model.reference-example-versions == "true" %}
 						<h4>{{ model.reference-example-version-label-3 }}</h4>
 					{% endif %}
-					{{ global.reference-get-code-start-tag }}{% include "/base/boxes/error-message-box" %}{{ global.reference-get-code-end-tag }}
+					{{ global.reference-get-code-start-tag }}{% include "/objects/message-boxes/error-message-box" %}{{ global.reference-get-code-end-tag }}
 					{{ model.reference-code-html-content-block-post }}
 
 
 					{% if model.reference-example-versions == "true" %}
 						<h4>{{ model.reference-example-version-label-4 }}</h4>
 					{% endif %}
-					{{ global.reference-get-code-start-tag }}{% include "/base/boxes/information-message-box" %}{{ global.reference-get-code-end-tag }}
+					{{ global.reference-get-code-start-tag }}{% include "/objects/message-boxes/information-message-box" %}{{ global.reference-get-code-end-tag }}
 					{{ model.reference-code-html-content-block-post }}
 
 
@@ -83,22 +83,22 @@
 				{% if model.reference-example-versions == "true" %}
 					<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
 				{% endif %}
-				{% include "/base/boxes/confirmation-message-box" %}
+				{% include "/objects/message-boxes/confirmation-message-box" %}
 
 				{% if model.reference-example-versions == "true" %}
 					<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
 				{% endif %}
-				{% include "/base/boxes/attention-message-box" %}
+				{% include "/objects/message-boxes/attention-message-box" %}
 
 				{% if model.reference-example-versions == "true" %}
 					<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
 				{% endif %}
-				{% include "/base/boxes/error-message-box" %}
+				{% include "/objects/message-boxes/error-message-box" %}
 
 				{% if model.reference-example-versions == "true" %}
 					<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-4 }}</h4>
 				{% endif %}
-				{% include "/base/boxes/information-message-box" %}
+				{% include "/objects/message-boxes/information-message-box" %}
 
 			<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 

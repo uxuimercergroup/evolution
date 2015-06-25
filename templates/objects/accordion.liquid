@@ -37,15 +37,8 @@
 					<h4>{{ model.reference-example-version-label }}</h4>
 				{% endif %}
 				{{ model.reference-code-js-content-block-pre }}
-				{{ global.reference-get-code-start-tag }}{% include '/js/objects/accordion' %}{{ global.reference-get-code-end-tag }}
+				{{ global.reference-get-code-start-tag }}{ include '' }{{ global.reference-get-code-end-tag }}
 				{{ model.reference-code-js-content-block-post }}
-
-				{% if model.reference-example-versions == "true" %}
-					<h4>{{ model.reference-example-version-label-2 }}</h4>
-				{% endif %}
-				{{ model.reference-code-js-content-block-pre-2 }}
-				{{ global.reference-get-code-start-tag }}{% include '/js/objects/accordion-icons' %}{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-js-content-block-post-2 }}
 
 			{% endif %}
 

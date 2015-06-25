@@ -123,6 +123,7 @@
 
 	// LIBRARY EXAMPLES
 	//----------------------------------------------------------------------------------------------------
+		
 		// DATATABLES
 		jQuery('#evo-datatble-example').DataTable({
 			searching: true,
@@ -275,27 +276,8 @@ $(function() {
 
 		// ACCORDION
 
-			// Accordion - default
-			// evoAccordion('js-evo-accordion-example');
-
 			// Accordion - icons
 			accordionIconToggle();
-			/*
-			evoAccordion('js-evo-accordion-icons-example', {
-				icons: {'header': 'evo-icon-plus-circle', 'activeHeader': 'evo-icon-minus-circle'}
-			});
-			*/
-
-		// ALTERNATE VIEWS BADGE
-
-			// Alternate views badge - full
-			// evoAlternateViewsBadge('js-evo-alternate-views-badge-full-example', 'center');
-
-			// Alternate views badge - text only
-			// evoAlternateViewsBadge('js-evo-alternate-views-badge-text-only-example', 'left');
-
-			// Alternate views badge - text only
-			// evoAlternateViewsBadge('js-evo-alternate-views-badge-icon-only-example', 'right');
 
 		// AUTO SUGGEST
 			

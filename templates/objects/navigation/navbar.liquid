@@ -20,7 +20,7 @@
 					<h4>{{ model.reference-example-version-label }}</h4>
 				{% endif %}
 				{{ model.reference-code-html-content-block-pre }}
-				{{ global.reference-get-code-start-tag }}{ include '' }{{ global.reference-get-code-end-tag }}
+				{{ global.reference-get-code-start-tag }}{% include '/objects/navigation/navbar' %}{{ global.reference-get-code-end-tag }}
 				{{ model.reference-code-html-content-block-post }}
 
 				{% if model.reference-code-js == "true" %}
@@ -64,12 +64,12 @@
 					<p>{{ model.reference-example-description}}</p>
 					<p>
 						<a href="/demos/product-header" class="right see-context-link" target="_blank">
-							<img src="{{ "navbar_tabs_3.png" | asset_url }}" width="980" height="50" />
+							<img src="{{ "navbar_menu_1.png" | asset_url }}" width="980" height="" />
 						</a>
 					</p>
 			</section>
 		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-		
+
 		</section>
 	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
 

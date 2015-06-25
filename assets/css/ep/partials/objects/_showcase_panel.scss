@@ -26,30 +26,8 @@ $evo-showcase-panel-fixed-z-index: 900 !default;
 												display: inline-block;
 												float: none;
 
-				// LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
-				@each $color-name, $color in $color-palette 
-													{
-
-						// CUSTOM SPOT BACKGROUND COLOR FOR SHOWCASE ICONS
-						&[data-evo-showcase-panel-icon-background-color="#{$color-name}"]
-														{
-														background-color: map-get($color, color);
-														}
-													}
-
 				[class*="evo-icon-"]				{
 													top: 2px;
-
-					// LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
-					@each $color-name, $color in $color-palette 
-														{
-
-							// CUSTOM SPOT FONT COLOR FOR SHOWCASE ICONS
-							&[data-evo-showcase-panel-icon-color="#{$color-name}"]
-															{
-															color: map-get($color, color);
-															}
-														}
 													}
 												}
 											}
