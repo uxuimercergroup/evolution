@@ -4,7 +4,6 @@
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
-
 //
 // @variables
 //
@@ -32,25 +31,25 @@ $evo-definition-list-hdr-border-color: $gray-mid !default;
 // @mixins
 //
 // We use this mixin to create inline defintion lists
-@mixin evo-inline-dl-list 						{
-												@include clearfix;
-												margin-bottom: $evo-inline-dl-list-margin-bottom;
-	dt												{
-													float: $evo-inline-dl-list-dt-float;
-													margin: $evo-inline-dl-list-dt-margin;
+@mixin evo-inline-dl-list 					{
+											@include clearfix;
+											margin-bottom: $evo-inline-dl-list-margin-bottom;
+	dt											{
+												float: $evo-inline-dl-list-dt-float;
+												margin: $evo-inline-dl-list-dt-margin;
+												}
+	& > dd										{
+												list-style: none;
+												float: $evo-inline-dl-list-dd-float;
+												margin: $evo-inline-dl-list-dd-margin;
+												display: $evo-inline-dl-list-dd-display;
+		a											{
+													text-decoration: none;
+			&:hover										{text-decoration: underline;}
 													}
-	& > dd											{
-													list-style: none;
-													float: $evo-inline-dl-list-dd-float;
-													margin: $evo-inline-dl-list-dd-margin;
-													display: $evo-inline-dl-list-dd-display;
-		a												{
-														text-decoration: none;
-			&:hover											{text-decoration: underline;}
-														}
 		&:last-child								{margin-right: $evo-inline-dl-list-dd-last-child;}
 												}
-}
+											}
 
 //
 // @exports
@@ -94,8 +93,8 @@ $evo-definition-list-hdr-border-color: $gray-mid !default;
 											list-style: none;
 											margin-left: 0;
 		dt										{
-												margin: 0 0 10px 0;
-												padding: 0 0 4px 0;
+												margin: 0 0 rem-calc(10) 0;
+												padding: 0 0 rem-calc(4) 0;
 												color: $evo-definition-list-hdr-color;
 												border-bottom: 1px solid $evo-definition-list-hdr-border-color;
 												}
@@ -115,10 +114,12 @@ $evo-definition-list-hdr-border-color: $gray-mid !default;
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
 	@if $use-medium-up-mediaquery == true {
 		
 		@media #{$medium-up} {
+
+			
 
 		}
 		

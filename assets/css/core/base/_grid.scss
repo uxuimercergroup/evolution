@@ -12,22 +12,18 @@ $evo-grid-device-padding: rem-calc(20) rem-calc(10) 0 rem-calc(10) !default;
 
 @if $use-grid == true{
 
-	.evo-row-margin-bottom		{
-		@media #{$small-only}		{margin-bottom: 10px;}
-		@media #{$medium-only}		{margin-bottom: 20px;}
-		@media #{$large-up}			{margin-bottom: 30px;}
-								}
-
 	section[role=main]			{
-		@media #{$small-up}			{padding: $evo-grid-device-padding;}
+								padding: $evo-grid-device-padding;
 								}
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
 	@if $use-medium-up-mediaquery == true {
 			
 		@media #{$medium-up} {
+
+			
 
 		}
 

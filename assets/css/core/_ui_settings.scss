@@ -20,14 +20,14 @@
 
 // MEDIA QUERY RANGES AND UP
 $use-small-up-mediaquery:					true !default; // 0px +
-$use-medium-up-mediaquery:					true !default; // 641px +
+$use-medium-up-mediaquery:					true !default; // 768px +
 $use-large-up-mediaquery:					true !default; // 1025px +
 $use-xlarge-up-mediaquery:					true !default; // 1441px +
 $use-xxlarge-up-mediaquery:					true !default; // 1921px +
 
 // MEDIA QUERY RANGES
-$use-small-only-mediaquery:					true !default; // 0px - 640px
-$use-medium-only-mediaquery:				true !default; // 641px - 1024px
+$use-small-only-mediaquery:					true !default; // 0px - 767px
+$use-medium-only-mediaquery:				true !default; // 768px - 1024px
 $use-large-only-mediaquery:					true !default; // 1025px - 1440px
 $use-xlarge-only-mediaquery:				true !default; // 1441px - 1920px
 $use-xxlarge-only-mediaquery:				true !default; // 1921px +
