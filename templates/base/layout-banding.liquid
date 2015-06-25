@@ -53,8 +53,8 @@
 	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
 		<section class="evo-ref-example-content">
 
-			<div class="col-24 evo-margin-bottom">
-				<div class="col-12 first">
+			<div class="row evo-margin-bottom">
+				<div class="medium-6 columns">
 
 					{% if model.reference-example-versions == "true" %}
 						<h5>{{ model.reference-example-version-label }}</h5>
@@ -66,7 +66,7 @@
 					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 				</div>
-				<div class="col-12">
+				<div class="medium-6 columns">
 
 					<a href="/demos/layout-banding-demo" target="_blank"><img class="img-border" src="{{ "ex_banding_template.png" | asset_url }}" width="490" height="239" alt="{{ model.reference-example-version-label }}" title="{{ model.reference-example-version-label }}" /></a>
 
