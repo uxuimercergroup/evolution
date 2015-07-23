@@ -1,10 +1,11 @@
 /**
  * Grid theme for Highcharts JS
  * @author David Santos
+ * MONOCHROME COLOR PALETTE: SAPPHIRE & IOLITE
  */
 
 Highcharts.theme = {
-	colors: ['#00A8C8', '#0FB694', '#008075', '#BFBFBF', '#ED2C67', '#A9194F', '#006D9E', '#808080', '#FBAE17', '#F48132', '#595998', '#932077', '#404040', '#BDDDA3', '#A7D9C8', '#E7B8D6', '#C5CAE7', '#D7D7D7', '#A6E2EF'],
+	colors: ['#00A8C8', '#006D9E', '#002C77', '#43286D', '#595998', '#6F85C2', '#C5CAE7', '#A6E2EF' ],
 	chart: {
 		backgroundColor: {
 			linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },

@@ -5,7 +5,69 @@
 ${demo.css}
 		</style>
 <script type="text/javascript">
+$(function () {
+    $('#spline-symbols').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'Monthly Average Temperature'
+        },
+        subtitle: {
+            text: 'Source: WorldClimate.com'
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'Temperature'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value + '°';
+                }
+            }
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: 'Tokyo',
+            marker: {
+                symbol: 'square'
+            },
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, {
+                y: 26.5,
+                marker: {
+                    symbol: 'url(http://www.highcharts.com/demo/gfx/sun.png)'
+                }
+            }, 23.3, 18.3, 13.9, 9.6]
 
+        }, {
+            name: 'London',
+            marker: {
+                symbol: 'diamond'
+            },
+            data: [{
+                y: 3.9,
+                marker: {
+                    symbol: 'url(http://www.highcharts.com/demo/gfx/snow.png)'
+                }
+            }, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+        }]
+    });});
 </script>
 <!-- PAGE TITLE - BEGINS -->
 	<h1>{{ model.title }}</h1>
@@ -73,17 +135,6 @@ ${demo.css}
 
 		</section>
 	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
-
-		<h4>Other Similar Charts</h4>
-		<ul>
-			<li><a href="/demos/highcharts/line-basic">Basic line chart</a></li>
-			<li><a href="/demos/highcharts/line-ajax">Ajax loaded data, clickable points</a></li>
-			<li><a href="/demos/highcharts/line-labels">With data labels</a></li>
-			<li><a href="/demos/highcharts/line-zoomable">Time series, zoomable</a></li>
-			<li><a href="/demos/highcharts/spline-inverted">Spline with inverted axes</a></li>
-			<li><a href="/demos/highcharts/spline-irregular-time">Time data with irregular intervals</a></li>
-			<li><a href="/demos/highcharts/line-log-axis">Logarithmic axis</a></li>
-		</ul>
 
 	</section>
 <!-- EXAMPLE SECTION - ENDS -->
