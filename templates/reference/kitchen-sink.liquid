@@ -1,0 +1,44 @@
+{% layout "reference/layout-kitchen-sink" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+
+		<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+			<h1>{{ model.title }}</h1>
+			<p>
+				Lorem ipsum sed turpis nibh libero nisi integer arcu mattis quam aliquet aliquet. Viverra aliquam felis lacus mus auctor nisl eu laoreet in. Ipsum sit dolor aliquet nunc arcu consequat orci eu sociosqu in non.
+			</p>
+		<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+			<hr />
+
+		<!-- CONTENT - BEGINS -->
+			
+			<h3>Boxes</h3>
+
+			<div class="row">
+				<div class="medium-4 columns">
+					{% include '/reference/base/boxes/box' %}
+				</div>
+				<div class="medium-4 columns">
+					{% include '/reference/base/boxes/box-hdr' %}
+				</div>
+				<div class="medium-4 columns">
+					{% include '/reference/base/boxes/box-hdr-shadow' %}
+				</div>
+			</div>
+
+			<hr />
+
+			
+
+		<!-- CONTENT - ENDS -->
+
+		</div>
+	</section>
+<!-- PAGE CONTENT - ENDS -->
+
+{% endblock %}

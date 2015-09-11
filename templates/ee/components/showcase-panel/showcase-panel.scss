@@ -1,0 +1,111 @@
+/*-------------------------------------------------------------------------------------------
+Mercer Evolution - Core v3.0.1 - Employee Portal Family
+Showcase Panel Component v1.0 - SASS
+DATE - September 2, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
+--------------------------------------------------------------------------------------------*/
+
+//
+// @core sass imports
+//
+@import	"../../../../assets/css/core/global/color_variables";
+@import	"../../../../assets/css/core/foundation/foundation/settings";
+@import	"../../../../assets/css/core/global/variables";
+@import	"../../../../assets/css/core/global/functions";
+@import	"../../../../assets/css/core/global/mixins";
+
+//
+// @variables
+//
+$evo-showcase-panel-shadow-h: 0 !default;
+$evo-showcase-panel-shadow-v: rem-calc(2) !default;
+$evo-showcase-panel-shadow-blur: rem-calc(8) !default;
+$evo-showcase-panel-shadow-color: $onyx-dark-10 !default;
+$evo-showcase-panel-fixed-z-index: 900 !default;
+
+//
+// @variable overrides
+//
+
+
+// SHOWCASE PANEL - BEGINS
+	.evo-showcase-panel					{
+										@include box-shadow($evo-showcase-panel-shadow-h, $evo-showcase-panel-shadow-v, $evo-showcase-panel-shadow-blur, $evo-showcase-panel-shadow-color);
+		li									{
+											padding: rem-calc(10) 0;
+			.evo-icon-adv						{
+												top: rem-calc(4);
+												border: 0;
+												display: inline-block;
+												float: none;
+
+				[class*="evo-icon-"]				{line-height: 3;}
+												}
+											}
+
+		// LARGE COST STYLES - BEGIN
+			.evo-large-cost						{
+												text-align: center;
+				.evo-cost-number					{
+													font-size: rem-calc(32);
+													display: block;
+					sup									{
+														position: relative;
+														top: rem-calc(-16);
+														left: rem-calc(-1);
+														}
+													}
+				.evo-monthly-label					{
+													position: relative;
+													left: rem-calc(-5);
+													top: rem-calc(-5);
+													}
+				.evo-total-label					{
+													position: relative;
+													top: rem-calc(-7);
+													}
+												}
+		// LARGE COST STYLES - END
+
+		// SMALL COST STYLES - BEGIN
+			.evo-small-cost						{
+												text-align: center;
+				.evo-cost-number					{
+													font-size: rem-calc(24);
+													display: block;
+					sup									{
+														position: relative;
+														top: rem-calc(-10);
+														left: rem-calc(-1);
+														}
+													}
+				.evo-monthly-label					{
+													position: relative;
+													left: rem-calc(-5);
+													top: rem-calc(-5);
+													}
+												}
+		// SMALL COST STYLES - END
+
+										}
+	[data-evo-showcase-panel-fixed]		{
+										position: fixed;
+										top: rem-calc(45);
+										left: 0;
+										z-index: $evo-showcase-panel-fixed-z-index;
+										width: 100%;
+										margin-left: 0;
+										}
+
+	.evo-showcase-panel-fixed-header-adjust
+										{margin-bottom: rem-calc(145);}
+
+	.evo-showcase-reverse				{color: $white;}
+
+//=== MEDIA QUERIES =========================================================================
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+@media #{$medium-up} {
+
+
+}

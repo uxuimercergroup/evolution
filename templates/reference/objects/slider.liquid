@@ -1,0 +1,206 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+			<p>
+				The Slider gives the user a more visual and tactile approach to filling out numeric form fields.
+			</p>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="default"><a href="#default">Basic</a></dd>
+					<dd data-magellan-arrival="rangeslider"><a href="#rangeslider">Range Slider</a></dd>
+					<dd data-magellan-arrival="rangeslidermin"><a href="#rangeslidermin">Range Slider Min</a></dd>
+					<dd data-magellan-arrival="rangeslidermax"><a href="#rangeslidermax">Range Slider Max</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+			<h3 data-magellan-destination="default">Basic</h3>
+			<a name="default"></a>
+	<!-- SLIDER - BEGINS -->
+			<section class="row">
+				
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/slider/slider' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					<!-- EXAMPLE JS - BEGINS -->
+						<h6>Javascript</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/js/objects/slider/slider' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE JS - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - BEGINS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/slider/slider' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+			</section>
+	<!-- SLIDER - ENDS -->
+
+			<hr />
+			<h3 data-magellan-destination="rangeslider">Range Slider</h3>
+			<a name="rangeslider"></a>
+	<!-- RANGE SLIDER - BEGINS -->
+			<section class="row">
+				
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/slider/range-slider' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					<!-- EXAMPLE JS - BEGINS -->
+						<h6>Javascript</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/js/objects/slider/range-slider' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE JS - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - BEGINS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/slider/range-slider' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+			</section>
+	<!-- RANGE SLIDER - ENDS -->
+
+			<hr />
+			<h3 data-magellan-destination="rangeslidermin">Range Slider (min)</h3>
+			<a name="rangeslidermin"></a>
+	<!-- RANGE SLIDER (MIN) - BEGINS -->
+			<section class="row">
+				
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/slider/range-slider-min' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					<!-- EXAMPLE JS - BEGINS -->
+						<h6>Javascript</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/js/objects/slider/range-slider-min' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE JS - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - BEGINS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/slider/range-slider-min' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+			</section>
+	<!-- RANGE SLIDER (MIN) - ENDS -->
+
+			<hr />
+			<h3 data-magellan-destination="rangeslidermax">Range Slider (max)</h3>
+			<a name="rangeslidermax"></a>
+	<!-- RANGE SLIDER (MAX) - BEGINS -->
+			<section class="row">
+				
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/slider/range-slider-max' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					<!-- EXAMPLE JS - BEGINS -->
+						<h6>Javascript</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/js/objects/slider/range-slider-max' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE JS - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - BEGINS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/slider/range-slider-max' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+			</section>
+	<!-- RANGE SLIDER (MAX) - ENDS -->
+
+			<hr />
+	<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+									<ul>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/panels.html" target="_blank">Panels</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+	<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}

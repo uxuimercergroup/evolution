@@ -1,0 +1,221 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+			<p>
+				The Scroll Pane is an added control that allows excess information to be presented in a defined space. It essentially allows a container to have scrollable content while keeping the container fixed to a desired height.
+			</p>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="default"><a href="#default">Vertical Scrolling</a></dd>
+					<dd data-magellan-arrival="horizontal"><a href="#horizontal">Horizontal Scrolling</a></dd>
+					<dd data-magellan-arrival="horizontal-vertical"><a href="#horizontal-vertical">Horizontal &amp; Vertical Scrolling</a></dd>
+					<dd data-magellan-arrival="custom-scroll-pane-height"><a href="#custom-scroll-pane-height">Custom Scroll Pane Height</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+		<!-- DEFAULT (Vertical Scrolling Only) - BEGINS -->
+			<h3 data-magellan-destination="default">Vertical Scrolling</h3>
+			<a name="default"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/scroll-pane/scroll-pane' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					<!-- EXAMPLE JS - BEGINS -->
+						<h6>Javascript</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/js/objects/scroll-pane/scroll-pane' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE JS - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/scroll-pane/scroll-pane' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- DEFAULT (Vertical Scrolling Only) - ENDS -->
+
+		<!-- HORIZONTAL SCROLLING ONLY - BEGINS -->
+			<h3 data-magellan-destination="horizontal">Horizontal Scrolling</h3>
+			<a name="horizontal"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/scroll-pane/scroll-pane-horizontal' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					<!-- EXAMPLE JS - BEGINS -->
+						<h6>Javascript</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/js/objects/scroll-pane/scroll-pane-horizontal' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE JS - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/scroll-pane/scroll-pane-horizontal' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- HORIZONTAL SCROLLING ONLY - ENDS -->
+
+		<!-- HORIZONTAL AND VERTICAL SCROLLING - BEGINS -->
+			<h3 data-magellan-destination="horizontal-vertical">Horizontal &amp; Vertical Scrolling</h3>
+			<a name="horizontal-vertical"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/scroll-pane/scroll-pane-horizontal-vertical' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					<!-- EXAMPLE JS - BEGINS -->
+						<h6>Javascript</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/js/objects/scroll-pane/scroll-pane-horizontal-vertical' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE JS - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/scroll-pane/scroll-pane-horizontal-vertical' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- HORIZONTAL AND VERTICAL SCROLLING - ENDS -->
+
+		<!-- CUSTOM SCROLL PANE - BEGINS -->
+			<h3 data-magellan-destination="custom-scroll-pane-height">Custom Scroll Pane Height</h3>
+			<a name="custom-scroll-pane-height"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/scroll-pane/scroll-pane-custom-height' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					<!-- EXAMPLE JS - BEGINS -->
+						<h6>Javascript</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/js/objects/scroll-pane/scroll-pane-custom-height' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE JS - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/scroll-pane/scroll-pane-custom-height' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- CUSTOM SCROLL PANE - ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}

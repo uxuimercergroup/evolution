@@ -1,0 +1,188 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+			<p>
+				Lorem ipsum sed turpis nibh libero nisi integer arcu mattis quam aliquet aliquet. Viverra aliquam felis lacus mus auctor nisl eu laoreet in. Ipsum sit dolor aliquet nunc arcu consequat orci eu sociosqu in non.
+			</p>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="example-a"><a href="#example-a">Example A</a></dd>
+					<dd data-magellan-arrival="example-b"><a href="#example-b">Example B</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+		<!-- EXAMPLE A - BEGINS -->
+			<h3 data-magellan-destination="example-a">Example A</h3>
+			<a name="example-a"></a>
+			<p>
+				Lorem ipsum sed turpis nibh libero nisi integer arcu mattis <code>quam aliquet</code> aliquet. Viverra aliquam felis lacus mus auctor nisl eu laoreet in.
+			</p>
+
+		<!-- ANNOTATIONS BOX - BEGINS -->
+			<div class="panel evo-box annotations">
+				<div class="evo-box-bdy">
+					<p class="evo-no-margin-bottom">Note: Make sure to modify the <code>colspan</code> based on how many columns you have in your table.</p>
+				</div>
+			</div>
+		<!-- ANNOTATIONS BOX - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/scroll-pane/scroll-pane-custom-height' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					<!-- EXAMPLE JS - BEGINS -->
+						<h6>Javascript</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/js/objects/scroll-pane/scroll-pane-custom-height' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE JS - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/scroll-pane/scroll-pane-custom-height' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- ANNOTATIONS BOX - BEGINS -->
+				<div class="panel evo-box annotations">
+					<div class="evo-box-bdy">
+						<p class="evo-no-margin-bottom">Note: This is an <code>annotations</code> box.</p>
+					</div>
+				</div>
+			<!-- ANNOTATIONS BOX - ENDS -->
+
+			<hr />
+		<!-- EXAMPLE A - ENDS -->
+
+		<!-- EXAMPLE B - BEGINS -->
+			<h3 data-magellan-destination="example-b">Example B</h3>
+			<a name="example-b"></a>
+			<p>
+				Lorem ipsum sed turpis nibh libero nisi integer arcu mattis <code>quam aliquet</code> aliquet. Viverra aliquam felis lacus mus auctor nisl eu laoreet in.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/scroll-pane/scroll-pane-custom-height' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					<!-- EXAMPLE JS - BEGINS -->
+						<h6>Javascript</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/js/objects/scroll-pane/scroll-pane-custom-height' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE JS - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/scroll-pane/scroll-pane-custom'-height %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- ANNOTATIONS BOX - BEGINS -->
+				<div class="panel evo-box annotations">
+					<div class="evo-box-bdy">
+						<p class="evo-no-margin-bottom">Note: This is an <code>annotations</code> box.</p>
+					</div>
+				</div>
+			<!-- ANNOTATIONS BOX - ENDS -->
+
+			<hr />
+		<!-- EXAMPLE B - ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+					<p>
+						Lorem ipsum sed turpis nibh libero nisi integer arcu mattis <code>quam aliquet</code> aliquet. Viverra aliquam felis lacus mus auctor nisl eu laoreet in.
+					</p>
+
+					<h6>Code Sample</h6>
+					{{ global.reference-get-code-start-tag }}{% include '/reference/js/objects/scroll-pane/scroll-pane-custom-height' %}{{ global.reference-get-code-end-tag }}
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+									<ul>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/accordion.html" target="_blank">Accordions</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}

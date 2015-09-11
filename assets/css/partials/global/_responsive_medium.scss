@@ -1,0 +1,121 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Responsive CSS - Medium Media Query - 768px - 1024px
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+@media #{$medium-up} {
+
+	// FOOTER - BEGINS
+
+		// HOMPAGE FOOTER - BEGINS
+			.evo-site-hp-footer			{
+										padding: rem-calc(20 0 10 0);
+			
+			// FOOTER LOGO - BEGINS
+				.evo-footer-logo			{
+					> a							{
+												position: relative;
+												top: -6px;
+												}
+											}
+			// FOOTER LOGO - ENDS
+
+										}
+		// HOMPAGE FOOTER - ENDS
+
+	// FOOTER - ENDS
+
+}
+
+// MEDIUM MEDIA QUERY RANGE - 768px - 1024px
+@media #{$medium-only} {
+
+	// FAMILY GLOBAL - BEGINS
+
+		// FAMILY BUTTON GROUP NAV - BEGINS
+			.evo-site-family-button-group-nav
+										{
+										margin-bottom: rem-calc(60);
+										}
+		// FAMILY BUTTON GROUP NAV - ENDS
+
+	// FAMILY GLOBAL - ENDS
+
+
+	// FOOTER - BEGINS
+
+		// FOOTER GLOBAL - BEGINS
+			.evo-footer					{
+										margin-top: rem-calc(60);
+										}
+		// FOOTER GLOBAL - ENDS
+
+	// FOOTER - ENDS
+
+
+	// TEMPLATE PAGE - BEGINS
+
+		// HERO IMAGE & TEXT - BEGINS
+			.evo-site-hero-text			{
+										font-size: rem-calc(40);
+										line-height: rem-calc(40);
+										padding: rem-calc(12 10 9 15);
+										top: 122px;
+										}
+		// HERO IMAGE & TEXT - ENDS
+
+		// LARGE HERO IMAGE & TEXT - BEGINS
+			.evo-site-large-hero-text	{
+										font-size: rem-calc(46);
+										line-height: rem-calc(46);
+										padding: rem-calc(12 10 9 15);
+										top: 236px;
+										}
+		// LARGE HERO IMAGE & TEXT - ENDS
+
+		// FAMILY CONTENT CONTAINER - BEGINS
+			.evo-site-family-content-ctn
+										{
+										margin-top: rem-calc(60);
+										}
+		// FAMILY CONTENT CONTAINER - BEGINS
+
+	// TEMPLATE PAGE - ENDS
+
+
+	// CATEGORY PAGE TEMPLATE - BEGINS
+
+		// TABLE OF CONTENT - BEGIN
+			.evo-site-table-content-ctn	{
+										margin-bottom: rem-calc(40) !important;
+				.evo-site-table-contents	{
+											padding: rem-calc(40 0 15 0);
+											}
+										}
+		// TABLE OF CONTENT - ENDS
+
+		// COMPONENT GROUP LAYOUT - BEGINS
+			.evo-site-component-group-ctn
+										{
+										margin-top: rem-calc(60);
+										margin-bottom: rem-calc(60);
+										}
+		// COMPONENT GROUP LAYOUT - ENDS
+
+	// CATEGORY PAGE TEMPLATE - ENDS	
+
+
+	// FAMILY LANDING TEMPLATE - BEGINS
+
+		// FAMILY LANDING TEMPLATE GLOBAL - BEGINS
+			.evo-family-categories-ctn
+										{
+										margin-bottom: rem-calc(60);
+										}
+		// FAMILY LANDING TEMPLATE - ENDS
+
+	// FAMILY LANDING TEMPLATE - ENDS
+
+}

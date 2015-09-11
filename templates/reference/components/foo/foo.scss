@@ -1,0 +1,66 @@
+/*-------------------------------------------------------------------------------------------
+Mercer Evolution - Core v3.0.1
+Foo Component v1.0 - SASS
+DATE - August 19, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
+--------------------------------------------------------------------------------------------*/
+
+//
+// @core sass imports
+//
+@import	"../../../../assets/css/core/global/color_variables";
+@import	"../../../../assets/css/core/foundation/foundation/settings";
+@import	"../../../../assets/css/core/global/variables";
+@import	"../../../../assets/css/core/global/functions";
+@import	"../../../../assets/css/core/global/mixins";
+
+//
+// @variables
+//
+
+// Component family setting
+$evo-family: core;
+
+// Component variables
+$evo-comp-foo-background-color: $white !default;
+	@if $evo-family == comm {
+		$evo-comp-foo-background-color: $emerald-light;
+	} @else if $evo-family == ee {
+		$evo-comp-foo-background-color: $topaz-light;
+	}
+
+$evo-comp-foo-color-background-color: $onyx-light !default;
+	@if $evo-family == comm {
+		$evo-comp-foo-color-background-color: $sapphire-light;
+	} @else if $evo-family == ee {
+		$evo-comp-foo-color-background-color: $garnet-light;
+	}
+
+//
+// @variable overrides
+//
+// $evo-comp-foo-background-color: ;
+// $evo-comp-foo-color-background-color: ;
+
+
+// FOO COMPONENT
+.evo-comp-foo 		{
+					@include border-radius(rem-calc(4));
+					background-color: $evo-comp-foo-background-color;
+					color: blue;
+	&.evo-comp-foo-color
+						{
+						background-color: $evo-comp-foo-color-background-color;
+						}
+					}
+
+//=== MEDIA QUERIES =========================================================================
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+@media #{$medium-up} {
+
+	.evo-comp-foo	{
+					background-color: darken($evo-comp-foo-background-color, 50%);
+					}
+
+}

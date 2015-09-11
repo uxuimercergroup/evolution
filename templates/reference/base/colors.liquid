@@ -1,0 +1,404 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="core-palette"><a href="#core-palette">Core Palette</a></dd>
+					<dd data-magellan-arrival="color-palette"><a href="#color-palette">Color Palette</a></dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+		<!-- CORE PALETTE - BEGINS -->
+			<h3 data-magellan-destination="core-palette">Core Palette</h3>
+			<a name="core-palette"></a>
+			
+			<div class="row evo-margin-bottom">
+				<div class="medium-6 columns">
+					<h6 class="text-center">Base</h6>
+					<div class="color-block" data-evo-background-color="black">
+						<div class="left">black</div>
+						<div class="right">#000000</div>
+					</div>
+					<div class="color-block color-block-light-colors" data-evo-background-color="white">
+						<div class="left">white</div>
+						<div class="right">#FFFFFF</div>
+					</div>
+					<div class="color-block color-block-light-colors" data-evo-background-color="transparent">
+						<div class="left">transparent</div>
+						<div class="right"></div>
+					</div>
+				</div>
+
+				<div class="medium-6 columns">
+					<h6 class="text-center">Specific Use</h6>
+					<div class="color-block" data-evo-background-color="alert-color">
+						<div class="left">alert-color</div>
+						<div class="right">#EF4E45</div>
+					</div>
+					<div class="color-block" data-evo-background-color="success-color">
+						<div class="left">success-color</div>
+						<div class="right">#72BE44</div>
+					</div>
+					<div class="color-block" data-evo-background-color="warning-color">
+						<div class="left">warning-color</div>
+						<div class="right">#FCC770</div>
+					</div>
+					<div class="color-block color-block-light-colors" data-evo-background-color="info-color">
+						<div class="left">info-color</div>
+						<div class="right">#A6E2EF</div>
+					</div>
+					<div class="color-block color-block-light-colors" data-evo-background-color="highlight-color">
+						<div class="left">highlight-color</div>
+						<div class="right">#F7F0B2</div>
+					</div>
+				</div>
+			</div>
+
+			<hr />
+		<!-- CORE PALETTE - ENDS -->
+
+		<!-- COLOR PALETTE - BEGINS -->
+			<h3 data-magellan-destination="color-palette">Color Palette</h3>
+			<a name="color-palette"></a>
+
+			<h4 class="evo-spacer-margin-top-medium">Primary Color Palette</h4>
+
+			<p>
+				Mercer's primary sapphire color palette plays an important strategic role in defining our identity. It communicates Mercer's personality and values, has powerful psychological implications, and effectively differentiates our brand. This palette should be used predominantly and consistently across all communications to provide immediate brand recognition.
+			</p>
+
+			<p>
+				While the primary or "core" sapphire colors shown below should be omnipresent on all materials, a set of secondary "spectrums" and a tertiary color palette provide additional flexibility while supporting the primary identity, These supporting colors should be used as sparingly as possible so the integrity of primary palette is not diluted and brand recognizability is not compromised. The preferred use of support colors is on interior applications to highlight text or when an expanded palette is necessary, such as for info-graphics or page dividers.
+			</p>
+
+			<div class="row evo-margin-bottom">
+				<div class="medium-6 columns">
+					<h6 class="text-center">Sapphire</h6>
+					<div class="color-block" data-evo-background-color="sapphire-dark">
+						<div class="left">sapphire-dark</div>
+						<div class="right">#002C77</div>
+					</div>
+					<div class="color-block" data-evo-background-color="sapphire-medium">
+						<div class="left">sapphire-medium</div>
+						<div class="right">#006D9E</div>
+					</div>
+					<div class="color-block" data-evo-background-color="sapphire-bright">
+						<div class="left">sapphire-bright</div>
+						<div class="right">#00A8C8</div>
+					</div>
+					<div class="color-block" data-evo-background-color="sapphire-light">
+						<div class="left">sapphire-light</div>
+						<div class="right">#A6E2EF</div>
+					</div>
+				</div>
+
+				<div class="medium-6 columns">
+					<h6 class="text-center">Onyx</h6>
+					<div class="color-block" data-evo-background-color="onyx-dark">
+						<div class="left">onyx-dark</div>
+						<div class="right">#000000</div>
+					</div>
+					<div class="color-block" data-evo-background-color="onyx-medium">
+						<div class="left">onyx-medium</div>
+						<div class="right">#404040</div>
+					</div>
+					<div class="color-block" data-evo-background-color="onyx-bright">
+						<div class="left">onyx-bright</div>
+						<div class="right">#808080</div>
+					</div>
+					<div class="color-block" data-evo-background-color="onyx-light">
+						<div class="left">onyx-light</div>
+						<div class="right">#BFBFBF</div>
+					</div>
+
+					<br />
+
+					<div class="color-block" data-evo-background-color="onyx-dark-90">
+						<div class="left">onyx-dark-90</div>
+						<div class="right">#1A1A1A</div>
+					</div>
+					<div class="color-block" data-evo-background-color="onyx-dark-80">
+						<div class="left">onyx-dark-80</div>
+						<div class="right">#333333</div>
+					</div>
+					<div class="color-block" data-evo-background-color="onyx-dark-70">
+						<div class="left">onyx-dark-70</div>
+						<div class="right">#4D4D4D</div>
+					</div>
+					<div class="color-block" data-evo-background-color="onyx-dark-60">
+						<div class="left">onyx-dark-60</div>
+						<div class="right">#666666</div>
+					</div>
+					<div class="color-block" data-evo-background-color="onyx-dark-50">
+						<div class="left">onyx-dark-50</div>
+						<div class="right">#808080</div>
+					</div>
+					<div class="color-block" data-evo-background-color="onyx-dark-40">
+						<div class="left">onyx-dark-40</div>
+						<div class="right">#999999</div>
+					</div>
+					<div class="color-block" data-evo-background-color="onyx-dark-30">
+						<div class="left">onyx-dark-30</div>
+						<div class="right">#B3B3B3</div>
+					</div>
+					<div class="color-block" data-evo-background-color="onyx-dark-20">
+						<div class="left">onyx-dark-20</div>
+						<div class="right">#CCCCCC</div>
+					</div>
+					<div class="color-block color-block-light-colors" data-evo-background-color="onyx-dark-14">
+						<div class="left">onyx-dark-14</div>
+						<div class="right">#DBDBDB</div>
+					</div>
+					<div class="color-block color-block-light-colors" data-evo-background-color="onyx-dark-10">
+						<div class="left">onyx-dark-10</div>
+						<div class="right">#E6E6E6</div>
+					</div>
+					<div class="color-block color-block-light-colors" data-evo-background-color="onyx-dark-6">
+						<div class="left">onyx-dark-6</div>
+						<div class="right">#F0F0F0</div>
+					</div>
+					<div class="color-block color-block-light-colors" data-evo-background-color="onyx-dark-2">
+						<div class="left">onyx-dark-2</div>
+						<div class="right">#FAFAFA</div>
+					</div>
+				</div>
+			</div>
+
+			<h4 class="evo-spacer-margin-top-x-large">Secondary Color Palette</h4>
+
+			<p>
+				The core colors are preferred on all applications. The secondary colors can be used to add flexibility and differentiation. Secondary colors can be used to differentiate specific products, solutions, events, and campaigns. Secondary colors should not be used on our general communications.
+			</p>
+
+			<!-- ANNOTATIONS BOX - BEGINS -->
+				<div class="panel evo-box annotations">
+					<div class="evo-box-bdy">
+						<p class="evo-no-margin-bottom">Note: Do not use more than one secondary color on a single application. The core colors are the only additional color allowed with a secondary color.</p>
+					</div>
+				</div>
+			<!-- ANNOTATIONS BOX - ENDS -->
+
+			<div class="row evo-margin-bottom">
+				<div class="medium-6 columns">
+					<h6 class="text-center">Amethyst</h6>
+					<div class="color-block" data-evo-background-color="amethyst-dark">
+						<div class="left">amethyst-dark</div>
+						<div class="right">#570054</div>
+					</div>
+					<div class="color-block" data-evo-background-color="amethyst-medium">
+						<div class="left">amethyst-medium</div>
+						<div class="right">#932077</div>
+					</div>
+					<div class="color-block" data-evo-background-color="amethyst-bright">
+						<div class="left">amethyst-bright</div>
+						<div class="right">#CF3D96</div>
+					</div>
+					<div class="color-block" data-evo-background-color="amethyst-light">
+						<div class="left">amethyst-light</div>
+						<div class="right">#E7B8D6</div>
+					</div>
+				</div>
+
+				<div class="medium-6 columns">
+					<h6 class="text-center">Ruby</h6>
+					<div class="color-block" data-evo-background-color="ruby-dark">
+						<div class="left">ruby-dark</div>
+						<div class="right">#690031</div>
+					</div>
+					<div class="color-block" data-evo-background-color="ruby-medium">
+						<div class="left">ruby-medium</div>
+						<div class="right">#A9194F</div>
+					</div>
+					<div class="color-block" data-evo-background-color="ruby-bright">
+						<div class="left">ruby-bright</div>
+						<div class="right">#ED2C67</div>
+					</div>
+					<div class="color-block" data-evo-background-color="ruby-light">
+						<div class="left">ruby-light</div>
+						<div class="right">#F7B6BB</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row evo-margin-bottom">
+				<div class="medium-6 columns">
+					<h6 class="text-center">Topaz</h6>
+					<div class="color-block" data-evo-background-color="topaz-dark">
+						<div class="left">topaz-dark</div>
+						<div class="right">#905501</div>
+					</div>
+					<div class="color-block" data-evo-background-color="topaz-medium">
+						<div class="left">topaz-medium</div>
+						<div class="right">#C98414</div>
+					</div>
+					<div class="color-block" data-evo-background-color="topaz-bright">
+						<div class="left">topaz-bright</div>
+						<div class="right">#FBAE17</div>
+					</div>
+					<div class="color-block" data-evo-background-color="topaz-light">
+						<div class="left">topaz-light</div>
+						<div class="right">#FFDDAC</div>
+					</div>
+				</div>
+
+				<div class="medium-6 columns">
+					<h6 class="text-center">Turquoise</h6>
+					<div class="color-block" data-evo-background-color="turquoise-dark">
+						<div class="left">turquoise-dark</div>
+						<div class="right">#004C50</div>
+					</div>
+					<div class="color-block" data-evo-background-color="turquoise-medium">
+						<div class="left">turquoise-medium</div>
+						<div class="right">#008075</div>
+					</div>
+					<div class="color-block" data-evo-background-color="turquoise-bright">
+						<div class="left">turquoise-bright</div>
+						<div class="right">#0FB694</div>
+					</div>
+					<div class="color-block" data-evo-background-color="turquoise-light">
+						<div class="left">turquoise-light</div>
+						<div class="right">#A7D9C8</div>
+					</div>
+				</div>
+			</div>
+
+			<h4 class="evo-spacer-margin-top-x-large">Tertiary Color Palette</h4>
+
+			<p>
+				Tertiary colors are to be used for infographics, charts, graphs, and tables. The use of tertiary colors help call out these types of information in layout. Tertiary colors should never be used to replace secondary colors for differentiation purposes.
+			</p>
+
+			<div class="row evo-margin-bottom">
+				<div class="medium-6 columns">
+					<h6 class="text-center">Iolite</h6>
+					<div class="color-block" data-evo-background-color="iolite-dark">
+						<div class="left">iolite-dark</div>
+						<div class="right">#43286D</div>
+					</div>
+					<div class="color-block" data-evo-background-color="iolite-medium">
+						<div class="left">iolite-medium</div>
+						<div class="right">#595998</div>
+					</div>
+					<div class="color-block" data-evo-background-color="iolite-bright">
+						<div class="left">iolite-bright</div>
+						<div class="right">#6F85C2</div>
+					</div>
+					<div class="color-block" data-evo-background-color="iolite-light">
+						<div class="left">iolite-light</div>
+						<div class="right">#C5CAE7</div>
+					</div>
+				</div>
+
+				<div class="medium-6 columns">
+					<h6 class="text-center">Garnet</h6>
+					<div class="color-block" data-evo-background-color="garnet-dark">
+						<div class="left">garnet-dark</div>
+						<div class="right">#820009</div>
+					</div>
+					<div class="color-block" data-evo-background-color="garnet-medium">
+						<div class="left">garnet-medium</div>
+						<div class="right">#BB2C2B</div>
+					</div>
+					<div class="color-block" data-evo-background-color="garnet-bright">
+						<div class="left">garnet-bright</div>
+						<div class="right">#EF4E45</div>
+					</div>
+					<div class="color-block" data-evo-background-color="garnet-light">
+						<div class="left">garnet-light</div>
+						<div class="right">#F9BEAD</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row evo-margin-bottom">
+				<div class="medium-6 columns">
+					<h6 class="text-center">Citrine</h6>
+					<div class="color-block" data-evo-background-color="citrine-dark">
+						<div class="left">citrine-dark</div>
+						<div class="right">#8D380A</div>
+					</div>
+					<div class="color-block" data-evo-background-color="citrine-medium">
+						<div class="left">citrine-medium</div>
+						<div class="right">#C55F24</div>
+					</div>
+					<div class="color-block" data-evo-background-color="citrine-bright">
+						<div class="left">citrine-bright</div>
+						<div class="right">#F48132</div>
+					</div>
+					<div class="color-block" data-evo-background-color="citrine-light">
+						<div class="left">citrine-light</div>
+						<div class="right">#FCCFAB</div>
+					</div>
+				</div>
+
+				<div class="medium-6 columns">
+					<h6 class="text-center">Peridot</h6>
+					<div class="color-block" data-evo-background-color="peridot-dark">
+						<div class="left">peridot-dark</div>
+						<div class="right">#516021</div>
+					</div>
+					<div class="color-block" data-evo-background-color="peridot-medium">
+						<div class="left">peridot-medium</div>
+						<div class="right">#838E30</div>
+					</div>
+					<div class="color-block" data-evo-background-color="peridot-bright">
+						<div class="left">peridot-bright</div>
+						<div class="right">#B3BA35</div>
+					</div>
+					<div class="color-block" data-evo-background-color="peridot-light">
+						<div class="left">peridot-light</div>
+						<div class="right">#D9D99F</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row evo-margin-bottom">
+				<div class="medium-6 columns">
+					<h6 class="text-center">Emerald</h6>
+					<div class="color-block" data-evo-background-color="emerald-dark">
+						<div class="left">emerald-dark</div>
+						<div class="right">#00582D</div>
+					</div>
+					<div class="color-block" data-evo-background-color="emerald-medium">
+						<div class="left">emerald-medium</div>
+						<div class="right">#128C3F</div>
+					</div>
+					<div class="color-block" data-evo-background-color="emerald-bright">
+						<div class="left">emerald-bright</div>
+						<div class="right">#72BE44</div>
+					</div>
+					<div class="color-block" data-evo-background-color="emerald-light">
+						<div class="left">emerald-light</div>
+						<div class="right">#BDDDA3</div>
+					</div>
+				</div>
+			</div>
+		<!-- COLOR PALETTE - ENDS -->
+
+		</div>
+	</section>
+<!-- PAGE CONTENT - ENDS -->
+
+{% endblock %}

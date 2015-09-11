@@ -1,0 +1,434 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+			<p>
+				Lists are a flexible component for displaying not only simple lists of elements, but complex ones with custom content.
+			</p>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="horizontal"><a href="#horizontal">Horizontal Lists</a></dd>
+					<dd data-magellan-arrival="dataLists"><a href="#dataLists">Data Lists</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+		<!-- HORIZONTAL LISTS - BEGINS -->
+			<h3 data-magellan-destination="horizontal">Horizontal Lists</h3>
+			<a name="horizontal"></a>
+			<p>
+				Here is a basic horizontal list, with a few adjustments you can get a couple of different scenarios to meet your needs. For a piped horizontal list just use the helper class option: <code>evo-inline-list-pipes</code>.
+			</p>
+
+			<!-- DEFAULT - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						<p class="ref-sub-head">
+							Default
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-default' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						<p class="ref-sub-head">
+							Default
+						</p>	
+
+						{% include '/reference/base/lists/list-horizontal-default' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- DEFAULT - ENDS -->
+
+			<!-- DEFAULT WITH LINKS - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head">
+							Default with Links
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-default-links' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head">
+							Default with Links
+						</p>
+
+						{% include '/reference/base/lists/list-horizontal-default-links' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- DEFAULT WITH LINKS - ENDS -->
+
+			<!-- DEFAULT WITH PIPES - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head">
+							Default with Pipes
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-default-pipes' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head">
+							Default with Pipes
+						</p>
+
+						{% include '/reference/base/lists/list-horizontal-default-pipes' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- DEFAULT WITH PIPES - ENDS -->
+
+			<!-- DEFAULT WITH LINKS AND PIPES - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head">
+							Default with Links and Pipes
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-default-links-pipes' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head">
+							Default with Links and Pipes
+						</p>
+
+						{% include '/reference/base/lists/list-horizontal-default-links-pipes' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- DEFAULT WITH LINKS AND PIPES - ENDS -->
+
+			<!-- DEFINITION LIST - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head">
+							Definition List
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-definition' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head">
+							Definition List
+						</p>
+
+						{% include '/reference/base/lists/list-horizontal-definition' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- DEFINITION LIST - ENDS -->
+
+			<!-- DEFINITION LIST WITH LINKS - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head">
+							Definition List with Links
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-definition-links' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head">
+							Definition List with Links
+						</p>
+
+						{% include '/reference/base/lists/list-horizontal-definition-links' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- DEFINITION LIST WITH LINKS - ENDS -->	
+
+			<!-- DEFINITION LIST WITH PIPES - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head">
+							Definition List with Pipes
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-definition-pipes' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head">
+							Definition List with Pipes
+						</p>
+
+						{% include '/reference/base/lists/list-horizontal-definition-pipes' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- DEFINITION LIST WITH PIPES - ENDS -->		
+
+			<hr />
+		<!-- HORIZONTAL LISTS - ENDS -->
+
+		<!-- DATA LISTS - BEGINS -->
+			<h3 data-magellan-destination="dataLists">Data Lists</h3>
+			<a name="dataLists"></a>
+			<p>
+				Here is a basic data list, with a few adjustments you can get a couple of different scenarios to meet your needs.
+			</p>
+
+			<!-- DEFAULT DATA LIST - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						<p class="ref-sub-head">
+							Default
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-data-default' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						<p class="ref-sub-head">
+							Default
+						</p>	
+
+						{% include '/reference/base/lists/list-data-default' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- DEFAULT DATA LIST - ENDS -->
+
+			<!-- STACKED DATA LIST - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head">
+							Stacked
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-data-default-stacked' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head">
+							Stacked
+						</p>
+
+						{% include '/reference/base/lists/list-data-default-stacked' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- STACKED DATA LIST - ENDS -->
+
+			<!-- DATA DEFINITION LIST - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head">
+							Data Definition List
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-data-definition' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head">
+							Data Definition List
+						</p>
+
+						{% include '/reference/base/lists/list-data-definition' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- DATA DEFINITION LIST - ENDS -->
+
+			<!-- DATA DEFINITION LIST STACKED - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head">
+							Data Definition List Stacked
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-data-definition-stacked' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head">
+							Data Definition List Stacked
+						</p>
+
+						{% include '/reference/base/lists/list-data-definition-stacked' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- DATA DEFINITION LIST STACKED - ENDS -->	
+
+			<hr />
+		<!-- DATA LISTS - ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+									<ul>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/inline_lists.html" target="_blank">Inline Lists</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}

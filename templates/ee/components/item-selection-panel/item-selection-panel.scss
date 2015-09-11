@@ -1,0 +1,81 @@
+/*-------------------------------------------------------------------------------------------
+Mercer Evolution - Core v3.0.1 - Employee Portal Family
+Item Selection Panel Component v1.0 - SASS
+DATE - September 1, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
+--------------------------------------------------------------------------------------------*/
+
+//
+// @core sass imports
+//
+@import	"../../../../assets/css/core/global/color_variables";
+@import	"../../../../assets/css/core/foundation/foundation/settings";
+@import	"../../../../assets/css/core/global/variables";
+@import	"../../../../assets/css/core/global/functions";
+@import	"../../../../assets/css/core/global/mixins";
+
+//
+// @variables
+//
+$evo-item-selection-panel-align: center !default;
+$evo-item-selection-panel-container-color: $onyx-medium !default;
+$evo-item-selection-panel-container-img-border-radius: 100% !default;
+$evo-item-selection-panel-container-img-border-width: rem-calc(3) !default;
+$evo-item-selection-panel-container-img-border-style: solid !default;
+$evo-item-selection-panel-container-img-border-color: $onyx-dark-10 !default;
+$evo-item-selection-panel-container-img-padding: rem-calc(3) !default;
+$evo-item-selection-panel-container-item-label-font-size: rem-calc(14) !default;
+$evo-item-selection-panel-container-item-label-margin-top: rem-calc(5) !default;
+$evo-item-selection-panel-container-category-highlight-img-h-shadow: rem-calc(0) !default;
+$evo-item-selection-panel-container-category-highlight-img-v-shadow: rem-calc(2) !default;
+$evo-item-selection-panel-container-category-highlight-img-blur: rem-calc(6) !default;
+$evo-item-selection-panel-container-category-highlight-img-color: $onyx-dark-10 !default;
+$evo-item-selection-panel-container-category-highlight-img-border-color: $topaz-medium !default;
+
+//
+// @variable overrides
+//
+
+
+// ITEM SELECTION PANEL
+.evo-item-selection-panel			{
+									text-align: $evo-item-selection-panel-align;
+	ul									{
+		li									{
+											padding-bottom: rem-calc(15);
+			.evo-category-ctn					{
+												color: $evo-item-selection-panel-container-color;
+												text-decoration: none;
+				&:hover								{text-decoration: none;}
+				img									{
+													@include border-radius($evo-item-selection-panel-container-img-border-radius);
+													border: $evo-item-selection-panel-container-img-border-width $evo-item-selection-panel-container-img-border-style $evo-item-selection-panel-container-img-border-color;
+													padding: $evo-item-selection-panel-container-img-padding;
+													}
+				span								{
+													display: block;
+													float: none;
+													margin: 0 auto;
+													}
+				.item-label							{
+													font-size: $evo-item-selection-panel-container-item-label-font-size;
+													margin-top: $evo-item-selection-panel-container-item-label-margin-top;
+													}
+												}
+			.evo-category-highlight				{
+				img									{
+													@include box-shadow($evo-item-selection-panel-container-category-highlight-img-h-shadow, $evo-item-selection-panel-container-category-highlight-img-v-shadow, $evo-item-selection-panel-container-category-highlight-img-blur, $evo-item-selection-panel-container-category-highlight-img-color);
+													border-color: $evo-item-selection-panel-container-category-highlight-img-border-color;
+													}
+												}
+											}
+										}
+									}
+
+//=== MEDIA QUERIES =========================================================================
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+@media #{$medium-up} {
+
+
+}

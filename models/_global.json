@@ -1,0 +1,470 @@
+{
+	"site_title": "Mercer Evolution",
+	"version_number": "3.0.1",
+	"jquery_version": "2.1.4",
+	"jquery_ui_version": "1.11.2",
+	"foundation_version": "5.5.2",
+
+	"reference-get-code-start-tag" : "<pre class=\"prettyprint linenums\"><xmp>",
+	"reference-get-code-end-tag" : "</xmp></pre>",
+
+	"core-table-of-contents": [
+		{
+			"section-hdr": "Evo Core",
+			"main-section": [
+				{"link-name": "Boxes", "url": "/reference/base/boxes"},
+				{"link-name": "Buttons", "url": "/reference/base/buttons"},
+				{"link-name": "Colors", "url": "/reference/base/colors"},
+				{"link-name": "Dropdowns", "url": "/reference/base/dropdowns"},
+				{"link-name": "Equalizer", "url": "/reference/base/equalizer"},
+				{"link-name": "Forms", "url": "/reference/base/forms"},
+				{"link-name": "Grids", "url": "/reference/base/grids"},
+				{"link-name": "Helpers", "url": "/reference/base/helpers"},
+				{"link-name": "Icons", "url": "/reference/base/icons"},
+				{"link-name": "Lists", "url": "/reference/base/lists"},
+				{"link-name": "Tables", "url": "/reference/base/tables"},
+				{"link-name": "Type", "url": "/reference/base/type"}
+			]
+		},
+
+		{
+			"section-hdr": "Evo Core UI",
+			"main-section": [
+				{"link-name": "Accordion", "url": "/reference/objects/accordion"},
+				{"link-name": "Alert Boxes", "url": "/reference/objects/alert-boxes"},
+				{"link-name": "Autocomplete", "url": "/reference/objects/autocomplete"},
+				{"link-name": "Breadcrumbs", "url": "/reference/objects/breadcrumbs"},				
+				{"link-name": "Carousel", "url": "/reference/objects/carousel"},
+				{"link-name": "Data Table", "url": "/reference/objects/data-table"},
+				{"link-name": "Datepicker", "url": "/reference/objects/datepicker"},
+				{"link-name": "Dropdown Buttons", "url": "/reference/objects/dropdown-buttons"},
+				{"link-name": "Labels", "url": "/reference/objects/labels"},
+				{"link-name": "Off-canvas", "url": "/reference/objects/off-canvas"},
+				{"link-name": "Pagination", "url": "/reference/objects/pagination"},
+				{"link-name": "Progress Bar", "url": "/reference/objects/progress-bar"},
+				{"link-name": "Reveal Modal", "url": "/reference/objects/reveal"},
+				{"link-name": "Scroll Pane", "url": "/reference/objects/scroll-pane"},
+				{"link-name": "Slider", "url": "/reference/objects/slider"},
+				{"link-name": "Sub Nav", "url": "/reference/objects/sub-nav"},
+				{"link-name": "Tabs", "url": "/reference/objects/tabs"},
+				{"link-name": "Tooltips", "url": "/reference/objects/tooltip"},
+				{"link-name": "Top Bar", "url": "/reference/objects/top-bar"}
+			]
+		},
+
+		{
+			"section-hdr": "Components",
+			"main-section": [
+				{"link-name": "Foo", "url": "/reference/components/foo/index"}
+			]
+		}
+	],
+
+	"reference-component-html-instructions" : "<p>A reference to this component's CSS file is included with the HTML code in the component download package. You can reference this CSS file anywhere on your page, or for less requests, you can put the styles from this CSS file into your site CSS file.</p>",
+	"reference-component-js-instructions" : "<p>A Javascript file is included in the component download package. You can either reference this component's Javascript file at the bottom of your page or for less requests, put the Javascript code in your site JS file.</p>",
+	"reference-component-image-instructions" : "<p>All Mercer branded photo and vector icon images are included in the Evolution framework. All other component images are included in the component download package. Please make sure to reference them correctly in your HTML or CSS.</p>",
+
+	"table_data": [
+		{
+			"renderingEngine": "Trident",
+			"browser": "Internet Explorer 4.0",
+			"platform": "Win 95+",
+			"engine": "4",
+			"cssGrade": "X"
+		},
+		{
+			"renderingEngine": "Trident",
+			"browser": "Internet Explorer 5.0",
+			"platform": "Win 95+",
+			"engine": "5",
+			"cssGrade": "C"
+		},
+		{
+			"renderingEngine": "Trident",
+			"browser": "Internet Explorer 5.5",
+			"platform": "Win 95+",
+			"engine": "5.5",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Trident",
+			"browser": "Internet Explorer 6",
+			"platform": "Win 98+",
+			"engine": "6",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Trident",
+			"browser": "Internet Explorer 7",
+			"platform": "Win XP SP2+",
+			"engine": "7",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Trident",
+			"browser": "AOL browser",
+			"platform": "Win XP",
+			"engine": "6",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Firefox 1.0",
+			"platform": "Win 98+ / OSX.2+",
+			"engine": "1.7",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Firefox 1.5",
+			"platform": "Win 98+ / OSX.2+",
+			"engine": "1.8",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Firefox 2.0",
+			"platform": "Win 98+ / OSX.2+",
+			"engine": "1.8",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Firefox 3.0",
+			"platform": "Win 2k+ / OSX.3+",
+			"engine": "1.9",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Camino 1.0",
+			"platform": "OSX.2+",
+			"engine": "1.8",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Camino 1.5",
+			"platform": "OSX.3+",
+			"engine": "1.8",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Netscape 7.2",
+			"platform": "Win 95+ / Mac OS 8.6-9.2",
+			"engine": "1.7",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Netscape Browser 8",
+			"platform": "Win 98SE+",
+			"engine": "1.7",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Netscape Navigator 9",
+			"platform": "Win 98+ / OSX.2+",
+			"engine": "1.8",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Mozilla 1.0",
+			"platform": "Win 95+ / OSX.1+",
+			"engine": "1",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Mozilla 1.1",
+			"platform": "Win 95+ / OSX.1+",
+			"engine": "1.1",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Mozilla 1.2",
+			"platform": "Win 95+ / OSX.1+",
+			"engine": "1.2",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Mozilla 1.3",
+			"platform": "Win 95+ / OSX.1+",
+			"engine": "1.3",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Mozilla 1.4",
+			"platform": "Win 95+ / OSX.1+",
+			"engine": "1.4",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Mozilla 1.5",
+			"platform": "Win 95+ / OSX.1+",
+			"engine": "1.5",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Mozilla 1.6",
+			"platform": "Win 95+ / OSX.1+",
+			"engine": "1.6",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Mozilla 1.7",
+			"platform": "Win 98+ / OSX.1+",
+			"engine": "1.7",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Mozilla 1.8",
+			"platform": "Win 98+ / OSX.1+",
+			"engine": "1.8",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Seamonkey 1.1",
+			"platform": "Win 98+ / OSX.2+",
+			"engine": "1.8",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Gecko",
+			"browser": "Epiphany 2.20",
+			"platform": "Gnome",
+			"engine": "1.8",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Webkit",
+			"browser": "Safari 1.2",
+			"platform": "OSX.3",
+			"engine": "125.5",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Webkit",
+			"browser": "Safari 1.3",
+			"platform": "OSX.3",
+			"engine": "312.8",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Webkit",
+			"browser": "Safari 2.0",
+			"platform": "OSX.4+",
+			"engine": "419.3",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Webkit",
+			"browser": "Safari 3.0",
+			"platform": "OSX.4+",
+			"engine": "522.1",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Webkit",
+			"browser": "OmniWeb 5.5",
+			"platform": "OSX.4+",
+			"engine": "420",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Webkit",
+			"browser": "iPod Touch / iPhone",
+			"platform": "iPod",
+			"engine": "420.1",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Webkit",
+			"browser": "S60",
+			"platform": "S60",
+			"engine": "413",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Presto",
+			"browser": "Opera 7.0",
+			"platform": "Win 95+ / OSX.1+",
+			"engine": "-",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Presto",
+			"browser": "Opera 7.5",
+			"platform": "Win 95+ / OSX.2+",
+			"engine": "-",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Presto",
+			"browser": "Opera 8.0",
+			"platform": "Win 95+ / OSX.2+",
+			"engine": "-",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Presto",
+			"browser": "Opera 8.5",
+			"platform": "Win 95+ / OSX.2+",
+			"engine": "-",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Presto",
+			"browser": "Opera 9.0",
+			"platform": "Win 95+ / OSX.3+",
+			"engine": "-",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Presto",
+			"browser": "Opera 9.2",
+			"platform": "Win 88+ / OSX.3+",
+			"engine": "-",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Presto",
+			"browser": "Opera 9.5",
+			"platform": "Win 88+ / OSX.3+",
+			"engine": "-",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Presto",
+			"browser": "Opera for Wii",
+			"platform": "Wii",
+			"engine": "-",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Presto",
+			"browser": "Nokia N800",
+			"platform": "N800",
+			"engine": "-",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Presto",
+			"browser": "Nintendo DS browser",
+			"platform": "Nintendo DS",
+			"engine": "8.5",
+			"cssGrade": "C/A<sup>1</sup>"
+		},
+		{
+			"renderingEngine": "KHTML",
+			"browser": "Konqureror 3.1",
+			"platform": "KDE 3.1",
+			"engine": "3.1",
+			"cssGrade": "C"
+		},
+		{
+			"renderingEngine": "KHTML",
+			"browser": "Konqureror 3.3",
+			"platform": "KDE 3.3",
+			"engine": "3.3",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "KHTML",
+			"browser": "Konqureror 3.5",
+			"platform": "KDE 3.5",
+			"engine": "3.5",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Tasman",
+			"browser": "Internet Explorer 4.5",
+			"platform": "Mac OS 8-9",
+			"engine": "-",
+			"cssGrade": "X"
+		},
+		{
+			"renderingEngine": "Tasman",
+			"browser": "Internet Explorer 5.1",
+			"platform": "Mac OS 7.6-9",
+			"engine": "1",
+			"cssGrade": "C"
+		},
+		{
+			"renderingEngine": "Tasman",
+			"browser": "Internet Explorer 5.2",
+			"platform": "Mac OS 8-X",
+			"engine": "1",
+			"cssGrade": "C"
+		},
+		{
+			"renderingEngine": "Misc",
+			"browser": "NetFront 3.1",
+			"platform": "Embedded devices",
+			"engine": "-",
+			"cssGrade": "C"
+		},
+		{
+			"renderingEngine": "Misc",
+			"browser": "NetFront 3.4",
+			"platform": "Embedded devices",
+			"engine": "-",
+			"cssGrade": "A"
+		},
+		{
+			"renderingEngine": "Misc",
+			"browser": "Dillo 0.8",
+			"platform": "Embedded devices",
+			"engine": "-",
+			"cssGrade": "X"
+		},
+		{
+			"renderingEngine": "Misc",
+			"browser": "Links",
+			"platform": "Text only",
+			"engine": "-",
+			"cssGrade": "X"
+		},
+		{
+			"renderingEngine": "Misc",
+			"browser": "Lynx",
+			"platform": "Text only",
+			"engine": "-",
+			"cssGrade": "X"
+		},
+		{
+			"renderingEngine": "Misc",
+			"browser": "IE Mobile",
+			"platform": "Windows Mobile 6",
+			"engine": "-",
+			"cssGrade": "C"
+		},
+		{
+			"renderingEngine": "Misc",
+			"browser": "PSP browser",
+			"platform": "PSP",
+			"engine": "-",
+			"cssGrade": "C"
+		},
+		{
+			"renderingEngine": "Other browsers",
+			"browser": "All others",
+			"platform": "-",
+			"engine": "-",
+			"cssGrade": "U"
+		}
+	]
+
+
+}

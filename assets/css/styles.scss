@@ -1,0 +1,1641 @@
+/*--------------------------------------------------------------------------------------------
+Mercer Evolution - Evolution Site CSS
+DATE - August 19, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
+--------------------------------------------------------------------------------------------*/
+
+// ===========================================================================================
+// CORE SASS IMPORTS
+// ===========================================================================================
+
+@import	"core/global/color_variables",
+		"core/foundation/foundation/settings",
+		"core/global/variables",
+		"core/global/functions",
+		"core/global/mixins";
+
+// ===========================================================================================
+// SITE IMPORTS
+// ===========================================================================================
+
+@import	"partials/global/settings",
+		"partials/global/variables",
+		"partials/global/functions",
+		"partials/base/icons";
+
+/*=== WEBSITE STYLES =======================================================================*/
+
+/*--- SITE GLOBAL --------------------------------------------------------------------------*/
+
+// CORE GLOBAL - BEGINS
+
+	// BUTTONS - BEGINS
+		$button-bg-color: $sapphire-medium;
+		$button-bg-hover: scale-color($button-bg-color, $lightness: -20%);
+		$button-border-color: $button-bg-hover;
+
+		.evo-site-button			{
+									background-color: $button-bg-color;
+									border-color: $button-border-color;
+			&:hover,
+			&:focus						{
+										background-color: $button-bg-hover;
+										}
+									}
+	// BUTTONS - ENDS
+
+// CORE GLOBAL - ENDS
+
+
+// FAMILY GLOBAL - BEGINS
+
+	// BUTTON GROUP NAV - BEGINS
+	.evo-site-button-group-nav		{
+		&.button-group.radius > *		{
+										margin: 0 rem-calc(-3) !important;
+										}
+		li								{
+			.evo-button						{
+											background-color: $white;
+											border-top: 2px solid $sapphire-bright !important;
+											border-right: 0;
+											border-bottom: 2px solid $sapphire-bright !important;
+											border-left: 2px solid $sapphire-bright !important;
+											min-width: rem-calc(224);
+											padding-top: rem-calc(9);
+											padding-bottom: rem-calc(9);
+											margin-bottom: 0;
+				&.secondary,
+				&.secondary:visited				{
+												color: $sapphire-dark;
+												}
+				&.button.secondary:hover,
+				&.button.secondary:focus		{
+												background-color: $sapphire-light;
+												}
+				&.evo-site-button-group-nav-active
+												{
+												background-color: $sapphire-bright;
+					&.secondary,
+					&.secondary:visited				{
+													color: $white;
+													}
+					&.button.secondary:hover,
+					&.button.secondary:focus		{
+													background-color: $sapphire-bright;
+													color: $white;
+													}
+												}
+											}
+			&:last-child					{
+				.evo-button						{
+												border-right: 2px solid $sapphire-bright !important;
+												}
+											}
+										}
+									}
+	// BUTTON GROUP NAV - ENDS
+
+	// FAMILY BUTTON GROUP NAV - BEGINS
+	.evo-site-family-button-group-nav
+									{
+									margin-bottom: rem-calc(100);
+									}
+	// FAMILY BUTTON GROUP NAV - ENDS
+
+	// COMM FAMILY - BEGINS
+		// ICONS
+		.comm-icon					{
+									color: $amethyst-bright;
+									}
+	// COMM FAMILY - ENDS
+
+	// EMPLOYEE PORTAL FAMILY - BEGINS
+		// ICONS
+		.ee-icon					{
+									color: $sapphire-bright;
+									}
+	// EMPLOYEE PORTAL FAMILY - ENDS
+
+// FAMILY GLOBAL - ENDS
+
+
+// HEADER/NAV - BEGINS
+
+	// TOP BAR - BEGINS
+
+		// Background color for the top bar
+		$topbar-bg-color: $sapphire-dark;
+		$topbar-bg: $topbar-bg-color;
+
+		// Height and margin
+		$topbar-height: rem-calc(44);
+		$topbar-margin-bottom: 0;
+
+		// Controlling the styles for the title in the top bar
+		$topbar-title-weight: $font-weight-normal;
+		$topbar-title-font-size: rem-calc(20);
+
+		// Set the link colors and styles for top-level nav
+		$topbar-link-color: #78BDDC;
+		$topbar-link-color-hover: $white;
+		$topbar-link-color-active: $white;
+		$topbar-link-color-active-hover: $white;
+		$topbar-link-weight: $font-weight-normal;
+		$topbar-link-font-size: rem-calc(16);
+		$topbar-link-hover-lightness: 0;
+		$topbar-link-bg: $transparent;
+		$topbar-link-bg-hover: $sapphire-medium;
+		$topbar-link-bg-color-hover: $sapphire-medium;
+		$topbar-link-bg-active: #224F90;
+		$topbar-link-bg-active-hover: $sapphire-medium;
+		$topbar-link-text-transform: none;
+		$topbar-link-padding: ($topbar-height / 3);
+		$topbar-back-link-size: rem-calc(22);
+		$topbar-link-dropdown-padding: rem-calc(20);
+		$topbar-button-font-size: .75rem;
+		$topbar-button-top: 7px;
+
+		// Style the top bar dropdown elements
+		$topbar-dropdown-bg: $topbar-bg;
+		$topbar-dropdown-link-color: $topbar-link-color;
+		$topbar-dropdown-link-color-hover: $topbar-link-color-hover;
+		$topbar-dropdown-link-bg: $sapphire-medium;
+		$topbar-dropdown-link-bg-hover: #2084AE;
+		$topbar-dropdown-link-weight: $font-weight-normal;
+		$topbar-dropdown-toggle-size: 0px;
+		$topbar-dropdown-toggle-color: $topbar-link-color;
+		$topbar-dropdown-toggle-alpha: 1;
+
+		$topbar-dropdown-label-color: $white;
+		$topbar-dropdown-label-text-transform: uppercase;
+		$topbar-dropdown-label-font-weight: $font-weight-normal;
+		$topbar-dropdown-label-font-size: rem-calc(12);
+		$topbar-dropdown-label-bg: $sapphire-dark;
+
+		// Divider Styles
+		$topbar-divider-border-bottom: solid 1px $sapphire-dark;
+		$topbar-divider-border-top: solid 1px $sapphire-dark;
+
+		// TOP BAR
+		// ------------------------------------------------------------------------------------------
+		$evo-top-bar-section-anchor-icon-color: $topbar-link-color;
+		$evo-top-bar-section-anchor-hover-icon-color: $topbar-link-color-hover;
+		$evo-top-bar-section-anchor-active-icon-color: $topbar-link-color-active;
+		$evo-top-bar-section-dropdown-active-background-color: $sapphire-medium;
+		$evo-top-bar-section-dropdown-anchor-active-background-color: $topbar-link-bg-active;
+
+		.evo-site-header			{
+			.evo-top-bar				{
+										background: $topbar-bg;
+										height: $topbar-height;
+										line-height: $topbar-height;
+										margin-bottom: $topbar-margin-bottom;
+				.title-area					{
+					.name						{
+												height: $topbar-height;
+						h1							{
+													font-family: $evo-font-thin-stack !important;
+													letter-spacing: rem-calc(4.5);
+							a							{
+														font-weight: $topbar-title-weight;
+														padding-left: rem-calc(13) !important;
+														padding-right: 0 !important;
+								&:hover						{background-color: $transparent !important;}
+														}
+													}
+						h1, h2, h3, h4, p, span		{
+													font-size: $topbar-title-font-size;
+         											line-height: $topbar-height;
+													}
+												}
+											}
+				.top-bar-section			{
+					ul							{
+						li							{
+													background: $topbar-dropdown-bg;
+							>a							{
+														color: $topbar-link-color;
+														font-weight: $topbar-link-weight;
+														text-transform: uppercase;
+														letter-spacing: rem-calc(3);
+														font-size: rem-calc(14);
+														padding-left: $topbar-link-padding;
+														padding: 12px 0 12px $topbar-link-padding;
+								&[class^="evo-icon-"],
+								&[class^="evo-icon-site-"]	{
+															top: -1px;
+															font-size: rem-calc(24);
+															padding-right: rem-calc(10) !important;
+															padding-left: rem-calc(14) !important;
+															color: $white;
+															}
+
+								&:hover						{
+									[class^=evo-icon-]			{
+																color: $evo-top-bar-section-anchor-hover-icon-color;
+																}
+															}
+
+								[class^="evo-icon-"],
+								[class^="evo-icon-site-"]	{
+															color: $evo-top-bar-section-anchor-icon-color;
+															top: 2px;
+															}
+														}
+
+							&.hover 					{
+								> a:not(.button) 			{
+															background-color: $topbar-link-bg-color-hover;
+															@if ($topbar-link-bg-hover) {
+																background: $topbar-link-bg-hover;
+																}
+															color: $topbar-link-color-hover;
+															}
+														}
+
+							&:hover:not(.has-form)>a	{
+														color: $topbar-link-color-hover;
+														}
+
+							&:not(.has-form) 			{
+								a:not(.button) 				{
+															background: $topbar-link-bg;
+															line-height: $topbar-height;
+															padding: 0 $topbar-link-padding;
+									&:hover 					{
+																background-color: $topbar-link-bg-color-hover;
+																@if ($topbar-link-bg-hover) {
+																	background: $topbar-link-bg-hover;
+																	}
+																}
+															}
+														}
+
+							&.active:not(.has-form) 	{
+								a:not(.button) 				{
+															background: $topbar-link-bg-active;
+															color: $topbar-link-color-active;
+															line-height: $topbar-height;
+															padding: 0 $topbar-link-padding;
+									&:hover 					{
+																background: $topbar-link-bg-active-hover;
+																color: $topbar-link-color-active-hover;
+																}
+															}
+														}
+
+							&.active:not(.has-form)		{
+								a:not(.button)				{
+									[class^=evo-icon-]			{
+																color: $evo-top-bar-section-anchor-active-icon-color;
+																}					
+															}
+														}
+
+							&:hover:not(.has-form)		{
+								>a							{
+									[class^="evo-icon-"]		{color: $white;}
+															}
+														}
+													}
+												}
+
+					.divider,
+					[role="separator"] 			{
+												border-top: $topbar-divider-border-top;
+												}
+
+					.has-dropdown				{
+						&.hover,
+						&.not-click:hover			{
+													background-color: $evo-top-bar-section-dropdown-active-background-color;
+													}
+
+						> a:after					{top: 0;}
+						.dropdown 					{
+													display:block;
+													visibility: hidden;
+													opacity: 0;
+							li							{
+								a							{
+															text-transform: none;
+															letter-spacing: normal;
+															font-size: rem-calc(16);
+															}	
+														}
+													}
+						&:hover > .dropdown			{
+													visibility: visible;
+													opacity: 1;
+													@include transition(opacity 300ms ease-in-out);
+													}
+												}
+
+					.dropdown 					{
+
+						li 							{
+							a 							{
+														background: $topbar-dropdown-link-bg;
+														color: $topbar-dropdown-link-color;
+														line-height: $topbar-height;
+														font-weight: $topbar-dropdown-link-weight;
+														padding: 12px $topbar-link-padding;
+								 &.parent-link 				{
+              												font-weight: $topbar-link-weight;
+            												}
+														}
+							&.active:not(.has-form)		{
+									a:not(.button)			{
+															background-color: $evo-top-bar-section-dropdown-anchor-active-background-color;
+															}
+														}
+
+							&:not(.has-form):not(.active)
+														{
+								> a:not(.button) 			{
+															background: $topbar-dropdown-link-bg;
+															color: $topbar-dropdown-link-color;
+															}
+
+								&:hover > a:not(.button) 	{
+															background-color: $topbar-link-bg-color-hover;
+															color: $topbar-dropdown-link-color-hover;
+															@if ($topbar-dropdown-link-bg-hover) {
+																background: $topbar-dropdown-link-bg-hover;
+																}
+															}
+														}
+													}
+
+						label 						{
+													color: $topbar-dropdown-label-color;
+													font-size: $topbar-dropdown-label-font-size;
+													font-weight: $topbar-dropdown-label-font-weight;
+													padding: 8px $topbar-link-padding 2px;
+													text-transform: $topbar-dropdown-label-text-transform;
+													background: $topbar-dropdown-label-bg;
+													}
+
+					> ul > .divider,
+					> ul > [role="separator"] 		{
+													border-right: $topbar-divider-border-bottom;
+													height: $topbar-height;
+													}
+
+					.has-form 						{
+													background: $topbar-link-bg;
+													height: $topbar-height;
+													padding: 0 $topbar-link-padding;
+													}
+												}
+											}
+
+				// Degrade gracefully when Javascript is disabled. Displays dropdown and changes
+				// background & text color on hover.
+				.no-js .top-bar-section 	{
+					ul li 						{
+						&:hover > a 				{
+													background-color: $topbar-link-bg-color-hover;
+													@if ($topbar-link-bg-hover) {
+														background: $topbar-link-bg-hover;
+														}
+													color: $topbar-link-color-hover;
+													}
+						&:active > a 				{
+													background: $topbar-link-bg-active;
+													color: $topbar-link-color-active;
+													}
+												}
+											}
+										}
+									}
+	// TOP BAR - ENDS
+
+	// OFF-CANVAS - BEGINS
+		$tabbar-bg: $sapphire-dark;
+		$tabbar-height: rem-calc(44);
+		$tabbar-icon-width: $tabbar-height;
+		$tabbar-line-height: $tabbar-height;
+		$tabbar-color: $white;
+
+		// Off Canvas Divider Styles
+		$tabbar-left-section-border: 0;
+		$tabbar-right-section-border: $tabbar-left-section-border;
+
+		// Off Canvas Tab Bar Headers
+		$tabbar-header-color: $white;
+		$tabbar-header-line-height: $tabbar-height;
+
+		// Off Canvas Menu Variables
+		$off-canvas-bg: $sapphire-medium;
+		$off-canvas-bg-hover: #2084AE;
+		$off-canvas-bg-active: #2084AE;
+
+		// Off Canvas Menu List Variables
+		$off-canvas-label-color: $white;
+		$off-canvas-label-bg: $sapphire-bright;
+		$off-canvas-label-border-top: 1px solid $sapphire-dark;
+		$off-canvas-link-color: $white;
+		$off-canvas-link-border-bottom: 1px solid $sapphire-dark;
+		$off-canvas-back-bg: $sapphire-dark;
+		$off-canvas-back-hover-bg: $off-canvas-back-bg;
+
+		// Off Canvas Menu Icon Variables
+		$tabbar-menu-icon-color: $white;
+		$tabbar-menu-icon-hover: $white;
+
+		$tabbar-menu-icon-width: $tabbar-icon-width;
+		$tabbar-menu-icon-height: $tabbar-height;
+
+		// OFF-CANVAS
+		// ------------------------------------------------------------------------------------------
+		$evo-off-canvas-tab-bar-menu-icon-color: $tabbar-menu-icon-color;
+		$evo-off-canvas-tab-bar-menu-icon-hover-color: $tabbar-menu-icon-hover;
+		$evo-off-canvas-tab-bar-header-anchor-color: $tabbar-header-color;
+		$evo-off-canvas-menu-anchor-line-height: 1.25;
+
+		.evo-site-off-canvas		{
+			.tab-bar					{
+										background: $tabbar-bg;
+										color: $tabbar-color;
+										height: $tabbar-height;
+										line-height: $tabbar-line-height;
+
+				h1, h2, h3, h4, h5, h6 		{
+											color: $tabbar-header-color;
+											font-weight: $tabbar-header-weight;
+											line-height: $tabbar-header-line-height;
+											}
+
+				.menu-icon					{
+											color: $tabbar-menu-icon-color;
+											height: $tabbar-menu-icon-height;
+      										width: $tabbar-menu-icon-width;
+					[class*="evo-icon-"]		{
+												color: $evo-off-canvas-tab-bar-menu-icon-color;
+												font-size: rem-calc(24);
+												top: 4px;
+												left: 10px;
+												}
+					&:hover						{
+						[class*="evo-icon-"]		{color: $evo-off-canvas-tab-bar-menu-icon-hover-color;}
+												}
+											}
+				.tab-bar-section			{
+											height: $tabbar-height;
+					&.right						{padding-left: rem-calc(3);}
+					h1							{
+												font-family: $evo-font-thin-stack !important;
+												font-size: rem-calc(20);
+												letter-spacing: rem-calc(4.5);
+						.evo-tab-bar-title-sub-name {
+													font-family: $font-family-sans-serif !important;
+													}
+												}
+					a							{
+												color: $evo-off-canvas-tab-bar-header-anchor-color;
+												}
+											}
+										}
+
+			.left-small,
+			.right-small				{
+										height: $tabbar-height;
+										width: $tabbar-icon-width;
+										border-right: $tabbar-left-section-border;
+										border-left: $tabbar-right-section-border;
+										}
+
+			.left-off-canvas-menu,
+			.right-off-canvas-menu		{
+										background: $off-canvas-bg;
+				ul.off-canvas-list			{
+					li							{
+						a							{
+													line-height: $evo-off-canvas-menu-anchor-line-height;
+													}
+												}
+											}
+										}
+			ul.off-canvas-list			{
+				li							{
+					label						{
+												background: $off-canvas-label-bg;
+												border-top: $off-canvas-label-border-top;
+												color: $off-canvas-label-color;
+												}
+					a 							{
+												border-bottom: $off-canvas-link-border-bottom;
+												color: $off-canvas-link-color;
+						&:hover						{
+													background: $off-canvas-bg-hover;
+													}
+						&:active					{
+													background: $off-canvas-bg-active;
+													}
+												}
+											}
+										}
+			.left-submenu,
+			.right-submenu				{
+										background: $off-canvas-bg;
+				.back > a 					{
+											background: $off-canvas-back-bg;
+											color: $off-canvas-label-color;
+											border-top: 0;
+											border-bottom: 0;
+					&:hover 					{
+												background: $off-canvas-back-hover-bg;
+												}
+											}
+										}
+									}
+	// OFF-CANVAS - ENDS
+
+// HEADER/NAV - ENDS
+
+
+// FOOTER - BEGINS
+
+	// FOOTER GLOBAL - BEGINS
+		.evo-footer					{
+									margin-top: rem-calc(120);
+									padding-top: rem-calc(30);
+									padding-bottom: rem-calc(20);
+									background-color: $onyx-dark-6;
+
+		// FOOTER LINK LISTS HEADERS - BEGINS
+			h6							{
+										margin-top: 0;
+										color: $sapphire-dark;
+				&.evo-hdr-rule				{border-color: $sapphire-dark;}
+										}
+		// FOOTER LINK LISTS HEADERS - ENDS
+			
+		// FOOTER LINK LISTS - BEGINS
+			ul.no-bullet				{
+				li							{
+					a							{line-height: 2;}
+											}
+										}
+		// FOOTER LINK LISTS - ENDS
+
+		// COPYRIGHT - BEGINS
+			.evo-copyright				{
+										letter-spacing: rem-calc(2.5);
+				small						{font-size: rem-calc(10);}
+										}
+		// COPYRIGHT - ENDS
+
+									}
+	// FOOTER GLOBAL - ENDS
+
+	// HOMPAGE FOOTER - BEGINS
+		.evo-site-hp-footer			{padding: rem-calc(20 0 10 0);}
+	// HOMPAGE FOOTER - ENDS
+
+// FOOTER - ENDS
+
+
+// TEMPLATE PAGE - BEGINS
+
+	// BANDING TEMPLATE SETUP - BEGINS
+		.banding-template			{
+			[role="main"]				{padding: 0;}
+			[role="main"],
+			.evo-footer					{
+				.row						{
+											max-width: 100%;
+											margin-left: auto;
+											margin-right: auto;
+											max-width: initial;
+											}
+										}
+									}
+	// BANDING TEMPLATE SETUP - ENDS
+
+	// BANDING TEMPLATE SECTION ARROW - BEGINS
+		.evo-site-down-arrrow		{
+			&:after						{
+										border: 0 !important;
+										content: '\edc6';
+										font-size: rem-calc(60);
+										font-family: $evo-icon-font-stack;
+										line-height: 0.25;		
+										position: absolute;
+										bottom: -16px;
+										text-align: center;
+										width: 100%;
+										clear: both;
+										}
+									}
+	// BANDING TEMPLATE SECTION ARROW - ENDS
+
+	// HERO IMAGE & TEXT - BEGINS
+		.evo-site-hero-ctn			{
+									background-position: right 0;
+									background-repeat: no-repeat;
+									@include background-size(cover);
+			&.evo-site-comm-hero-ctn	{
+										background-color: $amethyst-medium;
+										background-image: url('../images/comm/content/evo_comm_family_hero.jpg');
+										}
+			&.evo-site-ee-hero-ctn		{
+										background-color: $sapphire-bright;
+										background-image: url('../images/ee/content/evo_ee_family_hero.jpg');
+										}
+			.row						{
+				div							{min-height: rem-calc(315);}
+										}
+									}
+
+		.evo-site-hero-text			{
+									border: 2px solid $white;
+									color: $white;
+									display: inline-block;
+									font-size: rem-calc(52);
+									line-height: rem-calc(58);
+									text-align: center;
+									padding: rem-calc(12 8 7 15);
+									position: relative;
+									top: 114px;
+									}
+	// HERO IMAGE & TEXT - ENDS
+
+	// LARGE HERO IMAGE & TEXT - BEGINS
+		.evo-site-large-hero-ctn	{
+									background-position: right 0;
+									background-repeat: no-repeat;
+									@include background-size(cover);
+			&.evo-site-large-comm-hero-ctn
+										{
+										background-color: $amethyst-medium;
+										background-image: url('../images/comm/content/evo_comm_category_hero.jpg');
+										}
+			&.evo-site-large-ee-hero-ctn	
+										{
+										background-color: $sapphire-bright;
+										background-image: url('../images/ee/content/evo_ee_category_hero.jpg');
+										}
+
+			.row						{
+				div							{min-height: rem-calc(550);}
+										}
+									}
+
+		.evo-site-large-hero-text	{
+									border: 2px solid $white;
+									color: $white;
+									display: inline-block;
+									font-size: rem-calc(65);
+									line-height: rem-calc(68);
+									text-align: center;
+									letter-spacing: rem-calc(9.5);
+									padding: rem-calc(12 10 7 15);
+									position: relative;
+									top: 226px;
+			span						{
+										font-family: $evo-font-thin-stack;
+										}
+									}
+	// LARGE HERO IMAGE & TEXT - ENDS
+
+	// BASIC CONTENT CONTAINER - BEGINS
+		.evo-site-basic-content-ctn	{
+									margin-top: rem-calc(26);
+									}
+	// BASIC CONTENT CONTAINER - ENDS
+
+	// FAMILY CONTENT CONTAINER - BEGINS
+		.evo-site-family-content-ctn
+									{
+									margin-top: rem-calc(100);
+									}
+	// FAMILY CONTENT CONTAINER - BEGINS
+
+// TEMPLATE PAGE - ENDS
+
+
+// CATEGORY PAGE TEMPLATE - BEGINS
+
+	// SECTION SPACING - BEGINS
+		.evo-site-example-section	{
+									margin-bottom: rem-calc(45);
+									}
+	// SECTION SPACING - BEGINS
+
+	// COMPONENT DIVIDER - BEGINS
+		.evo-site-component-divider	{
+									border-color: $sapphire-bright;
+									margin: 0 0;
+									}
+	// COMPONENT DIVIDER - ENDS
+
+	// TABLE OF CONTENT - BEGIN
+		.evo-site-table-content-ctn	{
+									background-color: $onyx-dark-6;
+									margin-bottom: rem-calc(80) !important;
+			.evo-site-down-arrrow		{
+				&:after 					{color: $onyx-dark-6;}
+										}
+			
+			.evo-site-table-contents	{
+										padding: rem-calc(60) 0;
+				li							{
+											font-size: rem-calc(18);
+											line-height: rem-calc(42);
+											list-style-type: none;
+											}
+										}
+									}
+	// TABLE OF CONTENT - ENDS
+
+	// CATEGORY HEADER - BEGINS
+		.evo-site-category-pages-header
+									{
+									color: $sapphire-bright;
+									margin-bottom: 0;
+									margin-top: rem-calc(10);
+									}
+	// CATEGORY HEADER - ENDS
+
+	// COMPONENT GROUP LAYOUT - BEGINS
+		.evo-site-component-group-ctn
+									{
+									margin-top: rem-calc(160);
+									margin-bottom: rem-calc(80);
+									}
+	// COMPONENT GROUP LAYOUT - ENDS
+
+	// DOWNLOAD PLAYBOOK SECTION - BEGINS
+		.evo-site-download-playbook	{
+									background-color: $onyx-dark-6;
+			h3							{color: $sapphire-dark;}
+			img							{
+										@include box-shadow($evo-base-shadow-horizontal, $evo-base-shadow-vertical, $evo-base-shadow-blur, $evo-base-shadow-color);
+										margin-top: rem-calc(10);
+										}
+			> div						{padding: rem-calc(50) 0 rem-calc(40) 0;}
+			.evo-site-down-arrrow		{
+				&:after						{color: $onyx-dark-6;}
+										}
+									}
+	// DOWNLOAD PLAYBOOK SECTION - ENDS
+
+	// CATEGORY PAGES TABS - BEGINS
+		.evo-tabs-titles-category-pages
+									{
+									float: right;
+									margin-top: rem-calc(13);
+									margin-right: rem-calc(-15);
+			li.tab-title				{
+				a							{
+											background-color: $transparent;
+					[class^="evo-icon"]			{color: $sapphire-bright;}
+					&:hover						{
+												background-color: $transparent;
+						[class^="evo-icon"]			{color: $sapphire-dark;}
+												}
+											}
+										}
+			li.evo-component-page-tab-back-to-top
+										{
+				a							{
+					[class^="evo-icon"]			{color: $sapphire-dark;}
+											}				
+										}
+									}
+	// CATEGORY PAGES TABS - ENDS
+
+// CATEGORY PAGE TEMPLATE - ENDS
+
+
+// FAMILY LANDING TEMPLATE - BEGINS
+
+	// FAMILY LANDING TEMPLATE GLOBAL - BEGINS
+		.evo-family-categories-ctn	{
+									@include border-radius(0);
+									background-color: $transparent;
+									border-width: 2px;
+									border-color: $sapphire-bright;
+									text-align: center;
+									margin-bottom: rem-calc(80);
+
+			.evo-box-circle				{
+										background-color: $white;
+										border-radius: 100%;
+										width: 86px;
+										height: 86px !important; 
+										text-align: center;
+										border-style: solid;
+										border-width: 2px;
+										border-color: $sapphire-bright;
+										z-index: 9999;
+										margin-top: -58px;
+				[class^=evo-icon-]			{
+											top: 25px;
+											}
+				.evo-icon-site-meter-fast	{
+											top: 20px;
+											}
+				.evo-icon-warning2			{
+											top: 22px;
+											}
+				.evo-icon-site-reset		{
+											top: 22px;
+											}
+										}
+
+			.evo-box-hdr				{
+										margin-top: rem-calc(20);
+				h5							{
+											color: $sapphire-dark;
+											line-height: rem-calc(22);
+											}
+										}
+
+			.evo-box-bdy				{
+				ul							{
+											list-style: none;
+											margin: 0;
+											padding: 0;
+					li							{
+												padding-bottom: rem-calc(8);
+												}
+											}
+										}
+									}
+	// FAMILY LANDING TEMPLATE GLOBAL - ENDS
+
+	// DOWNLOAD SECTION - BEGINS
+		.evo-site-download-ctn		{
+									margin-top: rem-calc(60);
+			.evo-box					{
+										background-color: $transparent;
+										border-width: 0;
+										padding: 0;
+				.evo-box-bdy				{
+											text-align: center;
+					h5							{
+												margin-top: rem-calc(20);
+												color: $sapphire-dark;
+												}
+					button						{margin-bottom: 0;}
+											}
+										}
+									}
+	// DOWNLOAD SECTION - ENDS
+
+// FAMILY LANDING TEMPLATE STYLES - ENDS
+
+// HOME PAGE - BEGINS
+
+	// PARALLAX SCROLLING  - BEGINS
+
+		.evo-home-body 	
+										{
+										margin:0;
+										padding:0;
+										}
+		.evo-background-video 	
+										{
+										position: fixed;
+										top: 50%;
+										left: 50%;
+										min-width: 100%;
+										min-height: 100%;
+										width: auto;
+										height: auto;
+										z-index: -100;
+										-webkit-transform: translateX(-50%) translateY(-50%);
+										transform: translateX(-50%) translateY(-50%);
+										background: url("../images/home/evo-milky-way-background.jpg") no-repeat;
+										background-size: cover;
+						  				}
+
+		.evo-home-scroll-section-welcome		
+										{
+										height: rem-calc(250);  
+										margin: 0 auto; 
+										width: 100%; 
+										position: relative; 
+										text-align: center;
+			@media #{$medium-up} and (orientation: portrait)			
+											{ 
+											height: rem-calc(550);  
+											}
+			@media #{$medium-up} and (orientation: landscape)			
+											{ 
+											height: rem-calc(500);  
+											}	
+			@media #{$large-up}		
+											{ 
+											height: rem-calc(912);  
+											}																					
+			.evo-home-welcome 				{
+											background: none; 
+											background-size: cover;
+											height: rem-calc(250); 
+											position: absolute; 
+											margin-top: rem-calc(106); 
+											width: 100%;
+											z-index: 98 !important;
+				@media #{$medium-up}  and (orientation: portrait)			
+												{ 
+												height: rem-calc(550); 
+												}
+				@media #{$medium-up}  and (orientation: landscape)			
+												{ 
+												height: rem-calc(500); 
+												}
+				@media #{$large-up}		
+												{ 
+												background: url("../images/home/hero-welcome-triangles.png") no-repeat scroll center top transparent; 
+												height: rem-calc(912); 
+												}
+								    		}
+								    	}
+
+		.evo-home-scroll-section-about		{ 
+											height: rem-calc(505);  
+											margin: 0 auto; 
+											width: 100%; 
+											position: relative; 
+											text-align: center;
+			@media #{$small-up} and (orientation: landscape)				
+												{
+												height: rem-calc(525);  													
+												}
+			@media #{$medium-up} 				{ 
+												height: rem-calc(670);  
+												}
+			@media #{$large-up} 				{ 
+												height: rem-calc(725);  
+												}
+			.evo-home-about 					{
+												height: rem-calc(345);
+												position: absolute;  
+												width: 100%;
+												margin: 0 auto;
+												overflow: hidden;
+												background-color: #fff;
+												padding: rem-calc(40) 0 0;												
+				@media #{$medium-up} 				{  
+													height: rem-calc(670);   
+													padding: rem-calc(100) 0 0 0;
+													}
+				@media #{$large-up} 				{  
+													height: rem-calc(760);   
+													padding: rem-calc(180) 0 0 0;
+													}													
+												}
+											}
+		.evo-home-scroll-section-families	{ 
+											height: rem-calc(540);  
+											margin: 0 auto; 
+											width: 100%; 
+											position: relative; 
+											text-align: center;
+			@media #{$small-up} and (orientation: landscape)				
+												{
+												height: rem-calc(500);  													
+												}
+			@media #{$medium-up} 				{ 
+												height: rem-calc(890);  
+												}
+			@media #{$large-up} 				{ 
+												height: rem-calc(755);  
+												}												
+			.evo-home-families 					{ 
+												background: none; 
+												height: rem-calc(540); 
+												position: absolute; 
+												width: 100%;
+												padding: 0px;
+												margin-top: rem-calc(-110);
+				p 									{
+													font-size: 140%;
+													}
+				@media #{$small-up} and (orientation: landscape)				
+													{
+													height: rem-calc(500);  													
+													}
+				@media #{$medium-up} 				{
+													height: rem-calc(890);
+													padding: rem-calc(120) 0 rem-calc(40) 0;
+													margin-top: rem-calc(35);
+													}
+				@media #{$large-up} 				{
+													background: url("../images/home/product-families-triangles.png") no-repeat scroll center top transparent;
+													height: rem-calc(755);
+													padding: rem-calc(180) 0 0 0;
+													margin-top: rem-calc(35);
+													}													
+				h5 									{							
+													text-align: center;
+													font-size: rem-calc(13);
+					@media #{$medium-up} 				{
+														font-size: rem-calc(14);
+														}
+													}								    		
+									    		}
+									    	}
+		.evo-home-scroll-section-benefits	{ 
+											height: rem-calc(580);  
+											margin: 0 auto; 
+											width: 100%; 
+											position: relative; 
+											text-align: center;
+			@media #{$medium-up} 				{ 
+												height: rem-calc(1000); 
+												}
+			.evo-home-benefits 					{ 
+												position: absolute;  
+												width: 100%;
+												margin: 0 auto;
+												overflow: hidden;
+												background-color: #fff;
+												padding: rem-calc(80) 0 0 0;												
+				@media #{$medium-up} 				{ 
+													height: rem-calc(1000); 
+													padding: rem-calc(180) 0 rem-calc(60) 0; 
+													}
+												}
+											}
+		.evo-home-scroll-section-front-end		
+										{ 
+										height: rem-calc(785);  
+										margin: 0 auto; 
+										width: 100%; 
+										position: relative; 
+										text-align: center;
+			p 								{
+											font-size: 140%;
+											}
+			@media #{$small-up} and (orientation: landscape)  			
+											{
+											height: rem-calc(700);
+											}											
+			@media #{$medium-up} and (orientation: portrait)  			
+											{
+											height: rem-calc(645);
+											}
+			@media #{$medium-up} and (orientation: landscape)  			
+											{
+											height: rem-calc(645);
+											}
+			@media #{$large-up} 			
+											{
+											height: rem-calc(725);
+											}
+		.evo-home-front-end 				{ 
+											background: none; 
+											position: absolute; 
+											width: 100%;
+											padding: 0px;
+											margin-top: rem-calc(-45);
+			@media #{$medium-up} and (orientation: portrait)				
+												{
+												height: rem-calc(645);
+												padding: rem-calc(100) 0 0 0;
+												}
+			@media #{$medium-up} and (orientation: landscape)				
+												{
+												height: rem-calc(645);
+												padding: rem-calc(180) 0 0 0;
+												}
+			@media #{$large-up}				
+												{
+												background: url("../images/home/front-end-dev-triangles.png") no-repeat scroll center top transparent; 
+												background-size: cover; 
+												height: rem-calc(725);
+												padding: rem-calc(180) 0 0 0;
+												margin-top: 0px;
+												}													
+								    		}								    
+							    		}									 					
+	// PARALLAX SCROLLING  - ENDS
+
+	// ICONS WITH CIRCLES - BEGINS
+
+		.evo-box-circle-home			{
+										background-color: $white;
+										border-radius: 100%;
+										width: rem-calc(70);
+										height: rem-calc(70) !important; 
+										text-align: center;
+										border-style: solid;
+										border-width: 2px;
+										border-color: $sapphire-bright;
+										z-index: 99;
+										margin-top: rem-calc(-35) !important;
+			@media #{$medium-up} 			{
+										margin-top: rem-calc(-38)!important;
+											}
+			[class^=evo-icon-]				{
+											color: $sapphire-dark;
+											top: rem-calc(16);
+											}											
+										}
+
+		.evo-box-circle-home-arrow		{
+										background-color: $sapphire-bright;
+										border-radius: 100%;
+										width: rem-calc(40);
+										height: rem-calc(40) !important; 
+										text-align: center;
+										z-index: 99 !important;
+										margin: rem-calc(5) auto;
+										box-shadow: 0 0 20px rgba(0,0,0,0.8);
+				[class^=evo-icon-]			{
+											color: $white;
+											top: rem-calc(10);
+											font-size: rem-calc(20);
+											}
+				@media #{$small-up} and (orientation: landscape) 
+											{
+											margin: rem-calc(20) auto;
+											}
+				@media #{$medium-up} and (orientation: portrait)		
+											{
+											width: rem-calc(85);
+											height: rem-calc(85) !important; 
+											margin: rem-calc(86) auto;
+					[class^=evo-icon-]			{
+												top: rem-calc(25);
+												font-size: rem-calc(40);
+												}
+											}
+				@media #{$medium-up} and (orientation: landscape)		
+											{
+											width: rem-calc(85);
+											height: rem-calc(85) !important; 
+											margin: rem-calc(140) auto;
+					[class^=evo-icon-]			{
+												top: rem-calc(25);
+												font-size: rem-calc(40);
+												}
+											}
+				@media #{$large-up}	
+											{
+											width: rem-calc(85);
+											height: rem-calc(85) !important; 
+											margin: rem-calc(423) auto;
+					[class^=evo-icon-]			{
+												top: rem-calc(25);
+												}
+											}																						
+										}
+
+		.evo-box-circle-home-button		{
+										background-color: transparent;
+										border-radius: 100%;
+										width: rem-calc(100);
+										height: rem-calc(100) !important; 
+										text-align: center;
+										margin: rem-calc(20) auto;
+										border: 2px solid $white;
+										color: $white;
+			@media #{$medium-up} 			{
+											width: rem-calc(125);
+											height: rem-calc(125) !important;
+											margin: rem-calc(40) auto;											 
+											}
+			[class^=evo-icon-]				{
+											color: $white;
+											margin-bottom: rem-calc(60);
+											margin-top: rem-calc(12);
+											font-size: (1rem*3);
+				@media #{$medium-up} 			{
+												margin-bottom: rem-calc(60);
+												margin-top: rem-calc(15);
+												font-size: (1rem*4);												
+												}
+
+				&:hover							{
+												background-color: $white;										
+				[class^=evo-icon-]					{
+													color: $sapphire-bright !important;
+													}
+												}
+
+				a:visited						{
+												color: $white;											
+					[class^=evo-icon-]					{
+														color: $white;
+														}
+												}
+											}
+										}
+	// ICONS WITH CIRCLES - ENDS
+
+	// HOME PAGE HEADERS - BEGINS									
+
+		.evo-home-article-headers 		{
+
+			h3							{
+										font-size: rem-calc(18);
+										text-transform: uppercase;
+										color: $white;																	
+										font-family: $evo-font-regular-stack !important;
+				@media #{$medium-up} 		{
+											font-size: rem-calc(26);																	
+											}
+										}
+			h2							{
+										font-size: rem-calc(22);
+										text-transform: uppercase;
+										color: $sapphire-bright;																	
+										letter-spacing: rem-calc(9.0) !important;
+										font-family: $evo-font-medium-family !important;
+										text-align: center;										
+				@media #{$medium-up} 		{
+											font-size: rem-calc(32);																	
+											}
+										}
+		h5								{																	
+										text-transform: uppercase;
+										color: $white;																	
+										}
+		p 								{
+										color: $white;
+										}
+									}
+
+		.evo-home-headers-box-welcome
+											{
+											width: rem-calc(265);	
+											border: 2px solid $white;
+											margin: rem-calc(0) 0 rem-calc(20) 0;
+											text-align: center;
+											font-family: $evo-font-medium-family !important;
+											text-transform: uppercase;											
+											letter-spacing: rem-calc(9.0) !important;
+											margin: rem-calc(-68) 0 rem-calc(25) 0;
+											display: inline-block;
+											padding: rem-calc(5) 0 0 rem-calc(5);
+			@media #{$small-up} and (orientation: landscape)
+												{
+												width: rem-calc(540);
+												padding: rem-calc(15) 0 rem-calc(10) rem-calc(5);
+												margin: rem-calc(-45) 0 rem-calc(40) 0;
+												}
+			@media #{$medium-up} and (orientation: portrait) 				
+												{
+												width: rem-calc(580);
+												margin: rem-calc(30) 0 rem-calc(50) 0;
+												text-align: center;									
+												letter-spacing: rem-calc(9.0) !important;
+												padding: 0 0 rem-calc(24) rem-calc(5);
+												}
+			@media #{$medium-up} and (orientation: landscape) 				
+												{
+												width: rem-calc(970);
+												margin: rem-calc(50) 0 rem-calc(40) 0;
+												text-align: center;									
+												letter-spacing: rem-calc(9.0) !important;
+												padding: 0 0 rem-calc(24) rem-calc(5);
+												}
+			@media #{$large-up} 				{
+												margin: rem-calc(180) 0 rem-calc(40) 0;
+												text-align: center;									
+												letter-spacing: rem-calc(9.0) !important;
+												padding: 0 0 rem-calc(24) rem-calc(5);
+												}
+			.evo-home-headers-welcome 			{
+												font-size: rem-calc(32);
+												color: $white !important;
+												letter-spacing: rem-calc(8) !important;
+												padding: 0px;
+												line-height: rem-calc(38);
+												text-align: center;
+												margin: 0 auto;
+												display: inline-block;
+				@media #{$small-up} and (orientation: landscape)
+													{
+													font-size: rem-calc(42);
+													line-height: rem-calc(30);
+													} 
+				@media #{$medium-up} and (orientation: portrait)  				
+													{
+    												font-size: rem-calc(80);
+													margin: rem-calc(30) 0 0 rem-calc(5);
+													letter-spacing: rem-calc(12) !important;													    												
+  													}
+				@media #{$medium-up} and (orientation: landscape) 				
+													{
+    												font-size: rem-calc(80);
+													margin: rem-calc(30) 0 0 rem-calc(5);
+													letter-spacing: rem-calc(12) !important;
+													line-height: rem-calc(30);													    												
+  													}  													
+				@media #{$large-up} 				{
+    												font-size: rem-calc(80);
+													margin: rem-calc(30) 0 0 rem-calc(5);
+													letter-spacing: rem-calc(12) !important;
+													line-height: rem-calc(30);													    												
+  													}  																																								
+												}
+											}
+		.evo-home-headers-box-families
+											{
+											width: rem-calc(200);
+											border: 2px solid $white;
+											margin: 0 0 rem-calc(30) 0;
+											text-align: center;
+											font-family: $evo-font-medium-family !important;
+											text-transform: uppercase;											
+											letter-spacing: rem-calc(9.0) !important;
+											padding: rem-calc(5) 0 0 rem-calc(5);
+			@media #{$small-up} and (orientation: landscape)
+												{
+												width: rem-calc(540);
+												padding: rem-calc(10) 0 rem-calc(10) rem-calc(5);
+												}
+			@media #{$medium-up} 				{
+												width: rem-calc(631);
+												height: rem-calc(55);
+												margin: 0 0 rem-calc(40) 0;									
+												letter-spacing: rem-calc(9.0) !important;
+												padding: 0 0 0 rem-calc(5);
+												}
+
+			.evo-home-headers-families			{
+												font-size: rem-calc(26);
+												letter-spacing: rem-calc(8) !important;
+												padding: 0px;
+												color: $white !important;
+												margin-top: 0px !important;
+												line-height: rem-calc(32);
+												text-align: center;
+												margin: rem-calc(40) 0 0 rem-calc(5);
+												display: inline-block;
+			@media #{$small-up} and (orientation: landscape)
+												{
+												font-size: rem-calc(42);
+												}												
+				@media #{$medium-up} 				{
+													font-size: rem-calc(46);
+													letter-spacing: rem-calc(12) !important;
+													padding: 0px;
+													margin-top: 0px !important;
+													line-height: rem-calc(53);
+													margin: rem-calc(40) 0 0 rem-calc(5);
+													}	
+												}									
+											}
+		.evo-home-headers-box-front-end
+											{
+											width: rem-calc(290);
+											border: 2px solid $white;
+											margin: 0 0 rem-calc(30) 0;
+											text-align: center;
+											font-family: $evo-font-medium-family !important;
+											text-transform: uppercase;											
+											letter-spacing: rem-calc(9.0) !important;
+											padding: rem-calc(5) 0 0 rem-calc(5);
+		@media #{$small-up} and (orientation: landscape)
+												{
+												width: rem-calc(410);
+												padding: rem-calc(5) 0 0 rem-calc(5);
+												}		
+			@media #{$medium-up} and (orientation: portrait) 				
+												{
+												width: rem-calc(475);
+												border: 2px solid $white;
+												margin: rem-calc(10) 0 rem-calc(40) 0;
+												text-align: center;
+												font-family: $evo-font-medium-family !important;
+												text-transform: uppercase;											
+												letter-spacing: rem-calc(9.0) !important;
+												padding: rem-calc(5) 0 0 rem-calc(5);
+												}
+			@media #{$medium-up} and (orientation: landscape) 				
+												{
+												width: rem-calc(862);
+												border: 2px solid $white;
+												margin: rem-calc(-10) 0 rem-calc(40) 0;
+												text-align: center;
+												font-family: $evo-font-medium-family !important;
+												text-transform: uppercase;											
+												letter-spacing: rem-calc(9.0) !important;
+												padding: rem-calc(5) 0 0 rem-calc(5);
+												}												
+			.evo-home-headers-front-end		{
+												font-size: rem-calc(26);
+												letter-spacing: rem-calc(8) !important;
+												padding: 0px;
+												color: $white !important;
+												margin-top: 0px !important;
+												line-height: rem-calc(32);
+												text-align: center;
+												margin: 0 0 0 rem-calc(5);
+												display: inline-block;
+		@media #{$small-up} and (orientation: landscape)
+												{
+												font-size: rem-calc(42);
+												line-height: rem-calc(40)
+												}													
+				@media #{$medium-up} and (orientation: portrait)				
+													{
+													font-size: rem-calc(46);
+													letter-spacing: rem-calc(12) !important;
+													padding: 0px;
+													color: $white !important;
+													margin-top: 0px !important;
+													line-height: rem-calc(53);
+													text-align: center;
+													margin: rem-calc(40) 0 0 rem-calc(5);
+													display: inline-block;	
+													}
+				@media #{$medium-up} and (orientation: landscape)				
+													{
+													font-size: rem-calc(46);
+													letter-spacing: rem-calc(12) !important;
+													padding: 0px;
+													color: $white !important;
+													margin-top: 0px !important;
+													line-height: rem-calc(53);
+													text-align: center;
+													margin: rem-calc(40) 0 0 rem-calc(5);
+													display: inline-block;	
+													}													
+												}									
+											}
+
+		.evo-home-article-headers-thin
+											{
+											font-family: $evo-font-thin-stack !important;
+											}
+
+		.evo-home-section-spacer			{
+											margin-top: rem-calc(180);
+											}
+
+		.evo-home-section-spacer-bottom		{
+											margin-bottom: rem-calc(180);
+											}
+
+	// HOME PAGE HEADERS - ENDS
+
+	// LEARN MORE BUTTONS - BEGINS										
+
+		.evo-button-learn-more-home			
+											{
+											color: $sapphire-bright !important;
+											border: 2px solid $sapphire-bright;
+											background-color: $white;
+											margin-bottom: rem-calc(40);
+			[class^=evo-icon-]					{
+												top: rem-calc(2);
+												color: $sapphire-bright !important;
+												}
+			@media #{$medium-up} 				{
+												margin-bottom: rem-calc(180);
+												}
+
+			&:hover								{
+												color: $sapphire-dark !important;
+												background-color: $white;
+												border: 2px solid $sapphire-dark;
+				[class^=evo-icon-]					{
+													color: $sapphire-dark !important;
+													}
+												}
+			&:visited							{
+												color: $sapphire-bright;
+												background-color: $white;											
+					[class^=evo-icon-]					{
+														color: $sapphire-bright;
+														}
+												}
+											}
+	// LEARN MORE BUTTONS - ENDS										
+	
+	// HOME PAGE GRIDS - BEGINS
+		.evo-home-grid-about
+										{
+										margin-top: rem-calc(10);
+										color: $sapphire-dark;
+										font-family: $evo-font-regular-stack !important;
+										font-size: rem-calc(18);
+										list-style: none;
+			@media #{$medium-up} 			{
+											margin-top: rem-calc(40);
+											text-align: center;
+											line-height: rem-calc(24) !important;											
+											}
+			.evo-home-grid-about-small		{
+											width: rem-calc(210);
+											}
+
+			h4 								{
+											font-size: rem-calc(18);
+											text-transform: uppercase;
+											color: $sapphire-dark;
+											text-align: left;
+				@media #{$medium-up} 			{
+												font-size: rem-calc(22);
+												margin-bottom: rem-calc(15);
+												text-align: center;												
+												}
+											}
+
+			[class*='evo-icon']				{
+											color: $sapphire-dark;
+											margin: rem-calc(3) rem-calc(15) 0 0;
+											float: left;
+				@media #{$medium-up} 			{
+												font-size: rem-calc(84);					
+												margin: 0 0 rem-calc(40) 0;
+												float: none;										
+												}
+											}
+										}
+
+		.evo-home-grid-front-end
+										{
+										margin: rem-calc(20) 0 rem-calc(20) 0;
+										text-align: center;
+										color: $white;
+										padding: 0px;
+			@media #{$medium-up} 			{
+											margin: rem-calc(50) auto;
+											}
+			h5 								{
+											font-size: 100%;
+											text-transform: uppercase;
+											color: $white;
+											margin: rem-calc(30) 0 rem-calc(0) 0;
+											text-align: center;
+				@media #{$medium-up} 			{
+												font-size: 80%;
+												margin: rem-calc(30) 0 rem-calc(30) 0;
+												}
+											}
+
+			[class*='evo-icon']				{
+											display: inline;
+											color: $white;
+											font-size: rem-calc(65);
+											margin-bottom: rem-calc(40);
+											}
+										}
+	// HOME PAGE GRIDS - ENDS
+
+	// HOME PAGE CAROUSEL - BEGINS
+		.evo-carousel-home				{
+										margin: rem-calc(10) 0 rem-calc(20) 0;
+										height: rem-calc(280);
+			@media #{$medium-up} 			{
+											margin: rem-calc(100) 0 rem-calc(20) 0;
+											}
+
+			.evo-carousel-box				{
+											margin-top: rem-calc(50);
+											border-top: 2px solid $sapphire-bright;
+											height: rem-calc(180);
+											background-color: $transparent;
+				@media #{$medium-up} 			{
+												margin-top: rem-calc(100);
+												height: rem-calc(400);
+												}
+				h4 								{
+												color: $sapphire-dark;
+												text-align: center;
+												margin-top: rem-calc(20);
+					@media #{$medium-up} 			{
+													margin-top: rem-calc(40);
+													text-align: left;
+													padding-left: rem-calc(30);
+													}		
+												}
+				p 								{
+												color: $sapphire-dark;
+												text-align: center;
+					@media #{$medium-up} 			{
+													text-align: left;
+													padding-left: rem-calc(30);
+													}							
+												}
+											}
+			.evo-carousel-image-home			{
+												z-index: 98 !important;
+												margin-top: rem-calc(-100);
+												box-shadow: 0 0 20px rgba(0,0,0,0.8);
+												padding: 0px;
+												}
+										}
+	// HOME PAGE CAROUSEL - ENDS
+
+
+//HOME PAGE - ENDS
+
+/*=== MEDIA QUERIES ========================================================================*/
+@import	"partials/global/responsive_small",
+		"partials/global/responsive_medium",
+		"partials/global/responsive_large",
+		"partials/global/responsive_xlarge",
+		"partials/global/responsive_xxlarge"
+		;

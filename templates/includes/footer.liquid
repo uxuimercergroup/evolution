@@ -1,0 +1,84 @@
+{% if model.page == "home" %}
+
+	<footer class="evo-footer evo-site-hp-footer">
+		<section class="row">
+
+			<!-- FOOTER LOGO - BEGINS -->
+			<div class="medium-6 medium-push-6 columns medium-text-right evo-footer-logo">
+				<a class="small-only-text-center" href="http://www.mercer.com/" target="_blank" title="Mercer - Make Tomorrow, Today"><img src="{{ "mercer_hp_logo.png" | asset_url }}" alt="Mercer - Make Tomorrow, Today" width="395" height="15" /></a>
+			</div>
+			<!-- FOOTER LOGO - ENDS -->
+
+			<!-- FOOTER COPYRIGHT - BEGINS -->
+			<div class="medium-6 medium-pull-6 columns">
+				<p class="small-only-text-center evo-footnote evo-copyright">
+					<small>&copy; {{ 'now' | date: "%Y" }} Mercer LLC, All Rights Reserved</small>
+				</p>
+			</div>
+			<!-- FOOTER COPYRIGHT - ENDS -->
+
+		</section>
+	</footer>
+
+{% else %}
+
+	<footer class="evo-footer">
+		<section class="row">
+
+			<div class="large-10 large-centered columns">
+				<div class="row">
+
+					<!-- FOOTER LINK LISTS - BEGINS -->
+					<div class="medium-3 medium-push-3 columns">
+						<h6 class="evo-hdr-rule">Families</h6>
+						<ul class="no-bullet">
+							<li><a href="/ee/index">Employee Portals</a></li>
+							<li><a href="">Employer Dashboards</a></li>
+							<li><a href="/comm/index">Communication Sites</a></li>
+							<li><a href="">Internal Tools</a></li>
+						</ul>
+					</div>
+					<div class="medium-3 medium-push-3 columns">
+						<h6 class="evo-hdr-rule">Header</h6>
+						<ul class="no-bullet">
+							<li><a href="">Lorem Ipsum Dolore Sit</a></li>
+							<li><a href="">Ut Enim Ad Minim</a></li>
+							<li><a href="">Lorem Ipsum Dolore Sit</a></li>
+							<li><a href="">Ut Enim Ad Minim</a></li>
+						</ul>
+					</div>
+					<div class="medium-3 medium-push-3 columns">
+						<h6 class="evo-hdr-rule">Header</h6>
+						<ul class="no-bullet">
+							<li><a href="">Lorem Ipsum Dolore Sit</a></li>
+							<li><a href="">Ut Enim Ad Minim</a></li>
+							<li><a href="">Lorem Ipsum Dolore Sit</a></li>
+							<li><a href="">Ut Enim Ad Minim</a></li>
+						</ul>
+					</div>
+					<!-- FOOTER LINK LISTS - ENDS -->
+
+					<!-- FOOTER LOGO - BEGINS -->
+					<div class="small-12 medium-3 medium-pull-9 columns evo-footer-logo">
+						<a class="small-only-text-center" href="http://www.mercer.com/" target="_blank" title="Mercer - Make Tomorrow, Today"><img src="{{ "mercer_logo.png" | asset_url }}" alt="Mercer - Make Tomorrow, Today" width="240" height="43" /></a>
+					</div>
+					<!-- FOOTER LOGO - BEGINS -->
+
+				</div>
+				<div class="row">
+
+					<!-- FOOTER COPYRIGHT - BEGINS -->
+					<div class="small-12 medium-offset-3 columns">
+						<p class="small-only-text-center evo-footnote evo-copyright">
+							<small>&copy; {{ 'now' | date: "%Y" }} Mercer LLC, All Rights Reserved</small>
+						</p>
+					</div>
+					<!-- FOOTER COPYRIGHT - ENDS -->
+
+				</div>
+			</div>
+
+		</section>
+	</footer>
+
+{% endif %}

@@ -1,0 +1,162 @@
+/*--------------------------------------------------------------------------------------------
+Mercer Evolution - Reference Site CSS
+DATE - August 19, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
+--------------------------------------------------------------------------------------------*/
+
+// ===========================================================================================
+// CORE SASS IMPORTS
+// ===========================================================================================
+
+@import	"../core/global/color_variables",
+		"../core/foundation/foundation/settings",
+		"core/global/variables_overrides",
+		"../core/global/variables",
+		"../core/global/functions",
+		"../core/global/mixins";
+
+// ===========================================================================================
+// SITE IMPORTS
+// ===========================================================================================
+
+@import	"../partials/global/settings",
+		"../partials/global/variables",
+		"../partials/global/functions",
+		"../partials/base/icons";
+
+/*=== WEBSITE STYLES =======================================================================*/
+
+/*--- SITE GLOBAL --------------------------------------------------------------------------*/
+
+// CODE CONTENT STYLES
+code									{@include border-radius(rem-calc(4));}
+
+/*--- GENERAL LAYOUT OF PAGES --------------------------------------------------------------*/
+
+// SIDEBAR MENU LAYOUT
+.evo-sidebar-menu-layout				{
+										margin: 0;
+										max-width: 100%;
+
+	// SIDEBAR MENU
+	.evo-sidebar-menu						{
+											background-color: $onyx-dark-80;
+											position: fixed;
+											overflow-y: auto;
+											height: 100%;
+											padding-top: rem-calc(15);
+		a,
+		.evo-hdr-rule							{color: $white;}
+											}
+										}
+
+// FOOTER
+.evo-footer								{
+										border-top: 1px dotted $onyx-dark-50;
+										margin-top: rem-calc(390);
+										padding-top: rem-calc(10);
+										}
+
+/*--- REFERENCE PAGES ----------------------------------------------------------------------*/
+
+// REFERENCE SUB HEADER
+.ref-sub-head							{
+										margin-bottom: rem-calc(10);
+										}
+
+// REFERENCE ANNOTATIONS
+.annotations							{
+										background-color: $highlight-color;
+										border-width: 0;
+										}
+
+// REFERENCE MAGELLAN NAV
+.evo-magellan							{
+										left: auto !important;
+										}
+
+/*--- GRIDS PAGE ---------------------------------------------------------------------------*/
+
+// GRID DEMO
+.grid-demo-styles						{
+	.row									{
+											border: 1px solid $onyx-dark-10;
+											margin-bottom: $evo-base-margin;
+											margin-left: 0 !important;
+											margin-right: 0 !important;
+											}
+	.columns								{background-color: $onyx-dark-2;}
+	.columns:nth-child(2n)					{background-color: $onyx-dark-6;}
+
+	[class*="evo-icon-"]					{top: 3px;}
+
+	[class*="small-block-grid-"]			{
+		li										{
+												background-color: $onyx-dark-2;
+												border-top: 1px solid $onyx-dark-10;
+												border-right: 1px solid $onyx-dark-10;
+												border-bottom: 1px solid $onyx-dark-10;
+												padding-top: rem-calc($evo-base-padding);
+												text-align: center;
+			&:nth-child(2n)							{background-color: $onyx-dark-6;}
+			&:first-child							{border-left: 1px solid $onyx-dark-10;}
+												}
+											}
+										}
+
+/*--- TYPE PAGE ----------------------------------------------------------------------------*/
+
+// TYPE DEMO
+.evo-ref-type-table						{
+	td.evo-ref-type-example					{
+											font-size: 1rem !important;
+		small									{color: $small-font-color;}
+											}
+										}
+
+// HYPHEN DEMO
+.evo-ref-hyphen-demo					{@include hyphens(auto);}
+
+/*--- ICONS PAGE ---------------------------------------------------------------------------*/
+.icons-large-on							{
+	i[class^="evo-icon-"]					{
+											font-size: (1rem*3);
+											margin: 0 auto;
+											display: block;
+											}
+										}
+.icon-table-cell-reverse-background		{background-color: $onyx-dark-80 !important;}
+
+/*--- COLOR PAGE ---------------------------------------------------------------------------*/
+
+// COLOR PALETTE SWATCH BOX
+.color-block
+										{
+										height: rem-calc(50);
+										text-align: center;
+										color: $white;
+										padding: rem-calc(14) rem-calc(14) 0 rem-calc(14);
+										}
+.color-block-light-colors
+										{
+										color: $black;
+										}
+
+/*--- HELPERS PAGE -------------------------------------------------------------------------*/
+
+// CENTER HORIZONTALLY AND VERTICALLY DEMO
+.evo-center-container-dimensions
+										{
+										height: rem-calc(200);
+										width: 100%;
+	p										{
+											width: rem-calc(200) !important;
+											}
+										}
+
+// WORD BREAK DEMO
+.evo-word-break-container-dimensions
+										{
+										height: rem-calc(50);
+										width: rem-calc(200);
+										}

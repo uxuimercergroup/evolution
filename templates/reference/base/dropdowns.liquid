@@ -1,0 +1,166 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+			<p>Universal dropdown plugin that will attach dropdowns or popovers to whatever element you need.</p>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="basic"><a href="#Basic">Basic</a></dd>
+					<dd data-magellan-arrival="positioning"><a href="#Positioning">Positioning</a></dd>
+					<dd data-magellan-arrival="hover"><a href="#hover">Hover</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+			<h3 data-magellan-destination="basic">Basic</h3>
+			<a name="basic"></a>
+
+			<p>Here is a list of additional classes that can be added to dropdown to quickly modify it's appearance:</p>
+			<ul class="evo-data-list">
+				<li><code>tiny</code>: Make the dropdown have a <strong>max-width of 200px</strong></li>
+				<li><code>small</code>: Make the dropdown have a <strong>max-width of 300px</strong></li>
+				<li><code>medium</code>: Make the dropdown have a <strong>max-width of 500px</strong></li>
+				<li><code>large</code>: Make the dropdown have a <strong>max-width of 800px</strong></li>
+				<li><code>mega</code>: Make the dropdown go <strong>full 100% width</strong></li>
+				<li><code>content</code>: Add padding inside the dropdown for better-looking content</li>
+			</ul>
+
+		<!-- ANNOTATIONS BOX - BEGINS -->
+			<div class="panel evo-box annotations">
+				<div class="evo-box-bdy">
+					<p class="evo-no-margin-bottom">
+						Autoclose: There is an autoclose option that is enabled by default, to disable (keep dropdowns persisting) set the attribute <code>aria-autoclose</code> to <code>false</code>.
+					</p>
+				</div>
+			</div>
+		<!-- ANNOTATIONS BOX - ENDS -->
+
+		<!-- DROPDOWNS - BEGINS -->
+			<section class="row">
+			<!-- EXAMPLE HTML - BEGINS -->
+				<div class="medium-6 columns">
+					<h6>HTML</h6>
+					{{ global.reference-get-code-start-tag }}{% include '/reference/base/dropdowns/dropdowns' %}{{ global.reference-get-code-end-tag }}
+				</div>
+			<!-- EXAMPLE HTML - ENDS -->
+			<!-- EXAMPLE RENDERED CODE - BEGINS -->
+				<div class="medium-6 columns">
+					<h6>Rendered HTML</h6>
+					{% include '/reference/base/dropdowns/dropdowns' %}
+				</div>
+			<!-- EXAMPLE RENDERED CODE - ENDS -->
+			</section>
+			<hr />
+		<!-- DROPDOWNS - ENDS -->
+
+		<!-- DROPDOWNS POSITIONING - BEGINS -->
+			<h3 data-magellan-destination="positioning">Positioning</h3>
+			<a name="positioning"></a>
+
+			<section class="row">
+			<!-- EXAMPLE HTML - BEGINS -->
+				<div class="medium-6 columns">
+					<h6>HTML</h6>
+					{{ global.reference-get-code-start-tag }}{% include '/reference/base/dropdowns/dropdowns-positioning' %}{{ global.reference-get-code-end-tag }}
+				</div>
+			<!-- EXAMPLE HTML - ENDS -->
+			<!-- EXAMPLE RENDERED CODE - BEGINS -->
+				<div class="medium-6 columns">
+					<h6>Rendered HTML</h6>
+					{% include '/reference/base/dropdowns/dropdowns-positioning' %}
+				</div>
+			<!-- EXAMPLE RENDERED CODE - ENDS -->
+			</section>
+			<hr />
+		<!-- DROPDOWNS POSITIONING - ENDS -->
+
+		<!-- DROPDOWNS HOVER - BEGINS -->
+			<h3 data-magellan-destination="hover">Hover</h3>
+			<a name="hover"></a>
+
+			<p>
+				You can change the default hover_timeout in milliseconds to however long or little you need. The default setting for hover_timeout is 150ms.
+			</p>
+
+			<section class="row">
+			<!-- EXAMPLE HTML - BEGINS -->
+				<div class="medium-6 columns">
+					<h6>HTML</h6>
+					{{ global.reference-get-code-start-tag }}{% include '/reference/base/dropdowns/dropdowns-hover' %}{{ global.reference-get-code-end-tag }}
+				</div>
+			<!-- EXAMPLE HTML - ENDS -->
+			<!-- EXAMPLE RENDERED CODE - BEGINS -->
+				<div class="medium-6 columns">
+					<h6>Rendered HTML</h6>
+					{% include '/reference/base/dropdowns/dropdowns-hover' %}
+				</div>
+			<!-- EXAMPLE RENDERED CODE - ENDS -->
+			</section>
+			<hr />
+		<!-- DROPDOWNS HOVER - ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+									<ul>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/dropdown.html" target="_blank">Dropdowns</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}

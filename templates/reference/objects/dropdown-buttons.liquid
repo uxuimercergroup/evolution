@@ -1,0 +1,204 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+			<p>
+				Dropdown buttons are elements that, when tapped, reveal additional content. Foundation's <a href="/reference/base/dropdowns">dropdown plugin</a> is attached to the button style of your choice to create the dropdown button.
+			</p>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="basic"><a href="#basic">Basic</a></dd>
+					<dd data-magellan-arrival="shapes"><a href="#shapes">Shapes</a></dd>
+					<dd data-magellan-arrival="disabled"><a href="#disabled">Disabled</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+	
+		<!-- BASIC DROPDOWN BUTTONS - BEGINS -->
+			<h3 data-magellan-destination="basic">Basic</h3>
+			<a name="basic"></a>
+
+			<h4>Dropdown button size</h4>
+			<p>Here is a list of classes that can be added to the dropdown button to modify the size of the button (medium size is the default and requires no additonal button size class):</p>
+			<ul class="evo-data-list">
+				<li><code>tiny</code></li>
+				<li><code>small</code></li>
+				<li><code>large</code></li>
+				<li><code>expand</code>: 100% width</li>
+			</ul>
+
+			<h4 class="evo-spacer-margin-top-medium">Dropdown button menu size</h4>
+			<p>Here is a list of additional classes that can be added to the dropdown menu of the dropdown button to quickly modify it's appearance:</p>
+			<ul class="evo-data-list">
+				<li><code>tiny</code>: Make the dropdown have a <strong>max-width of 200px</strong></li>
+				<li><code>small</code>: Make the dropdown have a <strong>max-width of 300px</strong></li>
+				<li><code>medium</code>: Make the dropdown have a <strong>max-width of 500px</strong></li>
+				<li><code>large</code>: Make the dropdown have a <strong>max-width of 800px</strong></li>
+				<li><code>mega</code>: Make the dropdown go <strong>full 100% width</strong></li>
+				<li><code>content</code>: Add padding inside the dropdown menu for better-looking content</li>
+			</ul>
+		
+			<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/dropdown-buttons/dropdown-buttons' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/dropdown-buttons/dropdown-buttons' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+			</section>
+			<hr />
+		<!-- BASIC DROPDOWN BUTTONS - ENDS -->
+
+		<!-- DROPDOWN BUTTONS - SHAPES - BEGINS -->
+			<h3 data-magellan-destination="shapes">Shapes</h3>
+			<a name="shapes"></a>
+			<p>Adding the classes <code>.radius</code> or <code>.round</code> to a dropdown button will apply the border radius only to the outside corners.</p>
+
+				<h4>Radius</h4>
+
+			<!-- EXAMPLE CODE - BEGINS -->
+				<section class="row">
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>HTML</h6>					
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/dropdown-buttons/dropdown-buttons-radius' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+
+						{% include '/reference/objects/dropdown-buttons/dropdown-buttons-radius' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE CODE - ENDS -->
+				
+				<h4 class="evo-spacer-margin-top-medium">Round</h4>
+
+			<!-- EXAMPLE CODE - BEGINS -->
+				<section class="row">
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>HTML</h6>					
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/dropdown-buttons/dropdown-buttons-round' %}{{ global.reference-get-code-end-tag }}
+				<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+			<!-- EXAMPLE CODE - ENDS -->
+
+			<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+
+						{% include '/reference/objects/dropdown-buttons/dropdown-buttons-round' %}
+					</div>
+			<!-- EXAMPLE RENDERED CODE - ENDS -->
+			</section>
+			<hr />
+		<!-- DROPDOWN BUTTONS - SHAPES - ENDS -->
+
+		<!-- DROPDOWN BUTTONS - DISABLED - BEGINS -->
+			<h3 data-magellan-destination="disabled">Disabled</h3>
+			<a name="disabled"></a>
+
+			<!-- EXAMPLE CODE - BEGINS -->
+				<section class="row">
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>HTML</h6>					
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/dropdown-buttons/dropdown-buttons-disabled' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+
+						{% include '/reference/objects/dropdown-buttons/dropdown-buttons-disabled' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+				</section>
+				<hr />
+			<!-- EXAMPLE CODE - ENDS -->
+		<!-- DROPDOWN BUTTONS - DISABLED - ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+									<ul>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/dropdown_buttons.html" target="_blank">Dropdown Buttons</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}

@@ -1,0 +1,125 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+			<p>
+				Tables are an element meant to organize data on a page. Evolution Core tables depend on Foundation's <a href="http://foundation.zurb.com/docs/components/tables.html" target="_blank">Tables</a> as a starting point.
+			</p>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="staticTable"><a href="#staticTable">Basic</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+		<!-- STATIC TABLE - BEGINS -->
+			<h3 data-magellan-destination="staticTable">Basic</h3>
+			<a name="staticTable"></a>
+
+			<h4 class="evo-spacer-margin-top-medium">Column Widths</h4>
+			<p>
+				You can define the width of table columns using the <code>width</code> attribute on a table <code>th</code> and this will define the width of the cells below it in the same column, for example: <code>width="200"</code> in the <code>th</code> code below.
+			</p>
+
+			<h4 class="evo-spacer-margin-top-medium">Cell Text Alignment</h4>
+			<p>
+				You can change the text alignment of a table cell <code>td</code> by adding <code>.text-left</code>, <code>.text-right</code>, <code>.text-center</code> or <code>.text-justify</code> to the table cell. Prevent text from wrapping within a cell by adding the class <code>.evo-nowrap</code>.
+			</p>
+			<p>
+				Adding a size to the front of a text alignment class will cause it to only be applied on that size screen or larger (ex. <code>.medium-text-center</code> will center text for everything except small screens). Adding a size and only will apply the text alignment just for that media query (ex. <code>.medium-only-text-center</code> will center text just for medium screens).
+			</p>
+
+			<!-- EXAMPLE - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/tables/table-static' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+
+						{% include '/reference/base/tables/table-static' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE - ENDS -->
+
+			<hr />
+		<!-- STATIC TABLE - ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+									<ul>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/tables.html" target="_blank">Tables</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}
