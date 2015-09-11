@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------------------------------
 Mercer Evolution - Site CSS
-DATE - January 13, 2015
-AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+DATE - June 3, 2015
+AUTHOR - Doug Fraize, Matthew Holmes
 -------------------------------------------------------------------------------------------*/
 
 // ==========================================================================================
@@ -14,16 +14,14 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 		"core/global/functions",
 		"core/global/mixins";
 
-
 // ==========================================================================================
 // SITE IMPORTS
 // ==========================================================================================
 
-@import	"partials/global/site_settings",
-		"partials/global/site_variables",
-		"partials/global/site_functions",
-		"partials/base/site_icons";
-		
+@import	"partials/global/settings",
+		"partials/global/variables",
+		"partials/global/functions",
+		"partials/base/icons";
 
 /*=== WEBSITE STYLES ======================================================================*/
 
@@ -33,100 +31,13 @@ AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
 // HIDE PAGE WITH CSS CLASS PROVIDED BY MODERNIZR AND WHEN DOCUMENT IS READY, SHOW PAGE WITH JS
 html.evo-mod-js							{display:none;}
 
-.see-context-link						{font-size: rem-calc(13);}
-
-.img-border								{border: 1px solid $gray-mid;}
-
-
-
-/*--- DEMO STYLES -------------------------------------------------------------------------*/
-.evo-masthead			{
-	.evo-masthead-adjust	{
-		.evo-logo-col-1			{
-			.evo-primary-logo		{
-				[class*="evo-icon"]		{
-										color: $white;
-										top: 6px;
+// CODE CONTENT STYLES
+code									{
+										@include border-radius(rem-calc(4));
 										}
-									}
-								}
-							}
-						}
 
 
 /*--- REFERENCE PAGES ---------------------------------------------------------------------*/
-
-// ALTERNATE VIEWS BADGE
-.evo-ref-alternate-views-badge.ui-tabs	{
-										margin-top: 5px;
-	.evo-btn-group-horizontal				{
-		.evo-btn								{
-												@include background-gradient($gray-lighter, $gray-lighter);
-												border-color: $gray-light;
-												font-size: 13px;
-			a										{
-													padding: 13px 9px 14px 14px; 
-				[class^="evo-icon-"]					{display: block;}
-													}
-			&:hover									{@include background-gradient($gray-light, $gray-light);}
-			&.ui-tabs-active						{
-													@include background-gradient(#fef8e3, #fef8e3);
-													border-color: #f9eec7;
-													}
-												}
-											}
-	.ui-tabs-panel							{
-		p, ul, ol, li, dt, dd					{
-												font-size: 1rem;
-												}
-		.prettyprint							{
-			li 										{
-													font-size: 1rem;
-													}
-												}
-											}
-										}
-// NAVBAR
-.evo-navbar								{
-	.evo-navbar-adjust						{
-		nav.evo-text-nav						{
-			.evo-nav-menus							{
-				.navbar-site-menu						{
-					h4										{
-															border-bottom: 1px dotted $gray-mid;
-															margin-bottom: 4px;
-															}
-					dl										{
-															margin: 0 0 5px 0;
-															padding: 0;
-						dd										{
-																margin: 0;
-																padding: 0 0 3px 0;
-							a										{
-																	color: $white;
-																	font-size: rem-calc(12);
-																	padding: 0;
-																	margin: 0;
-								&:hover									{background-color: $transparent;}
-																	}
-																}
-															}
-														}
-													}
-												}
-											}
-										}
-
-// STYLES FOR THE DEMO SEARCH IN THE MENU NAVBAR
-.menu-search							{
-	.menu-search-btn						{
-											border-color: $emerald-dark;
-											padding: 4px 9px;
-											margin-top: -1px;
-											min-width: 100%;
-		[class*='evo-icon']						{color: $white !important;}
-											}
-										}
 
 // EXAMPLES
 .evo-ref-example						{
@@ -135,107 +46,29 @@ html.evo-mod-js							{display:none;}
 	.evo-ref-example-box					{background-color: $white;}
 										}
 
-// DEVELOPER - SLIDING DRAWER
-.evo-ref-sliding-drawer-btn				{
-										@include border-radius(4px);
-										background-color: $gray-lightest;
-										border: 1px solid $gray-mid;
-										padding: 5px 3px 5px 2px;
-										width: 28px;
-										height: 28px;
-										float: right;
-										top: -5px;
-										cursor: pointer;
-										}
-.evo-ref-sliding-drawer					{
-										@include box-shadow(inset 0, 0, 10px, #000);
-										background-color: $gray-darkest;
-										overflow-y: hidden !important;
-	.evo-ref-sliding-drawer-hdr				{
-											@include box-shadow(0, 0, 10px, #000);
-											position: fixed;
-											top: 0;
-											width: 250px;
-											min-width: 250px;
-											padding: $evo-base-padding $evo-base-padding 0 $evo-base-padding;
-											background-color: $gray-dark;
-		h3										{
-												color: $white;
-												padding: 0 0 7px 0;
-												position: relative;
-												top: -4px;
-												}
-		.evo-ref-sliding-drawer-close-btn		{
-												color: $white;
-												cursor: pointer;
-												top: 0;
-												right: 12px;
-												}
-											}
-
-	.mCustomScrollbar						{
-											padding-top: 103px;
-		.mCSB_container							{margin-right: 0;}
-											}
-
-	h4,
-	h5										{
-											color: $white;
-											padding-left: 10px;
-											}
-	h4:first-child							{margin-top: 7px;}
-	h5										{margin-bottom: 4px;}
-
-	.evo-vertical-list						{
-											margin-bottom: $evo-base-margin;
-		&:last-child							{margin-bottom: 100px;}
-		dd										{
-												margin: 0;
-			a										{
-													color: $white;
-													display: block;
-													font-size: rem-calc(12);
-													line-height: rem-calc(28);
-													padding: 0 12px;
-				&:hover									{
-														@include href-link-hover(none);
-														background-color: $gray-darker;
-														}
-													}
-												}
-											}
-										}
-
 
 /*--- HOMEPAGE ----------------------------------------------------------------------------*/
-[class*="banding-section"]				{font-size: 1rem;}
-
-
-.evo-alternate-views-badge.ui-tabs		{
-	.banding-section-1						{
-											@include background-gradient-horizontal($mastheadBackgroundStartColor, $mastheadBackgroundEndColor);
-		h1										{
-												color: $white;
-												font-size: rem-calc(51);
-												font-family: $evo-font-thin-stack;
-												padding-top: 20px;
-												}
-		h3										{
-												color: $white;
-												font-family: $evo-font-thin-stack;
-												padding-bottom: 70px;
-												}
-		.evo-icon								{
-												color: $white;
-												display: inline-block;
-												top: -12px;
-												font-size: rem-calc(140);
-												}
-		.evo-btn-group-horizontal				{@include clearfix;}
+.hp-banding-section-1					{
+	h1										{
+											color: $white;
+											font-size: rem-calc(51);
+											font-family: $evo-font-thin-stack;
 											}
+	h3										{
+											color: $white;
+											font-family: $evo-font-thin-stack;
+											padding-bottom: 70px;
+											}
+	.evo-icon								{
+											color: $white;
+											display: inline-block;
+											top: -12px;
+											font-size: rem-calc(140);
+											}
+	.evo-btn-group-horizontal				{@include clearfix;}
 										}
 
-.banding-section-2						{
+.hp-banding-section-2					{
 	h1										{
 											text-align: center;
 											margin-bottom: 20px;
@@ -247,7 +80,7 @@ html.evo-mod-js							{display:none;}
 	h3, p									{text-align: center;}
 										}
 
-.banding-section-3						{
+.hp-banding-section-3					{
 										color: $sapphire-dark;
 	h1, h3									{color: $sapphire-dark;}
 	[class*="evo-icon"]						{color: $sapphire-dark;}
@@ -257,7 +90,7 @@ html.evo-mod-js							{display:none;}
 											}
 										}
 
-.banding-section-4						{
+.hp-banding-section-4					{
 	li										{line-height: 20px;}
 	[class*="evo-icon"]						{
 											color: $gray-darkest;
@@ -266,7 +99,7 @@ html.evo-mod-js							{display:none;}
 											}
 										}
 
-.banding-section-5						{
+.hp-banding-section-5					{
 	h1, p									{text-align: center;}
 	.evo-horizontal-list					{
 											text-align: center;
@@ -283,7 +116,7 @@ html.evo-mod-js							{display:none;}
 											}
 										}
 
-.banding-section-6						{
+.hp-banding-section-6					{
 										font-size: 1em;
 	.hp-layout								{
 		h5										{margin-bottom: 7px;}
@@ -313,11 +146,30 @@ html.evo-mod-js							{display:none;}
 
 
 /*--- LAYOUT/GRIDS PAGE -------------------------------------------------------------------*/
-.unit									{
-										@include border-radius(3px);
-										margin-bottom:15px;
-										background-color:#e7e7e7;
-										border:1px solid #ccc;
+.grid-demo-styles						{
+	.row									{
+											border: 1px solid $gray-light;
+											margin-bottom: $evo-base-margin;
+											margin-left: 0 !important;
+											margin-right: 0 !important;
+											}
+	.columns								{background-color: $gray-lightest;}
+	.columns:nth-child(2n)					{background-color: $gray-lighter;}
+
+	[class*="evo-icon-"]					{top: 3px;}
+
+	[class*="small-block-grid-"]			{
+		li										{
+												background-color: $gray-lightest;
+												border-top: 1px solid $gray-light;
+												border-right: 1px solid $gray-light;
+												border-bottom: 1px solid $gray-light;
+												padding-top: rem-calc($evo-base-padding);
+												text-align: center;
+			&:nth-child(2n)							{background-color: $gray-lighter;}
+			&:first-child							{border-left: 1px solid $gray-light;}
+												}
+											}
 										}
 
 
@@ -363,6 +215,7 @@ html.evo-mod-js							{display:none;}
 										}
 
 // TABLE COLORS
+/*
 .table-header-row						{background-color: $tableThBackgroundColor;}
 .table-subheader-row					{background-color: $tableSubHeaderBackgroundColor;}
 .table-header-row-color					{background-color: $sapphire-light;}
@@ -376,7 +229,7 @@ html.evo-mod-js							{display:none;}
 .table-header-border					{background-color: #A9BCD3;}
 .table-row-border						{background-color: $tableTdBorderColor;}
 .table-subheader-border					{background-color: #C3D2E5;}
-
+*/
 
 /*--- CORP LOGOS PAGE ----------------------------------------------------------------------*/
 .corp-logo-background-color				{background-color: $blue-gray !important;}
@@ -419,7 +272,6 @@ html.evo-mod-js							{display:none;}
 
 .evo-footable.color-vars-quick-reference-table .evo-highlight
 										{background-color: inherit !important;}
-										
 
 /*=== MEDIA QUERIES =========================================================================*/
 @import	"partials/global/responsive_small",

@@ -1,12 +1,12 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
 {% block content %}
 
-<!-- PAGE TITLE - BEGINS -->
-	<h1>{{ model.title }}</h1>
-<!-- PAGE TITLE - ENDS -->
+<section class="row">
+	<div class="small-12 columns">
 
-<!-- CONTENT SECTION - BEGINS -->
-	<section class="col-24 evo-alternate-views-badge evo-ref-alternate-views-badge" data-alternate-views-badge="js-evo-ref-alternate-views-badge">
+	<!-- PAGE TITLE - BEGINS -->
+		<h1>{{ model.title }}</h1>
+	<!-- PAGE TITLE - ENDS -->
 
 		{% include '/reference/reference-content' %}
 
@@ -39,135 +39,69 @@
 			</div>
 		{% endif %}
 	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
-
-	</section>
-<!-- CONTENT SECTION - ENDS -->
-
-<!-- NOT RESPONSIVE - ATTENTION MESSAGE - BEGINS -->
-	<div class="evo-box evo-box-rnd evo-attention-ctn evo-visible-small-mediaquery">
-		<div class="evo-box-hdr">
-			<h6 class="evo-message-hdr">
-				<i class="evo-icon-warning evo-icon-size-small evo-icon-color-attention evo-icon-position-left"></i>Attention
-			</h6>
-		</div>
-		<div class="box-bdy">
-			<p>This component does not have a baseline mobile version as of this release. A responsive version will be coming soon.</p>
-		</div>
+		
 	</div>
-<!-- NOT RESPONSIVE - ATTENTION MESSAGE - ENDS -->
+</section>
+
 
 <!-- EXAMPLE SECTION - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
 
-	<section class="col-24 evo-ref-example evo-hidden-small-mediaquery">
+		<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+			<h3 class="evo-hdr-dbl-rule evo-ref-example-hdr">{{ global.reference-example-hdr }} (Click the "filter" icon to view)</h3>
+		<!-- EXAMPLE SECTION - HEADER - ENDS -->
 
-	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
-		<h3 class="evo-hdr-dbl-rule evo-ref-example-hdr">{{ global.reference-example-hdr }} (Click the "filter" icon to view)</h3>
-	<!-- EXAMPLE SECTION - HEADER - ENDS -->
+		<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
+			<section class="evo-ref-example-content">
 
-	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
-		<section class="evo-ref-example-content">
+			<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
 
-		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+				{% if model.reference-example-versions == "true" %}
+					<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
+				{% endif %}
 
-			{% if model.reference-example-versions == "true" %}
-				<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
-			{% endif %}
 
-			<!-- ADVANCED FILTER - ATTENTION MESSAGE CONTAINER - BEGINS -->
-				<div class="evo-box evo-box-rnd evo-attention-ctn evo-display-none" id="js-evo-advanced-filter-example-attention-ctn">
-					<div class="col-22 first evo-box-hdr">
-						<h6 class="evo-message-hdr">
-							<i class="evo-icon-warning evo-icon-size-small evo-icon-color-attention evo-icon-position-left"></i>Attention
-						</h6>
-						<div class="box-bdy">
-							<p>These results have been filtered.</p>
-						</div>
-					</div>
-					<div class="col-2 evo-align-right">
-						<a class="evo-icon-evo-edit evo-icon-size-small evo-icon-color-gray-darker evo-icon-position-right" id="js-evo-advanced-filter-example-edit-btn" href="javascript:;" title="Edit Filter"></a>
-						<a class="evo-icon-minus-circle evo-icon-size-small evo-icon-color-error evo-icon-position-right" id="js-evo-advanced-filter-example-close-btn" href="javascript:;" title="Delete Filter"></a>
-					</div>
+			<!-- INTERACTIVE DATA TABLE - BEGINS -->
+				<div class="evo-table-small-mediaquery">
+					<table cellpadding="0" cellspacing="0" border="0" class="tdisplay evo-table evo-table-hover" id="evo-datatble-adv-filter-example">
+						<thead>
+							<tr>
+								<th scope="column"><input type="checkbox" class="js-evo-select-all-checkboxes"></th>
+								<th scope="column"><a href="javascript:;">Rendering engine</a></th>
+								<th scope="column"><a href="javascript:;">Browser</a></th>
+								<th scope="column"><a href="javascript:;">Platform(s)</a></th>
+								<th scope="column" class="text-center"><a href="javascript:;">Engine Version</a></th>
+								<th scope="column" class="text-center"><a href="javascript:;">CSS Grade</a></th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for item in global.browser_data %}
+							<tr>
+								<td scope="row" class="checkbox"><input type="checkbox" class="js-evo-select-all-checkbox-item"></td>
+								<td scope="row">{{ item.renderingEngine }}</td>
+								<td scope="row">{{ item.browser }}</td>
+								<td scope="row">{{ item.platform }}</td>
+								<td scope="row" class="text-center">{{ item.engine }}</td>
+								<td scope="row" class="text-center">{{ item.cssGrade }}</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
 				</div>
-			<!-- ADVANCED FILTER - ATTENTION MESSAGE CONTAINER - ENDS -->
+			<!-- INTERACTIVE DATA TABLE - ENDS -->
 
-			<!-- ADVANCED FILTER - CONFIRMATION MESSAGE CONTAINER WITH CLOSE - BEGINS -->
-				<div class="evo-box evo-box-rnd evo-display-none evo-confirmation-ctn js-evo-fadeout-element" id="js-evo-advanced-filter-example-confirmation-ctn">
-					<div class="evo-box-hdr">
-						<i class="evo-icon-cancel-circle evo-icon-size-small evo-icon-color-gray-darker evo-icon-position-right evo-close-action js-evo-close-ctn" title="Close"><span class="evo-icon-hide-text">Close</span></i>
-						<h6 class="evo-message-hdr">
-							<i class="evo-icon-checkmark-circle evo-icon-size-small evo-icon-color-confirmation evo-icon-position-left"></i>Confirmation
-						</h6>
-					</div>
-					<div class="box-bdy">
-						<p>Your filter has been successfully removed.</p>
-					</div>
-				</div>
-			<!-- ADVANCED FILTER - CONFIRMATION MESSAGE CONTAINER WITH CLOSE - ENDS -->
 
-			<div class="evo-table-small-mediaquery">
-				<table class="evo-table evo-footable evo-table-borders evo-table-striped evo-table-hover" data-filter="#filter" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
-					<caption>
-						<div class="col-19 first">&nbsp;</div>
-						<div class="col-5 evo-tbl-data-filter">
-							<div class="col-24">
-								<div class="col-21 first">
-									{% include '/base/tables/table-quick-filter' %}
-								</div>
-								<div class="col-3">
-									<i class="evo-icon-filter" id="js-evo-advanced-filter-example-action-btn" title="Advanced Filter"></i>
-								</div>
-							</div>
-						</div>
-					</caption>
-					<thead>
-						<tr>
-							<th class="col-1" scope="col" data-sort-ignore="true">
-								<input type="checkbox" class="js-evo-select-all-checkboxes">
-							</th>
-							<th class="col-6" scope="col"><a href="javascript:;">Task</a></th>
-							<th class="col-2" scope="col"><a href="javascript:;">Type</a></th>
-							<th class="col-8" scope="col">
-								<a href="javascript:;">Client</a> |
-								<a href="javascript:;">Location</a>
-							</th>
-							<th class="col-4" data-sort-initial="ascending" scope="col"><a href="javascript:;">Assigned To</a></th>
-							<th class="col-3 evo-nowrap evo-align-right" scope="col"><a href="javascript:;">Start Date</a></th>
-							<th class="col-3 evo-nowrap evo-align-right" scope="col"><a href="javascript:;">End Date</a></th>
-						</tr>
-					</thead>
-					<tbody>
+			<!-- ADVANCED FILTER MODAL - BEGINS -->
+				{% include '/base/tables/table-advanced-filter' %}
+			<!-- ADVANCED FILTER MODAL - ENDS -->
 
-						{% for item in global.table_data %}
-						<tr>
-							<td>{{ item.checkbox }}</td>
-							<td>{{ item.task }}</td>
-							<td>{{ item.type_global }}</td>
-							<td>
-								<a href="javascript:;">{{ item.company }}</a> |
-								{{ item.location}}
-							</td>
-							<td>
-								{{ item.abbrev_first_name}} {{ item.last_name}}
-							</td>
-							<td class="evo-nowrap evo-align-right">{{ item.start_date }}</td>
-							<td class="evo-nowrap evo-align-right">{{ item.end_date }}</td>
-						</tr>
-						{% endfor %}
-						
-					</tbody>
-				</table>
-			</div>
+			<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
-		<!-- ADVANCED FILTER MODAL - BEGINS -->
-			{% include '/base/tables/table-advanced-filter' %}
-		<!-- ADVANCED FILTER MODAL - ENDS -->
+			</section>
+		<!-- EXAMPLE SECTION - CONTENT - ENDS -->
 
-		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-		</section>
-	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
-
+		</div>
 	</section>
 <!-- EXAMPLE SECTION - ENDS -->
-
 {% endblock %}

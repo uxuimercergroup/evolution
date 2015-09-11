@@ -1,0 +1,63 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.7 - Core UI SASS Imports Partial
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+// ==========================================================================================
+// CORE SASS IMPORTS
+// ==========================================================================================
+
+@import	"global/color_variables";
+
+@import	"foundation/foundation/settings";
+@import 'foundation/foundation/components/accordion';
+@import 'foundation/foundation/components/alert-boxes';
+@import 'foundation/foundation/components/breadcrumbs';
+@import 'foundation/foundation/components/icon-bar';
+@import 'foundation/foundation/components/keystrokes';
+@import 'foundation/foundation/components/labels';
+@import 'foundation/foundation/components/pagination';
+@import 'foundation/foundation/components/progress-bars';
+@import 'foundation/foundation/components/reveal';
+@import 'foundation/foundation/components/side-nav';
+@import 'foundation/foundation/components/split-buttons';
+@import 'foundation/foundation/components/sub-nav';
+@import 'foundation/foundation/components/switches';
+@import 'foundation/foundation/components/tabs';
+@import 'foundation/foundation/components/thumbs';
+@import 'foundation/foundation/components/tooltips';
+@import 'foundation/foundation/components/top-bar';
+@import 'foundation/foundation/components/offcanvas';
+
+@import	"global/variables";
+@import	"global/functions";
+@import	"global/mixins";
+		
+@import	"objects/accordion";
+@import	"objects/add_remove_plan_component";
+@import	"objects/autocomplete";
+@import	"objects/carousel";
+@import	"objects/category_hdr_ctn";
+@import	"objects/conversational_form";
+@import	"objects/datepicker";
+@import	"objects/footer";
+@import	"objects/header";
+@import	"objects/hero_banner";
+@import	"objects/image_content_overlay";
+@import	"objects/item_highlight_ctn";
+@import	"objects/item_selection_panel";
+@import	"objects/layout_banding";
+@import	"objects/login";
+@import	"objects/message_boxes";
+@import	"objects/mini_filter";
+@import	"objects/pricing_table";
+@import	"objects/scroll_pane";
+@import	"objects/showcase_panel";
+@import	"objects/slider";
+@import	"objects/summary_containers";
+@import	"objects/tabs";
+@import	"objects/tiles";
+@import	"objects/tooltip";
+@import	"objects/top_bar";
+@import	"objects/worksheet_form";

@@ -60,6 +60,9 @@
 		<!-- EVOLUTION CORE STYLES -->
 		{{ "evolution.css" | asset_url | stylesheet_tag }}
 
+		<!-- EVOLUTION UI STYLES -->
+		{{ "evolution_ui.css" | asset_url | stylesheet_tag }}
+
 		<!-- SITE STYLES -->
 		{{ "styles.css" | asset_url | stylesheet_tag }}
 
@@ -76,9 +79,9 @@
 	<body>
 
 		<!-- HEADER - BEGINS -->
-		<header role="banner" class="evo-grid evo-header">
+		<header role="banner" class="evo-header">
 			<div class="evo-header-adjust">
-				{% include "/demos/base/header/toolbar-v1" %}
+				{% include "/demos/objects/header/toolbar-v1" %}
 			</div>
 		</header>
 		<!-- HEADER - ENDS -->

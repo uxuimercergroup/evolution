@@ -1,7 +1,7 @@
 <button class="evo-btn evo-btn-medium evo-btn-primary evo-btn-first" id="js-evo-content-modal-example-btn">Open Content Modal</button>
 
 <!-- Modal dialog source element -->
-<div id="js-evo-content-modal-example" class="evo-grid evo-content-modal-ctn">
+<div id="js-evo-content-modal-example" class="evo-content-modal-ctn">
 
 	<div class="js-evo-content-modal-tabs">
 		<div class="col-1 first evo-content-modal-util-bar">
@@ -58,8 +58,8 @@
 								<a href="javascript:;">Location</a>
 							</th>
 							<th class="col-4" scope="col"><a href="javascript:;">Assigned To</a></th>
-							<th class="col-3 evo-nowrap evo-align-right" scope="col"><a href="javascript:;">Start Date</a></th>
-							<th class="col-3 evo-nowrap evo-align-right" scope="col"><a href="javascript:;">End Date</a></th>
+							<th class="col-3 text-right evo-nowrap" scope="col"><a href="javascript:;">Start Date</a></th>
+							<th class="col-3 text-right evo-nowrap" scope="col"><a href="javascript:;">End Date</a></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -76,8 +76,8 @@
 							<td>
 								{{ item.abbrev_first_name}} {{ item.last_name}}
 							</td>
-							<td class="evo-nowrap evo-align-right">{{ item.start_date }}</td>
-							<td class="evo-nowrap evo-align-right">{{ item.end_date }}</td>
+							<td class="text-right evo-nowrap">{{ item.start_date }}</td>
+							<td class="text-right evo-nowrap">{{ item.end_date }}</td>
 						</tr>
 						{% endfor %}
 						

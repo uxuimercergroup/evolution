@@ -1,0 +1,54 @@
+{
+	"title": "Message Boxes",
+
+	"reference-overview": 
+		"<p>The <strong>Confirmation Message</strong> container provides feedback to the user when he/she has successfully completed an action. Like the other message containers, it always displays immediately below the page title.</p><p>The <strong>Error Message</strong> container informs the user when an error has occurred. It is always displayed immediately below the page title, and it is intended to act as a general point of orientation for the user in an error situation.</p><p>The <strong>Attention Message</strong> container is used when you want to alert the user to an important message. It follows the same structure as the other messaging containers</p>",
+
+	"reference-usage": 
+		"<p>The <strong>Confirmation Message</strong> container should be used when the user has successfully completed an action.</p><p>The <strong>Error Message</strong> container should be displayed whenever a server-side Error has occurred on a form the user has attempted to submit. For more information, see the <a href='/base/forms/field-specific-error'>Page Error Messaging and Handling</a>.</p><p>The <strong>Attention Message</strong> container should be displayed when you need to highlight something important to the user or when an important action is necessary. Some common uses: Inform the user that they have a task due; Inform the user that a new tax form is now available.</p><h5>Types of Configuration</h5><p>There are three additional types of configurations that should be supported:</p><h5>Optional Close</h5><ul><li>This configuration gives the user the ability to 'close' the message container via the 'close' icon in the upper right corner. When clicked, the container will dissolve and all content displayed below the container will shift up on the screen.</li></ul><h5>Timer Based Close – (This does not apply for Attention or Error Messages)</h5><ul><li>This configuration would be used for messages where it is not critical for the user to see or act on the message.</li><li>The container would remain open for 8 seconds before closing. This time frame is not editable, rather it remains consistent for all instances.</li><li>The amount of text displayed should be concise, to allow the user to read it before the container closes.</li><li>This configuration should not be used for the Attention or Error containers.</li></ul><strong>In Page Display vs On Top of Page Display</strong> – Each message container (Error, Attention, and Confirmation) should have a setting that will determine where the message will display.<ul><li>The default display will be as an item within the rest of the content within the screen (In Page Display).</li><li>There is an alternative configuration that allows the message container to display 'on top of' the other content on the page. This would be used in cases where it is highly important that the user notice and acknowledge the message. In this case, the container should be centered on the screen, near the top of the browser.</li></ul>",
+
+	"reference-details": 
+		"<h6>General</h6><ul><li>The container will span the entire width of its parent container and be located immediately below the page title.</li><li>There should only ever be one of each Confirmation, Attention or Error Message container on a page at a time.</li><li>If there are multiple messages that need to get communicated, the page should display a single confirmation message container with multiple messages inside the container.</li></ul><h6>Title</h6><ul><li>Confirmation: The title should always contain the 'green checkmark' icon and the title should always be 'Confirmation'. The title should never be a link.</li><li>Error: The title should always contain the 'Error' icon and the title should always be 'Error'. The title should never be a link.</li><li>Attention: The title should always contain the 'orange/yellow exclamation' icon and the title should always be 'Attention'. The title should never be a link.</li></ul><h6>Message</h6><ul><li>The message should be able to support two different formats</li><li>Paragraph Text - This can be multiple lines or even multiple paragraphs.</li><li>List Items - This can be a single bulleted list item or multiple bulleted list items.</li></ul><h6>Colors</h6><ul><li>Confirmation, Attention and Error Messages should adhere to the approved Mercer color palette for all aspects of the container: Background, Border, Text</li></ul>",
+
+	"reference-mobile": 
+		"<ul><li>In the mobile version of these containers the width will shrink to span the width of the parent container.</li><li>The placement of these containers would remain the same as the desktop version.</li><li>Font size increases for mobile</li></ul>",
+
+	"reference-technical": 
+		"<h3>Cross browser compatibility</h3><p>IE9 doesn't crop background gradients on containers with rounded corners, so we square the corners of every container.</p>",
+
+	
+	"reference-dependency": "false",
+	"reference-dependency-jquery": "false",
+	"reference-dependency-jquery-ui": "false",
+	"reference-dependency-list": 
+		"",
+
+	"reference-example-versions": "true",
+
+	"reference-example-version-label": "Confirmation",
+	"reference-example-version-label-2": "Attention",
+	"reference-example-version-label-3": "Error",
+	"reference-example-version-label-4": "Information",
+	"reference-example-version-label-5": "General",
+
+	"reference-get-code": "true",
+
+	"reference-code-html-content-block-pre": 
+		"<p>If you would like to make any of the message boxes have a timed fade out effect you can add <code>js-evo-fadeout-element</code> class.</p>",
+	"reference-code-html-content-block-post": 
+		"",
+	"reference-code-html-content-block-pre-2": 
+		"",
+	"reference-code-html-content-block-post-2": 
+		"",
+	"reference-code-html-content-block-pre-3": 
+		"",
+	"reference-code-html-content-block-post-3": 
+		"",
+
+	"reference-code-js": "false",
+	"reference-code-js-content-block-pre": 
+		"",
+	"reference-code-js-content-block-post": 
+		""
+}

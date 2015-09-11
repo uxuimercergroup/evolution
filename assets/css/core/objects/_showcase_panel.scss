@@ -1,0 +1,126 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.7 - Showcase Panel Partial
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+$evo-showcase-panel-shadow-h: 0 !default;
+$evo-showcase-panel-shadow-v: rem-calc(2) !default;
+$evo-showcase-panel-shadow-blur: rem-calc(8) !default;
+$evo-showcase-panel-shadow-color: $gray-mid !default;
+$evo-showcase-panel-fixed-z-index: 900 !default;
+$evo-cost-reverse-font-color: $white !default;
+$evo-large-cost-font-color: $gray-darkest !default;
+$evo-small-cost-font-color: $gray-darkest !default;
+
+
+@if $use-showcase-panel == true{
+
+	.evo-showcase-panel					{
+										@include box-shadow($evo-showcase-panel-shadow-h, $evo-showcase-panel-shadow-v, $evo-showcase-panel-shadow-blur, $evo-showcase-panel-shadow-color);
+		li									{
+											min-height: rem-calc(100);
+											padding: rem-calc(10) 0;
+											font-family: $evo-font-bold-stack;
+											line-height: 1;
+			.evo-icon-adv						{
+												top: rem-calc(4);
+												border: 0;
+												display: inline-block;
+												float: none;
+
+				[class*="evo-icon-"]				{top: 2px;}
+												}
+											}
+		.evo-monthly-label					{
+											font-family: $evo-font-medium-stack;
+											font-size: rem-calc(16);
+											text-transform: uppercase;
+											}
+		.evo-total-label,
+		.evo-plan-label						{
+											display: block;
+											font-size: rem-calc(11);
+											}
+		.evo-large-cost						{
+											padding: rem-calc(19) 0;
+											position: relative;
+											top: rem-calc(4);
+											text-align: center;
+											color: $evo-large-cost-font-color;
+			.evo-cost-number					{
+												font-size: rem-calc(48);
+												letter-spacing: rem-calc(-2);
+				sup									{
+													position: relative;
+													top: rem-calc(-19);
+													left: rem-calc(-1);
+													}
+												}
+				.evo-monthly-label				{
+												position: relative;
+												left: rem-calc(-10);
+												top: rem-calc(-5);
+												}
+				.evo-total-label				{
+												position: relative;
+												top: rem-calc(-7);
+												}
+											}
+		.evo-small-cost						{
+											padding: rem-calc(30) 0;
+											text-align: center;
+											color: $evo-small-cost-font-color;
+			.evo-cost-number					{
+												font-size: rem-calc(26);
+												letter-spacing: rem-calc(-.2);
+				sup									{
+													font-size: rem-calc(11);
+													position: relative;
+													top: rem-calc(-6);
+													left: rem-calc(-1);
+													}
+												}
+			.evo-monthly-label					{
+												font-family: $evo-font-bold-stack;
+												position: relative;
+												left: rem-calc(-5);
+												top: rem-calc(-5);
+												text-transform: lowercase;
+												}
+											}
+		.evo-cost-reverse					{
+											color: $evo-cost-reverse-font-color;
+			a									{color: $evo-cost-reverse-font-color;}
+											}
+										}
+
+	[data-evo-showcase-panel-fixed]		{
+										position: fixed;
+										top: rem-calc(45);
+										left: 0;
+										z-index: $evo-showcase-panel-fixed-z-index;
+										width: 100%;
+										margin-left: 0;
+										}
+
+	.evo-showcase-panel-fixed-header-adjust
+										{margin-bottom: rem-calc(145);}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			
+
+		}
+		
+	}// endif
+
+}// endif

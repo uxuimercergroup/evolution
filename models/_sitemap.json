@@ -6,15 +6,15 @@
     "url": "/index"
   },
   {
+    "directory": false,
+    "key": "archive_index",
+    "name": "Archive Index",
+    "url": "/archive_index"
+  },
+  {
     "children": [
       {
         "children": [
-          {
-            "directory": false,
-            "key": "container-advanced",
-            "name": "Container Advanced",
-            "url": "/base/boxes/container-advanced"
-          },
           {
             "directory": false,
             "key": "container-basic",
@@ -44,24 +44,6 @@
             "key": "container-support",
             "name": "Container Support",
             "url": "/base/boxes/container-support"
-          },
-          {
-            "directory": false,
-            "key": "message-attention",
-            "name": "Message Attention",
-            "url": "/base/boxes/message-attention"
-          },
-          {
-            "directory": false,
-            "key": "message-confirmation",
-            "name": "Message Confirmation",
-            "url": "/base/boxes/message-confirmation"
-          },
-          {
-            "directory": false,
-            "key": "message-error",
-            "name": "Message Error",
-            "url": "/base/boxes/message-error"
           }
         ],
         "directory": true,
@@ -88,24 +70,18 @@
         "url": "/base/corp-logos"
       },
       {
-        "directory": false,
-        "key": "fat-footer",
-        "name": "Fat Footer",
-        "url": "/base/fat-footer"
-      },
-      {
-        "directory": false,
-        "key": "footer",
-        "name": "Footer",
-        "url": "/base/footer"
-      },
-      {
         "children": [
           {
             "directory": false,
             "key": "compact",
             "name": "Compact",
             "url": "/base/forms/compact"
+          },
+          {
+            "directory": false,
+            "key": "conversational",
+            "name": "Conversational",
+            "url": "/base/forms/conversational"
           },
           {
             "directory": false,
@@ -150,26 +126,6 @@
         "url": "/base/grids"
       },
       {
-        "children": [
-          {
-            "directory": false,
-            "key": "masthead",
-            "name": "Masthead",
-            "url": "/base/header/masthead"
-          },
-          {
-            "directory": false,
-            "key": "navbar",
-            "name": "Navbar",
-            "url": "/base/header/navbar"
-          }
-        ],
-        "directory": true,
-        "key": "header",
-        "name": "Header",
-        "url": "/base/header"
-      },
-      {
         "directory": false,
         "key": "icons",
         "name": "Icons",
@@ -180,42 +136,6 @@
         "key": "icons-additional",
         "name": "Icons Additional",
         "url": "/base/icons-additional"
-      },
-      {
-        "directory": false,
-        "key": "layout-banding",
-        "name": "Layout Banding",
-        "url": "/base/layout-banding"
-      },
-      {
-        "directory": false,
-        "key": "layout-employee-portal-homepage",
-        "name": "Layout Employee Portal Homepage",
-        "url": "/base/layout-employee-portal-homepage"
-      },
-      {
-        "directory": false,
-        "key": "layout-employee-portal-innerpage",
-        "name": "Layout Employee Portal Innerpage",
-        "url": "/base/layout-employee-portal-innerpage"
-      },
-      {
-        "directory": false,
-        "key": "layout-hero-banner",
-        "name": "Layout Hero Banner",
-        "url": "/base/layout-hero-banner"
-      },
-      {
-        "directory": false,
-        "key": "layout-login",
-        "name": "Layout Login",
-        "url": "/base/layout-login"
-      },
-      {
-        "directory": false,
-        "key": "layout-sidebar",
-        "name": "Layout Sidebar",
-        "url": "/base/layout-sidebar"
       },
       {
         "children": [
@@ -242,18 +162,6 @@
         "key": "lists",
         "name": "Lists",
         "url": "/base/lists"
-      },
-      {
-        "directory": false,
-        "key": "product-header",
-        "name": "Product Header",
-        "url": "/base/product-header"
-      },
-      {
-        "directory": false,
-        "key": "product-header-sliding-nav",
-        "name": "Product Header Sliding Nav",
-        "url": "/base/product-header-sliding-nav"
       },
       {
         "children": [
@@ -301,12 +209,6 @@
       },
       {
         "directory": false,
-        "key": "toolbar-header",
-        "name": "Toolbar Header",
-        "url": "/base/toolbar-header"
-      },
-      {
-        "directory": false,
         "key": "typography",
         "name": "Typography",
         "url": "/base/typography"
@@ -339,12 +241,6 @@
     "children": [
       {
         "directory": false,
-        "key": "banding-page",
-        "name": "Banding Page",
-        "url": "/demos/banding-page"
-      },
-      {
-        "directory": false,
         "key": "hero-banner-background-color-carousel-demo",
         "name": "Hero Banner Background Color Carousel Demo",
         "url": "/demos/hero-banner-background-color-carousel-demo"
@@ -368,22 +264,204 @@
         "url": "/demos/hero-banner-background-image-demo"
       },
       {
+        "children": [
+          {
+            "directory": false,
+            "key": "area-basic",
+            "name": "Area Basic",
+            "url": "/demos/highcharts/area-basic"
+          },
+          {
+            "directory": false,
+            "key": "area-index",
+            "name": "Area Index",
+            "url": "/demos/highcharts/area-index"
+          },
+          {
+            "directory": false,
+            "key": "area-inverted",
+            "name": "Area Inverted",
+            "url": "/demos/highcharts/area-inverted"
+          },
+          {
+            "directory": false,
+            "key": "area-missing",
+            "name": "Area Missing",
+            "url": "/demos/highcharts/area-missing"
+          },
+          {
+            "directory": false,
+            "key": "area-negative",
+            "name": "Area Negative",
+            "url": "/demos/highcharts/area-negative"
+          },
+          {
+            "directory": false,
+            "key": "area-percentage",
+            "name": "Area Percentage",
+            "url": "/demos/highcharts/area-percentage"
+          },
+          {
+            "directory": false,
+            "key": "area-range",
+            "name": "Area Range",
+            "url": "/demos/highcharts/area-range"
+          },
+          {
+            "directory": false,
+            "key": "area-range-line",
+            "name": "Area Range Line",
+            "url": "/demos/highcharts/area-range-line"
+          },
+          {
+            "directory": false,
+            "key": "area-sparkline",
+            "name": "Area Sparkline",
+            "url": "/demos/highcharts/area-sparkline"
+          },
+          {
+            "directory": false,
+            "key": "area-spline",
+            "name": "Area Spline",
+            "url": "/demos/highcharts/area-spline"
+          },
+          {
+            "directory": false,
+            "key": "area-stacked",
+            "name": "Area Stacked",
+            "url": "/demos/highcharts/area-stacked"
+          },
+          {
+            "directory": false,
+            "key": "bar-basic",
+            "name": "Bar Basic",
+            "url": "/demos/highcharts/bar-basic"
+          },
+          {
+            "directory": false,
+            "key": "bar-column-index",
+            "name": "Bar Column Index",
+            "url": "/demos/highcharts/bar-column-index"
+          },
+          {
+            "directory": false,
+            "key": "bar-stacked",
+            "name": "Bar Stacked",
+            "url": "/demos/highcharts/bar-stacked"
+          },
+          {
+            "directory": false,
+            "key": "column-basic",
+            "name": "Column Basic",
+            "url": "/demos/highcharts/column-basic"
+          },
+          {
+            "directory": false,
+            "key": "column-rotated-labels",
+            "name": "Column Rotated Labels",
+            "url": "/demos/highcharts/column-rotated-labels"
+          },
+          {
+            "directory": false,
+            "key": "line-ajax",
+            "name": "Line Ajax",
+            "url": "/demos/highcharts/line-ajax"
+          },
+          {
+            "directory": false,
+            "key": "line-basic",
+            "name": "Line Basic",
+            "url": "/demos/highcharts/line-basic"
+          },
+          {
+            "directory": false,
+            "key": "line-index",
+            "name": "Line Index",
+            "url": "/demos/highcharts/line-index"
+          },
+          {
+            "directory": false,
+            "key": "line-labels",
+            "name": "Line Labels",
+            "url": "/demos/highcharts/line-labels"
+          },
+          {
+            "directory": false,
+            "key": "line-log-axis",
+            "name": "Line Log Axis",
+            "url": "/demos/highcharts/line-log-axis"
+          },
+          {
+            "directory": false,
+            "key": "line-zoomable",
+            "name": "Line Zoomable",
+            "url": "/demos/highcharts/line-zoomable"
+          },
+          {
+            "directory": false,
+            "key": "pie-basic",
+            "name": "Pie Basic",
+            "url": "/demos/highcharts/pie-basic"
+          },
+          {
+            "directory": false,
+            "key": "pie-index",
+            "name": "Pie Index",
+            "url": "/demos/highcharts/pie-index"
+          },
+          {
+            "directory": false,
+            "key": "pie-monochrome",
+            "name": "Pie Monochrome",
+            "url": "/demos/highcharts/pie-monochrome"
+          },
+          {
+            "directory": false,
+            "key": "pie-semi-circle",
+            "name": "Pie Semi Circle",
+            "url": "/demos/highcharts/pie-semi-circle"
+          },
+          {
+            "directory": false,
+            "key": "spline-inverted",
+            "name": "Spline Inverted",
+            "url": "/demos/highcharts/spline-inverted"
+          },
+          {
+            "directory": false,
+            "key": "spline-irregular-time",
+            "name": "Spline Irregular Time",
+            "url": "/demos/highcharts/spline-irregular-time"
+          },
+          {
+            "directory": false,
+            "key": "spline-plot-bands",
+            "name": "Spline Plot Bands",
+            "url": "/demos/highcharts/spline-plot-bands"
+          },
+          {
+            "directory": false,
+            "key": "spline-symbols",
+            "name": "Spline Symbols",
+            "url": "/demos/highcharts/spline-symbols"
+          }
+        ],
+        "directory": true,
+        "key": "highcharts",
+        "name": "Highcharts",
+        "url": "/demos/highcharts"
+      },
+      {
+        "directory": false,
+        "key": "layout-banding-demo",
+        "name": "Layout Banding Demo",
+        "url": "/demos/layout-banding-demo"
+      },
+      {
         "directory": false,
         "key": "layout-default-demo",
         "name": "Layout Default Demo",
         "url": "/demos/layout-default-demo"
-      },
-      {
-        "directory": false,
-        "key": "layout-employee-portal-homepage-demo",
-        "name": "Layout Employee Portal Homepage Demo",
-        "url": "/demos/layout-employee-portal-homepage-demo"
-      },
-      {
-        "directory": false,
-        "key": "layout-employee-portal-innerpage-demo",
-        "name": "Layout Employee Portal Innerpage Demo",
-        "url": "/demos/layout-employee-portal-innerpage-demo"
       },
       {
         "directory": false,
@@ -471,33 +549,9 @@
       },
       {
         "directory": false,
-        "key": "product-header-sliding-nav-demo",
-        "name": "Product Header Sliding Nav Demo",
-        "url": "/demos/product-header-sliding-nav-demo"
-      },
-      {
-        "directory": false,
-        "key": "product-header-version-1",
-        "name": "Product Header Version 1",
-        "url": "/demos/product-header-version-1"
-      },
-      {
-        "directory": false,
-        "key": "product-header-version-2",
-        "name": "Product Header Version 2",
-        "url": "/demos/product-header-version-2"
-      },
-      {
-        "directory": false,
-        "key": "product-header-version-3",
-        "name": "Product Header Version 3",
-        "url": "/demos/product-header-version-3"
-      },
-      {
-        "directory": false,
-        "key": "product-header-version-4",
-        "name": "Product Header Version 4",
-        "url": "/demos/product-header-version-4"
+        "key": "product-header",
+        "name": "Product Header",
+        "url": "/demos/product-header"
       },
       {
         "directory": false,
@@ -510,24 +564,18 @@
         "key": "toolbar-version-2",
         "name": "Toolbar Version 2",
         "url": "/demos/toolbar-version-2"
-      },
-      {
-        "directory": false,
-        "key": "toolbar-version-3",
-        "name": "Toolbar Version 3",
-        "url": "/demos/toolbar-version-3"
-      },
-      {
-        "directory": false,
-        "key": "toolbar-version-4",
-        "name": "Toolbar Version 4",
-        "url": "/demos/toolbar-version-4"
       }
     ],
     "directory": true,
     "key": "demos",
     "name": "Demos",
     "url": "/demos"
+  },
+  {
+    "directory": false,
+    "key": "design-principles",
+    "name": "Design Principles",
+    "url": "/design-principles"
   },
   {
     "directory": false,
@@ -574,194 +622,6 @@
     "url": "/error-handling"
   },
   {
-    "children": [
-      {
-        "directory": false,
-        "key": "area-basic",
-        "name": "Area Basic",
-        "url": "/highcharts/area-basic"
-      },
-      {
-        "directory": false,
-        "key": "area-index",
-        "name": "Area Index",
-        "url": "/highcharts/area-index"
-      },
-      {
-        "directory": false,
-        "key": "area-inverted",
-        "name": "Area Inverted",
-        "url": "/highcharts/area-inverted"
-      },
-      {
-        "directory": false,
-        "key": "area-missing",
-        "name": "Area Missing",
-        "url": "/highcharts/area-missing"
-      },
-      {
-        "directory": false,
-        "key": "area-negative",
-        "name": "Area Negative",
-        "url": "/highcharts/area-negative"
-      },
-      {
-        "directory": false,
-        "key": "area-percentage",
-        "name": "Area Percentage",
-        "url": "/highcharts/area-percentage"
-      },
-      {
-        "directory": false,
-        "key": "area-range",
-        "name": "Area Range",
-        "url": "/highcharts/area-range"
-      },
-      {
-        "directory": false,
-        "key": "area-range-line",
-        "name": "Area Range Line",
-        "url": "/highcharts/area-range-line"
-      },
-      {
-        "directory": false,
-        "key": "area-sparkline",
-        "name": "Area Sparkline",
-        "url": "/highcharts/area-sparkline"
-      },
-      {
-        "directory": false,
-        "key": "area-spline",
-        "name": "Area Spline",
-        "url": "/highcharts/area-spline"
-      },
-      {
-        "directory": false,
-        "key": "area-stacked",
-        "name": "Area Stacked",
-        "url": "/highcharts/area-stacked"
-      },
-      {
-        "directory": false,
-        "key": "bar-basic",
-        "name": "Bar Basic",
-        "url": "/highcharts/bar-basic"
-      },
-      {
-        "directory": false,
-        "key": "bar-column-index",
-        "name": "Bar Column Index",
-        "url": "/highcharts/bar-column-index"
-      },
-      {
-        "directory": false,
-        "key": "bar-stacked",
-        "name": "Bar Stacked",
-        "url": "/highcharts/bar-stacked"
-      },
-      {
-        "directory": false,
-        "key": "column-basic",
-        "name": "Column Basic",
-        "url": "/highcharts/column-basic"
-      },
-      {
-        "directory": false,
-        "key": "column-rotated-labels",
-        "name": "Column Rotated Labels",
-        "url": "/highcharts/column-rotated-labels"
-      },
-      {
-        "directory": false,
-        "key": "line-ajax",
-        "name": "Line Ajax",
-        "url": "/highcharts/line-ajax"
-      },
-      {
-        "directory": false,
-        "key": "line-basic",
-        "name": "Line Basic",
-        "url": "/highcharts/line-basic"
-      },
-      {
-        "directory": false,
-        "key": "line-index",
-        "name": "Line Index",
-        "url": "/highcharts/line-index"
-      },
-      {
-        "directory": false,
-        "key": "line-labels",
-        "name": "Line Labels",
-        "url": "/highcharts/line-labels"
-      },
-      {
-        "directory": false,
-        "key": "line-log-axis",
-        "name": "Line Log Axis",
-        "url": "/highcharts/line-log-axis"
-      },
-      {
-        "directory": false,
-        "key": "line-zoomable",
-        "name": "Line Zoomable",
-        "url": "/highcharts/line-zoomable"
-      },
-      {
-        "directory": false,
-        "key": "pie-basic",
-        "name": "Pie Basic",
-        "url": "/highcharts/pie-basic"
-      },
-      {
-        "directory": false,
-        "key": "pie-index",
-        "name": "Pie Index",
-        "url": "/highcharts/pie-index"
-      },
-      {
-        "directory": false,
-        "key": "pie-monochrome",
-        "name": "Pie Monochrome",
-        "url": "/highcharts/pie-monochrome"
-      },
-      {
-        "directory": false,
-        "key": "pie-semi-circle",
-        "name": "Pie Semi Circle",
-        "url": "/highcharts/pie-semi-circle"
-      },
-      {
-        "directory": false,
-        "key": "spline-inverted",
-        "name": "Spline Inverted",
-        "url": "/highcharts/spline-inverted"
-      },
-      {
-        "directory": false,
-        "key": "spline-irregular-time",
-        "name": "Spline Irregular Time",
-        "url": "/highcharts/spline-irregular-time"
-      },
-      {
-        "directory": false,
-        "key": "spline-plot-bands",
-        "name": "Spline Plot Bands",
-        "url": "/highcharts/spline-plot-bands"
-      },
-      {
-        "directory": false,
-        "key": "spline-symbols",
-        "name": "Spline Symbols",
-        "url": "/highcharts/spline-symbols"
-      }
-    ],
-    "directory": true,
-    "key": "highcharts",
-    "name": "Highcharts",
-    "url": "/highcharts"
-  },
-  {
     "directory": false,
     "key": "icon-font",
     "name": "Icon Font",
@@ -774,6 +634,12 @@
         "key": "accordion",
         "name": "Accordion",
         "url": "/objects/accordion"
+      },
+      {
+        "directory": false,
+        "key": "add-remove-plan-component",
+        "name": "Add Remove Plan Component",
+        "url": "/objects/add-remove-plan-component"
       },
       {
         "directory": false,
@@ -792,12 +658,6 @@
         "key": "auto-suggest",
         "name": "Auto Suggest",
         "url": "/objects/auto-suggest"
-      },
-      {
-        "directory": false,
-        "key": "batch-actions",
-        "name": "Batch Actions",
-        "url": "/objects/batch-actions"
       },
       {
         "directory": false,
@@ -830,10 +690,56 @@
         "url": "/objects/date-range"
       },
       {
+        "children": [
+          {
+            "directory": false,
+            "key": "fat-footer",
+            "name": "Fat Footer",
+            "url": "/objects/footer/fat-footer"
+          },
+          {
+            "directory": false,
+            "key": "footer",
+            "name": "Footer",
+            "url": "/objects/footer/footer"
+          }
+        ],
+        "directory": true,
+        "key": "footer",
+        "name": "Footer",
+        "url": "/objects/footer"
+      },
+      {
         "directory": false,
-        "key": "descriptive-hover",
-        "name": "Descriptive Hover",
-        "url": "/objects/descriptive-hover"
+        "key": "form-worksheet",
+        "name": "Form Worksheet",
+        "url": "/objects/form-worksheet"
+      },
+      {
+        "children": [
+          {
+            "directory": false,
+            "key": "masthead",
+            "name": "Masthead",
+            "url": "/objects/header/masthead"
+          },
+          {
+            "directory": false,
+            "key": "product-header",
+            "name": "Product Header",
+            "url": "/objects/header/product-header"
+          },
+          {
+            "directory": false,
+            "key": "toolbar-header",
+            "name": "Toolbar Header",
+            "url": "/objects/header/toolbar-header"
+          }
+        ],
+        "directory": true,
+        "key": "header",
+        "name": "Header",
+        "url": "/objects/header"
       },
       {
         "directory": false,
@@ -855,9 +761,39 @@
       },
       {
         "directory": false,
+        "key": "item-selection-panel",
+        "name": "Item Selection Panel",
+        "url": "/objects/item-selection-panel"
+      },
+      {
+        "directory": false,
+        "key": "layout-banding",
+        "name": "Layout Banding",
+        "url": "/objects/layout-banding"
+      },
+      {
+        "directory": false,
+        "key": "layout-hero-banner",
+        "name": "Layout Hero Banner",
+        "url": "/objects/layout-hero-banner"
+      },
+      {
+        "directory": false,
+        "key": "layout-login",
+        "name": "Layout Login",
+        "url": "/objects/layout-login"
+      },
+      {
+        "directory": false,
         "key": "load-animation",
         "name": "Load Animation",
         "url": "/objects/load-animation"
+      },
+      {
+        "directory": false,
+        "key": "message-boxes",
+        "name": "Message Boxes",
+        "url": "/objects/message-boxes"
       },
       {
         "directory": false,
@@ -872,6 +808,20 @@
         "url": "/objects/modal"
       },
       {
+        "children": [
+          {
+            "directory": false,
+            "key": "navbar",
+            "name": "Navbar",
+            "url": "/objects/navigation/navbar"
+          }
+        ],
+        "directory": true,
+        "key": "navigation",
+        "name": "Navigation",
+        "url": "/objects/navigation"
+      },
+      {
         "directory": false,
         "key": "pagination",
         "name": "Pagination",
@@ -879,9 +829,9 @@
       },
       {
         "directory": false,
-        "key": "primary-summary",
-        "name": "Primary Summary",
-        "url": "/objects/primary-summary"
+        "key": "pricing-table",
+        "name": "Pricing Table",
+        "url": "/objects/pricing-table"
       },
       {
         "directory": false,
@@ -939,27 +889,27 @@
       },
       {
         "directory": false,
-        "key": "pull-quote",
-        "name": "Pull Quote",
-        "url": "/objects/pull-quote"
-      },
-      {
-        "directory": false,
         "key": "scroll-pane",
         "name": "Scroll Pane",
         "url": "/objects/scroll-pane"
       },
       {
         "directory": false,
-        "key": "secondary-summary",
-        "name": "Secondary Summary",
-        "url": "/objects/secondary-summary"
+        "key": "showcase-panel",
+        "name": "Showcase Panel",
+        "url": "/objects/showcase-panel"
       },
       {
         "directory": false,
         "key": "slider",
         "name": "Slider",
         "url": "/objects/slider"
+      },
+      {
+        "directory": false,
+        "key": "summary-containers",
+        "name": "Summary Containers",
+        "url": "/objects/summary-containers"
       },
       {
         "directory": false,

@@ -1,44 +1,45 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.6 - Accordion Partial
-// DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// Mercer Evolution - Core v2.7 - Accordion Partial
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+$evo-accordion-border-color: $gray-mid !default;
+$evo-accordion-navigation-font-color: $gray-darkest !default;
+$evo-accordion-navigation-active-background-color: $gray-lightest !default;
+
 
 @if $use-accordion == true{
 
-	.evo-accordion.ui-accordion	{
-								margin-bottom: $evo-base-margin;
-								border: 1px solid $accordionBorderColor;
-								border-bottom: 0;
-		.ui-accordion-header		{
-									@include clearfix;
-									padding: 10px $evo-base-padding 8px $evo-base-padding;
-									border-bottom: 1px solid $accordionBorderColor;
-									background-color: $accordionHeaderBackgroundColor;
-									color: $accordionHeaderFontColor;
-									cursor: pointer;
-			&.ui-accordion-icons		{
-				.ui-accordion-header-icon	{
-											@extend [class^="evo-icon-"];
-											float: right;
-											position: relative;
-											margin-left: $evo-base-margin;
-											top: 1px;
-											cursor: pointer;
-											color: $accordionHeaderIconColor;
-											}
+	.evo-accordion			{
+							margin-bottom: $evo-base-margin;
+							margin-left: 0;
+		.evo-accordian-navigation
+								{
+								@include border-radius($global-radius);
+								border: 1px solid $evo-accordion-border-color;
+								margin-bottom: 10px !important;
+			a						{
+									color: $evo-accordion-navigation-font-color;
+									font-family: $evo-font-bold-family;
+									text-decoration: none;
+				[class*="evo-icon"]		{
+										margin-right: rem-calc(3);
+										top: rem-calc(1);
 										}
 									}
-		.ui-accordion-content		{
-									padding: $evo-base-padding $evo-base-padding 0 $evo-base-padding;
-									border-bottom: 1px solid $accordionBorderColor;
-									background-color: $accordionContentBackgroundColor;
-									}
+			.evo-content			{padding-top: 0;}
 								}
+		.evo-accordian-navigation.active>a
+								{background: $evo-accordion-navigation-active-background-color;}
+							}
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
 	@if $use-medium-up-mediaquery == true {
 		
 		@media #{$medium-up} {

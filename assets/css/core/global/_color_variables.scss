@@ -1,7 +1,7 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.6 - Global Color Variables Partial
-// DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// Mercer Evolution - Core v2.7 - Global Color Variables Partial
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
 // ==========================================================================================
@@ -14,13 +14,17 @@ $black:										#000000 !default;
 
 // GRAY COLORS
 // ------------------------------------------------------------------------------------------
-$gray-darkest:								#202020 !default;
-$gray-darker:								#37424A !default;
+
+$gray:										#20262B !default;
+$gray-darkest:								#37424A !default;
+$gray-darker:								#2C2C2C !default;
 $gray-dark:									#404040 !default;
-$gray-mid:									#808080 !default;
-$gray-light:								#BFBFBF !default;
+$gray-mid-dark:								#808080 !default;
+$gray-mid:									#BFBFBF !default;
+$gray-mid-light:							#D7D7D7 !default;
+$gray-light:								#E6E6E6 !default;
 $gray-lighter:								#EEEEEE !default;
-$gray-lightest:								#F8F8F8 !default;
+$gray-lightest:								#F5F5F5 !default;
 
 
 // ==========================================================================================
@@ -119,6 +123,9 @@ $turquoise-light:							#A7D9C8 !default;
 // BRAND COLORS
 // ==========================================================================================
 
+// HIGHLIGHT COLOR
+$evo-highlight-color:						#F7F0B2 !default;
+
 // ICONS
 $iconFontColorWhite:						$white !default;
 $iconFontColorBlack:						$black !default;
@@ -142,26 +149,6 @@ $iconFontAdvGrayDarkBackgroundColor:		$gray-dark !default;
 $iconFontAdvDisabledBackgroundColor:		$gray-light !default;
 $iconFontAdvDisabledShadowColor:			$gray-light !default;
 
-// MESSAGE BOXES
-$errorBackgroundColor:						$garnet-light !default;
-$errorBorderColor:							$garnet-dark !default;
-$errorFontColor:							$gray-dark !default;
-$errorHdr:									$garnet !default;
-
-$attentionBoxBackgroundColor:				$topaz-light !default;
-$attentionBoxBorderColor:					$topaz-dark !default;
-$attentionBoxFontColor:						$gray-dark !default;
-$attentionHdr:								$topaz !default;
-
-$infoBoxBackgroundColor:					$sapphire-light !default;
-$infoBoxBorderColor:						$sapphire-dark !default;
-$infoBoxFontColor:							$gray-dark !default;
-$infoHdr:									$sapphire !default;
-
-$confirmationBoxBackgroundColor:			$emerald-light !default;
-$confirmationBoxBorderColor:				$emerald-dark !default;
-$confirmationBoxFontColor:					$gray-dark !default;
-$confirmationHdr:							$emerald !default;
 
 // PROFILE CONTAINERS
 $profileContainerUserHdrBackgroundColor:	$sapphire-mid !default;
@@ -185,13 +172,16 @@ $color-palette: (
 	black: 					(color: $black),
 
 	// GRAY COLORS
-	gray-darkest: 			(color: $gray-darkest),
-	gray-darker: 			(color: $gray-darker),
-	gray-dark: 				(color: $gray-dark),
-	gray-mid: 				(color: $gray-mid),
-	gray-light: 			(color: $gray-light),
-	gray-lighter: 			(color: $gray-lighter),
-	gray-lightest: 			(color: $gray-lightest),
+	gray:					(color: $gray),
+	gray-darkest:			(color: $gray-darkest),
+	gray-darker:			(color: $gray-darker),
+	gray-dark:				(color: $gray-dark),
+	gray-mid-dark:			(color: $gray-mid-dark),
+	gray-mid:				(color: $gray-mid),
+	gray-mid-light:			(color: $gray-mid-light),
+	gray-light:				(color: $gray-light),
+	gray-lighter:			(color: $gray-lighter),
+	gray-lightest:			(color: $gray-lightest),
 
 	// BLUE GRAY COLORS
 	blue-gray: 				(color: $blue-gray),
@@ -265,83 +255,3 @@ $color-palette: (
 	turquoise-light:		(color: $turquoise-light)
 
 );
-
-$color-palette-buttons: (
-
-	// BASE COLORS
-	transparent: 			(color: $transparent),
-	white: 					(color: $white),
-	black: 					(color: $black),
-
-	// GRAY COLORS
-	gray-darkest: 			(color: $gray-darkest),
-	gray-darker: 			(color: $gray-darker),
-	gray-dark: 				(color: $gray-dark),
-	gray-mid: 				(color: $gray-mid),
-	gray-light: 			(color: $gray-light),
-	gray-lighter: 			(color: $gray-lighter),
-	gray-lightest: 			(color: $gray-lightest),
-
-	// SAPPHIRE COLORS
-	sapphire: 				(color: $sapphire),
-	sapphire-dark: 			(color: $sapphire-dark),
-
-	// IOLITE COLORS
-	iolite: 				(color: $iolite),
-	iolite-dark: 			(color: $iolite-dark),
-
-	// AMETHYST COLORS
-	amethyst: 				(color: $amethyst),
-	amethyst-dark: 			(color: $amethyst-dark),
-
-	// RUBY COLORS
-	ruby: 					(color: $ruby),
-	ruby-dark: 				(color: $ruby-dark),
-
-	// GARNET COLORS
-	garnet: 				(color: $garnet),
-	garnet-dark: 			(color: $garnet-dark),
-
-	// CITRINE COLORS
-	citrine: 				(color: $citrine),
-	citrine-dark:			(color: $citrine-dark),
-
-	// TOPAZ COLORS
-	topaz: 					(color: $topaz),
-	topaz-dark:				(color: $topaz-dark),
-
-	// PERIDOT COLORS
-	peridot: 				(color: $peridot),
-	peridot-dark:			(color: $peridot-dark),
-
-	// EMERALD COLORS
-	emerald: 				(color: $emerald),
-	emerald-dark:			(color: $emerald-dark),
-
-	// TURQUOISE COLORS
-	turquoise: 				(color: $turquoise),
-	turquoise-dark:			(color: $turquoise-dark)
-
-);
-
-// ==========================================================================================
-// CUSTOM SPOT COLORS FOR ELEMENTS
-// ==========================================================================================
-
-// LOOP TO GET COLORS FROM GLOBAL COLOR PALETTE
-@each $color-name, $color in $color-palette 
-							{
-
-	// CUSTOM SPOT FONT COLOR FOR TEXT AND LINKS
-	[data-evo-font-color="#{$color-name}"]
-								{
-								color: map-get($color, color) !important;
-								}
-
-	// CUSTOM SPOT BACKGROUND COLOR FOR CONTAINERS AND BOXES
-	[data-evo-background-color="#{$color-name}"]
-								{
-								background-color: map-get($color, color);
-								}
-
-							}

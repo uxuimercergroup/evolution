@@ -1,25 +1,39 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.6 - Mini Filter Partial
-// DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// Mercer Evolution - Core v2.7 - Mini Filter Partial
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+$evo-mini-filter-active-padding-left-right: 7px !default;
+$evo-mini-filter-active-bgcolor: $topaz-light !default;
+$evo-mini-filter-active-font-color: $black !default;
+
+$miniFilterMarginBottom: 6px !default;
+$miniFilterDropDownMaxWidth: 300px !default;
+
 
 @if $use-mini-filter == true{
 
 	.evo-mini-filter						{
 											margin: 0 0 $miniFilterMarginBottom 0;
-		dt										{
-												font-family: $evo-font-medium-stack;
-												color: $miniFilterLabelFontColor;
+											font-size: rem-calc(14);
+		.evo-mini-filter-label					{
+												border-right: 0;
+												font-family: $evo-font-medium-family;
+												margin-left: 0 !important;
+												padding-right: 0;
 												}
-		dd										{
-			a.active								{
-													padding: $miniFilterActivePaddingTopBottom $miniFilterActivePaddingLeftRight;
-													background-color: $miniFilterActiveBackgroundColor;
-													color: $miniFilterActiveFontColor;
-													text-decoration: none;
+		.evo-mini-filter-active					{
+												background-color: $evo-mini-filter-active-bgcolor;
+												color: $evo-mini-filter-active-font-color;
+												padding: 1px $evo-mini-filter-active-padding-left-right 2px $evo-mini-filter-active-padding-left-right;
+												text-decoration: none;
+			&:hover									{
 													cursor: default;
-				&:hover									{text-decoration: none;}
+													text-decoration: none;
 													}
 												}
 											}
@@ -32,22 +46,11 @@
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
 	@if $use-medium-up-mediaquery == true {
 		
 		@media #{$medium-up} {
 
-			.evo-mini-filter				{
-											margin: 0;
-				dt, dd							{
-												font-size: $miniFilterFontSizeLargeBreakpoint;
-												line-height: $miniFilterFontSizeLargeBreakpoint;
-												}
-				dd								{
-												padding-left: 5px;
-												margin-right: 2px;
-												}
-											}
 
 		}
 		

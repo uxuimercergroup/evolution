@@ -1,141 +1,113 @@
 {% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
-{% block content %}
 
+{% block content %}
 <!-- PAGE TITLE - BEGINS -->
-	<h1>{{ model.title }}</h1>
+	<section class="row">
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+		</div>
+	</section>
 <!-- PAGE TITLE - ENDS -->
 
 <!-- CONTENT SECTION - BEGINS -->
-	<section class="col-24 evo-alternate-views-badge evo-ref-alternate-views-badge" data-alternate-views-badge="js-evo-ref-alternate-views-badge">
+	<section class="row">
+		<div class="small-12 columns">
+			{% include '/reference/reference-content' %}
 
-		{% include '/reference/reference-content' %}
+		<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
+			{% if model.reference-get-code == "true" %}
+				<div id="evo-ref-alternate-views-badge-content-panel-get-code">
 
-	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - BEGINS -->
-		{% if model.reference-get-code == "true" %}
-			<div id="evo-ref-alternate-views-badge-content-panel-get-code">
-
-				<h3 class="evo-hdr-rule">HTML</h3>
-
-				{% if model.reference-example-versions == "true" %}
-					<h4>{{ model.reference-example-version-label }}</h4>
-				{% endif %}
-				{{ model.reference-code-html-content-block-pre }}
-				{{ global.reference-get-code-start-tag }}{% include '/objects/scroll-pane' %}{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-html-content-block-post }}
-
-				{% if model.reference-example-versions == "true" %}
-					<h4>{{ model.reference-example-version-label-2 }}</h4>
-				{% endif %}
-				{{ model.reference-code-html-content-block-pre-2 }}
-				{{ global.reference-get-code-start-tag }}{% include '/objects/scroll-pane-horizontal' %}{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-html-content-block-post-2 }}
-
-				{% if model.reference-example-versions == "true" %}
-					<h4>{{ model.reference-example-version-label-3 }}</h4>
-				{% endif %}
-				{{ model.reference-code-html-content-block-pre-3 }}
-				{{ global.reference-get-code-start-tag }}{% include '/objects/scroll-pane-horizontal-vertical' %}{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-html-content-block-post-3 }}
-
-				{% if model.reference-example-versions == "true" %}
-					<h4>{{ model.reference-example-version-label-4 }}</h4>
-				{% endif %}
-				{{ model.reference-code-html-content-block-pre-4 }}
-				{{ global.reference-get-code-start-tag }}{% include '/objects/scroll-pane-custom' %}{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-html-content-block-post-4 }}
-
-				{% if model.reference-code-js == "true" %}
-
-					<h3 class="evo-hdr-rule">JS</h3>
+					<h3 class="evo-hdr-rule">HTML</h3>
 
 					{% if model.reference-example-versions == "true" %}
 						<h4>{{ model.reference-example-version-label }}</h4>
 					{% endif %}
-					{{ model.reference-code-js-content-block-pre }}
-					{{ global.reference-get-code-start-tag }}{% include '/js/objects/scroll-pane' %}{{ global.reference-get-code-end-tag }}
-					{{ model.reference-code-js-content-block-post }}
+					{{ model.reference-code-html-content-block-pre }}
+					{{ global.reference-get-code-start-tag }}{% include '/objects/scroll-pane' %}{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-html-content-block-post }}
 
-				{% endif %}
+					{% if model.reference-example-versions == "true" %}
+						<h4>{{ model.reference-example-version-label-2 }}</h4>
+					{% endif %}
+					{{ model.reference-code-html-content-block-pre-2 }}
+					{{ global.reference-get-code-start-tag }}{% include '/objects/scroll-pane-horizontal' %}{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-html-content-block-post-2 }}
 
-			</div>
-		{% endif %}
-	<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
+					{% if model.reference-example-versions == "true" %}
+						<h4>{{ model.reference-example-version-label-3 }}</h4>
+					{% endif %}
+					{{ model.reference-code-html-content-block-pre-3 }}
+					{{ global.reference-get-code-start-tag }}{% include '/objects/scroll-pane-horizontal-vertical' %}{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-html-content-block-post-3 }}
 
+					{% if model.reference-example-versions == "true" %}
+						<h4>{{ model.reference-example-version-label-4 }}</h4>
+					{% endif %}
+					{{ model.reference-code-html-content-block-pre-4 }}
+					{{ global.reference-get-code-start-tag }}{% include '/objects/scroll-pane-custom' %}{{ global.reference-get-code-end-tag }}
+					{{ model.reference-code-html-content-block-post-4 }}
+
+					{% if model.reference-code-js == "true" %}
+
+						<h3 class="evo-hdr-rule">JS</h3>
+
+						{% if model.reference-example-versions == "true" %}
+							<h4>{{ model.reference-example-version-label }}</h4>
+						{% endif %}
+						{{ model.reference-code-js-content-block-pre }}
+						{{ global.reference-get-code-start-tag }}{% include '/js/objects/scroll-pane' %}{{ global.reference-get-code-end-tag }}
+						{{ model.reference-code-js-content-block-post }}
+
+					{% endif %}
+
+				</div>
+			{% endif %}
+		<!-- CONTENT SECTION - CONTENT PANEL - GET CODE - ENDS -->
+		</div>
 	</section>
 <!-- CONTENT SECTION - ENDS -->
 
 <!-- EXAMPLE SECTION - BEGINS -->
-	<section class="col-24 evo-ref-example">
+	<section class="row">
+		<div class="small-12 columns">
 
-	<!-- EXAMPLE SECTION - HEADER - BEGINS -->
-		<h3 class="evo-hdr-dbl-rule evo-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
-	<!-- EXAMPLE SECTION - HEADER - ENDS -->
+		<!-- EXAMPLE SECTION - HEADER - BEGINS -->
+			<h3 class="evo-hdr-dbl-rule evo-ref-example-hdr">{{ global.reference-example-hdr }}</h3>
+		<!-- EXAMPLE SECTION - HEADER - ENDS -->
 
-	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
-		<section class="evo-ref-example-content">
-
-			<div class="col-24 evo-margin-bottom">
-
-			<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-
-				{% if model.reference-example-versions == "true" %}
-					<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
-				{% endif %}
-
-				{% include '/objects/scroll-pane' %}
-
-			<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-			</div>
-
-			<div class="col-24 evo-margin-bottom">
-				<div class="col-12 first">
-
+			<section class="row">
+				<div class="small-12 columns">
 				<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-
 					{% if model.reference-example-versions == "true" %}
 						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
 					{% endif %}
+					{% include '/objects/scroll-pane' %}
+				<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+				</div>
+			</section>
 
+			<br><br>
+
+			<section class="row">
+				<div class="small-6 columns">
+				<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
+					{% endif %}
 					{% include '/objects/scroll-pane-horizontal' %}
-
 				<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
 				</div>
-
-				<div class="col-12">
-
+				<div class="small-6 columns">
 				<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-
 					{% if model.reference-example-versions == "true" %}
-						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
+						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
 					{% endif %}
-
 					{% include '/objects/scroll-pane-horizontal-vertical' %}
-
 				<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
 				</div>
-			</div>
-
-			<div class="col-24 evo-margin-bottom">
-
-				<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-
-					{% if model.reference-example-versions == "true" %}
-						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
-					{% endif %}
-
-					{% include '/objects/scroll-pane-custom' %}
-
-				<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-			</div>
-
-		</section>
-	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
-
+			</section>
+		</div>
 	</section>
 <!-- EXAMPLE SECTION - ENDS -->
-
 {% endblock %}

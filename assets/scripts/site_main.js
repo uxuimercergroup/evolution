@@ -7,22 +7,170 @@
 		jQuery('html.evo-mod-js').show();
 	}
 
-	// REFERENCE PAGES
-
-		// DEVELOPER - SLIDING DRAWER
-		var evoRefSlidingDrawer = jQuery.jPanelMenu({
-			animated: true,
-			closeOnContentClick: false,
-			duration: 450,
-			direction: 'left',
-			menu: '.js-evo-ref-sliding-drawer',
-			keyboardShortcuts: false,
-			trigger: '.js-evo-ref-sliding-drawer-btn'
+	// ACCORDION ICON TOGGLE
+	var accordionIconToggle = function(){
+		jQuery('.accordion a').on('click',function(){
+			jQuery('.active a').children('.evo-icon-minus-circle, .evo-icon-plus-circle').toggleClass('evo-icon-minus-circle evo-icon-plus-circle');
+			jQuery(this).children('.evo-icon-minus-circle, .evo-icon-plus-circle').toggleClass('evo-icon-minus-circle evo-icon-plus-circle');
 		});
+	};
 
+	// ITEM SELECTION CLASS TOGGLE
+	var evoItemSelectionClassToggle = function (){
+		jQuery('.js-evo-category-highlight').click(function(event) {
+			jQuery(this).toggleClass('evo-category-highlight');
+		});
+	}
+
+	// ADD/REMOVE PLAN COMPONENT DISABLE/ENABLE
+	var evoShowPlanComponent = function (){
+		jQuery('.js-evo-add-remove-plan-component-disable').click(function() {
+			var id = 'evo-add-remove-plan-component-item-' + jQuery(this).attr('data-evo-add-remove-plan-component-item-toggle');
+			jQuery('#' + id).show();
+			jQuery(this).css('visibility', 'hidden');
+			return false;
+		});
+	};
+
+	var evoHidePlanComponent = function (){
+		jQuery('.js-evo-add-remove-plan-component-enable').click(function() {
+			jQuery(this).parent().hide();
+			jQuery('.js-evo-add-remove-plan-component-disable').css('visibility', 'visible');
+		});
+	};
+
+	// FORM TOGGLE CONTENT
+	var evoFormToggleContent = function(){
+		jQuery('.js-evo-toggle-form-content').focus(function(){
+			var id = 'form-item' + jQuery(this).attr('data-evo-form-toggle');
+			jQuery('#' + id).fadeToggle(2000);
+			return false;
+		});
+	}
+
+	// SELECT DIV BOX
+	var selectDropDown = function() {
+		jQuery('.dropdown').click(function() {
+			jQuery(this).children('ul').slideToggle(150);
+			if (jQuery(this).hasClass('open')) {
+				jQuery(this).removeClass('open');
+				return false;
+			} else {
+				jQuery(this).addClass('open');
+				return false;
+			}
+			return false;
+			}).hover(function(){},function() {
+				jQuery(this).children('ul').slideUp(150);
+				jQuery(this).removeClass('open');
+			});
+
+			jQuery('.dropdown ul li').click(function() {
+				var sitem = jQuery(this).html();
+				var sid = jQuery(this).attr('id');
+				var id = 'form-item' + jQuery(this).attr('data-evo-form-toggle');
+
+				jQuery('#' + id).fadeToggle(2000);
+				jQuery(this).siblings('li').removeClass('selected');
+				jQuery(this).addClass('selected');
+				jQuery(this).parent('ul').siblings('span.selected').html(sitem);
+				jQuery(this).parent('ul').siblings('input').val(sid);
+
+
+			});
+	};
+
+
+	// RANGE SLIDER - CONTRIBUTIONS
+
+	// Pass data attribute value of slider range object
+	var evoSliderContributions = function(objectDataValue) {
+		
+		// Variable to define slider range object based on data attribute value
+		var sliderDataValue = jQuery('[data-evo-slider='+objectDataValue+']');
+
+		// Slider Contribution values
+		var userContributionValue = 5;
+		var companyContributionValue = 3;
+		var peerContributionValue = 7;
+
+
+		// Slider Max value
+		var sliderMax = 20;
+
+		// Slider
+		sliderDataValue.slider({
+			animate: true, // Animated slide on/off
+			min: 0, // Min value to show on slider
+			max: sliderMax, // Max value to show on slider
+			orientation: "horizontal", // Orientation: horizontal (default) or vertical
+			step: 1, // Determines the size or amount of each interval or step the slider takes between the min and max
+			value: userContributionValue, // Start value for the slider handle
+			range: "min",
+			slide: function(event, ui){
+				jQuery('#amount').html(ui.value);
+			}
+		});
+		jQuery('#amount').html(jQuery(sliderDataValue).slider('value'));
+
+		// Slider Markers
+		var sliderMultiplier = 100 / sliderMax;
+		jQuery('.js-evo-slider-marker-user').css({ marginLeft: (userContributionValue * sliderMultiplier) + '%' });
+		jQuery('.js-evo-slider-marker-company').css({ marginLeft: (companyContributionValue * sliderMultiplier)+'%' });
+		jQuery('.js-evo-slider-marker-peers').css({ marginLeft: (peerContributionValue * sliderMultiplier) + '%' });
+	};
+	
 
 	// LIBRARY EXAMPLES
 	//----------------------------------------------------------------------------------------------------
+		
+		// DATATABLES
+		jQuery('#evo-datatble-example').DataTable({
+			searching: true,
+
+			order: [[1, 'desc']],
+			columns: [
+    			{orderable: false},
+    			{orderable: true},
+    			{orderable: true},
+    			{orderable: true},
+    			{orderable: true},
+    			{orderable: true}
+			],
+
+			language: {
+			    sSearch: '',
+			    searchPlaceholder: "Filters",
+			    sSearch: '<i class="evo-icon-filter" id="js-mul-advanced-filter-example-action-btn" title="Advanced Filter"></i>'
+			}
+		});
+
+		// FILTER ONLY EXAMPLE
+		jQuery('#evo-datatble-filter-only-example').DataTable({
+			searching: true,
+			paging: false,
+			info: false,
+			ordering: false,
+			language: {
+			    sSearch: '',
+			    searchPlaceholder: "Filters"
+			}
+		});
+
+		// ADVANCED FILTER EXAMPLE
+		jQuery('#evo-datatble-adv-filter-example').DataTable({
+			searching: true,
+			paging: false,
+			info: false,
+			ordering: false,
+			language: {
+			    sSearch: '',
+			    searchPlaceholder: "Filters",
+			    sSearch: '<i class="evo-icon-filter" data-reveal-id="advanced-filter" title="Advanced Filter"></i>'
+			}
+		});
+
+
 
 		// CONTENT MODAL
 
@@ -104,7 +252,6 @@ $(document).foundation({
 	// FOUNDATION INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
 
-	
 
 });
 
@@ -112,31 +259,6 @@ $(function() {
 
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
-
-		// REFERENCE PAGES
-
-			// ALTERNATE VIEWS BADGE
-			// evoAlternateViewsBadge('js-evo-ref-alternate-views-badge', 'left');
-
-			// DEVELOPER - SLIDING DRAWER INIT
-			evoRefSlidingDrawer.on();
-
-			// DEVELOPER - SLIDING DRAWER - SCROLL PANE
-			var windowHeight = jQuery(window).height();
-			evoScrollPaneCustom('js-evo-ref-sliding-drawer-scrollpane',{
-				setHeight: windowHeight,
-				advanced:{
-					updateOnContentResize: true
-				}
-			});
-
-			// DEVELOPER - SLIDING DRAWER - SCROLL PANE - CHANGE ON RESIZE OF WINDOW
-			jQuery(window).bind('resize', resizeWindow);
-			function resizeWindow(e) {
-				var newWindowHeight = jQuery(window).height();
-				jQuery('.js-evo-ref-sliding-drawer-scrollpane').css('height', newWindowHeight);
-			}
-
 
 		// JS LIBRARY INITS
 
@@ -154,26 +276,8 @@ $(function() {
 
 		// ACCORDION
 
-			// Accordion - default
-			// evoAccordion('js-evo-accordion-example');
-
 			// Accordion - icons
-			/*
-			evoAccordion('js-evo-accordion-icons-example', {
-				icons: {'header': 'evo-icon-plus-circle', 'activeHeader': 'evo-icon-minus-circle'}
-			});
-			*/
-
-		// ALTERNATE VIEWS BADGE
-
-			// Alternate views badge - full
-			// evoAlternateViewsBadge('js-evo-alternate-views-badge-full-example', 'center');
-
-			// Alternate views badge - text only
-			// evoAlternateViewsBadge('js-evo-alternate-views-badge-text-only-example', 'left');
-
-			// Alternate views badge - text only
-			// evoAlternateViewsBadge('js-evo-alternate-views-badge-icon-only-example', 'right');
+			accordionIconToggle();
 
 		// AUTO SUGGEST
 			
@@ -440,6 +544,26 @@ $(function() {
 				range: 'max'
 			});
 
+		// ITEM SELECTION CLASS TOGGLE
+			evoItemSelectionClassToggle();
+
+		// ADD/REMOVE PLAN COMPONENT DISABLE/ENABLE
+			evoHidePlanComponent();
+			evoShowPlanComponent();
+
+		// FORM TOGGLE CONTENT
+			evoFormToggleContent();
+
+		// SELECT DIV BOX
+			selectDropDown();
+
+		// ADD/REMOVE PLAN COMPONENT CAROUSEL
+			evoCarousel('js-evo-add-remove-plan-component-carousel',{
+				autoPlay: false
+			});
+
+		// RANGE SLIDER - CONTRIBUTIONS
+			evoSliderContributions('js-evo-slider');
 
 		// TABS
 

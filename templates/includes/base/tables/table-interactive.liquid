@@ -1,42 +1,27 @@
 <!-- INTERACTIVE DATA TABLE - BEGINS -->
 <div class="evo-table-small-mediaquery">
-	<table class="evo-table evo-footable evo-table-borders evo-table-striped evo-table-hover" data-filter="#filter" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
-		<caption>
-			<div class="col-19 first">&nbsp;</div>
-			<div class="col-5 evo-tbl-data-filter">
-				{% include '/base/tables/table-quick-filter' %}
-			</div>
-		</caption>
+	<table cellpadding="0" cellspacing="0" border="0" class="tdisplay evo-table evo-table-hover" id="evo-datatble-example">
 		<thead>
 			<tr>
-				<th class="col-1" scope="col" data-sort-ignore="true">
-					<input type="checkbox" class="js-evo-select-all-checkboxes">
-				</th>
-				<th class="col-5" scope="col"><a href="javascript:;">Task</a></th>
-				<th class="col-2" scope="col"><a href="javascript:;">Type</a></th>
-				<th class="col-7" scope="col">
-					<a href="javascript:;">Client</a> |
-					<a href="javascript:;">Location</a>
-				</th>
-				<th class="col-3" data-sort-initial="true" scope="col"><a href="javascript:;">Assigned To</a></th>
-				<th class="col-3 evo-nowrap evo-align-right" scope="col"><a href="javascript:;">Start Date</a></th>
-				<th class="col-3 evo-nowrap evo-align-right" scope="col"><a href="javascript:;">End Date</a></th>
+				<th scope="column"><input type="checkbox" class="js-evo-select-all-checkboxes"></th>
+				<th scope="column"><a href="javascript:;">Rendering engine</a></th>
+				<th scope="column"><a href="javascript:;">Browser</a></th>
+				<th scope="column"><a href="javascript:;">Platform(s)</a></th>
+				<th scope="column" class="text-center"><a href="javascript:;">Engine Version</a></th>
+				<th scope="column" class="text-center"><a href="javascript:;">CSS Grade</a></th>
 			</tr>
 		</thead>
 		<tbody>
-
-			{% for item in global.table_data %}
+		{% for item in global.browser_data %}
 			<tr>
-				<td>{{ item.checkbox }}</td>
-				<td>{{ item.task }}</td>
-				<td>{{ item.type_global }}</td>
-				<td><a href="javascript:;">{{ item.company }}</a> | {{ item.location}}</td>
-				<td>{{ item.abbrev_first_name}} {{ item.last_name}}</td>
-				<td class="evo-nowrap evo-align-right">{{ item.start_date }}</td>
-				<td class="evo-nowrap evo-align-right">{{ item.end_date }}</td>
+				<td scope="row" class="checkbox"><input type="checkbox" class="js-evo-select-all-checkbox-item"></td>
+				<td scope="row">{{ item.renderingEngine }}</td>
+				<td scope="row">{{ item.browser }}</td>
+				<td scope="row">{{ item.platform }}</td>
+				<td scope="row" class="text-center">{{ item.engine }}</td>
+				<td scope="row" class="text-center">{{ item.cssGrade }}</td>
 			</tr>
-			{% endfor %}
-
+		{% endfor %}
 		</tbody>
 	</table>
 </div>

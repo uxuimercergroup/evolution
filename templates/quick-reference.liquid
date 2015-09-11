@@ -9,902 +9,901 @@
 	<section class="col-24">
 		{{ model.reference-overview }}
 
-	<!-- QUICK REFERENCE TABS - BEGINS -->
-		<div class="evo-tabs js-evo-tabs-example">
-			<ul>
-				<li><a href="#css">CSS</a></li>
-				<li><a href="#html">HTML</a></li>
-				<li><a href="#js">JS</a></li>
-				<li><a href="#grid-layouts">Grid Layouts</a></li>
-				<li><a href="#shortcuts">Snippet Shortcuts</a></li>
-				<li><a href="#misc">Miscellaneous</a></li>
-			</ul>
-			
-			<!-- CSS REFERENCE - BEGINS -->
-			<div class="col-24" id="css">
-				
-				<h2 class="evo-hdr-rule">CSS</h2>
+	<!-- TABS - BEGIN -->
+		<ul class="tabs evo-tabs" data-tab>
+			<li class="tab-title active"><a href="#tabs1"><span class="text">CSS</span></a></li>
+			<li class="tab-title"><a href="#tabs2"><span class="text">HTML</span></a></li>
+			<li class="tab-title"><a href="#tabs3"><span class="text">JS</span></a></li>
+			<li class="tab-title"><a href="#tabs4"><span class="text">Grid Layouts</span></a></li>
+			<li class="tab-title"><a href="#tabs5"><span class="text">Snippet Shortcuts</span></a></li>
+			<li class="tab-title"><a href="#tabs6"><span class="text">Miscellaneous</span></a></li>
+		</ul>
+	
+		<div class="tabs-content evo-tabs-content">		
+		<!-- CSS REFERENCE - BEGINS -->
+			<section class="row content active" id="tabs1">
+				<div class="small-12 columns">
 
-				<ul class="evo-horizontal-list evo-horizontal-list-piped evo-margin-bottom">
-					<li><a href="#base-vars">Base Variables</a></li>
-					<li><a href="#color-vars">Color Variables</a></li>
-					<li><a href="#border-radius-vars">Border Radius Variables</a></li>
-					<li><a href="#font-vars">Font Variables</a></li>
-					<li><a href="#sass-mixins">Sass Mixins</a></li>
-				</ul>
+					<h2 class="evo-hdr-rule">CSS</h2>
 
-				<div class="col-12 first">
+					<ul class="inline-list evo-inline-list evo-inline-list-pipes evo-margin-bottom">
+						<li><a href="#base-vars">Base Variables</a></li>
+						<li><a href="#color-vars">Color Variables</a></li>
+						<li><a href="#border-radius-vars">Border Radius Variables</a></li>
+						<li><a href="#font-vars">Font Variables</a></li>
+						<li><a href="#sass-mixins">Sass Mixins</a></li>
+					</ul>
 
-					<!-- BASE VARIABLES - BEGINS -->
-					<div class="evo-box-adv" id="base-vars">
-						<div class="evo-box-hdr">
-							<h4 class="evo-hdr-rule">Base Variables</h4>
-						</div>
-						<div class="evo-box-bdy">
+					<section class="row">
+						<div class="large-6 columns">
+						<!-- BASE VARIABLES - BEGINS -->
+							<div class="evo-box-adv" id="base-vars">
+								<div class="evo-box-hdr">
+									<h4 class="evo-hdr-rule">Base Variables</h4>
+								</div>
+								<div class="evo-box-bdy">
 
-							<!-- BASE VARIABLES TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
-									<thead>
-										<tr>
-											<th class="col-8" scope="col">SASS Variable</th>
-											<th class="col-8" scope="col">Function</th>
-											<th class="col-8" scope="col">Value</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.base_variables_data %}
-										<tr>
-											<td>{{ item.sass_variable }}</td>
-											<td>{{ item.function }}</td>
-											<td>{{ item.value }}</td>
-										</tr>
-										{% endfor %}
+									<!-- BASE VARIABLES TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
+											<thead>
+												<tr>
+													<th class="col-8" scope="col">SASS Variable</th>
+													<th class="col-8" scope="col">Function</th>
+													<th class="col-8" scope="col">Value</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.base_variables_data %}
+												<tr>
+													<td>{{ item.sass_variable }}</td>
+													<td>{{ item.function }}</td>
+													<td>{{ item.value }}</td>
+												</tr>
+												{% endfor %}
 
-									</tbody>
-								</table>
+											</tbody>
+										</table>
+									</div>
+									<!-- BASE VARIABLES TABLE - ENDS -->
+									
+								</div>
 							</div>
-							<!-- BASE VARIABLES TABLE - ENDS -->
-							
-						</div>
-					</div>
-					<!-- BASE VARIABLES - ENDS -->
+						<!-- BASE VARIABLES - ENDS -->
 
-					<!-- COLOR VARIABLES - BEGINS -->
-					<div class="evo-box-adv" id="color-vars">
-						<div class="evo-box-hdr">
-							<h4 class="evo-hdr-rule">Color Variables</h4>
-						</div>
-						<div class="evo-box-bdy">
+						<!-- COLOR VARIABLES - BEGINS -->
+							<div class="evo-box-adv" id="color-vars">
+								<div class="evo-box-hdr">
+									<h4 class="evo-hdr-rule">Color Variables</h4>
+								</div>
+								<div class="evo-box-bdy">
 
-							<!-- COLOR VARIABLES TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders color-vars-quick-reference-table" data-filter="#color-vars-filter" border="0" cellpadding="0" cellspacing="0">
-									<caption>
-										<div class="col-24 evo-tbl-data-filter">
-											<input id="color-vars-filter" type="text" title="Type to filter results." tabindex="" placeholder="Filter" />
-										</div>
-									</caption>
-									<thead>
-										<tr>
-											<th class="col-16" scope="col">SASS Variable</th>
-											<th class="col-8" scope="col">Hex Value</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.color_variables_data %}
-										<tr {% if item.default_text_color == "true" %}class="default-text-color"{% endif %} style="background-color: {{ item.hex_value }};">
-											<td>{{ item.sass_variable }}</td>
-											<td>{{ item.hex_value }}</td>
-										</tr>
-										{% endfor %}
+									<!-- COLOR VARIABLES TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders color-vars-quick-reference-table" data-filter="#color-vars-filter" border="0" cellpadding="0" cellspacing="0">
+											<caption>
+												<div class="col-24 evo-tbl-data-filter">
+													<input id="color-vars-filter" type="text" title="Type to filter results." tabindex="" placeholder="Filter" />
+												</div>
+											</caption>
+											<thead>
+												<tr>
+													<th class="col-16" scope="col">SASS Variable</th>
+													<th class="col-8" scope="col">Hex Value</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.color_variables_data %}
+												<tr {% if item.default_text_color == "true" %}class="default-text-color"{% endif %} style="background-color: {{ item.hex_value }};">
+													<td>{{ item.sass_variable }}</td>
+													<td>{{ item.hex_value }}</td>
+												</tr>
+												{% endfor %}
 
-									</tbody>
-								</table>
+											</tbody>
+										</table>
+									</div>
+									<!-- COLOR VARIABLES TABLE - ENDS -->
+									
+								</div>
 							</div>
-							<!-- COLOR VARIABLES TABLE - ENDS -->
-							
+						<!-- COLOR VARIABLES - ENDS -->
 						</div>
-					</div>
-					<!-- COLOR VARIABLES - ENDS -->
+						<div class="large-6 columns">
+						<!-- SASS MIXINS - BEGINS -->
+							<div class="evo-box-adv" id="sass-mixins">
+								<div class="evo-box-hdr">
+									<h4 class="evo-hdr-rule">SASS Mixins</h4>
+								</div>
+								<div class="evo-box-bdy">
+
+									<!-- SASS MIXINS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" data-filter="#sass-mixins-filter" border="0" cellpadding="0" cellspacing="0">
+											<caption>
+												<div class="col-24 evo-tbl-data-filter">
+													<input id="sass-mixins-filter" type="text" title="Type to filter results." tabindex="" placeholder="Filter" />
+												</div>
+											</caption>
+											<thead>
+												<tr>
+													<th class="col-12" scope="col">Function</th>
+													<th class="col-12" scope="col">SASS Mixin</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.sass_mixins_data %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.sass_mixin }}</td>
+												</tr>
+												{% endfor %}
+
+											</tbody>
+										</table>
+									</div>
+									<!-- SASS MIXINS TABLE - ENDS -->
+									
+								</div>
+							</div>
+						<!-- SASS MIXINS - ENDS -->
+
+						<!-- FONT VARIABLES - BEGINS -->
+							<div class="evo-box-adv" id="font-vars">
+								<div class="evo-box-hdr">
+									<h4 class="evo-hdr-rule">Font Variables</h4>
+								</div>
+								<div class="evo-box-bdy">
+
+									<!-- FONT VARIABLES TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
+											<thead>
+												<tr>
+													<th class="col-12" scope="col">SASS Variable</th>
+													<th class="col-12" scope="col">Font</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.font_variables_data %}
+												<tr>
+													<td>{{ item.sass_variable }}</td>
+													<td>{{ item.font }}</td>
+												</tr>
+												{% endfor %}
+
+											</tbody>
+										</table>
+									</div>
+									<!-- FONT VARIABLES TABLE - ENDS -->
+									
+								</div>
+							</div>
+						<!-- FONT VARIABLES - ENDS -->
+
+						<!-- BORDER RADIUS VARIABLES - BEGINS -->
+							<div class="evo-box-adv" id="border-radius-vars">
+								<div class="evo-box-hdr">
+									<h4 class="evo-hdr-rule">Border Radius Variables</h4>
+								</div>
+								<div class="evo-box-bdy">
+
+									<!-- BORDER RADIUS VARIABLES TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
+											<thead>
+												<tr>
+													<th class="col-10" scope="col">SASS Variable</th>
+													<th class="col-7" scope="col">Title</th>
+													<th class="col-7" scope="col">Radius Size</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.border_radius_variables_data %}
+												<tr>
+													<td>{{ item.sass_variable }}</td>
+													<td>{{ item.border_radius_size_title }}</td>
+													<td>{{ item.border_radius_size }}</td>
+												</tr>
+												{% endfor %}
+
+											</tbody>
+										</table>
+									</div>
+									<!-- BORDER RADIUS VARIABLES TABLE - ENDS -->
+									
+								</div>
+							</div>
+						<!-- BORDER RADIUS VARIABLES - ENDS -->
+						</div>
+					</section>
 
 				</div>
-				<div class="col-12">
+			</section>
+		<!-- CSS REFERENCE - ENDS -->
 
-					<!-- SASS MIXINS - BEGINS -->
-					<div class="evo-box-adv" id="sass-mixins">
-						<div class="evo-box-hdr">
-							<h4 class="evo-hdr-rule">SASS Mixins</h4>
-						</div>
-						<div class="evo-box-bdy">
+		<!-- HTML REFERENCE - BEGINS -->
+			<section class="row content" id="tabs2">
+				<div class="small-12 columns">
 
-							<!-- SASS MIXINS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" data-filter="#sass-mixins-filter" border="0" cellpadding="0" cellspacing="0">
-									<caption>
-										<div class="col-24 evo-tbl-data-filter">
-											<input id="sass-mixins-filter" type="text" title="Type to filter results." tabindex="" placeholder="Filter" />
-										</div>
-									</caption>
-									<thead>
-										<tr>
-											<th class="col-12" scope="col">Function</th>
-											<th class="col-12" scope="col">SASS Mixin</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.sass_mixins_data %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.sass_mixin }}</td>
-										</tr>
-										{% endfor %}
+					<h2 class="evo-hdr-rule">HTML</h2>
 
-									</tbody>
-								</table>
+					<ul class="inline-list evo-inline-list evo-inline-list-pipes evo-margin-bottom">
+						<li><a href="#button-helpers">Button Helpers</a></li>
+						<li><a href="#core-helpers">Core Helpers</a></li>
+						<li><a href="#form-helpers">Form Helpers</a></li>
+						<li><a href="#icon-helpers">Icon Helpers</a></li>
+						<li><a href="#list-helpers">List Helpers</a></li>
+					</ul>
+
+					<section class="row">
+						<div class="large-6 columns">
+						<!-- CORE HELPER CLASSES - BEGINS -->
+							<div class="evo-box-adv" id="core-helpers">
+								<div class="evo-box-hdr">
+									<h4 class="evo-hdr-rule">Core Helper Classes</h4>
+								</div>
+								<div class="evo-box-bdy">
+
+									<h5 class="evo-hdr-rule">Type Helpers</h5>
+									
+									<!-- TYPE HELPERS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" data-filter="#type-helpers-filter" border="0" cellpadding="0" cellspacing="0">
+											<caption>
+												<div class="col-24 evo-tbl-data-filter">
+													<input id="type-helpers-filter" type="text" title="Type to filter results." tabindex="" placeholder="Filter" />
+												</div>
+											</caption>
+											<thead>
+												<tr>
+													<th class="col-12" scope="col" data-sort-initial="true">Function</th>
+													<th class="col-12" scope="col">Class</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.helper_classes_type_data %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.class }}</td>
+												</tr>
+												{% endfor %}
+
+											</tbody>
+										</table>
+									</div>
+									<!-- TYPE HELPERS TABLE - ENDS -->
+
+									<h5 class="evo-hdr-rule">Page Element Helpers</h5>
+									
+									<!-- PAGE ELEMENT HELPERS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
+											<thead>
+												<tr>
+													<th class="col-12" scope="col" data-sort-initial="true">Function</th>
+													<th class="col-12" scope="col">Class</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.helper_classes_page_elements_data %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.class }}</td>
+												</tr>
+												{% endfor %}
+
+											</tbody>
+										</table>
+									</div>
+									<!-- PAGE ELEMENT HELPERS TABLE - ENDS -->
+
+									<h5 class="evo-hdr-rule">Layout Helpers</h5>
+									
+									<!-- LAYOUT HELPERS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" data-filter="#layout-helpers-filter" border="0" cellpadding="0" cellspacing="0">
+											<caption>
+												<div class="col-24 evo-tbl-data-filter">
+													<input id="layout-helpers-filter" type="text" title="Type to filter results." tabindex="" placeholder="Filter" />
+												</div>
+											</caption>
+											<thead>
+												<tr>
+													<th class="col-12" scope="col" data-sort-initial="true">Function</th>
+													<th class="col-12" scope="col">Class</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.helper_classes_layout_data %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.class }}</td>
+												</tr>
+												{% endfor %}
+
+											</tbody>
+										</table>
+									</div>
+									<!-- LAYOUT HELPERS TABLE - ENDS -->
+
+									<h5 class="evo-hdr-rule">Responsive Helpers</h5>
+									
+									<!-- RESPONSIVE HELPERS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
+											<thead>
+												<tr>
+													<th class="col-12" scope="col" data-sort-initial="true">Function</th>
+													<th class="col-12" scope="col">Class</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.helper_classes_responsive_data %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.class }}</td>
+												</tr>
+												{% endfor %}
+
+											</tbody>
+										</table>
+									</div>
+									<!-- RESPONSIVE HELPERS TABLE - ENDS -->
+									
+								</div>
 							</div>
-							<!-- SASS MIXINS TABLE - ENDS -->
-							
+						<!-- CORE HELPER CLASSES - ENDS -->
 						</div>
-					</div>
-					<!-- SASS MIXINS - ENDS -->
+						<div class="large-6 columns">
+						<!-- ICON HELPER CLASSES - BEGINS -->
+							<div class="evo-box-adv" id="icon-helpers">
+								<div class="evo-box-hdr">
+									<h4 class="evo-hdr-rule">Icon Helper Classes</h4>
+								</div>
+								<div class="evo-box-bdy">
 
-					<!-- FONT VARIABLES - BEGINS -->
-					<div class="evo-box-adv" id="font-vars">
-						<div class="evo-box-hdr">
-							<h4 class="evo-hdr-rule">Font Variables</h4>
-						</div>
-						<div class="evo-box-bdy">
+									<h5 class="evo-hdr-rule">Icon Image Helpers</h5>
+									
+									<!-- ICON IMAGE HELPERS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
+											<thead>
+												<tr>
+													<th class="col-12" scope="col" data-sort-initial="true">Function</th>
+													<th class="col-12" scope="col">Class</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.helper_classes_icon_image %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.class }}</td>
+												</tr>
+												{% endfor %}
 
-							<!-- FONT VARIABLES TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
-									<thead>
-										<tr>
-											<th class="col-12" scope="col">SASS Variable</th>
-											<th class="col-12" scope="col">Font</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.font_variables_data %}
-										<tr>
-											<td>{{ item.sass_variable }}</td>
-											<td>{{ item.font }}</td>
-										</tr>
-										{% endfor %}
+											</tbody>
+										</table>
+									</div>
+									<!-- ICON IMAGE HELPERS TABLE - ENDS -->
 
-									</tbody>
-								</table>
+									<h5 class="evo-hdr-rule">Icon Font Helpers</h5>
+									
+									<!-- ICON FONT HELPERS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" data-filter="#icon-font-helpers-filter" border="0" cellpadding="0" cellspacing="0">
+											<caption>
+												<div class="col-24 evo-tbl-data-filter">
+													<input id="icon-font-helpers-filter" type="text" title="Type to filter results." tabindex="" placeholder="Filter" />
+												</div>
+											</caption>
+											<thead>
+												<tr>
+													<th class="col-11" scope="col" data-sort-initial="true">Function</th>
+													<th class="col-13" scope="col">Class</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.helper_classes_icon_font %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.class }}</td>
+												</tr>
+												{% endfor %}
+
+											</tbody>
+										</table>
+									</div>
+									<!-- ICON FONT HELPERS TABLE - ENDS -->
+
+									<h5 class="evo-hdr-rule">Icon Advanced Helpers</h5>
+									
+									<!-- ICON ADVANCED HELPERS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
+											<thead>
+												<tr>
+													<th class="col-11" scope="col" data-sort-initial="true">Function</th>
+													<th class="col-13" scope="col">Class</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.helper_classes_icon_advanced %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.class }}</td>
+												</tr>
+												{% endfor %}
+
+											</tbody>
+										</table>
+									</div>
+									<!-- ICON ADVANCED HELPERS TABLE - ENDS -->
+									
+								</div>
 							</div>
-							<!-- FONT VARIABLES TABLE - ENDS -->
-							
-						</div>
-					</div>
-					<!-- FONT VARIABLES - ENDS -->
+						<!-- ICON HELPER CLASSES - ENDS -->
 
-					<!-- BORDER RADIUS VARIABLES - BEGINS -->
-					<div class="evo-box-adv" id="border-radius-vars">
-						<div class="evo-box-hdr">
-							<h4 class="evo-hdr-rule">Border Radius Variables</h4>
-						</div>
-						<div class="evo-box-bdy">
+						<!-- BUTTON HELPER CLASSES - BEGINS -->
+							<div class="evo-box-adv" id="button-helpers">
+								<div class="evo-box-hdr">
+									<h4 class="evo-hdr-rule">Button Helper Classes</h4>
+								</div>
+								<div class="evo-box-bdy">
+									
+									<!-- BUTTON HELPERS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
+											<thead>
+												<tr>
+													<th class="col-12" scope="col" data-sort-initial="true">Function</th>
+													<th class="col-12" scope="col">Class</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.helper_classes_button %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.class }}</td>
+												</tr>
+												{% endfor %}
 
-							<!-- BORDER RADIUS VARIABLES TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
-									<thead>
-										<tr>
-											<th class="col-10" scope="col">SASS Variable</th>
-											<th class="col-7" scope="col">Title</th>
-											<th class="col-7" scope="col">Radius Size</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.border_radius_variables_data %}
-										<tr>
-											<td>{{ item.sass_variable }}</td>
-											<td>{{ item.border_radius_size_title }}</td>
-											<td>{{ item.border_radius_size }}</td>
-										</tr>
-										{% endfor %}
-
-									</tbody>
-								</table>
+											</tbody>
+										</table>
+									</div>
+									<!-- BUTTON HELPERS TABLE - ENDS -->
+									
+								</div>
 							</div>
-							<!-- BORDER RADIUS VARIABLES TABLE - ENDS -->
-							
+						<!-- BUTTON HELPER CLASSES - ENDS -->
+
+						<!-- FORM HELPER CLASSES - BEGINS -->
+							<div class="evo-box-adv" id="form-helpers">
+								<div class="evo-box-hdr">
+									<h4 class="evo-hdr-rule">Form Helper Classes</h4>
+								</div>
+								<div class="evo-box-bdy">
+									
+									<!-- FORM HELPERS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
+											<thead>
+												<tr>
+													<th class="col-12" scope="col" data-sort-initial="true">Function</th>
+													<th class="col-12" scope="col">Class</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.helper_classes_form %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.class }}</td>
+												</tr>
+												{% endfor %}
+
+											</tbody>
+										</table>
+									</div>
+									<!-- FORM HELPERS TABLE - ENDS -->
+									
+								</div>
+							</div>
+						<!-- FORM HELPER CLASSES - ENDS -->
+
+						<!-- LIST HELPER CLASSES - BEGINS -->
+							<div class="evo-box-adv" id="list-helpers">
+								<div class="evo-box-hdr">
+									<h4 class="evo-hdr-rule">List Helper Classes</h4>
+								</div>
+								<div class="evo-box-bdy">
+									
+									<!-- LIST HELPERS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
+											<thead>
+												<tr>
+													<th class="col-12" scope="col" data-sort-initial="true">Function</th>
+													<th class="col-12" scope="col">Class</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.helper_classes_list %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.class }}</td>
+												</tr>
+												{% endfor %}
+
+											</tbody>
+										</table>
+									</div>
+									<!-- LIST HELPERS TABLE - ENDS -->
+									
+								</div>
+							</div>
+						<!-- LIST HELPER CLASSES - ENDS -->
 						</div>
-					</div>
-					<!-- BORDER RADIUS VARIABLES - ENDS -->
+					</section>
 
 				</div>
+			</section>
+		<!-- HTML REFERENCE - ENDS -->
 
-			</div>
-			<!-- CSS REFERENCE - ENDS -->
+		<!-- JS REFERENCE - BEGINS -->
+			<section class="row content" id="tabs3">
+				<div class="small-12 columns">
 
-			<!-- HTML REFERENCE - BEGINS -->
-			<div class="col-24" id="html">
-				
-				<h2 class="evo-hdr-rule">HTML</h2>
+					<h2 class="evo-hdr-rule">JS</h2>
 
-				<ul class="evo-horizontal-list evo-horizontal-list-piped evo-margin-bottom">
-					<li><a href="#button-helpers">Button Helpers</a></li>
-					<li><a href="#core-helpers">Core Helpers</a></li>
-					<li><a href="#form-helpers">Form Helpers</a></li>
-					<li><a href="#icon-helpers">Icon Helpers</a></li>
-					<li><a href="#list-helpers">List Helpers</a></li>
-				</ul>
+					<ul class="inline-list evo-inline-list evo-inline-list-pipes evo-margin-bottom">
+						<li><a href="#core-js-helpers">Core Helpers</a></li>
+						<li><a href="#scrollpane-js-helpers">Scroll Pane Helpers</a></li>
+						<li><a href="#tooltip-js-helpers">Tooltip Helpers</a></li>
+					</ul>
 
-				<div class="col-12 first">
+					<section class="row">
+						<div class="large-6 columns">
+						<!-- CORE JS HELPER CLASSES - BEGINS -->
+							<div class="evo-box-adv" id="core-js-helpers">
+								<div class="evo-box-hdr">
+									<h4 class="evo-hdr-rule">Core JS Helpers</h4>
+								</div>
+								<div class="evo-box-bdy">
 
-					<!-- CORE HELPER CLASSES - BEGINS -->
-					<div class="evo-box-adv" id="core-helpers">
-						<div class="evo-box-hdr">
-							<h4 class="evo-hdr-rule">Core Helper Classes</h4>
-						</div>
-						<div class="evo-box-bdy">
+									<h5 class="evo-hdr-rule">Button Helpers</h5>
+									
+									<!-- BUTTON HELPERS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
+											<thead>
+												<tr>
+													<th class="col-12" scope="col" data-sort-initial="true">Function</th>
+													<th class="col-12" scope="col">Class</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.js_helper_classes_core_button_data %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.class }}</td>
+												</tr>
+												{% endfor %}
 
-							<h5 class="evo-hdr-rule">Type Helpers</h5>
-							
-							<!-- TYPE HELPERS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" data-filter="#type-helpers-filter" border="0" cellpadding="0" cellspacing="0">
-									<caption>
-										<div class="col-24 evo-tbl-data-filter">
-											<input id="type-helpers-filter" type="text" title="Type to filter results." tabindex="" placeholder="Filter" />
-										</div>
-									</caption>
-									<thead>
-										<tr>
-											<th class="col-12" scope="col" data-sort-initial="true">Function</th>
-											<th class="col-12" scope="col">Class</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.helper_classes_type_data %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.class }}</td>
-										</tr>
-										{% endfor %}
+											</tbody>
+										</table>
+									</div>
+									<!-- BUTTON HELPERS TABLE - ENDS -->
 
-									</tbody>
-								</table>
+									<h5 class="evo-hdr-rule">Form Helpers</h5>
+									
+									<!-- FORM HELPERS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
+											<thead>
+												<tr>
+													<th class="col-12" scope="col" data-sort-initial="true">Function</th>
+													<th class="col-12" scope="col">Class</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.js_helper_classes_core_form_data %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.class }}</td>
+												</tr>
+												{% endfor %}
+
+											</tbody>
+										</table>
+									</div>
+									<!-- FORM HELPERS TABLE - ENDS -->
+
+									<h5 class="evo-hdr-rule">Interactive Helpers</h5>
+									
+									<!-- INTERACTIVE HELPERS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
+											<thead>
+												<tr>
+													<th class="col-12" scope="col" data-sort-initial="true">Function</th>
+													<th class="col-12" scope="col">Class</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.js_helper_classes_core_interactive_data %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.class }}</td>
+												</tr>
+												{% endfor %}
+
+											</tbody>
+										</table>
+									</div>
+									<!-- INTERACTIVE HELPERS TABLE - ENDS -->
+									
+								</div>
 							</div>
-							<!-- TYPE HELPERS TABLE - ENDS -->
+						<!-- CORE JS HELPER CLASSES - ENDS -->
+						</div>
+						<div class="large-6 columns">
+						<!-- SCROLL PANE JS HELPER CLASSES - BEGINS -->
+							<div class="evo-box-adv" id="scrollpane-js-helpers">
+								<div class="evo-box-hdr">
+									<h4 class="evo-hdr-rule">Scroll Pane Helpers</h4>
+								</div>
+								<div class="evo-box-bdy">
+									
+									<!-- SCROLL PANE HELPERS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
+											<thead>
+												<tr>
+													<th class="col-12" scope="col" data-sort-initial="true">Function</th>
+													<th class="col-12" scope="col">Class</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.js_helper_classes_scroll_pane_data %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.class }}</td>
+												</tr>
+												{% endfor %}
 
-							<h5 class="evo-hdr-rule">Page Element Helpers</h5>
-							
-							<!-- PAGE ELEMENT HELPERS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
-									<thead>
-										<tr>
-											<th class="col-12" scope="col" data-sort-initial="true">Function</th>
-											<th class="col-12" scope="col">Class</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.helper_classes_page_elements_data %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.class }}</td>
-										</tr>
-										{% endfor %}
-
-									</tbody>
-								</table>
+											</tbody>
+										</table>
+									</div>
+									<!-- SCROLL PANE HELPERS TABLE - ENDS -->
+									
+								</div>
 							</div>
-							<!-- PAGE ELEMENT HELPERS TABLE - ENDS -->
+						<!-- SCROLL PANE JS HELPER CLASSES - ENDS -->
 
-							<h5 class="evo-hdr-rule">Layout Helpers</h5>
-							
-							<!-- LAYOUT HELPERS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" data-filter="#layout-helpers-filter" border="0" cellpadding="0" cellspacing="0">
-									<caption>
-										<div class="col-24 evo-tbl-data-filter">
-											<input id="layout-helpers-filter" type="text" title="Type to filter results." tabindex="" placeholder="Filter" />
-										</div>
-									</caption>
-									<thead>
-										<tr>
-											<th class="col-12" scope="col" data-sort-initial="true">Function</th>
-											<th class="col-12" scope="col">Class</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.helper_classes_layout_data %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.class }}</td>
-										</tr>
-										{% endfor %}
+						<!-- TOOLTIP JS HELPER CLASSES - BEGINS -->
+							<div class="evo-box-adv" id="tooltip-js-helpers">
+								<div class="evo-box-hdr">
+									<h4 class="evo-hdr-rule">Tooltip Helpers</h4>
+								</div>
+								<div class="evo-box-bdy">
+									
+									<!-- TOOLTIP HELPERS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
+											<thead>
+												<tr>
+													<th class="col-11" scope="col" data-sort-initial="true">Function</th>
+													<th class="col-13" scope="col">Class</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.js_helper_classes_tooltip_data %}
+												<tr>
+													<td>{{ item.function_title }}</td>
+													<td>{{ item.class }}</td>
+												</tr>
+												{% endfor %}
 
-									</tbody>
-								</table>
+											</tbody>
+										</table>
+									</div>
+									<!-- TOOLTIP HELPERS TABLE - ENDS -->
+									
+								</div>
 							</div>
-							<!-- LAYOUT HELPERS TABLE - ENDS -->
-
-							<h5 class="evo-hdr-rule">Responsive Helpers</h5>
-							
-							<!-- RESPONSIVE HELPERS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
-									<thead>
-										<tr>
-											<th class="col-12" scope="col" data-sort-initial="true">Function</th>
-											<th class="col-12" scope="col">Class</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.helper_classes_responsive_data %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.class }}</td>
-										</tr>
-										{% endfor %}
-
-									</tbody>
-								</table>
-							</div>
-							<!-- RESPONSIVE HELPERS TABLE - ENDS -->
-							
+						<!-- TOOLTIP JS HELPER CLASSES - ENDS -->
 						</div>
-					</div>
-					<!-- CORE HELPER CLASSES - ENDS -->
-					
-				</div>
-				<div class="col-12">
-
-					<!-- ICON HELPER CLASSES - BEGINS -->
-					<div class="evo-box-adv" id="icon-helpers">
-						<div class="evo-box-hdr">
-							<h4 class="evo-hdr-rule">Icon Helper Classes</h4>
-						</div>
-						<div class="evo-box-bdy">
-
-							<h5 class="evo-hdr-rule">Icon Image Helpers</h5>
-							
-							<!-- ICON IMAGE HELPERS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
-									<thead>
-										<tr>
-											<th class="col-12" scope="col" data-sort-initial="true">Function</th>
-											<th class="col-12" scope="col">Class</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.helper_classes_icon_image %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.class }}</td>
-										</tr>
-										{% endfor %}
-
-									</tbody>
-								</table>
-							</div>
-							<!-- ICON IMAGE HELPERS TABLE - ENDS -->
-
-							<h5 class="evo-hdr-rule">Icon Font Helpers</h5>
-							
-							<!-- ICON FONT HELPERS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" data-filter="#icon-font-helpers-filter" border="0" cellpadding="0" cellspacing="0">
-									<caption>
-										<div class="col-24 evo-tbl-data-filter">
-											<input id="icon-font-helpers-filter" type="text" title="Type to filter results." tabindex="" placeholder="Filter" />
-										</div>
-									</caption>
-									<thead>
-										<tr>
-											<th class="col-11" scope="col" data-sort-initial="true">Function</th>
-											<th class="col-13" scope="col">Class</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.helper_classes_icon_font %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.class }}</td>
-										</tr>
-										{% endfor %}
-
-									</tbody>
-								</table>
-							</div>
-							<!-- ICON FONT HELPERS TABLE - ENDS -->
-
-							<h5 class="evo-hdr-rule">Icon Advanced Helpers</h5>
-							
-							<!-- ICON ADVANCED HELPERS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
-									<thead>
-										<tr>
-											<th class="col-11" scope="col" data-sort-initial="true">Function</th>
-											<th class="col-13" scope="col">Class</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.helper_classes_icon_advanced %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.class }}</td>
-										</tr>
-										{% endfor %}
-
-									</tbody>
-								</table>
-							</div>
-							<!-- ICON ADVANCED HELPERS TABLE - ENDS -->
-							
-						</div>
-					</div>
-					<!-- ICON HELPER CLASSES - ENDS -->
-
-					<!-- BUTTON HELPER CLASSES - BEGINS -->
-					<div class="evo-box-adv" id="button-helpers">
-						<div class="evo-box-hdr">
-							<h4 class="evo-hdr-rule">Button Helper Classes</h4>
-						</div>
-						<div class="evo-box-bdy">
-							
-							<!-- BUTTON HELPERS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
-									<thead>
-										<tr>
-											<th class="col-12" scope="col" data-sort-initial="true">Function</th>
-											<th class="col-12" scope="col">Class</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.helper_classes_button %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.class }}</td>
-										</tr>
-										{% endfor %}
-
-									</tbody>
-								</table>
-							</div>
-							<!-- BUTTON HELPERS TABLE - ENDS -->
-							
-						</div>
-					</div>
-					<!-- BUTTON HELPER CLASSES - ENDS -->
-
-					<!-- FORM HELPER CLASSES - BEGINS -->
-					<div class="evo-box-adv" id="form-helpers">
-						<div class="evo-box-hdr">
-							<h4 class="evo-hdr-rule">Form Helper Classes</h4>
-						</div>
-						<div class="evo-box-bdy">
-							
-							<!-- FORM HELPERS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
-									<thead>
-										<tr>
-											<th class="col-12" scope="col" data-sort-initial="true">Function</th>
-											<th class="col-12" scope="col">Class</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.helper_classes_form %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.class }}</td>
-										</tr>
-										{% endfor %}
-
-									</tbody>
-								</table>
-							</div>
-							<!-- FORM HELPERS TABLE - ENDS -->
-							
-						</div>
-					</div>
-					<!-- FORM HELPER CLASSES - ENDS -->
-
-					<!-- LIST HELPER CLASSES - BEGINS -->
-					<div class="evo-box-adv" id="list-helpers">
-						<div class="evo-box-hdr">
-							<h4 class="evo-hdr-rule">List Helper Classes</h4>
-						</div>
-						<div class="evo-box-bdy">
-							
-							<!-- LIST HELPERS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
-									<thead>
-										<tr>
-											<th class="col-12" scope="col" data-sort-initial="true">Function</th>
-											<th class="col-12" scope="col">Class</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.helper_classes_list %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.class }}</td>
-										</tr>
-										{% endfor %}
-
-									</tbody>
-								</table>
-							</div>
-							<!-- LIST HELPERS TABLE - ENDS -->
-							
-						</div>
-					</div>
-					<!-- LIST HELPER CLASSES - ENDS -->
-					
-				</div>
-
-			</div>
-			<!-- HTML REFERENCE - ENDS -->
-
-			<!-- JS REFERENCE - BEGINS -->
-			<div class="col-24" id="js">
-				
-				<h2 class="evo-hdr-rule">JS</h2>
-
-				<ul class="evo-horizontal-list evo-horizontal-list-piped evo-margin-bottom">
-					<li><a href="#core-js-helpers">Core Helpers</a></li>
-					<li><a href="#scrollpane-js-helpers">Scroll Pane Helpers</a></li>
-					<li><a href="#tooltip-js-helpers">Tooltip Helpers</a></li>
-				</ul>
-
-				<div class="col-12 first">
-
-					<!-- CORE JS HELPER CLASSES - BEGINS -->
-					<div class="evo-box-adv" id="core-js-helpers">
-						<div class="evo-box-hdr">
-							<h4 class="evo-hdr-rule">Core JS Helpers</h4>
-						</div>
-						<div class="evo-box-bdy">
-
-							<h5 class="evo-hdr-rule">Button Helpers</h5>
-							
-							<!-- BUTTON HELPERS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
-									<thead>
-										<tr>
-											<th class="col-12" scope="col" data-sort-initial="true">Function</th>
-											<th class="col-12" scope="col">Class</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.js_helper_classes_core_button_data %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.class }}</td>
-										</tr>
-										{% endfor %}
-
-									</tbody>
-								</table>
-							</div>
-							<!-- BUTTON HELPERS TABLE - ENDS -->
-
-							<h5 class="evo-hdr-rule">Form Helpers</h5>
-							
-							<!-- FORM HELPERS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
-									<thead>
-										<tr>
-											<th class="col-12" scope="col" data-sort-initial="true">Function</th>
-											<th class="col-12" scope="col">Class</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.js_helper_classes_core_form_data %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.class }}</td>
-										</tr>
-										{% endfor %}
-
-									</tbody>
-								</table>
-							</div>
-							<!-- FORM HELPERS TABLE - ENDS -->
-
-							<h5 class="evo-hdr-rule">Interactive Helpers</h5>
-							
-							<!-- INTERACTIVE HELPERS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
-									<thead>
-										<tr>
-											<th class="col-12" scope="col" data-sort-initial="true">Function</th>
-											<th class="col-12" scope="col">Class</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.js_helper_classes_core_interactive_data %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.class }}</td>
-										</tr>
-										{% endfor %}
-
-									</tbody>
-								</table>
-							</div>
-							<!-- INTERACTIVE HELPERS TABLE - ENDS -->
-							
-						</div>
-					</div>
-					<!-- CORE JS HELPER CLASSES - ENDS -->
-					
-				</div>
-				<div class="col-12">
-					
-					<!-- SCROLL PANE JS HELPER CLASSES - BEGINS -->
-					<div class="evo-box-adv" id="scrollpane-js-helpers">
-						<div class="evo-box-hdr">
-							<h4 class="evo-hdr-rule">Scroll Pane Helpers</h4>
-						</div>
-						<div class="evo-box-bdy">
-							
-							<!-- SCROLL PANE HELPERS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
-									<thead>
-										<tr>
-											<th class="col-12" scope="col" data-sort-initial="true">Function</th>
-											<th class="col-12" scope="col">Class</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.js_helper_classes_scroll_pane_data %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.class }}</td>
-										</tr>
-										{% endfor %}
-
-									</tbody>
-								</table>
-							</div>
-							<!-- SCROLL PANE HELPERS TABLE - ENDS -->
-							
-						</div>
-					</div>
-					<!-- SCROLL PANE JS HELPER CLASSES - ENDS -->
-
-					<!-- TOOLTIP JS HELPER CLASSES - BEGINS -->
-					<div class="evo-box-adv" id="tooltip-js-helpers">
-						<div class="evo-box-hdr">
-							<h4 class="evo-hdr-rule">Tooltip Helpers</h4>
-						</div>
-						<div class="evo-box-bdy">
-							
-							<!-- TOOLTIP HELPERS TABLE - BEGINS -->
-							<div class="evo-table-small-mediaquery">
-								<table class="evo-table evo-footable evo-table-borders" border="0" cellpadding="0" cellspacing="0">
-									<thead>
-										<tr>
-											<th class="col-11" scope="col" data-sort-initial="true">Function</th>
-											<th class="col-13" scope="col">Class</th>
-										</tr>
-									</thead>
-									<tbody>
-										
-										{% for item in model.js_helper_classes_tooltip_data %}
-										<tr>
-											<td>{{ item.function_title }}</td>
-											<td>{{ item.class }}</td>
-										</tr>
-										{% endfor %}
-
-									</tbody>
-								</table>
-							</div>
-							<!-- TOOLTIP HELPERS TABLE - ENDS -->
-							
-						</div>
-					</div>
-					<!-- TOOLTIP JS HELPER CLASSES - ENDS -->
+					</section>
 
 				</div>
+			</section>
+		<!-- JS REFERENCE - ENDS -->
 
-			</div>
-			<!-- JS REFERENCE - ENDS -->
+		<!-- GRID LAYOUTS REFERENCE - BEGINS -->
+			<section class="row content" id="tabs4">
+				<div class="small-12 columns">
 
-			<!-- GRID LAYOUTS REFERENCE - BEGINS -->
+					<h2 class="evo-hdr-rule">Grid Layouts</h2>
+
+					<ul class="inline-list evo-inline-list evo-inline-list-pipes evo-margin-bottom">
+						<li><a href="#grid-1-col">1 Col</a></li>
+						<li><a href="#grid-2-col-50-50">50/50</a></li>
+						<li><a href="#grid-2-col-66-33">66/33</a></li>
+						<li><a href="#grid-2-col-33-66">33/66</a></li>
+						<li><a href="#grid-2-col-75-25">75/25</a></li>
+						<li><a href="#grid-2-col-25-75">25/75</a></li>
+						<li><a href="#grid-3-col-33-33-33">33/33/33</a></li>
+						<li><a href="#grid-3-col-25-50-25">25/50/25</a></li>
+						<li><a href="#grid-4-col-25-25-25-25">25x4</a></li>
+
+					</ul>
+
+					<h4 id="grid-1-col">1 Column / Clearing Row</h4>
+					<pre class="prettyprint linenums"><xmp>{% include '/base/grids/grid-1-col' %}</xmp></pre>
+
+					<h4 id="grid-2-col-50-50">2 Column - 50% / 50%</h4>
+					<pre class="prettyprint linenums"><xmp>{% include '/base/grids/grid-2-col-50-50' %}</xmp></pre>
+
+					<h4 id="grid-2-col-66-33">2 Column - 66% / 33%</h4>
+					<pre class="prettyprint linenums"><xmp>{% include '/base/grids/grid-2-col-66-33' %}</xmp></pre>
+
+					<h4 id="grid-2-col-33-66">2 Column - 33% / 66%</h4>
+					<pre class="prettyprint linenums"><xmp>{% include '/base/grids/grid-2-col-33-66' %}</xmp></pre>
+
+					<h4 id="grid-2-col-75-25">2 Column - 75% / 25%</h4>
+					<pre class="prettyprint linenums"><xmp>{% include '/base/grids/grid-2-col-75-25' %}</xmp></pre>
+
+					<h4 id="grid-2-col-25-75">2 Column - 25% / 75%</h4>
+					<pre class="prettyprint linenums"><xmp>{% include '/base/grids/grid-2-col-25-75' %}</xmp></pre>
+
+					<h4 id="grid-3-col-33-33-33">3 Column - 33% / 33% / 33%</h4>
+					<pre class="prettyprint linenums"><xmp>{% include '/base/grids/grid-3-col-33-33-33' %}</xmp></pre>
+
+					<h4 id="grid-3-col-25-50-25">3 Column - 25% / 50% / 25%</h4>
+					<pre class="prettyprint linenums"><xmp>{% include '/base/grids/grid-3-col-25-50-25' %}</xmp></pre>
+
+					<h4 id="grid-4-col-25-25-25-25">4 Column - 25% / 25% / 25% / 25%</h4>
+					<pre class="prettyprint linenums"><xmp>{% include '/base/grids/grid-4-col-25-25-25-25' %}</xmp></pre>
+
+				</div>
+			</section>
+		
 			<div class="col-24" id="grid-layouts">
 
-				<h2 class="evo-hdr-rule">Grid Layouts</h2>
 
-				<ul class="evo-horizontal-list evo-horizontal-list-piped evo-margin-bottom">
-					<li><a href="#grid-1-col">1 Col</a></li>
-					<li><a href="#grid-2-col-50-50">2 Col (50/50)</a></li>
-					<li><a href="#grid-2-col-66-33">2 Col (66/33)</a></li>
-					<li><a href="#grid-2-col-33-66">2 Col (33/66)</a></li>
-					<li><a href="#grid-2-col-75-25">2 Col (75/25)</a></li>
-					<li><a href="#grid-2-col-25-75">2 Col (25/75)</a></li>
-					<li><a href="#grid-3-col-33-33-33">3 Col (33/33/33)</a></li>
-					<li><a href="#grid-3-col-25-50-25">3 Col (25/50/25)</a></li>
-					<li><a href="#grid-4-col-25-25-25-25">4 Col (25x4)</a></li>
-					<li><a href="#grid-6-col">6 Col (17x6)</a></li>
-				</ul>
-
-				<h4 id="grid-1-col">1 Column / Clearing Row</h4>
-				<pre class="prettyprint linenums"><xmp>{% include '/base/grid-1-col' %}</xmp></pre>
-
-				<h4 id="grid-2-col-50-50">2 Column - 50% / 50%</h4>
-				<pre class="prettyprint linenums"><xmp>{% include '/base/grid-2-col-50-50' %}</xmp></pre>
-
-				<h4 id="grid-2-col-66-33">2 Column - 66% / 33%</h4>
-				<pre class="prettyprint linenums"><xmp>{% include '/base/grid-2-col-66-33' %}</xmp></pre>
-
-				<h4 id="grid-2-col-33-66">2 Column - 33% / 66%</h4>
-				<pre class="prettyprint linenums"><xmp>{% include '/base/grid-2-col-33-66' %}</xmp></pre>
-
-				<h4 id="grid-2-col-75-25">2 Column - 75% / 25%</h4>
-				<pre class="prettyprint linenums"><xmp>{% include '/base/grid-2-col-75-25' %}</xmp></pre>
-
-				<h4 id="grid-2-col-25-75">2 Column - 25% / 75%</h4>
-				<pre class="prettyprint linenums"><xmp>{% include '/base/grid-2-col-25-75' %}</xmp></pre>
-
-				<h4 id="grid-3-col-33-33-33">3 Column - 33% / 33% / 33%</h4>
-				<pre class="prettyprint linenums"><xmp>{% include '/base/grid-3-col-33-33-33' %}</xmp></pre>
-
-				<h4 id="grid-3-col-25-50-25">3 Column - 25% / 50% / 25%</h4>
-				<pre class="prettyprint linenums"><xmp>{% include '/base/grid-3-col-25-50-25' %}</xmp></pre>
-
-				<h4 id="grid-4-col-25-25-25-25">4 Column - 25% / 25% / 25% / 25%</h4>
-				<pre class="prettyprint linenums"><xmp>{% include '/base/grid-4-col-25-25-25-25' %}</xmp></pre>
-
-				<h4 id="grid-6-col">6 Column - 17% / 17% / 17% / 17% / 17% / 17%</h4>
-				<pre class="prettyprint linenums"><xmp>{% include '/base/grid-6-col' %}</xmp></pre>
-
-				<h4 id="grid-8-col">8 Column</h4>
-				<pre class="prettyprint linenums"><xmp>{% include '/base/grid-8-col' %}</xmp></pre>
-
-				<h4 id="grid-8-col">12 Column</h4>
-				<pre class="prettyprint linenums"><xmp>{% include '/base/grid-12-col' %}</xmp></pre>
 
 			</div>
-			<!-- GRID LAYOUTS REFERENCE - ENDS -->
+		<!-- GRID LAYOUTS REFERENCE - ENDS -->
 
-			<!-- SNIPPET SHORTCUTS REFERENCE - BEGINS -->
-			<div class="col-24" id="shortcuts">
-				
-				<h2 class="evo-hdr-rule">Snippet Shortcuts</h2>
+		<!-- SNIPPET SHORTCUTS REFERENCE - BEGINS -->
+			<section class="row content" id="tabs5">
+				<div class="small-12 columns">
+					
+					<h2 class="evo-hdr-rule">Snippet Shortcuts</h2>
 
-				<div class="col-24">
-					<div class="col-16 first">
+					<section class="row">
+						<div class="large-9 columns">
 
-						<p>The following Evolution snippet shortcuts are for use with the <a href="http://www.sublimetext.com/2" target="_blank">Sublime Text 2</a> text editor which is available for Windows or Mac, <a href="http://www.sublimetext.com/2" target="_blank">download Sublime Text 2</a>. The shortcut key commands provided are only for use with the Windows version but can be easily changed for use on a Mac, just replace <code>alt</code> with <code>ctrl</code> when editing the key bindings.</p>
+							<p>The following Evolution snippet shortcuts are for use with the <a href="http://www.sublimetext.com/2" target="_blank">Sublime Text 2</a> text editor which is available for Windows or Mac, <a href="http://www.sublimetext.com/2" target="_blank">download Sublime Text 2</a>. The shortcut key commands provided are only for use with the Windows version but can be easily changed for use on a Mac, just replace <code>alt</code> with <code>ctrl</code> when editing the key bindings.</p>
 
-						<h4>Installation Instructions</h4>
+							<h4>Installation Instructions</h4>
 
-						<p class="evo-bold">(These instructions assume you are using Sublime Text 2 for Windows 7)</p>
+							<p class="evo-bold">(These instructions assume you are using Sublime Text 2 for Windows 7)</p>
 
-						<ol>
-							<li>Checkout <code>evolution</code> project from <code>GitHub</code>.</li>
-							<li>Copy the files from inside your local <code>evolution/snippets</code> directory and paste them into the following directory on your Windows computer: <code>C:\Users\{Your_Username}\AppData\Roaming\Sublime Text 2\Packages\User</code></li>
-							<li>Open Sublime Text 2.</li>
-							<li>Go to Preferences > Key Bindings - User, this will open a preferences document in Sublime.</li>
-							<li>If you do not have any existing user key bindings then select all the code in this file and delete it. If you have existing user key bindings, insert the code from the next step between the "[ ]" in the document, making sure to seperate key binding calls with commas.</li>
-							<li>Copy the user key binding code from the code box below:
+							<ol>
+								<li>Checkout <code>evolution</code> project from <code>GitHub</code>.</li>
+								<li>Copy the files from inside your local <code>evolution/snippets</code> directory and paste them into the following directory on your Windows computer: <code>C:\Users\{Your_Username}\AppData\Roaming\Sublime Text 2\Packages\User</code></li>
+								<li>Open Sublime Text 2.</li>
+								<li>Go to Preferences > Key Bindings - User, this will open a preferences document in Sublime.</li>
+								<li>If you do not have any existing user key bindings then select all the code in this file and delete it. If you have existing user key bindings, insert the code from the next step between the "[ ]" in the document, making sure to seperate key binding calls with commas.</li>
+								<li>Copy the user key binding code from the code box below:
 
-								<pre class="prettyprint linenums"><xmp>{% include 'snippet-key-bindings' %}</xmp></pre>
+									<pre class="prettyprint linenums"><xmp>{% include 'snippet-key-bindings' %}</xmp></pre>
 
-							</li>
-							<li>Paste the user key binding code into the <code>Key Bindings - User</code> document and save.</li>
-							<li>If Sublime Text does not let you save, make sure to change the access rights of the user key binding file so it's not read-only. In Windows you can find the user binding file at the following location: <code>C:\Users\{Your_Username}\AppData\Roaming\Sublime Text 2\Packages\User</code>. Right click on the <code>Default (Windows).sublime-keymap</code> file and select <code>Properties</code>. Under the <code>General</code> tab uncheck the <code>Read-only</code> checkbox at bottom next to the <code>Attributes</code> label. Click <code>OK</code> to save settings. Go back to Sublime Text and try to save again.</li>
-							<li>If everything saves correctly, test key commands in a HTML document.</li>
-						</ol>
+								</li>
+								<li>Paste the user key binding code into the <code>Key Bindings - User</code> document and save.</li>
+								<li>If Sublime Text does not let you save, make sure to change the access rights of the user key binding file so it's not read-only. In Windows you can find the user binding file at the following location: <code>C:\Users\{Your_Username}\AppData\Roaming\Sublime Text 2\Packages\User</code>. Right click on the <code>Default (Windows).sublime-keymap</code> file and select <code>Properties</code>. Under the <code>General</code> tab uncheck the <code>Read-only</code> checkbox at bottom next to the <code>Attributes</code> label. Click <code>OK</code> to save settings. Go back to Sublime Text and try to save again.</li>
+								<li>If everything saves correctly, test key commands in a HTML document.</li>
+							</ol>
 
-					</div>
-					<div class="col-8">
+						</div>
+						<div class="large-3 columns">
+							<div class="evo-box evo-sidebar-ctn">
+								<div class="evo-box-hdr">
+									<h4 class="evo-hdr-rule">Snippet Key Commands</h4>
+								</div>
+								<div class="box-bdy">
+								
+									<p>Use the following key commands in Sublime Text for easy insertion of Evolution code snippets.</p>
 
-						<div class="evo-box evo-sidebar-ctn">
-							<div class="evo-box-hdr">
-								<h4 class="evo-hdr-rule">Snippet Key Commands</h4>
-							</div>
-							<div class="box-bdy">
-							
-								<p>Use the following key commands in Sublime Text for easy insertion of Evolution code snippets.</p>
+									<!-- SNIPPET SHORTCUTS TABLE - BEGINS -->
+									<div class="evo-table-small-mediaquery">
+										<table class="evo-table evo-footable evo-table-borders" data-filter="#snippet-shortcuts-filter" border="0" cellpadding="0" cellspacing="0">
+											<caption>
+												<div class="col-24 evo-tbl-data-filter">
+													<input id="snippet-shortcuts-filter" type="text" title="Type to filter results." tabindex="" placeholder="Filter" />
+												</div>
+											</caption>
+											<thead>
+												<tr>
+													<th class="col-14" scope="col">Snippet</th>
+													<th class="col-10" scope="col">Shortcut</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												{% for item in model.snippet_shortcut_data %}
+												<tr>
+													<td>{{ item.snippet_title }}</td>
+													<td>{{ item.shortcut }}</td>
+												</tr>
+												{% endfor %}
 
-								<!-- SNIPPET SHORTCUTS TABLE - BEGINS -->
-								<div class="evo-table-small-mediaquery">
-									<table class="evo-table evo-footable evo-table-borders" data-filter="#snippet-shortcuts-filter" border="0" cellpadding="0" cellspacing="0">
-										<caption>
-											<div class="col-24 evo-tbl-data-filter">
-												<input id="snippet-shortcuts-filter" type="text" title="Type to filter results." tabindex="" placeholder="Filter" />
-											</div>
-										</caption>
-										<thead>
-											<tr>
-												<th class="col-14" scope="col">Snippet</th>
-												<th class="col-10" scope="col">Shortcut</th>
-											</tr>
-										</thead>
-										<tbody>
-											
-											{% for item in model.snippet_shortcut_data %}
-											<tr>
-												<td>{{ item.snippet_title }}</td>
-												<td>{{ item.shortcut }}</td>
-											</tr>
-											{% endfor %}
+											</tbody>
+										</table>
+									</div>	
+									<!-- SNIPPET SHORTCUTS TABLE - ENDS -->
 
-										</tbody>
-									</table>
-								</div>	
-								<!-- SNIPPET SHORTCUTS TABLE - ENDS -->
-
+								</div>
 							</div>
 						</div>
-
-					</div>
+					</section>
+							
 				</div>
+			</section>
+		<!-- SNIPPET SHORTCUTS REFERENCE - ENDS -->
 
-			</div>
-			<!-- SNIPPET SHORTCUTS REFERENCE - ENDS -->
-
-			<!-- MISC REFERENCE - BEGINS -->
-			<div class="col-24" id="misc">
-				
-				<h2 class="evo-hdr-rule">Miscellaneous</h2>
+		<!-- MISC REFERENCE - BEGINS -->
+			<section class="row content" id="tabs6">
+				<div class="small-12 columns">
+					
+					<h2 class="evo-hdr-rule">Miscellaneous</h2>
 
 				<!-- SASS MIXINS - BEGINS -->
-				<div class="evo-box-adv">
-					<div class="evo-box-hdr">
-						<h4 class="evo-hdr-rule">Theming</h4>
+					<div class="evo-box-adv">
+						<div class="evo-box-hdr">
+							<h4 class="evo-hdr-rule">Theming</h4>
+						</div>
+						<div class="evo-box-bdy">
+
+							<h5>Theming Instructions</h5>
+
+							<p>Developers can theme Evolution at the site level by customizing the <code>theme.css</code> file located at the following location: <code>assets/css/</code> or if using SASS customizing the <code>theme_variables.scss</code> file inside <code>assets/css/partials/global</code>.</p>
+
+							<p>Furthermore, if a developer wants to add custom theme styles or variables (if using SASS) to their project, those can be added to the bottom of theme.css or theme.scss (if using SASS) in the section called <code>WEBSITE THEME STYLES</code>. These files are located at <code>assets/css/</code>.</p>
+
+							<h5>Theming Reference</h5>
+
+							<p>If a developer is using SASS they can use the <code>theme_variables.scss</code> file in the Evolution core as a reference for the theming variables used in <code>theme_variables.scss</code> at the site level <code>(assets/css/partials/global/theme_variables.scss)</code>. Developers who are using just CSS can use it as a CSS value reference. The file is located at <code>assets/css/core/global/</code>.</p>
+							
+						</div>
 					</div>
-					<div class="evo-box-bdy">
-
-						<h5>Theming Instructions</h5>
-
-						<p>Developers can theme Evolution at the site level by customizing the <code>theme.css</code> file located at the following location: <code>assets/css/</code> or if using SASS customizing the <code>theme_variables.scss</code> file inside <code>assets/css/partials/global</code>.</p>
-
-						<p>Furthermore, if a developer wants to add custom theme styles or variables (if using SASS) to their project, those can be added to the bottom of theme.css or theme.scss (if using SASS) in the section called <code>WEBSITE THEME STYLES</code>. These files are located at <code>assets/css/</code>.</p>
-
-						<h5>Theming Reference</h5>
-
-						<p>If a developer is using SASS they can use the <code>theme_variables.scss</code> file in the Evolution core as a reference for the theming variables used in <code>theme_variables.scss</code> at the site level <code>(assets/css/partials/global/theme_variables.scss)</code>. Developers who are using just CSS can use it as a CSS value reference. The file is located at <code>assets/css/core/global/</code>.</p>
-						
-					</div>
-				</div>
 				<!-- SASS MIXINS - ENDS -->
-
-			</div>
-			<!-- MISC REFERENCE - BEGINS -->
-
+				</div>
+			</section>
+		<!-- MISC REFERENCE - BEGINS -->
 		</div>
-	<!-- QUICK REFERENCE TABS - ENDS -->
+	<!-- TABS - END -->
 
 	</section>
 <!-- CONTENT SECTION - ENDS -->

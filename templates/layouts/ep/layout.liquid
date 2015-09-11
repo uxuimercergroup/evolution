@@ -60,6 +60,9 @@
 		<!-- EVOLUTION CORE STYLES -->
 		{{ "evolution.css" | asset_url | stylesheet_tag }}
 
+		<!-- EVOLUTION UI STYLES -->
+		{{ "evolution_ui.css" | asset_url | stylesheet_tag }}
+
 		<!-- SITE STYLES -->
 		{{ "ep.css" | asset_url | stylesheet_tag }}
 
@@ -79,9 +82,9 @@
 			<div class="inner-wrap">
 				
 				{% if model.header == "true" %}
-				<!-- HEADER - BEGINS -->
-						{% include "ep/header" %}
-				<!-- HEADER - ENDS -->
+					<!-- HEADER - BEGINS -->
+					{% include "ep/header" %}
+					<!-- HEADER - ENDS -->
 				{% endif %}
 
 				<!-- PAGE - BEGINS -->

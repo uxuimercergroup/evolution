@@ -27,13 +27,6 @@
 				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/href-secondary' %}{{ global.reference-get-code-end-tag }}
 				{{ model.reference-code-html-content-block-post }}
 
-				{% if model.reference-example-versions == "true" %}
-					<h4>{{ model.reference-example-version-label-2 }}</h4>
-				{% endif %}
-				{{ model.reference-code-html-content-block-pre-2 }}
-				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-primary-interactive' %}{{ global.reference-get-code-end-tag }}
-				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-secondary-interactive' %}{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-html-content-block-post-2 }}
 
 				{% if model.reference-example-versions == "true" %}
 					<h4>{{ model.reference-example-version-label-3 }}</h4>
@@ -42,13 +35,6 @@
 				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-primary-disabled' %}{{ global.reference-get-code-end-tag }}
 				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-secondary-disabled' %}{{ global.reference-get-code-end-tag }}
 				{{ model.reference-code-html-content-block-post-3 }}
-
-				{% if model.reference-example-versions == "true" %}
-					<h4>{{ model.reference-example-version-label-7 }}</h4>
-				{% endif %}
-				{{ model.reference-code-html-content-block-pre-7 }}
-				{{ global.reference-get-code-start-tag }}{% include '/base/buttons/button-colors' %}{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-html-content-block-post-7 }}
 
 				{% if model.reference-example-versions == "true" %}
 					<h4>{{ model.reference-example-version-label-8 }}</h4>
@@ -115,478 +101,429 @@
 	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
 		<section class="evo-ref-example-content">
 
-			<div class="col-24">
-				<div class="col-8 first">
+			<section class="row">
+				<div class="small-12 columns">
 
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-padding-bottom evo-ref-example-box">
+				<!-- TABS - BEGIN -->
+					<ul class="tabs evo-tabs" data-tab>
+						<li class="tab-title active"><a href="#tabs1"><span class="text">Standard Options</span></a></li>
+						<li class="tab-title"><a href="#tabs2"><span class="text">Additional Options</span></a></li>
+					</ul>
+					<div class="tabs-content evo-tabs-content">
+						<div class="content active" id="tabs1">
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
-						{% endif %}
+							<section class="row evo-spacer-margin-bottom-x-large">
+								<div class="small-6 columns">
+								<!-- EXAMPLE SECTION - BOX - BEGINS -->
+									{% if model.reference-example-versions == "true" %}
+										<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
+									{% endif %}
+									<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+										{% include 'base/buttons/href-secondary' %}
+										{% include 'base/buttons/button-secondary' %}
+										<br>
+										{% include 'base/buttons/href-primary' %}
+										{% include 'base/buttons/button-primary' %}
+									<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+								<!-- EXAMPLE SECTION - BOX - ENDS -->
+								</div>
+								<div class="small-6 columns">
+								<!-- EXAMPLE SECTION - BOX - BEGINS -->
+									{% if model.reference-example-versions == "true" %}
+										<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
+									{% endif %}
+									<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+										{% include 'base/buttons/button-secondary-disabled' %}
+										{% include 'base/buttons/button-primary-disabled' %}
+									<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+								<!-- EXAMPLE SECTION - BOX - ENDS -->
+								</div>
+							</section>
 
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<a href="" class="button radius secondary evo-btn" id="" tabindex="" title="">Secondary a</a>
-							<button class="button radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button>
+							<section class="row evo-spacer-margin-bottom-x-large">
+								<div class="small-12 columns">
+								<!-- MULTI-STEP BUTTONS - BEGINS -->
+									{% if model.reference-example-versions == "true" %}
+										<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-4 }}</h4>
+										<p>In cases where buttons are used within a multi-step flow, the common combination of buttons is as follows: "Cancel" first, followed by "Back", followed by whatever the primary action is ("Next", "Save", "Review", etc).</p>
+									{% endif %}
 
-							<a href="" class="button radius evo-btn" id="" tabindex="" title="">Primary a</a>
-							<button class="button radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+									<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+										<button class="button radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Cancel</button>
+										<button class="button radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Back</button>
+										<button class="button radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Save</button>
+									<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+								<!-- MULTI-STEP BUTTONS - ENDS -->					
+								</div>
+							</section>
 
+							<section class="row">
+								<div class="small-6 columns">
+								<!-- MINIMUM WIDTH BUTTONS - BEGINS -->
+									{% if model.reference-example-versions == "true" %}
+										<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-5 }}</h4>
+										<p>Each button has a minimum width of 100 pixels. This ensures consistency even in cases where the label text is really short.</p>
+									{% endif %}
+
+									<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+										<button class="button radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Back</button>
+										<button class="button radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Go</button>
+									<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+								<!-- MINIMUM WIDTH BUTTONS - ENDS -->
+								</div>
+								<div class="small-6 columns">
+								<!-- MINIMUM WIDTH BUTTONS - BEGINS -->
+									{% if model.reference-example-versions == "true" %}
+										<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-6 }}</h4>
+										<p>The buttons are content aware, and the width of the button should be dynamic based on the label text.</p>
+									{% endif %}
+
+									<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+										<button class="button radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Title Case Button With Alot Of Text</button>
+									<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+								<!-- MINIMUM WIDTH BUTTONS - ENDS -->
+								</div>
+							</section>
+
+						</div>
+						<div class="content" id="tabs2">
+
+							<section class="row evo-spacer-margin-bottom-x-large">
+								<div class="small-12 columns">
+								<!-- EXAMPLE SECTION - BOX - BEGINS -->
+									{% if model.reference-example-versions == "true" %}
+										<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-8 }}</h4>
+									{% endif %}
+
+									<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+										<div class="col-24">
+											<button class="button tiny radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Tiny</button>
+											<button class="button small radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Small</button>
+											<button class="button radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Default</button>
+											<button class="button large radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Large</button>
+										</div>
+										<div class="col-24">
+											<button class="button tiny radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Tiny</button>
+											<button class="button small radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Small</button>
+											<button class="button radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Default</button>
+											<button class="button large radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Large</button>
+										</div>
+									<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+								<!-- EXAMPLE SECTION - BOX - ENDS -->					
+								</div>
+							</section>
+
+							<section class="row evo-spacer-margin-bottom-x-large">
+								<div class="small-12 columns">
+								<!-- EXAMPLE SECTION - BOX - BEGINS -->
+									{% if model.reference-example-versions == "true" %}
+										<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-9 }}</h4>
+									{% endif %}
+
+									<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+										<button class="button expand radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary expanded</button>
+										<button class="button round secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary round</button>
+										<button class="button radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary radius</button>
+
+										<button class="button expand radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Expanded</button>
+										<button class="button round evo-btn" id="" name="" value="" type="" tabindex="" title="">Round</button>
+										<button class="button radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Radius</button>
+									<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+								<!-- EXAMPLE SECTION - BOX - ENDS -->					
+								</div>
+							</section>
+
+							<section class="row evo-spacer-margin-bottom-x-large">
+								<div class="small-12 columns">
+								<!-- EXAMPLE SECTION - BOX - BEGINS -->
+									{% if model.reference-example-versions == "true" %}
+										<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-10 }}</h4>
+									{% endif %}
+
+									<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+										<input class="button secondary radius evo-btn" id="" name="" value="Secondary" type="submit" tabindex="" title="" />
+										<input class="button radius evo-btn" id="" name="" value="Primary" type="submit" tabindex="" title="" />
+									<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+								<!-- EXAMPLE SECTION - BOX - ENDS -->					
+								</div>
+							</section>
+
+							<section class="row evo-spacer-margin-bottom-x-large">
+								<div class="small-12 columns">
+								<!-- EXAMPLE SECTION - BOX - BEGINS -->
+									{% if model.reference-example-versions == "true" %}
+										<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-11 }}</h4>
+									{% endif %}
+
+									<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+										<ul class="button-group radius">
+											<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
+											<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
+											<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
+										</ul>
+
+										<ul class="button-group round">
+											<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
+											<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
+											<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
+										</ul>
+
+										<ul class="button-group radius">
+											<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+											<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+											<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+										</ul>
+
+										<ul class="button-group round">
+											<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+											<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+											<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+										</ul>
+
+										<div class="evo-spacer-margin-left-large">
+											<br><br>
+
+											<h5>Expand Evenly</h5>
+											<ul class="button-group radius even-3">
+												<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
+												<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
+												<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
+											</ul>
+
+											<ul class="button-group radius even-6">
+												<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+												<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+												<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+												<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+												<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+												<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+											</ul>
+											
+											<br><br>
+											
+											<h5>Stacked</h5>
+											<ul class="stack button-group radius">
+												<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
+												<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
+												<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
+											</ul>
+											
+											<br><br>
+											
+											<h5>Stacked for Small Media Query</h5>
+											<ul class="stack-for-small button-group radius">
+												<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
+												<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
+												<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
+											</ul>
+											
+											<br><br>
+											
+											<h5>Button Bar</h5>
+											<div class="button-bar">
+												<ul class="button-group radius">
+													<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+													<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+													<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+												</ul>
+												<ul class="button-group radius">
+													<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+													<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+													<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
+												</ul>
+											</div>
+										</div>
+									<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+								<!-- EXAMPLE SECTION - BOX - ENDS -->					
+								</div>
+							</section>
+
+							<section class="row">
+								<div class="small-12 columns">
+								<!-- EXAMPLE SECTION - BOX - BEGINS -->
+									{% if model.reference-example-versions == "true" %}
+										<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-12 }}</h4>
+									{% endif %}
+
+									<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+										<section class="row">
+											<div class="small-12 columns">
+
+												<a href="" class="button tiny radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Secondary a</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</a>
+												<button class="button tiny radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Secondary</span>
+												</button>
+
+												<a href="" class="button tiny radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
+													<span class="evo-btn-text">Primary a</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</a>
+												<button class="button tiny radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Primary</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</button>
+
+											</div>
+										</section>
+
+										<section class="row">
+											<div class="small-12 columns">
+
+												<a href="" class="button small radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Secondary a</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</a>
+												<button class="button small radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Secondary</span>
+												</button>
+
+												<a href="" class="button small radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
+													<span class="evo-btn-text">Primary a</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</a>
+												<button class="button small radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Primary</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</button>
+
+											</div>
+										</section>
+
+										<section class="row">
+											<div class="small-12 columns">
+
+												<a href="" class="button radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Secondary a</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</a>
+												<button class="button radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Secondary</span>
+												</button>
+
+												<a href="" class="button radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
+													<span class="evo-btn-text">Primary a</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</a>
+												<button class="button radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Primary</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</button>
+
+											</div>
+										</section>
+
+										<section class="row">
+											<div class="small-12 columns">
+
+												<a href="" class="button large radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Secondary a</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</a>
+												<button class="button large radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Secondary</span>
+												</button>
+
+												<a href="" class="button large radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
+													<span class="evo-btn-text">Primary a</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</a>
+												<button class="button large radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Primary<span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</button>
+
+											</div>
+										</section>
+
+										<section class="row">
+											<div class="small-12 columns">
+
+												<button class="button expand radius secondary evo-btn" data-evo-button-icons="both" id="" name="" value="" type="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Secondary expanded</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</button>
+												<button class="button round secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Secondary round</span>
+												</button>
+												<button class="button radius secondary evo-btn" data-evo-button-icons="right" id="" name="" value="" type="" tabindex="" title="">
+													<span class="evo-btn-text">Secondary radius</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</button>
+
+											</div>
+										</section>
+
+										<section class="row">
+											<div class="small-12 columns">
+
+												<button class="button expand radius evo-btn" data-evo-button-icons="both" id="" name="" value="" type="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Expanded</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</button>
+												<button class="button round evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Round</span>
+												</button>
+												<button class="button radius evo-btn" data-evo-button-icons="right" id="" name="" value="" type="" tabindex="" title="">
+													<span class="evo-btn-text">Radius</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</button>
+												
+											</div>
+										</section>
+
+										<ul class="stack-for-small button-group radius">
+											<li>
+												<a href="" class="button radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Secondary a</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</a>
+											</li>
+											<li>
+												<a href="" class="button radius evo-btn" data-evo-button-icons="left"  id="" tabindex="" title="">
+													<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
+													<span class="evo-btn-text">Primary a</span>
+												</a>
+											</li>
+											<li>
+												<a href="" class="button radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
+													<span class="evo-btn-text">Primary a</span>
+													<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
+												</a>
+											</li>
+										</ul>
+									<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+								<!-- EXAMPLE SECTION - BOX - ENDS -->					
+								</div>
+							</section>
+
+						</div>
 					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
+				<!-- TABS - END -->
 
 				</div>
-				<div class="col-8">
-
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-padding-bottom evo-ref-example-box">
-
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							{% include '/base/buttons/button-secondary-interactive' %}
-							{% include '/base/buttons/button-primary-interactive' %}
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
-
-				</div>
-
-				<div class="col-8">
-
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-padding-bottom evo-ref-example-box">
-
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<button class="button radius secondary disabled evo-btn" id="" name="" value="" type="" disabled="disabled" tabindex="" title="">Secondary disabled</button>
-							<button class="button radius disabled evo-btn" id="" name="" value="" type="" disabled="disabled" tabindex="" title="">Primary disabled</button>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
-
-				</div>
-			</div>
-			<div class="col-24">
-
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-padding-bottom evo-ref-example-box">
-
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-4 }}</h4>
-							<p>In cases where buttons are used within a multi-step flow, the common combination of buttons is as follows: "Cancel" first, followed by "Back", followed by whatever the primary action is ("Next", "Save", "Review", etc).</p>
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<button class="button radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Cancel</button>
-							<button class="button radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Back</button>
-							<button class="button radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Save</button>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
-
-			</div>
-			<div class="col-24">
-
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-padding-bottom evo-ref-example-box">
-
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-5 }}</h4>
-							<p>Each button has a minimum width of 100 pixels. This ensures consistency even in cases where the label text is really short.</p>
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<button class="button radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Back</button>
-							<button class="button radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Go</button>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
-
-			</div>
-			<div class="col-24">
-
-			<!-- EXAMPLE SECTION - BOX - BEGINS -->
-				<div class="evo-box evo-box-rnd evo-padding-bottom evo-ref-example-box">
-
-					{% if model.reference-example-versions == "true" %}
-						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-6 }}</h4>
-						<p>The buttons are content aware, and the width of the button should be dynamic based on the label text.</p>
-					{% endif %}
-
-					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-						<button class="button radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Title Case Button With Alot Of Text</button>
-					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-				</div>
-			<!-- EXAMPLE SECTION - BOX - ENDS -->
-
-			</div>
-
-			<div class="col-24">
-
-			<!-- EXAMPLE SECTION - BOX - BEGINS -->
-				<div class="evo-box evo-box-rnd evo-padding-bottom evo-ref-example-box">
-
-					{% if model.reference-example-versions == "true" %}
-						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-7 }}</h4>
-					{% endif %}
-
-					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-						<button class="button radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button>
-						<button class="button radius success evo-btn" id="" name="" value="" type="" tabindex="" title="">Success</button>
-						<button class="button radius alert evo-btn" id="" name="" value="" type="" tabindex="" title="">Alert</button>
-						<button class="button radius info evo-btn" id="" name="" value="" type="" tabindex="" title="">Info</button>
-
-						<h5>Custom Background Color</h5>
-						<button class="button radius evo-btn" data-evo-button-color="orange" id="" name="" value="" type="" tabindex="" title="">Orange</button>
-						<button class="button radius evo-btn" data-evo-button-color="purple" id="" name="" value="" type="" tabindex="" title="">Purple</button>
-						<button class="button radius evo-btn" data-evo-button-color="fuscia" id="" name="" value="" type="" tabindex="" title="">Fuscia</button>
-						<button class="button radius evo-btn" data-evo-button-color="blue-green" id="" name="" value="" type="" tabindex="" title="">Blue Green</button>
-
-						<h5>Custom Font Color</h5>
-						<button class="button radius secondary evo-btn" data-evo-button-font-color="orange" id="" name="" value="" type="" tabindex="" title="">Orange text</button>
-						<button class="button radius secondary evo-btn" data-evo-button-font-color="purple" id="" name="" value="" type="" tabindex="" title="">Purple text</button>
-						<button class="button radius secondary evo-btn" data-evo-button-font-color="fuscia" id="" name="" value="" type="" tabindex="" title="">Fuscia text</button>
-						<button class="button radius secondary evo-btn" data-evo-button-font-color="blue-green" id="" name="" value="" type="" tabindex="" title="">Blue Green text</button>
-
-					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-				</div>
-			<!-- EXAMPLE SECTION - BOX - ENDS -->
-
-			</div>
-
-			<div class="col-24">
-
-			<!-- EXAMPLE SECTION - BOX - BEGINS -->
-				<div class="evo-box evo-box-rnd evo-padding-bottom evo-ref-example-box">
-
-					{% if model.reference-example-versions == "true" %}
-						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-8 }}</h4>
-					{% endif %}
-
-					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-						<div class="col-24">
-							<button class="button tiny radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Tiny</button>
-							<button class="button small radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Small</button>
-							<button class="button radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Default</button>
-							<button class="button large radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Large</button>
-						</div>
-						<div class="col-24">
-							<button class="button tiny radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Tiny</button>
-							<button class="button small radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Small</button>
-							<button class="button radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Default</button>
-							<button class="button large radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Large</button>
-						</div>
-					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-				</div>
-			<!-- EXAMPLE SECTION - BOX - ENDS -->
-
-			</div>
-
-			<div class="col-24">
-
-			<!-- EXAMPLE SECTION - BOX - BEGINS -->
-				<div class="evo-box evo-box-rnd evo-padding-bottom evo-ref-example-box">
-
-					{% if model.reference-example-versions == "true" %}
-						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-9 }}</h4>
-					{% endif %}
-
-					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-						<div class="col-24">
-							<button class="button expand radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary expanded</button>
-							<button class="button round secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary round</button>
-							<button class="button radius secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary radius</button>
-						</div>
-						<div class="col-24">
-							<button class="button expand radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Expanded</button>
-							<button class="button round evo-btn" id="" name="" value="" type="" tabindex="" title="">Round</button>
-							<button class="button radius evo-btn" id="" name="" value="" type="" tabindex="" title="">Radius</button>
-						</div>
-					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-				</div>
-			<!-- EXAMPLE SECTION - BOX - ENDS -->
-
-			</div>
-
-			<div class="col-24">
-
-			<!-- EXAMPLE SECTION - BOX - BEGINS -->
-				<div class="evo-box evo-box-rnd evo-padding-bottom evo-ref-example-box">
-
-					{% if model.reference-example-versions == "true" %}
-						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-10 }}</h4>
-					{% endif %}
-
-					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-						<input class="button secondary radius evo-btn" id="" name="" value="Secondary" type="submit" tabindex="" title="" />
-						<input class="button radius evo-btn" id="" name="" value="Primary" type="submit" tabindex="" title="" />
-					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-				</div>
-			<!-- EXAMPLE SECTION - BOX - ENDS -->
-
-			</div>
-
-			<div class="col-24">
-
-			<!-- EXAMPLE SECTION - BOX - BEGINS -->
-				<div class="evo-box evo-box-rnd evo-padding-bottom evo-ref-example-box">
-
-					{% if model.reference-example-versions == "true" %}
-						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-11 }}</h4>
-					{% endif %}
-
-					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-						<ul class="button-group radius">
-							<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
-							<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
-							<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
-						</ul>
-
-						<ul class="button-group round">
-							<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
-							<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
-							<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
-						</ul>
-
-						<ul class="button-group radius">
-							<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-							<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-							<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-						</ul>
-
-						<ul class="button-group round">
-							<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-							<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-							<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-						</ul>
-
-						<h5>Expand Evenly</h5>
-
-						<ul class="button-group radius even-3">
-							<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
-							<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
-							<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
-						</ul>
-
-						<ul class="button-group radius even-6">
-							<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-							<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-							<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-							<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-							<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-							<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-						</ul>
-
-						<h5>Stacked</h5>
-
-						<ul class="stack button-group radius">
-							<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
-							<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
-							<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
-						</ul>
-
-						<h5>Stacked for Small Media Query</h5>
-
-						<ul class="stack-for-small button-group radius">
-							<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
-							<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
-							<li><button class="button secondary evo-btn" id="" name="" value="" type="" tabindex="" title="">Secondary</button></li>
-						</ul>
-
-						<h5>Button Bar</h5>
-
-						<div class="button-bar">
-							<ul class="button-group radius">
-								<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-								<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-								<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-							</ul>
-							<ul class="button-group radius">
-								<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-								<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-								<li><button class="button evo-btn" id="" name="" value="" type="" tabindex="" title="">Primary</button></li>
-							</ul>
-						</div>
-					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-				</div>
-			<!-- EXAMPLE SECTION - BOX - ENDS -->
-
-			</div>
-
-			<div class="col-24">
-
-			<!-- EXAMPLE SECTION - BOX - BEGINS -->
-				<div class="evo-box evo-box-rnd evo-padding-bottom evo-ref-example-box">
-
-					{% if model.reference-example-versions == "true" %}
-						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-12 }}</h4>
-					{% endif %}
-
-					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-						<div class="col-24">
-							<a href="" class="button tiny radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Secondary a</span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</a>
-							<button class="button tiny radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Secondary</span>
-							</button>
-
-							<a href="" class="button tiny radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
-								<span class="evo-btn-text">Primary a</span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</a>
-							<button class="button tiny radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Primary</span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</button>
-						</div>
-
-						<div class="col-24">
-							<a href="" class="button small radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Secondary a</span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</a>
-							<button class="button small radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Secondary</span>
-							</button>
-
-							<a href="" class="button small radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
-								<span class="evo-btn-text">Primary a</span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</a>
-							<button class="button small radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Primary</span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</button>
-						</div>
-
-						<div class="col-24">
-							<a href="" class="button radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Secondary a</span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</a>
-							<button class="button radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Secondary</span>
-							</button>
-
-							<a href="" class="button radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
-								<span class="evo-btn-text">Primary a</span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</a>
-							<button class="button radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Primary</span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</button>
-						</div>
-
-						<div class="col-24">
-							<a href="" class="button large radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Secondary a</span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</a>
-							<button class="button large radius secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Secondary</span>
-							</button>
-
-							<a href="" class="button large radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
-								<span class="evo-btn-text">Primary a</span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</a>
-							<button class="button large radius evo-btn" data-evo-button-icons="both"  id="" name="" value="" type="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Primary<span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</button>
-						</div>
-
-						<div class="col-24">
-							<button class="button expand radius secondary evo-btn" data-evo-button-icons="both" id="" name="" value="" type="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Secondary expanded</span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</button>
-							<button class="button round secondary evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Secondary round</span>
-							</button>
-							<button class="button radius secondary evo-btn" data-evo-button-icons="right" id="" name="" value="" type="" tabindex="" title="">
-								<span class="evo-btn-text">Secondary radius</span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</button>
-						</div>
-
-						<div class="col-24">
-							<button class="button expand radius evo-btn" data-evo-button-icons="both" id="" name="" value="" type="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Expanded</span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</button>
-							<button class="button round evo-btn" data-evo-button-icons="left" id="" name="" value="" type="" tabindex="" title="">
-								<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-								<span class="evo-btn-text">Round</span>
-							</button>
-							<button class="button radius evo-btn" data-evo-button-icons="right" id="" name="" value="" type="" tabindex="" title="">
-								<span class="evo-btn-text">Radius</span>
-								<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-							</button>
-						</div>
-
-						<ul class="stack-for-small button-group radius">
-							<li>
-								<a href="" class="button radius secondary evo-btn" data-evo-button-icons="both" id="" tabindex="" title="">
-									<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-									<span class="evo-btn-text">Secondary a</span>
-									<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-								</a>
-							</li>
-							<li>
-								<a href="" class="button radius evo-btn" data-evo-button-icons="left"  id="" tabindex="" title="">
-									<i class="evo-icon-plus-circle evo-icon-position-left" title=""></i>
-									<span class="evo-btn-text">Primary a</span>
-								</a>
-							</li>
-							<li>
-								<a href="" class="button radius evo-btn" data-evo-button-icons="right"  id="" tabindex="" title="">
-									<span class="evo-btn-text">Primary a</span>
-									<i class="evo-icon-arrow-right2 evo-icon-position-right" title=""></i>
-								</a>
-							</li>
-						</ul>
-					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-				</div>
-			<!-- EXAMPLE SECTION - BOX - ENDS -->
-
-			</div>
+			</section>
 
 		</section>
 	<!-- EXAMPLE SECTION - CONTENT - ENDS -->

@@ -1,11 +1,11 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.6 - Tooltip Partial
-// DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// Mercer Evolution - Core v2.7 - Tooltip Partial
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
 @if $use-tooltip == true{
-
+/*
 	// EVO Tooltip global
 	.evo-tooltip 		{
 						@include border-radius($global-radius);
@@ -326,14 +326,14 @@
 						-ms-transform: scale(1.1, 1.1);
 						transform: scale(1.1, 1.1);
 						}
-
+*/
 	//=== MEDIA QUERIES =========================================================================
 
-	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
 	@if $use-medium-up-mediaquery == true {
 		
 		@media #{$medium-up} {
-
+/*
 			// EVO Tooltip global
 			.evo-tooltip
 						{
@@ -344,7 +344,7 @@
 							font-size: 1rem;
 							}
 						}
-
+*/
 		}
 		
 	}// endif

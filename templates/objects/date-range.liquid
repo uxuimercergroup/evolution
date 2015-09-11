@@ -47,105 +47,92 @@
 	<!-- EXAMPLE SECTION - CONTENT - BEGINS -->
 		<section class="evo-ref-example-content">
 
-			<div class="col-11 first">
-				
-				<div class="col-24">
+			<section class="row">
+				<div class="large-7 columns">
+				<!-- EXAMPLE SECTION - BOX - BEGINS -->
+					<div class="evo-box evo-box-rnd evo-ref-example-box">
+
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
+					{% endif %}
+
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<form>
+							<fieldset>
+								<div class="row">
+									<label class="evo-required small-12 columns" for="js-evo-datepicker-range-stacked-from">
+										<i class="evo-icon-evo-asterisk-small evo-icon-color-gray-dark evo-icon-position-left"></i>Label:
+										{% include '/objects/date-range' %}
+									</label>
+								</div>
+							</fieldset>
+						</form>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+
+					</div>
+				<!-- EXAMPLE SECTION - BOX - ENDS -->
 
 				<!-- EXAMPLE SECTION - BOX - BEGINS -->
 					<div class="evo-box evo-box-rnd evo-ref-example-box">
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label }}</h4>
-						{% endif %}
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
+					{% endif %}
 
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<form class="evo-form" id="" name="" method="" action="" title="">
-								<fieldset>
-									<ol>
-										<li>
-											<label class="evo-required" for="js-evo-datepicker-range-stacked-from">
-												<i class="evo-icon-evo-asterisk-small evo-icon-color-gray-darker evo-icon-position-left"></i>Label:
-											</label>
-											{% include '/objects/date-range' %}
-										</li>
-									</ol>
-								</fieldset>
-							</form>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<form>
+							<fieldset>
+								<div class="row evo-datepicker-ctn evo-datepicker-range">
+									<label class="small-4 columns evo-required" for="js-evo-datepicker-range-left-aligned-from">
+										<i class="evo-icon-evo-asterisk-small evo-icon-color-gray-dark evo-icon-position-left"></i>Label:
+									</label>
+									<div class="small-4 columns">
+										<input id="js-evo-datepicker-range-left-aligned-from" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="From" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" />
+									</div>
+									<div class="small-4 columns">
+										<input id="js-evo-datepicker-range-left-aligned-to" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="To" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" />
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 					</div>
 				<!-- EXAMPLE SECTION - BOX - ENDS -->
-					
-				</div>
-				<div class="col-24">
 
 				<!-- EXAMPLE SECTION - BOX - BEGINS -->
 					<div class="evo-box evo-box-rnd evo-ref-example-box">
 
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
-						{% endif %}
+					{% if model.reference-example-versions == "true" %}
+						<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
+					{% endif %}
 
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<form class="evo-form evo-form-inline" id="" name="" method="" action="" title="">
-								<fieldset>
-									<ol>
-										<li>
-											<label class="col-5 first evo-required" for="js-evo-datepicker-range-left-aligned-from">
-												<i class="evo-icon-evo-asterisk-small evo-icon-color-gray-darker evo-icon-position-left"></i>Label:
-											</label>
-											<div class="col-19 evo-datepicker-ctn evo-datepicker-range evo-small-mediaquery-grid">
-												<input class="col-12 first" id="js-evo-datepicker-range-left-aligned-from" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="From" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" />
-												<input class="col-12" id="js-evo-datepicker-range-left-aligned-to" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="To" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" />
-											</div>
-										</li>
-									</ol>
-								</fieldset>
-							</form>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-					</div>
-				<!-- EXAMPLE SECTION - BOX - ENDS -->
-					
-				</div>
-				<div class="col-24">
-
-				<!-- EXAMPLE SECTION - BOX - BEGINS -->
-					<div class="evo-box evo-box-rnd evo-ref-example-box">
-
-						{% if model.reference-example-versions == "true" %}
-							<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-3 }}</h4>
-						{% endif %}
-
-						<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-							<form class="evo-form evo-form-inline evo-form-label-right" id="" name="" method="" action="" title="">
-								<fieldset>
-									<ol>
-										<li>
-											<label class="col-5 first evo-required" for="js-evo-datepicker-range-right-aligned-from">
-												<i class="evo-icon-evo-asterisk-small evo-icon-color-gray-darker evo-icon-position-left"></i>Label:
-											</label>
-											<div class="col-19 evo-datepicker-ctn evo-datepicker-range evo-small-mediaquery-grid">
-												<input class="col-12 first" id="js-evo-datepicker-range-right-aligned-from" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="From" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" />
-												<input class="col-12" id="js-evo-datepicker-range-right-aligned-to" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="To" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" />
-											</div>
-										</li>
-									</ol>
-								</fieldset>
-							</form>
-						<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
+					<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
+						<form>
+							<fieldset>
+								<div class="row evo-datepicker-ctn evo-datepicker-range">
+									<div class="small-4 columns">
+										<label class="text-right evo-required" for="js-evo-datepicker-range-right-aligned-from">
+											<i class="evo-icon-evo-asterisk-small evo-icon-color-gray-dark evo-icon-position-left"></i>Label:
+										</label>
+									</div>
+									<div class="small-4 columns">
+										<input class="col-12 first" id="js-evo-datepicker-range-right-aligned-from" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="From" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" />
+									</div>
+									<div class="small-4 columns">
+										<input class="col-12" id="js-evo-datepicker-range-right-aligned-to" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="To" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" />
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
 					</div>
 				<!-- EXAMPLE SECTION - BOX - ENDS -->
+				</div>
+				<div class="large-5 columns">
 					
 				</div>
-
-			</div>
-			<div class="col-13">
-				
-			</div>
-
-		</section>
+			</section>
 	<!-- EXAMPLE SECTION - CONTENT - ENDS -->
 
 	</section>

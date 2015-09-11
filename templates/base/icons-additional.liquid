@@ -55,11 +55,11 @@
 				<thead>
 					<tr>
 						<th class="col-4" data-sort-initial="true" scope="col"><a href="javascript:;">Name</a></th>
-						<th class="col-2 evo-align-center" scope="col"><a href="javascript:;">Blue</a></th>
-						<th class="col-2 evo-align-center" scope="col"><a href="javascript:;">Gray</a></th>
-						<th class="col-2 evo-align-center" scope="col"><a href="javascript:;">Disabled</a></th>
-						<th class="col-2 evo-align-center" scope="col"><a href="javascript:;">Reverse</a></th>
-						<th class="col-4 evo-align-center" scope="col"><a href="javascript:;">Specific Use Color</a></th>
+						<th class="col-2 text-center" scope="col"><a href="javascript:;">Blue</a></th>
+						<th class="col-2 text-center" scope="col"><a href="javascript:;">Gray</a></th>
+						<th class="col-2 text-center" scope="col"><a href="javascript:;">Disabled</a></th>
+						<th class="col-2 text-center" scope="col"><a href="javascript:;">Reverse</a></th>
+						<th class="col-4 text-center" scope="col"><a href="javascript:;">Specific Use Color</a></th>
 						<th class="col-8" scope="col"><a href="javascript:;">Keywords</a></th>
 					</tr>
 				</thead>
@@ -68,11 +68,11 @@
 					{% for item in model.icons %}
 					<tr>
 						<td>{{ item.properties.name }}</td>
-						<td class="evo-align-center"><i class="evo-icon-site-{{ item.properties.name }}"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
-						<td class="evo-align-center"><i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-gray-dark"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
-						<td class="evo-align-center"><i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-disabled"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
-						<td class="evo-align-center icon-table-cell-reverse-background"><i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-white"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
-						<td class="evo-align-center">
+						<td class="text-center"><i class="evo-icon-site-{{ item.properties.name }}"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
+						<td class="text-center"><i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-gray-dark"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
+						<td class="text-center"><i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-disabled"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
+						<td class="text-center icon-table-cell-reverse-background"><i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-white"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span></td>
+						<td class="text-center">
 							<i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-confirmation evo-icon-position-left"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span>
 							<i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-error evo-icon-position-left"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span>
 							<i class="evo-icon-site-{{ item.properties.name }} evo-icon-color-attention evo-icon-position-left"></i><span class="evo-icon-hide-text">{{ item.properties.name }}</span>

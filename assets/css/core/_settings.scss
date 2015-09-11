@@ -1,7 +1,7 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.6 - Core SASS Settings Partial
-// DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// Mercer Evolution - Core v2.7 - Core SASS Settings Partial
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
 // ==========================================================================================
@@ -20,59 +20,25 @@
 
 // MEDIA QUERY RANGES AND UP
 $use-small-up-mediaquery:					true !default; // 0px +
-$use-medium-up-mediaquery:					true !default; // 641px +
+$use-medium-up-mediaquery:					true !default; // 768px +
 $use-large-up-mediaquery:					true !default; // 1025px +
 $use-xlarge-up-mediaquery:					true !default; // 1441px +
 $use-xxlarge-up-mediaquery:					true !default; // 1921px +
 
 // MEDIA QUERY RANGES
-$use-small-only-mediaquery:					true !default; // 0px - 640px
-$use-medium-only-mediaquery:				true !default; // 641px - 1024px
+$use-small-only-mediaquery:					true !default; // 0px - 767px
+$use-medium-only-mediaquery:				true !default; // 768px - 1024px
 $use-large-only-mediaquery:					true !default; // 1025px - 1440px
 $use-xlarge-only-mediaquery:				true !default; // 1441px - 1920px
 $use-xxlarge-only-mediaquery:				true !default; // 1921px +
 
 // BASE SETTINGS
 // ------------------------------------------------------------------------------------------
-$use-grid:									true !default;
-$use-type:									true !default;
-$use-boxes:									false !default;
+$use-boxes:									true !default;
 $use-buttons:								true !default;
-$use-fat-footer:							false !default;
-$use-footer:								false !default;
+$use-grid:									true !default;
 $use-forms:									true !default;
-$use-header:								false !default;
-$use-hero-banner:							false !default;
 $use-icons:									true !default;
-$use-icon-image:							false !default;
-$use-icon-font:								true !default;
 $use-lists:									true !default;
-$use-inline-list:							false !default;
-$use-menus:									false !default;
-$use-message-boxes:							false !default;
-$use-nav:									false !default;
-$use-tables:								false !default;
-
-// OBJECTS SETTINGS
-// ------------------------------------------------------------------------------------------
-$use-accordion:								false !default;
-$use-advanced-filter:						false !default;
-$use-alternate-views-badge:					false !default;
-$use-autocomplete:							false !default;
-$use-banding-layout:						false !default;
-$use-carousel:								true !default;
-$use-content-modal:							false !default;
-$use-datepicker:							false !default;
-$use-dialog:								false !default;
-$use-image-content-overlay:					false !default;
-$use-login-layout:							true !default;
-$use-mini-filter:							false !default;
-$use-pagination:							false !default;
-$use-profile-containers:					false !default;
-$use-scrollpane:							false !default;
-$use-slider:								true !default;
-$use-stepper:								false !default;
-$use-summary-containers:					false !default;
-$use-tabs:									false !default;
-$use-tiles:									false !default;
-$use-tooltip:								false !default;
+$use-tables:								true !default;
+$use-type:									true !default;

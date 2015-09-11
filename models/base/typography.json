@@ -2,74 +2,62 @@
   "title": "Typography",
 
   "reference-overview": 
-    "<p class='evo-intro-text'>We've implemented <strong>Proxima Nova</strong> as our default font family as a means to represent our brand instead of the typical fonts often used, like Arial and Verdana. Proxima Nova is a modern, yet professional, font, and it is also compatible with all modern web browsers.</p>",
+    "<p class='evo-intro-text'>We've implemented Proxima Nova as our default font family as a means to represent our brand instead of the typical fonts often used, like Arial and Verdana. Proxima Nova is a modern, yet professional, font, and it is also compatible with all modern web browsers.</p>",
 
   "reference-typography-data": [
     {
       "example": "<h1>H1 Header</h1>",
       "name": "H1",
-      "usage": "Header/Titles",
-      "font": "Proxima Nova Regular",
-      "desktop_size": "32px",
-      "mobile_size": "34px",
-      "weight": "400",
+      "usage": "Page Title",
+      "font": "Proxima Nova Bold",
+      "size": "38px",
       "decoration": "None",
-      "color": "#333333/Dark Grey"
+      "color": "#000000/Black"
     },
     {
       "example": "<h2>H2 Header</h2>",
       "name": "H2",
       "usage": "Header/Titles",
-      "font": "Proxima Nova Regular",
-      "desktop_size": "26px",
-      "mobile_size": "28px",
-      "weight": "400",
+      "font": "Proxima Nova",
+      "size": "30px",
       "decoration": "None",
-      "color": "#333333/Dark Grey"
+      "color": "#000000/Black"
     },
     {
       "example": "<h3>H3 Header</h3>",
       "name": "H3",
       "usage": "Header/Titles",
-      "font": "Proxima Nova Regular",
-      "desktop_size": "22px",
-      "mobile_size": "24px",
-      "weight": "400",
+      "font": "Proxima Nova",
+      "size": "22px",
       "decoration": "None",
-      "color": "#333333/Dark Grey"
+      "color": "#000000/Black"
     },
     {
       "example": "<h4>H4 Header</h4>",
       "name": "H4",
       "usage": "Sub-Header",
-      "font": "Proxima Nova Semibold",
-      "desktop_size": "18px",
-      "mobile_size": "20px",
-      "weight": "200",
+      "font": "Proxima Nova Bold",
+      "size": "16px",
       "decoration": "None",
-      "color": "#333333/Dark Grey"
+      "color": "#000000/Black"
     },
     {
       "example": "<h5>H5 Header</h5>",
       "name": "H5",
       "usage": "Sub-Header",
-      "font": "Proxima Nova Semibold",
-      "desktop_size": "14px",
-      "mobile_size": "16px",
-      "weight": "200",
+      "font": "Proxima Nova",
+      "size": "16px",
       "decoration": "None",
-      "color": "#333333/Dark Grey"
+      "color": "#000000/Black"
     },
     {
       "example": "<h6>H6 Header</h6>",
       "name": "H6",
       "usage": "Sub-Header",
-      "font": "Proxima Nova Semibold",
-      "desktop_size": "12px",
-      "mobile_size": "14px",
-      "weight": "200",
+      "font": "Proxima Nova Bold",
+      "size": "14px",
       "decoration": "None",
-      "color": "#333333/Dark Grey"
+      "color": "#808080/Gray Mid"
     }
    ],
 
@@ -78,23 +66,55 @@
       "example": "Base font sample",
       "name": "Base",
       "usage": "Base Font/Body Content",
-      "font": "Proxima Nova Regular",
-      "desktop_size": "14px",
-      "mobile_size": "16px",
-      "weight": "Normal",
+      "font": "Proxima Nova",
+      "size": "16px",
       "decoration": "None",
-      "color": "#000000/Black"
+      "color": "#404040/Dark Gray"
     },
     {
       "example": "<a href='javascript:;'>Default link</a>",
       "name": "L1",
       "usage": "Links (Body Content)",
-      "font": "Proxima Nova Regular",
-      "desktop_size": "14px",
-      "mobile_size": "16px",
-      "weight": "Normal",
+      "font": "Proxima Nova",
+      "size": "16px",
       "decoration": "Underline/Hover Only",
       "color": "#003399/Blue"
+    },
+    {
+      "example": "Messaging content",
+      "name": "",
+      "usage": "Messages",
+      "font": "Proxima Nova",
+      "size": "14px",
+      "decoration": "",
+      "color": "#000000/Black"
+    },
+    {
+      "example": "Form labels",
+      "name": "label",
+      "usage": "Forms",
+      "font": "Proxima Nova Semi-bold",
+      "size": "17px",
+      "decoration": "",
+      "color": "#000000/Black"
+    },
+    {
+      "example": "Form Data",
+      "name": "",
+      "usage": "Data",
+      "font": "Proxima Nova",
+      "size": "16px",
+      "decoration": "",
+      "color": "#404040/Gray"
+    },
+    {
+      "example": "Form Placeholder",
+      "name": "Placeholder",
+      "usage": "Inputs",
+      "font": "Proxima Nova",
+      "size": "16px",
+      "decoration": "",
+      "color": "#AAAAAA/Gray"
     }
   ],
 

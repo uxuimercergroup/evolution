@@ -1,0 +1,79 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.7 - Item Selection Panel Partial
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+$evo-item-selection-panel-align: center !default;
+$evo-item-selection-panel-container-color: $gray-dark !default;
+$evo-item-selection-panel-container-img-border-radius: 100% !default;
+$evo-item-selection-panel-container-img-border-width: rem-calc(3) !default;
+$evo-item-selection-panel-container-img-border-style: solid !default;
+$evo-item-selection-panel-container-img-border-color: $gray-lighter !default;
+$evo-item-selection-panel-container-img-padding: rem-calc(3) !default;
+$evo-item-selection-panel-container-img-width: rem-calc(80);
+$evo-item-selection-panel-container-img-height: rem-calc(80);
+$evo-item-selection-panel-container-item-label-font-size: rem-calc(14) !default;
+$evo-item-selection-panel-container-item-label-margin-top: rem-calc(5) !default;
+$evo-item-selection-panel-container-category-highlight-img-h-shadow: rem-calc(0) !default;
+$evo-item-selection-panel-container-category-highlight-img-v-shadow: rem-calc(2) !default;
+$evo-item-selection-panel-container-category-highlight-img-blur: rem-calc(6) !default;
+$evo-item-selection-panel-container-category-highlight-img-color: $gray-light !default;
+$evo-item-selection-panel-container-category-highlight-img-border-color: $topaz-dark !default;
+
+
+@if $use-item-selection-panel == true{
+
+	.evo-item-selection-panel			{
+										text-align: $evo-item-selection-panel-align;
+		ul									{
+			li									{
+												padding-bottom: rem-calc(15);
+				.evo-category-ctn					{
+													color: $evo-item-selection-panel-container-color;
+													text-decoration: none;
+					&:hover								{text-decoration: none;}
+					img									{
+														@include border-radius($evo-item-selection-panel-container-img-border-radius);
+														border: $evo-item-selection-panel-container-img-border-width $evo-item-selection-panel-container-img-border-style $evo-item-selection-panel-container-img-border-color;
+														padding: $evo-item-selection-panel-container-img-padding;
+														width: $evo-item-selection-panel-container-img-width;
+														height: $evo-item-selection-panel-container-img-height;
+														}
+					span								{
+														display: block;
+														float: none;
+														margin: 0 auto;
+														}
+					.item-label							{
+														font-size: $evo-item-selection-panel-container-item-label-font-size;
+														margin-top: $evo-item-selection-panel-container-item-label-margin-top;
+														}
+													}
+				.evo-category-highlight				{
+					img									{
+														@include box-shadow($evo-item-selection-panel-container-category-highlight-img-h-shadow, $evo-item-selection-panel-container-category-highlight-img-v-shadow, $evo-item-selection-panel-container-category-highlight-img-blur, $evo-item-selection-panel-container-category-highlight-img-color);
+														border-color: $evo-item-selection-panel-container-category-highlight-img-border-color;
+														}
+													}
+												}
+											}
+										}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			
+
+		}
+		
+	}// endif
+
+}// endif

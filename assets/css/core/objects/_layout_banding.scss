@@ -1,27 +1,31 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.6 - Accordion Partial
-// DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// Mercer Evolution - Core v2.7 - Banding Layout Partial
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
-@if $use-banding-layout == true{
-	.banding-layout[role="main"]			{
-											margin: 0;
-											padding: 0;
-		[class*="banding-section-"]				{
-			.evo-grid								{min-height: 200px;}
+//
+// @variables
+//
+$evo-banding-layout-ctn-min-height: rem-calc(200) !default;
+$evo-banding-layout-ctn-padding: rem-calc(50) rem-calc(10) rem-calc(60) rem-calc(10) !default;
 
-			@each $color-name, $color in $color-palette
-													{
-				&[data-palette-color="#{$color-name}"]
-														{background-color: map-get($color, color);}
+
+@if $use-banding-layout == true{
+
+	.banding-layout[role="main"]			{
+											padding: 0;
+		.banding-section						{
+			.banding-ctn							{
+													min-height: $evo-banding-layout-ctn-min-height;
+													padding: $evo-banding-layout-ctn-padding;
 													}
 												}
 											}
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
 	@if $use-medium-up-mediaquery == true {
 		
 		@media #{$medium-up} {

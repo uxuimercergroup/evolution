@@ -60,6 +60,9 @@
 		<!-- EVOLUTION CORE STYLES -->
 		{{ "evolution.css" | asset_url | stylesheet_tag }}
 
+		<!-- EVOLUTION UI STYLES -->
+		{{ "evolution_ui.css" | asset_url | stylesheet_tag }}
+
 		<!-- SITE STYLES -->
 		{{ "styles.css" | asset_url | stylesheet_tag }}
 
@@ -90,10 +93,6 @@
 		<!-- FOOTER - BEGINS -->
 		{% include "footer" %}
 		<!-- FOOTER - ENDS -->
-
-		<!-- DEVELOPER - SLIDING DRAWER - BEGINS -->
-		{% include "/reference/developer-sliding-drawer" %}
-		<!-- DEVELOPER - SLIDING DRAWER - ENDS -->
 
 		{% include "scripts" %}
 

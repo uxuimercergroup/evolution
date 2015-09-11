@@ -1,118 +1,102 @@
-<!-- ALTERNATE VIEWS BADGE - TEXT ONLY - BEGINS -->
-<div class="evo-alternate-views-badge evo-alternate-views-badge-text-only" data-alternate-views-badge="js-evo-alternate-views-badge-text-only-example">
-	
-	<!-- NO WHITE SPACE BETWEEN CODE BELOW REQUIRED BECAUSE USING DISPLAY: INLINE-BLOCK ON BUTTONS -->
-	<ul class="evo-btn-group-horizontal"><li class="evo-btn"><a href="#alternate-views-badge-text-only-1"><span>Grid View</span></a></li><li class="evo-btn"><a href="#alternate-views-badge-text-only-2"><span>Savings View</span></a></li><li class="evo-btn"><a href="#alternate-views-badge-text-only-3"><span>Dashboard View</span></a></li></ul>
-	
-	<div id="alternate-views-badge-text-only-1">
-		
-		{% include '/base/tables/table-interactive' %}
+<!-- EXAMPLE GROUP TABS - BEGINS -->
+	<ul class="tabs evo-tabs evo-tabs-grouped" data-tab>
+		<li class="tab-title active">
+			<a href="#grouptabset7"><span class="evo-text">Grid View</span></a>
+		</li>
+		<li class="tab-title">
+			<a href="#grouptabset8"><span class="evo-text">Savings View</span></a>
+		</li>
+		<li class="tab-title">
+			<a href="#grouptabset9"><span class="evo-text">Dashboard View</span></a>
+		</li>
+	</ul>
+	<div class="tabs-content evo-tabs-content evo-tabs-grouped-content">
 
-	</div>
-	<div id="alternate-views-badge-text-only-2">
-		
-		<div class="col-24">
+		<div class="content active" id="grouptabset7">
+			{% include '/base/tables/table-static' %}
+		</div>
 
-			<div class="col-24">
+		<div class="content" id="grouptabset8">
 
+			<section class="row">
+				<div class="small-12 columns">
 				<!-- FEATURE CONTAINER - BEGINS -->
-				<div class="evo-box evo-feature-ctn">
-					<div class="evo-box-hdr">
-						<h3 class="evo-hdr-rule">Cost Savings</h3>
+					<div class="evo-box evo-feature-ctn">
+						<div class="evo-box-hdr">
+							<h3 class="evo-hdr-rule">Cost Savings</h3>
+						</div>
+						<div class="box-bdy">
+							{% include '/objects/slider-horizontal' %}
+						</div>
 					</div>
-					<div class="box-bdy">
-						
-						{% include '/objects/slider-horizontal' %}
-
-					</div>
-				</div>
 				<!-- FEATURE CONTAINER - ENDS -->
+				</div>
+			</section>
 
-			</div>
-			<div class="col-24">
-
+			<section class="row">
+				<div class="small-12 columns">
 				<!-- FEATURE CONTAINER - BEGINS -->
-				<div class="evo-box evo-feature-ctn">
-					<div class="evo-box-hdr">
-						<h3 class="evo-hdr-rule">Cost Avoidance</h3>
+					<div class="evo-box evo-feature-ctn">
+						<div class="evo-box-hdr">
+							<h3 class="evo-hdr-rule">Cost Avoidance</h3>
+						</div>
+						<div class="box-bdy">
+							{% include '/objects/slider-horizontal' %}
+						</div>
 					</div>
-					<div class="box-bdy">
-						
-						{% include '/objects/slider-horizontal-range' %}
-
-					</div>
+				<!-- FEATURE CONTAINER - ENDS -->		
 				</div>
-				<!-- FEATURE CONTAINER - ENDS -->
+			</section>
 
-			</div>
-			<div class="col-24">
-
+			<section class="row">
+				<div class="small-12 columns">
 				<!-- FEATURE CONTAINER - BEGINS -->
-				<div class="evo-box evo-feature-ctn">
-					<div class="evo-box-hdr">
-						<h3 class="evo-hdr-rule">Unrealized Savings</h3>
+					<div class="evo-box evo-feature-ctn">
+						<div class="evo-box-hdr">
+							<h3 class="evo-hdr-rule">Unrealized Savings</h3>
+						</div>
+						<div class="box-bdy">
+							{% include '/objects/slider-horizontal' %}
+						</div>
 					</div>
-					<div class="box-bdy">
-						
-						{% include '/objects/slider-horizontal-range-min' %}
-
-					</div>
+				<!-- FEATURE CONTAINER - ENDS -->		
 				</div>
-				<!-- FEATURE CONTAINER - ENDS -->
-
-			</div>
+			</section>
 
 		</div>
 
-	</div>
-	<div id="alternate-views-badge-text-only-3">
-		
-		<div class="col-24">
+		<div class="content" id="grouptabset9">
 
-			<div class="col-24">
-
+			<section class="row">
+				<div class="small-12 columns">
 				<!-- FEATURE CONTAINER - BEGINS -->
-				<div class="evo-box evo-feature-ctn">
-					<div class="evo-box-hdr">
-						<h3 class="evo-hdr-rule">Policy Snapshot</h3>
+					<div class="evo-box evo-feature-ctn">
+						<div class="evo-box-hdr">
+							<h3 class="evo-hdr-rule">Policy Snapshot</h3>
+						</div>
+						<div class="box-bdy">
+							{% include '/objects/primary-summary-ctn' %}
+						</div>
 					</div>
-					<div class="box-bdy">
-						{% include '/objects/primary-summary-ctn' %}
-					</div>
-				</div>
 				<!-- FEATURE CONTAINER - ENDS -->
+				</div>
+			</section>
 
-			</div>
-			<div class="col-24">
-
+			<section class="row">
+				<div class="small-12 columns">
 				<!-- FEATURE CONTAINER - BEGINS -->
-				<div class="col-16 first evo-box evo-feature-ctn evo-alternate-views-badge-feature-ctn">
-					<div class="evo-box-hdr">
-						<h3 class="evo-hdr-rule">Policy Data</h3>
+					<div class="col-16 first evo-box evo-feature-ctn evo-alternate-views-badge-feature-ctn">
+						<div class="evo-box-hdr">
+							<h3 class="evo-hdr-rule">Policy Data</h3>
+						</div>
+						<div class="box-bdy">
+							{% include '/base/tables/table-static' %}
+						</div>
 					</div>
-					<div class="box-bdy">
-						{% include '/base/tables/table-static' %}
-					</div>
-				</div>
 				<!-- FEATURE CONTAINER - ENDS -->
-				
-				<!-- FEATURE CONTAINER - BEGINS -->
-				<div class="col-8 evo-box evo-feature-ctn evo-alternate-views-badge-feature-ctn">
-					<div class="evo-box-hdr">
-						<h3 class="evo-hdr-rule">Premium by Product</h3>
-					</div>
-					<div class="box-bdy">
-						<p>
-							<img src="{{ "feature-ctn-pie-chart.png" | asset_url }}" alt="Pie Chart" title="Pie Chart" width="264" height="279" />
-						</p>
-					</div>
 				</div>
-				<!-- FEATURE CONTAINER - ENDS -->
-
-			</div>
+			</section>
 			
 		</div>
-
 	</div>
-</div>
-<!-- ALTERNATE VIEWS BADGE - TEXT ONLY - ENDS -->
+<!-- EXAMPLE GROUP TABS - ENDS -->

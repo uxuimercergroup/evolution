@@ -1,244 +1,120 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.6 - Base Tables Partial
-// DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// Mercer Evolution - Core v2.7 - Base Tables Partial
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+$evo-table-border-width: rem-calc(1) !default;
+$evo-table-border-style: solid !default;
+$evo-table-border-header-color: $white !default;
+$evo-table-border-color: $white !default; /* TODO: Fix to be final, seems to match up with a foundation one tables.scss */
+$evo-table-header-padding: rem-calc(12) rem-calc(10) rem-calc(11) rem-calc(10) !default;
+$evo-table-row-hover-color: $gray-mid-light !default;
+$evo-table-subheader-bg-color: #E8F0F7 !default;
+$evo-table-subheader-font-color: $gray-darker !default;
+$evo-table-subheader-border-color: #C3D2E5 !default;
+$evo-table-subtotal-bg-color: $gray-lighter !default;
+$evo-table-subtotal-font-color: $gray-darker !default;
+$evo-table-total-bg-color: #E6E6E6 !default;
+$evo-table-total-font-color: $black !default;
+
 
 @if $use-tables == true{
 
-	// TABLE OVERFLOW FOR SMALL MEDIAQUERY
-	.evo-table-small-mediaquery		{
-									margin-bottom: $evo-base-margin;
-									overflow-x: auto;
-									overflow-y: hidden;
-									-ms-overflow-style: -ms-autohiding-scrollbar;
-									-webkit-overflow-scrolling: touch;
-		> table							{
-										margin-bottom: 0;
-										min-width: $tableMinWidth;
-										}
+	.evo-table-small-mediaquery
+						{
+						overflow-x: auto;
+						overflow-y: hidden;
+						-ms-overflow-style: -ms-autohiding-scrollbar;
+						-webkit-overflow-scrolling: touch;
+
+		.evo-table			{
+							min-width: 768px;
+			th					{
+								border: $evo-table-border-width $evo-table-border-style $evo-table-border-header-color;
+								border-left: 0;
+								color: $white;  /* TODO: Fix this to be final tables.scss */
+								font-family: $evo-font-regular-family !important; /* TODO: Fix this to be final tables.scss */
+								padding: $evo-table-header-padding;
+								vertical-align: bottom;
+				&:first-child		{border-left: $evo-table-border-width $evo-table-border-style $evo-table-border-header-color;}
+				a					{
+									color: $white !important; /* TODO: Fix this to be final tables.scss */
+									display: block;
+									text-decoration: none;
+					&:hover				{text-decoration: underline;}
 									}
+								}
+			td					{border: $evo-table-border-width $evo-table-border-style $evo-table-border-color;}
+			td.checkbox			{width: rem-calc(30);}
 
-	// BASIC TABLE STYLES
-	table							{
-									max-width: 100%;
-									background-color: transparent;
-									border-collapse: collapse;
-									border-spacing: 0;
-									}
-
-	// EVO TABLE
-	th, td							{text-align: left;}
-
-	.evo-table						{
-									color: $tableFontColor;
-									margin-bottom: $tableMarginBottom;
-									width: 100%;
-									border-bottom: 1px $tableBorderStyle $tableBorderColor;
-									background-color: $tableBackgroundColor;
-		th,
-		td								{
-										font-size: rem-calc(14);
-										padding: 5px 10px;
-			input[type="checkbox"]			{display: block;}
-			a								{
-				&:link							{
-												text-decoration: $anchor-text-decoration-hover;
-												color: $anchor-font-color;
-												}
-				&:hover							{text-decoration: $anchor-text-decoration;}
-											}
-										}
-		th								{
-										background-color: $tableThBackgroundColor;
-										border-top:1px solid $tableThBorderColor;
-										border-bottom:1px solid $tableThBorderColor;
-										color:$tableThFontColor;
-										font-family: $evo-font-medium-stack;
-										vertical-align: bottom;
-			&[class*="col-"]				{
-											float: none;
-											margin: 0;
-											}
-										}
-		caption							{
-										padding:1px 0 5px 0;
-										text-align:left;
-										vertical-align: bottom;
-			.evo-tbl-data-filter			{
-											max-width: $tableDataFilterMaxWidth;
-				input							{
-												height: $tableDataFilterHeight;
-												line-height: $tableDataFilterLineHeight;
-												margin: 0;
-												}
-											}
-										}
-		td								{
-										border-top:1px $tableTdBorderStyle $tableTdBorderColor;
-										vertical-align: top;
-										}
+			[type="checkbox"]	{
+								margin: 0;
+								top: rem-calc(1);
+				&:focus				{font-size: rem-calc(13);}
+								}
 
 		//SUB HEADER, THIS IS USED TO GROUP SECTIONS IN A TABLE
-		.evo-subheader-row				{
-										background-color: $tableSubHeaderBackgroundColor !important;
-										border: 1px solid $tableSubHeaderBorderColor;
-										color: $tableSubHeaderFontColor;
-										font-family: $evo-font-medium-stack;
-										}
+		.evo-subheader-row		{
+								background-color: $evo-table-subheader-bg-color !important;
+								border: $evo-table-border-width $evo-table-border-style $evo-table-subheader-border-color;
+								color: $evo-table-subheader-font-color;
+								font-family: $evo-font-medium-stack;
+								}
 
 		// SUBTOTAL AND TOTAL HELPERS
 		.evo-subtotal-row,
-		.evo-total-row					{
-										font-family: $evo-font-medium-stack;
-			td								{border-top: 1px $tableBorderStyle $tableBorderColor;}
-										}
-		.evo-subtotal-row				{
-			td								{
-											background-color: $tableSubTotalBackgroundColor !important;
-											color: $tableSubTotalFontColor;
-											}
-										}
-		.evo-total-row					{
-			td								{
-											background-color: $tableTotalBackgroundColor !important;
-											color: $tableTotalFontColor;
-											}
-										}
+		.evo-total-row			{
+								font-family: $evo-font-medium-stack;
+			td						{border-top: $evo-table-border-width $evo-table-border-style $evo-table-border-color;}
+								}
+		.evo-subtotal-row		{
+			td						{
+									background-color: $evo-table-subtotal-bg-color !important;
+									color: $evo-table-subtotal-font-color;
 									}
-
-	// FOOTABLES
-	.evo-footable					{
-		th								{cursor: pointer;}
-
-		// SORTING CLASSES
-		.evo-highlight					{background-color: $tableOddTdSortedBackgroundColor !important;}
-		tbody > tr:nth-child(odd) > .evo-highlight
-										{background-color: $tableOddTdBackgroundColor !important;}
-
-		// IF COLUMN IS NOT SORTABLE TURN OFF POINTER CURSOR
-		th[data-sort-ignore="true"]		{cursor: default;}
+								}
+		.evo-total-row			{
+			td						{
+									background-color: $evo-table-total-bg-color !important;
+									color: $evo-table-total-font-color;
 									}
+								}
 
+							}
 
-	// EVO TABLE BORDERS
-	.evo-table-borders				{
-									border: 1px $tableBorderStyle $tableBorderColor;
-		th								{
-										border-left: 1px solid $tableThBorderColor;
-										border-right: 1px solid $tableThBorderColor;
-										border-top: 1px solid $tableThBorderColor;
-										border-bottom: 1px solid $tableThBorderColor;
-										}
-		td								{border-left: 1px $tableBorderStyle $tableBorderColor;}
-									}
+		// ADVANCED FILTER ICON PLACEMENT
+		.dataTables_filter	{
+			[class*="evo-icon-"]
+								{
+								float: right;
+								margin: rem-calc(9) 0 0 rem-calc(8);
+								}
+							}
 
-	// EVO TABLE ROW STRIPING
-	.evo-table-striped				{
-		tbody > tr:nth-child(even) > td	{background-color:$tableOddTdBackgroundColor;}
+		.evo-table-hover tbody tr:hover > td
+							{background-color: $evo-table-row-hover-color;}
 
-		// FALLBACK ROW STRIPING
-		.evo-even						{
-			td								{
-											background-color:$tableEvenTdBackgroundColor;
-
-				// SORTED COLUMN STYLES - EVEN
-				&[class*="sorting"]				{background-color:$tableEvenTdSortedBackgroundColor;}
-											}
-										}
-		.evo-odd						{
-			td								{
-											background-color:$tableOddTdBackgroundColor;
-
-				// SORTED COLUMN STYLES - ODD
-				&[class*="sorting"]				{background-color:$tableOddTdSortedBackgroundColor;}
-											}
-										}			
-									}
-
-	// EVO TABLE ROW HOVER
-	.evo-table-hover tbody tr:hover > td,
-	.evo-table-hover tbody tr:hover > td[class*="sorting"]
-									{background-color: $tableRowHoverColor;}
-
-
-	// EVO TABLE PAGINATION
-	.evo-table-pagination			{
-		.evo-pagination-row				{
-			td								{
-											border-top:1px solid $tableBorderColor;
-											border-right:1px solid transparent;
-											border-bottom:1px solid transparent;
-											border-left:1px solid transparent;
-											padding: 5px 0 0 0;
-											text-align:left;
-				.evo-pagination					{
-												position: relative;
-												left: -2px;
-												}
-											}
-										}
-									}
+						}
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// SMALL MEDIA QUERY RANGE - 0 - 640px
-	@if $use-small-only-mediaquery == true {
-		
-		@media #{$small-only} {
-
-			// EVO TABLE IE9 FIXES
-			.ie9					{
-				
-				// EVO TABLE
-				.evo-table				{
-					caption					{
-						.evo-tbl-data-filter	{
-							input					{line-height: ($tableDataFilterLineHeight - 4);}
-												}
-											}
-										}
-									}
-
-		}
-
-	}//endif
-
-	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
 	@if $use-medium-up-mediaquery == true {
 		
 		@media #{$medium-up} {
 
-			// TABLE OVERFLOW FOR SMALL MEDIAQUERY
 			.evo-table-small-mediaquery
-									{
-									width: $tableMinWidthLargeBreakpoint;
-				> table					{min-width: $tableMinWidthLargeBreakpoint;}
-									}
-
-			// EVO TABLE
-			.evo-table				{
-				th,
-				td						{
-										font-size: rem-calc(14);
-										}
-				caption					{
-					.evo-tbl-data-filter	{
-											max-width: 100%;
-						input					{
-												height: $tableDataFilterHeightLargeBreakpoint;
-												line-height: $tableDataFilterLineHeightLargeBreakpoint;
-												}
-											}
-										}
-									}
-
-			// EVO TABLE PAGINATION
-			.evo-table-pagination	{
-				.evo-pagination-row		{
-					td						{text-align:right;}
-										}
-									}
+						{
+						width: 100%;
+				> table		{
+							min-width: 100%;
+							width: 100%;
+							}
+						}
 
 		}
 		

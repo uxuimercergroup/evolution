@@ -1,0 +1,113 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.7 - Pricing Table Partial
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+$evo-price-table-bg-color: $gray-lighter !default;
+$evo-price-table-base-font: rem-calc(18) !default;
+$evo-price-table-padding: rem-calc(11) rem-calc(0) !default;
+$evo-price-table-margin-bottom: rem-calc(2) !default;
+$evo-price-table-amt-font-color: $gray-dark !default;
+$evo-price-table-amt-text-align: right !default;
+$evo-price-table-amt-text-transform: uppercase !default;
+$evo-price-table-label-font-size: rem-calc(12) !default;
+$evo-price-table-label-position: relative !default;
+$evo-price-table-item-label-font-color: $gray-mid !default;
+$evo-price-table-item-label-top-position: rem-calc(14) !default;
+$evo-price-table-time-value-label-color: $gray-mid !default;
+$evo-price-table-time-value-label-text-align: right !default;
+$evo-price-table-time-value-label-top-position: -3px !default;
+$evo-price-table-break-down-row-bg-color: $gray-light !default;
+$evo-price-table-total-row-bg-color: $gray-dark !default;
+$evo-price-table-total-row-font-color: $white !default;
+
+
+@if $use-pricing-table == true{
+
+	.evo-price-table			{
+								@include clearfix;
+								padding-bottom: rem-calc(20);
+		[class*="small-block-grid-"]
+									{
+									background-color: $evo-price-table-bg-color;
+									font-size: $evo-price-table-base-font;
+									padding: $evo-price-table-padding;
+									margin: 0;
+									margin-bottom: $evo-price-table-margin-bottom;
+			li							{padding-bottom: 0;}
+			.evo-item-amt,
+			.break-down-amt,
+			.total-amt					{
+										color: $evo-price-table-amt-font-color;
+										text-align: $evo-price-table-amt-text-align;
+										}
+			.evo-item-label,
+			.break-down-label,
+			.total-label				{text-transform: $evo-price-table-amt-text-transform;}
+
+			.evo-item-label,
+			.evo-time-value-label		{
+										font-size: $evo-price-table-label-font-size;
+										position: $evo-price-table-label-position;
+										}
+									}
+
+		.evo-price-table-row		{
+
+			// ITEM LABEL
+			.evo-category-label			{
+										padding-top: 0;
+										padding-bottom: 0;
+										margin-top: 0;
+										margin-bottom: 0;
+				li							{padding-bottom: 0;}
+				.evo-item-label				{
+											color: $evo-price-table-item-label-font-color;
+											top: $evo-price-table-item-label-top-position;
+											}
+										}
+			
+			// ITEM
+			.evo-item-amt				{
+				.evo-time-value-label		{
+											color: $evo-price-table-time-value-label-color;
+											text-align: $evo-price-table-time-value-label-text-align;
+											top: $evo-price-table-time-value-label-top-position;
+											}
+										}
+									}
+
+		// BREAK DOWN ROW
+		.evo-price-table-break-down-row	{
+										background-color: $evo-price-table-break-down-row-bg-color;
+			.break-down-label			{}
+			.break-down-amt				{}
+									}
+
+		// TOTAL ROW
+		.evo-price-table-total-row	{
+									background-color: $evo-price-table-total-row-bg-color;
+			.total-label				{color: $evo-price-table-total-row-font-color;}
+			.total-amt					{color: $evo-price-table-total-row-font-color;}
+									}
+
+								}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			
+
+		}
+		
+	}// endif
+
+}// endif

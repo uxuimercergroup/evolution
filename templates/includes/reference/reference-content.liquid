@@ -1,23 +1,23 @@
-<dl class="tabs evo-tabs" data-tab>
+<ul class="tabs evo-tabs evo-tabs-grouped" data-tab>
 {% for item in global.reference-buttons %}
-	<dd>
+	<li class="tab-title">
 		<a href="#panel{% cycle '1', '2', '3', '4', '5' %}">
 			<i class="evo-icon-{{ item.reference-button-icon }} evo-icon-position-left" title="{{ item.reference-button-label }}"></i>
 			{{ item.reference-button-label }}
 		</a>
-	</dd>
+	</li>
 {% endfor %}
 
 {% if model.reference-get-code == "true" %}
-	<dd>
-		<a href="#panel5">
+	<li class="tab-title">
+		<a href="#panel6">
 			<i class="evo-icon-{{ global.reference-button-icon-get-code }} evo-icon-position-left" title="{{ global.reference-button-label-get-code }}"></i>
 			{{ global.reference-button-label-get-code }}
 		</a>
-	</dd>
+	</li>
 {% endif %}
-</dl>
-<div class="tabs-content evo-tabs-content">
+</ul>
+<div class="tabs-content evo-tabs-content evo-tabs-grouped-content">
 <!-- REFERENCE OVERVIEW - BEGINS -->
 	<div class="content active" id="panel1">
 		{{ model.reference-overview }}
@@ -49,6 +49,7 @@
 <!-- REFERENCE TECHNICAL - ENDS -->
 
 <!-- REFERENCE DEPENDECY - BEGINS -->
+<!-- Make note that the end tag for this on the specific pages -->
 	<div class="content" id="panel6">
 		{% if model.reference-dependency == "true" %}
 		<!-- DEPENDENCY LIST - BEGINS -->
@@ -66,6 +67,4 @@
 		</ul>
 		<!-- DEPENDENCY LIST - ENDS -->
 		{% endif %}
-	</div>
 <!-- REFERENCE DEPENDECY - ENDS -->
-</div>

@@ -60,6 +60,9 @@
 		<!-- EVOLUTION CORE STYLES -->
 		{{ "evolution.css" | asset_url | stylesheet_tag }}
 
+		<!-- EVOLUTION UI STYLES -->
+		{{ "evolution_ui.css" | asset_url | stylesheet_tag }}
+
 		<!-- SITE STYLES -->
 		{{ "styles.css" | asset_url | stylesheet_tag }}
 
@@ -84,7 +87,7 @@
 		<!-- PAGE - ENDS -->
 
 		<!-- FOOTER - BEGINS -->
-		{% include "/base/layout-login-footer" %}
+		{% include "/objects/footer/login-footer" %}
 		<!-- FOOTER - ENDS -->
 
 		{% include "scripts" %}

@@ -1,0 +1,226 @@
+/*------------------------------------------------------------------------------------------
+Mercer Evolution - Employee Portal Family - Stream Partial
+DATE - June 3, 2015
+AUTHOR - Doug Fraize, Matthew Holmes
+-------------------------------------------------------------------------------------------*/
+
+//
+// @variables
+//
+
+
+@-webkit-keyframes pulse-animation
+								{
+								0%		{-webkit-transform: scale(1);}
+								30%		{-webkit-transform: scale(1);}
+								40%		{-webkit-transform: scale(1.08);}
+								50%		{-webkit-transform: scale(1);}
+								60%		{-webkit-transform: scale(1);}
+								70%		{-webkit-transform: scale(1.05);}
+								80%		{-webkit-transform: scale(1);}
+								100%	{-webkit-transform: scale(1);}
+								}
+
+[data-evo-active-open="pulse-animation"]
+								{
+								-webkit-animation-name: 'pulse-animation';
+								-webkit-animation-duration: 1000ms;
+								-webkit-transform-origin: 70% 70%;
+								-webkit-animation-iteration-count: infinite;
+								-webkit-animation-timing-function: linear;
+								}
+
+
+.evo-connection-line			{
+								position: absolute;
+								border-right: 1px solid $white;
+								display: block;
+								width: 1px;
+								height: rem-calc(180);
+								left: 50%;
+								top: 41%;
+								z-index: 3;
+								}
+
+
+.evo-stream-item-ctn			{
+								position: relative;
+								text-align: center;
+
+	&.evo-stream-item-ctn-border-left
+									{
+									border-left: 1px dotted $white;
+									margin-left: -1px;
+									}
+	&.evo-stream-item-ctn-border-right
+									{border-right: 1px dotted $white;}
+
+	.evo-stream-icon-ctn,
+	.evo-stream-content-ctn			{
+									position: relative;
+									z-index: 5;
+									}
+
+	.evo-stream-message-menu		{
+									@include box-shadow(2px, 2px, 8px, $gray-mid);
+									background-color: $white;
+									font-size: rem-calc(12);
+									min-height: rem-calc(50);
+									padding: rem-calc(5);
+									position: absolute;
+									width: rem-calc(150);
+									right: rem-calc(-155);
+									top: 14%;
+									z-index: 10;
+		.evo-stream-message-menu-ctn	{
+										color: $ruby-mid;
+										position: relative;							
+			[class*="evo-icon-"]			{
+											color: $white;
+											font-size: rem-calc(32);
+											position: absolute;
+											top: 5%;
+											margin: 0;
+											}
+			.evo-icon-arrow-left2			{left: -24px;}
+										}
+									}
+
+	.evo-stream-message-menu-right	{
+									@include box-shadow(-2px, 2px, 8px, $gray-mid);
+									left: rem-calc(-155);
+			[class*="evo-icon-"]		{
+										color: $white;
+										font-size: rem-calc(32);
+										position: absolute;
+										top: 5%;
+										margin: 0;
+										}
+			.evo-icon-arrow-right2		{right: -24px;}
+									}
+
+
+	.evo-stream-icon-ctn			{
+
+		.evo-stream-line-right-tick,
+		.evo-stream-line-left-tick		{
+										border-top: 1px dotted $white;
+										position: absolute;
+										top: 50%;
+										width: 10%;
+										}
+		.evo-stream-line-right-tick		{right: 0;}
+		.evo-stream-line-left-tick		{left: 0;}
+
+		.evo-icon-ctn					{
+										@include border-radius(100%);
+										background-color: $transparent;
+										border: 1px solid $white;
+										padding: rem-calc(12);
+										width: auto;
+			.evo-icon-position				{
+											position: absolute;
+											left: -18px;
+											top: -5px;
+											}
+			.evo-icon-lock:before			{
+											position: relative;
+											left: 12px;
+											}
+			img								{max-width: $evo-clip-art-icon-size-medium;}
+										}
+									}
+
+	.evo-stream-content-ctn			{
+									background-color: $transparent;
+									padding: 0 rem-calc(10);
+		.h6								{
+										color: $white;
+										margin-top: rem-calc(10);
+										}
+		.h4								{
+										color: $white;
+										font-size: rem-calc(10);
+										letter-spacing: 0.5px;
+										margin-bottom: 3px;
+										}
+		.h5								{
+										color: $white;
+										font-size: rem-calc(9);
+										text-transform: lowercase;
+										letter-spacing: 0.5px;
+										}
+		.evo-progress					{
+										background-color: $sapphire-light;
+										border: 0;
+										height: rem-calc(6);
+										padding: 0;
+										margin-bottom: 15px;
+			.meter							{background-color: $white;}
+										}
+									}
+								}
+
+
+.evo-stream-item-ctn-diabled	{
+								@include opacity(40);
+	.evo-stream-content-ctn			{
+		.evo-progress					{display: none;}
+									}
+								}
+
+.evo-stream-hdr					{
+								color: $white;
+								font-size: rem-calc(8);
+								margin-bottom: rem-calc(0);
+								}
+
+.evo-stream-hdr-margin-bottom	{margin-bottom: rem-calc(30);}
+.evo-stream-hdr-margin-top		{
+								margin-top: rem-calc(20);
+								margin-bottom: rem-calc(3);
+								}
+
+.evo-stream-completed-steps-ctn	{
+								border-bottom: 1px dotted $white;
+	.evo-stream-item-ctn			{
+									margin-top: rem-calc(50);
+		&:first-of-type					{margin-top: rem-calc(0);}
+		[class*="evo-icon-"]			{color: $white;}
+									}
+
+	.evo-stream-item-ctn-placeholder{display: none;}
+								}
+
+
+
+
+
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+@media #{$medium-up} {
+	.evo-stream-item-ctn			{
+		.evo-stream-message-menu		{top: 27%;}
+		.evo-stream-message-menu-right	{top: 25%;}
+									}
+
+	.evo-stream-hdr					{font-size: rem-calc(12);}
+
+	.evo-stream-completed-steps-ctn	{
+									@include border-radius($global-radius);
+									border: 1px solid $gray-lighter;
+									padding: rem-calc(15);
+		.evo-stream-item-ctn-placeholder{
+										display: block;
+			.evo-stream-icon-ctn			{
+				.evo-icon-ctn					{
+												border-style: dashed;
+												border-color: $gray-light;
+												height: $evo-clip-art-icon-size-large;
+												width: $evo-clip-art-icon-size-large;
+												}
+											}
+										}
+									}
+
+}

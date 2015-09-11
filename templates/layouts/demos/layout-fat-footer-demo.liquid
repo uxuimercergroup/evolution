@@ -60,6 +60,9 @@
 		<!-- EVOLUTION CORE STYLES -->
 		{{ "evolution.css" | asset_url | stylesheet_tag }}
 
+		<!-- EVOLUTION UI STYLES -->
+		{{ "evolution_ui.css" | asset_url | stylesheet_tag }}
+
 		<!-- SITE STYLES -->
 		{{ "styles.css" | asset_url | stylesheet_tag }}
 
@@ -76,7 +79,7 @@
 	<body>
 
 		<!-- HEADER - BEGINS -->
-		{% include "/demos/base/default-header" %}
+		{% include "/objects/header/product-header" %}
 		<!-- HEADER - ENDS -->
 
 		<!-- PAGE - BEGINS -->
@@ -88,7 +91,7 @@
 		<!-- PAGE - ENDS -->
 
 		<!-- FOOTER - BEGINS -->
-		{% include "/base/fat-footer" %}
+		{% include "/objects/footer/fat-footer" %}
 		<!-- FOOTER - ENDS -->
 
 		{% include "scripts" %}

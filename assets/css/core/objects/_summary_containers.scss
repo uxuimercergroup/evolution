@@ -1,109 +1,125 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.6 - Summary Containers Partial
-// DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// Mercer Evolution - Core v2.7 - Summary Containers Partial
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+$evo-summary-ctn-margin-bottom: $evo-base-margin !default;
+$evo-summary-ctn-cell-width: 1px !default;
+$evo-summary-ctn-cell-style: dotted !default;
+$evo-summary-ctn-cell-color: $gray-mid-dark !default;
+$evo-summary-ctn-cell-border-top-color: $white !default;
+$evo-summary-ctn-cell-border-bottom-color: $white !default;
+$evo-summary-ctn-cell-padding-top: rem-calc(10) !default;
+$evo-summary-ctn-cell-border-width: 1px !default;
+$evo-summary-ctn-cell-border-style: dotted !default;
+$evo-summary-ctn-cell-border-color: $gray-mid-dark !default;
+$evo-summary-cell-text-icon-font-size: rem-calc(44) !default;
+$evo-summary-cell-text-support-font-size: (1rem - rem-calc(3)) !default;
+$evo-summary-cell-text-alignment: center !default;
+$evo-summary-cell-hover-background-color: $topaz-light !default;
+$evo-summary-cell-hover-border-top-color: $gray-light !default;
+$evo-summary-cell-hover-border-bottom-color: $gray-light !default;
+$evo-summary-cell-hover-transition-time: 400ms !default;
+$evo-summary-cell-alert-font-color: $garnet-dark !default;
+$evo-summary-cell-alert-icon-color: $garnet-dark !default;
+$evo-summary-cell-alert-hover-background-color: $garnet-light !default;
+$evo-summary-cell-positive-font-color: $emerald-dark !default;
+$evo-summary-cell-positive-icon-color: $emerald-dark !default;
+$evo-summary-cell-positive-hover-background-color: $emerald-light !default;
+$evo-secondary-summary-cell-font-size: rem-calc(32) !default;
+
 
 @if $use-summary-containers == true{
 
 	// SUMMARY CONTAINER
-	.evo-summary-ctn						{
-											margin-bottom: $evo-base-margin;
-											width: 100%;
-		.evo-summary-ctn-row					{
-			div										{
-													color: $body-font-color;
-													border-color: $summaryCtnBorderColor;
-													border-top-color: $summaryCtnBorderColorTop;
-													border-width: $summaryCtnBorderSize;
-													border-style: $summaryCtnBorderStyle;
-													display: block;
-													font-size: 44px;
-													width: auto;
-													padding: $summaryCtnPadding;
-													text-align: center;
-				&:first-child							{border-top-color: $summaryCtnBorderFirstChildColorTop;}
-				a										{@include href-link($body-font-color, none);}
-				.evo-main-text							{display: block;}
-				.evo-support-text						{
-														display: block;
-														font-size: (1rem - rem-calc(3));
-														}
-				[class*="evo-icon-"]					{
-														color: $body-font-color;
-														font-size: $summaryPrimaryCtnIconFontSize;
+	.evo-summary-ctn							{
+												margin-bottom: $evo-summary-ctn-margin-bottom;
+		ul											{
+													margin: 0;
+			li											{
+														border: $evo-summary-ctn-cell-width $evo-summary-ctn-cell-style $evo-summary-ctn-cell-color;
+														border-top: 0;
+														cursor: pointer;
+														padding-top: $evo-summary-ctn-cell-padding-top;
+				&:first-child								{border-top: $evo-summary-ctn-cell-width $evo-summary-ctn-cell-style $evo-summary-ctn-cell-color;}
+				.evo-main-text,
+				.evo-support-text							{
+															display: block;
+															text-align: $evo-summary-cell-text-alignment;
+															}
+				.evo-main-text,
+				[class*="evo-icon-"]						{font-size: $evo-summary-cell-text-icon-font-size;}
+				.evo-support-text							{font-size: $evo-summary-cell-text-support-font-size;}
+				[class*="evo-icon-"],
+				a											{
+															color: $body-font-color;
+															text-decoration: none;
+															}
 														}
 													}
-
-			// SET AN ITEM TO ALERT STATE - NEGATIVE
-			.evo-summary-ctn-alert-negative,
-			.evo-summary-ctn-alert-negative a		{
-													@include href-link($summaryCtnAlertNegativeFontColor, none);
-													color: $summaryCtnAlertNegativeFontColor;
-				[class*="evo-icon-"]					{color: $summaryCtnAlertNegativeFontColor;}
+			.evo-summary-alert						{
+													color: $evo-summary-cell-alert-font-color;
+				[class*="evo-icon-"],
+				a										{color: $evo-summary-cell-alert-icon-color;}
+													}
+			.evo-summary-positive					{
+													color: $evo-summary-cell-positive-font-color;
+				[class*="evo-icon-"],
+				a										{color: $evo-summary-cell-positive-icon-color;}
 													}
 
-			// SET AN ITEM TO ALERT STATE - POSITIVE
-			.evo-summary-ctn-alert-positive,
-			.evo-summary-ctn-alert-positive a		{
-													@include href-link($summaryCtnAlertPositiveFontColor, none);
-													color: $summaryCtnAlertPositiveFontColor;
-				[class*="evo-icon-"]					{color: $summaryCtnAlertPositiveFontColor;}
-													}
 												}
-											}
 
 	// SECONDARY SUMMARY CONTAINER
-	.evo-secondary-summary-ctn				{
-		.evo-summary-ctn-row					{
-			div										{
-				.evo-main-text							{font-size: 36px;}
-				.evo-support-text						{font-size: (1rem - rem-calc(3));}
-				[class*="evo-icon-"]					{font-size: $summarySecondaryCtnIconFontSize;}
+	.evo-secondary-summary-ctn					{
+		ul											{
+			li											{
+				.evo-main-text,							
+				[class*="evo-icon-"]						{font-size: $evo-secondary-summary-cell-font-size;}
+														}
 													}
 												}
-											}
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
 	@if $use-medium-up-mediaquery == true {
 		
 		@media #{$medium-up} {
 
 			// SUMMARY CONTAINER
-			.evo-summary-ctn				{
-											display: table;
-				.evo-summary-ctn-row			{
-												display: table-row;
-					div								{
-													display: table-cell;
-													width: 10%;
-													border-left-color: $summaryCtnBorderColorLeft;
-													border-bottom-color: $summaryCtnBorderColorBottom;
-						&:first-child					{
-														border-top-color: $summaryCtnBorderColorTop;
-														border-left-color: $summaryCtnBorderFirstChildColorLeft;
-														}
-						&:hover							{
-														@include transition(background-color $summaryCtnBorderHoverTransitionSpeed ease-in-out);
-														background-color: $summaryCtnBorderHoverBackgroundColor;
-														border-top-color: $summaryCtnBorderHoverBorderTopColor;
-														border-bottom-color: $summaryCtnBorderHoverBorderBottomColor;
+			.evo-summary-ctn					{
+				ul									{
+					li									{
+														border: $evo-summary-ctn-cell-width $evo-summary-ctn-cell-style $evo-summary-ctn-cell-color;
+														border-left: 0;
+														border-top-color: $evo-summary-ctn-cell-border-top-color;
+														border-bottom-color: $evo-summary-ctn-cell-border-bottom-color;
+						&:first-child						{
+															border-top-color: $evo-summary-ctn-cell-border-top-color;
+															border-left: $evo-summary-ctn-cell-border-width $evo-summary-ctn-cell-border-style $evo-summary-ctn-cell-border-color;
+															}
+						&:hover								{
+															@include transition(background-color $evo-summary-cell-hover-transition-time ease-in-out);
+															background-color: $evo-summary-cell-hover-background-color;
+															border-top-color: $evo-summary-ctn-cell-color;
+															border-bottom-color: $evo-summary-ctn-cell-color;
+															}
 														}
 													}
 
-					// SET AN ITEM TO ALERT STATE - NEGATIVE
-					.evo-summary-ctn-alert-negative	{
-						&:hover							{background-color: $summaryCtnAlertNegativeHoverBackgroundColor;}
+					.evo-summary-alert				{
+						&:hover							{background-color: $evo-summary-cell-alert-hover-background-color;}
+													}
+					.evo-summary-positive			{
+						&:hover							{background-color: $evo-summary-cell-positive-hover-background-color;}
 													}
 
-					// SET AN ITEM TO ALERT STATE - POSITIVE
-					.evo-summary-ctn-alert-positive	{
-						&:hover							{background-color: $summaryCtnAlertPositiveHoverBackgroundColor;}
-													}
 												}
-											}
 
 		}
 

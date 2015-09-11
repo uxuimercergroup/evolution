@@ -1,0 +1,41 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.7 - Base Page Header Partial
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+$evo-header-container-box-shadow-horizontal: $evo-base-shadow-horizontal !default;
+$evo-header-container-box-shadow-vertical: $evo-base-shadow-vertical !default;
+$evo-header-container-box-shadow-blur: $evo-base-shadow-blur !default;
+$evo-header-container-box-shadow-color: $evo-base-shadow-color !default;
+
+
+// THIS IS ONLY USED FOR GENERAL GLOBAL HEADER STYLES
+@if $use-header == true{
+
+	// PAGE HEADER
+	.evo-header						{
+
+		// PAGE HEADER CONTAINER
+		.evo-header-ctn					{
+										@include box-shadow($evo-header-container-box-shadow-horizontal, $evo-header-container-box-shadow-vertical, $evo-header-container-box-shadow-blur, $evo-header-container-box-shadow-color);
+										}
+									}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			
+
+		}
+		
+	}// endif
+
+}// endif

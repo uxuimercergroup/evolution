@@ -5,7 +5,7 @@
 			<tr>
 				<th class="col-10" scope="col">First Name</th>
 				<th class="col-11" scope="col">Last Name</th>
-				<th class="col-3 evo-nowrap evo-align-right" scope="col">Start Date</th>
+				<th class="col-3 text-right evo-nowrap" scope="col">Start Date</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -15,7 +15,7 @@
 			<tr>
 				<td>{{ item.first_name }}</td>
 				<td>{{ item.last_name }}</td>
-				<td class="evo-nowrap evo-align-right">{{ item.start_date }}</td>
+				<td class="text-right evo-nowrap">{{ item.start_date }}</td>
 			</tr>{% endfor %}
 		</tbody>
 	</table>

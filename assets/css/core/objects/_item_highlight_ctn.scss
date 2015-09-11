@@ -1,0 +1,150 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Core v2.7 - Item Highlight Container Partial
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
+//-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+$evo-item-highlight-ctn-bgcolor: $gray-lightest !default;
+$evo-item-highlight-ctn-border-width: 3px !default;
+$evo-item-highlight-ctn-border-style: solid !default;
+$evo-item-highlight-ctn-border-color: $topaz-dark !default;
+$evo-item-highlight-ctn-padding: rem-calc(10) rem-calc(18) rem-calc(3) rem-calc(18) !default;
+$evo-item-highlight-ctn-margin: 0 10px !default;
+$evo-item-highlight-ctn-min-height: 100px !default;
+
+$evo-item-highlight-ctn-tag-indicator-min-height: rem-calc(29) !default;
+$evo-item-highlight-ctn-tag-indicator-label-font-size: rem-calc(11) !default;
+$evo-item-highlight-ctn-tag-indicator-label-text-transform: uppercase !default;
+$evo-item-highlight-ctn-tag-indicator-label-position: relative !default;
+$evo-item-highlight-ctn-tag-indicator-label-position-top: -6px !default;
+$evo-item-highlight-ctn-tag-indicator-label-position-left: -26px !default;
+$evo-item-highlight-ctn-tag-indicator-label-padding: rem-calc(10) rem-calc(30) rem-calc(8) rem-calc(30) !default;
+$evo-item-highlight-ctn-tag-indicator-label-bgcolor: $sapphire-mid !default;
+$evo-item-highlight-ctn-tag-indicator-label-letter-spacing: rem-calc(1) !default;
+
+$evo-item-highlight-ctn-highlight-ctn-link-font-size: rem-calc(12) !default;
+$evo-item-highlight-ctn-highlight-ctn-link-line-height: 0 !default;
+$evo-item-highlight-ctn-highlight-ctn-link-margin-top: rem-calc(8) !default;
+
+// TODO: This needs to be reconciled item_highlight_ctn.scss
+
+// COSTS TYPOGRAPHY
+$evo-cost-reverse-font-color: $white !default;
+$evo-large-cost-font-color:	$gray-mid-dark !default;
+$evo-small-cost-font-color:	$gray-mid-dark !default;
+
+
+@if $use-item-highlight-container == true{
+
+	// COSTS TYPOGRAPHY
+	.evo-cost-number			{
+								font-family: $evo-font-bold-stack;
+								line-height: 1;
+								}
+
+	.evo-monthly-label			{
+								font-family: $evo-font-medium-stack;
+								font-size: rem-calc(16);
+								text-transform: uppercase;
+								}
+
+	.evo-total-label,
+	.evo-plan-label				{
+								display: block;
+								font-size: rem-calc(11);
+								}
+
+	.evo-large-cost				{
+								text-align: center;
+								color: $evo-large-cost-font-color;
+		.evo-cost-number			{
+									font-size: rem-calc(48);
+									letter-spacing: rem-calc(-2);
+			sup							{
+										position: relative;
+										top: rem-calc(-19);
+										left: rem-calc(-1);
+										}
+									}
+		.evo-monthly-label			{
+									position: relative;
+									left: rem-calc(-10);
+									top: rem-calc(-5);
+									}
+		.evo-total-label			{
+									position: relative;
+									top: rem-calc(-7);
+									}
+								}
+
+	.evo-small-cost				{
+								text-align: center;
+								color: $evo-small-cost-font-color;
+		.evo-cost-number			{
+									font-size: rem-calc(26);
+									letter-spacing: rem-calc(-.2);
+			sup							{
+										font-size: rem-calc(11);
+										position: relative;
+										top: rem-calc(-6);
+										left: rem-calc(-1);
+										}
+									}
+		.evo-monthly-label			{
+									font-family: $evo-font-bold-stack;
+									position: relative;
+									left: rem-calc(-5);
+									top: rem-calc(-5);
+									text-transform: lowercase;
+									}
+								}
+
+	.evo-cost-reverse			{
+								color: $evo-cost-reverse-font-color;
+		a							{color: $evo-cost-reverse-font-color;}
+								}
+
+	// ITEM HIGHLIGHT CONTAINER
+	.evo-item-highlight-ctn			{
+									background-color: $evo-item-highlight-ctn-bgcolor;
+									border: $evo-item-highlight-ctn-border-width $evo-item-highlight-ctn-border-style $evo-item-highlight-ctn-border-color;
+									padding: $evo-item-highlight-ctn-padding;
+									margin: $evo-item-highlight-ctn-margin;
+									min-height: $evo-item-highlight-ctn-min-height;
+		.evo-tag-indicator-ctn			{
+										min-height: $evo-item-highlight-ctn-tag-indicator-min-height;
+			.evo-label						{
+											font-size: $evo-item-highlight-ctn-tag-indicator-label-font-size;
+											text-transform: $evo-item-highlight-ctn-tag-indicator-label-text-transform;
+											position: $evo-item-highlight-ctn-tag-indicator-label-position;
+											top: $evo-item-highlight-ctn-tag-indicator-label-position-top;
+											left: $evo-item-highlight-ctn-tag-indicator-label-position-left;
+											padding: $evo-item-highlight-ctn-tag-indicator-label-padding;
+											background-color: $evo-item-highlight-ctn-tag-indicator-label-bgcolor;
+											letter-spacing: $evo-item-highlight-ctn-tag-indicator-label-letter-spacing;
+											}
+										}
+		a.evo-highlight-ctn-link		{
+										font-size: $evo-item-highlight-ctn-highlight-ctn-link-font-size;
+										line-height: $evo-item-highlight-ctn-highlight-ctn-link-line-height;
+										margin-top: $evo-item-highlight-ctn-highlight-ctn-link-margin-top;
+										}
+									}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			
+
+		}
+		
+	}// endif
+
+}// endif

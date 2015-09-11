@@ -1,7 +1,7 @@
 //-------------------------------------------------------------------------------------------
 // Mercer Evolution - Core v2.6 - Tabs Partial
-// DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
 //
@@ -9,7 +9,6 @@
 //
 
 /* TODO: TABS.SCSS - come back and change the background color options and even color options to use the entire color palette with a data attribute */
-// Tabs variables
 $evo-margin-left: rem-calc(4) !default;
 $evo-margin-left-first-child: 0 !default;
 $evo-tabs-border-radius: $global-radius !default;
@@ -21,8 +20,6 @@ $evo-tabs-border-size: 1px !default;
 $evo-tabs-border-style: solid !default;
 $evo-tabs-border-bottom: 0 !default;
 $evo-tabs-active-bg-color: $white !default;
-
-// Tabs panel variables
 $evo-tabs-panel-padding: $evo-base-padding !default;
 $evo-tabs-panel-border-size: 1px !default;
 $evo-tabs-panel-border-style: solid !default;
@@ -31,195 +28,141 @@ $evo-tabs-panel-bg-color: $white !default;
 
 @if $use-tabs == true{
 
-	.evo-tabs			{
-		// TAB STYLES
-		dd					{
-							margin-left: $evo-margin-left;
-			&:first-child		{margin-left: $evo-margin-left-first-child;}
-			a					{
-								@include border-radius(rem-calc($evo-tabs-border-radius) rem-calc($evo-tabs-border-radius) 0 0);
-								background-color: $evo-tabs-bg-color;
-								border: $evo-tabs-border-size $evo-tabs-border-style $tabsBorderColor;
-								border-bottom: $evo-tabs-border-bottom;
-								color: $tabsFontColor;
-								font-size: $evo-tabs-font-size;
-								padding: $evo-tabs-padding;
-								position: relative;
-								text-decoration: none;
-				&:hover				{background-color: $evo-tabs-hover-bg-color;}
-								}
-							}
-		// ACTIVE TAB STYLES
-		dd.active			{
-			a					{
-								background-color: $evo-tabs-active-bg-color;
-								top: 2px;
-								margin-top: -1px;
-								}
-							}
-						}
+	// BASIC TABS
+	.evo-tabs						{
+		li.tab-title					{
+										margin-right: rem-calc(3);
+			&:last-child					{margin-right: 0;}
+			a								{
+											@include border-radius(rem-calc(4) rem-calc(4) 0 0);
+											border: 1px solid $gray-mid;
+											border-bottom: 0;
+											text-decoration: none;
+				[class*="evo-icon"]				{
+												display: inline-block;
+												vertical-align: middle;
+												margin-top: -1px;
+												}
+											}
+										}
+		li.active						{
+			a								{
+											position: relative;
+											top: 1px;
+											}
+										}
+									}
 
-	.evo-tabs-content	{
-		.content			{
-							@include border-radius(0 $evo-tabs-border-radius $evo-tabs-border-radius $evo-tabs-border-radius);
-							padding: $evo-tabs-panel-padding $evo-tabs-panel-padding 0 $evo-tabs-panel-padding;
-							border: $evo-tabs-panel-border-size $evo-tabs-panel-border-style $tabsPanelBorderColor;
-							background-color: $evo-tabs-panel-bg-color;
-							}
-						}
+	// BASIC TABS CONTENT
+	.evo-tabs-content				{
+									@include border-radius(0 rem-calc(4) rem-calc(4) rem-calc(4));
+									border: 1px solid $gray-mid;
+		>.content						{padding: rem-calc(16) rem-calc(16) 0 rem-calc(16);}
+									}
 
 
+	// GROUPED TABS
+	.evo-tabs-grouped				{
+		li.tab-title					{
+										margin-right: 0;
+			a								{
+											@include border-radius(0);
+											border: 1px solid $gray-mid;
+											border-right: 0;
+				.evo-text						{display: none;}
+											}
+			&:first-child					{
+				a								{@include border-radius(rem-calc(4) 0 0 rem-calc(4));}
+											}
+			&:last-child					{
+				a								{
+												@include border-radius(0 rem-calc(4) rem-calc(4) 0);
+												border-right: 1px solid $gray-mid;
+												}
+											}
+										}
+		li.active						{
+			a								{top: 0;}
+										}
+									}
+
+	// GROUPED TABS CONTENT
+	.evo-tabs-grouped-content		{
+									border: 0;
+		>.content						{padding-left: 0;}
+									}
 
 
+	// VERTICAL TABS
+	.evo-vertical-tabs				{
+		li.tab-title					{
+										margin-right: 0;
+			a								{@include border-radius(0);}
+										}
+		li:last-child					{
+			a								{border-bottom: 1px solid $gray-light;}
+										}
+		li.active						{
+			a								{top: 0;}
+										}
+									}
 
-	// OLD TABS USING JQUERY UI
-	.evo-tabs.ui-tabs										{
-															position:relative; // position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed")
-															margin-bottom:$tabsSetMarginBottom;
-		.ui-tabs-nav											{
-																margin:0;
-																padding:0;
-																height:$tabsNavHeight;
-			.ui-state-default										{
-																	@include border-radius($global-radius $global-radius 0 0);
-																	@include background-gradient($tabsBackgroundStartColor,$tabsBackgroundEndColor);
-																	list-style:none;
-																	float:left;
-																	position:relative;
-																	top:$tabsPositonTop;
-																	height:$tabsHeight;
-																	width:auto;
-																	margin: 0 $tabsMarginRight $tabsMarginBottom 0;
-																	padding:0;
-																	white-space:nowrap;
-																	display:block;
-																	border:$tabsBorderSize $tabsBorderStyle $tabsBorderColor;
-																	border-bottom:0;
-				a														{
-																		float:left;
-																		padding:$tabsPaddingTopBottom $tabsPaddingLeftRight;
-																		text-decoration:none;
-																		cursor:pointer;
-																		display:block;
-																		color:$tabsFontColor;
-																		font-size:$tabsFontSize;
-																		line-height:$tabsLineHeight;
-																		font-weight:$tabsFontWeight;
-																		outline:none;
-																		}
-																	}
-
-			// TABS MOBILE PAGING
-			.ui-tabs-paging-prev,
-			.ui-tabs-paging-next									{
-																	@include border-radius(0);
-																	@include background-gradient($tabsPagingNavBackgroundStartColor, $tabsPagingNavBackgroundEndColor);
-																	border: 0;
-																	padding-right: 0 !important;
-				a														{
-																		@include hide-text;
-																		background: transparent;
-																		color: $tabsPagingNavLinkColor;
-																		cursor: pointer;
-																		display: block;
-																		height: 32px;
-																		width: 32px;
-																		padding: 0;
-																		text-decoration: none;
-					&:hover,
-					&:focus,
-					&:active,
-					&:hover,
-					&:focus,
-					&:active												{background: transparent;}
-					&:hover													{color: $tabsPagingNavHoverColor;}
-					&:before												{
-																			font-family: $evo-icon-font-stack;
-																			font-size: 1rem;
-																			}
-																		}
-																	}
-			.ui-tabs-paging-prev									{
-				a														{
-																		padding: 6px 0 0 7px;
-					&:before												{content: "\e60f";}
-																		}
-																	}
-			.ui-tabs-paging-next									{
-																	float: right !important;
-				a														{
-																		padding: 6px 0 0 9px;
-					&:before												{content: "\e60e";}
-																		}
-																	}
-			.ui-tabs-paging-disabled								{visibility: hidden;}
-
-			.ui-state-hover											{@include background-gradient($tabsHoverBackgroundStartColor,$tabsHoverBackgroundEndColor);}
-			.ui-state-active										{
-																	@include background-gradient($tabsActiveBackgroundStartColor,$tabsActiveBackgroundEndColor);
-																	top:$tabsActivePositonTop;
-																	height:$tabsActiveHeight;
-																	padding-bottom:$tabsActivePaddingBottom;
-				a														{
-																		color:$tabsActiveFontColor;
-																		cursor:default;
-																		}
-																	}
-																}
-		.ui-tabs-panel											{
-																@include border-radius(0 $global-radius $global-radius $global-radius);
-																padding:$tabsPanelPadding $tabsPanelPadding 0 $tabsPanelPadding;
-																border:$tabsPanelBorderSize $tabsPanelBorderStyle $tabsPanelBorderColor;
-																background-color:$tabsPanelBackgroundColor;
-																}
-		.ui-tabs-hide											{display:none;}
-															}
+	// VERTICAL TABS CONTENT
+	.evo-vertical-content			{
+									@include border-radius(0);
+									border-top: 0;
+									}
 
 	//=== MEDIA QUERIES =========================================================================
 
-	// MEDIUM MEDIA QUERY RANGE AND UP - 641px +
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
 	@if $use-medium-up-mediaquery == true {
 		
 		@media #{$medium-up} {
 
-			.evo-tabs.ui-tabs								{
-				.ui-tabs-nav									{
-																height:$tabsNavHeightLargeBreakpoint;
-					.ui-state-default								{
-																	height:$tabsHeightLargeBreakpoint;
-						a												{
-																		font-size:$tabsFontSize;
-																		line-height:$tabsLineHeight;
-																		}
-																	}
-					.ui-state-active								{height:$tabsActiveHeightLargeBreakpoint;}
-																}
-				.ui-tabs-panel									{@include border-radius(0 $global-radius $global-radius $global-radius);}
-															}
+			// BASIC TABS
+			.evo-tabs				{
+				li.tab-title			{
+					a						{
+						&:hover					{
+												@include transition(background-color 0.3s ease-in-out);
+												}
+											}
+										}
+				li.active				{
+					a						{
+											@include transition(background-color 0.5s ease-in-out);
+											}
+										}
+									}
 
-			// TABS IE9 FIXES
-			.ie9											{
-				.evo-tabs.ui-tabs								{
-					.ui-tabs-nav									{
-						.ui-state-default								{
-							a												{line-height: ($tabsLineHeight - 4)}
-																		}
-																	}
-																}
-															}
 
-			// TABS FIREFOX (3.5+) FIXES
-			body:not(:-moz-handler-blocked) 				{
+			// GROUPED TABS
+			.evo-tabs-grouped		{
+				li.tab-title			{
+					a						{
+						.evo-text				{display: inline-block;}
+											}
+										}
+									}
 
-				.evo-tabs.ui-tabs								{
-					.ui-tabs-nav									{
-						.ui-state-default								{
-							a												{line-height: ($tabsLineHeight - 4)}
-																		}
-																	}
-																}
-																
-															}
+
+			// VERTICAL TABS
+			.evo-vertical			{
+									margin-top: 1px;
+				li:last-child			{
+					a						{margin-bottom: -1px;}
+										}
+				li.active				{
+					a						{border-right: 0;}
+										}
+									}
+
+			// VERTICAL TABS CONTENT
+			.evo-vertical-content	{
+									border: 1px solid $gray-light;
+				>.content				{padding-left: rem-calc(210);}
+									}
 
 		}
 		

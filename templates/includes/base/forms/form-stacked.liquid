@@ -2,21 +2,21 @@
 <form data-abide>
 	<fieldset>
 		<div class="row">
-			<div class="large-8 columns">
+			<div class="large-6 columns">
 				<label>
-					<small><i class="evo-icon-evo-asterisk-small evo-icon-color-gray-dark"></i></small>Input Label
-					<input type="text" placeholder="Placeholder text" tabindex="" title="" required />
+					<small><i class="evo-icon-evo-asterisk-small"></i></small>Input Label:
+					<input type="text" placeholder="" tabindex="" title="" required />
 					<small class="error">Houston we have a problem.</small>
 				</label>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="large-8 columns">
+			<div class="large-6 columns">
 				<label>
-					<small><i class="evo-icon-evo-asterisk-small evo-icon-color-gray-dark"></i></small>Select Box
+					<small><i class="evo-icon-evo-asterisk-small"></i></small>Select Box:
 					<select tabindex="" title="" required>
-						<option value="">Choose one&#8230;</option>
+						<option value="">choose one&#8230;</option>
 						<option value="husker">Star Lord</option>
 						<option value="starbuck">Groot</option>
 						<option value="hotdog">Rocket Raccoon</option>
@@ -29,7 +29,7 @@
 
 		<div class="row">
 			<div class="large-6 columns">
-				<label>Choose Your Favorite</label>
+				<label>Choose Your Favorite:</label>
 				<input checked type="radio" name="pokemon" value="Red" id="pokemonRed" tabindex="" title="" />
 				<label for="pokemonRed">Red</label>
 				<input type="radio" name="pokemon" value="Blue" id="pokemonBlue" tabindex="" title="" />
@@ -40,7 +40,7 @@
 		<div class="row">
 			<div class="large-6 columns">
 				<label>
-					<small><i class="evo-icon-evo-asterisk-small evo-icon-color-gray-dark"></i></small>Check these out
+					<small><i class="evo-icon-evo-asterisk-small"></i></small>Check These Out:
 				</label>
 				<input id="checkbox1" type="checkbox" tabindex="" title="" required />
 				<label for="checkbox1">Checkbox 1</label>
@@ -51,12 +51,28 @@
 		</div>
 
 		<div class="row">
-			<div class="large-8 columns">
+			<div class="large-6 columns">
 				<label>
-					<small><i class="evo-icon-evo-asterisk-small evo-icon-color-gray-dark"></i></small>Textarea Label
+					<small><i class="evo-icon-evo-asterisk-small"></i></small>Textarea Label:
 					<textarea placeholder="Placeholder text" tabindex="" title="" required ></textarea>
 					<small class="error">Houston we have a problem.</small>
 				</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-6 columns">
+				<div class="row evo-datepicker-ctn evo-datepicker-range">
+					<label class="small-12 columns evo-required" for="js-evo-datepicker-range-left-aligned-from">
+						<small><i class="evo-icon-evo-asterisk-small"></i></small>Label:
+					</label>
+					<div class="small-6 columns">
+						<input id="js-evo-datepicker-range-left-aligned-from" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="From" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" class="hasDatepicker" size="10"><button type="button" class="ui-datepicker-trigger">Choose Date</button>
+					</div>
+					<div class="small-6 columns">
+						<input id="js-evo-datepicker-range-left-aligned-to" readonly="true" name="" value="" type="text" tabindex="" title="Select date." placeholder="To" data-evo-datepicker-message-label="This is a calendar message area for user messages related to dates" class="hasDatepicker" size="10"><button type="button" class="ui-datepicker-trigger">Choose Date</button>
+					</div>
+				</div>
 			</div>
 		</div>
 

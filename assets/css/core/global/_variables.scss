@@ -1,21 +1,25 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.6 - Global Variables Partial
-// DATE - January 13, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Doug Richar, Vinod Bhatt
+// Mercer Evolution - Core v2.7 - Global Variables Partial
+// DATE - June 3, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
 // ==========================================================================================
-// GLOBAL
+// EVO CORE - GLOBAL
 // ==========================================================================================
-$evo-include-html-classes:					true !default;
-
-
-// GLOBAL
-// ------------------------------------------------------------------------------------------
 
 // BASE VARIABLES
-$evo-base-margin:							14px !default;
-$evo-base-padding:							14px !default;
+
+	// LAYOUT
+	$evo-base-margin:							rem-calc(14) !default;
+	$evo-base-padding:							rem-calc(14) !default;
+
+	// SHADOWS
+	$evo-base-shadow-base-color: 				$black !default;
+	$evo-base-shadow-horizontal: 				0 !default;
+	$evo-base-shadow-vertical: 				 	rem-calc(3) !default;
+	$evo-base-shadow-blur: 				 		rem-calc(3) !default;
+	$evo-base-shadow-color:						scale-color($evo-base-shadow-base-color, $lightness: 75%) !default;
 
 // Z-INDEX MASTER LIST
 // Used for a bird's eye view of components dependent on the z-axis
@@ -31,24 +35,6 @@ $evo-zindex-dialog-overlay:					10003 !default;
 $evo-zindex-dialog-position:				10004 !default;
 
 
-// HELPERS
-// ------------------------------------------------------------------------------------------
-
-// KEYLINES
-$evo-keyline-right-border-right-color: 		$gray-mid !default;
-$evo-keyline-left-border-left-color:		$gray-mid !default;
-
-// SPACER SIZES
-$evo-spacer-size:							5px !default;
-$evo-spacer-xsmall:							($evo-spacer-size*1) !default;
-$evo-spacer-small:							($evo-spacer-size*2) !default;
-$evo-spacer-medium:							($evo-spacer-size*3) !default;
-$evo-spacer-large:							($evo-spacer-size*4) !default;
-$evo-spacer-xlarge:							($evo-spacer-size*5) !default;
-$evo-spacer-xxlarge:						($evo-spacer-size*6) !default;
-$evo-spacer-xxxlarge:						($evo-spacer-size*7) !default;
-
-
 // TYPOGRAPHY
 // ------------------------------------------------------------------------------------------
 
@@ -59,38 +45,33 @@ $evo-base-font-file-path:					"../fonts" !default;
 // WEB FONTS
 
 	// Thin
-	$evo-font-thin-family:						relativefaux !default;
-	$evo-font-thin-file-path:					"#{$evo-base-font-file-path}/relative-faux-webfont" !default;
+	$evo-font-thin-family:						proxima_nova_ththin !default;
+	$evo-font-thin-file-path:					"#{$evo-base-font-file-path}/ProximaNova-Thin-webfont" !default;
 	$evo-font-thin-stack:						"#{$evo-font-thin-family}", $evo-base-font-stack !default;
 
 	// Regular
-	$evo-font-regular-family:					relativebook !default;
-	$evo-font-regular-file-path:				"#{$evo-base-font-file-path}/relative-book-webfont" !default;
+	$evo-font-regular-family:					proxima_nova_rgregular !default;
+	$evo-font-regular-file-path:				"#{$evo-base-font-file-path}/ProximaNova-Reg-webfont" !default;
 	$evo-font-regular-stack:					"#{$evo-font-regular-family}", $evo-base-font-stack !default;
 
 	// Italic
-	$evo-font-italic-family:					relativebook_italic !default;
-	$evo-font-italic-file-path:					"#{$evo-base-font-file-path}/relative-bookitalic-webfont" !default;
+	$evo-font-italic-family:					proxima_novaregular_italic !default;
+	$evo-font-italic-file-path:					"#{$evo-base-font-file-path}/ProximaNova-RegIt-webfont" !default;
 	$evo-font-italic-stack:						"#{$evo-font-italic-family}", $evo-base-font-stack !default;
 
 	// Medium
-	$evo-font-medium-family:					relativemedium !default;
-	$evo-font-medium-file-path:					"#{$evo-base-font-file-path}/relative-medium-webfont" !default;
+	$evo-font-medium-family:					proxima_nova_ltsemibold !default;
+	$evo-font-medium-file-path:					"#{$evo-base-font-file-path}/ProximaNova-Sbold-webfont" !default;
 	$evo-font-medium-stack:						"#{$evo-font-medium-family}", $evo-base-font-stack !default;
 
-	// Medium Italic
-	$evo-font-medium-italic-family:				relativemedium_italic !default;
-	$evo-font-medium-italic-file-path:			"#{$evo-base-font-file-path}/relative-mediumitalic-webfont" !default;
-	$evo-font-medium-italic-stack:				"#{$evo-font-medium-italic-family}", $evo-base-font-stack !default;
-
 	// Bold
-	$evo-font-bold-family:						relativebold !default;
-	$evo-font-bold-file-path:					"#{$evo-base-font-file-path}/relative-bold-webfont" !default;
+	$evo-font-bold-family:						proxima_nova_rgbold !default;
+	$evo-font-bold-file-path:					"#{$evo-base-font-file-path}/ProximaNova-Bold-webfont" !default;
 	$evo-font-bold-stack:						"#{$evo-font-bold-family}", $evo-base-font-stack !default;
 
 	// Bold Italic
-	$evo-font-bold-italic-family:				relativebold_italic !default;
-	$evo-font-bold-italic-file-path:			"#{$evo-base-font-file-path}/relative-bolditalic-webfont" !default;
+	$evo-font-bold-italic-family:				proxima_novabold_italic !default;
+	$evo-font-bold-italic-file-path:			"#{$evo-base-font-file-path}/ProximaNova-BoldIt-webfont" !default;
 	$evo-font-bold-italic-stack:				"#{$evo-font-bold-italic-family}", $evo-base-font-stack !default;
 
 // ICON FONTS
@@ -105,196 +86,10 @@ $evo-base-font-file-path:					"../fonts" !default;
 	$evo-icon-site-font-file-path:				"#{$evo-base-font-file-path}/evo-icon-font-site" !default;
 	$evo-icon-site-font-stack:					"#{$evo-icon-site-font-family}" !default;
 
-// LINKS
-$evo-base-link-visited-color:				$sapphire-dark !default;
-
-// FONT WEIGHTS
-$evo-weight-bold-100:						100 !default;
-$evo-weight-bold-200:						200 !default;
-$evo-weight-bold-300:						300 !default;
-$evo-weight-bold-400:						400 !default;
-$evo-weight-bold-500:						500 !default;
-$evo-weight-bold-600:						600 !default;
-$evo-weight-bold-700:						700 !default;
-$evo-weight-bold-800:						800 !default;
-$evo-weight-bold-900:						900 !default;
-
-// OTHER ELEMENTS
-$evo-text-selection-text-color:				$white !default;
-$evo-text-selection-background-color:		$gray-darker !default;
-
 
 // ==========================================================================================
-// BASE
+// EVO CORE - BASE
 // ==========================================================================================
-
-// BOXES
-// ------------------------------------------------------------------------------------------
-
-// BASE
-$boxBorderSize:								1px !default;
-$boxBorderStyle:							solid !default;
-$boxHdrBorderSize:							3px !default;
-$boxHdrBorderStyle:							solid !default;
-$boxBdyBorderTopSize:						1px !default;
-$boxBdyBorderTopStyle:						solid !default;
-$boxPadding:								$evo-base-padding !default;
-$boxVShadow:								1px !default;
-$boxHShadow:								1px !default;
-$boxShadowBlur:								1px !default;
-$boxBackgroundColor:						$gray-lighter !default;
-$boxBorderColor:							$gray-mid !default;
-$boxHdrBorderColor:							$gray-mid !default;
-$boxShadowColor:							$gray-darker !default;
-
-// ADVANCED BOX
-$boxAdvancedBackgroundColor:				$transparent !default;
-$boxAdvancedHdrBackgroundColor:				$gray-light !default;
-
-// MESSAGE BOXES
-$msgBorderWidth:							1px !default;
-$msgBorderStyle:							solid !default;
-
-// CUSTOM CONTAINERS
-$boxInlineSearchBorderSizeColor:			1px !default;
-$boxInlineSearchBorderTypeColor:			dotted !default;
-$boxInlineSearchLabelLineHeight:			22px !default;
-
-$boxFeaturedBackgroundColor:				$white !default;
-$boxFeaturedBorderBottomColor:				$blue-gray-mid-dark !default;
-
-$boxSidebarBackgroundColor:					$gray-lighter !default;
-$boxSidebarBorderBottomColor:				$gray-mid !default;
-
-$boxInlineSearchBackgroundColor:			$gray-lighter !default;
-$boxInlineSearchBorderColor:				$gray-darker !default;
-
-$boxSupportBackgroundColor:					$blue-gray-lighter !default;
-$boxSupportBottomColor:						$blue-gray-mid-dark !default;
-$boxSupportBorderBottomColor:				$blue-gray-mid-dark !default;
-
-
-// HEADER
-// ------------------------------------------------------------------------------------------
-
-// ICON STYLES
-$headerIconRadius:							3px !default;
-$headerIconPadding:							4px 10px 6px 6px !default;
-$headerIconMinWidth:						28px !default;
-$headerIconBackgroundColor:					$gray-dark !default;
-$headerIconFontColor:						$white !default;
-$headerIconHoverBackgroundColor:			$gray-dark !default;
-$headerIconHoverFontColor:					$white !default;
-
-// BASE & LOGO STYLES
-$mastheadContentHeight:						52px !default;
-$mastheadLogoLineHeight:					52px !default;
-$mastheadLogoFontWeight:					400 !default;
-$mastheadLogoFontSize:						24px !default;
-$mastheadLogoFontSizeLargeBreakpoint:		33px !default;
-$mastheadBackgroundStartColor:				$blue-gray !default;
-$mastheadBackgroundEndColor:				$blue-gray-darker !default;
-$mastheadLogoLinkColor:						$white !default;
-
-// USER IDENTIFIER
-$userIdentifierMenuFontSize:				12px !default;
-$userIdentifierMenuPadding:					6px 10px 6px 30px !default;
-$userIdentifierBackgroundStartColor:		#4674a9 !default;
-$userIdentifierBackgroundEndColor:			#385882 !default;
-$userIdentifierFontColor:					$white !default;
-$userIdentifierMenuShadowColor:				$gray-darker !default;
-$userIdentifierMenuTextColor:				$white !default;
-$userIdentifierMenuHoverColor:				$blue-gray !default;
-
-// TOOLBAR
-$toolbarBackgroundStartColor:				$blue-gray !default;
-$toolbarBackgroundEndColor:					$blue-gray-darker !default;
-$toolbarMobileNavbarBackgroundColor:		$gray-lighter !default;
-$toolbarDropShadowColor:					$gray-darker !default;
-$toolbarLinkColor:							$white !default;
-$toolbarLinkHoverColor:						$white !default;
-
-// NAVBAR
-$navbarBackgroundGradientStartColor:		$gray-lightest !default;
-$navbarBackgroundGradientEndColor:			$gray-mid !default;
-$navbarBorderColor:							$gray-mid !default;
-$navbarBorderBottomStyle:					solid !default;
-$navbarBorderColor:							$gray-mid !default;
-$navbarFontHoverColor:						#002C77 !default;
-
-	// MENU OVERRIDES
-	$subMenuBackgroundColor:				$gray-lighter !default;
-	$subMenuBorderTopColor:					$gray-mid !default;
-
-	// NAVBAR MESSAGE AREA
-	$navbarMessageBorderRightColor:			$gray-mid !default;
-
-	// TEXT NAVBAR
-	$textNavbarBorderLeftColor:				$gray-mid !default;
-	$textNavbarSubMenuHoverBackgroundColor:	$white !default;
-
-	// TABBED NAVBAR
-	$tabbedNavbarBorderLeftColor:			$white !default;
-	$tabbedNavbarHrefBorderLeftColor:		$gray-mid !default;
-
-	$tabbedNavbarActiveBackgroundStartColor:	$gray-lightest !default;
-	$tabbedNavbarActiveBackgroundEndColor:		$gray-mid !default;
-	$tabbedNavbarSubMenuHoverBackgroundColor:	$white !default;
-
-// SPOTLIGHT CONTAINER
-$megaMenuContainerSpotlightBorderRadius: 	4px !default;
-
-
-// MENU STYLES
-// ------------------------------------------------------------------------------------------
-$menuLinkPadding:							7px 10px !default;
-
-// MENUS
-$menuBackgroundHoverColor: 					$white !default;
-$menuDropShadowColor:						$gray-mid !default;
-$menuBackgroundColor:						$white !default;
-$menuBorderColor:							$gray-mid !default;
-$menuBorderTopColor:						$gray-mid !default;
-$menuIndicatorColor1stLevel:				$gray-dark !default;
-$menuFontColor:								#002C77 !default;
-$menuHoverFontColor:						#002C77 !default;
-$menuBorderTopColor2ndlevel:				$gray-mid !default;
-
-// MEGA MENU
-$megaMenuBackgroundColor: 					$gray-darker !default;
-$megaMenuBorderTopColor:					$gray-dark !default;
-$megaMenuBorderBottomColor:					$gray-dark !default;
-$megaMenuContentFontColor:					$white !default;
-
-
-// NAVIGATION
-// ------------------------------------------------------------------------------------------
-$navbarBorderBottomWidth:					1px !default;
-$navbarBorderBottomStyle:					solid !default;
-$navbarMessageWidth:						200px !default;
-$navbarMessagePadding:						9px 0 7px 0 !default;
-$navbarMessageInnerPadding:					2px 10px 2px 0 !default;
-$navbarMessageFontFamily:					$evo-font-medium-family !default;
-$navbarMessageBorderRightWidth:				1px !default;
-$navbarMessageBorderRightStyle:				dotted !default;
-
-
-// HERO BANNER
-// ------------------------------------------------------------------------------------------
-$heroBannerBackgroundColor:					$gray-lighter !default;
-
-
-// FOOTER
-// ------------------------------------------------------------------------------------------
-
-// BASE
-$footerBorderTopColor:						$gray-mid !default;
-$footerFontColor:							$gray-darker !default;
-
-// FAT FOOTER
-$fatFooterBackgroundColor:					$gray-darker !default;
-$fatFooterFontColor:						$white !default;
-
 
 // ICONS
 // ------------------------------------------------------------------------------------------
@@ -308,65 +103,9 @@ $iconFontAdvBorderColor:					$gray-lighter !default;
 $iconFontAdvFontColor:						$white !default;
 
 
-// LISTS
-// ------------------------------------------------------------------------------------------
-$horizontalListPipeBorderColor:				$gray-mid !default;
-$definitionListHeaderColor:					$black !default;
-$definitionDataListHeaderBorderColor:		$gray-mid !default;
-
-
-// TABLES
-// ------------------------------------------------------------------------------------------
-
-// BASE
-$tableColWidthMultiplier: 					1% !default;
-$tableBorderStyle:							solid !default;
-$tableTdBorderStyle:						solid !default;
-$tableMarginBottom:							$evo-base-margin !default;
-$tableMinWidth:								640px !default;
-$tableMinWidthLargeBreakpoint:				100% !default;
-
-$tableBackgroundColor:						$white !default;
-$tableBorderColor:							$gray-mid !default;
-$tableFontColor:							$black !default;
-$tableThFontColor:							$black !default;
-$tableThBackgroundColor:					$blue-gray-lighter !default;
-$tableThBorderColor:						#A9BCD3 !default;
-$tableTdBorderColor:						$gray-mid !default;
-$tableEvenTdBackgroundColor:				$white !default;
-$tableEvenTdSortedBackgroundColor: 			$gray-lightest !default;
-$tableOddTdBackgroundColor:					$gray-lightest !default;
-$tableOddTdSortedBackgroundColor: 			$gray-lighter !default;
-$tableRowHoverColor:						$topaz-light !default;
-
-// OPTIONS
-$tableDataFilterMaxWidth:					300px !default;
-$tableDataFilterLineHeight:					22px !default;
-$tableDataFilterLineHeightLargeBreakpoint:	16px !default;
-$tableDataFilterHeight:						24px !default;
-$tableDataFilterHeightLargeBreakpoint:		20px !default;
-
-$tableSubHeaderBackgroundColor:				#E8F0F7 !default;
-$tableSubHeaderFontColor:					$gray-darker !default;
-$tableSubHeaderBorderColor:					#C3D2E5 !default;
-$tableSubTotalBackgroundColor:				$gray-lighter !default;
-$tableSubTotalFontColor:					$gray-darker !default;
-$tableTotalBackgroundColor:					#E6E6E6 !default;
-$tableTotalFontColor:						$black !default;
-
-
 // ==========================================================================================
-// OBJECTS
+// EVO UI - OBJECTS
 // ==========================================================================================
-
-// ACCORDION
-// ------------------------------------------------------------------------------------------
-$accordionBorderColor:						$gray-mid !default;
-$accordionHeaderBackgroundColor:			$gray-lightest !default;
-$accordionHeaderFontColor:					$blue-gray-dark !default;
-$accordionHeaderIconColor:					$blue-gray-dark !default;
-$accordionContentBackgroundColor:			$white !default;
-
 
 // ADVANCED FILTER MODAL
 // ------------------------------------------------------------------------------------------
@@ -416,16 +155,6 @@ $autocompleteItemHoverBackgroundStartColor:	$topaz-light !default;
 $autocompleteItemHoverBackgroundEndColor:	$topaz-light !default;
 
 
-// CAROUSEL
-// ------------------------------------------------------------------------------------------
-$carouselPageCircleBackgroundColor:			$gray-light !default;
-$carouselPageCircleHoverBackgroundColor:	$gray-dark !default;
-$carouselPageCircleActiveBackgroundColor:	$gray-darker !default;
-$carouselPageCircleTextColor:				$white !default;
-$carouselNavIconColor:						$gray-mid !default;
-$carouselNavHoverIconColor:					$gray-dark !default;
-
-
 // CONTENT MODAL
 // ------------------------------------------------------------------------------------------
 $contentModalUtilityBarWidth:				51px !default;
@@ -445,41 +174,6 @@ $contentModalUtilityBarTabsHoverBackgroundStartColor: $blue-gray-mid-dark !defau
 $contentModalUtilityBarTabsHoverBackgroundEndColor: $blue-gray-dark !default;
 $contentModalUtilityBarTabsActiveBackgroundColor: $white !default;
 $contentModalUtilityBarTabsActiveIconColor:	$blue-gray-darker !default;
-
-
-// DATEPICKER
-// ------------------------------------------------------------------------------------------
-$datepickerMarginTop:						5px !default;
-$datepickerHdrPaddingTopBottom:				4px !default;
-$datepickerMessageFontSize:					13px !default;
-$datepickerMessageLineHeight:				15px !default;
-$datepickerIconPositionTop:					5px;
-$datepickerIconPositionLeft:				-22px;
-$datepickerIconPositionTopLargeBreakpoint:	4px;
-$datepickerIconPositionTopIE:				($datepickerIconPositionTop - 2) !default;
-$datepickerIconPositionLeftLargeBreakpoint:	-20px;
-$datepickerMinWidth:						110px !default;
-
-$datepickerShadowColor:						$gray-darker !default;
-$datepickerBackgroundColor:					$white !default;
-$datepickerThFontColor:						$gray-darker !default;
-$datepickerBorderColor:						$gray-lighter !default;
-$datepickerLinkColor:						$gray-darker !default;
-$datepickerHdrBackgroundStartColor:			$gray-lighter !default;
-$datepickerHdrBackgroundEndColor:			$gray-mid !default;
-$datepickerHdrFontColor:					$gray-darker !default;
-$datepickerHdrNavIconColor:					$sapphire !default;
-$datepickerTodayFontColor:					$emerald !default;
-$datepickerTodayBackgroundColor: 			$emerald-light !default;
-$datepickerCurrentDayBackgroundColor: 		$topaz-mid !default;
-$datepickerCurrentDayFontColor:				$topaz !default;
-$datepickerHoverBackgroundColor: 			$topaz-light !default;
-$datepickerDisabledFontColor:				$gray-mid !default;
-$datepickerDisabledBackgroundColor:			$white !default;
-$datepickerDisabledBorderColor:				$gray-lighter !default;
-$datepickerMessageFontColor:				$gray-darker !default;
-$datepickerMessageBackgroundColor:			$topaz-light !default;
-$datepickerIconColor:						$gray-darker !default;
 
 
 // DIALOG/MODAL
@@ -514,6 +208,23 @@ $dialogHdrBorderBottomColor:				$transparent !default;
 $dialogCloseIconColor:						$gray-darker !default;
 
 
+// FOOTER
+// ------------------------------------------------------------------------------------------
+
+// BASE
+$footerBorderTopColor:						$gray-mid !default;
+$footerFontColor:							$gray-darker !default;
+
+// FAT FOOTER
+$fatFooterBackgroundColor:					$gray-darker !default;
+$fatFooterFontColor:						$white !default;
+
+
+// HERO BANNER
+// ------------------------------------------------------------------------------------------
+$heroBannerBackgroundColor:					$gray-lighter !default;
+
+
 // IMAGE CONTENT OVERLAY
 // ------------------------------------------------------------------------------------------
 $imageContentOverlayBackgroundColor:		$gray-darker !default;
@@ -533,19 +244,6 @@ $layoutLoginContainerBoxBorderColor:		$gray-dark !default;
 $layoutLoginFooterTranslucentBackgroundColor: $black !default;
 $layoutLoginFooterFontColor:				$white !default;
 $layoutLoginFooterBorderColor:				$white !default;
-
-
-// MINI FILTER
-// ------------------------------------------------------------------------------------------
-$miniFilterMarginBottom:					6px !default;
-$miniFilterFontSizeLargeBreakpoint:			11px !default;
-$miniFilterActivePaddingTopBottom: 			1px !default;
-$miniFilterActivePaddingLeftRight: 			4px !default;
-$miniFilterDropDownMaxWidth:				300px !default;
-
-$miniFilterLabelFontColor:					$black !default;
-$miniFilterActiveBackgroundColor: 			$topaz-light !default;
-$miniFilterActiveFontColor:					$black !default;
 
 
 // PAGINATION
@@ -582,47 +280,6 @@ $scrollPaneHeight:							300px !default;
 
 $scrollPaneScrollbarRGBColor:				$black !default;
 $scrollPaneScrollbarHexColor:				#666 !default;
-
-
-// SLIDER
-// ------------------------------------------------------------------------------------------
-$sliderBarBackgroundStartColor:				$gray-mid !default;
-$sliderBarBackgroundEndColor:				$gray-mid !default;
-$sliderBarRangeBackgroundColor:				$gray-darker !default;
-$sliderHandleBackgroundStartColor:			$blue-gray-darker !default;
-$sliderHandleBackgroundEndColor:			$blue-gray-darker !default;
-$sliderHandleShadowColor: 					$gray-mid !default;
-$sliderHandleBorderColor:					$white !default;
-$sliderHandleFocusBackgroundStartColor:		$blue-gray-darker !default;
-$sliderHandleFocusBackgroundEndColor:		$blue-gray-darker !default;
-$sliderHandleHoverBackgroundStartColor:		$blue-gray-darkest !default;
-$sliderHandleHoverBackgroundEndColor:		$blue-gray-darkest !default;
-$sliderHandleActiveBackgroundStartColor:	$blue-gray-darkest !default;
-$sliderHandleActiveBackgroundEndColor:		$blue-gray-darkest !default;
-
-
-// SUMMARY CONTAINER
-// ------------------------------------------------------------------------------------------
-$summaryCtnBorderSize:						1px !default;
-$summaryCtnBorderStyle:						dotted !default;
-$summaryCtnPadding:							10px !default;
-$summaryPrimaryCtnIconFontSize:				40px !default;
-$summarySecondaryCtnIconFontSize:			30px !default;
-
-$summaryCtnBorderColor:						$gray-darker !default;
-$summaryCtnBorderColorTop:					$transparent !default;
-$summaryCtnBorderColorBottom:				$transparent !default;
-$summaryCtnBorderColorLeft:					$transparent !default;
-$summaryCtnBorderFirstChildColorTop:		$gray-darker !default;
-$summaryCtnBorderFirstChildColorLeft:		$gray-darker !default;
-$summaryCtnBorderHoverTransitionSpeed:		250ms !default;
-$summaryCtnBorderHoverBackgroundColor:		$topaz-light !default;
-$summaryCtnBorderHoverBorderTopColor:		$gray-darker !default;
-$summaryCtnBorderHoverBorderBottomColor:	$gray-darker !default;
-$summaryCtnAlertNegativeFontColor:			$garnet !default;
-$summaryCtnAlertNegativeHoverBackgroundColor: $garnet-light !default;
-$summaryCtnAlertPositiveFontColor:			$emerald !default;
-$summaryCtnAlertPositiveHoverBackgroundColor: $emerald-light !default;
 
 
 // TABS
@@ -667,23 +324,6 @@ $tabsActiveBackgroundStartColor:			$white !default;
 $tabsActiveBackgroundEndColor:				$white !default;
 $tabsPanelBorderColor:						$gray-mid !default;
 $tabsPanelBackgroundColor: 					$white !default;
-
-
-// TILES
-// ------------------------------------------------------------------------------------------
-$tilesBorderRadius:							3px !default;
-$tilesMarginBottom:							3px !default;
-$tilesBodyBorderRadius:						0 0 3px 3px !default;
-$tilesScrollPaneHeight:						400px !default;
-$tilesOuterBorderRadiusLargeBreakpoint:		0 !default;
-
-$tilesBackgroundColor:						$gray-lightest !default;
-$tilesHeaderBorderTopColor:					$sapphire-mid !default;
-$tilesHeaderBackgroundColor:				$transparent !default;
-$tilesHeaderFontColor:						$gray-darker !default;
-$tilesBodyBackgroundColor:					$white !default;
-$tilesBodyBorderColor:						$gray-light !default;
-$tilesOutsideBorderColor:					$gray-light !default;
 
 
 // TOOLTIP

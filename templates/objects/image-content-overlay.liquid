@@ -18,20 +18,11 @@
 
 				{{ model.reference-code-html-content-block-pre }}
 
-				{{ global.reference-get-code-start-tag }}{% include '/objects/image-content-overlay-custom-color' %}{{ global.reference-get-code-end-tag }}
-
 				{% if model.reference-example-versions == "true" %}
 					<h4>{{ model.reference-example-version-label }}</h4>
 				{% endif %}
 				{{ global.reference-get-code-start-tag }}{% include '/objects/image-content-overlay' %}{{ global.reference-get-code-end-tag }}
 				{{ model.reference-code-html-content-block-post }}
-
-				{% if model.reference-example-versions == "true" %}
-					<h4>{{ model.reference-example-version-label-2 }}</h4>
-				{% endif %}
-				{{ model.reference-code-html-content-block-pre-2 }}
-				{{ global.reference-get-code-start-tag }}{% include '/objects/image-content-overlay-custom-color' %}{{ global.reference-get-code-end-tag }}
-				{{ model.reference-code-html-content-block-post-2 }}
 
 				{% if model.reference-code-js == "true" %}
 
@@ -70,16 +61,6 @@
 			{% endif %}
 
 			{% include '/objects/image-content-overlay' %}
-
-		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
-
-		<!-- {{ model.title | upcase }} - EXAMPLE - BEGINS -->
-
-			{% if model.reference-example-versions == "true" %}
-				<h4 class="evo-hdr-rule">{{ model.reference-example-version-label-2 }}</h4>
-			{% endif %}
-
-			{% include '/objects/image-content-overlay-custom-color' %}
 
 		<!-- {{ model.title | upcase }} - EXAMPLE - ENDS -->
 
