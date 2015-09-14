@@ -78,14 +78,12 @@
 						<!-- EXAMPLE HTML - BEGINS -->
 							<h6>HTML</h6>
 							{{ global.reference-component-html-instructions }}
-							<!-- {{ global.reference-get-code-start-tag }}{% include "/ee/components/item-selection-panel/item-selection-panel" %}{{ global.reference-get-code-end-tag }} -->
 							<hr />
 						<!-- EXAMPLE HTML - ENDS -->
 
 						<!-- EXAMPLE JS - BEGINS -->
 							<h6>Javascript</h6>
 							{{ global.reference-component-js-instructions }}
-							<!-- {{ global.reference-get-code-start-tag }}{% include "/ee/components/item-selection-panel/item-selection-panel-js" %}{{ global.reference-get-code-end-tag }} -->
 							<hr />
 						<!-- EXAMPLE JS - ENDS -->
 
@@ -143,8 +141,12 @@
 
 			<section class="row">
 				<div class="small-12 columns">
+
+				<!-- COMPONENT CODE - BEGINS -->
 					{{ "item-selection-panel.css" | asset_url | stylesheet_tag }}
 					{% include "/ee/components/item-selection-panel/item-selection-panel" %}
+				<!-- COMPONENT CODE - ENDS -->
+
 				</div>
 			</section>
 		<!-- COMPONENT EXAMPLE - ENDS -->

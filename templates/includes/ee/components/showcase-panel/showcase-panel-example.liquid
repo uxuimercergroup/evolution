@@ -78,7 +78,6 @@
 						<!-- EXAMPLE HTML - BEGINS -->
 							<h6>HTML</h6>
 							{{ global.reference-component-html-instructions }}
-							<!-- {{ global.reference-get-code-start-tag }}{% include "/ee/components/showcase-panel/showcase-panel" %}{{ global.reference-get-code-end-tag }} -->
 							<hr />
 						<!-- EXAMPLE HTML - ENDS -->
 
@@ -125,8 +124,18 @@
 
 			<section class="row">
 				<div class="small-12 columns">
+
+				<!-- LIVE DEMO - BEGINS -->
+					<div class="evo-spacer-margin-bottom-xxx-large">
+						<a href="/ee/components/showcase-panel/demo" target="_blank" class="button radius evo-button evo-site-button" id="" role="button" title="Live Demo" aria-label="">Live Demo</a>
+					</div>
+				<!-- LIVE DEMO - ENDS -->
+
+				<!-- COMPONENT CODE - BEGINS -->
 					{{ "showcase-panel.css" | asset_url | stylesheet_tag }}
 					{% include "/ee/components/showcase-panel/showcase-panel" %}
+				<!-- COMPONENT CODE - ENDS -->
+
 				</div>
 			</section>
 		<!-- COMPONENT EXAMPLE - ENDS -->
