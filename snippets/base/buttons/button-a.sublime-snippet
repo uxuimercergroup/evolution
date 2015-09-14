@@ -1,11 +1,11 @@
 <snippet>
 	<content>
 <![CDATA[
-<button class="evo-btn evo-btn-medium evo-btn-primary evo-btn-first $1" id="$2" name="$3" value="$4" type="$5" tabindex="$6" title="$7">$7</button>
-$8
+<a href="$1" class="button radius evo-button $2" id="$3" role="button" title="$4" aria-label="$5">$6</a>
+$7
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>button</tabTrigger>
+	<tabTrigger>bna</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>text.html</scope>
 </snippet>
