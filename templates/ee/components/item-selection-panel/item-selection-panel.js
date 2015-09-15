@@ -5,11 +5,11 @@
 // AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 //--------------------------------------------------------------------------------------------------------
 
-// ITEM SELECTION CLASS TOGGLE
-var evoItemSelectionClassToggle = function (){
-	jQuery('.js-evo-category-highlight').click(function(event) {
-		jQuery(this).toggleClass('evo-category-highlight');
+// ITEM SELECTION PANEL ITEM SELECTED TOGGLE
+var evoItemSelectionPanelItemSelected = function (){
+	jQuery('[data-evo-item-selection-panel-item]').click(function(event) {
+		jQuery(this).toggleClass('evo-item-selection-panel-item-selected');
 	});
 }
 
-evoItemSelectionClassToggle();
+evoItemSelectionPanelItemSelected();
