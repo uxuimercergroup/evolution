@@ -20,5 +20,5 @@
 // COMPONENTS
 // =======================================================================================================
 
-// COMPONENT
+// ITEM SELECTION PANEL
 @import "../../../templates/ee/components/item-selection-panel/item-selection-panel.js";
