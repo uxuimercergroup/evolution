@@ -88,7 +88,7 @@
 					<div class="tabs-content evo-tabs-content-category-pages">
 
 					<!-- TAB 1 (overview section) - BEGINS -->
-						<section role="tabpanel" aria-hidden="false" class="content active" id="{{ model.component-name-id-02 }}">
+						<section role="tabpanel" aria-hidden="false" class="content active" id="{{ model.component-name-id-0X }}">
 						<!-- COMPONENT TITLE AND DESCRIPTION - BEGINS -->
 								{{ 1 | lorem_ipsum:'p' }}
 						<!-- COMPONENT TITLE AND DESCRIPTION - ENDS -->
@@ -96,30 +96,88 @@
 					<!-- TAB 1 (overview section) - ENDS -->
 
 					<!-- TAB 2 (usage section) - BEGINS -->
-						<section role="tabpanel" aria-hidden="true" class="content" id="{{ model.component-name-id-02 }}">
+						<section role="tabpanel" aria-hidden="true" class="content" id="{{ model.component-name-id-0X }}">
 							<p>Usage details go here.</p>
 						</section>
 					<!-- TAB 2 (usage section) - ENDS -->
 
 					<!-- TAB 3 (mobile section) - BEGINS -->
-						<section role="tabpanel" aria-hidden="true" class="content" id="{{ model.component-name-id-02 }}">
+						<section role="tabpanel" aria-hidden="true" class="content" id="{{ model.component-name-id-0X }}">
 							<p>Mobile view info goes here.</p>
 						</section>
 					<!-- TAB 3 (mobile section) - ENDS -->
 
 					<!-- TAB 4 (get code section) - BEGINS -->
-						<section role="tabpanel" aria-hidden="true" class="content" id="{{ model.component-name-id-02 }}">
+						<section role="tabpanel" aria-hidden="true" class="content" id="{{ model.component-name-id-0X }}">
+						
+							<!-- DOWNLOAD - BEGINS -->
+							<h6>Download Code</h6>
+							<p>
+								<a href="{{ model.component-download-url-0X }}" class="button radius evo-button evo-site-button evo-no-margin-bottom" data-evo-button-icons="left" id="" role="button" title="Download" aria-label="">
+									<i class="evo-icon-download4 evo-icon-position-left" title=""></i>
+									<span class="evo-button-text">{{ model.component-name-0X }} v{{ model.component-version-0X }}</span>
+								</a>
+							</p>
+							<hr />
+						<!-- DOWNLOAD - ENDS -->
+
 						<!-- EXAMPLE HTML - BEGINS -->
 							<h6>HTML</h6>
-							{{ "/comm/component/bar/bar.css" | asset_url | stylesheet_tag }}
-
-							{{ global.reference-get-code-start-tag }}{% include "/ee/components/item-selection-panel/item-selection-panel" %}{{ global.reference-get-code-end-tag }}
+							{{ global.reference-component-html-instructions }}
+							<hr />
 						<!-- EXAMPLE HTML - ENDS -->
 
 						<!-- EXAMPLE JS - BEGINS -->
 							<h6>Javascript</h6>
-							{{ global.reference-get-code-start-tag }}{% include "/ee/components/item-selection-panel/item-selection-panel-js" %}{{ global.reference-get-code-end-tag }}
+							{{ global.reference-component-js-instructions }}
+							<hr />
 						<!-- EXAMPLE JS - ENDS -->
+
+						<!-- EXAMPLE IMAGES - BEGINS -->
+							<h6>Images</h6>
+							{{ global.reference-component-image-instructions }}
+							<hr />
+						<!-- EXAMPLE IMAGES - ENDS -->
+
+						<!-- DEPENDENCY LIST - BEGINS -->
+							{% if model.component-reference-dependency-0X == "true" %}
+								<h6>Dependencies</h6>
+								<ul>
+									{% if model.component-reference-dependency-evolution-0X == "true" %}
+										<li>
+											<a href="/reference/index">Evolution Core {{ global.version_number }}</a>
+											<ul>
+												<li>
+													<a href="/reference/base/icons">Photo Icons</a>
+												</li>
+											</ul>
+										</li>
+									{% endif %}
+
+									{% if model.component-reference-dependency-foundation-0X == "true" %}
+										<li>
+											<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+											<ul>
+												<li>
+													<a href="http://foundation.zurb.com/docs/components/block_grid.html" target="_blank">Block Grid</a>
+												</li>
+											</ul>
+										</li>
+									{% endif %}
+
+									{% if model.component-reference-dependency-jquery-0X == "true" %}
+										<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+									{% endif %}
+
+									{% if model.component-reference-dependency-jquery-ui-0X == "true" %}
+										<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+									{% endif %}
+
+									{{ model.component-reference-dependency-list-0X }}
+								</ul>
+							{% endif %}
+						<!-- DEPENDENCY LIST - ENDS -->
+
 						</section>
 					<!-- TAB 4 (get code section) - ENDS -->
 
