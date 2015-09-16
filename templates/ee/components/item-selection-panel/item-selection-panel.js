@@ -6,10 +6,10 @@
 //--------------------------------------------------------------------------------------------------------
 
 // ITEM SELECTION PANEL ITEM SELECTED TOGGLE - BEGINS
-var evoItemSelectionPanelItemSelected = function (){
-	jQuery('[data-evo-item-selection-panel-item]').click(function(event) {
-		jQuery(this).toggleClass('evo-item-selection-panel-item-selected');
-	});
-}
-evoItemSelectionPanelItemSelected();
+	var evoItemSelectionPanelItemSelected = function (){
+		jQuery('[data-evo-item-selection-panel-item]').click(function(event) {
+			jQuery(this).toggleClass('evo-item-selection-panel-item-selected');
+		});
+	}
+	evoItemSelectionPanelItemSelected();
 // ITEM SELECTION PANEL ITEM SELECTED TOGGLE - ENDS
