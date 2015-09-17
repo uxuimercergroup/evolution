@@ -34,6 +34,14 @@
 
 	// FAMILY GLOBAL - BEGINS
 
+		// COMPONENT ANCHOR ADJUST - BEGINS
+			.evo-site-component-anchor-adjust
+										{
+										height: 0;
+										margin-top: 0;
+										}
+		// COMPONENT ANCHOR ADJUST - ENDS
+
 		// FAMILY BUTTON GROUP NAV - BEGINS
 			.evo-site-family-button-group-nav
 										{
@@ -75,10 +83,16 @@
 										}
 		// LARGE HERO IMAGE & TEXT - ENDS
 
+		// BASIC CONTENT CONTAINER - BEGINS
+			.evo-site-basic-content-ctn	{
+										margin-top: rem-calc(15);
+										}
+		// BASIC CONTENT CONTAINER - ENDS
+
 		// FAMILY CONTENT CONTAINER - BEGINS
 			.evo-site-family-content-ctn
 										{
-										margin-top: rem-calc(60);
+										margin-top: rem-calc(20);
 										}
 		// FAMILY CONTENT CONTAINER - BEGINS
 

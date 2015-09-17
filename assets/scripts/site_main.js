@@ -16,7 +16,7 @@
 		jQuery('[data-scroll-to-location]').click(function(e){
 			var scrollToLocationValue = jQuery(this).attr('href');
 			jQuery('html, body').animate({
-				scrollTop: jQuery(scrollToLocationValue).offset().top - 60
+				scrollTop: jQuery(scrollToLocationValue).offset().top
 			}, 500);
 			e.preventDefault();
 		});
