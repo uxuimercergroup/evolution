@@ -732,7 +732,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 	// SECTION SPACING - BEGINS
 		.evo-site-example-section	{
 									padding-top: rem-calc(60);
-									padding-bottom: rem-calc(60);
+									padding-bottom: rem-calc(100);
 									}
 	// SECTION SPACING - BEGINS
 
@@ -746,7 +746,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 	// TABLE OF CONTENT - BEGIN
 		.evo-site-table-content-ctn	{
 									background-color: $onyx-dark-6;
-									margin-bottom: rem-calc(80) !important;
+									margin-bottom: rem-calc(40) !important;
 			.evo-site-down-arrrow		{
 				&:after 					{color: $onyx-dark-6;}
 										}
@@ -809,6 +809,8 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 			li.tab-title				{
 				a							{
 											background-color: $transparent;
+											padding: rem-calc(8 0);
+											margin: rem-calc(0 16);
 					[class^="evo-icon"]			{color: $sapphire-bright;}
 					&:hover						{
 												background-color: $transparent;

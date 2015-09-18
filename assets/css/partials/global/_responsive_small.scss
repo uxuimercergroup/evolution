@@ -144,9 +144,15 @@
 
 	// CATEGORY PAGE TEMPLATE - BEGINS
 
+		// SECTION SPACING - BEGINS
+			.evo-site-example-section	{
+										padding-bottom: 0;
+										}
+		// SECTION SPACING - BEGINS
+
 		// TABLE OF CONTENT - BEGIN
 			.evo-site-table-content-ctn	{
-										margin-bottom: rem-calc(30) !important;
+										margin-bottom: 0 !important;
 				.evo-site-table-contents	{
 											padding: rem-calc(40 0 15 0);
 											}
