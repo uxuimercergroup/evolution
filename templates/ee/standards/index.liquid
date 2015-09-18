@@ -17,7 +17,7 @@
 						<li>
 							<ul>
 								<li><a href="#{{ model.standard-id-01 }}" data-scroll-to-location>{{ model.standard-01 }}</a></li>
-								<li><a href="" data-scroll-to-location>Standard Links</a></li>
+								<li><a href="#{{ model.standard-id-02 }}" data-scroll-to-location>{{ model.standard-02 }}</a></li>
 								<li><a href="" data-scroll-to-location>Standard Links</a></li>
 							</ul>
 						</li>
@@ -48,5 +48,9 @@
 <!-- STANDARD/ASSET NAME - BEGINS -->
 	{% include '/content/standards/template-standard-example' %}
 <!-- STANDARD/ASSET NAME - ENDS -->
+
+<!-- BUTTONS SECTION - BEGINS -->
+	{% include 'ee/standards/buttons/buttons-example' %}
+<!-- BUTTONS SECTION - ENDS -->
 
 {% endblock %}
