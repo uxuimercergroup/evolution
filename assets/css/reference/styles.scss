@@ -33,6 +33,20 @@ code									{@include border-radius(rem-calc(4));}
 
 /*--- GENERAL LAYOUT OF PAGES --------------------------------------------------------------*/
 
+// FRONT-END STANDARDS HEADER - BEGINS
+	.front-end-standards-header			{border-top: 5px solid $black;}
+	.back-to-reference-link				{
+										display: block;
+										margin-bottom: 30px;
+										}
+	.front-end-standards-menu-section	{
+		ul									{
+											list-style-type: none;
+											margin-left: 0;
+											}
+										}
+// FRONT-END STANDARDS HEADER - ENDS
+
 // SIDEBAR MENU LAYOUT
 .evo-sidebar-menu-layout				{
 										margin: 0;

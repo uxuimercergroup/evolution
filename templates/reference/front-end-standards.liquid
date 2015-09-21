@@ -1,0 +1,43 @@
+{% layout "reference/layout-front-end-standards" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+
+			<a class="back-to-reference-link" href="/reference/index"><i class="evo-icon-arrow-left5" title=""></i>Back to Reference Site</a>
+
+		<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+			<h1>{{ model.title }}</h1>
+			<p>This online document contains the guidelines and best practices from the front-end development team at Mercer.</p>
+		<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+			<hr />
+
+			<section class="row">
+				<div class="small-8 columns">
+
+					Each item here represents either:
+
+					<ul>
+						<li>A reminder to follow existing standards or industry conventions,</li>
+						<li>guidance on what constitutes professional patterns and organization, or</li>
+						<li>a decision we've made favoring one method over its alternatives.</li>
+					</ul>
+
+					<p>
+					What this document is not is a series of explanations as to how front-end technologies work; a basic familiarity is assumed. It also does not provide evaluations of the pros and cons of various alternatives unless there is common confusion about which option is best; when appropriate we pick what we consider to be the best solutions and present them. Issues that don't yet have a clear solution are considered flexible and may or may not be listed.
+					</p>
+
+				</div>
+				<div class="small-3 columns">
+					{% include '/reference/front-end-standards-sidebar-menu' %}
+				</div>
+			</section>
+
+		</div>
+	</section>
+<!-- PAGE CONTENT - ENDS -->
+
+{% endblock %}
