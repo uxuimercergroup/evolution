@@ -912,213 +912,194 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 	// PARALLAX SCROLLING  - BEGINS
 
-		.evo-home-body 	
-										{
-										margin:0;
-										padding:0;
-										}
-		.evo-background-video 	
-										{
-										position: fixed;
-										top: 50%;
-										left: 50%;
-										min-width: 100%;
-										min-height: 100%;
-										width: auto;
-										height: auto;
-										z-index: -100;
-										-webkit-transform: translateX(-50%) translateY(-50%);
-										transform: translateX(-50%) translateY(-50%);
-										background: url("../images/home/evo-homepage-background.jpg") no-repeat;
-										background-size: cover;
-						  				}
+		.evo-background-video 		{
+									position: fixed;
+									top: 50%;
+									left: 50%;
+									min-width: 100%;
+									min-height: 100%;
+									width: auto;
+									height: auto;
+									z-index: -100;
+									-webkit-transform: translateX(-50%) translateY(-50%);
+									transform: translateX(-50%) translateY(-50%);
+									background: url("../images/home/evo-homepage-background.jpg") no-repeat;
+									background-size: cover;
+					  				}
 
 		.evo-home-scroll-section-welcome		
-										{
-										height: rem-calc(282);  
-										margin: 0 auto; 
-										width: 100%; 
-										position: relative; 
-										text-align: center;
-			//@media #{$small-up} and (orientation: landscape)			
-											//{ 
-											//height: rem-calc(250);  
-											//}																	
-			.evo-home-welcome 				{
-											background: none; 
-											background-size: cover;
-											height: rem-calc(250); 
-											position: absolute; 
-											margin-top: rem-calc(106); 
-											width: 100%;
-											z-index: 98 !important;
-								    		}
-								    	}
+									{
+									height: rem-calc(282);  
+									margin: 0 auto; 
+									width: 100%; 
+									position: relative; 
+									text-align: center;
 
-		.evo-home-scroll-section-about		{ 
-											height: rem-calc(505);  
-											margin: 0 auto; 
-											width: 100%; 
-											position: relative; 
-											text-align: center;
-			//@media #{$small-up} and (orientation: landscape)				
-												//{
-												//height: rem-calc(525);  													
-												//}
+			.evo-home-welcome 			{
+										background: none; 
+										background-size: cover;
+										height: rem-calc(250); 
+										position: absolute; 
+										margin-top: rem-calc(106); 
+										width: 100%;
+										z-index: 98 !important;
+							    		}
+								    }
 
-			.evo-home-about 					{
-												height: rem-calc(345);
-												position: absolute;  
-												width: 100%;
-												margin: 0 auto;
-												overflow: hidden;
-												background-color: #fff;
-												padding: rem-calc(40) 0 0;																								
-												}
-											}
-		.evo-home-scroll-section-families	{ 
-											height: rem-calc(540);  
-											margin: 0 auto; 
-											width: 100%; 
-											position: relative; 
-											text-align: center;
-			//@media #{$small-up} and (orientation: landscape)				
-												//{
-												//height: rem-calc(500);  													
-												//}
-											
-			.evo-home-families 					{ 
-												background: none; 
-												height: rem-calc(540); 
-												position: absolute; 
-												width: 100%;
-												padding: 0;
-												margin-top: rem-calc(-110);
-				p 									{
-													font-size: 140%;
-													}
-				//@media #{$small-up} and (orientation: landscape)				
-													//{
-													//height: rem-calc(500);  													
-													//}
-												
-				h5 									{							
-													text-align: center;
-													font-size: rem-calc(13);
-													}								    		
-									    		}
-									    	}
-		.evo-home-scroll-section-benefits	{ 
-											height: rem-calc(565);  
-											margin: 0 auto; 
-											width: 100%; 
-											position: relative; 
-											text-align: center;
-			.evo-home-benefits 					{ 
-												position: absolute;  
-												width: 100%;
-												margin: 0 auto;
-												overflow: hidden;
-												background-color: #fff;
-												padding: rem-calc(40) 0 rem-calc(45) 0;												
-												}
-											}
-		.evo-home-scroll-section-front-end		
-										{ 
-										height: rem-calc(760);  
-										margin: 0 auto; 
-										width: 100%; 
-										position: relative; 
-										text-align: center;
-			p 								{
+		.evo-home-scroll-section-about		
+									{ 
+									height: rem-calc(505);  
+									margin: 0 auto; 
+									width: 100%; 
+									position: relative; 
+									text-align: center;
+
+			.evo-home-about 			{
+										height: rem-calc(345);
+										position: absolute;  
+										width: 100%;
+										margin: 0 auto;
+										overflow: hidden;
+										background-color: #fff;
+										padding: rem-calc(40) 0 0;																								
+										}
+									}
+
+		.evo-home-scroll-section-families	
+									{ 
+									height: rem-calc(540);  
+									margin: 0 auto; 
+									width: 100%; 
+									position: relative; 
+									text-align: center;
+									
+			.evo-home-families 			{ 
+										background: none; 
+										height: rem-calc(540); 
+										position: absolute; 
+										width: 100%;
+										padding: 0;
+										margin-top: rem-calc(-110);
+		p 									{
 											font-size: 140%;
-											}
-			//@media #{$small-up} and (orientation: landscape)  			
-											//{
-											//height: rem-calc(700);
-											//}											
+											}												
+		h5 									{							
+											text-align: center;
+											font-size: rem-calc(13);
+											}								    		
+							    		}
+									}
 
-			.evo-home-front-end 			{ 
-											background: none; 
-											position: absolute; 
-											width: 100%;
-											padding: 0;
-											margin-top: rem-calc(-50);											
-								    		}								    
-							    		}									 					
+		.evo-home-scroll-section-benefits	
+									{ 
+									height: rem-calc(565);  
+									margin: 0 auto; 
+									width: 100%; 
+									position: relative; 
+									text-align: center;
+
+			.evo-home-benefits 			{ 
+										position: absolute;  
+										width: 100%;
+										margin: 0 auto;
+										overflow: hidden;
+										background-color: #fff;
+										padding: rem-calc(40) 0 rem-calc(45) 0;												
+										}
+									}
+		
+		.evo-home-scroll-section-front-end		
+									{ 
+									height: rem-calc(760);  
+									margin: 0 auto; 
+									width: 100%; 
+									position: relative; 
+									text-align: center;
+		p 								{
+										font-size: 140%;
+										}											
+
+			.evo-home-front-end 		{ 
+										background: none; 
+										position: absolute; 
+										width: 100%;
+										padding: 0;
+										margin-top: rem-calc(-50);											
+							    		}								    
+							    	}
+
 	// PARALLAX SCROLLING  - ENDS
 
 	// ICONS WITH CIRCLES - BEGINS
 
-		.evo-box-circle-home			{
-										background-color: $white;
-										border-radius: 100%;
-										width: rem-calc(70);
-										height: rem-calc(70) !important; 
-										text-align: center;
-										border-style: solid;
-										border-width: 2px;
-										border-color: $sapphire-bright;
-										z-index: 99;
-										margin-top: rem-calc(-35) !important;
-			[class^=evo-icon-]				{
-											color: $sapphire-dark;
-											top: rem-calc(16);
-											}											
-										}
+		.evo-box-circle-home		{
+									background-color: $white;
+									border-radius: 100%;
+									width: rem-calc(70);
+									height: rem-calc(70) !important; 
+									text-align: center;
+									border-style: solid;
+									border-width: 2px;
+									border-color: $sapphire-bright;
+									z-index: 99;
+									margin-top: rem-calc(-35) !important;
+		[class^=evo-icon-]				{
+										color: $sapphire-dark;
+										top: rem-calc(16);
+										}											
+									}
 
-		.evo-box-circle-home-arrow		{
-										background-color: $sapphire-bright;
-										border-radius: 100%;
-										width: rem-calc(40);
-										height: rem-calc(40) !important; 
-										text-align: center;
-										z-index: 99 !important;
-										margin: rem-calc(5) auto;
-										box-shadow: 0 0 20px rgba(0,0,0,0.8);
-										display: none !important;
-				[class^=evo-icon-]			{
-											color: $white;
-											top: rem-calc(10);
-											font-size: rem-calc(20);
-											}																					
-										}
-
-		.evo-box-circle-home-button		{
-										background-color: transparent;
-										border-radius: 100%;
-										width: rem-calc(100);
-										height: rem-calc(100) !important; 
-										text-align: center;
-										margin: rem-calc(20) auto;
-										border: 2px solid $white;
+		.evo-box-circle-home-arrow	{
+									background-color: $sapphire-bright;
+									border-radius: 100%;
+									width: rem-calc(40);
+									height: rem-calc(40) !important; 
+									text-align: center;
+									z-index: 99 !important;
+									margin: rem-calc(5) auto;
+									box-shadow: 0 0 20px rgba(0,0,0,0.8);
+									display: none !important;
+			[class^=evo-icon-]			{
 										color: $white;
+										top: rem-calc(10);
+										font-size: rem-calc(20);
+										}																					
+									}
+
+		.evo-box-circle-home-button	{
+									background-color: transparent;
+									border-radius: 100%;
+									width: rem-calc(100);
+									height: rem-calc(100) !important; 
+									text-align: center;
+									margin: rem-calc(20) auto;
+									border: 2px solid $white;
+									color: $white;
+		[class^=evo-icon-]				{
+										color: $white;
+										margin-bottom: rem-calc(60);
+										margin-top: rem-calc(12);
+										font-size: (1rem*3);
+										}
+		&:hover							{
+										background-color: $white;										
+			[class^=evo-icon-]				{
+											color: $sapphire-bright !important;
+											}
+										}
+		a:visited						{
+										color: $white;											
 			[class^=evo-icon-]				{
 											color: $white;
-											margin-bottom: rem-calc(60);
-											margin-top: rem-calc(12);
-											font-size: (1rem*3);
 											}
-				&:hover							{
-												background-color: $white;										
-				[class^=evo-icon-]					{
-													color: $sapphire-bright !important;
-													}
-												}
-
-				a:visited						{
-												color: $white;											
-					[class^=evo-icon-]					{
-														color: $white;
-														}
-												}
 										}
+									}
+
 	// ICONS WITH CIRCLES - ENDS
 
 	// HOME PAGE HEADERS - BEGINS									
 
 		.evo-home-article-headers 	{
-
 			h3							{
 										font-size: rem-calc(18);
 										text-transform: uppercase;
@@ -1143,231 +1124,203 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 									}
 
 		.evo-home-headers-box-welcome
-											{
-											width: rem-calc(265);	
-											border: 2px solid $white;
-											margin: rem-calc(0) 0 rem-calc(20) 0;
-											text-align: center;
-											font-family: $evo-font-medium-family !important;
-											text-transform: uppercase;											
-											letter-spacing: rem-calc(9.0) !important;
-											margin: rem-calc(-68) 0 rem-calc(25) 0;
-											display: inline-block;
-											padding: rem-calc(5) 0 0 rem-calc(5);
-			//@media #{$small-up} and (orientation: landscape)
-												//{
-												//width: rem-calc(540);
-												//padding: rem-calc(15) 0 rem-calc(10) rem-calc(5);
-												//margin: rem-calc(-45) 0 rem-calc(40) 0;
-												//}
+									{
+									width: rem-calc(265);	
+									border: 2px solid $white;
+									margin: rem-calc(0) 0 rem-calc(20) 0;
+									text-align: center;
+									font-family: $evo-font-medium-family !important;
+									text-transform: uppercase;											
+									letter-spacing: rem-calc(9.0) !important;
+									margin: rem-calc(-68) 0 rem-calc(25) 0;
+									display: inline-block;
+									padding: rem-calc(5) 0 0 rem-calc(5);
 
-			.evo-home-headers-welcome 			{
-												font-size: rem-calc(32);
-												color: $white !important;
-												letter-spacing: rem-calc(8) !important;
-												padding: 0px;
-												line-height: rem-calc(34);
-												text-align: center;
-												margin: 0 auto;
-												display: inline-block;
-				//@media #{$small-up} and (orientation: landscape)
-													//{
-													//font-size: rem-calc(42);
-													//line-height: rem-calc(30);
-													//} 																																								
-												}
-											}
+			.evo-home-headers-welcome 	{
+										font-size: rem-calc(32);
+										color: $white !important;
+										letter-spacing: rem-calc(8) !important;
+										padding: 0px;
+										line-height: rem-calc(34);
+										text-align: center;
+										margin: 0 auto;
+										display: inline-block;																																								
+										}
+									}
+		
 		.evo-home-headers-box-families
-											{
-											width: rem-calc(200);
-											border: 2px solid $white;
-											margin: 0 0 rem-calc(30) 0;
-											text-align: center;
-											font-family: $evo-font-medium-family !important;
-											text-transform: uppercase;											
-											letter-spacing: rem-calc(9.0) !important;
-											padding: rem-calc(5) 0 0 rem-calc(5);
-			//@media #{$small-up} and (orientation: landscape)
-												//{
-												//width: rem-calc(540);
-												//padding: rem-calc(10) 0 rem-calc(10) rem-calc(5);
-												//}
+									{
+									width: rem-calc(200);
+									border: 2px solid $white;
+									margin: 0 0 rem-calc(30) 0;
+									text-align: center;
+									font-family: $evo-font-medium-family !important;
+									text-transform: uppercase;											
+									letter-spacing: rem-calc(9.0) !important;
+									padding: rem-calc(5) 0 0 rem-calc(5);
 
-			.evo-home-headers-families			{
-												font-size: rem-calc(26);
-												letter-spacing: rem-calc(8) !important;
-												padding: 0px;
-												color: $white !important;
-												margin-top: 0px !important;
-												line-height: rem-calc(32);
-												text-align: center;
-												margin: rem-calc(40) 0 0 rem-calc(5);
-												display: inline-block;
-				//@media #{$small-up} and (orientation: landscape)
-													//{
-													//font-size: rem-calc(42);
-													//}												
-												}									
-											}
+			.evo-home-headers-families	{
+										font-size: rem-calc(26);
+										letter-spacing: rem-calc(8) !important;
+										padding: 0px;
+										color: $white !important;
+										margin-top: 0px !important;
+										line-height: rem-calc(32);
+										text-align: center;
+										margin: rem-calc(40) 0 0 rem-calc(5);
+										display: inline-block;											
+										}									
+									}
+
 		.evo-home-headers-box-front-end
-											{
-											width: rem-calc(290);
-											border: 2px solid $white;
-											margin: 0 0 rem-calc(30) 0;
-											text-align: center;
-											font-family: $evo-font-medium-family !important;
-											text-transform: uppercase;											
-											letter-spacing: rem-calc(9.0) !important;
-											padding: rem-calc(5) 0 0 rem-calc(5);
-			//@media #{$small-up} and (orientation: landscape)
-												//{
-												//width: rem-calc(410);
-												//padding: rem-calc(5) 0 0 rem-calc(5);
-												//}		
+									{
+									width: rem-calc(290);
+									border: 2px solid $white;
+									margin: 0 0 rem-calc(30) 0;
+									text-align: center;
+									font-family: $evo-font-medium-family !important;
+									text-transform: uppercase;											
+									letter-spacing: rem-calc(9.0) !important;
+									padding: rem-calc(5) 0 0 rem-calc(5);	
 
-			.evo-home-headers-front-end			{
-												font-size: rem-calc(26);
-												letter-spacing: rem-calc(8) !important;
-												padding: 0px;
-												color: $white !important;
-												margin-top: 0px !important;
-												line-height: rem-calc(32);
-												text-align: center;
-												margin: 0 0 0 rem-calc(5);
-												display: inline-block;
-				//@media #{$small-up} and (orientation: landscape)
-													//{
-													//font-size: rem-calc(42);
-													//line-height: rem-calc(40)
-													//}																							
-												}									
-											}
+			.evo-home-headers-front-end	{
+										font-size: rem-calc(26);
+										letter-spacing: rem-calc(8) !important;
+										padding: 0px;
+										color: $white !important;
+										margin-top: 0px !important;
+										line-height: rem-calc(32);
+										text-align: center;
+										margin: 0 0 0 rem-calc(5);
+										display: inline-block;																							
+										}									
+									}
 
 		.evo-home-article-headers-thin
-											{
-											font-family: $evo-font-thin-stack !important;
-											}
+									{
+									font-family: $evo-font-thin-stack !important;
+									}
 
-		.evo-home-section-spacer			{
-											margin-top: rem-calc(180);
-											}
+		.evo-home-section-spacer	{
+									margin-top: rem-calc(180);
+									}
 
-		.evo-home-section-spacer-bottom		{
-											margin-bottom: rem-calc(180);
-											}
+		.evo-home-section-spacer-bottom	
+									{
+									margin-bottom: rem-calc(180);
+									}
 
 	// HOME PAGE HEADERS - ENDS
 
 	// LEARN MORE BUTTONS - BEGINS										
 
-		.evo-button-learn-more-home			
-											{
-											color: $sapphire-bright !important;
-											border: 2px solid $sapphire-bright;
-											background-color: $white;
-											margin-bottom: rem-calc(40);
-			[class^=evo-icon-]					{
-												top: rem-calc(2);
-												color: $sapphire-bright !important;
-												}
-
-			&:hover								{
-												color: $sapphire-dark !important;
-												background-color: $white;
-												border: 2px solid $sapphire-dark;
-				[class^=evo-icon-]					{
-													color: $sapphire-dark !important;
-													}
-												}
-			&:visited							{
-												color: $sapphire-bright;
-												background-color: $white;											
-					[class^=evo-icon-]					{
-														color: $sapphire-bright;
-														}
-												}
+		.evo-button-learn-more-home	{
+									color: $sapphire-bright !important;
+									border: 2px solid $sapphire-bright;
+									background-color: $white;
+									margin-bottom: rem-calc(40);
+			[class^=evo-icon-]			{
+										top: rem-calc(2);
+										color: $sapphire-bright !important;
+										}
+			&:hover						{
+										color: $sapphire-dark !important;
+										background-color: $white;
+										border: 2px solid $sapphire-dark;
+				[class^=evo-icon-]			{
+											color: $sapphire-dark !important;
 											}
+										}
+			&:visited					{
+										color: $sapphire-bright;
+										background-color: $white;											
+				[class^=evo-icon-]			{
+											color: $sapphire-bright;
+											}
+										}
+									}
+
 	// LEARN MORE BUTTONS - ENDS										
 	
 	// HOME PAGE GRIDS - BEGINS
-		.evo-home-grid-about
-										{
-										margin-top: rem-calc(10);
-										color: $sapphire-dark;
-										font-family: $evo-font-regular-stack !important;
+
+		.evo-home-grid-about		{
+									margin-top: rem-calc(10);
+									color: $sapphire-dark;
+									font-family: $evo-font-regular-stack !important;
+									font-size: rem-calc(18);
+									list-style: none;
+			h4 							{
 										font-size: rem-calc(18);
-										list-style: none;
-
-			.evo-home-grid-about-small		{
-											width: rem-calc(210);
-											}
-
-			h4 								{
-											font-size: rem-calc(18);
-											text-transform: uppercase;
-											color: $sapphire-dark;
-											text-align: left;
-											}
-
-			[class*='evo-icon']				{
-											color: $sapphire-dark;
-											margin: rem-calc(3) rem-calc(15) 0 0;
-											float: left;
-											}
+										text-transform: uppercase;
+										color: $sapphire-dark;
+										text-align: left;
 										}
+			[class*='evo-icon']			{
+										color: $sapphire-dark;
+										margin: rem-calc(3) rem-calc(15) 0 0;
+										float: left;
+										}
+
+			.evo-home-grid-about-small	{
+										width: rem-calc(210);
+										}
+									}
 
 		.evo-home-grid-front-end
-										{
-										margin: rem-calc(20) 0 rem-calc(20) 0;
-										text-align: center;
+									{
+									margin: rem-calc(20) 0 rem-calc(20) 0;
+									text-align: center;
+									color: $white;
+									padding: 0px;
+			h5 							{
+										font-size: 100%;
+										text-transform: uppercase;
 										color: $white;
-										padding: 0px;
-			h5 								{
-											font-size: 100%;
-											text-transform: uppercase;
-											color: $white;
-											margin: rem-calc(30) 0 rem-calc(0) 0;
-											text-align: center;
-											}
-
-			[class*='evo-icon']				{
-											display: inline;
-											color: $white;
-											font-size: rem-calc(65);
-											margin-bottom: rem-calc(40);
-											}
+										margin: rem-calc(30) 0 rem-calc(0) 0;
+										text-align: center;
 										}
+			[class*='evo-icon']			{
+										display: inline;
+										color: $white;
+										font-size: rem-calc(65);
+										margin-bottom: rem-calc(40);
+										}
+									}
+
 	// HOME PAGE GRIDS - ENDS
 
 	// HOME PAGE CAROUSEL - BEGINS
-		.evo-carousel-home				{
-										margin: rem-calc(10) 0 rem-calc(20) 0;
-										height: rem-calc(280);
 
-			.evo-carousel-box				{
-											margin-top: rem-calc(50);
-											border-top: 2px solid $sapphire-bright;
-											height: rem-calc(220);
-											background-color: $transparent;
-				h4 								{
-												color: $sapphire-dark;
-												text-align: center;
-												margin-top: rem-calc(20);	
-												}
-				p 								{
-												color: $sapphire-dark;
-												text-align: center;					
-												}
+		.evo-carousel-home			{
+									margin: rem-calc(10) 0 rem-calc(20) 0;
+									height: rem-calc(280);
+
+			.evo-carousel-box			{
+										margin-top: rem-calc(50);
+										border-top: 2px solid $sapphire-bright;
+										height: rem-calc(220);
+										background-color: $transparent;
+				h4 							{
+											color: $sapphire-dark;
+											text-align: center;
+											margin-top: rem-calc(20);	
 											}
-			.evo-carousel-image-home			{
-												z-index: 98 !important;
-												margin-top: rem-calc(-100);
-												box-shadow: 0 0 20px rgba(0,0,0,0.8);
-												padding: 0px;
-												}
+				p 							{
+											color: $sapphire-dark;
+											text-align: center;					
+											}
 										}
-	// HOME PAGE CAROUSEL - ENDS
 
+			.evo-carousel-image-home	{
+										z-index: 98 !important;
+										margin-top: rem-calc(-100);
+										box-shadow: 0 0 20px rgba(0,0,0,0.8);
+										padding: 0px;
+										}
+									}
+
+	// HOME PAGE CAROUSEL - ENDS
 
 //HOME PAGE - ENDS
 
