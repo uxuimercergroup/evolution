@@ -7,32 +7,35 @@
 // LARGE MEDIA QUERY RANGE AND UP - 1025px +
 @media #{$large-up} {
 
-// HOME PAGE - BEGINS
+	// HOME PAGE - BEGINS
 
-	// PARALLAX SCROLLING  - BEGINS
+		// PARALLAX SCROLLING  - BEGINS
 
-		.evo-home-scroll-section-welcome		
+			.evo-home-scroll-section-welcome		
 										{ 
 										height: rem-calc(912);  
 
-			.evo-home-welcome 				{ 
+				.evo-home-welcome 			{ 
 											background: url("../images/home/hero-welcome-triangles.png") no-repeat scroll center top transparent; 
 											height: rem-calc(912); 
 											}
 										}
 
-		.evo-home-scroll-section-about	{ 
-										height: rem-calc(725);  
-			.evo-home-about 				{
+			.evo-home-scroll-section-about	
+										{ 
+										height: rem-calc(725); 
+
+				.evo-home-about 			{
 											height: rem-calc(760);   
 											padding: rem-calc(180) 0 0 0;
 											}
 										}													
 
-		.evo-home-scroll-section-families	
+			.evo-home-scroll-section-families	
 										{ 
-										height: rem-calc(755);  												
-			.evo-home-families 				{ 
+										height: rem-calc(755);
+
+				.evo-home-families 			{ 
 											background: url("../images/home/product-families-triangles.png") no-repeat scroll center top transparent;
 											height: rem-calc(755);
 											padding: rem-calc(180) 0 0 0;
@@ -40,20 +43,21 @@
 											}
 										}													
 
-		.evo-home-scroll-section-benefits	
+			.evo-home-scroll-section-benefits	
 										{ 
 										height: rem-calc(1200); 
-			.evo-home-benefits 				{ 
+
+				.evo-home-benefits 			{ 
 											height: rem-calc(1200);
 											padding: rem-calc(180) 0 0 0; 
 											}
 										}
 
-		.evo-home-scroll-section-front-end		
+			.evo-home-scroll-section-front-end		
 										{ 
 										height: rem-calc(725);
 
-			.evo-home-front-end 			{ 
+				.evo-home-front-end 		{ 
 											background: url("../images/home/front-end-dev-triangles.png") no-repeat scroll center top transparent; 
 											background-size: cover; 
 											height: rem-calc(725);
@@ -61,13 +65,12 @@
 											margin-top: 0;
 											}
 										}	
-																															 					
-	// PARALLAX SCROLLING  - ENDS
+																																 					
+		// PARALLAX SCROLLING  - ENDS
 
-	// ICONS WITH CIRCLES - BEGINS
+		// ICONS WITH CIRCLES - BEGINS
 
-
-		.evo-box-circle-home-arrow		{
+			.evo-box-circle-home-arrow	{
 										width: rem-calc(85);
 										height: rem-calc(85) !important; 
 										margin: rem-calc(423) auto;
@@ -76,29 +79,32 @@
 											top: rem-calc(25);
 											font-size: rem-calc(40);
 											}
-										}																						
-	// ICONS WITH CIRCLES - ENDS
+										}
 
-	// HOME PAGE HEADERS - BEGINS									
+		// ICONS WITH CIRCLES - ENDS
 
-		.evo-home-headers-box-welcome
+		// HOME PAGE HEADERS - BEGINS									
+
+			.evo-home-headers-box-welcome
 										{
 										margin: rem-calc(180) 0 rem-calc(40) 0;
 										text-align: center;									
 										letter-spacing: rem-calc(9.0) !important;
 										padding: 0 0 rem-calc(24) rem-calc(5);
-										
-			.evo-home-headers-welcome 		{
+											
+				.evo-home-headers-welcome 	{
 											font-size: rem-calc(80);
 											margin: rem-calc(30) 0 0 rem-calc(5);
 											letter-spacing: rem-calc(12) !important;
 											line-height: rem-calc(30);													    												
 											} 
-										} 																																								
-	// HOME PAGE HEADERS - ENDS
-											
-//HOME PAGE - ENDS
+										}
+
+		// HOME PAGE HEADERS - ENDS
+												
+	//HOME PAGE - ENDS
 }
+
 
 // LARGE MEDIA QUERY RANGE - 1025px - 1440px
 @media #{$large-only} {

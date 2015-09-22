@@ -194,18 +194,18 @@
 
 	// HOME PAGE - BEGINS
 
-	// PARALLAX SCROLLING  - BEGINS
+		// PARALLAX SCROLLING  - BEGINS
 
-		.evo-home-scroll-section-welcome		
+			.evo-home-scroll-section-welcome		
 										{																
-			.evo-home-welcome 				{
-				h3								{
+				.evo-home-welcome 			{
+					h3							{
 												margin-bottom: rem-calc(20);  
 												}
 											}
-								    	}
+									    }
 
-	// PARALLAX SCROLLING  - ENDS
+		// PARALLAX SCROLLING  - ENDS
 
 	// HOME PAGE - ENDS
 }
@@ -214,67 +214,70 @@
 @media #{$small-up} and (orientation:landscape)	{
 	// HOME PAGE - BEGINS
 
-	// PARALLAX SCROLLING  - BEGINS
+		// PARALLAX SCROLLING  - BEGINS
 
-		.evo-home-scroll-section-welcome
+			.evo-home-scroll-section-welcome
 										{ 
 										height: rem-calc(250);  
 										}																					
 
-		.evo-home-scroll-section-about	{ 
+			.evo-home-scroll-section-about	
+										{ 
 										height: rem-calc(525);  													
 										}
 
-		.evo-home-scroll-section-families
+			.evo-home-scroll-section-families
 										{
 										height: rem-calc(500);  													
 
-			.evo-home-families 				{
+				.evo-home-families 			{
 											height: rem-calc(500);  													
 											}
 										}
 
-		.evo-home-scroll-section-front-end		
+			.evo-home-scroll-section-front-end		
 										{ 
 										height: rem-calc(700);
-										}																			 					
-	// PARALLAX SCROLLING  - ENDS
+										}	
 
-	// HOME PAGE HEADERS - BEGINS									
+		// PARALLAX SCROLLING  - ENDS
 
-		.evo-home-headers-box-welcome
+		// HOME PAGE HEADERS - BEGINS									
+
+			.evo-home-headers-box-welcome
 										{
 										width: rem-calc(540);
 										padding: rem-calc(15) 0 rem-calc(10) rem-calc(5);
 										margin: rem-calc(-45) 0 rem-calc(40) 0;
 
-			.evo-home-headers-welcome 		{
+				.evo-home-headers-welcome 	{
 											font-size: rem-calc(42);
 											line-height: rem-calc(30);
 											} 
 										}
 
-		.evo-home-headers-box-families
+			.evo-home-headers-box-families
 										{
 										width: rem-calc(540);
 										padding: rem-calc(10) 0 rem-calc(10) rem-calc(5);
 
-			.evo-home-headers-families		{
+				.evo-home-headers-families	{
 											font-size: rem-calc(42);
 											}
 										}												
 
-		.evo-home-headers-box-front-end
+			.evo-home-headers-box-front-end
 											{
 											width: rem-calc(410);
 											padding: rem-calc(5) 0 0 rem-calc(5);	
-												
-			.evo-home-headers-front-end			{
+													
+				.evo-home-headers-front-end		{
 												font-size: rem-calc(42);
 												line-height: rem-calc(40)
 												}
-											}											
-	// HOME PAGE HEADERS - ENDS									
+											}
+																						
+		// HOME PAGE HEADERS - ENDS									
 	
 //HOME PAGE - ENDS
 }

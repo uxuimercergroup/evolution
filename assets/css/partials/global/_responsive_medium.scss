@@ -44,6 +44,7 @@
 			.evo-home-scroll-section-about		
 										{
 										height: rem-calc(670);
+
 				.evo-home-about 			{
 											height: rem-calc(670);   
 											padding: rem-calc(100) 0 0 0;
@@ -53,6 +54,7 @@
 			.evo-home-scroll-section-families	
 										{
 										height: rem-calc(860); 
+
 				.evo-home-families			{
 											height: rem-calc(860);
 											padding: rem-calc(100) 0 0 0;
@@ -62,20 +64,22 @@
 												}
 											}
 										}
+
 			.evo-home-scroll-section-benefits
 										{
 										height: rem-calc(800); 
+
 				.evo-home-benefits			{
 											height: rem-calc(800); 
 											padding: rem-calc(100) 0 0 0; 
 											}
 										}
 
-		.evo-home-scroll-section-front-end		
+			.evo-home-scroll-section-front-end		
 										{ 
 										height: rem-calc(745);
 
-			.evo-home-front-end 			{ 
+				.evo-home-front-end 		{ 
 											height: rem-calc(745);
 											padding: rem-calc(180) 0 0 0;
 											margin-top: 0;
@@ -93,8 +97,7 @@
 			.evo-box-circle-home-button	{
 										width: rem-calc(125);
 										height: rem-calc(125) !important;
-										margin: rem-calc(40) auto;											 
-										
+										margin: rem-calc(40) auto;											 										
 				[class^=evo-icon-]			{
 											margin-bottom: rem-calc(60);
 											margin-top: rem-calc(15);
@@ -106,18 +109,16 @@
 
 		// HOME PAGE HEADERS - BEGINS									
 
-		.evo-home-article-headers 		{
-
-			h3								{
+			.evo-home-article-headers 	{
+				h3							{
 											font-size: rem-calc(26);																	
 											}
-
-			h2								{
+				h2							{
 											font-size: rem-calc(32);																	
 											}
 										}
 
-		.evo-home-headers-box-welcome
+			.evo-home-headers-box-welcome	
 										{
 										width: rem-calc(970);
 										margin: rem-calc(50) 0 rem-calc(40) 0;
@@ -125,16 +126,15 @@
 										letter-spacing: rem-calc(9.0) !important;
 										padding: 0 0 rem-calc(24) rem-calc(5);
 										
-			.evo-home-headers-welcome 		{
+				.evo-home-headers-welcome 	{
 											font-size: rem-calc(80);
 											margin: rem-calc(30) 0 0 rem-calc(5);
 											letter-spacing: rem-calc(12) !important;
 											line-height: rem-calc(30);													    												
 											}  																																										
-										}
-																			
+										}																			
 		
-		.evo-home-headers-box-families
+			.evo-home-headers-box-families	
 										{
 										width: rem-calc(631);
 										height: rem-calc(55);
@@ -142,7 +142,7 @@
 										letter-spacing: rem-calc(9.0) !important;
 										padding: 0 0 0 rem-calc(5);
 
-			.evo-home-headers-families		{
+				.evo-home-headers-families	{
 											font-size: rem-calc(46);
 											letter-spacing: rem-calc(12) !important;
 											padding: 0px;
@@ -152,7 +152,7 @@
 											}
 										}
 
-		.evo-home-headers-box-front-end
+			.evo-home-headers-box-front-end	
 										{
 										width: rem-calc(862);
 										border: 2px solid $white;
@@ -161,8 +161,9 @@
 										font-family: $evo-font-medium-family !important;
 										text-transform: uppercase;											
 										letter-spacing: rem-calc(9.0) !important;
-										padding: rem-calc(5) 0 0 rem-calc(5);											
-			.evo-home-headers-front-end		{
+										padding: rem-calc(5) 0 0 rem-calc(5);
+
+				.evo-home-headers-front-end	{
 											font-size: rem-calc(46);
 											letter-spacing: rem-calc(12) !important;
 											padding: 0px;
@@ -179,7 +180,7 @@
 
 		// LEARN MORE BUTTONS - BEGINS										
 
-		.evo-button-learn-more-home			
+			.evo-button-learn-more-home		
 										{
 										margin-bottom: rem-calc(180);
 										}
@@ -187,39 +188,36 @@
 		// LEARN MORE BUTTONS - ENDS
 
 		// HOME PAGE GRIDS - BEGINS
-		.evo-home-grid-about
-										{
+
+			.evo-home-grid-about		{
 										margin-top: rem-calc(40);
 										text-align: center;
 										line-height: rem-calc(24) !important;										
-
-			h4 								{
+				h4 							{
 											font-size: rem-calc(22);
 											margin-bottom: rem-calc(15);
 											text-align: center;												
 											}
-
-			[class*='evo-icon']				{
+				[class*='evo-icon']			{
 											font-size: rem-calc(84);					
 											margin: 0 0 rem-calc(40) 0;
 											float: none;										
 											}
 										}
 
-		.evo-home-grid-front-end
-										{
-										margin: rem-calc(50) auto;
-											
-			h5 								{
+			.evo-home-grid-front-end	{
+										margin: rem-calc(50) auto;											
+				h5 							{
 											font-size: 80%;
 											margin: rem-calc(30) 0 rem-calc(30) 0;
 											}
 										}
 
-	// HOME PAGE GRIDS - ENDS
+		// HOME PAGE GRIDS - ENDS
 
-	// HOME PAGE CAROUSEL - BEGINS
-		.evo-carousel-home				{
+		// HOME PAGE CAROUSEL - BEGINS
+
+			.evo-carousel-home				{
 										margin: rem-calc(100) 0 rem-calc(20) 0;
 
 			.evo-carousel-box				{
@@ -237,32 +235,34 @@
 												}							
 											}
 										}
-	// HOME PAGE CAROUSEL - ENDS
+
+		// HOME PAGE CAROUSEL - ENDS
 
 	// HOME PAGE - ENDS
-
 }
 
 // MEDIUM MEDIA QUERY RANGE AND UP AND PORTRAIT - 768px +
 
-@media #{$medium-only} and (orientation: portrait) {
+@media #{$medium-up} and (orientation: portrait) {
 
 	// HOME PAGE - BEGINS
 
 		// PARALLAX SCROLLING  - BEGINS
 		
-		.evo-home-scroll-section-welcome		
+			.evo-home-scroll-section-welcome		
 										{
 										height: rem-calc(577);  
 																			
-			.evo-home-welcome 				{
+				.evo-home-welcome 			{
 											height: rem-calc(550); 
 											}
 								    	}
-		.evo-home-scroll-section-front-end					
+
+			.evo-home-scroll-section-front-end					
 										{
 										height: rem-calc(760);
-					.evo-home-front-end 	{ 
+
+				.evo-home-front-end 		{ 
 											height: rem-calc(745);
 											padding: rem-calc(100) 0 0 0;
 											margin-top: 0;
@@ -273,14 +273,15 @@
 
 		// HOME PAGE HEADERS - BEGINS				
 
-		.evo-home-headers-box-welcome
+			.evo-home-headers-box-welcome
 										{
 										width: rem-calc(580);
 										margin: rem-calc(30) 0 rem-calc(50) 0;
 										text-align: center;									
 										letter-spacing: rem-calc(9.0) !important;
 										padding: 0 0 rem-calc(24) rem-calc(5);
-			.evo-home-headers-welcome 		{
+
+				.evo-home-headers-welcome 	{
 											font-size: rem-calc(80);
 											line-height: rem-calc(75);
 											margin: rem-calc(30) 0 0 rem-calc(5);
@@ -289,7 +290,7 @@
 										}
 
 
-		.evo-home-headers-box-front-end
+			.evo-home-headers-box-front-end
 										{
 										width: rem-calc(475);
 										border: 2px solid $white;
@@ -300,7 +301,7 @@
 										letter-spacing: rem-calc(9.0) !important;
 										padding: rem-calc(5) 0 0 rem-calc(5);
 										
-			.evo-home-headers-front-end		{
+				.evo-home-headers-front-end	{
 											font-size: rem-calc(46);
 											letter-spacing: rem-calc(12) !important;
 											padding: 0px;
@@ -317,7 +318,6 @@
 
 	// HOME PAGE - ENDS
 }
-
 
 
 
