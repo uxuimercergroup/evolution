@@ -39,11 +39,16 @@ code									{@include border-radius(rem-calc(4));}
 										display: block;
 										margin-bottom: 30px;
 										}
-	.front-end-standards-menu-section	{
-		ul									{
-											list-style-type: none;
-											margin-left: 0;
+	.front-end-standards-menu			{
+		.front-end-standards-menu-section	{
+			ul									{
+												list-style-type: none;
+												margin-left: 0;
+												}
 											}
+										}
+	.front-end-standards				{
+		hr									{border-color: $onyx-dark-6;}
 										}
 // FRONT-END STANDARDS HEADER - ENDS
 
