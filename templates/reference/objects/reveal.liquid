@@ -42,7 +42,7 @@
 					<div class="evo-box-bdy">
 						<ul class="no-bullet evo-no-margin-bottom">
 							<li>
-								<strong>To launch a modal</strong>, just add a <code>.data-reveal-id</code> to the object which you want to fire the modal when clicked. The <code>.data-reveal-id</code> needs to match the <code>id</code> of your reveal.
+								<strong>To launch a modal</strong>, just add a <code>data-reveal-id</code> data attribute to the object which you want to fire the modal when clicked. The <code>data-reveal-id</code> data attribute needs to match the <code>id</code> of your reveal.
 							</li>
 							<li>
 								Removing the background on a reveal modal is simple, just add the following class to the reveal modal div: <code>.reveal-modal-bg</code>.
@@ -66,51 +66,11 @@
 					<div class="medium-6 columns">
 						<h6>Rendered HTML</h6>
 						{% include '/reference/objects/reveal/reveal-default' %}
-
-					<!-- SMALL REVEAL - BEGINS -->
-						<a href="" class="button radius evo-button" data-reveal-id="smallModal" id="" tabindex="" title="">Small Modal Size</a>
-						<div id="smallModal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-							<h3>Small Modal Size</h3>
-							<p>This modal window is set to 40%. The <code>.small</code> class has been added</p>.
-							<a class="close-reveal-modal" aria-label="Close"><i class="evo-icon-cancel-circle"></i></a>
-						</div>
-					<!-- SMALL REVEAL - ENDS -->
-
-					<!-- MEDIUM REVEAL - BEGINS -->
-						<a href="" class="button radius evo-button" data-reveal-id="mediumModal" id="" tabindex="" title="">Medium Modal Size</a>
-						<div id="mediumModal" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-							<h3>Medium Modal Size</h3>
-							<p>This modal window is set to 60%. The <code>.medium</code> class has been added</p>.
-							<a class="close-reveal-modal" aria-label="Close"><i class="evo-icon-cancel-circle"></i></a>
-						</div>
-					<!-- MEDIUM REVEAL - ENDS -->
-
-					<!-- LARGE REVEAL - BEGINS -->
-						<a href="" class="button radius evo-button" data-reveal-id="largeModal" id="" tabindex="" title="">Large Modal Size</a>
-						<div id="largeModal" class="reveal-modal large" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-							<h3>Large Modal Size</h3>
-							<p>This modal window is set to 70%. The <code>.large</code> class has been added</p>.
-							<a class="close-reveal-modal" aria-label="Close"><i class="evo-icon-cancel-circle"></i></a>
-						</div>
-					<!-- LARGE REVEAL - ENDS -->
-
-					<!-- XLARGE REVEAL - BEGINS -->
-						<a href="" class="button radius evo-button" data-reveal-id="xlargeModal" id="" tabindex="" title="">XLarge Modal Size</a>
-						<div id="xlargeModal" class="reveal-modal xlarge" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-							<h3>XLarge Modal Size</h3>
-							<p>This modal window is set to 95%. The <code>.xlarge</code> class has been added</p>.
-							<a class="close-reveal-modal" aria-label="Close"><i class="evo-icon-cancel-circle"></i></a>
-						</div>
-					<!-- XLARGE REVEAL - ENDS -->
-
-					<!-- FULL REVEAL - BEGINS -->
-						<a href="" class="button radius evo-button" data-reveal-id="fullModal" id="" tabindex="" title="">Full Modal Size</a>
-						<div id="fullModal" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-							<h3>Full Modal Size</h3>
-							<p>This modal window is set to 100% width and height. The <code>.full</code> class has been added</p>.
-							<a class="close-reveal-modal" aria-label="Close"><i class="evo-icon-cancel-circle"></i></a>
-						</div>
-					<!-- FULL REVEAL - ENDS -->
+						{% include '/reference/objects/reveal/reveal-small' %}
+						{% include '/reference/objects/reveal/reveal-medium' %}
+						{% include '/reference/objects/reveal/reveal-large' %}
+						{% include '/reference/objects/reveal/reveal-xlarge' %}
+						{% include '/reference/objects/reveal/reveal-full' %}
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
