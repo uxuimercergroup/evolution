@@ -1,0 +1,43 @@
+/*-------------------------------------------------------------------------------------------
+Mercer Evolution - v3.0.1 - Employee Portal Family
+Worksheet Form Component v1.0 - SASS
+DATE - September 24, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
+--------------------------------------------------------------------------------------------*/
+
+//
+// @core sass imports - IMPORTANT: DO NOT MODIFY!
+//
+@import	"../../../../assets/css/core/global/color_variables";
+@import	"../../../../assets/css/core/foundation/foundation/settings";
+@import	"../../../../assets/css/core/global/variables";
+@import	"../../../../assets/css/core/global/functions";
+@import	"../../../../assets/css/core/global/mixins";
+
+//
+// @variables - IMPORTANT: DO NOT MODIFY! MODIFY VARIABLE OVERRIDES ONLY.
+//
+
+
+//
+// @variable overrides
+//
+
+
+
+// ITEM SELECTION PANEL - BEGINS
+	[data-evo-family="ee"]				{
+
+		&.worksheet-form					{}
+
+										}
+// ITEM SELECTION PANEL - ENDS
+
+//=== MEDIA QUERIES =========================================================================
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+@media #{$medium-up} {
+
+	
+
+}
