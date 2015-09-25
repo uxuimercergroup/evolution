@@ -76,6 +76,56 @@ $evo-form-input-error-radio-checkbox-label-font-color: $body-font-color !default
 														}
 													}
 
+	// FORM PRE/POSTFIX LABELS/ACTIONS
+	.evo-form-prefix,
+	.evo-form-postfix								{
+		.prefix,
+		.postfix										{margin-top: $evo-form-input-margin-top;}
+		.evo-button										{
+														min-width: auto;
+														}
+													}
+	.evo-form-prefix								{
+		input[type="text"],
+		input[type="text"][readonly],
+		input[type="password"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="date"],
+		input[type="month"],
+		input[type="time"],
+		input[type="week"],
+		input[type="number"],
+		input[type="email"],
+		input[type="url"],
+		input[type="search"],
+		input[type="tel"]								{
+														border-radius: 0 $evo-form-input-border-radius $evo-form-input-border-radius 0 !important;
+														-webkit-border-radius: 0 $evo-form-input-border-radius $evo-form-input-border-radius 0 !important;
+														}
+		.prefix											{border-right: 0;}
+													}
+	.evo-form-postfix								{
+		input[type="text"],
+		input[type="text"][readonly],
+		input[type="password"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="date"],
+		input[type="month"],
+		input[type="time"],
+		input[type="week"],
+		input[type="number"],
+		input[type="email"],
+		input[type="url"],
+		input[type="search"],
+		input[type="tel"]								{
+														border-radius: $evo-form-input-border-radius 0 0 $evo-form-input-border-radius !important;
+														-webkit-border-radius: $evo-form-input-border-radius 0 0 $evo-form-input-border-radius !important;
+														}
+		.postfix										{border-left: 0;}
+													}
+
 	// FORM ELEMENTS
 	input[type="text"],
 	input[type="text"][readonly],

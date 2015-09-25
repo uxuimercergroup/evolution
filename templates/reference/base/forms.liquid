@@ -22,6 +22,7 @@
 					<dd data-magellan-arrival="stacked"><a href="#stacked">Stacked</a></dd>
 					<dd data-magellan-arrival="inline"><a href="#inline">Inline</a></dd>
 					<dd data-magellan-arrival="compact"><a href="#compact">Compact</a></dd>
+					<dd data-magellan-arrival="prepostfix"><a href="#prepostfix">Pre/Postfix</a></dd>
 					<dd data-magellan-arrival="html5"><a href="#html5">HTML5</a></dd>
 					<dd data-magellan-arrival="abide-validation"><a href="#abide-validation">Abide Validation</a></dd>
 					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
@@ -237,6 +238,73 @@
 
 			<hr />
 		<!-- COMPACT- ENDS -->
+
+		<!-- PRE/POSTFIX- BEGINS -->
+			<h3 data-magellan-destination="prepostfix">Pre/Postfix</h3>
+			<a name="prepostfix"></a>
+
+			<p>
+				To create a pre/postfix you will need a container div with class of <code>.evo-form-prefix</code> or <code>.evo-form-postfix</code>. These classes need to be used like this: <code>class="row collapse evo-form-prefix"</code>, which will contain the input and the pre/postfix object.
+			</p>
+
+			<p>
+				Built in support tied to buttons, and prefix / postfix labels, through a versatile approach using special grid properties. Essentially you can use <code>div class="row collapse"</code> to create label / action / input combinations. You use the Grid columns to define the size of the pre/postfix <code>span class="postfix"</code> or <code>span class="prefix"</code>.
+			</p>
+
+			<p>
+				You can also give a button / input pair a radius or a rounded edge by adding the classes prefix-radius, postfix-radius, prefix-round or postfix-round to the row that contains the elements. For example, <code>div class="row collapse postfix-round"</code> will add a rounded edge to the left side of the input field, and to the right side of the button, creating a cohesive rounded input. Here are a few examples:
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/forms/form-pre-postfix' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/forms/form-pre-postfix' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head">Compact with help text</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/forms/form-pre-postfix' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head">Compact with help text</p>
+						{% include '/reference/base/forms/form-pre-postfix' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- PRE/POSTFIX- ENDS -->
 
 		<!-- HTML5 ELEMENTS - BEGINS -->
 			<h3 data-magellan-destination="html5">HTML5 Elements</h3>
