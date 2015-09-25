@@ -22,3 +22,6 @@
 
 // FOO COMPONENT
 @import "../../../templates/reference/components/foo/foo.js";
+
+// ADVANCED RANGE SLIDER COMPONENT
+@import "../../../templates/reference/components/advanced-range-slider/advanced-range-slider.js";

@@ -1,6 +1,6 @@
 /*-------------------------------------------------------------------------------------------
 Mercer Evolution - Core v3.0.1
-Foo Component v1.0 - SASS
+Advanced Range Slider v1.0 - SASS
 DATE - August 19, 2015
 AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 --------------------------------------------------------------------------------------------*/
@@ -43,7 +43,7 @@ $evo-comp-foo-color-background-color: $onyx-light !default;
 // $evo-comp-foo-color-background-color: ;
 
 
-// FOO COMPONENT - BEGINS
+// ADVANCED RANGE SLIDER COMPONENT - BEGINS
 	.evo-comp-foo 		{
 						@include border-radius(rem-calc(4));
 						background-color: $evo-comp-foo-background-color;
@@ -53,17 +53,13 @@ $evo-comp-foo-color-background-color: $onyx-light !default;
 							background-color: $evo-comp-foo-color-background-color;
 							}
 						}
-// FOO COMPONENT - ENDS
+// ADVANCED RANGE SLIDER COMPONENT - ENDS
 
 //=== MEDIA QUERIES =========================================================================
 
 // MEDIUM MEDIA QUERY RANGE AND UP - 768px +
 @media #{$medium-up} {
 
-	// FOO COMPONENT - BEGINS
-		.evo-comp-foo	{
-						background-color: darken($evo-comp-foo-background-color, 50%);
-						}
-	// FOO COMPONENT - ENDS
+	
 
 }
