@@ -10,7 +10,7 @@
 			<h1>{{ model.title }}</h1>
 			<p>Version: {{ model.version_number }}</p>
 			<p>
-				Lorem ipsum sed turpis nibh libero nisi integer arcu mattis quam aliquet aliquet. Viverra aliquam felis lacus mus auctor nisl eu laoreet in. Ipsum sit dolor aliquet nunc arcu consequat orci eu sociosqu in non.
+				The Advanced Range Slider component uses at it's base the Evolution Core UI <a href="/reference/objects/slider">Range Slider</a> and adds on the options for tick markers and a tick marker key.
 			</p>
 		</div>
 	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
@@ -19,8 +19,7 @@
 		<div class="small-12 columns">
 			<div class="evo-magellan" data-magellan-expedition="fixed">
 				<dl class="sub-nav">
-					<dd data-magellan-arrival="example-a"><a href="#example-a">Example A</a></dd>
-					<dd data-magellan-arrival="example-b"><a href="#example-b">Example B</a></dd>
+					<dd data-magellan-arrival="component"><a href="#component">Component</a></dd>
 					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
 				</dl>
 			</div>
@@ -35,20 +34,9 @@
 		<div class="small-12 columns">
 			<hr />
 
-		<!-- EXAMPLE A - BEGINS -->
-			<h3 data-magellan-destination="example-a">Example A</h3>
-			<a name="example-a"></a>
-			<p>
-				Lorem ipsum sed turpis nibh libero nisi integer arcu mattis <code>quam aliquet</code> aliquet. Viverra aliquam felis lacus mus auctor nisl eu laoreet in.
-			</p>
-
-			<!-- ANNOTATIONS BOX - BEGINS -->
-				<div class="panel evo-box annotations">
-					<div class="evo-box-bdy">
-						<p class="evo-no-margin-bottom">Note: Lorem ipsum sed turpis nibh libero.</p>
-					</div>
-				</div>
-			<!-- ANNOTATIONS BOX - ENDS -->
+		<!-- ADVANCED RANGE SLIDER EXAMPLE - BEGINS -->
+			<h3 data-magellan-destination="component">Component</h3>
+			<a name="component"></a>
 
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
@@ -90,64 +78,7 @@
 			<!-- EXAMPLE DEMO - ENDS -->
 
 			<hr />
-		<!-- EXAMPLE A - ENDS -->
-
-		<!-- EXAMPLE B - BEGINS -->
-			<h3 data-magellan-destination="example-b">Example B</h3>
-			<a name="example-b"></a>
-			<p>
-				Lorem ipsum sed turpis nibh libero nisi integer arcu mattis <code>quam aliquet</code> aliquet. Viverra aliquam felis lacus mus auctor nisl eu laoreet in.
-			</p>
-
-			<!-- ANNOTATIONS BOX - BEGINS -->
-				<div class="panel evo-box annotations">
-					<div class="evo-box-bdy">
-						<p class="evo-no-margin-bottom">Note: Lorem ipsum sed turpis nibh libero.</p>
-					</div>
-				</div>
-			<!-- ANNOTATIONS BOX - ENDS -->
-
-			<!-- EXAMPLE DEMO - BEGINS -->
-				<section class="row">
-
-				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
-
-					<!-- EXAMPLE HTML - BEGINS -->
-						<h6>HTML</h6>
-
-						{{ "advanced-range-slider.css" | asset_url | stylesheet_tag }}
-
-						{{ global.reference-get-code-start-tag }}{% include "/reference/components/advanced-range-slider/advanced-range-slider" %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
-					<!-- EXAMPLE JS - BEGINS -->
-						<h6>Javascript</h6>
-						{{ global.reference-get-code-start-tag }}{% include "/reference/components/advanced-range-slider/advanced-range-slider-js" %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE JS - ENDS -->
-
-					<!-- VIEW CODE LINKS - BEGINS -->
-						<ul>
-							<li><a href="advanced-range-slider.css">View CSS</a></li>
-							<li><a href="advanced-range-slider.js">View JS</a></li>
-						</ul>
-					<!-- VIEW CODE LINKS - ENDS -->
-
-					</div>
-				<!-- EXAMPLE CODE - ENDS -->
-
-				<!-- EXAMPLE RENDERED CODE - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>Rendered HTML</h6>
-						{% include "/reference/components/advanced-range-slider/advanced-range-slider" %}
-					</div>
-				<!-- EXAMPLE RENDERED CODE - ENDS -->
-
-				</section>
-			<!-- EXAMPLE DEMO - ENDS -->
-
-			<hr />
-		<!-- EXAMPLE B - ENDS -->
+		<!-- ADVANCED RANGE SLIDER EXAMPLE - ENDS -->
 
 		<!-- ADVANCED - BEGINS -->
 			<section class="row">
@@ -155,9 +86,6 @@
 
 					<h3 data-magellan-destination="advanced">Advanced</h3>
 					<a name="advanced"></a>
-					<p>
-						Lorem ipsum sed turpis nibh libero nisi integer arcu mattis <code>quam aliquet</code> aliquet. Viverra aliquam felis lacus mus auctor nisl eu laoreet in.
-					</p>
 
 				<!-- DEPENDENCY LIST - BEGINS -->
 					{% if model.reference-dependency == "true" %}
@@ -166,11 +94,6 @@
 							{% if model.reference-dependency-evolution == "true" %}
 								<li>
 									<a href="/">Evolution Core {{ global.version_number }}</a>
-									<ul>
-										<li>
-											<a href="/reference/base/boxes">Boxes</a>
-										</li>
-									</ul>
 								</li>
 							{% endif %}
 
@@ -185,7 +108,14 @@
 							{% endif %}
 
 							{% if model.reference-dependency-jquery-ui == "true" %}
-								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+								<li>
+									<a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a>
+									<ul>
+										<li>
+											<a href="https://jqueryui.com/slider/" target="_blank">Slider</a>
+										</li>
+									</ul>
+								</li>
 							{% endif %}
 
 							{{ model.reference-dependency-list }}

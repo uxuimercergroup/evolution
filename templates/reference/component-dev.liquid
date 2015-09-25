@@ -66,20 +66,9 @@
 
 			<p>Example:</p>
 
-			{{ global.reference-get-code-start-tag }}<div class="evo-item-selection-panel" data-evo-family="ee">{{ global.reference-get-code-end-tag }}
+			{{ global.reference-get-code-start-tag }}<div class="evo-item-selection-panel">{{ global.reference-get-code-end-tag }}
 
-			<p>4. Make sure the component containing <code>div</code> also has the correct Evolution family data attribute and the correct value for the family. The currrent <code>data-evo-family</code> values are the following:</p>
-
-			<ul>
-				<li><strong>comm</strong> - communications sites</li>
-				<li><strong>ee</strong> - employee portals</li>
-			</ul>
-
-			<p>Example:</p>
-
-			{{ global.reference-get-code-start-tag }}<div class="evo-item-selection-panel" data-evo-family="ee">{{ global.reference-get-code-end-tag }}
-
-			<p>5. When using class names with HTML tags in the component please be as descriptive as possible and don't worry if the class name is too long, the more specific the better. Always separate words in the class name with dashes, and always begin the class name with <code>evo-</code> as the class prefix.</p>
+			<p>4. When using class names with HTML tags in the component please be as descriptive as possible and don't worry if the class name is too long, the more specific the better. Always separate words in the class name with dashes, and always begin the class name with <code>evo-</code> as the class prefix.</p>
 
 			<p>When naming classes, always start with the name of the component and then end the class name with the specific function of the class. This is keep the class names consistent, specific, and functional.</p>
 
@@ -89,7 +78,7 @@ class="evo-item-selection-panel-item"
 class="evo-item-selection-panel-item-img"
 class="evo-item-selection-panel-item-label"{{ global.reference-get-code-end-tag }}
 
-			<p>6. When using Zurb Foundation and Evolution classes on the same HTML tag, always put the Foundation classes first before Evolution classes in the class order.</p>
+			<p>5. When using Zurb Foundation and Evolution classes on the same HTML tag, always put the Foundation classes first before Evolution classes in the class order.</p>
 
 			<p>The <code>text-center</code> class is a Zurb Foundation class because it does not have the <code>evo-</code> class prefix. The <code>text-center</code> is first in the class order before <code>evo-item-selection-panel-item-label</code>.</p>
 
@@ -97,7 +86,7 @@ class="evo-item-selection-panel-item-label"{{ global.reference-get-code-end-tag 
 
 			{{ global.reference-get-code-start-tag }}<span class="text-center evo-item-selection-panel-item-label">Management Skills</span>{{ global.reference-get-code-end-tag }}
 
-			<p>7. Always use HTML5 standards when coding HTML for Evolution components.</p>
+			<p>6. Always use HTML5 standards when coding HTML for Evolution components.</p>
 
 
 			<h3>SASS</h3>
@@ -237,24 +226,8 @@ $evo-item-selection-panel-text-align: center !default;
 		// ITEM SELECTION PANEL HEADER - ENDS
 
 ...{{ global.reference-get-code-end-tag }}
-				
-			<p>7. Component Family Data Attribute</p>
 
-			<p>All component SASS with start with a call to the component family data attribute as a hook for how the component will be styled for the particular family it is contained in.</p>
-
-			<p>Example HTML:</p>
-
-			{{ global.reference-get-code-start-tag }}<div class="evo-item-selection-panel" data-evo-family="ee">{{ global.reference-get-code-end-tag }}
-
-			<p>Example SASS:</p>
-
-			{{ global.reference-get-code-start-tag }}// ITEM SELECTION PANEL - BEGINS
-	[data-evo-family="ee"]		{
-
-		&.evo-item-selection-panel	{
-...{{ global.reference-get-code-end-tag }}
-
-			<p>8. Misc. SASS Rules</p>
+			<p>7. Misc. SASS Rules</p>
 
 			<p>Don't be too specific with you SASS/CSS cascade as it makes it harder to maintain. Write your SASS so its more modular or builds on layers of classes.</p>
 
