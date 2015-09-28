@@ -58,9 +58,6 @@
 
 					<!-- EXAMPLE HTML - BEGINS -->
 						<h6>HTML</h6>
-
-						{{ "foo.css" | asset_url | stylesheet_tag }}
-
 						{{ global.reference-get-code-start-tag }}{% include "/reference/components/foo/foo" %}{{ global.reference-get-code-end-tag }}
 					<!-- EXAMPLE HTML - ENDS -->
 
@@ -69,19 +66,13 @@
 						{{ global.reference-get-code-start-tag }}{% include "/reference/components/foo/foo-js" %}{{ global.reference-get-code-end-tag }}
 					<!-- EXAMPLE JS - ENDS -->
 
-					<!-- VIEW CODE LINKS - BEGINS -->
-						<ul>
-							<li><a href="foo.css">View CSS</a></li>
-							<li><a href="foo.js">View JS</a></li>
-						</ul>
-					<!-- VIEW CODE LINKS - ENDS -->
-
 					</div>
 				<!-- EXAMPLE CODE - ENDS -->
 
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
 						<h6>Rendered HTML</h6>
+						{{ "/reference/components/foo/foo.css" | asset_url | stylesheet_tag }}
 						{% include "/reference/components/foo/foo" %}
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->

@@ -15,17 +15,6 @@
 		</div>
 	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
 
-	<!-- PAGE MAGELLAN NAV - BEGINS -->
-		<div class="small-12 columns">
-			<div class="evo-magellan" data-magellan-expedition="fixed">
-				<dl class="sub-nav">
-					<dd data-magellan-arrival="component"><a href="#component">Component</a></dd>
-					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
-				</dl>
-			</div>
-		</div>
-	<!-- PAGE MAGELLAN NAV - ENDS -->
-
 	</section>
 <!-- PAGE INTRO - ENDS -->
 
@@ -35,8 +24,6 @@
 			<hr />
 
 		<!-- ADVANCED RANGE SLIDER EXAMPLE - BEGINS -->
-			<h3 data-magellan-destination="component">Component</h3>
-			<a name="component"></a>
 
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
@@ -46,9 +33,6 @@
 
 					<!-- EXAMPLE HTML - BEGINS -->
 						<h6>HTML</h6>
-
-						{{ "advanced-range-slider.css" | asset_url | stylesheet_tag }}
-
 						{{ global.reference-get-code-start-tag }}{% include "/reference/components/advanced-range-slider/advanced-range-slider" %}{{ global.reference-get-code-end-tag }}
 					<!-- EXAMPLE HTML - ENDS -->
 
@@ -57,19 +41,13 @@
 						{{ global.reference-get-code-start-tag }}{% include "/reference/components/advanced-range-slider/advanced-range-slider-js" %}{{ global.reference-get-code-end-tag }}
 					<!-- EXAMPLE JS - ENDS -->
 
-					<!-- VIEW CODE LINKS - BEGINS -->
-						<ul>
-							<li><a href="advanced-range-slider.css">View CSS</a></li>
-							<li><a href="advanced-range-slider.js">View JS</a></li>
-						</ul>
-					<!-- VIEW CODE LINKS - ENDS -->
-
 					</div>
 				<!-- EXAMPLE CODE - ENDS -->
 
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
 						<h6>Rendered HTML</h6>
+						{{ "/reference/components/advanced-range-slider/advanced-range-slider.css" | asset_url | stylesheet_tag }}
 						{% include "/reference/components/advanced-range-slider/advanced-range-slider" %}
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
