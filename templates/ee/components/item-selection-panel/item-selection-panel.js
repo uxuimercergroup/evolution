@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - v3.0.1 - Employee Portal Family
+// Mercer Evolution - Core v3.0.1
 // Item Selection Panel Component v1.0 - JS
 // DATE - September 1, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton

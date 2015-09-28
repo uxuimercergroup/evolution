@@ -21,7 +21,7 @@
 // =======================================================================================================
 
 // BAR COMPONENT
-@import "../../../templates/ee/components/bar/bar.js";
+// @import "../../../templates/ee/components/bar/bar.js";
 
 // ITEM SELECTION PANEL
 @import "../../../templates/ee/components/item-selection-panel/item-selection-panel.js";
