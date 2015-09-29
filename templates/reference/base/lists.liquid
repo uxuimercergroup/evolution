@@ -21,6 +21,9 @@
 					<dd data-magellan-arrival="horizontal"><a href="#horizontal">Horizontal Lists</a></dd>
 					<dd data-magellan-arrival="dataLists"><a href="#dataLists">Data Lists</a></dd>
 					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
 				</dl>
 			</div>
 		</div>
@@ -42,22 +45,7 @@
 			</p>
 
 			<!-- DEFAULT - BEGINS -->
-				<section class="row">
-
-				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
-
-					<!-- EXAMPLE HTML - BEGINS -->
-						<h6>HTML</h6>
-						<p class="ref-sub-head">
-							Default
-						</p>
-
-						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-default' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
-					</div>
-				<!-- EXAMPLE CODE - ENDS -->
+				<section class="row ">
 
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
@@ -70,55 +58,46 @@
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
-				</section>
-			<!-- DEFAULT - ENDS -->
-
-			<!-- DEFAULT WITH LINKS - BEGINS -->
-				<section class="row">
-
 				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
-
-					<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
 						<p class="ref-sub-head">
-							Default with Links
+							Default
 						</p>
 
-						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-default-links' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-default' %}{{ global.reference-get-code-end-tag }}
 					</div>
 				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- DEFAULT - ENDS -->
+			<hr />
+			<!-- DEFAULT WITH LINKS - BEGINS -->
+				<section class="row">
 
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
 						<p class="ref-sub-head">
 							Default with Links
 						</p>
-
 						{% include '/reference/base/lists/list-horizontal-default-links' %}
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
-				</section>
-			<!-- DEFAULT WITH LINKS - ENDS -->
-
-			<!-- DEFAULT WITH PIPES - BEGINS -->
-				<section class="row">
-
 				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
-
-					<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
 						<p class="ref-sub-head">
-							Default with Pipes
+							Default with Links
 						</p>
-
-						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-default-pipes' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-default-links' %}{{ global.reference-get-code-end-tag }}
 					</div>
 				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- DEFAULT WITH LINKS - ENDS -->
+			<hr />
+			<!-- DEFAULT WITH PIPES - BEGINS -->
+				<section class="row">
 
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
@@ -130,25 +109,21 @@
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
-				</section>
-			<!-- DEFAULT WITH PIPES - ENDS -->
-
-			<!-- DEFAULT WITH LINKS AND PIPES - BEGINS -->
-				<section class="row">
-
 				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
-
-					<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
 						<p class="ref-sub-head">
-							Default with Links and Pipes
+							Default with Pipes
 						</p>
 
-						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-default-links-pipes' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-default-pipes' %}{{ global.reference-get-code-end-tag }}
 					</div>
 				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- DEFAULT WITH PIPES - ENDS -->
+			<hr />
+			<!-- DEFAULT WITH LINKS AND PIPES - BEGINS -->
+				<section class="row">
 
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
@@ -160,25 +135,21 @@
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
-				</section>
-			<!-- DEFAULT WITH LINKS AND PIPES - ENDS -->
-
-			<!-- DEFINITION LIST - BEGINS -->
-				<section class="row">
-
 				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
-
-					<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
 						<p class="ref-sub-head">
-							Definition List
+							Default with Links and Pipes
 						</p>
 
-						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-definition' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-default-links-pipes' %}{{ global.reference-get-code-end-tag }}
 					</div>
 				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- DEFAULT WITH LINKS AND PIPES - ENDS -->
+			<hr />
+			<!-- DEFINITION LIST - BEGINS -->
+				<section class="row">
 
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
@@ -190,25 +161,21 @@
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
-				</section>
-			<!-- DEFINITION LIST - ENDS -->
-
-			<!-- DEFINITION LIST WITH LINKS - BEGINS -->
-				<section class="row">
-
 				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
-
-					<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
 						<p class="ref-sub-head">
-							Definition List with Links
+							Definition List
 						</p>
 
-						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-definition-links' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-definition' %}{{ global.reference-get-code-end-tag }}
 					</div>
 				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- DEFINITION LIST - ENDS -->
+			<hr />
+			<!-- DEFINITION LIST WITH LINKS - BEGINS -->
+				<section class="row">
 
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
@@ -220,25 +187,21 @@
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
-				</section>
-			<!-- DEFINITION LIST WITH LINKS - ENDS -->	
-
-			<!-- DEFINITION LIST WITH PIPES - BEGINS -->
-				<section class="row">
-
 				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
-
-					<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
 						<p class="ref-sub-head">
-							Definition List with Pipes
+							Definition List with Links
 						</p>
 
-						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-definition-pipes' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-definition-links' %}{{ global.reference-get-code-end-tag }}
 					</div>
 				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- DEFINITION LIST WITH LINKS - ENDS -->	
+			<hr />
+			<!-- DEFINITION LIST WITH PIPES - BEGINS -->
+				<section class="row">
 
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
@@ -249,6 +212,16 @@
 						{% include '/reference/base/lists/list-horizontal-definition-pipes' %}
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<p class="ref-sub-head">
+							Definition List with Pipes
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-horizontal-definition-pipes' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
 
 				</section>
 			<!-- DEFINITION LIST WITH PIPES - ENDS -->		
@@ -266,21 +239,6 @@
 			<!-- DEFAULT DATA LIST - BEGINS -->
 				<section class="row">
 
-				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
-
-					<!-- EXAMPLE HTML - BEGINS -->
-						<h6>HTML</h6>
-						<p class="ref-sub-head">
-							Default
-						</p>
-
-						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-data-default' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
-					</div>
-				<!-- EXAMPLE CODE - ENDS -->
-
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
 						<h6>Rendered HTML</h6>
@@ -292,25 +250,22 @@
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						<p class="ref-sub-head">
+							Default
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-data-default' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
 				</section>
 			<!-- DEFAULT DATA LIST - ENDS -->
 
 			<!-- STACKED DATA LIST - BEGINS -->
 				<section class="row">
-
-				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
-
-					<!-- EXAMPLE HTML - BEGINS -->
-						<p class="ref-sub-head">
-							Stacked
-						</p>
-
-						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-data-default-stacked' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
-					</div>
-				<!-- EXAMPLE CODE - ENDS -->
 
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
@@ -322,25 +277,21 @@
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<p class="ref-sub-head">
+							Stacked
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-data-default-stacked' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
 				</section>
 			<!-- STACKED DATA LIST - ENDS -->
 
 			<!-- DATA DEFINITION LIST - BEGINS -->
 				<section class="row">
-
-				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
-
-					<!-- EXAMPLE HTML - BEGINS -->
-						<p class="ref-sub-head">
-							Data Definition List
-						</p>
-
-						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-data-definition' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
-					</div>
-				<!-- EXAMPLE CODE - ENDS -->
 
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
@@ -352,25 +303,21 @@
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<p class="ref-sub-head">
+							Data Definition List
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-data-definition' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
 				</section>
 			<!-- DATA DEFINITION LIST - ENDS -->
 
 			<!-- DATA DEFINITION LIST STACKED - BEGINS -->
 				<section class="row">
-
-				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
-
-					<!-- EXAMPLE HTML - BEGINS -->
-						<p class="ref-sub-head">
-							Data Definition List Stacked
-						</p>
-
-						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-data-definition-stacked' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
-					</div>
-				<!-- EXAMPLE CODE - ENDS -->
 
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
@@ -381,6 +328,16 @@
 						{% include '/reference/base/lists/list-data-definition-stacked' %}
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<p class="ref-sub-head">
+							Data Definition List Stacked
+						</p>
+
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/lists/list-data-definition-stacked' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
 
 				</section>
 			<!-- DATA DEFINITION LIST STACKED - ENDS -->	

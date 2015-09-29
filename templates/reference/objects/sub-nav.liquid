@@ -21,6 +21,9 @@
 					<dd data-magellan-arrival="basic"><a href="#basic">Basic</a></dd>
 					<dd data-magellan-arrival="visibility"><a href="#visibility">Item Visibility</a></dd>
 					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
 				</dl>
 			</div>
 		</div>
@@ -41,23 +44,20 @@
 		
 		<section class="row">
 
-			<!-- EXAMPLE CODE - BEGINS -->
-				<div class="medium-6 columns">
+		<!-- EXAMPLE RENDERED CODE - BEGINS -->
+			<div class="medium-6 columns">
+				<h6>Rendered HTML</h6>
+				{% include '/reference/objects/sub-nav/sub-nav' %}
+			</div>
+		<!-- EXAMPLE RENDERED CODE - ENDS -->
 
-				<!-- EXAMPLE HTML - BEGINS -->
-					<h6>HTML</h6>
-					{{ global.reference-get-code-start-tag }}{% include '/reference/objects/sub-nav/sub-nav' %}{{ global.reference-get-code-end-tag }}
-				<!-- EXAMPLE HTML - ENDS -->
+		<!-- EXAMPLE CODE - BEGINS -->
+			<div class="medium-6 columns site-html-ctn">
+				<h6>HTML</h6>
+				{{ global.reference-get-code-start-tag }}{% include '/reference/objects/sub-nav/sub-nav' %}{{ global.reference-get-code-end-tag }}
+			</div>
+		<!-- EXAMPLE CODE - ENDS -->
 
-				</div>
-			<!-- EXAMPLE CODE - ENDS -->
-
-			<!-- EXAMPLE RENDERED CODE - BEGINS -->
-				<div class="medium-6 columns">
-					<h6>Rendered HTML</h6>
-					{% include '/reference/objects/sub-nav/sub-nav' %}
-				</div>
-			<!-- EXAMPLE RENDERED CODE - ENDS -->
 		</section>
 		<hr />
 	<!-- BASIC SUB NAV- ENDS -->
@@ -69,23 +69,20 @@
 
 			<section class="row">
 
-				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
+			<!-- EXAMPLE RENDERED CODE - BEGINS -->
+				<div class="medium-6 columns">
+					<h6>Rendered HTML</h6>
+					{% include '/reference/objects/sub-nav/sub-nav-item-visibility' %}
+				</div>
+			<!-- EXAMPLE RENDERED CODE - ENDS -->
 
-					<!-- EXAMPLE HTML - BEGINS -->
-						<h6>HTML</h6>
-						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/sub-nav/sub-nav-item-visibility' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
+			<!-- EXAMPLE CODE - BEGINS -->
+				<div class="medium-6 columns site-html-ctn">
+					<h6>HTML</h6>
+					{{ global.reference-get-code-start-tag }}{% include '/reference/objects/sub-nav/sub-nav-item-visibility' %}{{ global.reference-get-code-end-tag }}
+				</div>
+			<!-- EXAMPLE CODE - ENDS -->
 
-					</div>
-				<!-- EXAMPLE CODE - ENDS -->
-
-				<!-- EXAMPLE RENDERED CODE - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>Rendered HTML</h6>
-						{% include '/reference/objects/sub-nav/sub-nav-item-visibility' %}
-					</div>
-				<!-- EXAMPLE RENDERED CODE - ENDS -->
 			</section>
 			<hr />
 	<!-- SUB NAV ITEM VISIBILITY- ENDS -->

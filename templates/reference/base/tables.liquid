@@ -20,6 +20,9 @@
 				<dl class="sub-nav">
 					<dd data-magellan-arrival="staticTable"><a href="#staticTable">Basic</a></dd>
 					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
 				</dl>
 			</div>
 		</div>
@@ -53,25 +56,19 @@
 			<!-- EXAMPLE - BEGINS -->
 				<section class="row">
 
-				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="small-12 columns">
-
-					<!-- EXAMPLE HTML - BEGINS -->
-						<h6>HTML</h6>
-
-						{{ global.reference-get-code-start-tag }}{% include '/reference/base/tables/table-static' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
-					</div>
-				<!-- EXAMPLE CODE - ENDS -->
-
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="small-12 columns">
 						<h6>Rendered HTML</h6>
-
 						{% include '/reference/base/tables/table-static' %}
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/tables/table-static' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
 
 				</section>
 			<!-- EXAMPLE - ENDS -->

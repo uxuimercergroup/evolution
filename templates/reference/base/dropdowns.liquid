@@ -16,10 +16,13 @@
 		<div class="small-12 columns">
 			<div class="evo-magellan" data-magellan-expedition="fixed">
 				<dl class="sub-nav">
-					<dd data-magellan-arrival="basic"><a href="#Basic">Basic</a></dd>
-					<dd data-magellan-arrival="positioning"><a href="#Positioning">Positioning</a></dd>
+					<dd data-magellan-arrival="basic"><a href="#basic">Basic</a></dd>
+					<dd data-magellan-arrival="positioning"><a href="#positioning">Positioning</a></dd>
 					<dd data-magellan-arrival="hover"><a href="#hover">Hover</a></dd>
 					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
 				</dl>
 			</div>
 		</div>
@@ -58,18 +61,21 @@
 
 		<!-- DROPDOWNS - BEGINS -->
 			<section class="row">
-			<!-- EXAMPLE HTML - BEGINS -->
-				<div class="medium-6 columns">
-					<h6>HTML</h6>
-					{{ global.reference-get-code-start-tag }}{% include '/reference/base/dropdowns/dropdowns' %}{{ global.reference-get-code-end-tag }}
-				</div>
-			<!-- EXAMPLE HTML - ENDS -->
+
 			<!-- EXAMPLE RENDERED CODE - BEGINS -->
 				<div class="medium-6 columns">
 					<h6>Rendered HTML</h6>
 					{% include '/reference/base/dropdowns/dropdowns' %}
 				</div>
 			<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+			<!-- EXAMPLE HTML - BEGINS -->
+				<div class="medium-6 columns site-html-ctn">
+					<h6>HTML</h6>
+					{{ global.reference-get-code-start-tag }}{% include '/reference/base/dropdowns/dropdowns' %}{{ global.reference-get-code-end-tag }}
+				</div>
+			<!-- EXAMPLE HTML - ENDS -->
+
 			</section>
 			<hr />
 		<!-- DROPDOWNS - ENDS -->
@@ -79,18 +85,21 @@
 			<a name="positioning"></a>
 
 			<section class="row">
-			<!-- EXAMPLE HTML - BEGINS -->
-				<div class="medium-6 columns">
-					<h6>HTML</h6>
-					{{ global.reference-get-code-start-tag }}{% include '/reference/base/dropdowns/dropdowns-positioning' %}{{ global.reference-get-code-end-tag }}
-				</div>
-			<!-- EXAMPLE HTML - ENDS -->
+
 			<!-- EXAMPLE RENDERED CODE - BEGINS -->
 				<div class="medium-6 columns">
 					<h6>Rendered HTML</h6>
 					{% include '/reference/base/dropdowns/dropdowns-positioning' %}
 				</div>
 			<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+			<!-- EXAMPLE HTML - BEGINS -->
+				<div class="medium-6 columns site-html-ctn">
+					<h6>HTML</h6>
+					{{ global.reference-get-code-start-tag }}{% include '/reference/base/dropdowns/dropdowns-positioning' %}{{ global.reference-get-code-end-tag }}
+				</div>
+			<!-- EXAMPLE HTML - ENDS -->
+
 			</section>
 			<hr />
 		<!-- DROPDOWNS POSITIONING - ENDS -->
@@ -104,18 +113,21 @@
 			</p>
 
 			<section class="row">
-			<!-- EXAMPLE HTML - BEGINS -->
-				<div class="medium-6 columns">
-					<h6>HTML</h6>
-					{{ global.reference-get-code-start-tag }}{% include '/reference/base/dropdowns/dropdowns-hover' %}{{ global.reference-get-code-end-tag }}
-				</div>
-			<!-- EXAMPLE HTML - ENDS -->
+
 			<!-- EXAMPLE RENDERED CODE - BEGINS -->
 				<div class="medium-6 columns">
 					<h6>Rendered HTML</h6>
 					{% include '/reference/base/dropdowns/dropdowns-hover' %}
 				</div>
 			<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+			<!-- EXAMPLE HTML - BEGINS -->
+				<div class="medium-6 columns site-html-ctn">
+					<h6>HTML</h6>
+					{{ global.reference-get-code-start-tag }}{% include '/reference/base/dropdowns/dropdowns-hover' %}{{ global.reference-get-code-end-tag }}
+				</div>
+			<!-- EXAMPLE HTML - ENDS -->
+
 			</section>
 			<hr />
 		<!-- DROPDOWNS HOVER - ENDS -->

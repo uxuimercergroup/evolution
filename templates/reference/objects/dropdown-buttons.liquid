@@ -22,6 +22,9 @@
 					<dd data-magellan-arrival="shapes"><a href="#shapes">Shapes</a></dd>
 					<dd data-magellan-arrival="disabled"><a href="#disabled">Disabled</a></dd>
 					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
 				</dl>
 			</div>
 		</div>
@@ -61,23 +64,20 @@
 		
 			<section class="row">
 
-				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
-
-					<!-- EXAMPLE HTML - BEGINS -->
-						<h6>HTML</h6>
-						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/dropdown-buttons/dropdown-buttons' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
-					</div>
-				<!-- EXAMPLE CODE - ENDS -->
-
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
 						<h6>Rendered HTML</h6>
 						{% include '/reference/objects/dropdown-buttons/dropdown-buttons' %}
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/dropdown-buttons/dropdown-buttons' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
 			</section>
 			<hr />
 		<!-- BASIC DROPDOWN BUTTONS - ENDS -->
@@ -91,30 +91,37 @@
 
 			<!-- EXAMPLE CODE - BEGINS -->
 				<section class="row">
-				<!-- EXAMPLE HTML - BEGINS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/dropdown-buttons/dropdown-buttons-radius' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
 						<h6>HTML</h6>					
 						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/dropdown-buttons/dropdown-buttons-radius' %}{{ global.reference-get-code-end-tag }}
 					</div>
 				<!-- EXAMPLE HTML - ENDS -->
 
+				</section>
+			<!-- EXAMPLE CODE - ENDS -->
+
+				<h4 class="evo-spacer-margin-top-medium">Round</h4>
+			<!-- EXAMPLE CODE - BEGINS -->
+				<section class="row">
+
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
 						<h6>Rendered HTML</h6>
-
-						{% include '/reference/objects/dropdown-buttons/dropdown-buttons-radius' %}
+						{% include '/reference/objects/dropdown-buttons/dropdown-buttons-round' %}
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
-				</section>
-			<!-- EXAMPLE CODE - ENDS -->
-				
-				<h4 class="evo-spacer-margin-top-medium">Round</h4>
-
-			<!-- EXAMPLE CODE - BEGINS -->
-				<section class="row">
 				<!-- EXAMPLE HTML - BEGINS -->
-					<div class="medium-6 columns">
+					<div class="medium-6 columns site-html-ctn">
 						<h6>HTML</h6>					
 						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/dropdown-buttons/dropdown-buttons-round' %}{{ global.reference-get-code-end-tag }}
 				<!-- EXAMPLE HTML - ENDS -->
@@ -122,13 +129,6 @@
 					</div>
 			<!-- EXAMPLE CODE - ENDS -->
 
-			<!-- EXAMPLE RENDERED CODE - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>Rendered HTML</h6>
-
-						{% include '/reference/objects/dropdown-buttons/dropdown-buttons-round' %}
-					</div>
-			<!-- EXAMPLE RENDERED CODE - ENDS -->
 			</section>
 			<hr />
 		<!-- DROPDOWN BUTTONS - SHAPES - ENDS -->
@@ -139,12 +139,6 @@
 
 			<!-- EXAMPLE CODE - BEGINS -->
 				<section class="row">
-				<!-- EXAMPLE HTML - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>HTML</h6>					
-						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/dropdown-buttons/dropdown-buttons-disabled' %}{{ global.reference-get-code-end-tag }}
-					</div>
-				<!-- EXAMPLE HTML - ENDS -->
 
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
@@ -153,6 +147,14 @@
 						{% include '/reference/objects/dropdown-buttons/dropdown-buttons-disabled' %}
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>					
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/dropdown-buttons/dropdown-buttons-disabled' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
 				</section>
 				<hr />
 			<!-- EXAMPLE CODE - ENDS -->

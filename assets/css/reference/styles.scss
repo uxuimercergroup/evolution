@@ -32,6 +32,20 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 code									{@include border-radius(rem-calc(4));}
 
 /*--- GENERAL LAYOUT OF PAGES --------------------------------------------------------------*/
+.site-html-ctn							{display: none;}
+.site-html-ctn-toggle					{
+	a										{
+											@include border-radius($global-radius);
+											background-color: $topaz-bright;
+											color: $white !important;
+											display: inline-block;
+											padding: 0 0 0 rem-calc(10) !important;
+		[class*="evo-icon-"]					{
+												color: $white;
+												top: rem-calc(2.3);
+												}
+											}
+										}
 
 // FRONT-END STANDARDS HEADER - BEGINS
 	.front-end-standards-menu			{
@@ -87,6 +101,7 @@ code									{@include border-radius(rem-calc(4));}
 // REFERENCE MAGELLAN NAV
 .evo-magellan							{
 										left: auto !important;
+	dd										{margin-left: rem-calc(12)}
 										}
 
 /*--- GRIDS PAGE ---------------------------------------------------------------------------*/

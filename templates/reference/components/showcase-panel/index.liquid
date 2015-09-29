@@ -14,13 +14,26 @@
 					<p>Version: {{ model.version_number }}</p>		
 				</div>
 				<div class="small-9 columns">
-					<p class="right"><span class="label radius evo-label" data-evo-background-color="sapphire-bright">Employee Portal</span> <span class="label radius evo-label" data-evo-background-color="amethyst-bright">Communication Site</span></p>		
+					<p class="right">
+						<span class="label radius evo-label" data-evo-background-color="sapphire-bright">Employee Portal</span>
+					</p>	
 				</div>
 			</section>
 			
 		</div>
 	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
 
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
 	</section>
 <!-- PAGE INTRO - ENDS -->
 
@@ -34,8 +47,16 @@
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
 
-				<!-- EXAMPLE CODE - BEGINS -->
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{{ "/reference/components/showcase-panel/showcase-panel.css" | asset_url | stylesheet_tag }}
+						{% include "/reference/components/showcase-panel/showcase-panel" %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
 
 					<!-- EXAMPLE HTML - BEGINS -->
 						<h6>HTML</h6>
@@ -44,14 +65,6 @@
 
 					</div>
 				<!-- EXAMPLE CODE - ENDS -->
-
-				<!-- EXAMPLE RENDERED CODE - BEGINS -->
-					<div class="small-12 columns">
-						<h6>Rendered HTML</h6>
-						{{ "/reference/components/showcase-panel/showcase-panel.css" | asset_url | stylesheet_tag }}
-						{% include "/reference/components/showcase-panel/showcase-panel" %}
-					</div>
-				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->

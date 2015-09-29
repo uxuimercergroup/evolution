@@ -20,6 +20,9 @@
 				<dl class="sub-nav">
 					<dd data-magellan-arrival="basic"><a href="#basic">Basic</a></dd>
 					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
 				</dl>
 			</div>
 		</div>
@@ -38,9 +41,16 @@
 			<a name="basic"></a>
 
 			<section class="row">
+	
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/autocomplete/autocomplete' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
 				<!-- EXAMPLE DEMO - BEGINS -->				
-					<div class="medium-6 columns">
+					<div class="medium-6 columns site-html-ctn">
 
 					<!-- EXAMPLE HTML - BEGINS -->
 						<h6>HTML</h6>
@@ -54,13 +64,6 @@
 
 					</div>
 				<!-- EXAMPLE DEMO - ENDS -->
-	
-				<!-- EXAMPLE RENDERED CODE - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>Rendered HTML</h6>
-						{% include '/reference/objects/autocomplete/autocomplete' %}
-					</div>
-				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
 			</section>	
 			<hr />		

@@ -1,7 +1,11 @@
 // FUNCTIONS
 //--------------------------------------------------------------------------------------------------------
 
-	
+var siteCodeToggle = function(){
+	jQuery('.site-get-code').click(function() {
+		jQuery('div.site-html-ctn').toggle();
+	});
+};
 
 
 // DOCUMENT READY
@@ -20,6 +24,9 @@ $(function() {
 
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
+
+		// SITE GET CODE TOGGLE
+		siteCodeToggle();
 
 		// ICON REFERENCE DATA TABLE
 		evoDataTable('evo-data-table-icon-reference',{

@@ -24,6 +24,9 @@
 					<dd data-magellan-arrival="show-on"><a href="#show-on">Show by Screen Size</a></dd>
 					<dd data-magellan-arrival="tooltip-input"><a href="#tooltip-input">Tooltip in a Form</a></dd>
 					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
 				</dl>
 			</div>
 		</div>
@@ -44,25 +47,28 @@
 				The default position of tooltips is on the bottom of the target element. The tooltips can be positioned on the top, right or left of the target element by adding the appropriate class to them: <code>.tip-top</code>, <code>.tip-right</code>, <code>.tip-left</code>. NOTE: On a small device, the tooltips are full-width and bottom aligned.
 			</p>
 
-				<!-- EXAMPLE DEMO - BEGINS -->
-					<section class="row">
-						
-						<!-- EXAMPLE HTML - BEGINS -->
-							<div class="medium-6 columns">
-								<h6>HTML</h6>
-								{{ global.reference-get-code-start-tag }}{% include '/reference/objects/tooltip/tooltip-default' %}{{ global.reference-get-code-end-tag }}
-							</div>
-						<!-- EXAMPLE HTML - ENDS -->
+		<!-- EXAMPLE DEMO - BEGINS -->
+			<section class="row">
 
-						<!-- EXAMPLE RENDERED CODE - BEGINS -->
-							<div class="medium-6 columns">
-								<h6>Rendered HTML</h6>
-								{% include '/reference/objects/tooltip/tooltip-default' %}
-							</div>
-						<!-- EXAMPLE RENDERED CODE - ENDS -->
-					</section>
-				<!-- EXAMPLE DEMO - ENDS -->
-					<hr />
+			<!-- EXAMPLE RENDERED CODE - BEGINS -->
+				<div class="medium-6 columns">
+					<h6>Rendered HTML</h6>
+					{% include '/reference/objects/tooltip/tooltip-default' %}
+				</div>
+			<!-- EXAMPLE RENDERED CODE - ENDS -->
+				
+			<!-- EXAMPLE HTML - BEGINS -->
+				<div class="medium-6 columns site-html-ctn">
+					<h6>HTML</h6>
+					{{ global.reference-get-code-start-tag }}{% include '/reference/objects/tooltip/tooltip-default' %}{{ global.reference-get-code-end-tag }}
+				</div>
+			<!-- EXAMPLE HTML - ENDS -->
+
+			</section>
+		<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+
 		<!-- BASIC TOOLTIP - ENDS -->
 
 		<!-- DISABLE FOR TOUCH EVENTS TOOLTIP - BEGINS -->
@@ -72,24 +78,26 @@
 				If you don't want tooltips to interfere with a touch event, you can disable them for those devices by adding <code>data-options="disable_for_touch:true"</code>. Tooltips applied to <code>a</code> tags will automatically be disabled for touch events, so as not to interfere with the link.
 			</p>
 
-				<!-- EXAMPLE DEMO - BEGINS -->
-					<section class="row">
-						<!-- EXAMPLE HTML - BEGINS -->
-							<div class="medium-6 columns">
-								<h6>HTML</h6>
-								{{ global.reference-get-code-start-tag }}{% include '/reference/objects/tooltip/tooltip-disable' %}{{ global.reference-get-code-end-tag }}
-							</div>
-						<!-- EXAMPLE HTML - ENDS -->
+		<!-- EXAMPLE DEMO - BEGINS -->
+			<section class="row">
 
-						<!-- EXAMPLE RENDERED CODE - BEGINS -->
-							<div class="medium-6 columns">
-								<h6>Rendered HTML</h6>
-								{% include '/reference/objects/tooltip/tooltip-disable' %}
-							</div>
-						<!-- EXAMPLE RENDERED CODE - ENDS -->
-					</section>
-				<!-- EXAMPLE DEMO - ENDS -->
-					<hr />
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/tooltip/tooltip-disable' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/tooltip/tooltip-disable' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+			</section>
+		<!-- EXAMPLE DEMO - ENDS -->
+			<hr />
 		<!-- DISABLE FOR TOUCH EVENTS TOOLTIP - ENDS -->
 
 		<!-- SHAPES - BEGINS -->
@@ -101,13 +109,6 @@
 
 			<!-- EXAMPLE CODE - BEGINS -->
 				<section class="row">
-					<!-- EXAMPLE HTML - BEGINS -->
-						<div class="medium-6 columns">
-							<h6>HTML</h6>					
-							{{ global.reference-get-code-start-tag }}{% include '/reference/objects/tooltip/tooltip-radius' %}{{ global.reference-get-code-end-tag }}
-						</div>
-					<!-- EXAMPLE HTML - ENDS -->
-
 					<!-- EXAMPLE RENDERED CODE - BEGINS -->
 						<div class="medium-6 columns">
 							<h6>Rendered HTML</h6>
@@ -115,21 +116,18 @@
 							{% include '/reference/objects/tooltip/tooltip-radius' %}
 						</div>
 					<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<div class="medium-6 columns site-html-ctn">
+							<h6>HTML</h6>					
+							{{ global.reference-get-code-start-tag }}{% include '/reference/objects/tooltip/tooltip-radius' %}{{ global.reference-get-code-end-tag }}
+						</div>
+					<!-- EXAMPLE HTML - ENDS -->
+
 				</section>
 			<!-- EXAMPLE CODE - ENDS -->
 				
 				<h4 class="evo-spacer-margin-top-medium">Round</h4>
-
-			<!-- EXAMPLE CODE - BEGINS -->
-				<section class="row">
-				<!-- EXAMPLE HTML - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>HTML</h6>					
-						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/tooltip/tooltip-round' %}{{ global.reference-get-code-end-tag }}
-				<!-- EXAMPLE HTML - ENDS -->
-
-					</div>
-			<!-- EXAMPLE CODE - ENDS -->
 
 			<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
@@ -138,6 +136,18 @@
 						{% include '/reference/objects/tooltip/tooltip-round' %}
 					</div>
 			<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+			<!-- EXAMPLE CODE - BEGINS -->
+				<section class="row">
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>					
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/tooltip/tooltip-round' %}{{ global.reference-get-code-end-tag }}
+				<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+			<!-- EXAMPLE CODE - ENDS -->
+
 				</section>				
 				<hr />
 		<!-- SHAPES - ENDS -->
@@ -152,19 +162,19 @@
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
 
-				<!-- EXAMPLE HTML - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>HTML</h6>
-						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/tooltip/tooltip-show-by-screen-size' %}{{ global.reference-get-code-end-tag }}
-					</div>
-				<!-- EXAMPLE HTML - ENDS -->
-
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
 						<h6>Rendered HTML</h6>
 						{% include '/reference/objects/tooltip/tooltip-show-by-screen-size' %}
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/tooltip/tooltip-show-by-screen-size' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
 
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
@@ -179,19 +189,19 @@
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
 
-				<!-- EXAMPLE HTML - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>HTML</h6>
-						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/tooltip/tooltip-input' %}{{ global.reference-get-code-end-tag }}
-					</div>
-				<!-- EXAMPLE HTML - ENDS -->
-
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
 						<h6>Rendered HTML</h6>
 						{% include '/reference/objects/tooltip/tooltip-input' %}
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/tooltip/tooltip-input' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
 
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->

@@ -21,6 +21,9 @@
 						<dd data-magellan-arrival="basic"><a href="#basic">Basic</a></dd>
 						<dd data-magellan-arrival="navigation"><a href="#navigation">Navigation</a></dd>
 						<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
 					</dl>
 				</div>
 			</div>
@@ -44,23 +47,24 @@
 
 			<section class="row">
 
-				<!-- EXAMPLE HTML - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>HTML</h6>
-						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/breadcrumbs/breadcrumbs' %}{{ global.reference-get-code-end-tag }}
-					</div>
-				<!-- EXAMPLE HTML - ENDS -->
+			<!-- EXAMPLE RENDERED CODE - BEGINS -->
+				<div class="medium-6 columns">
+					<h6>Rendered HTML</h6>
+					{% include '/reference/objects/breadcrumbs/breadcrumbs' %}
+				</div>
+			<!-- EXAMPLE RENDERED CODE - ENDS -->
 
-				<!-- EXAMPLE RENDERED CODE - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>Rendered HTML</h6>
-						{% include '/reference/objects/breadcrumbs/breadcrumbs' %}
-					</div>
-				<!-- EXAMPLE RENDERED CODE - ENDS -->
+			<!-- EXAMPLE HTML - BEGINS -->
+				<div class="medium-6 columns site-html-ctn">
+					<h6>HTML</h6>
+					{{ global.reference-get-code-start-tag }}{% include '/reference/objects/breadcrumbs/breadcrumbs' %}{{ global.reference-get-code-end-tag }}
+				</div>
+			<!-- EXAMPLE HTML - ENDS -->
 
-				</section>
+			</section>
 		<!-- BASIC BREADCRUMBS - ENDS -->
 
+		<hr>
 		<!-- NAVIGATION BREADCRUMBS - BEGINS -->
 			<h3 data-magellan-destination="navigation">Navigation</h3>
 			<a name="navigation"></a>
@@ -71,13 +75,6 @@
 
 			<section class="row">
 
-				<!-- EXAMPLE HTML - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>HTML</h6>
-						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/breadcrumbs/breadcrumbs-navigation' %}{{ global.reference-get-code-end-tag }}
-					</div>
-				<!-- EXAMPLE HTML - ENDS -->
-
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
 						<h6>Rendered HTML</h6>
@@ -85,9 +82,17 @@
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/breadcrumbs/breadcrumbs-navigation' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
 				</section>
 		<!-- BASIC BREADCRUMBS - ENDS -->
 
+		<hr>
 		<!-- ADVANCED - BEGINS -->
 			<section class="row">
 				<div class="small-12 columns">

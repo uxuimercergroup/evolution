@@ -22,6 +22,9 @@
 					<dd data-magellan-arrival="shapes"><a href="#shapes">Shapes</a></dd>
 					<dd data-magellan-arrival="colors"><a href="#colors">Colors</a></dd>
 					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
 				</dl>
 			</div>
 		</div>
@@ -35,118 +38,109 @@
 		<div class="small-12 columns">
 			<hr />
 
-	<!-- BASIC - BEGINS -->
-		<h3 data-magellan-destination="basic">Basic</h3>
-		<a name="basic"></a>
+		<!-- BASIC - BEGINS -->
+			<h3 data-magellan-destination="basic">Basic</h3>
+			<a name="basic"></a>
 
 			<section class="row">
 
-				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
+			<!-- EXAMPLE RENDERED CODE - BEGINS -->
+				<div class="medium-6 columns">
+					<h6>Rendered HTML</h6>
+					{% include '/reference/objects/labels/labels' %}
+				</div>
+			<!-- EXAMPLE RENDERED CODE - ENDS -->
 
-					<!-- EXAMPLE HTML - BEGINS -->
-						<h6>HTML</h6>
-						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/labels/labels' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
-					</div>
-				<!-- EXAMPLE CODE - ENDS -->
-
-				<!-- EXAMPLE RENDERED CODE - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>Rendered HTML</h6>
-						{% include '/reference/objects/labels/labels' %}
-					</div>
-				<!-- EXAMPLE RENDERED CODE - ENDS -->
+			<!-- EXAMPLE CODE - BEGINS -->
+				<div class="medium-6 columns site-html-ctn">
+					<h6>HTML</h6>
+					{{ global.reference-get-code-start-tag }}{% include '/reference/objects/labels/labels' %}{{ global.reference-get-code-end-tag }}
+				</div>
+			<!-- EXAMPLE CODE - ENDS -->
 
 			</section>
 			<hr />
-	<!-- BASIC - ENDS -->
+		<!-- BASIC - ENDS -->
 
-	<!-- SHAPES - BEGINS -->
-		<h3 data-magellan-destination="shapes">Shapes</h3>
-		<a name="shapes"></a>
-		<p>Adding the classes <code>.radius</code> or <code>.round</code> to a label will apply the border radius only to the outside corners.</p>
+		<!-- SHAPES - BEGINS -->
+			<h3 data-magellan-destination="shapes">Shapes</h3>
+			<a name="shapes"></a>
+			<p>Adding the classes <code>.radius</code> or <code>.round</code> to a label will apply the border radius only to the outside corners.</p>
 			
 			<h4>Radius</h4>
 
 			<section class="row">
 
-				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns">
+			<!-- EXAMPLE RENDERED CODE - BEGINS -->
+				<div class="medium-6 columns">
+					<h6>Rendered HTML</h6>
+					{% include '/reference/objects/labels/labels-radius' %}
+				</div>
+			<!-- EXAMPLE RENDERED CODE - ENDS -->
 
-					<!-- EXAMPLE HTML - BEGINS -->
-						<h6>HTML</h6>
-						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/labels/labels-radius' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
+			<!-- EXAMPLE CODE - BEGINS -->
+				<div class="medium-6 columns site-html-ctn">
+					<h6>HTML</h6>
+					{{ global.reference-get-code-start-tag }}{% include '/reference/objects/labels/labels-radius' %}{{ global.reference-get-code-end-tag }}
+				</div>
+			<!-- EXAMPLE CODE - ENDS -->
 
-					</div>
-				<!-- EXAMPLE CODE - ENDS -->
+			</section>
 
-				<!-- EXAMPLE RENDERED CODE - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>Rendered HTML</h6>
-						{% include '/reference/objects/labels/labels-radius' %}
-					</div>
-
-				</section>
-				<!-- EXAMPLE RENDERED CODE - ENDS -->
-
+			<hr />
 			<h4 class="evo-spacer-margin-top-medium">Round</h4>
+			<!-- EXAMPLE CODE - BEGINS -->
+			<section class="row">	
 
-				<!-- EXAMPLE CODE - BEGINS -->
-					<section class="row">
-					<!-- EXAMPLE HTML - BEGINS -->
-						<div class="medium-6 columns">
-							<h6>HTML</h6>					
-							{{ global.reference-get-code-start-tag }}{% include '/reference/objects/labels/labels-round' %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
+			<!-- EXAMPLE RENDERED CODE - BEGINS -->
+				<div class="medium-6 columns">
+					<h6>Rendered HTML</h6>
+					{% include '/reference/objects/labels/labels-round' %}
+				</div>
+			<!-- EXAMPLE RENDERED CODE - ENDS -->
 
-						</div>
-				<!-- EXAMPLE CODE - ENDS -->
-
-				<!-- EXAMPLE RENDERED CODE - BEGINS -->
-						<div class="medium-6 columns">
-							<h6>Rendered HTML</h6>
-
-							{% include '/reference/objects/labels/labels-round' %}
-						</div>
-				<!-- EXAMPLE RENDERED CODE - ENDS -->
+			<!-- EXAMPLE HTML - BEGINS -->
+				<div class="medium-6 columns site-html-ctn">
+					<h6>HTML</h6>					
+					{{ global.reference-get-code-start-tag }}{% include '/reference/objects/labels/labels-round' %}{{ global.reference-get-code-end-tag }}
+				</div>
+			<!-- EXAMPLE HTML - ENDS -->
 
 			</section>
 			<hr />
-	<!-- SHAPES - ENDS -->
+		<!-- SHAPES - ENDS -->
 
-	<!-- COLORS - BEGINS -->
-		<h3 data-magellan-destination="colors">Colors</h3>
-		<a name="colors"></a>
-		<p>
+		<!-- COLORS - BEGINS -->
+			<h3 data-magellan-destination="colors">Colors</h3>
+			<a name="colors"></a>
+			<p>
 			You can modify the label font color and background color by adding the data attributes <code>data-evo-font-color</code> or <code>data-evo-background-color</code>.
-		</p>
-		<p>
-			Use the <a href="/reference/base/colors">colors reference</a> to get the values you need for the data attributes. The color name corresponds to the value needed for the data attribute. For example if you wanted a background color you would use the <code>amethyst-bright</code> value in the <code>data-evo-background-color</code> attribute: <code>data-evo-background-color="amethyst-bright"</code>.
-		</p>
-		<p>
-			You can also modify the background color of a label by adding these specific use classes: <code>.alert</code>, <code>.warning</code>, <code>.success</code>, or <code>.info</code>.
-		</p>
+			</p>
+			<p>
+				Use the <a href="/reference/base/colors">colors reference</a> to get the values you need for the data attributes. The color name corresponds to the value needed for the data attribute. For example if you wanted a background color you would use the <code>amethyst-bright</code> value in the <code>data-evo-background-color</code> attribute: <code>data-evo-background-color="amethyst-bright"</code>.
+			</p>
+			<p>
+				You can also modify the background color of a label by adding these specific use classes: <code>.alert</code>, <code>.warning</code>, <code>.success</code>, or <code>.info</code>.
+			</p>
 			
 		<!-- EXAMPLE CODE - BEGINS -->
 
 			<section class="row">
 
-				<!-- EXAMPLE HTML - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>HTML</h6>
-						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/labels/labels-colors' %}{{ global.reference-get-code-end-tag }}
-					</div>
-				<!-- EXAMPLE HTML - ENDS -->
-				
-				<!-- EXAMPLE RENDERED CODE - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>Rendered HTML</h6>
-						{% include '/reference/objects/labels/labels-colors' %}
-					</div>
-				<!-- EXAMPLE RENDERED CODE - ENDS -->
+			<!-- EXAMPLE RENDERED CODE - BEGINS -->
+				<div class="medium-6 columns">
+					<h6>Rendered HTML</h6>
+					{% include '/reference/objects/labels/labels-colors' %}
+				</div>
+			<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+			<!-- EXAMPLE HTML - BEGINS -->
+				<div class="medium-6 columns site-html-ctn">
+					<h6>HTML</h6>
+					{{ global.reference-get-code-start-tag }}{% include '/reference/objects/labels/labels-colors' %}{{ global.reference-get-code-end-tag }}
+				</div>
+			<!-- EXAMPLE HTML - ENDS -->
+
 			</section>
 		<!-- EXAMPLE CODE - ENDS -->
 			<hr />
