@@ -22,45 +22,64 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 $evo-family: core;
 
 // Component variables
-$evo-comp-foo-background-color: $white !default;
-	@if $evo-family == comm {
-		$evo-comp-foo-background-color: $emerald-light;
-	} @else if $evo-family == ee {
-		$evo-comp-foo-background-color: $topaz-light;
-	}
+$evo-worksheet-form-border-bottom-width: rem-calc(2) !default;
+$evo-worksheet-form-border-bottom-color: $onyx-bright !default;
+$evo-worksheet-form-border-bottom-hover: $onyx-dark-40 !default;
+$evo-worksheet-form-focus-shadow-color: $onyx-dark-20 !default;
+$evo-worksheet-form-focus-input-color: $onyx-dark-40 !default;
+$evo-worksheet-form-border-bottom-focus-color: $onyx-dark-40 !default;
 
-$evo-comp-foo-color-background-color: $onyx-light !default;
 	@if $evo-family == comm {
-		$evo-comp-foo-color-background-color: $sapphire-light;
+		$evo-worksheet-form-border-bottom-color: $onyx-bright;
+		$evo-worksheet-form-border-bottom-hover: $black;
+		$evo-worksheet-form-focus-shadow-color: $onyx-dark-14;
+		$evo-worksheet-form-focus-input-color: $onyx-dark-14;
+		$evo-worksheet-form-border-bottom-focus-color: $onyx-dark-14;
 	} @else if $evo-family == ee {
-		$evo-comp-foo-color-background-color: $garnet-light;
+		$evo-worksheet-form-border-bottom-color: $sapphire-bright;
+		$evo-worksheet-form-border-bottom-hover: $topaz-bright;
+		$evo-worksheet-form-focus-shadow-color: $topaz-bright;
+		$evo-worksheet-form-focus-input-color: $topaz-bright;
+		$evo-worksheet-form-border-bottom-focus-color: $topaz-bright;
 	}
 
 //
 // @variable overrides
 //
-// $evo-comp-foo-background-color: ;
-// $evo-comp-foo-color-background-color: ;
+
 
 
 // WORKSHEET FORM - BEGINS
-	[data-evo-family="ee"]				{
-
-		&.evo-worksheet-form				{
-		// CURRENCY VALUE - BEGINS
-			.evo-currency-symbol				{
-												font-size: rem-calc(28);
-												position: relative;
-												top: 32px;
+	.evo-worksheet-form				{
+		// INPUT STYLES - BEGINS
+			input[type="text"],
+			input[type="text"][readonly],
+			input[type="password"],
+			input[type="datetime"],
+			input[type="datetime-local"],
+			input[type="date"],
+			input[type="month"],
+			input[type="time"],
+			input[type="week"],
+			input[type="number"],
+			input[type="email"],
+			input[type="url"],
+			input[type="search"],
+			input[type="tel"]					{
+												border-radius: $global-radius!important;
+												-webkit-border-radius:$global-radius !important;
+												border-bottom-width: $evo-worksheet-form-border-bottom-width;
+												border-bottom-color: $evo-worksheet-form-border-bottom-color;
+				&:hover								{border-color: $evo-worksheet-form-border-bottom-hover;}
+				&:focus								{
+													@include box-shadow(0, 0, rem-calc(5), $evo-worksheet-form-focus-shadow-color);
+													border-color: $evo-worksheet-form-focus-input-color;
+													border-bottom-color: $evo-worksheet-form-border-bottom-focus-color;
+													}
 												}
-		// CURRENCY VALUE - BEGINS
+		// INPUT STYLES - ENDS
 
-		// INPUT FIELD - BEGINS
-			input								{margin-top: 0;}
-		// INPUT FIELD - ENDS
 											}
-
-										}
 // WORKSHEET FORM - ENDS
 
 //=== MEDIA QUERIES =========================================================================

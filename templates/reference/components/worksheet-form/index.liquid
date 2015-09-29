@@ -8,12 +8,32 @@
 	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
 		<div class="small-12 columns">
 			<h1>{{ model.title }}</h1>
-			<p>Version: {{ model.version_number }}</p>
-			<p>
-				Below is a simle and basic worksheet form that you can use.
-			</p>
+
+			<section class="row">
+				<div class="small-3 columns">
+					<p>Version: {{ model.version_number }}</p>		
+				</div>
+				<div class="small-9 columns">
+					<p class="right">
+						<span class="label radius evo-label" data-evo-background-color="sapphire-bright">Employee Portal</span>
+					</p>
+				</div>
+			</section>
+
+			<p>Below is a simple worksheet form that you can use.</p>
 		</div>
 	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="worksheetform"><a href="#worksheetform">Worksheet Form</a></dd>
+					<dd class="site-html-ctn-toggle"><a href="javascript:;" class="site-get-code">Get Code</a></dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
 
 	</section>
 <!-- PAGE INTRO - ENDS -->
@@ -24,31 +44,28 @@
 			<hr />
 
 		<!-- EXAMPLE A - BEGINS -->
-			<h3 data-magellan-destination="example-a">Example A</h3>
-			<a name="example-a"></a>
+			<h3 data-magellan-destination="worksheetform">Basic Worksheet Form</h3>
+			<a name="worksheetform"></a>
 			<p>
-				Lorem ipsum sed turpis nibh libero nisi integer arcu mattis <code>quam aliquet</code> aliquet. Viverra aliquam felis lacus mus auctor nisl eu laoreet in.
+				The currency symbol is used in the placeholder attribute of the input and can be changed to easily. Also the currency symbol with go away in the input once you begin to type. The input used is a <code>number</code> style input that will give you a number keyboard by default on a mobile device and will prevent letters to be entered.
 			</p>
-
-			<!-- ANNOTATIONS BOX - BEGINS -->
-				<div class="panel evo-box annotations">
-					<div class="evo-box-bdy">
-						<p class="evo-no-margin-bottom">Note: Lorem ipsum sed turpis nibh libero.</p>
-					</div>
-				</div>
-			<!-- ANNOTATIONS BOX - ENDS -->
 
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
 
-				<!-- EXAMPLE CODE - BEGINS -->
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{{ "reference/components/worksheet-form/worksheet-form.css" | asset_url | stylesheet_tag }}
+						{% include "/reference/components/worksheet-form/worksheet-form" %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
 
 					<!-- EXAMPLE HTML - BEGINS -->
 						<h6>HTML</h6>
-
-						{{ "worksheet-form.css" | asset_url | stylesheet_tag }}
-
 						{{ global.reference-get-code-start-tag }}{% include "/reference/components/worksheet-form/worksheet-form" %}{{ global.reference-get-code-end-tag }}
 					<!-- EXAMPLE HTML - ENDS -->
 
@@ -57,22 +74,8 @@
 						{{ global.reference-get-code-start-tag }}{% include "/reference/components/worksheet-form/worksheet-form-js" %}{{ global.reference-get-code-end-tag }}
 					<!-- EXAMPLE JS - ENDS -->
 
-					<!-- VIEW CODE LINKS - BEGINS -->
-						<ul>
-							<li><a href="worksheet-form.css">View CSS</a></li>
-							<li><a href="worksheet-form.js">View JS</a></li>
-						</ul>
-					<!-- VIEW CODE LINKS - ENDS -->
-
 					</div>
 				<!-- EXAMPLE CODE - ENDS -->
-
-				<!-- EXAMPLE RENDERED CODE - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>Rendered HTML</h6>
-						{% include "/reference/components/worksheet-form/worksheet-form" %}
-					</div>
-				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
