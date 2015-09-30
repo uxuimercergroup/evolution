@@ -74,6 +74,12 @@ $evo-form-input-error-radio-checkbox-label-font-color: $body-font-color !default
 		[class*="evo-icon"]								{
 														top: rem-calc(2);
 														}
+		> * 											{
+														pointer-events: none;
+														// Fixes problem with fastclick.js not selecting input for elements within a label element
+														// https://github.com/ftlabs/fastclick/issues/60
+														}
+		a												{pointer-events: all;}
 													}
 
 	// FORM PRE/POSTFIX LABELS/ACTIONS

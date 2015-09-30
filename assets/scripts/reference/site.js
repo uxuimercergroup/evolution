@@ -270,7 +270,7 @@ $(function() {
 
 // ITEM SELECTION PANEL ITEM SELECTED TOGGLE - BEGINS
 	var evoItemSelectionPanelItemSelected = function (){
-		jQuery('[data-evo-item-selection-panel-item]').click(function(event) {
+		jQuery('[data-evo-item-selection-panel-item]').change(function() {
 			jQuery(this).toggleClass('evo-item-selection-panel-item-selected');
 		});
 	}
