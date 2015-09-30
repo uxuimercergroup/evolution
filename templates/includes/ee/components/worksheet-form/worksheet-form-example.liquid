@@ -64,60 +64,20 @@
 					<!-- TAB 4 (get code section) - BEGINS -->
 						<section role="tabpanel" aria-hidden="true" class="content" id="{{ model.component-name-id-03 }}-4">
 							<div class="row">
-								<div class="large-4 large-push-8 columns">
+								<div class="large-3 large-push-9 columns">
 
 								<!-- DOWNLOAD - BEGINS -->
-									<h6>Download Code</h6>
+									<h6>Get Code</h6>
 									<p>
-										<a href="{{ model.component-download-url-03 }}" class="button radius evo-button evo-site-button evo-no-margin-bottom" data-evo-button-icons="left" id="" role="button" title="Download" aria-label="">
+										<a href="{{ model.family-boilerplate-download-url }}" class="button radius evo-button evo-site-button evo-no-margin-bottom" data-evo-button-icons="left" id="" role="button" title="Download Boilerplate" aria-label="">
 											<i class="evo-icon-download4 evo-icon-position-left" title=""></i>
-											<span class="evo-button-text">{{ model.component-name-03 }} v{{ model.component-version-03 }}</span>
+											<span class="evo-button-text">Download Boilerplate</span>
 										</a>
 									</p>
-									<hr />
 								<!-- DOWNLOAD - ENDS -->
-
-								<!-- DEPENDENCY LIST - BEGINS -->
-									{% if model.component-reference-dependency-01 == "true" %}
-										<h6>Dependencies</h6>
-										<ul>
-											{% if model.component-reference-dependency-evolution-01 == "true" %}
-												<li>
-													<a href="/reference/index">Evolution Core {{ global.version_number }}</a>
-													<ul>
-														<li>
-															<a href="/reference/base/icons">Photo Icons</a>
-														</li>
-													</ul>
-												</li>
-											{% endif %}
-
-											{% if model.component-reference-dependency-foundation-01 == "true" %}
-												<li>
-													<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
-													<ul>
-														<li>
-															<a href="http://foundation.zurb.com/docs/components/block_grid.html" target="_blank">Block Grid</a>
-														</li>
-													</ul>
-												</li>
-											{% endif %}
-
-											{% if model.component-reference-dependency-jquery-01 == "true" %}
-												<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
-											{% endif %}
-
-											{% if model.component-reference-dependency-jquery-ui-01 == "true" %}
-												<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
-											{% endif %}
-
-											{{ model.component-reference-dependency-list-01 }}
-										</ul>
-									{% endif %}
-								<!-- DEPENDENCY LIST - ENDS -->
 									
 								</div>
-								<div class="large-8 large-pull-4 columns">
+								<div class="large-9 large-pull-3 columns">
 									
 								<!-- EXAMPLE HTML - BEGINS -->
 									<h6>HTML</h6>
@@ -147,7 +107,7 @@
 				<div class="small-12 columns">
 
 				<!-- COMPONENT CODE - BEGINS -->
-					{{ "worksheet-form.css" | asset_url | stylesheet_tag }}
+					{{ "/ee/components/worksheet-form/worksheet-form.css" | asset_url | stylesheet_tag }}
 					{% include "/ee/components/worksheet-form/worksheet-form" %}
 				<!-- COMPONENT CODE - ENDS -->
 

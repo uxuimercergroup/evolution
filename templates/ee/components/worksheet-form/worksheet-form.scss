@@ -1,7 +1,7 @@
 /*-------------------------------------------------------------------------------------------
-Mercer Evolution - v3.0.1 - Employee Portal Family
+Mercer Evolution - Core v3.0.1
 Worksheet Form Component v1.0 - SASS
-DATE - September 24, 2015
+DATE - September 30, 2015
 AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 --------------------------------------------------------------------------------------------*/
 
@@ -18,14 +18,88 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 // @variables - IMPORTANT: DO NOT MODIFY! MODIFY VARIABLE OVERRIDES ONLY.
 //
 
+// Component default variables
+$evo-worksheet-form-border-bottom-width: rem-calc(2) !default;
+$evo-worksheet-form-border-bottom-color: $onyx-bright !default;
+$evo-worksheet-form-border-bottom-hover: $onyx-dark-40 !default;
+$evo-worksheet-form-focus-shadow-horizontal: 0 !default;
+$evo-worksheet-form-focus-shadow-vertical: 0 !default;
+$evo-worksheet-form-focus-shadow-blur: $evo-base-shadow-blur !default;
+$evo-worksheet-form-focus-shadow-color: $evo-base-shadow-color !default;
+$evo-worksheet-form-focus-input-color: $onyx-dark-40 !default;
+$evo-worksheet-form-border-bottom-focus-color: $onyx-dark-40 !default;
+
+//
+// @family component theme variables - IMPORTANT: DO NOT MODIFY!
+//
+
+// Family setting
+$evo-family: ee;
+
+// Communications
+@if $evo-family == comm {
+
+	$evo-worksheet-form-border-bottom-color: $onyx-bright;
+	$evo-worksheet-form-border-bottom-hover: $black;
+	$evo-worksheet-form-focus-shadow-color: $evo-base-shadow-color;
+	$evo-worksheet-form-focus-input-color: $onyx-dark-14;
+	$evo-worksheet-form-border-bottom-focus-color: $onyx-dark-14;
+
+// Employee Portal
+} @else if $evo-family == ee {
+
+	$evo-worksheet-form-border-bottom-color: $sapphire-bright;
+	$evo-worksheet-form-border-bottom-hover: $topaz-bright;
+	$evo-worksheet-form-focus-shadow-color: $topaz-bright;
+	$evo-worksheet-form-focus-input-color: $topaz-bright;
+	$evo-worksheet-form-border-bottom-focus-color: $topaz-bright;
+
+}
 
 //
 // @variable overrides
 //
+// $evo-worksheet-form-border-bottom-width: rem-calc(2);
+// $evo-worksheet-form-border-bottom-color: $onyx-bright;
+// $evo-worksheet-form-border-bottom-hover: $onyx-dark-40;
+// $evo-worksheet-form-focus-shadow-color: $onyx-dark-20;
+// $evo-worksheet-form-focus-input-color: $onyx-dark-40;
+// $evo-worksheet-form-border-bottom-focus-color: $onyx-dark-40;
 
 
+// WORKSHEET FORM - BEGINS
+	.evo-worksheet-form				{
 
+		// INPUT STYLES - BEGINS
+			input[type="text"],
+			input[type="text"][readonly],
+			input[type="password"],
+			input[type="datetime"],
+			input[type="datetime-local"],
+			input[type="date"],
+			input[type="month"],
+			input[type="time"],
+			input[type="week"],
+			input[type="number"],
+			input[type="email"],
+			input[type="url"],
+			input[type="search"],
+			input[type="tel"]					{
+												border-radius: $global-radius!important;
+												-webkit-border-radius:$global-radius !important;
+												border-bottom-width: $evo-worksheet-form-border-bottom-width;
+												border-bottom-color: $evo-worksheet-form-border-bottom-color;
+				&:hover								{border-color: $evo-worksheet-form-border-bottom-hover;}
+				&:focus								{
+													@include box-shadow($evo-worksheet-form-focus-shadow-horizontal, $evo-worksheet-form-focus-shadow-vertical, $evo-worksheet-form-focus-shadow-blur, $evo-worksheet-form-focus-shadow-color);
+													border-color: $evo-worksheet-form-focus-input-color;
+													border-bottom-color: $evo-worksheet-form-border-bottom-focus-color;
+													}
+												}
+		// INPUT STYLES - ENDS
 
+											}
+// WORKSHEET FORM - ENDS
 
 //=== MEDIA QUERIES =========================================================================
 
