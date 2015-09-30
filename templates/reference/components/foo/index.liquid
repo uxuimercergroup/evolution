@@ -14,7 +14,10 @@
 					<p>Version: {{ model.version_number }}</p>		
 				</div>
 				<div class="small-9 columns">
-					<p class="right"><span class="label radius evo-label" data-evo-background-color="sapphire-bright">Employee Portal</span> <span class="label radius evo-label" data-evo-background-color="amethyst-bright">Communication Site</span></p>		
+					<p class="right">
+						<span class="label radius evo-label" data-evo-background-color="sapphire-bright">Employee Portal</span>
+						<span class="label radius evo-label" data-evo-background-color="amethyst-bright">Communication Site</span>
+					</p>
 				</div>
 			</section>
 
@@ -31,6 +34,9 @@
 					<dd data-magellan-arrival="example-a"><a href="#example-a">Example A</a></dd>
 					<dd data-magellan-arrival="example-b"><a href="#example-b">Example B</a></dd>
 					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
 				</dl>
 			</div>
 		</div>
@@ -62,8 +68,16 @@
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
 
-				<!-- EXAMPLE CODE - BEGINS -->
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{{ "/reference/components/foo/foo.css" | asset_url | stylesheet_tag }}
+						{% include "/reference/components/foo/foo" %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
 
 					<!-- EXAMPLE HTML - BEGINS -->
 						<h6>HTML</h6>
@@ -77,14 +91,6 @@
 
 					</div>
 				<!-- EXAMPLE CODE - ENDS -->
-
-				<!-- EXAMPLE RENDERED CODE - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>Rendered HTML</h6>
-						{{ "/reference/components/foo/foo.css" | asset_url | stylesheet_tag }}
-						{% include "/reference/components/foo/foo" %}
-					</div>
-				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
@@ -110,8 +116,15 @@
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
 
-				<!-- EXAMPLE CODE - BEGINS -->
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
 					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include "/reference/components/foo/foo" %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
 
 					<!-- EXAMPLE HTML - BEGINS -->
 						<h6>HTML</h6>
@@ -135,13 +148,6 @@
 
 					</div>
 				<!-- EXAMPLE CODE - ENDS -->
-
-				<!-- EXAMPLE RENDERED CODE - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>Rendered HTML</h6>
-						{% include "/reference/components/foo/foo" %}
-					</div>
-				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
