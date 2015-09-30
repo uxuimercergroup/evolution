@@ -1,6 +1,7 @@
 // FUNCTIONS
 //--------------------------------------------------------------------------------------------------------
 
+// SITE GET CODE TOGGLE
 var siteCodeToggle = function(){
 	jQuery('.site-get-code').click(function() {
 		jQuery('div.site-html-ctn').toggle();

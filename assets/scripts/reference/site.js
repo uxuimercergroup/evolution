@@ -47,6 +47,7 @@ h={};g()}};typeof define==="function"&&define.amd&&define("google-code-prettify"
 // FUNCTIONS
 //--------------------------------------------------------------------------------------------------------
 
+// SITE GET CODE TOGGLE
 var siteCodeToggle = function(){
 	jQuery('.site-get-code').click(function() {
 		jQuery('div.site-html-ctn').toggle();
