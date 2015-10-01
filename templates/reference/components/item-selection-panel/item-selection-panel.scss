@@ -20,31 +20,33 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 // Component default variables
 $evo-item-selection-panel-text-align: center !default;
-$evo-item-selection-panel-hdr-border-top-width: 1px !default;
-$evo-item-selection-panel-hdr-border-top-style: solid !default;
-$evo-item-selection-panel-hdr-border-top-color: $onyx-dark-30 !default;
-$evo-item-selection-panel-hdr-color: $onyx-dark-70 !default;
-$evo-item-selection-panel-hdr-margin: rem-calc(18 0) !default;
-$evo-item-selection-panel-hdr-padding-top: rem-calc(15) !default;
-$evo-item-selection-panel-hdr-font-size: rem-calc(12) !default;
-$evo-item-selection-panel-hdr-text-align: center !default;
 $evo-item-selection-panel-list-item-padding: rem-calc(15) !default;
-$evo-item-selection-panel-item-font-color: $onyx-medium !default;
-$evo-item-selection-panel-item-img-border-radius: 100% !default;
-$evo-item-selection-panel-item-img-border-width: rem-calc(3) !default;
-$evo-item-selection-panel-item-img-border-style: solid !default;
-$evo-item-selection-panel-item-img-border-color: $onyx-dark-10 !default;
-$evo-item-selection-panel-item-img-padding: rem-calc(3) !default;
-$evo-item-selection-panel-item-img-width: rem-calc(70) !default;
-$evo-item-selection-panel-item-img-height: rem-calc(70) !default;
-$evo-item-selection-panel-item-label-margin: rem-calc(5) auto 0 auto !default;
-$evo-item-selection-panel-item-label-font-family: $evo-font-regular-stack !default;
-$evo-item-selection-panel-item-label-font-size: rem-calc(14) !default;
-$evo-item-selection-panel-item-selected-shadow-horizontal: 0 !default;
-$evo-item-selection-panel-item-selected-shadow-vertical: 2px !default;
-$evo-item-selection-panel-item-selected-shadow-blur: 6px !default;
-$evo-item-selection-panel-item-selected-shadow-color: $evo-base-shadow-color !default;
-$evo-item-selection-panel-item-selected-border-color: $onyx-medium !default;
+$evo-item-selection-panel-item-icon-border-radius: 100% !default;
+$evo-item-selection-panel-item-icon-border-width: rem-calc(2) !default;
+$evo-item-selection-panel-item-icon-border-style: solid !default;
+$evo-item-selection-panel-item-icon-border-color: $onyx-light !default;
+$evo-item-selection-panel-item-icon-font-color: $onyx-medium !default;
+$evo-item-selection-panel-item-icon-padding: rem-calc(22) !default;
+$evo-item-selection-panel-item-icon-small-padding: rem-calc(10) !default;
+$evo-item-selection-panel-item-icon-medium-padding: rem-calc(16) !default;
+$evo-item-selection-panel-item-icon-x-large-padding: rem-calc(28) !default;
+$evo-item-selection-panel-item-label-margin: rem-calc(7) auto 0 auto !default;
+$evo-item-selection-panel-item-label-font-family: $evo-font-medium-stack !default;
+$evo-item-selection-panel-item-label-font-size: rem-calc(16) !default;
+$evo-item-selection-panel-item-label-font-color: $onyx-bright !default;
+$evo-item-selection-panel-item-label-line-height: 1.25 !default;
+$evo-item-selection-panel-item-selected-icon-shadow-horizontal: 0 !default;
+$evo-item-selection-panel-item-selected-icon-shadow-vertical: rem-calc(2) !default;
+$evo-item-selection-panel-item-selected-icon-shadow-blur: rem-calc(6) !default;
+$evo-item-selection-panel-item-selected-icon-shadow-color: $evo-base-shadow-color !default;
+$evo-item-selection-panel-item-selected-icon-border-color: $onyx-medium !default;
+$evo-item-selection-panel-item-selected-icon-font-color: $white !default;
+$evo-item-selection-panel-item-selected-icon-background-color: $onyx-medium !default;
+$evo-item-selection-panel-item-selected-label-font-color: $onyx-medium !default;
+$evo-item-selection-panel-photo-item-icon-padding: rem-calc(6) !default;
+$evo-item-selection-panel-photo-item-icon-width: rem-calc(80) !default;
+$evo-item-selection-panel-photo-item-icon-height: rem-calc(80) !default;
+$evo-item-selection-panel-photo-item-label-margin: rem-calc(5) auto 0 auto !default;
 
 //
 // @family component theme variables - IMPORTANT: DO NOT MODIFY!
@@ -56,20 +58,24 @@ $evo-family: core;
 // Communications
 @if $evo-family == comm {
 
-	$evo-item-selection-panel-hdr-border-top-color: $onyx-dark-30;
-	$evo-item-selection-panel-hdr-color: $onyx-dark-70;
-	$evo-item-selection-panel-item-font-color: $onyx-medium;
-	$evo-item-selection-panel-item-img-border-color: $onyx-dark-10;
-	$evo-item-selection-panel-item-selected-border-color: $onyx-medium;
+	$evo-item-selection-panel-item-icon-border-color: $onyx-light;
+	$evo-item-selection-panel-item-icon-font-color: $onyx-medium;
+	$evo-item-selection-panel-item-label-font-color: $onyx-bright;
+	$evo-item-selection-panel-item-selected-icon-border-color: $onyx-medium;
+	$evo-item-selection-panel-item-selected-icon-font-color: $white;
+	$evo-item-selection-panel-item-selected-icon-background-color: $onyx-medium;
+	$evo-item-selection-panel-item-selected-label-font-color: $onyx-medium;
 
 // Employee Portal
 } @else if $evo-family == ee {
 
-	$evo-item-selection-panel-hdr-border-top-color: $onyx-dark-30;
-	$evo-item-selection-panel-hdr-color: $onyx-dark-70;
-	$evo-item-selection-panel-item-font-color: $onyx-medium;
-	$evo-item-selection-panel-item-img-border-color: $onyx-dark-10;
-	$evo-item-selection-panel-item-selected-border-color: $topaz-medium;
+	$evo-item-selection-panel-item-icon-border-color: $onyx-light;
+	$evo-item-selection-panel-item-icon-font-color: $sapphire-bright;
+	$evo-item-selection-panel-item-label-font-color: $onyx-bright;
+	$evo-item-selection-panel-item-selected-icon-border-color: $sapphire-bright;
+	$evo-item-selection-panel-item-selected-icon-font-color: $white;
+	$evo-item-selection-panel-item-selected-icon-background-color: $sapphire-bright;
+	$evo-item-selection-panel-item-selected-label-font-color: $sapphire-bright;
 
 }
 
@@ -77,47 +83,38 @@ $evo-family: core;
 // @variable overrides
 //
 // $evo-item-selection-panel-text-align: center;
-// $evo-item-selection-panel-hdr-border-top-width: 1px;
-// $evo-item-selection-panel-hdr-border-top-style: solid;
-// $evo-item-selection-panel-hdr-border-top-color: $onyx-dark-30;
-// $evo-item-selection-panel-hdr-color: $onyx-dark-70;
-// $evo-item-selection-panel-hdr-margin: rem-calc(18 0);
-// $evo-item-selection-panel-hdr-padding-top: rem-calc(15);
-// $evo-item-selection-panel-hdr-font-size: rem-calc(12);
-// $evo-item-selection-panel-hdr-text-align: center;
 // $evo-item-selection-panel-list-item-padding: rem-calc(15);
-// $evo-item-selection-panel-item-font-color: $onyx-medium;
-// $evo-item-selection-panel-item-img-border-radius: 100%;
-// $evo-item-selection-panel-item-img-border-width: rem-calc(3);
-// $evo-item-selection-panel-item-img-border-style: solid;
-// $evo-item-selection-panel-item-img-border-color: $onyx-dark-10;
-// $evo-item-selection-panel-item-img-padding: rem-calc(3);
-// $evo-item-selection-panel-item-img-width: rem-calc(70);
-// $evo-item-selection-panel-item-img-height: rem-calc(70);
-// $evo-item-selection-panel-item-label-margin: rem-calc(5) auto 0 auto;
-// $evo-item-selection-panel-item-label-font-family: $evo-font-regular-stack;
-// $evo-item-selection-panel-item-label-font-size: rem-calc(14);
-// $evo-item-selection-panel-item-selected-shadow-horizontal: 0;
-// $evo-item-selection-panel-item-selected-shadow-vertical: 2px;
-// $evo-item-selection-panel-item-selected-shadow-blur: 6px;
-// $evo-item-selection-panel-item-selected-shadow-color: $evo-base-shadow-color;
-// $evo-item-selection-panel-item-selected-border-color: $onyx-medium;
+// $evo-item-selection-panel-item-icon-border-radius: 100%;
+// $evo-item-selection-panel-item-icon-border-width: rem-calc(2);
+// $evo-item-selection-panel-item-icon-border-style: solid;
+// $evo-item-selection-panel-item-icon-border-color: $onyx-light;
+// $evo-item-selection-panel-item-icon-font-color: $onyx-medium;
+// $evo-item-selection-panel-item-icon-padding: rem-calc(22);
+// $evo-item-selection-panel-item-icon-small-padding: rem-calc(10);
+// $evo-item-selection-panel-item-icon-medium-padding: rem-calc(16);
+// $evo-item-selection-panel-item-icon-x-large-padding: rem-calc(28);
+// $evo-item-selection-panel-item-label-margin: rem-calc(7) auto 0 auto;
+// $evo-item-selection-panel-item-label-font-family: $evo-font-medium-stack;
+// $evo-item-selection-panel-item-label-font-size: rem-calc(16);
+// $evo-item-selection-panel-item-label-font-color: $onyx-bright;
+// $evo-item-selection-panel-item-label-line-height: 1.25;
+// $evo-item-selection-panel-item-selected-icon-shadow-horizontal: 0;
+// $evo-item-selection-panel-item-selected-icon-shadow-vertical: rem-calc(2);
+// $evo-item-selection-panel-item-selected-icon-shadow-blur: rem-calc(6);
+// $evo-item-selection-panel-item-selected-icon-shadow-color: $evo-base-shadow-color;
+// $evo-item-selection-panel-item-selected-icon-border-color: $onyx-medium;
+// $evo-item-selection-panel-item-selected-icon-font-color: $white;
+// $evo-item-selection-panel-item-selected-icon-background-color: $onyx-medium;
+// $evo-item-selection-panel-item-selected-label-font-color: $onyx-medium;
+// $evo-item-selection-panel-photo-item-icon-padding: rem-calc(6);
+// $evo-item-selection-panel-photo-item-icon-width: rem-calc(80);
+// $evo-item-selection-panel-photo-item-icon-height: rem-calc(80);
+// $evo-item-selection-panel-photo-item-label-margin: rem-calc(5) auto 0 auto;
 
 
 // ITEM SELECTION PANEL - BEGINS
 	.evo-item-selection-panel			{
 										text-align: $evo-item-selection-panel-text-align;
-
-	// ITEM SELECTION PANEL HEADER - BEGINS
-		.evo-item-selection-panel-hdr		{
-											border-top: $evo-item-selection-panel-hdr-border-top-width $evo-item-selection-panel-hdr-border-top-style $evo-item-selection-panel-hdr-border-top-color;
-											color: $evo-item-selection-panel-hdr-color;
-											margin: $evo-item-selection-panel-hdr-margin;
-											padding-top: $evo-item-selection-panel-hdr-padding-top;
-											font-size: $evo-item-selection-panel-hdr-font-size;
-											text-align: $evo-item-selection-panel-hdr-text-align;
-											}
-	// ITEM SELECTION PANEL HEADER - ENDS
 
 	// ITEM SELECTION PANEL LIST - BEGINS
 		ul									{
@@ -129,23 +126,27 @@ $evo-family: core;
 
 	// ITEM SELECTION PANEL ITEM - BEGINS
 		.evo-item-selection-panel-item		{
-											color: $evo-item-selection-panel-item-font-color;
-											font-family: $evo-item-selection-panel-item-label-font-family;
+											@include user-select(none);
 											cursor: pointer;
-			.evo-item-selection-panel-item-img	{
-												@include border-radius($evo-item-selection-panel-item-img-border-radius);
-												border: $evo-item-selection-panel-item-img-border-width $evo-item-selection-panel-item-img-border-style $evo-item-selection-panel-item-img-border-color;
-												padding: $evo-item-selection-panel-item-img-padding;
-												width: $evo-item-selection-panel-item-img-width;
-												height: $evo-item-selection-panel-item-img-height;
+			.evo-item-selection-panel-item-icon	{
+												@include border-radius($evo-item-selection-panel-item-icon-border-radius);
+												border: $evo-item-selection-panel-item-icon-border-width $evo-item-selection-panel-item-icon-border-style $evo-item-selection-panel-item-icon-border-color;
+												color: $evo-item-selection-panel-item-icon-font-color;
+												padding: $evo-item-selection-panel-item-icon-padding;
+												width: auto;
+				&.evo-icon-size-small				{padding: $evo-item-selection-panel-item-icon-small-padding;}
+				&.evo-icon-size-medium				{padding: $evo-item-selection-panel-item-icon-medium-padding;}
+				&.evo-icon-size-large				{padding: $evo-item-selection-panel-item-icon-padding;}
+				&.evo-icon-size-x-large				{padding: $evo-item-selection-panel-item-icon-x-large-padding;}
 												}
 			.evo-item-selection-panel-item-label
 												{
-												display: block;
 												margin: $evo-item-selection-panel-item-label-margin;
 												font-family: $evo-item-selection-panel-item-label-font-family;
 												font-size: $evo-item-selection-panel-item-label-font-size;
-												line-height: 1.25;
+												color: $evo-item-selection-panel-item-label-font-color;
+												line-height: $evo-item-selection-panel-item-label-line-height;
+												display: block;
 												}
 			.evo-item-selection-panel-item-checkbox
 												{
@@ -160,12 +161,50 @@ $evo-family: core;
 	// ITEM SELECTION PANEL ITEM SELECTED - BEGINS
 		.evo-item-selection-panel-item-selected
 											{
-			.evo-item-selection-panel-item-img	{
-												@include box-shadow($evo-item-selection-panel-item-selected-shadow-horizontal, $evo-item-selection-panel-item-selected-shadow-vertical, $evo-item-selection-panel-item-selected-shadow-blur, $evo-item-selection-panel-item-selected-shadow-color);
-												border-color: $evo-item-selection-panel-item-selected-border-color;
+			.evo-item-selection-panel-item-icon	{
+												@include box-shadow($evo-item-selection-panel-item-selected-icon-shadow-horizontal, $evo-item-selection-panel-item-selected-icon-shadow-vertical, $evo-item-selection-panel-item-selected-icon-shadow-blur, $evo-item-selection-panel-item-selected-icon-shadow-color);
+												border-width: 0;
+												color: $evo-item-selection-panel-item-selected-icon-font-color;
+												padding: ($evo-item-selection-panel-item-icon-padding + $evo-item-selection-panel-item-icon-border-width);
+												background-color: $evo-item-selection-panel-item-selected-icon-background-color;
+				&.evo-icon-size-small				{padding: ($evo-item-selection-panel-item-icon-small-padding + $evo-item-selection-panel-item-icon-border-width);}
+				&.evo-icon-size-medium				{padding: ($evo-item-selection-panel-item-icon-medium-padding + $evo-item-selection-panel-item-icon-border-width);}
+				&.evo-icon-size-large				{padding: ($evo-item-selection-panel-item-icon-padding + $evo-item-selection-panel-item-icon-border-width);}
+				&.evo-icon-size-x-large				{padding: ($evo-item-selection-panel-item-icon-x-large-padding + $evo-item-selection-panel-item-icon-border-width);}
+												}
+			.evo-item-selection-panel-item-label
+												{
+												color: $evo-item-selection-panel-item-selected-label-font-color;
 												}
 											}
 	// ITEM SELECTION PANEL ITEM SELECTED - ENDS
+
+	// ITEM SELECTION PANEL ITEM SELECTED - PHOTO ICONS - BEGINS
+		&[data-evo-item-selection-panel-type="photo"]
+											{
+			.evo-item-selection-panel-item		{
+				.evo-item-selection-panel-item-icon	{
+													@include box-sizing(content-box);
+													padding: $evo-item-selection-panel-photo-item-icon-padding;
+													width: $evo-item-selection-panel-photo-item-icon-width;
+													height: $evo-item-selection-panel-photo-item-icon-height;
+													}
+				.evo-item-selection-panel-item-label
+													{
+													margin: $evo-item-selection-panel-photo-item-label-margin;
+													}
+												}
+
+			.evo-item-selection-panel-item-selected
+												{
+				.evo-item-selection-panel-item-icon	{
+													border-width: $evo-item-selection-panel-item-icon-border-width;
+													border-color: $evo-item-selection-panel-item-selected-icon-border-color;
+													background: none;
+													}
+												}	
+											}
+	// ITEM SELECTION PANEL ITEM SELECTED - PHOTO ICONS - ENDS
 
 										}
 // ITEM SELECTION PANEL - ENDS

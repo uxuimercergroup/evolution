@@ -108,7 +108,16 @@
 
 				<!-- COMPONENT CODE - BEGINS -->
 					{{ "/ee/components/item-selection-panel/item-selection-panel.css" | asset_url | stylesheet_tag }}
-					{% include "/ee/components/item-selection-panel/item-selection-panel" %}
+
+					<div class="evo-spacer-margin-bottom-xx-large">
+						<h6 class="evo-hdr-rule evo-spacer-margin-bottom-xx-large">Vector Icons</h6>
+						{% include "/ee/components/item-selection-panel/item-selection-panel" %}
+					</div>
+
+					<div>
+						<h6 class="evo-hdr-rule evo-spacer-margin-bottom-xx-large">Photo Image Icons</h6>
+						{% include "/ee/components/item-selection-panel/item-selection-panel-photo-icons" %}
+					</div>
 				<!-- COMPONENT CODE - ENDS -->
 
 				</div>

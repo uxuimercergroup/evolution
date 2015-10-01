@@ -27,6 +27,7 @@
 		<div class="small-12 columns">
 			<div class="evo-magellan" data-magellan-expedition="fixed">
 				<dl class="sub-nav">
+					<dd data-magellan-arrival="basic"><a href="#basic">Basic</a></dd>
 					<dd data-magellan-arrival="options"><a href="#options">Options</a></dd>
 					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
 					<dd class="site-html-ctn-toggle">
@@ -45,6 +46,8 @@
 			<hr />
 
 		<!-- SHOWCASE PANEL EXAMPLE - BEGINS -->
+			<h3 data-magellan-destination="basic">Basic</h3>
+			<a name="basic"></a>
 
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
@@ -76,38 +79,40 @@
 		<!-- SHOWCASE PANEL EXAMPLE - ENDS -->
 
 		<!-- OPTIONS - BEGINS -->
-			<section class="row">
-				<div class="small-12 columns">
+			<h3 data-magellan-destination="options">Options</h3>
+			<a name="options"></a>
+			
+			<!-- OPTIONS CONTENT - BEGINS -->
+				<section class="row">
+					<div class="small-12 columns">
 
-					<h3 data-magellan-destination="options">Options</h3>
-					<a name="options"></a>
+						<h5>Color Reverse</h5>
 
-					<h5>Color Reverse</h5>
+						<p>To create a showcase panel with a reverse text color on a dark background use this data attribute on the overall component container: <code>data-evo-showcase-panel-color-reverse</code>.</p>
 
-					<p>To create a showcase panel with a reverse text color on a dark background use this data attribute on the overall component container: <code>data-evo-showcase-panel-color-reverse</code>.</p>
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}<div class="evo-showcase-panel" data-evo-showcase-panel-color-reverse data-evo-background-color="garnet-medium">{{ global.reference-get-code-end-tag }}
 
-					<h6>HTML</h6>
-					{{ global.reference-get-code-start-tag }}<div class="evo-showcase-panel" data-evo-showcase-panel-color-reverse data-evo-background-color="garnet-medium">{{ global.reference-get-code-end-tag }}
+						<h5>Fixed</h5>
 
-					<h5>Fixed</h5>
+						<p>To fix the showcase panel to the top of a page but under a header such as a top bar use the following data attribute on the overall component container: <code>data-evo-showcase-panel-fixed</code>.</p>
 
-					<p>To fix the showcase panel to the top of a page but under a header such as a top bar use the following data attribute on the overall component container: <code>data-evo-showcase-panel-fixed</code>.</p>
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}<div class="evo-showcase-panel" data-evo-showcase-panel-fixed>{{ global.reference-get-code-end-tag }}
 
-					<h6>HTML</h6>
-					{{ global.reference-get-code-start-tag }}<div class="evo-showcase-panel" data-evo-showcase-panel-fixed>{{ global.reference-get-code-end-tag }}
-
-					<!-- ANNOTATIONS BOX - BEGINS -->
-						<div class="panel evo-box annotations">
-							<div class="evo-box-bdy">
-								<p class="evo-no-margin-bottom"><strong>IMPORTANT:</strong> You may need to adjust the top positioning of the fixed showcase panel depending on the height of your site header. Along with this, you might also need to adjust the margin under your site header to push page content down so its not overlapped by the fixed showcase panel. Lastly, if using fixed showcase panel with a off-canvas solution, the off-canvas needs to be positioned fixed with a correct z-index value and width of 100%. The fixed showcase panel then need to be adjusted down below the off-canvas tab bar. All of this can be seen in the live demo.</p>
+						<!-- ANNOTATIONS BOX - BEGINS -->
+							<div class="panel evo-box annotations">
+								<div class="evo-box-bdy">
+									<p class="evo-no-margin-bottom"><strong>IMPORTANT:</strong> You may need to adjust the top positioning of the fixed showcase panel depending on the height of your site header. Along with this, you might also need to adjust the margin under your site header to push page content down so its not overlapped by the fixed showcase panel. Lastly, if using fixed showcase panel with a off-canvas solution, the off-canvas needs to be positioned fixed with a correct z-index value and width of 100%. The fixed showcase panel then need to be adjusted down below the off-canvas tab bar. All of this can be seen in the live demo.</p>
+								</div>
 							</div>
-						</div>
-					<!-- ANNOTATIONS BOX - ENDS -->
+						<!-- ANNOTATIONS BOX - ENDS -->
 
-					<a href="/ee/components/showcase-panel/demo" target="_blank" class="button radius evo-button evo-site-button" id="" role="button" title="Live Demo" aria-label="">Live Demo</a>
+						<a href="/ee/components/showcase-panel/demo" target="_blank" class="button radius evo-button evo-site-button" id="" role="button" title="Live Demo" aria-label="">Live Demo</a>
 
-				</div>
-			</section>
+					</div>
+				</section>
+			<!-- OPTIONS CONTENT - END -->
 
 			<hr />
 		<!-- OPTIONS - ENDS -->
