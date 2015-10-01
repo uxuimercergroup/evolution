@@ -22,7 +22,7 @@ $evo-pricing-table-base-font: rem-calc(17) !default;
 $evo-pricing-table-padding: rem-calc(10) !default;
 $evo-pricing-table-margin-bottom: rem-calc(2) !default;
 $evo-pricing-table-amt-text-align: right !default;
-$evo-pricing-table-amt-text-transform: uppercase !default;
+$evo-pricing-table-amt-text-transform: none !default;
 $evo-pricing-table-label-font-size: rem-calc(12) !default;
 $evo-pricing-table-label-position: relative !default;
 $evo-pricing-table-item-label-font-color: $onyx-dark-40 !default;
@@ -90,12 +90,12 @@ $evo-family: core;
 									margin-bottom: $evo-pricing-table-margin-bottom;
 			li							{padding-bottom: 0;}
 			.evo-item-amt,
-			.break-down-amt,
-			.total-amt					{text-align: $evo-pricing-table-amt-text-align;}
+			.evo-break-down-amt,
+			.evo-total-amt				{text-align: $evo-pricing-table-amt-text-align;}
 
 			.evo-item-label,
-			.break-down-label,
-			.total-label				{text-transform: $evo-pricing-table-amt-text-transform;}
+			.evo-break-down-label,
+			.evo-total-label			{text-transform: $evo-pricing-table-amt-text-transform;}
 
 			.evo-item-label,
 			.evo-time-value-label		{
@@ -139,8 +139,8 @@ $evo-family: core;
 		.evo-pricing-table-total-row
 									{
 									background-color: $evo-pricing-table-total-row-bg-color;
-			.total-label				{color: $evo-pricing-table-total-row-font-color;}
-			.total-amt					{color: $evo-pricing-table-total-row-font-color;}
+			.evo-total-label			{color: $evo-pricing-table-total-row-font-color;}
+			.evo-total-amt				{color: $evo-pricing-table-total-row-font-color;}
 									}
 	// TOTAL ROW - ENDS
 
