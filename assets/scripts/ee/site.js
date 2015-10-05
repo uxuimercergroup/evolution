@@ -58,6 +58,7 @@ $(function() {
 
 // BAR COMPONENT - ENDS
 
+
 // ITEM SELECTION PANEL
 //--------------------------------------------------------------------------------------------------------
 // Mercer Evolution - Core v3.0.1

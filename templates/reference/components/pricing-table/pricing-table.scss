@@ -88,17 +88,21 @@ $evo-family: core;
 									padding: $evo-pricing-table-padding;
 									margin: 0;
 									margin-bottom: $evo-pricing-table-margin-bottom;
+
 			li							{padding-bottom: 0;}
-			.evo-item-amt,
-			.evo-break-down-amt,
-			.evo-total-amt				{text-align: $evo-pricing-table-amt-text-align;}
+			.evo-pricing-table-item-amt,
+			.evo-pricing-table-break-down-amt,
+			.evo-pricing-table-total-amt
+										{text-align: $evo-pricing-table-amt-text-align;}
 
-			.evo-item-label,
-			.evo-break-down-label,
-			.evo-total-label			{text-transform: $evo-pricing-table-amt-text-transform;}
+			.evo-pricing-table-item-label,
+			.evo-pricing-table-break-down-label,
+			.evo-pricing-table-total-label
+										{text-transform: $evo-pricing-table-amt-text-transform;}
 
-			.evo-item-label,
-			.evo-time-value-label		{
+			.evo-pricing-table-item-label,
+			.evo-pricing-table-value-label
+										{
 										font-size: $evo-pricing-table-label-font-size;
 										position: $evo-pricing-table-label-position;
 										}
@@ -107,13 +111,14 @@ $evo-family: core;
 
 
 	// ITEM LABEL - BEGINS
-		.evo-category-label			{
+		.evo-pricing-table-category-label			{
 									padding-top: 0;
 									padding-bottom: 0;
 									margin-top: 0;
 									margin-bottom: 0;
 			li							{padding-bottom: 0;}
-			.evo-item-label				{
+			.evo-pricing-table-item-label
+										{
 										color: $evo-pricing-table-item-label-font-color;
 										top: $evo-pricing-table-item-label-top-position;
 										}
@@ -121,8 +126,9 @@ $evo-family: core;
 	// ITEM LABEL - ENDS
 		
 	// ITEM - BEGINS
-		.evo-item-amt				{
-			.evo-time-value-label		{
+		.evo-pricing-table-item-amt	{
+			.evo-pricing-table-value-label
+										{
 										color: $evo-pricing-table-time-value-label-color;
 										text-align: $evo-pricing-table-time-value-label-text-align;
 										top: $evo-pricing-table-time-value-label-top-position;
@@ -139,8 +145,10 @@ $evo-family: core;
 		.evo-pricing-table-total-row
 									{
 									background-color: $evo-pricing-table-total-row-bg-color;
-			.evo-total-label			{color: $evo-pricing-table-total-row-font-color;}
-			.evo-total-amt				{color: $evo-pricing-table-total-row-font-color;}
+			.evo-pricing-table-total-label
+										{color: $evo-pricing-table-total-row-font-color;}
+			.evo-pricing-table-total-amt
+										{color: $evo-pricing-table-total-row-font-color;}
 									}
 	// TOTAL ROW - ENDS
 
