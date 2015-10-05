@@ -48,7 +48,7 @@
 			<p>Example:</p>
 
 			{{ global.reference-get-code-start-tag }}<!-- ITEM SELECTION PANEL COMPONENT - BEGINS -->
-<link href="/ee/components/item-selection-panel/item-selection-panel.css" rel="stylesheet" type="text/css" />{{ global.reference-get-code-end-tag }}
+	<link href="/reference/components/item-selection-panel/item-selection-panel.css" rel="stylesheet" type="text/css" />{{ global.reference-get-code-end-tag }}
 
 			<!-- ANNOTATIONS BOX - BEGINS -->
 				<div class="panel evo-box annotations">
@@ -84,7 +84,7 @@ class="evo-item-selection-panel-item-label"{{ global.reference-get-code-end-tag 
 
 			<p>Example:</p>
 
-			{{ global.reference-get-code-start-tag }}<span class="text-center evo-item-selection-panel-item-label">Management Skills</span>{{ global.reference-get-code-end-tag }}
+			{{ global.reference-get-code-start-tag }}<span class="text-center evo-item-selection-panel-item-label">Management</span>{{ global.reference-get-code-end-tag }}
 
 			<p>6. Always use HTML5 standards when coding HTML for Evolution components.</p>
 
@@ -138,6 +138,8 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 			{{ global.reference-get-code-start-tag }}//
 // @variables - IMPORTANT: DO NOT MODIFY! MODIFY VARIABLE OVERRIDES ONLY.
 //
+
+// Component default variables
 $evo-item-selection-panel-text-align: center !default;
 ...{{ global.reference-get-code-end-tag }}
 
@@ -147,20 +149,23 @@ $evo-item-selection-panel-text-align: center !default;
 				<li>
 					Each SASS variable name is always separated by dashes, for example:
 					<br />
-					<code>$evo-item-selection-panel-text-align !default;</code>
+					<code>$evo-item-selection-panel-text-align</code>
 					<br /><br />
 				</li>
 				<li>
 					Each SASS variable name always starts with the name of the component, followed by the SASS variable name or function. Try to group name/function variables together with the same prefix for even more clarity.
 					Example:<br />
-					<code>$evo-item-selection-panel-hdr-border-top-width: 1px !default;</code><br />
-					<code>$evo-item-selection-panel-hdr-border-top-style: solid !default;</code><br />
-					<code>$evo-item-selection-panel-hdr-border-top-color: $onyx-dark-30 !default;</code><br />
-					<code>$evo-item-selection-panel-hdr-color: $onyx-dark-70 !default;</code><br />
-					<code>$evo-item-selection-panel-hdr-margin: rem-calc(18 0) !default;</code><br />
-					<code>$evo-item-selection-panel-hdr-padding-top: rem-calc(15) !default;</code><br />
-					<code>$evo-item-selection-panel-hdr-font-size: rem-calc(12) !default;</code><br />
-					<code>$evo-item-selection-panel-hdr-text-align: center !default;</code>
+					<code>$evo-item-selection-panel-text-align: center !default;</code><br />
+					<code>$evo-item-selection-panel-list-item-padding: rem-calc(15) !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-border-radius: 100% !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-border-width: rem-calc(2) !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-border-style: solid !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-border-color: $onyx-light !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-font-color: $onyx-medium !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-padding: rem-calc(22) !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-small-padding: rem-calc(10) !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-medium-padding: rem-calc(16) !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-x-large-padding: rem-calc(28) !default;</code>
 					<br /><br />
 				</li>
 				<li>
@@ -178,7 +183,26 @@ $evo-item-selection-panel-text-align: center !default;
 				</div>
 			<!-- ANNOTATIONS BOX - ENDS -->
 
-			<p>4. The next section is the component "Variable Overrides" section. This is where you can modify the component SASS variables to override the default component SASS variable values.</p>
+			<p>4. The next section is the component "Family Theme Variables" section. This is the section which defines the theme of the component depending on which family is set using the <code>$evo-family</code> SASS variable. The default value for <code>$evo-family</code> is "core" and a developer needs to change the value of <code>$evo-family</code> to the correct family value, for example: <code>ee</code> for employee portals and <code>comm</code> for communications sites, when implementing the component in a family-based project.</p>
+
+			<p>To accomplish the theme switching between families, the SASS <code>if</code> conditional statement is used to set the correct SASS variables for each family. SASS variables for this section should only be used to theme the component for each family and most likely will only be color values. This section should also never be modified when implementing the component.</p>
+
+			<p>Here is the code for it:</p>
+
+			{{ global.reference-get-code-start-tag }}//
+// @family component theme variables - IMPORTANT: DO NOT MODIFY!
+//
+
+// Family setting
+$evo-family: core;
+
+// Communications
+@if $evo-family == comm {
+
+	$evo-item-selection-panel-item-icon-border-color: $onyx-light;
+...{{ global.reference-get-code-end-tag }}
+
+			<p>5. The next section is the component "Variable Overrides" section. This is where you can modify the component SASS variables to override the default component SASS variable values.</p>
 
 			<p>When building a component, once the default component SASS variables are completed, you can take a copy of those variables, remove the !default at the end of them (very important), comment them out, and put them in the "Variable Overrides" section of the component SASS file.</p>
 
@@ -188,46 +212,75 @@ $evo-item-selection-panel-text-align: center !default;
 // @variable overrides
 //
 // $evo-item-selection-panel-text-align: center;
-// $evo-item-selection-panel-hdr-border-top-width: 1px;
+// $evo-item-selection-panel-list-item-padding: rem-calc(15);
 ...{{ global.reference-get-code-end-tag }}
 
-			<p>5. After the core SASS imports and the component SASS variables, you can then setup the section where you code the SASS for the component. Make sure the component SASS section has a CSS comment tag around it. The first comment uses <code>- BEGINS</code> and the last comment uses <code>- ENDS</code>. Comments are always capitalized and the name of the component.</p>
+			<p>6. After the core SASS imports and the component SASS variables, you can then setup the section where you code the SASS for the component. Make sure the component SASS section has a CSS comment tag around it. The first comment uses <code>- BEGINS</code> and the last comment uses <code>- ENDS</code>. Comments are always capitalized and the name of the component.</p>
 
 			<p>Always indent the first set of SASS inside the commented section 1 tab in from the comment. This allows better code folding in text editors.</p>
 
 			<p>Example:</p>
 
-			{{ global.reference-get-code-start-tag }}// ITEM SELECTION PANEL - BEGINS
-	[data-evo-family="ee"]	{
+			{{ global.reference-get-code-start-tag }}// ITEM SELECTION PANEL ITEM - BEGINS
+	.evo-item-selection-panel-item		{
 
-	...
+		...
 
-							}
+										}
 // ITEM SELECTION PANEL - ENDS{{ global.reference-get-code-end-tag }}
 
-			<p>6. Subsequent sections in the component SASS section also get comments for the different parts of the component. Please try to "chunk" out the SASS for the component into its smaller parts as this makes it easier to understand how it's put together with the HTML. The comments also help to chunk the SASS code so a developer can concentrate on one part at a time.</p>
+			<p>7. Subsequent sections in the component SASS section also get comments for the different parts of the component. Please try to "chunk" out the SASS for the component into its smaller parts as this makes it easier to understand how it's put together with the HTML. The comments also help to chunk the SASS code so a developer can concentrate on one part at a time.</p>
 
 			<p>Example:</p>
 
 			{{ global.reference-get-code-start-tag }}// ITEM SELECTION PANEL - BEGINS
-	[data-evo-family="ee"]			{
+	.evo-item-selection-panel			{
+										text-align: $evo-item-selection-panel-text-align;
 
-		&.evo-item-selection-panel			{
-											text-align: $evo-item-selection-panel-text-align;
-
-		// ITEM SELECTION PANEL HEADER - BEGINS
-			.evo-item-selection-panel-hdr		{
-												color: $evo-item-selection-panel-hdr-color;
-												margin: $evo-item-selection-panel-hdr-margin;
-												padding-top: $evo-item-selection-panel-hdr-padding-top;
-												font-size: $evo-item-selection-panel-hdr-font-size;
-												text-align: $evo-item-selection-panel-hdr-text-align;
+	// ITEM SELECTION PANEL LIST - BEGINS
+		ul									{
+			li									{
+												padding-bottom: $evo-item-selection-panel-list-item-padding;
 												}
-		// ITEM SELECTION PANEL HEADER - ENDS
+											}
+	// ITEM SELECTION PANEL LIST - ENDS
+
+	// ITEM SELECTION PANEL ITEM - BEGINS
+		.evo-item-selection-panel-item		{
+											@include user-select(none);
+											cursor: pointer;
+			.evo-item-selection-panel-item-icon	{
+												@include border-radius($evo-item-selection-panel-item-icon-border-radius);
+												color: $evo-item-selection-panel-item-icon-font-color;
+												padding: $evo-item-selection-panel-item-icon-padding;
+												width: auto;
+				&.evo-icon-size-small				{padding: $evo-item-selection-panel-item-icon-small-padding;}
+				&.evo-icon-size-medium				{padding: $evo-item-selection-panel-item-icon-medium-padding;}
+				&.evo-icon-size-large				{padding: $evo-item-selection-panel-item-icon-padding;}
+				&.evo-icon-size-x-large				{padding: $evo-item-selection-panel-item-icon-x-large-padding;}
+												}
+			.evo-item-selection-panel-item-label
+												{
+												margin: $evo-item-selection-panel-item-label-margin;
+												font-family: $evo-item-selection-panel-item-label-font-family;
+												font-size: $evo-item-selection-panel-item-label-font-size;
+												color: $evo-item-selection-panel-item-label-font-color;
+												line-height: $evo-item-selection-panel-item-label-line-height;
+												display: block;
+												}
+			.evo-item-selection-panel-item-checkbox
+												{
+												position: absolute;
+												left: rem-calc(-9999);
+												width: 0;
+												height: 0;
+												}
+											}
+	// ITEM SELECTION PANEL ITEM - ENDS
 
 ...{{ global.reference-get-code-end-tag }}
 
-			<p>7. Misc. SASS Rules</p>
+			<p>8. Misc. SASS Rules</p>
 
 			<p>Don't be too specific with you SASS/CSS cascade as it makes it harder to maintain. Write your SASS so its more modular or builds on layers of classes.</p>
 
@@ -253,30 +306,125 @@ $evo-item-selection-panel-text-align: center !default;
 
 			<p>Use the Evolution core SASS mixins to save time writing out CSS3 properties. The browser prefixes are taken care of when using the mixin libary. Example:</p>
 
-			{{ global.reference-get-code-start-tag }}.evo-item-selection-panel-item-img	{
-									@include border-radius($evo-item-selection-panel-item-img-border-radius);
+			{{ global.reference-get-code-start-tag }}.evo-item-selection-panel-item-icon	{
+									@include border-radius($evo-item-selection-panel-item-icon-border-radius);
 ...{{ global.reference-get-code-end-tag }}
 
 			<p>Keep the tabs in your SASS clean and lined up, this makes it much easier to understand the hierarchy of styles and the embedding style of SASS coding. Try to follow the formatting of the SASS you see in these examples or already built components. Example:</p>
 
-			{{ global.reference-get-code-start-tag }}// SHOWCASE PANEL - BEGINS
-	[data-evo-family="ee"]		{
+			{{ global.reference-get-code-start-tag }}/ SHOWCASE PANEL - BEGINS
+	.evo-showcase-panel				{
+										@include box-shadow($evo-showcase-panel-shadow-horizontal, $evo-showcase-panel-shadow-vertical, $evo-showcase-panel-shadow-blur, $evo-showcase-panel-shadow-color);
+										background-color: $evo-showcase-panel-background-color;
 
-		&.evo-showcase-panel		{
-									background-color: $evo-showcase-panel-background-color;
+	// SHOWCASE PANEL ITEM - BEGINS
+		.evo-showcase-panel-item 			{
+											min-height: $evo-showcase-panel-item-min-height;
+											padding: $evo-showcase-panel-item-padding;
+											text-align: $evo-showcase-panel-item-text-align;
+											color: $evo-showcase-panel-item-font-color;
 
-		// SHOWCASE PANEL ITEM - BEGINS
-			.evo-showcase-panel-item 	{
-										min-height: $evo-showcase-panel-item-min-height;
-										padding: $evo-showcase-panel-item-padding;
-										text-align: $evo-showcase-panel-item-text-align;
-										color: $evo-showcase-panel-item-font-color;
-				[class^="evo-icon-"]		{top: $evo-showcase-panel-item-icon-position-top;}
+			[class^="evo-icon-"]				{top: $evo-showcase-panel-item-icon-position-top;}
+											}
+	// SHOWCASE PANEL ITEM - ENDS
+
+	// SHOWCASE PANEL ITEM LABEL - BEGINS
+		.evo-showcase-panel-item-label		{
+											font-family: $evo-showcase-panel-item-label-font-family;
+											line-height: $evo-showcase-panel-item-label-line-height;
+			sup									{
+												position: relative;
+												font-family: $evo-showcase-panel-item-label-sup-font-family;
+												}
+											}
+	// SHOWCASE PANEL ITEM LABEL - ENDS
+
+	// SHOWCASE PANEL ITEM SUB LABEL - BEGINS
+		.evo-showcase-panel-item-sub-label	{
+											position: relative;
+											font-family: $evo-showcase-panel-item-sub-label-font-family;
+											font-size: $evo-showcase-panel-item-sub-label-font-size;
+											text-transform: $evo-showcase-panel-item-sub-label-text-transform;
+											}
+	// SHOWCASE PANEL ITEM SUB LABEL - ENDS
+
+	// SHOWCASE PANEL ITEM SUB TEXT - BEGINS
+		.evo-showcase-panel-item-sub-text	{
+											display: block;
+											font-size: $evo-showcase-panel-item-sub-text-font-size;
+											}
+	// SHOWCASE PANEL ITEM SUB TEXT - ENDS
+
+	// SHOWCASE PANEL ITEM - LARGE - BEGINS
+		.evo-showcase-panel-item-large		{
+											padding-top: $evo-showcase-panel-item-large-padding-top;
+											padding-bottom: $evo-showcase-panel-item-large-padding-bottom;
+			.evo-showcase-panel-item-label		{
+												font-size: $evo-showcase-panel-item-large-label-font-size;
+												letter-spacing: $evo-showcase-panel-item-large-label-letter-spacing;
+				sup									{
+													font-size: $evo-showcase-panel-item-large-label-sup-font-size;
+													top: $evo-showcase-panel-item-large-label-sup-position-top;
+													left: $evo-showcase-panel-item-large-label-sup-position-left;
+													}
+												}
+			.evo-showcase-panel-item-sub-label	{
+												top: $evo-showcase-panel-item-large-sub-label-position-top;
+												left: $evo-showcase-panel-item-large-sub-label-position-left;
+												letter-spacing: $evo-showcase-panel-item-large-sub-label-letter-spacing;
+												}
+			.evo-showcase-panel-item-sub-text	{
+												position: relative;
+												top: $evo-showcase-panel-item-large-sub-text-position-top;
+												}
+											}
+	// SHOWCASE PANEL ITEM - LARGE - ENDS
+
+	// SHOWCASE PANEL ITEM - SMALL - BEGINS
+		.evo-showcase-panel-item-small		{
+											padding-top: $evo-showcase-panel-item-small-padding-top;
+											padding-bottom: $evo-showcase-panel-item-small-padding-bottom;
+			.evo-showcase-panel-item-label		{
+												font-size: $evo-showcase-panel-item-small-label-font-size;
+												letter-spacing: $evo-showcase-panel-item-small-label-letter-spacing;
+				sup									{
+													font-size: $evo-showcase-panel-item-small-label-sup-font-size;
+													top: $evo-showcase-panel-item-small-label-sup-position-top;
+													left: $evo-showcase-panel-item-small-label-sup-position-left;
+													}
+												}
+			.evo-showcase-panel-item-sub-label	{
+												top: $evo-showcase-panel-item-small-sub-label-position-top;
+												left: $evo-showcase-panel-item-small-sub-label-position-left;
+												letter-spacing: $evo-showcase-panel-item-small-sub-label-letter-spacing;
+												font-family: $evo-showcase-panel-item-small-sub-label-font-family;
+												text-transform: $evo-showcase-panel-item-small-sub-label-text-transform;
+												}
+											}
+	// SHOWCASE PANEL ITEM - SMALL - ENDS
+
+	// SHOWCASE PANEL - COLOR REVERSE - BEGINS
+		&[data-evo-showcase-panel-color-reverse]
+											{
+			.evo-showcase-panel-item 			{
+												color: $evo-showcase-panel-color-reverse-font-color;
+				a									{color: $evo-showcase-panel-color-reverse-font-color;}
+				[class^="evo-icon-"]				{color: $evo-showcase-panel-color-reverse-font-color;}
+												}
+											}
+	// SHOWCASE PANEL - COLOR REVERSE - BEGINS
+
+	// SHOWCASE PANEL - FIXED - BEGINS
+		&[data-evo-showcase-panel-fixed]	{
+											position: fixed;
+											top: $evo-showcase-panel-fixed-position-top;
+											left: $evo-showcase-panel-fixed-position-left;
+											z-index: $evo-showcase-panel-fixed-z-index;
+											width: $evo-showcase-panel-fixed-width;
+											}
+	// SHOWCASE PANEL - FIXED - ENDS
+
 										}
-		// SHOWCASE PANEL ITEM - ENDS
-
-									}
-								}
 // SHOWCASE PANEL - ENDS{{ global.reference-get-code-end-tag }}
 
 			<h3>Javascript</h3>
@@ -329,7 +477,7 @@ $evo-item-selection-panel-text-align: center !default;
 
 			{{ global.reference-get-code-start-tag }}// ITEM SELECTION PANEL ITEM SELECTED TOGGLE - BEGINS
 	var evoItemSelectionPanelItemSelected = function (){
-		jQuery('[data-evo-item-selection-panel-item]').click(function(event) {
+		jQuery('[data-evo-item-selection-panel-item]').change(function() {
 			jQuery(this).toggleClass('evo-item-selection-panel-item-selected');
 		});
 	}
