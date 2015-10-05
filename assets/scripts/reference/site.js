@@ -242,23 +242,37 @@ $(function() {
 				range: 'max'
 			});
 
+			// Slider horizontal (default) with interval ticks example
+			evoSlider('evo-slider-default-ticks',{
+				step: 10,
+				ticks: true
+			});
+
+			// Slider range horizontal (default) with interval ticks example
+			evoSliderRange('evo-slider-range-default-ticks',{
+				step: 10,
+				ticks: true
+			});
+
+			// Slider range horizontal - fixed min with interval ticks example
+			evoSliderRangeSingleHandle('evo-slider-range-single-min-ticks',{
+				range: 'min',
+				step: 10,
+				ticks: true
+			});
+
+			// Slider range horizontal - fixed max with interval ticks example
+			evoSliderRangeSingleHandle('evo-slider-range-single-max-ticks',{
+				range: 'max',
+				step: 10,
+				ticks: true
+			});
+
 });
 
 // =======================================================================================================
 // COMPONENTS
 // =======================================================================================================
-
-// ADVANCED RANGE SLIDER COMPONENT
-//--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v3.0.1
-// Advanced Range Slider v1.0 - JS
-// DATE - August 19, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
-//--------------------------------------------------------------------------------------------------------
-
-// ADVANCED RANGE SLIDER COMPONENT - BEGINS
-	
-// ADVANCED RANGE SLIDER COMPONENT - ENDS
 
 // ITEM SELECTION PANEL
 //--------------------------------------------------------------------------------------------------------

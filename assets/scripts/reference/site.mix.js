@@ -20,8 +20,5 @@
 // COMPONENTS
 // =======================================================================================================
 
-// ADVANCED RANGE SLIDER COMPONENT
-@import "../../../templates/reference/components/advanced-range-slider/advanced-range-slider.js";
-
 // ITEM SELECTION PANEL
 @import "../../../templates/reference/components/item-selection-panel/item-selection-panel.js";

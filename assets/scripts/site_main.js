@@ -37,7 +37,6 @@
     }
 
     // CUSTOMIZE HOME PAGE CAROUSEL DEFAULTS
-
     var evoCarouselDefaults = {
 	addClassActive: false, // Add "active" classes on visible items. Works with any numbers of items on screen.
 	autoHeight: true, // Add height to owl-wrapper-outer so you can use diffrent heights on slides. Use it only for one item per page setting.
