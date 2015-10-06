@@ -19,6 +19,21 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 //
 
 // Component default variables
+$evo-form-conversational-font-family: $evo-font-regular-family !default;
+$evo-form-conversational-font-size: rem-calc(25) !default;
+$evo-form-conversational-label-color: $onyx-bright !default;
+$evo-form-conversational-select-color: $sapphire-bright !default;
+$evo-form-conversational-inputs-border-radius: 0 !default;
+$evo-form-conversational-inputs-bg-color: $onyx-dark-6 !default;
+$evo-form-conversational-inputs-border: 0 !default;
+$evo-form-conversational-inputs-border-bottom-with: 2px !default;
+$evo-form-conversational-inputs-border-bottom-style: solid !default;
+$evo-form-conversational-inputs-border-bottom-color: $sapphire-bright !default;
+$evo-form-conversational-input-transition-time: 0.25s !default;
+$evo-form-conversational-input-width: rem-calc(80) !default;
+$evo-form-conversational-input-min-width: rem-calc(50) !default;
+$evo-form-conversational-input-max-width: rem-calc(300) !default;
+$evo-form-conversational-select-min-width: rem-calc(50) !default;
 
 
 //
@@ -44,30 +59,6 @@ $evo-family: core;
 // @variable overrides
 //
 
-
-
-// CONVERSATIONAL FORM - BEGINS
-
-
-
-//
-// @variables
-//
-$evo-form-conversational-font-family: $evo-font-regular-family !default;
-$evo-form-conversational-font-size: rem-calc(25) !default;
-$evo-form-conversational-label-color: $onyx-bright !default;
-$evo-form-conversational-select-color: $sapphire-bright !default;
-$evo-form-conversational-inputs-border-radius: 0 !default;
-$evo-form-conversational-inputs-bg-color: $onyx-dark-6 !default;
-$evo-form-conversational-inputs-border: 0 !default;
-$evo-form-conversational-inputs-border-bottom-with: 2px !default;
-$evo-form-conversational-inputs-border-bottom-style: solid !default;
-$evo-form-conversational-inputs-border-bottom-color: $sapphire-bright !default;
-$evo-form-conversational-input-transition-time: 0.25s !default;
-$evo-form-conversational-input-width: rem-calc(80) !default;
-$evo-form-conversational-input-min-width: rem-calc(50) !default;
-$evo-form-conversational-input-max-width: rem-calc(300) !default;
-$evo-form-conversational-select-min-width: rem-calc(50) !default;
 
 
 // CONVERSATIONAL FORM - BEGINS
