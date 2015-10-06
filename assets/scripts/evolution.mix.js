@@ -70,6 +70,7 @@
 // jQuery Component plugins
 @import "core/lib/jquery/plugins/jquery.dataTables.js";
 @import "core/lib/jquery/plugins/datatables.foundation.js";
+@import "core/lib/jquery/plugins/jquery.autosize.input.js";
 @import "core/lib/jquery/plugins/jquery.maskedinput.js";
 @import "core/lib/jquery/plugins/jquery.mousewheel.js";
 @import "core/lib/jquery/plugins/jquery.mCustomScrollbar.js";

@@ -27,9 +27,6 @@
 		<div class="small-12 columns">
 			<div class="evo-magellan" data-magellan-expedition="fixed">
 				<dl class="sub-nav">
-					<dd data-magellan-arrival="basic"><a href="#basic">Basic</a></dd>
-					<dd data-magellan-arrival="photo-icons"><a href="#photo-icons">Photo Icons</a></dd>
-					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
 					<dd class="site-html-ctn-toggle">
 						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
 					</dd>
@@ -37,7 +34,7 @@
 			</div>
 		</div>
 	<!-- PAGE MAGELLAN NAV - ENDS -->
-	
+
 	</section>
 <!-- PAGE INTRO - ENDS -->
 
@@ -46,7 +43,7 @@
 		<div class="small-12 columns">
 			<hr />
 
-		<!-- ITEM SELECTION PANEL - BASIC - EXAMPLE - BEGINS -->
+		<!-- CONVERSATIONAL FORM - EXAMPLE - BEGINS -->
 			<h3 data-magellan-destination="basic">Basic</h3>
 			<a name="basic"></a>
 
@@ -54,24 +51,24 @@
 				<section class="row">
 
 				<!-- EXAMPLE RENDERED CODE - BEGINS -->
-					<div class="small-12 columns">
+					<div class="medium-6 columns">
 						<h6>Rendered HTML</h6>
-						{{ "/reference/components/item-selection-panel/item-selection-panel.css" | asset_url | stylesheet_tag }}
-						{% include "/reference/components/item-selection-panel/item-selection-panel" %}
+						{{ "/reference/components/conversational-form/conversational-form.css" | asset_url | stylesheet_tag }}
+						{% include "/reference/components/conversational-form/conversational-form" %}
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
 				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="small-12 columns site-html-ctn">
+					<div class="medium-6 columns site-html-ctn">
 
 					<!-- EXAMPLE HTML - BEGINS -->
 						<h6>HTML</h6>
-						{{ global.reference-get-code-start-tag }}{% include "/reference/components/item-selection-panel/item-selection-panel" %}{{ global.reference-get-code-end-tag }}
+						{{ global.reference-get-code-start-tag }}{% include "/reference/components/conversational-form/conversational-form" %}{{ global.reference-get-code-end-tag }}
 					<!-- EXAMPLE HTML - ENDS -->
 
 					<!-- EXAMPLE JS - BEGINS -->
 						<h6>Javascript</h6>
-						{{ global.reference-get-code-start-tag }}{% include "/reference/components/item-selection-panel/item-selection-panel-js" %}{{ global.reference-get-code-end-tag }}
+						{{ global.reference-get-code-start-tag }}{% include "/reference/components/conversational-form/conversational-form-js" %}{{ global.reference-get-code-end-tag }}
 					<!-- EXAMPLE JS - ENDS -->
 
 					</div>
@@ -81,43 +78,7 @@
 			<!-- EXAMPLE DEMO - ENDS -->
 
 			<hr />
-		<!-- ITEM SELECTION PANEL - BASIC - EXAMPLE - ENDS -->
-
-		<!-- ITEM SELECTION PANEL - PHOTO ICONS - EXAMPLE - BEGINS -->
-			<h3 data-magellan-destination="photo-icons">Photo Icons</h3>
-			<a name="photo-icons"></a>
-
-			<!-- EXAMPLE DEMO - BEGINS -->
-				<section class="row">
-
-				<!-- EXAMPLE RENDERED CODE - BEGINS -->
-					<div class="small-12 columns">
-						<h6>Rendered HTML</h6>
-						{% include "/reference/components/item-selection-panel/item-selection-panel-photo-icons" %}
-					</div>
-				<!-- EXAMPLE RENDERED CODE - ENDS -->
-
-				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="small-12 columns site-html-ctn">
-
-					<!-- EXAMPLE HTML - BEGINS -->
-						<h6>HTML</h6>
-						{{ global.reference-get-code-start-tag }}{% include "/reference/components/item-selection-panel/item-selection-panel-photo-icons" %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE HTML - ENDS -->
-
-					<!-- EXAMPLE JS - BEGINS -->
-						<h6>Javascript</h6>
-						{{ global.reference-get-code-start-tag }}{% include "/reference/components/item-selection-panel/item-selection-panel-js" %}{{ global.reference-get-code-end-tag }}
-					<!-- EXAMPLE JS - ENDS -->
-
-					</div>
-				<!-- EXAMPLE CODE - ENDS -->
-
-				</section>
-			<!-- EXAMPLE DEMO - ENDS -->
-
-			<hr />
-		<!-- ITEM SELECTION PANEL - PHOTO ICONS - EXAMPLE - ENDS -->
+		<!-- CONVERSATIONAL FORM - EXAMPLE - ENDS -->
 
 		<!-- ADVANCED - BEGINS -->
 			<section class="row">
@@ -135,10 +96,7 @@
 									<a href="/">Evolution Core {{ global.version_number }}</a>
 									<ul>
 										<li>
-											<a href="/reference/base/icons">Icons</a>
-										</li>
-										<li>
-											Photo Icons
+											<a href="/reference/base/forms">Forms</a>
 										</li>
 									</ul>
 								</li>
@@ -147,11 +105,6 @@
 							{% if model.reference-dependency-foundation == "true" %}
 								<li>
 									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
-									<ul>
-										<li>
-											<a href="http://foundation.zurb.com/docs/components/block_grid.html" target="_blank">Block Grid</a>
-										</li>
-									</ul>
 								</li>
 							{% endif %}
 

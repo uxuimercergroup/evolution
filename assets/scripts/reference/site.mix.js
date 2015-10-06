@@ -20,5 +20,8 @@
 // COMPONENTS
 // =======================================================================================================
 
+// CONVERSATIONAL FORM
+@import "../../../templates/reference/components/conversational-form/conversational-form.js";
+
 // ITEM SELECTION PANEL
 @import "../../../templates/reference/components/item-selection-panel/item-selection-panel.js";
