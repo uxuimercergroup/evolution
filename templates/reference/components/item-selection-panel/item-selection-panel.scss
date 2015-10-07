@@ -30,8 +30,8 @@ $evo-item-selection-panel-item-icon-padding: rem-calc(22) !default;
 $evo-item-selection-panel-item-icon-small-padding: rem-calc(10) !default;
 $evo-item-selection-panel-item-icon-medium-padding: rem-calc(16) !default;
 $evo-item-selection-panel-item-icon-x-large-padding: rem-calc(28) !default;
-$evo-item-selection-panel-item-label-margin: rem-calc(7) auto 0 auto !default;
-$evo-item-selection-panel-item-label-font-family: $evo-font-medium-stack !default;
+$evo-item-selection-panel-item-label-margin: rem-calc(10) auto 0 auto !default;
+$evo-item-selection-panel-item-label-font-family: $evo-font-regular-stack !default;
 $evo-item-selection-panel-item-label-font-size: rem-calc(16) !default;
 $evo-item-selection-panel-item-label-font-color: $onyx-bright !default;
 $evo-item-selection-panel-item-label-line-height: 1.25 !default;
@@ -42,11 +42,12 @@ $evo-item-selection-panel-item-selected-icon-shadow-color: $evo-base-shadow-colo
 $evo-item-selection-panel-item-selected-icon-border-color: $onyx-medium !default;
 $evo-item-selection-panel-item-selected-icon-font-color: $white !default;
 $evo-item-selection-panel-item-selected-icon-background-color: $onyx-medium !default;
+$evo-item-selection-panel-item-selected-label-font-family: $evo-font-medium-stack !default;
 $evo-item-selection-panel-item-selected-label-font-color: $onyx-medium !default;
 $evo-item-selection-panel-photo-item-icon-padding: rem-calc(6) !default;
 $evo-item-selection-panel-photo-item-icon-width: rem-calc(80) !default;
 $evo-item-selection-panel-photo-item-icon-height: rem-calc(80) !default;
-$evo-item-selection-panel-photo-item-label-margin: rem-calc(5) auto 0 auto !default;
+$evo-item-selection-panel-photo-item-label-margin: rem-calc(8) auto 0 auto !default;
 
 //
 // @family component theme variables - IMPORTANT: DO NOT MODIFY!
@@ -93,8 +94,8 @@ $evo-family: core;
 // $evo-item-selection-panel-item-icon-small-padding: rem-calc(10);
 // $evo-item-selection-panel-item-icon-medium-padding: rem-calc(16);
 // $evo-item-selection-panel-item-icon-x-large-padding: rem-calc(28);
-// $evo-item-selection-panel-item-label-margin: rem-calc(7) auto 0 auto;
-// $evo-item-selection-panel-item-label-font-family: $evo-font-medium-stack;
+// $evo-item-selection-panel-item-label-margin: rem-calc(10) auto 0 auto;
+// $evo-item-selection-panel-item-label-font-family: $evo-font-regular-stack;
 // $evo-item-selection-panel-item-label-font-size: rem-calc(16);
 // $evo-item-selection-panel-item-label-font-color: $onyx-bright;
 // $evo-item-selection-panel-item-label-line-height: 1.25;
@@ -105,11 +106,12 @@ $evo-family: core;
 // $evo-item-selection-panel-item-selected-icon-border-color: $onyx-medium;
 // $evo-item-selection-panel-item-selected-icon-font-color: $white;
 // $evo-item-selection-panel-item-selected-icon-background-color: $onyx-medium;
+// $evo-item-selection-panel-item-selected-label-font-family: $evo-font-medium-stack;
 // $evo-item-selection-panel-item-selected-label-font-color: $onyx-medium;
 // $evo-item-selection-panel-photo-item-icon-padding: rem-calc(6);
 // $evo-item-selection-panel-photo-item-icon-width: rem-calc(80);
 // $evo-item-selection-panel-photo-item-icon-height: rem-calc(80);
-// $evo-item-selection-panel-photo-item-label-margin: rem-calc(5) auto 0 auto;
+// $evo-item-selection-panel-photo-item-label-margin: rem-calc(8) auto 0 auto;
 
 
 // ITEM SELECTION PANEL - BEGINS
@@ -174,6 +176,7 @@ $evo-family: core;
 												}
 			.evo-item-selection-panel-item-label
 												{
+												font-family: $evo-item-selection-panel-item-selected-label-font-family;
 												color: $evo-item-selection-panel-item-selected-label-font-color;
 												}
 											}
