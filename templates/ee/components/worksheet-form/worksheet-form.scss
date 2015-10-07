@@ -19,15 +19,16 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 //
 
 // Component default variables
-$evo-worksheet-form-border-bottom-width: rem-calc(2) !default;
-$evo-worksheet-form-border-bottom-color: $onyx-bright !default;
-$evo-worksheet-form-border-bottom-hover: $onyx-dark-40 !default;
-$evo-worksheet-form-focus-shadow-horizontal: 0 !default;
-$evo-worksheet-form-focus-shadow-vertical: 0 !default;
-$evo-worksheet-form-focus-shadow-blur: $evo-base-shadow-blur !default;
-$evo-worksheet-form-focus-shadow-color: $evo-base-shadow-color !default;
-$evo-worksheet-form-focus-input-color: $onyx-dark-40 !default;
-$evo-worksheet-form-border-bottom-focus-color: $onyx-dark-40 !default;
+$evo-worksheet-form-input-border-radius: $global-radius !default;
+$evo-worksheet-form-input-border-bottom-width: 2px !default;
+$evo-worksheet-form-input-border-bottom-color: $onyx-bright !default;
+$evo-worksheet-form-input-hover-border-color: $onyx-dark-40 !default;
+$evo-worksheet-form-input-focus-shadow-horizontal: 0 !default;
+$evo-worksheet-form-input-focus-shadow-vertical: 0 !default;
+$evo-worksheet-form-input-focus-shadow-blur: $evo-base-shadow-blur !default;
+$evo-worksheet-form-input-focus-shadow-color: $evo-base-shadow-color !default;
+$evo-worksheet-form-input-focus-border-color: $onyx-dark-40 !default;
+$evo-worksheet-form-input-focus-border-bottom-color: $onyx-dark-40 !default;
 
 //
 // @family component theme variables - IMPORTANT: DO NOT MODIFY!
@@ -39,64 +40,55 @@ $evo-family: ee;
 // Communications
 @if $evo-family == comm {
 
-	$evo-worksheet-form-border-bottom-color: $onyx-bright;
-	$evo-worksheet-form-border-bottom-hover: $black;
-	$evo-worksheet-form-focus-shadow-color: $evo-base-shadow-color;
-	$evo-worksheet-form-focus-input-color: $onyx-dark-14;
-	$evo-worksheet-form-border-bottom-focus-color: $onyx-dark-14;
+	$evo-worksheet-form-input-border-bottom-color: $onyx-bright;
+	$evo-worksheet-form-input-hover-border-color: $onyx-dark-40;
+	$evo-worksheet-form-input-focus-shadow-color: $evo-base-shadow-color;
+	$evo-worksheet-form-input-focus-border-color: $onyx-dark-14;
+	$evo-worksheet-form-input-focus-border-bottom-color: $onyx-dark-14;
 
 // Employee Portal
 } @else if $evo-family == ee {
 
-	$evo-worksheet-form-border-bottom-color: $sapphire-bright;
-	$evo-worksheet-form-border-bottom-hover: $topaz-bright;
-	$evo-worksheet-form-focus-shadow-color: $topaz-bright;
-	$evo-worksheet-form-focus-input-color: $topaz-bright;
-	$evo-worksheet-form-border-bottom-focus-color: $topaz-bright;
+	$evo-worksheet-form-input-border-bottom-color: $sapphire-bright;
+	$evo-worksheet-form-input-hover-border-color: $topaz-bright;
+	$evo-worksheet-form-input-focus-shadow-color: $topaz-bright;
+	$evo-worksheet-form-input-focus-border-color: $topaz-bright;
+	$evo-worksheet-form-input-focus-border-bottom-color: $topaz-bright;
 
 }
 
 //
 // @variable overrides
 //
-// $evo-worksheet-form-border-bottom-width: rem-calc(2);
-// $evo-worksheet-form-border-bottom-color: $onyx-bright;
-// $evo-worksheet-form-border-bottom-hover: $onyx-dark-40;
-// $evo-worksheet-form-focus-shadow-color: $onyx-dark-20;
-// $evo-worksheet-form-focus-input-color: $onyx-dark-40;
-// $evo-worksheet-form-border-bottom-focus-color: $onyx-dark-40;
+// $evo-worksheet-form-input-border-radius: $global-radius;
+// $evo-worksheet-form-input-border-bottom-width: rem-calc(2);
+// $evo-worksheet-form-input-border-bottom-color: $onyx-bright;
+// $evo-worksheet-form-input-hover-border-color: $onyx-dark-40;
+// $evo-worksheet-form-input-focus-shadow-horizontal: 0;
+// $evo-worksheet-form-input-focus-shadow-vertical: 0;
+// $evo-worksheet-form-input-focus-shadow-blur: $evo-base-shadow-blur;
+// $evo-worksheet-form-input-focus-shadow-color: $evo-base-shadow-color;
+// $evo-worksheet-form-input-focus-border-color: $onyx-dark-40;
+// $evo-worksheet-form-input-focus-border-bottom-color: $onyx-dark-40;
 
 
 // WORKSHEET FORM - BEGINS
 	.evo-worksheet-form				{
 
-		// INPUT STYLES - BEGINS
-			input[type="text"],
-			input[type="text"][readonly],
-			input[type="password"],
-			input[type="datetime"],
-			input[type="datetime-local"],
-			input[type="date"],
-			input[type="month"],
-			input[type="time"],
-			input[type="week"],
-			input[type="number"],
-			input[type="email"],
-			input[type="url"],
-			input[type="search"],
-			input[type="tel"]					{
-												border-radius: $global-radius!important;
-												-webkit-border-radius:$global-radius !important;
-												border-bottom-width: $evo-worksheet-form-border-bottom-width;
-												border-bottom-color: $evo-worksheet-form-border-bottom-color;
-				&:hover								{border-color: $evo-worksheet-form-border-bottom-hover;}
+		// WORKSHEET FORM - INPUT STYLES - BEGINS
+			input								{
+												border-radius: $evo-worksheet-form-input-border-radius !important;
+												-webkit-border-radius: $evo-worksheet-form-input-border-radius !important;
+												border-bottom-width: $evo-worksheet-form-input-border-bottom-width;
+												border-bottom-color: $evo-worksheet-form-input-border-bottom-color;
+				&:hover								{border-color: $evo-worksheet-form-input-hover-border-color;}
 				&:focus								{
-													@include box-shadow($evo-worksheet-form-focus-shadow-horizontal, $evo-worksheet-form-focus-shadow-vertical, $evo-worksheet-form-focus-shadow-blur, $evo-worksheet-form-focus-shadow-color);
-													border-color: $evo-worksheet-form-focus-input-color;
-													border-bottom-color: $evo-worksheet-form-border-bottom-focus-color;
+													@include box-shadow($evo-worksheet-form-input-focus-shadow-horizontal, $evo-worksheet-form-input-focus-shadow-vertical, $evo-worksheet-form-input-focus-shadow-blur, $evo-worksheet-form-input-focus-shadow-color);
+													border-color: $evo-worksheet-form-input-focus-border-color;
+													border-bottom-color: $evo-worksheet-form-input-focus-border-bottom-color;
 													}
 												}
-		// INPUT STYLES - ENDS
+		// WORKSHEET FORM - INPUT STYLES - ENDS
 
 											}
 // WORKSHEET FORM - ENDS
