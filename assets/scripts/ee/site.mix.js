@@ -23,5 +23,8 @@
 // BAR COMPONENT
 @import "../../../templates/ee/components/bar/bar.js";
 
+// CONVERSATIONAL FORM
+@import "../../../templates/ee/components/conversational-form/conversational-form.js";
+
 // ITEM SELECTION PANEL
 @import "../../../templates/ee/components/item-selection-panel/item-selection-panel.js";
