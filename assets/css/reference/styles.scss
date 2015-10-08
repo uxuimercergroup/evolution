@@ -32,6 +32,8 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 code									{@include border-radius(rem-calc(4));}
 
 /*--- GENERAL LAYOUT OF PAGES --------------------------------------------------------------*/
+
+// SITE CODE CONTAINER AND TOGGLE
 .site-html-ctn							{display: none;}
 .site-html-ctn-toggle					{
 	a										{
@@ -46,20 +48,6 @@ code									{@include border-radius(rem-calc(4));}
 												}
 											}
 										}
-
-// FRONT-END STANDARDS HEADER - BEGINS
-	.front-end-standards-menu			{
-		.front-end-standards-menu-section	{
-			ul									{
-												list-style-type: none;
-												margin-left: 0;
-												}
-											}
-										}
-	.front-end-standards				{
-		hr									{border-color: $onyx-dark-6;}
-										}
-// FRONT-END STANDARDS HEADER - ENDS
 
 // SIDEBAR MENU LAYOUT
 .evo-sidebar-menu-layout				{

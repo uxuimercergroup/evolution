@@ -33,18 +33,18 @@
 								<thead>
 									<tr>
 										<th scope="column">Browser</th>
-										<th scope="column">A Grade</th>
-										<th scope="column">B Grade</th>
-										<th scope="column">F Grade</th>
+										<th scope="column" data-evo-background-color="emerald-medium">A Grade</th>
+										<th scope="column" data-evo-background-color="emerald-medium">B Grade</th>
+										<th scope="column" data-evo-background-color="garnet-medium">F Grade</th>
 									</tr>
 								</thead>
 								<tbody>
 									{% for item in model.browser-support-table-data %}
 									<tr>
 										<td><strong>{{ item.browserType }}</strong></td>
-										<td>{{ item.gradeA }}</td>
-										<td>{{ item.gradeB }}</td>
-										<td>{{ item.gradeF }}</td>
+										<td data-evo-background-color="emerald-light">{{ item.gradeA }}</td>
+										<td data-evo-background-color="emerald-light">{{ item.gradeB }}</td>
+										<td data-evo-background-color="garnet-light">{{ item.gradeF }}</td>
 									</tr>
 									{% endfor %}
 								</tbody>
