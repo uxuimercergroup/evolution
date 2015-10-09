@@ -29,6 +29,13 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 // CORE GLOBAL - BEGINS
 
+	// ANNOTATIONS - BEGINS
+		.annotations				{
+									background-color: $highlight-color;
+									border-width: 0;
+									}
+	// ANNOTATIONS - ENDS
+
 	// BUTTONS - BEGINS
 		$button-bg-color: $sapphire-medium;
 		$button-bg-hover: scale-color($button-bg-color, $lightness: -20%);
