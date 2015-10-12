@@ -20,5 +20,3 @@
 // COMPONENTS
 // =======================================================================================================
 
-// COMPONENT
-// @import "../../../templates/comm/components/component-name/component-name.js";
