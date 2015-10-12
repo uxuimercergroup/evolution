@@ -53,8 +53,8 @@ $evo-family: core;
 	$evo-pricing-table-total-row-bg-color: $onyx-medium;
 	$evo-pricing-table-total-row-font-color: $white;
 
-// Employee Portal
-} @else if $evo-family == ee {
+// Benefits Portals
+} @else if $evo-family == bp {
 
 	$evo-pricing-table-bg-color: $onyx-dark-6;
 	$evo-pricing-table-item-label-font-color: $onyx-dark-40;

@@ -47,7 +47,6 @@ $evo-conversational-form-input-padding: rem-calc(0 6) !default;
 $evo-conversational-form-select-min-width: rem-calc(50) !default;
 $evo-conversational-form-select-padding: rem-calc(0 0 0 6) !default;
 
-
 //
 // @family component theme variables - IMPORTANT: DO NOT MODIFY!
 //
@@ -66,8 +65,8 @@ $evo-family: core;
 	$evo-conversational-form-elements-focus-shadow-color: $evo-base-shadow-color;
 	$evo-conversational-form-elements-focus-border-bottom-color: $onyx-dark-40;
 
-// Employee Portal
-} @else if $evo-family == ee {
+// Benefits Portals
+} @else if $evo-family == bp {
 
 	$evo-conversational-form-label-color: $onyx-bright;
 	$evo-conversational-form-elements-background-color: $onyx-dark-6;

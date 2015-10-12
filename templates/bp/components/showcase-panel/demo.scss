@@ -1,0 +1,58 @@
+/*-------------------------------------------------------------------------------------------
+Mercer Evolution - Core v3.0.1 - Benefits Portals Family
+Showcase Panel Component v1.0 - Demo SASS
+DATE - September 14, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
+--------------------------------------------------------------------------------------------*/
+
+//
+// @core sass imports
+//
+@import	"../../../../assets/css/core/global/color_variables";
+@import	"../../../../assets/css/core/foundation/foundation/settings";
+@import	"../../../../assets/css/core/global/variables";
+@import	"../../../../assets/css/core/global/functions";
+@import	"../../../../assets/css/core/global/mixins";
+
+//
+// @variables
+//
+
+
+// SHOWCASE PANEL DEMO - BEGINS
+
+	// FIXED OFF CANVAS HEADER - BEGINS
+		.evo-off-canvas						{
+			.tab-bar							{
+												position: fixed;
+												z-index: 99;
+												width: 100%;
+												}
+											}
+	// FIXED OFF CANVAS HEADER - ENDS
+	
+	// FIXED HEADER - SHOWCASE PANEL ADJUST - BEGINS
+	// Adjusts content down after showcase panel so its not overlapped by position fixed elements
+	// For Off-canvas, must account for height of fixed mobile header + height of showcase panel, in this case 44px (mobile header height) + 100px (showcase panel height)
+		.evo-showcase-panel-fixed-header-adjust
+											{margin-bottom: rem-calc(144);}
+	// FIXED HEADER - SHOWCASE PANEL ADJUST - ENDS
+
+// SHOWCASE PANEL DEMO - ENDS
+
+//=== MEDIA QUERIES =========================================================================
+
+// LARGE MEDIA QUERY RANGE AND UP - 1025px +
+@media #{$large-up} {
+
+	// SHOWCASE PANEL DEMO - BEGINS
+	
+		// FIXED HEADER - SHOWCASE PANEL ADJUST - BEGINS
+		// Top Bar on large screens already adjusts content down automatically when top bar is a fixed header, so you just need to account for the height of the showcase panel, 100px default
+			.evo-showcase-panel-fixed-header-adjust
+												{margin-bottom: rem-calc(100);}
+		// FIXED HEADER - SHOWCASE PANEL ADJUST - ENDS
+
+	// SHOWCASE PANEL DEMO - ENDS
+
+}

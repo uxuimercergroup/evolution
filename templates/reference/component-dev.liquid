@@ -103,7 +103,7 @@ class="evo-item-selection-panel-item-label"{{ global.reference-get-code-end-tag 
 			<p>Example:</p>
 
 			{{ global.reference-get-code-start-tag }}/*-------------------------------------------------------------------------------------------
-Mercer Evolution - v3.0.1 - Employee Portal Family
+Mercer Evolution - v3.0.1 - Benefits Portals Family
 Item Selection Panel Component v1.0 - SASS
 DATE - September 1, 2015
 AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
@@ -184,7 +184,7 @@ $evo-item-selection-panel-text-align: center !default;
 				</div>
 			<!-- ANNOTATIONS BOX - ENDS -->
 
-			<p>4. The next section is the component "Family Theme Variables" section. This is the section which defines the theme of the component depending on which family is set using the <code>$evo-family</code> SASS variable. The default value for <code>$evo-family</code> is "core" and a developer needs to change the value of <code>$evo-family</code> to the correct family value, for example: <code>ee</code> for employee portals and <code>comm</code> for communications sites, when implementing the component in a family-based project.</p>
+			<p>4. The next section is the component "Family Theme Variables" section. This is the section which defines the theme of the component depending on which family is set using the <code>$evo-family</code> SASS variable. The default value for <code>$evo-family</code> is "core" and a developer needs to change the value of <code>$evo-family</code> to the correct family value, for example: <code>bp</code> for benefits portals and <code>comm</code> for communications sites, when implementing the component in a family-based project.</p>
 
 			<p>To accomplish the theme switching between families, the SASS <code>if</code> conditional statement is used to set the correct SASS variables for each family. SASS variables for this section should only be used to theme the component for each family and most likely will only be color values. This section should also never be modified when implementing the component.</p>
 
@@ -442,7 +442,7 @@ $evo-family: core;
 			<p>Example:</p>
 
 			{{ global.reference-get-code-start-tag }}//--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - v3.0.1 - Employee Portal Family
+// Mercer Evolution - v3.0.1 - Benefits Portals Family
 // Item Selection Panel Component v1.0 - JS
 // DATE - September 1, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
@@ -495,7 +495,7 @@ $evo-family: core;
 			<p>Example from site.mix.js:</p>
 
 			{{ global.reference-get-code-start-tag }}//--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Employee Portal Family JS
+// Mercer Evolution - Benefits Portals Family JS
 // DATE - August 19, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //--------------------------------------------------------------------------------------------------------
@@ -516,7 +516,7 @@ $evo-family: core;
 // =======================================================================================================
 
 // ITEM SELECTION PANEL
-@import "../../../templates/ee/components/item-selection-panel/item-selection-panel.js";{{ global.reference-get-code-end-tag }}
+@import "../../../templates/bp/components/item-selection-panel/item-selection-panel.js";{{ global.reference-get-code-end-tag }}
 
 			<h3>Testing</h3>
 

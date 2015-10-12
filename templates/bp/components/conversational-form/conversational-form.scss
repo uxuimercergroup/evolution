@@ -1,0 +1,167 @@
+/*-------------------------------------------------------------------------------------------
+Mercer Evolution - Core v3.0.1
+Conversational Form Component v1.0 - SASS
+DATE - October 6, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
+--------------------------------------------------------------------------------------------*/
+
+//
+// @core sass imports - IMPORTANT: DO NOT MODIFY!
+//
+@import	"../../../../assets/css/core/global/color_variables";
+@import	"../../../../assets/css/core/foundation/foundation/settings";
+@import	"../../../../assets/css/core/global/variables";
+@import	"../../../../assets/css/core/global/functions";
+@import	"../../../../assets/css/core/global/mixins";
+
+//
+// @variables - IMPORTANT: DO NOT MODIFY! MODIFY VARIABLE OVERRIDES ONLY.
+//
+
+// Component default variables
+$evo-conversational-form-ctn-margin: rem-calc(0 0 10 0) !default;
+$evo-conversational-form-item-float: left !default;
+$evo-conversational-form-font-size: rem-calc(25) !default;
+$evo-conversational-form-label-line-height: 2 !default;
+$evo-conversational-form-label-font-family: $evo-font-regular-family !default;
+$evo-conversational-form-label-color: $onyx-bright !default;
+$evo-conversational-form-elements-border-radius: 0 !default;
+$evo-conversational-form-elements-background-color: $onyx-dark-6 !default;
+$evo-conversational-form-elements-border: 0 !default;
+$evo-conversational-form-elements-border-bottom-width: 2px !default;
+$evo-conversational-form-elements-border-bottom-style: solid !default;
+$evo-conversational-form-elements-border-bottom-color: $onyx-bright !default;
+$evo-conversational-form-elements-font-color: $onyx-bright !default;
+$evo-conversational-form-elements-margin-bottom: 0 !default;
+$evo-conversational-form-elements-hover-border-bottom-color: $onyx-dark-40 !default;
+$evo-conversational-form-elements-focus-shadow-horizontal: 0 !default;
+$evo-conversational-form-elements-focus-shadow-vertical: 0 !default;
+$evo-conversational-form-elements-focus-shadow-blur: $evo-base-shadow-blur !default;
+$evo-conversational-form-elements-focus-shadow-color: $evo-base-shadow-color !default;
+$evo-conversational-form-elements-focus-border-bottom-color: $onyx-dark-40 !default;
+$evo-conversational-form-input-transition-time: 0.25s !default;
+$evo-conversational-form-input-width: rem-calc(80) !default;
+$evo-conversational-form-input-min-width: rem-calc(55) !default;
+$evo-conversational-form-input-max-width: rem-calc(300) !default;
+$evo-conversational-form-input-padding: rem-calc(0 6) !default;
+$evo-conversational-form-select-min-width: rem-calc(50) !default;
+$evo-conversational-form-select-padding: rem-calc(0 0 0 6) !default;
+
+
+//
+// @family component theme variables - IMPORTANT: DO NOT MODIFY!
+//
+
+// Family setting
+$evo-family: bp;
+
+// Communications
+@if $evo-family == comm {
+
+	$evo-conversational-form-label-color: $onyx-bright;
+	$evo-conversational-form-elements-background-color: $onyx-dark-6;
+	$evo-conversational-form-elements-border-bottom-color: $onyx-bright;
+	$evo-conversational-form-elements-font-color: $onyx-bright;
+	$evo-conversational-form-elements-hover-border-bottom-color: $onyx-dark-40;
+	$evo-conversational-form-elements-focus-shadow-color: $evo-base-shadow-color;
+	$evo-conversational-form-elements-focus-border-bottom-color: $onyx-dark-40;
+
+// Benefits Portals
+} @else if $evo-family == bp {
+
+	$evo-conversational-form-label-color: $onyx-bright;
+	$evo-conversational-form-elements-background-color: $onyx-dark-6;
+	$evo-conversational-form-elements-border-bottom-color: $sapphire-bright;
+	$evo-conversational-form-elements-font-color: $sapphire-bright;
+	$evo-conversational-form-elements-hover-border-bottom-color: $topaz-bright;
+	$evo-conversational-form-elements-focus-shadow-color: $topaz-bright;
+	$evo-conversational-form-elements-focus-border-bottom-color: $topaz-bright;
+
+}
+
+//
+// @variable overrides
+//
+// $evo-conversational-form-ctn-margin: rem-calc(0 0 10 0);
+// $evo-conversational-form-item-float: left;
+// $evo-conversational-form-font-size: rem-calc(25);
+// $evo-conversational-form-label-line-height: 2;
+// $evo-conversational-form-label-font-family: $evo-font-regular-family;
+// $evo-conversational-form-label-color: $onyx-bright;
+// $evo-conversational-form-elements-border-radius: 0;
+// $evo-conversational-form-elements-background-color: $onyx-dark-6;
+// $evo-conversational-form-elements-border: 0;
+// $evo-conversational-form-elements-border-bottom-width: 2px;
+// $evo-conversational-form-elements-border-bottom-style: solid;
+// $evo-conversational-form-elements-border-bottom-color: $onyx-bright;
+// $evo-conversational-form-elements-font-color: $onyx-bright;
+// $evo-conversational-form-elements-margin-bottom: 0;
+// $evo-conversational-form-elements-hover-border-bottom-color: $onyx-dark-40;
+// $evo-conversational-form-elements-focus-shadow-horizontal: 0;
+// $evo-conversational-form-elements-focus-shadow-vertical: 0;
+// $evo-conversational-form-elements-focus-shadow-blur: $evo-base-shadow-blur;
+// $evo-conversational-form-elements-focus-shadow-color: $evo-base-shadow-color;
+// $evo-conversational-form-elements-focus-border-bottom-color: $onyx-dark-40;
+// $evo-conversational-form-input-transition-time: 0.25s;
+// $evo-conversational-form-input-width: rem-calc(80);
+// $evo-conversational-form-input-min-width: rem-calc(50);
+// $evo-conversational-form-input-max-width: rem-calc(300);
+// $evo-conversational-form-input-padding: rem-calc(0 6);
+// $evo-conversational-form-select-min-width: rem-calc(50);
+// $evo-conversational-form-select-padding: rem-calc(0 0 0 6);
+
+
+// CONVERSATIONAL FORM - BEGINS
+	.evo-conversational-form			{
+		.evo-conversational-form-ctn		{margin: $evo-conversational-form-ctn-margin;}
+		.evo-conversational-form-item		{float: $evo-conversational-form-item-float;}
+		label								{
+											font-size: $evo-conversational-form-font-size;
+											line-height: $evo-conversational-form-label-line-height;
+											font-family: $evo-conversational-form-label-font-family;
+											color: $evo-conversational-form-label-color;
+											}
+		input,
+		select								{
+											border-radius: $evo-conversational-form-elements-border-radius !important;
+											-webkit-border-radius: $evo-conversational-form-elements-border-radius !important;
+											background-color: $evo-conversational-form-elements-background-color;
+											border: $evo-conversational-form-elements-border;
+											border-bottom: $evo-conversational-form-elements-border-bottom-width $evo-conversational-form-elements-border-bottom-style $evo-conversational-form-elements-border-bottom-color;
+											color: $evo-conversational-form-elements-font-color;
+											font-size: $evo-conversational-form-font-size;
+											margin-bottom: $evo-conversational-form-elements-margin-bottom;
+			&:hover								{border-bottom-color: $evo-conversational-form-elements-hover-border-bottom-color;}
+			&:focus								{
+												@include box-shadow($evo-conversational-form-elements-focus-shadow-horizontal, $evo-conversational-form-elements-focus-shadow-vertical, $evo-conversational-form-elements-focus-shadow-blur, $evo-conversational-form-elements-focus-shadow-color);
+												border-bottom-color: $evo-conversational-form-elements-focus-border-bottom-color;
+												}
+											}
+		label,
+		input,
+		select								{
+											display: inline;
+											width: auto;
+											}
+		input								{
+											@include transition(width $evo-conversational-form-input-transition-time);
+											width: $evo-conversational-form-input-width;
+											min-width: $evo-conversational-form-input-min-width;
+											max-width: $evo-conversational-form-input-max-width;
+											padding: $evo-conversational-form-input-padding;
+											}
+		select								{
+											min-width: $evo-conversational-form-select-min-width;
+											padding: $evo-conversational-form-select-padding;
+											}
+										}
+// CONVERSATIONAL FORM - ENDS
+
+//=== MEDIA QUERIES =========================================================================
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+@media #{$medium-up} {
+
+	
+
+}

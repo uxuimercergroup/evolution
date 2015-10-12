@@ -1,0 +1,76 @@
+{% layout "bp/layout" %}
+{% block content %}
+
+<!-- HERO IMAGE - BEGINS -->
+	{% include "/bp/hero-banner" %}
+<!-- HERO IMAGE - ENDS -->
+
+<!-- CATEGORY TABLE OF CONTENTS - BEGINS -->
+	<section class="row evo-site-table-content-ctn">
+		<div class="large-12 columns">
+
+			<section class="row collapse">
+				<div class="small-12 medium-12 large-10 small-centered columns evo-site-down-arrrow">
+
+				<!-- CATEGORY PAGE NAVIGATION - BEGINS -->
+					<ul class="medium-block-grid-3 evo-site-table-contents">
+						<li>
+							<ul>
+								<li><a href="#{{ model.standard-component-name-id-01 }}" data-scroll-to-location>{{ model.standard-component-name-01 }}</a></li>
+								<li><a href="#{{ model.component-name-id-05 }}" data-scroll-to-location>{{ model.component-name-05 }}</a></li>
+								<li><a href="#{{ model.component-name-id-01 }}" data-scroll-to-location>{{ model.component-name-01 }}</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#{{ model.component-name-id-04 }}" data-scroll-to-location>{{ model.component-name-04 }}</a></li>
+								<li><a href="#{{ model.component-name-id-02 }}" data-scroll-to-location>{{ model.component-name-02 }}</a></li>
+								<li><a href="#{{ model.standard-component-name-id-02 }}" data-scroll-to-location>{{ model.standard-component-name-02 }}</a></li>
+							</ul>	
+						</li>
+						<li>
+							<ul>
+								<li><a href="#{{ model.component-name-id-03 }}" data-scroll-to-location>{{ model.component-name-03 }}</a></li>
+								<li><a href="" data-scroll-to-location>Component Links</a></li>
+								<li><a href="" data-scroll-to-location>Component Links</a></li>
+							</ul>
+						</li>
+					</ul>
+				<!-- CATEGORY PAGE NAVIGATION - ENDS -->
+
+				</div>
+			</section>
+			
+		</div>
+	</section>
+<!-- CATEGORY TABLE OF CONTENTS - ENDS -->
+
+<!-- BUTTONS SECTION - BEGINS -->
+	{% include 'content/components/base/buttons/buttons-example' %}
+<!-- BUTTONS SECTION - ENDS -->
+
+<!-- CONVERSATIONAL FORM SECTION - BEGINS -->
+	{% include 'bp/components/conversational-form/conversational-form-example' %}
+<!-- CONVERSATIONAL FORM SECTION - ENDS -->
+
+<!-- ITEM SELECTION PANEL SECTION - BEGINS -->
+	{% include 'bp/components/item-selection-panel/item-selection-panel-example' %}
+<!-- ITEM SELECTION PANEL SECTION - ENDS -->
+
+<!-- PRICING TABLE SECTION - BEGINS -->
+	{% include 'bp/components/pricing-table/pricing-table-example' %}
+<!-- PRICING TABLE SECTION - ENDS -->
+
+<!-- SHOWCASE PANEL SECTION - BEGINS -->
+	{% include 'bp/components/showcase-panel/showcase-panel-example' %}
+<!-- SHOWCASE PANEL SECTION - ENDS -->
+
+<!-- SLIDER SECTION - BEGINS -->
+	{% include 'content/components/objects/slider/slider-example' %}
+<!-- SLIDER SECTION - ENDS -->
+
+<!-- WORKSHEET FORM SECTION - BEGINS -->
+	{% include 'bp/components/worksheet-form/worksheet-form-example' %}
+<!-- WORKSHEET FORM SECTION - ENDS -->
+
+{% endblock %}

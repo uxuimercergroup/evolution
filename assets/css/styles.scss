@@ -127,12 +127,12 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 									}
 	// COMM FAMILY - ENDS
 
-	// EMPLOYEE PORTAL FAMILY - BEGINS
+	// BENEFITS PORTALS FAMILY - BEGINS
 		// ICONS
-		.ee-icon					{
+		.bp-icon					{
 									color: $sapphire-bright;
 									}
-	// EMPLOYEE PORTAL FAMILY - ENDS
+	// BENEFITS PORTALS FAMILY - ENDS
 
 // FAMILY GLOBAL - ENDS
 
@@ -658,9 +658,9 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 										background-color: $amethyst-medium;
 										background-image: url('../images/comm/content/evo_comm_family_hero.jpg');
 										}
-			&.evo-site-ee-hero-ctn		{
+			&.evo-site-bp-hero-ctn		{
 										background-color: $sapphire-bright;
-										background-image: url('../images/ee/content/evo_ee_family_hero.jpg');
+										background-image: url('../images/bp/content/evo_bp_family_hero.jpg');
 										}
 			.row						{
 				div							{min-height: rem-calc(315);}
@@ -690,10 +690,10 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 										background-color: $amethyst-medium;
 										background-image: url('../images/comm/content/evo_comm_category_hero.jpg');
 										}
-			&.evo-site-large-ee-hero-ctn	
+			&.evo-site-large-bp-hero-ctn	
 										{
 										background-color: $sapphire-bright;
-										background-image: url('../images/ee/content/evo_ee_category_hero.jpg');
+										background-image: url('../images/bp/content/evo_bp_category_hero.jpg');
 										}
 
 			.row						{
