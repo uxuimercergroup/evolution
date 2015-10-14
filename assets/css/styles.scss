@@ -695,6 +695,11 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 										background-color: $sapphire-bright;
 										background-image: url('../images/bp/content/evo_bp_category_hero.jpg');
 										}
+			&.evo-site-large-uidev-hero-ctn
+										{
+										background-color: $emerald-medium;
+										background-image: url('../images/content/evo_uidev_category_hero.jpg');
+										}
 
 			.row						{
 				div							{min-height: rem-calc(550);}
@@ -1329,7 +1334,16 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 	// HOME PAGE CAROUSEL - ENDS
 
-//HOME PAGE - ENDS
+// HOME PAGE - ENDS
+
+// UI DEVELOPMENT PAGE - BEGINS
+
+	// ICONS
+	.uidev-icon						{
+									color: $emerald-medium;
+									}
+
+// UI DEVELOPMENT PAGE - ENDS
 
 /*=== MEDIA QUERIES ========================================================================*/
 @import	"partials/global/responsive_small",
