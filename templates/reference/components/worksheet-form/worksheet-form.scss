@@ -75,22 +75,22 @@ $evo-family: core;
 // WORKSHEET FORM - BEGINS
 	.evo-worksheet-form				{
 
-		// WORKSHEET FORM - INPUT STYLES - BEGINS
-			input								{
-												border-radius: $evo-worksheet-form-input-border-radius !important;
-												-webkit-border-radius: $evo-worksheet-form-input-border-radius !important;
-												border-bottom-width: $evo-worksheet-form-input-border-bottom-width;
-												border-bottom-color: $evo-worksheet-form-input-border-bottom-color;
-				&:hover								{border-color: $evo-worksheet-form-input-hover-border-color;}
-				&:focus								{
-													@include box-shadow($evo-worksheet-form-input-focus-shadow-horizontal, $evo-worksheet-form-input-focus-shadow-vertical, $evo-worksheet-form-input-focus-shadow-blur, $evo-worksheet-form-input-focus-shadow-color);
-													border-color: $evo-worksheet-form-input-focus-border-color;
-													border-bottom-color: $evo-worksheet-form-input-focus-border-bottom-color;
-													}
-												}
-		// WORKSHEET FORM - INPUT STYLES - ENDS
-
+	// WORKSHEET FORM - INPUT STYLES - BEGINS
+		input							{
+										border-radius: $evo-worksheet-form-input-border-radius !important;
+										-webkit-border-radius: $evo-worksheet-form-input-border-radius !important;
+										border-bottom-width: $evo-worksheet-form-input-border-bottom-width;
+										border-bottom-color: $evo-worksheet-form-input-border-bottom-color;
+			&:hover							{border-color: $evo-worksheet-form-input-hover-border-color;}
+			&:focus							{
+											@include box-shadow($evo-worksheet-form-input-focus-shadow-horizontal, $evo-worksheet-form-input-focus-shadow-vertical, $evo-worksheet-form-input-focus-shadow-blur, $evo-worksheet-form-input-focus-shadow-color);
+											border-color: $evo-worksheet-form-input-focus-border-color;
+											border-bottom-color: $evo-worksheet-form-input-focus-border-bottom-color;
 											}
+										}
+	// WORKSHEET FORM - INPUT STYLES - ENDS
+
+									}
 // WORKSHEET FORM - ENDS
 
 //=== MEDIA QUERIES =========================================================================
