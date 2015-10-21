@@ -179,6 +179,8 @@ $evo-icon-shield-font-color:				$white !default;
 	[class^="evo-icon-"]					{font-family: $evo-icon-font-stack;}
 
 	// ICON FONT - CORE SET - ICON CLASSES
+	.evo-icon-custom-asterisk-small:before {content: "\e600";}
+	.evo-icon-custom-asterisk:before {content: "\e601";}
 	.evo-icon-pencil5:before {content: "\e912";}
 	.evo-icon-file-empty:before {content: "\e99d";}
 	.evo-icon-file-empty2:before {content: "\e99e";}
@@ -259,7 +261,17 @@ $evo-icon-shield-font-color:				$white !default;
 	.evo-icon-file-excel:before {content: "\ef39";}
 	.evo-icon-menu-open:before {content: "\ee38";}
 	.evo-icon-menu7:before {content: "\ec6e";}
-	.evo-icon-custom-asterisk-small:before {content: "\e600";}
-	.evo-icon-custom-asterisk:before {content: "\e601";}
+	.evo-icon-google-plus2:before {content: "\eee5";}
+	.evo-icon-facebook2:before {content: "\eee9";}
+	.evo-icon-twitter2:before {content: "\eeee";}
+	.evo-icon-youtube:before {content: "\eef3";}
+	.evo-icon-vimeo2:before {content: "\eef9";}
+	.evo-icon-dribbble2:before {content: "\ef03";}
+	.evo-icon-github:before {content: "\ef0d";}
+	.evo-icon-wordpress2:before {content: "\ef13";}
+	.evo-icon-tumblr2:before {content: "\ef18";}
+	.evo-icon-skype:before {content: "\ef22";}
+	.evo-icon-linkedin:before {content: "\ef24";}
+	.evo-icon-pinterest2:before {content: "\ef2d";}
 
 }//endif

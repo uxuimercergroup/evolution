@@ -1,0 +1,82 @@
+/*-------------------------------------------------------------------------------------------
+Mercer Evolution - Core v3.0.1
+Foo Component v1.0 - SASS
+DATE - August 19, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
+--------------------------------------------------------------------------------------------*/
+
+//
+// @core sass imports - IMPORTANT: DO NOT MODIFY!
+//
+@import	"../../../../assets/css/core/global/color_variables";
+@import	"../../../../assets/css/core/foundation/foundation/settings";
+@import	"../../../../assets/css/core/global/variables";
+@import	"../../../../assets/css/core/global/functions";
+@import	"../../../../assets/css/core/global/mixins";
+
+//
+// @variables - IMPORTANT: DO NOT MODIFY! MODIFY VARIABLE OVERRIDES ONLY.
+//
+
+// Component default variables
+$evo-social-media-badge-font-color: $onyx-medium !default;
+$evo-social-media-badge-font-color-hover: $onyx-bright !default;
+$evo-social-media-badge-font-color-focus: $onyx-light !default;
+$evo-social-media-badge-font-color-visited: $onyx-bright !default;
+
+//
+// @family component theme variables - IMPORTANT: DO NOT MODIFY!
+//
+
+// Family setting
+$evo-family: core;
+
+// Communications
+@if $evo-family == comm {
+
+	$evo-social-media-badge-font-color: $citrine-medium;
+	$evo-social-media-badge-font-color-hover: $citrine-bright;
+	$evo-social-media-badge-font-color-focus: $citrine-light;
+	$evo-social-media-badge-font-color-visited: $citrine-bright;
+
+// Benefits Portals
+} @else if $evo-family == bp {
+
+	$evo-social-media-badge-font-color: $sapphire-medium;
+	$evo-social-media-badge-font-color-hover: $sapphire-bright;
+	$evo-social-media-badge-font-color-focus: $sapphire-light;
+	$evo-social-media-badge-font-color-visited: $sapphire-bright;
+
+}
+
+//
+// @variable overrides
+//
+// $evo-social-media-badge-font-color: $onyx-dark-80;
+
+
+// SOCIAL MEDIA BADGE COMPONENT - BEGINS
+	.evo-social-media-badges-ctn 
+						{
+
+		a[class^="evo-icon-"]
+							{
+							color: $evo-social-media-badge-font-color;
+			&:hover				{color: $evo-social-media-badge-font-color-hover;}
+			&:focus				{color: $evo-social-media-badge-font-color-focus;}
+			&:visited			{color: $evo-social-media-badge-font-color-visited;}
+							}
+
+						}
+// SOCIAL MEDIA BADGE COMPONENT - ENDS
+
+//=== MEDIA QUERIES =========================================================================
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+@media #{$medium-up} {
+
+	// SOCIAL MEDIA BADGE COMPONENT - BEGINS
+
+	// SOCIAL MEDIA BADGE COMPONENT - ENDS
+
+}

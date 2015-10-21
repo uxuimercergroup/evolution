@@ -1,13 +1,41 @@
-<footer class="evo-footer">
-	<section class="row">
-		<div class="small-12 columns">
-			<ul class="inline-list evo-inline-list evo-inline-list-pipes right">
-				<li><a href="/change-log">Evolution Core {{ global.version_number }}</a></li>
-				<li><a href="http://foundation.zurb.com/docs/" target="_blank">Foundation {{ global.foundation_version }}</a></li>
-				<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
-				<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
-				<li><span class="evo-copyright">&copy; {{ 'now' | date: "%Y" }} Mercer LLC, All Rights Reserved</span></li>
-			</ul>
+<footer class="evo-thin-footer site-ref-thin-footer">
+
+<!-- CONTENT SECTION - BEGINS -->
+	<section class="row evo-footer-content-section">
+		<div class="medium-6 columns">&nbsp;</div>
+		<div class="medium-6 columns">
+
+		<!-- HORIZONTAL LIST - PIPES - BEGINS -->
+			<div class="evo-footer-links">
+				<ul class="inline-list evo-inline-list evo-inline-list-pipes right">
+					<li><a href="/change-log">Evolution Core {{ global.version_number }}</a></li>
+					<li><a href="http://foundation.zurb.com/docs/" target="_blank">Foundation {{ global.foundation_version }}</a></li>
+					<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+					<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+				</ul>
+			</div>
+		<!-- HORIZONTAL LIST - PIPES - ENDS -->
+
 		</div>
 	</section>
+<!-- CONTENT SECTION - ENDS -->
+
+<!-- BRAND BAR - BEGINS -->
+	<section class="row evo-thin-footer-brand-bar">
+	<!-- FOOTER LOGO - BEGINS -->
+		<div class="medium-6 medium-push-6 columns medium-text-right evo-footer-logo">
+			<a class="small-only-text-center" href="http://www.mercer.com/" target="_blank" title="Mercer - Make Tomorrow, Today"><img src="{{ "mercer_hp_logo.png" | asset_url }}" alt="Mercer - Make Tomorrow, Today" width="395" height="15" /></a>
+		</div>
+	<!-- FOOTER LOGO - ENDS -->
+
+	<!-- FOOTER COPYRIGHT - BEGINS -->
+		<div class="medium-6 medium-pull-6 columns">
+			<p class="small-only-text-center evo-footnote evo-footer-copyright">
+				<small>&copy; {{ 'now' | date: "%Y" }} Mercer LLC, All Rights Reserved</small>
+			</p>
+		</div>
+	<!-- FOOTER COPYRIGHT - ENDS -->
+	</section>
+<!-- BRAND BAR - ENDS -->
+
 </footer>
