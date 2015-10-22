@@ -24,18 +24,18 @@
 						</li>
 						<li>
 							<ul>
+								<li><a href="#{{ model.standard-component-name-id-06 }}" data-scroll-to-location>{{ model.standard-component-name-06 }}</a></li>
+								<li><a href="#{{ model.component-name-id-03 }}" data-scroll-to-location>{{ model.component-name-03 }}</a></li>
 								<li><a href="#{{ model.component-name-id-01 }}" data-scroll-to-location>{{ model.component-name-01 }}</a></li>
 								<li><a href="#{{ model.standard-component-name-id-05 }}" data-scroll-to-location>{{ model.standard-component-name-05 }}</a></li>
-								<li><a href="#{{ model.component-name-id-04 }}" data-scroll-to-location>{{ model.component-name-04 }}</a></li>
-								<li><a href="#{{ model.component-name-id-02 }}" data-scroll-to-location>{{ model.component-name-02 }}</a></li>
 							</ul>
 						</li>
 						<li>
 							<ul>
+								<li><a href="#{{ model.component-name-id-04 }}" data-scroll-to-location>{{ model.component-name-04 }}</a></li>
+								<li><a href="#{{ model.component-name-id-02 }}" data-scroll-to-location>{{ model.component-name-02 }}</a></li>
 								<li><a href="#{{ model.standard-component-name-id-02 }}" data-scroll-to-location>{{ model.standard-component-name-02 }}</a></li>
-								<li><a href="#{{ model.standard-component-name-id-06 }}" data-scroll-to-location>{{ model.standard-component-name-06 }}</a></li>
 								<li><a href="#{{ model.component-name-id-06 }}" data-scroll-to-location>{{ model.component-name-06 }}</a></li>
-								<li><a href="#{{ model.component-name-id-03 }}" data-scroll-to-location>{{ model.component-name-03 }}</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -52,17 +52,25 @@
 	{% include 'content/components/base/buttons/buttons-example' %}
 <!-- BUTTONS SECTION - ENDS -->
 
-<!-- COMPACT FORM SECTION - BEGINS -->
+<!-- FORMS - COMPACT SECTION - BEGINS -->
 	{% include 'content/components/base/forms/form-compact-example' %}
-<!-- COMPACT FORM SECTION - ENDS -->
+<!-- FORMS - COMPACT SECTION - ENDS -->
 
-<!-- CONVERSATIONAL FORM SECTION - BEGINS -->
+<!-- FORMS - CONVERSATIONAL SECTION - BEGINS -->
 	{% include 'bp/components/conversational-form/conversational-form-example' %}
-<!-- CONVERSATIONAL FORM SECTION - ENDS -->
+<!-- FORMS - CONVERSATIONAL SECTION - ENDS -->
 
-<!-- INLINE FORM SECTION - BEGINS -->
+<!-- FORMS - INLINE SECTION - BEGINS -->
 	{% include 'content/components/base/forms/form-inline-example' %}
-<!-- INLINE FORM SECTION - ENDS -->
+<!-- FORMS - INLINE SECTION - ENDS -->
+
+<!-- FORMS - STACKED SECTION - BEGINS -->
+	{% include 'content/components/base/forms/form-stacked-example' %}
+<!-- FORMS - STACKED SECTION - ENDS -->
+
+<!-- FORMS - WORKSHEET SECTION - BEGINS -->
+	{% include 'bp/components/worksheet-form/worksheet-form-example' %}
+<!-- FORMS - WORKSHEET SECTION - ENDS -->
 
 <!-- ITEM SELECTION PANEL SECTION - BEGINS -->
 	{% include 'bp/components/item-selection-panel/item-selection-panel-example' %}
@@ -84,16 +92,8 @@
 	{% include 'content/components/objects/slider/slider-example' %}
 <!-- SLIDER SECTION - ENDS -->
 
-<!-- STACKED FORM SECTION - BEGINS -->
-	{% include 'content/components/base/forms/form-stacked-example' %}
-<!-- STACKED FORM SECTION - ENDS -->
-
 <!-- STEPPER SECTION - BEGINS -->
 	{% include 'bp/components/stepper/stepper-example' %}
 <!-- STEPPER SECTION - ENDS -->
-
-<!-- WORKSHEET FORM SECTION - BEGINS -->
-	{% include 'bp/components/worksheet-form/worksheet-form-example' %}
-<!-- WORKSHEET FORM SECTION - ENDS -->
 
 {% endblock %}
