@@ -43,6 +43,12 @@ $(function() {
 	// LIBRARY EXAMPLES
 	//----------------------------------------------------------------------------------------------------
 
+		// BUTTONS
+
+			// Interactive button examples
+			evoButtonInteractive('evo-button-interactive-secondary-example');
+			evoButtonInteractive('evo-button-interactive-primary-example');
+
 		// SLIDER
 
 			// Slider horizontal (default) with interval ticks example

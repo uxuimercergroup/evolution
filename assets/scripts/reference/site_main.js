@@ -98,6 +98,13 @@ $(function() {
 				source: evoAutocompleteExampleData
 			});
 
+
+		// BUTTONS
+
+			// Interactive button examples
+			evoButtonInteractive('evo-button-interactive-secondary-example');
+			evoButtonInteractive('evo-button-interactive-primary-example');
+
 		
 		// DATA TABLE
 
