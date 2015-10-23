@@ -7,6 +7,7 @@
 //
 // @variables
 //
+$evo-form-required-icon-font-color: $alert-color !default;
 $evo-form-label-font-family: $evo-font-medium-stack !default;
 $evo-form-input-border-radius: $global-radius !default;
 $evo-form-input-margin-top: rem-calc(3) !default;
@@ -31,6 +32,9 @@ $evo-form-input-error-radio-checkbox-label-font-color: $body-font-color !default
 			@media #{$large-up}								{margin-top: rem-calc(13);}
 														}
 
+		// FORM REQUIRED ICON
+		.evo-form-required-icon							{color: $evo-form-required-icon-font-color;}
+
 		// FORM HELP TEXT
 		.evo-form-help									{
 			input[type="text"],
@@ -51,9 +55,7 @@ $evo-form-input-error-radio-checkbox-label-font-color: $body-font-color !default
 			select,
 			textarea,
 			input[type="radio"],
-			input[type="checkbox"]							{
-															margin-bottom: 0;
-															}
+			input[type="checkbox"]							{margin-bottom: 0;}
 			.evo-form-help-text								{
 															display: block;
 															padding: $input-error-message-padding;
@@ -104,9 +106,7 @@ $evo-form-input-error-radio-checkbox-label-font-color: $body-font-color !default
 	.evo-form-postfix								{
 		.prefix,
 		.postfix										{margin-top: $evo-form-input-margin-top;}
-		.evo-button										{
-														min-width: auto;
-														}
+		.evo-button										{min-width: auto;}
 													}
 	.evo-form-prefix								{
 		input[type="text"],

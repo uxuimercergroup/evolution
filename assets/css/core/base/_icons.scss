@@ -132,7 +132,7 @@ $evo-icon-shield-font-color:				$white !default;
 											display: block;
 											float: left;
 											border: 2px solid $evo-icon-shield-border-color;
-		[class*="evo-icon-"]					{
+		[class^="evo-icon-"]					{
 												color: $evo-icon-shield-font-color !important;
 												font-size: 1rem;
 			&.evo-icon-shield-vert-adjust-down		{top: 1px;}
@@ -147,31 +147,31 @@ $evo-icon-shield-font-color:				$white !default;
 											width: $evo-icon-shield-size;
 											height: $evo-icon-shield-size;
 											padding: 6px 0;
-		[class*="evo-icon-"]					{font-size: 1rem;}
+		[class^="evo-icon-"]					{font-size: 1rem;}
 											}
 	.evo-icon-shield-size-small-medium		{
 											width: ($evo-icon-shield-size * 1.4);
 											height: ($evo-icon-shield-size * 1.43);
 											padding: 8px 0;
-		[class*="evo-icon-"]					{font-size: (1rem*1.5);}
+		[class^="evo-icon-"]					{font-size: (1rem*1.5);}
 											}
 	.evo-icon-shield-size-medium			{
 											width: ($evo-icon-shield-size * 2);
 											height: ($evo-icon-shield-size * 2);
 											padding: 14px 0;
-		[class*="evo-icon-"]					{font-size: ((1rem*2) - rem-calc(2));}
+		[class^="evo-icon-"]					{font-size: ((1rem*2) - rem-calc(2));}
 											}
 	.evo-icon-shield-size-large				{
 											width: ($evo-icon-shield-size * 3);
 											height: ($evo-icon-shield-size * 3);
 											padding: 21px 0;
-		[class*="evo-icon-"]					{font-size: ((1rem*3) - rem-calc(2));}
+		[class^="evo-icon-"]					{font-size: ((1rem*3) - rem-calc(2));}
 											}
 	.evo-icon-shield-size-x-large			{
 											width: ($evo-icon-shield-size * 4);
 											height: ($evo-icon-shield-size * 4);
 											padding: 27px 0;
-		[class*="evo-icon-"]					{font-size: ((1rem*4) - rem-calc(2));}
+		[class^="evo-icon-"]					{font-size: ((1rem*4) - rem-calc(2));}
 											}
 
 	
