@@ -41,10 +41,8 @@ $evo-thin-footer-content-section-border-top-style: solid !default;
 $evo-thin-footer-content-section-padding-top: rem-calc(20) !default;
 $evo-thin-footer-content-section-min-height: rem-calc(80) !default;
 
-
-
 //
-// @family component theme variables - IMPORTANT: DO NOT` MODIFY!
+// @family component theme variables - IMPORTANT: DO NOT MODIFY!
 //
 
 // Family setting
@@ -105,6 +103,7 @@ $evo-family: core;
 // $evo-thin-footer-content-section-border-top-style: solid;
 // $evo-thin-footer-content-section-padding-top: rem-calc(20);
 // $evo-thin-footer-content-section-min-height: rem-calc(80);
+
 
 // THIN FOOTER COMPONENT - BEGINS
 	.evo-thin-footer 	{
@@ -187,7 +186,7 @@ $evo-family: core;
 // MEDIUM MEDIA QUERY RANGE AND UP - 768px +
 @media #{$medium-up} {
 
-	// FOO COMPONENT - BEGINS
+// THIN FOOTER COMPONENT - BEGINS
 	.evo-thin-footer 	{
 
 	// CONTENT SECTION LOGO - BEGINS
@@ -211,11 +210,12 @@ $evo-family: core;
 							}
 	// FOOTER LINKS - END
 						}
-	// FOO COMPONENT - ENDS
+// THIN FOOTER COMPONENT - BEGINS
 
 }
 
 @media #{$small-only} {
+
 // THIN FOOTER COMPONENT - BEGINS
 	.evo-thin-footer 	{
 
@@ -239,4 +239,5 @@ $evo-family: core;
 
 						}
 // THIN FOOTER COMPONENT - ENDS
+
 }
