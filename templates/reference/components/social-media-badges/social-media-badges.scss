@@ -1,6 +1,6 @@
 /*-------------------------------------------------------------------------------------------
 Mercer Evolution - Core v3.0.1
-Foo Component v1.0 - SASS
+Social Media Badge Component v1.0 - SASS
 DATE - August 19, 2015
 AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 --------------------------------------------------------------------------------------------*/
@@ -20,9 +20,9 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 // Component default variables
 $evo-social-media-badge-font-color: $onyx-medium !default;
-$evo-social-media-badge-font-color-hover: $onyx-bright !default;
-$evo-social-media-badge-font-color-focus: $onyx-light !default;
-$evo-social-media-badge-font-color-visited: $onyx-bright !default;
+$evo-social-media-badge-font-color-hover: $evo-social-media-badge-font-color !default;
+$evo-social-media-badge-font-color-focus: $evo-social-media-badge-font-color !default;
+$evo-social-media-badge-font-color-visited: $evo-social-media-badge-font-color !default;
 
 //
 // @family component theme variables - IMPORTANT: DO NOT MODIFY!
@@ -34,25 +34,28 @@ $evo-family: core;
 // Communications
 @if $evo-family == comm {
 
-	$evo-social-media-badge-font-color: $citrine-medium;
-	$evo-social-media-badge-font-color-hover: $citrine-bright;
-	$evo-social-media-badge-font-color-focus: $citrine-light;
-	$evo-social-media-badge-font-color-visited: $citrine-bright;
+	$evo-social-media-badge-font-color: $onyx-medium;
+	$evo-social-media-badge-font-color-hover: $evo-social-media-badge-font-color;
+	$evo-social-media-badge-font-color-focus: $evo-social-media-badge-font-color;
+	$evo-social-media-badge-font-color-visited: $evo-social-media-badge-font-color;
 
 // Benefits Portals
 } @else if $evo-family == bp {
 
 	$evo-social-media-badge-font-color: $sapphire-medium;
-	$evo-social-media-badge-font-color-hover: $sapphire-bright;
-	$evo-social-media-badge-font-color-focus: $sapphire-light;
-	$evo-social-media-badge-font-color-visited: $sapphire-bright;
+	$evo-social-media-badge-font-color-hover: $evo-social-media-badge-font-color;
+	$evo-social-media-badge-font-color-focus: $evo-social-media-badge-font-color;
+	$evo-social-media-badge-font-color-visited: $evo-social-media-badge-font-color;
 
 }
 
 //
 // @variable overrides
 //
-// $evo-social-media-badge-font-color: $onyx-dark-80;
+// $evo-social-media-badge-font-color: $onyx-medium;
+// $evo-social-media-badge-font-color-hover: $evo-social-media-badge-font-color;
+// $evo-social-media-badge-font-color-focus: $evo-social-media-badge-font-color;
+// $evo-social-media-badge-font-color-visited: $evo-social-media-badge-font-color;
 
 
 // SOCIAL MEDIA BADGE COMPONENT - BEGINS

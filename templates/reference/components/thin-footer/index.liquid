@@ -11,7 +11,7 @@
 
 			<section class="row">
 				<div class="small-3 columns">
-					<p>Version: {{ model.version_number }}</p>		
+					<p>Version: {{ model.version_number }}</p>
 				</div>
 				<div class="small-9 columns">
 					<p class="right">
@@ -19,10 +19,6 @@
 					</p>
 				</div>
 			</section>
-
-			<p>
-				Lorem ipsum sed turpis nibh libero nisi integer arcu mattis quam aliquet aliquet. Viverra aliquam felis lacus mus auctor nisl eu laoreet in. Ipsum sit dolor aliquet nunc arcu consequat orci eu sociosqu in non.
-			</p>
 		</div>
 	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
 
@@ -30,7 +26,6 @@
 		<div class="small-12 columns">
 			<div class="evo-magellan" data-magellan-expedition="fixed">
 				<dl class="sub-nav">
-					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
 					<dd class="site-html-ctn-toggle">
 						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
 					</dd>
@@ -48,10 +43,10 @@
 			<hr />
 
 		<!-- EXAMPLE A - BEGINS -->
-			<h3 data-magellan-destination="example-a">Example A</h3>
+			<h3 data-magellan-destination="example-a">Basic</h3>
 			<a name="example-a"></a>
 			<p>
-				Lorem ipsum sed turpis nibh libero nisi integer arcu mattis <code>quam aliquet</code> aliquet. Viverra aliquam felis lacus mus auctor nisl eu laoreet in.
+				This is a basic display of a thin footer, if you use a color combination that is dark you will need to add in the correct logos that will work with the colors for your thin footer.
 			</p>
 
 			<!-- ANNOTATIONS BOX - BEGINS
@@ -96,9 +91,6 @@
 
 					<h3 data-magellan-destination="advanced">Advanced</h3>
 					<a name="advanced"></a>
-					<p>
-						Lorem ipsum sed turpis nibh libero nisi integer arcu mattis <code>quam aliquet</code> aliquet. Viverra aliquam felis lacus mus auctor nisl eu laoreet in.
-					</p>
 
 				<!-- DEPENDENCY LIST - BEGINS -->
 					{% if model.reference-dependency == "true" %}
@@ -109,7 +101,16 @@
 									<a href="/">Evolution Core {{ global.version_number }}</a>
 									<ul>
 										<li>
-											<a href="/reference/base/boxes">Boxes</a>
+											<a href="#/">Corporate Logos</a>
+										</li>
+										<li>
+											<a href="/reference/base/icons">Icons</a>
+										</li>
+										<li>
+											<a href="/reference/base/lists">Lists</a>
+										</li>
+										<li>
+											<a href="/reference/components/social-media-badges/index">Social Media Badges</a>
 										</li>
 									</ul>
 								</li>

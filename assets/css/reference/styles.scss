@@ -16,6 +16,11 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 		"../core/global/mixins";
 
 // ===========================================================================================
+// COMPONENT IMPORTS
+// ===========================================================================================
+@import	"../../../templates/reference/components/thin-footer/thin-footer.css";
+
+// ===========================================================================================
 // SITE IMPORTS
 // ===========================================================================================
 
@@ -38,7 +43,7 @@ code									{@include border-radius(rem-calc(4));}
 .site-html-ctn-toggle					{
 	a										{
 											@include border-radius($global-radius);
-											background-color: $topaz-bright;
+											background-color: $onyx-dark-30;
 											color: $white !important;
 											display: inline-block;
 											padding: 0 0 0 rem-calc(10) !important;
@@ -56,7 +61,7 @@ code									{@include border-radius(rem-calc(4));}
 
 	// SIDEBAR MENU
 	.evo-sidebar-menu						{
-											background-color: $onyx-dark-80;
+											background-color: $sapphire-medium;
 											position: fixed;
 											overflow-y: auto;
 											height: 100%;
@@ -67,9 +72,12 @@ code									{@include border-radius(rem-calc(4));}
 										}
 
 	// FOOTER - BEGINS
-		.site-ref-thin-footer			{
-										margin-top: rem-calc(100);
+		.site-ref-homepage-footer		{
+										position: fixed;
+										bottom: 0;
+										width: 81.3%;
 										}
+		.site-ref-thin-footer			{margin-top: rem-calc(125);}
 	// FOOTER - ENDS
 
 /*--- REFERENCE PAGES ----------------------------------------------------------------------*/
@@ -88,7 +96,9 @@ code									{@include border-radius(rem-calc(4));}
 // REFERENCE MAGELLAN NAV
 .evo-magellan							{
 										left: auto !important;
-	dd										{margin-left: rem-calc(12)}
+	dd										{
+											margin-left: rem-calc(12);
+											}
 										}
 
 /*--- GRIDS PAGE ---------------------------------------------------------------------------*/
