@@ -43,12 +43,12 @@ code									{@include border-radius(rem-calc(4));}
 .site-html-ctn-toggle					{
 	a										{
 											@include border-radius($global-radius);
-											background-color: $onyx-dark-30;
-											color: $white !important;
+											background-color: $topaz-bright;
+											color: $onyx-dark-80 !important;
 											display: inline-block;
 											padding: 0 0 0 rem-calc(10) !important;
 		[class*="evo-icon-"]					{
-												color: $white;
+												color: $onyx-dark-80;
 												top: rem-calc(2.3);
 												}
 											}
@@ -61,24 +61,18 @@ code									{@include border-radius(rem-calc(4));}
 
 	// SIDEBAR MENU
 	.evo-sidebar-menu						{
-											background-color: $sapphire-medium;
+											background-color: $emerald-medium;
 											position: fixed;
 											overflow-y: auto;
 											height: 100%;
 											padding-top: rem-calc(15);
-		a,
-		.evo-hdr-rule							{color: $white;}
+		a										{color: $white;}
+		.evo-hdr-rule							{color: $emerald-light;}
 											}
 										}
 
-	// FOOTER - BEGINS
-		.site-ref-homepage-footer		{
-										position: fixed;
-										bottom: 0;
-										width: 81.3%;
-										}
-		.site-ref-thin-footer			{margin-top: rem-calc(125);}
-	// FOOTER - ENDS
+	// FOOTER
+	.site-ref-thin-footer				{margin-top: rem-calc(125);}
 
 /*--- REFERENCE PAGES ----------------------------------------------------------------------*/
 
@@ -96,9 +90,7 @@ code									{@include border-radius(rem-calc(4));}
 // REFERENCE MAGELLAN NAV
 .evo-magellan							{
 										left: auto !important;
-	dd										{
-											margin-left: rem-calc(12);
-											}
+	dd										{margin-left: rem-calc(12);}
 										}
 
 /*--- GRIDS PAGE ---------------------------------------------------------------------------*/

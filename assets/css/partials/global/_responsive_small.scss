@@ -69,12 +69,37 @@
 
 	// FOOTER - BEGINS
 
-		// HOMPAGE FOOTER - BEGINS
-			.evo-site-hp-footer			{
-										position: fixed;
-										bottom: 0;
+		// FOOTER GLOBAL - BEGINS
+			.evo-footer					{
+										margin-top: rem-calc(30);
+
+			// FOOTER LOGO - BEGINS
+				.evo-footer-logo			{
+					> a							{
+												display: block;
+												padding: rem-calc(20 0 17 0);
+												border-top: 1px dotted $sapphire-dark;
+												}
+											}
+			// FOOTER LOGO - ENDS
+
 										}
-		// HOMPAGE FOOTER - ENDS
+		// FOOTER GLOBAL - ENDS
+
+		// HOMEPAGE FOOTER - BEGINS
+			.evo-site-hp-footer			{
+
+			// HOMEPAGE FOOTER LOGO - BEGINS
+				.evo-footer-logo			{
+					> a							{
+												padding: rem-calc(0 0 17 0);
+												border-top: 0;
+												}
+											}
+			// HOMEPAGE FOOTER LOGO - ENDS
+			
+										}
+		// HOMEPAGE FOOTER - ENDS
 
 	// FOOTER - ENDS
 
