@@ -34,7 +34,10 @@ $evo-accordion-icon-font-color: $accordion-navigation-font-color !default;
 									font-family: $evo-accordion-navigation-font-family;
 									text-decoration: none;
 									}
-			.content				{padding-top: 0;}
+			.content				{
+									padding-top: 0;
+				&.active				{@include border-radius(0 0 $global-radius $global-radius);}
+									}
 								}
 							}
 

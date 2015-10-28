@@ -16,15 +16,18 @@
 					<ul class="medium-block-grid-3 evo-site-table-contents">
 						<li>
 							<ul>
+								<li><a href="#{{ model.standard-component-name-id-10 }}" data-scroll-to-location>{{ model.standard-component-name-10 }}</a></li>
+								<li><a href="#{{ model.standard-component-name-id-09 }}" data-scroll-to-location>{{ model.standard-component-name-09 }}</a></li>
 								<li><a href="#{{ model.standard-component-name-id-01 }}" data-scroll-to-location>{{ model.standard-component-name-01 }}</a></li>
+								<li><a href="#{{ model.standard-component-name-id-08 }}" data-scroll-to-location>{{ model.standard-component-name-08 }}</a></li>
 								<li><a href="#{{ model.standard-component-name-id-03 }}" data-scroll-to-location>{{ model.standard-component-name-03 }}</a></li>
 								<li><a href="#{{ model.component-name-id-05 }}" data-scroll-to-location>{{ model.component-name-05 }}</a></li>
-								<li><a href="#{{ model.standard-component-name-id-04 }}" data-scroll-to-location>{{ model.standard-component-name-04 }}</a></li>
-								<li><a href="#{{ model.standard-component-name-id-06 }}" data-scroll-to-location>{{ model.standard-component-name-06 }}</a></li>
 							</ul>
 						</li>
 						<li>
 							<ul>
+								<li><a href="#{{ model.standard-component-name-id-04 }}" data-scroll-to-location>{{ model.standard-component-name-04 }}</a></li>
+								<li><a href="#{{ model.standard-component-name-id-06 }}" data-scroll-to-location>{{ model.standard-component-name-06 }}</a></li>
 								<li><a href="#{{ model.component-name-id-03 }}" data-scroll-to-location>{{ model.component-name-03 }}</a></li>
 								<li><a href="#{{ model.component-name-id-01 }}" data-scroll-to-location>{{ model.component-name-01 }}</a></li>
 								<li><a href="#{{ model.standard-component-name-id-05 }}" data-scroll-to-location>{{ model.standard-component-name-05 }}</a></li>
@@ -36,7 +39,9 @@
 								<li><a href="#{{ model.component-name-id-02 }}" data-scroll-to-location>{{ model.component-name-02 }}</a></li>
 								<li><a href="#{{ model.standard-component-name-id-02 }}" data-scroll-to-location>{{ model.standard-component-name-02 }}</a></li>
 								<li><a href="#{{ model.component-name-id-06 }}" data-scroll-to-location>{{ model.component-name-06 }}</a></li>
+								<li><a href="#{{ model.standard-component-name-id-11 }}" data-scroll-to-location>{{ model.standard-component-name-11 }}</a></li>
 								<li><a href="#{{ model.component-name-id-07 }}" data-scroll-to-location>{{ model.component-name-07 }}</a></li>
+								<li><a href="#{{ model.standard-component-name-id-07 }}" data-scroll-to-location>{{ model.standard-component-name-07 }}</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -49,9 +54,21 @@
 	</section>
 <!-- CATEGORY TABLE OF CONTENTS - ENDS -->
 
+<!-- ACCORDION SECTION - BEGINS -->
+	{% include 'content/components/objects/accordion/accordion-example' %}
+<!-- ACCORDION SECTION - ENDS -->
+
+<!-- AUTOCOMPLETE SECTION - BEGINS -->
+	{% include 'content/components/objects/autocomplete/autocomplete-example' %}
+<!-- AUTOCOMPLETE SECTION - ENDS -->
+
 <!-- BUTTONS SECTION - BEGINS -->
 	{% include 'content/components/base/buttons/buttons-example' %}
 <!-- BUTTONS SECTION - ENDS -->
+
+<!-- DATEPICKER SECTION - BEGINS -->
+	{% include 'content/components/objects/datepicker/datepicker-example' %}
+<!-- DATEPICKER SECTION - ENDS -->
 
 <!-- FORMS - COMPACT SECTION - BEGINS -->
 	{% include 'content/components/base/forms/form-compact-example' %}
@@ -97,8 +114,16 @@
 	{% include 'bp/components/stepper/stepper-example' %}
 <!-- STEPPER SECTION - ENDS -->
 
+<!-- TABS SECTION - BEGINS -->
+	{% include 'content/components/objects/tabs/tabs-example' %}
+<!-- TABS SECTION - ENDS -->
+
 <!-- THIN FOOTER SECTION - BEGINS -->
 	{% include 'bp/components/thin-footer/thin-footer-example' %}
 <!-- THIN FOOTER SECTION - ENDS -->
+
+<!-- TOOLTIP SECTION - BEGINS -->
+	{% include 'content/components/objects/tooltip/tooltip-example' %}
+<!-- TOOLTIP SECTION - ENDS -->
 
 {% endblock %}
