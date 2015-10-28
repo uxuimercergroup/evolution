@@ -186,7 +186,10 @@ $evo-form-input-error-radio-checkbox-label-font-color: $body-font-color !default
 													}
 	input[type="checkbox"]							{top: rem-calc(-0.6);}
 	input[type="radio"] + label,
-	input[type="checkbox"] + label					{font-family: $evo-form-input-radio-checkbox-label-font-family;}
+	input[type="checkbox"] + label					{
+													font-size: $input-font-size;
+													font-family: $evo-form-input-radio-checkbox-label-font-family;
+													}
 
 	// HIDDEN INPUTS
 	input[type="hidden"]							{display: none;}
