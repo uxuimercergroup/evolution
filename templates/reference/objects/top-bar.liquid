@@ -16,7 +16,7 @@
 			<div class="panel evo-box annotations">
 				<div class="evo-box-bdy">
 					<p class="evo-no-margin-bottom">
-						Note: Top bar is used for large and up media queries only, hence no mobile version for small or medium media queries. On small and medium media queries, top bar is replaced by offcanvas menu and the mobile header component.
+						<strong>Important:</strong> Top bar is used for large and up media queries only, hence no mobile version for small or medium media queries. On small and medium media queries, top bar is replaced by offcanvas menu and the mobile header component.
 					</p>
 				</div>
 			</div>
@@ -34,6 +34,7 @@
 					<dd data-magellan-arrival="sticky"><a href="#sticky">Sticky Bar</a></dd>
 					<dd data-magellan-arrival="clickable"><a href="#clickable">Clickable Bar</a></dd>
 					<dd data-magellan-arrival="components"><a href="#components">Built-in Components</a></dd>
+					<dd data-magellan-arrival="megamenu"><a href="#megamenu">Mega Menu</a></dd>
 					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
 					<dd class="site-html-ctn-toggle">
 						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
@@ -101,6 +102,7 @@
 					<div class="small-12 columns">
 						<h6>Rendered HTML</h6>
 						{% include '/reference/objects/top-bar/top-bar' %}
+						<br />
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
@@ -129,7 +131,7 @@
 				<div class="panel evo-box annotations">
 					<div class="evo-box-bdy">
 						<p class="evo-no-margin-bottom">
-							Note: You may use <code>fixed</code> and <code>contain-to-grid</code> together in the same wrapping div: <code>div class="contain-to-grid fixed</code>.
+							Note: You may use <code>fixed</code> and <code>contain-to-grid</code> together in the same wrapping div: <code>div class="contain-to-grid fixed"</code>.
 						</p>
 					</div>
 				</div>
@@ -207,6 +209,7 @@
 					<div class="small-12 columns">
 						<h6>Rendered HTML</h6>
 						{% include '/reference/objects/top-bar/top-bar-clickable' %}
+						<br />
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
@@ -239,6 +242,7 @@
 					<div class="small-12 columns">
 						<h6>Rendered HTML</h6>
 						{% include '/reference/objects/top-bar/top-bar-dividers' %}
+						<br />
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
@@ -266,6 +270,7 @@
 					<div class="small-12 columns">
 						<h6>Rendered HTML</h6>
 						{% include '/reference/objects/top-bar/top-bar-labels' %}
+						<br />
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
@@ -305,7 +310,120 @@
 			<!-- EXAMPLE DEMO - ENDS -->
 
 			<hr />
-		<!-- BUILT-IN COMPONENTS - BEGINS -->
+		<!-- BUILT-IN COMPONENTS - ENDS -->
+
+		<!-- OPTIONS - BEGINS -->
+			<h3 data-magellan-destination="megamenu">Mega Menu</h3>
+			<a name="megamenu"></a>
+
+			<h5 class="evo-spacer-margin-top-medium">Hover</h5>
+
+			<p>When using the hover version of the Top Bar Mega Menu make sure to set the <code>data-options="is_hover: true"</code> on the Top Bar <code>nav</code> element itself.</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row evo-spacer-margin-bottom-large">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/top-bar/top-bar-mega-menu-hover' %}
+						<br />
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar-mega-menu-hover' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<h5 class="evo-spacer-margin-top-medium">Click</h5>
+
+			<p>When using the click version of the Top Bar Mega Menu make sure to set the <code>data-options="is_hover: false"</code> on the Top Bar <code>nav</code> element itself.</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row evo-spacer-margin-bottom-large">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/top-bar/top-bar-mega-menu-click' %}
+						<br />
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar-mega-menu-click' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<h5 class="evo-spacer-margin-top-medium">Content Layout Options</h5>
+
+			<p>Use <code>data-evo-top-bar-mega-menu-content-ctn="grid"</code> to contain the content inside the Mega Menu to the grid max-width and center it inside the Mega Menu.</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row evo-spacer-margin-bottom-large">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/top-bar/top-bar-mega-menu-grid' %}
+						<br />
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar-mega-menu-grid' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<p>Use <code>data-evo-top-bar-mega-menu-content-ctn="full"</code> to expand the content inside the Mega Menu to 100% of the width of Mega Menu.</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row evo-spacer-margin-bottom-large">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/top-bar/top-bar-mega-menu-full' %}
+						<br />
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar-mega-menu-full' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- OPTIONS - ENDS -->
 
 		<!-- ADVANCED - BEGINS -->
 			<section class="row">

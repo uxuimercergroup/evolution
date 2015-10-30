@@ -41,6 +41,12 @@ $evo-top-bar-section-dropdown-icon-padding-right: $topbar-link-padding !default;
 $evo-top-bar-section-dropdown-sub-icon: '\edc5' !default;
 $evo-top-bar-section-dropdown-sub-icon-position-top: rem-calc(1) !default;
 $evo-top-bar-section-dropdown-sub-icon-position-right: rem-calc(-1) !default;
+$evo-top-bar-mega-menu-ctn-padding: rem-calc(20) !default;
+$evo-top-bar-mega-menu-ctn-border-top-width: 2px !default;
+$evo-top-bar-mega-menu-ctn-border-top-style: solid !default;
+$evo-top-bar-mega-menu-ctn-border-top-color: $evo-top-bar-section-dropdown-active-background-color !default;
+$evo-top-bar-mega-menu-ctn-background-color: $onyx-dark-6 !default;
+$evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
 
 
 @if $use-top-bar == true{
@@ -175,9 +181,69 @@ $evo-top-bar-section-dropdown-sub-icon-position-right: rem-calc(-1) !default;
 															}
 														}
 													}
+
+					// TOP BAR - MEGA MENU
+					[data-evo-top-bar-mega-menu]	{
+
+						// TOP BAR - MEGA MENU CONTAINER
+						[data-evo-top-bar-mega-menu-ctn]
+														{
+							> li							{
+															padding: $evo-top-bar-mega-menu-ctn-padding;
+															border-top: $evo-top-bar-mega-menu-ctn-border-top-width $evo-top-bar-mega-menu-ctn-border-top-style $evo-top-bar-mega-menu-ctn-border-top-color;
+															background-color: $evo-top-bar-mega-menu-ctn-background-color;
+								&:last-child					{@include border-radius($evo-top-bar-mega-menu-ctn-border-radius);}
+
+								// TOP BAR - MEGA MENU CONTENT CONTAINER
+								[data-evo-top-bar-mega-menu-content-ctn]
+																{
+									ul								{
+																	display: block;
+																	margin-bottom: $evo-base-margin;
+										li								{
+																		width: auto;
+																		float: none;
+																		background: none;
+											a								{
+																			@include border-radius(0);
+																			background: none;
+																			color: $anchor-font-color;
+												&:hover							{
+																				background: none;
+																				color: $anchor-font-color-hover;
+																				}
+																			}
+																		}
+																	}
+																}
+									a							{
+																padding: 0;
+																line-height: 1.5;
+																background: none;
+																color: $anchor-font-color;
+																text-decoration: $anchor-text-decoration;
+										&:hover						{
+																	background: none;
+																	color: $anchor-font-color-hover;
+																	text-decoration: $anchor-text-decoration-hover;
+																	}
+																}
+															}
+
+							// TOP BAR - MEGA MENU CONTENT CONTAINER - CONTAIN TO GRID WIDTH
+							[data-evo-top-bar-mega-menu-content-ctn="grid"]
+															{
+															max-width: $row-width;
+															margin: 0 auto;
+															}
+
+							// TOP BAR - MEGA MENU CONTENT CONTAINER - FULL WIDTH, 100%
+							[data-evo-top-bar-mega-menu-content-ctn="full"]
+															{width: 100%;}
+														}
+													}
+
 												}
-
-
 											}
 
 		}
