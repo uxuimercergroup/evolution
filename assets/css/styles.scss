@@ -663,7 +663,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 										background-image: url('../images/bp/content/evo_bp_family_hero.jpg');
 										}
 			.row						{
-				div							{min-height: rem-calc(315);}
+				div							{min-height: rem-calc(240);}
 										}
 									}
 
@@ -676,7 +676,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 									text-align: center;
 									padding: rem-calc(12 8 7 15);
 									position: relative;
-									top: 114px;
+									top: 73px;
 									}
 	// HERO IMAGE & TEXT - ENDS
 
@@ -702,7 +702,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 										}
 
 			.row						{
-				div							{min-height: rem-calc(550);}
+				div							{min-height: rem-calc(400);}
 										}
 									}
 
@@ -716,7 +716,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 									letter-spacing: rem-calc(9.5);
 									padding: rem-calc(12 10 7 15);
 									position: relative;
-									top: 226px;
+									top: 154px;
 			span						{
 										font-family: $evo-font-thin-stack;
 										}
@@ -922,30 +922,60 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 // HOME PAGE - BEGINS
 
-	// PARALLAX SCROLLING  - BEGINS
+	// VIDEO STYLES - BEGIN
+		.evo-background-video	{
+								background: url("../images/home/evo-homepage-background.jpg") no-repeat;
+								background-size: cover;
+								position: fixed;
+								top: 50%;
+								left: 50%;
+								min-width: 100%;
+								min-height: 100%;
+								width: auto;
+								height: auto;
+								z-index: -100;
+								-webkit-transform: translateX(-50%) translateY(-50%);
+								transform: translateX(-50%) translateY(-50%);
+				  				}
+	// VIDEO STYLES - END
 
-		.evo-background-video 		{
-									position: fixed;
-									top: 50%;
-									left: 50%;
-									min-width: 100%;
-									min-height: 100%;
-									width: auto;
-									height: auto;
-									z-index: -100;
-									-webkit-transform: translateX(-50%) translateY(-50%);
-									transform: translateX(-50%) translateY(-50%);
-									background: url("../images/home/evo-homepage-background.jpg") no-repeat;
-									background-size: cover;
-					  				}
+	// GLOBAL HOMEPAGE STYLES - BEGIN
+		.evo-home-headers-welcome
+								{
+								color: $white !important;
+								display: inline-block;
+								font-size: rem-calc(32);
+								letter-spacing: rem-calc(8) !important;
+								padding: 0px;
+								line-height: rem-calc(34);
+								text-align: center;
+								margin: 0 auto;
+								}
+	// GLOBAL HOMEPAGE STYLES - END
+
+	// INTRO SECTION - BEGINS
+		.evo-site-intro-section-scroll
+								{
+								height: rem-calc(282);  
+								margin: 0 auto; 
+								width: 100%; 
+								position: relative; 
+								text-align: center;
+			.evo-home-headers-welcome
+									{
+									
+									}
+								}
+
+	// INTRO SECTION - ENDS
+
+
+
+/*
 
 		.evo-home-scroll-section-welcome		
 									{
-									height: rem-calc(282);  
-									margin: 0 auto; 
-									width: 100%; 
-									position: relative; 
-									text-align: center;
+
 
 			.evo-home-welcome 			{
 										background: none; 
@@ -957,7 +987,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 										z-index: 98 !important;
 							    		}
 								    }
-
+*/
 		.evo-home-scroll-section-about		
 									{ 
 									height: rem-calc(505);  
@@ -1106,7 +1136,6 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 											}
 										}
 									}
-
 	// ICONS WITH CIRCLES - ENDS
 
 	// HOME PAGE HEADERS - BEGINS									
@@ -1147,17 +1176,6 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 									margin: rem-calc(-68) 0 rem-calc(25) 0;
 									display: inline-block;
 									padding: rem-calc(5) 0 0 rem-calc(5);
-
-			.evo-home-headers-welcome 	{
-										font-size: rem-calc(32);
-										color: $white !important;
-										letter-spacing: rem-calc(8) !important;
-										padding: 0px;
-										line-height: rem-calc(34);
-										text-align: center;
-										margin: 0 auto;
-										display: inline-block;																																								
-										}
 									}
 		
 		.evo-home-headers-box-families
@@ -1251,7 +1269,6 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 											}
 										}
 									}
-
 	// LEARN MORE BUTTONS - ENDS										
 	
 	// HOME PAGE GRIDS - BEGINS
@@ -1299,7 +1316,6 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 										margin-bottom: rem-calc(40);
 										}
 									}
-
 	// HOME PAGE GRIDS - ENDS
 
 	// HOME PAGE CAROUSEL - BEGINS
@@ -1331,7 +1347,6 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 										padding: 0px;
 										}
 									}
-
 	// HOME PAGE CAROUSEL - ENDS
 
 // HOME PAGE - ENDS
