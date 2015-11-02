@@ -1,0 +1,18 @@
+<!-- PEOPLE IMAGES - BEGINS -->
+	<p>A new, more human, and engaging imagery style delivers on the people-centric nature of Make Tomorrow, Today. Pairing this imagery with graphic elements and type treatments helps convey immediacy and activity.</p>
+	<p>Mercer is a global company, so when selecting photography ensure that diversity is being represented. Also, consider a clear range of families, professions, craftsmanship, office environments, and leisure activities, and that they are used appropiately for the communication.</p>
+
+	<section class="row">
+		<div class="small-12 text-center columns">
+			<a href="/assets/docs/core/images/evo-people-images.zip" class="button radius evo-button" id="" role="button" title="Download" aria-label="Download">Download</a>
+		</div>
+	</section>
+
+	<ul class="small-block-grid-3 medium-block-grid-5 large-block-grid-7 evo-spacer-margin-top-x-large evo-people-image-ctn" data-evo-masonry-layout>
+		{% for i in (1..global.reference-people-image-count) %}
+			<li>
+				<img src="/assets/images/content/people-image-thumbnails/people_image_{{ i }}.jpg" class="evo-people-image-thumb" alt="" title="" />
+			</li>
+		{% endfor %}
+	</ul>
+<!-- PEOPLE IMAGES - ENDS -->

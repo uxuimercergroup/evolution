@@ -1360,6 +1360,20 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 // UI DEVELOPMENT PAGE - ENDS
 
+// FAMILY VISUALS PAGE - BEGINS
+
+	// PEOPLE IMAGE THUMBNAILS
+	.evo-people-image-ctn			{
+		li								{padding: rem-calc(14) !important;}
+		.evo-people-image-thumb			{
+										width: 100%;
+										vertical-align: top;
+										display: block;
+										}
+									}
+
+// FAMILY VISUALS PAGE - ENDS
+
 /*=== MEDIA QUERIES ========================================================================*/
 @import	"partials/global/responsive_small",
 		"partials/global/responsive_medium",

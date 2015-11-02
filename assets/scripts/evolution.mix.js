@@ -78,9 +78,19 @@
 
 
 // =======================================================================================================
-// POLYFILL LIBRARIES
+// JS LIBRARIES
 // =======================================================================================================
 
+// Masonary JS - Masonry is a JavaScript grid layout library. It works by placing elements in optimal position based on available vertical space, sort of like a mason fitting stones in a wall.
+@import "core/lib/js/masonry.pkgd.js";
+
+// imagesLoaded JS - Unloaded images can throw off Masonry layouts and cause item elements to overlap. imagesLoaded resolves this issue.
+@import "core/lib/js/imagesloaded.pkgd.js";
+
+
+// =======================================================================================================
+// POLYFILL LIBRARIES
+// =======================================================================================================
 
 
 
@@ -89,6 +99,7 @@
 // =======================================================================================================
 
 @import "core/lib/mobile/ios-orientationchange-fix.js"; // iOS orientation change fix for zooming, https://github.com/scottjehl/iOS-Orientationchange-Fix
+
 
 // =======================================================================================================
 // CORE JS LIBRARIES
