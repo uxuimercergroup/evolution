@@ -123,13 +123,37 @@ code									{@include border-radius(rem-calc(4));}
 										}
 
 /*--- TYPE PAGE ----------------------------------------------------------------------------*/
-
-// TYPE DEMO
-.evo-ref-type-table						{
-	td.evo-ref-type-example					{
-											font-size: 1rem !important;
-		small									{color: $small-font-color;}
+.evo-type-sample						{
+										margin-bottom: rem-calc(15);
+	&[data-evo-type-sample="proxima-nova-regular"]
+											{font-family: $evo-font-regular-stack;}
+	&[data-evo-type-sample="proxima-nova-semibold"]
+											{font-family: $evo-font-medium-stack;}
+	&[data-evo-type-sample="proxima-nova-bold"]
+											{font-family: $evo-font-bold-stack;}
+	&[data-evo-type-sample="proxima-nova-italic"]
+											{font-family: $evo-font-italic-stack;}
+	&[data-evo-type-sample="proxima-nova-thin"]
+											{font-family: $evo-font-thin-stack;}
+	.large-size								{
+											font-size: rem-calc(120);
+											line-height: 1;
 											}
+	.medium-size							{
+											font-size: rem-calc(32);
+											word-wrap: break-word;
+		span									{letter-spacing: rem-calc(6);}
+											}
+	.small-size								{
+											font-size: rem-calc(22);
+											word-wrap: break-word;
+		span									{letter-spacing: rem-calc(3.5);}
+											}
+										}
+.evo-type-hierarchy-row					{margin-bottom: rem-calc(30) !important;}
+.evo-type-data-list						{
+										font-size: rem-calc(14);
+										margin-bottom: 0;
 										}
 
 // HYPHEN DEMO

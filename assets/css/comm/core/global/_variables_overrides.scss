@@ -304,7 +304,7 @@ $definition-list-header-weight: $font-weight-normal;
 
 // We use these to style blockquotes
 // $blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
-// $blockquote-padding: rem-calc(9 20 0 19);
+$blockquote-padding: rem-calc(9 20 2 19);
 $blockquote-border: 1px solid $onyx-dark-30;
 // $blockquote-cite-font-size: rem-calc(13);
 // $blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);

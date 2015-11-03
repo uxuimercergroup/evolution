@@ -116,7 +116,7 @@ $evo-anchor-font-color-alt: $onyx-dark-10 !default;
 								letter-spacing: rem-calc(3.5);
 								}
 	h6							{
-								font-family: $font-family-sans-serif !important;
+								font-family: $evo-font-medium-stack !important;
 								letter-spacing: rem-calc(3.5);
 								}
 
@@ -174,7 +174,7 @@ $evo-anchor-font-color-alt: $onyx-dark-10 !default;
 
 	// FOOTNOTES
 	.evo-footnote				{
-								line-height: 1;
+								line-height: 1.0625;
 								margin-bottom: rem-calc(10);
 								}
 
@@ -193,7 +193,7 @@ $evo-anchor-font-color-alt: $onyx-dark-10 !default;
 		p							{
 									margin-bottom: rem-calc(10);
 									font-size: rem-calc(22);
-									line-height: 1.25;
+									line-height: 1.273 !important;
 									}
 		cite						{
 									text-align: right;

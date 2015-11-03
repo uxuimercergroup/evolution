@@ -18,12 +18,12 @@
 		<div class="small-12 columns">
 			<div class="evo-magellan" data-magellan-expedition="fixed">
 				<dl class="sub-nav">
-					<dd data-magellan-arrival="basic"><a href="#basic">Basic</a></dd>
+					<dd data-magellan-arrival="families"><a href="#families">Families &amp; Hierarchy</a></dd>
+					<dd data-magellan-arrival="headers"><a href="#headers">Headers &amp; Paragraphs</a></dd>
 					<dd data-magellan-arrival="header-options"><a href="#header-options">Header Options</a></dd>
 					<dd data-magellan-arrival="lists"><a href="#lists">Lists</a></dd>
 					<dd data-magellan-arrival="misc"><a href="#misc">Miscellaneous</a></dd>
 					<dd data-magellan-arrival="characters"><a href="#characters">Characters</a></dd>
-					<dd data-magellan-arrival="context-demo"><a href="#context-demo">Context Demo</a></dd>
 					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
 					<dd class="site-html-ctn-toggle">
 						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
@@ -41,72 +41,19 @@
 		<div class="small-12 columns">
 			<hr />
 
-		<!-- BASIC - BEGINS -->
-			<h3 data-magellan-destination="basic">Basic</h3>
-			<a name="basic"></a>
+		<!-- FAMILIES AND HIERARCHY - BEGINS -->
+			<h3 data-magellan-destination="families">Families &amp; Hierarchy</h3>
+			<a name="families"></a>
 			
-			<div class="evo-table-small-mediaquery">
-				<table class="evo-table evo-ref-type-table" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="" role="grid">
-					<thead>
-						<tr>
-							<th scope="column">Example</th>
-							<th scope="column">Usage</th>
-							<th scope="column">Font</th>
-							<th scope="column">Size</th>
-							<th scope="column">Decoration</th>
-							<th scope="column">Color</th>
-						</tr>
-					</thead>
-					<tbody>
+			{% include '/content/visual/typography/typography' %}
 
-						{% for item in model.reference-typography-data %}
-						<tr>
-							<td>{{ item.example }}</td>
-							<td>{{ item.usage }}</td>
-							<td>{{ item.font }}</td>
-							<td>{{ item.size }}</td>
-							<td>{{ item.decoration }}</td>
-							<td>{{ item.color }}</td>
-						</tr>
-						{% endfor %}
+			<hr />
+		<!-- FAMILIES AND HIERARCHY - ENDS -->
 
-						{% for item in model.reference-typography-base-data %}
-						<tr>
-							<td class="evo-ref-type-example">{{ item.example }}</td>
-							<td>{{ item.usage }}</td>
-							<td>{{ item.font }}</td>
-							<td>{{ item.size }}</td>
-							<td>{{ item.decoration }}</td>
-							<td>{{ item.color }}</td>
-						</tr>
-						{% endfor %}
+		<!-- HEADERS AND PARAGRAPHS - BEGINS -->
+			<h3 data-magellan-destination="headers">Headers &amp; Paragraphs</h3>
+			<a name="headers"></a>
 
-					</tbody>
-				</table>
-			</div>
-
-			<h5 class="evo-spacer-margin-top-medium">Paragraphs</h5>
-			<!-- EXAMPLE DEMO - BEGINS -->
-				<section class="row">
-
-				<!-- EXAMPLE RENDERED CODE - BEGINS -->
-					<div class="medium-6 columns">
-						<h6>Rendered HTML</h6>
-						{% include '/reference/base/type/type-paragraph' %}
-					</div>
-				<!-- EXAMPLE RENDERED CODE - ENDS -->
-
-				<!-- EXAMPLE CODE - BEGINS -->
-					<div class="medium-6 columns site-html-ctn">
-						<h6>HTML</h6>
-						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-paragraph' %}{{ global.reference-get-code-end-tag }}
-					</div>
-				<!-- EXAMPLE CODE - ENDS -->
-
-				</section>
-			<!-- EXAMPLE DEMO - ENDS -->
-
-			<hr>
 			<h5 class="evo-spacer-margin-top-medium">Headers</h5>
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
@@ -128,9 +75,8 @@
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
 
-			<hr>
+			<hr />
 			<h5 class="evo-spacer-margin-top-medium">Subheaders</h5>
-
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
 
@@ -152,7 +98,29 @@
 			<!-- EXAMPLE DEMO - ENDS -->
 
 			<hr />
-		<!-- BASIC - ENDS -->
+			<h5 class="evo-spacer-margin-top-medium">Paragraphs</h5>
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-paragraph' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-paragraph' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- HEADERS AND PARAGRAPHS - ENDS -->
 
 		<!-- HEADER OPTIONS - BEGINS -->
 			<h3 data-magellan-destination="header-options">Header Options</h3>
@@ -180,7 +148,7 @@
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
 
-			<hr>
+			<hr />
 			<h5 class="evo-spacer-margin-top-medium">Header with Rule</h5>
 
 			<!-- EXAMPLE DEMO - BEGINS -->
@@ -203,7 +171,7 @@
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
 
-			<hr>
+			<hr />
 			<h5 class="evo-spacer-margin-top-medium">Header with Double Rule</h5>
 
 			<!-- EXAMPLE DEMO - BEGINS -->
@@ -253,7 +221,7 @@
 
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
-			<hr>
+			<hr />
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
 
@@ -274,7 +242,7 @@
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
 
-			<hr>
+			<hr />
 			<h5 class="evo-spacer-margin-top-medium">Unordered Lists</h5>
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
@@ -296,7 +264,7 @@
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
 
-			<hr>
+			<hr />
 			<h5 class="evo-spacer-margin-top-medium">Definition Lists</h5>
 
 			<!-- EXAMPLE DEMO - BEGINS -->
@@ -347,7 +315,7 @@
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
 
-			<hr>
+			<hr />
 			<h5 class="evo-spacer-margin-top-medium">Footnotes</h5>
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
@@ -369,7 +337,7 @@
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
 
-			<hr>
+			<hr />
 			<h5 class="evo-spacer-margin-top-medium">Horizonal Rules</h5>
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
@@ -391,7 +359,7 @@
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
 
-			<hr>
+			<hr />
 			<h5 class="evo-spacer-margin-top-medium">Text Overflow</h5>
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
@@ -413,7 +381,7 @@
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
 
-			<hr>
+			<hr />
 			<h5 class="evo-spacer-margin-top-medium">Word Break</h5>
 			<p>Make long words break and wrap within a container by adding the class <code>.evo-word-break</code>.</p>
 
@@ -424,6 +392,7 @@
 					<div class="medium-6 columns">
 						<h6>Rendered HTML</h6>
 						{% include '/reference/base/type/type-text-word-break' %}
+						<br />
 					</div>
 				<!-- EXAMPLE RENDERED CODE - ENDS -->
 
@@ -437,7 +406,7 @@
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
 
-			<hr>
+			<hr />
 			<h5 class="evo-spacer-margin-top-medium">Hyphens</h5>
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
@@ -459,7 +428,7 @@
 				</section>
 			<!-- EXAMPLE DEMO - ENDS -->
 
-			<hr>
+			<hr />
 			<h5 class="evo-spacer-margin-top-medium">Other Markup Code</h5>
 			<!-- EXAMPLE DEMO - BEGINS -->
 				<section class="row">
@@ -513,152 +482,6 @@
 
 			<hr />
 		<!-- CHARACTERS - ENDS -->
-
-		<!-- CONTEXT DEMO - BEGINS -->
-			<h3 data-magellan-destination="context-demo">Context Demo</h3>
-			<a name="context-demo"></a>
-			
-			<section class="row">
-				<div class="medium-6 columns">
-
-					<h1>Parker Ranch</h1>
-					<p>
-						<strong>Lorem ipsum</strong> <em>dolor sit amet</em>, <a href="">consectetuer</a> <abbr title="adipiscing">adipiscing</abbr> elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<h2 class="subheader">Parker Ranch</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<h3>Parker Ranch</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<h5 class="subheader">Parker Ranch</h5>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<h5>Parker Ranch</h5>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<h6 class="subheader">Parker Ranch</h6>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<ol>
-						<li>Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-						<li>Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
-						<li>Ordered list item three</li>
-					</ol>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<ul>
-						<li>Unordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-						<li>Unordered list item two</li>
-						<li>Unordered list item three. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-					</ul>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<dl>
-						<dt>Definition Term</dt>
-						<dd>Definition description. Lorem ipsum dolor sit amet, consectetur.</dd>
-						<dt>Definition Term</dt>
-						<dd>Definition description Lorem ipsum dolor sit amet, consectetur.</dd>
-						<dt>Definition Term</dt>
-						<dd>Definition description Lorem ipsum dolor sit amet, consectetur.</dd>
-					</dl>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<blockquote>
-						<p>
-							&ldquo;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.&rdquo;
-						</p>
-						<cite>John Doe, Expert</cite>
-					</blockquote>
-					<hr />
-					<p class="evo-footnote">
-						<small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</small>
-					</p>
-
-				</div>
-				<div class="medium-6 columns">
-					
-					<h1>Parker Ranch</h1>
-					<p>
-						<strong>Lorem ipsum</strong> <em>dolor sit amet</em>, <a href="">consectetuer</a> <abbr title="adipiscing">adipiscing</abbr> elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<h2 class="subheader">Parker Ranch</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<h3>Parker Ranch</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<h5 class="subheader">Parker Ranch</h5>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<h5>Parker Ranch</h5>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<h6 class="subheader">Parker Ranch</h6>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<ol>
-						<li>Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-						<li>Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ordered list item two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
-						<li>Ordered list item three</li>
-					</ol>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<ul>
-						<li>Unordered list item one. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-						<li>Unordered list item two</li>
-						<li>Unordered list item three. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-					</ul>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<dl>
-						<dt>Definition Term</dt>
-						<dd>Definition description. Lorem ipsum dolor sit amet, consectetur.</dd>
-						<dt>Definition Term</dt>
-						<dd>Definition description Lorem ipsum dolor sit amet, consectetur.</dd>
-						<dt>Definition Term</dt>
-						<dd>Definition description Lorem ipsum dolor sit amet, consectetur.</dd>
-					</dl>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</p>
-					<blockquote>
-						<p>
-							&ldquo;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.&rdquo;
-						</p>
-						<cite>John Doe, Expert</cite>
-					</blockquote>
-					<hr />
-					<p class="evo-footnote">
-						<small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</small>
-					</p>
-
-				</div>
-			</section>
-
-			<hr />
-		<!-- CONTEXT DEMO - ENDS -->
 
 		<!-- ADVANCED - BEGINS -->
 			<section class="row">

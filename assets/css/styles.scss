@@ -29,6 +29,10 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 // CORE GLOBAL - BEGINS
 
+	// TYPE - BEGINS
+		h6.evo-hdr-rule				{color: $sapphire-bright;}
+	// TYPE - ENDS
+
 	// ANNOTATIONS - BEGINS
 		.annotations				{
 									background-color: $highlight-color;
@@ -1353,24 +1357,61 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 // UI DEVELOPMENT PAGE - BEGINS
 
-	// ICONS
-	.uidev-icon						{
+	// ICONS - BEGINS
+		.uidev-icon					{
 									color: $emerald-medium;
 									}
+	// ICONS - ENDS
 
 // UI DEVELOPMENT PAGE - ENDS
 
 // FAMILY VISUALS PAGE - BEGINS
 
-	// PEOPLE IMAGE THUMBNAILS
-	.evo-people-image-ctn			{
-		li								{padding: rem-calc(14) !important;}
-		.evo-people-image-thumb			{
+	// TYPOGRAPHY - BEGINS
+		.evo-type-sample			{
+									margin-bottom: rem-calc(15);
+			&[data-evo-type-sample="proxima-nova-regular"]
+										{font-family: $evo-font-regular-stack;}
+			&[data-evo-type-sample="proxima-nova-semibold"]
+										{font-family: $evo-font-medium-stack;}
+			&[data-evo-type-sample="proxima-nova-bold"]
+										{font-family: $evo-font-bold-stack;}
+			&[data-evo-type-sample="proxima-nova-italic"]
+										{font-family: $evo-font-italic-stack;}
+			&[data-evo-type-sample="proxima-nova-thin"]
+										{font-family: $evo-font-thin-stack;}
+			.large-size					{
+										font-size: rem-calc(120);
+										line-height: 1;
+										}
+			.medium-size				{
+										font-size: rem-calc(32);
+										word-wrap: break-word;
+				span						{letter-spacing: rem-calc(6);}
+										}
+			.small-size					{
+										font-size: rem-calc(22);
+										word-wrap: break-word;
+				span						{letter-spacing: rem-calc(3.5);}
+										}
+									}
+		.evo-type-hierarchy-row		{margin-bottom: rem-calc(30) !important;}
+		.evo-type-data-list			{
+									font-size: rem-calc(14);
+									margin-bottom: 0;
+									}
+	// TYPOGRAPHY - ENDS
+
+	// PEOPLE IMAGE THUMBNAILS - BEGINS
+		.evo-people-image-ctn		{
+			li							{padding: rem-calc(14) !important;}
+			.evo-people-image-thumb		{
 										width: 100%;
 										vertical-align: top;
 										display: block;
 										}
 									}
+	// PEOPLE IMAGE THUMBNAILS - ENDS
 
 // FAMILY VISUALS PAGE - ENDS
 
