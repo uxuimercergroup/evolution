@@ -44,20 +44,32 @@
 					<!-- TAB 1 (overview section) - BEGINS -->
 						<section role="tabpanel" aria-hidden="false" class="content active" id="{{ model.component-name-id-04 }}-1">
 						<!-- COMPONENT TITLE AND DESCRIPTION - BEGINS -->
-								{{ 1 | lorem_ipsum:'p' }}
+								<p>The Pricing Table is used to list out items and their numeric values in a way that clearly displays their total.</p>
 						<!-- COMPONENT TITLE AND DESCRIPTION - ENDS -->
 						</section>
 					<!-- TAB 1 (overview section) - ENDS -->
 
 					<!-- TAB 2 (usage section) - BEGINS -->
 						<section role="tabpanel" aria-hidden="true" class="content" id="{{ model.component-name-id-04 }}-2">
-							<p>Usage details go here.</p>
+							<ul>
+								<li>The Pricing Table is formatted into two columns. The left column contains the list items, while the numeric values are displayed in the right column.</li>
+								<li>The list items can contain an optional top label.</li>
+								<li>The numeric values can contain an optional bottom label.</li>
+								<li>The numeric values should be right justified so the decimal points are aligned.</li>
+								<li>Optional subtotal or highlighted rows have a darker background than the default background color, and can be placed directly above the total row.</li>
+								<li>The total row is optional, but when used it is always the bottom-most row, has the darkest background color, and totals the values of all the items above it.</li>
+							</ul>
 						</section>
 					<!-- TAB 2 (usage section) - ENDS -->
 
 					<!-- TAB 3 (mobile section) - BEGINS -->
 						<section role="tabpanel" aria-hidden="true" class="content" id="{{ model.component-name-id-04 }}-3">
-							<p>Mobile view info goes here.</p>
+							<ul>
+								<li>The width of the Pricing Table shrinks to fit the mobile display used.</li>
+								<li>The font sizes will increase slightly.</li>
+								<li>The list item text wraps to fit in its column</li>
+								<li>When the list item text wraps to more than one line, the numeric value remains vertically centered.</li>
+							</ul>
 						</section>
 					<!-- TAB 3 (mobile section) - ENDS -->
 
