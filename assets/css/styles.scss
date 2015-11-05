@@ -356,6 +356,10 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 					.dropdown 					{
 
 						li 							{
+							&:last-child				{
+														@include border-radius(0);
+								> a							{@include border-radius(0);}
+														}
 							a 							{
 														background: $topbar-dropdown-link-bg;
 														color: $topbar-dropdown-link-color;
