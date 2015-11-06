@@ -11,7 +11,7 @@ $evo-form-required-icon-font-color: $alert-color !default;
 $evo-form-label-font-family: $evo-font-medium-stack !default;
 $evo-form-input-border-radius: $global-radius !default;
 $evo-form-input-margin-top: rem-calc(3) !default;
-$evo-form-input-hover-border-color: $onyx-dark-14 !default;
+$evo-form-input-hover-border-color: $onyx-dark-40 !default;
 $evo-form-input-hover-background-color: $white !default;
 $evo-form-input-radio-checkbox-margin-bottom: rem-calc(18) !default;
 $evo-form-input-radio-checkbox-label-font-family: $font-family-sans-serif !default;
@@ -175,7 +175,17 @@ $evo-form-input-error-radio-checkbox-label-font-color: $body-font-color !default
 														border-color: $evo-form-input-hover-border-color;
 														border-bottom-style: solid;
 														}
-		&:focus											{outline: 0;}
+		&:focus											{
+														outline: 0;
+														border-color: $input-focus-border-color !important;
+														}
+													}
+
+	// SELECTS
+	select											{
+													@if $input-include-glowing-effect {
+														@include block-glowing-effect(focus, $glowing-effect-fade-time, $glowing-effect-color);
+													}
 													}
 
 	// RADIO BUTTONS AND CHECKBOXES
