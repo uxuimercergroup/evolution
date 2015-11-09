@@ -29,6 +29,10 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 // CORE GLOBAL - BEGINS
 
+	// TYPE - BEGINS
+		h6.evo-hdr-rule				{color: $sapphire-bright;}
+	// TYPE - ENDS
+
 	// ANNOTATIONS - BEGINS
 		.annotations				{
 									background-color: $highlight-color;
@@ -45,9 +49,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 									background-color: $button-bg-color;
 									border-color: $button-border-color;
 			&:hover,
-			&:focus						{
-										background-color: $button-bg-hover;
-										}
+			&:focus						{background-color: $button-bg-hover;}
 									}
 	// BUTTONS - ENDS
 
@@ -55,6 +57,17 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 
 // FAMILY GLOBAL - BEGINS
+
+	// FAMILY HEADLINE - BEGINS
+		.evo-site-headline			{
+									padding: rem-calc(0 80);
+									margin: rem-calc(65 0 0 0);
+			h4							{
+										color: $sapphire-dark;
+										margin: 0;
+										}
+									}
+	// FAMILY HEADLINE - ENDS
 
 	// COMPONENT ANCHOR ADJUST - BEGINS
 		.evo-site-component-anchor-adjust
@@ -115,23 +128,17 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 	// FAMILY BUTTON GROUP NAV - BEGINS
 		.evo-site-family-button-group-nav
-									{
-									margin-bottom: rem-calc(100);
-									}
+									{margin-bottom: rem-calc(100);}
 	// FAMILY BUTTON GROUP NAV - ENDS
 
 	// COMM FAMILY - BEGINS
 		// ICONS
-		.comm-icon					{
-									color: $amethyst-bright;
-									}
+		.comm-icon					{color: $amethyst-bright;}
 	// COMM FAMILY - ENDS
 
 	// BENEFITS PORTALS FAMILY - BEGINS
 		// ICONS
-		.bp-icon					{
-									color: $sapphire-bright;
-									}
+		.bp-icon					{color: $sapphire-bright;}
 	// BENEFITS PORTALS FAMILY - ENDS
 
 // FAMILY GLOBAL - ENDS
@@ -581,7 +588,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 	// FOOTER GLOBAL - BEGINS
 		.evo-footer					{
-									margin-top: rem-calc(120);
+									margin-top: rem-calc(90);
 									padding-top: rem-calc(30);
 									padding-bottom: rem-calc(20);
 									background-color: $onyx-dark-6;
@@ -667,7 +674,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 										background-image: url('../images/bp/content/evo_bp_family_hero.jpg');
 										}
 			.row						{
-				div							{min-height: rem-calc(315);}
+				div							{min-height: rem-calc(240);}
 										}
 									}
 
@@ -678,9 +685,9 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 									font-size: rem-calc(52);
 									line-height: rem-calc(58);
 									text-align: center;
-									padding: rem-calc(12 8 7 15);
+									padding: rem-calc(12 8 11 15);
 									position: relative;
-									top: 114px;
+									top: 73px;
 									}
 	// HERO IMAGE & TEXT - ENDS
 
@@ -706,7 +713,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 										}
 
 			.row						{
-				div							{min-height: rem-calc(550);}
+				div							{min-height: rem-calc(400);}
 										}
 									}
 
@@ -718,9 +725,9 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 									line-height: rem-calc(68);
 									text-align: center;
 									letter-spacing: rem-calc(9.5);
-									padding: rem-calc(12 10 7 15);
+									padding: rem-calc(12 10 11 15);
 									position: relative;
-									top: 226px;
+									top: 154px;
 			span						{
 										font-family: $evo-font-thin-stack;
 										}
@@ -793,8 +800,8 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 	// COMPONENT GROUP LAYOUT - BEGINS
 		.evo-site-component-group-ctn
 									{
-									margin-top: rem-calc(160);
-									margin-bottom: rem-calc(80);
+									margin-top: rem-calc(90);
+									margin-bottom: rem-calc(90);
 									}
 	// COMPONENT GROUP LAYOUT - ENDS
 
@@ -905,7 +912,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 	// DOWNLOAD SECTION - BEGINS
 		.evo-site-download-ctn		{
-									margin-top: rem-calc(60);
+									margin-top: rem-calc(70);
 			.evo-box					{
 										background-color: $transparent;
 										border-width: 0;
@@ -916,7 +923,6 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 												margin-top: rem-calc(20);
 												color: $sapphire-dark;
 												}
-					button						{margin-bottom: 0;}
 											}
 										}
 									}
@@ -928,7 +934,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 	// PARALLAX SCROLLING  - BEGINS
 
-		.evo-background-video 		{
+		.evo-home-background-image 	{
 									position: fixed;
 									top: 50%;
 									left: 50%;
@@ -1342,12 +1348,63 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 // UI DEVELOPMENT PAGE - BEGINS
 
-	// ICONS
+	// ICONS - BEGINS
 	.uidev-icon						{
 									color: $emerald-medium;
 									}
+	// ICONS - ENDS
 
 // UI DEVELOPMENT PAGE - ENDS
+
+// FAMILY VISUALS PAGE - BEGINS
+
+	// TYPOGRAPHY - BEGINS
+		.evo-type-sample			{
+									margin-bottom: rem-calc(15);
+			&[data-evo-type-sample="proxima-nova-regular"]
+										{font-family: $evo-font-regular-stack;}
+			&[data-evo-type-sample="proxima-nova-semibold"]
+										{font-family: $evo-font-medium-stack;}
+			&[data-evo-type-sample="proxima-nova-bold"]
+										{font-family: $evo-font-bold-stack;}
+			&[data-evo-type-sample="proxima-nova-italic"]
+										{font-family: $evo-font-italic-stack;}
+			&[data-evo-type-sample="proxima-nova-thin"]
+										{font-family: $evo-font-thin-stack;}
+			.large-size					{
+										font-size: rem-calc(120);
+										line-height: 1;
+										}
+			.medium-size				{
+										font-size: rem-calc(32);
+										word-wrap: break-word;
+				span						{letter-spacing: rem-calc(6);}
+										}
+			.small-size					{
+										font-size: rem-calc(22);
+										word-wrap: break-word;
+				span						{letter-spacing: rem-calc(3.5);}
+										}
+									}
+		.evo-type-hierarchy-row		{margin-bottom: rem-calc(30) !important;}
+		.evo-type-data-list			{
+									font-size: rem-calc(14);
+									margin-bottom: 0;
+									}
+	// TYPOGRAPHY - ENDS
+
+	// PEOPLE IMAGE THUMBNAILS - BEGINS
+		.evo-people-image-ctn		{
+			li							{padding: rem-calc(14) !important;}
+			.evo-people-image-thumb		{
+										width: 100%;
+										vertical-align: top;
+										display: block;
+										}
+									}
+	// PEOPLE IMAGE THUMBNAILS - ENDS
+
+// FAMILY VISUALS PAGE - ENDS
 
 /*=== MEDIA QUERIES ========================================================================*/
 @import	"partials/global/responsive_small",

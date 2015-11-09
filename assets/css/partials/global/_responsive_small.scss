@@ -14,6 +14,13 @@
 
 	// FAMILY GLOBAL - BEGINS
 
+		// FAMILY HEADLINE - BEGINS
+			.evo-site-headline			{
+										padding: rem-calc(0 20);
+										margin: rem-calc(40 0 0 0);
+										}
+		// FAMILY HEADLINE - ENDS
+
 		// COMPONENT ANCHOR ADJUST - BEGINS
 			.evo-site-component-anchor-adjust
 										{
@@ -181,7 +188,7 @@
 		// FAMILY LANDING TEMPLATE GLOBAL - BEGINS
 			.evo-family-categories-ctn	{
 										margin-top: rem-calc(40);
-										margin-bottom: rem-calc(20);
+										margin-bottom: rem-calc(20) !important;
 										}
 		// FAMILY LANDING TEMPLATE GLOBAL - ENDS
 

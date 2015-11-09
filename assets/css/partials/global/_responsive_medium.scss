@@ -326,6 +326,13 @@
 
 	// FAMILY GLOBAL - BEGINS
 
+		// FAMILY HEADLINE - BEGINS
+			.evo-site-headline			{
+										padding: rem-calc(0 60);
+										margin: rem-calc(45 0 20 0);
+										}
+		// FAMILY HEADLINE - ENDS
+
 		// COMPONENT ANCHOR ADJUST - BEGINS
 			.evo-site-component-anchor-adjust
 										{
@@ -362,7 +369,7 @@
 										font-size: rem-calc(40);
 										line-height: rem-calc(40);
 										padding: rem-calc(12 10 9 15);
-										top: 122px;
+										top: 73px;
 										}
 		// HERO IMAGE & TEXT - ENDS
 
@@ -371,7 +378,7 @@
 										font-size: rem-calc(46);
 										line-height: rem-calc(46);
 										padding: rem-calc(12 10 9 15);
-										top: 236px;
+										top: 154px;
 										}
 		// LARGE HERO IMAGE & TEXT - ENDS
 
@@ -412,7 +419,7 @@
 			.evo-site-component-group-ctn
 										{
 										margin-top: rem-calc(60);
-										margin-bottom: rem-calc(60);
+										margin-bottom: 0;
 										}
 		// COMPONENT GROUP LAYOUT - ENDS
 
@@ -424,9 +431,21 @@
 		// FAMILY LANDING TEMPLATE GLOBAL - BEGINS
 			.evo-family-categories-ctn
 										{
-										margin-bottom: rem-calc(60);
+										margin-bottom: rem-calc(60) !important;
 										}
 		// FAMILY LANDING TEMPLATE - ENDS
+
+		// DOWNLOAD SECTION - BEGINS
+			.evo-site-download-ctn		{
+										margin-top: rem-calc(60);
+				.evo-box					{
+											margin-bottom: 0;
+					.evo-box-bdy				{
+						.evo-site-button			{margin-bottom: 0;}
+												}
+											}
+										}
+		// DOWNLOAD SECTION - ENDS
 
 	// FAMILY LANDING TEMPLATE - ENDS
 
