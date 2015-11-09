@@ -2,9 +2,15 @@
 
 	<div>
 
-		<!--HOMEPAGE BACKGROUND IMAGE -BEGIN -->
-			<div class="evo-home-background-image"></div>
-		<!--HOMEPAGE BACKGROUND IMAGE -END -->
+		<!--HOMEPAGE BACKGROUND IMAGE - BEGIN -->
+			<div class="hide-for-large-up evo-home-background-image"></div>
+		<!--HOMEPAGE BACKGROUND IMAGE - END -->
+
+		<!--VIDEO BACKGROUND - BEGIN -->
+			<video autoplay loop poster="{{ "evo-tree-background.jpg" | asset_url }}" class="show-for-large-up evo-home-background-image">
+				<source src="{{ "evo-home-video-bg.mp4" | asset_url }}" type="video/mp4">
+			</video>
+		<!--VIDEO BACKGROUND - END -->
 
 		<!-- TITLE AND TAGLINE - BEGIN -->
 			<section class="row evo-home-scroll-section-welcome" data-speed="10" data-type="background">

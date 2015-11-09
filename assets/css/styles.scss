@@ -29,6 +29,16 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 // CORE GLOBAL - BEGINS
 
+	// CODE - BEGINS
+		code						{
+									@include border-radius(rem-calc(4));
+									color: $black;
+									background-color: $onyx-dark-10;
+									border-width: 0;
+									padding: rem-calc(2 5 1 5);
+									}
+	// CODE - ENDS
+
 	// TYPE - BEGINS
 		h6.evo-hdr-rule				{color: $sapphire-bright;}
 	// TYPE - ENDS
@@ -945,7 +955,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 									z-index: -100;
 									-webkit-transform: translateX(-50%) translateY(-50%);
 									transform: translateX(-50%) translateY(-50%);
-									background: url("../images/home/evo-homepage-background.jpg") no-repeat;
+									background: url("../images/home/evo-tree-background.jpg") no-repeat;
 									background-size: cover;
 					  				}
 

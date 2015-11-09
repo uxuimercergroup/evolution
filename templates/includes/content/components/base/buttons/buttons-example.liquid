@@ -44,6 +44,33 @@
 					<!-- TAB 1 (overview section) - BEGINS -->
 						<section role="tabpanel" aria-hidden="false" class="content active" id="{{ model.standard-component-name-id-01 }}-1">
 						<!-- COMPONENT TITLE AND DESCRIPTION - BEGINS -->
+							<p>Buttons act as the focal point for user interaction as it relates to saving data or completing an action.</p>
+
+							<ul>
+								<li>Each button has 4 states: static, hover, active, and loading (optional). </li>
+								<li>In the optional "loading" state, the button should be disabled to prevent the user from clicking multiple times. When this occurs, the button should also change style to also look like it's in a disabled state.</li>
+								<li>Buttons are entirely created with CSS. No images should be used. </li>
+								<li>Buttons used as "links" and buttons used with "forms" should look the same, but the functions can differ. For instance, you can make a link look like a button, but it will not have the "submit" function of a button with type of "submit."</li>
+								<li>The buttons should be able to be aligned to one another horizontally for consistency of Mercer branding.</li>
+							</ul>
+
+							<h5>Width</h5>
+							<ul>
+								<li>Each button should have a minimum width of 100 pixels , but they can expand to match content length if needed.</li>
+								<li>The final width of the button should be dynamic based on the content inside the button.</li>
+							</ul>
+
+							<h5>Labels</h5>
+							<ul>
+								<li>Button text should be a concise, specific call to action. Try to use one word, two at the most, and make it active voice.</li>
+								<li>Button text should Title Case - except in the "loading" state where lowercase is used to visually offset this state from the others.</li>
+							</ul>
+						<!-- COMPONENT TITLE AND DESCRIPTION - ENDS -->
+						</section>
+					<!-- TAB 1 (overview section) - ENDS -->
+
+					<!-- TAB 2 (usage section) - BEGINS -->
+						<section role="tabpanel" aria-hidden="true" class="content" id="{{ model.standard-component-name-id-01 }}-2">
 							<p>There are two button styles:</p> 
 
 							<h5>Primary Button</h5>
@@ -67,19 +94,17 @@
 								<li>To save data entered on a form</li>
 								<li>As a click event action to invoke another interaction on the page. For example, toggling content, hiding and showing content, sliding a panel, etc.</li>
 							</ul>
-						<!-- COMPONENT TITLE AND DESCRIPTION - ENDS -->
-						</section>
-					<!-- TAB 1 (overview section) - ENDS -->
-
-					<!-- TAB 2 (usage section) - BEGINS -->
-						<section role="tabpanel" aria-hidden="true" class="content" id="{{ model.standard-component-name-id-01 }}-2">
-							<p>Usage details go here.</p>
 						</section>
 					<!-- TAB 2 (usage section) - ENDS -->
 
 					<!-- TAB 3 (mobile section) - BEGINS -->
 						<section role="tabpanel" aria-hidden="true" class="content" id="{{ model.standard-component-name-id-01 }}-3">
-							<p>Mobile view info goes here.</p>
+							<ul>
+								<li>The width of all buttons will expand to stretch the available content area when <code>.expand</code> class is used on buttons.</li>
+								<li>All related buttons will stack on top of one another in the presented order when <code>.expand</code> class is used on buttons.</li>
+								<li>The entire button remains "clickable."</li>
+								<li>All states of buttons&mdash;Primary, Secondary, hover, disabled, etc.&mdash;remain in effect.</li>
+							</ul>
 						</section>
 					<!-- TAB 3 (mobile section) - ENDS -->
 
