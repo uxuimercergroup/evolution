@@ -105,8 +105,8 @@ $(function() {
 		// PARALLAX SCROLLING
 		evoParallaxScroll();
 
-		//HOME PAGE CAROUSEL
-		evoCarousel('evo-carousel-example');
+		// HOME PAGE CAROUSEL
+		evoCarousel('evo-home-carousel');
 
 		// JS LIBRARY INITS
 

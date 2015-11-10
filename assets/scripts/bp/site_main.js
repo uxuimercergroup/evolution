@@ -74,6 +74,13 @@ $(function() {
 			evoButtonInteractive('evo-button-interactive-secondary-example');
 			evoButtonInteractive('evo-button-interactive-primary-example');
 
+		// CAROUSEL
+
+			// Carousel example
+			evoCarousel('evo-carousel-example',{
+				navigation: true
+			});
+
 		// DATEPICKER
 
 			// Datepicker read only input example
