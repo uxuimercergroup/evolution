@@ -60,11 +60,11 @@
 
 			.evo-home-scroll-section-benefits	
 										{ 
-										height: rem-calc(1200); 
+										height: rem-calc(1000); 
 
 				.evo-home-benefits 			{ 
-											height: rem-calc(1200);
-											padding: rem-calc(180) 0 0 0; 
+											height: rem-calc(1000);
+											padding: rem-calc(160) 0 0 0; 
 											}
 										}
 
@@ -116,8 +116,18 @@
 										}
 
 		// HOME PAGE HEADERS - ENDS
+
+		// HOME PAGE CAROUSEL - BEGINS
+
+			.evo-carousel-home			{
+				.evo-carousel-box			{
+											height: rem-calc(400);						
+											}
+										}
+
+		// HOME PAGE CAROUSEL - ENDS
 												
-	//HOME PAGE - ENDS
+	// HOME PAGE - ENDS
 }
 
 

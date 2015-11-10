@@ -1015,9 +1015,9 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 		p 									{
 											font-size: 140%;
 											}												
-		h5 									{							
+		h5 									{
 											text-align: center;
-											font-size: rem-calc(13);
+											font-size: rem-calc(12);
 											}								    		
 							    		}
 									}
@@ -1166,7 +1166,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 									letter-spacing: rem-calc(9.0) !important;
 									margin: rem-calc(-68) 0 rem-calc(25) 0;
 									display: inline-block;
-									padding: rem-calc(5) 0 0 rem-calc(5);
+									padding: rem-calc(5 0 3 5);
 
 			.evo-home-headers-welcome 	{
 										font-size: rem-calc(32);
@@ -1189,7 +1189,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 									font-family: $evo-font-medium-family !important;
 									text-transform: uppercase;											
 									letter-spacing: rem-calc(9.0) !important;
-									padding: rem-calc(5) 0 0 rem-calc(5);
+									padding: rem-calc(5 0 3 5);
 
 			.evo-home-headers-families	{
 										font-size: rem-calc(26);
@@ -1213,7 +1213,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 									font-family: $evo-font-medium-family !important;
 									text-transform: uppercase;											
 									letter-spacing: rem-calc(9.0) !important;
-									padding: rem-calc(5) 0 0 rem-calc(5);	
+									padding: rem-calc(5 0 3 5);	
 
 			.evo-home-headers-front-end	{
 										font-size: rem-calc(26);
@@ -1336,19 +1336,26 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 				h4 							{
 											color: $sapphire-dark;
 											text-align: center;
-											margin-top: rem-calc(20);	
+											margin-top: rem-calc(20);
+											padding-left: rem-calc(30);
+											padding-right: rem-calc(30);
 											}
 				p 							{
 											color: $sapphire-dark;
-											text-align: center;					
+											text-align: center;
+											padding-left: rem-calc(30);
+											padding-right: rem-calc(30);			
 											}
 										}
 
 			.evo-carousel-image-home	{
 										z-index: 98 !important;
 										margin-top: rem-calc(-100);
-										box-shadow: 0 0 20px rgba(0,0,0,0.8);
 										padding: 0px;
+				img							{
+											width: auto !important;
+											margin: 0 auto;
+											}
 										}
 									}
 
