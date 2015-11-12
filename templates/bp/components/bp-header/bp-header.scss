@@ -1,0 +1,53 @@
+/*-------------------------------------------------------------------------------------------
+Mercer Evolution - v3.0.1 - Benefits Portals Family
+Header Component v1.0 - SASS
+DATE - November 11, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
+--------------------------------------------------------------------------------------------*/
+
+//
+// @core sass imports - IMPORTANT: DO NOT MODIFY!
+//
+@import	"../../../../assets/css/core/global/color_variables";
+@import	"../../../../assets/css/core/foundation/foundation/settings";
+@import	"../../../../assets/css/core/global/variables";
+@import	"../../../../assets/css/core/global/functions";
+@import	"../../../../assets/css/core/global/mixins";
+
+//
+// @variables - IMPORTANT: DO NOT MODIFY! MODIFY VARIABLE OVERRIDES ONLY.
+//
+
+
+//
+// @variable overrides
+//
+
+
+
+// HEADER COMPONENT - BEGINS
+.evo-bp-header					{
+	.evo-top-bar					{
+		.title-area						{
+			.name							{
+				a								{
+												padding-left: rem-calc(20);
+												padding-right: 0;
+					&:hover							{
+													background-color: $transparent;
+													}
+												}
+											}
+										}
+									}
+								}
+// HEADER COMPONENT - ENDS
+
+//=== MEDIA QUERIES =========================================================================
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+@media #{$medium-up} {
+
+	
+
+}

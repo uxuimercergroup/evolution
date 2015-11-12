@@ -85,11 +85,12 @@
 	<body id="top">
 
 		<!-- OFF-CANVAS WRAPPER - BEGINS -->
-		<div class="off-canvas-wrap evo-off-canvas evo-site-off-canvas" data-offcanvas>
+		<div class="off-canvas-wrap evo-off-canvas" data-offcanvas>
 			<div class="inner-wrap">
 
 				<!-- HEADER - BEGINS -->
-				{% include "header" %}
+				{{ "/bp/components/bp-header/bp-header.css" | asset_url | stylesheet_tag }}
+				{% include "/bp/components/bp-header/bp-header" %}
 				<!-- HEADER - ENDS -->
 
 				<!-- PAGE - BEGINS -->
