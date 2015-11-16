@@ -28,20 +28,30 @@
 					<li>
 						<a href="#/">Section Two</a>
 					</li>
-					<li>
-						<a href="#/">Section Three</a>
+					<li class="has-dropdown">
+						<a>Section Three</a>
+						<ul class="dropdown">
+							<li>
+								<a href="#/">Link 1</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#/">Link 2</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#/">Link 3</a>
+							</li>
+						</ul>
 					</li>
-					<li class="divider"></li>
 					<li>
 						<a class="evo-icon-site-cart"></a>
 					</li>
-					<li class="divider"></li>
 					<li>
 						<a class="evo-icon-envelop">
 							<span class="label alert evo-badge" data-evo-badge-size="small">9</span>
 						</a>
 					</li>
-					<li class="divider"></li>
 					<li class="has-dropdown">
 						<a class="evo-icon-user"></a>
 						<ul class="dropdown">
@@ -66,10 +76,10 @@
 
 					<!-- TOP BAR - MEGA MENU - BEGINS -->
 					<li class="has-dropdown" data-evo-top-bar-mega-menu>
-						<a class="evo-icon-menu7"></a>
+						<a class="evo-icon-menu7" data-evo-top-bar-primary-menu-icon></a>
 						<ul class="dropdown" data-evo-top-bar-mega-menu-ctn>
 							<li>
-								<div class="evo-contain-to-grid" data-evo-top-bar-mega-menu-content-ctn>
+								<div class="evo-full-width" data-evo-top-bar-mega-menu-content-ctn>
 									<div class="row">
 										<div class="large-3 columns">
 											<h6 class="evo-hdr-rule">H6 Header</h6>
@@ -112,12 +122,11 @@
 							</li>
 						</ul>
 					</li>
+					<li class="divider"></li>
 					<!-- TOP BAR - MEGA MENU - ENDS -->
 
 					<li class="name">
-						<h1>
-							<a href="#/">Mercer <span class="evo-top-bar-sub-name">Evolution</span></a>
-						</h1>
+						<a href="#/"><img src="{{ "mercer-only-reverse.png" | asset_url }}" alt="Mercer - Make Tomorrow, Today" width="164" /></a>
 					</li>
 				</ul>
 				<!-- TOP BAR LEFT NAV SECTION - ENDS -->
@@ -141,7 +150,7 @@
 
 		<section class="middle tab-bar-section">
 			<h1 class="title">
-				<a href="#/">Mercer Evolution</a>
+				<a href="#/"><img src="{{ "mercer-only-reverse.png" | asset_url }}" alt="Mercer - Make Tomorrow, Today" width="164" /></a>
 			</h1>
 		</section>
 

@@ -1427,8 +1427,8 @@ $topbar-link-weight: $font-weight-normal;
 $topbar-link-font-size: rem-calc(16);
 $topbar-link-hover-lightness: 0;
 $topbar-link-bg: $transparent;
-$topbar-link-bg-hover: $sapphire-medium;
-$topbar-link-bg-color-hover: $sapphire-medium;
+$topbar-link-bg-hover: $transparent;
+$topbar-link-bg-color-hover: $transparent;
 $topbar-link-bg-active: #224F90;
 $topbar-link-bg-active-hover: $sapphire-medium;
 $topbar-link-text-transform: none;
@@ -1476,7 +1476,7 @@ $topbar-dropdown-label-bg: $sapphire-dark;
 
 // Divider Styles
 $topbar-divider-border-bottom: solid 1px $sapphire-medium;
-$topbar-divider-border-top: solid 1px $sapphire-medium;
+$topbar-divider-border-top: solid 1px #01567c;
 
 // Sticky Class
 $topbar-sticky-class: ".sticky";
@@ -2013,7 +2013,7 @@ $evo-top-bar-section-dropdown-active-background-color: $sapphire-medium;
 // $evo-top-bar-section-dropdown-sub-icon: '\edc5';
 // $evo-top-bar-section-dropdown-sub-icon-position-top: rem-calc(1);
 // $evo-top-bar-section-dropdown-sub-icon-position-right: rem-calc(-1);
-// $evo-top-bar-mega-menu-ctn-padding: rem-calc(20 0);
+$evo-top-bar-mega-menu-ctn-padding: rem-calc(40 25 35 25);
 // $evo-top-bar-mega-menu-ctn-border-top-width: 2px;
 // $evo-top-bar-mega-menu-ctn-border-top-style: solid;
 // $evo-top-bar-mega-menu-ctn-border-top-color: $evo-top-bar-section-dropdown-active-background-color;

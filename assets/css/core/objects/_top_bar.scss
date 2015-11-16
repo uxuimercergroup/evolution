@@ -106,6 +106,16 @@ $evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
 																	}
 																}
 															}
+							&:hover:not(.has-form)			{
+								>a								{
+									[class^="evo-icon-"]			{color: $evo-top-bar-section-anchor-hover-icon-color;}
+																}
+															}
+							&.hover							{
+								> a 							{
+									[class^="evo-icon-"]			{color: $evo-top-bar-section-anchor-hover-icon-color;}
+																}
+															}
 							&.active:not(.has-form)			{
 								a:not(.button)					{
 									[class^=evo-icon-]				{

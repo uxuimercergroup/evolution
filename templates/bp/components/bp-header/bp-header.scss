@@ -25,29 +25,57 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 
 
-// HEADER COMPONENT - BEGINS
-.evo-bp-header					{
-	.evo-top-bar					{
-		.title-area						{
-			.name							{
-				a								{
-												padding-left: rem-calc(20);
-												padding-right: 0;
-					&:hover							{
-													background-color: $transparent;
+//=== MEDIA QUERIES =========================================================================
+
+// LARGE MEDIA QUERY RANGE AND UP - 1025px +
+@media #{$large-up} {
+
+	// HEADER COMPONENT - BEGINS
+	.evo-bp-header					{
+		.evo-top-bar					{
+			.title-area						{
+				.name							{
+					h1								{letter-spacing: rem-calc(4.5);}
+					a								{
+													padding-left: rem-calc(18);
+													padding-right: 0;
+						&:hover							{background-color: $transparent;}
+						img								{
+														position: relative;
+														top: -2px;
+														}
 													}
 												}
 											}
+			.top-bar-section				{
+				ul								{
+					li								{
+						> a								{
+														position: relative;
+							&[class^="evo-icon-"],
+							&[class^="evo-icon-site-"]		{
+															margin-top: -1px;
+															padding-right: rem-calc(18) !important;
+															padding-left: rem-calc(18) !important;
+															font-size: rem-calc(24);
+															}
+							[class^="evo-icon-"],
+							[class^="evo-icon-site-"]		{top: 0;}
+
+							.evo-badge						{
+															position: absolute;
+															top: 7px;
+															right: 10px;
+															z-index: 99;
+															}
+														}
+													}
+												}
+				[data-evo-top-bar-primary-menu-icon]
+												{color: $white;}
+											}
 										}
 									}
-								}
-// HEADER COMPONENT - ENDS
-
-//=== MEDIA QUERIES =========================================================================
-
-// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
-@media #{$medium-up} {
-
-	
+	// HEADER COMPONENT - ENDS	
 
 }
