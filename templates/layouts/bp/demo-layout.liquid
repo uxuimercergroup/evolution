@@ -104,9 +104,9 @@
 				<!-- PAGE - ENDS -->
 
 				<!-- FOOTER - BEGINS -->
-				{% if mixture.url == 'bp/components/thin-footer/demo' %}
-					{{ "/bp/components/thin-footer/thin-footer.css" | asset_url | stylesheet_tag }}
-					{% include "/bp/components/thin-footer/thin-footer" %}
+				{% if mixture.url == 'bp/components/fat-footer/demo' %}
+					{{ "/bp/components/fat-footer/fat-footer.css" | asset_url | stylesheet_tag }}
+					{% include "/bp/components/fat-footer/fat-footer" %}
 				{% else %}
 					{{ "/bp/components/thin-footer/thin-footer.css" | asset_url | stylesheet_tag }}
 					{% include "/bp/components/thin-footer/thin-footer" %}

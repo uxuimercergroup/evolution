@@ -1,0 +1,10 @@
+﻿{% layout "bp/demo-layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE CONTENT - BEGINS -->
+	{{ 5 | lorem_ipsum:'p' }}
+	<br />
+<!-- PAGE CONTENT - ENDS -->
+
+{% endblock %}

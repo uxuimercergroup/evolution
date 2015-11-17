@@ -117,6 +117,7 @@ $evo-family: bp;
 							border-top-color: $evo-thin-footer-content-section-border-top-color;
 							padding-top: $evo-thin-footer-content-section-padding-top;
 							min-height: $evo-thin-footer-content-section-min-height;
+							max-width: none;
 
 		// SOCIAL MEDIA BADGE COMPONENT - BEGINS
 			.evo-social-media-badges-ctn 
@@ -160,6 +161,7 @@ $evo-family: bp;
 							{
 							background-color: $evo-thin-footer-brand-bar-background-color;
 							min-height: $evo-thin-footer-brand-bar-min-height;
+							max-width: none;
 			small				{color: $evo-thin-footer-brand-bar-font-color;}
 							}
 	// BRAND BAR - ENDS
