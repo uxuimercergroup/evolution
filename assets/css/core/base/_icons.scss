@@ -179,8 +179,6 @@ $evo-icon-shield-font-color:				$white !default;
 	[class^="evo-icon-"]					{font-family: $evo-icon-font-stack;}
 
 	// ICON FONT - CORE SET - ICON CLASSES
-	.evo-icon-custom-asterisk-small:before {content: "\e600";}
-	.evo-icon-custom-asterisk:before {content: "\e601";}
 	.evo-icon-pencil5:before {content: "\e912";}
 	.evo-icon-file-empty:before {content: "\e99d";}
 	.evo-icon-file-empty2:before {content: "\e99e";}
@@ -273,5 +271,8 @@ $evo-icon-shield-font-color:				$white !default;
 	.evo-icon-skype:before {content: "\ef22";}
 	.evo-icon-linkedin:before {content: "\ef24";}
 	.evo-icon-pinterest2:before {content: "\ef2d";}
+	.evo-icon-cart:before {content: "\e9fe";}
+	.evo-icon-custom-asterisk-small:before {content: "\e600";}
+	.evo-icon-custom-asterisk:before {content: "\e601";}
 
 }//endif

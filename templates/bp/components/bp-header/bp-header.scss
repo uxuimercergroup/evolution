@@ -17,32 +17,79 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 //
 // @variables - IMPORTANT: DO NOT MODIFY! MODIFY VARIABLE OVERRIDES ONLY.
 //
-
+$evo-bp-header-off-canvas-tab-bar-icon-font-size: rem-calc(24) !default;
+$evo-bp-header-off-canvas-menu-item-badge-float: right !default;
+$evo-bp-header-off-canvas-menu-item-badge-position-right: -28px !default;
+$evo-bp-header-top-bar-title-area-anchor-padding-left: rem-calc(18) !default;
+$evo-bp-header-top-bar-title-area-anchor-padding-right: rem-calc(18) !default;
+$evo-bp-header-top-bar-title-area-anchor-hover-background-color: $transparent !default;
+$evo-bp-header-top-bar-title-area-anchor-image-position-top: -2px !default;
+$evo-bp-header-top-bar-section-anchor-icon-margin-top: -1px !default;
+$evo-bp-header-top-bar-section-anchor-icon-padding-right: rem-calc(18) !default;
+$evo-bp-header-top-bar-section-anchor-icon-padding-left: rem-calc(18) !default;
+$evo-bp-header-top-bar-section-anchor-icon-font-size: rem-calc(24) !default;
+$evo-bp-header-top-bar-section-anchor-badge-position-top: 7px !default;
+$evo-bp-header-top-bar-section-anchor-badge-position-right: 10px !default;
+$evo-bp-header-top-bar-section-anchor-badge-zindex: 99 !default;
+$evo-bp-header-top-bar-section-anchor-primary-icon-font-color: $white !default;
 
 //
 // @variable overrides
 //
+// $evo-bp-header-off-canvas-tab-bar-icon-font-size: rem-calc(24);
+// $evo-bp-header-off-canvas-menu-item-badge-float: right;
+// $evo-bp-header-off-canvas-menu-item-badge-position-right: -28px;
+// $evo-bp-header-top-bar-title-area-anchor-padding-left: rem-calc(18);
+// $evo-bp-header-top-bar-title-area-anchor-padding-right: rem-calc(18);
+// $evo-bp-header-top-bar-title-area-anchor-hover-background-color: $transparent;
+// $evo-bp-header-top-bar-title-area-anchor-image-position-top: -2px;
+// $evo-bp-header-top-bar-section-anchor-icon-margin-top: -1px;
+// $evo-bp-header-top-bar-section-anchor-icon-padding-right: rem-calc(18);
+// $evo-bp-header-top-bar-section-anchor-icon-padding-left: rem-calc(18);
+// $evo-bp-header-top-bar-section-anchor-icon-font-size: rem-calc(24);
+// $evo-bp-header-top-bar-section-anchor-badge-position-top: 7px;
+// $evo-bp-header-top-bar-section-anchor-badge-position-right: 10px;
+// $evo-bp-header-top-bar-section-anchor-badge-zindex: 99;
+// $evo-bp-header-top-bar-section-anchor-primary-icon-font-color: $white;
 
 
+// HEADER COMPONENT - OFF-CANVAS - BEGINS
+	.evo-bp-header					{
+		.tab-bar						{
+			.menu-icon						{
+				[class*="evo-icon-"]			{font-size: $evo-bp-header-off-canvas-tab-bar-icon-font-size;}
+											}
+										}
+		ul.off-canvas-list				{
+			li								{
+				a 								{
+					.evo-badge						{
+													float: $evo-bp-header-off-canvas-menu-item-badge-float;
+													right: $evo-bp-header-off-canvas-menu-item-badge-position-right;
+													}
+												}
+											}
+										}
+									}
+// HEADER COMPONENT - OFF-CANVAS - ENDS
 
 //=== MEDIA QUERIES =========================================================================
 
 // LARGE MEDIA QUERY RANGE AND UP - 1025px +
 @media #{$large-up} {
 
-	// HEADER COMPONENT - BEGINS
+	// HEADER COMPONENT - TOP BAR - BEGINS
 	.evo-bp-header					{
 		.evo-top-bar					{
 			.title-area						{
 				.name							{
-					h1								{letter-spacing: rem-calc(4.5);}
 					a								{
-													padding-left: rem-calc(18);
-													padding-right: 0;
-						&:hover							{background-color: $transparent;}
+													padding-left: $evo-bp-header-top-bar-title-area-anchor-padding-left;
+													padding-right: $evo-bp-header-top-bar-title-area-anchor-padding-right;
+						&:hover							{background-color: $evo-bp-header-top-bar-title-area-anchor-hover-background-color;}
 						img								{
 														position: relative;
-														top: -2px;
+														top: $evo-bp-header-top-bar-title-area-anchor-image-position-top;
 														}
 													}
 												}
@@ -54,28 +101,29 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 														position: relative;
 							&[class^="evo-icon-"],
 							&[class^="evo-icon-site-"]		{
-															margin-top: -1px;
-															padding-right: rem-calc(18) !important;
-															padding-left: rem-calc(18) !important;
-															font-size: rem-calc(24);
+															margin-top: $evo-bp-header-top-bar-section-anchor-icon-margin-top;
+															padding-right: $evo-bp-header-top-bar-section-anchor-icon-padding-right !important;
+															padding-left: $evo-bp-header-top-bar-section-anchor-icon-padding-left !important;
+															font-size: $evo-bp-header-top-bar-section-anchor-icon-font-size;
 															}
 							[class^="evo-icon-"],
 							[class^="evo-icon-site-"]		{top: 0;}
 
+							// TOP BAR ICON LINK BADGES
 							.evo-badge						{
 															position: absolute;
-															top: 7px;
-															right: 10px;
-															z-index: 99;
+															top: $evo-bp-header-top-bar-section-anchor-badge-position-top;
+															right: $evo-bp-header-top-bar-section-anchor-badge-position-right;
+															z-index: $evo-bp-header-top-bar-section-anchor-badge-zindex;
 															}
 														}
 													}
 												}
 				[data-evo-top-bar-primary-menu-icon]
-												{color: $white;}
+												{color: $evo-bp-header-top-bar-section-anchor-primary-icon-font-color;}
 											}
 										}
 									}
-	// HEADER COMPONENT - ENDS	
+	// HEADER COMPONENT - TOP BAR - ENDS	
 
 }

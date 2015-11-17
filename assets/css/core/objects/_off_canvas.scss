@@ -25,21 +25,23 @@ $evo-off-canvas-tab-bar-header-anchor-color: $tabbar-header-color !default;
 $evo-off-canvas-tab-bar-header-image-margin: rem-calc(-3 0 0 0) !default;
 $evo-off-canvas-menu-label-font-family: $font-family-sans-serif !default;
 $evo-off-canvas-menu-label-letter-spacing: rem-calc(3) !default;
-$evo-off-canvas-menu-anchor-font-size: rem-calc(14) !default;
+$evo-off-canvas-menu-anchor-font-size: rem-calc(16) !default;
 $evo-off-canvas-menu-anchor-line-height: 1.5 !default;
-$evo-off-canvas-menu-anchor-letter-spacing: rem-calc(3) !default;
-$evo-off-canvas-menu-anchor-text-transform: uppercase !default;
+$evo-off-canvas-menu-anchor-letter-spacing: normal !default;
+$evo-off-canvas-menu-anchor-text-transform: none !default;
 $evo-off-canvas-menu-anchor-icon-font-family: $evo-icon-font-stack !default;
 $evo-off-canvas-menu-anchor-icon-font-size: rem-calc(16) !default;
 $evo-off-canvas-menu-anchor-icon-position-top: 2px !default;
 $evo-off-canvas-menu-back-padding-top: rem-calc(9) !default;
 $evo-off-canvas-menu-back-padding-bottom: rem-calc(12) !default;
+$evo-off-canvas-menu-back-letter-spacing: rem-calc(3) !default;
+$evo-off-canvas-menu-back-text-transform: uppercase !default;
 $evo-off-canvas-menu-back-icon-font-family: $evo-icon-font-stack !default;
 $evo-off-canvas-menu-back-icon-position-top: 2px !default;
 $evo-off-canvas-menu-left-anchor-padding-right: rem-calc(40) !default;
 $evo-off-canvas-menu-left-has-submenu-anchor-padding-right: rem-calc(14) !default;
 $evo-off-canvas-menu-left-has-submenu-icon: '\edc5' !default;
-$evo-off-canvas-menu-left-has-submenu-icon-position-top: -2px !default;
+$evo-off-canvas-menu-left-has-submenu-icon-position-top: 0 !default;
 $evo-off-canvas-menu-left-has-submenu-icon-margin-left: rem-calc(5) !default;
 $evo-off-canvas-menu-left-back-anchor-padding-left: rem-calc(19) !default;
 $evo-off-canvas-menu-left-back-icon: '\edc7' !default;
@@ -123,6 +125,8 @@ $evo-off-canvas-menu-right-back-icon-margin-left: 0 !default;
 				> a								{
 												padding-top: $evo-off-canvas-menu-back-padding-top;
 												padding-bottom: $evo-off-canvas-menu-back-padding-bottom;
+												letter-spacing: $evo-off-canvas-menu-back-letter-spacing !important;
+												text-transform: $evo-off-canvas-menu-back-text-transform !important;
 					&:before,
 					&:after							{
 													font-family: $evo-off-canvas-menu-back-icon-font-family;
