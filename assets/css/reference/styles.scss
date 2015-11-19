@@ -229,3 +229,26 @@ code									{@include border-radius(rem-calc(4));}
 										height: rem-calc(50);
 										width: rem-calc(200);
 										}
+
+
+/*--- CORPORATE LOGOS PAGE ------------------------------------------------------------------*/
+.evo-hdr-link							{
+										font-size: rem-calc(16);
+										text-transform: none;
+										letter-spacing: normal;
+										}
+.evo-corp-logo-img-ctn					{
+										border: 1px solid $transparent;
+										margin: rem-calc(20 0);
+										padding: rem-calc(20);
+										}
+.evo-corp-logo-favicon-ctn				{padding: rem-calc(0 0 0 1)}
+
+@media #{$small-only} {
+
+	.evo-hdr-link						{
+										display: block;
+										float: none !important;
+										margin: rem-calc(5 0 10 0);
+										}
+}
