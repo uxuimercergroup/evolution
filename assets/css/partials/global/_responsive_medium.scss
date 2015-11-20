@@ -9,21 +9,31 @@
 
 	// FOOTER - BEGINS
 
-		// HOMPAGE FOOTER - BEGINS
-			.evo-site-hp-footer			{
-										padding: rem-calc(20 0 10 0);
-			
-			// FOOTER LOGO - BEGINS
-				.evo-footer-logo			{
-					> a							{
-												position: relative;
-												top: -6px;
-												}
-											}
-			// FOOTER LOGO - ENDS
+		// SITE FOOTER - BEGINS
+			.evo-site-footer 	{
 
+			// CONTENT SECTION LOGO - BEGINS
+				.evo-thin-footer-logo
+									{margin-bottom: rem-calc(0);}
+			// CONTENT SECTION LOGO - ENDS
+
+			// SOCIAL MEDIA BADGES - BEGINS
+				.evo-social-media-badges-ctn
+									{margin-bottom: rem-calc(0);}
+			// SOCIAL MEDIA BADGES - ENDS
+
+			// FOOTER LINKS - BEGINS
+				.evo-footer-links	{
+									@include clearfix;
+									float: right;
+					li					{
+										border-right-color: $evo-thin-footer-list-pipe-color;
+						a					{color: $evo-thin-footer-link-font-color;}
 										}
-		// HOMPAGE FOOTER - ENDS
+									}
+			// FOOTER LINKS - END
+								}
+		// SITE FOOTER - BEGINS
 
 	// FOOTER - ENDS
 
@@ -348,7 +358,7 @@
 	// FOOTER - BEGINS
 
 		// FOOTER GLOBAL - BEGINS
-			.evo-footer					{
+			.evo-site-footer			{
 										margin-top: rem-calc(60);
 										}
 		// FOOTER GLOBAL - ENDS

@@ -596,42 +596,106 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 
 // FOOTER - BEGINS
 
-	// FOOTER GLOBAL - BEGINS
-		.evo-footer					{
-									margin-top: rem-calc(90);
-									padding-top: rem-calc(30);
-									padding-bottom: rem-calc(20);
-									background-color: $onyx-dark-6;
+	// Component default variables
+	$evo-thin-footer-content-section-background-color: $onyx-dark-2;
+	$evo-thin-footer-content-section-border-top-color: $onyx-dark-10;
+	$evo-thin-footer-brand-bar-background-color: $onyx-dark-10;
+	$evo-thin-footer-brand-bar-font-color: $onyx-bright;
+	$evo-thin-footer-brand-bar-min-height: rem-calc(50);
+	$evo-thin-footer-link-font-color: $sapphire-medium;
+	$evo-thin-footer-list-pipe-color: $onyx-dark-30;
+	$evo-thin-footer-copyright: rem-calc(16);
+	$evo-thin-footer-links-float: none;
+	$evo-thin-footer-links-font-size: rem-calc(14);
+	$evo-thin-footer-logo-margin-bottom: rem-calc(12);
+	$evo-thin-footer-social-media-badge-font-color: $sapphire-medium;
+	$evo-thin-footer-social-media-badge-font-color-hover: $evo-thin-footer-social-media-badge-font-color;
+	$evo-thin-footer-social-media-badge-font-color-focus: $evo-thin-footer-social-media-badge-font-color;
+	$evo-thin-footer-social-media-badge-font-color-visited: $evo-thin-footer-social-media-badge-font-color;
+	$evo-thin-footer-social-media-badge-margin-bottom: rem-calc(20);
+	$evo-thin-footer-content-section-border-top-width: 1px;
+	$evo-thin-footer-content-section-border-top-style: solid;
+	$evo-thin-footer-content-section-padding-top: rem-calc(20);
+	$evo-thin-footer-content-section-min-height: rem-calc(80);
 
-		// FOOTER LINK LISTS HEADERS - BEGINS
-			h6							{
-										margin-top: 0;
-										color: $sapphire-dark;
-				&.evo-hdr-rule				{border-color: $sapphire-dark;}
-										}
-		// FOOTER LINK LISTS HEADERS - ENDS
-			
-		// FOOTER LINK LISTS - BEGINS
-			ul.no-bullet				{
-				li							{
-					a							{line-height: 2;}
-											}
-										}
-		// FOOTER LINK LISTS - ENDS
+	// SITE FOOTER - BEGINS
+		.evo-site-footer 	{
+							margin-top: rem-calc(90);
 
-		// COPYRIGHT - BEGINS
-			.evo-copyright				{
-										letter-spacing: rem-calc(2.5);
-				small						{font-size: rem-calc(10);}
+		// FOOTER CONTENT SECTION - BEGINS
+			.evo-footer-content-section
+								{
+								background-color: $evo-thin-footer-content-section-background-color;
+								border-top-width: $evo-thin-footer-content-section-border-top-width;
+								border-top-style: $evo-thin-footer-content-section-border-top-style;
+								border-top-color: $evo-thin-footer-content-section-border-top-color;
+								padding-top: $evo-thin-footer-content-section-padding-top;
+								min-height: $evo-thin-footer-content-section-min-height;
+								max-width: none;
+
+			// SOCIAL MEDIA BADGE COMPONENT - BEGINS
+				.evo-social-media-badges-ctn 
+									{
+									margin-bottom: $evo-thin-footer-social-media-badge-margin-bottom;
+					a[class^="evo-icon-"]
+										{
+										color: $evo-thin-footer-social-media-badge-font-color;
+						&:hover				{color: $evo-thin-footer-social-media-badge-font-color-hover;}
+						&:focus				{color: $evo-thin-footer-social-media-badge-font-color-focus;}
+						&:visited			{color: $evo-thin-footer-social-media-badge-font-color-visited;}
 										}
-		// COPYRIGHT - ENDS
 
 									}
-	// FOOTER GLOBAL - ENDS
+			// SOCIAL MEDIA BADGE COMPONENT - ENDS
 
-	// HOMPAGE FOOTER - BEGINS
-		.evo-site-hp-footer			{padding: rem-calc(20 0 10 0);}
-	// HOMPAGE FOOTER - ENDS
+			// CONTENT SECTION LOGO - BEGINS
+				.evo-thin-footer-logo
+									{
+									margin-bottom: $evo-thin-footer-logo-margin-bottom;
+									}
+			// CONTENT SECTION LOGO - ENDS
+
+								}
+		// FOOTER CONTENT SECTION - ENDS
+
+		// FOOTER LINKS - BEGINS
+			.evo-footer-links	{
+								float: $evo-thin-footer-links-float;
+				li					{
+					a					{
+										font-size: $evo-thin-footer-links-font-size;
+										color: $evo-thin-footer-link-font-color;
+										}
+									}
+								}
+		// FOOTER LINKS - END
+
+		// BRAND BAR - BEGINS
+			.evo-thin-footer-brand-bar
+								{
+								background-color: $evo-thin-footer-brand-bar-background-color;
+								min-height: $evo-thin-footer-brand-bar-min-height;
+								max-width: none;
+				small				{color: $evo-thin-footer-brand-bar-font-color;}
+								}
+		// BRAND BAR - ENDS
+
+		// COPYRIGHT - BEGINS
+			.evo-footer-copyright
+								{
+								margin-top: $evo-thin-footer-copyright;
+								text-transform: uppercase;
+								letter-spacing: rem-calc(1.2);
+								}
+		// COPYRIGHT - ENDS
+
+		// FOOTER LOGO - BEGINS
+			.evo-footer-logo	{
+								margin-top: $evo-thin-footer-logo-margin-bottom;
+								}
+		// FOOTER LOGO - ENDS
+							}
+	// SITE FOOTER - ENDS
 
 // FOOTER - ENDS
 
@@ -642,7 +706,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 		.banding-template			{
 			[role="main"]				{padding: 0;}
 			[role="main"],
-			.evo-footer					{
+			.evo-site-footer			{
 				> .row						{
 											max-width: 100%;
 											margin-left: auto;

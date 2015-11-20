@@ -12,6 +12,36 @@
 // SMALL MEDIA QUERY RANGE - 0px - 767px
 @media #{$small-only} {
 
+	// FOOTER - BEGINS
+
+		// SITE FOOTER - BEGINS
+			.evo-site-footer 	{
+								margin-top: rem-calc(30);
+
+			// FOOTER LINKS - BEGINS
+				.evo-footer-links	{
+									float: none;
+					li					{
+										border: 0;
+										float: none;
+										line-height: rem-calc(30);
+										margin: 0;
+										padding: 0;
+
+						a					{
+											display: block;
+											width: 100%;
+											}
+										}
+									}
+			// FOOTER LINKS - END
+
+								}
+		// SITE FOOTER - ENDS
+
+	// FOOTER - ENDS
+	
+
 	// FAMILY GLOBAL - BEGINS
 
 		// FAMILY HEADLINE - BEGINS
@@ -72,43 +102,6 @@
 		// FAMILY BUTTON GROUP NAV - ENDS
 
 	// FAMILY GLOBAL - ENDS
-
-
-	// FOOTER - BEGINS
-
-		// FOOTER GLOBAL - BEGINS
-			.evo-footer					{
-										margin-top: rem-calc(30);
-
-			// FOOTER LOGO - BEGINS
-				.evo-footer-logo			{
-					> a							{
-												display: block;
-												padding: rem-calc(20 0 17 0);
-												border-top: 1px dotted $sapphire-dark;
-												}
-											}
-			// FOOTER LOGO - ENDS
-
-										}
-		// FOOTER GLOBAL - ENDS
-
-		// HOMEPAGE FOOTER - BEGINS
-			.evo-site-hp-footer			{
-
-			// HOMEPAGE FOOTER LOGO - BEGINS
-				.evo-footer-logo			{
-					> a							{
-												padding: rem-calc(0 0 17 0);
-												border-top: 0;
-												}
-											}
-			// HOMEPAGE FOOTER LOGO - ENDS
-			
-										}
-		// HOMEPAGE FOOTER - ENDS
-
-	// FOOTER - ENDS
 
 
 	// TEMPLATE PAGE - BEGINS
