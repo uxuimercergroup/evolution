@@ -15,9 +15,11 @@
 		<div class="small-12 columns">
 			<div class="evo-magellan" data-magellan-expedition="fixed">
 				<dl class="sub-nav">
-					<dd data-magellan-arrival="overall-color-palette"><a href="#overall-color-palette">Overall Color Palette</a></dd>
 					<dd data-magellan-arrival="primary-color-palette"><a href="#primary-color-palette">Primary Color Palette</a></dd>
-					<dd data-magellan-arrival="chart-colors"><a href="#chart-colors">Chart Colors</a></dd>
+					<dd data-magellan-arrival="secondary-color-palette"><a href="#secondary-color-palette">Secondary Color Palette</a></dd>
+					<dd data-magellan-arrival="tertiary-color-palette"><a href="#tertiary-color-palette">Tertiary Color Palette</a></dd>
+					<dd data-magellan-arrival="system-colors"><a href="#system-colors">System Colors</a></dd>
+					<dd data-magellan-arrival="data-visualization"><a href="#data-visualization">Data Visualization</a></dd>
 				</dl>
 			</div>
 		</div>
@@ -31,17 +33,7 @@
 		<div class="small-12 columns">
 			<hr />
 
-			<h3 data-magellan-destination="overall-color-palette">Overall Color Palette</h3>
-			<a name="overall-color-palette"></a>
-			{% include '/content/visual/colors/overall-color-palette' %}
-
-			<h3 class="evo-spacer-margin-top-x-large" data-magellan-destination="primary-color-palette">Primary Color Palette</h3>
-			<a name="primary-color-palette"></a>
-			{% include '/content/visual/colors/primary-color-palette' %}
-
-			<h3 class="evo-spacer-margin-top-x-large" data-magellan-destination="chart-colors">Chart Colors</h3>
-			<a name="chart-colors"></a>
-			{% include "/content/visual/colors/chart-colors" %}
+			{% include '/content/visual/colors/color-palette' %}
 
 		</div>
 	</section>
