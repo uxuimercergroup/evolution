@@ -1,59 +1,61 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.7 - Pagination Partial
+// Mercer Evolution - Core v3.0.1 - Pagination Partial
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
 
+//
+// @variables
+//
+$evo-pagination-icon-font-family: $evo-icon-font-stack !default;
+$evo-pagination-icon-font-size: rem-calc(16) !default;
+$evo-pagination-icon-position-top: 0 !default;
+$evo-pagination-icon-padding: rem-calc(16) !default;
+$evo-pagination-icon-previous: '\edc7' !default;
+$evo-pagination-icon-previous-position-left: 0 !default;
+$evo-pagination-icon-next: '\edc5' !default;
+$evo-pagination-icon-next-position-right: 0 !default;
+
+
 @if $use-pagination == true{
 
-	.evo-pagination							{
-		ul										{
-												@include clearfix;
-												position: relative;
-												right: -1px;
-												display: inline-block;
-												list-style: none;
-												margin: 0;
-												padding: 0;
-			li										{
-													float: left;
-													margin-right: 5px; 
-													text-align: center;
-													vertical-align: middle;
-													font-size: 1rem;
-				&:last-child							{margin-right: 0;}
-				a,
-				span									{
-														display: block;
-														border: 1px $paginationBorderStyle $paginationBorderColor;
-														padding: 9px 6px 8px 6px;
-														line-height: $paginationLinkLineHeight;
-														min-width: $paginationLinkMinWidth;
-														max-height: $paginationLinkMaxHeight;
-														text-decoration: none;
-														}
-				&.active								{
-					a,
-					span									{
-															cursor: default;
-															background-color: $paginationActiveBackgroundColor;
-															color: $paginationActiveFontColor;
-															text-decoration: none;
-															}
-					a:hover									{color: $paginationActiveFontColor;}
-														}
-				a:hover									{
-														background-color: $paginationHoverBackgroundColor;
-														text-decoration: none;
-														}
-				[class^="evo-icon-"]					{color: $iconFontColor;}
-				.evo-pagination-icon					{
-					&:hover									{color: $paginationLinkHoverColor;}
-														}
-													}
-			.evo-pagination-page-nav				{display: none;}
+	// PAGINATION
+	.evo-pagination					{
+		li								{
+			a								{
+											position: relative;
+											text-decoration: none;
+											}
+			&.previous,
+			&.next							{
+				a:before,
+				a:after							{
+												position: absolute;
+												font-family: $evo-pagination-icon-font-family;
+												font-size: $evo-pagination-icon-font-size;
+												top: $evo-pagination-icon-position-top;
 												}
 											}
+			&.previous						{
+				a								{
+												padding-left: $evo-pagination-icon-padding;
+					&:before						{
+													content: $evo-pagination-icon-previous;
+													left: $evo-pagination-icon-previous-position-left;
+													}
+												}
+											}
+			&.next							{
+				a								{
+												padding-right: $evo-pagination-icon-padding;
+					&:after							{
+													content: $evo-pagination-icon-next;
+													right: $evo-pagination-icon-next-position-right;
+													}
+												}
+											}
+										}
+									}
 
 	//=== MEDIA QUERIES =========================================================================
 
@@ -62,20 +64,7 @@
 		
 		@media #{$medium-up} {
 
-			.evo-pagination					{
-				ul								{
-					li								{
-													font-size: $paginationFontSizeLargeBreakpoint;
-						a,
-						span							{
-														min-width: $paginationLinkMinWidthLargeBreakpoint;
-														max-height: $paginationLinkMaxHeightLargeBreakpoint;
-														}
-						.evo-pagination-icon			{padding: 7px 5px;}
-													}
-					.evo-pagination-page-nav		{display: block;}
-												}
-											}
+			
 
 		}
 		

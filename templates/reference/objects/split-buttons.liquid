@@ -1,0 +1,91 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+			
+			{{ 1 | lorem_ipsum:'p' }}
+
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+	<!-- SPLIT BUTTONS - BEGINS -->
+			<section class="row">
+
+			<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/split-buttons/split-buttons' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+			<!-- EXAMPLE CODE - ENDS -->
+
+			<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/split-buttons/split-buttons' %}
+					</div>
+			<!-- EXAMPLE RENDERED CODE - ENDS -->
+			</section>
+			<hr />
+	<!-- SPLIT BUTTONS - ENDS -->
+
+	<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3>Advanced</h3>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+									<ul>
+										<li>
+											<a href="http://127.0.0.1:7774/objects/split-buttons" target="_blank">Split Buttons</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+	<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}

@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.7 - Base Lists Partial
+// Mercer Evolution - Core v3.0.1 - Base Lists Partial
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
@@ -7,84 +7,50 @@
 //
 // @variables
 //
-$evo-inline-dl-list-margin-bottom: 0 !default;
-
-// Used for defintion title styles
-$evo-inline-dl-list-dt-float: left !default;
-$evo-inline-dl-list-dt-margin: 0 rem-calc(10) 0 0 !default;
-
-// Used to format the definition items
-$evo-inline-dl-list-dd-float: left !default;
-$evo-inline-dl-list-dd-margin: 0 rem-calc(10) 0 0 !default;
-$evo-inline-dl-list-dd-display: block !default;
-$evo-inline-dl-list-dd-last-child: 0 !default;
-
-// Used for the vertical pipe in lists
-$evo-horizontal-list-pipe-border-color: $gray-mid !default;
-
-// Used for defintion list headers
+$evo-inline-list-pipe-border-color: $onyx-dark-30 !default;
+$evo-inline-dl-list-dt-margin-right: rem-calc(10) !default;
+$evo-inline-dl-list-dd-margin-right: rem-calc(10) !default;
 $evo-definition-list-hdr-color: $black !default;
-$evo-definition-list-hdr-border-color: $gray-mid !default;
-
-
-//
-// @mixins
-//
-// We use this mixin to create inline defintion lists
-@mixin evo-inline-dl-list 					{
-											@include clearfix;
-											margin-bottom: $evo-inline-dl-list-margin-bottom;
-	dt											{
-												float: $evo-inline-dl-list-dt-float;
-												margin: $evo-inline-dl-list-dt-margin;
-												}
-	& > dd										{
-												list-style: none;
-												float: $evo-inline-dl-list-dd-float;
-												margin: $evo-inline-dl-list-dd-margin;
-												display: $evo-inline-dl-list-dd-display;
-		a											{
-													text-decoration: none;
-			&:hover										{text-decoration: underline;}
-													}
-		&:last-child								{margin-right: $evo-inline-dl-list-dd-last-child;}
-												}
-											}
-
-//
-// @exports
-//
-@include exports("evo-inline-dl-list") {}
+$evo-definition-list-hdr-border-color: $onyx-dark-30 !default;
 
 
 @if $use-lists == true{
 
-	// DEFINITION LIST STYLES
-	.evo-inline-dl-list						{@include evo-inline-dl-list();}
-
-	// UNORDERED LIST STYLES
+	// INLINE LIST
 	.evo-inline-list						{
-											@include inline-list;
-											margin-bottom: 0;
-		& > li
-												{
-												margin-bottom: 0;
-												margin-left: rem-calc(10);
-			&:first-child							{margin-left: $inline-list-default-float-list-margin;}
-			a										{
-													text-decoration: none;
-				&:hover									{text-decoration: underline;}
+		& > li									{
+			&:first-child							{margin-left: 0;}
+												}
+											}
+
+	// INLINE LIST WITH PIPES
+	.evo-inline-list-pipes					{
+		& > li,
+		& > dd									{
+												border-right: 1px solid $evo-inline-list-pipe-border-color;
+												padding-right: rem-calc(10);
+			&:last-child							{
+													padding-right: 0;
+													border-right: 0;
 													}
 												}
 											}
 
-	// ADD PIPE DELINATION TO LIST ITEMS
-	.evo-inline-list-pipes					{
-		& > li,
+	// INLINE DEFINITION LIST
+	.evo-inline-dl-list						{
+											@include clearfix;
+		dt										{
+												float: left;
+												margin-right: $evo-inline-dl-list-dt-margin-right;
+												margin-bottom: 0;
+												}
 		& > dd									{
-												border-right: 1px solid $evo-horizontal-list-pipe-border-color;
-												padding-right: rem-calc(9);
-			&:last-child							{border-right: 0;}
+												list-style: none;
+												display: block;
+												float: left;
+												margin-right: $evo-inline-dl-list-dd-margin-right;
+												margin-bottom: 0;
+			&:last-child							{margin-right: 0;}
 												}
 											}
 
@@ -93,8 +59,8 @@ $evo-definition-list-hdr-border-color: $gray-mid !default;
 											list-style: none;
 											margin-left: 0;
 		dt										{
-												margin: 0 0 rem-calc(10) 0;
-												padding: 0 0 rem-calc(4) 0;
+												margin-bottom: rem-calc(10);
+												padding-bottom: rem-calc(4);
 												color: $evo-definition-list-hdr-color;
 												border-bottom: 1px solid $evo-definition-list-hdr-border-color;
 												}
@@ -104,11 +70,11 @@ $evo-definition-list-hdr-border-color: $gray-mid !default;
 												}
 											}
 
-	.evo-data-list-bulleted					{
+	.evo-data-list-stacked					{
 		dd, li									{
-												display: list-item;
-												list-style: disc;
-												margin-left: rem-calc(18);
+			span									{
+													display: block;
+													}
 												}
 											}
 

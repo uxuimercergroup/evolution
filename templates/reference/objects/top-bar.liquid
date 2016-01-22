@@ -1,0 +1,470 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+			<p>
+				The Top Bar gives you a great way to display a complex navigation bar. Evolution Core top bar depends on Foundation's <a href="http://foundation.zurb.com/docs/components/topbar.html" target="_blank">Top Bar</a> as a starting point.
+			</p>
+
+		<!-- ANNOTATIONS BOX - BEGINS -->
+			<div class="panel evo-box annotations">
+				<div class="evo-box-bdy">
+					<p class="evo-no-margin-bottom">
+						<strong>Important:</strong> Top bar is used for large and up media queries only, hence no mobile version for small or medium media queries. On small and medium media queries, top bar is replaced by offcanvas menu and the mobile header component.
+					</p>
+				</div>
+			</div>
+		<!-- ANNOTATIONS BOX - ENDS -->
+
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="basic"><a href="#basic">Basic</a></dd>
+					<dd data-magellan-arrival="positioning"><a href="#positioning">Positioning the Bar</a></dd>
+					<dd data-magellan-arrival="sticky"><a href="#sticky">Sticky Bar</a></dd>
+					<dd data-magellan-arrival="clickable"><a href="#clickable">Clickable Bar</a></dd>
+					<dd data-magellan-arrival="components"><a href="#components">Built-in Components</a></dd>
+					<dd data-magellan-arrival="megamenu"><a href="#megamenu">Mega Menu</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+		<!-- DEFAULT - BEGINS -->
+			<h3 data-magellan-destination="basic">Basic</h3>
+			<a name="basic"></a>
+
+			<p>
+				The top bar is a pretty complex piece of magical UI goodness. We rely on many presentational classes to define its look and feel, and there's a lot happening in the JS. The top bar is hoverable by default, but you can change it to use click events instead by adding <code>data-options="is_hover: false"</code> to the <code>nav</code> element. If you have a hoverable topbar, it will close itself on click by default, but this behavior can be prevented by setting <code>data-options="dropdown_autoclose: false"</code>.
+			</p>
+
+			<h5 class="evo-spacer-margin-top-medium">Content Zones</h5>
+			<p>
+				The top bar has two "content" zones after the main title area. These are the <code>TOP BAR RIGHT NAV SECTION</code> and the <code>TOP BAR LEFT NAV SECTION</code>. The top bar list items can live in both zones.
+			</p>
+
+			<h5 class="evo-spacer-margin-top-medium">Active Navigation</h5>
+			<p>
+				To show active navigation in both the top bar and dropdown menus of the top bar use the class of <code>.active</code> on the active list item.
+			</p>
+
+			<h5 class="evo-spacer-margin-top-medium">Dropdown Menus</h5>
+			<p>
+				Add the class of <code>.has-dropdown</code> to top bar list items that need dropdown menus. Then add a <code>ul</code> list (and list item options) with class of <code>.dropdown</code> after the top bar item link that has the dropdown menu.
+			</p>
+			<p>
+				If the list item with a menu is only an icon, it will not get a menu down icon next to it. If the list item with a menu is text, it will get a menu down icon next to it.
+			</p>
+			<p>
+				You can create multi-tiered dropdown menu navigation by putting dropdown menu lists inside other dropdown menu lists. See code below for an example.
+			</p>
+			<h5 class="evo-spacer-margin-top-medium">Accessibility</h5>
+			<p>
+				The top bar is fully keyboard and screen reader accessible. However, if your page uses top bar and off-canvas navigation, add the attribute <code>aria-hidden="true"</code> to one of them to ensure the user's device will not tab through (and possibly read) both of them before reaching any content.
+			</p>
+
+			<!-- ANNOTATIONS BOX - BEGINS -->
+				<div class="panel evo-box annotations">
+					<div class="evo-box-bdy">
+						<p class="evo-no-margin-bottom">
+							<strong>Important:</strong> Make sure to remove the <code>href</code> attribute from links that open dropdown menus. For example: <code>&lt;a&gt;Library&lt;/a&gt;</code> in the code below. The <code>href</code> attribute messes up the Foundation dropdown menu functionality.
+						</p>
+					</div>
+				</div>
+			<!-- ANNOTATIONS BOX - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/top-bar/top-bar' %}
+						<br />
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- DEFAULT - ENDS -->
+
+		<!-- POSITIONING THE BAR - BEGINS -->
+			<h3 data-magellan-destination="positioning">Positioning the Bar</h3>
+			<a name="positioning"></a>
+
+			<p>
+				The top bar is built with a single <code>nav</code> element with a class of <code>top-bar</code>. It will take on full-browser width by default. To make the top bar stay fixed as you scroll, wrap it in <code>div class="fixed"</code>. If you want your navigation to be set to your grid width, wrap it in <code>div class="contain-to-grid"</code>.
+			</p>
+
+			<!-- ANNOTATIONS BOX - BEGINS -->
+				<div class="panel evo-box annotations">
+					<div class="evo-box-bdy">
+						<p class="evo-no-margin-bottom">
+							Note: You may use <code>fixed</code> and <code>contain-to-grid</code> together in the same wrapping div: <code>div class="contain-to-grid fixed"</code>.
+						</p>
+					</div>
+				</div>
+			<!-- ANNOTATIONS BOX - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>Contain to Grid</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar-contain-to-grid' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>Fixed</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar-fixed' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- POSITIONING THE BAR - ENDS -->
+
+		<!-- STICKY BAR - BEGINS -->
+			<h3 data-magellan-destination="sticky">Sticky Bar</h3>
+			<a name="sticky"></a>
+
+			<p>
+				You may also wrap your top bar in <code>div class="sticky"</code> and put it anywhere within your markup. When the navigation hits the top of the browser, it will act like the fixed top bar and stick to the top as users continue to scroll.
+			</p>
+
+			<p>
+				You can also add <code>sticky_on</code> to your <code>data-options</code> attribute to allow your sticky bar to work on <code>small</code>, <code>medium</code>, or <code>large</code> when the page loads. This works in conjunction with the sticky class wrapper to target sticky for small, medium, or large. It will be sticky on all screen sizes by default.
+			</p>
+
+			<p>
+				Additionally, you can pass in an array to specify sticky on multiple sizes. For example, <code>data-options="sticky_on: [small,large]"</code> will be sticky on small and large, but NOT medium.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar-sticky' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- STICKY BAR - ENDS -->
+
+		<!-- CLICKABLE BAR - BEGINS -->
+			<h3 data-magellan-destination="clickable">Clickable Top Bar</h3>
+			<a name="clickable"></a>
+
+			<p>
+				You can now make the top bar clickable by adding the data-attribute <code>data-options="is_hover: false"</code> to the nav element.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/top-bar/top-bar-clickable' %}
+						<br />
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar-clickable' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- CLICKABLE BAR - ENDS -->
+
+		<!-- BUILT-IN COMPONENTS - BEGINS -->
+			<h3 data-magellan-destination="components">Built-in Components</h3>
+			<a name="components"></a>
+
+			<h5 class="evo-spacer-margin-top-medium">Dividers</h5>
+			<p>
+				Separate your top bar items and dropdown menu items with dividers.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row evo-spacer-margin-bottom-large">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/top-bar/top-bar-dividers' %}
+						<br />
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar-dividers' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<h5 class="evo-spacer-margin-top-medium">Labels</h5>
+			<p>
+				Separate sections of your dropdown menus with labels.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row evo-spacer-margin-bottom-large">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/top-bar/top-bar-labels' %}
+						<br />
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar-labels' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<h5 class="evo-spacer-margin-top-medium">Remove the Title</h5>
+			<p>
+				If you want a bar that doesn't include a title, just take out the content within the list item <code>class="name"</code>.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/top-bar/top-bar-no-title' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar-no-title' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- BUILT-IN COMPONENTS - ENDS -->
+
+		<!-- OPTIONS - BEGINS -->
+			<h3 data-magellan-destination="megamenu">Mega Menu</h3>
+			<a name="megamenu"></a>
+
+			<h5 class="evo-spacer-margin-top-medium">Hover</h5>
+
+			<p>When using the hover version of the Top Bar Mega Menu make sure to set the <code>data-options="is_hover: true"</code> on the Top Bar <code>nav</code> element itself.</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row evo-spacer-margin-bottom-large">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/top-bar/top-bar-mega-menu-hover' %}
+						<br />
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar-mega-menu-hover' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<h5 class="evo-spacer-margin-top-medium">Click</h5>
+
+			<p>When using the click version of the Top Bar Mega Menu make sure to set the <code>data-options="is_hover: false"</code> on the Top Bar <code>nav</code> element itself.</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row evo-spacer-margin-bottom-large">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/top-bar/top-bar-mega-menu-click' %}
+						<br />
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar-mega-menu-click' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<h5 class="evo-spacer-margin-top-medium">Content Layout Options</h5>
+
+			<p>Use <code>.evo-contain-to-grid</code> to contain the content inside the Mega Menu to the grid max-width and center it inside the Mega Menu.</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row evo-spacer-margin-bottom-large">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/top-bar/top-bar-mega-menu-grid' %}
+						<br />
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar-mega-menu-grid' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<p>Use <code>.evo-full-width</code> to expand the content inside the Mega Menu to 100% of the width of Mega Menu.</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row evo-spacer-margin-bottom-large">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/top-bar/top-bar-mega-menu-full' %}
+						<br />
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/top-bar/top-bar-mega-menu-full' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- OPTIONS - ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+									<ul>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/topbar.html" target="_blank">Top Bar</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+{% endblock %}

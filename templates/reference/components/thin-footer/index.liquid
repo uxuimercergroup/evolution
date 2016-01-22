@@ -1,0 +1,142 @@
+﻿{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+
+			<section class="row">
+				<div class="small-3 columns">
+					<p>Version: {{ model.version_number }}</p>
+				</div>
+				<div class="small-9 columns">
+					<p class="right">
+						<span class="label radius evo-label" data-evo-background-color="sapphire-bright">Benefits Portals</span>
+					</p>
+				</div>
+			</section>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+		<!-- EXAMPLE A - BEGINS -->
+			<h3 data-magellan-destination="example-a">Basic</h3>
+			<a name="example-a"></a>
+			<p>
+				This is a basic display of a thin footer, if you use a color combination that is dark you will need to add in the correct logos that will work with the colors for your thin footer.
+			</p>
+
+			<p>Use <code>.evo-contain-to-grid</code> to contain the content inside the Thin Footer to the grid max-width and center it inside the Thin Footer.</p>
+
+			<p>Use <code>.evo-full-width</code> to expand the content inside the Thin Footer to 100% of the width of Thin Footer.</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{{ "/reference/components/thin-footer/thin-footer.css" | asset_url | stylesheet_tag }}
+						{% include "/reference/components/thin-footer/thin-footer" %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns evo-spacer-margin-top-large site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include "/reference/components/thin-footer/thin-footer" %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- EXAMPLE A - ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-evolution == "true" %}
+								<li>
+									<a href="/">Evolution Core {{ global.version_number }}</a>
+									<ul>
+										<li>
+											<a href="#/">Corporate Logos</a>
+										</li>
+										<li>
+											<a href="/reference/base/icons">Icons</a>
+										</li>
+										<li>
+											<a href="/reference/base/lists">Lists</a>
+										</li>
+										<li>
+											<a href="/reference/components/social-media-badges/index">Social Media Badges</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}

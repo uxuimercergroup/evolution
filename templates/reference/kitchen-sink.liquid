@@ -1,0 +1,1592 @@
+{% layout "reference/kitchen-sink-layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+
+		<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+			<h1>{{ model.title }}</h1>
+			<p>
+				This page includes every single Evolution Core element so that we can make sure things work together smoothly.
+			</p>
+		<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+			<hr />
+
+		<!-- CONTENT - BEGINS -->
+			
+			<!-- BOXES - BEGINS -->
+				<h3>Boxes</h3>
+				<div class="row">
+					<div class="medium-4 columns">
+
+					<!-- BASIC - BEGINS -->
+						<h6>Basic</h6>
+						{% include 'reference/base/boxes/box' %}
+					<!-- BASIC - ENDS -->
+
+					</div>
+					<div class="medium-4 columns">
+
+					<!-- BOX WITH HEADER - BEGINS -->
+						<h6>With Header</h6>
+						{% include 'reference/base/boxes/box-hdr' %}
+					<!-- BOX WITH HEADER - ENDS -->
+
+					</div>
+					<div class="medium-4 columns">
+
+					<!-- BOX WITH SHADOW - BEGINS -->
+						<h6>With Shadow</h6>
+						{% include 'reference/base/boxes/box-hdr-shadow' %}
+					<!-- BOX WITH SHADOW - ENDS -->
+
+					</div>
+				</div>
+			<!-- BOXES - ENDS -->
+
+			<hr />
+
+			<!-- BUTTONS - BEGINS -->
+				<h3>Buttons</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+
+					<!-- BASIC - BEGINS -->
+						<h6>Basic</h6>
+
+						<p class="ref-sub-head"><code>a</code> tag</p>
+						{% include 'reference/base/buttons/button-a-secondary' %}
+						{% include 'reference/base/buttons/button-a-primary' %}
+
+						<p class="ref-sub-head"><code>button</code> tag</p>
+						{% include 'reference/base/buttons/button-secondary' %}
+						{% include 'reference/base/buttons/button-primary' %}
+					<!-- BASIC - ENDS -->
+
+					<!-- DISABLED - BEGINS -->
+						<h6>Disabled</h6>
+						
+						<p class="ref-sub-head"><code>a</code> tag</p>
+						{% include 'reference/base/buttons/button-a-secondary-disabled' %}
+						{% include 'reference/base/buttons/button-a-primary-disabled' %}
+
+						<p class="ref-sub-head"><code>button</code> tag</p>
+						{% include 'reference/base/buttons/button-secondary-disabled' %}
+						{% include 'reference/base/buttons/button-primary-disabled' %}
+					<!-- DISABLED - ENDS -->
+
+					<!-- SIZES - BEGINS -->
+						<h6>Sizes</h6>
+
+						<p class="ref-sub-head"><code>a</code> tag</p>
+						{% include 'reference/base/buttons/button-a-sizes' %}
+
+						<p class="ref-sub-head"><code>button</code> tag</p>
+						{% include 'reference/base/buttons/button-sizes' %}
+					<!-- SIZES - ENDS -->
+
+					<!-- SHAPES - BEGINS -->
+						<h6>Shapes</h6>
+
+						<p class="ref-sub-head"><code>a</code> tag</p>
+						{% include 'reference/base/buttons/button-a-shapes' %}
+
+						<p class="ref-sub-head"><code>button</code> tag</p>
+						{% include 'reference/base/buttons/button-shapes' %}
+					<!-- SHAPES - ENDS -->
+
+					</div>
+					<div class="medium-6 columns">
+
+					<!-- ICONS - BEGINS -->
+						<h6>Icons</h6>
+
+						<p class="ref-sub-head"><code>a</code> tag</p>
+						{% include 'reference/base/buttons/button-a-icons' %}
+
+						<p class="ref-sub-head"><code>button</code> tag</p>
+						{% include 'reference/base/buttons/button-icons' %}
+					<!-- ICONS - ENDS -->
+
+					<!-- FORM BUTTONS - BEGINS -->
+						<h6>Form Buttons</h6>
+						{% include 'reference/base/buttons/button-forms' %}
+					<!-- FORM BUTTONS - ENDS -->
+
+					<!-- INTERACTIVE BUTTONS - BEGINS -->
+						<h6>Interactive Buttons</h6>
+						{% include '/reference/base/buttons/button-interactive' %}
+					<!-- INTERACTIVE BUTTONS - ENDS -->
+
+					<!-- BUTTON GROUPS - BEGINS -->
+						<h6>Button Groups</h6>
+
+						<p class="ref-sub-head">Basic</p>
+						{% include 'reference/base/buttons/button-group' %}
+
+						<p class="ref-sub-head">Evenly distributed</p>
+						{% include 'reference/base/buttons/button-group-even' %}
+
+						<p class="ref-sub-head">Stacked</p>
+						{% include 'reference/base/buttons/button-group-stacked' %}
+					<!-- BUTTON GROUPS - ENDS -->
+					
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+
+						<!-- BUTTON BAR - BEGINS -->
+							<h6>Button Bar</h6>
+							{% include 'reference/base/buttons/button-group-bar' %}
+						<!-- BUTTON BAR - ENDS -->
+
+					</div>
+				</div>
+					
+			<!-- BUTTONS - ENDS -->
+
+			<hr />
+
+			<!-- DROPDOWNS - BEGINS -->
+				<h3>Dropdowns</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+
+					<!-- BASIC - BEGINS -->
+						<h6>Basic</h6>
+						{% include 'reference/base/dropdowns/dropdowns' %}
+					<!-- BASIC - ENDS -->
+
+					<br /><br />
+
+					<!-- POSITIONING - BEGINS -->
+						<h6>Positioning</h6>
+						{% include 'reference/base/dropdowns/dropdowns-positioning' %}
+					<!-- POSITIONING - ENDS -->
+					
+					</div>
+					<div class="medium-6 columns">
+
+					<!-- HOVER - BEGINS -->
+						<h6>Hover</h6>
+						{% include 'reference/base/dropdowns/dropdowns-hover' %}
+					<!-- HOVER - ENDS -->
+					
+					</div>
+				</div>
+			<!-- DROPDOWNS - ENDS -->
+
+			<hr />
+
+			<!-- EQUALIZER - BEGINS -->
+				<h3>Equalizer</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+					<!-- BASIC - BEGINS -->
+						<h6>Basic</h6>
+						{% include 'reference/base/equalizer/equalizer' %}
+					<!-- BASIC - ENDS -->
+					
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+
+					<!-- RESPONSIVE - BEGINS -->
+						<h6>Responsive</h6>
+						{% include 'reference/base/equalizer/equalizer-responsive' %}
+					<!-- RESPONSIVE - ENDS -->
+					
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+
+					<!-- NESTED - BEGINS -->
+						<h6>Nested</h6>
+						{% include 'reference/base/equalizer/equalizer-nested' %}
+					<!-- NESTED - ENDS -->
+					
+					</div>
+				</div>
+			<!-- EQUALIZER - ENDS -->
+
+			<hr />
+
+			<!-- FORMS - BEGINS -->
+				<h3>Forms</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+						
+					<!-- STACKED - BEGINS -->
+						<h6>Stacked</h6>
+						{% include 'reference/base/forms/form-stacked' %}
+					<!-- STACKED - ENDS -->
+
+					<!-- STACKED WITH HELP TEXT - BEGINS -->
+						<h6>Stacked with help text</h6>
+						{% include 'reference/base/forms/form-stacked-help' %}
+					<!-- STACKED WITH HELP TEXT - ENDS -->
+
+					<!-- COMPACT - BEGINS -->
+						<h6>Compact</h6>
+						{% include 'reference/base/forms/form-compact' %}
+					<!-- COMPACT - ENDS -->
+
+					<!-- COMPACT WITH HELP TEXT - BEGINS -->
+						<h6>Compact with help text</h6>
+						{% include 'reference/base/forms/form-compact-help' %}
+					<!-- COMPACT WITH HELP TEXT - ENDS -->
+
+					<!-- PRE/POSTFIX - BEGINS -->
+						<h6>Pre/Postfix</h6>
+						{% include '/reference/base/forms/form-pre-postfix' %}
+					<!-- PRE/POSTFIX - ENDS -->
+
+					</div>
+					<div class="medium-6 columns">
+						
+					<!-- INLINE - BEGINS -->
+						<h6>Inline</h6>
+						{% include 'reference/base/forms/form-inline' %}
+					<!-- INLINE - ENDS -->
+
+					<!-- INLINE - LABELS RIGHT ALIGNED - BEGINS -->
+						<h6>Inline - Labels right aligned</h6>
+						{% include 'reference/base/forms/form-inline-right' %}
+					<!-- INLINE - LABELS RIGHT ALIGNED - ENDS -->
+
+					<!-- INLINE WITH HELP TEXT - BEGINS -->
+						<h6>Inline with help text</h6>
+						{% include 'reference/base/forms/form-inline-help' %}
+					<!-- INLINE WITH HELP TEXT - ENDS -->
+
+					<!-- ABIDE VALIDATION - BEGINS -->
+						<h6>Abide Validation</h6>
+						{% include 'reference/base/forms/form-stacked' %}
+					<!-- ABIDE VALIDATION - ENDS -->
+
+					</div>
+				</div>
+			<!-- FORMS - ENDS -->
+
+			<hr />
+
+			<!-- GRIDS - BEGINS -->
+				<h3>Grids</h3>
+				<div class="row">
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+
+						<!-- BASIC - BEGINS -->
+							<h6>Basic</h6>
+							{% include 'reference/base/grids/grid-basic' %}
+						<!-- BASIC - ENDS -->
+						
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+						
+						<!-- OFFSETS - BEGINS -->
+							<h6>Offsets</h6>
+							{% include 'reference/base/grids/grid-offset' %}
+						<!-- OFFSETS - ENDS -->
+
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+						
+						<!-- CENTERING - BEGINS -->
+							<h6>Centering</h6>
+							{% include 'reference/base/grids/grid-centering' %}
+						<!-- CENTERING - ENDS -->
+						
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+						
+						<!-- SOURCE ORDERING - BEGINS -->
+							<h6>Source Ordering</h6>
+							{% include 'reference/base/grids/grid-source-ordering' %}
+						<!-- SOURCE ORDERING - ENDS -->
+
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+						
+						<!-- LAYOUTS - BEGINS -->
+							<h6>Layouts</h6>
+							{% include 'reference/base/grids/grid-1-col' %}
+							{% include 'reference/base/grids/grid-2-col-50-50' %}
+							{% include 'reference/base/grids/grid-2-col-66-33' %}
+							{% include 'reference/base/grids/grid-2-col-33-66' %}
+							{% include 'reference/base/grids/grid-2-col-75-25' %}
+							{% include 'reference/base/grids/grid-2-col-25-75' %}
+							{% include 'reference/base/grids/grid-3-col-33-33-33' %}
+							{% include 'reference/base/grids/grid-3-col-25-50-25' %}
+							{% include 'reference/base/grids/grid-4-col-25-25-25-25' %}
+						<!-- LAYOUTS - ENDS -->
+						
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+							
+						<!-- BLOCK GRID - BEGINS -->
+							<h6>Block Grid</h6>
+							{% include 'reference/base/grids/block-grid-basic' %}
+						<!-- BLOCK GRID - ENDS -->
+						
+						</div>
+					</div>
+				</div>
+			<!-- GRIDS - ENDS -->
+
+			<hr />
+
+			<!-- HELPERS - BEGINS -->
+				<h3>Helpers</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+
+					<!-- FLOAT HELPERS - BEGINS -->
+						<h6>Floats</h6>
+						{% include 'reference/base/helper/utility-classes-float' %}
+					<!-- FLOAT HELPERS - ENDS -->
+
+					<!-- RADIUS HELPER - BEGINS -->
+						<h6>Radius</h6>
+						{% include 'reference/base/helper/utility-classes-radius' %}
+					<!-- RADIUS HELPER - ENDS -->
+
+					<!-- ROUND HELPER - BEGINS -->
+						<h6>Round</h6>
+						{% include 'reference/base/helper/utility-classes-round' %}
+					<!-- ROUND HELPER - ENDS -->
+
+					<!-- SPOT COLORS HELPER - BEGINS -->
+						<h6>Spot Colors</h6>
+						{% include 'reference/base/helper/utility-classes-colors' %}
+					<!-- SPOT COLORS HELPER - ENDS -->
+
+					<!-- SPECIFIC USE COLORS HELPER - BEGINS -->
+						<h6>Specific Use Colors</h6>
+						{% include 'reference/base/helper/utility-classes-colors-specific-use' %}
+						<br /><br />
+					<!-- SPECIFIC USE COLORS HELPER - ENDS -->
+
+					<!-- KEYLINES HELPER - BEGINS -->
+						<h6>Keylines</h6>
+						{% include 'reference/base/helper/utility-classes-keylines' %}
+					<!-- KEYLINES HELPER - ENDS -->
+
+					<!-- TEXT ALIGN HELPER - BEGINS -->
+						<h6>Text Align</h6>
+						{% include 'reference/base/helper/utility-classes-text-align' %}
+					<!-- TEXT ALIGN HELPER - ENDS -->
+
+					<!-- IMAGE ALIGN HELPER - BEGINS -->
+						<h6>Image Align</h6>
+						{% include 'reference/base/helper/utility-classes-image-align' %}
+					<!-- IMAGE ALIGN HELPER - ENDS -->
+						
+					</div>
+					<div class="medium-6 columns">
+
+					<!-- CENTER HORIZONTAL HELPER - BEGINS -->
+						<h6>Center Horizontal</h6>
+						{% include 'reference/base/helper/utility-classes-center-horizontal' %}
+					<!-- CENTER HORIZONTAL HELPER - ENDS -->
+
+					<!-- CENTER VERTICAL HELPER - BEGINS -->
+						<h6>Center Vertical</h6>
+						{% include 'reference/base/helper/utility-classes-center-vertical' %}
+					<!-- CENTER VERTICAL HELPER - ENDS -->
+
+					<!-- INPUT NUMERIC MASK HELPER - BEGINS -->
+						<h6>Input Numeric Mask</h6>
+						{% include 'reference/base/helper/form-helper-input-numeric-mask' %}
+					<!-- INPUT NUMERIC MASK HELPER - ENDS -->
+
+					<!-- SELECT ALL CHECKBOXES HELPER - BEGINS -->
+						<h6>Select All Checkboxes Toggle</h6>
+						{% include 'reference/base/helper/interactive-helper-checkboxes-select-all' %}
+					<!-- SELECT ALL CHECKBOXES HELPER - ENDS -->
+
+					<!-- TOGGLE ELEMENT HELPER - BEGINS -->
+						<h6>Toggle Element</h6>
+						{% include 'reference/base/helper/interactive-helper-toggle-element' %}
+					<!-- TOGGLE ELEMENT HELPER - ENDS -->
+
+					<!-- VISIBILITY - SHOW BY SCREEN SIZE HELPER - BEGINS -->
+						<h6>Visibility - Show by Screen Size</h6>
+						{% include 'reference/base/helper/visibility-classes-screen-size-show' %}
+					<!-- VISIBILITY - SHOW BY SCREEN SIZE HELPER - ENDS -->
+
+					<!-- VISIBILITY - HIDE BY SCREEN SIZE HELPER - BEGINS -->
+						<h6>Visibility - Hide by Screen Size</h6>
+						{% include 'reference/base/helper/visibility-classes-screen-size-hide' %}
+					<!-- VISIBILITY - HIDE BY SCREEN SIZE HELPER - ENDS -->
+
+					<!-- VISIBILITY - ORIENTATION DETECTION HELPER - BEGINS -->
+						<h6>Visibility - Orientation Detection</h6>
+						{% include 'reference/base/helper/visibility-classes-orientation-detection' %}
+					<!-- VISIBILITY - ORIENTATION DETECTION HELPER - ENDS -->
+
+					<!-- VISIBILITY - TOUCH DETECTION HELPER - BEGINS -->
+						<h6>Visibility - Touch Detection</h6>
+						{% include 'reference/base/helper/visibility-classes-touch-detection' %}
+					<!-- VISIBILITY - TOUCH DETECTION HELPER - ENDS -->
+
+					<!-- ACCESSIBILITY - SHOW FOR SCREEN READERS HELPER - BEGINS -->
+						<h6>Accessibility - Show for Screen Readers Only</h6>
+						{% include 'reference/base/helper/visibility-classes-screen-readers-show' %}
+					<!-- ACCESSIBILITY - SHOW FOR SCREEN READERS HELPER - ENDS -->
+
+					<!-- ACCESSIBILITY - HIDE FOR SCREEN READERS HELPER - BEGINS -->
+						<h6>Accessibility - Hide for Screen Readers Only</h6>
+						{% include 'reference/base/helper/visibility-classes-screen-readers-hide' %}
+					<!-- ACCESSIBILITY - HIDE FOR SCREEN READERS HELPER - ENDS -->
+
+					<!-- ACCESSIBILITY - RESPONSIVE VISIBILITY HELPER - BEGINS -->
+						<h6>Accessibility - Responsive Visibility</h6>
+						{% include 'reference/base/helper/visibility-classes-hidden' %}
+						{% include 'reference/base/helper/visibility-classes-visible' %}
+					<!-- ACCESSIBILITY - RESPONSIVE VISIBILITY HELPER - ENDS -->
+						
+					</div>
+				</div>
+			<!-- HELPERS - BEGINS -->
+
+			<hr />
+
+			<!-- ICONS - BEGINS -->
+				<h3>Icons</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+
+					<!-- BASIC ICON - BEGINS -->
+						<h6>Basic Icon</h6>
+						{% include 'reference/base/icons/icon-basic' %}
+						<br /><br />
+					<!-- BASIC ICON - ENDS -->
+
+					<!-- ICON POSITION - TOP - BEGINS -->
+						<h6>Icon Position - Top</h6>
+						{% include 'reference/base/icons/icon-position-top' %}
+						<br /><br />
+					<!-- ICON POSITION - TOP - ENDS -->
+
+					<!-- ICON POSITION - BOTTOM - BEGINS -->
+						<h6>Icon Position - Bottom</h6>
+						{% include 'reference/base/icons/icon-position-bottom' %}
+						<br /><br />
+					<!-- ICON POSITION - BOTTOM - ENDS -->
+
+					<!-- ICON POSITION - LEFT - BEGINS -->
+						<h6>Icon Position - Left</h6>
+						{% include 'reference/base/icons/icon-position-left' %}
+						<br /><br />
+					<!-- ICON POSITION - LEFT - ENDS -->
+
+					<!-- ICON POSITION - RIGHT - BEGINS -->
+						<h6>Icon Position - Right</h6>
+						{% include 'reference/base/icons/icon-position-right' %}
+						<br /><br />
+					<!-- ICON POSITION - RIGHT - ENDS -->
+
+					<!-- ICON SIZE - SMALL - BEGINS -->
+						<h6>Icon Size - Small</h6>
+						{% include 'reference/base/icons/icon-size-small' %}
+						<br /><br />
+					<!-- ICON SIZE - SMALL - ENDS -->
+
+					<!-- ICON SIZE - MEDIUM - BEGINS -->
+						<h6>Icon Size - Medium</h6>
+						{% include 'reference/base/icons/icon-size-medium' %}
+						<br /><br />
+					<!-- ICON SIZE - MEDIUM - ENDS -->
+
+					<!-- ICON SIZE - LARGE - BEGINS -->
+						<h6>Icon Size - Large</h6>
+						{% include 'reference/base/icons/icon-size-large' %}
+						<br /><br />
+					<!-- ICON SIZE - LARGE - ENDS -->
+
+					<!-- ICON SIZE - X-LARGE - BEGINS -->
+						<h6>Icon Size - X-Large</h6>
+						{% include 'reference/base/icons/icon-size-x-large' %}
+						<br /><br />
+					<!-- ICON SIZE - X-LARGE - ENDS -->
+
+					</div>
+					<div class="medium-6 columns">
+
+					<!-- ICON AS LINK - BEGINS -->
+						<h6>Icon as link</h6>
+						{% include 'reference/base/icons/icon-link' %}
+						<br /><br />
+					<!-- ICON AS LINK - ENDS -->
+
+					<!-- ICON WITH LINK - BEGINS -->
+						<h6>Icon with link</h6>
+						{% include 'reference/base/icons/icon-with-link' %}
+						<br /><br />
+					<!-- ICON WITH LINK - ENDS -->
+
+					<!-- ICON SHIELD - SMALL - BEGINS -->
+						<h6>Icon Shield - Small</h6>
+						<div class="row">
+							<div class="small-12  columns">
+								{% include 'reference/base/icons/icon-shield-small' %}
+							</div>
+						</div>
+						<br />
+					<!-- ICON SHIELD - SMALL - ENDS -->
+
+					<!-- ICON SHIELD - SMALL MEDIUM - BEGINS -->
+						<h6>Icon Shield - Small Medium</h6>
+						<div class="row">
+							<div class="small-12  columns">
+								{% include 'reference/base/icons/icon-shield-small-medium' %}
+							</div>
+						</div>
+						<br />
+					<!-- ICON SHIELD - SMALL MEDIUM - ENDS -->
+
+					<!-- ICON SHIELD - MEDIUM - BEGINS -->
+						<h6>Icon Shield - Medium</h6>
+						<div class="row">
+							<div class="small-12  columns">
+								{% include 'reference/base/icons/icon-shield-medium' %}
+							</div>
+						</div>
+						<br />
+					<!-- ICON SHIELD - MEDIUM - ENDS -->
+
+					<!-- ICON SHIELD - LARGE - BEGINS -->
+						<h6>Icon Shield - Large</h6>
+						<div class="row">
+							<div class="small-12  columns">
+								{% include 'reference/base/icons/icon-shield-large' %}
+							</div>
+						</div>
+						<br />
+					<!-- ICON SHIELD - LARGE - ENDS -->
+
+					<!-- ICON SHIELD - X-LARGE - BEGINS -->
+						<h6>Icon Shield - X-Large</h6>
+						<div class="row">
+							<div class="small-12  columns">
+								{% include 'reference/base/icons/icon-shield-x-large' %}
+							</div>
+						</div>
+						<br />
+					<!-- ICON SHIELD - X-LARGE - ENDS -->
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+
+					<!-- PHOTO ICONS - BEGINS -->
+						<h5>Photo Icons</h5>
+						<h6>Career</h6>
+						<div class="clearfix evo-spacer-margin-bottom-x-large">
+							{% for i in (1..global.reference-photo-career-icon-count) %}
+								<img src="/assets/images/core/icons/photo/career/photo_icon_career_{{ i }}.png" width="80" height="80" class="left" alt="" title="" />
+							{% endfor %}
+						</div>
+						<h6>Health</h6>
+						<div class="clearfix evo-spacer-margin-bottom-x-large">
+							{% for i in (1..global.reference-photo-health-icon-count) %}
+								<img src="/assets/images/core/icons/photo/health/photo_icon_health_{{ i }}.png" width="80" height="80" class="left" alt="" title="" />
+							{% endfor %}
+						</div>
+						<h6>Wealth</h6>
+						<div class="clearfix">
+							{% for i in (1..global.reference-photo-wealth-icon-count) %}
+								<img src="/assets/images/core/icons/photo/wealth/photo_icon_wealth_{{ i }}.png" width="80" height="80" class="left" alt="" title="" />
+							{% endfor %}
+						</div>
+					<!-- PHOTO ICONS - BEGINS -->
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+
+					<!-- VECTOR ICONS - BEGINS -->
+						<h5 class="evo-spacer-margin-top-large">Vector Icons</h5>
+						<h6>Career</h6>
+						<div class="clearfix evo-spacer-margin-bottom-x-large">
+							{% for i in (1..global.reference-vector-career-icon-count) %}
+								<img src="/assets/images/core/icons/vector/career/vector_icon_career_{{ i }}.png" width="60" height="60" class="left" alt="" title="" />
+							{% endfor %}
+						</div>
+
+						<h6>Health</h6>
+						<div class="clearfix evo-spacer-margin-bottom-x-large">
+							{% for i in (1..global.reference-vector-health-icon-count) %}
+								<img src="/assets/images/core/icons/vector/health/vector_icon_health_{{ i }}.png" width="60" height="60" class="left" alt="" title="" />
+							{% endfor %}
+						</div>
+
+						<h6>Wealth</h6>
+						<div class="clearfix">
+							{% for i in (1..global.reference-vector-wealth-icon-count) %}
+								<img src="/assets/images/core/icons/vector/wealth/vector_icon_wealth_{{ i }}.png" width="60" height="60" class="left" alt="" title="" />
+							{% endfor %}
+						</div>
+					<!-- VECTOR ICONS - BEGINS -->
+
+					</div>
+				</div>
+			<!-- ICONS - ENDS -->
+
+			<hr />
+
+			<!-- LISTS - BEGINS -->
+				<h3>Lists</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+
+					<!-- HORIZONTAL LISTS - BEGINS -->
+						<h6>Horizontal Lists</h6>
+						{% include 'reference/base/lists/list-horizontal-default' %}
+					<!-- HORIZONTAL LISTS - ENDS -->
+
+					<!-- HORIZONTAL LISTS WITH LINKS - BEGINS -->
+						<h6>Horizontal Lists With Links</h6>
+						{% include 'reference/base/lists/list-horizontal-default-links' %}
+					<!-- HORIZONTAL LISTS WITH LINKS - ENDS -->
+
+					<!-- HORIZONTAL LISTS WITH PIPES - BEGINS -->
+						<h6>Horizontal Lists With Pipes</h6>
+						{% include 'reference/base/lists/list-horizontal-default-pipes' %}
+					<!-- HORIZONTAL LISTS WITH PIPES - ENDS -->
+
+					<!-- HORIZONTAL LISTS WITH LINKS AND PIPES - BEGINS -->
+						<h6>Horizontal Lists With Links and Pipes</h6>
+						{% include 'reference/base/lists/list-horizontal-default-links-pipes' %}
+					<!-- HORIZONTAL LISTS WITH LINKS AND PIPES - ENDS -->
+
+					<!-- HORIZONTAL DEFINITION LIST - BEGINS -->
+						<h6>Horizontal Definition List</h6>
+						{% include 'reference/base/lists/list-horizontal-definition' %}
+					<!-- HORIZONTAL DEFINITION LIST - ENDS -->
+
+					<!-- HORIZONTAL DEFINITION LIST WITH LINKS - BEGINS -->
+						<h6>Horizontal Definition List With Links</h6>
+						{% include 'reference/base/lists/list-horizontal-definition-links' %}
+					<!-- HORIZONTAL DEFINITION LIST WITH LINKS - ENDS -->
+
+					<!-- HORIZONTAL DEFINITION LIST WITH PIPES - BEGINS -->
+						<h6>Horizontal Definition List With Pipes</h6>
+						{% include 'reference/base/lists/list-horizontal-definition-pipes' %}
+					<!-- HORIZONTAL DEFINITION LIST WITH PIPES - ENDS -->
+
+					</div>
+					<div class="medium-6 columns">
+
+					<!-- DATA LIST - BEGINS -->
+						<h6>Data List</h6>
+						{% include 'reference/base/lists/list-data-default' %}
+					<!-- DATA LIST - ENDS -->
+
+					<!-- DATA LIST - STACKED - BEGINS -->
+						<h6>Data List - Stacked</h6>
+						{% include 'reference/base/lists/list-data-default-stacked' %}
+					<!-- DATA LIST - STACKED - ENDS -->
+
+					<!-- DATA DEFINITION LIST - BEGINS -->
+						<h6>Data Definition List</h6>
+						{% include 'reference/base/lists/list-data-definition' %}
+					<!--  DATA DEFINITION LIST - ENDS -->
+
+					<!-- DATA DEFINITION LIST - STACKED - BEGINS -->
+						<h6>Data Definition List - Stacked</h6>
+						{% include 'reference/base/lists/list-data-definition-stacked' %}
+					<!--  DATA DEFINITION LIST - STACKED - ENDS -->
+
+					</div>
+				</div>
+			<!-- LISTS - BEGINS -->
+
+			<hr />
+
+			<!-- TABLES - BEGINS -->
+				<h3>Tables</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+					<!-- BASIC TABLE - BEGINS -->
+						<h6>Basic Static Table</h6>
+						{% include 'reference/base/tables/table-static' %}
+					<!--  BASIC TABLE - ENDS -->
+
+					</div>
+				</div>
+			<!-- TABLES - ENDS -->
+
+			<hr />
+
+			<!-- TYPE - BEGINS -->
+				<h3>Type</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+						
+					<!-- PARAGRAPHS - BEGINS -->
+						<h6>Paragraphs</h6>
+						{% include 'reference/base/type/type-paragraph' %}
+					<!-- PARAGRAPHS - ENDS -->
+
+					<!-- HEADERS - BEGINS -->
+						<h6>Headers</h6>
+						{% include 'reference/base/type/type-header' %}
+						<br />
+					<!-- HEADERS - ENDS -->
+
+					<!-- SUBHEADERS - BEGINS -->
+						<h6>Subheaders</h6>
+						{% include 'reference/base/type/type-subheader' %}
+						<br />
+					<!-- SUBHEADERS - ENDS -->
+
+					<!-- HEADER WITH BACKGROUND COLOR - BEGINS -->
+						<h6>Header with Background Color</h6>
+						{% include 'reference/base/type/type-header-background' %}
+						<br />
+					<!-- HEADER WITH BACKGROUND COLOR - ENDS -->
+
+					<!-- HEADER WITH RULE - BEGINS -->
+						<h6>Header with Rule</h6>
+						{% include 'reference/base/type/type-header-rule' %}
+						<br />
+					<!-- HEADER WITH RULE - ENDS -->
+
+					<!-- HEADER WITH DOUBLE RULE - BEGINS -->
+						<h6>Header with Double Rule</h6>
+						{% include 'reference/base/type/type-header-double-rule' %}
+						<br />
+					<!-- HEADER WITH DOUBLE RULE - ENDS -->
+
+					</div>
+					<div class="medium-6 columns">
+
+					<!-- ORDERED LISTS - BEGINS -->
+						<h6>Ordered Lists</h6>
+						{% include 'reference/base/type/type-ordered-list' %}
+					<!-- ORDERED LISTS - ENDS -->
+
+					<!-- ORDERED LISTS STYLE TYPES - BEGINS -->
+						<h6>Ordered List Style Types</h6>
+						{% include 'reference/base/type/type-ordered-list-styles' %}
+					<!-- ORDERED LISTS STYLE TYPES - ENDS -->
+
+					<!-- UNORDERED LISTS - BEGINS -->
+						<h6>Unordered Lists</h6>
+						{% include 'reference/base/type/type-unordered-list' %}
+					<!-- UNORDERED LISTS - ENDS -->
+
+					<!-- DEFINITION LISTS - BEGINS -->
+						<h6>Definition Lists</h6>
+						{% include 'reference/base/type/type-definition-list' %}
+					<!-- DEFINITION LISTS - ENDS -->
+						
+					<!-- BLOCKQUOTES - BEGINS -->
+						<h6>Blockquotes</h6>
+						{% include 'reference/base/type/type-blockquote' %}
+					<!-- BLOCKQUOTES - ENDS -->
+
+					<!-- FOOTNOTES - BEGINS -->
+						<h6>Footnotes</h6>
+						{% include 'reference/base/type/type-footnote' %}
+					<!-- FOOTNOTES - ENDS -->
+
+					<!-- HORIZONTAL RULES - BEGINS -->
+						<h6>Horizonal Rules</h6>
+						{% include 'reference/base/type/type-horizontal-rule' %}
+					<!-- HORIZONTAL RULES - ENDS -->
+
+					<!-- TEXT OVERFLOW - BEGINS -->
+						<h6>Text Overflow</h6>
+						{% include 'reference/base/type/type-text-overflow' %}
+					<!-- TEXT OVERFLOW - ENDS -->
+
+					<!-- WORD BREAK - BEGINS -->
+						<h6>Word Break</h6>
+						{% include 'reference/base/type/type-text-word-break' %}
+						<br />
+						<br />
+						<br />
+					<!-- WORD BREAK - ENDS -->
+
+					<!-- HYPHENS - BEGINS -->
+						<h6>Hyphens</h6>
+						{% include 'reference/base/type/type-hyphen' %}
+					<!-- HYPHENS - ENDS -->
+
+					<!-- OTHER MARKUP CODE - BEGINS -->
+						<h6>Other Markup Code</h6>
+						{% include 'reference/base/type/type-other-markup' %}
+					<!-- OTHER MARKUP CODE - ENDS -->
+
+					</div>
+				</div>
+			<!-- TYPE - ENDS -->
+
+			<hr />
+
+			<!-- ACCORDION - BEGINS -->
+				<h3>Accordion</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+
+					<!-- BASIC ACCORDION - BEGINS -->
+						<h6>Basic</h6>
+						{% include 'reference/objects/accordion/accordion' %}
+					<!-- BASIC ACCORDION - ENDS -->
+
+					</div>
+					<div class="medium-6 columns">
+
+					<!-- ACCORDION WITH ICONS - BEGINS -->
+						<h6>With Icons</h6>
+						{% include 'reference/objects/accordion/accordion-icons' %}
+					<!-- ACCORDION WITH ICONS - ENDS -->
+
+					</div>
+				</div>
+			<!-- ACCORDION - ENDS -->
+
+			<hr />
+
+			<!-- ALERT BOXES - BEGINS -->
+				<h3>Alert Boxes</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+
+					<!-- BASIC ALERT BOXES - BEGINS -->
+						<h6>Basic</h6>
+						{% include 'reference/objects/alert-boxes/alert-boxes' %}
+					<!-- BASIC ALERT BOXES - ENDS -->
+
+					</div>
+					<div class="medium-6 columns">
+
+					<!-- ADVANCED ALERT BOXES - BEGINS -->
+						<h6>Advanced</h6>
+						{% include 'reference/objects/alert-boxes/alert-boxes-advanced' %}
+					<!-- ADVANCED ALERT BOXES - ENDS -->
+
+					</div>
+				</div>
+			<!-- ALERT BOXES - ENDS -->
+
+			<hr />
+
+			<!-- AUTOCOMPLETE - BEGINS -->
+				<h3>Autocomplete</h3>
+				<div class="row">
+					<div class="small-12 columns">
+						
+					<!-- ADVANCED ALERT BOXES - BEGINS -->
+						{% include 'reference/objects/autocomplete/autocomplete' %}
+					<!-- ADVANCED ALERT BOXES - ENDS -->
+
+					</div>
+				</div>
+			<!-- AUTOCOMPLETE - ENDS -->
+
+			<hr />
+
+			<!-- BREADCRUMBS - BEGINS -->
+				<h3>Badges</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+						
+					<!-- BASIC BADGES - BEGINS -->
+						<h6>Basic</h6>
+						{% include 'reference/objects/badges/badges' %}
+						<br /><br />
+					<!-- BASIC BADGES - ENDS -->
+
+					<!-- BADGE SIZES - BEGINS -->
+						<h6>Badge Sizes</h6>
+						{% include 'reference/objects/badges/badges-sizes' %}
+					<!-- BADGE SIZES - ENDS -->
+
+					</div>
+					<div class="medium-6 columns">
+						
+					<!-- BADGE COLORS - BEGINS -->
+						<h6>Badge Colors</h6>
+						{% include 'reference/objects/badges/badges-colors' %}
+					<!-- BADGE COLORS - ENDS -->
+
+					</div>
+				</div>
+			<!-- BREADCRUMBS - ENDS -->
+
+			<hr />
+
+			<!-- BREADCRUMBS - BEGINS -->
+				<h3>Breadcrumbs</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+						
+					<!-- BASIC BREADCRUMBS - BEGINS -->
+						<h6>Basic</h6>
+						{% include 'reference/objects/breadcrumbs/breadcrumbs' %}
+					<!-- BASIC BREADCRUMBS - ENDS -->
+
+					</div>
+					<div class="medium-6 columns">
+						
+					<!-- NAVIGATION BREADCRUMBS - BEGINS -->
+						<h6>Navigation</h6>
+						{% include 'reference/objects/breadcrumbs/breadcrumbs-navigation' %}
+					<!-- NAVIGATION BREADCRUMBS - ENDS -->
+
+					</div>
+				</div>
+			<!-- BREADCRUMBS - ENDS -->
+
+			<hr />
+
+			<!-- CAROUSEL - BEGINS -->
+				<h3>Carousel</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+					<!-- IMAGE CAROUSEL - BEGINS -->
+						<h6>Image Carousel</h6>
+						{% include 'reference/objects/carousel/carousel' %}
+					<!-- IMAGE CAROUSEL - ENDS -->
+
+					<!-- CONTENT CAROUSEL - BEGINS -->
+						<h6>Content Carousel</h6>
+						{% include 'reference/objects/carousel/carousel-content' %}
+					<!-- CONTENT CAROUSEL - ENDS -->
+
+					</div>
+				</div>
+			<!-- CAROUSEL - ENDS -->
+
+			<hr />
+
+			<!-- DATA TABLE - BEGINS -->
+				<h3>Data Table</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+					<!-- BASIC DATA TABLE - BEGINS -->
+						<h6>Basic Data Table</h6>
+						{% include 'reference/objects/data-table/data-table' %}
+					<!-- BASIC DATA TABLE - ENDS -->
+
+					<!-- DATA TABLE - SUBTOTAL ROW - BEGINS -->
+						<h6>Subtotal Row</h6>
+						{% include 'reference/objects/data-table/data-table-subtotal' %}
+					<!-- DATA TABLE - SUBTOTAL ROW - ENDS -->
+
+					<!-- DATA TABLE - TOTAL ROW - BEGINS -->
+						<h6>Total Row</h6>
+						{% include 'reference/objects/data-table/data-table-total' %}
+					<!-- DATA TABLE - TOTAL ROW - ENDS -->
+
+					<!-- DATA TABLE - VERTCAL SCROLL - BEGINS -->
+						<h6>Vertical Scroll</h6>
+						{% include 'reference/objects/data-table/data-table-vertical-scroll' %}
+					<!-- DATA TABLE - VERTCAL SCROLL - ENDS -->
+
+					</div>
+				</div>
+			<!-- DATA TABLE - ENDS -->
+
+			<hr />
+
+			<!-- DATEPICKER - BEGINS -->
+				<h3>Datepicker</h3>
+				<div class="row">
+					<div class="medium-3 columns">
+						
+						<!-- DATEPICKER - READ ONLY - BEGINS -->
+							<h6>Read Only</h6>
+							{% include 'reference/objects/datepicker/datepicker' %}
+						<!-- DATEPICKER - READ ONLY - ENDS -->
+
+					</div>
+					<div class="medium-3 columns">
+						
+						<!-- DATEPICKER - DATE INPUT - BEGINS -->
+							<h6>Date Input</h6>
+							{% include 'reference/objects/datepicker/datepicker-date-input' %}
+						<!-- DATEPICKER - DATE INPUT - ENDS -->
+
+					</div>
+					<div class="medium-3 columns">
+						
+						<!-- DATEPICKER - MESSAGE - BEGINS -->
+							<h6>Message</h6>
+							{% include 'reference/objects/datepicker/datepicker-message' %}
+						<!-- DATEPICKER - MESSAGE - ENDS -->
+
+					</div>
+					<div class="medium-3 columns">
+						
+						<!-- DATEPICKER - INPUT MASK - BEGINS -->
+							<h6>Masked Input</h6>
+							{% include 'reference/objects/datepicker/datepicker-date-input-masked' %}
+						<!-- DATEPICKER - INPUT MASK - ENDS -->
+
+					</div>
+				</div>
+			<!-- DATEPICKER - BEGINS -->
+
+			<hr />
+
+			<!-- DROPDOWN BUTTONS - BEGINS -->
+				<h3>Dropdown Buttons</h3>
+				<div class="row">
+					<div class="medium-4 columns">
+
+						<!-- BASIC DROPDOWN BUTTONS - BEGINS -->
+							<h6>Basic</h6>
+							{% include 'reference/objects/dropdown-buttons/dropdown-buttons' %}
+						<!-- BASIC DROPDOWN BUTTONS - ENDS -->
+
+					</div>
+					<div class="medium-4 columns">
+
+						<!-- DROPDOWN BUTTONS - SHAPES - BEGINS -->
+							<h6>Shapes</h6>
+							{% include 'reference/objects/dropdown-buttons/dropdown-buttons-radius' %}
+							{% include 'reference/objects/dropdown-buttons/dropdown-buttons-round' %}
+						<!-- DROPDOWN BUTTONS - SHAPES - ENDS -->
+
+					</div>
+					<div class="medium-4 columns">
+
+						<!-- DROPDOWN BUTTONS - DISABLED - BEGINS -->
+							<h6>Disabled</h6>
+							{% include 'reference/objects/dropdown-buttons/dropdown-buttons-disabled' %}
+						<!-- DROPDOWN BUTTONS - DISABLED - ENDS -->
+
+					</div>
+				</div>
+			<!-- DROPDOWN BUTTONS - BEGINS -->
+
+			<hr />
+
+			<!-- LABELS - BEGINS -->
+				<h3>Labels</h3>
+				<div class="row">
+					<div class="medium-4 columns">
+
+						<!-- BASIC LABEL - BEGINS -->
+							<h6>Basic</h6>
+							{% include 'reference/objects/labels/labels' %}
+						<!-- BASIC LABEL - ENDS -->
+
+					</div>
+					<div class="medium-4 columns">
+
+						<!-- LABELS - SHAPES - BEGINS -->
+							<h6>Shapes</h6>
+							{% include 'reference/objects/labels/labels-radius' %}
+							{% include 'reference/objects/labels/labels-round' %}
+						<!-- LABELS - SHAPES - ENDS -->
+
+					</div>
+					<div class="medium-4 columns">
+
+						<!-- LABELS - COLORS - BEGINS -->
+							<h6>Colors</h6>
+							{% include 'reference/objects/labels/labels-colors' %}
+						<!-- LABELS - COLORS - ENDS -->
+
+					</div>
+				</div>
+			<!-- LABELS - BEGINS -->
+
+			<hr />
+
+			<!-- OFF-CANVAS - BEGINS -->
+				<h3>Off-canvas</h3>
+				<div class="row">
+					<div class="medium-4 columns">
+
+						<!-- OFF-CANVAS LEFT - BEGINS -->
+							<h6>Off-canvas left</h6>
+							{% include 'reference/objects/off-canvas/off-canvas-left' %}
+						<!-- OFF-CANVAS LEFT - ENDS -->
+
+					</div>
+					<div class="medium-4 columns">
+
+						<!-- OFF-CANVAS RIGHT - BEGINS -->
+							<h6>Off-canvas right</h6>
+							{% include 'reference/objects/off-canvas/off-canvas-right' %}
+						<!-- OFF-CANVAS RIGHT - ENDS -->
+
+					</div>
+					<div class="medium-4 columns">
+
+						<!-- OFF-CANVAS BOTH - BEGINS -->
+							<h6>Off-canvas Both Sides</h6>
+							{% include 'reference/objects/off-canvas/off-canvas-both' %}
+						<!-- OFF-CANVAS BOTH - ENDS -->
+
+					</div>
+				</div>
+			<!-- OFF-CANVAS - BEGINS -->
+
+			<hr />
+
+			<!-- PAGINATION - BEGINS -->
+				<h3>Pagination</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+
+						<!-- BASIC PAGINATION - BEGINS -->
+							<h6>Basic</h6>
+							{% include 'reference/objects/pagination/pagination' %}
+						<!-- BASIC PAGINATION - ENDS -->
+
+					</div>
+					<div class="medium-6 columns">
+
+						<!-- PAGINATION CENTERED - BEGINS -->
+							<h6>Centered</h6>
+							{% include 'reference/objects/pagination/pagination-centered' %}
+						<!-- PAGINATION CENTERED - ENDS -->
+
+					</div>
+				</div>
+			<!-- PAGINATION - BEGINS -->
+
+			<hr />
+
+			<!-- PROGRESS BAR - BEGINS -->
+				<h3>Progress Bar</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+
+						<!-- BASIC PROGRESS BAR - BEGINS -->
+							<h6>Basic</h6>
+							{% include 'reference/objects/progress-bar/progress-bar' %}
+						<!-- BASIC PROGRESS BAR - ENDS -->
+
+						<!-- PROGRESS BAR - SHAPES - BEGINS -->
+							<h6>Shapes</h6>
+							{% include 'reference/objects/progress-bar/progress-bar-radius' %}
+							{% include 'reference/objects/progress-bar/progress-bar-round' %}
+						<!-- PROGRESS BAR - SHAPES - ENDS -->
+
+					</div>
+					<div class="medium-6 columns">
+
+						<!-- PROGRESS BAR - WIDTH - BEGINS -->
+							<h6>Width</h6>
+							{% include 'reference/objects/progress-bar/progress-bar-width' %}
+						<!-- PROGRESS BAR - WIDTH - ENDS -->
+
+						<!-- PROGRESS BAR - METER COLOR - BEGINS -->
+							<h6>Meter Color</h6>
+							{% include 'reference/objects/progress-bar/progress-bar-meter-color' %}
+						<!-- PROGRESS BAR - METER COLOR - ENDS -->
+
+					</div>
+				</div>
+			<!-- PROGRESS BAR - BEGINS -->
+
+			<hr />
+
+			<!-- REVEAL MODAL - BEGINS -->
+				<h3>Reveal Modal</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+					<!-- REVEAL MODALS - BEGINS -->
+						{% include 'reference/objects/reveal/reveal-default' %}
+						{% include 'reference/objects/reveal/reveal-small' %}
+						{% include 'reference/objects/reveal/reveal-medium' %}
+						{% include 'reference/objects/reveal/reveal-large' %}
+						{% include 'reference/objects/reveal/reveal-xlarge' %}
+						{% include 'reference/objects/reveal/reveal-full' %}
+					<!-- REVEAL MODALS - ENDS -->
+
+					</div>
+				</div>
+			<!-- REVEAL MODAL - BEGINS -->
+
+			<hr />
+
+			<!-- SCROLL PANE - BEGINS -->
+				<h3>Scroll Pane</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+
+					<!-- SCROLL PANE - VERTICAL SCROLLING - BEGINS -->
+						<h6>Vertical Scrolling</h6>
+						{% include 'reference/objects/scroll-pane/scroll-pane' %}
+						<br />
+					<!-- SCROLL PANE - VERTICAL SCROLLING - ENDS -->
+
+					<!-- SCROLL PANE - HORIZONTAL SCROLLING - BEGINS -->
+						<h6>Horizontal Scrolling</h6>
+						{% include 'reference/objects/scroll-pane/scroll-pane-horizontal' %}
+					<!-- SCROLL PANE - HORIZONTAL SCROLLING - ENDS -->
+
+					</div>
+					<div class="medium-6 columns">
+
+					<!-- SCROLL PANE - HORIZONTAL AND VERTICAL SCROLLING - BEGINS -->
+						<h6>Horizontal &amp; Vertical Scrolling</h6>
+						{% include 'reference/objects/scroll-pane/scroll-pane-horizontal-vertical' %}
+						<br />
+					<!-- SCROLL PANE - HORIZONTAL AND VERTICAL SCROLLING - ENDS -->
+
+					<!-- SCROLL PANE - CUSTOM SCROLL PANE - BEGINS -->
+						<h6>Custom Scroll Pane Height</h6>
+						{% include 'reference/objects/scroll-pane/scroll-pane-custom-height' %}
+					<!-- SCROLL PANE - CUSTOM SCROLL PANE - ENDS -->
+
+					</div>
+				</div>
+			<!-- SCROLL PANE - BEGINS -->
+
+			<hr />
+
+			<!-- SLIDER - BEGINS -->
+				<h3>Slider</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+
+					<!-- BASIC SLIDER - BEGINS -->
+						<h6>Basic</h6>
+						{% include 'reference/objects/slider/slider' %}
+					<!-- BASIC SLIDER - ENDS -->
+
+					<!-- RANGE SLIDER - BEGINS -->
+						<h6>Range</h6>
+						{% include 'reference/objects/slider/range-slider' %}
+					<!-- RANGE SLIDER - ENDS -->
+
+					<!-- RANGE SLIDER MIN - BEGINS -->
+						<h6>Range (min)</h6>
+						{% include 'reference/objects/slider/range-slider-min' %}
+					<!-- RANGE SLIDER MIN - ENDS -->
+
+					<!-- RANGE SLIDER MAX - BEGINS -->
+						<h6>Range (max)</h6>
+						{% include 'reference/objects/slider/range-slider-max' %}
+					<!-- RANGE SLIDER MAX - ENDS -->
+
+					</div>
+					<div class="medium-6 columns">
+
+					<!-- SLIDERS WITH INTERVAL TICKS - BEGINS -->
+						<h6>Sliders with Interval Ticks</h6>
+						{% include '/reference/objects/slider/slider-interval-ticks' %}
+					<!-- SLIDERS WITH INTERVAL TICKS - ENDS -->
+
+					</div>
+				</div>
+			<!-- SLIDER - BEGINS -->
+
+			<hr />
+
+			<!-- SUB NAV - BEGINS -->
+				<h3>Sub Nav</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+					<!-- BASIC SUB NAV - BEGINS -->
+						{% include 'reference/objects/sub-nav/sub-nav' %}
+					<!-- BASIC SUB NAV - ENDS -->
+
+					</div>
+				</div>
+			<!-- SUB NAV - BEGINS -->
+
+			<hr />
+
+			<!-- TABS - BEGINS -->
+				<h3>Tabs</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+					<!-- BASIC TABS - BEGINS -->
+						{% include 'reference/objects/tabs/tabs' %}
+					<!-- BASIC TABS - ENDS -->
+
+					</div>
+				</div>
+			<!-- TABS - BEGINS -->
+
+			<hr />
+
+			<!-- TOOLTIPS - BEGINS -->
+				<h3>Tooltips</h3>
+				<div class="row">
+					<div class="medium-6 columns">
+
+					<!-- BASIC TOOLTIP - BEGINS -->
+						<h6>Basic</h6>
+						{% include 'reference/objects/tooltip/tooltip-default' %}
+					<!-- BASIC TOOLTIP - ENDS -->
+
+					<!-- TOOLTIP - DISABLE FOR TOUCH EVENTS - BEGINS -->
+						<h6>Disable for Touch Events</h6>
+						{% include 'reference/objects/tooltip/tooltip-disable' %}
+					<!-- TOOLTIP - DISABLE FOR TOUCH EVENTS - ENDS -->
+
+					</div>
+					<div class="medium-6 columns">
+
+					<!-- TOOLTIP - SHAPES - BEGINS -->
+						<h6>Shapes</h6>
+						{% include 'reference/objects/tooltip/tooltip-radius' %}
+						{% include 'reference/objects/tooltip/tooltip-round' %}
+					<!-- TOOLTIP - SHAPES - ENDS -->
+
+					<!-- TOOLTIP - SHOW BY SCREEN SIZE - BEGINS -->
+						<h6>Show by Screen Size</h6>
+						{% include 'reference/objects/tooltip/tooltip-show-by-screen-size' %}
+					<!-- TOOLTIP - SHOW BY SCREEN SIZE - ENDS -->
+
+					<!-- TOOLTIP - IN A FORM - BEGINS -->
+						<h6>Tooltip in a Form</h6>
+						{% include 'reference/objects/tooltip/tooltip-input' %}
+					<!-- TOOLTIP - IN A FORM - ENDS -->
+
+					</div>
+				</div>
+			<!-- TOOLTIPS - BEGINS -->
+
+			<hr />
+
+			<!-- TOP BAR - BEGINS -->
+				<h3>Top Bar</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+					<!-- BASIC TOP BAR - BEGINS -->
+						<h6>Basic</h6>
+						{% include 'reference/objects/top-bar/top-bar' %}
+						<br />
+					<!-- BASIC TOP BAR - ENDS -->
+
+					<!-- TOP BAR - CLICKABLE - BEGINS -->
+						<h6>Clickable</h6>
+						{% include 'reference/objects/top-bar/top-bar-clickable' %}
+						<br />
+					<!-- TOP BAR - CLICKABLE - ENDS -->
+
+					<!-- TOP BAR - DIVIDERS - BEGINS -->
+						<h6>With Dividers</h6>
+						{% include 'reference/objects/top-bar/top-bar-dividers' %}
+						<br />
+					<!-- TOP BAR - DIVIDERS - ENDS -->
+
+					<!-- TOP BAR - LABELS - BEGINS -->
+						<h6>With Labels</h6>
+						{% include 'reference/objects/top-bar/top-bar-labels' %}
+						<br />
+					<!-- TOP BAR - LABELS - ENDS -->
+
+					<!-- TOP BAR - REMOVE THE TITLE - BEGINS -->
+						<h6>Remove the Title</h6>
+						{% include 'reference/objects/top-bar/top-bar-no-title' %}
+						<br />
+					<!-- TOP BAR - REMOVE THE TITLE - ENDS -->
+
+					<!-- TOP BAR - MEGA MENU - HOVER - BEGINS -->
+						<h6>Mega Menu - Hover</h6>
+						{% include 'reference/objects/top-bar/top-bar-mega-menu-hover' %}
+						<br />
+					<!-- TOP BAR - MEGA MENU - HOVER - ENDS -->
+
+					<!-- TOP BAR - MEGA MENU - CLICK - BEGINS -->
+						<h6>Mega Menu - Click</h6>
+						{% include 'reference/objects/top-bar/top-bar-mega-menu-click' %}
+						<br />
+					<!-- TOP BAR - MEGA MENU - CLICK - ENDS -->
+
+					<!-- TOP BAR - MEGA MENU - GRID WIDTH CONTENT - BEGINS -->
+						<h6>Mega Menu - Grid Width Content</h6>
+						{% include 'reference/objects/top-bar/top-bar-mega-menu-grid' %}
+						<br />
+					<!-- TOP BAR - MEGA MENU - GRID WIDTH CONTENT - ENDS -->
+
+					<!-- TOP BAR - MEGA MENU - FULL WIDTH CONTENT - BEGINS -->
+						<h6>Mega Menu - Full Width Content</h6>
+						{% include 'reference/objects/top-bar/top-bar-mega-menu-full' %}
+						<br />
+					<!-- TOP BAR - MEGA MENU - FULL WIDTH CONTENT - ENDS -->
+
+					</div>
+				</div>
+			<!-- TOP BAR - BEGINS -->
+
+			<hr />
+
+			<!-- CONVERSATIONAL FORM COMPONENT - BEGINS -->
+				<h3>Conversational Form Component</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+						{{ "/reference/components/conversational-form/conversational-form.css" | asset_url | stylesheet_tag }}
+						{% include "/reference/components/conversational-form/conversational-form" %}
+
+					</div>
+				</div>
+			<!-- CONVERSATIONAL FORM COMPONENT - BEGINS -->
+
+			<hr />
+
+			<!-- FAT FOOTER - BEGINS -->
+				<h3>Fat Footer Component</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+						{{ "/reference/components/fat-footer/fat-footer.css" | asset_url | stylesheet_tag }}
+						{% include "/reference/components/fat-footer/fat-footer" %}
+
+					</div>
+				</div>
+			<!-- FAT FOOTER - BEGINS -->
+
+			<hr />
+
+			<!-- ITEM SELECTION PANEL COMPONENT - BEGINS -->
+				<h3>Item Selection Panel Component</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+						{{ "/reference/components/item-selection-panel/item-selection-panel.css" | asset_url | stylesheet_tag }}
+						{% include "/reference/components/item-selection-panel/item-selection-panel" %}
+						{% include "/reference/components/item-selection-panel/item-selection-panel-photo-icons" %}
+
+					</div>
+				</div>
+			<!-- ITEM SELECTION PANEL COMPONENT - BEGINS -->
+
+			<hr />
+
+			<!-- PRICING TABLE COMPONENT - BEGINS -->
+				<h3>Pricing Table Component</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+						{{ "/reference/components/pricing-table/pricing-table.css" | asset_url | stylesheet_tag }}
+						{% include "/reference/components/pricing-table/pricing-table" %}<br />
+						{% include "/reference/components/pricing-table/pricing-table-top-label" %}<br />
+						{% include "/reference/components/pricing-table/pricing-table-bottom-label" %}<br />
+						{% include "/reference/components/pricing-table/pricing-table-top-bottom-label" %}<br />
+						{% include "/reference/components/pricing-table/pricing-table-top-bottom-label-sub-total" %}
+
+					</div>
+				</div>
+			<!-- PRICING TABLE COMPONENT - BEGINS -->
+
+			<hr />
+
+			<!-- SHOWCASE PANEL COMPONENT - BEGINS -->
+				<h3>Showcase Panel Component</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+						{{ "/reference/components/showcase-panel/showcase-panel.css" | asset_url | stylesheet_tag }}
+						{% include "/reference/components/showcase-panel/showcase-panel" %}
+
+					</div>
+				</div>
+			<!-- SHOWCASE PANEL COMPONENT - BEGINS -->
+
+			<hr />
+
+			<!-- SOCIAL MEDIA BADGES COMPONENT - BEGINS -->
+				<h3>Social Media Badges Component</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+						{{ "/reference/components/social-media-badges/social-media-badges.css" | asset_url | stylesheet_tag }}
+						{% include "/reference/components/social-media-badges/social-media-badges" %}
+
+					</div>
+				</div>
+			<!-- SOCIAL MEDIA BADGES COMPONENT - BEGINS -->
+
+			<hr />
+
+			<!-- STEPPER COMPONENT - BEGINS -->
+				<h3>Stepper Component</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+						{{ "reference/components/stepper/stepper.css" | asset_url | stylesheet_tag }}
+						{% include "/reference/components/stepper/stepper" %}
+
+					</div>
+				</div>
+			<!-- STEPPER COMPONENT - BEGINS -->
+
+			<hr />
+
+			<!-- THIN FOOTER - BEGINS -->
+				<h3>Thin Footer Component</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+						{{ "/reference/components/thin-footer/thin-footer.css" | asset_url | stylesheet_tag }}
+						{% include "/reference/components/thin-footer/thin-footer" %}
+
+					</div>
+				</div>
+			<!-- THIN FOOTER - BEGINS -->
+
+			<hr />
+
+			<!-- WORKSHEET FORM - BEGINS -->
+				<h3>Worksheet Form Component</h3>
+				<div class="row">
+					<div class="small-12 columns">
+
+						{{ "reference/components/worksheet-form/worksheet-form.css" | asset_url | stylesheet_tag }}
+						{% include "/reference/components/worksheet-form/worksheet-form" %}
+
+					</div>
+				</div>
+			<!-- WORKSHEET FORM - BEGINS -->
+
+
+		<!-- CONTENT - ENDS -->
+
+		</div>
+	</section>
+<!-- PAGE CONTENT - ENDS -->
+
+{% endblock %}

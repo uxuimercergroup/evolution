@@ -1,0 +1,362 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+			<p>
+				Evolution Core forms depend on Foundation's <a href="http://foundation.zurb.com/docs/components/forms.html" target="_blank">Forms</a> and <a href="http://foundation.zurb.com/docs/components/abide.html" target="_blank">Abide Validation</a> as a starting point.
+			</p>
+			</p>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="stacked"><a href="#stacked">Stacked</a></dd>
+					<dd data-magellan-arrival="inline"><a href="#inline">Inline</a></dd>
+					<dd data-magellan-arrival="compact"><a href="#compact">Compact</a></dd>
+					<dd data-magellan-arrival="prepostfix"><a href="#prepostfix">Pre/Postfix</a></dd>
+					<dd data-magellan-arrival="html5"><a href="#html5">HTML5</a></dd>
+					<dd data-magellan-arrival="abide-validation"><a href="#abide-validation">Abide Validation</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+		<!-- STACKED - BEGINS -->
+			<h3 data-magellan-destination="stacked">Stacked</h3>
+			<a name="stacked"></a>
+			<p>
+				A stacked form is a form where the form label is stacked on top of the form field.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/forms/form-stacked' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/forms/form-stacked' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head">Stacked with help text</p>
+						{% include '/reference/base/forms/form-stacked-help' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<p class="ref-sub-head">Stacked with help text</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/forms/form-stacked-help' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- STACKED - ENDS -->
+
+		<!-- INLINE - BEGINS -->
+			<h3 data-magellan-destination="inline">Inline</h3>
+			<a name="inline"></a>
+			<p>
+				The inline form displays the field Labels and the associated form fields on the same line with one another.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						<p class="ref-sub-head">Labels left aligned</p>
+						{% include '/reference/base/forms/form-inline' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						<p class="ref-sub-head">Labels left aligned</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/forms/form-inline' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head">Labels right aligned</p>
+						{% include '/reference/base/forms/form-inline-right' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<p class="ref-sub-head">Labels right aligned</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/forms/form-inline-right' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head">Inline with help text</p>
+						{% include '/reference/base/forms/form-inline-help' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<p class="ref-sub-head">Inline with help text</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/forms/form-inline-help' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- INLINE - ENDS -->
+
+		<!-- COMPACT - BEGINS -->
+			<h3 data-magellan-destination="compact">Compact</h3>
+			<a name="compact"></a>
+			<p>
+				The compact form is intended to be used when there are a small number of fields used in the form and the form needs to be displayed in a tight area. It is normally used in conjunction with placeholder text, and usually without a corresponding field label.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/forms/form-compact' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/forms/form-compact' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head">Compact with help text</p>
+						{% include '/reference/base/forms/form-compact-help' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<p class="ref-sub-head">Compact with help text</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/forms/form-compact-help' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- COMPACT - ENDS -->
+
+		<!-- PRE/POSTFIX - BEGINS -->
+			<h3 data-magellan-destination="prepostfix">Pre/Postfix</h3>
+			<a name="prepostfix"></a>
+
+			<p>
+				To create a pre/postfix you will need a container div with class of <code>.evo-form-prefix</code> or <code>.evo-form-postfix</code>. These classes need to be used like this: <code>class="row collapse evo-form-prefix"</code>, which will contain the input and the pre/postfix object.
+			</p>
+
+			<p>
+				There is built in support tied to buttons, and prefix/postfix labels, through a versatile approach using special grid properties. Essentially you can use <code>div class="row collapse"</code> to create label/action/input combinations. You use the Grid columns to define the size of the pre/postfix <code>span class="postfix"</code> or <code>span class="prefix"</code>.
+			</p>
+
+			<p>
+				You can also give a button/input pair a radius or a rounded edge by adding the classes prefix-radius, postfix-radius, prefix-round or postfix-round to the row that contains the elements. For example, <code>div class="row collapse postfix-round"</code> will add a rounded edge to the left side of the input field, and to the right side of the button, creating a cohesive rounded input. Here are a few examples:
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/forms/form-pre-postfix' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/forms/form-pre-postfix' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- PRE/POSTFIX - ENDS -->
+
+		<!-- HTML5 ELEMENTS - BEGINS -->
+			<h3 data-magellan-destination="html5">HTML5 Elements</h3>
+			<a name="html5"></a>
+			<p>
+				There are a variety of additional form elements that are used in HTML5 and that are available in Evolution Core.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/forms/form-html5' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/forms/form-html5' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- HTML5 ELEMENTS - ENDS -->
+
+		<!-- ABIDE VALIDATION- BEGINS -->
+			<h3 data-magellan-destination="abide-validation">Abide Validation</h3>
+			<a name="abide-validation"></a>
+			<p>
+				Abide Validation appears whenever the user makes a mistake on a form element, like failing to fill out a required input field. Abide Validation pinpoints where exactly on the form the error or errors occurred. Put the <code>required</code> attribute on the form element that needs validation and add a <code>small</code> tag with a class of <code>error</code> along with error help text under that form element. If your form elements are not contained in a <code>label</code> then you need to make sure the label's <code>for</code> attribute matches up with the <code>id</code> of the associated form element. Please refer to Foundation's <a href="http://foundation.zurb.com/docs/components/abide.html" target="_blank">Abide Validation</a> documentation for more information.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/forms/form-stacked' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/forms/form-stacked' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- ABIDE VALIDATION- ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+									<ul>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/forms.html" target="_blank">Forms</a>
+										</li>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/abide.html" target="_blank">Abide Validation</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}

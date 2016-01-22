@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.7 - Base Tables Partial
+// Mercer Evolution - Core v3.0.1 - Base Tables Partial
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
@@ -7,98 +7,43 @@
 //
 // @variables
 //
-$evo-table-border-width: rem-calc(1) !default;
-$evo-table-border-style: solid !default;
-$evo-table-border-header-color: $white !default;
-$evo-table-border-color: $white !default; /* TODO: Fix to be final, seems to match up with a foundation one tables.scss */
-$evo-table-header-padding: rem-calc(12) rem-calc(10) rem-calc(11) rem-calc(10) !default;
-$evo-table-row-hover-color: $gray-mid-light !default;
-$evo-table-subheader-bg-color: #E8F0F7 !default;
-$evo-table-subheader-font-color: $gray-darker !default;
-$evo-table-subheader-border-color: #C3D2E5 !default;
-$evo-table-subtotal-bg-color: $gray-lighter !default;
-$evo-table-subtotal-font-color: $gray-darker !default;
-$evo-table-total-bg-color: #E6E6E6 !default;
-$evo-table-total-font-color: $black !default;
+$evo-table-border-size: $table-border-size !default;
+$evo-table-border-style: $table-border-style !default;
+$evo-table-border-color: $table-border-color !default;
+$evo-table-head-border-color: $table-border-color !default;
+$evo-table-head-font-family: $font-family-sans-serif !default;
+$evo-table-row-hover-color: $onyx-dark-10 !default;
 
 
 @if $use-tables == true{
 
+	// TABLE HORIZONTAL SCROLL CONTAINER FOR SMALL MEDIA QUERY
 	.evo-table-small-mediaquery
 						{
 						overflow-x: auto;
 						overflow-y: hidden;
 						-ms-overflow-style: -ms-autohiding-scrollbar;
 						-webkit-overflow-scrolling: touch;
-
-		.evo-table			{
-							min-width: 768px;
-			th					{
-								border: $evo-table-border-width $evo-table-border-style $evo-table-border-header-color;
-								border-left: 0;
-								color: $white;  /* TODO: Fix this to be final tables.scss */
-								font-family: $evo-font-regular-family !important; /* TODO: Fix this to be final tables.scss */
-								padding: $evo-table-header-padding;
-								vertical-align: bottom;
-				&:first-child		{border-left: $evo-table-border-width $evo-table-border-style $evo-table-border-header-color;}
-				a					{
-									color: $white !important; /* TODO: Fix this to be final tables.scss */
-									display: block;
-									text-decoration: none;
-					&:hover				{text-decoration: underline;}
-									}
-								}
-			td					{border: $evo-table-border-width $evo-table-border-style $evo-table-border-color;}
-			td.checkbox			{width: rem-calc(30);}
-
-			[type="checkbox"]	{
-								margin: 0;
-								top: rem-calc(1);
-				&:focus				{font-size: rem-calc(13);}
-								}
-
-		//SUB HEADER, THIS IS USED TO GROUP SECTIONS IN A TABLE
-		.evo-subheader-row		{
-								background-color: $evo-table-subheader-bg-color !important;
-								border: $evo-table-border-width $evo-table-border-style $evo-table-subheader-border-color;
-								color: $evo-table-subheader-font-color;
-								font-family: $evo-font-medium-stack;
-								}
-
-		// SUBTOTAL AND TOTAL HELPERS
-		.evo-subtotal-row,
-		.evo-total-row			{
-								font-family: $evo-font-medium-stack;
-			td						{border-top: $evo-table-border-width $evo-table-border-style $evo-table-border-color;}
-								}
-		.evo-subtotal-row		{
-			td						{
-									background-color: $evo-table-subtotal-bg-color !important;
-									color: $evo-table-subtotal-font-color;
-									}
-								}
-		.evo-total-row			{
-			td						{
-									background-color: $evo-table-total-bg-color !important;
-									color: $evo-table-total-font-color;
-									}
-								}
-
-							}
-
-		// ADVANCED FILTER ICON PLACEMENT
-		.dataTables_filter	{
-			[class*="evo-icon-"]
-								{
-								float: right;
-								margin: rem-calc(9) 0 0 rem-calc(8);
-								}
-							}
-
-		.evo-table-hover tbody tr:hover > td
-							{background-color: $evo-table-row-hover-color;}
-
 						}
+
+	// TABLE BASE
+	.evo-table			{
+						min-width: ($small-breakpoint  + em-calc(1));
+		th					{
+							border: $evo-table-border-size $evo-table-border-style $evo-table-head-border-color;
+							border-left: 0;
+							font-family: $evo-table-head-font-family !important;
+							font-weight: normal;
+							vertical-align: bottom;
+			&:first-child		{border-left: $evo-table-border-size $evo-table-border-style $evo-table-head-border-color;}
+							}
+		td					{border: $evo-table-border-size $evo-table-border-style $evo-table-border-color;}
+						}
+
+	// TABLE ROW HOVER
+	.evo-table-hover tbody tr:hover > td
+						{background-color: $evo-table-row-hover-color;}
+
 
 	//=== MEDIA QUERIES =========================================================================
 
@@ -107,13 +52,16 @@ $evo-table-total-font-color: $black !default;
 		
 		@media #{$medium-up} {
 
+			// TABLE HORIZONTAL SCROLL CONTAINER FOR SMALL MEDIA QUERY, TURNED OFF FOR MEDIUM AND UP
 			.evo-table-small-mediaquery
 						{
+						overflow: hidden;
 						width: 100%;
-				> table		{
-							min-width: 100%;
-							width: 100%;
-							}
+						}
+
+			.evo-table	{
+						min-width: 100%;
+						width: 100%;
 						}
 
 		}

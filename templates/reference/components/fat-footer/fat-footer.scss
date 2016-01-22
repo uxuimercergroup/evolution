@@ -1,0 +1,195 @@
+/*-------------------------------------------------------------------------------------------
+Mercer Evolution - Core v3.0.1
+Fat Footer Component v1.0 - SASS
+DATE - August 19, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
+--------------------------------------------------------------------------------------------*/
+
+//
+// @core sass imports - IMPORTANT: DO NOT MODIFY!
+//
+@import	"../../../../assets/css/core/global/color_variables";
+@import	"../../../../assets/css/core/foundation/foundation/settings";
+@import	"../../../../assets/css/core/global/variables";
+@import	"../../../../assets/css/core/global/functions";
+@import	"../../../../assets/css/core/global/mixins";
+
+//
+// @variables - IMPORTANT: DO NOT MODIFY! MODIFY VARIABLE OVERRIDES ONLY.
+//
+
+// Component default variables
+$evo-fat-footer-content-section-background-color: $onyx-dark-2 !default;
+$evo-fat-footer-content-section-border-top-color: $onyx-dark-10 !default;
+$evo-fat-footer-brand-bar-background-color: $onyx-dark-10 !default;
+$evo-fat-footer-brand-bar-font-color: $onyx-bright !default;
+$evo-fat-footer-brand-bar-min-height: rem-calc(50) !default;
+$evo-fat-footer-brand-bar-logo-margin-top: rem-calc(12) !default;
+$evo-fat-footer-link-font-color: $sapphire-medium !default;
+$evo-fat-footer-list-pipe-color: $onyx-dark-30 !default;
+$evo-fat-footer-copyright: rem-calc(16) !default;
+$evo-fat-footer-links-font-size: rem-calc(14) !default;
+$evo-fat-footer-logo-margin-bottom: rem-calc(45) !default;
+$evo-fat-footer-social-media-badge-font-color: $onyx-medium !default;
+$evo-fat-footer-social-media-badge-font-color-hover: $evo-fat-footer-social-media-badge-font-color !default;
+$evo-fat-footer-social-media-badge-font-color-focus: $evo-fat-footer-social-media-badge-font-color !default;
+$evo-fat-footer-social-media-badge-font-color-visited: $evo-fat-footer-social-media-badge-font-color !default;
+$evo-fat-footer-social-media-badge-margin-bottom: rem-calc(20) !default;
+$evo-fat-footer-content-section-border-top-width: 1px !default;
+$evo-fat-footer-content-section-border-top-style: solid !default;
+$evo-fat-footer-content-section-padding-top: rem-calc(20) !default;
+$evo-fat-footer-content-section-min-height: rem-calc(200) !default;
+$evo-footer-content-header-font-color: $onyx-dark !default;
+$evo-footer-content-header-font: rem-calc(12) !default;
+
+//
+// @family component theme variables - IMPORTANT: DO NOT MODIFY!
+//
+
+// Family setting
+$evo-family: core;
+
+// Communication
+@if $evo-family == comm {
+
+// Benefits Portals
+} @else if $evo-family == bp {
+
+	$evo-fat-footer-content-section-background-color: $sapphire-medium;
+	$evo-fat-footer-content-section-border-top-color: $sapphire-dark;
+	$evo-footer-content-header-font-color: $sapphire-light;
+	$evo-fat-footer-brand-bar-background-color: $sapphire-dark;
+	$evo-fat-footer-brand-bar-font-color: $white;
+	$evo-fat-footer-link-font-color: $white;
+	$evo-fat-footer-list-pipe-color: $sapphire-light;
+
+	$evo-fat-footer-social-media-badge-font-color: $white;
+	$evo-fat-footer-social-media-badge-font-color-hover: $evo-fat-footer-social-media-badge-font-color;
+	$evo-fat-footer-social-media-badge-font-color-focus: $evo-fat-footer-social-media-badge-font-color;
+	$evo-fat-footer-social-media-badge-font-color-visited: $evo-fat-footer-social-media-badge-font-color;
+
+}
+
+//
+// @variable overrides
+//
+
+
+
+// FAT FOOTER COMPONENT - BEGINS
+	.evo-fat-footer 	{
+
+	// FOOTER CONTENT SECTION - BEGINS
+		.evo-footer-content-section
+							{
+							background-color: $evo-fat-footer-content-section-background-color;
+							border-top-width: $evo-fat-footer-content-section-border-top-width;
+							border-top-style: $evo-fat-footer-content-section-border-top-style;
+							border-top-color: $evo-fat-footer-content-section-border-top-color;
+							padding-top: $evo-fat-footer-content-section-padding-top;
+							min-height: $evo-fat-footer-content-section-min-height;
+							max-width: none;
+
+		// SOCIAL MEDIA BADGE COMPONENT - BEGINS
+			.evo-social-media-badges-ctn 
+								{
+								margin-bottom: $evo-fat-footer-social-media-badge-margin-bottom;
+				a[class^="evo-icon-"]
+									{
+									color: $evo-fat-footer-social-media-badge-font-color;
+					&:hover				{color: $evo-fat-footer-social-media-badge-font-color-hover;}
+					&:focus				{color: $evo-fat-footer-social-media-badge-font-color-focus;}
+					&:visited			{color: $evo-fat-footer-social-media-badge-font-color-visited;}
+									}
+
+								}
+		// SOCIAL MEDIA BADGE COMPONENT - ENDS
+
+		// CONTENT SECTION LOGO - BEGINS
+			.evo-fat-footer-logo
+								{
+								margin-bottom: $evo-fat-footer-logo-margin-bottom;
+								}
+		// CONTENT SECTION LOGO - ENDS
+
+							}
+	// FOOTER CONTENT SECTION - ENDS
+
+	// FOOTER LINK HEADERS - BEGINS
+		.evo-footer-link-hdr
+							{
+							color: $evo-footer-content-header-font-color;
+							font-size: $evo-footer-content-header-font;
+							}
+	// FOOTER LINK HEADERS - ENDS
+
+	// FOOTER LINKS - BEGINS
+		.evo-footer-links	{
+			li					{
+				a					{
+									color: $evo-fat-footer-link-font-color;
+									display: block;
+									font-size: $evo-fat-footer-links-font-size;
+									line-height: rem-calc(25);
+									}
+								}
+							}
+	// FOOTER LINKS - END
+
+	// BRAND BAR - BEGINS
+		.evo-fat-footer-brand-bar
+							{
+							background-color: $evo-fat-footer-brand-bar-background-color;
+							min-height: $evo-fat-footer-brand-bar-min-height;
+							max-width: none;
+			small				{color: $evo-fat-footer-brand-bar-font-color;}
+							}
+	// BRAND BAR - ENDS
+
+	// COPYRIGHT - BEGINS
+		.evo-footer-copyright
+							{
+							margin-top: $evo-fat-footer-copyright;
+							text-transform: uppercase;
+							letter-spacing: rem-calc(1.2);
+							}
+	// COPYRIGHT - ENDS
+
+	// FOOTER LOGO - BEGINS
+		.evo-brand-bar-footer-logo
+							{
+							margin-top: $evo-fat-footer-brand-bar-logo-margin-top;
+							}
+	// FOOTER LOGO - ENDS
+						}
+// FAT FOOTER COMPONENT - ENDS
+
+//=== MEDIA QUERIES =========================================================================
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+@media #{$medium-up} {
+
+// FAT FOOTER COMPONENT - BEGINS
+	.evo-fat-footer 	{
+	// FOOTER LINKS - BEGINS
+		.evo-footer-links	{
+			li					{
+								padding-bottom: rem-calc(5);
+				a					{
+									//line-height: rem-calc(25);
+									}
+								}
+							}
+	// FOOTER LINKS - END
+	}
+// FAT FOOTER COMPONENT - BEGINS
+
+}
+
+@media #{$small-only} {
+
+// FAT FOOTER COMPONENT - BEGINS
+	.evo-fat-footer 	{}
+// FAT FOOTER COMPONENT - ENDS
+
+}

@@ -58,16 +58,16 @@
 		<link rel="shortcut icon" href="/favicon.ico" />
 
 		<!-- EVOLUTION CORE STYLES -->
-		{{ "evolution.css" | asset_url | stylesheet_tag }}
+		<link href="/assets/css/evolution.css" rel="stylesheet" type="text/css" />
 
 		<!-- EVOLUTION UI STYLES -->
-		{{ "evolution_ui.css" | asset_url | stylesheet_tag }}
+		<link href="/assets/css/evolution_ui.css" rel="stylesheet" type="text/css" />
 
 		<!-- SITE STYLES -->
-		{{ "styles.css" | asset_url | stylesheet_tag }}
+		<link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
 
 		<!-- SITE IE CONDITIONAL STYLES -->
-		<!--[if IE 9]>{{ "ie.css" | asset_url | stylesheet_tag }}<![endif]-->
+		<!--[if IE 9]><link href="/assets/css/ie.css" rel="stylesheet" type="text/css" /><![endif]-->
 
 		<!-- GOOGLE PRETTIFY STYLES FOR PRETTY CODE PRINTING -->
 		{{ "prettify.css" | asset_url | stylesheet_tag }}
@@ -76,23 +76,37 @@
 		{{ "modernizr.js" | asset_url | script_tag }}
 
 	</head>
-	<body>
+	<body class="banding-template" id="top">
 
-		<!-- HEADER - BEGINS -->
-		{% include "header" %}
-		<!-- HEADER - ENDS -->
+		<!-- OFF-CANVAS WRAPPER - BEGINS -->
+		<div class="off-canvas-wrap evo-off-canvas evo-site-off-canvas" data-offcanvas>
+			<div class="inner-wrap">
 
-		<!-- PAGE - BEGINS -->
-		<section role="main">
-			<div class="row">
-				{% block content %}{% endblock %}
+				<!-- HEADER - BEGINS -->
+				{% include "header" %}
+				<!-- HEADER - ENDS -->
+
+				<!-- PAGE - BEGINS -->
+				<section role="main">
+					<div class="row">
+						<div class="small-12 columns">
+							{% block content %}{% endblock %}
+						</div>
+					</div>
+				</section>
+				<!-- PAGE - ENDS -->
+
+				<!-- FOOTER - BEGINS -->
+				{% include "footer" %}
+				<!-- FOOTER - ENDS -->
+
+				<!-- OFF-CANVAS CLOSE - BEGINS -->
+				<a class="exit-off-canvas"></a>
+				<!-- OFF-CANVAS CLOSE - ENDS -->
+
 			</div>
-		</section>
-		<!-- PAGE - ENDS -->
-
-		<!-- FOOTER - BEGINS -->
-		{% include "footer" %}
-		<!-- FOOTER - ENDS -->
+		</div>
+		<!-- OFF-CANVAS WRAPPER - ENDS -->
 
 		{% include "scripts" %}
 

@@ -1,8 +1,25 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.7 - Autocomplete Partial
+// Mercer Evolution - Core v3.0.1 - Autocomplete Partial
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+$evo-autocomplete-border-size: 1px !default;
+$evo-autocomplete-border-style: solid !default;
+$evo-autocomplete-border-color:	$onyx-dark-30 !default;
+$evo-autocomplete-max-height: rem-calc(107) !default;
+$evo-autocomplete-max-height-medium-up: rem-calc(176) !default;
+$evo-autocomplete-item-font-color: $onyx-dark-80 !default;
+$evo-autocomplete-item-line-height: 1.5 !default;
+$evo-autocomplete-item-border-bottom-size: 1px !default;
+$evo-autocomplete-item-border-bottom-style: solid !default;
+$evo-autocomplete-item-border-bottom-color: $transparent !default;
+$evo-autocomplete-item-hover-background-color: $onyx-dark-10 !default;
+$evo-autocomplete-background-color: $onyx-dark-2 !default;
+
 
 @if $use-autocomplete == true{
 
@@ -12,56 +29,40 @@
 	// AUTOCOMPLETE
 	.ui-menu				{
 							@include border-radius(0 0 $global-radius $global-radius);
-							@include box-shadow(0, 3px, 5px, $autocompleteShadowColor);
-							background-color: $autocompleteBackgroundColor;
-							border: $autocompleteBorderSize $autocompleteBorderStyle $autocompleteBorderColor;
+							@include box-shadow($evo-base-shadow-horizontal, $evo-base-shadow-vertical,	$evo-base-shadow-blur, $evo-base-shadow-color);
+							background-color: $evo-autocomplete-background-color;
+							border: $evo-autocomplete-border-size $evo-autocomplete-border-style $evo-autocomplete-border-color;
 							border-top: 0;
 							display: block;
 							position: absolute;
-							z-index: $evo-zindex-autocomplete;
+							z-index: $evo-base-zindex-autocomplete;
 							padding: 0;
 							margin: 0;
 							width: auto;
 							list-style: none;
-							max-height: $autocompleteMaxHeight;
+							max-height: $evo-autocomplete-max-height;
 							overflow-y: auto;
 							overflow-x: hidden;
 							outline: none;
 		.ui-menu-item			{
+								@include text-overflow;
 								margin: 0;
-								padding: 0;
+								padding: rem-calc(5);
+								display: block;
 								width: 100%;
-								font-size: 1rem;
-								font-family: $evo-font-medium-stack;
-			.ui-menu-item-highlight	{
-									color: $autocompleteItemHighlightText;
-									text-decoration: $autocompleteItemUnderlineText;
-									}
-			a 						{
+								color: $evo-autocomplete-item-font-color;
+								line-height: $evo-autocomplete-item-line-height;
+								border-bottom: $evo-autocomplete-item-border-bottom-size $evo-autocomplete-item-border-bottom-style $evo-autocomplete-item-border-bottom-color;
+								cursor: pointer;
+			.ui-menu-secondary		{
 									@include text-overflow;
-									border-top: $autocompleteItemBorderTopSize $autocompleteItemBorderTopStyle $autocompleteItemBorderTopColor;
-									border-bottom: $autocompleteItemBorderBottomSize $autocompleteItemBorderBottomStyle $autocompleteItemBorderBottomColor;
-									color: $autocompleteItemFontColor;
-									cursor: pointer;
-									display: block;
-									text-decoration: none;
-									padding: 5px;
-									line-height: $autocompleteItemLinkLineHeight;
-									height: auto;
-									height: 32px;
-				.ui-menu-secondary		{
-										@include text-overflow;
-										margin-left: 5px;
-										display: inline;
-										}
+									margin-left: rem-calc(5);
+									display: inline;
 									}
-			.ui-state-focus			{@include background-gradient($autocompleteItemHoverBackgroundStartColor,$autocompleteItemHoverBackgroundEndColor);}
 								}
 
-		.ui-menu-item:first-child
-								{border-top: 0;}
+		.ui-state-focus			{background-color: $evo-autocomplete-item-hover-background-color;}
 								
-		// Styles for autocomplete list item hover and active state on last item
 		.ui-menu-item:last-child
 								{
 								border-bottom: 0;
@@ -79,11 +80,9 @@
 
 			// AUTOCOMPLETE
 			.ui-menu		{
-							max-height: $autocompleteMaxHeightLargeBreakpoint;
+							max-height: $evo-autocomplete-max-height-medium-up;
 				.ui-menu-item	{
-								font-size: 1rem;
 					a				{
-									line-height: $autocompleteItemLinkLineHeightLargeBreakpoint;
 						.ui-menu-secondary
 										{
 										margin-left: 0;

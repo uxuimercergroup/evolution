@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.7 - Carousel JS
+// Mercer Evolution - Core v3.0.1 - Carousel JS
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //--------------------------------------------------------------------------------------------------------
@@ -25,8 +25,8 @@ var evoCarouselDefaults = {
 	lazyLoad: false, // Delays loading of images. Images outside of viewport won't be loaded before user scrolls to them. Great for mobile devices to speed up page loadings. IMG need special markup class="lazyOwl" and data-src="your img path"
 	navigation: true, // Display "next" and "prev" buttons
 	navigationText: [
-		'<i class="evo-icon-arrow-left4 evo-icon-position-left" title="Previous"></i>',
-		'<i class="evo-icon-arrow-right4 evo-icon-position-right" title="Next"></i>'
+		'<i class="evo-icon-arrow-left2 evo-icon-position-left" title="Previous"></i>',
+		'<i class="evo-icon-arrow-right2 evo-icon-position-right" title="Next"></i>'
 	], // You can cusomize your own text for navigation. To get empty buttons use navigationText : false. Also HTML can be used here.
 	pagination: true, // Show pagination
 	paginationNumbers: false, // Show numbers inside pagination buttons
@@ -49,7 +49,7 @@ var evoCarouselDefaults = {
 var evoCarousel = function(objectDataValue, options) {
 	
 	// Variable to define carousel object based on data attribute value
-	var carouselDataValue = jQuery('[data-carousel='+objectDataValue+']');
+	var carouselDataValue = jQuery('[data-evo-carousel='+objectDataValue+']');
 
 	// Apply owl carousel to carousel object and any default or custom options
 	carouselDataValue.owlCarousel(jQuery.extend({},evoCarouselDefaults,options));

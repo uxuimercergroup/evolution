@@ -1,0 +1,529 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+			<p>
+				We've implemented Proxima Nova as our default font family as a means to represent our brand instead of the typical fonts often used, like Arial and Verdana. Proxima Nova is a modern, yet professional, font, and it is also compatible with all modern web browsers.
+			</p>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="families"><a href="#families">Families &amp; Hierarchy</a></dd>
+					<dd data-magellan-arrival="headers"><a href="#headers">Headers &amp; Paragraphs</a></dd>
+					<dd data-magellan-arrival="header-options"><a href="#header-options">Header Options</a></dd>
+					<dd data-magellan-arrival="lists"><a href="#lists">Lists</a></dd>
+					<dd data-magellan-arrival="misc"><a href="#misc">Miscellaneous</a></dd>
+					<dd data-magellan-arrival="characters"><a href="#characters">Characters</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+		<!-- FAMILIES AND HIERARCHY - BEGINS -->
+			<h3 data-magellan-destination="families">Families &amp; Hierarchy</h3>
+			<a name="families"></a>
+			
+			{% include '/content/visual/typography/typography' %}
+
+			<hr />
+		<!-- FAMILIES AND HIERARCHY - ENDS -->
+
+		<!-- HEADERS AND PARAGRAPHS - BEGINS -->
+			<h3 data-magellan-destination="headers">Headers &amp; Paragraphs</h3>
+			<a name="headers"></a>
+
+			<h5 class="evo-spacer-margin-top-medium">Headers</h5>
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-header' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-header' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+			<h5 class="evo-spacer-margin-top-medium">Subheaders</h5>
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-subheader' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-subheader' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+			<h5 class="evo-spacer-margin-top-medium">Paragraphs</h5>
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-paragraph' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-paragraph' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- HEADERS AND PARAGRAPHS - ENDS -->
+
+		<!-- HEADER OPTIONS - BEGINS -->
+			<h3 data-magellan-destination="header-options">Header Options</h3>
+			<a name="header-options"></a>
+			
+			<h5 class="evo-spacer-margin-top-medium">Header with Background Color</h5>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-header-background' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-header-background' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+			<h5 class="evo-spacer-margin-top-medium">Header with Rule</h5>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-header-rule' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-header-rule' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+			<h5 class="evo-spacer-margin-top-medium">Header with Double Rule</h5>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-header-double-rule' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-header-double-rule' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- HEADER OPTIONS - ENDS -->
+
+		<!-- LISTS - BEGINS -->
+			<h3 data-magellan-destination="lists">Lists</h3>
+			<a name="lists"></a>
+			
+			<h5 class="evo-spacer-margin-top-medium">Ordered Lists</h5>
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-ordered-list' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-ordered-list' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+			<hr />
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head">Different lists style types</p>
+						{% include '/reference/base/type/type-ordered-list-styles' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<p class="ref-sub-head">Different lists style types</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-ordered-list-styles' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+			<h5 class="evo-spacer-margin-top-medium">Unordered Lists</h5>
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-unordered-list' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-unordered-list' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+			<h5 class="evo-spacer-margin-top-medium">Definition Lists</h5>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-definition-list' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-definition-list' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- LISTS - ENDS -->
+
+		<!-- MISCELLANEOUS - BEGINS -->
+			<h3 data-magellan-destination="misc">Miscellaneous</h3>
+			<a name="misc"></a>
+			
+			<h5 class="evo-spacer-margin-top-medium">Blockquotes</h5>
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-blockquote' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-blockquote' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+			<h5 class="evo-spacer-margin-top-medium">Footnotes</h5>
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-footnote' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-footnote' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+			<h5 class="evo-spacer-margin-top-medium">Horizonal Rules</h5>
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-horizontal-rule' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-horizontal-rule' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+			<h5 class="evo-spacer-margin-top-medium">Text Overflow</h5>
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-text-overflow' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-text-overflow' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+			<h5 class="evo-spacer-margin-top-medium">Word Break</h5>
+			<p>Make long words break and wrap within a container by adding the class <code>.evo-word-break</code>.</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-text-word-break' %}
+						<br />
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-text-word-break' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+			<h5 class="evo-spacer-margin-top-medium">Hyphens</h5>
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-hyphen' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-hyphen' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+			<h5 class="evo-spacer-margin-top-medium">Other Markup Code</h5>
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/type/type-other-markup' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/type/type-other-markup' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- MISCELLANEOUS - ENDS -->
+
+		<!-- CHARACTERS - BEGINS -->
+			<h3 data-magellan-destination="characters">Characters</h3>
+			<a name="characters"></a>
+			
+			<p>This is a demo of Western Latin characters to show off the compatibility of the Evolution Core web font (Proxima Nova) with the type of characters used in common Western European languages such as Spanish, Portuguese, French, German, etc.</p>
+
+			<div class="evo-table-small-mediaquery">
+				<table class="evo-table evo-ref-type-table" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="">
+					<thead>
+						<tr>
+							<th scope="column">Name</th>
+							<th scope="column">Glyph</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						{% for item in model.reference-western-latin-characters-data %}
+						<tr>
+							<td>{{ item.character_name }}</td>
+							<td class="evo-ref-type-example	">{{ item.character_name_code }}</td>
+						</tr>
+						{% endfor %}
+
+					</tbody>
+				</table>
+			</div>
+
+			<hr />
+		<!-- CHARACTERS - ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+									<ul>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/typography.html" target="_blank">Typography</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- PAGE CONTENT - ENDS -->
+
+{% endblock %}

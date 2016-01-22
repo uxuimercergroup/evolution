@@ -1,0 +1,11 @@
+<!-- ICOMOON ICONS - BEGINS -->
+	<p>Our icons use an icon Web font based primarily on the IcoMoon library. The icons available in IcoMoon have been narrowed to this core set. These should cover most icon needs, but if you can't find something to meet your specific needs, you can <a href="/reference/base/icons-ultimate">access the full IcoMoon set</a> to see a complete list of available icons. We continually add new icons to the core set from the full IcoMoon set as they are required.</p>
+
+	<div class="clearfix evo-spacer-margin-top-xx-large">
+		{% for item in global.icons %}
+			<div class="left evo-spacer-padding-bottom-x-large evo-spacer-padding-right-x-large">
+				<i class="evo-icon-{{ item.properties.name }} evo-icon-size-medium"></i>
+			</div>
+		{% endfor %}
+	</div>
+<!-- ICOMOON ICONS - ENDS -->

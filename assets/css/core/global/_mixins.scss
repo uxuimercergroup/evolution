@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.7 - Global SASS Mixins Partial
+// Mercer Evolution - Core v3.0.1 - Global SASS Mixins Partial
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
@@ -375,21 +375,6 @@
 // ==========================================================================================
 // RESPONSIVE MIXINS
 // ==========================================================================================
-
-// RESPONSIVE UTILITIES
-@mixin responsive-show($parent) {
-	#{$parent} {display: block !important;}
-	tr#{$parent} {display: table-row !important;}
-	th#{$parent},
-	td#{$parent} {display: table-cell !important;}
-}
-
-@mixin responsive-hide($parent) {
-	#{$parent} {display: none !important;}
-	tr#{$parent} {display: none !important;}
-	th#{$parent},
-	td#{$parent} {display: none !important;}
-}
 
 // TEXT SIZE ADJUST
 @mixin text-size-adjust($size-adjust:100%) {

@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.7 - Base Top Bar Partial
+// Mercer Evolution - Core v3.0.1 - Top Bar Partial
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
@@ -15,11 +15,14 @@
 //
 // @variables
 //
+$evo-top-bar-icon-font-family: $evo-icon-font-stack !default;
+$evo-top-bar-icon-site-font-family: $evo-icon-site-font-stack !default;
 $evo-top-bar-anchor-decoration: none !default;
-$evo-top-bar-title-area-name-font-family: $evo-font-regular-stack !default;
+$evo-top-bar-title-area-name-font-family: $font-family-sans-serif !default;
+$evo-top-bar-title-area-name-letter-spacing: rem-calc(3) !default;
 $evo-top-bar-title-area-name-font-color: scale-color($topbar-bg-color, $lightness: 100%) !default;
 $evo-top-bar-title-area-name-link-color: scale-color($topbar-bg-color, $lightness: 100%) !default;
-$evo-top-bar-title-area-sub-name-font-family: $evo-font-regular-stack !default;
+$evo-top-bar-title-area-sub-name-font-family: $font-family-sans-serif !default;
 $evo-top-bar-section-anchor-icon-color: $topbar-link-color !default;
 $evo-top-bar-section-anchor-hover-icon-color: $topbar-link-color-hover !default;
 $evo-top-bar-section-anchor-active-icon-color: $topbar-link-color-active !default;
@@ -31,13 +34,19 @@ $evo-top-bar-section-dropdown-box-shadow-horizontal: $evo-base-shadow-horizontal
 $evo-top-bar-section-dropdown-box-shadow-vertical: $evo-base-shadow-vertical !default;
 $evo-top-bar-section-dropdown-box-shadow-blur: $evo-base-shadow-blur !default;
 $evo-top-bar-section-dropdown-box-shadow-color: $evo-base-shadow-color !default;
-$evo-top-bar-section-dropdown-icon: '\e3c2' !default;
+$evo-top-bar-section-dropdown-icon: '\edc6' !default;
 $evo-top-bar-section-dropdown-icon-position-top: rem-calc(1) !default;
 $evo-top-bar-section-dropdown-icon-margin-right: rem-calc(28) !default;
 $evo-top-bar-section-dropdown-icon-padding-right: $topbar-link-padding !default;
-$evo-top-bar-section-dropdown-sub-icon: '\e3c1' !default;
+$evo-top-bar-section-dropdown-sub-icon: '\edc5' !default;
 $evo-top-bar-section-dropdown-sub-icon-position-top: rem-calc(1) !default;
 $evo-top-bar-section-dropdown-sub-icon-position-right: rem-calc(-1) !default;
+$evo-top-bar-mega-menu-ctn-padding: rem-calc(20) !default;
+$evo-top-bar-mega-menu-ctn-border-top-width: 2px !default;
+$evo-top-bar-mega-menu-ctn-border-top-style: solid !default;
+$evo-top-bar-mega-menu-ctn-border-top-color: $evo-top-bar-section-dropdown-active-background-color !default;
+$evo-top-bar-mega-menu-ctn-background-color: $onyx-dark-6 !default;
+$evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
 
 
 @if $use-top-bar == true{
@@ -60,7 +69,8 @@ $evo-top-bar-section-dropdown-sub-icon-position-right: rem-calc(-1) !default;
 				.title-area						{
 					.name							{
 						h1								{
-														font-family: $evo-top-bar-title-area-name-font-family;
+														font-family: $evo-top-bar-title-area-name-font-family !important;
+														letter-spacing: $evo-top-bar-title-area-name-letter-spacing;
 														color: $evo-top-bar-title-area-name-font-color;
 							a								{
 															color: $evo-top-bar-title-area-name-link-color;
@@ -80,10 +90,10 @@ $evo-top-bar-section-dropdown-sub-icon-position-right: rem-calc(-1) !default;
 
 								// TOP BAR NAV SECTION ICONS
 								&[class^=evo-icon-]				{
-																font-family: $evo-icon-font-stack;
+																font-family: $evo-top-bar-icon-font-family;
 																}
 								&[class^="evo-icon-site-"]		{
-																font-family: $evo-icon-site-font-stack;
+																font-family: $evo-top-bar-icon-site-font-family;
 																}
 
 								// TOP BAR NAV LINKS WITH ICONS
@@ -94,6 +104,16 @@ $evo-top-bar-section-dropdown-sub-icon-position-right: rem-calc(-1) !default;
 									[class^=evo-icon-]				{
 																	color: $evo-top-bar-section-anchor-hover-icon-color;
 																	}
+																}
+															}
+							&:hover:not(.has-form)			{
+								>a								{
+									[class^="evo-icon-"]			{color: $evo-top-bar-section-anchor-hover-icon-color;}
+																}
+															}
+							&.hover							{
+								> a 							{
+									[class^="evo-icon-"]			{color: $evo-top-bar-section-anchor-hover-icon-color;}
 																}
 															}
 							&.active:not(.has-form)			{
@@ -110,6 +130,7 @@ $evo-top-bar-section-dropdown-sub-icon-position-right: rem-calc(-1) !default;
 					.has-dropdown					{
 						
 						// TOP BAR NAV DROPDOWN MENU ACTIVE MENU
+						&.hover,
 						&.not-click:hover				{
 														background-color: $evo-top-bar-section-dropdown-active-background-color;
 														}
@@ -119,7 +140,7 @@ $evo-top-bar-section-dropdown-sub-icon-position-right: rem-calc(-1) !default;
 							&:after							{
 															margin-right: $evo-top-bar-section-dropdown-icon-margin-right;
 															top: $evo-top-bar-section-dropdown-icon-position-top;
-															font-family: $evo-icon-font-stack;
+															font-family: $evo-top-bar-icon-font-family;
 															content: $evo-top-bar-section-dropdown-icon;
 															}
 							&[class^=evo-icon-],
@@ -170,9 +191,58 @@ $evo-top-bar-section-dropdown-sub-icon-position-right: rem-calc(-1) !default;
 															}
 														}
 													}
+
+					// TOP BAR - MEGA MENU
+					[data-evo-top-bar-mega-menu]	{
+
+						// TOP BAR - MEGA MENU CONTAINER
+						[data-evo-top-bar-mega-menu-ctn]
+														{
+							> li							{
+															padding: $evo-top-bar-mega-menu-ctn-padding;
+															border-top: $evo-top-bar-mega-menu-ctn-border-top-width $evo-top-bar-mega-menu-ctn-border-top-style $evo-top-bar-mega-menu-ctn-border-top-color;
+															background-color: $evo-top-bar-mega-menu-ctn-background-color;
+								&:last-child					{@include border-radius($evo-top-bar-mega-menu-ctn-border-radius);}
+
+								// TOP BAR - MEGA MENU CONTENT CONTAINER
+								[data-evo-top-bar-mega-menu-content-ctn]
+																{
+									ul								{
+																	display: block;
+																	margin-bottom: $evo-base-margin;
+										li								{
+																		width: auto;
+																		float: none;
+																		background: none;
+											a								{
+																			@include border-radius(0);
+																			background: none;
+																			color: $anchor-font-color;
+												&:hover							{
+																				background: none;
+																				color: $anchor-font-color-hover;
+																				}
+																			}
+																		}
+																	}
+																}
+									a							{
+																padding: 0;
+																line-height: 1.5;
+																background: none;
+																color: $anchor-font-color;
+																text-decoration: $anchor-text-decoration;
+										&:hover						{
+																	background: none;
+																	color: $anchor-font-color-hover;
+																	text-decoration: $anchor-text-decoration-hover;
+																	}
+																}
+															}
+														}
+													}
+
 												}
-
-
 											}
 
 		}

@@ -1,0 +1,30 @@
+<!-- DATA TABLE WITH TOTAL ROW - BEGINS -->
+<div class="evo-table-small-mediaquery">
+	<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-example" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+		<thead>
+			<tr>
+				<th scope="column">Rendering engine</th>
+				<th scope="column">Browser</th>
+				<th scope="column">Platform(s)</th>
+				<th scope="column">Engine Version</th>
+				<th scope="column">CSS Grade</th>
+			</tr>
+		</thead>
+		<tbody>{% for item in global.table_data limit: 20 %}
+			<tr>
+				<td>{{ item.renderingEngine }}</td>
+				<td>{{ item.browser }}</td>
+				<td>{{ item.platform }}</td>
+				<td>{{ item.engine }}</td>
+				<td class="text-right">{{ item.cssGrade }}</td>
+			</tr>{% endfor %}
+		</tbody>
+		<tfoot>
+			<tr class="evo-table-total-row">
+				<td class="text-right" colspan="4">Total</td>
+				<td class="text-right">58</td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+<!-- DATA TABLE WITH TOTAL ROW - ENDS -->

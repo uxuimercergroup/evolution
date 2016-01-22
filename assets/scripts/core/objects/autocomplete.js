@@ -1,43 +1,24 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.7 - Autocomplete JS
+// Mercer Evolution - Core v3.0.1 - Autocomplete JS
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //--------------------------------------------------------------------------------------------------------
 
-// Define autocomplete defaults
+// Autocomplete defaults
 var evoAutocompleteDefaults = {
-	autoFocus: true,
-	delay: 0,
-	minLength: 3
+	autoFocus: true, // If set to true the first item will automatically be focused when the menu is shown.
+	delay: 0, // The delay in milliseconds between when a keystroke occurs and when a search is performed. A zero-delay makes sense for local data (more responsive), but can produce a lot of load for remote data, while being less responsive.
+	minLength: 3 // The minimum number of characters a user must type before a search is performed. Zero is useful for local data with just a few items, but a higher value should be used when a single character search could match a few thousand items.
 };
 
-// Used to create the highlight for the autocomplete
-var evoAutocompleteHighlight = function() {
-
-	$.ui.autocomplete.prototype._renderItem = function (ul, item) {
-		var keywords = $.trim(this.term).split(' ').join('|');
-		var output = item.label.replace(new RegExp("(" + keywords + ")", "gi"), '<span class="ui-menu-item-highlight">$1</span>');
-		return $("<li>")
-			.append($("<a>").html(output))
-			.appendTo(ul);
-	};
-
-};
-
-// Autocomplete function, pass id of autocomplete input and any autocomplete options you want to add/override
-var evoAutocomplete = function(id, options) {
+// Autocomplete function:
+// Pass data attribute value of autocomplete object and any autocomplete options you want to add/override
+var evoAutocomplete = function(objectDataValue, options) {
 	
-	// Variable to define id of autocomplete
-	var autocompleteId = jQuery('#'+id);
+	// Variable to define autocomplete object based on data attribute value
+	var autocompleteDataValue = jQuery('[data-evo-autocomplete='+objectDataValue+']');
 	
-	// Apply autocomplete to specified element along with default options
-	autocompleteId.autocomplete(jQuery.extend({},evoAutocompleteDefaults,options));
+	// Apply autocomplete and any default or custom autocomplete options
+	autocompleteDataValue.autocomplete(jQuery.extend({},evoAutocompleteDefaults,options));
 
-	// Element the autocomplete menu should be appended to, usually a container that contains the autocomplete input
-	autocompleteId.autocomplete({
-		appendTo: '#'+id+'-ctn'
-	});
-
-	// Initialize autocomplete highlight function
-	evoAutocompleteHighlight();
 };

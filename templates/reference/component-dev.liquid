@@ -1,0 +1,532 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+
+		<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+			<h1>{{ model.title }}</h1>
+			<p>This online document contains the guidelines and best practices for component development for use with the Evolution framework.</p>
+		<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+			<hr />
+
+		<!-- CONTENT - BEGINS -->
+
+			<h3>General</h3>
+
+			<p>All Evolution components live as stand alone plug-ins for Evolution which rely on global elements supplied by the Evolution Framework.</p>
+			<p>Finished Evolution components are made up of the following files after they have been converted to static files:</p>
+
+			<ul>
+				<li>HTML file - index.html</li>
+				<li>CSS file - {component-name}.css</li>
+				<li>JS file - {component-name}.js</li>
+			</ul>
+
+			<p>All these files live in a directory with the component name. The developer will create a ZIP file of these static component files when the component is ready to be released and post it to the Evolution Libary site so it can be downloaded.</p>
+
+			<p>As a developer using Mixture, you will be building these components using the following languages to get the static files required for the ZIP package:</p>
+
+			<ul>
+				<li>HTML - index.liquid (Liquid templating)</li>
+				<li>CSS - {component-name}.scss (SASS)</li>
+				<li>JS - {component-name}.js (Mixture .mix.js files may be used)</li>
+			</ul>
+			
+			<h3>HTML</h3>
+
+			<p>1. Make sure the component has a comment tag around it. The first comment uses <code>- BEGINS</code> and the last comment uses <code>- ENDS</code>. Comments are always capitalized and the name of the component.</p>
+			<p>Example:</p>
+			
+			{{ global.reference-get-code-start-tag }}<!-- ITEM SELECTION PANEL COMPONENT - BEGINS -->
+<!-- ITEM SELECTION PANEL COMPONENT - ENDS -->{{ global.reference-get-code-end-tag }}
+
+			<p>2. Always reference the component CSS file at the top of the component code before the HTML begins but after the opening comment tag.</p>
+
+			<p>Example:</p>
+
+			{{ global.reference-get-code-start-tag }}<!-- ITEM SELECTION PANEL COMPONENT - BEGINS -->
+	<link href="/reference/components/item-selection-panel/item-selection-panel.css" rel="stylesheet" type="text/css" />{{ global.reference-get-code-end-tag }}
+
+			<!-- ANNOTATIONS BOX - BEGINS -->
+				<div class="panel evo-box annotations">
+					<div class="evo-box-bdy">
+						<p class="evo-no-margin-bottom">
+							<strong>IMPORTANT:</strong> For developing in Mixture, you will need to add another CSS reference call to the page for Mixture to find CSS files inside of the /templates directory. Before your component code and before the opening comment tag include a Mixture specific CSS link tag like below:
+							<br /><br />
+							&lbrace;&lbrace; "item-selection-panel.css" | asset_url | stylesheet_tag &rbrace;&rbrace;
+						</p>
+					</div>
+				</div>
+			<!-- ANNOTATIONS BOX - ENDS -->
+
+			<p>3. Always wrap the component in a containing <code>div</code> that has the class name of the component. Always separate words in the class name with dashes, and always begin the class name with "evo-" as the class prefix. As a general coding standard, always use classes in your HTML versus id's which can only be used once on a given page.</p>
+
+			<p>Example:</p>
+
+			{{ global.reference-get-code-start-tag }}<div class="evo-item-selection-panel">{{ global.reference-get-code-end-tag }}
+
+			<p>4. When using class names with HTML tags in the component please be as descriptive as possible and don't worry if the class name is too long, the more specific the better. Always separate words in the class name with dashes, and always begin the class name with <code>evo-</code> as the class prefix.</p>
+
+			<p>When naming classes, always start with the name of the component and then end the class name with the specific function of the class. This is keep the class names consistent, specific, and functional.</p>
+
+			{{ global.reference-get-code-start-tag }}class="evo-item-selection-panel"
+class="evo-item-selection-panel-hdr"
+class="evo-item-selection-panel-item"
+class="evo-item-selection-panel-item-img"
+class="evo-item-selection-panel-item-label"{{ global.reference-get-code-end-tag }}
+
+			<p>5. When using Zurb Foundation and Evolution classes on the same HTML tag, always put the Foundation classes first before Evolution classes in the class order.</p>
+
+			<p>The <code>text-center</code> class is a Zurb Foundation class because it does not have the <code>evo-</code> class prefix. The <code>text-center</code> is first in the class order before <code>evo-item-selection-panel-item-label</code>.</p>
+
+			<p>Example:</p>
+
+			{{ global.reference-get-code-start-tag }}<span class="text-center evo-item-selection-panel-item-label">Management</span>{{ global.reference-get-code-end-tag }}
+
+			<p>6. Always use HTML5 standards when coding HTML for Evolution components.</p>
+
+
+			<h3>SASS</h3>
+
+			<p>1. Make sure to update the SASS comments at the top of the component .scss file so it has the following info:</p>
+			<ul>
+				<li>Mercer Evolution - version - Family name</li>
+				<li>Component name and version - SASS</li>
+				<li>DATE - date of release/dev</li>
+				<li>AUTHOR - developer name(s)</li>
+			</ul>
+
+			<p>Example:</p>
+
+			{{ global.reference-get-code-start-tag }}/*-------------------------------------------------------------------------------------------
+Mercer Evolution - v3.0.1 - Benefits Portals Family
+Item Selection Panel Component v1.0 - SASS
+DATE - September 1, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
+--------------------------------------------------------------------------------------------*/{{ global.reference-get-code-end-tag }}
+
+			<p>2. The next section is the "Core SASS Imports" section of the SASS file. This should never be modified when implementing the component.</p>
+
+			<p>Here is the code for it:</p>
+
+			{{ global.reference-get-code-start-tag }}//
+// @core sass imports - IMPORTANT: DO NOT MODIFY!
+//
+@import	"../../../../assets/css/core/global/color_variables";
+@import	"../../../../assets/css/core/foundation/foundation/settings";
+@import	"../../../../assets/css/core/global/variables";
+@import	"../../../../assets/css/core/global/functions";
+@import	"../../../../assets/css/core/global/mixins";{{ global.reference-get-code-end-tag }}
+
+			<p>These imports give you access to a bunch of SASS variables and functions you can use in the SASS for building the component styles.</p>
+
+			<ul>
+				<li><strong>global/color_variables:</strong> allows you to use Evolution core level SASS color variables from the core color palette.</li>
+				<li><strong>foundation/settings:</strong> gives you access to foundation functions such as rem-calc.</li>
+				<li><strong>global/variables:</strong> allows you to use global Evolution core level SASS variables such as font stack variables, base shadows variables, etc.</li>
+				<li><strong>global/variables:</strong> allows you to use global Evolution core level SASS functions.</li>
+				<li><strong>global/mixins:</strong> allows you to use global Evolution core level SASS mixins such as border-radius, background-gradient, box-shadow, etc.</li>
+			</ul>
+
+			<p>3. The next section is the component "Variables" section. These are a list of the default SASS variables for the component. This should also never be modified when implementing the component. The SASS variables for the component should be modified in the "Variable Overrides" section.</p>
+
+			<p>Here is the code for it:</p>
+
+			{{ global.reference-get-code-start-tag }}//
+// @variables - IMPORTANT: DO NOT MODIFY! MODIFY VARIABLE OVERRIDES ONLY.
+//
+
+// Component default variables
+$evo-item-selection-panel-text-align: center !default;
+...{{ global.reference-get-code-end-tag }}
+
+			<p>When creating component SASS variable names follow these guidelines:</p>
+
+			<ul>
+				<li>
+					Each SASS variable name is always separated by dashes, for example:
+					<br />
+					<code>$evo-item-selection-panel-text-align</code>
+					<br /><br />
+				</li>
+				<li>
+					Each SASS variable name always starts with the name of the component, followed by the SASS variable name or function. Try to group name/function variables together with the same prefix for even more clarity.
+					Example:<br />
+					<code>$evo-item-selection-panel-text-align: center !default;</code><br />
+					<code>$evo-item-selection-panel-list-item-padding: rem-calc(15) !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-border-radius: 100% !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-border-width: rem-calc(2) !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-border-style: solid !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-border-color: $onyx-light !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-font-color: $onyx-medium !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-padding: rem-calc(22) !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-small-padding: rem-calc(10) !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-medium-padding: rem-calc(16) !default;</code><br />
+					<code>$evo-item-selection-panel-item-icon-x-large-padding: rem-calc(28) !default;</code>
+					<br /><br />
+				</li>
+				<li>
+					<strong>VERY IMPORTANT:</strong> All SASS variables in the "Variables" section need to have <code>!default</code> at the end followed by a semi-colon. This sets the SASS variable as the default value so it can be overwritten in "Variable Overrides" section.
+				</li>
+			</ul>
+
+			<!-- ANNOTATIONS BOX - BEGINS -->
+				<div class="panel evo-box annotations">
+					<div class="evo-box-bdy">
+						<p class="evo-no-margin-bottom">
+							<strong>IMPORTANT:</strong> You should strive for SASS variables for everything in the component SASS section. Exceptions can be made for styles that you would not want anyone to override with SASS variables.
+						</p>
+					</div>
+				</div>
+			<!-- ANNOTATIONS BOX - ENDS -->
+
+			<p>4. The next section is the component "Family Theme Variables" section. This is the section which defines the theme of the component depending on which family is set using the <code>$evo-family</code> SASS variable. The default value for <code>$evo-family</code> is "core" and a developer needs to change the value of <code>$evo-family</code> to the correct family value, for example: <code>bp</code> for benefits portals and <code>comm</code> for communications sites, when implementing the component in a family-based project.</p>
+
+			<p>To accomplish the theme switching between families, the SASS <code>if</code> conditional statement is used to set the correct SASS variables for each family. SASS variables for this section should only be used to theme the component for each family and most likely will only be color values. This section should also never be modified when implementing the component.</p>
+
+			<p>Here is the code for it:</p>
+
+			{{ global.reference-get-code-start-tag }}//
+// @family component theme variables - IMPORTANT: DO NOT MODIFY!
+//
+
+// Family setting
+$evo-family: core;
+
+// Communications
+@if $evo-family == comm {
+
+	$evo-item-selection-panel-item-icon-border-color: $onyx-light;
+...{{ global.reference-get-code-end-tag }}
+
+			<p>5. The next section is the component "Variable Overrides" section. This is where you can modify the component SASS variables to override the default component SASS variable values.</p>
+
+			<p>When building a component, once the default component SASS variables are completed, you can take a copy of those variables, remove the !default at the end of them (very important), comment them out, and put them in the "Variable Overrides" section of the component SASS file.</p>
+
+			<p>Here is the code for it:</p>
+
+			{{ global.reference-get-code-start-tag }}//
+// @variable overrides
+//
+// $evo-item-selection-panel-text-align: center;
+// $evo-item-selection-panel-list-item-padding: rem-calc(15);
+...{{ global.reference-get-code-end-tag }}
+
+			<p>6. After the core SASS imports and the component SASS variables, you can then setup the section where you code the SASS for the component. Make sure the component SASS section has a CSS comment tag around it. The first comment uses <code>- BEGINS</code> and the last comment uses <code>- ENDS</code>. Comments are always capitalized and the name of the component.</p>
+
+			<p>Always indent the first set of SASS inside the commented section 1 tab in from the comment. This allows better code folding in text editors.</p>
+
+			<p>Example:</p>
+
+			{{ global.reference-get-code-start-tag }}// ITEM SELECTION PANEL ITEM - BEGINS
+	.evo-item-selection-panel-item		{
+
+		...
+
+										}
+// ITEM SELECTION PANEL - ENDS{{ global.reference-get-code-end-tag }}
+
+			<p>7. Subsequent sections in the component SASS section also get comments for the different parts of the component. Please try to "chunk" out the SASS for the component into its smaller parts as this makes it easier to understand how it's put together with the HTML. The comments also help to chunk the SASS code so a developer can concentrate on one part at a time.</p>
+
+			<p>Example:</p>
+
+			{{ global.reference-get-code-start-tag }}// ITEM SELECTION PANEL - BEGINS
+	.evo-item-selection-panel			{
+										text-align: $evo-item-selection-panel-text-align;
+
+	// ITEM SELECTION PANEL LIST - BEGINS
+		ul									{
+			li									{
+												padding-bottom: $evo-item-selection-panel-list-item-padding;
+												}
+											}
+	// ITEM SELECTION PANEL LIST - ENDS
+
+	// ITEM SELECTION PANEL ITEM - BEGINS
+		.evo-item-selection-panel-item		{
+											@include user-select(none);
+											cursor: pointer;
+			.evo-item-selection-panel-item-icon	{
+												@include border-radius($evo-item-selection-panel-item-icon-border-radius);
+												color: $evo-item-selection-panel-item-icon-font-color;
+												padding: $evo-item-selection-panel-item-icon-padding;
+												width: auto;
+				&.evo-icon-size-small				{padding: $evo-item-selection-panel-item-icon-small-padding;}
+				&.evo-icon-size-medium				{padding: $evo-item-selection-panel-item-icon-medium-padding;}
+				&.evo-icon-size-large				{padding: $evo-item-selection-panel-item-icon-padding;}
+				&.evo-icon-size-x-large				{padding: $evo-item-selection-panel-item-icon-x-large-padding;}
+												}
+			.evo-item-selection-panel-item-label
+												{
+												margin: $evo-item-selection-panel-item-label-margin;
+												font-family: $evo-item-selection-panel-item-label-font-family;
+												font-size: $evo-item-selection-panel-item-label-font-size;
+												color: $evo-item-selection-panel-item-label-font-color;
+												line-height: $evo-item-selection-panel-item-label-line-height;
+												display: block;
+												}
+			.evo-item-selection-panel-item-checkbox
+												{
+												position: absolute;
+												left: rem-calc(-9999);
+												width: 0;
+												height: 0;
+												}
+											}
+	// ITEM SELECTION PANEL ITEM - ENDS
+
+...{{ global.reference-get-code-end-tag }}
+
+			<p>8. Misc. SASS Rules</p>
+
+			<p>Don't be too specific with you SASS/CSS cascade as it makes it harder to maintain. Write your SASS so its more modular or builds on layers of classes.</p>
+
+			<p>Use the foundation rem-calc function for pixel values, just pass in pixel value into function. Example: <code>font-size: rem-calc(12);</code></p>
+
+			<p>Don't use rem-calc for positioning values such as top, left, right, bottom. Don't use rem-calc for border-width values. Use pixels instead.</p>
+
+			<p>Try to use as much of the core variables as you can from Evolution core SASS variables, this will keep things more consistent  and easier to maintain.</p>
+
+			<p>When using colors, use as much as you can from the Evolution core SASS color variables. The designer will also be using the same palette and should provide the colors specs that match the core palette.</p>
+
+			<p>There is a media query section at the bottom of the component SASS file, use it to change styles for different devices and just duplicate the same comment rules/hierarchy in this section.</p>
+
+			<!-- ANNOTATIONS BOX - BEGINS -->
+				<div class="panel evo-box annotations">
+					<div class="evo-box-bdy">
+						<p class="evo-no-margin-bottom">
+							<strong>IMPORTANT:</strong> The SASS you are writing should be mobile first (as in, not in a media query to start) and then that SASS is overridden in the media query section for medium (tablet) and large (desktop) sizes. This guarantees you are scaling up from small (phones) to medium and large media queries.
+						</p>
+					</div>
+				</div>
+			<!-- ANNOTATIONS BOX - ENDS -->
+
+			<p>Use the Evolution core SASS mixins to save time writing out CSS3 properties. The browser prefixes are taken care of when using the mixin libary. Example:</p>
+
+			{{ global.reference-get-code-start-tag }}.evo-item-selection-panel-item-icon	{
+									@include border-radius($evo-item-selection-panel-item-icon-border-radius);
+...{{ global.reference-get-code-end-tag }}
+
+			<p>Keep the tabs in your SASS clean and lined up, this makes it much easier to understand the hierarchy of styles and the embedding style of SASS coding. Try to follow the formatting of the SASS you see in these examples or already built components. Example:</p>
+
+			{{ global.reference-get-code-start-tag }}/ SHOWCASE PANEL - BEGINS
+	.evo-showcase-panel				{
+										@include box-shadow($evo-showcase-panel-shadow-horizontal, $evo-showcase-panel-shadow-vertical, $evo-showcase-panel-shadow-blur, $evo-showcase-panel-shadow-color);
+										background-color: $evo-showcase-panel-background-color;
+
+	// SHOWCASE PANEL ITEM - BEGINS
+		.evo-showcase-panel-item 			{
+											min-height: $evo-showcase-panel-item-min-height;
+											padding: $evo-showcase-panel-item-padding;
+											text-align: $evo-showcase-panel-item-text-align;
+											color: $evo-showcase-panel-item-font-color;
+
+			[class^="evo-icon-"]				{top: $evo-showcase-panel-item-icon-position-top;}
+											}
+	// SHOWCASE PANEL ITEM - ENDS
+
+	// SHOWCASE PANEL ITEM LABEL - BEGINS
+		.evo-showcase-panel-item-label		{
+											font-family: $evo-showcase-panel-item-label-font-family;
+											line-height: $evo-showcase-panel-item-label-line-height;
+			sup									{
+												position: relative;
+												font-family: $evo-showcase-panel-item-label-sup-font-family;
+												}
+											}
+	// SHOWCASE PANEL ITEM LABEL - ENDS
+
+	// SHOWCASE PANEL ITEM SUB LABEL - BEGINS
+		.evo-showcase-panel-item-sub-label	{
+											position: relative;
+											font-family: $evo-showcase-panel-item-sub-label-font-family;
+											font-size: $evo-showcase-panel-item-sub-label-font-size;
+											text-transform: $evo-showcase-panel-item-sub-label-text-transform;
+											}
+	// SHOWCASE PANEL ITEM SUB LABEL - ENDS
+
+	// SHOWCASE PANEL ITEM SUB TEXT - BEGINS
+		.evo-showcase-panel-item-sub-text	{
+											display: block;
+											font-size: $evo-showcase-panel-item-sub-text-font-size;
+											}
+	// SHOWCASE PANEL ITEM SUB TEXT - ENDS
+
+	// SHOWCASE PANEL ITEM - LARGE - BEGINS
+		.evo-showcase-panel-item-large		{
+											padding-top: $evo-showcase-panel-item-large-padding-top;
+											padding-bottom: $evo-showcase-panel-item-large-padding-bottom;
+			.evo-showcase-panel-item-label		{
+												font-size: $evo-showcase-panel-item-large-label-font-size;
+												letter-spacing: $evo-showcase-panel-item-large-label-letter-spacing;
+				sup									{
+													font-size: $evo-showcase-panel-item-large-label-sup-font-size;
+													top: $evo-showcase-panel-item-large-label-sup-position-top;
+													left: $evo-showcase-panel-item-large-label-sup-position-left;
+													}
+												}
+			.evo-showcase-panel-item-sub-label	{
+												top: $evo-showcase-panel-item-large-sub-label-position-top;
+												left: $evo-showcase-panel-item-large-sub-label-position-left;
+												letter-spacing: $evo-showcase-panel-item-large-sub-label-letter-spacing;
+												}
+			.evo-showcase-panel-item-sub-text	{
+												position: relative;
+												top: $evo-showcase-panel-item-large-sub-text-position-top;
+												}
+											}
+	// SHOWCASE PANEL ITEM - LARGE - ENDS
+
+	// SHOWCASE PANEL ITEM - SMALL - BEGINS
+		.evo-showcase-panel-item-small		{
+											padding-top: $evo-showcase-panel-item-small-padding-top;
+											padding-bottom: $evo-showcase-panel-item-small-padding-bottom;
+			.evo-showcase-panel-item-label		{
+												font-size: $evo-showcase-panel-item-small-label-font-size;
+												letter-spacing: $evo-showcase-panel-item-small-label-letter-spacing;
+				sup									{
+													font-size: $evo-showcase-panel-item-small-label-sup-font-size;
+													top: $evo-showcase-panel-item-small-label-sup-position-top;
+													left: $evo-showcase-panel-item-small-label-sup-position-left;
+													}
+												}
+			.evo-showcase-panel-item-sub-label	{
+												top: $evo-showcase-panel-item-small-sub-label-position-top;
+												left: $evo-showcase-panel-item-small-sub-label-position-left;
+												letter-spacing: $evo-showcase-panel-item-small-sub-label-letter-spacing;
+												font-family: $evo-showcase-panel-item-small-sub-label-font-family;
+												text-transform: $evo-showcase-panel-item-small-sub-label-text-transform;
+												}
+											}
+	// SHOWCASE PANEL ITEM - SMALL - ENDS
+
+	// SHOWCASE PANEL - COLOR REVERSE - BEGINS
+		&[data-evo-showcase-panel-color-reverse]
+											{
+			.evo-showcase-panel-item 			{
+												color: $evo-showcase-panel-color-reverse-font-color;
+				a									{color: $evo-showcase-panel-color-reverse-font-color;}
+				[class^="evo-icon-"]				{color: $evo-showcase-panel-color-reverse-font-color;}
+												}
+											}
+	// SHOWCASE PANEL - COLOR REVERSE - BEGINS
+
+	// SHOWCASE PANEL - FIXED - BEGINS
+		&[data-evo-showcase-panel-fixed]	{
+											position: fixed;
+											top: $evo-showcase-panel-fixed-position-top;
+											left: $evo-showcase-panel-fixed-position-left;
+											z-index: $evo-showcase-panel-fixed-z-index;
+											width: $evo-showcase-panel-fixed-width;
+											}
+	// SHOWCASE PANEL - FIXED - ENDS
+
+										}
+// SHOWCASE PANEL - ENDS{{ global.reference-get-code-end-tag }}
+
+			<h3>Javascript</h3>
+
+			<p>1. Make sure to update the JS comments at the top of the component .js file so it has the following info:</p>
+
+			<ul>
+				<li>Mercer Evolution - version - Family name</li>
+				<li>Component name and version - JS</li>
+				<li>DATE - date of release/dev</li>
+				<li>AUTHOR - developer name(s)</li>
+			</ul>
+
+			<p>Example:</p>
+
+			{{ global.reference-get-code-start-tag }}//--------------------------------------------------------------------------------------------------------
+// Mercer Evolution - v3.0.1 - Benefits Portals Family
+// Item Selection Panel Component v1.0 - JS
+// DATE - September 1, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
+//--------------------------------------------------------------------------------------------------------{{ global.reference-get-code-end-tag }}
+
+			<p>2. Make sure the component JS has a JS comment tag around it. The first comment uses <code>- BEGINS</code> and the last comment uses <code>- ENDS</code>. Comments are always capitalized and the name of the component and the function of the JS.</p>
+
+			<p>Always indent the JS inside the commented section 1 tab in from the comment. This allows better code folding in text editors.</p>
+
+			<p>Example:</p>
+
+			{{ global.reference-get-code-start-tag }}// ITEM SELECTION PANEL ITEM SELECTED TOGGLE - BEGINS
+	var evoItemSelectionPanelItemSelected = function (){
+		...
+	}
+	evoItemSelectionPanelItemSelected();
+// ITEM SELECTION PANEL ITEM SELECTED TOGGLE - ENDS{{ global.reference-get-code-end-tag }}
+
+			<p>3. When naming your functions use these guidelines:</p>
+
+			<ul>
+				<li>Start the name of the function with the name of the component and then add the function name.</li>
+				<li>Always use CamelCase</li>
+			</ul>
+
+			<p>Example:</p>
+
+			{{ global.reference-get-code-start-tag }}var evoItemSelectionPanelItemSelected = function (){
+	...
+}{{ global.reference-get-code-end-tag }}
+
+			<p>4. Make sure to initialize the function after the function code, for example:</p>
+
+			{{ global.reference-get-code-start-tag }}// ITEM SELECTION PANEL ITEM SELECTED TOGGLE - BEGINS
+	var evoItemSelectionPanelItemSelected = function (){
+		jQuery('[data-evo-item-selection-panel-item]').change(function() {
+			jQuery(this).toggleClass('evo-item-selection-panel-item-selected');
+		});
+	}
+	evoItemSelectionPanelItemSelected();
+// ITEM SELECTION PANEL ITEM SELECTED TOGGLE - ENDS
+{{ global.reference-get-code-end-tag }}
+
+			<p>When you are ready to reference the component JS there are 2 options, but the major requirement is that the component JS <strong>MUST</strong> be referenced at the bottom of the page before the end body tag <code>&lt;/body&gt;</code> after jQuery has been initialized or the jQuery in your component JS won't work.</p>
+
+			<p><strong>Option 1:</strong> Reference the component JS file in your site's global page layout at the end of the page after the Evolution core JS (evolution.js). The Evolution core JS includes the jQuery library.</p>
+
+			<p><strong>Option 2:</strong> Import the component JS into site.mix.js and use the power of mix JS files and Mixture to combine the component JS with the JS that is in site_main.js to ultimately create site.js. Make sure to call component JS imports after the import for site_main.js. Site.js is then called after the Evolution core JS by default, so jQuery code works.</p>
+
+			<p>Example from site.mix.js:</p>
+
+			{{ global.reference-get-code-start-tag }}//--------------------------------------------------------------------------------------------------------
+// Mercer Evolution - Benefits Portals Family JS
+// DATE - August 19, 2015
+// AUTHOR - Doug Fraize, Matthew Holmes
+//--------------------------------------------------------------------------------------------------------
+
+// =======================================================================================================
+// JAVASCRIPT LIBRARIES
+// =======================================================================================================
+
+
+// =======================================================================================================
+// SITE FUNCTIONS AND INITIALIZATIONS
+// =======================================================================================================
+
+@import "site_main.js";
+
+// =======================================================================================================
+// COMPONENTS
+// =======================================================================================================
+
+// ITEM SELECTION PANEL
+@import "../../../templates/bp/components/item-selection-panel/item-selection-panel.js";{{ global.reference-get-code-end-tag }}
+
+			<h3>Testing</h3>
+
+			<p>Always test your components in the B Grade and greater browsers listed under the Evolution <a href="/browser-support">browser support reference</a>.</p>
+
+
+		<!-- CONTENT - ENDS -->
+
+		</div>
+	</section>
+<!-- PAGE CONTENT - ENDS -->
+
+{% endblock %}

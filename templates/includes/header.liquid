@@ -1,3 +1,196 @@
-<!-- HEADER TOOLBAR - BEGINS -->
-{% include "objects/header/header-toolbar" %}
-<!-- HEADER TOOLBAR - ENDS -->
+<header class="evo-header evo-site-header {% if mixture.url == 'bp/components/showcase-panel/demo' %}evo-showcase-panel-fixed-header-adjust{% endif %}" role="banner">
+	
+	<!-- TOP BAR CONTAINER - DEFAULT - BEGINS -->
+	<div class="fixed show-for-large-up">
+
+		<!-- TOP BAR - BEGINS -->
+		<nav class="top-bar evo-top-bar" data-topbar role="navigation">
+			
+			<!-- TOP BAR TITLE AREA - BEGINS -->
+			<ul class="title-area">
+				<li class="name">
+
+				</li>
+			</ul>
+			<!-- TOP BAR TITLE AREA - ENDS -->
+
+			<!-- TOP BAR NAV SECTION - BEGINS -->
+			<section class="top-bar-section">
+
+				<!-- TOP BAR RIGHT NAV SECTION - BEGINS -->
+				<ul class="right">
+					<!--
+					<li class="has-dropdown {% if mixture.url == 'comm/index' or mixture.url == 'comm/principles/index' or mixture.url == 'comm/design/index' or mixture.url == 'comm/components/index' or mixture.url == 'comm/templates/index' %}active{% endif %}">
+						<a>
+							<i class="evo-icon-site-bubbles4 evo-icon-position-left"></i>
+							Communication Sites
+						</a>
+						<ul class="dropdown">
+							<li>
+								<a href="/comm/index">Overview</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="/comm/principles/index">Design Principles</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="/comm/visual/index">Visual Assets</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="/comm/components/index">Components</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="/comm/templates/index">Templates</a>
+							</li>
+						</ul>
+					</li>
+					-->
+					<li class="has-dropdown {% if mixture.url == 'bp/index' or mixture.url == 'bp/principles/index' or mixture.url == 'bp/design/index' or mixture.url == 'bp/components/index' or mixture.url == 'bp/templates/index' %}active{% endif %}">
+						<a>
+							<i class="evo-icon-users5 evo-icon-position-left"></i>
+							Benefits Portals
+						</a>
+						<ul class="dropdown">
+							<li>
+								<a href="/bp/index">Overview</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="/bp/principles/index">Design Principles</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="/bp/visual/index">Visual Assets</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="/bp/components/index">Components</a>
+							</li>
+							<!--
+							<li class="divider"></li>
+							<li>
+								<a href="/bp/templates/index">Templates</a>
+							</li>
+							-->
+						</ul>
+					</li>
+				</ul>
+				<!-- TOP BAR RIGHT NAV SECTION - ENDS -->
+
+				<!-- TOP BAR LEFT NAV SECTION - BEGINS -->
+				<ul class="title-area left">
+					<li class="has-dropdown">
+						<a class="evo-icon-menu7"></a>
+						<ul class="dropdown">
+							<li {% if model.page == "home" %}class="active"{% endif %}>
+								<a href="/">Home</a>
+							</li>
+							<li class="divider"></li>
+							<li {% if model.page == "overview" %}class="active"{% endif %}>
+								<a href="/overview">Overview</a>
+							</li>
+							<li class="divider"></li>
+							<li class="has-dropdown">
+								<a>Families</a>
+								<ul class="dropdown">
+									<!--
+									<li {% if mixture.url == 'comm/index' %}class="active"{% endif %}>
+										<a href="/comm/index">Communication Sites</a>
+									</li>
+									<li class="divider"></li>
+									-->
+									<li {% if mixture.url == 'bp/index' %}class="active"{% endif %}>
+										<a href="/bp/index">Benefits Portals</a>
+									</li>
+								</ul>
+							</li>
+							<li class="divider"></li>
+							<li {% if mixture.url == 'browser-support' %}class="active"{% endif %}>
+								<a href="/browser-support">Browser Support</a>
+							</li>
+							<li class="divider"></li>
+							<li {% if mixture.url == 'development' %}class="active"{% endif %}>
+								<a href="/reference/index">Development</a>
+							</li>
+						</ul>
+					</li>
+
+					{% if model.page != "home" %}
+					<li class="name">
+						<h1>
+							<a href="/">Mercer <span class="evo-top-bar-sub-name">Evolution</span></a>
+						</h1>
+					</li>
+					{% endif %}
+
+				</ul>
+				<!-- TOP BAR LEFT NAV SECTION - ENDS -->
+
+			</section>
+			<!-- TOP BAR NAV SECTION - ENDS -->
+
+		</nav>
+		<!-- TOP BAR - ENDS -->
+
+	</div>
+	<!-- TOP BAR CONTAINER - DEFAULT - ENDS -->
+
+	<!-- OFF-CANVAS - TAB BAR - BEGINS -->
+	<nav class="tab-bar hide-for-large-up" aria-hidden="true">
+		<section class="left-small">
+			<a class="left-off-canvas-toggle menu-icon">
+				<i class="evo-icon-menu7 evo-icon-size-medium" title="Menu"></i>
+			</a>
+		</section>
+
+		<section class="right tab-bar-section">
+
+			{% if model.page != "home" %}
+				<h1 class="title text-left">
+					<a href="/">Mercer <span class="evo-tab-bar-title-sub-name">Evolution</span></a>
+				</h1>
+			{% endif %}
+
+		</section>
+	</nav>
+	<!-- OFF-CANVAS - TAB BAR - ENDS -->
+
+	<!-- OFF-CANVAS - LEFT MENU - BEGINS -->
+	<aside class="left-off-canvas-menu">
+		<ul class="off-canvas-list">
+			<li>
+				<a href="/">Home</a>
+			</li>
+			<li>
+				<a href="/overview">Overview</a>
+			</li>
+			<li class="has-submenu">
+				<a href="">Families</a>
+				<ul class="left-submenu">
+					<li class="back">
+						<a href="">Back</a>
+					</li>
+					<!--
+					<li>
+						<a href="/comm/index">Communication Sites</a>
+					</li>
+					-->
+					<li>
+						<a href="/bp/index">Benefits Portals</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="/browser-support">Browser Support</a>
+			</li>
+			<li>
+				<a href="/reference/index">Development</a>
+			</li>
+		</ul>
+	</aside>
+	<!-- OFF-CANVAS - LEFT MENU - ENDS -->
+
+</header>

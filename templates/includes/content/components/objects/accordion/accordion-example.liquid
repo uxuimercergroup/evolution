@@ -1,0 +1,100 @@
+<!-- ACCORDION EXAMPLE SECTION - BEGINS -->
+	<section class="row">
+		<div class="large-10 large-centered columns evo-site-example-section" id="{{ model.standard-component-name-id-10 }}">
+			<section class="row">
+
+			<!-- COMPONENT HEADER - BEGINS -->
+				<div class="medium-7 columns">
+					<h3 class="evo-site-category-pages-header">{{ model.standard-component-name-10 }}</h3>
+				</div>
+			<!-- COMPONENT HEADER - ENDS -->
+
+			<!-- TABS - BEGINS -->
+				<div class="medium-5 columns">
+					<ul class="tabs evo-tabs-titles-category-pages" data-tab role="tablist">
+						<li class="tab-title active" role="presentation">
+							<a href="#{{ model.standard-component-name-id-10 }}-1" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs1" data-tooltip data-options="disable_for_touch:true; show_on:large; touch_close_text:" aria-haspopup="true" class="has-tip tip-top radius evo-tooltip" title="Overview"><span class="text"><i class="evo-icon-site-newspaper evo-icon-size-small evo-center-block-vertical-element evo-center-block" title="Overview" aria-label="Overview"></i></span></a>
+						</li>
+						<li class="tab-title" role="presentation">
+							<a href="#{{ model.standard-component-name-id-10 }}-2" role="tab" tabindex="0" aria-selected="false" aria-controls="tabs2" data-tooltip data-options="disable_for_touch:true; show_on:large; touch_close_text:" aria-haspopup="true" class="has-tip tip-top radius evo-tooltip" title="Usage"><span class="text"><i class="evo-icon-site-book3 evo-icon-size-small evo-center-block-vertical-element evo-center-block active" title="Usage" aria-label="Usage"></i></span></a>
+						</li>
+						<li class="tab-title" role="presentation">
+							<a href="#{{ model.standard-component-name-id-10 }}-3" role="tab" tabindex="0" aria-selected="false" aria-controls="tabs3" data-tooltip data-options="disable_for_touch:true; show_on:large; touch_close_text:" aria-haspopup="true" class="has-tip tip-top radius evo-tooltip" title="Mobile"><span class="text"><i class="evo-icon-site-mobile evo-icon-size-small evo-center-block-vertical-element evo-center-block" title="Mobile" aria-label="Mobile"></i></span></a>
+						</li>
+						<li class="tab-title" role="presentation">
+							<a href="#{{ model.standard-component-name-id-10 }}-4" role="tab" tabindex="0" aria-selected="false" aria-controls="tabs4" data-tooltip data-options="disable_for_touch:true; show_on:large; touch_close_text:" aria-haspopup="true" class="has-tip tip-top radius evo-tooltip" title="Technical"><span class="text"><i class="evo-icon-site-file-xml2 evo-icon-size-small evo-center-block-vertical-element evo-center-block" title="Technical" aria-label="Technical"></i></span></a>
+						</li>
+						<li class="tab-title evo-no-padding-right evo-component-page-tab-back-to-top" role="presentation">
+							<a data-scroll-to-top href="#top" tabindex="0" aria-selected="false" aria-controls="" data-tooltip data-options="disable_for_touch:true; show_on:large; touch_close_text:" aria-haspopup="true" class="has-tip tip-top radius evo-tooltip" title="Back to Top"><span class="text"><i class="evo-icon-circle-up2 evo-icon-size-small evo-center-block-vertical-element evo-center-block" aria-label="Back to Top"></i></span></a>
+						</li>
+					</ul>
+				</div>
+			<!-- TABS - ENDS -->
+
+			</section>
+
+		<!-- COMPONENT EXAMPLE - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<hr class="evo-site-component-divider">
+
+					<div class="tabs-content evo-tabs-content-category-pages">
+
+					<!-- TAB 1 (overview section) - BEGINS -->
+						<section role="tabpanel" aria-hidden="false" class="content active" id="{{ model.standard-component-name-id-10 }}-1">
+						<!-- COMPONENT TITLE AND DESCRIPTION - BEGINS -->
+							<p>The accordion control provides an effective way to display chunks of information in a condensed fashion. </p>
+						<!-- COMPONENT TITLE AND DESCRIPTION - ENDS -->
+						</section>
+					<!-- TAB 1 (overview section) - ENDS -->
+
+					<!-- TAB 2 (usage section) - BEGINS -->
+						<section role="tabpanel" aria-hidden="true" class="content" id="{{ model.standard-component-name-id-10 }}-2">
+							<ul>
+								<li>The accordion can be used when an extensive amount of content needs to be displayed in a compact manner.</li>
+								<li>Should only be used with a smaller number of sections, as too many sections will lead to some of the section headers being out of view.</li>
+								<li>Avoid using the accordiion in forms where data is required across multiple sections. This could lead to consistent usability issues with regard to the user's awareness of required fields.</li>
+								<li>Avoid using an accordion if the amount of the content within a section is so expansive that it will require a lot of scrolling.</li>
+								<li>Avoid nesting one accordion control inside of another..</li>
+							</ul>
+						</section>
+					<!-- TAB 2 (usage section) - ENDS -->
+
+					<!-- TAB 3 (mobile section) - BEGINS -->
+						<section role="tabpanel" aria-hidden="true" class="content" id="{{ model.standard-component-name-id-10 }}-3">
+							<ul>
+								<li>The accordion is an effective control for mobile as it provides the user with an initial "summarized" view of content via the section headers and gives the user the ability to view a deeper level of content via tapping interaction.</li>
+								<li>The accordion fully scales and functions on mobile devices.</li>
+								<li>The accordion will span the width of the mobile device.</li>
+								<li>The overall font sizes will increases slightly for mobile.</li>
+							</ul>
+						</section>
+					<!-- TAB 3 (mobile section) - ENDS -->
+
+					<!-- TAB 4 (get code section) - BEGINS -->
+						<section role="tabpanel" aria-hidden="true" class="content" id="{{ model.standard-component-name-id-10 }}-4">
+							
+							<p>Please use the Evolution Core <a href="/reference/objects/accordion">accordion reference</a> to get code for this standard.</p>
+
+						</section>
+					<!-- TAB 4 (get code section) - ENDS -->
+
+					</div>
+				</div>
+			</section>
+
+			<section class="row">
+				<div class="small-12 columns">
+
+				<!-- COMPONENT CODE - BEGINS -->
+					{% include "/content/components/objects/accordion/accordion" %}
+				<!-- COMPONENT CODE - ENDS -->
+
+				</div>
+			</section>
+		<!-- COMPONENT EXAMPLE - ENDS -->
+
+		</div>
+	</section>
+<!-- ACCORDION EXAMPLE SECTION - ENDS -->

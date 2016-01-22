@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.7 - Base Buttons Partial
+// Mercer Evolution - Core v3.0.1 - Base Buttons Partial
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
@@ -7,16 +7,17 @@
 //
 // @variables
 //
-$evo-button-min-width: 120 !default;
+$evo-button-min-width: rem-calc(120) !default;
 $evo-button-font-color-visited:	$button-font-color !default;
 $evo-button-font-color-alt-visited: $button-font-color-alt !default;
+$evo-button-group-stacked-border-color: rgba($white, .5) !default;
 
 
 @if $use-buttons == true{
 
 	// CORE BUTTON SETUP
-	.evo-btn 						{
-									min-width: rem-calc($evo-button-min-width);
+	.evo-button 					{
+									min-width: $evo-button-min-width;
 
 		// BUTTON VISITED LINK COLOR
 		&:visited						{color: $evo-button-font-color-visited;}
@@ -44,9 +45,11 @@ $evo-button-font-color-alt-visited: $button-font-color-alt !default;
 											float: right;
 											margin-left: rem-calc(8);
 											}
-			.evo-btn-text					{position: relative;}
+			.evo-button-text				{position: relative;}
 										}
-		&[data-evo-button-icons="both"]	{
+		&[data-evo-button-icons="both"],
+		&[data-evo-button-icons="both"].expand
+										{
 										padding-left: rem-calc(16);
 										padding-right: rem-calc(16);
 										}
@@ -71,7 +74,7 @@ $evo-button-font-color-alt-visited: $button-font-color-alt !default;
 			[class^="evo-icon-"]			{top: 0;}
 			.evo-icon-position-left			{margin-right: rem-calc(6);}
 			.evo-icon-position-right		{margin-left: rem-calc(6);}
-			.evo-btn-text					{top: rem-calc(2);}
+			.evo-button-text				{top: rem-calc(2);}
 										}
 		&[data-evo-button-icons="both"].tiny
 										{
@@ -101,7 +104,7 @@ $evo-button-font-color-alt-visited: $button-font-color-alt !default;
 			[class^="evo-icon-"]			{top: 0;}
 			.evo-icon-position-left			{margin-right: rem-calc(7);}
 			.evo-icon-position-right		{margin-left: rem-calc(7);}
-			.evo-btn-text					{top: 0;}
+			.evo-button-text					{top: 0;}
 										}
 		&[data-evo-button-icons="both"].small
 										{
@@ -131,7 +134,7 @@ $evo-button-font-color-alt-visited: $button-font-color-alt !default;
 			[class^="evo-icon-"]			{top: rem-calc(3);}
 			.evo-icon-position-left			{margin-right: rem-calc(9);}
 			.evo-icon-position-right		{margin-left: rem-calc(9);}
-			.evo-btn-text					{top: 0;}
+			.evo-button-text				{top: 0;}
 										}
 		&[data-evo-button-icons="both"].large
 										{
@@ -153,6 +156,12 @@ $evo-button-font-color-alt-visited: $button-font-color-alt !default;
 										padding-left: rem-calc(36);
 										padding-right: rem-calc(18);
 										}
+									}
+
+		// BUTTON GROUPS - STACKED
+		.button-group.radius.stack>* .evo-button
+									{
+									border-top-color: $evo-button-group-stacked-border-color;
 									}
 
 	//=== MEDIA QUERIES =========================================================================

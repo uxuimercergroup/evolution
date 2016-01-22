@@ -1,0 +1,236 @@
+﻿{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+
+			<section class="row">
+				<div class="small-4 columns">
+					<p>Version: {{ model.version_number }}</p>		
+				</div>
+				<div class="small-8 columns">
+					<p class="right">
+						<span class="label radius evo-label" data-evo-background-color="sapphire-bright">Benefits Portals</span>
+					</p>
+				</div>
+			</section>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="example-a"><a href="#example-a">Basic</a></dd>
+					<dd data-magellan-arrival="example-b"><a href="#example-b">Top Label</a></dd>
+					<dd data-magellan-arrival="example-c"><a href="#example-c">Bottom Label</a></dd>
+					<dd data-magellan-arrival="example-d"><a href="#example-d">Top/Bottom Labels</a></dd>
+					<dd data-magellan-arrival="example-e"><a href="#example-e">Sub Total/Total Row</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+		<!-- EXAMPLE A - BEGINS -->
+			<h3 data-magellan-destination="example-a">Basic</h3>
+			<a name="example-a"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{{ "/reference/components/pricing-table/pricing-table.css" | asset_url | stylesheet_tag }}
+						{% include "/reference/components/pricing-table/pricing-table" %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include "/reference/components/pricing-table/pricing-table" %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- EXAMPLE A - ENDS -->
+
+		<!-- EXAMPLE B - BEGINS -->
+			<h3 data-magellan-destination="example-b">Top Label</h3>
+			<a name="example-b"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include "/reference/components/pricing-table/pricing-table-top-label" %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include "/reference/components/pricing-table/pricing-table-top-label" %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- EXAMPLE B - ENDS -->
+
+		<!-- EXAMPLE C - BEGINS -->
+			<h3 data-magellan-destination="example-c">Bottom Label</h3>
+			<a name="example-c"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include "/reference/components/pricing-table/pricing-table-bottom-label" %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include "/reference/components/pricing-table/pricing-table-bottom-label" %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- EXAMPLE C - ENDS -->
+
+		<!-- EXAMPLE D - BEGINS -->
+			<h3 data-magellan-destination="example-d">Top/Bottom Label</h3>
+			<a name="example-d"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include "/reference/components/pricing-table/pricing-table-top-bottom-label" %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include "/reference/components/pricing-table/pricing-table-top-bottom-label" %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- EXAMPLE D - ENDS -->
+
+		<!-- EXAMPLE E - BEGINS -->
+			<h3 data-magellan-destination="example-e">Sub Total/Total Row</h3>
+			<a name="example-e"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include "/reference/components/pricing-table/pricing-table-top-bottom-label-sub-total" %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include "/reference/components/pricing-table/pricing-table-top-bottom-label-sub-total" %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- EXAMPLE E - ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-evolution == "true" %}
+								<li>
+									<a href="/">Evolution Core {{ global.version_number }}</a>
+									<ul>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/block_grid.html" target="_blank">Block Grid</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}

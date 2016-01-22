@@ -1,0 +1,560 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+			<p>
+				Buttons act as the focal point for user interaction as it relates to saving data or completing an action. Evolution Core buttons depend on Foundation's <a href="http://foundation.zurb.com/docs/components/buttons.html" target="_blank">Buttons</a> and <a href="http://foundation.zurb.com/docs/components/button_groups.html" target="_blank">Button Groups</a> as a starting point.
+			</p>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="basic"><a href="#basic">Basic</a></dd>
+					<dd data-magellan-arrival="disabled"><a href="#disabled">Disabled</a></dd>
+					<dd data-magellan-arrival="sizes"><a href="#sizes">Sizes</a></dd>
+					<dd data-magellan-arrival="shapes"><a href="#shapes">Shapes</a></dd>
+					<dd data-magellan-arrival="icons"><a href="#icons">Icons</a></dd>
+					<dd data-magellan-arrival="form-buttons"><a href="#form-buttons">Form Buttons</a></dd>
+					<dd data-magellan-arrival="interactive-buttons"><a href="#interactive-buttons">Interactive Buttons</a></dd>
+					<dd data-magellan-arrival="button-groups"><a href="#button-groups">Button Groups</a></dd>
+					<dd data-magellan-arrival="button-bar"><a href="#button-bar">Button Bar</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+		<!-- BASIC - BEGINS -->
+			<h3 data-magellan-destination="basic">Basic</h3>
+			<a name="basic"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+				
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						<p class="ref-sub-head"><code>a</code> tag</p>
+						{% include '/reference/base/buttons/button-a-secondary' %}
+						{% include '/reference/base/buttons/button-a-primary' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						<p class="ref-sub-head"><code>a</code> tag</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-a-secondary' %}{{ global.reference-get-code-end-tag }}
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-a-primary' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head"><code>button</code> tag</p>
+						{% include '/reference/base/buttons/button-secondary' %}
+						{% include '/reference/base/buttons/button-primary' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head"><code>button</code> tag</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-secondary' %}{{ global.reference-get-code-end-tag }}
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-primary' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- BASIC - ENDS -->
+
+		<!-- DISABLED - BEGINS -->
+			<h3 data-magellan-destination="disabled">Disabled</h3>
+			<a name="disabled"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						<p class="ref-sub-head"><code>a</code> tag</p>
+						{% include '/reference/base/buttons/button-a-secondary-disabled' %}
+						{% include '/reference/base/buttons/button-a-primary-disabled' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						<p class="ref-sub-head"><code>a</code> tag</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-a-secondary-disabled' %}{{ global.reference-get-code-end-tag }}
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-a-primary-disabled' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head"><code>button</code> tag</p>
+						{% include '/reference/base/buttons/button-secondary-disabled' %}
+						{% include '/reference/base/buttons/button-primary-disabled' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head"><code>button</code> tag</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-secondary-disabled' %}{{ global.reference-get-code-end-tag }}
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-primary-disabled' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- DISABLED - ENDS -->
+
+		<!-- SIZES - BEGINS -->
+			<h3 data-magellan-destination="sizes">Sizes</h3>
+			<a name="sizes"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						<p class="ref-sub-head"><code>a</code> tag</p>
+						{% include '/reference/base/buttons/button-a-sizes' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						<p class="ref-sub-head"><code>a</code> tag</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-a-sizes' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head"><code>button</code> tag</p>
+						{% include '/reference/base/buttons/button-sizes' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head"><code>button</code> tag</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-sizes' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- SIZES - ENDS -->
+
+		<!-- SHAPES - BEGINS -->
+			<h3 data-magellan-destination="shapes">Shapes</h3>
+			<a name="shapes"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						<p class="ref-sub-head"><code>a</code> tag</p>
+						{% include '/reference/base/buttons/button-a-shapes' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						<p class="ref-sub-head"><code>a</code> tag</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-a-shapes' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head"><code>button</code> tag</p>
+						{% include '/reference/base/buttons/button-shapes' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head"><code>button</code> tag</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-shapes' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- SHAPES - ENDS -->
+
+		<!-- ICONS - BEGINS -->
+			<h3 data-magellan-destination="icons">Icons</h3>
+			<a name="icons"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						<p class="ref-sub-head"><code>a</code> tag</p>
+						{% include '/reference/base/buttons/button-a-icons' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						<p class="ref-sub-head"><code>a</code> tag</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-a-icons' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<p class="ref-sub-head"><code>button</code> tag</p>
+						{% include '/reference/base/buttons/button-icons' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head"><code>button</code> tag</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-icons' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- ICONS - ENDS -->
+
+		<!-- FORM BUTTONS - BEGINS -->
+			<h3 data-magellan-destination="form-buttons">Form Buttons</h3>
+			<a name="form-buttons"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/buttons/button-forms' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-forms' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- FORM BUTTONS - ENDS -->
+
+		<!-- INTERACTIVE BUTTONS - BEGINS -->
+			<h3 data-magellan-destination="interactive-buttons">Interactive Buttons</h3>
+			<a name="interactive-buttons"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/buttons/button-interactive' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-interactive' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					<!-- EXAMPLE JS - BEGINS -->
+						<h6>JS</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/js/base/buttons/button-interactive' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE JS - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- INTERACTIVE BUTTONS - ENDS -->
+
+		<!-- BUTTON GROUPS - BEGINS -->
+			<h3 data-magellan-destination="button-groups">Button Groups</h3>
+			<a name="button-groups"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-7 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/buttons/button-group' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-5 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-group' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-7 columns">
+						<p class="ref-sub-head">Evenly distributed</p>
+						{% include '/reference/base/buttons/button-group-even' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-5 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head">Evenly distributed</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-group-even' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-7 columns">
+						<p class="ref-sub-head">Stacked</p>
+						{% include '/reference/base/buttons/button-group-stacked' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-5 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<p class="ref-sub-head">Stacked</p>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-group-stacked' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- BUTTON GROUPS - ENDS -->
+
+		<!-- BUTTON BAR - BEGINS -->
+			<h3 data-magellan-destination="button-bar">Button Bar</h3>
+			<a name="button-bar"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/buttons/button-group-bar' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/buttons/button-group-bar' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- BUTTON BAR - ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+									<ul>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/buttons.html" target="_blank">Buttons</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}

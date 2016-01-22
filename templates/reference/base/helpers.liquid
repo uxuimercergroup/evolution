@@ -1,0 +1,1330 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="utility"><a href="#utility">Utility Helpers</a></dd>
+					<dd data-magellan-arrival="form"><a href="#form">Form Helpers</a></dd>
+					<dd data-magellan-arrival="interactive"><a href="#interactive">Interactive Helpers</a></dd>
+					<dd data-magellan-arrival="visibility"><a href="#visibility">Visibility Helpers</a></dd>
+					<dd data-magellan-arrival="accessibility"><a href="#accessibility">Accessibility Helpers</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+		<!-- UTILITY HELPERS - BEGINS -->
+			<h3 data-magellan-destination="utility">Utility Helpers</h3>
+			<a name="utility"></a>
+			<p>Utility classes add certain behaviors to your elements.</p>
+
+			<!-- FLOAT HELPERS - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Floats</h5>
+
+				<p>
+					You can change the float behavior of an element by adding <code>.left</code> or <code>.right</code> to an HTML element. To clear floats, add the class <code>.clearfix</code> to the parent element.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/utility-classes-float' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/utility-classes-float' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- FLOAT HELPERS - ENDS -->
+			<hr />
+			<!-- RADIUS HELPER - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Radius</h5>
+
+				<p>
+					The <code>.radius</code> class allows you to easily apply a border-radius to a UI-element. Adding the class to a button group will apply the border radius only to the outside corners.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+
+						{% include '/reference/base/helper/utility-classes-radius' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/utility-classes-radius' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- RADIUS HELPER - ENDS -->
+			<hr />
+			<!-- ROUND HELPER - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Round</h5>
+
+				<p>
+					The <code>.round</code> class allows you to easily apply a border-radius to a UI-element.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/utility-classes-round' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/utility-classes-round' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- ROUND HELPER - ENDS -->
+			<hr />
+			<!-- COLOR HELPERS - BEGINS -->
+				<a name="colors"></a>
+				<h5 class="evo-spacer-margin-top-medium">Colors</h5>
+
+				<h6>Spot Colors for Elements</h6>
+				<p>
+					You can modify the font color, border color and background color of an element by adding the data attributes <code>data-evo-font-color</code>, <code>data-evo-border-color</code> or <code>data-evo-background-color</code> to an element that has the ability to possess those attributes.
+				</p>
+				<p>
+					Use the <a href="/reference/base/colors">colors reference</a> to get the values you need for the data attributes. The color name corresponds to the value needed for the data attribute. For example if you wanted a green background you would use the <code>emerald-light</code> value in the <code>data-evo-background-color</code> attribute: <code>data-evo-background-color="emerald-light"</code>.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/utility-classes-colors' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/utility-classes-colors' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+
+				<h6>Specific Use Colors</h6>
+				<p>
+					You can modify the background color of an element for a specific use by adding these classes: <code>.alert</code>, <code>.warning</code>, <code>.success</code>, and <code>.info</code>. If there is text used in the element, the font color of the element is automatically modified to complement the background color of that class.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/utility-classes-colors-specific-use' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/utility-classes-colors-specific-use' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- COLOR HELPERS - ENDS -->
+			<hr />
+			<!-- KEYLINES HELPER - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Keylines</h5>
+
+				<p>
+					You can add a keyline to the right of text, or an image, by adding the class <code>.evo-keyline-right</code> to a grid column. Add a keyline to the left of text, or an image, by adding the class <code>.evo-keyline-left</code> to a grid column. Combine column keylines with Equalizer to make all columns with keylines the same height, so the keylines line up.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/utility-classes-keylines' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/utility-classes-keylines' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- KEYLINES HELPER - ENDS -->
+			<hr />
+			<!-- TEXT ALIGN HELPERS - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Text Align</h5>
+				
+				<p>
+					You can change the text alignment of an element by adding <code>.text-left</code>, <code>.text-right</code>, <code>.text-center</code> or <code>.text-justify</code> to an element.
+				</p>
+				
+				<p>
+					Adding a size to the front of a text alignment class will cause it to only be applied on that size screen or larger (ex. <code>.medium-text-center</code> will center text for everything except small screens). Adding a size and only will apply the text alignment just for that media query (ex. <code>.medium-only-text-center</code> will center text just for medium screens).
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/utility-classes-text-align' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/utility-classes-text-align' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+
+				<section class="row">
+				
+				<!-- AVAILABLE ALIGNMENT HELPERS - BEGINS -->
+					<div class="medium-12 columns">
+						<h6>Available Text Alignment Helpers</h6>
+
+						<table class="evo-table" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="" role="grid">
+							<thead>
+								<tr>
+									<th scope="column">Align Left</th>
+									<th scope="column">Align Right</th>
+									<th scope="column">Align Center</th>
+									<th scope="column">Justify</th>
+								</tr>
+							</thead>	
+							<tbody>
+								<tr>
+									<td><code>.text-left</code></td>
+									<td><code>.text-right</code></td>
+									<td><code>.text-center</code></td>
+									<td><code>.text-justify</code></td>
+								</tr>
+								<tr>
+									<td><code>.small-text-left</code></td>
+									<td><code>.small-text-right</code></td>
+									<td><code>.small-text-center</code></td>
+									<td><code>.small-text-justify</code></td>
+								</tr>
+								<tr>
+									<td><code>.small-only-text-left</code></td>
+									<td><code>.small-only-text-right</code></td>
+									<td><code>.small-only-text-center</code></td>
+									<td><code>.small-only-text-justify</code></td>
+								</tr>
+								<tr>
+									<td><code>.medium-text-left</code></td>
+									<td><code>.medium-text-right</code></td>
+									<td><code>.medium-text-center</code></td>
+									<td><code>.medium-text-justify</code></td>
+								</tr>
+								<tr>
+									<td><code>.medium-only-text-left</code></td>
+									<td><code>.medium-only-text-right</code></td>
+									<td><code>.medium-only-text-center</code></td>
+									<td><code>.medium-only-text-justify</code></td>
+								</tr>
+								<tr>
+									<td><code>.large-text-left</code></td>
+									<td><code>.large-text-right</code></td>
+									<td><code>.large-text-center</code></td>
+									<td><code>.large-text-justify</code></td>
+								</tr>
+								<tr>
+									<td><code>.large-only-text-left</code></td>
+									<td><code>.large-only-text-right</code></td>
+									<td><code>.large-only-text-center</code></td>
+									<td><code>.large-only-text-justify</code></td>
+								</tr>
+								<tr>
+									<td><code>.xlarge-text-left</code></td>
+									<td><code>.xlarge-text-right</code></td>
+									<td><code>.xlarge-text-center</code></td>
+									<td><code>.xlarge-text-justify</code></td>
+								</tr>
+								<tr>
+									<td><code>.xlarge-only-text-left</code></td>
+									<td><code>.xlarge-only-text-right</code></td>
+									<td><code>.xlarge-only-text-center</code></td>
+									<td><code>.xlarge-only-text-justify</code></td>
+								</tr>
+								<tr>
+									<td><code>.xxlarge-text-left</code></td>
+									<td><code>.xxlarge-text-right</code></td>
+									<td><code>.xxlarge-text-center</code></td>
+									<td><code>.xxlarge-text-justify</code></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				<!-- AVAILABLE ALIGNMENT HELPERS - ENDS -->
+
+				</section>
+			<!-- TEXT ALIGN HELPERS - ENDS -->
+			<hr />
+			<!-- IMAGE ALIGN HELPERS - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Image Align</h5>
+
+				<p>
+					Add the class <code>.evo-image-left</code> to an image to align the image to the left and include margin space to the top, bottom and right side of the image. Add the class <code>.evo-image-right</code> to an image to align the image to the right and include margin space to the top, bottom and left side of the image.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/utility-classes-image-align' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+					
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/utility-classes-image-align' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- IMAGE ALIGN HELPERS - ENDS -->
+			<hr />
+			<!-- GRID WIDTH HELPERS - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Grid Width Helpers</h5>
+
+				<h6 class="ref-sub-head">Contain To Grid</h6>
+				<p>
+					Use <code>.evo-contain-to-grid</code> to contain content or containers to the grid row max-width and center it.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/utility-classes-contain-to-grid' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+					
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/utility-classes-contain-to-grid' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+
+				<h6 class="ref-sub-head">Full Width</h6>
+				<p>
+					Use <code>.evo-full-width</code> to expand content or containers to 100% full width.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/utility-classes-full-width' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+					
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/utility-classes-full-width' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- GRID WIDTH HELPERS - ENDS -->
+			<hr />
+			<!-- CENTER ELEMENTS HELPERS - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Center Elements</h5>
+
+				<h6 class="ref-sub-head">Center Horizontal</h6>
+				<p>
+					Add the class <code>.evo-center-block</code> to center a block level element horizontally only. Add the class <code>.evo-center-block</code> to the block level element to be centered. The block level element must also have a width for the centering to work.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/utility-classes-center-horizontal' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+					
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/utility-classes-center-horizontal' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+
+				<h6 class="ref-sub-head">Center Vertical</h6>
+				<p>
+					First, add the class <code>.evo-center-block-vertical</code> to the container of the block level element. Add the class <code>.evo-center-block-vertical-element</code> to the block level element itself or in the case of an image, another container inside <code>.evo-center-block-vertical</code> to center a block level element vertically only.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/utility-classes-center-vertical' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+					
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/utility-classes-center-vertical' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- CENTER ELEMENTS HELPERS - ENDS -->
+			<hr />
+			<!-- MARGIN AND PADDING HELPERS - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Margin and Padding Helpers</h5>							
+
+					<!-- ADD MARGIN AND PADDING HELPERS TABLE - BEGINS -->
+						<section class="row">
+							<div class="small-12 columns evo-table-small-mediaquery">
+								<h6>Add Margins, Margin Spacers, Padding, and Padding Spacers</h6>
+									<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-vertical-scroll-example" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+										<thead>
+											<tr>
+												<th scope="column">Definition</th>
+												<th scope="column">Class</th>
+											</tr>
+										</thead>
+										<tbody>							
+											<tr>
+												<td>margin base all sides</td>
+												<td><code>.evo-margin</code></td>
+											</tr>
+											<tr>
+												<td>margin base top</td>
+												<td><code>.evo-margin-top</code></td>
+											</tr>									
+											<tr>
+												<td>margin base right</td>
+												<td><code>.evo-margin-right</code></td>
+											</tr>
+											<tr>
+												<td>margin base bottom</td>
+												<td><code>.evo-margin-bottom</code></td>
+											</tr>
+											<tr>
+												<td>margin base left</td>
+												<td><code>.evo-margin-left</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer x-small all sides</td>
+												<td><code>.evo-spacer-margin-x-small</code></td>
+											</tr>									
+											<tr>
+												<td>margin spacer small all sides</td>
+												<td><code>.evo-spacer-margin-small</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer medium all sides</td>
+												<td><code>.evo-spacer-margin-medium</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer large all sides</td>
+												<td><code>.evo-spacer-margin-large</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer x-large all sides</td>
+												<td><code>.evo-spacer-margin-x-large</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer xx-large all sides</td>
+												<td><code>.evo-spacer-margin-xx-large</code></td>
+											</tr>									
+											<tr>
+												<td>margin spacer xxx-large all sides</td>
+												<td><code>.evo-spacer-margin-xxx-large</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer x-small top</td>
+												<td><code>.evo-spacer-margin-top-x-small</code></td>
+											</tr>									
+											<tr>
+												<td>margin spacer small top</td>
+												<td><code>.evo-spacer-margin-top-small</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer medium top</td>
+												<td><code>.evo-spacer-margin-top-medium</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer large top</td>
+												<td><code>.evo-spacer-margin-top-large</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer x-large top</td>
+												<td><code>.evo-spacer-margin-top-x-large</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer xx-large top</td>
+												<td><code>.evo-spacer-margin-top-xx-large</code></td>
+											</tr>									
+											<tr>
+												<td>margin spacer xxx-large top</td>
+												<td><code>.evo-spacer-margin-top-xxx-large</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer x-small right</td>
+												<td><code>.evo-spacer-margin-right-x-small</code></td>
+											</tr>									
+											<tr>
+												<td>margin spacer small right</td>
+												<td><code>.evo-spacer-margin-right-small</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer medium right</td>
+												<td><code>.evo-spacer-margin-right-medium</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer large right</td>
+												<td><code>.evo-spacer-margin-right-large</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer x-large right</td>
+												<td><code>.evo-spacer-margin-right-x-large</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer xx-large right</td>
+												<td><code>.evo-spacer-margin-right-xx-large</code></td>
+											</tr>									
+											<tr>
+												<td>margin spacer xxx-large right</td>
+												<td><code>.evo-spacer-margin-right-xxx-large</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer x-small bottom</td>
+												<td><code>.evo-spacer-margin-bottom-x-small</code></td>
+											</tr>									
+											<tr>
+												<td>margin spacer small bottom</td>
+												<td><code>.evo-spacer-margin-bottom-small</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer medium bottom</td>
+												<td><code>.evo-spacer-margin-bottom-medium</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer large bottom</td>
+												<td><code>.evo-spacer-margin-bottom-large</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer x-large bottom</td>
+												<td><code>.evo-spacer-margin-bottom-x-large</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer xx-large bottom</td>
+												<td><code>.evo-spacer-margin-bottom-xx-large</code></td>
+											</tr>									
+											<tr>
+												<td>margin spacer xxx-large bottom</td>
+												<td><code>.evo-spacer-margin-bottom-xxx-large</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer x-small left</td>
+												<td><code>.evo-spacer-margin-left-x-small</code></td>
+											</tr>									
+											<tr>
+												<td>margin spacer small left</td>
+												<td><code>.evo-spacer-margin-left-small</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer medium left</td>
+												<td><code>.evo-spacer-margin-left-medium</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer large left</td>
+												<td><code>.evo-spacer-margin-left-large</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer x-large left</td>
+												<td><code>.evo-spacer-margin-left-x-large</code></td>
+											</tr>
+											<tr>
+												<td>margin spacer xx-large left</td>
+												<td><code>.evo-spacer-margin-left-xx-large</code></td>
+											</tr>									
+											<tr>
+												<td>margin spacer xxx-large left</td>
+												<td><code>.evo-spacer-margin-left-xxx-large</code></td>
+											</tr>						
+											<tr>
+												<td>padding base all sides</td>
+												<td><code>.evo-padding</code></td>
+											</tr>
+											<tr>
+												<td>padding base top</td>
+												<td><code>.evo-padding-top</code></td>
+											</tr>									
+											<tr>
+												<td>padding base right</td>
+												<td><code>.evo-padding-right</code></td>
+											</tr>
+											<tr>
+												<td>padding base bottom</td>
+												<td><code>.evo-padding-bottom</code></td>
+											</tr>
+											<tr>
+												<td>padding base left</td>
+												<td><code>.evo-padding-left</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer x-small all sides</td>
+												<td><code>.evo-spacer-padding-x-small</code></td>
+											</tr>									
+											<tr>
+												<td>padding spacer small all sides</td>
+												<td><code>.evo-spacer-padding-small</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer medium all sides</td>
+												<td><code>.evo-spacer-padding-medium</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer large all sides</td>
+												<td><code>.evo-spacer-padding-large</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer x-large all sides</td>
+												<td><code>.evo-spacer-padding-x-large</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer xx-large all sides</td>
+												<td><code>.evo-spacer-padding-xx-large</code></td>
+											</tr>									
+											<tr>
+												<td>padding spacer xxx-large all sides</td>
+												<td><code>.evo-spacer-padding-xxx-large</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer x-small top</td>
+												<td><code>.evo-spacer-padding-top-x-small</code></td>
+											</tr>									
+											<tr>
+												<td>padding spacer small top</td>
+												<td><code>.evo-spacer-padding-top-small</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer medium top</td>
+												<td><code>.evo-spacer-padding-top-medium</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer large top</td>
+												<td><code>.evo-spacer-padding-top-large</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer x-large top</td>
+												<td><code>.evo-spacer-padding-top-x-large</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer xx-large top</td>
+												<td><code>.evo-spacer-padding-top-xx-large</code></td>
+											</tr>									
+											<tr>
+												<td>padding spacer xxx-large top</td>
+												<td><code>.evo-spacer-padding-top-xxx-large</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer x-small right</td>
+												<td><code>.evo-spacer-padding-right-x-small</code></td>
+											</tr>									
+											<tr>
+												<td>padding spacer small right</td>
+												<td><code>.evo-spacer-padding-right-small</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer medium right</td>
+												<td><code>.evo-spacer-padding-right-medium</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer large right</td>
+												<td><code>.evo-spacer-padding-right-large</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer x-large right</td>
+												<td><code>.evo-spacer-padding-right-x-large</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer xx-large right</td>
+												<td><code>.evo-spacer-padding-right-xx-large</code></td>
+											</tr>									
+											<tr>
+												<td>padding spacer xxx-large right</td>
+												<td><code>.evo-spacer-padding-right-xxx-large</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer x-small bottom</td>
+												<td><code>.evo-spacer-padding-bottom-x-small</code></td>
+											</tr>									
+											<tr>
+												<td>padding spacer small bottom</td>
+												<td><code>.evo-spacer-padding-bottom-small</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer medium bottom</td>
+												<td><code>.evo-spacer-padding-bottom-medium</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer large bottom</td>
+												<td><code>.evo-spacer-padding-bottom-large</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer x-large bottom</td>
+												<td><code>.evo-spacer-padding-bottom-x-large</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer xx-large bottom</td>
+												<td><code>.evo-spacer-padding-bottom-xx-large</code></td>
+											</tr>									
+											<tr>
+												<td>padding spacer xxx-large bottom</td>
+												<td><code>.evo-spacer-padding-bottom-xxx-large</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer x-small left</td>
+												<td><code>.evo-spacer-padding-left-x-small</code></td>
+											</tr>									
+											<tr>
+												<td>padding spacer small left</td>
+												<td><code>.evo-spacer-padding-left-small</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer medium left</td>
+												<td><code>.evo-spacer-padding-left-medium</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer large left</td>
+												<td><code>.evo-spacer-padding-left-large</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer x-large left</td>
+												<td><code>.evo-spacer-padding-left-x-large</code></td>
+											</tr>
+											<tr>
+												<td>padding spacer xx-large left</td>
+												<td><code>.evo-spacer-padding-left-xx-large</code></td>
+											</tr>									
+											<tr>
+												<td>padding spacer xxx-large left</td>
+												<td><code>.evo-spacer-padding-left-xxx-large</code></td>
+											</tr>
+										</tbody>
+									</table>						
+							</div>
+						</section>
+					<!-- ADD MARGIN AND PADDING HELPERS TABLE - ENDS -->
+						
+					<!-- REMOVE MARGIN AND PADDING HELPERS TABLE - BEGINS -->
+						<section class="row">
+							<div class="small-12 columns evo-table-small-mediaquery">
+								<h6 class="evo-spacer-margin-top-medium">Remove Margins and Padding</h6>
+									<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-vertical-scroll-example" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+										<thead>
+											<tr>
+												<th scope="column">Definition</th>
+												<th scope="column">Class</th>
+											</tr>
+										</thead>
+										<tbody>							
+											<tr>
+												<td>remove margin all sides</td>
+												<td><code>.evo-no-margin</code></td>
+											</tr>
+											<tr>
+												<td>remove margin top</td>
+												<td><code>.evo-no-margin-top</code></td>
+											</tr>									
+											<tr>
+												<td>remove margin right</td>
+												<td><code>.evo-no-margin-right</code></td>
+											</tr>
+											<tr>
+												<td>remove margin bottom</td>
+												<td><code>.evo-no-margin-bottom</code></td>
+											</tr>
+											<tr>
+												<td>remove margin left</td>
+												<td><code>.evo-no-margin-left</code></td>
+											</tr>
+											<tr>
+												<td>remove padding all sides</td>
+												<td><code>.evo-no-padding</code></td>
+											</tr>
+											<tr>
+												<td>remove padding top</td>
+												<td><code>.evo-no-padding-top</code></td>
+											</tr>									
+											<tr>
+												<td>remove padding right</td>
+												<td><code>.evo-no-padding-right</code></td>
+											</tr>
+											<tr>
+												<td>remove padding bottom</td>
+												<td><code>.evo-no-padding-bottom</code></td>
+											</tr>
+											<tr>
+												<td>remove padding left</td>
+												<td><code>.evo-no-padding-left</code></td>
+											</tr>
+										</tbody>
+									</table>
+							</div>
+						</section>
+					<!-- REMOVE MARGIN AND PADDING HELPERS TABLE - ENDS -->
+
+			<!-- MARGIN AND PADDING HELPERS - ENDS -->
+			<hr />
+			<!-- HIDE AN ELEMENT HELPER - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Hide an Element</h5>
+
+				<p>
+					You can add the class <code>.hide</code> to an element to hide it. This will add the property display: none to the element. &#40;No rendered HTML is shown because the element is hidden.&#41;
+				</p>
+
+				<section class="row">
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/utility-classes-hide-element' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+				</section>
+			<!-- HIDE AN ELEMENT HELPER - ENDS -->
+			<hr />
+		<!-- UTILITY HELPERS - ENDS -->
+
+		<!-- FORM HELPERS - BEGINS -->
+			<h3 data-magellan-destination="form">Form Helpers</h3>
+			<a name="form"></a>
+
+			<!-- INPUT NUMERIC MASK HELPER - BEGINS -->
+				<h5 class="ref-sub-head">Input Numeric Mask</h5>
+
+				<p>
+					You can add a numeric mask to any form text input by adding the data attribute of <code>data-evo-input-numeric-mask</code> to the text input that needs the mask. This allows the user to only enter whole numbers, nothing else.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/form-helper-input-numeric-mask' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/form-helper-input-numeric-mask' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- INPUT NUMERIC MASK HELPER - ENDS -->
+			<hr />
+		<!-- FORM HELPERS - ENDS -->
+
+		<!-- INTERACTIVE HELPERS - BEGINS -->
+			<h3 data-magellan-destination="interactive">Interactive Helpers</h3>
+			<a name="interactive"></a>
+
+			<!-- SELECT ALL CHECKBOXES HELPER - BEGINS -->
+				<h5>Select All Checkboxes Toggle</h5>
+
+				<p>
+					Using the data atrributes of <code>data-evo-checkboxes-select-all</code> and <code>data-evo-checkboxes-select-all-item</code> you can create a select all checkbox toggle pattern. The data attribute of <code>data-evo-checkboxes-select-all</code> is placed on the checkbox that will be used to select all checkboxes. The data attribute of <code>data-evo-checkboxes-select-all-item</code> is used on the checkbox items that will be selected in a select all.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/interactive-helper-checkboxes-select-all' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/interactive-helper-checkboxes-select-all' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- SELECT ALL CHECKBOXES HELPER - ENDS -->
+			<hr />
+			<!-- TOGGLE ELEMENT HELPER - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Toggle Element</h5>
+
+				<p>
+					It's easy to toggle elements on and off with a few data attributes in your HTML. Set the data attribute of <code>data-evo-toggle-element</code> on the object you want to do the toggling action, usually a link or a button. Then set a class of <code>hide</code> on the object that needs to be toggled on/off. Finally, also set a data attribute of <code>data-evo-toggle-element-item</code> on the object that needs to be toggled on/off.
+				</p>
+
+				<!-- ANNOTATIONS BOX - BEGINS -->
+					<div class="panel evo-box annotations">
+						<div class="evo-box-bdy">
+							<p class="evo-no-margin-bottom">Make sure the value of <code>data-evo-toggle-element</code> matches the value of <code>data-evo-toggle-element-item</code>. The same value links the toggler to the object being toggled.</p>
+						</div>
+					</div>
+				<!-- ANNOTATIONS BOX - ENDS -->
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/interactive-helper-toggle-element' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/interactive-helper-toggle-element' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- TOGGLE ELEMENT HELPER - ENDS -->
+			<hr />
+		<!-- INTERACTIVE HELPERS - ENDS -->
+
+		<!-- VISIBILITY HELPERS - BEGINS -->
+			<h3 data-magellan-destination="visibility">Visibility Helpers</h3>
+			<a name="visibility"></a>
+			<p>
+				Visibility classes let you show or hide elements based on screen size or device orientation. You can use visibility classes to control which elements users see depending on their browsing environment.
+			</p>
+
+			<!-- VISIBILITY HELPERS CHEAT SHEET - BEGINS -->
+				<h5>Cheat Sheet</h5>	
+				<section class="row">			   
+					<div class="medium-3 columns">
+						<h6 class="evo-h1-hdr-background">Show Classes</h6>
+						<ul class="no-bullet">
+							<li><code>class="show-for-small-only"</code>
+							</li>
+							<li><code>class="show-for-medium-up"</code>
+							</li>
+							<li><code>class="show-for-medium-only"</code>
+							</li>
+							<li><code>class="show-for-large-up"</code>
+							</li>
+							<li><code>class="show-for-large-only"</code>
+							</li>
+							<li><code>class="show-for-xlarge-up"</code>
+							</li>
+							<li><code>class="show-for-xlarge-only"</code>
+							</li>
+							<li><code>class="show-for-xxlarge-up"</code>
+							</li>
+						</ul>
+					</div>
+					<div class="medium-3 columns">
+						<h6 class="evo-h1-hdr-background">Hide Classes</h6> 
+						<ul class="no-bullet">
+							<li><code>class="hide-for-small-only"</code>
+							</li>
+							<li><code>class="hide-for-medium-up"</code>
+							</li>
+							<li><code>class="hide-for-medium-only"</code>
+							</li>
+							<li><code>class="hide-for-large-up"</code>
+							</li>
+							<li><code>class="hide-for-large-only"</code>
+							</li>
+							<li><code>class="hide-for-xlarge-up"</code>
+							</li>
+							<li><code>class="hide-for-xlarge-only"</code>
+							</li>
+							<li><code>class="hide-for-xxlarge-up"</code>
+							</li>
+							</li>
+						</ul>
+					</div>
+					<div class="medium-3 columns">
+						<h6 class="evo-h1-hdr-background">Orientation Detection</h6>
+						<ul class="no-bullet">
+							<li><code>class="show-for-landscape"</code>
+							</li>
+							<li><code>class="show-for-portrait"</code>
+							</li>
+						</ul>
+						<h6 class="evo-h1-hdr-background">Touch Detection</h6>
+						<ul class="no-bullet">
+							<li><code>class="show-for-touch"</code>
+							</li>
+							<li><code>class="hide-for-touch"</code>
+							</li>
+						</ul>
+					</div>
+					<div class="medium-3 columns">
+						<h6 class="evo-h1-hdr-background">Accessibility</h6>
+						<p>If you want to hide some content but still make it accessible for screen readers, use the hidden visibility classes. To reverse the rules defined by hidden, use the visible visibility classes.</p>
+						<ul class="no-bullet">
+							<li><code>class="hidden-for-small-only"</code>
+							</li>
+							<li><code>class="visible-for-small-only"</code>
+							</li>
+						</ul>
+					</div>
+				</section>
+			<!-- VISIBILITY HELPERS CHEAT SHEET - ENDS -->
+			<hr />
+			<!-- Show by Screen Size - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Show by Screen Size</h5>
+
+				<p>
+					In this example, we use the <strong>show</strong> visibility classes to show certain strings of text based on the device on which users view a page. If their browser meets the class's conditions, the element will be shown. If not, it will be hidden.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/visibility-classes-screen-size-show' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/visibility-classes-screen-size-show' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- Show by Screen Size - ENDS -->
+			<hr />
+			<!-- Hide by Screen Size - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Hide by Screen Size</h5>
+
+				<p>
+					This example shows the opposite: It uses the <strong>hide</strong> visibility classes to state which elements should disappear based on your device's screen size or orientation. Users will see elements on every browser <strong>except</strong> those that meet these conditions.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/visibility-classes-screen-size-hide' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/visibility-classes-screen-size-hide' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- Hide by Screen Size - ENDS -->
+			<hr />
+			<!-- Orientation Detection - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Orientation Detection</h5>
+
+				<p>
+					This straightforward example shows how two strings of text determine whether or not an element is visible in different orientations. This will change on mobile devices when you rotate the device. On desktop, the orientation is almost always reported as landscape.
+				</p>
+				
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+						<div class="medium-6 columns">
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/helper/visibility-classes-orientation-detection' %}
+						</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+						<div class="medium-6 columns site-html-ctn">
+							<h6>HTML</h6>
+							{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/visibility-classes-orientation-detection' %}{{ global.reference-get-code-end-tag }}
+						</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- Orientation Detection - ENDS -->
+			<hr />
+			<!-- Touch Detection - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Touch Detection</h5>
+
+				<p>
+					There are also visibility classes to hide or show content based on whether a device supports touch (as determined by Modernizr).
+				</p>
+				
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+						<div class="medium-6 columns">
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/helper/visibility-classes-touch-detection' %}
+						</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+						<div class="medium-6 columns site-html-ctn">
+							<h6>HTML</h6>
+							{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/visibility-classes-touch-detection' %}{{ global.reference-get-code-end-tag }}
+						</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- Touch Detection - ENDS -->
+			<hr />
+				
+		<!-- VISIBILITY HELPERS - ENDS -->
+
+		<!-- ACCESSIBILITY HELPERS - BEGINS -->
+			<h3 data-magellan-destination="accessibility">Accessibility Helpers</h3>
+			<a name="accessibility"></a>
+			<p>
+				Adding <code>display: none</code> to an element will prevent screen readers from reading it. However, there are techniques to hide content while still making it readable by screen readers.
+			</p>
+
+			<!-- Show for Screen Readers Only - BEGINS -->
+				<h5>Show for Screen Readers Only</h5>
+
+				<p>
+					To visually hide content, while still allowing assistive technology to read it, add the class <code>show-for-sr</code>.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/visibility-classes-screen-readers-show' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/visibility-classes-screen-readers-show' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- Show for Screen Readers Only - ENDS -->
+			<hr />
+			<!-- Hide for Screen Readers Only - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Hide for Screen Readers Only</h5>
+
+				<p>
+					To hide text from assistive technology, while still keeping it visible, add the attribute <code>aria-hidden="true"</code>. This doesn't affect how the element looks, but screen readers will skip over it.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/visibility-classes-screen-readers-hide' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/visibility-classes-screen-readers-hide' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- Hide for Screen Readers Only - ENDS -->
+			<hr />
+			<!-- Creating Skip Links - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Creating Skip Links</h5>
+
+				<p>
+					If your site has a lot of navigation, a screen reader will have to read through the entire navigation to get to your site's content. To remedy this, you can add a "skip link" at the very top of your page, which will send the user farther down the page, past the navigation when clicked on.
+				</p>
+				<p>
+					Use the class <code>show-on-focus</code> to hide an element, <em>except</em> when it has focus.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/visibility-classes-skip-links' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/visibility-classes-skip-links' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- Creating Skip Links - ENDS -->
+			<hr />
+			<!-- Responsive Visibility - BEGINS -->
+				<h5 class="evo-spacer-margin-top-medium">Responsive Visibility</h5>
+
+				<p>
+					Finally, if you want to hide some content but still make it accessible for screen readers, use the <strong>hidden</strong> visibility classes. Do not confuse these classes with <strong>hide</strong> visibility classes. Use these classes in conjunction with the <strong>hide</strong> and <strong>show</strong> visibility classes to control complex layouts while offering accessibility for those using screen readers.
+				</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/base/helper/visibility-classes-hidden' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/visibility-classes-hidden' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+
+				<p>To reverse the rules defined by <strong>hidden</strong>, use the <strong>visible</strong> visibility classes.</p>
+
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						{% include '/reference/base/helper/visibility-classes-visible' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+				
+				<!-- EXAMPLE HTML - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/helper/visibility-classes-visible' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE HTML - ENDS -->
+
+				</section>
+			<!-- Responsive Visibility - ENDS -->
+
+		<!-- ACCESSIBILITY HELPERS - ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+									<ul>
+										<li>
+											<a href="http://foundation.zurb.com/docs/utility-classes.html" target="_blank">Utility Classes</a>
+										</li>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/visibility.html" target="_blank">Visibility Classes</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+		
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}

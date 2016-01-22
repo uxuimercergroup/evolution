@@ -1,0 +1,52 @@
+{% layout "comm/layout" %}
+{% block content %}
+
+<!-- HERO IMAGE - BEGINS -->
+	{% include "/comm/hero-banner" %}
+<!-- HERO IMAGE - ENDS -->
+
+<!-- CATEGORY TABLE OF CONTENTS - BEGINS -->
+	<section class="row evo-site-table-content-ctn">
+		<div class="large-12 columns">
+
+			<section class="row collapse">
+				<div class="small-12 medium-12 large-10 small-centered columns evo-site-down-arrrow">
+
+				<!-- CATEGORY PAGE NAVIGATION - BEGINS -->
+					<ul class="medium-block-grid-3 evo-site-table-contents">
+						<li>
+							<ul>
+								<li><a href="#{{ model.component-name-id-0X }}" data-scroll-to-location>{{ model.component-name-0X }}</a></li>
+								<li><a href="" data-scroll-to-location>Component Links</a></li>
+								<li><a href="" data-scroll-to-location>Component Links</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="" data-scroll-to-location>Component Links</a></li>
+								<li><a href="" data-scroll-to-location>Component Links</a></li>
+								<li><a href="" data-scroll-to-location>Component Links</a></li>
+							</ul>	
+						</li>
+						<li>
+							<ul>
+								<li><a href="" data-scroll-to-location>Component Links</a></li>
+								<li><a href="" data-scroll-to-location>Component Links</a></li>
+								<li><a href="" data-scroll-to-location>Component Links</a></li>
+							</ul>
+						</li>
+					</ul>
+				<!-- CATEGORY PAGE NAVIGATION - ENDS -->
+
+				</div>
+			</section>
+			
+		</div>
+	</section>
+<!-- CATEGORY TABLE OF CONTENTS - ENDS -->
+
+<!-- COMPONENT NAME - BEGINS -->
+	{ include 'comm/components/component-name/component-name-example' }
+<!-- COMPONENT NAME - ENDS -->
+
+{% endblock %}

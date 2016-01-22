@@ -1,0 +1,10 @@
+﻿// FOO COMPONENT - BEGINS
+	var evoCompFoo = function(compObjectDataValue){
+		var compObject = jQuery('[data-evo-comp='+compObjectDataValue+']');
+		compObject.click(function() {
+			jQuery(this).toggleClass('evo-comp-foo-color');
+		});
+	}
+	evoCompFoo('foo');
+	evoCompFoo('foo2');
+// FOO COMPONENT - ENDS

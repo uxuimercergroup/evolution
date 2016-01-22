@@ -1,0 +1,161 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+			<p>
+				Pagination allows user to scroll through multiple pages of content breaking longer pages into multiple shorter pages. This control is intended to be used in conjunction with a <a href="/reference/objects/data-table">Data Table</a>, a <a href="/reference/base/tables">Static Table</a>, or content pages.
+			</p>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="pagination"><a href="#pagination">Basic</a></dd>
+					<dd data-magellan-arrival="options"><a href="#options">Other Options</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+		<!-- PAGINATION - BEGINS -->
+			<h3 data-magellan-destination="pagination">Basic</h3>
+			<a name="pagination"></a>
+
+			<p>
+				Add <code>.pagination</code> and <code>.evo-pagination</code> classes to a <code>ul</code> to get started, then add list items with links or buttons in them.
+			</p>
+			<ul>
+				<li>Add class of <code>.previous</code> to the first list item to get the previous arrow icon to the left of the "Previous" text.</li>
+				<li>Add class of <code>.next</code> to the last list item to get the next arrow icon to the right of the "Next" text.</li>
+				<li>To mark the current page, add a <code>.current</code> class to a list item.</li>
+				<li>Add a class of <code>.unavailable</code> to a list item to make it not clickable, like for the ellipsis in the middle.</li>
+			</ul>
+
+			<h5>Accessibility</h5>
+			<p>
+				Adding the role attribute of <code>role="menubar"</code> to the <code>.pagination</code> list gives context to a screen reader. The <code>aria-label="Pagination"</code> attribute will allow a screen reader to call out what the component is to the user. Using the Tab button, a user can navigate until they've reached the link below. (Use Shift+Tab to navigate back one step.)
+			</p>
+			<p>
+				If you are using an unavailable link, give it an aria-disabled attribute: <code>aria-disabled="true"</code>.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/pagination/pagination' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/pagination/pagination' %}{{ global.reference-get-code-end-tag }}
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- PAGINATION - ENDS -->
+
+		<!-- PAGINATION - OTHER OPTIONS - BEGINS -->
+			<h3 data-magellan-destination="options">Other Options</h3>
+			<a name="options"></a>
+
+			<!-- CENTERED PAGINATION - BEGINS -->
+				<h5>Centered Pagination</h5>
+				<p>Wrap your <code>ul.pagination</code> with an element that has the <code>.pagination-centered</code> class to center your pagination.</p>
+
+				<!-- EXAMPLE DEMO - BEGINS -->
+					<section class="row">
+
+					<!-- EXAMPLE RENDERED CODE - BEGINS -->
+						<div class="medium-6 columns">
+							<h6>Rendered HTML</h6>
+							{% include '/reference/objects/pagination/pagination-centered' %}
+						</div>
+					<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+					<!-- EXAMPLE CODE - BEGINS -->
+						<div class="medium-6 columns site-html-ctn">
+							<h6>HTML</h6>
+							{{ global.reference-get-code-start-tag }}{% include '/reference/objects/pagination/pagination-centered' %}{{ global.reference-get-code-end-tag }}
+						</div>
+					<!-- EXAMPLE CODE - ENDS -->
+
+					</section>
+				<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- CENTERED PAGINATION - ENDS -->
+
+			<hr />
+		<!-- PAGINATION - OTHER OPTIONS - ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+									<ul>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/pagination.html" target="_blank">Pagination</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}

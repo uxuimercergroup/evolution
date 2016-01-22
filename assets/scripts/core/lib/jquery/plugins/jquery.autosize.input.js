@@ -1,5 +1,3 @@
-// https://github.com/MartinF/jQuery.Autosize.Input
-
 var Plugins;
 (function (Plugins) {
     var AutosizeInputOptions = (function () {

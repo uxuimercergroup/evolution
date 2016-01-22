@@ -1,0 +1,30 @@
+﻿{% layout "bp/demo-layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+{{ "/bp/components/showcase-panel/showcase-panel.css" | asset_url | stylesheet_tag }}
+{{ "/bp/components/showcase-panel/demo.css" | asset_url | stylesheet_tag }}
+<link href="/bp/components/showcase-panel/demo.css" rel="stylesheet" type="text/css" />
+
+<!-- SHOWCASE PANEL COMPONENT - BEGINS -->
+	<link href="/bp/components/showcase-panel/showcase-panel.css" rel="stylesheet" type="text/css" />
+
+	<div class="evo-showcase-panel" data-evo-showcase-panel-fixed>
+		<ul class="small-block-grid-1">
+			<li class="evo-showcase-panel-item evo-showcase-panel-item-large">
+				<span class="evo-showcase-panel-item-label" data-evo-font-color="sapphire-bright">
+					<sup>$</sup>200
+					<sub class="evo-showcase-panel-item-sub-label" data-evo-font-color="sapphire-bright">/mo</sub>
+				</span>
+				<span class="evo-showcase-panel-item-sub-text" data-evo-font-color="sapphire-bright">total cost</span>
+			</li>
+		</ul>
+	</div>
+<!-- SHOWCASE PANEL COMPONENT - ENDS -->
+
+<!-- PAGE CONTENT - BEGINS -->
+	{{ 20 | lorem_ipsum:'p' }}
+	<br />
+<!-- PAGE CONTENT - ENDS -->
+
+{% endblock %}

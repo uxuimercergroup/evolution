@@ -1,0 +1,555 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+			<p>
+				Grids are the layout tools of a framework. Foundation's <a href="http://foundation.zurb.com/docs/components/grid.html" target="_blank">Grid</a> and <a href="http://foundation.zurb.com/docs/components/block_grid.html" target="_blank">Block Grid</a> are the basis for the grid system used in Evolution Core.
+			</p>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="basic"><a href="#basic">Basic</a></dd>
+					<dd data-magellan-arrival="offsets"><a href="#offsets">Offsets</a></dd>
+					<dd data-magellan-arrival="centering"><a href="#centering">Centering</a></dd>
+					<dd data-magellan-arrival="source-ordering"><a href="#source-ordering">Source Ordering</a></dd>
+					<dd data-magellan-arrival="layouts"><a href="#layouts">Layouts</a></dd>
+					<dd data-magellan-arrival="block-grids"><a href="#block-grids">Block Grids</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+		<!-- BASIC - BEGINS -->
+			<h3 data-magellan-destination="basic">Basic</h3>
+			<a name="basic"></a>
+			<p>
+				Start by adding an element with a class of <code>row</code>. This will create a horizontal block to contain vertical columns. Then add divs with a <code>columns</code> class within that row. Specify the widths of each column with the <code>small-#</code>, <code>medium-#</code>, and <code>large-#</code> classes. Code for small screens first, and larger devices will inherit those styles. Customize for larger screens as necessary.
+			</p>
+			<p>
+				The collapse class lets you remove column gutters (padding). There are times that your needs to collapse may not be the same across devices so you can use the <code>small-collapse</code>, <code>medium-collapse</code> and <code>large-collapse</code> classes.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/grids/grid-basic' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/grids/grid-basic' %}
+
+						</div>
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- BASIC - ENDS -->
+
+		<!-- OFFSETS - BEGINS -->
+			<h3 data-magellan-destination="offsets">Offsets</h3>
+			<a name="offsets"></a>
+
+			<p>
+				Move blocks up to 11 columns to the right by using classes like <code>.large-offset-1</code> and <code>.small-offset-3</code>.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/grids/grid-offset' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/grids/grid-offset' %}
+
+						</div>
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- OFFSETS - ENDS -->
+
+		<!-- CENTERING - BEGINS -->
+			<h3 data-magellan-destination="centering">Centering</h3>
+			<a name="centering"></a>
+
+			<p>
+				Center your columns by adding a class of <code>small-centered</code> to your column. Large will inherit small centering by default, but you can also center solely on large by applying a <code>large-centered</code> class. To uncenter on large screens use <code>large-uncentered</code>.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/grids/grid-centering' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/grids/grid-centering' %}
+
+						</div>
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- CENTERING - ENDS -->
+
+		<!-- SOURCE ORDERING- BEGINS -->
+			<h3 data-magellan-destination="source-ordering">Source Ordering</h3>
+			<a name="source-ordering"></a>
+
+			<p>
+				Source ordering allows you to shift columns of content around between breakpoints (devices). Prefix <code>push/pull</code> with the class name that matches to the breakpoint you are dealing with. Here are some examples: <code>medium-push-#</code>, <code>large-push-#</code> is the syntax you'll use, if you need to reset content on large screens use <code>large-reset-order</code>.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/grids/grid-source-ordering' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/grids/grid-source-ordering' %}
+
+						</div>
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- SOURCE ORDERING- ENDS -->
+
+		<!-- LAYOUTS - BEGINS -->
+			<h3 data-magellan-destination="layouts">Layouts</h3>
+			<a name="layouts"></a>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<p class="ref-sub-head evo-spacer-margin-top-x-large">1 Column</p>
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/grids/grid-1-col' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/grids/grid-1-col' %}
+
+						</div>
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<p class="ref-sub-head evo-spacer-margin-top-x-large">2 Column - 50/50</p>
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/grids/grid-2-col-50-50' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/grids/grid-2-col-50-50' %}
+
+						</div>
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<p class="ref-sub-head evo-spacer-margin-top-x-large">2 Column - 66/33</p>
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/grids/grid-2-col-66-33' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/grids/grid-2-col-66-33' %}
+
+						</div>
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<p class="ref-sub-head evo-spacer-margin-top-x-large">2 Column - 33/66</p>
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/grids/grid-2-col-33-66' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/grids/grid-2-col-33-66' %}
+
+						</div>
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<p class="ref-sub-head evo-spacer-margin-top-x-large">2 Column - 75/25</p>
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/grids/grid-2-col-75-25' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/grids/grid-2-col-75-25' %}
+
+						</div>
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<p class="ref-sub-head evo-spacer-margin-top-x-large">2 Column - 25/75</p>
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/grids/grid-2-col-25-75' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/grids/grid-2-col-25-75' %}
+
+						</div>
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<p class="ref-sub-head evo-spacer-margin-top-x-large">3 Column - 33/33/33</p>
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/grids/grid-3-col-33-33-33' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/grids/grid-3-col-33-33-33' %}
+
+						</div>
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<p class="ref-sub-head evo-spacer-margin-top-x-large">3 Column - 25/50/25</p>
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/grids/grid-3-col-25-50-25' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/grids/grid-3-col-25-50-25' %}
+
+						</div>
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<p class="ref-sub-head evo-spacer-margin-top-x-large">4 Column - 25/25/25/25</p>
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/grids/grid-4-col-25-25-25-25' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/grids/grid-4-col-25-25-25-25' %}
+
+						</div>
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- LAYOUTS - ENDS -->
+
+		<!-- BLOCK GRIDS - BEGINS -->
+			<h3 data-magellan-destination="block-grids">Block Grid</h3>
+			<a name="block-grids"></a>
+
+			<p>
+				Block grids are designed to allow you to split a certain amount of content evenly between a grid layout. If you use the <code>small-block-grid</code> only, the grid will keep its spacing and configuration no matter the screen size. If you use <code>large-block-grid</code> only, the list items will stack on top of each other for small devices. If you use both of those classes combined, you can control the configuration and layout separately for each breakpoint.
+			</p>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="small-12 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/base/grids/block-grid-basic' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="small-12 columns">
+						<div class="grid-demo-styles">
+
+							<h6>Rendered HTML</h6>
+							{% include '/reference/base/grids/block-grid-basic' %}
+
+						</div>
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- BLOCK GRIDS - ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+									<ul>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/grid.html" target="_blank">Grid</a>
+										</li>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/block_grid.html" target="_blank">Block Grid</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}

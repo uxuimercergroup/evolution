@@ -1,0 +1,243 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE INTRO - BEGINS -->
+	<section class="row">
+
+	<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+		<div class="small-12 columns">
+			<h1>{{ model.title }}</h1>
+			<p>
+				The Datepicker allows the user to select a specific date. It automatically defaults to show a 1-month range with the current month visible. Users can click on the month and year drop downs to select the month and year they need.</p>
+			</p>
+		</div>
+	<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+	<!-- PAGE MAGELLAN NAV - BEGINS -->
+		<div class="small-12 columns">
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="read-only"><a href="#read-only">Read Only</a></dd>
+					<dd data-magellan-arrival="date-input"><a href="#date-input">Date Input</a></dd>
+					<dd data-magellan-arrival="message"><a href="#message">Message</a></dd>
+					<dd data-magellan-arrival="masked-input"><a href="#masked-input">Masked Input</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Advanced</a></dd>
+					<dd class="site-html-ctn-toggle">
+						<a href="javascript:;" class="site-get-code">Get Code<i class="evo-icon-arrow-right5 evo-icon-position-left"></i></a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	<!-- PAGE MAGELLAN NAV - ENDS -->
+
+	</section>
+<!-- PAGE INTRO - ENDS -->
+
+
+<!-- EXAMPLE - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+			<hr />
+
+		<!-- READ ONLY - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+					<h3 data-magellan-destination="read-only">Read Only</h3>
+					<a name="read-only"></a>
+				</div>
+			</section>
+
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+					<!-- EXAMPLE RENDERED CODE - BEGINS -->
+						<div class="medium-6 columns">
+							<h6>Rendered HTML</h6>
+							{% include '/reference/objects/datepicker/datepicker' %}
+						</div>
+					<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+					<!-- EXAMPLE CODE - BEGINS -->
+						<div class="medium-6 columns site-html-ctn">
+
+						<!-- EXAMPLE HTML - BEGINS -->
+							<h6>HTML</h6>						
+							{{ global.reference-get-code-start-tag }}{% include '/reference/objects/datepicker/datepicker' %}{{ global.reference-get-code-end-tag }}
+						<!-- EXAMPLE HTML - ENDS -->
+
+						<!-- EXAMPLE JS - BEGINS -->
+							<h6>Javascript</h6>
+							{{ global.reference-get-code-start-tag }}{% include '/reference/js/objects/datepicker/datepicker' %}{{ global.reference-get-code-end-tag }}
+						<!-- EXAMPLE JS - ENDS -->
+
+						</div>
+					<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- READ ONLY - ENDS -->
+
+		<!-- DATE INPUT - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+					<h3 data-magellan-destination="date-input">Date Input</h3>
+					<a name="date-input"></a>
+				</div>
+			</section>
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/datepicker/datepicker-date-input' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/datepicker/datepicker-date-input' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					<!-- EXAMPLE JS - BEGINS -->
+						<h6>Javascript</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/js/objects/datepicker/datepicker-date-input' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE JS - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- DATE INPUT - ENDS -->
+
+		<!-- MESSAGE - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+					<h3 data-magellan-destination="message">Message</h3>
+					<a name="message"></a>
+				</div>
+			</section>
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/datepicker/datepicker-message' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/datepicker/datepicker-message' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					<!-- EXAMPLE JS - BEGINS -->
+						<h6>Javascript</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/js/objects/datepicker/datepicker-message' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE JS - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- MESSAGE - ENDS -->
+
+		<!-- MASKED INPUT - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+					<h3 data-magellan-destination="masked-input">Masked Input</h3>
+					<a name="masked-input"></a>
+				</div>
+			</section>
+			<!-- EXAMPLE DEMO - BEGINS -->
+				<section class="row">
+
+				<!-- EXAMPLE RENDERED CODE - BEGINS -->
+					<div class="medium-6 columns">
+						<h6>Rendered HTML</h6>
+						{% include '/reference/objects/datepicker/datepicker-date-input-masked' %}
+					</div>
+				<!-- EXAMPLE RENDERED CODE - ENDS -->
+
+				<!-- EXAMPLE CODE - BEGINS -->
+					<div class="medium-6 columns site-html-ctn">
+
+					<!-- EXAMPLE HTML - BEGINS -->
+						<h6>HTML</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/objects/datepicker/datepicker-date-input-masked' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE HTML - ENDS -->
+
+					<!-- EXAMPLE JS - BEGINS -->
+						<h6>Javascript</h6>
+						{{ global.reference-get-code-start-tag }}{% include '/reference/js/objects/datepicker/datepicker-date-input-masked' %}{{ global.reference-get-code-end-tag }}
+					<!-- EXAMPLE JS - ENDS -->
+
+					</div>
+				<!-- EXAMPLE CODE - ENDS -->
+
+				</section>
+			<!-- EXAMPLE DEMO - ENDS -->
+
+			<hr />
+		<!-- MASKED INPUT - ENDS -->
+
+		<!-- ADVANCED - BEGINS -->
+			<section class="row">
+				<div class="small-12 columns">
+
+					<h3 data-magellan-destination="advanced">Advanced</h3>
+					<a name="advanced"></a>
+
+				<!-- DEPENDENCY LIST - BEGINS -->
+					{% if model.reference-dependency == "true" %}
+						<h6>Dependencies</h6>
+						<ul>
+							{% if model.reference-dependency-foundation == "true" %}
+								<li>
+									<a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation {{ global.foundation_version }}</a>
+									<ul>
+										<li>
+											<a href="http://foundation.zurb.com/docs/components/panels.html" target="_blank">Panels</a>
+										</li>
+									</ul>
+								</li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery == "true" %}
+								<li><a href="https://jquery.com/" target="_blank">jQuery {{ global.jquery_version }}</a></li>
+							{% endif %}
+
+							{% if model.reference-dependency-jquery-ui == "true" %}
+								<li><a href="http://jqueryui.com/" target="_blank">jQuery UI {{ global.jquery_ui_version }}</a></li>
+							{% endif %}
+
+							{{ model.reference-dependency-list }}
+						</ul>
+					{% endif %}
+				<!-- DEPENDENCY LIST - ENDS -->
+
+				</div>
+			</section>
+		<!-- ADVANCED - ENDS -->
+
+		</div>
+	</section>
+<!-- EXAMPLE - ENDS -->
+
+{% endblock %}

@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.7 - Base Box Partial
+// Mercer Evolution - Core v3.0.1 - Base Box Partial
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
@@ -9,48 +9,20 @@
 //
 
 // CORE BOX
-$evo-box-hdr-rule-size: 3px !default;
+$evo-box-hdr-rule-size: rem-calc(3) !default;
 $evo-box-hdr-rule-style: solid !default;
-$evo-box-hdr-rule-color: $gray-mid-dark !default;
-$evo-box-hdr-rule-padding: 0 0 6px 0 !default;
+$evo-box-hdr-rule-color: $onyx-dark-50 !default;
+$evo-box-hdr-rule-padding: 0 0 rem-calc(6) 0 !default;
 $evo-box-border-width: 1px !default;
 $evo-box-border-style: solid !default;
-$evo-box-border-color: $gray-mid !default;
+$evo-box-border-color: $onyx-dark-30 !default;
 $evo-box-body-text-align: left !default;
-
-// CORE BOX SHADOW
-$evo-box-shadow-vertical: 0 !default;
-$evo-box-shadow-horizontal: 3px !default;
-$evo-box-shadow-blur: 6px !default;
-$evo-box-shadow-color: $gray-mid !default;
-
-// CUSTOM BOXES
-
-// FEATURE CONTAINER
-$evo-box-featured-background-color:	$white !default;
-$evo-box-featured-hdr-rule-color: $blue-gray-mid-dark !default;
-
-// SIDEBAR CONTAINER
-$evo-box-sidebar-background-color: $gray-lighter !default;
-$evo-box-sidebar-hdr-rule-color: $gray-mid !default;
-
-// SUPPORT CONTAINER
-$evo-box-support-background-color: $blue-gray-lighter !default;
-$evo-box-support-border-color: $blue-gray-mid-dark !default;
-$evo-box-support-hdr-rule-color: $blue-gray-mid-dark !default;
-
-// HIGHLIGHT CONTAINER
-$evo-box-highlight-background-color: $evo-highlight-color !default;
-
-// INLINE SEARCH CONTAINER
-$evo-box-inline-search-background-color: $gray-lighter !default;
 
 
 @if $use-boxes == true{
 
 	// CORE BOX
 	.evo-box					{
-								//@include panel();
 								@include border-radius(rem-calc($global-radius));
 								border: $evo-box-border-width $evo-box-border-style $evo-box-border-color;
 								position: relative;
@@ -61,54 +33,12 @@ $evo-box-inline-search-background-color: $gray-lighter !default;
 									padding: $evo-box-hdr-rule-padding;
 									}
 		.evo-box-bdy,
-		.evo-box-ftr				{padding-bottom: 1px;}
+		.evo-box-ftr				{padding-bottom: rem-calc(1);}
 		.evo-box-ftr				{margin-top: rem-calc(14);}
 								}
 
 	// CORE BOX SHADOW
-	.evo-box-shadow				{@include box-shadow($evo-box-shadow-vertical, $evo-box-shadow-horizontal, $evo-box-shadow-blur, $evo-box-shadow-color);}
-
-	// FEATURE CONTAINER
-	.evo-feature-ctn			{
-								background-color: $evo-box-featured-background-color;
-		.evo-hdr-rule				{border-bottom-color: $evo-box-featured-hdr-rule-color;}
-								}
-
-	// SIDEBAR CONTAINER
-	.evo-sidebar-ctn			{
-								background-color: $evo-box-sidebar-background-color;
-		.evo-hdr-rule				{border-bottom-color: $evo-box-sidebar-hdr-rule-color;}
-								}
-
-	// SUPPORT CONTAINER
-	.evo-support-ctn			{
-								@include border-radius(0 0 $global-radius $global-radius);
-								background-color: $evo-box-support-background-color;
-								border-color: $evo-box-support-border-color;
-		.evo-hdr-rule				{border-bottom-color: $evo-box-support-hdr-rule-color;}
-								}
-
-	// HIGHLIGHT CONTAINER
-	.evo-highlight-ctn			{
-								background-color: $evo-box-highlight-background-color;
-								border-width: 0;
-								text-align: center;
-								}
-	
-	// INLINE SEARCH CONTAINER
-	.evo-inline-search-ctn		{
-								background-color: $evo-box-inline-search-background-color;
-								@include border-radius(0);
-								border-width: 0;
-		form						{
-									margin-bottom: 0;
-			.evo-margin-reset			{
-				label,
-				input,
-				select						{margin-bottom: 0;}
-										}
-									}
-								}
+	.evo-box-shadow				{@include box-shadow($evo-base-shadow-horizontal, $evo-base-shadow-vertical, $evo-base-shadow-blur, $evo-base-shadow-color);}
 
 	//=== MEDIA QUERIES =========================================================================
 
@@ -116,14 +46,8 @@ $evo-box-inline-search-background-color: $gray-lighter !default;
 	@if $use-medium-up-mediaquery == true {
 		
 		@media #{$medium-up} {
-
-			// INLINE SEARCH CONTAINER
-			.evo-inline-search-ctn
-								{
-				form				{
-					.evo-btn-row		{text-align: center;}
-									}
-								}
+			
+			
 
 		}
 		

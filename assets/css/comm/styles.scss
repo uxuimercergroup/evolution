@@ -1,0 +1,73 @@
+/*--------------------------------------------------------------------------------------------
+Mercer Evolution - Communication Family CSS
+DATE - August 19, 2015
+AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
+--------------------------------------------------------------------------------------------*/
+
+// ===========================================================================================
+// CORE SASS IMPORTS
+// ===========================================================================================
+
+@import	"../core/global/color_variables",
+		"../core/foundation/foundation/settings",
+		"core/global/variables_overrides",
+		"../core/global/variables",
+		"../core/global/functions",
+		"../core/global/mixins";
+
+// ===========================================================================================
+// SITE IMPORTS
+// ===========================================================================================
+
+@import	"../partials/global/settings",
+		"../partials/global/variables",
+		"../partials/global/functions",
+		"../partials/base/icons";
+
+/*=== WEBSITE STYLES =======================================================================*/
+
+/*--- GLOBAL -------------------------------------------------------------------------------*/
+
+
+
+/*--- VISUAL ASSETS ------------------------------------------------------------------------*/
+
+// COLOR PALETTE SWATCH BOX
+.color-block							{
+										height: rem-calc(46);
+										text-align: center;
+										color: $white;
+										padding: rem-calc(14 14 0 14);
+										margin-bottom: rem-calc(5);
+										font-size: rem-calc(12);
+										}
+.color-block-light-colors				{
+										color: $black;
+										}
+
+// MEDIUM MEDIA QUERY RANGE - 768px - 1024px
+@media #{$medium-only} {
+
+	.medium-3							{
+
+		// COLOR PALETTE SWATCH BOX
+		.color-block						{
+											height: auto;
+											padding: $evo-base-padding;
+			div									{
+												float: none !important;
+												}
+											}
+										}
+
+}
+
+// SMALL MEDIA QUERY RANGE - 0px - 767px
+@media #{$small-only} {
+
+	// COLOR PALETTE SWATCH BOX
+	.color-block:last-child				{
+										margin-bottom: $evo-base-margin;
+										}
+
+}

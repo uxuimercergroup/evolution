@@ -1,0 +1,70 @@
+{% layout "reference/layout" %}
+{% block title %}{{ model.title }} : {{ global.site_title }}{% endblock %}
+{% block content %}
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns">
+
+		<!-- PAGE TITLE AND DESCRIPTION - BEGINS -->
+			<h1>{{ model.title }}</h1>
+			<p>This online document contains the guidelines and best practices from the front-end development team at Mercer.</p>
+		<!-- PAGE TITLE AND DESCRIPTION - ENDS -->
+
+			<hr />
+
+			<section class="row">
+				<div class="small-9 columns front-end-standards">
+
+				<!-- GOALS - BEGINS -->
+					<a name="goals"></a>
+					<h5>Goals</h5>
+					<p>The goals of this document is to provide:</p>
+					<ul>
+						<li>Consistency of coding across projects</li>
+						<li>Create an easier level of maintenance</li>
+						<li>To maintain a level of quality in the web sites we produce</li>
+						<li>Help guide on-boarding of new staff or to help educate new developers</li>
+					</ul>
+				<!-- GOALS - ENDS -->
+
+					<hr data-evo-border-color="onyx-dark-6">
+				
+				<!-- GETTING STARTED - BEGINS -->
+					<a name="getting-started"></a>
+					<h5>Getting Started</h5>
+
+					<p>The responsibility of the front-end developer is to understand the goals of the project and the specific deliverables that are expected, taking care to not take them for granted or assume anything.</p>
+
+					<p>It's important to understand how the development environment will work, what tools will be available, and what the differences between development, test, and production environments may ultimately be.</p>
+
+					<p>There needs to be a clear understanding of what the browser and device requirements are from the outset of the project.</p>
+
+					<h5>Pillars of the internet</h5>
+					<p>The front-end technology solutions produced adhere to the industry best practices using the following:</p>
+
+					<ul>
+						<li><a href="javascript:;" data-tooltip aria-haspopup="true" class="has-tip tip-top radius evo-tooltip" title="Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages and web applications rather than merely to define its presentation or look. Semantic HTML is processed by traditional web browsers as well as by many other user agents. CSS is used to suggest its presentation to human users.">Semantic</a> HyperText Markup Language (HTML) for structure</li>
+						<li>Cascading Style Sheets (CSS) for presentation</li>
+						<li>JavaScript (JS) for behavior and interaction</li>
+					</ul>
+					<p>When at all possible, we strive for a <a href="javascript:;" data-tooltip aria-haspopup="true" class="has-tip tip-top radius evo-tooltip" title="Progressive enhancement is a strategy for web design that emphasizes accessibility, semantic HTML markup, and external stylesheet and scripting technologies. Progressive enhancement uses web technologies in a layered fashion that allows everyone to access the basic content and functionality of a web page, using any browser or Internet connection, while also providing an enhanced version of the page to those with more advanced browser software or greater bandwidth.">progressive enhancement</a> strategy.</p>
+				<!-- GETTING STARTED - ENDS -->
+
+					<hr data-evo-border-color="onyx-dark-6">
+
+				</div>
+				<div class="small-3 columns">
+
+				<!-- FRONT-END STANDARD SIDEBAR MENU - BEGINS -->
+					{% include '/reference/front-end-standards-sidebar-menu' %}
+				<!-- FRONT-END STANDARD SIDEBAR MENU - ENDS -->
+
+				</div>
+			</section>
+
+		</div>
+	</section>
+<!-- PAGE CONTENT - ENDS -->
+
+{% endblock %}

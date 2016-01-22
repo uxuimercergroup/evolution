@@ -1,12 +1,12 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v2.7 - Foundation - Off Canvas JS
+// Mercer Evolution - Core v3.0.1 - Foundation - Off-canvas JS
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //--------------------------------------------------------------------------------------------------------
 
 $(document).foundation({
 
-	// OFF CANVAS
+	// FOUNDATION OFF-CANVAS OPTIONS
 	/*
 	offcanvas : {
 		// Sets method in which offcanvas opens.

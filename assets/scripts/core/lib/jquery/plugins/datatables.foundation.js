@@ -119,7 +119,7 @@ DataTable.ext.renderer.pageButton.foundation = function ( settings, host, idx, b
 	};
 
 	attach(
-		$(host).empty().html('<ul class="pagination"/>').children('ul'),
+		$(host).empty().html('<ul class="pagination evo-pagination" role="menubar" aria-label="Pagination"/>').children('ul'),
 		buttons
 	);
 };

@@ -1,0 +1,37 @@
+<snippet>
+	<content>
+<![CDATA[
+<!-- $1 FORM COMPACT - BEGINS -->
+<form class="$2" id="$3" name="$4" method="" action="" title="$5" data-abide>
+	<fieldset>
+		<div class="row">
+			<div class="small-12 columns">
+				<label>
+					<input type="email" placeholder="Email Address" tabindex="" title="Enter your email address." required />
+				</label>
+				<small class="error">Houston we have a problem.</small>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 columns">
+				<label>
+					<input type="password" placeholder="Password" tabindex="" title="Enter your password." required />
+				</label>
+				<small class="error">Houston we have a problem.</small>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 columns">
+				<button class="button radius evo-button" id="" name="" value="" type="" tabindex="" title="Click for Validation">Click for Validation</button>
+			</div>
+		</div>
+	</fieldset>
+</form>
+<!-- $1 FORM COMPACT - ENDS -->
+$6
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>formcompact</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

@@ -5,40 +5,88 @@ DATE - June 13, 2014
 AUTHOR - Doug Fraize, Matthew Holmes
 -------------------------------------------------------------------------------------------*/
 
-.com { color: #93a1a1; }
-.lit { color: #195f91; }
-.pun, .opn, .clo { color: #93a1a1; }
-.fun { color: #dc322f; }
-.str, .atv { color: #D14; }
-.kwd, .prettyprint .tag { color: #1e347b; }
-.typ, .atn, .dec, .var { color: teal; }
-.pln { color: #48484c; }
+.prettyprint    {
+                background: #333;
+                padding: 10px 16px;
+                margin-bottom: 20px;
+    &.linenums      {
+                    -webkit-box-shadow: inset 60px 0 0 #333, inset 61px 0 0 #666;
+                    -moz-box-shadow: inset 60px 0 0 #333, inset 61px 0 0 #666;
+                    box-shadow: inset 60px 0 0 #333, inset 61px 0 0 #666;
+                    }
+    xmp             {
+                    margin: 0 0 3px 0;
+                    font-size: 14px;
+                    }
 
-.prettyprint {
-	padding: 8px;
-  	background-color: #f7f7f9;
-  	border: 1px solid #e1e1e8;
-  	margin:0 0 18px 0;
-	overflow-x: auto;
-}
-.prettyprint.linenums {
-	-webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-	-moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-	box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-}
+    .str            {color: #EC7600;}
+    .kwd            {color: #93C763;}
+    .com            {color: #66747B;}
+    .typ            {color: #678CB1;}
+    .lit            {color: #FACD22;}
+    .pun            {color: #F1F2F3;}
+    .pln            {color: #F1F2F3;}
+    .tag            {color: #8AC763;}
+    .atn            {color: #E0E2E4;}
+    .atv            {color: #EC7600;}
+    .dec            {color: purple;}
 
-/* Specify class=linenums on a pre to get line numbering */
-ol.linenums {
-	margin: 0 0 0 33px; /* IE indents via margin-left */
-}
-ol.linenums li {
-	padding-left: 12px;
-  	color: #bebec5;
-	line-height: 20px;
-	-webkit-tab-size: 4;
-	-moz-tab-size: 4;
-	-ms-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
-	word-wrap: break-word;
-}
+    // Specify class=linenums on a pre to get line numbering
+    ol.linenums     {
+                    margin: 0 0 0 50px; // IE indents via margin-left
+                    }
+
+    ol.linenums li {
+                    padding-left: 12px;
+                    line-height: 20px;
+                    -webkit-tab-size: 4;
+                    -moz-tab-size: 4;
+                    -ms-tab-size: 4;
+                    -o-tab-size: 4;
+                    tab-size: 4;
+                    word-wrap: break-word;
+                    }
+
+    li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9
+                    {color: #666;}
+    li.L1, li.L3, li.L5, li.L7, li.L9
+                    {background: #333;}
+                }
+
+@media print    {
+    .str            {
+                    color: #060;
+                    }
+    .kwd            {
+                    color: #006;
+                    font-weight: bold;
+                    }
+    .com            {
+                    color: #600;
+                    font-style: italic;
+                    }
+    .typ            {
+                    color: #404;
+                    font-weight: bold;
+                    }
+    .lit            {
+                    color: #044;
+                    }
+    .pun            {
+                    color: #440;
+                    }
+    .pln            {
+                    color: #000;
+                    }
+    .tag            {
+                    color: #006;
+                    font-weight: bold;
+                    }
+    .atn            {
+                    color: #404;
+                    }
+    .atv            {
+                    color: #060;
+                    }
+                }
+                

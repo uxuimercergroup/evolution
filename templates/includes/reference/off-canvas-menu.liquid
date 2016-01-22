@@ -1,0 +1,84 @@
+<!-- OFF-CANVAS - TAB BAR - BEGINS -->
+<nav class="tab-bar hide-for-large-up" aria-hidden="true">
+	<section class="left-small">
+		<a class="left-off-canvas-toggle menu-icon">
+			<i class="evo-icon-menu7 evo-icon-size-medium" title="Menu"></i>
+		</a>
+	</section>
+
+	<section class="middle tab-bar-section">
+		<h1 class="title">
+			<a href="/reference/index">Evolution Core</a>
+		</h1>
+	</section>
+</nav>
+<!-- OFF-CANVAS - TAB BAR - ENDS -->
+
+<!-- OFF-CANVAS - LEFT MENU - BEGINS -->
+<aside class="left-off-canvas-menu" aria-hidden="true">
+	<ul class="off-canvas-list">
+		<li>
+			<label>Navigation</label>
+		</li>
+		<li>
+			<a href="/reference/index">Home</a>
+		</li>
+
+		{% for item in global.core-table-of-contents %}
+
+			<li class="has-submenu">
+
+			<!-- TOC - SECTION HEADER - BEGINS -->
+				<a href="">{{ item.section-hdr }}</a>
+			<!-- TOC - SECTION HEADER - ENDS -->
+
+				<ul class="left-submenu">
+					<li class="back">
+						<a href="">Back</a>
+					</li>
+
+				<!-- TOC - SECTION LIST - BEGINS -->
+					{% for item in item.main-section %}
+						<li>
+							<a href="{{ item.url }}">{{ item.link-name }}</a>
+						</li>
+					{% endfor %}
+				<!-- TOC - SECTION LIST - ENDS -->
+
+				</ul>
+			</li>
+
+		{% endfor %}
+
+		<li>
+			<a href="/reference/kitchen-sink">Kitchen Sink</a>
+		</li>
+		<!--
+		<li>
+			<a href="/reference/quick-reference">Quick Reference</a>
+		</li>
+		-->
+		<li>
+			<a href="/reference/media-queries">Media Queries</a>
+		</li>
+		<li>
+			<a href="/browser-support">Browser Support</a>
+		</li>
+		<li>
+			<a href="/reference/front-end-standards">Front-end Code Standards</a>
+		</li>
+		<li>
+			<a href="/reference/tool-box">Tool Box</a>
+		</li>
+		<li>
+			<a href="/reference/component-dev">Component Development</a>
+		</li>
+		<li>
+			<a href="/reference/corp-logos">Corporate Logos</a>
+		</li>
+		<li>
+			<a href="/reference/change-log">Change Log</a>
+		</li>
+	</ul>
+</aside>
+<!-- OFF-CANVAS - LEFT MENU - ENDS -->
