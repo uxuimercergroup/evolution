@@ -1,0 +1,55 @@
+<!-- EQUALIZER NESTED - BEGINS -->
+<div class="row" data-equalizer="foo"> 
+	<div class="medium-4 columns"> 
+		<div class="panel evo-box" data-equalizer-watch="foo">
+			<div class="evo-box-hdr">
+				{{> type-header size="3" text="Parent panel"}}
+			</div>
+			<div class="evo-box-bdy">
+
+				<div class="row" data-equalizer="bar"> 
+					<div class="panel evo-box" data-equalizer-watch="bar">
+						<div class="evo-box-hdr">
+							{{> type-header size="5" text="Nested panel 1"}}
+						</div>
+						<div class="evo-box-bdy">
+							<p class="evo-no-margin-bottom">{{lorem count=2}}</p>
+						</div>
+					</div> 
+					<div class="panel evo-box" data-equalizer-watch="bar"> 
+						<div class="evo-box-hdr">
+							{{> type-header size="5" text="Nested panel 2"}}
+						</div>
+						<div class="evo-box-bdy">
+							<p class="evo-no-margin-bottom">{{lorem count=2}}</p>
+						</div>
+					</div> 
+					<div class="panel evo-box" data-equalizer-watch="bar"> 
+						<div class="evo-box-hdr">
+							{{> type-header size="5" text="Nested panel 3"}}
+						</div>
+						<div class="evo-box-bdy">
+							<p class="evo-no-margin-bottom">{{lorem count=2}}</p>
+						</div>
+					</div> 
+				</div>
+				
+			</div>
+		</div> 
+	</div> 
+	<div class="medium-4 columns"> 
+		<div class="panel evo-box" data-equalizer-watch="foo"> 
+			<div class="evo-box-bdy">
+				<p class="evo-no-margin-bottom">{{lorem count=3}}</p>
+			</div>
+		</div> 
+	</div> 
+	<div class="medium-4 columns"> 
+		<div class="panel evo-box" data-equalizer-watch="foo"> 
+			<div class="evo-box-bdy">
+				<p class="evo-no-margin-bottom">{{lorem count=3}}</p>
+			</div>
+		</div> 
+	</div> 
+</div>
+<!-- EQUALIZER NESTED - ENDS -->

@@ -1,0 +1,18 @@
+{{!--
+aria-label: button aria label
+button-name: custom name used for button
+button-title: title of the button
+button-value: custom value for button - for input buttons this is the text of the button
+custom-class: custom class for button
+disabled: if the button is disabled [TRUE] is the value
+id: custom id for button
+interactive-data-value: data value for interactive button - must match value used in JS init of interactive button
+size: tiny, small, large - default size is medium, no size option needed
+shape: radius, round
+expand: if the button is going to be 100% width [TRUE] is the value
+secondary: if the button is going to be a secondary button [TRUE] is the value
+tabindex: the tab index order number
+type: button, submit
+--}}
+
+<input class="button{{#if size}} {{size}}{{/if}}{{#if expand}} expand{{/if}}{{#if shape}} {{shape}}{{else}} radius{{/if}}{{#if secondary}} secondary{{/if}}{{#if disabled}} disabled{{/if}} evo-button{{#if custom-class}} {{custom-class}}{{/if}}" {{#if interactive-data-value}}data-evo-button-interactive="{{interactive-data-value}}"{{/if}} {{#if id}}id="{{id}}"{{/if}} role="button" {{#if button-name}}name="{{button-name}}"{{/if}} {{#if button-value}}value="{{{button-value}}}"{{/if}} {{#if type}}type="{{type}}"{{/if}} {{#if disabled}}disabled{{/if}} {{#if tabindex}}tabindex="{{tabindex}}"{{/if}} {{#if button-title}}title="{{{button-title}}}"{{/if}} {{#if aria-label}}aria-label="{{aria-label}}"{{/if}}>

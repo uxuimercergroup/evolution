@@ -1,0 +1,47 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Breadcrumbs Partial
+//-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+
+
+
+@if $use-breadcrumbs == true{
+
+	// BREADCRUMBS
+	.evo-breadcrumbs					{
+
+		// LINKS
+		a:hover 							{text-decoration: $anchor-text-decoration-hover;}
+		
+		// SEPERATORS
+		a:before 							{
+											text-decoration: $anchor-text-decoration;
+											display: inline-block;
+											}
+		a:before,
+		a:hover:before 						{text-decoration: $anchor-text-decoration-hover;}
+
+
+		.unavailable a,
+		.current a,
+		.unavailable,
+		.current							{text-decoration: none;}
+										}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			
+
+		}
+		
+	}// endif
+
+}//endif

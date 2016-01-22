@@ -1,0 +1,921 @@
+{{!-- BOX - BEGINS --}}
+	{{> type-header size="3" text="Box"}}
+	<div class="row">
+		<div class="medium-4 columns">
+
+		{{!-- BASIC BOX - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
+
+			{{> box }}
+		{{!-- BASIC BOX - ENDS --}}
+
+		</div>
+		<div class="medium-4 columns">
+
+		{{!-- BOX WITH HEADER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="With Header"}}
+
+			{{> box-hdr }}
+		{{!-- BOX WITH HEADER - ENDS --}}
+
+		</div>
+		<div class="medium-4 columns">
+
+		{{!-- BOX WITH SHADOW - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="With Shadow"}}
+
+			{{> box-hdr-shadow }}
+		{{!-- BOX WITH SHADOW - ENDS --}}
+
+		</div>
+	</div>
+{{!-- BOX - ENDS --}}
+
+<hr>
+
+{{!-- BUTTONS - BEGINS --}}
+	{{> type-header size="3" text="Buttons"}}
+	<div class="row">
+		<div class="medium-6 columns">
+
+		{{!-- BASIC BUTTONS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
+
+			{{> type-paragraph text="<code>a</code> tag"}}
+			{{> button secondary="true" text="Secondary a"}}
+			{{> button text="Primary a"}}
+			
+			{{> type-paragraph text="<code>button</code> tag"}}
+			{{> button button-type="button" secondary="true" text="Secondary"}}
+			{{> button button-type="button" text="Primary"}}
+		{{!-- BASIC BUTTONS - ENDS --}}
+
+		{{!-- DISABLED - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Disabled"}}
+			
+			{{> type-paragraph text="<code>a</code> tag"}}
+			{{> button disabled="true" secondary="true" text="Secondary disabled a"}}
+			{{> button disabled="true" text="Primary disabled a"}}
+
+			{{> type-paragraph text="<code>button</code> tag"}}
+			{{> button button-type="button" disabled="true" secondary="true" text="Secondary disabled"}}
+			{{> button button-type="button" disabled="true" text="Primary disabled"}}
+		{{!-- DISABLED - ENDS --}}
+
+		{{!-- SIZES - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Sizes"}}
+
+			{{> type-paragraph text="<code>a</code> tag"}}
+			{{> button secondary="true" size="tiny" text="Tiny a"}}
+			{{> button secondary="true" size="small" text="Small a"}}
+			{{> button secondary="true" text="Default a"}}
+			{{> button secondary="true" size="large" text="Large a"}}
+			<br>
+			{{> button size="tiny" text="Tiny a"}}
+			{{> button size="small" text="Small a"}}
+			{{> button text="Default a"}}
+			{{> button size="large" text="Large a"}}
+
+			{{> type-paragraph text="<code>button</code> tag"}}
+			{{> button button-type="button" secondary="true" size="tiny" text="Tiny"}}
+			{{> button button-type="button" secondary="true" size="small" text="Small"}}
+			{{> button button-type="button" secondary="true" text="Default"}}
+			{{> button button-type="button" secondary="true" size="large" text="Large"}}
+			<br>
+			{{> button button-type="button" size="tiny" text="Tiny"}}
+			{{> button button-type="button" size="small" text="Small"}}
+			{{> button button-type="button" text="Default"}}
+			{{> button button-type="button" size="large" text="Large"}}
+		{{!-- SIZES - ENDS --}}
+
+		</div>
+		<div class="medium-6 columns">
+
+		{{!-- SHAPES - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Shapes"}}
+
+			{{> type-paragraph text="<code>a</code> tag"}}
+			{{> button expand="true" secondary="true" text="Secondary expanded a"}}
+			{{> button secondary="true" shape="round" text="Secondary round a"}}
+			{{> button secondary="true" shape="radius" text="Secondary radius a"}}
+
+			{{> button expand="true" text="Expanded a"}}
+			{{> button shape="round" text="Round a"}}
+			{{> button shape="radius" text="Radius a"}}
+
+			{{> type-paragraph text="<code>button</code> tag"}}
+			{{> button button-type="button" expand="true" secondary="true" text="Secondary expanded a"}}
+			{{> button button-type="button" secondary="true" shape="round" text="Secondary round a"}}
+			{{> button button-type="button" secondary="true" shape="radius" text="Secondary radius a"}}
+
+			{{> button button-type="button" expand="true" text="Expanded a"}}
+			{{> button button-type="button" shape="round" text="Round a"}}
+			{{> button button-type="button" shape="radius" text="Radius a"}}
+		{{!-- SHAPES - ENDS --}}
+			
+		{{!-- ICONS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icons"}}
+
+			{{> type-paragraph text="<code>a</code> tag"}}
+
+			<!-- Button icon on left and right -->
+			{{> button icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right2" secondary="true" text="Secondary a"}}
+
+			<!-- Button icon on left -->
+			{{> button icon-position="left" icon-position-left-class="evo-icon-plus-circle" text="Primary a"}}
+
+			<!-- Button icon on right -->
+			{{> button icon-position="right" icon-position-right-class="evo-icon-arrow-right2" text="Primary a"}}
+
+			<!-- Expanded button with icon on left and right -->
+			{{> button expand="true" icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right2" text="Primary a"}}
+
+			
+			{{> type-paragraph text="<code>button</code> tag"}}
+
+			<!-- Button icon on left and right -->
+			{{> button button-type="button" icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right2" secondary="true" text="Secondary"}}
+
+			<!-- Button icon on left -->
+			{{> button button-type="button" icon-position="left" icon-position-left-class="evo-icon-plus-circle" text="Primary"}}
+
+			<!-- Button icon on right -->
+			{{> button button-type="button" icon-position="right" icon-position-right-class="evo-icon-arrow-right2" text="Primary"}}
+
+			<!-- Expanded button with icon on left and right -->
+			{{> button button-type="button" expand="true" icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right2" text="Primary"}}
+		{{!-- ICONS - ENDS --}}
+
+		{{!-- FORM BUTTONS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Form Buttons"}}
+
+			{{> input-button button-value="Secondary" secondary="true" type="submit"}}
+			{{> input-button button-value="Primary" type="submit"}}
+		{{!-- FORM BUTTONS - ENDS --}}
+
+		{{!-- INTERACTIVE BUTTONS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Interactive Buttons"}}
+
+			{{> button button-type="button" interactive-data-value="evo-button-interactive-secondary-example" secondary="true" text="Save"}}
+			{{> button button-type="button" interactive-data-value="evo-button-interactive-primary-example" text="Save"}}
+		{{!-- INTERACTIVE BUTTONS - ENDS --}}
+
+		</div>
+	</div>
+{{!-- BUTTONS - ENDS --}}
+
+<hr>
+
+{{!-- DROPDOWNS - BEGINS --}}
+	{{> type-header size="3" text="Dropdowns"}}
+	<div class="row">
+		<div class="medium-6 columns">
+
+		{{!-- BASIC - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
+			{{> dropdowns }}
+		{{!-- BASIC - ENDS --}}
+
+			<br><br>
+
+		{{!-- POSITIONING - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Positioning"}}
+			{{> dropdowns-positioning }}
+		{{!-- POSITIONING - ENDS --}}
+		
+		</div>
+		<div class="medium-6 columns">
+
+		{{!-- HOVER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Hover"}}
+			{{> dropdowns-hover }}
+		{{!-- HOVER - ENDS --}}
+		
+		</div>
+	</div>
+{{!-- DROPDOWNS - ENDS --}}
+
+<hr>
+
+{{!-- EQUALIZER - BEGINS --}}
+	{{> type-header size="3" text="Equalizer"}}
+	<div class="row">
+		<div class="small-12 columns">
+
+		{{!-- BASIC - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
+			{{> equalizer }}
+		{{!-- BASIC - ENDS --}}
+		
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+
+		{{!-- RESPONSIVE - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Responsive"}}
+			{{> equalizer-responsive }}
+		{{!-- RESPONSIVE - ENDS --}}
+		
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+
+		{{!-- NESTED - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Nested"}}
+			{{> equalizer-nested }}
+		{{!-- NESTED - ENDS --}}
+		
+		</div>
+	</div>
+{{!-- EQUALIZER - ENDS --}}
+
+<hr>
+
+{{!-- FORMS - BEGINS --}}
+	{{> type-header size="3" text="Forms"}}
+	<div class="row">
+		<div class="small-12 columns">
+
+		{{!-- ERROR TEXT - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Error Text"}}
+			{{> error-text }}
+		{{!-- ERROR TEXT - ENDS --}}
+
+		{{!-- HELP TEXT - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Help Text"}}
+			{{> help-text }}
+			<br>
+			<br>
+		{{!-- HELP TEXT - ENDS --}}
+
+		{{!-- LABEL - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Label"}}
+			{{> label text="Form label"}}
+			<br>
+		{{!-- LABEL - ENDS --}}
+
+		{{!-- CHECKBOX - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Checkbox"}}
+			{{> input type="checkbox" id="checkbox1" checked="true"}}
+			{{> label text="Checkbox 1" for="checkbox1"}}
+			{{> input type="checkbox" id="checkbox2"}}
+			{{> label text="Checkbox 2" for="checkbox2"}}
+		{{!-- CHECKBOX - ENDS --}}
+
+		{{!-- RADIO BUTTONS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Radio Buttons"}}
+			{{> input type="radio" input-name="color" input-value="red" id="red"}}
+			{{> label text="Red" for="red"}}
+			{{> input type="radio" input-name="color" input-value="blue" id="blue"}}
+			{{> label text="Blue" for="blue"}}
+		{{!-- RADIO BUTTONS - ENDS --}}
+
+		{{!-- SELECT MENU - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Select Menu"}}
+			{{> select required="true"}}
+		{{!-- SELECT MENU - ENDS --}}
+
+		{{!-- TEXTAREA - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Textarea"}}
+			{{> textarea placeholder="Placeholder text" required="true"}}
+		{{!-- TEXTAREA - ENDS --}}
+
+		{{!-- TEXT INPUT - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Text Input"}}
+			{{> input type="text" placeholder="Placeholder text"}}
+		{{!-- TEXT INPUT - ENDS --}}
+		
+		</div>
+	</div>
+{{!-- FORMS - ENDS --}}
+
+<hr>
+
+{{!-- GRIDS - BEGINS --}}
+	{{> type-header size="3" text="Grids"}}
+	<div class="row evo-spacer-margin-bottom-x-large">
+		<div class="small-12 columns">
+			<div class="evo-grid-demo">
+
+			{{!-- BASIC - BEGINS --}}
+				{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
+				{{> grid-basic}}
+			{{!-- BASIC - ENDS --}}
+			
+			</div>
+		</div>
+	</div>
+	<div class="row evo-spacer-margin-bottom-x-large">
+		<div class="small-12 columns">
+			<div class="evo-grid-demo">
+			
+			{{!-- OFFSETS - BEGINS --}}
+				{{> type-header size="6" class="evo-hdr-rule" text="Offsets"}}
+				{{> grid-offset }}
+			{{!-- OFFSETS - ENDS --}}
+
+			</div>
+		</div>
+	</div>
+	<div class="row evo-spacer-margin-bottom-x-large">
+		<div class="small-12 columns">
+			<div class="evo-grid-demo">
+			
+			{{!-- CENTERING - BEGINS --}}
+				{{> type-header size="6" class="evo-hdr-rule" text="Centering"}}
+				{{> grid-centering }}
+			{{!-- CENTERING - ENDS --}}
+			
+			</div>
+		</div>
+	</div>
+	<div class="row evo-spacer-margin-bottom-x-large">
+		<div class="small-12 columns">
+			<div class="evo-grid-demo">
+			
+			{{!-- SOURCE ORDERING - BEGINS --}}
+				{{> type-header size="6" class="evo-hdr-rule" text="Source Ordering"}}
+				{{> grid-source-ordering }}
+			{{!-- SOURCE ORDERING - ENDS --}}
+
+			</div>
+		</div>
+	</div>
+	<div class="row evo-spacer-margin-bottom-x-large">
+		<div class="small-12 columns">
+			<div class="evo-grid-demo">
+			
+			{{!-- LAYOUTS - BEGINS --}}
+				{{> type-header size="6" class="evo-hdr-rule" text="Layouts"}}
+				{{> grid-1-col }}
+				{{> grid-2-col-50-50 }}
+				{{> grid-2-col-66-33 }}
+				{{> grid-2-col-33-66 }}
+				{{> grid-2-col-75-25 }}
+				{{> grid-2-col-25-75 }}
+				{{> grid-3-col-33-33-33 }}
+				{{> grid-3-col-25-50-25 }}
+				{{> grid-4-col-25-25-25-25 }}
+			{{!-- LAYOUTS - ENDS --}}
+			
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<div class="evo-grid-demo">
+				
+			{{!-- BLOCK GRID - BEGINS --}}
+				{{> type-header size="6" class="evo-hdr-rule" text="Block Grid"}}
+				{{> block-grid-basic }}
+			{{!-- BLOCK GRID - ENDS --}}
+			
+			</div>
+		</div>
+	</div>
+{{!-- GRIDS - ENDS --}}
+
+<hr>
+
+{{!-- HELPERS - BEGINS --}}
+	{{> type-header size="3" text="Helpers"}}
+	<div class="row">
+		<div class="medium-6 columns">
+
+		{{!-- FLOAT HELPERS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Floats"}}
+			{{> utility-classes-float }}
+		{{!-- FLOAT HELPERS - ENDS --}}
+
+		{{!-- RADIUS HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Radius"}}
+			{{> utility-classes-radius }}
+		{{!-- RADIUS HELPER - ENDS --}}
+
+		{{!-- ROUND HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Round"}}
+			{{> utility-classes-round }}
+		{{!-- ROUND HELPER - ENDS --}}
+
+		{{!-- SPOT COLORS HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Spot Colors"}}
+			{{> utility-classes-colors }}
+		{{!-- SPOT COLORS HELPER - ENDS --}}
+
+		{{!-- SPECIFIC USE COLORS HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Specific Use Colors"}}
+			{{> utility-classes-colors-specific-use }}
+			<br><br>
+		{{!-- SPECIFIC USE COLORS HELPER - ENDS --}}
+
+		{{!-- KEYLINES HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Keylines"}}
+			{{> utility-classes-keylines }}
+		{{!-- KEYLINES HELPER - ENDS --}}
+
+		{{!-- TEXT ALIGN HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Text Align"}}
+			{{> utility-classes-text-align }}
+		{{!-- TEXT ALIGN HELPER - ENDS --}}
+
+		{{!-- IMAGE ALIGN HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Image Align"}}
+			{{> utility-classes-image-align }}
+		{{!-- IMAGE ALIGN HELPER - ENDS --}}
+			
+		</div>
+		<div class="medium-6 columns">
+
+		{{!-- CENTER HORIZONTAL HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Center Horizontal"}}
+			{{> utility-classes-center-horizontal }}
+		{{!-- CENTER HORIZONTAL HELPER - ENDS --}}
+
+		{{!-- CENTER VERTICAL HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Center Vertical"}}
+			{{> utility-classes-center-vertical }}
+		{{!-- CENTER VERTICAL HELPER - ENDS --}}
+
+		{{!-- INPUT NUMERIC MASK HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Input Numeric Mask"}}
+			{{> form-helper-input-numeric-mask }}
+		{{!-- INPUT NUMERIC MASK HELPER - ENDS --}}
+
+		{{!-- SELECT ALL CHECKBOXES HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Select All Checkboxes Toggle"}}
+			{{> interactive-helper-checkboxes-select-all }}
+		{{!-- SELECT ALL CHECKBOXES HELPER - ENDS --}}
+
+		{{!-- TOGGLE ELEMENT HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Toggle Element"}}
+			{{> interactive-helper-toggle-element }}
+		{{!-- TOGGLE ELEMENT HELPER - ENDS --}}
+
+		{{!-- VISIBILITY - SHOW BY SCREEN SIZE HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Visibility - Show by Screen Size"}}
+			{{> visibility-classes-screen-size-show }}
+		{{!-- VISIBILITY - SHOW BY SCREEN SIZE HELPER - ENDS --}}
+
+		{{!-- VISIBILITY - HIDE BY SCREEN SIZE HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Visibility - Hide by Screen Size"}}
+			{{> visibility-classes-screen-size-hide }}
+		{{!-- VISIBILITY - HIDE BY SCREEN SIZE HELPER - ENDS --}}
+
+		{{!-- VISIBILITY - ORIENTATION DETECTION HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Visibility - Orientation Detection"}}
+			{{> visibility-classes-orientation-detection }}
+		{{!-- VISIBILITY - ORIENTATION DETECTION HELPER - ENDS --}}
+
+		{{!-- VISIBILITY - TOUCH DETECTION HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Visibility - Touch Detection"}}
+			{{> visibility-classes-touch-detection }}
+		{{!-- VISIBILITY - TOUCH DETECTION HELPER - ENDS --}}
+
+		{{!-- ACCESSIBILITY - SHOW FOR SCREEN READERS HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Accessibility - Show for Screen Readers Only"}}
+			{{> visibility-classes-screen-readers-show }}
+		{{!-- ACCESSIBILITY - SHOW FOR SCREEN READERS HELPER - ENDS --}}
+
+		{{!-- ACCESSIBILITY - HIDE FOR SCREEN READERS HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Accessibility - Hide for Screen Readers Only"}}
+			{{> visibility-classes-screen-readers-hide }}
+		{{!-- ACCESSIBILITY - HIDE FOR SCREEN READERS HELPER - ENDS --}}
+
+		{{!-- ACCESSIBILITY - RESPONSIVE VISIBILITY HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Accessibility - Responsive Visibility"}}
+			{{> visibility-classes-hidden }}
+			{{> visibility-classes-visible }}
+		{{!-- ACCESSIBILITY - RESPONSIVE VISIBILITY HELPER - ENDS --}}
+			
+		</div>
+	</div>
+{{!-- HELPERS - BEGINS --}}
+
+<hr>
+
+{{!-- ICONS - BEGINS --}}
+	{{> type-header size="3" text="Icons"}}
+	<div class="row">
+		<div class="medium-6 columns">
+
+		{{!-- BASIC ICON - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Basic Icon"}}
+			{{> icon}}
+			<br><br>
+		{{!-- BASIC ICON - ENDS --}}
+
+		{{!-- ICON POSITION - TOP - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icon Position - Top"}}
+			<label class="text-center">
+				{{> icon class="evo-icon-alarm-check evo-icon-position-top"}}
+				Label
+			</label>
+			<br><br>
+		{{!-- ICON POSITION - TOP - ENDS --}}
+
+		{{!-- ICON POSITION - BOTTOM - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icon Position - Bottom"}}
+			<label class="text-center">
+				{{> icon class="evo-icon-alarm-check evo-icon-position-bottom"}}
+				Label
+			</label>
+			<br><br>
+		{{!-- ICON POSITION - BOTTOM - ENDS --}}
+
+		{{!-- ICON POSITION - LEFT - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icon Position - Left"}}
+			<label>
+				{{> icon class="evo-icon-alarm-check evo-icon-position-left"}}
+				Label
+			</label>
+			<br><br>
+		{{!-- ICON POSITION - LEFT - ENDS --}}
+
+		{{!-- ICON POSITION - RIGHT - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icon Position - Right"}}
+			<label>
+				Label
+				{{> icon class="evo-icon-alarm-check evo-icon-position-right"}}
+			</label>
+			<br><br>
+		{{!-- ICON POSITION - RIGHT - ENDS --}}
+
+		{{!-- ICON SIZE - SMALL - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icon Size - Small"}}
+			{{> icon class="evo-icon-alarm-check evo-icon-size-small" }}
+			<br><br>
+		{{!-- ICON SIZE - SMALL - ENDS --}}
+
+		{{!-- ICON SIZE - MEDIUM - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icon Size - Medium"}}
+			{{> icon class="evo-icon-alarm-check evo-icon-size-medium" }}
+			<br><br>
+		{{!-- ICON SIZE - MEDIUM - ENDS --}}
+
+		{{!-- ICON SIZE - LARGE - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icon Size - Large"}}
+			{{> icon class="evo-icon-alarm-check evo-icon-size-large" }}
+			<br><br>
+		{{!-- ICON SIZE - LARGE - ENDS --}}
+
+		{{!-- ICON SIZE - X-LARGE - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icon Size - X-Large"}}
+			{{> icon class="evo-icon-alarm-check evo-icon-size-x-large" }}
+			<br><br>
+		{{!-- ICON SIZE - X-LARGE - ENDS --}}
+
+		</div>
+		<div class="medium-6 columns">
+
+		{{!-- ICON AS LINK - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icon as link"}}
+			{{> icon class="evo-icon-alarm-check" href="#/" tagname="a"}}
+			<br><br>
+		{{!-- ICON AS LINK - ENDS --}}
+
+		{{!-- ICON WITH LINK - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icon with link"}}
+			{{> icon-with-link class="evo-icon-alarm-check evo-icon-position-left" text="Icon with link"}}
+			<br><br>
+		{{!-- ICON WITH LINK - ENDS --}}
+
+		{{!-- ICON SHIELD - SMALL - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icon Shield - Small"}}
+			<div class="row">
+				<div class="small-12 columns">
+					{{> icon-with-link a-class="evo-icon-shield evo-icon-shield-size-small evo-icon-position-left" class="evo-icon-alarm-check"}}
+				</div>
+			</div>
+			<br>
+		{{!-- ICON SHIELD - SMALL - ENDS --}}
+
+		{{!-- ICON SHIELD - SMALL MEDIUM - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icon Shield - Small Medium"}}
+			<div class="row">
+				<div class="small-12 columns">
+					{{> icon-with-link a-class="evo-icon-shield evo-icon-shield-size-small-medium" class="evo-icon-alarm-check"}}
+				</div>
+			</div>
+			<br>
+		{{!-- ICON SHIELD - SMALL MEDIUM - ENDS --}}
+
+		{{!-- ICON SHIELD - MEDIUM - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icon Shield - Medium"}}
+			<div class="row">
+				<div class="small-12 columns">
+					{{> icon-with-link a-class="evo-icon-shield evo-icon-shield-size-medium" class="evo-icon-alarm-check"}}
+				</div>
+			</div>
+			<br>
+		{{!-- ICON SHIELD - MEDIUM - ENDS --}}
+
+		{{!-- ICON SHIELD - LARGE - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icon Shield - Large"}}
+			<div class="row">
+				<div class="small-12 columns">
+					{{> icon-with-link a-class="evo-icon-shield evo-icon-shield-size-large" class="evo-icon-alarm-check"}}
+				</div>
+			</div>
+			<br>
+		{{!-- ICON SHIELD - LARGE - ENDS --}}
+
+		{{!-- ICON SHIELD - X-LARGE - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Icon Shield - X-Large"}}
+			<div class="row">
+				<div class="small-12 columns">
+					{{> icon-with-link a-class="evo-icon-shield evo-icon-shield-size-x-large" class="evo-icon-alarm-check"}}
+				</div>
+			</div>
+			<br>
+		{{!-- ICON SHIELD - X-LARGE - ENDS --}}
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+
+		{{!-- PHOTO ICONS - BEGINS --}}
+			{{> type-header size="5" text="Photo Icons"}}
+
+			{{> type-header size="6" class="evo-hdr-rule" text="Career"}}
+			<div class="clearfix evo-spacer-margin-bottom-x-large">
+			{{#repeat count=14 start=1}}
+				<img src="{{ assets }}/images/core/icons/photo/career/photo_icon_career_{{@index}}.png" width="80" height="80" class="left" alt="" title="" />
+			{{/repeat}}
+			</div>
+
+			{{> type-header size="6" class="evo-hdr-rule" text="Health"}}
+			<div class="clearfix evo-spacer-margin-bottom-x-large">
+			{{#repeat count=18 start=1}}
+				<img src="{{ assets }}/images/core/icons/photo/health/photo_icon_health_{{@index}}.png" width="80" height="80" class="left" alt="" title="" />
+			{{/repeat}}
+			</div>
+
+			{{> type-header size="6" class="evo-hdr-rule" text="Wealth"}}
+			<div class="clearfix">
+			{{#repeat count=16 start=1}}
+				<img src="{{ assets }}/images/core/icons/photo/wealth/photo_icon_wealth_{{@index}}.png" width="80" height="80" class="left" alt="" title="" />
+			{{/repeat}}
+			</div>
+		{{!-- PHOTO ICONS - BEGINS --}}
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+
+		{{!-- VECTOR ICONS - BEGINS --}}
+			{{> type-header size="5" text="Vector Icons"}}
+
+			{{> type-header size="6" class="evo-hdr-rule" text="Career"}}
+			<div class="clearfix evo-spacer-margin-bottom-x-large">
+			{{#repeat count=25 start=1}}
+				<img src="{{ assets }}/images/core/icons/vector/career/vector_icon_career_{{@index}}.png" width="60" height="60" class="left" alt="" title="" />
+			{{/repeat}}
+			</div>
+
+			{{> type-header size="6" class="evo-hdr-rule" text="Health"}}
+			<div class="clearfix evo-spacer-margin-bottom-x-large">
+			{{#repeat count=16 start=1}}
+				<img src="{{ assets }}/images/core/icons/vector/health/vector_icon_health_{{@index}}.png" width="60" height="60" class="left" alt="" title="" />
+			{{/repeat}}
+			</div>
+
+			{{> type-header size="6" class="evo-hdr-rule" text="Wealth"}}
+			<div class="clearfix">
+			{{#repeat count=19 start=1}}
+				<img src="{{ assets }}/images/core/icons/vector/wealth/vector_icon_wealth_{{@index}}.png" width="60" height="60" class="left" alt="" title="" />
+			{{/repeat}}
+			</div>
+		{{!-- VECTOR ICONS - BEGINS --}}
+
+		</div>
+	</div>
+{{!-- ICONS - ENDS --}}
+
+<hr>
+
+{{!-- IMAGES - ENDS --}}
+	{{> type-header size="3" text="Image Placeholders"}}
+	<div class="row">
+		<div class="medium-12 columns">
+			{{> image src="placeholders/placeholder_rectangle_high.png" alt="Placeholder"}}
+			{{> image src="placeholders/placeholder_rectangle_high_thick.png" alt="Placeholder"}}
+			{{> image src="placeholders/placeholder_rectangle_high_thin.png" alt="Placeholder"}}
+			{{> image src="placeholders/placeholder_rectangle_wide.png" alt="Placeholder"}}
+			{{> image src="placeholders/placeholder_rectangle_wide_thick.png" alt="Placeholder"}}
+			{{> image src="placeholders/placeholder_rectangle_wide_thin.png" alt="Placeholder"}}
+			{{> image src="placeholders/placeholder_square.png" alt="Placeholder"}}
+		</div>
+	</div>
+{{!-- IMAGES - ENDS --}}
+
+<hr>
+
+{{!-- LISTS - BEGINS --}}
+	{{> type-header size="3" text="Lists"}}
+	<div class="row">
+		<div class="medium-6 columns">
+
+		{{!-- HORIZONTAL LISTS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Horizontal Lists"}}
+			{{> list-horizontal-default }}
+		{{!-- HORIZONTAL LISTS - ENDS --}}
+
+		{{!-- HORIZONTAL LISTS WITH LINKS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Horizontal Lists With Links"}}
+			{{> list-horizontal-default-links }}
+		{{!-- HORIZONTAL LISTS WITH LINKS - ENDS --}}
+
+		{{!-- HORIZONTAL LISTS WITH PIPES - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Horizontal Lists With Pipes"}}
+			{{> list-horizontal-default-pipes }}
+		{{!-- HORIZONTAL LISTS WITH PIPES - ENDS --}}
+
+		{{!-- HORIZONTAL LISTS WITH LINKS AND PIPES - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Horizontal Lists With Links and Pipes"}}
+			{{> list-horizontal-default-links-pipes }}
+		{{!-- HORIZONTAL LISTS WITH LINKS AND PIPES - ENDS --}}
+
+		{{!-- HORIZONTAL DEFINITION LIST - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Horizontal Definition List"}}
+			{{> list-horizontal-definition }}
+		{{!-- HORIZONTAL DEFINITION LIST - ENDS --}}
+
+		{{!-- HORIZONTAL DEFINITION LIST WITH LINKS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Horizontal Definition List With Links"}}
+			{{> list-horizontal-definition-links }}
+		{{!-- HORIZONTAL DEFINITION LIST WITH LINKS - ENDS --}}
+
+		{{!-- HORIZONTAL DEFINITION LIST WITH PIPES - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Horizontal Definition List With Pipes"}}
+			{{> list-horizontal-definition-pipes }}
+		{{!-- HORIZONTAL DEFINITION LIST WITH PIPES - ENDS --}}
+
+		</div>
+		<div class="medium-6 columns">
+
+		{{!-- DATA LIST - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Data List"}}
+			{{> list-data-default }}
+		{{!-- DATA LIST - ENDS --}}
+
+		{{!-- DATA LIST - STACKED - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Data List - Stacked"}}
+			{{> list-data-default-stacked }}
+		{{!-- DATA LIST - STACKED - ENDS --}}
+
+		{{!-- DATA DEFINITION LIST - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Data Definition List"}}
+			{{> list-data-definition }}
+		{{!--  DATA DEFINITION LIST - ENDS --}}
+
+		{{!-- DATA DEFINITION LIST - STACKED - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Data Definition List - Stacked"}}
+			{{> list-data-definition-stacked }}
+		{{!--  DATA DEFINITION LIST - STACKED - ENDS --}}
+
+		</div>
+	</div>
+{{!-- LISTS - BEGINS --}}
+
+<hr>
+
+{{!-- TYPE - BEGINS --}}
+	{{> type-header size="3" text="Type"}}
+	<div class="row">
+		<div class="medium-6 columns">
+
+		{{!-- PARAGRAPHS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Paragraphs"}}
+			{{> type-paragraph text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."}}
+
+			{{> type-header size="6" class="subheader" text="Paragraph Overflow"}}
+			{{> type-paragraph class="evo-text-overflow" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."}}
+
+			{{> type-header size="6" class="subheader" text="Paragraph Hyphen"}}
+			{{> type-paragraph class="evo-hyphen-demo" text="Lorem ipsum dolor sit amet, cons­ectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer­citation ullamco laboris nisi ut aliquip ex ea com­modo consequat. Duis aute irure <strong>repre­henderit</strong> in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui of­ficia deserunt mollit anim id est lab­orum."}}
+
+			{{> type-header size="6" class="subheader" text="Paragraph Footnote"}}
+			{{> type-paragraph class="evo-footnote" text="<small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</small>"}}
+		{{!-- PARAGRAPHS - ENDS --}}
+
+		{{!-- HEADERS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Headers"}}
+			{{> type-header size="1" text="h1 header"}}
+			{{> type-header size="2" text="h2 header"}}
+			{{> type-header size="3" text="h3 header"}}
+			{{> type-header size="4" text="h4 header"}}
+			{{> type-header size="5" text="h5 header"}}
+			{{> type-header size="6" text="h6 header"}}
+			<br>
+		{{!-- HEADERS - ENDS --}}
+
+		{{!-- SUBHEADERS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Subheaders"}}
+			{{> type-header size="1" class="subheader" text="h1 header"}}
+			{{> type-header size="2" class="subheader" text="h2 header"}}
+			{{> type-header size="3" class="subheader" text="h3 header"}}
+			{{> type-header size="4" class="subheader" text="h4 header"}}
+			{{> type-header size="5" class="subheader" text="h5 header"}}
+			{{> type-header size="6" class="subheader" text="h6 header"}}
+			<br>
+		{{!-- SUBHEADERS - ENDS --}}
+
+		{{!-- HEADER WITH BACKGROUND COLOR - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Header with Background Color"}}
+
+			{{> type-header size="1" class="evo-h1-hdr-background" text="h1 header"}}
+			<p>{{lorem count=2}}</p>
+
+			{{> type-header size="2" class="evo-h2-hdr-background" text="h2 header"}}
+			<p>{{lorem count=2}}</p>
+
+			{{> type-header size="3" class="evo-h3-hdr-background" text="h3 header"}}
+			<p>{{lorem count=2}}</p>
+		{{!-- HEADER WITH BACKGROUND COLOR - ENDS --}}
+
+		{{!-- HEADER WITH RULE - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Header with Rule"}}
+
+			{{> type-header size="1" class="evo-hdr-rule" text="h1 header"}}
+			<p>{{lorem count=2}}</p>
+
+			{{> type-header size="2" class="evo-hdr-rule" text="h2 header"}}
+			<p>{{lorem count=2}}</p>
+
+			{{> type-header size="3" class="evo-hdr-rule" text="h3 header"}}
+			<p>{{lorem count=2}}</p>
+
+			{{> type-header size="4" class="evo-hdr-rule" text="h4 header"}}
+			<p>{{lorem count=2}}</p>
+
+			{{> type-header size="5" class="evo-hdr-rule" text="h5 header"}}
+			<p>{{lorem count=2}}</p>
+
+			{{> type-header size="6" class="evo-hdr-rule" text="h6 header"}}
+			<p>{{lorem count=2}}</p>
+		{{!-- HEADER WITH RULE - ENDS --}}
+
+		{{!-- HEADER WITH DOUBLE RULE - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Header with Double Rule"}}
+
+			{{> type-header size="1" class="evo-hdr-dbl-rule" text="h1 header"}}
+			<p>{{lorem count=2}}</p>
+
+			{{> type-header size="2" class="evo-hdr-dbl-rule" text="h2 header"}}
+			<p>{{lorem count=2}}</p>
+
+			{{> type-header size="3" class="evo-hdr-dbl-rule" text="h3 header"}}
+			<p>{{lorem count=2}}</p>
+		{{!-- HEADER WITH DOUBLE RULE - ENDS --}}
+
+		</div>
+		<div class="medium-6 columns">
+
+		{{!-- ORDERED LISTS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Ordered Lists"}}
+			{{> type-ordered-list }}
+		{{!-- ORDERED LISTS - ENDS --}}
+
+		{{!-- ORDERED LISTS STYLE TYPES - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Ordered List Style Types"}}
+			{{> type-ordered-list-styles }}
+		{{!-- ORDERED LISTS STYLE TYPES - ENDS --}}
+
+		{{!-- UNORDERED LISTS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Unordered Lists"}}
+			{{> type-unordered-list }}
+		{{!-- UNORDERED LISTS - ENDS --}}
+
+		{{!-- DEFINITION LISTS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Definition Lists"}}
+			{{> type-definition-list }}
+		{{!-- DEFINITION LISTS - ENDS --}}
+			
+		{{!-- BLOCKQUOTES - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Blockquotes"}}
+			{{> type-blockquote }}
+		{{!-- BLOCKQUOTES - ENDS --}}
+
+		{{!-- HORIZONTAL RULES - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Horizontal Rules"}}
+			{{> type-horizontal-rule }}
+		{{!-- HORIZONTAL RULES - ENDS --}}
+
+		{{!-- WORD BREAK - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Word Break"}}
+			{{> type-paragraph class="evo-word-break-container-dimensions-demo evo-word-break" text="This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword." }}
+			<br>
+		{{!-- WORD BREAK - ENDS --}}
+
+		{{!-- OTHER MARKUP CODE - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Other Markup Code"}}
+			{{> type-other-markup }}
+		{{!-- OTHER MARKUP CODE - ENDS --}}
+
+		</div>
+	</div>
+{{!-- TYPE - ENDS --}}

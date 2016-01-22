@@ -1,0 +1,42 @@
+//------------------------------------------------------------------------------------------
+// Mercer Evolution - Core 3.0.1 - Sublime Snippets Key Commands - Mac OS X
+// DATE - September 10, 2015
+//------------------------------------------------------------------------------------------
+
+[
+	//--------------------------------------------------------------------------------------
+	// BASE
+	//--------------------------------------------------------------------------------------
+
+	// GRIDS
+	{"keys": ["ctrl+shift+r"],	"command": "insert_snippet", "args":	{"name": "Packages/User/base/grids/grid-row.sublime-snippet"}},
+	{"keys": ["ctrl+shift+1"],	"command": "insert_snippet", "args":	{"name": "Packages/User/base/grids/grid-1-col.sublime-snippet"}},
+	{"keys": ["ctrl+shift+2"],	"command": "insert_snippet", "args":	{"name": "Packages/User/base/grids/grid-2-col.sublime-snippet"}},
+	{"keys": ["ctrl+shift+3"],	"command": "insert_snippet", "args":	{"name": "Packages/User/base/grids/grid-3-col.sublime-snippet"}},
+	{"keys": ["ctrl+shift+4"],	"command": "insert_snippet", "args":	{"name": "Packages/User/base/grids/grid-4-col.sublime-snippet"}},
+	{"keys": ["ctrl+shift+c"],	"command": "insert_snippet", "args":	{"name": "Packages/User/base/grids/grid-custom-col.sublime-snippet"}},
+
+	// BOXES	
+	{"keys": ["ctrl+b"], 		"command": "insert_snippet", "args":	{"name": "Packages/User/base/boxes/box.sublime-snippet"}},
+	{"keys": ["ctrl+a"],		"command": "insert_snippet", "args":	{"name": "Packages/User/base/boxes/box-hdr.sublime-snippet"}},
+
+	// BUTTONS
+	{"keys": ["ctrl+shift+b"],	"command": "insert_snippet", "args":	{"name": "Packages/User/base/buttons/button.sublime-snippet"}},
+	{"keys": ["ctrl+shift+a"],	"command": "insert_snippet", "args":	{"name": "Packages/User/base/buttons/button-a.sublime-snippet"}},
+
+	// FORMS
+	{"keys": ["ctrl+f"],		"command": "insert_snippet", "args":	{"name": "Packages/User/ui_form.sublime-snippet"}},
+	{"keys": ["ctrl+shift+i"],	"command": "insert_snippet", "args":	{"name": "Packages/User/ui_form_input_row.sublime-snippet"}},
+	{"keys": ["ctrl+shift+s"],	"command": "insert_snippet", "args":	{"name": "Packages/User/ui_form_select_row.sublime-snippet"}},
+	{"keys": ["ctrl+shift+f"],	"command": "insert_snippet", "args":	{"name": "Packages/User/ui_form_radio_row.sublime-snippet"}},
+	{"keys": ["ctrl+shift+x"],	"command": "insert_snippet", "args":	{"name": "Packages/User/ui_form_checkbox_row.sublime-snippet"}},
+
+	// TABLES
+	{"keys": ["ctrl+t"],		"command": "insert_snippet", "args":	{"name": "Packages/User/ui_table.sublime-snippet"}},
+
+	// TABS
+	{"keys": ["ctrl+shift+t"],	"command": "insert_snippet", "args":	{"name": "Packages/User/ui_tabs.sublime-snippet"}},
+	
+	// TOOLTIPS
+	{"keys": ["ctrl+shift+p"],	"command": "insert_snippet", "args":	{"name": "Packages/User/ui_tooltip.sublime-snippet"}}
+]

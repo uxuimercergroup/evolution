@@ -1,0 +1,65 @@
+<!-- FORM STACKED - BEGINS -->
+<form class="" id="" name="" method="" action="" title="" data-abide>
+	<fieldset>
+		<div class="row">
+			<div class="small-12 columns">
+				<label>
+					Input Label{{> icon class="evo-icon-custom-asterisk-small evo-form-required-icon"}}
+					{{> input type="text" placeholder="Placeholder text" required="true"}}
+					{{> error-text}}
+				</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="small-12 columns">
+				<label>
+					Select Box{{> icon class="evo-icon-custom-asterisk-small evo-form-required-icon"}}
+					{{> select required="true"}}
+				</label>
+				{{> error-text}}
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="small-12 columns">
+				{{> label text="Choose Your Favorite"}}
+
+				{{> input type="radio" input-name="color" input-value="red" id="red"}}
+				{{> label text="Red" for="red"}}
+
+				{{> input type="radio" input-name="color" input-value="blue" id="blue"}}
+				{{> label text="Blue" for="blue"}}
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="small-12 columns">
+				{{> label text="Check These Out"}}
+
+				{{> input type="checkbox" id="checkbox1" checked="true"}}
+				{{> label text="Checkbox 1" for="checkbox1"}}
+
+				{{> input type="checkbox" id="checkbox2"}}
+				{{> label text="Checkbox 2" for="checkbox2"}}
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="small-12 columns">
+				<label>
+					Textarea Label{{> icon class="evo-icon-custom-asterisk-small evo-form-required-icon"}}
+					{{> textarea placeholder="Placeholder text" required="true"}}
+					{{> error-text}}
+				</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="small-12 columns">
+				{{> button button-type="button" button-title="Click for Validation" text="Click for Validation"}}
+			</div>
+		</div>
+	</fieldset>
+</form>
+<!-- FORM STACKED - ENDS -->

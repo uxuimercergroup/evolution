@@ -1,0 +1,31 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Progress Bar Partial
+//-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+
+
+
+@if $use-progress-bar == true{
+
+	// PROGRESS BAR
+	.evo-progress	{
+
+					}
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			
+
+		}
+		
+	}// endif
+
+}//endif

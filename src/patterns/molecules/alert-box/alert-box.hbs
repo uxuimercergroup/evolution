@@ -1,0 +1,13 @@
+{{!--
+text: your content
+shape: radius, round
+type: alert, warning, success, info, custom
+custom-icon-class: icon class of custom icomoon icon when custom type is used
+custom-class: your custom class
+--}}
+
+<!-- {{uppercase type}} MESSAGE BOX - BEGINS -->
+<div data-alert class="alert-box{{#if shape}} {{shape}}{{else}} radius{{/if}}{{#is type 'warning'}} warning{{/is}}{{#is type 'success'}} success{{/is}}{{#is type 'alert'}} alert{{/is}}{{#is type 'info'}} info{{/is}} evo-alert-box{{#if custom-class}} {{ custom-class }}{{/if}}" tabindex="0" aria-live="assertive" role="alertdialog">
+	<i class="{{#is type 'warning'}}evo-icon-warning2 {{/is}}{{#is type 'success'}}evo-icon-checkmark-circle {{/is}}{{#is type 'alert'}}evo-icon-notification2 {{/is}}{{#is type 'info'}}evo-icon-info2 {{/is}}{{#is type 'custom'}}{{ custom-icon-class }} {{/is}}evo-icon-position-left"></i>{{#if text}}{{{text}}}{{else}}Message text would go here&hellip;{{/if}}<button href="#" tabindex="0" class="close" aria-label="Close {{capitalizeEach type}}"><i class="evo-icon-cancel-circle"></i></button>
+</div>
+<!-- {{uppercase type}} MESSAGE BOX - ENDS -->
