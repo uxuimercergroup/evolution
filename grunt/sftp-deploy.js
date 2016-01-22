@@ -7,7 +7,7 @@ module.exports = {
       authKey: 'key1'
     },
     src: 'dist/',
-    // dest: '/www/content/uxui/docs/path/to/project/dir',
+    dest: '/www/content/uxui/evolution-dev',
     serverSep: '/',
     concurrency: 3,
     progress: true
