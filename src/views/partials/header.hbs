@@ -1,7 +1,7 @@
 <header class="evo-header" role="banner">
 	
 	<!-- TOP BAR CONTAINER - DEFAULT - BEGINS -->
-	<div class="contain-to-grid show-for-large-up">
+	<div class="show-for-large-up">
 
 		<!-- TOP BAR - BEGINS -->
 		<nav class="top-bar evo-top-bar" data-topbar role="navigation">
@@ -9,7 +9,7 @@
 			<!-- TOP BAR TITLE AREA - BEGINS -->
 			<ul class="title-area">
 				<li class="name">
-					<h1><a href="index.html">{{ global.title }} <span class="evo-top-bar-sub-name"></span></a></h1>
+					<h1><a href="index.html"><span class="evo-top-bar-sub-name">Mercer</span> {{ global.title }}</a></h1>
 					<!-- <a href="#/">{{> image src="core/corp-logos/mercer/mercer_logo_rgb_reverse.png" alt="Mercer - Make Tomorrow, Today" width="160"}}</a> -->
 				</li>
 			</ul>
@@ -21,123 +21,147 @@
 				<!-- TOP BAR RIGHT NAV SECTION - BEGINS -->
 				<ul class="right">
 					<li class="has-dropdown">
-						<a class="evo-icon-user"></a>
+						<a>Learn</a>
 						<ul class="dropdown">
 							<li>
-								<a href="">View Profile</a>
-							</li>
-							<li class="divider"></li>
-							<li class="active">
-								<a href="">Change Language</a>
+								<a href="">What is Evolution?</a>
 							</li>
 							<li class="divider"></li>
 							<li>
-								<a href="">User Administration</a>
+								<a href="">Services</a>
 							</li>
 							<li class="divider"></li>
 							<li>
-								<a href="">Log Out</a>
+								<a href="">What's New</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="">Case Studies</a>
 							</li>
 						</ul>
+					</li>
+					<li class="has-dropdown">
+						<a>Design</a>
+						<ul class="dropdown">
+							<li>
+								<label>{{uppercase "UX Design"}}</label>
+							</li>
+							<li>
+								<a href="">Design Principles</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="">Design Tenets</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="">Download Templates</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="">Pattern Library</a>
+							</li>
+							<li>
+								<label>{{uppercase "Visual Design"}}</label>
+							</li>
+							<li>
+								<a href="">Color Palette</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="">Icons</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="">Corporate Logos</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="">People Images</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="">Typography</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-dropdown">
+						<a>Develop</a>
+						<ul class="dropdown">
+							<li>
+								<label>{{uppercase "Downloads"}}</label>
+							</li>
+							<li>
+								<a href="">Download Evolution v{{ package.evolution.version }}</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="">Previous Versions</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="">Upgrading Evolution</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="">Change Log</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="">Boilerplates</a>
+							</li>
+							<li>
+								<label>{{uppercase "Pattern Library"}}</label>
+							</li>
+							<li>
+								<a href="/atoms.html">Atoms</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="/molecules.html">Molecules</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="/organisms.html">Organisms</a>
+							</li>
+							<li>
+								<label>{{uppercase "UI Standards"}}</label>
+							</li>
+							<li>
+								<a href="">Front End Code Standards</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="">Organism Development</a>
+							</li>
+						</ul>
+					</li>
+					</li>
+					<li class="has-dropdown">
+						<a>Help/Support</a>
+						<ul class="dropdown">
+							<li>
+								<a href="">Browser Support</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="">Media Queries</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="">FAQs</a>
+							</li>
+						</ul>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a class="evo-header-cta-whats-new" href="">What's New{{> icon class="evo-icon-arrow-right2 evo-icon-position-right"}}</a>
 					</li>
 				</ul>
 				<!-- TOP BAR RIGHT NAV SECTION - ENDS -->
 
 				<!-- TOP BAR LEFT NAV SECTION - BEGINS -->
 				<ul class="left">
-					<li class="has-dropdown">
-						<a>Nav Link 1</a>
-						<ul class="dropdown">
-							<li>
-								<a href="">Item 1</a>
-							</li>
-							<li class="divider"></li>
-							<li class="has-dropdown">
-								<a>Item 2</a>
-								<ul class="dropdown">
-									<li>
-										<a href="">Sub-item 1</a>
-									</li>
-									<li class="divider"></li>
-									<li>
-										<a href="">Sub-item 2</a>
-									</li>
-									<li class="divider"></li>
-									<li>
-										<a href="">Sub-item 3</a>
-									</li>
-									<li class="divider"></li>
-									<li>
-										<a href="">Sub-item 4</a>
-									</li>
-								</ul>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a href="">Item 3</a>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a href="">Item 4</a>
-							</li>
-						</ul>
-					</li>
-					<li class="active">
-						<a href="">Nav Link 2</a>
-					</li>
-					<li>
-						<a href="">Nav Link 3</a>
-					</li>
-
-					<!-- TOP BAR - MEGA MENU - BEGINS -->
-					<li class="has-dropdown" data-evo-top-bar-mega-menu>
-						<a>Mega Menu</a>
-						<ul class="dropdown" data-evo-top-bar-mega-menu-ctn>
-							<li>
-								<div class="evo-contain-to-grid" data-evo-top-bar-mega-menu-content-ctn>
-									<div class="row">
-										<div class="large-3 columns">
-											<h6 class="evo-hdr-rule">H6 Header</h6>
-											<ul class="no-bullet">
-												<li><a href="#/">Section One</a></li>
-												<li><a href="#/">Section Two</a></li>
-												<li><a href="#/">Section Three</a></li>
-												<li><a href="#/">Section Four</a></li>	
-											</ul>
-										</div>
-										<div class="large-3 columns">
-											<h6 class="evo-hdr-rule">H6 Header</h6>
-											<ul class="no-bullet">
-												<li><a href="#/">Section One</a></li>
-												<li><a href="#/">Section Two</a></li>
-												<li><a href="#/">Section Three</a></li>
-												<li><a href="#/">Section Four</a></li>	
-											</ul>
-										</div>
-										<div class="large-3 columns">
-											<h6 class="evo-hdr-rule">H6 Header</h6>
-											<ul class="no-bullet">
-												<li><a href="#/">Section One</a></li>
-												<li><a href="#/">Section Two</a></li>
-												<li><a href="#/">Section Three</a></li>
-												<li><a href="#/">Section Four</a></li>	
-											</ul>
-										</div>
-										<div class="large-3 columns">
-											<h6 class="evo-hdr-rule">H6 Header</h6>
-											<ul class="no-bullet">
-												<li><a href="#/">Section One</a></li>
-												<li><a href="#/">Section Two</a></li>
-												<li><a href="#/">Section Three</a></li>
-												<li><a href="#/">Section Four</a></li>	
-											</ul>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-					<!-- TOP BAR - MEGA MENU - ENDS -->
 					
 				</ul>
 				<!-- TOP BAR LEFT NAV SECTION - ENDS -->
@@ -165,12 +189,6 @@
 			</h1>
 			<!-- <a class="title" href="#/">{{> image src="core/corp-logos/mercer/mercer_logo_rgb_reverse.png" alt="Mercer - Make Tomorrow, Today" width="160"}}</a> -->
 		</section>
-
-		<section class="right-small">
-			<a class="right-off-canvas-toggle menu-icon">
-				<i class="evo-icon-user evo-icon-size-medium" title="User Account"></i>
-			</a>
-		</section>
 	</nav>
 	<!-- OFF-CANVAS - TAB BAR - ENDS -->
 
@@ -178,75 +196,138 @@
 	<aside class="left-off-canvas-menu">
 		<ul class="off-canvas-list">
 			<li>
-				<label>Label</label>
+				<label>Navigation</label>
+			</li>
+			<li>
+				<a class="evo-header-cta-whats-new" href="">What's New{{> icon class="evo-icon-arrow-right2 evo-icon-position-right"}}</a>
 			</li>
 			<li class="has-submenu">
-				<a href="">Item 1 w/ menu</a>
+				<a href="">Learn</a>
 				<ul class="left-submenu">
 					<li class="back">
 						<a href="">Back</a>
 					</li>
 					<li>
-						<label>Level 1</label>
+						<a href="">What is Evolution?</a>
 					</li>
 					<li>
-						<a href="">Sub-item 1</a>
-					</li>
-					<li class="has-submenu">
-						<a href="">Sub-item 2 w/ menu</a>
-						<ul class="left-submenu">
-							<li class="back">
-								<a href="">Back</a>
-							</li>
-							<li>
-								<label>Level 2</label>
-							</li>
-							<li>
-								<a href="">Sub-sub-item 1</a>
-							</li>
-						</ul>
+						<a href="">Services</a>
 					</li>
 					<li>
-						<a href="">Sub-item 3</a>
+						<a href="">What's New</a>
+					</li>
+					<li>
+						<a href="">Case Studies</a>
 					</li>
 				</ul>
 			</li>
-			<li>
-				<a href="">Item 2</a>
+			<li class="has-submenu">
+				<a href="">Design</a>
+				<ul class="left-submenu">
+					<li class="back">
+						<a href="">Back</a>
+					</li>
+					<li>
+						<label>{{uppercase "UX Design"}}</label>
+					</li>
+					<li>
+						<a href="">Design Principles</a>
+					</li>
+					<li>
+						<a href="">Design Tenets</a>
+					</li>
+					<li>
+						<a href="">Download Templates</a>
+					</li>
+					<li>
+						<a href="">Pattern Library</a>
+					</li>
+					<li>
+						<label>{{uppercase "Visual Design"}}</label>
+					</li>
+					<li>
+						<a href="">Color Palette</a>
+					</li>
+					<li>
+						<a href="">Icons</a>
+					</li>
+					<li>
+						<a href="">Corporate Logos</a>
+					</li>
+					<li>
+						<a href="">People Images</a>
+					</li>
+					<li>
+						<a href="">Typography</a>
+					</li>
+				</ul>
 			</li>
-			<li>
-				<a href="">Item 3</a>
+			<li class="has-submenu">
+				<a href="">Develop</a>
+				<ul class="left-submenu">
+					<li class="back">
+						<a href="">Back</a>
+					</li>
+					<li>
+						<label>{{uppercase "Downloads"}}</label>
+					</li>
+					<li>
+						<a href="">Download Evolution v{{ package.evolution.version }}</a>
+					</li>
+					<li>
+						<a href="">Previous Versions</a>
+					</li>
+					<li>
+						<a href="">Upgrading Evolution</a>
+					</li>
+					<li>
+						<a href="">Change Log</a>
+					</li>
+					<li>
+						<a href="">Boilerplates</a>
+					</li>
+					<li>
+						<label>{{uppercase "Pattern Library"}}</label>
+					</li>
+					<li>
+						<a href="/atoms.html">Atoms</a>
+					</li>
+					<li>
+						<a href="/molecules.html">Molecules</a>
+					</li>
+					<li>
+						<a href="/organisms.html">Organisms</a>
+					</li>
+					<li>
+						<label>{{uppercase "UI Standards"}}</label>
+					</li>
+					<li>
+						<a href="">Front End Code Standards</a>
+					</li>
+					<li>
+						<a href="">Organism Development</a>
+					</li>
+				</ul>
 			</li>
-			<li>
-				<a href="">Item 4</a>
-			</li>
-			<li>
-				<a href="">Item 5</a>
+			<li class="has-submenu">
+				<a href="">Help/Support</a>
+				<ul class="left-submenu">
+					<li class="back">
+						<a href="">Back</a>
+					</li>
+					<li>
+						<a href="">Browser Support</a>
+					</li>
+					<li>
+						<a href="">Media Queries</a>
+					</li>
+					<li>
+						<a href="">FAQs</a>
+					</li>
+				</ul>
 			</li>
 		</ul>
 	</aside>
 	<!-- OFF-CANVAS - LEFT MENU - ENDS -->
-
-	<!-- OFF-CANVAS - RIGHT MENU - BEGINS -->
-	<aside class="right-off-canvas-menu">
-		<ul class="off-canvas-list">
-			<li>
-				<label>User Account</label>
-			</li>
-			<li>
-				<a href="">View Profile</a>
-			</li>
-			<li>
-				<a href="">Change Language</a>
-			</li>
-			<li>
-				<a href="">User Administration</a>
-			</li>
-			<li>
-				<a href="">Log Out</a>
-			</li>
-		</ul>
-	</aside>
-	<!-- OFF-CANVAS - RIGHT MENU - ENDS -->
 
 </header>
