@@ -5,6 +5,10 @@ module.exports = {
     livereload: true,
     spawn: false
   },
+  layouts: {
+    files: ['src/views/layouts/**/*'],
+    tasks: ['assemble', 'notify:assemble']
+  },
   partials: {
     files: ['src/views/partials/**/*', 'src/patterns/**/*'],
     tasks: ['assemble', 'notify:assemble']
