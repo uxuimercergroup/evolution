@@ -136,14 +136,18 @@ img										{
 // CONTAIN TO GRID
 // Apply class to element to contain its width to the grid row max-width ($row-width, a foundation variable) and center it on the page.
 .evo-contain-to-grid					{
-										max-width: $row-width;
+										@include clearfix;
+										max-width: $row-width !important;
 										margin: 0 auto;
 										}
 
 // FULL WIDTH
 // Apply class to element to set its width to 100% full width and take up full width of whatever it's contained in.
-.evo-full-width							{width: 100%;}
-
+.evo-full-width							{
+										@include clearfix;
+										max-width: none !important;
+										width: 100%;
+										}
 
 
 // HORIZONTAL CENTERING FOR BLOCK ELEMENTS
