@@ -1,0 +1,50 @@
+---
+title: "Reference"
+---
+
+<div class="small-12 columns evo-spacer-padding-top-x-large">
+
+{{# markdown }}
+# {{ title }}
+This is where general content would be placed about each atom, molecule and organisms, so keep reading more of this as you can so you can get a sense of things
+***
+{{/ markdown }}
+
+	<section class="row">
+		<div class="medium-9 columns">
+
+			{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+
+
+			<h3 data-magellan-destination="basic">Section 1</h3>
+			<a name="basic"></a>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+			<h3 data-magellan-destination="icons">Section 2</h3>
+			<a name="icons"></a>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+			<h3 data-magellan-destination="advanced">Section 3</h3>
+			<a name="advanced"></a>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+		</div>
+		<div class="medium-3 columns hide-for-small-only evo-keyline-left">
+
+		<!-- PAGE MAGELLAN NAV - BEGINS -->
+			<div class="evo-magellan" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd data-magellan-arrival="basic"><a href="#basic">Section 1</a></dd>
+					<dd data-magellan-arrival="icons"><a href="#icons">Section 2</a></dd>
+					<dd data-magellan-arrival="advanced"><a href="#advanced">Section 3</a></dd>
+				</dl>
+			</div>
+		<!-- PAGE MAGELLAN NAV - ENDS -->
+
+		</div>
+	</section>
+
+</div>

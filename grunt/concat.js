@@ -26,6 +26,7 @@ module.exports = {
         'src/assets/scripts/core/foundation/foundation/foundation.abide.js',
         'src/assets/scripts/core/foundation/foundation/foundation.dropdown.js',
         'src/assets/scripts/core/foundation/foundation/foundation.equalizer.js',
+        'src/assets/scripts/core/foundation/foundation/foundation.magellan.js',
         'src/assets/scripts/core/foundation/foundation/foundation.offcanvas.js',
         'src/assets/scripts/core/foundation/foundation/foundation.reveal.js',
         'src/assets/scripts/core/foundation/foundation/foundation.tab.js',

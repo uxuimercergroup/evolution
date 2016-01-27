@@ -34,6 +34,20 @@ module.exports = {
       ext: '.html'
       }
     ]
+  },
+  reference: {
+    options: {
+      layout: 'reference-layout.hbs'
+    },
+    files: [
+      {
+      expand: true,
+      cwd: 'src/views/reference/',
+      src: '**/*.hbs',
+      dest: 'dist/reference',
+      ext: '.html'
+      }
+    ]
   }
 
 };

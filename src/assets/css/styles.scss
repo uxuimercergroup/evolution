@@ -98,6 +98,47 @@ URL: {{ meta_url }}
 										}
 // HERO - ENDS
 
+// MAGELLAN - BEGINS
+	.evo-magellan.fixed					{
+										left: auto !important;
+										min-width: auto !important;
+										position: none !important;
+										width: auto !important;
+										}
+
+	.evo-magellan						{
+										background: $white;
+										width: 100% !important;
+										padding: 0;
+		// SUB-NAV
+		.sub-nav							{
+			dd									{
+												float: none;
+												margin-left: 0;
+				&.active							{
+					a									{background-color: $onyx-dark-20;}
+													}
+				a									{
+													color: $sapphire-medium;
+													text-decoration: underline;
+													}
+												}
+											}
+										}
+// MAGELLAN - ENDS
+
+// SIDEBAR - BEGINS
+	.evo-site-reference-sidebar			{
+										background-color: $sapphire-bright;
+		.evo-hdr-rule						{
+											color: $white;
+											border-bottom-color: $white;
+											}
+		a									{
+											color: $onyx-dark-10;
+											}
+										}
+// SIDEBAR - ENDS
 
 /*--- KITCHEN SINK -------------------------------------------------------------------------*/
 
