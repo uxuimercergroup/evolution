@@ -6,11 +6,11 @@ module.exports = {
     spawn: false
   },
   layouts: {
-    files: ['src/views/layouts/**/*'],
+    files: ['src/views/layouts/**/*.hbs'],
     tasks: ['assemble', 'notify:assemble']
   },
   partials: {
-    files: ['src/views/partials/**/*', 'src/patterns/**/*'],
+    files: ['src/views/partials/**/*.hbs', 'src/patterns/**/*.hbs'],
     tasks: ['assemble', 'notify:assemble']
   },
   templates: {
