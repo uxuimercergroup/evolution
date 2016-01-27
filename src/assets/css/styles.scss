@@ -28,6 +28,75 @@ URL: {{ meta_url }}
 
 /*--- SITE GLOBAL --------------------------------------------------------------------------*/
 
+// HERO - BEGINS
+
+	// HERO BANNER
+	.evo-site-hero						{
+										background-color: $evo-site-hero-background-color;
+										height: ($evo-site-hero-height*3);
+
+		&[data-evo-site-hero-size="x-small"]{height: $evo-site-hero-height/2;}
+		&[data-evo-site-hero-size="small"]	{height: $evo-site-hero-height;}
+		&[data-evo-site-hero-size="medium"]	{height: ($evo-site-hero-height*2);}
+		&[data-evo-site-hero-size="large"]	{height: ($evo-site-hero-height*3);}
+
+		&[data-evo-site-hero-arrow-position]
+											{
+			&:after,
+			&:before							{
+												border: 0 !important;
+												color: $evo-site-hero-background-color;
+												font-size: rem-calc(60);
+												font-family: $evo-icon-font-stack;
+												line-height: 0.25;
+												position: relative;
+												text-align: center;
+												width: 100%;
+												height: 0;
+												clear: both;
+												overflow: visible;
+												visibility: visible;
+												display: block;
+												z-index: 40;
+												}
+											}
+		&[data-evo-site-hero-arrow-position="bottom"]
+											{
+			&:after								{
+												content: '\edc6';
+												bottom: 0;
+												}
+											}
+		&[data-evo-site-hero-arrow-position="top"]
+											{
+			&:before							{
+												content: '\edc4';
+												top: -14px;
+												}
+											}
+										}
+
+	// HERO HEADER
+	.evo-site-hero--hdr					{
+										border: $evo-site-hero-hdr-border-width $evo-site-hero-hdr-border-style $evo-site-hero-hdr-border-color;
+										color: $evo-site-hero-hdr-color;
+										font-family: $evo-site-hero-hdr-font-family !important;
+										font-size: $evo-site-hero-hdr-font-size;
+										line-height: $evo-site-hero-hdr-line-height;
+										letter-spacing: $evo-site-hero-hdr-letter-spacing;
+										text-align: center;
+										padding: $evo-site-hero-hdr-padding;
+										margin-bottom: $evo-site-hero-hdr-margin-bottom;
+										display: inline-block;
+		span								{font-family: $evo-site-hero-hdr-subname-font-family;}
+										}
+
+	// HERO TAGLINE
+	.evo-site-hero--tagline				{
+										color: $evo-site-hero-tagline-color;
+										font-family: $evo-site-hero-tagline-font-family !important;
+										}
+// HERO - ENDS
 
 
 /*--- KITCHEN SINK -------------------------------------------------------------------------*/

@@ -5,7 +5,31 @@
 // LARGE MEDIA QUERY RANGE AND UP - 1025px +
 @media #{$large-up} {
 
-	
+	// HERO - BEGINS
+
+		// HERO BANNER
+		.evo-site-hero						{
+											height: ($evo-site-hero-height*8);
+			&[data-evo-site-hero-size="4x-large"]{height: ($evo-site-hero-height*7);}
+			&[data-evo-site-hero-size="5x-large"]{height: ($evo-site-hero-height*8);}
+			&[data-evo-site-hero-size="6x-large"]{height: ($evo-site-hero-height*9);}
+			&[data-evo-site-hero-size="7x-large"]{height: ($evo-site-hero-height*10);}
+											}
+
+		// HERO HEADER
+		.evo-site-hero--hdr					{
+											font-size: ($evo-site-hero-hdr-font-size*3);
+											line-height: ($evo-site-hero-hdr-font-size*3.1);
+											letter-spacing: $evo-site-hero-hdr-letter-spacing-large;
+											padding: $evo-site-hero-hdr-padding-large;
+											}
+
+		// HERO TAGLINE
+		.evo-site-hero--tagline				{
+											max-width: $evo-site-hero-tagline-max-width-large;
+											}
+
+	// HERO - ENDS
 
 }
 
@@ -13,5 +37,5 @@
 @media #{$large-only} {
 
 	
-												
+				
 }

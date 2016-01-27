@@ -5,7 +5,30 @@
 // MEDIUM MEDIA QUERY RANGE AND UP - 768px +
 @media #{$medium-up} {
 
-	
+	// HERO - BEGINS
+
+		// HERO BANNER
+		.evo-site-hero						{
+											height: ($evo-site-hero-height*6);
+			&[data-evo-site-hero-size="x-large"]{height: ($evo-site-hero-height*4);}
+			&[data-evo-site-hero-size="xx-large"]{height: ($evo-site-hero-height*5);}
+			&[data-evo-site-hero-size="3x-large"]{height: ($evo-site-hero-height*6);}
+											}
+
+		// HERO HEADER
+		.evo-site-hero--hdr					{
+											font-size: ($evo-site-hero-hdr-font-size*2);
+											line-height: ($evo-site-hero-hdr-font-size*2.25);
+											letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
+											padding: $evo-site-hero-hdr-padding-medium;
+											}
+
+		// HERO TAGLINE
+		.evo-site-hero--tagline				{
+											max-width: $evo-site-hero-tagline-max-width-medium;
+											}
+
+	// HERO - ENDS
 
 }
 
