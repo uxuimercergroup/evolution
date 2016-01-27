@@ -6,10 +6,22 @@
 // VARIABLES
 // ==========================================================================================
 
+// HEADER
+$evo-site-header-sub-name-font-family: $evo-font-thin-stack;
+
+	// WHAT'S NEW CALL TO ACTION
+	$evo-site-header-cta-whats-new-color: $white;
+	$evo-site-header-cta-whats-new-font-family: $evo-font-medium-stack;
+	$evo-site-header-cta-whats-new-letter-spacing: rem-calc(2.25);
+	$evo-site-header-cta-whats-new-text-transform: uppercase;
+	$evo-site-header-cta-whats-new-background-color: #004687;
+	$evo-site-header-cta-whats-new-hover-background-color: $sapphire-medium;
+	$evo-site-header-cta-whats-new-icon-color: $white;
+
 // HERO
 
 	// HERO BANNER
-	$evo-site-hero-background-color: $onyx-bright;
+	$evo-site-hero-background-color: $sapphire-bright;
 	$evo-site-hero-height: rem-calc(100);
 
 	// HERO HEADER
@@ -27,7 +39,7 @@
 	$evo-site-hero-hdr-padding-medium: rem-calc(10 9 6 15);
 	$evo-site-hero-hdr-padding-large: rem-calc(13 9 8 18);
 	$evo-site-hero-hdr-margin-bottom: rem-calc(22);
-	$evo-site-hero-hdr-subname-font-family: $evo-font-medium-stack;
+	$evo-site-hero-hdr-sub-name-font-family: $evo-font-medium-stack;
 
 	// HERO TAGLINE
 	$evo-site-hero-tagline-color: $white;

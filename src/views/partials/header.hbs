@@ -1,4 +1,4 @@
-<header class="evo-header" role="banner">
+<header class="evo-header evo-site-header" role="banner">
 	
 	<!-- TOP BAR CONTAINER - DEFAULT - BEGINS -->
 	<div class="show-for-large-up">
@@ -132,6 +132,10 @@
 							<li>
 								<a href="/organisms.html">Organisms</a>
 							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="/kitchen-sink.html">Kitchen Sink</a>
+							</li>
 							<li>
 								<label>{{uppercase "UI Standards"}}</label>
 							</li>
@@ -163,7 +167,7 @@
 					</li>
 					<li class="divider"></li>
 					<li>
-						<a class="evo-header-cta-whats-new" href="">What's New{{> icon class="evo-icon-arrow-right2 evo-icon-position-right"}}</a>
+						<a class="evo-site-header--cta-whats-new" href="">What's New{{> icon class="evo-icon-arrow-right2 evo-icon-position-right"}}</a>
 					</li>
 				</ul>
 				<!-- TOP BAR RIGHT NAV SECTION - ENDS -->
@@ -194,7 +198,7 @@
 		<section class="middle tab-bar-section">
 			<h1 class="title">
 				<a class="show-for-small-only" href="/">{{ global.title }}</a>
-				<a class="show-for-medium-only" href="/">{{ global.company }} {{ global.title }}</a>
+				<a class="show-for-medium-only" href="/"><span class="evo-tab-bar-sub-name">{{ global.company }}</span> {{ global.title }}</a>
 			</h1>
 			<!-- <a class="title" href="#/">{{> image src="core/corp-logos/mercer/mercer_logo_rgb_reverse.png" alt="Mercer - Make Tomorrow, Today" width="160"}}</a> -->
 		</section>
@@ -208,7 +212,7 @@
 				<label>Navigation</label>
 			</li>
 			<li>
-				<a class="evo-header-cta-whats-new" href="">What's New{{> icon class="evo-icon-arrow-right2 evo-icon-position-right"}}</a>
+				<a class="evo-site-header--cta-whats-new" href="">What's New{{> icon class="evo-icon-arrow-right2 evo-icon-position-right"}}</a>
 			</li>
 			<li class="has-submenu">
 				<a href="">Learn</a>
@@ -312,6 +316,9 @@
 					</li>
 					<li>
 						<a href="/organisms.html">Organisms</a>
+					</li>
+					<li>
+						<a href="/kitchen-sink.html">Kitchen Sink</a>
 					</li>
 					<li>
 						<label>{{uppercase "UI Standards"}}</label>
