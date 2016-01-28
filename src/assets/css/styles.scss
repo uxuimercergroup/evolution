@@ -42,7 +42,7 @@ URL: {{ meta_url }}
 			[class^="evo-icon-"]				{
 												color: $evo-site-header-cta-whats-new-icon-color !important;
 												top: 2px !important;
-												left: 78px;
+												left: 85px;
 												}
 											}
 
@@ -56,6 +56,10 @@ URL: {{ meta_url }}
 	// HERO BANNER
 	.evo-site-hero						{
 										background-color: $evo-site-hero-background-color;
+										background-image: url($evo-site-hero-background-image);
+										background-repeat: $evo-site-hero-background-repeat;
+										background-position: $evo-site-hero-background-position;
+										background-size: $evo-site-hero-background-size;
 										height: ($evo-site-hero-height*3);
 
 		&[data-evo-site-hero-size="x-small"]{height: $evo-site-hero-height/2;}
