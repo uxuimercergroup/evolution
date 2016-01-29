@@ -170,7 +170,7 @@ URL: {{ meta_url }}
 // SIDEBAR - ENDS
 
 
-// CODE EXAMPLE SECTION - BEGINS
+// CODE EXAMPLE - BEGINS
 	.evo-site-example-box				{
 										background-color: $white;
 										border: 0;
@@ -180,8 +180,18 @@ URL: {{ meta_url }}
 											border-bottom-width: 1px;
 											border-bottom-color: $onyx-dark-10;
 											}
+		.evo-site-example-box--code-hdr		{
+											@include border-radius($global-radius $global-radius 0 0);
+											background-color: $onyx-dark-10;
+											font-size: rem-calc(12);
+											padding: rem-calc(4 4 4 8);
+			[class^="evo-icon-"]				{
+												color: $onyx-dark-70;
+				&:hover								{color: $onyx-dark-80}
+												}
+											}
 										}
-// CODE EXAMPLE SECTION - ENDS
+// CODE EXAMPLE - ENDS
 
 /*--- KITCHEN SINK -------------------------------------------------------------------------*/
 

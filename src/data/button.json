@@ -1,101 +1,105 @@
 {
 	"data": {
+		"basic_button2": {
+			"name": "Basic Button2",
+			"partial": "button", "button-type": "button", "text": "Primary", "slug": "basic-button2"
+		},
 		"basic_button": {
 			"name": "Basic Button",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "button", "button-type": "button", "secondary": "true", "text": "Secondary"},
-				{"partial": "button", "button-type": "button", "text": "Primary"}
+				{"partial": "button", "button-type": "button", "secondary": "true", "text": "Secondary", "slug": "basic-button-secondary"},
+				{"partial": "button", "button-type": "button", "text": "Primary", "slug": "basic-button"}
 			]
 		},
 		"basic_a_button": {
 			"name": "Basic Button - a tag",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "button", "secondary": "true", "text": "Secondary"},
-				{"partial": "button", "text": "Primary"}
+				{"partial": "button", "secondary": "true", "text": "Secondary", "slug": "basic-a-button-secondary"},
+				{"partial": "button", "text": "Primary", "slug": "basic-a-button"}
 			]
 		},
 		"disabled_button": {
 			"name": "Disabled Button",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "button", "button-type": "button", "disabled": "true", "secondary": "true", "text": "Secondary"},
-				{"partial": "button", "button-type": "button", "disabled": "true", "text": "Primary"}
+				{"partial": "button", "button-type": "button", "disabled": "true", "secondary": "true", "text": "Secondary", "slug": "disabled-button-secondary"},
+				{"partial": "button", "button-type": "button", "disabled": "true", "text": "Primary", "slug": "disabled-button"}
 			]
 		},
 		"disabled_a_button": {
 			"name": "Disabled Button - a tag",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "button", "disabled": "true", "secondary": "true", "text": "Secondary"},
-				{"partial": "button", "disabled": "true", "text": "Primary"}
+				{"partial": "button", "disabled": "true", "secondary": "true", "text": "Secondary", "slug": "disabled-button-a-secondary"},
+				{"partial": "button", "disabled": "true", "text": "Primary", "slug": "disabled-button-a"}
 			]
 		},
 		"size_button": {
 			"name": "Size Buttons",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "button", "button-type": "button", "size": "tiny", "text": "Tiny"},
-				{"partial": "button", "button-type": "button", "size": "small", "text": "Small"},
-				{"partial": "button", "button-type": "button", "size": "medium", "text": "Medium"},
-				{"partial": "button", "button-type": "button", "size": "large", "text": "Large"}
+				{"partial": "button", "button-type": "button", "size": "tiny", "text": "Tiny", "slug": "size-button-tiny"},
+				{"partial": "button", "button-type": "button", "size": "small", "text": "Small", "slug": "size-button-small"},
+				{"partial": "button", "button-type": "button", "size": "medium", "text": "Medium", "slug": "size-button-medium"},
+				{"partial": "button", "button-type": "button", "size": "large", "text": "Large", "slug": "size-button-large"}
 			]
 		},
 		"size_a_button": {
 			"name": "Size Buttons - a tag",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "button", "size": "tiny", "text": "Tiny"},
-				{"partial": "button", "size": "small", "text": "Small"},
-				{"partial": "button", "size": "medium", "text": "Medium"},
-				{"partial": "button", "size": "large", "text": "Large"}
+				{"partial": "button", "size": "tiny", "text": "Tiny", "slug": "size-button-a-tiny"},
+				{"partial": "button", "size": "small", "text": "Small", "slug": "size-button-a-small"},
+				{"partial": "button", "size": "medium", "text": "Medium", "slug": "size-button-a-medium"},
+				{"partial": "button", "size": "large", "text": "Large", "slug": "size-button-a-large"}
 			]
 		},
 		"shape_button": {
 			"name": "Button Shapes",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "button", "button-type": "button", "expand": "true", "text": "Secondary Expanded"},
-				{"partial": "button", "button-type": "button", "shape": "round", "text": "Secondary Round"},
-				{"partial": "button", "button-type": "button", "shape": "radius", "text": "Secondary Radius"}
+				{"partial": "button", "button-type": "button", "expand": "true", "text": "Expanded", "slug": "shape-button-expand"},
+				{"partial": "button", "button-type": "button", "shape": "round", "text": "Round", "slug": "shape-button-round"},
+				{"partial": "button", "button-type": "button", "shape": "radius", "text": "Radius", "slug": "shape-button-radius"}
 			]
 		},
 		"shape_a_button": {
 			"name": "Button Shapes - a tag",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "button", "expand": "true", "text": "Secondary Expanded"},
-				{"partial": "button", "shape": "round", "text": "Secondary Round"},
-				{"partial": "button", "shape": "radius", "text": "Secondary Radius"}
+				{"partial": "button", "expand": "true", "text": "Expanded", "slug": "shape-button-a-expand"},
+				{"partial": "button", "shape": "round", "text": "Round", "slug": "shape-button-a-round"},
+				{"partial": "button", "shape": "radius", "text": "Radius", "slug": "shape-button-a-radius"}
 			]
 		},
 		"icon_button": {
 			"name": "Button Icons",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "button", "button-type": "button", "shape": "radius", "secondary": "true", "icon-position": "both", "text": "Secondary"},
-				{"partial": "button", "button-type": "button", "shape": "radius", "icon-position": "left", "text": "Primary"},
-				{"partial": "button", "button-type": "button", "shape": "radius", "icon-position": "right", "text": "Primary"},
-				{"partial": "button", "button-type": "button", "expand": "true", "icon-position": "both", "text": "Secondary"}
+				{"partial": "button", "button-type": "button", "shape": "radius", "secondary": "true", "icon-position": "both", "text": "Secondary", "slug": "icon-button-secondary-both"},
+				{"partial": "button", "button-type": "button", "shape": "radius", "icon-position": "left", "text": "Primary", "slug": "icon-button-left"},
+				{"partial": "button", "button-type": "button", "shape": "radius", "icon-position": "right", "text": "Primary", "slug": "icon-button-right"},
+				{"partial": "button", "button-type": "button", "expand": "true", "icon-position": "both", "text": "Primary", "slug": "icon-button-both"}
 			]
 		},
 		"icon_a_button": {
 			"name": "Button Icons - a tag",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "button", "shape": "radius", "secondary": "true", "icon-position": "both", "text": "Secondary"},
-				{"partial": "button", "shape": "radius", "icon-position": "left", "text": "Primary"},
-				{"partial": "button", "shape": "radius", "icon-position": "right", "text": "Primary"},
-				{"partial": "button", "expand": "true", "icon-position": "both", "text": "Secondary"}
+				{"partial": "button", "shape": "radius", "secondary": "true", "icon-position": "both", "text": "Secondary", "slug": "icon-a-button-secondary-both"},
+				{"partial": "button", "shape": "radius", "icon-position": "left", "text": "Primary", "slug": "icon-a-button-left"},
+				{"partial": "button", "shape": "radius", "icon-position": "right", "text": "Primary", "slug": "icon-a-button-right"},
+				{"partial": "button", "expand": "true", "icon-position": "both", "text": "Primary", "slug": "icon-a-button-both"}
 			]
 		},
 		"form_button": {
 			"name": "Form Buttons",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "input-button", "type": "submit", "button-type": "input", "secondary": "true", "button-value": "Secondary"},
-				{"partial": "input-button", "type": "submit", "button-type": "input", "button-value": "Primary"}
+				{"partial": "input-button", "type": "submit", "button-type": "input", "secondary": "true", "button-value": "Secondary", "slug": "form-button-secondary"},
+				{"partial": "input-button", "type": "submit", "button-type": "input", "button-value": "Primary", "slug": "form-button"}
 			]
 		}
 	}

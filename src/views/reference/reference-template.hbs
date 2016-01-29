@@ -23,9 +23,7 @@ buttons depend on Foundation's [Buttons](http://foundation.zurb.com/docs/compone
 					<!-- HEADER - BEGINS -->
 						<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
 							{{name}}
-							<a href="javascript:;" class="evo-icon-wrench evo-icon-position-right has-tip tip-top radius evo-tooltip right" title="Toggle Code View" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-
-							<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy{{@index}}" class="evo-icon-clipboard3 copy-to-clipboard has-tip tip-top radius evo-tooltip right" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+							<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-top radius evo-tooltip right" title="Toggle Code View" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 						</h6>
 						<a name="{{hyphenate name}}"></a>
 					<!-- HEADER - ENDS -->
@@ -41,7 +39,24 @@ buttons depend on Foundation's [Buttons](http://foundation.zurb.com/docs/compone
 						{{/is}}
 					<!-- BODY - ENDS -->
 					</div>
-					<div class="evo-box-ftr hide" data-evo-toggle-element-item="code-toggle{{@index}}"><pre><code class="language-markup" id="evo-code-copy{{@index}}"><xmp>{{#is multiple_example 'true'}}{{#each multiple_example_options}}{{> (lookup . 'partial') }}{{/each}}{{else}}{{> (lookup . 'partial') }}{{/is}}</xmp></code></pre>
+					<div class="evo-box-ftr hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+
+						{{#is multiple_example 'true'}}
+							{{#each multiple_example_options}}
+							<div class="evo-site-example-box--code-hdr">
+								{{slug}}
+								<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-top radius evo-tooltip right" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+							</div>
+							<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							{{/each}}
+						{{else}}
+							<div class="evo-site-example-box--code-hdr">
+								{{slug}}
+								<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-top radius evo-tooltip right" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+							</div>
+							<pre><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+						{{/is}}
+
 					</div>
 				</div>
 				{{/each}}
