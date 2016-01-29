@@ -65,8 +65,8 @@ module.exports = {
   site: {
     files: {
       'dist/assets/scripts/site.js': [
+        'node_modules/clipboard/dist/clipboard.js',
         'src/assets/scripts/site.js',
-        'src/assets/scripts/clipboard.js',
         'src/patterns/organisms/**/*.js'
       ]
     }

@@ -1,0 +1,64 @@
+---
+title: "Buttons"
+---
+
+<section class="row">
+	<div class="small-12 columns evo-spacer-padding-top-x-large">
+
+{{# markdown }}
+# {{ title }}
+Buttons act as the focal point for user interaction as it relates to saving data or completing an action. Evolution Core 
+buttons depend on Foundation's [Buttons](http://foundation.zurb.com/docs/components/buttons.html) and [Button Groups](http://foundation.zurb.com/docs/components/button_groups.html) as a starting point.
+***
+{{/ markdown }}
+
+		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+
+		<section class="row">
+			<div class="medium-12 large-9 columns evo-keyline-right">
+			<!-- CODE EXAMPLE BOX - BEGINS -->
+				{{#each button.data }}
+				<div class="panel evo-box evo-site-example-box">
+					<div class="evo-box-hdr">
+					<!-- HEADER - BEGINS -->
+						<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
+							{{name}}
+							<a href="javascript:;" class="evo-icon-wrench evo-icon-position-right has-tip tip-top radius evo-tooltip right" title="Toggle Code View" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+
+							<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy{{@index}}" class="evo-icon-clipboard3 copy-to-clipboard has-tip tip-top radius evo-tooltip right" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+						</h6>
+						<a name="{{hyphenate name}}"></a>
+					<!-- HEADER - ENDS -->
+					</div>
+					<div class="evo-box-bdy">
+					<!-- BODY - BEGINS -->
+						{{#is multiple_example 'true'}}
+							{{#each multiple_example_options}}
+								{{> (lookup . 'partial') }}
+							{{/each}}
+						{{else}}
+							{{> (lookup . 'partial') }}
+						{{/is}}
+					<!-- BODY - ENDS -->
+					</div>
+					<div class="evo-box-ftr hide" data-evo-toggle-element-item="code-toggle{{@index}}"><pre><code class="language-markup" id="evo-code-copy{{@index}}"><xmp>{{#is multiple_example 'true'}}{{#each multiple_example_options}}{{> (lookup . 'partial') }}{{/each}}{{else}}{{> (lookup . 'partial') }}{{/is}}</xmp></code></pre>
+					</div>
+				</div>
+				{{/each}}
+			<!-- CODE EXAMPLE BOX - ENDS -->
+			</div>
+			<div class="large-3 columns show-for-large-only">
+			<!-- PAGE MAGELLAN NAV - BEGINS -->
+				<div class="evo-magellan" data-magellan-expedition="fixed">
+					<dl class="sub-nav">
+						{{#each button.data}}
+						<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+						{{/each}}
+					</dl>
+				</div>
+			<!-- PAGE MAGELLAN NAV - ENDS -->				
+			</div>
+		</section>
+		
+	</div>
+</section>

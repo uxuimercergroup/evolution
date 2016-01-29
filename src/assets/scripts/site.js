@@ -36,7 +36,6 @@ $(document).foundation({
 		fixed_top: 0, // top distance in pixels assigend to the fixed element on scroll
 		offset_by_height: false // whether to offset the destination by the expedition height. Usually you want this to be true, unless your expedition is on the side.
 	}
-	
 
 });
 
@@ -45,20 +44,8 @@ $(function() {
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
 
-var clipboard = new Clipboard('.btn');
-
-clipboard.on('success', function(e) {
-    console.info('Action:', e.action);
-    console.info('Text:', e.text);
-    console.info('Trigger:', e.trigger);
-
-    e.clearSelection();
-});
-
-clipboard.on('error', function(e) {
-    console.error('Action:', e.action);
-    console.error('Trigger:', e.trigger);
-});
+		// COPY TO CLIPBOARD
+		var clipboard = new Clipboard('.copy-to-clipboard');
 
 
 	// KITCHEN SINK DEMOS

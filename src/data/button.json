@@ -1,0 +1,102 @@
+{
+	"data": {
+		"basic_button": {
+			"name": "Basic Button",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button", "button-type": "button", "secondary": "true", "text": "Secondary"},
+				{"partial": "button", "button-type": "button", "text": "Primary"}
+			]
+		},
+		"basic_a_button": {
+			"name": "Basic Button - a tag",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button", "secondary": "true", "text": "Secondary"},
+				{"partial": "button", "text": "Primary"}
+			]
+		},
+		"disabled_button": {
+			"name": "Disabled Button",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button", "button-type": "button", "disabled": "true", "secondary": "true", "text": "Secondary"},
+				{"partial": "button", "button-type": "button", "disabled": "true", "text": "Primary"}
+			]
+		},
+		"disabled_a_button": {
+			"name": "Disabled Button - a tag",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button", "disabled": "true", "secondary": "true", "text": "Secondary"},
+				{"partial": "button", "disabled": "true", "text": "Primary"}
+			]
+		},
+		"size_button": {
+			"name": "Size Buttons",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button", "button-type": "button", "size": "tiny", "text": "Tiny"},
+				{"partial": "button", "button-type": "button", "size": "small", "text": "Small"},
+				{"partial": "button", "button-type": "button", "size": "medium", "text": "Medium"},
+				{"partial": "button", "button-type": "button", "size": "large", "text": "Large"}
+			]
+		},
+		"size_a_button": {
+			"name": "Size Buttons - a tag",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button", "size": "tiny", "text": "Tiny"},
+				{"partial": "button", "size": "small", "text": "Small"},
+				{"partial": "button", "size": "medium", "text": "Medium"},
+				{"partial": "button", "size": "large", "text": "Large"}
+			]
+		},
+		"shape_button": {
+			"name": "Button Shapes",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button", "button-type": "button", "expand": "true", "text": "Secondary Expanded"},
+				{"partial": "button", "button-type": "button", "shape": "round", "text": "Secondary Round"},
+				{"partial": "button", "button-type": "button", "shape": "radius", "text": "Secondary Radius"}
+			]
+		},
+		"shape_a_button": {
+			"name": "Button Shapes - a tag",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button", "expand": "true", "text": "Secondary Expanded"},
+				{"partial": "button", "shape": "round", "text": "Secondary Round"},
+				{"partial": "button", "shape": "radius", "text": "Secondary Radius"}
+			]
+		},
+		"icon_button": {
+			"name": "Button Icons",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button", "button-type": "button", "shape": "radius", "secondary": "true", "icon-position": "both", "text": "Secondary"},
+				{"partial": "button", "button-type": "button", "shape": "radius", "icon-position": "left", "text": "Primary"},
+				{"partial": "button", "button-type": "button", "shape": "radius", "icon-position": "right", "text": "Primary"},
+				{"partial": "button", "button-type": "button", "expand": "true", "icon-position": "both", "text": "Secondary"}
+			]
+		},
+		"icon_a_button": {
+			"name": "Button Icons - a tag",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button", "shape": "radius", "secondary": "true", "icon-position": "both", "text": "Secondary"},
+				{"partial": "button", "shape": "radius", "icon-position": "left", "text": "Primary"},
+				{"partial": "button", "shape": "radius", "icon-position": "right", "text": "Primary"},
+				{"partial": "button", "expand": "true", "icon-position": "both", "text": "Secondary"}
+			]
+		},
+		"form_button": {
+			"name": "Form Buttons",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "input-button", "type": "submit", "button-type": "input", "secondary": "true", "button-value": "Secondary"},
+				{"partial": "input-button", "type": "submit", "button-type": "input", "button-value": "Primary"}
+			]
+		}
+	}
+}

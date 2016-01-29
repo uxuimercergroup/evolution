@@ -24,6 +24,8 @@ URL: {{ meta_url }}
 		"partials/global/functions",
 		"partials/atoms/icons";
 
+@import "lib/prism/prism.scss";
+
 /*=== WEBSITE STYLES =======================================================================*/
 
 /*--- SITE GLOBAL --------------------------------------------------------------------------*/
@@ -166,6 +168,20 @@ URL: {{ meta_url }}
 											}
 										}
 // SIDEBAR - ENDS
+
+
+// CODE EXAMPLE SECTION - BEGINS
+	.evo-site-example-box				{
+										background-color: $white;
+										border: 0;
+										padding: 0;
+										margin-bottom: rem-calc(80);
+		.evo-hdr-rule						{
+											border-bottom-width: 1px;
+											border-bottom-color: $onyx-dark-10;
+											}
+										}
+// CODE EXAMPLE SECTION - ENDS
 
 /*--- KITCHEN SINK -------------------------------------------------------------------------*/
 
