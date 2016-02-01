@@ -128,29 +128,45 @@ URL: {{ meta_url }}
 // HERO - ENDS
 
 // MAGELLAN - BEGINS
-	$evo-site-magellan-width: rem-calc(226) !important;
-	.evo-magellan.fixed					{
-										left: auto !important;
-										min-width: auto !important;
-										position: none !important;
-										width: $evo-site-magellan-width;
-										}
+	$evo-site-magellan-fixed-width: 19% !important;
 
 	.evo-magellan						{
 										background: $white;
-										width: $evo-site-magellan-width;
 										padding: 0;
+		&[data-magellan-expedition-clone]	{display: none;}
+		&.fixed								{
+											left: auto !important;
+											min-width: 0;
+											width: $evo-site-magellan-fixed-width;
+			.sub-nav							{
+				dd									{
+													float: none;
+													margin-left: 0;
+					&.active							{
+						&:before							{
+															font-family: $evo-icon-font-stack;
+															content: "\edc5";
+															position: absolute;
+															left: -3px;
+															margin-top: rem-calc(4);
+															}
+														}
+													}
+												}
+											}
+
 		// SUB-NAV
 		.sub-nav							{
 			dd									{
 												float: none;
 												margin-left: 0;
-				&.active							{
-					a									{background-color: $onyx-dark-20;}
-													}
 				a									{
+													display: block;
+													line-height: 1.6;
 													color: $sapphire-medium;
 													text-decoration: underline;
+													background-color: $transparent;
+					&:hover								{background-color: $transparent;}
 													}
 												}
 											}
