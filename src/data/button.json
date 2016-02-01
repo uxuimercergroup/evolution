@@ -1,9 +1,21 @@
 {
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "true",
+		"jquery_ui": "true",
+		"other": [
+			{"name": "", "url": "", "external_link": "true"}
+		]
+	}, 
 	"data": {
-		"basic_button2": {
-			"name": "Basic Button2",
-			"partial": "button", "button-type": "button", "text": "Primary", "slug": "basic-button2"
-		},
 		"basic_button": {
 			"name": "Basic Button",
 			"multiple_example": "true",

@@ -1,13 +1,13 @@
 <div id="jumpToMenu">
-{{#each reference.ref_site_menu}}
+{{#each reference.sidebar}}
 <!-- TOC - SECTION HEADER - BEGINS -->
-	<h5 class="evo-hdr-rule">{{ section_hdr }}</h5>
+	<h5 class="evo-hdr-rule">{{header}}</h5>
 <!-- TOC - SECTION HEADER - ENDS -->
 
 <!-- TOC - SECTION LIST - BEGINS -->
 	<dl>
-		{{#each main_section }}
-			<dd><a href="{{ url }}">{{ link_name }}</a></dd>
+		{{#each section}}
+			<dd><a href="{{url}}">{{name}}</a></dd>
 		{{/each}}
 	</dl>
 <!-- TOC - SECTION LIST - ENDS -->

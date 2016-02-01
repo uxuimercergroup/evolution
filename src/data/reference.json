@@ -1,49 +1,52 @@
 {
-	"ref_site_menu": [
+	"sidebar": [
 		{
-			"section_hdr": "Atoms",
-			"main_section": [
-				{"link_name": "Boxes",				"url": "/reference/base/boxes"},
-				{"link_name": "Buttons",			"url": "/reference/buttons.html"},
-				{"link_name": "Color Palette",		"url": "/reference/base/colors"},
-				{"link_name": "Dropdowns",			"url": "/reference/base/dropdowns"},
-				{"link_name": "Equalizer",			"url": "/reference/base/equalizer"},
-				{"link_name": "Forms",				"url": "/reference/base/forms"},
-				{"link_name": "Grids",				"url": "/reference/base/grids"},
-				{"link_name": "Helpers",			"url": "/reference/base/helpers"},
-				{"link_name": "Icons",				"url": "/reference/base/icons"},
-				{"link_name": "Lists",				"url": "/reference/base/lists"},
-				{"link_name": "Tables",				"url": "/reference/base/tables"},
-				{"link_name": "Type",				"url": "/reference/type.html"}
+			"header": "Atoms",
+			"section": [
+				{"name": "Boxes",				"url": "/reference/base/boxes"},
+				{"name": "Buttons",				"url": "/reference/buttons.html"},
+				{"name": "Color Palette",		"url": "/reference/base/colors"},
+				{"name": "Dropdowns",			"url": "/reference/base/dropdowns"},
+				{"name": "Equalizer",			"url": "/reference/base/equalizer"},
+				{"name": "Forms",				"url": "/reference/base/forms"},
+				{"name": "Grids",				"url": "/reference/base/grids"},
+				{"name": "Helpers",				"url": "/reference/base/helpers"},
+				{"name": "Icons",				"url": "/reference/base/icons"},
+				{"name": "Lists",				"url": "/reference/base/lists"},
+				{"name": "Tables",				"url": "/reference/base/tables"},
+				{"name": "Type",				"url": "/reference/type.html"}
 			]
 		},
 
 		{
-			"section_hdr": "Molecules",
-			"main_section": [
-				{"link_name": "Accordion",			"url": "/reference/objects/accordion"},
-				{"link_name": "Alert Boxes",		"url": "/reference/objects/alert-boxes"},
-				{"link_name": "Autocomplete",		"url": "/reference/objects/autocomplete"},
-				{"link_name": "Badges",				"url": "/reference/objects/badges"},
-				{"link_name": "Breadcrumbs",		"url": "/reference/objects/breadcrumbs"},				
-				{"link_name": "Carousel",			"url": "/reference/objects/carousel"},
-				{"link_name": "Data Table",			"url": "/reference/objects/data-table"},
-				{"link_name": "Datepicker",			"url": "/reference/objects/datepicker"},
-				{"link_name": "Dropdown Buttons",	"url": "/reference/objects/dropdown-buttons"},
-				{"link_name": "Labels",				"url": "/reference/objects/labels"},
-				{"link_name": "Off-canvas",			"url": "/reference/objects/off-canvas"},
-				{"link_name": "Pagination",			"url": "/reference/objects/pagination"},
-				{"link_name": "Progress Bar",		"url": "/reference/objects/progress-bar"},
-				{"link_name": "Reveal Modal",		"url": "/reference/objects/reveal"},
-				{"link_name": "Scroll Pane",		"url": "/reference/objects/scroll-pane"},
-				{"link_name": "Slider",				"url": "/reference/objects/slider"},
-				{"link_name": "Sub Nav",			"url": "/reference/objects/sub-nav"},
-				{"link_name": "Tabs",				"url": "/reference/objects/tabs"},
-				{"link_name": "Tooltips",			"url": "/reference/objects/tooltip"},
-				{"link_name": "Top Bar",			"url": "/reference/objects/top-bar"}
+			"header": "Molecules",
+			"section": [
+				{"name": "Accordion",			"url": "/reference/objects/accordion"},
+				{"name": "Alert Boxes",			"url": "/reference/objects/alert-boxes"},
+				{"name": "Autocomplete",		"url": "/reference/objects/autocomplete"},
+				{"name": "Badges",				"url": "/reference/objects/badges"},
+				{"name": "Breadcrumbs",			"url": "/reference/objects/breadcrumbs"},				
+				{"name": "Carousel",			"url": "/reference/objects/carousel"},
+				{"name": "Data Table",			"url": "/reference/objects/data-table"},
+				{"name": "Datepicker",			"url": "/reference/objects/datepicker"},
+				{"name": "Dropdown Buttons",	"url": "/reference/objects/dropdown-buttons"},
+				{"name": "Labels",				"url": "/reference/objects/labels"},
+				{"name": "Off-canvas",			"url": "/reference/objects/off-canvas"},
+				{"name": "Pagination",			"url": "/reference/objects/pagination"},
+				{"name": "Progress Bar",		"url": "/reference/objects/progress-bar"},
+				{"name": "Reveal Modal",		"url": "/reference/objects/reveal"},
+				{"name": "Scroll Pane",			"url": "/reference/objects/scroll-pane"},
+				{"name": "Slider",				"url": "/reference/objects/slider"},
+				{"name": "Sub Nav",				"url": "/reference/objects/sub-nav"},
+				{"name": "Tabs",				"url": "/reference/objects/tabs"},
+				{"name": "Tooltips",			"url": "/reference/objects/tooltip"},
+				{"name": "Top Bar",				"url": "/reference/objects/top-bar"}
 			]
 		}
-	]
+	],
 
+	"sidenav" : {
+		"dependencies_header": "Dependencies"
+	}
 
 }
