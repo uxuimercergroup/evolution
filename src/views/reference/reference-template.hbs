@@ -83,21 +83,25 @@ Main description would begin here about the component/pattern that you are build
 						<ul class="no-bullet" data-evo-toggle-element-item="dependencies_toggle1">
 							{{#is button.dependency_data.foundation 'true'}}
 								<li><a href="" target="_blank">Foundation {{package.foundation_version}}</a>
+								{{#if button.dependency_data.foundation_dependencies}}
 									<ul>
 									{{#each button.dependency_data.foundation_dependencies}}
 										<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 									{{/each}}
 									</ul>
+								{{/if}}
 								</li>
 							{{/is}}
 							{{#is button.dependency_data.evolution 'true'}}
 								<li><a href="/">Evolution {{package.evolution.version}}</a>
+								{{#if button.dependency_data.evolution_dependencies}}
 									<ul>
 									{{#each button.dependency_data.evolution_dependencies}}
 										<li><a href="{{url}}">{{name}}</a></li>
 									{{/each}}
 									</ul>
 								</li>
+								{{/if}}
 							{{/is}}
 							{{#is button.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
 							{{#is button.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}

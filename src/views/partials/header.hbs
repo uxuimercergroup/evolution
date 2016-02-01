@@ -15,157 +15,43 @@
 			</ul>
 			<!-- TOP BAR TITLE AREA - ENDS -->
 
-			<!-- TOP BAR NAV SECTION - BEGINS -->
+			<!-- TOP BAR NAV SECTION - BEGINS --> 
 			<section class="top-bar-section">
 
 				<!-- TOP BAR RIGHT NAV SECTION - BEGINS -->
 				<ul class="right">
+				{{#each navigation.nav}}
 					<li class="has-dropdown">
-						<a>Learn</a>
+						<a>{{section}}</a>
 						<ul class="dropdown">
+						{{#each sub_section}}
+							{{#if label}}
 							<li>
-								<a href="">What is Evolution?</a>
+								<label>{{label}}</label>
 							</li>
+							{{/if}}
+							{{#each nav_items}}
 							<li>
-								<a href="">Services</a>
+								<a href="{{url}}">{{name}}</a>
 							</li>
-							<li>
-								<a href="">What's New</a>
-							</li>
-							<li>
-								<a href="">Case Studies</a>
-							</li>
+							{{/each}}
+						{{/each}}
 						</ul>
-					</li>
-					<li class="has-dropdown">
-						<a>Design</a>
-						<ul class="dropdown">
-							<li>
-								<label>UX Design</label>
-							</li>
-							<li>
-								<a href="">Design Principles</a>
-							</li>
-	
-							<li>
-								<a href="">Design Tenets</a>
-							</li>
-	
-							<li>
-								<a href="">Download Templates</a>
-							</li>
-	
-							<li>
-								<a href="">Pattern Library</a>
-							</li>
-							<li>
-								<label>Visual Design</label>
-							</li>
-							<li>
-								<a href="">Color Palette</a>
-							</li>
-	
-							<li>
-								<a href="">Icons</a>
-							</li>
-	
-							<li>
-								<a href="">Corporate Logos</a>
-							</li>
-	
-							<li>
-								<a href="">People Images</a>
-							</li>
-	
-							<li>
-								<a href="">Typography</a>
-							</li>
-						</ul>
-					</li>
-					<li class="has-dropdown">
-						<a>Develop</a>
-						<ul class="dropdown">
-							<li>
-								<label>Downloads</label>
-							</li>
-							<li>
-								<a href="">Download Evolution v{{ package.evolution.version }}</a>
-							</li>
-	
-							<li>
-								<a href="">Download Evolution Toolbox</a>
-							</li>
-	
-							<li>
-								<a href="">Previous Versions</a>
-							</li>
-	
-							<li>
-								<a href="">Upgrading Evolution</a>
-							</li>
-	
-							<li>
-								<a href="">Change Log</a>
-							</li>
-	
-							<li>
-								<a href="">Boilerplates</a>
-							</li>
-							<li>
-								<label>Patterns</label>
-							</li>
-							<li>
-								<a href="">Pattern Library</a>
-							</li>
-	
-							<li>
-								<a href="/atoms.html">Atoms</a>
-							</li>
-	
-							<li>
-								<a href="/molecules.html">Molecules</a>
-							</li>
-	
-							<li>
-								<a href="/organisms.html">Organisms</a>
-							</li>
-	
-							<li>
-								<a href="/kitchen-sink.html">Kitchen Sink</a>
-							</li>
-							<li>
-								<label>UI Standards</label>
-							</li>
-							<li>
-								<a href="">Front End Code Standards</a>
-							</li>
-	
-							<li>
-								<a href="">Organism Development</a>
-							</li>
-						</ul>
-					</li>
-					</li>
-					<li class="has-dropdown">
-						<a>Help/Support</a>
-						<ul class="dropdown">
-							<li>
-								<a href="">Browser Support</a>
-							</li>
-	
-							<li>
-								<a href="">Media Queries</a>
-							</li>
-	
-							<li>
-								<a href="">FAQs</a>
-							</li>
-						</ul>
-					</li>
-					<li class="divider"></li>
 					<li>
-						<a class="evo-site-header--cta-whats-new" href="">What&rsquo;s New{{> icon class="evo-icon-arrow-right2"}}</a>
+				{{/each}}
+
+				{{#if navigation.whats_new}}
+					<li class="divider"></li>
+					{{#each navigation.whats_new}}
+					<li>
+						<a class="evo-site-header--cta-whats-new" href="{{url}}">{{name}}
+						{{#each icon}}
+							{{> (lookup . 'partial') }}
+						{{/each}}
+						</a>
 					</li>
+					{{/each}}
+				{{/if}}
 				</ul>
 				<!-- TOP BAR RIGHT NAV SECTION - ENDS -->
 
@@ -205,146 +91,46 @@
 	<!-- OFF-CANVAS - LEFT MENU - BEGINS -->
 	<aside class="left-off-canvas-menu">
 		<ul class="off-canvas-list">
+		{{#if navigation.nav_label}}
 			<li>
-				<label>Navigation</label>
+				<label>{{navigation.nav_label}}</label>
 			</li>
+		{{/if}}
+
+		{{#if navigation.whats_new}}
+			{{#each navigation.whats_new}}
 			<li>
-				<a class="evo-site-header--cta-whats-new" href="">What&rsquo;s New{{> icon class="evo-icon-arrow-right2"}}</a>
+				<a class="evo-site-header--cta-whats-new" href="{{url}}">{{name}}
+				{{#each icon}}
+					{{> (lookup . 'partial') }}
+				{{/each}}
+				</a>
 			</li>
+			{{/each}}
+		{{/if}}
+
+		{{#each navigation.nav}}
 			<li class="has-submenu">
-				<a href="">Learn</a>
+				<a href="">{{section}}</a>
 				<ul class="left-submenu">
 					<li class="back">
 						<a href="">Back</a>
 					</li>
+				{{#each sub_section}}
+					{{#if label}}
 					<li>
-						<a href="">What is Evolution?</a>
+						<label>{{label}}</label>
 					</li>
+					{{/if}}
+					{{#each nav_items}}
 					<li>
-						<a href="">Services</a>
+						<a href="{{url}}">{{name}}</a>
 					</li>
-					<li>
-						<a href="">What's New</a>
-					</li>
-					<li>
-						<a href="">Case Studies</a>
-					</li>
+					{{/each}}
+				{{/each}}
 				</ul>
-			</li>
-			<li class="has-submenu">
-				<a href="">Design</a>
-				<ul class="left-submenu">
-					<li class="back">
-						<a href="">Back</a>
-					</li>
-					<li>
-						<label>UX Design</label>
-					</li>
-					<li>
-						<a href="">Design Principles</a>
-					</li>
-					<li>
-						<a href="">Design Tenets</a>
-					</li>
-					<li>
-						<a href="">Download Templates</a>
-					</li>
-					<li>
-						<a href="">Pattern Library</a>
-					</li>
-					<li>
-						<label>Visual Design</label>
-					</li>
-					<li>
-						<a href="">Color Palette</a>
-					</li>
-					<li>
-						<a href="">Icons</a>
-					</li>
-					<li>
-						<a href="">Corporate Logos</a>
-					</li>
-					<li>
-						<a href="">People Images</a>
-					</li>
-					<li>
-						<a href="">Typography</a>
-					</li>
-				</ul>
-			</li>
-			<li class="has-submenu">
-				<a href="">Develop</a>
-				<ul class="left-submenu">
-					<li class="back">
-						<a href="">Back</a>
-					</li>
-					<li>
-						<label>Downloads</label>
-					</li>
-					<li>
-						<a href="">Download Evolution v{{ package.evolution.version }}</a>
-					</li>
-					<li>
-						<a href="">Download Evolution Toolbox</a>
-					</li>
-					<li>
-						<a href="">Previous Versions</a>
-					</li>
-					<li>
-						<a href="">Upgrading Evolution</a>
-					</li>
-					<li>
-						<a href="">Change Log</a>
-					</li>
-					<li>
-						<a href="">Boilerplates</a>
-					</li>
-					<li>
-						<label>Patterns</label>
-					</li>
-					<li>
-						<a href="">Pattern Library</a>
-					</li>
-					<li>
-						<a href="/atoms.html">Atoms</a>
-					</li>
-					<li>
-						<a href="/molecules.html">Molecules</a>
-					</li>
-					<li>
-						<a href="/organisms.html">Organisms</a>
-					</li>
-					<li>
-						<a href="/kitchen-sink.html">Kitchen Sink</a>
-					</li>
-					<li>
-						<label>UI Standards</label>
-					</li>
-					<li>
-						<a href="">Front End Code Standards</a>
-					</li>
-					<li>
-						<a href="">Organism Development</a>
-					</li>
-				</ul>
-			</li>
-			<li class="has-submenu">
-				<a href="">Help/Support</a>
-				<ul class="left-submenu">
-					<li class="back">
-						<a href="">Back</a>
-					</li>
-					<li>
-						<a href="">Browser Support</a>
-					</li>
-					<li>
-						<a href="">Media Queries</a>
-					</li>
-					<li>
-						<a href="">FAQs</a>
-					</li>
-				</ul>
-			</li>
+			<li>
+		{{/each}}
 		</ul>
 	</aside>
 	<!-- OFF-CANVAS - LEFT MENU - ENDS -->
