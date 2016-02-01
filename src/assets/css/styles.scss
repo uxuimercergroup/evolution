@@ -128,16 +128,17 @@ URL: {{ meta_url }}
 // HERO - ENDS
 
 // MAGELLAN - BEGINS
+	$evo-site-magellan-width: rem-calc(226) !important;
 	.evo-magellan.fixed					{
 										left: auto !important;
 										min-width: auto !important;
 										position: none !important;
-										width: auto !important;
+										width: $evo-site-magellan-width;
 										}
 
 	.evo-magellan						{
 										background: $white;
-										width: 100% !important;
+										width: $evo-site-magellan-width;
 										padding: 0;
 		// SUB-NAV
 		.sub-nav							{
@@ -187,6 +188,7 @@ URL: {{ meta_url }}
 											padding: rem-calc(4 4 4 8);
 			[class^="evo-icon-"]				{
 												color: $onyx-dark-70;
+												float: right !important;
 				&:hover								{color: $onyx-dark-80}
 												}
 											}
@@ -227,6 +229,7 @@ URL: {{ meta_url }}
 								margin-bottom: 0;
 								}
 // TYPOGRAPHY - ENDS
+
 /*--- KITCHEN SINK -------------------------------------------------------------------------*/
 
 // GRID DEMO

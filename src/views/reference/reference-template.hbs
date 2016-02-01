@@ -22,7 +22,7 @@ Main description would begin here about the component/pattern that you are build
 					<!-- EXAMPLE HEADER - BEGINS -->
 						<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
 							{{name}}
-							<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-top radius evo-tooltip right" title="Toggle Code View" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+							<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-bottom radius evo-tooltip right" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 						</h6>
 						<a name="{{hyphenate name}}"></a>
 					<!-- EXAMPLE HEADER - ENDS -->
@@ -44,14 +44,14 @@ Main description would begin here about the component/pattern that you are build
 							{{#each multiple_example_options}}
 							<div class="evo-site-example-box--code-hdr">
 								{{slug}}
-								<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-top radius evo-tooltip right" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 							</div>
 							<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							{{/each}}
 						{{else}}
 							<div class="evo-site-example-box--code-hdr">
 								{{slug}}
-								<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-top radius evo-tooltip right" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 							</div>
 							<pre><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 						{{/is}}
@@ -75,8 +75,12 @@ Main description would begin here about the component/pattern that you are build
 
 				<!-- DEPENDENCIES - BEGINS -->
 					<div class="evo-site-pattern-dependencies">
-						<h6>{{reference.sidenav.dependencies_header}}</h6>
-						<ul class="no-bullet">
+						<h6 data-evo-toggle-element="dependencies_toggle1">
+							{{reference.sidenav.dependencies_header}}
+							<a href="javascript:;" title="" class="evo-icon-site-plus-circle right evo-icon-site-minus-circle"></a>
+						</h6>
+
+						<ul class="no-bullet" data-evo-toggle-element-item="dependencies_toggle1">
 							{{#is button.dependency_data.foundation 'true'}}
 								<li><a href="" target="_blank">Foundation {{package.foundation_version}}</a>
 									<ul>
