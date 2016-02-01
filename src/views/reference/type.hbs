@@ -1,5 +1,5 @@
 ---
-title: "Template"
+title: "Type"
 ---
 
 <section class="row">
@@ -7,7 +7,9 @@ title: "Template"
 
 {{# markdown }}
 # {{ title }}
-Main description would begin here about the component/pattern that you are building.
+We've implemented Proxima Nova as our default font family as a means to represent our brand instead of the typical 
+fonts often used, like Arial and Verdana. Proxima Nova is a modern, yet professional, font, and it is also compatible 
+with all modern web browsers.
 ***
 {{/ markdown }}
 
@@ -16,7 +18,7 @@ Main description would begin here about the component/pattern that you are build
 		<section class="row">
 			<div class="medium-12 large-9 columns evo-keyline-right">
 			<!-- CODE EXAMPLE BOX - BEGINS -->
-				{{#each button.data }}
+				{{#each type.data }}
 				<div class="panel evo-box evo-site-example-box">
 					<div class="evo-box-hdr">
 					<!-- CODE HEADER - BEGINS -->
@@ -29,33 +31,18 @@ Main description would begin here about the component/pattern that you are build
 					</div>
 					<div class="evo-box-bdy">
 					<!-- RENDERED HTML - BEGINS -->
-						{{#is multiple_example 'true'}}
-							{{#each multiple_example_options}}
-								{{> (lookup . 'partial') }}
-							{{/each}}
-						{{else}}
-							{{> (lookup . 'partial') }}
-						{{/is}}
+						<div class="evo-type-sample" data-evo-type-sample="{{type-sample}}">
+							<div class="large-size">{{capitalizeFirst sample-letters}}</div>
+							<div class="medium-size">
+								<span>{{alphabet}}</span><br />
+								{{lowercase alphabet}}<br />
+								{{numbers-symbol}}
+							</div>
+						</div>
 					<!-- RENDERED HTML - ENDS -->
 					</div>
 					<div class="evo-box-ftr hide" data-evo-toggle-element-item="code-toggle{{@index}}">
-					<!-- HTML CODE - BEGINS -->
-						{{#is multiple_example 'true'}}
-							{{#each multiple_example_options}}
-							<div class="evo-site-example-box--code-hdr">
-								{{slug}}
-								<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-top radius evo-tooltip right" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-							</div>
-							<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
-							{{/each}}
-						{{else}}
-							<div class="evo-site-example-box--code-hdr">
-								{{slug}}
-								<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-top radius evo-tooltip right" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-							</div>
-							<pre><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
-						{{/is}}
-					<!-- HTML CODE - ENDS -->
+
 					</div>
 				</div>
 				{{/each}}
@@ -65,7 +52,7 @@ Main description would begin here about the component/pattern that you are build
 			<!-- PAGE MAGELLAN NAV - BEGINS -->
 				<div class="evo-magellan" data-magellan-expedition="fixed">
 					<dl class="sub-nav">
-						{{#each button.data}}
+						{{#each type.data}}
 						<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 						{{/each}}
 					</dl>
