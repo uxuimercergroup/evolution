@@ -127,6 +127,13 @@ URL: {{ meta_url }}
 										}
 // HERO - ENDS
 
+// BANDS - BEGINS
+	.evo-site-band						{
+										background-color: $evo-site-band-background-color;
+										padding: $evo-site-band-padding;
+										}
+// BANDS - ENDS
+
 // MAGELLAN - BEGINS
 	$evo-site-magellan-fixed-width: 19% !important;
 
@@ -173,7 +180,9 @@ URL: {{ meta_url }}
 										}
 // MAGELLAN - ENDS
 
-// SIDEBAR - BEGINS
+// REFERENCE PAGES - BEGINS
+
+	// SIDEBAR
 	.evo-site-reference-sidebar			{
 										background-color: $sapphire-bright;
 										padding: 22px;
@@ -185,9 +194,9 @@ URL: {{ meta_url }}
 											color: $onyx-dark-10;
 											}
 										}
-// SIDEBAR - ENDS
+// REFERENCE PAGES - ENDS
 
-// CODE EXAMPLE - BEGINS
+// EXAMPLE BOX - BEGINS
 	.evo-site-example-box				{
 										background-color: $white;
 										border: 0;
@@ -209,42 +218,42 @@ URL: {{ meta_url }}
 												}
 											}
 										}
-// CODE EXAMPLE - ENDS
+// EXAMPLE BOX - ENDS
 
-// TYPOGRAPHY - BEGINS
-	.evo-type-sample			{
-								margin-bottom: rem-calc(15);
+// TYPOGRAPHY PAGE - BEGINS
+	.evo-type-sample					{
+										margin-bottom: rem-calc(15);
 		&[data-evo-type-sample="proxima-nova-regular"]
-									{font-family: $evo-font-regular-stack;}
+											{font-family: $evo-font-regular-stack;}
 		&[data-evo-type-sample="proxima-nova-semibold"]
-									{font-family: $evo-font-medium-stack;}
+											{font-family: $evo-font-medium-stack;}
 		&[data-evo-type-sample="proxima-nova-bold"]
-									{font-family: $evo-font-bold-stack;}
+											{font-family: $evo-font-bold-stack;}
 		&[data-evo-type-sample="proxima-nova-italic"]
-									{font-family: $evo-font-italic-stack;}
+											{font-family: $evo-font-italic-stack;}
 		&[data-evo-type-sample="proxima-nova-thin"]
-									{font-family: $evo-font-thin-stack;}
-		.large-size					{
-									font-size: rem-calc(120);
-									line-height: 1;
-									}
-		.medium-size				{
-									font-size: rem-calc(32);
-									word-wrap: break-word;
-			span						{letter-spacing: rem-calc(6);}
-									}
-		.small-size					{
-									font-size: rem-calc(22);
-									word-wrap: break-word;
-			span						{letter-spacing: rem-calc(3.5);}
-									}
-								}
-	.evo-type-hierarchy-row		{margin-bottom: rem-calc(30) !important;}
-	.evo-type-data-list			{
-								font-size: rem-calc(14);
-								margin-bottom: 0;
-								}
-// TYPOGRAPHY - ENDS
+											{font-family: $evo-font-thin-stack;}
+		.large-size							{
+											font-size: rem-calc(120);
+											line-height: 1;
+											}
+		.medium-size						{
+											font-size: rem-calc(32);
+											word-wrap: break-word;
+			span								{letter-spacing: rem-calc(6);}
+											}
+		.small-size							{
+											font-size: rem-calc(22);
+											word-wrap: break-word;
+			span								{letter-spacing: rem-calc(3.5);}
+											}
+										}
+	.evo-type-hierarchy-row				{margin-bottom: rem-calc(30) !important;}
+	.evo-type-data-list					{
+										font-size: rem-calc(14);
+										margin-bottom: 0;
+										}
+// TYPOGRAPHY PAGE - ENDS
 
 /*--- KITCHEN SINK -------------------------------------------------------------------------*/
 
