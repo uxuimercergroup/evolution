@@ -2,32 +2,53 @@
 title: "Template"
 ---
 
-<section class="row">
-	<div class="small-12 columns evo-spacer-padding-top-medium">
+<!-- INTRO SECTION - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns evo-spacer-padding-top-medium evo-site--reference-intro">
 
 {{# markdown }}
 # {{ title }}
 Main description would begin here about the component/pattern that you are building.
-***
 {{/ markdown }}
 
 		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
 
+		<!-- TABS - BEGINS -->
+			<ul class="button-group radius even-4 stack-for-small evo-site-tabs--reference-tabs" data-tab role="tablist">
+				<li class="tab-title active" role="presentation">
+					<a href="#tabs1" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs1" class="button small evo-button">
+						<span class="text">Examples</span>
+					</a>
+				</li>
+				<li class="tab-title" role="presentation">
+					<a href="#tabs2" role="tab" tabindex="1" aria-selected="false" aria-controls="tabs2" class="button small evo-button">
+						<span class="text">Definition</span>
+					</a>
+				</li>
+				<li class="tab-title" role="presentation">
+					<a href="#tabs3" role="tab" tabindex="2" aria-selected="false" aria-controls="tabs3" class="button small evo-button">
+						<span class="text">Usage</span>
+					</a>
+				</li>
+				<li class="tab-title" role="presentation">
+					<a href="#tabs4" role="tab" tabindex="3" aria-selected="false" aria-controls="tabs4" class="button small evo-button">
+						<span class="text">Settings</span>
+					</a>
+				</li>
+			</ul>
+		<!-- TABS - ENDS -->
+
+		</div>
+	</section>
+<!-- INTRO SECTION - ENDS -->
 
 <!-- TABS - BEGINS -->
-	<ul class="tabs evo-tabs evo-site-tabs--content-tabs" data-tab role="tablist">
-		<li class="tab-title active" role="presentation">
-			<a href="#tabs1" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs1"><span class="text">Tab 1</span></a>
-		</li>
-		<li class="tab-title" role="presentation">
-			<a href="#tabs2" role="tab" tabindex="0" aria-selected="false" aria-controls="tabs2"><span class="text">Tab 2</span></a>
-		</li>
-	</ul>
-	<div class="tabs-content evo-tabs-content">
+	<div class="tabs-content evo-tabs-content evo-site-tabs-content--reference-content">
+	<!-- TAB PANEL 1 - BEGINS -->
 		<section role="tabpanel" aria-hidden="false" class="content active" id="tabs1">
 
 			<section class="row">
-				<div class="medium-12 large-9 columns evo-keyline-right">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each button.data }}
 					<div class="panel evo-box evo-site-example-box">
@@ -74,7 +95,7 @@ Main description would begin here about the component/pattern that you are build
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
-				<div class="large-3 columns show-for-large-up">
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large">
 				<!-- MAGELLAN NAV - BEGINS -->
 					<div class="evo-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
@@ -145,22 +166,51 @@ Main description would begin here about the component/pattern that you are build
 			</section>
 
 		</section>
+	<!-- TAB PANEL 1 - ENDS -->
+
+	<!-- TAB PANEL 2 - BEGINS -->
 		<section role="tabpanel" aria-hidden="true" class="content" id="tabs2">
 
 			<section class="row">
-				<div class="medium-6 columns">
-					Content for something
+				<div class="medium-12 large-9 columns evo-keyline-right">
+					Content for something 2
 				</div>
-				<div class="medium-6 columns">
-					Magellan
+				<div class="large-3 columns show-for-large-up">
+					Magellan 2
 				</div>
 			</section>
 			
 		</section>
+	<!-- TAB PANEL 2 - BEGINS -->
+
+	<!-- TAB PANEL 3 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="content" id="tabs3">
+
+			<section class="row">
+				<div class="medium-12 large-9 columns evo-keyline-right">
+					Content for something 3
+				</div>
+				<div class="large-3 columns show-for-large-up">
+					Magellan 3
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 3 - BEGINS -->
+
+	<!-- TAB PANEL 4 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="content" id="tabs4">
+
+			<section class="row">
+				<div class="medium-12 large-9 columns evo-keyline-right">
+					Content for something 4
+				</div>
+				<div class="large-3 columns show-for-large-up">
+					Magellan 4
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 4 - BEGINS -->
 	</div>
 <!-- TABS - ENDS -->
-
-
-		
-	</div>
-</section>

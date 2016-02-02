@@ -134,122 +134,163 @@ URL: {{ meta_url }}
 										}
 // BANDS - ENDS
 
-// MAGELLAN - BEGINS
-	$evo-site-magellan-fixed-width: 19% !important;
+// REFERENCE TEMPLATE - BEGINS
 
-	.evo-magellan						{
-										background: $white;
-										padding: 0;
-		&[data-magellan-expedition-clone]	{display: none;}
-		&.fixed								{
-											left: auto !important;
-											min-width: 0;
-											width: $evo-site-magellan-fixed-width;
-			.sub-nav							{
-				dd									{
-													float: none;
-													margin-left: 0;
-					&.active							{
-						&:before							{
-															font-family: $evo-icon-font-stack;
-															content: "\edc5";
-															position: absolute;
-															left: -3px;
-															margin-top: rem-calc(2);
-															}
+	.evo-site--reference-intro				{
+											border-bottom: 1px solid $onyx-dark-10;
+											padding-bottom: rem-calc(30);
+											}
+
+	// CONTENT TABS - BEGINS
+		.evo-site-tabs--reference-tabs		{
+			li									{
+				a									{
+													background-color: $onyx-dark-10;
+													color: $onyx-dark-80;
+													margin-bottom: 0;
+					&:hover								{
+														background-color: $onyx-dark-14;
+														color: $onyx-dark-80;
+														}
+													}
+												}
+			.active								{
+				a									{
+													background-color: $onyx-dark-20;
+													color: $onyx-dark-80;
+					&:hover								{
+														background-color: $onyx-dark-20;
 														}
 													}
 												}
 											}
 
-		// SUB-NAV
-		.sub-nav							{
-			dd									{
-												float: none;
-												margin-left: 0;
+		.evo-site-tabs-content--reference-content
+											{
+											border: 0;
+											margin-bottom: 0;
+ 			.evo-keyline-right					{border-color: $onyx-dark-10;}
+			.content							{
+												padding: 0;
+												}
+											}
+	// CONTENT TABS - ENDS
+
+	// SIDEBAR - BEGINS
+		.evo-site-reference-sidebar			{
+											background-color: $sapphire-bright;
+											padding: 22px;
+			.evo-hdr-rule						{
+												color: $white;
+												border-bottom-color: $white;
+												}
+			a									{
+												color: $onyx-dark-10;
+												}
+											}
+		.evo-site-accordian--other-options	{
+			.accordion-navigation				{
+												border: 0;
+												margin-bottom: rem-calc(6) !important;
+				&.active > a 						{background: $transparent !important;}
 				a									{
-													display: block;
-													line-height: 1.6;
-													color: $sapphire-medium;
-													text-decoration: underline;
 													background-color: $transparent;
-													padding-top: 0;
+													padding-left: 0;
 													padding-right: 0;
-													padding-bottom: 0;
+													padding-top: 0;
+													padding-bottom: rem-calc(6);
+					&:before							{float: right;}
 					&:hover								{background-color: $transparent;}
 													}
-												}
-											}
-										}
-// MAGELLAN - ENDS
-
-// REFERENCE PAGES - BEGINS
-
-	// SIDEBAR
-	.evo-site-reference-sidebar			{
-										background-color: $sapphire-bright;
-										padding: 22px;
-		.evo-hdr-rule						{
-											color: $white;
-											border-bottom-color: $white;
-											}
-		a									{
-											color: $onyx-dark-10;
-											}
-										}
-
-	.evo-site-accordian--other-options	{
-		.accordion-navigation				{
-											border: 0;
-											margin-bottom: rem-calc(6) !important;
-			&.active > a 						{background: $transparent !important;}
-			a									{
-												background-color: $transparent;
-												padding-left: 0;
-												padding-right: 0;
-												padding-top: 0;
-												padding-bottom: rem-calc(6);
-				&:before							{float: right;}
-				&:hover								{background-color: $transparent;}
-												}
-			.content							{
-												background-color: $transparent;
-												padding-left: rem-calc(2);
-				&.active							{background-color: $transparent;}
-				a									{
-													font-family: $evo-font-regular-family;
-													font-size: rem-calc(14);
-													text-decoration: underline;
+				.content							{
+													background-color: $transparent;
+													padding-left: rem-calc(2);
+					&.active							{background-color: $transparent;}
+					a									{
+														font-family: $evo-font-regular-family;
+														font-size: rem-calc(14);
+														text-decoration: underline;
+														}
+					li									{line-height: 1.3;}
 													}
-				li									{line-height: 1.3;}
 												}
 											}
-										}
-// REFERENCE PAGES - ENDS
+	// SIDEBAR - ENDS
 
-// EXAMPLE BOX - BEGINS
-	.evo-site-example-box				{
-										background-color: $white;
-										border: 0;
-										padding: 0;
-										margin-bottom: rem-calc(80);
-		.evo-hdr-rule						{
-											border-bottom-width: 1px;
-											border-bottom-color: $onyx-dark-10;
-											}
-		.evo-site-example-box--code-hdr		{
-											@include border-radius($global-radius $global-radius 0 0);
-											background-color: $onyx-dark-10;
-											font-size: rem-calc(12);
-											padding: rem-calc(4 4 4 8);
-			[class^="evo-icon-"]				{
-												color: $onyx-dark-70;
-												float: right !important;
-				&:hover								{color: $onyx-dark-80}
+	// MAGELLAN - BEGINS
+		$evo-site-magellan-fixed-width: 19% !important;
+
+		.evo-magellan						{
+											background: $white;
+											padding: 0;
+			&[data-magellan-expedition-clone]	{display: none;}
+			&.fixed								{
+												left: auto !important;
+												min-width: 0;
+												width: $evo-site-magellan-fixed-width;
+				.sub-nav							{
+					dd									{
+														float: none;
+														margin-left: 0;
+						&.active							{
+							&:before							{
+																font-family: $evo-icon-font-stack;
+																content: "\edc5";
+																position: absolute;
+																left: -3px;
+																margin-top: rem-calc(2);
+																}
+															}
+														}
+													}
+												}
+
+			// SUB-NAV
+			.sub-nav							{
+				dd									{
+													float: none;
+													margin-left: 0;
+					a									{
+														display: block;
+														line-height: 1.6;
+														color: $sapphire-medium;
+														text-decoration: underline;
+														background-color: $transparent;
+														padding-top: 0;
+														padding-right: 0;
+														padding-bottom: 0;
+						&:hover								{background-color: $transparent;}
+														}
+													}
 												}
 											}
-										}
-// EXAMPLE BOX - ENDS
+	// MAGELLAN - ENDS
+
+	// EXAMPLE BOX - BEGINS
+		.evo-site-example-box				{
+											background-color: $white;
+											border: 0;
+											padding: 0;
+											margin-bottom: rem-calc(80);
+			.evo-hdr-rule						{
+												border-bottom-width: 1px;
+												border-bottom-color: $onyx-dark-10;
+												}
+			.evo-site-example-box--code-hdr		{
+												@include border-radius($global-radius $global-radius 0 0);
+												background-color: $onyx-dark-10;
+												font-size: rem-calc(12);
+												padding: rem-calc(4 4 4 8);
+				[class^="evo-icon-"]				{
+													color: $onyx-dark-70;
+													float: right !important;
+					&:hover								{color: $onyx-dark-80}
+													}
+												}
+											}
+	// EXAMPLE BOX - ENDS
+
+// REFERENCE TEMPLATE - ENDS
 
 // TYPOGRAPHY PAGE - BEGINS
 	.evo-type-sample					{
