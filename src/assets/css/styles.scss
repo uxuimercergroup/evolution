@@ -155,7 +155,7 @@ URL: {{ meta_url }}
 															content: "\edc5";
 															position: absolute;
 															left: -3px;
-															margin-top: rem-calc(4);
+															margin-top: rem-calc(2);
 															}
 														}
 													}
@@ -173,6 +173,9 @@ URL: {{ meta_url }}
 													color: $sapphire-medium;
 													text-decoration: underline;
 													background-color: $transparent;
+													padding-top: 0;
+													padding-right: 0;
+													padding-bottom: 0;
 					&:hover								{background-color: $transparent;}
 													}
 												}
@@ -192,6 +195,34 @@ URL: {{ meta_url }}
 											}
 		a									{
 											color: $onyx-dark-10;
+											}
+										}
+
+	.evo-site-accordian--other-options	{
+		.accordion-navigation				{
+											border: 0;
+											margin-bottom: rem-calc(6) !important;
+			&.active > a 						{background: $transparent !important;}
+			a									{
+												background-color: $transparent;
+												padding-left: 0;
+												padding-right: 0;
+												padding-top: 0;
+												padding-bottom: rem-calc(6);
+				&:before							{float: right;}
+				&:hover								{background-color: $transparent;}
+												}
+			.content							{
+												background-color: $transparent;
+												padding-left: rem-calc(2);
+				&.active							{background-color: $transparent;}
+				a									{
+													font-family: $evo-font-regular-family;
+													font-size: rem-calc(14);
+													text-decoration: underline;
+													}
+				li									{line-height: 1.3;}
+												}
 											}
 										}
 // REFERENCE PAGES - ENDS

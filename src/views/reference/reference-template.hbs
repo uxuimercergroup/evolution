@@ -13,110 +13,154 @@ Main description would begin here about the component/pattern that you are build
 
 		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
 
-		<section class="row">
-			<div class="medium-12 large-9 columns evo-keyline-right">
-			<!-- EXAMPLE BOX - BEGINS -->
-				{{#each button.data }}
-				<div class="panel evo-box evo-site-example-box">
-					<div class="evo-box-hdr">
-					<!-- EXAMPLE HEADER - BEGINS -->
-						<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
-							{{name}}
-							<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-bottom radius evo-tooltip right" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-						</h6>
-						<a name="{{hyphenate name}}"></a>
-					<!-- EXAMPLE HEADER - ENDS -->
-					</div>
-					<div class="evo-box-bdy">
-					<!-- RENDERED HTML - BEGINS -->
-						{{#is multiple_example 'true'}}
-							{{#each multiple_example_options}}
+
+<!-- TABS - BEGINS -->
+	<ul class="tabs evo-tabs evo-site-tabs--content-tabs" data-tab role="tablist">
+		<li class="tab-title active" role="presentation">
+			<a href="#tabs1" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs1"><span class="text">Tab 1</span></a>
+		</li>
+		<li class="tab-title" role="presentation">
+			<a href="#tabs2" role="tab" tabindex="0" aria-selected="false" aria-controls="tabs2"><span class="text">Tab 2</span></a>
+		</li>
+	</ul>
+	<div class="tabs-content evo-tabs-content">
+		<section role="tabpanel" aria-hidden="false" class="content active" id="tabs1">
+
+			<section class="row">
+				<div class="medium-12 large-9 columns evo-keyline-right">
+				<!-- EXAMPLE BOX - BEGINS -->
+					{{#each button.data }}
+					<div class="panel evo-box evo-site-example-box">
+						<div class="evo-box-hdr">
+						<!-- EXAMPLE HEADER - BEGINS -->
+							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
+								{{name}}
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-bottom radius evo-tooltip right" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+							</h6>
+							<a name="{{hyphenate name}}"></a>
+						<!-- EXAMPLE HEADER - ENDS -->
+						</div>
+						<div class="evo-box-bdy">
+						<!-- RENDERED HTML - BEGINS -->
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
+									{{> (lookup . 'partial') }}
+								{{/each}}
+							{{else}}
 								{{> (lookup . 'partial') }}
-							{{/each}}
-						{{else}}
-							{{> (lookup . 'partial') }}
-						{{/is}}
-					<!-- RENDERED HTML - ENDS -->
+							{{/is}}
+						<!-- RENDERED HTML - ENDS -->
+						</div>
+						<div class="evo-box-ftr hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						<!-- HTML CODE - BEGINS -->
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+								{{/each}}
+							{{else}}
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							{{/is}}
+						<!-- HTML CODE - ENDS -->
+						</div>
 					</div>
-					<div class="evo-box-ftr hide" data-evo-toggle-element-item="code-toggle{{@index}}">
-					<!-- HTML CODE - BEGINS -->
-						{{#is multiple_example 'true'}}
-							{{#each multiple_example_options}}
-							<div class="evo-site-example-box--code-hdr">
-								{{slug}}
-								<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-							</div>
-							<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
-							{{/each}}
-						{{else}}
-							<div class="evo-site-example-box--code-hdr">
-								{{slug}}
-								<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-							</div>
-							<pre><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
-						{{/is}}
-					<!-- HTML CODE - ENDS -->
-					</div>
+					{{/each}}
+				<!-- EXAMPLE BOX - ENDS -->
 				</div>
-				{{/each}}
-			<!-- EXAMPLE BOX - ENDS -->
-			</div>
-			<div class="large-3 columns show-for-large-up">
-			<!-- MAGELLAN NAV - BEGINS -->
-				<div class="evo-magellan" data-magellan-expedition="fixed">
-					<dl class="sub-nav">
-						{{#each button.data}}
-						<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
-						{{/each}}
-					</dl>
-
-					{{#is button.dependency_data.dependency 'true'}}
-					<hr>
-
-				<!-- DEPENDENCIES - BEGINS -->
-					<div class="evo-site-pattern-dependencies">
-						<h6 data-evo-toggle-element="dependencies_toggle1">
-							{{reference.sidenav.dependencies_header}}
-							<a href="javascript:;" title="" class="evo-icon-site-plus-circle right evo-icon-site-minus-circle"></a>
-						</h6>
-
-						<ul class="no-bullet" data-evo-toggle-element-item="dependencies_toggle1">
-							{{#is button.dependency_data.foundation 'true'}}
-								<li><a href="" target="_blank">Foundation {{package.foundation_version}}</a>
-								{{#if button.dependency_data.foundation_dependencies}}
-									<ul>
-									{{#each button.dependency_data.foundation_dependencies}}
-										<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-									{{/each}}
-									</ul>
-								{{/if}}
-								</li>
-							{{/is}}
-							{{#is button.dependency_data.evolution 'true'}}
-								<li><a href="/">Evolution {{package.evolution.version}}</a>
-								{{#if button.dependency_data.evolution_dependencies}}
-									<ul>
-									{{#each button.dependency_data.evolution_dependencies}}
-										<li><a href="{{url}}">{{name}}</a></li>
-									{{/each}}
-									</ul>
-								</li>
-								{{/if}}
-							{{/is}}
-							{{#is button.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-							{{#is button.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
-							{{#each button.dependency_data.other}}
-								<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+				<div class="large-3 columns show-for-large-up">
+				<!-- MAGELLAN NAV - BEGINS -->
+					<div class="evo-magellan" data-magellan-expedition="fixed">
+						<dl class="sub-nav">
+							{{#each button.data}}
+							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/each}}
+						</dl>
+
+						{{#is button.dependency_data.dependency 'true'}}
+						<hr>
+
+					<!-- DEPENDENCIES ACCORDION - BEGINS -->
+						<ul class="accordion evo-accordion evo-accordion-icons evo-site-accordian--other-options" data-accordion data-allow-all-closed="true" role="tablist">
+						<!-- ACCORDION 1 - BEGINS -->
+							<li class="accordion-navigation">
+								<a id="panel1icons-heading" href="#panel1icons" role="tab" aria-controls="panel1icons">{{reference.sidenav.dependencies_header}}</a>
+								<div id="panel1icons" class="content" role="tabpanel" aria-labelledby="panel1icons-heading">
+
+									<ul class="no-bullet">
+										{{#is button.dependency_data.foundation 'true'}}
+											<li><a href="" target="_blank">Foundation {{package.foundation_version}}</a>
+											{{#if button.dependency_data.foundation_dependencies}}
+												<ul>
+												{{#each button.dependency_data.foundation_dependencies}}
+													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											{{/if}}
+											</li>
+										{{/is}}
+										{{#is button.dependency_data.evolution 'true'}}
+											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											{{#if button.dependency_data.evolution_dependencies}}
+												<ul>
+												{{#each button.dependency_data.evolution_dependencies}}
+													<li><a href="{{url}}">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											</li>
+											{{/if}}
+										{{/is}}
+										{{#is button.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is button.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
+										{{#each button.dependency_data.other}}
+											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+										{{/each}}
+									</ul>
+
+								</div>
+							</li>
+						<!-- ACCORDION 1 - ENDS -->
+
+						<!-- ACCORDION 2 - BEGINS -->
+							<li class="accordion-navigation">
+								<a id="panel1icons-heading" href="#panel2icons" role="tab" aria-controls="panel1icons">Other options</a>
+								<div id="panel2icons" class="content" role="tabpanel" aria-labelledby="panel1icons-heading">
+									<p>other content area</p>
+								</div>
+							</li>
+						<!-- ACCORDION 2 - BEGINS -->
 						</ul>
-					</div>
-				<!-- DEPENDENCIES - ENDS -->
-					{{/is}}
+					<!-- DEPENDENCIES ACCORDION - ENDS -->
+						{{/is}}
 
+					</div>
+				<!-- MAGELLAN NAV - ENDS -->
 				</div>
-			<!-- MAGELLAN NAV - ENDS -->
-			</div>
+			</section>
+
 		</section>
+		<section role="tabpanel" aria-hidden="true" class="content" id="tabs2">
+
+			<section class="row">
+				<div class="medium-6 columns">
+					Content for something
+				</div>
+				<div class="medium-6 columns">
+					Magellan
+				</div>
+			</section>
+			
+		</section>
+	</div>
+<!-- TABS - ENDS -->
+
+
 		
 	</div>
 </section>
