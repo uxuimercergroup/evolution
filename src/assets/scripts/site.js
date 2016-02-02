@@ -28,6 +28,8 @@ $(document).foundation({
 
 	// FOUNDATION INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
+	
+	// FOUNDATION MAGELLAN OPTIONS
 	"magellan-expedition": {
 		active_class: 'active', // specify the class used for active sections
 		threshold: 0, // how many pixels until the magellan bar sticks, 0 = auto

@@ -107,12 +107,13 @@ Main description would begin here about the component/pattern that you are build
 						{{#is button.dependency_data.dependency 'true'}}
 						<hr>
 
-					<!-- DEPENDENCIES ACCORDION - BEGINS -->
-						<ul class="accordion evo-accordion evo-accordion-icons evo-site-accordian--other-options" data-accordion data-allow-all-closed="true" role="tablist">
-						<!-- ACCORDION 1 - BEGINS -->
+					<!-- SIDENAV ACCORDION - BEGINS -->
+						<ul class="accordion evo-accordion evo-accordion-icons evo-site--reference-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
+
+						<!-- DEPENDENCIES ACCORDION - BEGINS -->
 							<li class="accordion-navigation">
-								<a id="panel1icons-heading" href="#panel1icons" role="tab" aria-controls="panel1icons">{{reference.sidenav.dependencies_header}}</a>
-								<div id="panel1icons" class="content" role="tabpanel" aria-labelledby="panel1icons-heading">
+								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion">{{reference.sidenav.dependencies_header}}</a>
+								<div id="dependencies-accordion" class="content" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
 
 									<ul class="no-bullet">
 										{{#is button.dependency_data.foundation 'true'}}
@@ -146,18 +147,19 @@ Main description would begin here about the component/pattern that you are build
 
 								</div>
 							</li>
-						<!-- ACCORDION 1 - ENDS -->
+						<!-- DEPENDENCIES ACCORDION - ENDS -->
 
-						<!-- ACCORDION 2 - BEGINS -->
+						<!-- OTHER OPTIONS ACCORDION - BEGINS -->
 							<li class="accordion-navigation">
-								<a id="panel1icons-heading" href="#panel2icons" role="tab" aria-controls="panel1icons">Other options</a>
-								<div id="panel2icons" class="content" role="tabpanel" aria-labelledby="panel1icons-heading">
+								<a id="other-options-accordion-heading" href="#other-options-accordion" role="tab" aria-controls="other-options-accordion">Other options</a>
+								<div id="other-options-accordion" class="content" role="tabpanel" aria-labelledby="other-options-accordion-heading">
 									<p>other content area</p>
 								</div>
 							</li>
-						<!-- ACCORDION 2 - BEGINS -->
+						<!-- OTHER OPTIONS ACCORDION - BEGINS -->
+
 						</ul>
-					<!-- DEPENDENCIES ACCORDION - ENDS -->
+					<!-- SIDENAV ACCORDION - ENDS -->
 						{{/is}}
 
 					</div>

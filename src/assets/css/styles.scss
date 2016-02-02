@@ -136,10 +136,12 @@ URL: {{ meta_url }}
 
 // REFERENCE TEMPLATE - BEGINS
 
-	.evo-site--reference-intro				{
+	// INTRO - BEGINS
+		.evo-site--reference-intro			{
 											border-bottom: 1px solid $onyx-dark-10;
 											padding-bottom: rem-calc(30);
 											}
+	// INTRO - ENDS
 
 	// CONTENT TABS - BEGINS
 		.evo-site-tabs--reference-tabs		{
@@ -177,7 +179,7 @@ URL: {{ meta_url }}
 	// CONTENT TABS - ENDS
 
 	// SIDEBAR - BEGINS
-		.evo-site-reference-sidebar			{
+		.evo-site--reference-sidebar		{
 											background-color: $sapphire-bright;
 											padding: 22px;
 			.evo-hdr-rule						{
@@ -188,7 +190,11 @@ URL: {{ meta_url }}
 												color: $onyx-dark-10;
 												}
 											}
-		.evo-site-accordian--other-options	{
+	// SIDEBAR - ENDS
+
+	// SIDENAV - BEGINS
+		.evo-site--reference-sidenav-accordian
+											{
 			.accordion-navigation				{
 												border: 0;
 												margin-bottom: rem-calc(6) !important;
@@ -215,7 +221,7 @@ URL: {{ meta_url }}
 													}
 												}
 											}
-	// SIDEBAR - ENDS
+	// SIDENAV - ENDS
 
 	// MAGELLAN - BEGINS
 		$evo-site-magellan-fixed-width: 19% !important;
@@ -375,9 +381,6 @@ URL: {{ meta_url }}
 										height: rem-calc(50);
 										width: rem-calc(200);
 										}
-
-/*--- STYLES SECTION HEADER ----------------------------------------------------------------*/
-
 
 
 /*=== MEDIA QUERIES ========================================================================*/
