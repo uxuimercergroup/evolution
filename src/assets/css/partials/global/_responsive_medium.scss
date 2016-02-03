@@ -38,11 +38,11 @@
 		// MARKETING BAND
 		.evo-site-band--marketing			{
 			.evo-site-band--marketing-content	{
-				h3									{margin-bottom: rem-calc(80);}
-				h6									{margin-bottom: rem-calc(80);}
+				h3									{margin-bottom: $evo-site-band-marketing-h3-margin-bottom-medium;}
+				h6									{margin-bottom: $evo-site-band-marketing-h6-margin-bottom-medium;}
 				.evo-site-band--marketing-block-grid
 													{
-					h5									{margin-top: rem-calc(20);}
+					h5									{margin-top: $evo-site-band-marketing-block-grid-h5-margin-top-medium;}
 													}
 												}
 											}

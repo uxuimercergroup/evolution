@@ -136,8 +136,8 @@ URL: {{ meta_url }}
 	.evo-site-band--marketing			{
 										background-color: $evo-site-band-marketing-background-color;
 		.evo-site-band--marketing-content	{
-			h3									{margin-bottom: rem-calc(30);}
-			h6									{margin-bottom: rem-calc(30);}
+			h3									{margin-bottom: $evo-site-band-marketing-h3-margin-bottom;}
+			h6									{margin-bottom: $evo-site-band-marketing-h6-margin-bottom;}
 			.evo-site-band--marketing-block-grid
 												{
 				[class^="evo-icon-"]				{color: $evo-site-band-marketing-block-grid-icon-color;}
@@ -149,7 +149,7 @@ URL: {{ meta_url }}
 														}
 													}
 				h5									{
-													margin-top: rem-calc(10);
+													margin-top: $evo-site-band-marketing-block-grid-h5-margin-top;
 													font-family: $evo-site-band-marketing-block-grid-h5-font-family !important;
 													}
 				p									{color: $evo-site-band-marketing-block-grid-paragraph-color;}

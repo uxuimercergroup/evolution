@@ -27,16 +27,16 @@
 		// MARKETING BAND
 		.evo-site-band--marketing			{
 			.evo-site-band--marketing-content	{
-				h3									{font-size: rem-calc(18);}
-				.evo-site-cta-button				{margin-bottom: rem-calc(30);}
+				h3									{font-size: $evo-site-band-marketing-h3-font-size-small;}
+				.evo-site-cta-button				{margin-bottom: $evo-site-band-marketing-cta-button-margin-bottom;}
 				.evo-site-band--marketing-block-grid
 													{
-					li									{padding-bottom: rem-calc(20);}
+					li									{padding-bottom: $evo-site-band-marketing-block-grid-item-padding-bottom-small;}
 					h4									{
-														font-size: rem-calc(16);
-														margin: 0;
+														font-size: $evo-site-band-marketing-block-grid-h4-font-size-small;
+														margin: $evo-site-band-marketing-block-grid-h4-margin-small;
 														}
-					h5									{font-size: rem-calc(14);}
+					h5									{font-size: $evo-site-band-marketing-block-grid-h5-font-size-small;}
 													}
 												}
 											}
