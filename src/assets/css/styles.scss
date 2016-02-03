@@ -205,7 +205,11 @@ URL: {{ meta_url }}
 													padding-right: 0;
 													padding-top: 0;
 													padding-bottom: rem-calc(6);
-					&:before							{float: right;}
+					&:before							{
+														float: right;
+														top: 0;
+														color: $sapphire-medium;
+														}
 					&:hover								{background-color: $transparent;}
 													}
 				.content							{
