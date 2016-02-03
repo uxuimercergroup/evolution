@@ -282,6 +282,9 @@ URL: {{ meta_url }}
 											border: 0;
 											padding: 0;
 											margin-bottom: rem-calc(80);
+			[class^="evo-icon-"]				{
+												float: right !important;
+												}
 			.evo-hdr-rule						{
 												border-bottom-width: 1px;
 												border-bottom-color: $onyx-dark-10;
