@@ -46,6 +46,9 @@ $(function() {
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
 
+		// CSS animation Init
+		evoAnimateHover('viewSource', 'bounceIn');
+
 		// COPY TO CLIPBOARD
 		var clipboard = new Clipboard('.copy-to-clipboard');
 

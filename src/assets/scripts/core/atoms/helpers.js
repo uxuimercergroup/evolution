@@ -5,6 +5,34 @@
 // URL: {{ evo_meta_url }}
 //--------------------------------------------------------------------------------------------------------
 
+// CSS ANIMATIONS
+//--------------------------------------------------------------------------------------------------------
+
+	// animateElement - element that is getting animated
+	// animationType - pass the animation type
+
+	var evoAnimateClick = function(animateElement, animationType){
+		jQuery('[data-evo-animate=' + animateElement + ']').on('click', function(){
+			jQuery('[data-evo-animate-element=' + animateElement + ']').addClass('animated ' + animationType).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+				jQuery(this).removeClass('animated ' + animationType);
+			});
+		});
+	}
+
+	// CSS animation Init
+	evoAnimateClick();
+
+	var evoAnimateHover = function(animateElement, animationType){
+		jQuery('[data-evo-animate=' + animateElement + ']').on('mouseenter', function(){
+			jQuery('[data-evo-animate-element=' + animateElement + ']').addClass('animated ' + animationType).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+				jQuery(this).removeClass('animated ' + animationType);
+			});
+		});
+	}
+
+	// CSS animation Init
+	evoAnimateHover();
+
 // FORM
 //--------------------------------------------------------------------------------------------------------
 
