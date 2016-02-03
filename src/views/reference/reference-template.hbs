@@ -15,26 +15,13 @@ Main description would begin here about the component/pattern that you are build
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius even-4 stack-for-small evo-site-tabs--reference-tabs" data-tab role="tablist">
-				<li class="tab-title active" role="presentation">
-					<a href="#tabs1" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs1" class="button small evo-button">
-						<span class="text">Examples</span>
+				{{#each reference.tabs}}
+				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
+					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
+						<span class="text">{{name}}</span>
 					</a>
 				</li>
-				<li class="tab-title" role="presentation">
-					<a href="#tabs2" role="tab" tabindex="1" aria-selected="false" aria-controls="tabs2" class="button small evo-button">
-						<span class="text">Definition</span>
-					</a>
-				</li>
-				<li class="tab-title" role="presentation">
-					<a href="#tabs3" role="tab" tabindex="2" aria-selected="false" aria-controls="tabs3" class="button small evo-button">
-						<span class="text">Usage</span>
-					</a>
-				</li>
-				<li class="tab-title" role="presentation">
-					<a href="#tabs4" role="tab" tabindex="3" aria-selected="false" aria-controls="tabs4" class="button small evo-button">
-						<span class="text">Settings</span>
-					</a>
-				</li>
+				{{/each}}
 			</ul>
 		<!-- TABS - ENDS -->
 
@@ -45,7 +32,7 @@ Main description would begin here about the component/pattern that you are build
 <!-- TABS - BEGINS -->
 	<div class="tabs-content evo-tabs-content evo-site-tabs-content--reference-content">
 	<!-- TAB PANEL 1 - BEGINS -->
-		<section role="tabpanel" aria-hidden="false" class="content active" id="tabs1">
+		<section role="tabpanel" aria-hidden="false" class="content active" id="tabs0">
 
 			<section class="row">
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
@@ -147,17 +134,7 @@ Main description would begin here about the component/pattern that you are build
 
 								</div>
 							</li>
-						<!-- DEPENDENCIES ACCORDION - ENDS -->
-
-						<!-- OTHER OPTIONS ACCORDION - BEGINS -->
-							<li class="accordion-navigation">
-								<a id="other-options-accordion-heading" href="#other-options-accordion" role="tab" aria-controls="other-options-accordion">Other options</a>
-								<div id="other-options-accordion" class="content" role="tabpanel" aria-labelledby="other-options-accordion-heading">
-									<p>other content area</p>
-								</div>
-							</li>
-						<!-- OTHER OPTIONS ACCORDION - BEGINS -->
-
+						<!-- DEPENDENCIES ACCORDION - BEGINS -->
 						</ul>
 					<!-- SIDENAV ACCORDION - ENDS -->
 						{{/is}}
@@ -171,7 +148,7 @@ Main description would begin here about the component/pattern that you are build
 	<!-- TAB PANEL 1 - ENDS -->
 
 	<!-- TAB PANEL 2 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content" id="tabs2">
+		<section role="tabpanel" aria-hidden="true" class="content" id="tabs1">
 
 			<section class="row">
 				<div class="medium-12 large-9 columns evo-keyline-right">
@@ -186,7 +163,7 @@ Main description would begin here about the component/pattern that you are build
 	<!-- TAB PANEL 2 - BEGINS -->
 
 	<!-- TAB PANEL 3 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content" id="tabs3">
+		<section role="tabpanel" aria-hidden="true" class="content" id="tabs2">
 
 			<section class="row">
 				<div class="medium-12 large-9 columns evo-keyline-right">
@@ -201,7 +178,7 @@ Main description would begin here about the component/pattern that you are build
 	<!-- TAB PANEL 3 - BEGINS -->
 
 	<!-- TAB PANEL 4 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content" id="tabs4">
+		<section role="tabpanel" aria-hidden="true" class="content" id="tabs3">
 
 			<section class="row">
 				<div class="medium-12 large-9 columns evo-keyline-right">

@@ -22,4 +22,29 @@
 
 	// HERO - ENDS
 
+	// REFERENCE TEMPLATE - BEGINS
+
+		// CONTENT TABS - BEGINS
+			.evo-site-tabs--reference-tabs		{
+				li									{
+													width: 100% !important;
+					a									{
+														border-top-color: $white !important;
+														}
+													}
+				.active								{
+					a									{
+														background-color: $onyx-dark-20;
+														color: $onyx-dark-80;
+						&:hover								{
+															background-color: $onyx-dark-20;
+															}
+														}
+													}
+												}
+
+			.evo-site-tabs-content--reference-content
+												{}
+		// CONTENT TABS - ENDS
+
 }
