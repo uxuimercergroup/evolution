@@ -30,6 +30,24 @@
 
 	// HERO - ENDS
 
+	// BANDS - BEGINS
+	
+		// DEFAULT BAND
+		.evo-site-band						{padding: $evo-site-band-padding-medium;}
+
+		// MARKETING BAND
+		.evo-site-band--marketing			{
+			.evo-site-band--marketing-content	{
+				h3									{margin-bottom: rem-calc(80);}
+				h6									{margin-bottom: rem-calc(80);}
+				.evo-site-band--marketing-block-grid
+													{
+					h5									{margin-top: rem-calc(20);}
+													}
+												}
+											}
+	// BANDS - ENDS
+
 }
 
 // MEDIUM MEDIA QUERY RANGE - 768px - 1024px

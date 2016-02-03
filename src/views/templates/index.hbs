@@ -11,15 +11,15 @@ title: "Home"
 	</div>
 </section>
 
-<section class="evo-full-width evo-site-band">
-	<div class="medium-12 large-10 large-centered columns">
+<section class="evo-full-width evo-site-band evo-site-band--marketing">
+	<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
 		<h3 class="text-center">{{home.tools.header}}</h3>
 		<div class="text-center show-for-small-only">
 			{{#each home.tools.cta_button_small}}
 				{{> (lookup . 'partial') }}
 			{{/each}}
 		</div>
-		<ul class="small-block-grid-{{home.tools.grid_small}} medium-block-grid-{{home.tools.grid_medium}} large-block-grid-{{home.tools.grid_large}}">
+		<ul class="small-block-grid-{{home.tools.grid_small}} medium-block-grid-{{home.tools.grid_medium}} large-block-grid-{{home.tools.grid_large}} evo-site-band--marketing-block-grid">
 			{{#each home.tools.items}}
 			<li class="text-center">
 				{{> (lookup . 'partial') }}
@@ -28,7 +28,7 @@ title: "Home"
 			</li>
 			{{/each}}
 		</ul>
-		<div class="text-center hide-for-small-only">
+		<div class="text-center hide-for-small-only"> 
 			{{#each home.tools.cta_button}}
 				{{> (lookup . 'partial') }}
 			{{/each}}
@@ -37,10 +37,17 @@ title: "Home"
 </section>
 
 <section class="evo-full-width evo-site-band">
-	<div class="evo-contain-to-grid">
-		<h3 class="text-center">{{home.products.header}}</h3>
+	<div class="medium-12 medium-centered columns evo-contain-to-grid">
+		<h3 class="text-center">Text Header</h3>
+		<p class="evo-no-margin-bottom">{{lorem count=10}}</p>
+	</div>
+</section>
+
+<section class="evo-full-width evo-site-band evo-site-band--marketing">
+	<div class="medium-12 medium-centered columns evo-contain-to-grid evo-site-band--marketing-content">
+		<h3 class="text-center evo-spacer-margin-bottom-small">{{home.products.header}}</h3>
 		<h6 class="subheader text-center">{{home.products.subheader}}</h6>
-		<ul class="small-block-grid-{{home.products.grid_small}} medium-block-grid-{{home.products.grid_medium}} large-block-grid-{{home.products.grid_large}}">
+		<ul class="small-block-grid-{{home.products.grid_small}} medium-block-grid-{{home.products.grid_medium}} large-block-grid-{{home.products.grid_large}} evo-site-band--marketing-block-grid">
 			{{#each home.products.items}}
 			<li class="text-center">
 				<h4><a href="{{url}}">{{header}}</a></h4>

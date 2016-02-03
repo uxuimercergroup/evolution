@@ -128,9 +128,33 @@ URL: {{ meta_url }}
 // HERO - ENDS
 
 // BANDS - BEGINS
-	.evo-site-band						{
-										background-color: $evo-site-band-background-color;
-										padding: $evo-site-band-padding;
+	
+	// DEFAULT BAND
+	.evo-site-band						{padding: $evo-site-band-padding;}
+
+	// MARKETING BAND
+	.evo-site-band--marketing			{
+										background-color: $evo-site-band-marketing-background-color;
+		.evo-site-band--marketing-content	{
+			h3									{margin-bottom: rem-calc(30);}
+			h6									{margin-bottom: rem-calc(30);}
+			.evo-site-band--marketing-block-grid
+												{
+				[class^="evo-icon-"]				{color: $evo-site-band-marketing-block-grid-icon-color;}
+				h4									{
+													color: $evo-site-band-marketing-block-grid-h4-color;
+					a									{
+														color: $evo-site-band-marketing-block-grid-h4-color;
+														text-decoration: $evo-site-band-marketing-block-grid-link-text-decoration;
+														}
+													}
+				h5									{
+													margin-top: rem-calc(10);
+													font-family: $evo-site-band-marketing-block-grid-h5-font-family !important;
+													}
+				p									{color: $evo-site-band-marketing-block-grid-paragraph-color;}
+												}
+											}
 										}
 // BANDS - ENDS
 

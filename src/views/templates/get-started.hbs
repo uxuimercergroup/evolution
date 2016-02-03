@@ -11,13 +11,22 @@ title: "Let’s Get Started"
 	</div>
 </section>
 
-<section class="evo-full-width evo-site-band">
-	<div class="evo-contain-to-grid">
-		<h3 class="text-center">{{get-started.built_for.header}}</h3>
+<section class="evo-full-width evo-site-band evo-site-band--marketing">
+	<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
+		<h3 class="text-center">{{get-started.users.header}}</h3>
+		<ul class="small-block-grid-{{get-started.users.grid_small}} medium-block-grid-{{get-started.users.grid_medium}} large-block-grid-{{get-started.users.grid_large}} evo-site-band--marketing-block-grid">
+			{{#each get-started.users.items}}
+			<li class="text-center">
+				{{> (lookup . 'partial') }}
+				<h5>{{header}}</h5>
+				<p>{{text}}</p>
+			</li>
+			{{/each}}
+		</ul>
 	</div>
 </section>
 
-<section class="evo-full-width evo-site-band">
+<section class="evo-full-width evo-site-band evo-site-band--marketing">
 	<div class="evo-contain-to-grid">
 		<h3 class="text-center">{{get-started.process.header}}</h3>
 	</div>
