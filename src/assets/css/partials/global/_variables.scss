@@ -6,6 +6,18 @@
 // VARIABLES
 // ==========================================================================================
 
+// BUTTONS
+
+	// CALL TO ACTION BUTTON
+	$evo-site-cta-button-border-width: 2px;
+	$evo-site-cta-button-border-style: solid;
+	$evo-site-cta-button-border-color: $sapphire-medium;
+	$evo-site-cta-button-background-color: $transparent;
+	$evo-site-cta-button-font-color: $sapphire-medium;
+	$evo-site-cta-button-min-width: rem-calc(250);
+	$evo-site-cta-button-hover-background-color: $sapphire-medium;
+	$evo-site-cta-button-hover-font-color: $white;
+
 // HEADER
 $evo-site-header-sub-name-font-family: $evo-font-thin-stack;
 
@@ -51,7 +63,7 @@ $evo-site-header-sub-name-font-family: $evo-font-thin-stack;
 	$evo-site-hero-tagline-font-size-small: rem-calc(14);
 	$evo-site-hero-tagline-max-width-small: 75%;
 	$evo-site-hero-tagline-max-width-medium: 87%;
-	$evo-site-hero-tagline-max-width-large: 50%;
+	$evo-site-hero-tagline-max-width-large: 53%;
 
 // BANDS
 $evo-site-band-padding: rem-calc(40 0);

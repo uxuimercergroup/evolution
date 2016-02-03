@@ -46,7 +46,8 @@ $(function() {
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
 
-		// CSS animation Init
+		// CSS ANIMATIONS INITS
+		evoAnimateHover('evoSiteHeaderCtaWhatsNew', 'bounceIn');
 		evoAnimateHover('viewSource', 'bounceIn');
 
 		// COPY TO CLIPBOARD

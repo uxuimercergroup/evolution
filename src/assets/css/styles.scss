@@ -30,6 +30,23 @@ URL: {{ meta_url }}
 
 /*--- SITE GLOBAL --------------------------------------------------------------------------*/
 
+// BUTTONS - BEGINS
+	
+	// CALL TO ACTION BUTTON
+	.evo-site-cta-button				{
+										border: $evo-site-cta-button-border-width $evo-site-cta-button-border-style $evo-site-cta-button-border-color;
+										background-color: $evo-site-cta-button-background-color;
+										color: $evo-site-cta-button-font-color;
+										min-width: $evo-site-cta-button-min-width;
+		&:visited							{color: $evo-site-cta-button-font-color;}
+		&:hover								{
+											background-color: $evo-site-cta-button-hover-background-color;
+											color: $evo-site-cta-button-hover-font-color;
+											}
+										}
+
+// BUTTONS - ENDS
+
 // HEADER - BEGINS
 	.evo-site-header					{
 
