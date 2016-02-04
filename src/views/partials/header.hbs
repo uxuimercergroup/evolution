@@ -43,7 +43,7 @@
 				{{#if navigation.whats_new}}
 					<li class="divider"></li>
 					<li>
-						<a class="evo-site-header--cta-whats-new" href="{{navigation.whats_new.url}}" data-evo-animate="evoSiteHeaderCtaWhatsNew"><span data-evo-animate-element="evoSiteHeaderCtaWhatsNew">{{navigation.whats_new.name}}</span>
+						<a class="evo-site-header--cta-whats-new" href="{{navigation.whats_new.url}}" data-anijs="if: mouseenter, do: bounceIn animated, to: .evo-site-header--cta-whats-new-name, after: removeAnim"><span class="evo-site-header--cta-whats-new-name">{{navigation.whats_new.name}}</span>
 						{{#each navigation.whats_new.icon}}
 							{{> (lookup . 'partial') }}
 						{{/each}}

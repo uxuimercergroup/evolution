@@ -3,10 +3,10 @@ title: "Home"
 ---
 
 <section class="evo-full-width evo-site-hero" data-evo-site-hero-size="4x-large" data-evo-site-hero-arrow-position="bottom">
-	<div class="small-12 columns evo-center-block-vertical">
+	<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
 		<div class="text-center evo-center-block-vertical-element">
-			<h1 class="evo-site-hero--hdr animated flipInY">{{ global.company }} <span>{{ global.title }}</span></h1>
-			<h3 class="evo-center-block evo-site-hero--tagline animated bounceInUp">{{ global.meta_description }}</h3>
+			<h1 class="evo-site-hero--hdr flipInY animated">{{ global.company }} <span>{{ global.title }}</span></h1>
+			<h3 class="evo-center-block evo-site-hero--tagline bounceInUp animated">{{ global.meta_description }}</h3>
 		</div>		
 	</div>
 </section>

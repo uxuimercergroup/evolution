@@ -25,9 +25,6 @@ Main description would begin here about the component/pattern that you are build
 			</ul>
 		<!-- TABS - ENDS -->
 
-<h1 data-evo-animate-mouseenter="mouseenter" data-evo-animate-mouseout="mouseout">HELLOWORLD</h1>
-<div data-evo-animate-element-mouseenter="mouseenter" data-evo-animate-element-mouseout="mouseout">HELLOMOTO</div>
-
 		</div>
 	</section>
 <!-- INTRO SECTION - ENDS -->
@@ -46,7 +43,7 @@ Main description would begin here about the component/pattern that you are build
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
 								{{name}}
-								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
@@ -62,7 +59,7 @@ Main description would begin here about the component/pattern that you are build
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
 						</div>
-						<div class="evo-box-ftr hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
 						<!-- HTML CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -102,7 +99,7 @@ Main description would begin here about the component/pattern that you are build
 
 						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
 							<li class="accordion-navigation">
-								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion">{{reference.sidenav.dependencies_header}}</a>
+								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{reference.sidenav.dependencies_header}}</a>
 								<div id="dependencies-accordion" class="content" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
 
 									<ul class="no-bullet">
