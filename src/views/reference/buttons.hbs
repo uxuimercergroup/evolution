@@ -2,8 +2,9 @@
 title: "Buttons"
 ---
 
-<section class="row">
-	<div class="small-12 columns evo-spacer-padding-top-medium">
+<!-- INTRO SECTION - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns evo-spacer-padding-top-medium evo-site--reference-intro">
 
 {{# markdown }}
 # {{ title }}
@@ -15,106 +16,245 @@ buttons depend on Foundation's [Buttons](http://foundation.zurb.com/docs/compone
 
 		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
 
-		<section class="row">
-			<div class="medium-12 large-9 columns evo-keyline-right">
-			<!-- EXAMPLE BOX - BEGINS -->
-				{{#each button.data }}
-				<div class="panel evo-box evo-site-example-box">
-					<div class="evo-box-hdr">
-					<!-- EXAMPLE HEADER - BEGINS -->
-						<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
-							{{name}}
-							<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-bottom radius evo-tooltip right" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-						</h6>
-						<a name="{{hyphenate name}}"></a>
-					<!-- EXAMPLE HEADER - ENDS -->
-					</div>
-					<div class="evo-box-bdy">
-					<!-- RENDERED HTML - BEGINS -->
-						{{#is multiple_example 'true'}}
-							{{#each multiple_example_options}}
-								{{> (lookup . 'partial') }}
-							{{/each}}
-						{{else}}
-							{{> (lookup . 'partial') }}
-						{{/is}}
-					<!-- RENDERED HTML - ENDS -->
-					</div>
-					<div class="evo-box-ftr hide" data-evo-toggle-element-item="code-toggle{{@index}}">
-					<!-- HTML CODE - BEGINS -->
-						{{#is multiple_example 'true'}}
-							{{#each multiple_example_options}}
-							<div class="evo-site-example-box--code-hdr">
-								{{slug}}
-								<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-							</div>
-							<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
-							{{/each}}
-						{{else}}
-							<div class="evo-site-example-box--code-hdr">
-								{{slug}}
-								<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-							</div>
-							<pre><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
-						{{/is}}
-					<!-- HTML CODE - ENDS -->
-					</div>
-				</div>
+		<!-- TABS - BEGINS -->
+			<ul class="button-group radius even-4 stack-for-small evo-site-tabs--reference-tabs" data-tab role="tablist">
+				{{#each reference.tabs}}
+				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
+					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
+						<span class="text">{{name}}</span>
+					</a>
+				</li>
 				{{/each}}
-			<!-- EXAMPLE BOX - ENDS -->
-			</div>
-			<div class="large-3 columns show-for-large-up">
-			<!-- MAGELLAN NAV - BEGINS -->
-				<div class="evo-magellan" data-magellan-expedition="fixed">
-					<dl class="sub-nav">
-						{{#each button.data}}
-						<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
-						{{/each}}
-					</dl>
+			</ul>
+		<!-- TABS - ENDS -->
 
-					{{#is button.dependency_data.dependency 'true'}}
-					<hr>
+		</div>
+	</section>
+<!-- INTRO SECTION - ENDS -->
 
-				<!-- DEPENDENCIES - BEGINS -->
-					<div class="evo-site-pattern-dependencies">
-						<h6 data-evo-toggle-element="dependencies_toggle1">
-							{{reference.sidenav.dependencies_header}}
-							<a href="javascript:;" title="" class="evo-icon-site-plus-circle right evo-icon-site-minus-circle"></a>
-						</h6>
+<!-- TABS - BEGINS -->
+	<div class="tabs-content evo-tabs-content evo-site-tabs-content--reference-content">
+	<!-- TAB PANEL 1 - BEGINS -->
+		<section role="tabpanel" aria-hidden="false" class="content active" id="tabs0">
 
-						<ul class="no-bullet" data-evo-toggle-element-item="dependencies_toggle1">
-							{{#is button.dependency_data.foundation 'true'}}
-								<li><a href="" target="_blank">Foundation {{package.foundation_version}}</a>
-									<ul>
-									{{#each button.dependency_data.foundation_dependencies}}
-										<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-									{{/each}}
-									</ul>
-								</li>
+			<section class="row">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
+				<!-- EXAMPLE BOX - BEGINS -->
+					{{#each button.data }}
+					<div class="panel evo-box evo-site-example-box">
+						<div class="evo-box-hdr">
+						<!-- EXAMPLE HEADER - BEGINS -->
+							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
+								{{name}}
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+							</h6>
+							<a name="{{hyphenate name}}"></a>
+						<!-- EXAMPLE HEADER - ENDS -->
+						</div>
+						<div class="evo-box-bdy">
+						<!-- RENDERED HTML - BEGINS -->
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
+									{{> (lookup . 'partial') }}
+								{{/each}}
+							{{else}}
+								{{> (lookup . 'partial') }}
 							{{/is}}
-							{{#is button.dependency_data.evolution 'true'}}
-								<li><a href="/">Evolution {{package.evolution.version}}</a>
-									<ul>
-									{{#each button.dependency_data.evolution_dependencies}}
-										<li><a href="{{url}}">{{name}}</a></li>
-									{{/each}}
-									</ul>
-								</li>
+						<!-- RENDERED HTML - ENDS -->
+						</div>
+						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						<!-- HTML CODE - BEGINS -->
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+								{{/each}}
+							{{else}}
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							{{/is}}
-							{{#is button.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-							{{#is button.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
-							{{#each button.dependency_data.other}}
-								<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
-							{{/each}}
-						</ul>
+						<!-- HTML CODE - ENDS -->
+						</div>
 					</div>
-				<!-- DEPENDENCIES - ENDS -->
-					{{/is}}
+					{{/each}}
+				<!-- EXAMPLE BOX - ENDS -->
+				</div>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large">
+				<!-- MAGELLAN NAV - BEGINS -->
+					<div class="evo-magellan" data-magellan-expedition="fixed">
+						<dl class="sub-nav">
+							{{#each button.data}}
+							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+							{{/each}}
+						</dl>
+
+						{{#is button.dependency_data.dependency 'true'}}
+						<hr>
+
+					<!-- SIDENAV ACCORDION - BEGINS -->
+						<ul class="accordion evo-accordion evo-accordion-icons evo-site--reference-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
+
+						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
+							<li class="accordion-navigation">
+								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{reference.sidenav.dependencies_header}}</a>
+								<div id="dependencies-accordion" class="content" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
+
+									<ul class="no-bullet">
+										{{#is button.dependency_data.foundation 'true'}}
+											<li><a href="" target="_blank">Foundation {{package.foundation_version}}</a>
+											{{#if button.dependency_data.foundation_dependencies}}
+												<ul>
+												{{#each button.dependency_data.foundation_dependencies}}
+													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											{{/if}}
+											</li>
+										{{/is}}
+										{{#is button.dependency_data.evolution 'true'}}
+											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											{{#if button.dependency_data.evolution_dependencies}}
+												<ul>
+												{{#each button.dependency_data.evolution_dependencies}}
+													<li><a href="{{url}}">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											</li>
+											{{/if}}
+										{{/is}}
+										{{#is button.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is button.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
+										{{#each button.dependency_data.other}}
+											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+										{{/each}}
+									</ul>
+
+								</div>
+							</li>
+						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
+
+						</ul>
+					<!-- SIDENAV ACCORDION - ENDS -->
+						{{/is}}
+
+					</div>
+				<!-- MAGELLAN NAV - ENDS -->
+				</div>
+			</section>
+
+		</section>
+	<!-- TAB PANEL 1 - ENDS -->
+
+	<!-- TAB PANEL 2 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="content" id="tabs1">
+
+			<section class="row">
+				<div class="medium-12 large-9 columns evo-keyline-right">
+					Buttons act as the focal point for user interaction as it relates to saving data or completing an action.
+				</div>
+				<div class="large-3 columns show-for-large-up">
+					Magellan 2
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 2 - BEGINS -->
+
+	<!-- TAB PANEL 3 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="content" id="tabs2">
+
+			<section class="row">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
+{{# markdown}}
+###### General
+* Each button has 4 states: static, hover, active, and loading (optional).
+* In the optional "loading" state, the button should be disabled to prevent the user from clicking multiple times. When this occurs, the button should also change style to also look like it's in a disabled state.
+* Buttons are entirely created with CSS. No images should be used.
+* Buttons used as "links" and buttons used with "forms" should look the same, but the functions can differ. For instance, you can make a link look like a button, but it will not have the "submit" function of a button with type of "submit."
+* The buttons should be able to be aligned to one another horizontally for consistency of Mercer branding.
+
+###### Width
+* Each button should have a minimum width of 100 pixels , but they can expand to match content length if needed.
+* The final width of the button should be dynamic based on the content inside the button.
+
+###### Labels
+* Button text should be a concise, specific call to action. Try to use one word, two at the most, and make it active voice.
+* Button text should Title Case - except in the "loading" state where lowercase is used to visually offset this state from the others.
+* There are two button styles:
+
+###### Primary Button
+* Used for the primary action on the page. There is usually only one Primary Button on a screen in order to avoid user confusion.
+* The Primary Button is essentially the "single most important" call-to-action you want the user to take.
+* Multiple primary buttons will confuse the user and should be avoided.
+
+###### Secondary Button
+* Designed to be visually offset from the Primary button.
+* There can be more than one Secondary Button on a screen.
+* Secondary Buttons are essentially additional options the user has on the page, just not the "primary call-to-action."
+* Buttons are different than links as links take you to another page, and therefore they have different uses. Buttons should be used for the following:
+
+* As navigation in a multi-step flow (user will be going through a process or a wizard).
+* To save data entered on a form
+* As a click event action to invoke another interaction on the page. For example, toggling content, hiding and showing content, sliding a panel, etc.
+{{/ markdown}}
+				</div>
+				<div class="large-3 columns show-for-large-up">
+					Magellan 3
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 3 - BEGINS -->
+
+	<!-- TAB PANEL 4 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="content" id="tabs3">
+
+			<section class="row">
+				<div class="medium-12 large-9 columns evo-keyline-right">
+
+					<h6 class="evo-hdr-rule evo-spacer-margin-top-large">{{ button.settings_header }}</h6>
+{{# markdown }}
+Below is list of options that you can pass in to the handlebars partial.
+{{/ markdown }}
+
+				<!-- BUTTON SETTINGS - BEGINS -->
+					<div class="evo-table-small-mediaquery">
+						<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-reference-setting-options" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+							<thead>
+								<tr>
+									<th scope="column" width="160">Options</th>
+									<th scope="column" width="90">Defaults</th>
+									<th scope="column">Values</th>
+									<th scope="column" width="325">Description</th>
+								</tr>
+							</thead>
+							<tbody>
+							{{#each button.settings_data}}
+								<tr>
+									<td>{{{ option }}}</td>
+									<td class="text-center">{{{ default_value }}}</td>
+									<td class="text-center">{{{ option_value }}}</td>
+									<td>{{{ description }}}</td>
+								</tr>
+							{{/each}}
+							</tbody>
+						</table>
+					</div>
+				<!-- BUTTON SETTINGS - ENDS -->
 
 				</div>
-			<!-- MAGELLAN NAV - ENDS -->
-			</div>
+				<div class="large-3 columns show-for-large-up">
+					&nbsp;
+				</div>
+			</section>
+			
 		</section>
-		
+	<!-- TAB PANEL 4 - BEGINS -->
 	</div>
-</section>
+<!-- TABS - ENDS -->

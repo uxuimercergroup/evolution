@@ -116,5 +116,129 @@
 				{"partial": "input-button", "type": "submit", "button-type": "input", "button-value": "Primary", "slug": "form-button"}
 			]
 		}
-	}
+	},
+
+	"settings_header": "Button Options",
+	"settings_data": [
+		{
+			"option": "aria-label",
+			"default_value": "--",
+			"option_value": "<em>Text</em>",
+			"description": "This will give you a value for the <code>aria label</code> attribute, used for accessibility"
+		},
+		{
+			"option": "button-name",
+			"default_value": "--",
+			"option_value": "<em>Text</em>",
+			"description": "This will give you a value for the <code>name</code> attribute"
+		},
+		{
+			"option": "button-title",
+			"default_value": "--",
+			"option_value": "<em>Text</em>",
+			"description": "This will give you a value for the <code>title</code> attribute"
+		},
+		{
+			"option": "button-type",
+			"default_value": "a",
+			"option_value": "<strong>button</strong>",
+			"description": "If you do not set an optional value you will get the <code>a</code> tag. You can also pass in <strong>button</strong> to get a <code>button</code> tag."
+		},
+		{
+			"option": "button-value",
+			"default_value": "--",
+			"option_value": "<em>Text</em>",
+			"description": "This will give you a value for the <code>value</code> attribute"
+		},
+		{
+			"option": "custom-class",
+			"default_value": "--",
+			"option_value": "<em>class name</em>",
+			"description": "This will allow you to add additional class names to the <code>class</code> attribute"
+		},
+		{
+			"option": "disabled",
+			"default_value": "--",
+			"option_value": "<strong>true</strong>",
+			"description": "If disabled is set to <strong>true</strong> then <code>disabled</code> attribute is added to button"
+		},
+		{
+			"option": "expand",
+			"default_value": "--",
+			"option_value": "<strong>true</strong>",
+			"description": "If expand is set to <strong>true</strong> then a class of <code>expand</code> is added to the class attribute of the button"
+		},
+		{
+			"option": "href",
+			"default_value": "--",
+			"option_value": "<em>path/to/file.html</em>",
+			"description": "Pass the value of the <code>href</code> attribute of the button"
+		},
+		{
+			"option": "icon-position",
+			"default_value": "--",
+			"option_value": "<strong>both, left, right</strong>",
+			"description": "Use the option values to set the position of the icons in the button"
+		},
+		{
+			"option": "icon-position-left-class",
+			"default_value": "--",
+			"option_value": "<em>class name</em>",
+			"description": "Icon class of custom icomoon icon for left side of button"
+		},
+		{
+			"option": "icon-position-right-class",
+			"default_value": "--",
+			"option_value": "<em>class name</em>",
+			"description": "Icon class of custom icomoon icon for right side of button"
+		},
+		{
+			"option": "id",
+			"default_value": "--",
+			"option_value": "<em>id</em>",
+			"description": "This will give you a value for the <code>id</code> attribute"
+		},
+		{
+			"option": "interactive-data-value",
+			"default_value": "--",
+			"option_value": "--",
+			"description": "Data value for interactive button - must match value used in JS init of interactive button"
+		},
+		{
+			"option": "shape",
+			"default_value": "radius",
+			"option_value": "<strong>radius, round</strong>",
+			"description": "Add one of the option values on the <code>class</code> attribute of the button"
+		},
+		{
+			"option": "secondary",
+			"default_value": "--",
+			"option_value": "<strong>true</strong>",
+			"description": "If expand is set to <strong>true</strong> then a class of <code>secondary</code> is added to the class attribute of the button"
+		},
+		{
+			"option": "size",
+			"default_value": "medium",
+			"option_value": "<strong>tiny, small, medium, large</strong>",
+			"description": "Add one of the option values on the <code>class</code> attribute of the button"
+		},
+		{
+			"option": "tabindex",
+			"default_value": "--",
+			"option_value": "<em>number</em>",
+			"description": "This will give you a value for the <code>tabindex</code> attribute"
+		},
+		{
+			"option": "text",
+			"default_value": "Button text",
+			"option_value": "<em>Text</em>",
+			"description": "This is the content of the button"
+		},
+		{
+			"option": "type",
+			"default_value": "--",
+			"option_value": "<strong>button, submit</strong>",
+			"description": "Add one of the option values on the <code>type</code> attribute of the button"
+		}
+	]
 }

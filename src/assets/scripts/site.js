@@ -108,6 +108,12 @@ $(function() {
 		// DATA TABLE
 
 			// Data Table example
+			evoDataTable('evo-data-table-reference-setting-options',{
+				"paging": false,
+				"info": false
+			});
+
+			// Data Table example
 			evoDataTable('evo-data-table-example');
 
 			// Data Table Vertical Scroll example
