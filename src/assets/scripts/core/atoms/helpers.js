@@ -19,19 +19,26 @@
 		});
 	}
 
-	// CSS animation Init
-	evoAnimateClick();
+	var evoAnimateMouseEnter = function(animateElement, animationType){
+		jQuery('[data-evo-animate-mouseenter=' + animateElement + ']').on('mouseenter', function(){
+			jQuery('[data-evo-animate-element-mouseenter=' + animateElement + ']').addClass('animated ' + animationType).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+				jQuery(this).removeClass('animated ' + animationType);
+			});
+		});
+	}
 
-	var evoAnimateHover = function(animateElement, animationType){
-		jQuery('[data-evo-animate=' + animateElement + ']').on('mouseenter', function(){
-			jQuery('[data-evo-animate-element=' + animateElement + ']').addClass('animated ' + animationType).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	var evoAnimateMouseOut = function(animateElement, animationType){
+		jQuery('[data-evo-animate-mouseout=' + animateElement + ']').on('mouseout', function(){
+			jQuery('[data-evo-animate-element-mouseout=' + animateElement + ']').addClass('animated ' + animationType).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 				jQuery(this).removeClass('animated ' + animationType);
 			});
 		});
 	}
 
 	// CSS animation Init
-	evoAnimateHover();
+	evoAnimateClick();
+	evoAnimateMouseEnter();
+	evoAnimateMouseOut();
 
 // FORM
 //--------------------------------------------------------------------------------------------------------

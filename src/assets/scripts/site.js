@@ -47,8 +47,9 @@ $(function() {
 	//----------------------------------------------------------------------------------------------------
 
 		// CSS ANIMATIONS INITS
-		evoAnimateHover('evoSiteHeaderCtaWhatsNew', 'bounceIn');
-		evoAnimateHover('viewSource', 'bounceIn');
+//		evoAnimateHover('evoSiteHeaderCtaWhatsNew', 'bounceIn');
+		evoAnimateMouseEnter('mouseenter', 'wobble');
+		evoAnimateMouseOut('mouseout', 'fadeOut');
 
 		// COPY TO CLIPBOARD
 		var clipboard = new Clipboard('.copy-to-clipboard');
