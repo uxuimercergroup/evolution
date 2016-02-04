@@ -44,7 +44,6 @@ URL: {{ meta_url }}
 											color: $evo-site-cta-button-hover-font-color;
 											}
 										}
-
 // BUTTONS - ENDS
 
 // HEADER - BEGINS
@@ -179,8 +178,10 @@ URL: {{ meta_url }}
 
 	// INTRO - BEGINS
 		.evo-site--reference-intro			{
-											border-bottom: 1px solid $onyx-dark-10;
-											padding-bottom: rem-calc(30);
+											border-bottom-width: $evo-site-reference-intro-border-bottom-width;
+											border-bottom-style: $evo-site-reference-intro-border-bottom-style;
+											border-bottom-color: $evo-site-reference-intro-border-bottom-color;
+											padding-bottom: $evo-site-reference-intro-padding-bottom;
 											}
 	// INTRO - ENDS
 
@@ -188,21 +189,21 @@ URL: {{ meta_url }}
 		.evo-site-tabs--reference-tabs		{
 			li									{
 				a									{
-													background-color: $onyx-dark-10;
-													color: $onyx-dark-80;
+													background-color: $evo-site-tabs-reference-tab-background-color;
+													color: $evo-site-tabs-reference-tab-font-color;
 													margin-bottom: 0;
 					&:hover								{
-														background-color: $onyx-dark-14;
-														color: $onyx-dark-80;
+														background-color: $evo-site-tabs-reference-tab-hover-background-color;
+														color: $evo-site-tabs-reference-tab-hover-font-color;
 														}
 													}
 												}
 			.active								{
 				a									{
-													background-color: $onyx-dark-20;
-													color: $onyx-dark-80;
+													background-color: $evo-site-tabs-reference-tab-active-background-color;
+													color: $evo-site-tabs-reference-tab-active-font-color;
 					&:hover								{
-														background-color: $onyx-dark-20;
+														background-color: $evo-site-tabs-reference-tab-active-hover-background-color;
 														}
 													}
 												}
@@ -212,7 +213,7 @@ URL: {{ meta_url }}
 											{
 											border: 0;
 											margin-bottom: 0;
- 			.evo-keyline-right					{border-color: $onyx-dark-10;}
+ 			.evo-keyline-right					{border-color: $evo-site-reference-keyline-color;}
 			.content							{
 												padding: 0;
 												}
@@ -221,14 +222,15 @@ URL: {{ meta_url }}
 
 	// SIDEBAR - BEGINS
 		.evo-site--reference-sidebar		{
-											background-color: $sapphire-bright;
-											padding: 22px;
+											background-color: $evo-site-reference-sidebar-background-color;
+											padding: $evo-site-reference-sidebar-padding;
 			.evo-hdr-rule						{
-												color: $white;
-												border-bottom-color: $white;
+												color: $evo-site-reference-sidebar-hdr-font-color;
+												border-bottom-color: $evo-site-reference-sidebar-hdr-border-bottom-color;
+												border-bottom-style: $evo-site-reference-sidebar-hdr-border-bottom-style;
 												}
 			a									{
-												color: $onyx-dark-10;
+												color: $evo-site-reference-sidebar-link-font-color;
 												}
 											}
 	// SIDEBAR - ENDS
@@ -249,7 +251,7 @@ URL: {{ meta_url }}
 					&:before							{
 														float: right;
 														top: 0;
-														color: $sapphire-medium;
+														color: $evo-site-reference-sidenav-accordian-icon-color;
 														}
 					&:hover								{background-color: $transparent;}
 													}
@@ -304,7 +306,7 @@ URL: {{ meta_url }}
 					a									{
 														display: block;
 														line-height: 1.6;
-														color: $sapphire-medium;
+														color: $evo-site-magellan-sub-nav-link-color;
 														text-decoration: underline;
 														background-color: $transparent;
 														padding-top: 0;
@@ -317,9 +319,9 @@ URL: {{ meta_url }}
 											}
 	// MAGELLAN - ENDS
 
-	// EXAMPLE BOX - BEGINS
+	// CODE EXAMPLE - BEGINS
 		.evo-site-example-box				{
-											background-color: $white;
+											background-color: $evo-site-example-box-background-color;
 											border: 0;
 											padding: 0;
 											margin-bottom: rem-calc(80);
@@ -327,23 +329,22 @@ URL: {{ meta_url }}
 												float: right !important;
 												}
 			.evo-hdr-rule						{
-												border-bottom-width: 1px;
-												border-bottom-color: $onyx-dark-10;
+												border-bottom-width: $evo-site-example-box-hdr-border-bottom-width;
+												border-bottom-color: $evo-site-example-box-hdr-border-bottom-color;
 												}
 			.evo-site-example-box--code-hdr		{
-												@include border-radius($global-radius $global-radius 0 0);
-												background-color: $onyx-dark-10;
-												font-size: rem-calc(12);
-												padding: rem-calc(4 4 4 8);
+												@include border-radius($evo-site-example-box-code-hdr-border-radius);
+												background-color: $evo-site-example-box-code-hdr-background-color;
+												font-size: $evo-site-example-box-code-hdr-font-size;
+												padding: $evo-site-example-box-code-hdr-padding;
 				[class^="evo-icon-"]				{
-													color: $onyx-dark-70;
+													color: $evo-site-example-box-code-hdr-icon-color;
 													float: right !important;
-					&:hover								{color: $onyx-dark-80}
+					&:hover								{color: $evo-site-example-box-code-hdr-hover-icon-color}
 													}
 												}
 											}
-	// EXAMPLE BOX - ENDS
-
+	// CODE EXAMPLE - ENDS
 // REFERENCE TEMPLATE - ENDS
 
 // TYPOGRAPHY PAGE - BEGINS
