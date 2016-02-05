@@ -175,7 +175,36 @@ URL: {{ meta_url }}
 
 	// TAB BAND
 	.evo-site-band--tab					{
-										@include box-shadow(0 0 10px 0 rgba($black, .9));
+		.evo-site-band--tab-hdr				{
+											background-color: $onyx-dark-2;
+			.evo-site-band--tab-hdr-tab			{
+												@include box-shadow(0 0 8px 1px rgba($black, 0.15));
+												@include border-radius(rem-calc(15) rem-calc(15) 0 0);
+												background-color: $white;
+												position: relative;
+												z-index: 3;
+												padding: rem-calc(30);
+												margin-bottom: rem-calc(-10);
+				h3									{
+													margin: 0;
+													color: $sapphire-bright;
+													}
+												}
+			.evo-site-band--tab-hdr-tab-shim	{
+												height: rem-calc(10);
+												background-color: $white;
+												position: relative;
+												top: 10px;
+												z-index: 4;
+												}
+											}
+		.evo-site-band--tab-panel			{
+											@include box-shadow(0 0 8px 1px rgba($black, 0.15));
+											background-color: $white;
+											position: relative;
+											z-index: 2;
+											padding: rem-calc(30 15);
+											}
 										}
 
 // BANDS - ENDS

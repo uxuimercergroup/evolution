@@ -2,11 +2,11 @@
 title: "Home"
 ---
 
-<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="4x-large" data-evo-site-hero-arrow-position="bottom">
+<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="3x-large" data-evo-site-hero-arrow-position="bottom">
 	<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
 		<div class="text-center evo-center-block-vertical-element">
-			<h1 class="evo-site-hero--hdr flipInY animated">{{ global.company }} <span>{{ global.title }}</span></h1>
-			<h3 class="evo-center-block evo-site-hero--tagline bounceInUp animated">{{ global.meta_description }}</h3>
+			<h1 class="evo-site-hero--hdr flipInY animated">{{{ global.company }}} <span>{{{ global.title }}}</span></h1>
+			<h3 class="evo-center-block evo-site-hero--tagline bounceInUp animated">{{{ global.meta_description }}}</h3>
 		</div>		
 	</div>
 </section>
@@ -32,6 +32,42 @@ title: "Home"
 			{{#each home.tools.cta_button}}
 				{{> (lookup . 'partial') }}
 			{{/each}}
+		</div>
+	</div>
+</section>
+
+<section class="evo-full-width evo-site-band--tab">
+	<div class="evo-full-width evo-site-band--tab-hdr">
+		<div class="small-12 columns">
+			<div class="row">
+				<div class="small-10 medium-8 large-6 small-centered columns evo-site-band--tab-hdr-tab">
+					<h3 class="text-center">{{home.benefits.header}}</h3>
+				</div>
+				<div class="small-10 medium-8 large-6 small-centered columns evo-site-band--tab-hdr-tab-shim"></div>
+			</div>
+		</div>
+	</div>
+	<div class="evo-full-width evo-site-band--tab-panel">
+		<div class="small-12 columns">
+			<div class="row">
+				<div class="medium-4 columns">
+					x
+				</div>
+				<div class="medium-8 columns">
+					x
+				</div>
+			</div>
+			<div class="row">
+				<div class="medium-4 columns">
+					x
+				</div>
+				<div class="medium-4 columns">
+					x
+				</div>
+				<div class="medium-4 columns">
+					x
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
