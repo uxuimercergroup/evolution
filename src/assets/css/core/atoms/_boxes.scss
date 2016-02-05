@@ -36,7 +36,7 @@ $evo-box-body-text-align: left !default;
 								}
 
 	// CORE BOX SHADOW
-	.evo-box-shadow				{@include box-shadow($evo-base-shadow-horizontal, $evo-base-shadow-vertical, $evo-base-shadow-blur, $evo-base-shadow-color);}
+	.evo-box-shadow				{@include box-shadow($evo-base-shadow-horizontal $evo-base-shadow-vertical $evo-base-shadow-blur $evo-base-shadow-spread $evo-base-shadow-color);}
 
 	//=== MEDIA QUERIES =========================================================================
 

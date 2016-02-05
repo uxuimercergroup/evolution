@@ -58,7 +58,7 @@ $evo-datepicker-input-min-width: rem-calc(110) !default;
 	// DATEPICKER
 	.ui-datepicker		{
 						@include border-radius($evo-datepicker-border-radius);
-						@include box-shadow($evo-base-shadow-horizontal, $evo-base-shadow-vertical, $evo-base-shadow-blur, $evo-base-shadow-color);
+						@include box-shadow($evo-base-shadow-horizontal $evo-base-shadow-vertical $evo-base-shadow-blur $evo-base-shadow-spread $evo-base-shadow-color);
 						width: 100%;
 						z-index: $evo-base-zindex-datepicker;
 						max-width: $evo-datepicker-max-width;

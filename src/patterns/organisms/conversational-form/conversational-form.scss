@@ -143,14 +143,11 @@ $evo-product: core;
 											padding: $evo-conversational-form-select-padding;
 			&:hover,
 			&:focus								{
-												-moz-box-shadow: $evo-conversational-form-select-shadow;
-												-webkit-box-shadow: $evo-conversational-form-select-shadow;
-												-o-box-shadow: $evo-conversational-form-select-shadow;
-												box-shadow: $evo-conversational-form-select-shadow;
+												@include box-shadow($evo-conversational-form-select-shadow);
 												background-color: $evo-conversational-form-select-hover-background-color;
 												}
 			&:focus								{
-    											box-shadow: 0 0 rem-calc(5) $evo-conversational-form-elements-hover-border-bottom-color;
+												@include box-shadow(0 0 5px 0 $evo-conversational-form-elements-hover-border-bottom-color);
 												border-bottom-color: $evo-conversational-form-elements-hover-border-bottom-color;
 												}
 											}

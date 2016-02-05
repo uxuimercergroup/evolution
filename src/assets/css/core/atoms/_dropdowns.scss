@@ -10,7 +10,7 @@
 @if $use-dropdowns == true{
 
 .evo-dropdowns			{
-						@include box-shadow($evo-base-shadow-horizontal, $evo-base-shadow-vertical, $evo-base-shadow-blur, $evo-base-shadow-color);
+						@include box-shadow($evo-base-shadow-horizontal $evo-base-shadow-vertical $evo-base-shadow-blur $evo-base-shadow-spread $evo-base-shadow-color);
 						@include border-radius($global-radius);
 						}
 

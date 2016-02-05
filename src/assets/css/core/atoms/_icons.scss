@@ -120,8 +120,8 @@ $evo-icon-shield-font-color:				$white !default;
 											}
 
 	// ICON SHIELDS
-	.evo-icon-shield							{
-											@include box-shadow(0, 0, 2px, $evo-icon-shield-shadow-color);
+	.evo-icon-shield						{
+											@include box-shadow(0 0 2px 0 $evo-icon-shield-shadow-color);
 											@include border-radius(100%);
 											background-color: $evo-icon-shield-background-color;
 											width: $evo-icon-shield-size;

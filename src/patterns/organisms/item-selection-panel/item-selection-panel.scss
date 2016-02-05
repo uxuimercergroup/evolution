@@ -39,6 +39,7 @@ $evo-item-selection-panel-item-label-line-height: 1.25 !default;
 $evo-item-selection-panel-item-selected-icon-shadow-horizontal: 0 !default;
 $evo-item-selection-panel-item-selected-icon-shadow-vertical: rem-calc(2) !default;
 $evo-item-selection-panel-item-selected-icon-shadow-blur: rem-calc(6) !default;
+$evo-item-selection-panel-item-selected-icon-shadow-spread: 0 !default;
 $evo-item-selection-panel-item-selected-icon-shadow-color: $evo-base-shadow-color !default;
 $evo-item-selection-panel-item-selected-icon-border-color: $onyx-medium !default;
 $evo-item-selection-panel-item-selected-icon-font-color: $white !default;
@@ -103,6 +104,7 @@ $evo-product: core;
 // $evo-item-selection-panel-item-selected-icon-shadow-horizontal: 0;
 // $evo-item-selection-panel-item-selected-icon-shadow-vertical: rem-calc(2);
 // $evo-item-selection-panel-item-selected-icon-shadow-blur: rem-calc(6);
+// $evo-item-selection-panel-item-selected-icon-shadow-spread: 0;
 // $evo-item-selection-panel-item-selected-icon-shadow-color: $evo-base-shadow-color;
 // $evo-item-selection-panel-item-selected-icon-border-color: $onyx-medium;
 // $evo-item-selection-panel-item-selected-icon-font-color: $white;
@@ -165,7 +167,7 @@ $evo-product: core;
 		.evo-item-selection-panel-item-selected
 											{
 			.evo-item-selection-panel-item-icon	{
-												@include box-shadow($evo-item-selection-panel-item-selected-icon-shadow-horizontal, $evo-item-selection-panel-item-selected-icon-shadow-vertical, $evo-item-selection-panel-item-selected-icon-shadow-blur, $evo-item-selection-panel-item-selected-icon-shadow-color);
+												@include box-shadow($evo-item-selection-panel-item-selected-icon-shadow-horizontal $evo-item-selection-panel-item-selected-icon-shadow-vertical $evo-item-selection-panel-item-selected-icon-shadow-blur $evo-item-selection-panel-item-selected-icon-shadow-spread $evo-item-selection-panel-item-selected-icon-shadow-color);
 												border-width: 0;
 												color: $evo-item-selection-panel-item-selected-icon-font-color;
 												padding: ($evo-item-selection-panel-item-icon-padding + $evo-item-selection-panel-item-icon-border-width);

@@ -172,6 +172,12 @@ URL: {{ meta_url }}
 												}
 											}
 										}
+
+	// TAB BAND
+	.evo-site-band--tab					{
+										@include box-shadow(0 0 10px 0 rgba($black, .9));
+										}
+
 // BANDS - ENDS
 
 // REFERENCE TEMPLATE - BEGINS

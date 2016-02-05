@@ -29,6 +29,7 @@ $evo-slider-handle-border-color: $white !default;
 $evo-slider-handle-shadow-horizontal: 0 !default;
 $evo-slider-handle-shadow-vertical: rem-calc(1) !default;
 $evo-slider-handle-shadow-blur: rem-calc(3) !default;
+$evo-slider-handle-shadow-spread: 0 !default;
 $evo-slider-handle-shadow-color: $black !default;
 $evo-slider-handle-height: rem-calc(24) !default;
 $evo-slider-handle-width: rem-calc(24) !default;
@@ -83,7 +84,7 @@ $evo-slider-tick-marker-max-position-right: 10px !default;
 			// SLIDER HANDLE
 			.ui-slider-handle				{
 											@include border-radius($evo-slider-handle-border-radius);
-											@include box-shadow($evo-slider-handle-shadow-horizontal, $evo-slider-handle-shadow-vertical, $evo-slider-handle-shadow-blur, $evo-slider-handle-shadow-color);
+											@include box-shadow($evo-slider-handle-shadow-horizontal $evo-slider-handle-shadow-vertical $evo-slider-handle-shadow-blur $evo-slider-handle-shadow-spread $evo-slider-handle-shadow-color);
 											background-color: $evo-slider-handle-background-color;
 											border: $evo-slider-handle-border-size $evo-slider-handle-border-style $evo-slider-handle-border-color;
 											cursor: pointer;

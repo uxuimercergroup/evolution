@@ -23,6 +23,7 @@ URL: {{ evo_meta_url }}
 $evo-showcase-panel-shadow-horizontal: $evo-base-shadow-horizontal !default;
 $evo-showcase-panel-shadow-vertical: $evo-base-shadow-vertical !default;
 $evo-showcase-panel-shadow-blur: $evo-base-shadow-blur !default;
+$evo-showcase-panel-shadow-spread: $evo-base-shadow-spread !default;
 $evo-showcase-panel-shadow-color: $evo-base-shadow-color !default;
 $evo-showcase-panel-background-color: $white !default;
 $evo-showcase-panel-item-min-height: rem-calc(100) !default;
@@ -95,6 +96,7 @@ $evo-product: core;
 // $evo-showcase-panel-shadow-horizontal: $evo-base-shadow-horizontal;
 // $evo-showcase-panel-shadow-vertical: $evo-base-shadow-vertical;
 // $evo-showcase-panel-shadow-blur: $evo-base-shadow-blur;
+// $evo-showcase-panel-shadow-spread: $evo-base-shadow-spread;
 // $evo-showcase-panel-shadow-color: $evo-base-shadow-color;
 // $evo-showcase-panel-background-color: $white;
 // $evo-showcase-panel-item-min-height: rem-calc(100);
@@ -141,7 +143,7 @@ $evo-product: core;
 
 // SHOWCASE PANEL - BEGINS
 	.evo-showcase-panel				{
-										@include box-shadow($evo-showcase-panel-shadow-horizontal, $evo-showcase-panel-shadow-vertical, $evo-showcase-panel-shadow-blur, $evo-showcase-panel-shadow-color);
+										@include box-shadow($evo-showcase-panel-shadow-horizontal $evo-showcase-panel-shadow-vertical $evo-showcase-panel-shadow-blur $evo-showcase-panel-shadow-spread $evo-showcase-panel-shadow-color);
 										background-color: $evo-showcase-panel-background-color;
 
 	// SHOWCASE PANEL ITEM - BEGINS

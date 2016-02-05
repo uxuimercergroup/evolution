@@ -9,6 +9,7 @@ $evo-badge-border-radius: $global-rounded !default;
 $evo-badge-shadow-horizontal: 0 !default;
 $evo-badge-shadow-vertical: rem-calc(1) !default;
 $evo-badge-shadow-blur: rem-calc(2) !default;
+$evo-badge-shadow-spread: 0 !default;
 $evo-badge-shadow-color: $evo-base-shadow-color !default;
 $evo-badge-line-height: 1 !default;
 $evo-badge-text-align: center !default;
@@ -34,7 +35,7 @@ $evo-badge-x-large-min-width: rem-calc(50) !default;
 	// BADGES
 	.evo-badge		{
 					@include border-radius($evo-badge-border-radius);
-					@include box-shadow($evo-badge-shadow-horizontal, $evo-badge-shadow-vertical, $evo-badge-shadow-blur, $evo-badge-shadow-color);
+					@include box-shadow($evo-badge-shadow-horizontal $evo-badge-shadow-vertical $evo-badge-shadow-blur $evo-badge-shadow-spread $evo-badge-shadow-color);
 					line-height: $evo-badge-line-height;
 					text-align: $evo-badge-text-align;
 					font-size: $evo-badge-font-size;

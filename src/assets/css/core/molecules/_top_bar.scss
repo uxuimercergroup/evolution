@@ -37,6 +37,7 @@ $evo-top-bar-section-dropdown-anchor-active-background-color: $topbar-link-bg-ac
 $evo-top-bar-section-dropdown-box-shadow-horizontal: $evo-base-shadow-horizontal !default;
 $evo-top-bar-section-dropdown-box-shadow-vertical: $evo-base-shadow-vertical !default;
 $evo-top-bar-section-dropdown-box-shadow-blur: $evo-base-shadow-blur !default;
+$evo-top-bar-section-dropdown-box-shadow-spread: $evo-base-shadow-spread !default;
 $evo-top-bar-section-dropdown-box-shadow-color: $evo-base-shadow-color !default;
 $evo-top-bar-section-dropdown-icon: '\edc6' !default;
 $evo-top-bar-section-dropdown-icon-position-top: rem-calc(1) !default;
@@ -178,7 +179,7 @@ $evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
 						
 						// TOP BAR NAV DROPDOWN MENU
 						.dropdown 						{
-														@include box-shadow($evo-top-bar-section-dropdown-box-shadow-horizontal, $evo-top-bar-section-dropdown-box-shadow-vertical, $evo-top-bar-section-dropdown-box-shadow-blur, $evo-top-bar-section-dropdown-box-shadow-color);
+														@include box-shadow($evo-top-bar-section-dropdown-box-shadow-horizontal $evo-top-bar-section-dropdown-box-shadow-vertical $evo-top-bar-section-dropdown-box-shadow-blur $evo-top-bar-section-dropdown-box-shadow-spread $evo-top-bar-section-dropdown-box-shadow-color);
 														@include border-radius($evo-top-bar-section-dropdown-border-radius);
 
 							// TOP BAR NAV DROPDOWN MENU LABELS
