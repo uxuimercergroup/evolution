@@ -17,17 +17,17 @@
 	},
 
 	"data": {
-		"basic_box": {
-			"name": "Basic Box",
-			"partial": "box", "slug": "basic-box"
+		"equalizer": {
+			"name": "Basic Equalizer",
+			"partial": "equalizer", "slug": "equalizer"
 		},
-		"basic_box_hdr": {
-			"name": "Basic Box Header",
-			"partial": "box-hdr", "slug": "basic-box-hdr"
+		"equalizer_responsive": {
+			"name": "Responsive Equalizer",
+			"partial": "equalizer-responsive", "slug": "equalizer-responsive"
 		},
-		"basic_box_shadow": {
-			"name": "Basic Box Shadow",
-			"partial": "box-hdr-shadow", "slug": "basic-box-shadow"
-		}
+		"equalizer_nested": {
+			"name": "Equalizer Nested",
+			"partial": "equalizer-nested", "slug": "equalizer-nested"
+		}		
 	}
 }

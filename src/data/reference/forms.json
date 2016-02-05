@@ -1,0 +1,41 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "true",
+		"jquery_ui": "true",
+		"other": [
+			{"name": "", "url": "", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"form_stacked": {
+			"name": "Stacked Form",
+			"partial": "form-stacked", "slug": "stacked-form"
+		},
+		"form_stacked_help": {
+			"name": "Stacked Form Help",
+			"partial": "form-stacked-help", "slug": "stacked-form-help"
+		},
+		"form_inline": {
+			"name": "Inline Form",
+			"partial": "form-inline", "slug": "inline-form"
+		},
+		"form_inline_right": {
+			"name": "Inline Form Right",
+			"partial": "form-inline-right", "slug": "inline-form-right"
+		},
+		"form_inline_help": {
+			"name": "Inline Form Help",
+			"partial": "form-inline-help", "slug": "inline-form-help"
+		}
+	}
+}

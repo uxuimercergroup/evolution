@@ -29,6 +29,7 @@ URL: {{ meta_url }}
 /*=== WEBSITE STYLES =======================================================================*/
 
 /*--- SITE GLOBAL --------------------------------------------------------------------------*/
+code									{@include border-radius(rem-calc(2));}
 
 // BUTTONS - BEGINS
 	
@@ -360,9 +361,7 @@ URL: {{ meta_url }}
 											border: 0;
 											padding: 0;
 											margin-bottom: rem-calc(80);
-			[class^="evo-icon-"]				{
-												float: right !important;
-												}
+			.evo-icon-site-embed2				{float: right !important;}
 			.evo-hdr-rule						{
 												border-bottom-width: $evo-site-example-box-hdr-border-bottom-width;
 												border-bottom-color: $evo-site-example-box-hdr-border-bottom-color;
