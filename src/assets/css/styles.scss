@@ -224,6 +224,29 @@ code									{@include border-radius(rem-calc(2));}
 										}
 // BANDS - ENDS
 
+// TILES - BEGINS
+	.evo-site-tile						{
+										padding: rem-calc(20 30 30 30);
+										margin: rem-calc(0 15 15 0);
+										min-height: rem-calc(410);
+										background-color: $onyx-medium;
+		.evo-site-tile--hdr					{
+											font-family: $evo-font-thin-stack;
+											font-size: rem-calc(110);
+											line-height: 1;
+											color: $white;
+											margin-bottom: rem-calc(148);
+											}
+		.evo-site-tile--body				{
+			h3									{color: $white;}
+			p									{
+												color: $white;
+												margin-bottom: 0;
+												}
+											}
+										}
+// TILES - ENDS
+
 // REFERENCE TEMPLATE - BEGINS
 
 	// INTRO - BEGINS
@@ -395,6 +418,18 @@ code									{@include border-radius(rem-calc(2));}
 	// CODE EXAMPLE - ENDS
 
 // REFERENCE TEMPLATE - ENDS
+
+// HOME PAGE - BEGINS
+
+	// TAB BAND - BENEFITS - BEGINS
+		.evo-site-band--home-benefits		{
+			.evo-site-band--tab-panel			{
+												padding: rem-calc(15 0 0 15);
+												}
+											}
+	// TAB BAND - BENEFITS - ENDS
+
+// HOME PAGE - ENDS
 
 // TYPOGRAPHY PAGE - BEGINS
 	.evo-type-sample					{
