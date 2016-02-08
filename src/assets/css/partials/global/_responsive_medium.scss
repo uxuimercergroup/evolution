@@ -46,7 +46,40 @@
 													}
 												}
 											}
+
+		// TAB BAND
+		.evo-site-band--tab					{
+			.evo-site-band--tab-panel			{
+				.evo-site-band--tab-panel-marketing-content
+													{
+					h1, h2, h3, h4, h5, h6				{margin: $evo-site-band-tab-panel-marketing-content-header-margin-medium;}
+					h3									{font-size: $evo-site-band-tab-panel-marketing-content-header-h3-font-size;}
+					p									{
+														font-size: $evo-site-band-tab-panel-marketing-content-paragraph-font-size-medium;
+														margin-bottom: $evo-site-band-tab-panel-marketing-content-paragraph-margin-bottom-medium;
+														}
+													}
+												}
+											}
+
 	// BANDS - ENDS
+
+	// GET STARTED PAGE - BEGINS
+
+		// TAB BAND - BEGINS
+			.evo-site-band--get-started			{
+				.evo-site-band--tab-panel			{
+													background-image: url($evo-site-get-started-band-tab-panel-background-image);
+													background-repeat: $evo-site-get-started-band-tab-panel-background-repeat;
+													background-size: $evo-site-get-started-band-tab-panel-background-size;
+													padding: $evo-site-get-started-band-tab-panel-padding;
+					.evo-site-band--tab-panel-marketing-content
+														{padding: $evo-site-get-started-band-tab-panel-marketing-content-padding;}
+													}
+												}
+		// TAB BAND - ENDS
+
+	// GET STARTED PAGE - ENDS
 
 }
 
@@ -63,5 +96,19 @@
 		// CONTENT TABS - ENDS
 
 	// REFERENCE TEMPLATE - BEGINS
+
+	// GET STARTED PAGE - BEGINS
+
+		// TAB BAND - BEGINS
+			.evo-site-band--get-started			{
+				.evo-site-band--tab-panel			{
+													background-position: $evo-site-get-started-band-tab-panel-background-position-medium;
+					.evo-site-band--tab-panel-marketing-content
+														{border-left: 0;}
+													}
+												}
+		// TAB BAND - ENDS
+
+	// GET STARTED PAGE - ENDS
 
 }

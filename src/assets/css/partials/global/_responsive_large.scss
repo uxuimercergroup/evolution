@@ -55,6 +55,24 @@
 
 	// HERO - ENDS
 
+	// GET STARTED PAGE - BEGINS
+
+		// TAB BAND - BEGINS
+			.evo-site-band--get-started			{
+				.evo-site-band--tab-panel			{
+													background-position: $evo-site-get-started-band-tab-panel-background-position-large;
+					.evo-site-band--tab-panel-marketing-content
+														{
+														border-width: $evo-site-get-started-band-tab-panel-marketing-content-keyline-border-width;
+														border-color: $evo-site-get-started-band-tab-panel-marketing-content-keyline-border-color;
+														padding: $evo-site-get-started-band-tab-panel-marketing-content-padding-large;
+														}
+													}
+												}
+		// TAB BAND - ENDS
+
+	// GET STARTED PAGE - ENDS
+
 }
 
 // LARGE MEDIA QUERY RANGE - 1025px - 1440px

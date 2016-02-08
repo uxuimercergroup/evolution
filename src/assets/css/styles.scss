@@ -63,6 +63,8 @@ code									{@include border-radius(rem-calc(2));}
 												top: 2px !important;
 												left: 85px;
 												}
+			.evo-site-header--cta-whats-new-name
+												{display: inline-block;}
 											}
 
 		// OFF CANVAS
@@ -177,37 +179,49 @@ code									{@include border-radius(rem-calc(2));}
 	// TAB BAND
 	.evo-site-band--tab					{
 		.evo-site-band--tab-hdr				{
-											background-color: $onyx-dark-2;
+											background-color: $evo-site-band-tab-hdr-background-color;
 			.evo-site-band--tab-hdr-tab			{
-												@include box-shadow(0 0 8px 1px rgba($black, 0.15));
-												@include border-radius(rem-calc(15) rem-calc(15) 0 0);
-												background-color: $white;
+												@include box-shadow($evo-site-band-tab-box-shadow-horizontal $evo-site-band-tab-box-shadow-vertical $evo-site-band-tab-box-shadow-blur $evo-site-band-tab-box-shadow-spread rgba($evo-site-band-tab-box-shadow-color, $evo-site-band-tab-box-shadow-alpha));
+												@include border-radius($evo-site-band-tab-hdr-tab-border-radius);
+												background-color: $evo-site-band-tab-panel-background-color;
 												position: relative;
 												z-index: 3;
-												padding: rem-calc(30);
-												margin-bottom: rem-calc(-10);
+												padding: $evo-site-band-tab-hdr-tab-padding;
+												margin-bottom: $evo-site-band-tab-hdr-tab-margin-bottom;
 				h3									{
 													margin: 0;
-													color: $sapphire-bright;
+													color: $evo-site-band-tab-hdr-tab-font-color;
 													}
 												}
 			.evo-site-band--tab-hdr-tab-shim	{
-												height: rem-calc(10);
-												background-color: $white;
+												height: abs($evo-site-band-tab-hdr-tab-margin-bottom);
+												background-color: $evo-site-band-tab-panel-background-color;
 												position: relative;
-												top: 10px;
+												top: abs($evo-site-band-tab-hdr-tab-margin-bottom);
 												z-index: 4;
 												}
 											}
 		.evo-site-band--tab-panel			{
-											@include box-shadow(0 0 8px 1px rgba($black, 0.15));
-											background-color: $white;
+											@include box-shadow($evo-site-band-tab-box-shadow-horizontal $evo-site-band-tab-box-shadow-vertical $evo-site-band-tab-box-shadow-blur $evo-site-band-tab-box-shadow-spread rgba($evo-site-band-tab-box-shadow-color, $evo-site-band-tab-box-shadow-alpha));
+											background-color: $evo-site-band-tab-panel-background-color;
 											position: relative;
 											z-index: 2;
-											padding: rem-calc(30 15);
+											padding: $evo-site-band-tab-panel-padding;
+			.evo-site-band--tab-panel-marketing-content
+												{
+				h1, h2, h3							{color: $evo-site-band-tab-panel-marketing-content-header-font-color;}
+				h1, h2, h3, h4, h5, h6				{margin: $evo-site-band-tab-panel-marketing-content-header-margin;}
+				p									{
+													color: $evo-site-band-tab-panel-marketing-content-paragraph-font-color;
+													font-size: $evo-site-band-tab-panel-marketing-content-paragraph-font-size;
+													line-height: $evo-site-band-tab-panel-marketing-content-paragraph-line-height;
+													margin-bottom: $evo-site-band-tab-panel-marketing-content-paragraph-margin-bottom;
+					strong								{color: $evo-site-band-tab-panel-marketing-content-paragraph-strong-font-color;}
+													}
+				*:last-child						{margin-bottom: 0;}
+												}
 											}
 										}
-
 // BANDS - ENDS
 
 // REFERENCE TEMPLATE - BEGINS
@@ -379,6 +393,7 @@ code									{@include border-radius(rem-calc(2));}
 												}
 											}
 	// CODE EXAMPLE - ENDS
+
 // REFERENCE TEMPLATE - ENDS
 
 // TYPOGRAPHY PAGE - BEGINS
