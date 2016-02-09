@@ -1,0 +1,20 @@
+---
+title: "Frequently Asked Questions"
+---
+
+<div class="evo-contain-to-grid">
+	<div class="small-12 columns">
+
+{{# markdown }}
+# {{ title }}
+Here are some of the most asked questions that we get with Evolution, we have them together for you to review.
+***
+{{/ markdown }}
+
+		{{#each faq.data}}
+		<h4>{{@index}}. {{title}}</h4>
+		<p>{{content}}</p>
+		{{/each}}
+
+	</div>
+</div>

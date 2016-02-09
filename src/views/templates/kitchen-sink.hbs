@@ -2,40 +2,37 @@
 title: "Kitchen Sink"
 ---
 
-<div class="small-12 columns">
+<div class="evo-contain-to-grid">
+	<div class="small-12 columns">
 
 {{# markdown }}
 # {{ title }}
-
 This page includes every single Evolution element so that we can make sure things work together smoothly.
-
 ***
 {{/ markdown }}
 
+	{{> patterns-navbar }}
+	<hr>
 
-{{> type-header size="2" class="evo-h2-hdr-background" text="Atoms"}}
+	{{> type-header size="2" class="evo-h2-hdr-background" text="Atoms"}}
+	<hr>
 
-<hr>
+	{{> atoms}}
+	<hr>
 
-{{> atoms}}
+	{{> type-header size="2" class="evo-h2-hdr-background" text="Molecules"}}
+	<hr>
 
-<hr>
+	{{> molecules}}
+	<hr>
 
-{{> type-header size="2" class="evo-h2-hdr-background" text="Molecules"}}
+	{{> type-header size="2" class="evo-h2-hdr-background" text="Organisms"}}
+	<hr>
 
-<hr>
+	{{> organisms}}
 
-{{> molecules}}
+	<br>
+	<br>
 
-<hr>
-
-{{> type-header size="2" class="evo-h2-hdr-background" text="Organisms"}}
-
-<hr>
-
-{{> organisms}}
-
-<br>
-<br>
-
+	</div>
 </div>
