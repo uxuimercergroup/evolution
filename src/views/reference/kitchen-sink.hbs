@@ -1,0 +1,52 @@
+---
+title: "Kitchen Sink"
+---
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns evo-spacer-padding-top-medium evo-site--reference-intro">
+
+{{# markdown }}
+# {{ title }}
+This page includes every single Evolution element so that we can make sure things work together smoothly.
+{{/ markdown }}
+
+		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+
+		</div>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<section class="row evo-site-tabs-content--reference-content">
+	<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
+
+		<a name="{{kitchen-sink.data.atoms.arrival_name}}"></a>
+		<h2 class="evo-h2-hdr-background" data-magellan-destination="{{kitchen-sink.data.atoms.arrival_name}}">{{kitchen-sink.data.atoms.name}}</h2>
+		<hr>
+		{{> atoms}}
+
+		<hr>
+		<a name="{{kitchen-sink.data.molecules.arrival_name}}"></a>
+		<h2 class="evo-h2-hdr-background" data-magellan-destination="{{kitchen-sink.data.molecules.arrival_name}}">{{kitchen-sink.data.molecules.name}}</h2>
+		<hr>
+		{{> molecules}}
+
+		<hr>
+		<a name="{{kitchen-sink.data.organisms.arrival_name}}"></a>
+		<h2 class="evo-h2-hdr-background" data-magellan-destination="{{kitchen-sink.data.organisms.arrival_name}}">{{kitchen-sink.data.organisms.name}}</h2>
+		<hr>
+		{{> organisms}}
+
+	</div>
+	<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large">
+	<!-- MAGELLAN NAV - BEGINS -->
+		<div class="evo-magellan" data-magellan-expedition="fixed">
+			<dl class="sub-nav">
+				<dd data-magellan-arrival="{{kitchen-sink.data.atoms.arrival_name}}"><a href="#{{kitchen-sink.data.atoms.url}}">{{kitchen-sink.data.atoms.name}}</a></dd>
+				<dd data-magellan-arrival="{{kitchen-sink.data.molecules.arrival_name}}"><a href="#{{kitchen-sink.data.molecules.url}}">{{kitchen-sink.data.molecules.name}}</a></dd>
+				<dd data-magellan-arrival="{{kitchen-sink.data.organisms.arrival_name}}"><a href="#{{kitchen-sink.data.organisms.url}}">{{kitchen-sink.data.organisms.name}}</a></dd>
+			</dl>
+		</div>
+	<!-- MAGELLAN NAV - ENDS -->
+	</div>
+</section>
