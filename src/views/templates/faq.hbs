@@ -2,8 +2,9 @@
 title: "Frequently Asked Questions"
 ---
 
-<div class="evo-contain-to-grid">
-	<div class="small-12 columns">
+<section class="evo-contain-to-grid">
+	<div class="row">
+		<div class="small-12 columns">
 
 {{# markdown }}
 # {{ title }}
@@ -11,12 +12,21 @@ Here are some of the most asked questions that we get about Evolution, we have t
 ***
 {{/ markdown }}
 
-	{{#each faq.data}}
-		<h5>{{add @index 1}}.&nbsp;{{title}}</h5>
-		<div class="evo-spacer-margin-bottom-xxx-large">
-			{{{faq_text}}}
 		</div>
-	{{/each}}
-
 	</div>
-</div>
+</section>
+
+<section class="evo-contain-to-grid">
+	<div class="row">
+		<div class="small-12 columns">
+
+		{{#each faq.data}}
+			<h5>{{add @index 1}}.&nbsp;{{title}}</h5>
+			<div class="evo-spacer-margin-bottom-xxx-large">
+				{{{faq_text}}}
+			</div>
+		{{/each}}
+
+		</div>
+	</div>
+</section>

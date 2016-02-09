@@ -2,8 +2,9 @@
 title: "Previous Versions"
 ---
 
-<div class="evo-contain-to-grid">
-	<div class="small-12 columns">
+<section class="evo-contain-to-grid">
+	<div class="row">
+		<div class="small-12 columns">
 
 {{# markdown }}
 # {{ title }}
@@ -11,18 +12,20 @@ Here you will find a full list of older versions of Evolution.
 ***
 {{/ markdown }}
 
-		<ul>
-			<li><a target="_blank" href="http://evolution-archive.mercer.com/v2.0/"> v2.0/</a></li>
-			<li><a target="_blank" href="http://evolution-archive.mercer.com/v2.1/"> v2.1/</a></li>
-			<li><a target="_blank" href="http://evolution-archive.mercer.com/v2.2/"> v2.2/</a></li>
-			<li><a target="_blank" href="http://evolution-archive.mercer.com/v2.3_internal_release/"> v2.3_internal_release/</a></li>
-			<li><a target="_blank" href="http://evolution-archive.mercer.com/v2.4/"> v2.4/</a></li>
-			<li><a target="_blank" href="http://evolution-archive.mercer.com/v2.5/"> v2.5/</a></li>
-			<li><a target="_blank" href="http://evolution-archive.mercer.com/v2.6/"> v2.6/</a></li>
-			<li><a target="_blank" href="http://evolution-archive.mercer.com/v2.7_internal_release/"> v2.7_internal_release/</a></li>
-			<li><a target="_blank" href="http://evolution-archive.mercer.com/v3.0.1/"> v3.0.1/</a></li>
-			<li><a target="_blank" href="http://evolution-archive.mercer.com/v3.0/"> v3.0/</a></li>
-		</ul>
-
+		</div>
 	</div>
-</div>
+</section>
+
+<section class="evo-contain-to-grid">
+	<div class="row">
+		<div class="small-12 columns">
+
+			<ul class="no-bullet">
+			{{#each previous-versions.data}}
+				<li class="evo-spacer-margin-bottom-small"><a href="{{url}}">{{{version_name}}}</a></li>
+			{{/each}}
+			</ul>
+
+		</div>
+	</div>
+</section>
