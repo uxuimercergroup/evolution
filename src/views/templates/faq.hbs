@@ -7,14 +7,16 @@ title: "Frequently Asked Questions"
 
 {{# markdown }}
 # {{ title }}
-Here are some of the most asked questions that we get with Evolution, we have them together for you to review.
+Here are some of the most asked questions that we get about Evolution, we have them together for you to review.
 ***
 {{/ markdown }}
 
-		{{#each faq.data}}
-		<h4>{{@index}}. {{title}}</h4>
-		<p>{{content}}</p>
-		{{/each}}
+	{{#each faq.data}}
+		<h5>{{add @index 1}}.&nbsp;{{title}}</h5>
+		<div class="evo-spacer-margin-bottom-xxx-large">
+			{{{faq_text}}}
+		</div>
+	{{/each}}
 
 	</div>
 </div>
