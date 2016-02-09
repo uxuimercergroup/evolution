@@ -10,7 +10,7 @@ module.exports = {
     tasks: ['assemble', 'notify:assemble']
   },
   partials: {
-    files: ['src/views/partials/**/*.hbs', 'src/patterns/**/*.hbs'],
+    files: ['src/views/partials/**/*{.hbs,.md}', 'src/patterns/**/*.hbs'],
     tasks: ['assemble', 'notify:assemble']
   },
   templates: {

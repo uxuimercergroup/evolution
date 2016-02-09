@@ -1,46 +1,50 @@
 ---
 title: "Let’s Get Started"
 ---
+<!-- GET STARTED HERO - BEGINS -->
+	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="3x-large" data-evo-site-hero-arrow-position="bottom">
+		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
+			<div class="text-center evo-center-block-vertical-element">
+				<h1 class="evo-site-hero--hdr flipInY animated">{{{get-started.hero.title}}} <span>{{{get-started.hero.subtitle}}}</span></h1>
+				<h3 class="evo-center-block evo-site-hero--tagline bounceInUp animated">{{{get-started.hero.tagline}}}</h3>
+			</div>		
+		</div>
+	</section>
+<!-- GET STARTED HERO - ENDS -->
 
-<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="3x-large" data-evo-site-hero-arrow-position="bottom">
-	<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
-		<div class="text-center evo-center-block-vertical-element">
-			<h1 class="evo-site-hero--hdr flipInY animated">{{{get-started.hero.title}}} <span>{{{get-started.hero.subtitle}}}</span></h1>
-			<h3 class="evo-center-block evo-site-hero--tagline bounceInUp animated">{{{get-started.hero.tagline}}}</h3>
-		</div>		
-	</div>
-</section>
+<!-- GET STARTED USERS BAND - BEGINS -->
+	<section class="evo-full-width evo-site-band evo-site-band--marketing">
+		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
+			<h3 class="text-center">{{get-started.users.header}}</h3>
+			<ul class="small-block-grid-{{get-started.users.grid_small}} medium-block-grid-{{get-started.users.grid_medium}} large-block-grid-{{get-started.users.grid_large}} evo-site-band--marketing-block-grid">
+				{{#each get-started.users.items}}
+				<li class="text-center">
+					{{> (lookup . 'partial') }}
+					<h5>{{header}}</h5>
+					<p>{{text}}</p>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</section>
+<!-- GET STARTED USERS BAND - ENDS -->
 
-<section class="evo-full-width evo-site-band evo-site-band--marketing">
-	<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
-		<h3 class="text-center">{{get-started.users.header}}</h3>
-		<ul class="small-block-grid-{{get-started.users.grid_small}} medium-block-grid-{{get-started.users.grid_medium}} large-block-grid-{{get-started.users.grid_large}} evo-site-band--marketing-block-grid">
-			{{#each get-started.users.items}}
-			<li class="text-center">
-				{{> (lookup . 'partial') }}
-				<h5>{{header}}</h5>
-				<p>{{text}}</p>
-			</li>
-			{{/each}}
-		</ul>
-	</div>
-</section>
-
-<section class="evo-full-width evo-site-band--tab evo-site-band--get-started">
-	<div class="evo-full-width evo-site-band--tab-hdr">
-		<div class="small-12 columns">
-			<div class="row">
-				<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab">
-					<h3 class="text-center">{{get-started.mission.header}}</h3>
+<!-- GET STARTED MISSION TAB BAND - BEGINS -->
+	<section class="evo-full-width evo-site-band--tab evo-site-band--get-started">
+		<div class="evo-full-width evo-site-band--tab-hdr">
+			<div class="small-12 columns">
+				<div class="row">
+					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab">
+						<h3 class="text-center">{{get-started.mission.header}}</h3>
+					</div>
+					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab-shim"></div>
 				</div>
-				<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab-shim"></div>
 			</div>
 		</div>
-	</div>
-	<div class="evo-full-width evo-site-band--tab-panel">
-		<div class="medium-12 large-10 large-centered columns">
-			<div class="row">
-				<div class="medium-7 large-7 xlarge-8 xx-large-10 columns evo-keyline-left evo-site-band--tab-panel-marketing-content hide" data-anijs="if: scroll, on: window, do: $removeClass hide; if: scroll, on: window, do: slideInLeft animated, before: scrollReveal, after: holdAnimClass">
+		<div class="evo-full-width evo-site-band--tab-panel">
+			<div class="medium-12 large-10 large-centered columns">
+				<div class="row">
+					<div class="medium-7 large-7 xlarge-8 xx-large-10 columns evo-keyline-left evo-site-band--tab-panel-marketing-content" data-anijs="if: scroll, on: window, do: slideInLeft animated, before: scrollReveal, after: holdAnimClass">
 {{#markdown}}
 Evolution isn&rsquo;t only a library of patterns for designers, or a front-end framework for developers;<br>
 it&rsquo;s a strategic tool for product development.
@@ -51,14 +55,17 @@ Evolution combines the best principles of user experience design, visual design,
 
 **Because that&rsquo;s how we get your product to market faster and efficiently.**
 {{/markdown}}
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
+<!-- GET STARTED MISSION TAB BAND - ENDS -->
 
-<section class="evo-full-width evo-site-band evo-site-band--marketing">
-	<div class="evo-contain-to-grid">
-		<h3 class="text-center">{{get-started.process.header}}</h3>
-	</div>
-</section>
+<!-- GET STARTED PROCESS BAND - BEGINS -->
+	<section class="evo-full-width evo-site-band evo-site-band--marketing">
+		<div class="evo-contain-to-grid">
+			<h3 class="text-center">{{get-started.process.header}}</h3>
+		</div>
+	</section>
+<!-- GET STARTED PROCESS BAND - ENDS -->

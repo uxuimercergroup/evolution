@@ -129,8 +129,20 @@ $evo-site-band-padding-medium: rem-calc(80 0);
 	$evo-site-band-tab-panel-marketing-content-paragraph-margin-bottom-medium: rem-calc(30);
 	$evo-site-band-tab-panel-marketing-content-paragraph-strong-font-color: $black;
 
+// TILES
+$evo-site-tile-padding: rem-calc(20 30 30 30);
+$evo-site-tile-margin: rem-calc(0 15 15 0);
+$evo-site-tile-min-height: rem-calc(410);
+$evo-site-tile-background-color: $onyx-medium;
+$evo-site-tile-hdr-font-family: $evo-font-thin-stack;
+$evo-site-tile-hdr-font-size: rem-calc(110);
+$evo-site-tile-hdr-line-height: 1;
+$evo-site-tile-hdr-font-color: $white;
+$evo-site-tile-hdr-margin-bottom: rem-calc(148);
+$evo-site-tile-body-font-color: $white;
+
 // REFERENCE TEMPLATE
-	$evo-site-reference-keyline-color: $onyx-dark-10;
+$evo-site-reference-keyline-color: $onyx-dark-10;
 
 	// INTRO
 	$evo-site-reference-intro-border-bottom-width: 1px;
@@ -175,14 +187,38 @@ $evo-site-band-padding-medium: rem-calc(80 0);
 	$evo-site-example-box-code-hdr-icon-color: $onyx-dark-70;
 	$evo-site-example-box-code-hdr-hover-icon-color: $onyx-dark-80;
 
+// HOMEPAGE
+
+	// BENEFITS BAND
+	$evo-site-home-benefits-band-tab-panel-padding: rem-calc(15 0 0 15);
+	$evo-site-home-benefits-band-tile-background-repeat: no-repeat;
+	$evo-site-home-benefits-band-tile-background-position: center;
+	$evo-site-home-benefits-band-tile-background-size: cover;
+	$evo-site-home-benefits-band-benefits1-tile-background-color: $sapphire-medium;
+	$evo-site-home-benefits-band-benefits1-tile-background-image: "../images/evo-site-home-benefits-tile-1.png";
+	$evo-site-home-benefits-band-benefits2-tile-background-color: $turquoise-bright;
+	$evo-site-home-benefits-band-benefits2-tile-background-image: "../images/evo-site-home-benefits-tile-2.png";
+	$evo-site-home-benefits-band-benefits3-tile-background-color: $ruby-bright;
+	$evo-site-home-benefits-band-benefits3-tile-background-image: "../images/evo-site-home-benefits-tile-3.png";
+	$evo-site-home-benefits-band-benefits3-tile-background-size: 353px 326px;
+	$evo-site-home-benefits-band-benefits3-tile-background-position: top right;
+	$evo-site-home-benefits-band-benefits4-tile-background-color: $sapphire-bright;
+	$evo-site-home-benefits-band-benefits4-tile-background-image: "../images/evo-site-home-benefits-tile-4.png";
+	$evo-site-home-benefits-band-benefits5-tile-background-color: $topaz-bright;
+	$evo-site-home-benefits-band-benefits5-tile-background-image: "../images/evo-site-home-benefits-tile-5.png";
+	$evo-site-home-benefits-band-benefits5-tile-background-size: auto;
+	$evo-site-home-benefits-band-benefits5-tile-background-position: top -46px right;
+
 // GET STARTED
-$evo-site-get-started-band-tab-panel-background-image: "../images/evo-site-tablet-desktop-vector.png";
-$evo-site-get-started-band-tab-panel-background-repeat: no-repeat;
-$evo-site-get-started-band-tab-panel-background-size: auto;
-$evo-site-get-started-band-tab-panel-background-position-medium: right -310px top 76px;
-$evo-site-get-started-band-tab-panel-background-position-large: right -200px top 76px;
-$evo-site-get-started-band-tab-panel-padding: rem-calc(80 15 130 15);
-$evo-site-get-started-band-tab-panel-marketing-content-padding: rem-calc(0 30);
-$evo-site-get-started-band-tab-panel-marketing-content-padding-large: rem-calc(40 0 40 40);
-$evo-site-get-started-band-tab-panel-marketing-content-keyline-border-width: 2px;
-$evo-site-get-started-band-tab-panel-marketing-content-keyline-border-color: $onyx-dark-10;
+
+	// MISSION TAB BAND
+	$evo-site-get-started-band-tab-panel-background-image: "../images/evo-site-tablet-desktop-vector.png";
+	$evo-site-get-started-band-tab-panel-background-repeat: no-repeat;
+	$evo-site-get-started-band-tab-panel-background-size: auto;
+	$evo-site-get-started-band-tab-panel-background-position-medium: right -310px top 76px;
+	$evo-site-get-started-band-tab-panel-background-position-large: right -200px top 76px;
+	$evo-site-get-started-band-tab-panel-padding: rem-calc(80 15 130 15);
+	$evo-site-get-started-band-tab-panel-marketing-content-padding: rem-calc(0 30);
+	$evo-site-get-started-band-tab-panel-marketing-content-padding-large: rem-calc(40 0 40 40);
+	$evo-site-get-started-band-tab-panel-marketing-content-keyline-border-width: 2px;
+	$evo-site-get-started-band-tab-panel-marketing-content-keyline-border-color: $onyx-dark-10;

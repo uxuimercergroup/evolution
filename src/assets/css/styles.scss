@@ -226,21 +226,21 @@ code									{@include border-radius(rem-calc(2));}
 
 // TILES - BEGINS
 	.evo-site-tile						{
-										padding: rem-calc(20 30 30 30);
-										margin: rem-calc(0 15 15 0);
-										min-height: rem-calc(410);
-										background-color: $onyx-medium;
+										padding: $evo-site-tile-padding;
+										margin: $evo-site-tile-margin;
+										min-height: $evo-site-tile-min-height;
+										background-color: $evo-site-tile-background-color;
 		.evo-site-tile--hdr					{
-											font-family: $evo-font-thin-stack;
-											font-size: rem-calc(110);
-											line-height: 1;
-											color: $white;
-											margin-bottom: rem-calc(148);
+											font-family: $evo-site-tile-hdr-font-family;
+											font-size: $evo-site-tile-hdr-font-size;
+											line-height: $evo-site-tile-hdr-line-height;
+											color: $evo-site-tile-hdr-font-color;
+											margin-bottom: $evo-site-tile-hdr-margin-bottom;
 											}
 		.evo-site-tile--body				{
-			h3									{color: $white;}
+			h3									{color: $evo-site-tile-body-font-color;}
 			p									{
-												color: $white;
+												color: $evo-site-tile-body-font-color;
 												margin-bottom: 0;
 												}
 											}
@@ -421,13 +421,42 @@ code									{@include border-radius(rem-calc(2));}
 
 // HOME PAGE - BEGINS
 
-	// TAB BAND - BENEFITS - BEGINS
+	// BENEFITS TAB BAND - BEGINS
 		.evo-site-band--home-benefits		{
 			.evo-site-band--tab-panel			{
-												padding: rem-calc(15 0 0 15);
+												padding: $evo-site-home-benefits-band-tab-panel-padding;
+				.evo-site-tile						{
+													background-repeat: $evo-site-home-benefits-band-tile-background-repeat;
+													background-position: $evo-site-home-benefits-band-tile-background-position;
+													background-size: $evo-site-home-benefits-band-tile-background-size;
+													}
+				.evo-site-tile--home-benefits-1		{
+													background-color: $evo-site-home-benefits-band-benefits1-tile-background-color;
+													background-image: url($evo-site-home-benefits-band-benefits1-tile-background-image);
+													}
+				.evo-site-tile--home-benefits-2		{
+													background-color: $evo-site-home-benefits-band-benefits2-tile-background-color;
+													background-image: url($evo-site-home-benefits-band-benefits2-tile-background-image);
+													}
+				.evo-site-tile--home-benefits-3		{
+													background-color: $evo-site-home-benefits-band-benefits3-tile-background-color;
+													background-image: url($evo-site-home-benefits-band-benefits3-tile-background-image);
+													background-size: $evo-site-home-benefits-band-benefits3-tile-background-size;
+													background-position: $evo-site-home-benefits-band-benefits3-tile-background-position;
+													}
+				.evo-site-tile--home-benefits-4		{
+													background-color: $evo-site-home-benefits-band-benefits4-tile-background-color;
+													background-image: url($evo-site-home-benefits-band-benefits4-tile-background-image);
+													}
+				.evo-site-tile--home-benefits-5		{
+													background-color: $evo-site-home-benefits-band-benefits5-tile-background-color;
+													background-image: url($evo-site-home-benefits-band-benefits5-tile-background-image);
+													background-size: $evo-site-home-benefits-band-benefits5-tile-background-size;
+													background-position: $evo-site-home-benefits-band-benefits5-tile-background-position;
+													}
 												}
 											}
-	// TAB BAND - BENEFITS - ENDS
+	// BENEFITS TAB BAND - ENDS
 
 // HOME PAGE - ENDS
 

@@ -2,126 +2,142 @@
 title: "Home"
 ---
 
-<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="3x-large" data-evo-site-hero-arrow-position="bottom">
-	<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
-		<div class="text-center evo-center-block-vertical-element">
-			<h1 class="evo-site-hero--hdr flipInY animated">{{{ global.company }}} <span>{{{ global.title }}}</span></h1>
-			<h3 class="evo-center-block evo-site-hero--tagline bounceInUp animated">{{{ global.meta_description }}}</h3>
-		</div>		
-	</div>
-</section>
-
-<section class="evo-full-width evo-site-band evo-site-band--marketing">
-	<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
-		<h3 class="text-center">{{home.tools.header}}</h3>
-		<div class="text-center show-for-small-only">
-			{{#each home.tools.cta_button_small}}
-				{{> (lookup . 'partial') }}
-			{{/each}}
+<!-- HOME PAGE HERO - BEGINS -->
+	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="3x-large" data-evo-site-hero-arrow-position="bottom">
+		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
+			<div class="text-center evo-center-block-vertical-element">
+				<h1 class="evo-site-hero--hdr flipInY animated">{{{ global.company }}} <span>{{{ global.title }}}</span></h1>
+				<h3 class="evo-center-block evo-site-hero--tagline bounceInUp animated">{{{ global.meta_description }}}</h3>
+			</div>		
 		</div>
-		<ul class="small-block-grid-{{home.tools.grid_small}} medium-block-grid-{{home.tools.grid_medium}} large-block-grid-{{home.tools.grid_large}} evo-site-band--marketing-block-grid">
-			{{#each home.tools.items}}
-			<li class="text-center">
-				{{> (lookup . 'partial') }}
-				<h5>{{header}}</h5>
-				<p>{{text}}</p>
-			</li>
-			{{/each}}
-		</ul>
-		<div class="text-center hide-for-small-only"> 
-			{{#each home.tools.cta_button}}
-				{{> (lookup . 'partial') }}
-			{{/each}}
-		</div>
-	</div>
-</section>
+	</section>
+<!-- HOME PAGE HERO - ENDS -->
 
-<section class="evo-full-width evo-site-band--tab evo-site-band--home-benefits">
-	<div class="evo-full-width evo-site-band--tab-hdr">
-		<div class="small-12 columns">
-			<div class="row">
-				<div class="small-10 medium-8 large-6 small-centered columns evo-site-band--tab-hdr-tab">
-					<h3 class="text-center">{{home.benefits.header}}</h3>
-				</div>
-				<div class="small-10 medium-8 large-6 small-centered columns evo-site-band--tab-hdr-tab-shim"></div>
+<!-- HOME PAGE TOOLS BAND - BEGINS -->
+	<section class="evo-full-width evo-site-band evo-site-band--marketing">
+		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
+			<h3 class="text-center">{{home.tools.header}}</h3>
+			<div class="text-center show-for-small-only">
+				{{#each home.tools.cta_button_small}}
+					{{> (lookup . 'partial') }}
+				{{/each}}
+			</div>
+			<ul class="small-block-grid-{{home.tools.grid_small}} medium-block-grid-{{home.tools.grid_medium}} large-block-grid-{{home.tools.grid_large}} evo-site-band--marketing-block-grid">
+				{{#each home.tools.items}}
+				<li class="text-center">
+					{{> (lookup . 'partial') }}
+					<h5>{{header}}</h5>
+					<p>{{text}}</p>
+				</li>
+				{{/each}}
+			</ul>
+			<div class="text-center hide-for-small-only"> 
+				{{#each home.tools.cta_button}}
+					{{> (lookup . 'partial') }}
+				{{/each}}
 			</div>
 		</div>
-	</div>
-	<div class="evo-full-width evo-site-band--tab-panel">
-		<div class="small-12 columns evo-no-padding">
-			<div class="row collapse" data-equalizer>
-				<div class="medium-4 columns">
-					
-					<div class="evo-site-tile" data-equalizer-watch>
-						<div class="evo-site-tile--hdr">1</div>
-						<div class="evo-site-tile--body">
-							<h3>Re-usability</h3>
-							<p>The common UX patterns and UI components included in Evolution can be re-used across projects.</p>
-						</div>
-					</div>
+	</section>
+<!-- HOME PAGE TOOLS BAND - END -->
 
-				</div>
-				<div class="medium-8 columns">
-					
-					<div class="evo-site-tile" data-equalizer-watch>
-						<div class="evo-site-tile--hdr">2</div>
-						<div class="evo-site-tile--body">
-							<h3>Consistency</h3>
-							<p>Projects built using Evolution deliver a common user experience<br class="show-for-large-up"> and the ability to have a consistent UI across products.</p>
-						</div>
+<!-- HOME PAGE BENEFITS TAB BAND - BEGINS -->
+	<section class="evo-full-width evo-site-band--tab evo-site-band--home-benefits">
+		<div class="evo-full-width evo-site-band--tab-hdr">
+			<div class="small-12 columns">
+				<div class="row">
+					<div class="small-10 medium-8 large-6 small-centered columns evo-site-band--tab-hdr-tab">
+						<h3 class="text-center">{{home.benefits.header}}</h3>
 					</div>
-
-				</div>
-			</div>
-			<div class="row collapse" data-equalizer>
-				<div class="medium-4 columns">
-					
-					<div class="evo-site-tile" data-equalizer-watch>
-						<div class="evo-site-tile--hdr">3</div>
-						<div class="evo-site-tile--body">
-							<h3>Responsive</h3>
-							<p>Evolution components are responsive out of the box, giving you default coverage for product delivery across multiple devices.</p>
-						</div>
-					</div>
-
-				</div>
-				<div class="medium-4 columns">
-					
-					<div class="evo-site-tile" data-equalizer-watch>
-						<div class="evo-site-tile--hdr">4</div>
-						<div class="evo-site-tile--body">
-							<h3>Time Savings</h3>
-							<p>Starting from a common baseline saves time across the facets of UI design; prototyping, visual design, and UI development.</p>
-						</div>
-					</div>
-
-				</div>
-				<div class="medium-4 columns">
-					
-					<div class="evo-site-tile" data-equalizer-watch>
-						<div class="evo-site-tile--hdr">5</div>
-						<div class="evo-site-tile--body">
-							<h3>Cost Savings</h3>
-							<p>Project delivery is cheaper thanks to the re-use of components and patterns that have already been tested across browsers.</p>
-						</div>
-					</div>
-
+					<div class="small-10 medium-8 large-6 small-centered columns evo-site-band--tab-hdr-tab-shim"></div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+		<div class="evo-full-width evo-site-band--tab-panel">
+			<div class="small-12 columns evo-no-padding">
+				<div class="row collapse" data-equalizer>
+					<div class="medium-6 large-4 columns">
+						
+						<div class="evo-site-tile evo-site-tile--home-benefits-{{home.benefits.benefit1.number}}" data-equalizer-watch data-anijs="if: scroll, on: window, do: {{home.benefits.benefit1.animation}} animated, before: scrollReveal, after: holdAnimClass">
+							<div class="evo-site-tile--hdr">{{home.benefits.benefit1.number}}</div>
+							<div class="evo-site-tile--body">
+								<h3>{{home.benefits.benefit1.header}}</h3>
+								<p>{{home.benefits.benefit1.text}}</p>
+							</div>
+						</div>
 
-<section class="evo-full-width evo-site-band evo-site-band--marketing">
-	<div class="medium-12 medium-centered columns evo-contain-to-grid evo-site-band--marketing-content">
-		<h3 class="text-center evo-spacer-margin-bottom-small">{{home.products.header}}</h3>
-		<h6 class="subheader text-center">{{home.products.subheader}}</h6>
-		<ul class="small-block-grid-{{home.products.grid_small}} medium-block-grid-{{home.products.grid_medium}} large-block-grid-{{home.products.grid_large}} evo-site-band--marketing-block-grid">
-			{{#each home.products.items}}
-			<li class="text-center">
-				<h4><a href="{{url}}">{{header}}</a></h4>
-			</li>
-			{{/each}}
-		</ul>
-	</div>
-</section>
+					</div>
+					<div class="medium-6 large-8 columns">
+						
+						<div class="evo-site-tile evo-site-tile--home-benefits-{{home.benefits.benefit2.number}}" data-equalizer-watch data-anijs="if: scroll, on: window, do: {{home.benefits.benefit2.animation}} animated, before: scrollReveal, after: holdAnimClass">
+							<div class="evo-site-tile--hdr">{{home.benefits.benefit2.number}}</div>
+							<div class="evo-site-tile--body">
+								<h3>{{home.benefits.benefit2.header}}</h3>
+								<div class="row collapse">
+									<div class="medium-12 large-6 columns">
+										<p>{{home.benefits.benefit2.text}}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="row collapse" data-equalizer>
+					<div class="medium-6 large-4 columns">
+						
+						<div class="evo-site-tile evo-site-tile--home-benefits-{{home.benefits.benefit3.number}}" data-equalizer-watch data-anijs="if: scroll, on: window, do: {{home.benefits.benefit3.animation}} animated, before: scrollReveal, after: holdAnimClass">
+							<div class="evo-site-tile--hdr">{{home.benefits.benefit3.number}}</div>
+							<div class="evo-site-tile--body">
+								<h3>{{home.benefits.benefit3.header}}</h3>
+								<p>{{home.benefits.benefit3.text}}</p>
+							</div>
+						</div>
+
+					</div>
+					<div class="medium-6 large-4 columns">
+						
+						<div class="evo-site-tile evo-site-tile--home-benefits-{{home.benefits.benefit4.number}}" data-equalizer-watch data-anijs="if: scroll, on: window, do: {{home.benefits.benefit4.animation}} animated, before: scrollReveal, after: holdAnimClass">
+							<div class="evo-site-tile--hdr">{{home.benefits.benefit4.number}}</div>
+							<div class="evo-site-tile--body">
+								<h3>{{home.benefits.benefit4.header}}</h3>
+								<p>{{home.benefits.benefit4.text}}</p>
+							</div>
+						</div>
+
+					</div>
+					<div class="large-4 columns">
+						
+						<div class="evo-site-tile evo-site-tile--home-benefits-{{home.benefits.benefit5.number}}" data-equalizer-watch data-anijs="if: scroll, on: window, do: {{home.benefits.benefit5.animation}} animated, before: scrollReveal, after: holdAnimClass">
+							<div class="evo-site-tile--hdr">{{home.benefits.benefit5.number}}</div>
+							<div class="evo-site-tile--body">
+								<h3>{{home.benefits.benefit5.header}}</h3>
+								<div class="row collapse">
+									<div class="medium-6 large-12 columns">
+										<p>{{home.benefits.benefit5.text}}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- HOME PAGE BENEFITS TAB BAND - ENDS -->
+
+<!-- HOME PAGE PRODUCTS BAND - BEGINS -->
+	<section class="evo-full-width evo-site-band evo-site-band--marketing">
+		<div class="medium-12 medium-centered columns evo-contain-to-grid evo-site-band--marketing-content">
+			<h3 class="text-center evo-spacer-margin-bottom-small">{{home.products.header}}</h3>
+			<h6 class="subheader text-center">{{home.products.subheader}}</h6>
+			<ul class="small-block-grid-{{home.products.grid_small}} medium-block-grid-{{home.products.grid_medium}} large-block-grid-{{home.products.grid_large}} evo-site-band--marketing-block-grid">
+				{{#each home.products.items}}
+				<li class="text-center">
+					<h4><a href="{{url}}">{{header}}</a></h4>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</section>
+<!-- HOME PAGE PRODUCTS BAND - ENDS -->
