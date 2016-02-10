@@ -25,24 +25,6 @@ The Mercer color palette is designed to support a range of visual styles. These 
 			</ul>
 		<!-- TABS - ENDS -->
 
-
-			<section class="row">
-				<div class="small-3 columns">
-					1
-				</div>
-				<div class="small-3 columns">
-					2
-				</div>
-				<div class="small-3 columns">
-					3
-				</div>
-				<div class="small-3 columns">
-					4
-				</div>
-			</section>
-
-
-
 		</div>
 	</section>
 <!-- INTRO SECTION - ENDS -->
@@ -50,51 +32,31 @@ The Mercer color palette is designed to support a range of visual styles. These 
 <!-- TABS - BEGINS -->
 	<div class="tabs-content evo-tabs-content evo-site-tabs-content--reference-content">
 	<!-- TAB PANEL 1 - BEGINS -->
-		<section role="tabpanel" aria-hidden="false" class="content active" id="tabs0">
+		<section role="tabpanel" aria-hidden="false" class="content active evo-color-palette--full" id="tabs0">
 
 			<section class="row">
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
 				<!-- EXAMPLE BOX - BEGINS -->
-					{{#each button.data }}
-					<div class="panel evo-box evo-site-example-box">
+					{{#each color-palette.data }}
+					<div class="panel evo-box evo-site-example-box evo-site-color-block">
 						<div class="evo-box-hdr">
 						<!-- EXAMPLE HEADER - BEGINS -->
-							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
-								{{name}}
-								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
-							</h6>
-							<a name="{{hyphenate name}}"></a>
+							<h6 class="evo-hdr-rule evo-site-color-block--header" data-magellan-destination="{{hyphenate header}}">{{header}}</h6>
+							<a name="{{hyphenate header}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</div>
 						<div class="evo-box-bdy">
 						<!-- RENDERED HTML - BEGINS -->
-							{{#is multiple_example 'true'}}
-								{{#each multiple_example_options}}
-									{{> (lookup . 'partial') }}
-								{{/each}}
-							{{else}}
-								{{> (lookup . 'partial') }}
-							{{/is}}
+							{{#each colors}}
+							<div class="evo-site-color-block--swatch-ctn{{#if custom-class}} {{custom-class}}{{/if}}">
+								<div class="evo-site-color-block--swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})" data-anijs="if: mouseenter, do: pulse animated"></div>
+								<div class="evo-site-color-block--details">
+									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
+									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
+								</div>
+							</div>
+							{{/each}}
 						<!-- RENDERED HTML - ENDS -->
-						</div>
-						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
-						<!-- HTML CODE - BEGINS -->
-							{{#is multiple_example 'true'}}
-								{{#each multiple_example_options}}
-								<div class="evo-site-example-box--code-hdr">
-									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-								</div>
-								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
-								{{/each}}
-							{{else}}
-								<div class="evo-site-example-box--code-hdr">
-									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-								</div>
-								<pre><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
-							{{/is}}
-						<!-- HTML CODE - ENDS -->
 						</div>
 					</div>
 					{{/each}}
@@ -104,60 +66,10 @@ The Mercer color palette is designed to support a range of visual styles. These 
 				<!-- MAGELLAN NAV - BEGINS -->
 					<div class="evo-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
-							{{#each button.data}}
-							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+							{{#each color-palette.data}}
+							<dd data-magellan-arrival="{{hyphenate header}}"><a href="#{{hyphenate header}}">{{header}}</a></dd>
 							{{/each}}
 						</dl>
-
-						{{#is button.dependency_data.dependency 'true'}}
-						<hr>
-
-					<!-- SIDENAV ACCORDION - BEGINS -->
-						<ul class="accordion evo-accordion evo-accordion-icons evo-site--reference-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
-
-						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
-							<li class="accordion-navigation">
-								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{reference.sidenav.dependencies_header}}</a>
-								<div id="dependencies-accordion" class="content" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
-
-									<ul class="no-bullet">
-										{{#is button.dependency_data.foundation 'true'}}
-											<li><a href="" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if button.dependency_data.foundation_dependencies}}
-												<ul>
-												{{#each button.dependency_data.foundation_dependencies}}
-													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											{{/if}}
-											</li>
-										{{/is}}
-										{{#is button.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
-											{{#if button.dependency_data.evolution_dependencies}}
-												<ul>
-												{{#each button.dependency_data.evolution_dependencies}}
-													<li><a href="{{url}}">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											</li>
-											{{/if}}
-										{{/is}}
-										{{#is button.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is button.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
-										{{#each button.dependency_data.other}}
-											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
-										{{/each}}
-									</ul>
-
-								</div>
-							</li>
-						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
-
-						</ul>
-					<!-- SIDENAV ACCORDION - ENDS -->
-						{{/is}}
-
 					</div>
 				<!-- MAGELLAN NAV - ENDS -->
 				</div>
@@ -167,14 +79,105 @@ The Mercer color palette is designed to support a range of visual styles. These 
 	<!-- TAB PANEL 1 - ENDS -->
 
 	<!-- TAB PANEL 2 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content" id="tabs1">
+		<section role="tabpanel" aria-hidden="true" class="content evo-color-palette--definition" id="tabs1">
 
 			<section class="row">
-				<div class="medium-12 large-9 columns evo-keyline-right">
-					Content for something 2
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
+					<h6 class="evo-hdr-rule" id="{{hyphenate color-palette.primary}}">{{color-palette.primary}}</h6>
+					<p>Mercer's primary "Sapphire" color palette communicates Mercer's personality and identity. This is the dominant color palette used for all Mercer branding, while the "Onyx" palette provides for additional flexibility with styling text, borders, and content dividers.</p>
+					
+					{{#slice color-palette.data limit="4"}}
+					<div class="panel evo-box evo-site-example-box evo-site-color-block evo-no-margin-bottom">
+						<div class="evo-box-bdy">
+						<!-- RENDERED HTML - BEGINS -->
+							{{#each colors}}
+							<div class="evo-site-color-block--swatch-ctn{{#if custom-class}} {{custom-class}}{{/if}}">
+								<div class="evo-site-color-block--swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})" data-anijs="if: mouseenter, do: pulse animated"></div>
+								<div class="evo-site-color-block--details">
+									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
+									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
+								</div>
+							</div>
+							{{/each}}
+						<!-- RENDERED HTML - ENDS -->
+						</div>
+					</div>
+					{{/slice}}
+
+					<h6 class="evo-hdr-rule evo-spacer-margin-top-xxx-large" id="{{hyphenate color-palette.secondary}}">{{color-palette.secondary}}</h6>
+					<p>The secondary color palette can be used to further differentiate elements in web applications. These colors provide for additional flexibility in defining content containers, icons, and call-to-action buttons.</p>
+
+					{{#slice color-palette.data offset="4" limit="4"}}
+					<div class="panel evo-box evo-site-example-box evo-site-color-block evo-no-margin-bottom">
+						<div class="evo-box-bdy">
+						<!-- RENDERED HTML - BEGINS -->
+							{{#each colors}}
+							<div class="evo-site-color-block--swatch-ctn{{#if custom-class}} {{custom-class}}{{/if}}">
+								<div class="evo-site-color-block--swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})" data-anijs="if: mouseenter, do: pulse animated"></div>
+								<div class="evo-site-color-block--details">
+									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
+									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
+								</div>
+							</div>
+							{{/each}}
+						<!-- RENDERED HTML - ENDS -->
+						</div>
+					</div>
+					{{/slice}}
+
+					<h6 class="evo-hdr-rule evo-spacer-margin-top-xxx-large" id="{{hyphenate color-palette.tertiary}}">{{color-palette.tertiary}}</h6>
+					<p>Tertiary colors are to be predominantly used for data visualization, charting solutions, and tables. These colors should never be used to replace the primary and secondary color palettes.</p>
+
+					{{#slice color-palette.data offset="8" limit="5"}}
+					<div class="panel evo-box evo-site-example-box evo-site-color-block evo-no-margin-bottom">
+						<div class="evo-box-bdy">
+						<!-- RENDERED HTML - BEGINS -->
+							{{#each colors}}
+							<div class="evo-site-color-block--swatch-ctn{{#if custom-class}} {{custom-class}}{{/if}}">
+								<div class="evo-site-color-block--swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})" data-anijs="if: mouseenter, do: pulse animated"></div>
+								<div class="evo-site-color-block--details">
+									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
+									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
+								</div>
+							</div>
+							{{/each}}
+						<!-- RENDERED HTML - ENDS -->
+						</div>
+					</div>
+					{{/slice}}
+
+					<h6 class="evo-hdr-rule evo-spacer-margin-top-xxx-large" id="{{hyphenate color-palette.system}}">{{color-palette.system}}</h6>
+					<p>The system colors are used for important, high-level information that may require the user to take action. This type of information is presented in a container that represents a positive, negative or attention value. While these containers are generally positioned at the top of a page as alerts, they can also appear within content containers.</p>
+
+					{{#slice color-palette.data offset="13" limit="1"}}
+					<div class="panel evo-box evo-site-example-box evo-site-color-block evo-no-margin-bottom">
+						<div class="evo-box-bdy">
+						<!-- RENDERED HTML - BEGINS -->
+							{{#each colors}}
+							<div class="evo-site-color-block--swatch-ctn{{#if custom-class}} {{custom-class}}{{/if}}">
+								<div class="evo-site-color-block--swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})" data-anijs="if: mouseenter, do: pulse animated"></div>
+								<div class="evo-site-color-block--details">
+									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
+									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
+								</div>
+							</div>
+							{{/each}}
+						<!-- RENDERED HTML - ENDS -->
+						</div>
+					</div>
+					{{/slice}}
 				</div>
-				<div class="large-3 columns show-for-large-up">
-					Magellan 2
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large">
+				<!-- MAGELLAN NAV - BEGINS -->
+					<div class="evo-magellan" data-evo-fixed-by-scroll="evo-magellan--color-palette-definition" data-evo-magellan>
+						<dl class="sub-nav">
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate color-palette.primary}}">{{color-palette.primary}}</a></dd>
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate color-palette.secondary}}">{{color-palette.secondary}}</a></dd>
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate color-palette.tertiary}}">{{color-palette.tertiary}}</a></dd>
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate color-palette.system}}">{{color-palette.system}}</a></dd>
+						</dl>
+					</div>
+				<!-- MAGELLAN NAV - ENDS -->
 				</div>
 			</section>
 			

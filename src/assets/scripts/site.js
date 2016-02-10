@@ -18,7 +18,45 @@
 // FUNCTIONS
 //--------------------------------------------------------------------------------------------------------
 
-	
+	// SCROLL TO TOP
+	var evoScrollToTop = function(){
+		jQuery('[data-evo-scroll-to-top]').click(function(e){
+			jQuery('body,html').animate({
+				scrollTop: 0
+			}, 500);
+			e.preventDefault();
+		});
+	}
+
+	// SCROLL TO LOCATION
+	var evoScrollToLocation = function(){
+		jQuery('[data-evo-scroll-to-location]').click(function(e){
+			var scrollToLocationValue = jQuery(this).attr('href');
+			jQuery('html, body').animate({
+				scrollTop: jQuery(scrollToLocationValue).offset().top
+			}, 500);
+			e.preventDefault();
+		});
+	}
+
+	// POSITION FIXED BY SCROLL
+	var evoFixedByScroll = function(objectValue, scrollDistance){
+		$(window).scroll(function() {
+			if ($(window).scrollTop() > scrollDistance) {
+				jQuery('[data-evo-fixed-by-scroll=' + objectValue +']').addClass('fixed evo-scroll-to-fixed');
+  			}else{
+  				jQuery('[data-evo-fixed-by-scroll=' + objectValue +']').removeClass('fixed evo-scroll-to-fixed');
+  			}
+		});
+	}
+
+	// EVO MAGELLAN
+	var evoMagellan = function(){
+		jQuery('[data-evo-magellan] dd').click(function() {
+			jQuery('[data-evo-magellan] dd').removeClass('active');
+			jQuery(this).addClass('active');
+		});
+	};
 
 
 // DOCUMENT READY
@@ -46,8 +84,24 @@ $(function() {
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
 
+		// SCROLL TO TOP
+		evoScrollToTop();
+
+		// SCROLL TO LOCATION
+		evoScrollToLocation();
+
+		// EVO MAGELLAN
+		evoMagellan();
+
 		// COPY TO CLIPBOARD
 		var clipboard = new Clipboard('.copy-to-clipboard');
+
+
+	// COLOR PAGE
+	//----------------------------------------------------------------------------------------------------
+
+		// POSITION FIXED BY SCROLL
+		evoFixedByScroll('evo-magellan--color-palette-definition', 264);
 
 
 	// KITCHEN SINK DEMOS

@@ -306,6 +306,9 @@ code									{@include border-radius(rem-calc(2));}
 												color: $evo-site-reference-sidebar-link-font-color;
 												}
 											}
+		.evo-magellan						{
+			&.evo-scroll-to-fixed				{top: 20px;}
+											}
 	// SIDEBAR - ENDS
 
 	// SIDENAV - BEGINS
@@ -494,6 +497,40 @@ code									{@include border-radius(rem-calc(2));}
 										margin-bottom: 0;
 										}
 // TYPOGRAPHY PAGE - ENDS
+
+// COLOR PALETTE - BEGINS
+	.evo-site-color-block				{
+										@include clearfix;
+		.evo-site-color-block--swatch-ctn	{
+											float: left;
+											margin-right: rem-calc(30);
+			&:last-child						{margin-right: 0;}
+											}
+
+		.evo-site-color-block--swatch		{
+											@include border-radius($global-radius);
+											border: 1px solid $onyx-dark-70;
+											cursor: default;
+											height: rem-calc(60);
+											width: rem-calc(110);
+											}
+		.evo-site-color-block--details		{
+											font-size: $small-font-size;
+											text-align: center;
+											}
+										}
+
+	.evo-color-palette--full			{
+		.evo-site-color-block--swatch-ctn	{
+											margin-bottom: 0;
+											}
+										}
+	.evo-color-palette--definition			{
+		.evo-site-color-block--swatch-ctn	{
+											margin-bottom: rem-calc(20);
+											}
+										}
+// COLOR PALETTE - ENDS
 
 /*--- KITCHEN SINK -------------------------------------------------------------------------*/
 
