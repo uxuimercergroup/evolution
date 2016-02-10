@@ -28,8 +28,21 @@ URL: {{ meta_url }}
 
 /*=== WEBSITE STYLES =======================================================================*/
 
+/*--- DEVELOPER TOOLS ----------------------------------------------------------------------*/
+	
+	// CODE - BEGINS
+		code								{@include border-radius(rem-calc(2));}
+	// CODE - ENDS
+
+	// ANNOTATIONS - BEGINS
+		.evo-site-annotations				{
+											background-color: $highlight-color;
+											border-width: 0;
+											}
+	// ANNOTATIONS - ENDS
+
+
 /*--- SITE GLOBAL --------------------------------------------------------------------------*/
-code									{@include border-radius(rem-calc(2));}
 
 // BUTTONS - BEGINS
 	

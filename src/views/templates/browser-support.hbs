@@ -2,22 +2,23 @@
 title: "Browser Support"
 ---
 
-<div class="evo-contain-to-grid">
-	<div class="small-12 columns">
+<!-- HERO - BEGINS -->
+	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="medium" data-evo-site-hero-arrow-position="bottom">
+		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
+			<div class="text-center evo-center-block-vertical-element">
+				<h1 class="evo-site-hero--hdr flipInY animated evo-no-margin-bottom" data-evo-site-hero-hdr-size="medium">{{{browser-support.hero.title}}} <span>{{{browser-support.hero.subtitle}}}</span></h1>
+			</div>		
+		</div>
+	</section>
+<!-- HERO - ENDS -->
+
+<section class="evo-contain-to-grid">
+	<div class="small-12 columns evo-spacer-padding-top-xxx-large">
 
 {{# markdown }}
-# {{ title }}
 Evolution is a modern framework for modern browsers. As such, Evolution is intended for <strong>B Grade browsers and above</strong>. For F Grade browsers, which are explicitly unsupported and untested, elements will render differently from supported browsers.
 ***
 {{/ markdown }}
-
-	</div>
-</div>
-
-
-
-<section class="evo-contain-to-grid">
-	<div class="small-12 columns">
 
 	<!-- BROWSER GRADING KEY - BEGINS -->
 		<h6>{{browser-support.browser_key_header}}</h6>
@@ -54,7 +55,7 @@ Evolution is a modern framework for modern browsers. As such, Evolution is inten
 	<!-- BROWSER GRADING TABLE - ENDS -->
 
 	<!-- ANNOTATIONS BOX - BEGINS -->
-		<div class="panel evo-box annotations">
+		<div class="panel evo-box evo-site-annotations">
 			<div class="evo-box-bdy">
 				<h6>{{ browser-support.ie-compatibility-mode-header }}</h6>
 				<p class="evo-no-margin-bottom">

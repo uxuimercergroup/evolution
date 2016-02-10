@@ -15,14 +15,6 @@
 			&[data-evo-site-hero-size="3x-large"]{height: ($evo-site-hero-height*6);}
 											}
 
-		// HERO HEADER
-		.evo-site-hero--hdr					{
-											font-size: ($evo-site-hero-hdr-font-size*3);
-											line-height: ($evo-site-hero-hdr-font-size*3.25);
-											letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
-											padding: $evo-site-hero-hdr-padding-medium;
-											}
-
 		// HERO TAGLINE
 		.evo-site-hero--tagline				{
 											max-width: $evo-site-hero-tagline-max-width-medium;
@@ -84,7 +76,42 @@
 }
 
 // MEDIUM MEDIA QUERY RANGE - 768px - 1024px
-@media #{$medium-only} {					
+@media #{$medium-only} {
+
+	// HERO - BEGINS
+
+		// HERO HEADER
+		.evo-site-hero--hdr					{
+			&[data-evo-site-hero-hdr-size="small"]
+												{
+												font-size: $evo-site-hero-hdr-font-size;
+												line-height: $evo-site-hero-hdr-line-height;
+												letter-spacing: $evo-site-hero-hdr-letter-spacing;
+												padding: $evo-site-hero-hdr-padding;
+												}
+			&[data-evo-site-hero-hdr-size="medium"]
+												{
+												font-size: ($evo-site-hero-hdr-font-size*1.5);
+												line-height: ($evo-site-hero-hdr-font-size*1.75);
+												letter-spacing: $evo-site-hero-hdr-letter-spacing;
+												padding: $evo-site-hero-hdr-padding;
+												}
+			&[data-evo-site-hero-hdr-size="large"]
+												{
+												font-size: ($evo-site-hero-hdr-font-size*2);
+												line-height: ($evo-site-hero-hdr-font-size*2.25);
+												letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
+												padding: $evo-site-hero-hdr-padding-medium;
+												}
+			&[data-evo-site-hero-hdr-size="x-large"]
+												{
+												font-size: ($evo-site-hero-hdr-font-size*3);
+												line-height: ($evo-site-hero-hdr-font-size*3.25);
+												letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
+												padding: $evo-site-hero-hdr-padding-medium;
+												}
+											}
+	// HERO - ENDS			
 
 	// REFERENCE TEMPLATE - BEGINS
 

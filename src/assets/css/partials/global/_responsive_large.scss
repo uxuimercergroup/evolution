@@ -44,10 +44,34 @@
 
 		// HERO HEADER
 		.evo-site-hero--hdr					{
-											font-size: ($evo-site-hero-hdr-font-size*4);
-											line-height: ($evo-site-hero-hdr-font-size*4.1);
-											letter-spacing: $evo-site-hero-hdr-letter-spacing-large;
-											padding: $evo-site-hero-hdr-padding-large;
+			&[data-evo-site-hero-hdr-size="small"]
+												{
+												font-size: $evo-site-hero-hdr-font-size;
+												line-height: $evo-site-hero-hdr-line-height;
+												letter-spacing: $evo-site-hero-hdr-letter-spacing;
+												padding: $evo-site-hero-hdr-padding;
+												}
+			&[data-evo-site-hero-hdr-size="medium"]
+												{
+												font-size: ($evo-site-hero-hdr-font-size*2);
+												line-height: ($evo-site-hero-hdr-font-size*2.25);
+												letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
+												padding: $evo-site-hero-hdr-padding-medium;
+												}
+			&[data-evo-site-hero-hdr-size="large"]
+												{
+												font-size: ($evo-site-hero-hdr-font-size*3);
+												line-height: ($evo-site-hero-hdr-font-size*3.25);
+												letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
+												padding: $evo-site-hero-hdr-padding-medium;
+												}
+			&[data-evo-site-hero-hdr-size="x-large"]
+												{
+												font-size: ($evo-site-hero-hdr-font-size*4);
+												line-height: ($evo-site-hero-hdr-font-size*4.1);
+												letter-spacing: $evo-site-hero-hdr-letter-spacing-large;
+												padding: $evo-site-hero-hdr-padding-large;
+												}
 											}
 
 		// HERO TAGLINE
