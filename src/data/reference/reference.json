@@ -1,12 +1,6 @@
 {
 	"sidebar": [
 		{
-			"header": "Tools",
-			"section": [
-				{"name": "Kitchen Sink",		"url": "/reference/kitchen-sink.html"}
-			]
-		},
-		{
 			"header": "Atoms",
 			"section": [
 				{"name": "Animations",			"url": "/reference/animations.html"},
@@ -16,38 +10,56 @@
 				{"name": "Dropdowns",			"url": "/reference/dropdowns.html"},
 				{"name": "Equalizer",			"url": "/reference/equalizer.html"},
 				{"name": "Forms",				"url": "/reference/forms.html"},
-				{"name": "Grids",				"url": "/reference/base/grids"},
-				{"name": "Helpers",				"url": "/reference/base/helpers"},
-				{"name": "Icons",				"url": "/reference/base/icons"},
-				{"name": "Lists",				"url": "/reference/base/lists"},
-				{"name": "Tables",				"url": "/reference/base/tables"},
+				{"name": "Grids",				"url": "/reference/grids"},
+				{"name": "Helpers",				"url": "/reference/helpers"},
+				{"name": "Icons",				"url": "/reference/icons"},
+				{"name": "Lists",				"url": "/reference/lists"},
+				{"name": "Tables",				"url": "/reference/tables"},
 				{"name": "Type",				"url": "/reference/type.html"}
 			]
 		},
-
 		{
 			"header": "Molecules",
 			"section": [
-				{"name": "Accordion",			"url": "/reference/objects/accordion"},
-				{"name": "Alert Boxes",			"url": "/reference/objects/alert-boxes"},
-				{"name": "Autocomplete",		"url": "/reference/objects/autocomplete"},
-				{"name": "Badges",				"url": "/reference/objects/badges"},
-				{"name": "Breadcrumbs",			"url": "/reference/objects/breadcrumbs"},				
-				{"name": "Carousel",			"url": "/reference/objects/carousel"},
-				{"name": "Data Table",			"url": "/reference/objects/data-table"},
-				{"name": "Datepicker",			"url": "/reference/objects/datepicker"},
-				{"name": "Dropdown Buttons",	"url": "/reference/objects/dropdown-buttons"},
-				{"name": "Labels",				"url": "/reference/objects/labels"},
-				{"name": "Off-canvas",			"url": "/reference/objects/off-canvas"},
-				{"name": "Pagination",			"url": "/reference/objects/pagination"},
-				{"name": "Progress Bar",		"url": "/reference/objects/progress-bar"},
-				{"name": "Reveal Modal",		"url": "/reference/objects/reveal"},
-				{"name": "Scroll Pane",			"url": "/reference/objects/scroll-pane"},
-				{"name": "Slider",				"url": "/reference/objects/slider"},
-				{"name": "Sub Nav",				"url": "/reference/objects/sub-nav"},
-				{"name": "Tabs",				"url": "/reference/objects/tabs"},
-				{"name": "Tooltips",			"url": "/reference/objects/tooltip"},
-				{"name": "Top Bar",				"url": "/reference/objects/top-bar"}
+				{"name": "Accordion",			"url": "/reference/accordion"},
+				{"name": "Alert Boxes",			"url": "/reference/alert-boxes"},
+				{"name": "Autocomplete",		"url": "/reference/autocomplete"},
+				{"name": "Badges",				"url": "/reference/badges"},
+				{"name": "Breadcrumbs",			"url": "/reference/breadcrumbs"},				
+				{"name": "Carousel",			"url": "/reference/carousel"},
+				{"name": "Data Table",			"url": "/reference/data-table"},
+				{"name": "Datepicker",			"url": "/reference/datepicker"},
+				{"name": "Dropdown Buttons",	"url": "/reference/dropdown-buttons"},
+				{"name": "Labels",				"url": "/reference/labels"},
+				{"name": "Off-canvas",			"url": "/reference/off-canvas"},
+				{"name": "Pagination",			"url": "/reference/pagination"},
+				{"name": "Progress Bar",		"url": "/reference/progress-bar"},
+				{"name": "Reveal Modal",		"url": "/reference/reveal"},
+				{"name": "Scroll Pane",			"url": "/reference/scroll-pane"},
+				{"name": "Slider",				"url": "/reference/slider"},
+				{"name": "Sub Nav",				"url": "/reference/sub-nav"},
+				{"name": "Tabs",				"url": "/reference/tabs"},
+				{"name": "Tooltips",			"url": "/reference/tooltip"},
+				{"name": "Top Bar",				"url": "/reference/top-bar"}
+			]
+		},
+		{
+			"header": "Organisms",
+			"section": [
+				{"name": "Conversational Form", 	"url": "/reference/conversational-form"},
+				{"name": "Fat Footer", 				"url": "/reference/fat-footer"},
+				{"name": "Item Selection Panel", 	"url": "/reference/item-selection-panel"},
+				{"name": "Pricing Table", 			"url": "/reference/pricing-table"},
+				{"name": "Showcase Panel", 			"url": "/reference/showcase-panel"},
+				{"name": "Social Media Badges", 	"url": "/reference/social-media-badges"},
+				{"name": "Stepper", 				"url": "/reference/stepper"},
+				{"name": "Thin Footer", 			"url": "/reference/thin-footer"}
+			]
+		},
+		{
+			"header": "Tools",
+			"section": [
+				{"name": "Kitchen Sink",		"url": "/reference/kitchen-sink.html"}
 			]
 		}
 	],

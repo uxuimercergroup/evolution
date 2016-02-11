@@ -2,17 +2,28 @@
 title: "Change Log"
 ---
 
-<div class="evo-contain-to-grid">
-	<div class="small-12 columns">
+<!-- HERO - BEGINS -->
+	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="medium" data-evo-site-hero-arrow-position="bottom">
+		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
+			<div class="text-center evo-center-block-vertical-element">
+				<h1 class="evo-site-hero--hdr flipInY animated evo-no-margin-bottom" data-evo-site-hero-hdr-size="medium">{{{change-log.hero.title}}} <span>{{{change-log.hero.subtitle}}}</span></h1>
+			</div>		
+		</div>
+	</section>
+<!-- HERO - ENDS -->
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="evo-contain-to-grid">
+		<div class="small-12 columns evo-spacer-padding-top-xxx-large evo-spacer-padding-bottom-xxx-large">
 
 {{# markdown }}
-# {{ title }}
-A summary of all the releases of Evolution Core
+A summary of all the releases of Evolution
 ***
 {{/ markdown }}
 
-		<h3>Evolution Core 3.0 - 8/10/2015</h3>
-		{{> type-paragraph text="Evolution Core 3.0 was initially released on August 10, 2015. Change log updates will be recorded for versions after this initial release."}}
+			{{> type-header size="5" text="Evolution 3.0 - 8/10/2015"}}
+			{{> type-paragraph text="Evolution 3.0 was initially released on August 10, 2015. Change log updates will be recorded for versions after this initial release."}}
 
-	</div>
-</div>
+		</div>
+	</section>
+<!-- PAGE CONTENT - ENDS -->

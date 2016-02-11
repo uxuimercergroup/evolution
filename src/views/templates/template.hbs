@@ -2,27 +2,27 @@
 title: "Template"
 ---
 
-<div class="small-12 columns">
-
-{{# markdown }}
-# {{ title }}
-{{/ markdown }}
-
-	<div class="row">
-		<div class="medium-8 columns">
-
-{{# markdown }}
-This boilerplate template is for the project homepage.
-
-{{#repeat count=5}}
-
-{{lorem count=5}}
-
-{{/repeat}}
-{{/ markdown }}
-
+<!-- HERO - BEGINS -->
+	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="medium" data-evo-site-hero-arrow-position="bottom">
+		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
+			<div class="text-center evo-center-block-vertical-element">
+				<h1 class="evo-site-hero--hdr flipInY animated evo-no-margin-bottom" data-evo-site-hero-hdr-size="medium">{{{faq.hero.title}}} <span>{{{faq.hero.subtitle}}}</span></h1>
+			</div>		
 		</div>
-		<div class="medium-4 columns">
+	</section>
+<!-- HERO - ENDS -->
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="evo-contain-to-grid">
+		<div class="small-12 columns evo-spacer-padding-top-xxx-large evo-spacer-padding-bottom-xxx-large">
+
+{{# markdown }}
+This boilerplate template is for the default pages.
+***
+{{/ markdown }}
+
+			<div class="row">
+				<div class="medium-3 columns">
 
 {{# markdown }}
 {{#repeat count=3}}
@@ -32,7 +32,20 @@ This boilerplate template is for the project homepage.
 {{/repeat}}
 {{/ markdown }}
 
-		</div>
-	</div>
+				</div>
+				<div class="medium-9 columns">
 
-</div>
+{{# markdown }}
+{{#repeat count=10}}
+
+{{lorem count=5}}
+
+{{/repeat}}
+{{/ markdown }}
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+<!-- PAGE CONTENT - ENDS -->

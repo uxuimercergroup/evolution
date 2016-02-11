@@ -5,6 +5,15 @@
 // LARGE MEDIA QUERY RANGE AND UP - 1025px +
 @media #{$large-up} {
 
+	/*--- SITE GLOBAL --------------------------------------------------------------------------*/
+
+	// LAYOUTS - BEGINS
+	
+		// MAIN BODY SECTION
+		[role="main"]						{min-height: $evo-site-main-section-min-height;}
+
+	// LAYOUTS - ENDS
+
 	// HEADER - BEGINS
 		.evo-site-header					{
 
@@ -79,23 +88,22 @@
 
 	// HERO - ENDS
 
-	// GET STARTED PAGE - BEGINS
 
-		// TAB BAND - BEGINS
-			.evo-site-band--get-started			{
-				.evo-site-band--tab-panel			{
-													background-position: $evo-site-get-started-band-tab-panel-background-position-large;
-					.evo-site-band--tab-panel-marketing-content
-														{
-														border-width: $evo-site-get-started-band-tab-panel-marketing-content-keyline-border-width;
-														border-color: $evo-site-get-started-band-tab-panel-marketing-content-keyline-border-color;
-														padding: $evo-site-get-started-band-tab-panel-marketing-content-padding-large;
-														}
+	/*--- GET STARTED PAGE ---------------------------------------------------------------------*/
+
+	// TAB BAND - BEGINS
+		.evo-site-band--get-started			{
+			.evo-site-band--tab-panel			{
+												background-position: $evo-site-get-started-band-tab-panel-background-position-large;
+				.evo-site-band--tab-panel-marketing-content
+													{
+													border-width: $evo-site-get-started-band-tab-panel-marketing-content-keyline-border-width;
+													border-color: $evo-site-get-started-band-tab-panel-marketing-content-keyline-border-color;
+													padding: $evo-site-get-started-band-tab-panel-marketing-content-padding-large;
 													}
 												}
-		// TAB BAND - ENDS
-
-	// GET STARTED PAGE - ENDS
+											}
+	// TAB BAND - ENDS
 
 }
 

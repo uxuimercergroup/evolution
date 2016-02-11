@@ -30,15 +30,14 @@ URL: {{ meta_url }}
 
 /*--- DEVELOPER TOOLS ----------------------------------------------------------------------*/
 	
-	// CODE - BEGINS
-		code								{@include border-radius(rem-calc(2));}
-	// CODE - ENDS
+	// CODE
+	code								{@include border-radius(rem-calc(2));}
 
-	// ANNOTATIONS - BEGINS
-		.evo-site-annotations				{
-											background-color: $highlight-color;
-											border-width: 0;
-											}
+	// ANNOTATIONS
+	.evo-site-annotations				{
+										background-color: $highlight-color;
+										border-width: 0;
+										}
 	// ANNOTATIONS - ENDS
 
 
@@ -147,6 +146,7 @@ URL: {{ meta_url }}
 										letter-spacing: $evo-site-hero-hdr-letter-spacing;
 										text-align: center;
 										padding: $evo-site-hero-hdr-padding;
+										margin-top: $evo-site-hero-hdr-margin-top;
 										margin-bottom: $evo-site-hero-hdr-margin-bottom;
 										display: inline-block;
 		span								{font-family: $evo-site-hero-hdr-sub-name-font-family;}
@@ -259,6 +259,9 @@ URL: {{ meta_url }}
 											}
 										}
 // TILES - ENDS
+
+
+/*--- REFERENCES PAGES ---------------------------------------------------------------------*/
 
 // REFERENCE TEMPLATE - BEGINS
 
@@ -435,48 +438,50 @@ URL: {{ meta_url }}
 
 // REFERENCE TEMPLATE - ENDS
 
-// HOME PAGE - BEGINS
 
-	// BENEFITS TAB BAND - BEGINS
-		.evo-site-band--home-benefits		{
-			.evo-site-band--tab-panel			{
-												padding: $evo-site-home-benefits-band-tab-panel-padding;
-				.evo-site-tile						{
-													background-repeat: $evo-site-home-benefits-band-tile-background-repeat;
-													background-position: $evo-site-home-benefits-band-tile-background-position;
-													background-size: $evo-site-home-benefits-band-tile-background-size;
-													}
-				.evo-site-tile--home-benefits-1		{
-													background-color: $evo-site-home-benefits-band-benefits1-tile-background-color;
-													background-image: url($evo-site-home-benefits-band-benefits1-tile-background-image);
-													}
-				.evo-site-tile--home-benefits-2		{
-													background-color: $evo-site-home-benefits-band-benefits2-tile-background-color;
-													background-image: url($evo-site-home-benefits-band-benefits2-tile-background-image);
-													}
-				.evo-site-tile--home-benefits-3		{
-													background-color: $evo-site-home-benefits-band-benefits3-tile-background-color;
-													background-image: url($evo-site-home-benefits-band-benefits3-tile-background-image);
-													background-size: $evo-site-home-benefits-band-benefits3-tile-background-size;
-													background-position: $evo-site-home-benefits-band-benefits3-tile-background-position;
-													}
-				.evo-site-tile--home-benefits-4		{
-													background-color: $evo-site-home-benefits-band-benefits4-tile-background-color;
-													background-image: url($evo-site-home-benefits-band-benefits4-tile-background-image);
-													}
-				.evo-site-tile--home-benefits-5		{
-													background-color: $evo-site-home-benefits-band-benefits5-tile-background-color;
-													background-image: url($evo-site-home-benefits-band-benefits5-tile-background-image);
-													background-size: $evo-site-home-benefits-band-benefits5-tile-background-size;
-													background-position: $evo-site-home-benefits-band-benefits5-tile-background-position;
-													}
+/*--- HOME PAGE ----------------------------------------------------------------------------*/
+
+// BENEFITS TAB BAND - BEGINS
+	.evo-site-band--home-benefits		{
+		.evo-site-band--tab-panel			{
+											padding: $evo-site-home-benefits-band-tab-panel-padding;
+			.evo-site-tile						{
+												background-repeat: $evo-site-home-benefits-band-tile-background-repeat;
+												background-position: $evo-site-home-benefits-band-tile-background-position;
+												background-size: $evo-site-home-benefits-band-tile-background-size;
+												}
+			.evo-site-tile--home-benefits-1		{
+												background-color: $evo-site-home-benefits-band-benefits1-tile-background-color;
+												background-image: url($evo-site-home-benefits-band-benefits1-tile-background-image);
+												}
+			.evo-site-tile--home-benefits-2		{
+												background-color: $evo-site-home-benefits-band-benefits2-tile-background-color;
+												background-image: url($evo-site-home-benefits-band-benefits2-tile-background-image);
+												}
+			.evo-site-tile--home-benefits-3		{
+												background-color: $evo-site-home-benefits-band-benefits3-tile-background-color;
+												background-image: url($evo-site-home-benefits-band-benefits3-tile-background-image);
+												background-size: $evo-site-home-benefits-band-benefits3-tile-background-size;
+												background-position: $evo-site-home-benefits-band-benefits3-tile-background-position;
+												}
+			.evo-site-tile--home-benefits-4		{
+												background-color: $evo-site-home-benefits-band-benefits4-tile-background-color;
+												background-image: url($evo-site-home-benefits-band-benefits4-tile-background-image);
+												}
+			.evo-site-tile--home-benefits-5		{
+												background-color: $evo-site-home-benefits-band-benefits5-tile-background-color;
+												background-image: url($evo-site-home-benefits-band-benefits5-tile-background-image);
+												background-size: $evo-site-home-benefits-band-benefits5-tile-background-size;
+												background-position: $evo-site-home-benefits-band-benefits5-tile-background-position;
 												}
 											}
-	// BENEFITS TAB BAND - ENDS
+										}
+// BENEFITS TAB BAND - ENDS
 
-// HOME PAGE - ENDS
 
-// TYPOGRAPHY PAGE - BEGINS
+/*--- TYPOGRAPHY PAGE ----------------------------------------------------------------------*/
+
+// TYPOGRAPHY - BEGINS
 	.evo-type-sample					{
 										margin-bottom: rem-calc(15);
 		&[data-evo-type-sample="proxima-nova-regular"]
@@ -509,7 +514,10 @@ URL: {{ meta_url }}
 										font-size: rem-calc(14);
 										margin-bottom: 0;
 										}
-// TYPOGRAPHY PAGE - ENDS
+// TYPOGRAPHY - ENDS
+
+
+/*--- COLOR PALETTE PAGE -------------------------------------------------------------------*/
 
 // COLOR PALETTE - BEGINS
 	.evo-site-color-block				{
@@ -544,6 +552,7 @@ URL: {{ meta_url }}
 											}
 										}
 // COLOR PALETTE - ENDS
+
 
 /*--- KITCHEN SINK -------------------------------------------------------------------------*/
 

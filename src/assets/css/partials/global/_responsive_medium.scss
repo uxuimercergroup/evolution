@@ -5,6 +5,8 @@
 // MEDIUM MEDIA QUERY RANGE AND UP - 768px +
 @media #{$medium-up} {
 
+	/*--- SITE GLOBAL --------------------------------------------------------------------------*/
+
 	// HERO - BEGINS
 
 		// HERO BANNER
@@ -56,27 +58,28 @@
 
 	// BANDS - ENDS
 
-	// GET STARTED PAGE - BEGINS
+	
+	/*--- GET STARTED PAGE ---------------------------------------------------------------------*/
 
-		// TAB BAND - BEGINS
-			.evo-site-band--get-started			{
-				.evo-site-band--tab-panel			{
-													background-image: url($evo-site-get-started-band-tab-panel-background-image);
-													background-repeat: $evo-site-get-started-band-tab-panel-background-repeat;
-													background-size: $evo-site-get-started-band-tab-panel-background-size;
-													padding: $evo-site-get-started-band-tab-panel-padding;
-					.evo-site-band--tab-panel-marketing-content
-														{padding: $evo-site-get-started-band-tab-panel-marketing-content-padding;}
-													}
+	// TAB BAND - BEGINS
+		.evo-site-band--get-started			{
+			.evo-site-band--tab-panel			{
+												background-image: url($evo-site-get-started-band-tab-panel-background-image);
+												background-repeat: $evo-site-get-started-band-tab-panel-background-repeat;
+												background-size: $evo-site-get-started-band-tab-panel-background-size;
+												padding: $evo-site-get-started-band-tab-panel-padding;
+				.evo-site-band--tab-panel-marketing-content
+													{padding: $evo-site-get-started-band-tab-panel-marketing-content-padding;}
 												}
-		// TAB BAND - ENDS
-
-	// GET STARTED PAGE - ENDS
+											}
+	// TAB BAND - ENDS
 
 }
 
 // MEDIUM MEDIA QUERY RANGE - 768px - 1024px
 @media #{$medium-only} {
+
+	/*--- SITE GLOBAL --------------------------------------------------------------------------*/
 
 	// HERO - BEGINS
 
@@ -113,6 +116,9 @@
 											}
 	// HERO - ENDS			
 
+
+	/*--- REFERENCES PAGES ---------------------------------------------------------------------*/
+	
 	// REFERENCE TEMPLATE - BEGINS
 
 		// CONTENT TABS - BEGINS
@@ -124,18 +130,17 @@
 
 	// REFERENCE TEMPLATE - BEGINS
 
-	// GET STARTED PAGE - BEGINS
 
-		// TAB BAND - BEGINS
-			.evo-site-band--get-started			{
-				.evo-site-band--tab-panel			{
-													background-position: $evo-site-get-started-band-tab-panel-background-position-medium;
-					.evo-site-band--tab-panel-marketing-content
-														{border-left: 0;}
-													}
+	/*--- GET STARTED PAGE ---------------------------------------------------------------------*/
+
+	// TAB BAND - BEGINS
+		.evo-site-band--get-started			{
+			.evo-site-band--tab-panel			{
+												background-position: $evo-site-get-started-band-tab-panel-background-position-medium;
+				.evo-site-band--tab-panel-marketing-content
+													{border-left: 0;}
 												}
-		// TAB BAND - ENDS
-
-	// GET STARTED PAGE - ENDS
+											}
+	// TAB BAND - ENDS
 
 }
