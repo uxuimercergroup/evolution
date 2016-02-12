@@ -25,10 +25,6 @@ module.exports = {
     files: ['src/data/**/*.json'],
     tasks: ['assemble', 'notify:assemble']
   },
-  images: {
-    files: ['src/assets/images/**/*'],
-    tasks: ['newer:imagemin:dist', 'notify:imagemin']
-  },
   sass: {
     files: ['src/assets/css/**/*.scss', 'src/patterns/**/*.scss'],
     tasks: ['sass', 'notify:sass']

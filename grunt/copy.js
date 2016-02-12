@@ -9,6 +9,22 @@ module.exports = {
       src: [
         'docs/**',
         'fonts/**',
+        'images/**',
+        'scripts/core/foundation/vendor/modernizr.js',
+        'scripts/lib/prism/prism.js'
+      ],
+      dest: 'dist/assets'
+      }
+    ]
+  },
+  prod: {
+    files: [
+      {
+      expand: true,
+      cwd: 'src/assets/',
+      src: [
+        'docs/**',
+        'fonts/**',
         'images/core/favicon.ico',
         'scripts/core/foundation/vendor/modernizr.js',
         'scripts/lib/prism/prism.js'

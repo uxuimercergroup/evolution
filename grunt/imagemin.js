@@ -4,7 +4,7 @@ module.exports = {
   options: {
     optimizationLevel: 3 // For PNGs, select optimization level between 0 and 7, 3 is the default
   },
-  dist: {
+  prod: {
     files: [{
       expand: true,
       cwd: 'src/assets/images/',
