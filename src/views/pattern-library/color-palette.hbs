@@ -4,7 +4,7 @@ title: "Color Palette"
 
 <!-- INTRO SECTION - BEGINS -->
 	<section class="row">
-		<div class="small-12 columns evo-spacer-padding-top-medium evo-site--reference-intro">
+		<div class="small-12 columns evo-spacer-padding-top-medium evo-site--pattern-library-intro">
 
 {{# markdown }}
 # {{ title }}
@@ -14,8 +14,8 @@ The Mercer color palette is designed to support a range of visual styles. These 
 		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius even-4 stack-for-small evo-site-tabs--reference-tabs" data-tab role="tablist">
-				{{#each reference.tabs}}
+			<ul class="button-group radius even-4 stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+				{{#each pattern-library.tabs}}
 				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
 					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
 						<span class="text">{{name}}</span>
@@ -30,7 +30,7 @@ The Mercer color palette is designed to support a range of visual styles. These 
 <!-- INTRO SECTION - ENDS -->
 
 <!-- TABS - BEGINS -->
-	<div class="tabs-content evo-tabs-content evo-site-tabs-content--reference-content">
+	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content">
 	<!-- TAB PANEL 1 - BEGINS -->
 		<section role="tabpanel" aria-hidden="false" class="content active evo-color-palette--full" id="tabs0">
 
@@ -49,7 +49,7 @@ The Mercer color palette is designed to support a range of visual styles. These 
 						<!-- RENDERED HTML - BEGINS -->
 							{{#each colors}}
 							<div class="evo-site-color-block--swatch-ctn{{#if custom-class}} {{custom-class}}{{/if}}">
-								<div class="evo-site-color-block--swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})" data-anijs="if: mouseenter, do: pulse animated"></div>
+								<div class="evo-site-color-block--swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})"></div>
 								<div class="evo-site-color-block--details">
 									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
 									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
@@ -93,7 +93,7 @@ Mercer's primary "Sapphire" color palette communicates Mercer's personality and 
 						<!-- RENDERED HTML - BEGINS -->
 							{{#each colors}}
 							<div class="evo-site-color-block--swatch-ctn{{#if custom-class}} {{custom-class}}{{/if}}">
-								<div class="evo-site-color-block--swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})" data-anijs="if: mouseenter, do: pulse animated"></div>
+								<div class="evo-site-color-block--swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})"></div>
 								<div class="evo-site-color-block--details">
 									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
 									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
@@ -115,7 +115,7 @@ The secondary color palette can be used to further differentiate elements in web
 						<!-- RENDERED HTML - BEGINS -->
 							{{#each colors}}
 							<div class="evo-site-color-block--swatch-ctn{{#if custom-class}} {{custom-class}}{{/if}}">
-								<div class="evo-site-color-block--swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})" data-anijs="if: mouseenter, do: pulse animated"></div>
+								<div class="evo-site-color-block--swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})"></div>
 								<div class="evo-site-color-block--details">
 									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
 									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
@@ -137,7 +137,7 @@ Tertiary colors are to be predominantly used for data visualization, charting so
 						<!-- RENDERED HTML - BEGINS -->
 							{{#each colors}}
 							<div class="evo-site-color-block--swatch-ctn{{#if custom-class}} {{custom-class}}{{/if}}">
-								<div class="evo-site-color-block--swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})" data-anijs="if: mouseenter, do: pulse animated"></div>
+								<div class="evo-site-color-block--swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})"></div>
 								<div class="evo-site-color-block--details">
 									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
 									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
@@ -159,7 +159,7 @@ The system colors are used for important, high-level information that may requir
 						<!-- RENDERED HTML - BEGINS -->
 							{{#each colors}}
 							<div class="evo-site-color-block--swatch-ctn{{#if custom-class}} {{custom-class}}{{/if}}">
-								<div class="evo-site-color-block--swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})" data-anijs="if: mouseenter, do: pulse animated"></div>
+								<div class="evo-site-color-block--swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})"></div>
 								<div class="evo-site-color-block--details">
 									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
 									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>

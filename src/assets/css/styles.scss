@@ -261,48 +261,49 @@ URL: {{ meta_url }}
 // TILES - ENDS
 
 
-/*--- REFERENCES PAGES ---------------------------------------------------------------------*/
+/*--- PATTERN LIBRARY PAGES ----------------------------------------------------------------*/
 
-// REFERENCE TEMPLATE - BEGINS
+// PATTERN LIBRARY TEMPLATE - BEGINS
 
 	// INTRO - BEGINS
-		.evo-site--reference-intro			{
-											border-bottom-width: $evo-site-reference-intro-border-bottom-width;
-											border-bottom-style: $evo-site-reference-intro-border-bottom-style;
-											border-bottom-color: $evo-site-reference-intro-border-bottom-color;
-											padding-bottom: $evo-site-reference-intro-padding-bottom;
+		.evo-site--pattern-library-intro	{
+											border-bottom-width: $evo-site-pattern-library-intro-border-bottom-width;
+											border-bottom-style: $evo-site-pattern-library-intro-border-bottom-style;
+											border-bottom-color: $evo-site-pattern-library-intro-border-bottom-color;
+											padding-bottom: $evo-site-pattern-library-intro-padding-bottom;
 											}
 	// INTRO - ENDS
 
 	// CONTENT TABS - BEGINS
-		.evo-site-tabs--reference-tabs		{
+		.evo-site-tabs--pattern-library-tabs
+											{
 			li									{
 				a									{
-													background-color: $evo-site-tabs-reference-tab-background-color;
-													color: $evo-site-tabs-reference-tab-font-color;
+													background-color: $evo-site-tabs-pattern-library-tab-background-color;
+													color: $evo-site-tabs-pattern-library-tab-font-color;
 													margin-bottom: 0;
 					&:hover								{
-														background-color: $evo-site-tabs-reference-tab-hover-background-color;
-														color: $evo-site-tabs-reference-tab-hover-font-color;
+														background-color: $evo-site-tabs-pattern-library-tab-hover-background-color;
+														color: $evo-site-tabs-pattern-library-tab-hover-font-color;
 														}
 													}
 												}
 			.active								{
 				a									{
-													background-color: $evo-site-tabs-reference-tab-active-background-color;
-													color: $evo-site-tabs-reference-tab-active-font-color;
+													background-color: $evo-site-tabs-pattern-library-tab-active-background-color;
+													color: $evo-site-tabs-pattern-library-tab-active-font-color;
 					&:hover								{
-														background-color: $evo-site-tabs-reference-tab-active-hover-background-color;
+														background-color: $evo-site-tabs-pattern-library-tab-active-hover-background-color;
 														}
 													}
 												}
 											}
 
-		.evo-site-tabs-content--reference-content
+		.evo-site-tabs-content--pattern-library-content
 											{
 											border: 0;
 											margin-bottom: 0;
- 			.evo-keyline-right					{border-color: $evo-site-reference-keyline-color;}
+ 			.evo-keyline-right					{border-color: $evo-site-pattern-library-keyline-color;}
 			.content							{
 												padding: 0;
 												}
@@ -310,16 +311,16 @@ URL: {{ meta_url }}
 	// CONTENT TABS - ENDS
 
 	// SIDEBAR - BEGINS
-		.evo-site--reference-sidebar		{
-											background-color: $evo-site-reference-sidebar-background-color;
-											padding: $evo-site-reference-sidebar-padding;
+		.evo-site--pattern-library-sidebar	{
+											background-color: $evo-site-pattern-library-sidebar-background-color;
+											padding: $evo-site-pattern-library-sidebar-padding;
 			.evo-hdr-rule						{
-												color: $evo-site-reference-sidebar-hdr-font-color;
-												border-bottom-color: $evo-site-reference-sidebar-hdr-border-bottom-color;
-												border-bottom-style: $evo-site-reference-sidebar-hdr-border-bottom-style;
+												color: $evo-site-pattern-library-sidebar-hdr-font-color;
+												border-bottom-color: $evo-site-pattern-library-sidebar-hdr-border-bottom-color;
+												border-bottom-style: $evo-site-pattern-library-sidebar-hdr-border-bottom-style;
 												}
 			a									{
-												color: $evo-site-reference-sidebar-link-font-color;
+												color: $evo-site-pattern-library-sidebar-link-font-color;
 												}
 											}
 		.evo-magellan						{
@@ -328,7 +329,7 @@ URL: {{ meta_url }}
 	// SIDEBAR - ENDS
 
 	// SIDENAV - BEGINS
-		.evo-site--reference-sidenav-accordian
+		.evo-site--pattern-library-sidenav-accordian
 											{
 			.accordion-navigation				{
 												border: 0;
@@ -343,7 +344,7 @@ URL: {{ meta_url }}
 					&:before							{
 														float: right;
 														top: 0;
-														color: $evo-site-reference-sidenav-accordian-icon-color;
+														color: $evo-site-pattern-library-sidenav-accordian-icon-color;
 														}
 					&:hover								{background-color: $transparent;}
 													}
@@ -436,7 +437,7 @@ URL: {{ meta_url }}
 											}
 	// CODE EXAMPLE - ENDS
 
-// REFERENCE TEMPLATE - ENDS
+// PATTERN LIBRARY TEMPLATE - ENDS
 
 
 /*--- HOME PAGE ----------------------------------------------------------------------------*/

@@ -1,21 +1,21 @@
 ---
-title: "Template"
+title: "AutoComplete"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
 	<section class="row">
-		<div class="small-12 columns evo-spacer-padding-top-medium evo-site--reference-intro">
+		<div class="small-12 columns evo-spacer-padding-top-medium evo-site--pattern-library-intro">
 
 {{# markdown }}
 # {{ title }}
-Main description would begin here about the component/pattern that you are building.
+The autocomplete automatically suggests items for users when filling out an input form field.
 {{/ markdown }}
 
 		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius even-4 stack-for-small evo-site-tabs--reference-tabs" data-tab role="tablist">
-				{{#each reference.tabs}}
+			<ul class="button-group radius even-4 stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+				{{#each pattern-library.tabs}}
 				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
 					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
 						<span class="text">{{name}}</span>
@@ -30,14 +30,14 @@ Main description would begin here about the component/pattern that you are build
 <!-- INTRO SECTION - ENDS -->
 
 <!-- TABS - BEGINS -->
-	<div class="tabs-content evo-tabs-content evo-site-tabs-content--reference-content">
+	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content">
 	<!-- TAB PANEL 1 - BEGINS -->
 		<section role="tabpanel" aria-hidden="false" class="content active" id="tabs0">
 
 			<section class="row">
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
 				<!-- EXAMPLE BOX - BEGINS -->
-					{{#each button.data }}
+					{{#each autocomplete.data }}
 					<div class="panel evo-box evo-site-example-box">
 						<div class="evo-box-hdr">
 						<!-- EXAMPLE HEADER - BEGINS -->
@@ -86,48 +86,48 @@ Main description would begin here about the component/pattern that you are build
 				<!-- MAGELLAN NAV - BEGINS -->
 					<div class="evo-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
-							{{#each button.data}}
+							{{#each autocomplete.data}}
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/each}}
 						</dl>
 
-						{{#is button.dependency_data.dependency 'true'}}
+						{{#is autocomplete.dependency_data.dependency 'true'}}
 						<hr>
 
 					<!-- SIDENAV ACCORDION - BEGINS -->
-						<ul class="accordion evo-accordion evo-accordion-icons evo-site--reference-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
+						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
 
 						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
 							<li class="accordion-navigation">
-								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{reference.sidenav.dependencies_header}}</a>
+								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
 								<div id="dependencies-accordion" class="content" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
 
 									<ul class="no-bullet">
-										{{#is button.dependency_data.foundation 'true'}}
+										{{#is autocomplete.dependency_data.foundation 'true'}}
 											<li><a href="" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if button.dependency_data.foundation_dependencies}}
+											{{#if autocomplete.dependency_data.foundation_dependencies}}
 												<ul>
-												{{#each button.dependency_data.foundation_dependencies}}
+												{{#each autocomplete.dependency_data.foundation_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#is button.dependency_data.evolution 'true'}}
+										{{#is autocomplete.dependency_data.evolution 'true'}}
 											<li><a href="/">Evolution {{package.evolution.version}}</a>
-											{{#if button.dependency_data.evolution_dependencies}}
+											{{#if autocomplete.dependency_data.evolution_dependencies}}
 												<ul>
-												{{#each button.dependency_data.evolution_dependencies}}
+												{{#each autocomplete.dependency_data.evolution_dependencies}}
 													<li><a href="{{url}}">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is button.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is button.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
-										{{#each button.dependency_data.other}}
+										{{#is autocomplete.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is autocomplete.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
+										{{#each autocomplete.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}
 									</ul>

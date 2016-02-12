@@ -35,16 +35,16 @@ module.exports = {
       }
     ]
   },
-  reference: {
+  pattern_library: {
     options: {
-      layout: 'reference-layout.hbs'
+      layout: 'pattern-library-layout.hbs'
     },
     files: [
       {
       expand: true,
-      cwd: 'src/views/reference/',
+      cwd: 'src/views/pattern-library/',
       src: '**/*.hbs',
-      dest: 'dist/reference',
+      dest: 'dist/pattern-library',
       ext: '.html'
       }
     ]

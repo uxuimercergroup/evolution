@@ -17,9 +17,9 @@ module.exports = {
     files: ['src/views/templates/**/*.hbs'],
     tasks: ['newer:assemble:dist', 'notify:assemble']
   },
-  reference: {
-    files: ['src/views/reference/**/*.hbs'],
-    tasks: ['newer:assemble:reference', 'notify:assemble']
+  pattern_library: {
+    files: ['src/views/pattern-library/**/*.hbs'],
+    tasks: ['newer:assemble:pattern_library', 'notify:assemble']
   },
   data: {
     files: ['src/data/**/*.json'],
@@ -37,7 +37,7 @@ module.exports = {
     files: [
       'src/assets/docs/**',
       'src/assets/fonts/**',
-      'src/assets/images/core/favicon.ico',
+      'src/assets/images/**',
       'src/assets/scripts/core/foundation/vendor/modernizr.js'
     ],
     tasks: ['newer:copy:dist', 'notify:copy']

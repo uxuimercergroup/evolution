@@ -97,7 +97,17 @@ $(function() {
 		var clipboard = new Clipboard('.copy-to-clipboard');
 
 
-	// COLOR PAGE
+	// PATTERN LIBRARY PAGES
+	//----------------------------------------------------------------------------------------------------
+
+		// Settings Data Table
+		evoDataTable('evo-data-table-pattern-library-setting-options',{
+			"paging": false,
+			"info": false
+		});
+
+
+	// COLOR PALETTE PAGE
 	//----------------------------------------------------------------------------------------------------
 
 		// POSITION FIXED BY SCROLL
@@ -160,12 +170,6 @@ $(function() {
 			evoCarousel('evo-carousel-example');
 
 		// DATA TABLE
-
-			// Data Table example
-			evoDataTable('evo-data-table-reference-setting-options',{
-				"paging": false,
-				"info": false
-			});
 
 			// Data Table example
 			evoDataTable('evo-data-table-example');
