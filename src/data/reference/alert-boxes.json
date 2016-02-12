@@ -1,0 +1,41 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "Alert Boxes", "url": "http://foundation.zurb.com/docs/components/alert_boxes.html"}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "false",
+		"jquery_ui": "false",
+		"other": [
+			{"name": "", "url": "", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"basic_general": {
+			"name": "General Box",
+			"partial": "alert-box", "type": "custom", "slug": "basic-alert-boxes"
+		},
+		"basic_warning": {
+			"name": "Warning Box",
+			"partial": "alert-box", "type": "warning", "slug": "basic-alert-boxes"
+		},
+		"basic_success": {
+			"name": "Success Box",
+			"partial": "alert-box", "type": "success", "slug": "basic-alert-boxes"
+		},
+		"basic_alert": {
+			"name": "Alert Box",
+			"partial": "alert-box", "type": "alert", "slug": "basic-alert-boxes"
+		},
+		"basic_info": {
+			"name": "Info Box",
+			"partial": "alert-box", "type": "info", "slug": "basic-alert-boxes"
+		}
+	}
+}

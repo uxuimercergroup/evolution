@@ -1,0 +1,196 @@
+---
+title: "Alert Boxes"
+---
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns evo-spacer-padding-top-medium evo-site--reference-intro">
+
+{{# markdown }}
+# {{ title }}
+Alerts are handy elements you can drop into a form or inline on a page to communicate success, warnings, failure or just information. They'll conform to 100% of the container width you put them in.
+{{/ markdown }}
+
+		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+
+		<!-- TABS - BEGINS -->
+			<ul class="button-group radius even-4 stack-for-small evo-site-tabs--reference-tabs" data-tab role="tablist">
+				{{#each reference.tabs}}
+				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
+					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
+						<span class="text">{{name}}</span>
+					</a>
+				</li>
+				{{/each}}
+			</ul>
+		<!-- TABS - ENDS -->
+
+		</div>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<!-- TABS - BEGINS -->
+	<div class="tabs-content evo-tabs-content evo-site-tabs-content--reference-content">
+	<!-- TAB PANEL 1 - BEGINS -->
+		<section role="tabpanel" aria-hidden="false" class="content active" id="tabs0">
+
+			<section class="row">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
+				<!-- EXAMPLE BOX - BEGINS -->
+					{{#each alert-boxes.data }}
+					<div class="panel evo-box evo-site-example-box">
+						<div class="evo-box-hdr">
+						<!-- EXAMPLE HEADER - BEGINS -->
+							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
+								{{name}}
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+							</h6>
+							<a name="{{hyphenate name}}"></a>
+						<!-- EXAMPLE HEADER - ENDS -->
+						</div>
+						<div class="evo-box-bdy">
+						<!-- RENDERED HTML - BEGINS -->
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
+									{{> (lookup . 'partial') }}
+								{{/each}}
+							{{else}}
+								{{> (lookup . 'partial') }}
+							{{/is}}
+						<!-- RENDERED HTML - ENDS -->
+						</div>
+						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						<!-- HTML CODE - BEGINS -->
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+								{{/each}}
+							{{else}}
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							{{/is}}
+						<!-- HTML CODE - ENDS -->
+						</div>
+					</div>
+					{{/each}}
+				<!-- EXAMPLE BOX - ENDS -->
+				</div>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large">
+				<!-- MAGELLAN NAV - BEGINS -->
+					<div class="evo-magellan" data-magellan-expedition="fixed">
+						<dl class="sub-nav">
+							{{#each alert-boxes.data}}
+							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+							{{/each}}
+						</dl>
+
+						{{#is alert-boxes.dependency_data.dependency 'true'}}
+						<hr>
+
+					<!-- SIDENAV ACCORDION - BEGINS -->
+						<ul class="accordion evo-accordion evo-accordion-icons evo-site--reference-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
+
+						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
+							<li class="accordion-navigation">
+								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{reference.sidenav.dependencies_header}}</a>
+								<div id="dependencies-accordion" class="content" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
+
+									<ul class="no-bullet">
+										{{#is alert-boxes.dependency_data.foundation 'true'}}
+											<li><a href="" target="_blank">Foundation {{package.foundation_version}}</a>
+											{{#if alert-boxes.dependency_data.foundation_dependencies}}
+												<ul>
+												{{#each alert-boxes.dependency_data.foundation_dependencies}}
+													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											{{/if}}
+											</li>
+										{{/is}}
+										{{#is alert-boxes.dependency_data.evolution 'true'}}
+											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											{{#if alert-boxes.dependency_data.evolution_dependencies}}
+												<ul>
+												{{#each alert-boxes.dependency_data.evolution_dependencies}}
+													<li><a href="{{url}}">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											</li>
+											{{/if}}
+										{{/is}}
+										{{#is alert-boxes.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is alert-boxes.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
+										{{#each alert-boxes.dependency_data.other}}
+											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+										{{/each}}
+									</ul>
+
+								</div>
+							</li>
+						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
+
+						</ul>
+					<!-- SIDENAV ACCORDION - ENDS -->
+						{{/is}}
+
+					</div>
+				<!-- MAGELLAN NAV - ENDS -->
+				</div>
+			</section>
+
+		</section>
+	<!-- TAB PANEL 1 - ENDS -->
+
+	<!-- TAB PANEL 2 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="content" id="tabs1">
+
+			<section class="row">
+				<div class="medium-12 large-9 columns evo-keyline-right">
+					Content for something 2
+				</div>
+				<div class="large-3 columns show-for-large-up">
+					Magellan 2
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 2 - BEGINS -->
+
+	<!-- TAB PANEL 3 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="content" id="tabs2">
+
+			<section class="row">
+				<div class="medium-12 large-9 columns evo-keyline-right">
+					Content for something 3
+				</div>
+				<div class="large-3 columns show-for-large-up">
+					Magellan 3
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 3 - BEGINS -->
+
+	<!-- TAB PANEL 4 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="content" id="tabs3">
+
+			<section class="row">
+				<div class="medium-12 large-9 columns evo-keyline-right">
+					Content for something 4
+				</div>
+				<div class="large-3 columns show-for-large-up">
+					Magellan 4
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 4 - BEGINS -->
+	</div>
+<!-- TABS - ENDS -->
