@@ -21,9 +21,9 @@
 			<div class="medium-6 small-only-text-center columns">
 				<div class="evo-footer-links">
 					<ul class="inline-list evo-inline-list evo-inline-list-pipes">
-						<li><a href="#/">Terms of Use</a></li>
-						<li><a href="#/">Privacy Policy</a></li>
-						<li><a href="#/">Contact Us</a></li>
+					{{#each footer.nav}}
+						<li><a href="{{url}}">{{{name}}}</a></li>
+					{{/each}}
 					</ul>
 				</div>
 			</div>
@@ -36,7 +36,7 @@
 		<div class="evo-contain-to-grid">
 		<!-- FOOTER BRAND LOGO - BEGINS -->
 			<div class="medium-6 medium-push-6 columns small-text-center medium-text-right evo-footer-logo">
-				<a class="small-only-text-center" href="http://www.mercer.com/" target="_blank" title="Mercer - Make Tomorrow, Today">
+				<a class="small-only-text-center" href="http://www.mercer.com/" title="Mercer - Make Tomorrow, Today">
 					<img src="{{assets}}/images/core/corp-logos/mercer/mercer_mtt_horizontal_rgb{{#is package.product_suite 'bp'}}_reverse{{/is}}.png" alt="Mercer - Make Tomorrow, Today" width="395" height="15">
 				</a>
 			</div>
@@ -45,7 +45,7 @@
 		<!-- FOOTER COPYRIGHT - BEGINS -->
 			<div class="medium-6 medium-pull-6 columns">
 				<p class="small-only-text-center evo-footnote evo-footer-copyright">
-					<small>&copy; {{now "%Y"}} {{ global.company }} LLC, All Rights Reserved</small>
+					<small>&copy; {{now "%Y"}} {{footer.copyright_text}}</small>
 				</p>
 			</div>
 		<!-- FOOTER COPYRIGHT - ENDS -->

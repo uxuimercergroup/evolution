@@ -17,9 +17,27 @@ title: "Contact Us"
 		<div class="small-12 columns evo-spacer-padding-top-xxx-large evo-spacer-padding-bottom-xxx-large">
 
 {{# markdown }}
-Contact us content
+Contact one of our talented professionals for help with your next project.
 ***
 {{/ markdown }}
+
+			{{#each global.staff.group}}
+			<div class="evo-site-vcard-group">
+				<h5 class="evo-spacer-margin-bottom-large">{{group_name}}</h5>
+				<ul class="small-block-grid-1 medium-block-grid-3">
+					{{#each members}}
+					<li class="evo-site-vcard">
+						<img class="left evo-margin-right" src="/assets/images/vcard/{{short_name}}.jpg" alt="{{name}}" width="50" height="50">
+						<p>
+							<strong class="evo-site-vcard--name">{{name}}</strong><br>
+							<span class="evo-site-vcard--title">{{title}}</span><br>
+							<a class="evo-site-vcard--email" href="mailto:{{email}}?subject={{email_subject}}">{{email}}</a>
+						</p>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+			{{/each}}
 
 		</div>
 	</section>
