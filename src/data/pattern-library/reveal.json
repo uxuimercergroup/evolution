@@ -1,0 +1,43 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "false",
+		"foundation_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "true",
+		"jquery_ui": "false",
+		"other": [
+			{"name": "jQuery OwlCarousel 1.3.3", "url": "http://owlgraphic.com/owlcarousel/", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"reveal": {
+			"name": "Reveal Modal",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "reveal-default", "slug": "reveal-default"},
+				{"partial": "reveal-small", "slug": "reveal-small"},
+				{"partial": "reveal-medium", "slug": "reveal-medium"},
+				{"partial": "reveal-large", "slug": "reveal-large"},
+				{"partial": "reveal-xlarge", "slug": "reveal-xlarge"},
+				{"partial": "reveal-full", "slug": "reveal-full"}
+			]
+		}
+	},
+
+	"settings_header": "Badge Options",
+	"settings_data": [
+		{
+			"option": "data-evo-background-color",
+			"default_value": "--",
+			"option_value": "<a href=\"/pattern-library/color-palette.html\">color palette</a>",
+			"description": "Add one of the option values on the <code>data-evo-background-color</code> attribute of the badge"
+		}
+	]
+}

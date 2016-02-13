@@ -1,0 +1,38 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "false",
+		"foundation_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "true",
+		"jquery_ui": "false",
+		"other": [
+			{"name": "j", "url": "", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"basic_table": {
+			"name": "Basic Table",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "data-table", "slug": "basic-table"}
+			]
+		}
+	},
+
+	"settings_header": "Badge Options",
+	"settings_data": [
+		{
+			"option": "data-evo-background-color",
+			"default_value": "--",
+			"option_value": "<a href=\"/pattern-library/color-palette.html\">color palette</a>",
+			"description": "Add one of the option values on the <code>data-evo-background-color</code> attribute of the badge"
+		}
+	]
+}
