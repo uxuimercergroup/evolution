@@ -1,5 +1,5 @@
 ---
-title: "Equalizer"
+title: "Animations"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -37,7 +37,7 @@ Main description would begin here about the component/pattern that you are build
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- EXAMPLE BOX - BEGINS -->
-					{{#each equalizer.data }}
+					{{#each animations.data }}
 					<div class="panel evo-box evo-site-example-box">
 						<div class="evo-box-hdr">
 						<!-- EXAMPLE HEADER - BEGINS -->
@@ -86,12 +86,12 @@ Main description would begin here about the component/pattern that you are build
 				<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
-							{{#each equalizer.data}}
+							{{#each animations.data}}
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/each}}
 						</dl>
 
-						{{#is equalizer.dependency_data.dependency 'true'}}
+						{{#is animations.dependency_data.dependency 'true'}}
 						<hr>
 
 					<!-- SIDENAV ACCORDION - BEGINS -->
@@ -103,31 +103,31 @@ Main description would begin here about the component/pattern that you are build
 								<div id="dependencies-accordion" class="content" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
 
 									<ul class="no-bullet">
-										{{#is equalizer.dependency_data.foundation 'true'}}
+										{{#is animations.dependency_data.foundation 'true'}}
 											<li><a href="" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if equalizer.dependency_data.foundation_dependencies}}
+											{{#if animations.dependency_data.foundation_dependencies}}
 												<ul>
-												{{#each equalizer.dependency_data.foundation_dependencies}}
+												{{#each animations.dependency_data.foundation_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#is equalizer.dependency_data.evolution 'true'}}
+										{{#is animations.dependency_data.evolution 'true'}}
 											<li><a href="/">Evolution {{package.evolution.version}}</a>
-											{{#if equalizer.dependency_data.evolution_dependencies}}
+											{{#if animations.dependency_data.evolution_dependencies}}
 												<ul>
-												{{#each equalizer.dependency_data.evolution_dependencies}}
+												{{#each animations.dependency_data.evolution_dependencies}}
 													<li><a href="{{url}}">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is equalizer.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is equalizer.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
-										{{#each equalizer.dependency_data.other}}
+										{{#is animations.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is animations.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
+										{{#each animations.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}
 									</ul>

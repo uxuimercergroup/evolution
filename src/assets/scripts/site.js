@@ -18,45 +18,59 @@
 // FUNCTIONS
 //--------------------------------------------------------------------------------------------------------
 
-	// SCROLL TO TOP
-	var evoScrollToTop = function(){
-		jQuery('[data-evo-scroll-to-top]').click(function(e){
-			jQuery('body,html').animate({
-				scrollTop: 0
-			}, 500);
-			e.preventDefault();
-		});
-	}
+	// SITE GLOBAL
+	//----------------------------------------------------------------------------------------------------
 
-	// SCROLL TO LOCATION
-	var evoScrollToLocation = function(){
-		jQuery('[data-evo-scroll-to-location]').click(function(e){
-			var scrollToLocationValue = jQuery(this).attr('href');
-			jQuery('html, body').animate({
-				scrollTop: jQuery(scrollToLocationValue).offset().top
-			}, 500);
-			e.preventDefault();
-		});
-	}
+		// SCROLL TO TOP
+		var evoScrollToTop = function(){
+			jQuery('[data-evo-scroll-to-top]').click(function(e){
+				jQuery('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				e.preventDefault();
+			});
+		}
 
-	// POSITION FIXED BY SCROLL
-	var evoFixedByScroll = function(objectValue, scrollDistance){
-		$(window).scroll(function() {
-			if ($(window).scrollTop() > scrollDistance) {
-				jQuery('[data-evo-fixed-by-scroll=' + objectValue +']').addClass('fixed evo-scroll-to-fixed');
-  			}else{
-  				jQuery('[data-evo-fixed-by-scroll=' + objectValue +']').removeClass('fixed evo-scroll-to-fixed');
-  			}
-		});
-	}
+		// SCROLL TO LOCATION
+		var evoScrollToLocation = function(){
+			jQuery('[data-evo-scroll-to-location]').click(function(e){
+				var scrollToLocationValue = jQuery(this).attr('href');
+				jQuery('html, body').animate({
+					scrollTop: jQuery(scrollToLocationValue).offset().top
+				}, 500);
+				e.preventDefault();
+			});
+		}
 
-	// EVO MAGELLAN
-	var evoMagellan = function(){
-		jQuery('[data-evo-magellan] dd').click(function() {
-			jQuery('[data-evo-magellan] dd').removeClass('active');
-			jQuery(this).addClass('active');
-		});
-	};
+		// POSITION FIXED BY SCROLL
+		var evoFixedByScroll = function(objectValue, scrollDistance){
+			$(window).scroll(function() {
+				if ($(window).scrollTop() > scrollDistance) {
+					jQuery('[data-evo-fixed-by-scroll=' + objectValue +']').addClass('fixed evo-scroll-to-fixed');
+	  			}else{
+	  				jQuery('[data-evo-fixed-by-scroll=' + objectValue +']').removeClass('fixed evo-scroll-to-fixed');
+	  			}
+			});
+		}
+
+		// EVO MAGELLAN
+		var evoMagellan = function(){
+			jQuery('[data-evo-magellan] dd').click(function() {
+				jQuery('[data-evo-magellan] dd').removeClass('active');
+				jQuery(this).addClass('active');
+			});
+		};
+
+
+	// PATTERN LIBRARY PAGES
+	//----------------------------------------------------------------------------------------------------
+
+		// EQUALIZE CONTENT COLUMNS ON TOGGLE OF TABS
+		var evoSitePatternLibTabsEqualizer = function(){
+			jQuery('.evo-site-tabs--pattern-library-tabs').on('toggled', function (event, tab) {
+			    $(document).foundation('equalizer', 'reflow');
+			});
+		}
 
 
 // DOCUMENT READY
@@ -67,15 +81,15 @@ $(document).foundation({
 	// FOUNDATION INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
 	
-	// FOUNDATION MAGELLAN OPTIONS
-	"magellan-expedition": {
-		active_class: 'active', // specify the class used for active sections
-		threshold: 0, // how many pixels until the magellan bar sticks, 0 = auto
-		destination_threshold: 40, // pixels from the top of destination for it to be considered active
-		throttle_delay: 50, // calculation throttling to increase framerate
-		fixed_top: 18, // top distance in pixels assigend to the fixed element on scroll
-		offset_by_height: false // whether to offset the destination by the expedition height. Usually you want this to be true, unless your expedition is on the side.
-	}
+		// FOUNDATION MAGELLAN OPTIONS
+		"magellan-expedition": {
+			active_class: 'active', // specify the class used for active sections
+			threshold: 0, // how many pixels until the magellan bar sticks, 0 = auto
+			destination_threshold: 40, // pixels from the top of destination for it to be considered active
+			throttle_delay: 50, // calculation throttling to increase framerate
+			fixed_top: 18, // top distance in pixels assigend to the fixed element on scroll
+			offset_by_height: false // whether to offset the destination by the expedition height. Usually you want this to be true, unless your expedition is on the side.
+		}
 
 });
 
@@ -84,203 +98,209 @@ $(function() {
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
 
-		// SCROLL TO TOP
-		evoScrollToTop();
+		// SITE GLOBAL
+		//------------------------------------------------------------------------------------------------
 
-		// SCROLL TO LOCATION
-		evoScrollToLocation();
+			// SCROLL TO TOP
+			evoScrollToTop();
 
-		// EVO MAGELLAN
-		evoMagellan();
+			// SCROLL TO LOCATION
+			evoScrollToLocation();
 
-		// COPY TO CLIPBOARD
-		var clipboard = new Clipboard('.copy-to-clipboard');
+			// EVO MAGELLAN
+			evoMagellan();
 
-
-	// PATTERN LIBRARY PAGES
-	//----------------------------------------------------------------------------------------------------
-
-		// Settings Data Table
-		evoDataTable('evo-data-table-pattern-library-setting-options',{
-			"paging": false,
-			"info": false
-		});
+			// COPY TO CLIPBOARD
+			var clipboard = new Clipboard('.copy-to-clipboard');
 
 
-	// COLOR PALETTE PAGE
-	//----------------------------------------------------------------------------------------------------
+		// PATTERN LIBRARY PAGES
+		//------------------------------------------------------------------------------------------------
 
-		// POSITION FIXED BY SCROLL
-		evoFixedByScroll('evo-magellan--color-palette-definition', 264);
+			// EQUALIZE CONTENT COLUMNS ON TOGGLE OF TABS
+			evoSitePatternLibTabsEqualizer();
 
-
-	// KITCHEN SINK DEMOS
-	//----------------------------------------------------------------------------------------------------
-
-		// AUTOCOMPLETE
-			
-			var evoAutocompleteExampleData = [
-				'Agresta, Jewel (Dallas) - Marsh',
-				'Agricola, Dwain (Norwood) - Mercer',
-				'Alexy, Dorthy (Chichester) - Mercer',
-				'Altonen, Colin (Hartford) - Marsh',
-				'Amaral, Ramon (Auckland) - Marsh',
-				'Amrich, Darrell (Iowa City) - Mercer',
-				'Araiza, Chad (Houston) - Mercer',
-				'Arenburg, Margot (Dusseldorf) - Mercer',
-				'Argenti, Kathie (Croydon) - Mercer',
-				'Arostegui, Marcelo (Norwood) - Mercer',
-				'Asberry, Kurtis (Dallas) - Marsh',
-				'Assad, Jess (Louisville) - Marsh',
-				'Backus, Neil (Dallas) - Marsh',
-				'Bagnoli, Luciusv (Croydon) - Marsh',
-				'Backus, Neil (Dallas) - Marsh',
-				'Bagnoli, Luciusv (Croydon) - Marsh',
-				'Assad, Jess (Louisville) - Marsh',
-				'Backus, Neil (Dallas) - Marsh',
-				'Bagnoli, Luciusv (Croydon) - Marsh',
-				'Backus, Neil (Dallas) - Marsh',
-				'Bagnoli, Luciusv (Croydon) - Marsh',
-				'Assad, Jess (Louisville) - Marsh',
-				'Backus, Neil (Dallas) - Marsh',
-				'Bagnoli, Luciusv (Croydon) - Marsh',
-				'Backus, Neil (Dallas) - Marsh',
-				'Bagnoli, Luciusv (Croydon) - Marsh',
-				'Bagnli, Luusv (Crydon) - Mercer',
-				'Bgnoli, Luciusv (Croon) - Marsh',
-				'Bagnol, Lucisv (Crodon) - Mercer',
-				'Bagnoli, uciusv (Croyn) - Mercer',
-				'Gnoli, Lucisv (Cdon) - Mercer',
-			];
-
-			// Autocomplete example
-			evoAutocomplete('evo-autocomplete-example',{
-				source: evoAutocompleteExampleData
+			// SETTINGS TAB DATA TABLE
+			evoDataTable('evo-data-table-pattern-library-setting-options',{
+				"paging": false,
+				"info": false
 			});
 
-		// BUTTONS
 
-			// Interactive button examples
-			evoButtonInteractive('evo-button-interactive-secondary-example');
-			evoButtonInteractive('evo-button-interactive-primary-example');
+		// COLOR PALETTE PAGE
+		//------------------------------------------------------------------------------------------------
 
-		// CAROUSEL
+			// POSITION FIXED BY SCROLL
+			evoFixedByScroll('evo-magellan--color-palette-definition', 264);
 
-			// Carousel example
-			evoCarousel('evo-carousel-example');
 
-		// DATA TABLE
+		// KITCHEN SINK DEMOS
+		//------------------------------------------------------------------------------------------------
 
-			// Data Table example
-			evoDataTable('evo-data-table-example');
+			// AUTOCOMPLETE
+				
+				var evoAutocompleteExampleData = [
+					'Agresta, Jewel (Dallas) - Marsh',
+					'Agricola, Dwain (Norwood) - Mercer',
+					'Alexy, Dorthy (Chichester) - Mercer',
+					'Altonen, Colin (Hartford) - Marsh',
+					'Amaral, Ramon (Auckland) - Marsh',
+					'Amrich, Darrell (Iowa City) - Mercer',
+					'Araiza, Chad (Houston) - Mercer',
+					'Arenburg, Margot (Dusseldorf) - Mercer',
+					'Argenti, Kathie (Croydon) - Mercer',
+					'Arostegui, Marcelo (Norwood) - Mercer',
+					'Asberry, Kurtis (Dallas) - Marsh',
+					'Assad, Jess (Louisville) - Marsh',
+					'Backus, Neil (Dallas) - Marsh',
+					'Bagnoli, Luciusv (Croydon) - Marsh',
+					'Backus, Neil (Dallas) - Marsh',
+					'Bagnoli, Luciusv (Croydon) - Marsh',
+					'Assad, Jess (Louisville) - Marsh',
+					'Backus, Neil (Dallas) - Marsh',
+					'Bagnoli, Luciusv (Croydon) - Marsh',
+					'Backus, Neil (Dallas) - Marsh',
+					'Bagnoli, Luciusv (Croydon) - Marsh',
+					'Assad, Jess (Louisville) - Marsh',
+					'Backus, Neil (Dallas) - Marsh',
+					'Bagnoli, Luciusv (Croydon) - Marsh',
+					'Backus, Neil (Dallas) - Marsh',
+					'Bagnoli, Luciusv (Croydon) - Marsh',
+					'Bagnli, Luusv (Crydon) - Mercer',
+					'Bgnoli, Luciusv (Croon) - Marsh',
+					'Bagnol, Lucisv (Crodon) - Mercer',
+					'Bagnoli, uciusv (Croyn) - Mercer',
+					'Gnoli, Lucisv (Cdon) - Mercer',
+				];
 
-			// Data Table Vertical Scroll example
-			evoDataTable('evo-data-table-vertical-scroll-example',{
-				scrollY: '200px',
-				scrollCollapse: true,
-				paging: false
-			});
+				// Autocomplete example
+				evoAutocomplete('evo-autocomplete-example',{
+					source: evoAutocompleteExampleData
+				});
 
-			// Data Table Select All Checkboxes example
-			evoDataTable('evo-data-table-select-all-checkboxes-example',{
-				searching: false,
-				paging: false,
-				info: false,
-				order: [[1, 'asc']],
-				columns: [
-					{orderable: false},
-					{orderable: true},
-					{orderable: true},
-					{orderable: true},
-					{orderable: true}
-				]
-			});
+			// BUTTONS
 
-		// DATEPICKER
+				// Interactive button examples
+				evoButtonInteractive('evo-button-interactive-secondary-example');
+				evoButtonInteractive('evo-button-interactive-primary-example');
 
-			// Datepicker read only input example
-			evoDatepicker('evo-datepicker-readonly-example');
-		 
-			// Datepicker default text input example
-			evoDatepicker('evo-datepicker-default-example');
-			
-			// Datepicker with message example
-			evoDatepicker('evo-datepicker-message-example');
-			
-			// Dateoicker masked date input example
-			evoDatepicker('evo-datepicker-masked-example');
+			// CAROUSEL
 
-		// SCROLL PANE
+				// Carousel example
+				evoCarousel('evo-carousel-example');
 
-			// Scroll pane example
-			evoScrollPane('evo-scroll-pane-example');
+			// DATA TABLE
 
-			// Horizontal scroll pane example
-			evoScrollPane('evo-scroll-pane-horizontal-example',{
-				axis:'x',
-				mouseWheel:{
-					axis:'x'
-				},
-				advanced:{
-					autoExpandHorizontalScroll: true
-				}
-			});
+				// Data Table example
+				evoDataTable('evo-data-table-example');
 
-			// Horizontal + vertical scroll pane example
-			evoScrollPane('evo-scroll-pane-horizontal-vertical-example',{
-				axis:'yx',
-				advanced:{
-					autoExpandHorizontalScroll: true
-				}
-			});
+				// Data Table Vertical Scroll example
+				evoDataTable('evo-data-table-vertical-scroll-example',{
+					scrollY: '200px',
+					scrollCollapse: true,
+					paging: false
+				});
 
-			// Scroll pane custom height example
-			evoScrollPane('evo-scroll-pane-custom-height-example',{
-				setHeight: 200
-			});
+				// Data Table Select All Checkboxes example
+				evoDataTable('evo-data-table-select-all-checkboxes-example',{
+					searching: false,
+					paging: false,
+					info: false,
+					order: [[1, 'asc']],
+					columns: [
+						{orderable: false},
+						{orderable: true},
+						{orderable: true},
+						{orderable: true},
+						{orderable: true}
+					]
+				});
 
-		// SLIDER
+			// DATEPICKER
 
-			// Slider horizontal (default) example
-			evoSlider('evo-slider-default');
+				// Datepicker read only input example
+				evoDatepicker('evo-datepicker-readonly-example');
+			 
+				// Datepicker default text input example
+				evoDatepicker('evo-datepicker-default-example');
+				
+				// Datepicker with message example
+				evoDatepicker('evo-datepicker-message-example');
+				
+				// Dateoicker masked date input example
+				evoDatepicker('evo-datepicker-masked-example');
 
-			// Slider range horizontal (default) example
-			evoSliderRange('evo-slider-range-default');
+			// SCROLL PANE
 
-			// Slider range horizontal - fixed min example
-			evoSliderRangeSingleHandle('evo-slider-range-single-min',{
-				range: 'min'
-			});
+				// Scroll pane example
+				evoScrollPane('evo-scroll-pane-example');
 
-			// Slider range horizontal - fixed max example
-			evoSliderRangeSingleHandle('evo-slider-range-single-max',{
-				range: 'max'
-			});
+				// Horizontal scroll pane example
+				evoScrollPane('evo-scroll-pane-horizontal-example',{
+					axis:'x',
+					mouseWheel:{
+						axis:'x'
+					},
+					advanced:{
+						autoExpandHorizontalScroll: true
+					}
+				});
 
-			// Slider horizontal (default) with interval ticks example
-			evoSlider('evo-slider-default-ticks',{
-				step: 10,
-				ticks: true
-			});
+				// Horizontal + vertical scroll pane example
+				evoScrollPane('evo-scroll-pane-horizontal-vertical-example',{
+					axis:'yx',
+					advanced:{
+						autoExpandHorizontalScroll: true
+					}
+				});
 
-			// Slider range horizontal (default) with interval ticks example
-			evoSliderRange('evo-slider-range-default-ticks',{
-				step: 10,
-				ticks: true
-			});
+				// Scroll pane custom height example
+				evoScrollPane('evo-scroll-pane-custom-height-example',{
+					setHeight: 200
+				});
 
-			// Slider range horizontal - fixed min with interval ticks example
-			evoSliderRangeSingleHandle('evo-slider-range-single-min-ticks',{
-				range: 'min',
-				step: 10,
-				ticks: true
-			});
+			// SLIDER
 
-			// Slider range horizontal - fixed max with interval ticks example
-			evoSliderRangeSingleHandle('evo-slider-range-single-max-ticks',{
-				range: 'max',
-				step: 10,
-				ticks: true
-			});
+				// Slider horizontal (default) example
+				evoSlider('evo-slider-default');
+
+				// Slider range horizontal (default) example
+				evoSliderRange('evo-slider-range-default');
+
+				// Slider range horizontal - fixed min example
+				evoSliderRangeSingleHandle('evo-slider-range-single-min',{
+					range: 'min'
+				});
+
+				// Slider range horizontal - fixed max example
+				evoSliderRangeSingleHandle('evo-slider-range-single-max',{
+					range: 'max'
+				});
+
+				// Slider horizontal (default) with interval ticks example
+				evoSlider('evo-slider-default-ticks',{
+					step: 10,
+					ticks: true
+				});
+
+				// Slider range horizontal (default) with interval ticks example
+				evoSliderRange('evo-slider-range-default-ticks',{
+					step: 10,
+					ticks: true
+				});
+
+				// Slider range horizontal - fixed min with interval ticks example
+				evoSliderRangeSingleHandle('evo-slider-range-single-min-ticks',{
+					range: 'min',
+					step: 10,
+					ticks: true
+				});
+
+				// Slider range horizontal - fixed max with interval ticks example
+				evoSliderRangeSingleHandle('evo-slider-range-single-max-ticks',{
+					range: 'max',
+					step: 10,
+					ticks: true
+				});
 
 });

@@ -31,14 +31,13 @@ URL: {{ meta_url }}
 /*--- DEVELOPER TOOLS ----------------------------------------------------------------------*/
 	
 	// CODE
-	code								{@include border-radius(rem-calc(2));}
+	code								{@include border-radius($evo-site-code-border-radius);}
 
 	// ANNOTATIONS
 	.evo-site-annotations				{
-										background-color: $highlight-color;
-										border-width: 0;
+										background-color: $evo-site-annotations-background-color;
+										border-width: $evo-site-annotations-border-width;
 										}
-	// ANNOTATIONS - ENDS
 
 
 /*--- SITE GLOBAL --------------------------------------------------------------------------*/
@@ -277,6 +276,7 @@ URL: {{ meta_url }}
 	// CONTENT TABS - BEGINS
 		.evo-site-tabs--pattern-library-tabs
 											{
+											margin-bottom: $evo-site-tabs-pattern-library-tabs-margin-bottom;
 			li									{
 				a									{
 													background-color: $evo-site-tabs-pattern-library-tab-background-color;
@@ -303,10 +303,12 @@ URL: {{ meta_url }}
 											{
 											border: 0;
 											margin-bottom: 0;
- 			.evo-keyline-right					{border-color: $evo-site-pattern-library-keyline-color;}
-			.content							{
-												padding: 0;
-												}
+ 			.evo-keyline-right					{
+ 												border-color: $evo-site-pattern-library-keyline-color;
+ 												min-height: $evo-site-pattern-library-keyline-min-height;
+ 												}
+			.evo-site-tabs-content--pattern-library-tab-panel
+												{padding: 0;}
 											}
 	// CONTENT TABS - ENDS
 
@@ -315,32 +317,84 @@ URL: {{ meta_url }}
 											background-color: $evo-site-pattern-library-sidebar-background-color;
 											padding: $evo-site-pattern-library-sidebar-padding;
 			.evo-hdr-rule						{
+												margin: $evo-site-pattern-library-sidebar-hdr-margin;
 												color: $evo-site-pattern-library-sidebar-hdr-font-color;
 												border-bottom-color: $evo-site-pattern-library-sidebar-hdr-border-bottom-color;
 												border-bottom-style: $evo-site-pattern-library-sidebar-hdr-border-bottom-style;
+												}
+			dl									{
+												margin-bottom: $evo-site-pattern-library-sidebar-list-margin-bottom;
+				&:last-child						{margin-bottom: 0;}
+				dd									{
+													line-height: $evo-site-pattern-library-sidebar-list-item-line-height;
+													margin-bottom: 0;
+													}
 												}
 			a									{
 												color: $evo-site-pattern-library-sidebar-link-font-color;
 												}
 											}
-		.evo-magellan						{
-			&.evo-scroll-to-fixed				{top: 20px;}
-											}
 	// SIDEBAR - ENDS
 
 	// SIDENAV - BEGINS
+
+		// SIDENAV MAGELLAN
+		.evo-site--pattern-library-sidenav-magellan
+											{
+											background: $evo-site-sidenav-magellan-background-color;
+											padding: 0;
+			.sub-nav							{
+				dd									{
+													float: none;
+													margin-left: 0;
+					a									{
+														display: block;
+														line-height: $evo-site-sidenav-magellan-link-line-height;
+														color: $evo-site-sidenav-magellan-link-color;
+														text-decoration: $evo-site-sidenav-magellan-link-text-decoration;
+														background-color: $evo-site-sidenav-magellan-link-background-color;
+														padding-top: 0;
+														padding-right: 0;
+														padding-bottom: 0;
+						&:hover								{background-color: $evo-site-sidenav-magellan-link-hover-background-color;}
+														}
+													}
+												}
+			&.evo-scroll-to-fixed				{top: 20px;}
+			&[data-magellan-expedition-clone]	{display: none;}
+			&.fixed								{
+												left: auto !important;
+												min-width: 0;
+												width: $evo-site-sidenav-magellan-fixed-width !important;
+				.sub-nav							{
+					dd									{
+														float: none;
+														margin-left: 0;
+						&.active							{
+							&:before							{
+																font-family: $evo-icon-font-stack;
+																content: $evo-site-sidenav-magellan-fixed-active-icon;
+																color: $evo-site-sidenav-magellan-fixed-active-icon-color;
+																position: absolute;
+																left: $evo-site-sidenav-magellan-fixed-active-icon-position-left;
+																margin-top: $evo-site-sidenav-magellan-fixed-active-icon-margin-top;
+																}
+															}
+														}
+													}
+												}
+											}
+
+		// SIDENAV ACCORDION
 		.evo-site--pattern-library-sidenav-accordian
 											{
 			.accordion-navigation				{
 												border: 0;
-												margin-bottom: rem-calc(6) !important;
+												margin-bottom: 0 !important;
 				&.active > a 						{background: $transparent !important;}
 				a									{
 													background-color: $transparent;
-													padding-left: 0;
-													padding-right: 0;
-													padding-top: 0;
-													padding-bottom: rem-calc(6);
+													padding: rem-calc(0 0 6 0);
 					&:before							{
 														float: right;
 														top: 0;
@@ -350,75 +404,29 @@ URL: {{ meta_url }}
 													}
 				.content							{
 													background-color: $transparent;
-													padding-left: rem-calc(2);
+													padding-left: rem-calc(16);
 					&.active							{background-color: $transparent;}
 					a									{
-														font-family: $evo-font-regular-family;
-														font-size: rem-calc(14);
-														text-decoration: underline;
+														font-family: $evo-site-pattern-library-sidenav-accordian-content-link-font-family;
+														font-size: $evo-site-pattern-library-sidenav-accordian-content-link-font-size;
+														text-decoration: $evo-site-pattern-library-sidenav-accordian-content-link-text-decoration;
 														}
-					li									{line-height: 1.3;}
+					li									{line-height: $evo-site-pattern-library-sidenav-accordian-content-list-item-line-height;}
 													}
 												}
 											}
 	// SIDENAV - ENDS
 
-	// MAGELLAN - BEGINS
-		$evo-site-magellan-fixed-width: 19% !important;
-
-		.evo-magellan						{
-											background: $white;
-											padding: 0;
-			&[data-magellan-expedition-clone]	{display: none;}
-			&.fixed								{
-												left: auto !important;
-												min-width: 0;
-												width: $evo-site-magellan-fixed-width;
-				.sub-nav							{
-					dd									{
-														float: none;
-														margin-left: 0;
-						&.active							{
-							&:before							{
-																font-family: $evo-icon-font-stack;
-																content: "\edc5";
-																position: absolute;
-																left: -3px;
-																margin-top: rem-calc(2);
-																}
-															}
-														}
-													}
-												}
-
-			// SUB-NAV
-			.sub-nav							{
-				dd									{
-													float: none;
-													margin-left: 0;
-					a									{
-														display: block;
-														line-height: 1.6;
-														color: $evo-site-magellan-sub-nav-link-color;
-														text-decoration: underline;
-														background-color: $transparent;
-														padding-top: 0;
-														padding-right: 0;
-														padding-bottom: 0;
-						&:hover								{background-color: $transparent;}
-														}
-													}
-												}
-											}
-	// MAGELLAN - ENDS
-
-	// CODE EXAMPLE - BEGINS
+	// EXAMPLE BOX - BEGINS
 		.evo-site-example-box				{
 											background-color: $evo-site-example-box-background-color;
 											border: 0;
 											padding: 0;
-											margin-bottom: rem-calc(80);
-			.evo-icon-site-embed2				{float: right !important;}
+											margin-bottom: $evo-site-example-box-margin-bottom;
+			.evo-icon-site-embed2				{
+												float: right !important;
+												margin-right: rem-calc(4);
+												}
 			.evo-hdr-rule						{
 												border-bottom-width: $evo-site-example-box-hdr-border-bottom-width;
 												border-bottom-color: $evo-site-example-box-hdr-border-bottom-color;
@@ -435,7 +443,7 @@ URL: {{ meta_url }}
 													}
 												}
 											}
-	// CODE EXAMPLE - ENDS
+	// EXAMPLE BOX - ENDS
 
 // PATTERN LIBRARY TEMPLATE - ENDS
 
@@ -530,27 +538,23 @@ URL: {{ meta_url }}
 											}
 
 		.evo-site-color-block--swatch		{
-											@include border-radius($global-radius);
-											border: 1px solid $onyx-dark-70;
+											@include border-radius($evo-site-color-palette-swatch-border-radius);
+											border: $evo-site-color-palette-swatch-border-width $evo-site-color-palette-swatch-border-style $evo-site-color-palette-swatch-border-color;
 											cursor: default;
-											height: rem-calc(60);
-											width: rem-calc(110);
+											height: $evo-site-color-palette-swatch-height;
+											width: $evo-site-color-palette-swatch-width;
 											}
 		.evo-site-color-block--details		{
-											font-size: $small-font-size;
-											text-align: center;
+											font-size: $evo-site-color-palette-details-font-size;
+											text-align: $evo-site-color-palette-details-text-align;
 											}
 										}
 
 	.evo-color-palette--full			{
-		.evo-site-color-block--swatch-ctn	{
-											margin-bottom: 0;
-											}
+		.evo-site-color-block--swatch-ctn	{margin-bottom: 0;}
 										}
 	.evo-color-palette--definition			{
-		.evo-site-color-block--swatch-ctn	{
-											margin-bottom: rem-calc(20);
-											}
+		.evo-site-color-block--swatch-ctn	{margin-bottom: rem-calc(20);}
 										}
 // COLOR PALETTE - ENDS
 

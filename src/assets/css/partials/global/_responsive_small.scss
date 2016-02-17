@@ -77,18 +77,14 @@
 			.evo-site-tabs--pattern-library-tabs
 												{
 				li									{
-													width: 100% !important;
-					a									{
-														border-top-color: $white !important;
-														}
+													width: $evo-site-tabs-pattern-library-tab-width-small !important;
+					a									{border-top-color: $evo-site-tabs-pattern-library-tab-link-border-top-color-small !important;}
 													}
 				.active								{
 					a									{
-														background-color: $onyx-dark-20;
-														color: $onyx-dark-80;
-						&:hover								{
-															background-color: $onyx-dark-20;
-															}
+														background-color: $evo-site-tabs-pattern-library-tab-active-link-background-color-small;
+														color: $evo-site-tabs-pattern-library-tab-active-link-font-color-small;
+						&:hover								{background-color: $evo-site-tabs-pattern-library-tab-active-link-hover-background-color-small;}
 														}
 													}
 												}

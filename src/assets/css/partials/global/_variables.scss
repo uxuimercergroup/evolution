@@ -6,6 +6,16 @@
 // VARIABLES
 // ==========================================================================================
 
+// DEVELOPER TOOLS
+
+	// CODE
+	$evo-site-code-border-radius: $global-radius;
+
+	// ANNOTATIONS
+	$evo-site-annotations-background-color: $highlight-color;
+	$evo-site-annotations-border-width: 0;
+
+
 // SITE GLOBAL
 
 	// LAYOUTS
@@ -22,7 +32,6 @@
 		$evo-site-h4-font-size-small: rem-calc(16);
 		$evo-site-h5-font-size-small: rem-calc(14);
 		$evo-site-h6-font-size-small: rem-calc(12);
-
 
 	// BUTTONS
 
@@ -154,43 +163,67 @@
 
 	// PATTERN LIBRARY TEMPLATE
 	$evo-site-pattern-library-keyline-color: $onyx-dark-10;
+	$evo-site-pattern-library-keyline-min-height: rem-calc(1500);
 
 		// INTRO
 		$evo-site-pattern-library-intro-border-bottom-width: 1px;
 		$evo-site-pattern-library-intro-border-bottom-style: solid;
 		$evo-site-pattern-library-intro-border-bottom-color: $onyx-dark-10;
-		$evo-site-pattern-library-intro-padding-bottom: rem-calc(30);
+		$evo-site-pattern-library-intro-padding-bottom: rem-calc(8);
 
 		// CONTENT TABS
-		$tab-dark-font-color: $onyx-dark-80;
-
+		$evo-site-tabs-pattern-library-tabs-margin-bottom: rem-calc(22);
 		$evo-site-tabs-pattern-library-tab-background-color: $onyx-dark-10;
-		$evo-site-tabs-pattern-library-tab-font-color: $tab-dark-font-color;
+		$evo-site-tabs-pattern-library-tab-font-color: $onyx-dark-80;
 		$evo-site-tabs-pattern-library-tab-hover-background-color: $onyx-dark-14;
-		$evo-site-tabs-pattern-library-tab-hover-font-color: $tab-dark-font-color;
+		$evo-site-tabs-pattern-library-tab-hover-font-color: $onyx-dark-80;
 		$evo-site-tabs-pattern-library-tab-active-background-color: $onyx-dark-20;
-		$evo-site-tabs-pattern-library-tab-active-font-color: $tab-dark-font-color;
+		$evo-site-tabs-pattern-library-tab-active-font-color: $onyx-dark-80;
 		$evo-site-tabs-pattern-library-tab-active-hover-background-color: $onyx-dark-20;
+		$evo-site-tabs-pattern-library-tab-width-small: 100%;
+		$evo-site-tabs-pattern-library-tab-link-border-top-color-small: $white;
+		$evo-site-tabs-pattern-library-tab-active-link-background-color-small: $onyx-dark-20;
+		$evo-site-tabs-pattern-library-tab-active-link-font-color-small: $onyx-dark-80;
+		$evo-site-tabs-pattern-library-tab-active-link-hover-background-color-small: $onyx-dark-20;
 
 		// SIDEBAR
 		$evo-site-pattern-library-sidebar-background-color: $sapphire-bright;
-		$evo-site-pattern-library-sidebar-padding: rem-calc(22);
-		$evo-site-pattern-library-sidebar-hdr-font-color: $white;
-		$evo-site-pattern-library-sidebar-hdr-border-bottom-color: $white;
+		$evo-site-pattern-library-sidebar-padding: rem-calc(20);
+		$evo-site-pattern-library-sidebar-hdr-margin: rem-calc(0 0 10 0);
+		$evo-site-pattern-library-sidebar-hdr-font-color: $sapphire-light;
+		$evo-site-pattern-library-sidebar-hdr-border-bottom-color: $sapphire-light;
 		$evo-site-pattern-library-sidebar-hdr-border-bottom-style: solid;
-		$evo-site-pattern-library-sidebar-link-font-color: $onyx-dark-10;
+		$evo-site-pattern-library-sidebar-list-margin-bottom: rem-calc(18);
+		$evo-site-pattern-library-sidebar-list-item-line-height: 1.75;
+		$evo-site-pattern-library-sidebar-link-font-color: $white;
 
 		// SIDENAV
-		$evo-site-pattern-library-sidenav-accordian-icon-color: $sapphire-medium;
 
-		// MAGELLAN
-		$evo-site-magellan-sub-nav-link-color: $sapphire-medium;
+			// SIDENAV MAGELLAN
+			$evo-site-sidenav-magellan-background-color: $white;
+			$evo-site-sidenav-magellan-link-line-height: 1.6;
+			$evo-site-sidenav-magellan-link-color: $sapphire-medium;
+			$evo-site-sidenav-magellan-link-text-decoration: underline;
+			$evo-site-sidenav-magellan-link-background-color: $transparent;
+			$evo-site-sidenav-magellan-link-hover-background-color: $transparent;
+			$evo-site-sidenav-magellan-fixed-width: 19%;
+			$evo-site-sidenav-magellan-fixed-active-icon: "\edc5";
+			$evo-site-sidenav-magellan-fixed-active-icon-color: $sapphire-bright;
+			$evo-site-sidenav-magellan-fixed-active-icon-position-left: -3px;
+			$evo-site-sidenav-magellan-fixed-active-icon-margin-top: rem-calc(2);
 
-		// CODE EXAMPLE
+			// SIDENAV ACCORDION
+			$evo-site-pattern-library-sidenav-accordian-icon-color: $sapphire-medium;
+			$evo-site-pattern-library-sidenav-accordian-content-link-font-family: $evo-font-regular-stack;
+			$evo-site-pattern-library-sidenav-accordian-content-link-font-size: rem-calc(14);
+			$evo-site-pattern-library-sidenav-accordian-content-link-text-decoration: underline;
+			$evo-site-pattern-library-sidenav-accordian-content-list-item-line-height: 1.3;
+
+		// EXAMPLE BOX
 		$evo-site-example-box-background-color: $white;
+		$evo-site-example-box-margin-bottom: rem-calc(80);
 		$evo-site-example-box-hdr-border-bottom-width: 1px;
 		$evo-site-example-box-hdr-border-bottom-color: $onyx-dark-10;
-
 		$evo-site-example-box-code-hdr-border-radius: $global-radius $global-radius 0 0;
 		$evo-site-example-box-code-hdr-background-color: $onyx-dark-10;
 		$evo-site-example-box-code-hdr-font-size: rem-calc(12);
@@ -235,3 +268,16 @@
 	$evo-site-what-is-band-tab-panel-marketing-content-padding-large: rem-calc(40 0 40 40);
 	$evo-site-what-is-band-tab-panel-marketing-content-keyline-border-width: 2px;
 	$evo-site-what-is-band-tab-panel-marketing-content-keyline-border-color: $onyx-dark-10;
+
+
+// COLOR PALETTE PAGE
+
+	// SWATCH
+	$evo-site-color-palette-swatch-border-radius: $global-radius;
+	$evo-site-color-palette-swatch-border-width: 1px;
+	$evo-site-color-palette-swatch-border-style: solid;
+	$evo-site-color-palette-swatch-border-color: $onyx-dark-70;
+	$evo-site-color-palette-swatch-height: rem-calc(60);
+	$evo-site-color-palette-swatch-width: rem-calc(110);
+	$evo-site-color-palette-details-font-size: $small-font-size;
+	$evo-site-color-palette-details-text-align: center;

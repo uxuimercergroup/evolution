@@ -32,10 +32,10 @@ The Carousel control allows for a revolving display of different types of conten
 <!-- TABS - BEGINS -->
 	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content">
 	<!-- TAB PANEL 1 - BEGINS -->
-		<section role="tabpanel" aria-hidden="false" class="content active" id="tabs0">
+		<section role="tabpanel" aria-hidden="false" class="content active evo-site-tabs-content--pattern-library-tab-panel" id="tabs0">
 
-			<section class="row">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each tooltip.data }}
 					<div class="panel evo-box evo-site-example-box">
@@ -82,9 +82,9 @@ The Carousel control allows for a revolving display of different types of conten
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large">
-				<!-- MAGELLAN NAV - BEGINS -->
-					<div class="evo-magellan" data-magellan-expedition="fixed">
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+				<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
 							{{#each tooltip.data}}
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
@@ -141,7 +141,7 @@ The Carousel control allows for a revolving display of different types of conten
 						{{/is}}
 
 					</div>
-				<!-- MAGELLAN NAV - ENDS -->
+				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
 
@@ -149,15 +149,15 @@ The Carousel control allows for a revolving display of different types of conten
 	<!-- TAB PANEL 1 - ENDS -->
 
 	<!-- TAB PANEL 2 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content" id="tabs1">
+		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs1">
 
-			<section class="row">
-				<div class="medium-12 large-9 columns evo-keyline-right">
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
 					<p>Add classes of <code>.breadcrumbs</code> <code>.evo-breadcrumbs</code> to a ul element. List items will automatically be styled, and you can add <code>.current</code> or <code>.unavailable</code> classes to list items to denote their state.</p>
 
 					<p>You can also add <code>.breadcrumbs</code> <code>.evo-breadcrumbs</code> classes to a nav element containing anchor links to get the same result.</p>
 				</div>
-				<div class="large-3 columns show-for-large-up">
+				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
 					Magellan 2
 				</div>
 			</section>
@@ -166,13 +166,13 @@ The Carousel control allows for a revolving display of different types of conten
 	<!-- TAB PANEL 2 - BEGINS -->
 
 	<!-- TAB PANEL 3 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content" id="tabs2">
+		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
 
-			<section class="row">
-				<div class="medium-12 large-9 columns evo-keyline-right">
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
 					Content for something 3
 				</div>
-				<div class="large-3 columns show-for-large-up">
+				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
 					Magellan 3
 				</div>
 			</section>
@@ -181,10 +181,10 @@ The Carousel control allows for a revolving display of different types of conten
 	<!-- TAB PANEL 3 - BEGINS -->
 
 	<!-- TAB PANEL 4 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content" id="tabs3">
+		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs3">
 
-			<section class="row">
-				<div class="medium-12 large-9 columns evo-keyline-right">
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
 
 					<h6 class="evo-hdr-rule evo-spacer-margin-top-large">{{ tooltip.settings_header }}</h6>
 {{# markdown }}
@@ -217,7 +217,7 @@ Below is list of options that you can pass in to the handlebars partial.
 				<!-- BUTTON SETTINGS - ENDS -->
 
 				</div>
-				<div class="large-3 columns show-for-large-up">
+				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
 					Magellan 4
 				</div>
 			</section>

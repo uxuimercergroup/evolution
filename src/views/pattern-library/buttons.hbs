@@ -34,10 +34,10 @@ buttons depend on Foundation's [Buttons](http://foundation.zurb.com/docs/compone
 <!-- TABS - BEGINS -->
 	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content">
 	<!-- TAB PANEL 1 - BEGINS -->
-		<section role="tabpanel" aria-hidden="false" class="content active" id="tabs0">
+		<section role="tabpanel" aria-hidden="false" class="content active evo-site-tabs-content--pattern-library-tab-panel" id="tabs0">
 
-			<section class="row">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each button.data }}
 					<div class="panel evo-box evo-site-example-box">
@@ -84,9 +84,9 @@ buttons depend on Foundation's [Buttons](http://foundation.zurb.com/docs/compone
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large">
-				<!-- MAGELLAN NAV - BEGINS -->
-					<div class="evo-magellan" data-magellan-expedition="fixed">
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+				<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
 							{{#each button.data}}
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
@@ -143,7 +143,7 @@ buttons depend on Foundation's [Buttons](http://foundation.zurb.com/docs/compone
 						{{/is}}
 
 					</div>
-				<!-- MAGELLAN NAV - ENDS -->
+				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
 
@@ -151,13 +151,13 @@ buttons depend on Foundation's [Buttons](http://foundation.zurb.com/docs/compone
 	<!-- TAB PANEL 1 - ENDS -->
 
 	<!-- TAB PANEL 2 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content" id="tabs1">
+		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs1">
 
-			<section class="row">
-				<div class="medium-12 large-9 columns evo-keyline-right">
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
 					Buttons act as the focal point for user interaction as it relates to saving data or completing an action.
 				</div>
-				<div class="large-3 columns show-for-large-up">
+				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
 					Magellan 2
 				</div>
 			</section>
@@ -166,10 +166,10 @@ buttons depend on Foundation's [Buttons](http://foundation.zurb.com/docs/compone
 	<!-- TAB PANEL 2 - BEGINS -->
 
 	<!-- TAB PANEL 3 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content" id="tabs2">
+		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
 
-			<section class="row">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 {{# markdown}}
 ###### General
 * Each button has 4 states: static, hover, active, and loading (optional).
@@ -203,7 +203,7 @@ buttons depend on Foundation's [Buttons](http://foundation.zurb.com/docs/compone
 * As a click event action to invoke another interaction on the page. For example, toggling content, hiding and showing content, sliding a panel, etc.
 {{/ markdown}}
 				</div>
-				<div class="large-3 columns show-for-large-up">
+				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
 					Magellan 3
 				</div>
 			</section>
@@ -212,17 +212,17 @@ buttons depend on Foundation's [Buttons](http://foundation.zurb.com/docs/compone
 	<!-- TAB PANEL 3 - BEGINS -->
 
 	<!-- TAB PANEL 4 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content" id="tabs3">
+		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs3">
 
-			<section class="row">
-				<div class="medium-12 large-9 columns evo-keyline-right">
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
 
 					<h6 class="evo-hdr-rule evo-spacer-margin-top-large">{{ button.settings_header }}</h6>
 {{# markdown }}
 Below is list of options that you can pass in to the handlebars partial.
 {{/ markdown }}
 
-				<!-- BUTTON SETTINGS - BEGINS -->
+				<!-- SETTINGS - BEGINS -->
 					<div class="evo-table-small-mediaquery">
 						<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-pattern-library-setting-options" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
 							<thead>
@@ -245,10 +245,10 @@ Below is list of options that you can pass in to the handlebars partial.
 							</tbody>
 						</table>
 					</div>
-				<!-- BUTTON SETTINGS - ENDS -->
+				<!-- SETTINGS - ENDS -->
 
 				</div>
-				<div class="large-3 columns show-for-large-up">
+				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
 					&nbsp;
 				</div>
 			</section>

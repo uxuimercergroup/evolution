@@ -32,10 +32,10 @@ The Mercer color palette is designed to support a range of visual styles. These 
 <!-- TABS - BEGINS -->
 	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content">
 	<!-- TAB PANEL 1 - BEGINS -->
-		<section role="tabpanel" aria-hidden="false" class="content active evo-color-palette--full" id="tabs0">
+		<section role="tabpanel" aria-hidden="false" class="content active evo-site-tabs-content--pattern-library-tab-panel evo-color-palette--full" id="tabs0">
 
-			<section class="row">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each color-palette.data }}
 					<div class="panel evo-box evo-site-example-box evo-site-color-block">
@@ -62,16 +62,16 @@ The Mercer color palette is designed to support a range of visual styles. These 
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large">
-				<!-- MAGELLAN NAV - BEGINS -->
-					<div class="evo-magellan" data-magellan-expedition="fixed">
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+				<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
 							{{#each color-palette.data}}
 							<dd data-magellan-arrival="{{hyphenate header}}"><a href="#{{hyphenate header}}">{{header}}</a></dd>
 							{{/each}}
 						</dl>
 					</div>
-				<!-- MAGELLAN NAV - ENDS -->
+				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
 
@@ -79,10 +79,10 @@ The Mercer color palette is designed to support a range of visual styles. These 
 	<!-- TAB PANEL 1 - ENDS -->
 
 	<!-- TAB PANEL 2 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-color-palette--definition" id="tabs1">
+		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel evo-color-palette--definition" id="tabs1">
 
-			<section class="row">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 					<h6 class="evo-hdr-rule" id="{{hyphenate color-palette.primary}}">{{color-palette.primary}}</h6>
 {{# markdown }}
 Mercer's primary "Sapphire" color palette communicates Mercer's personality and identity. This is the dominant color palette used for all Mercer branding, while the "Onyx" palette provides for additional flexibility with styling text, borders, and content dividers.
@@ -171,9 +171,9 @@ The system colors are used for important, high-level information that may requir
 					</div>
 					{{/slice}}
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large">
-				<!-- MAGELLAN NAV - BEGINS -->
-					<div class="evo-magellan" data-evo-fixed-by-scroll="evo-magellan--color-palette-definition" data-evo-magellan>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+				<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--color-palette-definition" data-evo-magellan>
 						<dl class="sub-nav">
 							<dd><a data-evo-scroll-to-location href="#{{hyphenate color-palette.primary}}">{{color-palette.primary}}</a></dd>
 							<dd><a data-evo-scroll-to-location href="#{{hyphenate color-palette.secondary}}">{{color-palette.secondary}}</a></dd>
@@ -181,7 +181,7 @@ The system colors are used for important, high-level information that may requir
 							<dd><a data-evo-scroll-to-location href="#{{hyphenate color-palette.system}}">{{color-palette.system}}</a></dd>
 						</dl>
 					</div>
-				<!-- MAGELLAN NAV - ENDS -->
+				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
 			
@@ -189,13 +189,13 @@ The system colors are used for important, high-level information that may requir
 	<!-- TAB PANEL 2 - BEGINS -->
 
 	<!-- TAB PANEL 3 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content" id="tabs2">
+		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
 
-			<section class="row">
-				<div class="medium-12 large-9 columns evo-keyline-right">
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
 					Content for something 3
 				</div>
-				<div class="large-3 columns show-for-large-up">
+				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
 					Magellan 3
 				</div>
 			</section>
@@ -204,13 +204,13 @@ The system colors are used for important, high-level information that may requir
 	<!-- TAB PANEL 3 - BEGINS -->
 
 	<!-- TAB PANEL 4 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content" id="tabs3">
+		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs3">
 
-			<section class="row">
-				<div class="medium-12 large-9 columns evo-keyline-right">
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
 					Content for something 4
 				</div>
-				<div class="large-3 columns show-for-large-up">
+				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
 					Magellan 4
 				</div>
 			</section>

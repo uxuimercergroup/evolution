@@ -123,7 +123,7 @@ $font-weight-bold: bold;
 // $black       : #000000;
 
 // We use these as default colors throughout, Message container colors
-$primary-color: $onyx-dark-70; // $onyx-dark-70
+$primary-color: $sapphire-dark; // $onyx-dark-70
 $secondary-color: $onyx-dark-6;
 $alert-color: $evo-base-alert-color;
 $success-color: $evo-base-success-color;
@@ -265,10 +265,10 @@ $paragraph-margin-bottom: rem-calc(16);
 // $paragraph-text-rendering: optimizeLegibility;
 
 // We use these to style <code> tags
-$code-color: $black;
+$code-color: $white;
 // $code-font-family: $font-family-monospace;
 // $code-font-weight: $font-weight-normal;
-$code-background-color: $onyx-light;
+$code-background-color: $onyx-medium;
 $code-border-size: 0;
 // $code-border-style: solid;
 // $code-border-color: scale-color($code-background-color, $lightness: -10%);
