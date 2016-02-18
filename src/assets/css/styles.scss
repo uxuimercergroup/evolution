@@ -445,6 +445,17 @@ URL: {{ meta_url }}
 											}
 	// EXAMPLE BOX - ENDS
 
+	// MARKDOWN CONTENT BLOCK - BEINGS
+		.evo-site-markdown-content-block
+										{
+										margin-bottom: $evo-site-markdown-content-block-margin-bottom;
+			h5								{
+											border-bottom: $evo-site-markdown-hdr-rule-border-size $evo-site-markdown-hdr-rule-border-style $evo-site-markdown-hdr-rule-border-color;
+											margin-bottom: $evo-site-markdown-hdr-rule-margin-bottom;
+											}
+										}
+	// MARKDOWN CONTENT BLOCK - ENDS
+
 // PATTERN LIBRARY TEMPLATE - ENDS
 
 

@@ -161,6 +161,14 @@
 
 // PATTERN LIBRARY PAGES
 
+	// MARKDOWN CONTENT BLOCK
+	$evo-site-markdown-hdr-rule-border-size: 1px !default;
+	$evo-site-markdown-hdr-rule-border-style: dotted !default;
+	$evo-site-markdown-hdr-rule-border-color: $onyx-dark-30 !default;
+	$evo-site-markdown-hdr-rule-margin-bottom: rem-calc(10) !default;
+	$evo-site-markdown-content-block-margin-bottom: rem-calc(60);
+	
+
 	// PATTERN LIBRARY TEMPLATE
 	$evo-site-pattern-library-keyline-color: $onyx-dark-10;
 	$evo-site-pattern-library-keyline-min-height: rem-calc(1500);

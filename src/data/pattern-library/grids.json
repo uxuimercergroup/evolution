@@ -15,5 +15,65 @@
 		"other": [
 			{"name": "", "url": "", "external_link": "true"}
 		]
+	},
+
+	"basic_nav": "Basic Grid",
+	"layouts_nav": "Layouts",
+	"center_nav": "Centering",
+	"source_nav": "Source Ordering",
+	"offsets_nav": "Grid Offsets",
+	"block_nav": "Block Grids",
+
+	"data": {
+		"basic": {
+			"name": "Basic Grid",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "grid-basic", "slug": "basic-grid"}
+			]
+		},
+		"layouts": {
+			"name": "Layouts",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "grid-1-col", "slug": "full-width"},
+				{"partial": "grid-2-col-25-75", "slug": "25-75"},
+				{"partial": "grid-2-col-33-66", "slug": "33-66"},
+				{"partial": "grid-2-col-50-50", "slug": "50-50"},
+				{"partial": "grid-2-col-66-33", "slug": "66-33"},
+				{"partial": "grid-2-col-75-25", "slug": "75-25"},
+				{"partial": "grid-3-col-25-50-25", "slug": "25-50-25"},
+				{"partial": "grid-3-col-33-33-33", "slug": "33-33-33"},
+				{"partial": "grid-4-col-25-25-25-25", "slug": "25-25-25-25"}
+			]
+		},
+		"centering": {
+			"name": "Centering",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "grid-centering", "slug": "centering"}
+			]
+		},
+		"source_ordering": {
+			"name": "Source Ordering",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "grid-source-ordering", "slug": "source-ordering"}
+			]
+		},
+		"offsets": {
+			"name": "Grid Offsets",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "grid-offset", "slug": "grid-offset"}
+			]
+		},
+		"block_grid": {
+			"name": "Block Grids",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "block-grid-basic", "slug": "block-grid-basic"}
+			]
+		}
 	}
 }

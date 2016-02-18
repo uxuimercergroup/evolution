@@ -127,11 +127,8 @@ $(function() {
 			});
 
 
-		// COLOR PALETTE PAGE
-		//------------------------------------------------------------------------------------------------
-
 			// POSITION FIXED BY SCROLL
-			evoFixedByScroll('evo-magellan--color-palette-definition', 264);
+			evoFixedByScroll('evo-magellan--side-nav', 230);
 
 
 		// KITCHEN SINK DEMOS
