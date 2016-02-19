@@ -42,6 +42,29 @@ URL: {{ meta_url }}
 
 /*--- SITE GLOBAL --------------------------------------------------------------------------*/
 
+.evo-site-basic-icon-table				{
+										background-color: $white;
+										border-collapse: separate;
+	thead									{display: none;}
+	tr										{
+											@include clearfix;
+											background-color: $white !important;
+											float: left;
+											width: 10%;
+		td										{
+												@include border-radius($global-radius);
+												background-color: $white !important;
+												border: 1px solid $onyx-dark-20;
+												cursor: pointer;
+												display: block !important;
+												margin: 3px;
+			[class^="evo-icon"]
+													{left: 4px;}
+												}
+											}
+										}
+
+
 // BUTTONS - BEGINS
 	
 	// CALL TO ACTION BUTTON

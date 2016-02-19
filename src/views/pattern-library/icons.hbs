@@ -8,7 +8,9 @@ title: "Icons"
 
 {{# markdown }}
 ## {{ title }}
-Main description would begin here about the component/pattern that you are building.
+Our icons use an icon Web font based primarily on the [IcoMoon](https://icomoon.io/) ultimate set. The icons available in [IcoMoon ultimate set](/) have been narrowed to this core Evolution Core set. These should cover most icon needs, but if you can't find something to meet your specific needs, you can view the IcoMoon ultimate set to see a complete list of available icons. We continually add new icons to the core set from the IcoMoon ultimate set as they are required.
+
+
 {{/ markdown }}
 
 		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
@@ -36,6 +38,33 @@ Main description would begin here about the component/pattern that you are build
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+
+					<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate icons.basic_icon_header}}">{{ icons.basic_icon_header }}</h6>
+					<a name="{{hyphenate icons.basic_icon_header}}"></a>
+					<div class="evo-table-small-mediaquery">
+						<table class="evo-table evo-site-basic-icon-table" id="evo-data-table-pattern-library-icons" data-evo-data-table="evo-data-table-pattern-library-icons" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+							<thead>
+								<tr>
+									<th scope="column">Default</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								{{#each icons.icon}}
+								<tr>
+									<td class="text-center copy-to-clipboard" title="evo-icon-{{{ properties.name }}}" data-clipboard-snippet data-clipboard-text="evo-icon-{{{ properties.name }}}">
+										<i class="evo-icon-{{{ properties.name }}} evo-icon-size-medium"></i>
+										<span class="evo-icon-hide-text">evo-icon-{{{ properties.name }}}</span>
+										<span class="evo-icon-hide-text">{{{ properties.name }}}</span>
+										<span class="evo-icon-hide-text">{{ join icon.tags ", "}}</span>
+									</td>
+								</tr>
+								{{/each}}
+
+							</tbody>
+						</table>
+					</div>
+
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each icons.data }}
 					<div class="panel evo-box evo-site-example-box">
@@ -51,9 +80,29 @@ Main description would begin here about the component/pattern that you are build
 						<div class="evo-box-bdy">
 						<!-- RENDERED HTML - BEGINS -->
 							{{#is multiple_example 'true'}}
+
+								<ul class="medium-block-grid-3 large-block-grid-5">
 								{{#each multiple_example_options}}
-									{{> (lookup . 'partial') }}
+
+									<li>
+									{{#if multiple_example_options_header}}
+										<p class="evo-spacer-margin-bottom-small">{{multiple_example_options_header}}</p>
+									{{/if}}
+
+									{{#is icon_label 'true'}}
+										<label{{#if icon_label_class}} class="{{icon_label_class}}"{{/if}}>
+											{{#is icon_label_before 'true'}}Label{{/is}}
+											{{> (lookup . 'partial') }}
+											{{#is icon_label_after 'true'}}Label{{/is}}
+										</label>
+									{{else}}
+										{{> (lookup . 'partial') }}
+									{{/is}}
+									</li>
+
 								{{/each}}
+								</ul>
+
 							{{else}}
 								{{> (lookup . 'partial') }}
 							{{/is}}
@@ -81,14 +130,70 @@ Main description would begin here about the component/pattern that you are build
 					</div>
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
+
+
+					<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate icons.photo_icons_header}}">{{ icons.photo_icons_header }}</h6>
+					<a name="{{hyphenate icons.photo_icons_header}}"></a>
+{{#markdown}}
+A library of icons gives the system more diverse use in digital and other applications. Icons can be used small, as buttons, or large, as graphic elements.
+
+Photo icons should feel human, represent genuine objects, and follow the same standards as the photography. The photo icons should evoke a sentimental feeling to represent an emotional response from Mercer (freedom, satisfaction, well-being, excitment, etc.).
+{{/markdown}}
+					<a href="{{assets}}/docs/core/icons/evo-photo-icons.zip" class="button small radius evo-button evo-spacer-margin-bottom-xxx-large" role="button">Download</a>
+					<p class="evo-no-margin">Career</p>
+					<div class="clearfix evo-spacer-margin-bottom-large">
+						{{#slice icons.photo_vector_icon_count limit="14"}}
+							<img src="/assets/images/core/icons/photo/career/photo_icon_career_{{this}}.png" width="80" height="80" class="left" alt="" title="" />
+						{{/slice}}
+					</div>
+					<p class="evo-no-margin">Health</p>
+					<div class="clearfix evo-spacer-margin-bottom-large">
+						{{#slice icons.photo_vector_icon_count limit="18"}}
+							<img src="/assets/images/core/icons/photo/health/photo_icon_health_{{this}}.png" width="80" height="80" class="left" alt="" title="" />
+						{{/slice}}
+					</div>
+					<p class="evo-no-margin">Wealth</p>
+					<div class="clearfix evo-spacer-margin-bottom-xxx-large">
+						{{#slice icons.photo_vector_icon_count limit="16"}}
+							<img src="/assets/images/core/icons/photo/wealth/photo_icon_wealth_{{this}}.png" width="80" height="80" class="left" alt="" title="" />
+						{{/slice}}
+					</div>
+
+					<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate icons.vector_icons_header}}">{{ icons.vector_icons_header }}</h6>
+					<a name="{{hyphenate icons.vector_icons_header}}"></a>
+{{#markdown}}
+A library of icons gives the system more diverse use in digital and other applications. Icons can be used small, as buttons, or large, as graphic elements. The icons below are merely examples of the style of icons that designers can create. Objects should be reduced as much as possible to simple, geometric shapes, while remaining instantly identifiable.
+{{/markdown}}
+					<a href="{{assets}}/docs/core/icons/evo-vector-icons.zip" class="button small radius evo-button evo-spacer-margin-bottom-xxx-large" role="button">Download</a>
+					<p class="evo-no-margin">Career</p>
+					<div class="clearfix evo-spacer-margin-bottom-large">
+						{{#slice icons.photo_vector_icon_count limit="25"}}
+							<img src="/assets/images/core/icons/vector/career/vector_icon_career_{{this}}.png" width="80" height="80" class="left" alt="" title="" />
+						{{/slice}}
+					</div>
+					<p class="evo-no-margin">Health</p>
+					<div class="clearfix evo-spacer-margin-bottom-large">
+						{{#slice icons.photo_vector_icon_count limit="16"}}
+							<img src="/assets/images/core/icons/vector/health/vector_icon_health_{{this}}.png" width="80" height="80" class="left" alt="" title="" />
+						{{/slice}}
+					</div>
+					<p class="evo-no-margin">Wealth</p>
+					<div class="clearfix evo-spacer-margin-bottom-large">
+						{{#slice icons.photo_vector_icon_count limit="19"}}
+							<img src="/assets/images/core/icons/vector/wealth/vector_icon_wealth_{{this}}.png" width="80" height="80" class="left" alt="" title="" />
+						{{/slice}}
+					</div>
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
+							<dd data-magellan-arrival="{{hyphenate icons.basic_icon_header}}"><a href="#{{hyphenate icons.basic_icon_header}}">{{icons.basic_icon_header}}</a></dd>
 							{{#each icons.data}}
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/each}}
+							<dd data-magellan-arrival="{{hyphenate icons.photo_icons_header}}"><a href="#{{hyphenate icons.photo_icons_header}}">{{icons.photo_icons_header}}</a></dd>
+							<dd data-magellan-arrival="{{hyphenate icons.vector_icons_header}}"><a href="#{{hyphenate icons.vector_icons_header}}">{{icons.vector_icons_header}}</a></dd>
 						</dl>
 
 						{{#is icons.dependency_data.dependency 'true'}}
@@ -153,7 +258,41 @@ Main description would begin here about the component/pattern that you are build
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
-					Content for something 2
+<!--
+					<div class="evo-table-small-mediaquery">
+						<table class="evo-table test-table" id="evo-data-table-pattern-library-icons" data-evo-data-table="evo-data-table-pattern-library-icons" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+							<thead>
+								<tr>
+									<th scope="column">Default</th>
+									<th scope="column">Name</th>
+									<th scope="column">Reverse</th>
+									<th scope="column">Class</th>
+									<th scope="column">Keywords</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								{{#each icons.icon}}
+								<tr>
+									<td class="text-center copy-to-clipboard" title="evo-icon-{{{ properties.name }}}" data-clipboard-snippet data-clipboard-text="evo-icon-{{{ properties.name }}}">
+										<i class="evo-icon-{{{ properties.name }}} evo-icon-size-medium"></i>
+										<span class="evo-icon-hide-text">evo-icon-{{{ properties.name }}}</span>
+										<span class="evo-icon-hide-text">{{{ properties.name }}}</span>
+									</td>
+									<td>{{{ properties.name }}}</td>
+									<td class="text-center icon-table-cell-reverse-background">
+										<i class="evo-icon-{{{ properties.name }}} evo-icon-color-white"></i>
+										<span class="evo-icon-hide-text">{{{ properties.name }}}</span>
+									</td>
+									<td>evo-icon-{{{ properties.name }}}</td>
+									<td>{{ join icon.tags ", "}}</td>
+								</tr>
+								{{/each}}
+
+							</tbody>
+						</table>
+					</div>
+-->
 				</div>
 				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
 					Magellan 2

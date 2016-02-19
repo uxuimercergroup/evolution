@@ -126,6 +126,10 @@ $(function() {
 				"info": false
 			});
 
+			evoDataTable('evo-data-table-pattern-library-icons',{
+				"paging": false,
+				"info": false
+			});
 
 			// POSITION FIXED BY SCROLL
 			evoFixedByScroll('evo-magellan--side-nav', 230);
