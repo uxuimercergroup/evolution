@@ -42,6 +42,25 @@ URL: {{ meta_url }}
 
 /*--- SITE GLOBAL --------------------------------------------------------------------------*/
 
+	// CORPORATE LOGOS - BEGINS
+		.evo-site-corp-logo-ctn		{
+			.evo-site-corp-logo-ctn--img-ctn
+										{
+										@include border-radius($global-radius);
+										border: 1px solid $transparent;
+										margin: rem-calc(20 0);
+										padding: rem-calc(20);
+										}
+									}
+
+		.evo-hdr-link				{
+									font-size: rem-calc(16);
+									text-transform: none;
+									letter-spacing: normal;
+									}
+		.evo-corp-logo-favicon-ctn	{padding: rem-calc(0 0 0 1)}
+	// CORPORATE LOGOS - ENDS
+
 .evo-site-basic-icon-table				{
 										background-color: $white;
 										border-collapse: separate;
