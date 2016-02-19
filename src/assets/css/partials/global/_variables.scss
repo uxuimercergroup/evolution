@@ -158,6 +158,18 @@
 	$evo-site-tile-hdr-margin-bottom: rem-calc(148);
 	$evo-site-tile-body-font-color: $white;
 
+	// SWATCH
+	$evo-site-swatch-background-color: $onyx-bright;
+	$evo-site-swatch-border-radius: $global-radius;
+	$evo-site-swatch-border-width: 1px;
+	$evo-site-swatch-border-style: solid;
+	$evo-site-swatch-border-color: $onyx-dark-70;
+	$evo-site-swatch-height: rem-calc(60);
+	$evo-site-swatch-width: rem-calc(110);
+	$evo-site-swatch-margin-bottom: rem-calc(5);
+	$evo-site-swatch-details-font-size: $small-font-size;
+	$evo-site-swatch-details-text-align: center;
+
 
 // PATTERN LIBRARY PAGES
 
@@ -278,14 +290,7 @@
 	$evo-site-what-is-band-tab-panel-marketing-content-keyline-border-color: $onyx-dark-10;
 
 
-// COLOR PALETTE PAGE
+// ANIMATIONS PAGE
 
 	// SWATCH
-	$evo-site-color-palette-swatch-border-radius: $global-radius;
-	$evo-site-color-palette-swatch-border-width: 1px;
-	$evo-site-color-palette-swatch-border-style: solid;
-	$evo-site-color-palette-swatch-border-color: $onyx-dark-70;
-	$evo-site-color-palette-swatch-height: rem-calc(60);
-	$evo-site-color-palette-swatch-width: rem-calc(110);
-	$evo-site-color-palette-details-font-size: $small-font-size;
-	$evo-site-color-palette-details-text-align: center;
+	$evo-site-animation-block-swatch-font-color: $white;

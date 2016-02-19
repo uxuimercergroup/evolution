@@ -282,6 +282,22 @@ URL: {{ meta_url }}
 										}
 // TILES - ENDS
 
+// SWATCHES - BEGINS
+	.evo-site-swatch					{
+										@include border-radius($evo-site-swatch-border-radius);
+										background-color: $evo-site-swatch-background-color;
+										border: $evo-site-swatch-border-width $evo-site-swatch-border-style $evo-site-swatch-border-color;
+										cursor: default;
+										height: $evo-site-swatch-height;
+										width: $evo-site-swatch-width;
+										margin: 0 0 $evo-site-swatch-margin-bottom 0;
+										}
+	.evo-site-swatch-details			{
+										font-size: $evo-site-swatch-details-font-size;
+										text-align: $evo-site-swatch-details-text-align;
+										}
+// SWATCHES - ENDS
+
 
 /*--- PATTERN LIBRARY PAGES ----------------------------------------------------------------*/
 
@@ -469,14 +485,13 @@ URL: {{ meta_url }}
 	// EXAMPLE BOX - ENDS
 
 	// MARKDOWN CONTENT BLOCK - BEINGS
-		.evo-site-markdown-content-block
-										{
-										margin-bottom: $evo-site-markdown-content-block-margin-bottom;
-			h5								{
-											border-bottom: $evo-site-markdown-hdr-rule-border-size $evo-site-markdown-hdr-rule-border-style $evo-site-markdown-hdr-rule-border-color;
-											margin-bottom: $evo-site-markdown-hdr-rule-margin-bottom;
+		.evo-site-markdown-content-block	{
+											margin-bottom: $evo-site-markdown-content-block-margin-bottom;
+			h5									{
+												border-bottom: $evo-site-markdown-hdr-rule-border-size $evo-site-markdown-hdr-rule-border-style $evo-site-markdown-hdr-rule-border-color;
+												margin-bottom: $evo-site-markdown-hdr-rule-margin-bottom;
+												}
 											}
-										}
 	// MARKDOWN CONTENT BLOCK - ENDS
 
 // PATTERN LIBRARY TEMPLATE - ENDS
@@ -522,6 +537,35 @@ URL: {{ meta_url }}
 // BENEFITS TAB BAND - ENDS
 
 
+/*--- ANIMATIONS PAGE ----------------------------------------------------------------------*/
+
+// ANIMATIONS - BEGINS
+	.evo-site-animation-block--swatch	{
+										border: 0;
+										cursor: pointer;
+										height: auto;
+										margin: 0 auto $evo-site-swatch-margin-bottom auto;
+										padding: rem-calc(18 18 19 18);
+										text-align: center;
+										color: rgba($evo-site-animation-block-swatch-font-color, .5);
+										}
+// ANIMATIONS - ENDS
+
+
+/*--- COLOR PALETTE PAGE -------------------------------------------------------------------*/
+
+// COLOR PALETTE - BEGINS
+	.evo-site-color-block				{
+										@include clearfix;
+		.evo-site-color-block--swatch-ctn	{
+											float: left;
+											padding: rem-calc(0 30 10 0);
+			&:last-child						{padding-right: 0;}
+											}
+										}
+// COLOR PALETTE - ENDS
+
+
 /*--- TYPOGRAPHY PAGE ----------------------------------------------------------------------*/
 
 // TYPOGRAPHY - BEGINS
@@ -558,39 +602,6 @@ URL: {{ meta_url }}
 										margin-bottom: 0;
 										}
 // TYPOGRAPHY - ENDS
-
-
-/*--- COLOR PALETTE PAGE -------------------------------------------------------------------*/
-
-// COLOR PALETTE - BEGINS
-	.evo-site-color-block				{
-										@include clearfix;
-		.evo-site-color-block--swatch-ctn	{
-											float: left;
-											margin-right: rem-calc(30);
-			&:last-child						{margin-right: 0;}
-											}
-
-		.evo-site-color-block--swatch		{
-											@include border-radius($evo-site-color-palette-swatch-border-radius);
-											border: $evo-site-color-palette-swatch-border-width $evo-site-color-palette-swatch-border-style $evo-site-color-palette-swatch-border-color;
-											cursor: default;
-											height: $evo-site-color-palette-swatch-height;
-											width: $evo-site-color-palette-swatch-width;
-											}
-		.evo-site-color-block--details		{
-											font-size: $evo-site-color-palette-details-font-size;
-											text-align: $evo-site-color-palette-details-text-align;
-											}
-										}
-
-	.evo-color-palette--full			{
-		.evo-site-color-block--swatch-ctn	{margin-bottom: 0;}
-										}
-	.evo-color-palette--definition			{
-		.evo-site-color-block--swatch-ctn	{margin-bottom: rem-calc(20);}
-										}
-// COLOR PALETTE - ENDS
 
 
 /*--- KITCHEN SINK -------------------------------------------------------------------------*/

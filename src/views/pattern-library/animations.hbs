@@ -8,7 +8,7 @@ title: "Animations"
 
 {{# markdown }}
 ## {{ title }}
-Main description would begin here about the component/pattern that you are building.
+Animations add a level of interactivity to any element.
 {{/ markdown }}
 
 		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
@@ -48,14 +48,19 @@ Main description would begin here about the component/pattern that you are build
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</div>
-						<div class="evo-box-bdy">
+						<div class="evo-box-bdy evo-spacer-margin-top-xx-large">
 						<!-- RENDERED HTML - BEGINS -->
 							{{#is multiple_example 'true'}}
+								<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4 xlarge-block-grid-5 xxlarge-block-grid-6">
 								{{#each multiple_example_options}}
-									{{> (lookup . 'partial') }}
+									<li>
+										{{> (lookup . 'partial') }}
+										<div class="evo-site-swatch-details">
+											<span>{{animation_type}}</span>
+										</div>
+									</li>
 								{{/each}}
-							{{else}}
-								{{> (lookup . 'partial') }}
+								</ul>
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
 						</div>
@@ -67,14 +72,8 @@ Main description would begin here about the component/pattern that you are build
 									{{slug}}
 									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
-								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{{code}}}</xmp></code></pre>
 								{{/each}}
-							{{else}}
-								<div class="evo-site-example-box--code-hdr">
-									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-								</div>
-								<pre><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							{{/is}}
 						<!-- HTML CODE - ENDS -->
 						</div>

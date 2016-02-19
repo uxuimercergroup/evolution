@@ -18,11 +18,196 @@
 	},
 
 	"data": {
-		"": {
-			"name": "",
-			"multiple_example": "",
+		"attention_seekers": {
+			"name": "Attention Seekers",
+			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "", "slug": ""}
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Flash",
+				"partial": "animation-flash",
+				"slug": "flash-animation",
+				"code": "data-anijs=\"if: click, do: flash animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Pulse",
+				"partial": "animation-pulse",
+				"slug": "pulse-animation",
+				"code": "data-anijs=\"if: click, do: pulse animated, after: removeAnim\""
+				}
+			]
+		},
+		"bouncing_entrances": {
+			"name": "Bouncing Entrances",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				}
+			]
+		},
+		"bouncing_exits": {
+			"name": "Bouncing Exits",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				}
+			]
+		},
+		"fading_entrances": {
+			"name": "Fading Entrances",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				}
+			]
+		},
+		"fading_exits": {
+			"name": "Fading Exits",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				}
+			]
+		},
+		"flippers": {
+			"name": "Flippers",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				}
+			]
+		},
+		"lightspeed": {
+			"name": "Lightspeed",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				}
+			]
+		},
+		"rotating": {
+			"name": "Rotating",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				}
+			]
+		},
+		"rotating_entrances": {
+			"name": "Rotating Entrances",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				}
+			]
+		},
+		"rotating_exits": {
+			"name": "Rotating Exits",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				}
+			]
+		},
+		"specials": {
+			"name": "Specials",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				}
+			]
+		},
+		"zooming_entrances": {
+			"name": "Zooming Entrances",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				}
+			]
+		},
+		"zooming_exits": {
+			"name": "Zooming Exits",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				}
+			]
+		},
+		"sliding_entrances": {
+			"name": "Sliding Entrances",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				}
+			]
+		},
+		"sliding_exits": {
+			"name": "Sliding Exits",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				}
 			]
 		}
 	},
