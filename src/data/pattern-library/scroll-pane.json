@@ -1,7 +1,7 @@
 {
 	"dependency_data" : {
 		"dependency": "true",
-		"foundation": "false",
+		"foundation": "",
 		"foundation_dependencies": [
 			{"name": "", "url": ""}
 		],
@@ -10,36 +10,27 @@
 			{"name": "", "url": ""}
 		],
 		"jquery": "true",
-		"jquery_ui": "false",
+		"jquery_ui": "",
 		"other": [
-			{"name": "jQuery OwlCarousel 1.3.3", "url": "http://owlgraphic.com/owlcarousel/", "external_link": "true"}
+			{"name": "jQuery Mouse Wheel 3.1.12", "url": "https://github.com/jquery/jquery-mousewheel", "external_link": "true"},
+			{"name": "Malihu jQuery Custom Scrollbar 3.0.7", "url": "http://manos.malihu.gr/jquery-custom-content-scroller/", "external_link": "true"}
 		]
 	},
 
 	"data": {
-		"image_carousel": {
-			"name": "Image Carousel",
-			"multiple_example": "true",
-			"multiple_example_options": [
-				{"partial": "carousel", "slug": "image-carousel"}
-			]
-		},
-		"content_carousel": {
-			"name": "Content Carousel",
-			"multiple_example": "true",
-			"multiple_example_options": [
-				{"partial": "carousel-content", "slug": "content-carousel"}
-			]
+		"": {
+			"name": "",
+			"partial": "", "slug": ""
 		}
 	},
 
-	"settings_header": "Badge Options",
+	"settings_header": "",
 	"settings_data": [
 		{
-			"option": "data-evo-background-color",
-			"default_value": "--",
-			"option_value": "<a href=\"/pattern-library/color-palette.html\">color palette</a>",
-			"description": "Add one of the option values on the <code>data-evo-background-color</code> attribute of the badge"
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
 		}
 	]
 }

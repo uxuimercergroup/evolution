@@ -3,26 +3,24 @@
 		"dependency": "true",
 		"foundation": "true",
 		"foundation_dependencies": [
-			{"name": "Inline Lists", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/inline_lists.html"}
+			{"name": "Block Grid", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/block_grid.html"}
 		],
 		"evolution": "true",
 		"evolution_dependencies": [
-			{"name": "", "url": ""}
+			{"name": "Icons", "url": "/pattern-library/icons.html"},
+			{"name": "Photo Icons", "url": "/pattern-library/icons.html"}
 		],
 		"jquery": "",
 		"jquery_ui": "",
 		"other": [
-			{"name": "", "url": "", "external_link": "true"}
+			{"name": "", "external_link": "true"}
 		]
 	},
 
 	"data": {
 		"": {
 			"name": "",
-			"multiple_example": "",
-			"multiple_example_options": [
-				{"partial": "", "slug": ""}
-			]
+			"partial": "", "slug": ""
 		}
 	},
 

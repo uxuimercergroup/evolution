@@ -104,7 +104,7 @@ Labels are useful inline styles that can be dropped into body copy to call out c
 
 									<ul class="no-bullet">
 										{{#is labels.dependency_data.foundation 'true'}}
-											<li><a href="" target="_blank">Foundation {{package.foundation_version}}</a>
+											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
 											{{#if labels.dependency_data.foundation_dependencies}}
 												<ul>
 												{{#each labels.dependency_data.foundation_dependencies}}
@@ -125,8 +125,8 @@ Labels are useful inline styles that can be dropped into body copy to call out c
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is labels.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is labels.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
+										{{#is labels.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is labels.dependency_data.jquery_ui 'true'}}<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
 										{{#each labels.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}

@@ -3,7 +3,7 @@
 		"dependency": "true",
 		"foundation": "true",
 		"foundation_dependencies": [
-			{"name": "Dropdowns", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/dropdown.html"}
+			{"name": "Pagination", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/pagination.html"}
 		],
 		"evolution": "true",
 		"evolution_dependencies": [
@@ -17,17 +17,9 @@
 	},
 
 	"data": {
-		"dropdown": {
-			"name": "Basic Dropdown",
-			"partial": "dropdowns", "slug": "dropdowns"
-		},
-		"dropdown_positioning": {
-			"name": "Dropdown Positioning",
-			"partial": "dropdowns-positioning", "slug": "dropdowns-positioning"
-		},
-		"dropdown_hover": {
-			"name": "Dropdown Hover",
-			"partial": "dropdowns-hover", "slug": "dropdowns-hover"
+		"basic_pagination": {
+			"name": "Basic Pagination",
+			"partial": "pagination", "slug": "basic-pagination"
 		}
 	},
 

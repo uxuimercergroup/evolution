@@ -9,8 +9,8 @@
 		"evolution_dependencies": [
 			{"name": "", "url": ""}
 		],
-		"jquery": "false",
-		"jquery_ui": "false",
+		"jquery": "",
+		"jquery_ui": "",
 		"other": [
 			{"name": "", "url": "", "external_link": "true"}
 		]
@@ -19,27 +19,21 @@
 	"data": {
 		"basic_breadcrumbs": {
 			"name": "Basic Breadcrumbs",
-			"multiple_example": "true",
-			"multiple_example_options": [
-				{"partial": "breadcrumbs", "slug": "basic-breadcrumbs"}
-			]
+			"partial": "breadcrumbs", "slug": "basic-breadcrumbs"
 		},
 		"basic_breadcrumbs_navigation": {
 			"name": "Breadcrumb Navigation",
-			"multiple_example": "true",
-			"multiple_example_options": [
-				{"partial": "breadcrumbs-navigation", "slug": "basic-breadcrumbs-navigation"}
-			]
+			"partial": "breadcrumbs-navigation", "slug": "basic-breadcrumbs-navigation"
 		}
 	},
 
-	"settings_header": "Badge Options",
+	"settings_header": "",
 	"settings_data": [
 		{
-			"option": "data-evo-background-color",
-			"default_value": "--",
-			"option_value": "<a href=\"/pattern-library/color-palette.html\">color palette</a>",
-			"description": "Add one of the option values on the <code>data-evo-background-color</code> attribute of the badge"
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
 		}
 	]
 }

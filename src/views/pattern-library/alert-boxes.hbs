@@ -104,7 +104,7 @@ Alerts are handy elements you can drop into a form or inline on a page to commun
 
 									<ul class="no-bullet">
 										{{#is alert-boxes.dependency_data.foundation 'true'}}
-											<li><a href="" target="_blank">Foundation {{package.foundation_version}}</a>
+											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
 											{{#if alert-boxes.dependency_data.foundation_dependencies}}
 												<ul>
 												{{#each alert-boxes.dependency_data.foundation_dependencies}}
@@ -125,8 +125,8 @@ Alerts are handy elements you can drop into a form or inline on a page to commun
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is alert-boxes.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is alert-boxes.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
+										{{#is alert-boxes.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is alert-boxes.dependency_data.jquery_ui 'true'}}<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
 										{{#each alert-boxes.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}

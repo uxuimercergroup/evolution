@@ -1,5 +1,5 @@
 ---
-title: "Breadcrumbs"
+title: "Tooltips"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -8,7 +8,7 @@ title: "Breadcrumbs"
 
 {{# markdown }}
 ## {{ title }}
-Breadcrumbs come in handy to show a navigation trail for users clicking through a site or app. They'll fill out 100% of the width of their parent container.
+Tooltips are a quick way to provide extended information on a term or action on a page. The information displayed with the Tooltip should not be crucial, required functionality, or content needed to interact with the interface. It is simply a bit of additional information that would be considered helpful to the user, but not essential.
 {{/ markdown }}
 
 		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
@@ -37,7 +37,7 @@ Breadcrumbs come in handy to show a navigation trail for users clicking through 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- EXAMPLE BOX - BEGINS -->
-					{{#each breadcrumbs.data }}
+					{{#each tooltips.data }}
 					<div class="panel evo-box evo-site-example-box">
 						<div class="evo-box-hdr">
 						<!-- EXAMPLE HEADER - BEGINS -->
@@ -86,12 +86,12 @@ Breadcrumbs come in handy to show a navigation trail for users clicking through 
 				<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
-							{{#each breadcrumbs.data}}
+							{{#each tooltips.data}}
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/each}}
 						</dl>
 
-						{{#is breadcrumbs.dependency_data.dependency 'true'}}
+						{{#is tooltips.dependency_data.dependency 'true'}}
 						<hr>
 
 					<!-- SIDENAV ACCORDION - BEGINS -->
@@ -103,31 +103,31 @@ Breadcrumbs come in handy to show a navigation trail for users clicking through 
 								<div id="dependencies-accordion" class="content" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
 
 									<ul class="no-bullet">
-										{{#is breadcrumbs.dependency_data.foundation 'true'}}
+										{{#is tooltips.dependency_data.foundation 'true'}}
 											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if breadcrumbs.dependency_data.foundation_dependencies}}
+											{{#if tooltips.dependency_data.foundation_dependencies}}
 												<ul>
-												{{#each breadcrumbs.dependency_data.foundation_dependencies}}
+												{{#each tooltips.dependency_data.foundation_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#is breadcrumbs.dependency_data.evolution 'true'}}
+										{{#is tooltips.dependency_data.evolution 'true'}}
 											<li><a href="/">Evolution {{package.evolution.version}}</a>
-											{{#if breadcrumbs.dependency_data.evolution_dependencies}}
+											{{#if tooltips.dependency_data.evolution_dependencies}}
 												<ul>
-												{{#each breadcrumbs.dependency_data.evolution_dependencies}}
+												{{#each tooltips.dependency_data.evolution_dependencies}}
 													<li><a href="{{url}}">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is breadcrumbs.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is breadcrumbs.dependency_data.jquery_ui 'true'}}<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
-										{{#each breadcrumbs.dependency_data.other}}
+										{{#is tooltips.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is tooltips.dependency_data.jquery_ui 'true'}}<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
+										{{#each tooltips.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}
 									</ul>
@@ -153,11 +153,9 @@ Breadcrumbs come in handy to show a navigation trail for users clicking through 
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
-{{# markdown }}
-Add classes of `.breadcrumbs` `.evo-breadcrumbs` to a ul element. List items will automatically be styled, and you can add `.current` or `.unavailable` classes to list items to denote their state.
+					<p>Add classes of <code>.breadcrumbs</code> <code>.evo-breadcrumbs</code> to a ul element. List items will automatically be styled, and you can add <code>.current</code> or <code>.unavailable</code> classes to list items to denote their state.</p>
 
-You can also add `.breadcrumbs` `.evo-breadcrumbs` classes to a nav element containing anchor links to get the same result.
-{{/ markdown }}
+					<p>You can also add <code>.breadcrumbs</code> <code>.evo-breadcrumbs</code> classes to a nav element containing anchor links to get the same result.</p>
 				</div>
 				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
 					Magellan 2
@@ -188,7 +186,7 @@ You can also add `.breadcrumbs` `.evo-breadcrumbs` classes to a nav element cont
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
 
-					<h6 class="evo-hdr-rule evo-spacer-margin-top-large">{{ breadcrumbs.settings_header }}</h6>
+					<h6 class="evo-hdr-rule evo-spacer-margin-top-large">{{ tooltips.settings_header }}</h6>
 {{# markdown }}
 Below is list of options that you can pass in to the handlebars partial.
 {{/ markdown }}
@@ -205,7 +203,7 @@ Below is list of options that you can pass in to the handlebars partial.
 								</tr>
 							</thead>
 							<tbody>
-							{{#each breadcrumbs.settings_data}}
+							{{#each tooltips.settings_data}}
 								<tr>
 									<td>{{{ option }}}</td>
 									<td class="text-center">{{{ default_value }}}</td>

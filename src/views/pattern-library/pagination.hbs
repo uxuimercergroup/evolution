@@ -8,7 +8,7 @@ title: "Pagination"
 
 {{# markdown }}
 ## {{ title }}
-Pagination allows user to scroll through multiple pages of content breaking longer pages into multiple shorter pages. This control is intended to be used in conjunction with a [Data Table](https://evolution-archive.mercer.com/v3.0.1/reference/objects/data-table.html), a [Static Table](https://evolution-archive.mercer.com/v3.0.1/reference/base/tables.html), or content pages.
+Pagination allows user to scroll through multiple pages of content breaking longer pages into multiple shorter pages. This control is intended to be used in conjunction with a [Data Table](/pattern-library/data-tables.html), a [Static Table](/pattern-library/tables.html), or content pages.
 {{/ markdown }}
 
 		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
@@ -37,7 +37,7 @@ Pagination allows user to scroll through multiple pages of content breaking long
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- EXAMPLE BOX - BEGINS -->
-					{{#each pagination.data }}
+					{{#each paginations.data }}
 					<div class="panel evo-box evo-site-example-box">
 						<div class="evo-box-hdr">
 						<!-- EXAMPLE HEADER - BEGINS -->
@@ -86,12 +86,12 @@ Pagination allows user to scroll through multiple pages of content breaking long
 				<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
-							{{#each pagination.data}}
+							{{#each paginations.data}}
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/each}}
 						</dl>
 
-						{{#is pagination.dependency_data.dependency 'true'}}
+						{{#is paginations.dependency_data.dependency 'true'}}
 						<hr>
 
 					<!-- SIDENAV ACCORDION - BEGINS -->
@@ -103,31 +103,31 @@ Pagination allows user to scroll through multiple pages of content breaking long
 								<div id="dependencies-accordion" class="content" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
 
 									<ul class="no-bullet">
-										{{#is pagination.dependency_data.foundation 'true'}}
-											<li><a href="" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if pagination.dependency_data.foundation_dependencies}}
+										{{#is paginations.dependency_data.foundation 'true'}}
+											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
+											{{#if paginations.dependency_data.foundation_dependencies}}
 												<ul>
-												{{#each pagination.dependency_data.foundation_dependencies}}
+												{{#each paginations.dependency_data.foundation_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#is pagination.dependency_data.evolution 'true'}}
+										{{#is paginations.dependency_data.evolution 'true'}}
 											<li><a href="/">Evolution {{package.evolution.version}}</a>
-											{{#if pagination.dependency_data.evolution_dependencies}}
+											{{#if paginations.dependency_data.evolution_dependencies}}
 												<ul>
-												{{#each pagination.dependency_data.evolution_dependencies}}
+												{{#each paginations.dependency_data.evolution_dependencies}}
 													<li><a href="{{url}}">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is pagination.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is pagination.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
-										{{#each pagination.dependency_data.other}}
+										{{#is paginations.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is paginations.dependency_data.jquery_ui 'true'}}<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
+										{{#each paginations.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}
 									</ul>
@@ -186,7 +186,7 @@ Pagination allows user to scroll through multiple pages of content breaking long
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
 
-					<h6 class="evo-hdr-rule evo-spacer-margin-top-large">{{ pagination.settings_header }}</h6>
+					<h6 class="evo-hdr-rule evo-spacer-margin-top-large">{{ paginations.settings_header }}</h6>
 {{# markdown }}
 Below is list of options that you can pass in to the handlebars partial.
 {{/ markdown }}
@@ -203,7 +203,7 @@ Below is list of options that you can pass in to the handlebars partial.
 								</tr>
 							</thead>
 							<tbody>
-							{{#each pagination.settings_data}}
+							{{#each paginations.settings_data}}
 								<tr>
 									<td>{{{ option }}}</td>
 									<td class="text-center">{{{ default_value }}}</td>

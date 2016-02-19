@@ -104,7 +104,7 @@ The Modal Window provides information to the user that supplements or impacts th
 
 									<ul class="no-bullet">
 										{{#is reveal.dependency_data.foundation 'true'}}
-											<li><a href="" target="_blank">Foundation {{package.foundation_version}}</a>
+											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
 											{{#if reveal.dependency_data.foundation_dependencies}}
 												<ul>
 												{{#each reveal.dependency_data.foundation_dependencies}}
@@ -125,8 +125,8 @@ The Modal Window provides information to the user that supplements or impacts th
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is reveal.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is reveal.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
+										{{#is reveal.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is reveal.dependency_data.jquery_ui 'true'}}<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
 										{{#each reveal.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}

@@ -1,7 +1,7 @@
 {
 	"dependency_data" : {
 		"dependency": "true",
-		"foundation": "false",
+		"foundation": "",
 		"foundation_dependencies": [
 			{"name": "", "url": ""}
 		],
@@ -19,21 +19,15 @@
 	"data": {
 		"image_carousel": {
 			"name": "Image Carousel",
-			"multiple_example": "true",
-			"multiple_example_options": [
-				{"partial": "carousel", "slug": "image-carousel"}
-			]
+			"partial": "carousel", "slug": "image-carousel"
 		},
 		"content_carousel": {
 			"name": "Content Carousel",
-			"multiple_example": "true",
-			"multiple_example_options": [
-				{"partial": "carousel-content", "slug": "content-carousel"}
-			]
+			"partial": "carousel-content", "slug": "content-carousel"
 		}
 	},
 
-	"settings_header": "Carousel Options",
+	"settings_header": "",
 	"settings_data": [
 		{
 			"option": "",

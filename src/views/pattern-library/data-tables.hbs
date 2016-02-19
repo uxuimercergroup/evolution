@@ -104,7 +104,7 @@ Data Tables are an element meant to organize data on a page with added functiona
 
 									<ul class="no-bullet">
 										{{#is data-tables.dependency_data.foundation 'true'}}
-											<li><a href="" target="_blank">Foundation {{package.foundation_version}}</a>
+											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
 											{{#if data-tables.dependency_data.foundation_dependencies}}
 												<ul>
 												{{#each data-tables.dependency_data.foundation_dependencies}}
@@ -125,8 +125,8 @@ Data Tables are an element meant to organize data on a page with added functiona
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is data-tables.dependency_data.jquery 'true'}}<li><a href="" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is data-tables.dependency_data.jquery_ui 'true'}}<li><a href="" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
+										{{#is data-tables.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is data-tables.dependency_data.jquery_ui 'true'}}<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
 										{{#each data-tables.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}

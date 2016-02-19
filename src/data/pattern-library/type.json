@@ -1,4 +1,21 @@
 {
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "Typography", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/typography.html"}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "",
+		"jquery_ui": "",
+		"other": [
+			{"name": "", "url": "", "external_link": "true"}
+		]
+	},
+
 	"data": {
 		"font_sample1": {
 			"name": "Proxima Nova Regular",
@@ -35,5 +52,15 @@
 			"alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
 			"numbers-symbol": "0123456789!@#$%^&*(-)"
 		}
-	}
+	},
+
+	"settings_header": "",
+	"settings_data": [
+		{
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
+		}
+	]
 }
