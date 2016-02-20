@@ -69,11 +69,36 @@ The corporate logos below are to be used for branding digital products across al
 								</li>
 								{{/each}}
 							</ul>
-							{{/is}}
+							{{/is}}							
 						<!-- RENDERED HTML - ENDS -->
 						</div>
 					</div>
 					{{/each}}
+
+
+					<div class="panel evo-box evo-site-example-box">
+						<div class="evo-box-hdr">
+						<!-- EXAMPLE HEADER - BEGINS -->
+							<h6 class="evo-hdr-rule" data-magellan-destination="favico">Favico</h6>
+							<a name="favico"></a>
+						<!-- EXAMPLE HEADER - ENDS -->
+						</div>
+						<div class="evo-box-bdy">
+
+							<p class="evo-site-corp-logo-ctn--img-ctn">
+								<img src="{{assets}}/images/content/favicon_example.png" alt="" width="" class="evo-no-margin" />
+							</p>
+							<p>The favicon can be installed into a Web site (or page) and will appear next to the page name in a list of bookmarks or tabbed display. It will also appear in the browser's address bar. The .ico format is recommended as it is supported by a broader set of browsers.</p>
+							<p class="evo-spacer-margin-bottom-small">Downloads:</p>
+							<ul class="inline-list evo-inline-list evo-inline-list-pipes">
+								<li>
+									<a href="{{assets}}/images/core/favicon.ico">PNG</a>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
@@ -83,6 +108,7 @@ The corporate logos below are to be used for branding digital products across al
 							{{#each corp-logos.data}}
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/each}}
+							<dd data-magellan-arrival="favico"><a href="#favico">Favico</a></dd>
 						</dl>
 					</div>
 				<!-- SIDENAV - ENDS -->
