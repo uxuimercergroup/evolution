@@ -48,7 +48,7 @@ The corporate logos below are to be used for branding digital products across al
 						<div class="evo-box-bdy">
 						<!-- RENDERED HTML - BEGINS -->
 							{{#is multiple_example 'true'}}
-							<ul class="medium-block-grid-2 large-block-grid-2 evo-site-corp-logo-ctn">
+							<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2 evo-site-corp-logo-ctn">
 								{{#each multiple_example_options}}
 								<li>
 									<div class="evo-site-corp-logo-ctn--img-ctn" data-evo-background-color="{{display_logo_background_color}}" data-evo-border-color="{{display_logo_border_color}}"><img src="/assets/images/core/corp-logos/{{image_png}}.png" alt="{{display_logo_alt}}" width="{{display_logo_width}}" class="evo-no-margin" /></div>
@@ -79,20 +79,21 @@ The corporate logos below are to be used for branding digital products across al
 					<div class="panel evo-box evo-site-example-box">
 						<div class="evo-box-hdr">
 						<!-- EXAMPLE HEADER - BEGINS -->
-							<h6 class="evo-hdr-rule" data-magellan-destination="favico">Favico</h6>
-							<a name="favico"></a>
+							<h6 class="evo-hdr-rule" data-magellan-destination="favicon">Favicon</h6>
+							<a name="favicon"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</div>
 						<div class="evo-box-bdy">
-
-							<p class="evo-site-corp-logo-ctn--img-ctn">
-								<img src="{{assets}}/images/content/favicon_example.png" alt="" width="" class="evo-no-margin" />
-							</p>
-							<p>The favicon can be installed into a Web site (or page) and will appear next to the page name in a list of bookmarks or tabbed display. It will also appear in the browser's address bar. The .ico format is recommended as it is supported by a broader set of browsers.</p>
+							<div class="evo-site-corp-logo--favicon-img-ctn">
+								<img src="{{assets}}/images/content/favicon_example.png" alt="Favicon" />
+							</div>
+{{# markdown }}
+The favicon can be installed into a Web site (or page) and will appear next to the page name in a list of bookmarks or tabbed display. It will also appear in the browser's address bar. The .ico format is recommended as it is supported by a broader set of browsers.
+{{/ markdown }}
 							<p class="evo-spacer-margin-bottom-small">Downloads:</p>
 							<ul class="inline-list evo-inline-list evo-inline-list-pipes">
 								<li>
-									<a href="{{assets}}/images/core/favicon.ico">PNG</a>
+									<a href="{{assets}}/images/core/favicon.ico">ICO</a>
 								</li>
 							</ul>
 
@@ -108,7 +109,7 @@ The corporate logos below are to be used for branding digital products across al
 							{{#each corp-logos.data}}
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/each}}
-							<dd data-magellan-arrival="favico"><a href="#favico">Favico</a></dd>
+							<dd data-magellan-arrival="favicon"><a href="#favicon">Favicon</a></dd>
 						</dl>
 					</div>
 				<!-- SIDENAV - ENDS -->
