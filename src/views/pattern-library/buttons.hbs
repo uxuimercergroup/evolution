@@ -8,9 +8,7 @@ title: "Buttons"
 
 {{# markdown }}
 ## {{ title }}
-Buttons act as the focal point for user interaction as it relates to saving data or completing an action. Evolution Core 
-buttons depend on Foundation's [Buttons](http://foundation.zurb.com/docs/components/buttons.html) and 
-[Button Groups](http://foundation.zurb.com/docs/components/button_groups.html) as a starting point.
+Buttons act as the focal point for user interaction as it relates to saving data or completing an action. Evolution buttons depend on Foundation's [Buttons](http://foundation.zurb.com/sites/docs/v/5.5.3/components/buttons.html) and [Button Groups](http://foundation.zurb.com/sites/docs/v/5.5.3/components/button_groups.html) as a starting point.
 {{/ markdown }}
 
 		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
@@ -154,11 +152,44 @@ buttons depend on Foundation's [Buttons](http://foundation.zurb.com/docs/compone
 		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs1">
 
 			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
-					Buttons act as the focal point for user interaction as it relates to saving data or completing an action.
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+
+					<div class="evo-site-markdown-content-block">
+{{# markdown}}
+##### General
+* Each button has 4 states: static, hover, active, and loading (optional).
+* In the optional "loading" state, the button should be disabled to prevent the user from clicking multiple times. When this occurs, the button should also change style to also look like it's in a disabled state.
+* Buttons are entirely created with CSS. No images should be used.
+* Buttons used as "links" and buttons used with "forms" should look the same, but the functions can differ. For instance, you can make a link look like a button, but it will not have the "submit" function of a button with type of "submit."
+* The buttons should be able to be aligned to one another horizontally for consistency of Mercer branding.
+
+##### Width
+* Each button should have a minimum width of 100 pixels, but they can expand to match content length if needed.
+* The final width of the button should be dynamic based on the content inside the button.
+
+##### Labels
+* Button text should be a concise, specific call to action. Try to use one word, two at the most, and make it active voice.
+* Button text should Title Case - except in the "loading" state where lowercase is used to visually offset this state from the others.
+
+##### Primary Button
+* Used for the primary action on the page. There is usually only one Primary Button on a screen in order to avoid user confusion.
+* The Primary Button is essentially the "single most important" call-to-action you want the user to take.
+* Multiple primary buttons will confuse the user and should be avoided.
+
+##### Secondary Button
+* Designed to be visually offset from the Primary button.
+* There can be more than one Secondary Button on a screen.
+* Secondary Buttons are essentially additional options the user has on the page, just not the "primary call-to-action."
+* Buttons are different than links as links take you to another page, and therefore they have different uses. Buttons should be used for the following:
+	* As navigation in a multi-step flow (user will be going through a process or a wizard).
+	* To save data entered on a form
+	* As a click event action to invoke another interaction on the page. For example, toggling content, hiding and showing content, sliding a panel, etc.
+{{/ markdown}}
+					</div>
+
 				</div>
-				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
-					Magellan 2
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+					&nbsp;
 				</div>
 			</section>
 			
@@ -170,41 +201,10 @@ buttons depend on Foundation's [Buttons](http://foundation.zurb.com/docs/compone
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-{{# markdown}}
-###### General
-* Each button has 4 states: static, hover, active, and loading (optional).
-* In the optional "loading" state, the button should be disabled to prevent the user from clicking multiple times. When this occurs, the button should also change style to also look like it's in a disabled state.
-* Buttons are entirely created with CSS. No images should be used.
-* Buttons used as "links" and buttons used with "forms" should look the same, but the functions can differ. For instance, you can make a link look like a button, but it will not have the "submit" function of a button with type of "submit."
-* The buttons should be able to be aligned to one another horizontally for consistency of Mercer branding.
-
-###### Width
-* Each button should have a minimum width of 100 pixels , but they can expand to match content length if needed.
-* The final width of the button should be dynamic based on the content inside the button.
-
-###### Labels
-* Button text should be a concise, specific call to action. Try to use one word, two at the most, and make it active voice.
-* Button text should Title Case - except in the "loading" state where lowercase is used to visually offset this state from the others.
-* There are two button styles:
-
-###### Primary Button
-* Used for the primary action on the page. There is usually only one Primary Button on a screen in order to avoid user confusion.
-* The Primary Button is essentially the "single most important" call-to-action you want the user to take.
-* Multiple primary buttons will confuse the user and should be avoided.
-
-###### Secondary Button
-* Designed to be visually offset from the Primary button.
-* There can be more than one Secondary Button on a screen.
-* Secondary Buttons are essentially additional options the user has on the page, just not the "primary call-to-action."
-* Buttons are different than links as links take you to another page, and therefore they have different uses. Buttons should be used for the following:
-
-* As navigation in a multi-step flow (user will be going through a process or a wizard).
-* To save data entered on a form
-* As a click event action to invoke another interaction on the page. For example, toggling content, hiding and showing content, sliding a panel, etc.
-{{/ markdown}}
+					Usage content
 				</div>
-				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
-					Magellan 3
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+					&nbsp;
 				</div>
 			</section>
 			
@@ -215,12 +215,14 @@ buttons depend on Foundation's [Buttons](http://foundation.zurb.com/docs/compone
 		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs3">
 
 			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 
-					<h6 class="evo-hdr-rule evo-spacer-margin-top-large">{{ button.settings_header }}</h6>
+					<div class="evo-site-markdown-content-block">
 {{# markdown }}
-Below is list of options that you can pass in to the handlebars partial.
+##### {{ button.handlebars_settings_header }}
+Below is a list of the options that you can pass into the button handlebars partial.
 {{/ markdown }}
+					</div>
 
 				<!-- SETTINGS - BEGINS -->
 					<div class="evo-table-small-mediaquery">
@@ -234,7 +236,7 @@ Below is list of options that you can pass in to the handlebars partial.
 								</tr>
 							</thead>
 							<tbody>
-							{{#each button.settings_data}}
+							{{#each button.handlebars_settings_data}}
 								<tr>
 									<td>{{{ option }}}</td>
 									<td class="text-center">{{{ default_value }}}</td>
@@ -248,7 +250,7 @@ Below is list of options that you can pass in to the handlebars partial.
 				<!-- SETTINGS - ENDS -->
 
 				</div>
-				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 					&nbsp;
 				</div>
 			</section>
