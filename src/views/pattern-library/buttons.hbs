@@ -90,56 +90,6 @@ Buttons act as the focal point for user interaction as it relates to saving data
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/each}}
 						</dl>
-
-						{{#is button.dependency_data.dependency 'true'}}
-						<hr>
-
-					<!-- SIDENAV ACCORDION - BEGINS -->
-						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
-
-						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
-							<li class="accordion-navigation">
-								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
-								<div id="dependencies-accordion" class="content" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
-
-									<ul class="no-bullet">
-										{{#is button.dependency_data.foundation 'true'}}
-											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if button.dependency_data.foundation_dependencies}}
-												<ul>
-												{{#each button.dependency_data.foundation_dependencies}}
-													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											{{/if}}
-											</li>
-										{{/is}}
-										{{#is button.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
-											{{#if button.dependency_data.evolution_dependencies}}
-												<ul>
-												{{#each button.dependency_data.evolution_dependencies}}
-													<li><a href="{{url}}">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											</li>
-											{{/if}}
-										{{/is}}
-										{{#is button.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is button.dependency_data.jquery_ui 'true'}}<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
-										{{#each button.dependency_data.other}}
-											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
-										{{/each}}
-									</ul>
-
-								</div>
-							</li>
-						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
-
-						</ul>
-					<!-- SIDENAV ACCORDION - ENDS -->
-						{{/is}}
-
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
@@ -208,7 +158,65 @@ Buttons act as the focal point for user interaction as it relates to saving data
 					Usage content
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					&nbsp;
+				<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+						{{!--
+						<dl class="sub-nav">
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
+						</dl>
+						<hr>
+						--}}
+
+						{{#is button.dependency_data.dependency 'true'}}
+
+					<!-- SIDENAV ACCORDION - BEGINS -->
+						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
+
+						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
+							<li class="accordion-navigation">
+								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
+								<div id="dependencies-accordion" class="content active" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
+
+									<ul class="no-bullet">
+										{{#is button.dependency_data.foundation 'true'}}
+											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
+											{{#if button.dependency_data.foundation_dependencies}}
+												<ul>
+												{{#each button.dependency_data.foundation_dependencies}}
+													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											{{/if}}
+											</li>
+										{{/is}}
+										{{#is button.dependency_data.evolution 'true'}}
+											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											{{#if button.dependency_data.evolution_dependencies}}
+												<ul>
+												{{#each button.dependency_data.evolution_dependencies}}
+													<li><a href="{{url}}">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											</li>
+											{{/if}}
+										{{/is}}
+										{{#is button.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is button.dependency_data.jquery_ui 'true'}}<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
+										{{#each button.dependency_data.other}}
+											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+										{{/each}}
+									</ul>
+
+								</div>
+							</li>
+						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
+
+						</ul>
+					<!-- SIDENAV ACCORDION - ENDS -->
+						{{/is}}
+					
+					</div>
+				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
 			
@@ -220,42 +228,10 @@ Buttons act as the focal point for user interaction as it relates to saving data
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-
-					<div class="evo-site-markdown-content-block">
-{{# markdown }}
-##### {{ button.handlebars_settings_header }}
-Below is a list of the options that you can pass into the button handlebars partial.
-{{/ markdown }}
-					</div>
-
-				<!-- SETTINGS - BEGINS -->
-					<div class="evo-table-small-mediaquery">
-						<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-pattern-library-setting-options" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
-							<thead>
-								<tr>
-									<th scope="column" width="160">Options</th>
-									<th scope="column" width="90">Defaults</th>
-									<th scope="column">Values</th>
-									<th scope="column" width="325">Description</th>
-								</tr>
-							</thead>
-							<tbody>
-							{{#each button.handlebars_settings_data}}
-								<tr>
-									<td>{{{ option }}}</td>
-									<td class="text-center">{{{ default_value }}}</td>
-									<td class="text-center">{{{ option_value }}}</td>
-									<td>{{{ description }}}</td>
-								</tr>
-							{{/each}}
-							</tbody>
-						</table>
-					</div>
-				<!-- SETTINGS - ENDS -->
-
+					Content for something 4
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					&nbsp;
+					Magellan 4
 				</div>
 			</section>
 			
