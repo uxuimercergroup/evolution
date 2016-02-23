@@ -152,10 +152,10 @@ Breadcrumbs come in handy to show a navigation trail for users clicking through 
 		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs1">
 
 			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 					Content for something 2
 				</div>
-				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 					Magellan 2
 				</div>
 			</section>
@@ -168,11 +168,19 @@ Breadcrumbs come in handy to show a navigation trail for users clicking through 
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+
+					<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
 {{# markdown }}
 Add classes of `.breadcrumbs` `.evo-breadcrumbs` to a ul element. List items will automatically be styled, and you can add `.current` or `.unavailable` classes to list items to denote their state.
 
 You can also add `.breadcrumbs` `.evo-breadcrumbs` classes to a nav element containing anchor links to get the same result.
 {{/ markdown }}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+				
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 					Magellan 3
@@ -186,7 +194,7 @@ You can also add `.breadcrumbs` `.evo-breadcrumbs` classes to a nav element cont
 		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs3">
 
 			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 
 					<h6 class="evo-hdr-rule evo-spacer-margin-top-large">{{ breadcrumbs.settings_header }}</h6>
 {{# markdown }}
@@ -219,7 +227,7 @@ Below is list of options that you can pass in to the handlebars partial.
 				<!-- BUTTON SETTINGS - ENDS -->
 
 				</div>
-				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 					Magellan 4
 				</div>
 			</section>

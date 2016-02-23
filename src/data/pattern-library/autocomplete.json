@@ -11,6 +11,9 @@
 		],
 		"jquery": "true",
 		"jquery_ui": "true",
+		"jquery_ui_dependencies": [
+			{"name": "Autocomplete", "url": "https://jqueryui.com/autocomplete/"}
+		],
 		"other": [
 			{"name": "", "url": "", "external_link": "true"}
 		]
@@ -19,7 +22,9 @@
 	"data": {
 		"autocompletel": {
 			"name": "Autocomplete",
-			"partial": "autocomplete", "slug": "autocomplete"
+			"partial": "autocomplete",
+			"partial_js" : "autocomplete-js",
+			"slug": "autocomplete"
 		}
 	},
 

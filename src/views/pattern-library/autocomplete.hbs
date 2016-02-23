@@ -1,5 +1,5 @@
 ---
-title: "AutoComplete"
+title: "Autocomplete"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -60,23 +60,47 @@ The autocomplete automatically suggests items for users when filling out an inpu
 						<!-- RENDERED HTML - ENDS -->
 						</div>
 						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
-						<!-- HTML CODE - BEGINS -->
+						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
+
+							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
-								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
+							<!-- JS - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-{{slug}}"><xmp>{{> (lookup . 'partial_js') }}</xmp></code></pre>
+							<!-- JS - ENDS -->
+
 								{{/each}}
 							{{else}}
+
+							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
-								<pre><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
+							<!-- JS - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-{{slug}}"><xmp>{{> (lookup . 'partial_js') }}</xmp></code></pre>
+							<!-- JS - ENDS -->
+
 							{{/is}}
-						<!-- HTML CODE - ENDS -->
+						<!-- CODE - ENDS -->
 						</div>
 					</div>
 					{{/each}}
@@ -90,56 +114,6 @@ The autocomplete automatically suggests items for users when filling out an inpu
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/each}}
 						</dl>
-
-						{{#is autocomplete.dependency_data.dependency 'true'}}
-						<hr>
-
-					<!-- SIDENAV ACCORDION - BEGINS -->
-						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
-
-						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
-							<li class="accordion-navigation">
-								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
-								<div id="dependencies-accordion" class="content" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
-
-									<ul class="no-bullet">
-										{{#is autocomplete.dependency_data.foundation 'true'}}
-											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if autocomplete.dependency_data.foundation_dependencies}}
-												<ul>
-												{{#each autocomplete.dependency_data.foundation_dependencies}}
-													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											{{/if}}
-											</li>
-										{{/is}}
-										{{#is autocomplete.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
-											{{#if autocomplete.dependency_data.evolution_dependencies}}
-												<ul>
-												{{#each autocomplete.dependency_data.evolution_dependencies}}
-													<li><a href="{{url}}">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											</li>
-											{{/if}}
-										{{/is}}
-										{{#is autocomplete.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is autocomplete.dependency_data.jquery_ui 'true'}}<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
-										{{#each autocomplete.dependency_data.other}}
-											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
-										{{/each}}
-									</ul>
-
-								</div>
-							</li>
-						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
-
-						</ul>
-					<!-- SIDENAV ACCORDION - ENDS -->
-						{{/is}}
-
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
@@ -153,7 +127,18 @@ The autocomplete automatically suggests items for users when filling out an inpu
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 2
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+{{# markdown }}
+##### General
+Autocomplete text is generated from a pre-defined list as the user types content into the form field. This control works well when input speed is important for the user or when data might be entered in different ways.
+{{/ markdown}}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 					Magellan 2
@@ -169,83 +154,88 @@ The autocomplete automatically suggests items for users when filling out an inpu
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 
-					<div class="evo-site-markdown-content-block">
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
 {{# markdown }}
-##### Initializing
-content
+##### Header
+{{lorem count=5}}
 {{/ markdown }}
-					</div>
+						</div>
+						
+					<!-- JS CODE - BEGINS -->
+						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
+							<div class="evo-box-ftr">
+								<div class="evo-site-example-box--code-hdr">
+									{{autocomplete.data.autocompletel.slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-usage-{{autocomplete.data.autocompletel.slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre><code class="language-js" id="evo-code-copy-js-usage-{{autocomplete.data.autocompletel.slug}}"><xmp>{{> autocomplete-js }}</xmp></code></pre>
+							</div>
+						</div>
+					<!-- JS CODE - ENDS -->
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+{{# markdown }}
+##### Header
+{{lorem count=5}}
+{{/ markdown }}
+						</div>
+
+					<!-- HTML CODE - BEGINS -->
+						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
+							<div class="evo-box-hdr">
+								<h6 class="evo-hdr-rule">{{autocomplete.data.autocompletel.name}} Example</h6>
+							</div>
+							<div class="evo-box-bdy">
+							<!-- RENDERED HTML - BEGINS -->
+								{{> autocomplete }}
+							<!-- RENDERED HTML - ENDS -->
+							</div>
+							<div class="evo-box-ftr evo-no-margin-top">
+								<div class="evo-site-example-box--code-hdr">
+									{{autocomplete.data.autocompletel.slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-usage-{{autocomplete.data.autocompletel.slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre><code class="language-markup" id="evo-code-copy-html-usage-{{autocomplete.data.autocompletel.slug}}"><xmp>{{> autocomplete }}</xmp></code></pre>
+							</div>
+						</div>
+					<!-- HTML CODE - ENDS -->
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+{{# markdown }}
+##### Header
+{{lorem count=5}}
+
+###### Sub header
+{{lorem count=5}}
+{{/ markdown }}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
 					
-					<!-- USAGE BOX - BEGINS -->
-					{{#each autocomplete.data }}
-					<div class="panel evo-box evo-site-example-box">
-						<div class="evo-box-hdr">
-						<!-- USAGE HEADER - BEGINS -->
-							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}-usage">{{name}}</h6>
-							<a name="{{hyphenate name}}-usage"></a>
-						<!-- USAGE HEADER - ENDS -->
-						</div>
-						<div class="evo-box-ftr">
-						<!-- USAGE CODE - BEGINS -->
-							{{#is multiple_example 'true'}}
-								<div class="evo-margin-bottom">
-								{{#each multiple_example_options}}
-									
-								<!-- HTML CODE - BEGINS -->
-									<div class="evo-site-example-box--code-hdr">
-										&nbsp;
-										<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-usage-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-									</div>
-									<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-usage-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
-								<!-- HTML CODE - ENDS -->
-
-								<!-- JS CODE - BEGINS -->
-									<div class="evo-site-example-box--code-hdr">
-										&nbsp;
-										<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-usage-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-									</div>
-									<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-usage-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
-								<!-- JS CODE - ENDS -->
-
-								{{/each}}
-								</div>
-							{{else}}
-								<div class="evo-margin-bottom">
-
-								<!-- HTML CODE - BEGINS -->
-									<div class="evo-site-example-box--code-hdr">
-										&nbsp;
-										<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-usage-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-									</div>
-									<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-usage-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
-								<!-- HTML CODE - ENDS -->
-
-								<!-- JS CODE - BEGINS -->
-									<div class="evo-site-example-box--code-hdr">
-										&nbsp;
-										<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-usage-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
-									</div>
-									<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-usage-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
-								<!-- JS CODE - ENDS -->
-
-								</div>
-							{{/is}}
-						<!-- USAGE CODE - ENDS -->
-						</div>
-					</div>
-					{{/each}}
-				<!-- USAGE BOX - ENDS -->
-
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+						{{!--
 						<dl class="sub-nav">
-							<!-- <dd><a data-evo-scroll-to-location href="#{{hyphenate color-palette.primary}}">{{color-palette.primary}}</a></dd> -->
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
 						</dl>
+						<hr>
+						--}}
 
 						{{#is autocomplete.dependency_data.dependency 'true'}}
-						<hr>
 
 					<!-- SIDENAV ACCORDION - BEGINS -->
 						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
@@ -279,7 +269,17 @@ content
 											{{/if}}
 										{{/is}}
 										{{#is autocomplete.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is autocomplete.dependency_data.jquery_ui 'true'}}<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
+										{{#is autocomplete.dependency_data.jquery_ui 'true'}}
+											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
+											{{#if autocomplete.dependency_data.jquery_ui_dependencies}}
+												<ul>
+												{{#each autocomplete.dependency_data.jquery_ui_dependencies}}
+													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											{{/if}}
+											</li>
+										{{/is}}
 										{{#each autocomplete.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}
@@ -309,7 +309,16 @@ content
 					Content for something 4
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 4
+				<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+						{{!--
+						<dl class="sub-nav">
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
+						</dl>
+						<hr>
+						--}}
+					</div>
+				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
 			

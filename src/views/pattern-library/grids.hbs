@@ -168,51 +168,73 @@ Grids are the layout tools of a framework. Foundation's [Grid](http://foundation
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					<div class="evo-site-markdown-content-block" id="{{hyphenate grids.basic_nav}}">
+
+					<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block" id="{{hyphenate grids.basic_nav}}">
 {{# markdown}}
 ##### Basic
 Start by adding an element with a class of row. This will create a horizontal block to contain vertical columns. Then add divs with a columns class within that row. Specify the widths of each column with the `small-#`, `medium-#`, and `large-#` classes. Code for small screens first, and larger devices will inherit those styles. Customize for larger screens as necessary.
 
 The collapse class lets you remove column gutters (padding). There are times that your needs to collapse may not be the same across devices so you can use the `small-collapse`, `medium-collapse` and `large-collapse` classes.
 {{/ markdown}}
-					</div>
+						</div>
+					</section>
+					<!-- CONTENT SECTION - ENDS -->
 
-					<div class="evo-site-markdown-content-block" id="{{hyphenate grids.center_nav}}">
+					<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block" id="{{hyphenate grids.offsets_nav}}">
 {{# markdown}}
 ##### Offsets
 Move blocks up to 11 columns to the right by using classes like `.large-offset-1` and `.small-offset-3`.
 {{/markdown}}
-					</div>
+						</div>
+					</section>
+					<!-- CONTENT SECTION - ENDS -->
 
-					<div class="evo-site-markdown-content-block" id="{{hyphenate grids.source_nav}}">
+					<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block" id="{{hyphenate grids.center_nav}}">
 {{# markdown}}
 ##### Centering
 Center your columns by adding a class of `small-centered` to your column. Large will inherit small centering by default, but you can also center solely on large by applying a `large-centered` class. To uncenter on large screens use `large-uncentered`.
 {{/ markdown}}
-					</div>
+						</div>
+					</section>
+					<!-- CONTENT SECTION - ENDS -->
 
-					<div class="evo-site-markdown-content-block" id="{{hyphenate grids.offsets_nav}}">
+					<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block" id="{{hyphenate grids.source_nav}}">
 {{# markdown}}
 ##### Source Ordering
 Source ordering allows you to shift columns of content around between breakpoints (devices). Prefix `push/pull` with the class name that matches to the breakpoint you are dealing with. Here are some examples: `medium-push-#`, `large-push-#` is the syntax you'll use, if you need to reset content on large screens use `large-reset-order`.
 {{/ markdown}}
-					</div>
+						</div>
+					</section>
+					<!-- CONTENT SECTION - ENDS -->
 
-					<div class="evo-site-markdown-content-block" id="{{hyphenate grids.block_nav}}">
+					<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block" id="{{hyphenate grids.block_nav}}">
 {{# markdown}}
 ##### Block Grid
 Block grids are designed to allow you to split a certain amount of content evenly between a grid layout. If you use the `small-block-grid` only, the grid will keep its spacing and configuration no matter the screen size. If you use `large-block-grid` only, the list items will stack on top of each other for small devices. If you use both of those classes combined, you can control the configuration and layout separately for each breakpoint.
 {{/ markdown}}
-					</div>
+						</div>
+					</section>
+					<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
 						<dl class="sub-nav">
 							<dd><a data-evo-scroll-to-location href="#{{hyphenate grids.basic_nav}}">{{grids.basic_nav}}</a></dd>
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate grids.offsets_nav}}">{{grids.offsets_nav}}</a></dd>
 							<dd><a data-evo-scroll-to-location href="#{{hyphenate grids.center_nav}}">{{grids.center_nav}}</a></dd>
 							<dd><a data-evo-scroll-to-location href="#{{hyphenate grids.source_nav}}">{{grids.source_nav}}</a></dd>
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate grids.offsets_nav}}">{{grids.offsets_nav}}</a></dd>
 							<dd><a data-evo-scroll-to-location href="#{{hyphenate grids.block_nav}}">{{grids.block_nav}}</a></dd>
 						</dl>
 					</div>

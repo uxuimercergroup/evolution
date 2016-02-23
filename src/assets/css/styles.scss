@@ -347,6 +347,8 @@ URL: {{ meta_url }}
  												}
 			.evo-site-tabs-content--pattern-library-tab-panel
 												{padding: 0;}
+			.evo-site-tabs-content--pattern-library-tab-content-section
+												{margin-bottom: $evo-site-tabs-pattern-library-tab-content-section-margin-bottom;}
 											}
 	// CONTENT TABS - ENDS
 
@@ -485,7 +487,6 @@ URL: {{ meta_url }}
 
 	// MARKDOWN CONTENT BLOCK - BEINGS
 		.evo-site-markdown-content-block	{
-											margin-bottom: $evo-site-markdown-content-block-margin-bottom;
 			h5									{
 												border-bottom: $evo-site-markdown-hdr-rule-border-size $evo-site-markdown-hdr-rule-border-style $evo-site-markdown-hdr-rule-border-color;
 												margin-bottom: $evo-site-markdown-hdr-rule-margin-bottom;

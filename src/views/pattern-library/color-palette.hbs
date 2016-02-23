@@ -36,17 +36,15 @@ The Mercer color palette is designed to support a range of visual styles. These 
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each color-palette.data }}
 					<div class="panel evo-box evo-site-example-box evo-site-color-block">
 						<div class="evo-box-hdr">
-						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule evo-site-color-block--header" data-magellan-destination="{{hyphenate header}}">{{header}}</h6>
 							<a name="{{hyphenate header}}"></a>
-						<!-- EXAMPLE HEADER - ENDS -->
 						</div>
 						<div class="evo-box-bdy">
-						<!-- RENDERED HTML - BEGINS -->
 							{{#each colors}}
 							<div class="evo-site-color-block--swatch-ctn">
 								<div class="evo-site-swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})"></div>
@@ -56,11 +54,11 @@ The Mercer color palette is designed to support a range of visual styles. These 
 								</div>
 							</div>
 							{{/each}}
-						<!-- RENDERED HTML - ENDS -->
 						</div>
 					</div>
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
@@ -83,95 +81,122 @@ The Mercer color palette is designed to support a range of visual styles. These 
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					<h5 class="evo-hdr-rule" id="{{hyphenate color-palette.primary}}">{{color-palette.primary}}</h5>
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate color-palette.primary}}">
+						<div class="evo-site-markdown-content-block">
 {{# markdown }}
+##### {{color-palette.primary}}
 Mercer's primary "Sapphire" color palette communicates Mercer's personality and identity. This is the dominant color palette used for all Mercer branding, while the "Onyx" palette provides for additional flexibility with styling text, borders, and content dividers.
 {{/ markdown }}
-					{{#slice color-palette.data limit="4"}}
-					<div class="panel evo-box evo-site-example-box evo-site-color-block evo-no-margin-bottom">
-						<div class="evo-box-bdy">
-						<!-- RENDERED HTML - BEGINS -->
-							{{#each colors}}
-							<div class="evo-site-color-block--swatch-ctn">
-								<div class="evo-site-swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})"></div>
-								<div class="evo-site-swatch-details">
-									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
-									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
-								</div>
-							</div>
-							{{/each}}
-						<!-- RENDERED HTML - ENDS -->
 						</div>
-					</div>
-					{{/slice}}
 
-					<h5 class="evo-hdr-rule evo-spacer-margin-top-xxx-large" id="{{hyphenate color-palette.secondary}}">{{color-palette.secondary}}</h5>
+						{{#slice color-palette.data limit="4"}}
+						<div class="panel evo-box evo-site-example-box evo-site-color-block evo-no-margin-bottom">
+							<div class="evo-box-bdy">
+								{{#each colors}}
+								<div class="evo-site-color-block--swatch-ctn">
+									<div class="evo-site-swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})"></div>
+									<div class="evo-site-swatch-details">
+										<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
+										<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+						</div>
+						{{/slice}}
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate color-palette.secondary}}">
+						<div class="evo-site-markdown-content-block">
 {{# markdown }}
+##### {{color-palette.secondary}}
 The secondary color palette can be used to further differentiate elements in web applications. These colors provide for additional flexibility in defining content containers, icons, and call-to-action buttons.
 {{/ markdown }}
-					{{#slice color-palette.data offset="4" limit="4"}}
-					<div class="panel evo-box evo-site-example-box evo-site-color-block evo-no-margin-bottom">
-						<div class="evo-box-bdy">
-						<!-- RENDERED HTML - BEGINS -->
-							{{#each colors}}
-							<div class="evo-site-color-block--swatch-ctn">
-								<div class="evo-site-swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})"></div>
-								<div class="evo-site-swatch-details">
-									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
-									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
-								</div>
-							</div>
-							{{/each}}
-						<!-- RENDERED HTML - ENDS -->
 						</div>
-					</div>
-					{{/slice}}
 
-					<h5 class="evo-hdr-rule evo-spacer-margin-top-xxx-large" id="{{hyphenate color-palette.tertiary}}">{{color-palette.tertiary}}</h5>
+						{{#slice color-palette.data offset="4" limit="4"}}
+						<div class="panel evo-box evo-site-example-box evo-site-color-block evo-no-margin-bottom">
+							<div class="evo-box-bdy">
+								{{#each colors}}
+								<div class="evo-site-color-block--swatch-ctn">
+									<div class="evo-site-swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})"></div>
+									<div class="evo-site-swatch-details">
+										<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
+										<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+						</div>
+						{{/slice}}
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate color-palette.tertiary}}">
+						<div class="evo-site-markdown-content-block">
 {{# markdown }}
+##### {{color-palette.tertiary}}
 Tertiary colors are to be predominantly used for data visualization, charting solutions, and tables. These colors should never be used to replace the primary and secondary color palettes.
 {{/ markdown }}
-					{{#slice color-palette.data offset="8" limit="5"}}
-					<div class="panel evo-box evo-site-example-box evo-site-color-block evo-no-margin-bottom">
-						<div class="evo-box-bdy">
-						<!-- RENDERED HTML - BEGINS -->
-							{{#each colors}}
-							<div class="evo-site-color-block--swatch-ctn">
-								<div class="evo-site-swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})"></div>
-								<div class="evo-site-swatch-details">
-									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
-									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
-								</div>
-							</div>
-							{{/each}}
-						<!-- RENDERED HTML - ENDS -->
 						</div>
-					</div>
-					{{/slice}}
 
-					<h5 class="evo-hdr-rule evo-spacer-margin-top-xxx-large" id="{{hyphenate color-palette.system}}">{{color-palette.system}}</h5>
+						{{#slice color-palette.data offset="8" limit="5"}}
+						<div class="panel evo-box evo-site-example-box evo-site-color-block evo-no-margin-bottom">
+							<div class="evo-box-bdy">
+								{{#each colors}}
+								<div class="evo-site-color-block--swatch-ctn">
+									<div class="evo-site-swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})"></div>
+									<div class="evo-site-swatch-details">
+										<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
+										<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+						</div>
+						{{/slice}}
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate color-palette.system}}">
+						<div class="evo-site-markdown-content-block">
 {{# markdown }}
+##### {{color-palette.system}}
 The system colors are used for important, high-level information that may require the user to take action. This type of information is presented in a container that represents a positive, negative or attention value. While these containers are generally positioned at the top of a page as alerts, they can also appear within content containers.
 {{/ markdown }}
-					{{#slice color-palette.data offset="13" limit="1"}}
-					<div class="panel evo-box evo-site-example-box evo-site-color-block evo-spacer-margin-bottom-xxx-large">
-						<div class="evo-box-bdy">
-						<!-- RENDERED HTML - BEGINS -->
-							{{#each colors}}
-							<div class="evo-site-color-block--swatch-ctn">
-								<div class="evo-site-swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})"></div>
-								<div class="evo-site-swatch-details">
-									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
-									<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
-								</div>
-							</div>
-							{{/each}}
-						<!-- RENDERED HTML - ENDS -->
 						</div>
-					</div>
-					{{/slice}}
+
+						{{#slice color-palette.data offset="13" limit="1"}}
+						<div class="panel evo-box evo-site-example-box evo-site-color-block evo-spacer-margin-bottom-xxx-large">
+							<div class="evo-box-bdy">
+								{{#each colors}}
+								<div class="evo-site-color-block--swatch-ctn">
+									<div class="evo-site-swatch copy-to-clipboard" data-evo-background-color="{{data_value}}" data-clipboard-text="${{data_value}}" title="{{name}} (${{data_value}}/{{{hex}}})"></div>
+									<div class="evo-site-swatch-details">
+										<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="${{{data_value}}}">{{name}}</span><br>
+										<span class="copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{{hex}}}">{{{hex}}}</span>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+						</div>
+						{{/slice}}
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+
 				<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
 						<dl class="sub-nav">
@@ -182,6 +207,7 @@ The system colors are used for important, high-level information that may requir
 						</dl>
 					</div>
 				<!-- SIDENAV - ENDS -->
+
 				</div>
 			</section>
 			
@@ -192,10 +218,10 @@ The system colors are used for important, high-level information that may requir
 		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
 
 			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 					Content for something 3
 				</div>
-				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 					Magellan 3
 				</div>
 			</section>
@@ -207,10 +233,10 @@ The system colors are used for important, high-level information that may requir
 		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs3">
 
 			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 					Content for something 4
 				</div>
-				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 					Magellan 4
 				</div>
 			</section>
