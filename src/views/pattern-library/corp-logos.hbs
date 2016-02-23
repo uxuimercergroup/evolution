@@ -14,7 +14,7 @@ The corporate logos below are to be used for branding digital products across al
 		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius even-4 stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
 				{{#each pattern-library.tabs}}
 				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
 					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
