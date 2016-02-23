@@ -8,7 +8,7 @@ title: "Conversational Form"
 
 {{# markdown }}
 ## {{ title }}
-Main description would begin here about the component/pattern that you are building.
+Conversational forms are used as a non-traditional way of collecting data from a user. These forms build dynamically based on the answer from the previous question. Conversational Forms can build on each previous question by continuing to display the previous answers to the user as more questions get asked.
 {{/ markdown }}
 
 		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
@@ -153,7 +153,13 @@ Main description would begin here about the component/pattern that you are build
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
-					Content for something 2
+{{# markdown}}
+Use this component when you want the act of gathering data from the user to be as conversational and natural as possible.
+
+Be careful not to build these is a way where too much data is displayed on a single screen. Ideally you should shoot for shorter questions, and then have the questions animate from screen to screen.
+
+There are no discernible differences in the Conversational Form for small screens. The labels and inputs will wrap naturally based on the width of the containing element. Since the text will be more compact, it is even more imperative to keep the form limited to a small number of questions.
+{{/ markdown}}
 				</div>
 				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
 					Magellan 2

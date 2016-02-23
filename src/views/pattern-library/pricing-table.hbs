@@ -8,7 +8,7 @@ title: "Pricing Table"
 
 {{# markdown }}
 ## {{ title }}
-Main description would begin here about the component/pattern that you are building.
+The Pricing Table is used to list out items and their numeric values in a way that clearly displays their total.
 {{/ markdown }}
 
 		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
@@ -153,7 +153,19 @@ Main description would begin here about the component/pattern that you are build
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
-					Content for something 2
+{{# markdown}}
+* The Pricing Table is formatted into two columns. The left column contains the list items, while the numeric values are displayed in the right column.
+* The list items can contain an optional top label.
+* The numeric values can contain an optional bottom label.
+* The numeric values should be right justified so the decimal points are aligned.
+* Optional subtotal or highlighted rows have a darker background than the default background color, and can be placed directly above the total row.
+* The total row is optional, but when used it is always the bottom-most row, has the darkest background color, and totals the values of all the items above it.
+
+* The width of the Pricing Table shrinks to fit the mobile display used.
+* The font sizes will increase slightly.
+* The list item text wraps to fit in its column
+* When the list item text wraps to more than one line, the numeric value remains vertically centered.
+{{/ markdown}}
 				</div>
 				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
 					Magellan 2

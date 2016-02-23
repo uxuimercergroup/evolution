@@ -8,7 +8,7 @@ title: "Showcase Panel"
 
 {{# markdown }}
 ## {{ title }}
-Main description would begin here about the component/pattern that you are building.
+The Showcase Panel is used as a means to highlight the most important information on the page in a way that "showcases" the content. There are four possible states that can be assigned to the Showcase Panel: Base, Positive, Negative, Attention.
 {{/ markdown }}
 
 		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
@@ -153,7 +153,16 @@ Main description would begin here about the component/pattern that you are build
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right" data-equalizer-watch>
-					Content for something 2
+{{# markdown}}
+This container should be used when you want to highlight "summary" information of elements.
+
+The Showcase Panel is designed to dock directly below the navigation bar. As the user scrolls down the page, it will constantly remain visible.
+
+Only one showcase panel can be used per page.
+
+* The width of the Showcase Panel will shrink to fit the mobile display used.
+* The font sizes for the header will increase slightly.
+{{/ markdown}}
 				</div>
 				<div class="large-3 columns show-for-large-up" data-equalizer-watch>
 					Magellan 2
