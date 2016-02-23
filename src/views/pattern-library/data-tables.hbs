@@ -90,56 +90,6 @@ Data Tables are an element meant to organize data on a page with added functiona
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/each}}
 						</dl>
-
-						{{#is data-tables.dependency_data.dependency 'true'}}
-						<hr>
-
-					<!-- SIDENAV ACCORDION - BEGINS -->
-						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
-
-						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
-							<li class="accordion-navigation">
-								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
-								<div id="dependencies-accordion" class="content" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
-
-									<ul class="no-bullet">
-										{{#is data-tables.dependency_data.foundation 'true'}}
-											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if data-tables.dependency_data.foundation_dependencies}}
-												<ul>
-												{{#each data-tables.dependency_data.foundation_dependencies}}
-													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											{{/if}}
-											</li>
-										{{/is}}
-										{{#is data-tables.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
-											{{#if data-tables.dependency_data.evolution_dependencies}}
-												<ul>
-												{{#each data-tables.dependency_data.evolution_dependencies}}
-													<li><a href="{{url}}">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											</li>
-											{{/if}}
-										{{/is}}
-										{{#is data-tables.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is data-tables.dependency_data.jquery_ui 'true'}}<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
-										{{#each data-tables.dependency_data.other}}
-											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
-										{{/each}}
-									</ul>
-
-								</div>
-							</li>
-						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
-
-						</ul>
-					<!-- SIDENAV ACCORDION - ENDS -->
-						{{/is}}
-
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
@@ -171,7 +121,75 @@ Data Tables are an element meant to organize data on a page with added functiona
 					Content for something 3
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 3
+				<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+						{{!--
+						<dl class="sub-nav">
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
+						</dl>
+						<hr>
+						--}}
+
+						{{#is data-tables.dependency_data.dependency 'true'}}
+
+					<!-- SIDENAV ACCORDION - BEGINS -->
+						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
+
+						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
+							<li class="accordion-navigation">
+								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
+								<div id="dependencies-accordion" class="content active" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
+
+									<ul class="no-bullet">
+										{{#is data-tables.dependency_data.foundation 'true'}}
+											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
+											{{#if data-tables.dependency_data.foundation_dependencies}}
+												<ul>
+												{{#each data-tables.dependency_data.foundation_dependencies}}
+													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											{{/if}}
+											</li>
+										{{/is}}
+										{{#is data-tables.dependency_data.evolution 'true'}}
+											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											{{#if data-tables.dependency_data.evolution_dependencies}}
+												<ul>
+												{{#each data-tables.dependency_data.evolution_dependencies}}
+													<li><a href="{{url}}">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											</li>
+											{{/if}}
+										{{/is}}
+										{{#is data-tables.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is data-tables.dependency_data.jquery_ui 'true'}}
+											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
+											{{#if data-tables.dependency_data.jquery_ui_dependencies}}
+												<ul>
+												{{#each data-tables.dependency_data.jquery_ui_dependencies}}
+													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											{{/if}}
+											</li>
+										{{/is}}
+										{{#each data-tables.dependency_data.other}}
+											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+										{{/each}}
+									</ul>
+
+								</div>
+							</li>
+						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
+
+						</ul>
+					<!-- SIDENAV ACCORDION - ENDS -->
+						{{/is}}
+
+					</div>
+				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
 			

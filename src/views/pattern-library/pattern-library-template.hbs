@@ -37,7 +37,7 @@ Main description would begin here about the component/pattern that you are build
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- EXAMPLE BOX - BEGINS -->
-					{{#each button.data }}
+					{{#each buttons.data }}
 					<div class="panel evo-box evo-site-example-box">
 						<div class="evo-box-hdr">
 						<!-- EXAMPLE HEADER - BEGINS -->
@@ -86,7 +86,7 @@ Main description would begin here about the component/pattern that you are build
 				<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
-							{{#each button.data}}
+							{{#each buttons.data}}
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/each}}
 						</dl>
@@ -117,7 +117,7 @@ Main description would begin here about the component/pattern that you are build
 
 ##### Width
 * Each button should have a minimum width of 100 pixels, but they can expand to match content length if needed.
-* The final width of the button should be dynamic based on the content inside the button.
+* The final width of the button should be dynamic based on the content inside the buttons.
 
 ##### Labels
 * Button text should be a concise, specific call to action. Try to use one word, two at the most, and make it active voice.
@@ -129,7 +129,7 @@ Main description would begin here about the component/pattern that you are build
 * Multiple primary buttons will confuse the user and should be avoided.
 
 ##### Secondary Button
-* Designed to be visually offset from the Primary button.
+* Designed to be visually offset from the Primary buttons.
 * There can be more than one Secondary Button on a screen.
 * Secondary Buttons are essentially additional options the user has on the page, just not the "primary call-to-action."
 * Buttons are different than links as links take you to another page, and therefore they have different uses. Buttons should be used for the following:
@@ -237,7 +237,7 @@ Main description would begin here about the component/pattern that you are build
 						<hr>
 						--}}
 
-						{{#is button.dependency_data.dependency 'true'}}
+						{{#is buttons.dependency_data.dependency 'true'}}
 
 					<!-- SIDENAV ACCORDION - BEGINS -->
 						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
@@ -248,31 +248,41 @@ Main description would begin here about the component/pattern that you are build
 								<div id="dependencies-accordion" class="content active" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
 
 									<ul class="no-bullet">
-										{{#is button.dependency_data.foundation 'true'}}
+										{{#is buttons.dependency_data.foundation 'true'}}
 											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if button.dependency_data.foundation_dependencies}}
+											{{#if buttons.dependency_data.foundation_dependencies}}
 												<ul>
-												{{#each button.dependency_data.foundation_dependencies}}
+												{{#each buttons.dependency_data.foundation_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#is button.dependency_data.evolution 'true'}}
+										{{#is buttons.dependency_data.evolution 'true'}}
 											<li><a href="/">Evolution {{package.evolution.version}}</a>
-											{{#if button.dependency_data.evolution_dependencies}}
+											{{#if buttons.dependency_data.evolution_dependencies}}
 												<ul>
-												{{#each button.dependency_data.evolution_dependencies}}
+												{{#each buttons.dependency_data.evolution_dependencies}}
 													<li><a href="{{url}}">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is button.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is button.dependency_data.jquery_ui 'true'}}<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
-										{{#each button.dependency_data.other}}
+										{{#is buttons.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is buttons.dependency_data.jquery_ui 'true'}}
+											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
+											{{#if buttons.dependency_data.jquery_ui_dependencies}}
+												<ul>
+												{{#each buttons.dependency_data.jquery_ui_dependencies}}
+													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											{{/if}}
+											</li>
+										{{/is}}
+										{{#each buttons.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}
 									</ul>

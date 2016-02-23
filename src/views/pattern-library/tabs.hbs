@@ -90,9 +90,47 @@ Tabs are elements that help you organize and navigate multiple content panels in
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/each}}
 						</dl>
+					</div>
+				<!-- SIDENAV - ENDS -->
+				</div>
+			</section>
+
+		</section>
+	<!-- TAB PANEL 1 - ENDS -->
+
+	<!-- TAB PANEL 2 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs1">
+
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+					Content for something 2
+				</div>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+					Magellan 2
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 2 - BEGINS -->
+
+	<!-- TAB PANEL 3 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
+
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+					Content for something 3
+				</div>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+				<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+						{{!--
+						<dl class="sub-nav">
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
+						</dl>
+						<hr>
+						--}}
 
 						{{#is tabs.dependency_data.dependency 'true'}}
-						<hr>
 
 					<!-- SIDENAV ACCORDION - BEGINS -->
 						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
@@ -100,7 +138,7 @@ Tabs are elements that help you organize and navigate multiple content panels in
 						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
 							<li class="accordion-navigation">
 								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
-								<div id="dependencies-accordion" class="content" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
+								<div id="dependencies-accordion" class="content active" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
 
 									<ul class="no-bullet">
 										{{#is tabs.dependency_data.foundation 'true'}}
@@ -142,36 +180,6 @@ Tabs are elements that help you organize and navigate multiple content panels in
 
 					</div>
 				<!-- SIDENAV - ENDS -->
-				</div>
-			</section>
-
-		</section>
-	<!-- TAB PANEL 1 - ENDS -->
-
-	<!-- TAB PANEL 2 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs1">
-
-			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 2
-				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 2
-				</div>
-			</section>
-			
-		</section>
-	<!-- TAB PANEL 2 - BEGINS -->
-
-	<!-- TAB PANEL 3 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
-
-			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 3
-				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 3
 				</div>
 			</section>
 			
