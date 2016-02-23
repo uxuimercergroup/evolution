@@ -109,23 +109,31 @@ Evolution's icons use an icon Web font based primarily on the [IcoMoon](https://
 						<!-- RENDERED HTML - ENDS -->
 						</div>
 						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
-						<!-- HTML CODE - BEGINS -->
+						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
+
+							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
-								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
 								{{/each}}
 							{{else}}
+
+							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
-								<pre><code class="language-markup" id="evo-code-copy-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
 							{{/is}}
-						<!-- HTML CODE - ENDS -->
+						<!-- CODE - ENDS -->
 						</div>
 					</div>
 					{{/each}}
@@ -134,11 +142,13 @@ Evolution's icons use an icon Web font based primarily on the [IcoMoon](https://
 
 					<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate icons.photo_icons_header}}">{{ icons.photo_icons_header }}</h6>
 					<a name="{{hyphenate icons.photo_icons_header}}"></a>
-{{#markdown}}
+					<div class="evo-site-markdown-content-block">
+{{# markdown }}
 A library of icons gives the system more diverse use in digital and other applications. Icons can be used small, as buttons, or large, as graphic elements.
 
 Photo icons should feel human, represent genuine objects, and follow the same standards as the photography. The photo icons should evoke a sentimental feeling to represent an emotional response from Mercer (freedom, satisfaction, well-being, excitment, etc.).
-{{/markdown}}
+{{/ markdown }}
+					</div>
 					<a href="{{assets}}/docs/core/icons/evo-photo-icons.zip" class="button small radius evo-button evo-spacer-margin-bottom-xxx-large" role="button">Download</a>
 					<p class="evo-no-margin">Career</p>
 					<div class="clearfix evo-spacer-margin-bottom-large">
@@ -161,9 +171,11 @@ Photo icons should feel human, represent genuine objects, and follow the same st
 
 					<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate icons.vector_icons_header}}">{{ icons.vector_icons_header }}</h6>
 					<a name="{{hyphenate icons.vector_icons_header}}"></a>
-{{#markdown}}
+					<div class="evo-site-markdown-content-block">
+{{# markdown }}
 A library of icons gives the system more diverse use in digital and other applications. Icons can be used small, as buttons, or large, as graphic elements. The icons below are merely examples of the style of icons that designers can create. Objects should be reduced as much as possible to simple, geometric shapes, while remaining instantly identifiable.
-{{/markdown}}
+{{/ markdown }}
+					</div>
 					<a href="{{assets}}/docs/core/icons/evo-vector-icons.zip" class="button small radius evo-button evo-spacer-margin-bottom-xxx-large" role="button">Download</a>
 					<p class="evo-no-margin">Career</p>
 					<div class="clearfix evo-spacer-margin-bottom-large">
