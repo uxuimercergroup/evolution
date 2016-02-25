@@ -20,13 +20,21 @@
 	},
 
 	"data": {
-		"basic_datepicker": {
-			"name": "Basic Datepicker",
-			"partial": "datepicker", "slug": "basic-datepicker"
+		"read_only": {
+			"name": "Read Only",
+			"partial": "datepicker", "slug": "read-only"
 		},
-		"message_datepicker": {
-			"name": "Datepicker Message",
-			"partial": "datepicker-message", "slug": "message-datepicker"
+		"date_input": {
+			"name": "Date Input",
+			"partial": "datepicker-date-input", "slug": "date-input"
+		},
+		"message": {
+			"name": "With Message",
+			"partial": "datepicker-message", "slug": "message"
+		},
+		"masked_input": {
+			"name": "Masked Input",
+			"partial": "datepicker-date-input-masked", "slug": "masked-input"
 		}
 	},
 

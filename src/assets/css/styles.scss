@@ -311,6 +311,26 @@ URL: {{ meta_url }}
 											}
 	// INTRO - ENDS
 
+	// HOMEPAGE INTRO - BEINGS
+		.evo-site--pattern-library-intro--homepage
+											{
+											border-bottom-width: 0;
+											text-align: center;
+											margin: rem-calc(30) 0;
+			h1									{
+												font-size: rem-calc(38);
+												font-family: $evo-font-thin-family !important;
+												text-transform: capitalize;
+												}
+											}
+
+		.evo-box--pattern-library--homepage-callouts
+											{
+											border-color: $onyx-dark-20;
+											background-color: $onyx-dark-2;
+											}
+	// HOMEPAGE INTRO - ENDS
+
 	// CONTENT TABS - BEGINS
 		.evo-site-tabs--pattern-library-tabs
 											{
