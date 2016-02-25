@@ -117,6 +117,42 @@
 				{"partial": "input-button", "type": "submit", "button-type": "input", "secondary": "true", "button-value": "Secondary", "slug": "form-button-secondary"},
 				{"partial": "input-button", "type": "submit", "button-type": "input", "button-value": "Primary", "slug": "form-button"}
 			]
+		},
+		"interactive_button": {
+			"name": "Interactive Buttons",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button", "button-type": "button", "secondary": "true", "text": "Save", "interactive-data-value":"evo-button-interactive-secondary-example", "slug": "interactive-button-secondary"},
+				{"partial": "button", "button-type": "button", "text": "Save", "interactive-data-value":"evo-button-interactive-primary-example", "slug": "interactive-button"}
+			]
+		},
+		"basic_button_group": {
+			"name": "Basic Button Group",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button-group", "slug": "button-group"}
+			]
+		},
+		"even_button_group": {
+			"name": "Even Button Group",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button-group-even", "slug": "button-group-even"}
+			]
+		},
+		"stacked_button_group": {
+			"name": "Stacked Button Group",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button-group-stacked", "slug": "button-group-stacked"}
+			]
+		},
+		"button_bar": {
+			"name": "Button Bar",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button-group-bar", "slug": "button-bar"}
+			]
 		}
 	},
 
