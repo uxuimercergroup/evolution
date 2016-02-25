@@ -21,6 +21,10 @@ module.exports = {
     files: ['src/views/pattern-library/**/*.hbs'],
     tasks: ['newer:assemble:pattern_library', 'notify:assemble']
   },
+  content: {
+    files: ['src/content/**/*.md'],
+    tasks: ['assemble', 'notify:assemble']
+  },
   data: {
     files: ['src/data/**/*.json'],
     tasks: ['assemble', 'notify:assemble']
