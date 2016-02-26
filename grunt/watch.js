@@ -42,7 +42,8 @@ module.exports = {
       'src/assets/docs/**',
       'src/assets/fonts/**',
       'src/assets/images/**',
-      'src/assets/scripts/core/foundation/vendor/modernizr.js'
+      'src/assets/scripts/core/foundation/vendor/modernizr.js',
+      'src/assets/scripts/lib/prism/prism.js'
     ],
     tasks: ['newer:copy:dist', 'notify:copy']
   },

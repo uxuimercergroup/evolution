@@ -14,5 +14,4 @@ required: if the field is going to be required and will use the abide validation
 tabindex: the tab index order number
 type: text, radio, checkbox
 --}}
-
 <input type="{{#if type}}{{type}}{{else}}text{{/if}}"{{#if class}} class="{{class}}"{{/if}}{{#if placeholder}} placeholder="{{placeholder}}"{{/if}}{{#if tabindex}} tabindex="{{tabindex}}"{{/if}}{{#if input-title}} title="{{{input-title}}}"{{/if}}{{#if id}} id="{{id}}"{{/if}}{{#if input-name}} name="{{input-name}}"{{/if}}{{#if input-value}} value="{{input-value}}"{{/if}}{{#if checked}} checked{{/if}}{{#if input-autocomplete}} autocomplete="{{input-autocomplete}}"{{/if}}{{#if min}} min="{{min}}"{{/if}}{{#if max}} max="{{max}}"{{/if}}{{#if input-numeric-mask}} data-evo-input-numeric-mask{{/if}}{{#if required}} required{{/if}}>
