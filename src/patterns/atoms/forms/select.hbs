@@ -3,12 +3,11 @@ class: custom class
 required: if the field is going to be required and will use the abide validation [TRUE] is the value
 tabindex: the tab index order number
 select-title: custom title
-select-option-default: Set custom default option in select
 --}}
 
-<select {{#if class}}class="{{class}}"{{/if}} {{#if tabindex}}tabindex="{{tabindex}}"{{/if}} {{#if select-title}}title="{{{select-title}}}"{{/if}} {{#if required}}required{{/if}}>
-	<option value="">{{#if select-option-default}}{{select-option-default}}{{else}}{{form.select_option_default}}{{/if}}</option>
-{{#each form.select_options}}
-	<option value="{{option}}">{{option}}</option>
-{{/each}}
+<select{{#if class}} class="{{class}}"{{/if}}{{#if tabindex}} tabindex="{{tabindex}}"{{/if}}{{#if select-title}} title="{{{select-title}}}"{{/if}}{{#if required}} required{{/if}}>
+	<option value="">Choose one&hellip;</option>
+	<option value="">Item 1</option>
+	<option value="">Item 2</option>
+	<option value="">Item 3</option>
 </select>
