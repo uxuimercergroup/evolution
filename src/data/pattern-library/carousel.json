@@ -1,0 +1,42 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "",
+		"foundation_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "true",
+		"jquery_ui": "",
+		"jquery_ui_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"other": [
+			{"name": "jQuery OwlCarousel 1.3.3", "url": "http://owlgraphic.com/owlcarousel/", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"image_carousel": {
+			"name": "Image Carousel",
+			"partial": "carousel", "slug": "image-carousel"
+		},
+		"content_carousel": {
+			"name": "Content Carousel",
+			"partial": "carousel-content", "slug": "content-carousel"
+		}
+	},
+
+	"settings_header": "",
+	"settings_data": [
+		{
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
+		}
+	]
+}

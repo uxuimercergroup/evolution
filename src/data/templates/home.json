@@ -1,0 +1,109 @@
+{
+	"tools": {
+		"header": "Access to Tools All in One Place",
+		"grid_small" : "1",
+		"grid_medium" : "3",
+		"grid_large" : "3",
+		"items":[
+			{
+				"header": "Style Guides",
+				"text":	"Interactive view of visual standards from colors, typography, icons, and imagery.",
+				"partial": "icon",
+				"class": "evo-icon-site-map5 evo-icon-size-x-large"
+			},
+			{
+				"header": "Pattern Library",
+				"text":	"Common UI patterns that can be easily re-used across projects.",
+				"partial": "icon",
+				"class": "evo-icon-site-lan2 evo-icon-size-x-large"
+			},
+			{
+				"header": "Framework",
+				"text":	"A responsive front-end framework, that is built on HTML, CSS, and Javascript.",
+				"partial": "icon",
+				"class": "evo-icon-site-embed2 evo-icon-size-x-large"
+			}
+		],
+		"cta_button_small": [
+			{
+			"partial": "button",
+			"custom-class": "evo-site-cta-button",
+			"href": "/what.html",
+			"expand": "true",
+			"icon-position": "right",
+			"icon-position-right-class": "evo-icon-arrow-right2",
+			"shape": "round",
+			"text": "Learn more"
+			}
+		],
+		"cta_button": [
+			{
+			"partial": "button",
+			"custom-class": "evo-site-cta-button evo-no-margin-bottom",
+			"href": "/what.html",
+			"icon-position": "right",
+			"icon-position-right-class": "evo-icon-arrow-right2",
+			"shape": "round",
+			"text": "Learn more"
+			}
+		]
+	},
+	"benefits": {
+		"header": "Benefits of Evolution",
+		"benefit1": {
+			"number": "1",
+			"header": "Re-usability",
+			"text": "The common UX patterns and UI components included in Evolution can be re-used across projects.",
+			"animation": "bounceInLeft"
+		},
+		"benefit2": {
+			"number": "2",
+			"header": "Consistency",
+			"text": "Projects built using Evolution deliver a common user experience and the ability to have a consistent UI across products.",
+			"animation": "bounceInRight"
+		},
+		"benefit3": {
+			"number": "3",
+			"header": "Responsive",
+			"text": "Evolution components are responsive out of the box, giving you default coverage for product delivery across multiple devices.",
+			"animation": "bounceInUp"
+		},
+		"benefit4": {
+			"number": "4",
+			"header": "Time Savings",
+			"text": "Starting from a common baseline saves time across the facets of UI design; prototyping, visual design, &amp; development.",
+			"animation": "flipInY"
+		},
+		"benefit5": {
+			"number": "5",
+			"header": "Cost Savings",
+			"text": "Project delivery is cheaper thanks to the re-use of components and patterns that have already been tested across browsers.",
+			"animation": "bounceInUp"
+		}
+	},
+	"products": {
+		"header": "Mercer Products Using Evolution",
+		"subheader": "A Sampling of Benefits Portals",
+		"grid_small" : "1",
+		"grid_medium" : "2",
+		"grid_large" : "4",
+		"items":[
+			{
+				"header": "Harmonise",
+				"url": "/"
+			},
+			{
+				"header": "EnrollNet",
+				"url": "/"
+			},
+			{
+				"header": "FSM Pro",
+				"url": "/"
+			},
+			{
+				"header": "Worklife",
+				"url": "/"
+			}
+		]
+	}
+}

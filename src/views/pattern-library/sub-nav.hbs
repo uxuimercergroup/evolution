@@ -1,0 +1,222 @@
+---
+title: "Sub Nav"
+---
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns evo-spacer-padding-top-medium evo-site--pattern-library-intro">
+
+{{# markdown }}
+## {{ title }}
+This simple sub nav is great for moving between different states of a page.
+{{/ markdown }}
+
+		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+
+		<!-- TABS - BEGINS -->
+			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+				{{#each pattern-library.tabs}}
+				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
+					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
+						<span class="text">{{name}}</span>
+					</a>
+				</li>
+				{{/each}}
+			</ul>
+		<!-- TABS - ENDS -->
+
+		</div>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<!-- TABS - BEGINS -->
+	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content">
+	<!-- TAB PANEL 1 - BEGINS -->
+		<section role="tabpanel" aria-hidden="false" class="content active evo-site-tabs-content--pattern-library-tab-panel" id="tabs0">
+
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+				<!-- EXAMPLE BOX - BEGINS -->
+					{{#each sub-nav.data }}
+					<div class="panel evo-box evo-site-example-box">
+						<div class="evo-box-hdr">
+						<!-- EXAMPLE HEADER - BEGINS -->
+							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
+								{{name}}
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+							</h6>
+							<a name="{{hyphenate name}}"></a>
+						<!-- EXAMPLE HEADER - ENDS -->
+						</div>
+						<div class="evo-box-bdy">
+						<!-- RENDERED HTML - BEGINS -->
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
+									{{> (lookup . 'partial') }}
+								{{/each}}
+							{{else}}
+								{{> (lookup . 'partial') }}
+							{{/is}}
+						<!-- RENDERED HTML - ENDS -->
+						</div>
+						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						<!-- CODE - BEGINS -->
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
+
+							<!-- HTML - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
+								{{/each}}
+							{{else}}
+
+							<!-- HTML - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
+							{{/is}}
+						<!-- CODE - ENDS -->
+						</div>
+					</div>
+					{{/each}}
+				<!-- EXAMPLE BOX - ENDS -->
+				</div>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+				<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
+						<dl class="sub-nav">
+							{{#each sub-nav.data}}
+							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+							{{/each}}
+						</dl>
+					</div>
+				<!-- SIDENAV - ENDS -->
+				</div>
+			</section>
+
+		</section>
+	<!-- TAB PANEL 1 - ENDS -->
+
+	<!-- TAB PANEL 2 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs1">
+
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+					Content for something 2
+				</div>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+					Magellan 2
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 2 - BEGINS -->
+
+	<!-- TAB PANEL 3 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
+
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+					Content for something 3
+				</div>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+				<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+						{{!--
+						<dl class="sub-nav">
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
+						</dl>
+						<hr>
+						--}}
+
+						{{#is sub-nav.dependency_data.dependency 'true'}}
+
+					<!-- SIDENAV ACCORDION - BEGINS -->
+						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
+
+						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
+							<li class="accordion-navigation">
+								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
+								<div id="dependencies-accordion" class="content active" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
+
+									<ul class="no-bullet">
+										{{#is sub-nav.dependency_data.foundation 'true'}}
+											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
+											{{#if sub-nav.dependency_data.foundation_dependencies}}
+												<ul>
+												{{#each sub-nav.dependency_data.foundation_dependencies}}
+													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											{{/if}}
+											</li>
+										{{/is}}
+										{{#is sub-nav.dependency_data.evolution 'true'}}
+											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											{{#if sub-nav.dependency_data.evolution_dependencies}}
+												<ul>
+												{{#each sub-nav.dependency_data.evolution_dependencies}}
+													<li><a href="{{url}}">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											</li>
+											{{/if}}
+										{{/is}}
+										{{#is sub-nav.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is sub-nav.dependency_data.jquery_ui 'true'}}
+											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
+											{{#if sub-nav.dependency_data.jquery_ui_dependencies}}
+												<ul>
+												{{#each sub-nav.dependency_data.jquery_ui_dependencies}}
+													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											{{/if}}
+											</li>
+										{{/is}}
+										{{#each sub-nav.dependency_data.other}}
+											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+										{{/each}}
+									</ul>
+
+								</div>
+							</li>
+						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
+
+						</ul>
+					<!-- SIDENAV ACCORDION - ENDS -->
+						{{/is}}
+
+					</div>
+				<!-- SIDENAV - ENDS -->
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 3 - BEGINS -->
+
+	<!-- TAB PANEL 4 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs3">
+
+			<section class="row" data-equalizer>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+					Content for something 4
+				</div>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+					Magellan 4
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 4 - BEGINS -->
+	</div>
+<!-- TABS - ENDS -->

@@ -1,0 +1,28 @@
+default:
+  - 'clean'
+  - 'sass:dist'
+  - 'sass:patterns'
+  - 'concat'
+  - 'copy:dist'
+  - 'assemble'
+  - 'string-replace'
+  - 'browserSync'
+  - 'notify:browserSync'
+  - 'watch'
+
+prod:
+  - 'clean'
+  - 'sass:prod'
+  - 'sass:patterns'
+  - 'concat'
+  - 'uglify'
+  - 'imagemin'
+  - 'copy:prod'
+  - 'assemble'
+  - 'string-replace'
+  - 'notify:prod'
+
+deploy:
+  - 'prod'
+  - 'sftp-deploy'
+  - 'notify:deploy'

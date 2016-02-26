@@ -1,0 +1,19 @@
+<!-- CAROUSEL - BEGINS -->
+<div class="evo-carousel" data-evo-carousel="evo-carousel-example">
+{{#repeat count=5 start=1}}
+	<div class="evo-carousel-item">
+
+		<!-- BOX - BEGINS -->
+		<div class="panel evo-box evo-no-margin-bottom">
+			<div class="evo-box-bdy">
+				<h1 class="evo-no-margin-top">Carousel Item {{@index}}</h1>
+				{{> type-header size="3" class="subheader evo-spacer-margin-bottom-x-larg" text="Subheader"}}
+				{{> button button-type="button" custom-class="evo-no-margin-bottom" text="Primary"}}
+			</div>
+		</div>
+		<!-- BOX - ENDS -->
+
+	</div>
+{{/repeat}}
+</div>
+<!-- CAROUSEL - ENDS -->

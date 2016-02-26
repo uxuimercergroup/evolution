@@ -1,0 +1,50 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "",
+		"foundation_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "true",
+		"jquery_ui": "true",
+		"jquery_ui_dependencies": [
+			{"name": "Datepicker", "url": "https://jqueryui.com/datepicker/"}
+		],
+		"other": [
+			{"name": "jQuery Masked Input Plugin 1.4.0", "url": "https://github.com/digitalBush/jquery.maskedinput", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"read_only": {
+			"name": "Read Only",
+			"partial": "datepicker", "slug": "read-only"
+		},
+		"date_input": {
+			"name": "Date Input",
+			"partial": "datepicker-date-input", "slug": "date-input"
+		},
+		"message": {
+			"name": "With Message",
+			"partial": "datepicker-message", "slug": "message"
+		},
+		"masked_input": {
+			"name": "Masked Input",
+			"partial": "datepicker-date-input-masked", "slug": "masked-input"
+		}
+	},
+
+	"settings_header": "",
+	"settings_data": [
+		{
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
+		}
+	]
+}

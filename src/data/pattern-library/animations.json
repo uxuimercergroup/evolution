@@ -1,0 +1,599 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "",
+		"foundation_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "true",
+		"jquery_ui": "",
+		"jquery_ui_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"other": [
+			{"name": "AniJS 0.9.3", "url": "http://anijs.github.io/", "external_link": "true"},
+			{"name": "Animate.css 3.5.1", "url": "https://github.com/daneden/animate.css", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"attention_seekers": {
+			"name": "Attention Seekers",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce",
+				"partial": "animation-bounce",
+				"slug": "bounce-animation",
+				"code": "data-anijs=\"if: click, do: bounce animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Flash",
+				"partial": "animation-flash",
+				"slug": "flash-animation",
+				"code": "data-anijs=\"if: click, do: flash animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Pulse",
+				"partial": "animation-pulse",
+				"slug": "pulse-animation",
+				"code": "data-anijs=\"if: click, do: pulse animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Rubber Band",
+				"partial": "animation-rubberband",
+				"slug": "rubberband-animation",
+				"code": "data-anijs=\"if: click, do: rubberBand animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Shake",
+				"partial": "animation-shake",
+				"slug": "shake-animation",
+				"code": "data-anijs=\"if: click, do: shake animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Swing",
+				"partial": "animation-swing",
+				"slug": "swing-animation",
+				"code": "data-anijs=\"if: click, do: swing animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Tada",
+				"partial": "animation-tada",
+				"slug": "tada-animation",
+				"code": "data-anijs=\"if: click, do: tada animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Wobble",
+				"partial": "animation-wobble",
+				"slug": "wobble-animation",
+				"code": "data-anijs=\"if: click, do: wobble animated, after: removeAnim\""
+				}
+			]
+		},
+		"bouncing_entrances": {
+			"name": "Bouncing Entrances",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce In",
+				"partial": "animation-bounce-in",
+				"slug": "bounce-in-animation",
+				"code": "data-anijs=\"if: click, do: bounceIn animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Bounce In Down",
+				"partial": "animation-bounce-in-down",
+				"slug": "bounce-in-down-animation",
+				"code": "data-anijs=\"if: click, do: bounceInDown animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Bounce In Left",
+				"partial": "animation-bounce-in-left",
+				"slug": "bounce-in-left-animation",
+				"code": "data-anijs=\"if: click, do: bounceInLeft animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Bounce In Right",
+				"partial": "animation-bounce-in-right",
+				"slug": "bounce-in-right-animation",
+				"code": "data-anijs=\"if: click, do: bounceInRight animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Bounce In Up",
+				"partial": "animation-bounce-in-up",
+				"slug": "bounce-in-up-animation",
+				"code": "data-anijs=\"if: click, do: bounceInUp animated, after: removeAnim\""
+				}
+			]
+		},
+		"bouncing_exits": {
+			"name": "Bouncing Exits",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Bounce Out",
+				"partial": "animation-bounce-out",
+				"slug": "bounce-out-animation",
+				"code": "data-anijs=\"if: click, do: bounceOut animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Bounce Out Down",
+				"partial": "animation-bounce-out-down",
+				"slug": "bounce-out-down-animation",
+				"code": "data-anijs=\"if: click, do: bounceOutDown animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Bounce Out Left",
+				"partial": "animation-bounce-out-left",
+				"slug": "bounce-out-left-animation",
+				"code": "data-anijs=\"if: click, do: bounceOutLeft animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Bounce Out Right",
+				"partial": "animation-bounce-out-right",
+				"slug": "bounce-out-right-animation",
+				"code": "data-anijs=\"if: click, do: bounceOutRight animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Bounce Out Up",
+				"partial": "animation-bounce-out-up",
+				"slug": "bounce-out-up-animation",
+				"code": "data-anijs=\"if: click, do: bounceOutUp animated, after: removeAnim\""
+				}
+			]
+		},
+		"fading_entrances": {
+			"name": "Fading Entrances",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Fade In",
+				"partial": "animation-fade-in",
+				"slug": "fade-in-animation",
+				"code": "data-anijs=\"if: click, do: fadeIn animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade In Down",
+				"partial": "animation-fade-in-down",
+				"slug": "fade-in-down-animation",
+				"code": "data-anijs=\"if: click, do: fadeInDown animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade In Down Big",
+				"partial": "animation-fade-in-down-big",
+				"slug": "fade-in-down-big-animation",
+				"code": "data-anijs=\"if: click, do: fadeInDownBig animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade In Left",
+				"partial": "animation-fade-in-left",
+				"slug": "fade-in-left-animation",
+				"code": "data-anijs=\"if: click, do: fadeInLeft animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade In Left Big",
+				"partial": "animation-fade-in-left-big",
+				"slug": "fade-in-left-big-animation",
+				"code": "data-anijs=\"if: click, do: fadeInLeftBig animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade In Right",
+				"partial": "animation-fade-in-right",
+				"slug": "fade-in-right-animation",
+				"code": "data-anijs=\"if: click, do: fadeInRight animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade In Right Big",
+				"partial": "animation-fade-in-right-big",
+				"slug": "fade-in-right-big-animation",
+				"code": "data-anijs=\"if: click, do: fadeInRightBig animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade In Up",
+				"partial": "animation-fade-in-up",
+				"slug": "fade-in-up-animation",
+				"code": "data-anijs=\"if: click, do: fadeInUp animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade In Up Big",
+				"partial": "animation-fade-in-up-big",
+				"slug": "fade-in-up-big-animation",
+				"code": "data-anijs=\"if: click, do: fadeInUpBig animated, after: removeAnim\""
+				}
+			]
+		},
+		"fading_exits": {
+			"name": "Fading Exits",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Fade Out",
+				"partial": "animation-fade-out",
+				"slug": "fade-out-animation",
+				"code": "data-anijs=\"if: click, do: fadeOut animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade Out Down",
+				"partial": "animation-fade-out-down",
+				"slug": "fade-out-down-animation",
+				"code": "data-anijs=\"if: click, do: fadeOutDown animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade Out Down Big",
+				"partial": "animation-fade-out-down-big",
+				"slug": "fade-out-down-big-animation",
+				"code": "data-anijs=\"if: click, do: fadeOutDownBig animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade Out Left",
+				"partial": "animation-fade-out-left",
+				"slug": "fade-out-left-animation",
+				"code": "data-anijs=\"if: click, do: fadeOutLeft animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade Out Left Big",
+				"partial": "animation-fade-out-left-big",
+				"slug": "fade-out-left-big-animation",
+				"code": "data-anijs=\"if: click, do: fadeOutLeftBig animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade Out Right",
+				"partial": "animation-fade-out-right",
+				"slug": "fade-out-right-animation",
+				"code": "data-anijs=\"if: click, do: fadeOutRight animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade Out Right Big",
+				"partial": "animation-fade-out-right-big",
+				"slug": "fade-out-right-big-animation",
+				"code": "data-anijs=\"if: click, do: fadeOutRightBig animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade Out Up",
+				"partial": "animation-fade-out-up",
+				"slug": "fade-out-up-animation",
+				"code": "data-anijs=\"if: click, do: fadeOutUp animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Fade Out Up Big",
+				"partial": "animation-fade-out-up-big",
+				"slug": "fade-out-up-big-animation",
+				"code": "data-anijs=\"if: click, do: fadeOutUpBig animated, after: removeAnim\""
+				}
+			]
+		},
+		"flippers": {
+			"name": "Flippers",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Flip",
+				"partial": "animation-flip",
+				"slug": "flip-animation",
+				"code": "data-anijs=\"if: click, do: flip animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Flip In X",
+				"partial": "animation-flip-in-x",
+				"slug": "flip-in-x-animation",
+				"code": "data-anijs=\"if: click, do: flipInX animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Flip In Y",
+				"partial": "animation-flip-in-y",
+				"slug": "flip-in-y-animation",
+				"code": "data-anijs=\"if: click, do: flipInY animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Flip Out X",
+				"partial": "animation-flip-out-x",
+				"slug": "flip-out-x-animation",
+				"code": "data-anijs=\"if: click, do: flipOutX animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Flip Out Y",
+				"partial": "animation-flip-out-y",
+				"slug": "flip-out-y-animation",
+				"code": "data-anijs=\"if: click, do: flipOutY animated, after: removeAnim\""
+				}
+			]
+		},
+		"light_speed": {
+			"name": "Lightspeed",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Light Speed In",
+				"partial": "animation-light-speed-in",
+				"slug": "light-speed-in-animation",
+				"code": "data-anijs=\"if: click, do: lightSpeedIn animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Light Speed Out",
+				"partial": "animation-light-speed-out",
+				"slug": "light-speed-out-animation",
+				"code": "data-anijs=\"if: click, do: lightSpeedOut animated, after: removeAnim\""
+				}
+			]
+		},
+		"rotating": {
+			"name": "Rotating",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Rotate",
+				"partial": "animation-rotate",
+				"slug": "rotate-animation",
+				"code": "data-anijs=\"if: click, do: rotate animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Rotate Down Left",
+				"partial": "animation-rotate-down-left",
+				"slug": "rotate-down-left-animation",
+				"code": "data-anijs=\"if: click, do: rotateDownLeft animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Rotate Down Right",
+				"partial": "animation-rotate-down-right",
+				"slug": "rotate-down-right-animation",
+				"code": "data-anijs=\"if: click, do: rotateDownRight animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Rotate Up Left",
+				"partial": "animation-rotate-up-left",
+				"slug": "rotate-up-left-animation",
+				"code": "data-anijs=\"if: click, do: rotateUpLeft animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Rotate Up Right",
+				"partial": "animation-rotate-up-right",
+				"slug": "rotate-up-right-animation",
+				"code": "data-anijs=\"if: click, do: rotateUpRight animated, after: removeAnim\""
+				}
+			]
+		},
+		"rotating_entrances": {
+			"name": "Rotating Entrances",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Rotate In",
+				"partial": "animation-rotate-in",
+				"slug": "rotate-in-animation",
+				"code": "data-anijs=\"if: click, do: rotateIn animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Rotate In Down Left",
+				"partial": "animation-rotate-in-down-left",
+				"slug": "rotate-in-down-left-animation",
+				"code": "data-anijs=\"if: click, do: rotateInDownLeft animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Rotate In Down Right",
+				"partial": "animation-rotate-in-down-right",
+				"slug": "rotate-in-down-right-animation",
+				"code": "data-anijs=\"if: click, do: rotateInDownRight animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Rotate In Up Left",
+				"partial": "animation-rotate-in-up-left",
+				"slug": "rotate-in-up-left-animation",
+				"code": "data-anijs=\"if: click, do: rotateInUpLeft animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Rotate In Up Right",
+				"partial": "animation-rotate-in-up-right",
+				"slug": "rotate-in-up-right-animation",
+				"code": "data-anijs=\"if: click, do: rotateInUpRight animated, after: removeAnim\""
+				}
+			]
+		},
+		"rotating_exits": {
+			"name": "Rotating Exits",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Rotate Out",
+				"partial": "animation-rotate-out",
+				"slug": "rotate-out-animation",
+				"code": "data-anijs=\"if: click, do: rotateOut animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Rotate Out Down Left",
+				"partial": "animation-rotate-out-down-left",
+				"slug": "rotate-out-down-left-animation",
+				"code": "data-anijs=\"if: click, do: rotateOutDownLeft animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Rotate Out Down Right",
+				"partial": "animation-rotate-out-down-right",
+				"slug": "rotate-out-down-right-animation",
+				"code": "data-anijs=\"if: click, do: rotateOutDownRight animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Rotate Out Up Left",
+				"partial": "animation-rotate-out-up-left",
+				"slug": "rotate-out-up-left-animation",
+				"code": "data-anijs=\"if: click, do: rotateOutUpLeft animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Rotate Out Up Right",
+				"partial": "animation-rotate-out-up-right",
+				"slug": "rotate-out-up-right-animation",
+				"code": "data-anijs=\"if: click, do: rotateOutUpRight animated, after: removeAnim\""
+				}
+			]
+		},
+		"specials": {
+			"name": "Specials",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Hinge",
+				"partial": "animation-hinge",
+				"slug": "hinge-animation",
+				"code": "data-anijs=\"if: click, do: hinge animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Roll In",
+				"partial": "animation-roll-in",
+				"slug": "roll-in-animation",
+				"code": "data-anijs=\"if: click, do: rollIn animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Roll Out",
+				"partial": "animation-roll-out",
+				"slug": "roll-out-animation",
+				"code": "data-anijs=\"if: click, do: rollOut animated, after: removeAnim\""
+				}
+			]
+		},
+		"zooming_entrances": {
+			"name": "Zooming Entrances",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Zoom In",
+				"partial": "animation-zoom-in",
+				"slug": "zoom-in-animation",
+				"code": "data-anijs=\"if: click, do: zoomIn animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Zoom In Down",
+				"partial": "animation-zoom-in-down",
+				"slug": "zoom-in-down-animation",
+				"code": "data-anijs=\"if: click, do: zoomInDown animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Zoom In Left",
+				"partial": "animation-zoom-in-left",
+				"slug": "zoom-in-left-animation",
+				"code": "data-anijs=\"if: click, do: zoomInLeft animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Zoom In Right",
+				"partial": "animation-zoom-in-right",
+				"slug": "zoom-in-right-animation",
+				"code": "data-anijs=\"if: click, do: zoomInRight animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Zoom In Up",
+				"partial": "animation-zoom-in-up",
+				"slug": "zoom-in-up-animation",
+				"code": "data-anijs=\"if: click, do: zoomInUp animated, after: removeAnim\""
+				}
+			]
+		},
+		"zooming_exits": {
+			"name": "Zooming Exits",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Zoom Out",
+				"partial": "animation-zoom-out",
+				"slug": "zoom-out-animation",
+				"code": "data-anijs=\"if: click, do: zoomOut animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Zoom Out Down",
+				"partial": "animation-zoom-out-down",
+				"slug": "zoom-out-down-animation",
+				"code": "data-anijs=\"if: click, do: zoomOutDown animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Zoom Out Left",
+				"partial": "animation-zoom-out-left",
+				"slug": "zoom-out-left-animation",
+				"code": "data-anijs=\"if: click, do: zoomOutLeft animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Zoom Out Right",
+				"partial": "animation-zoom-out-right",
+				"slug": "zoom-out-right-animation",
+				"code": "data-anijs=\"if: click, do: zoomOutRight animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Zoom Out Up",
+				"partial": "animation-zoom-out-up",
+				"slug": "zoom-out-up-animation",
+				"code": "data-anijs=\"if: click, do: zoomOutUp animated, after: removeAnim\""
+				}
+			]
+		},
+		"sliding_entrances": {
+			"name": "Sliding Entrances",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Slide In Down",
+				"partial": "animation-slide-in-down",
+				"slug": "slide-in-down-animation",
+				"code": "data-anijs=\"if: click, do: slideInDown animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Slide In Left",
+				"partial": "animation-slide-in-left",
+				"slug": "slide-in-left-animation",
+				"code": "data-anijs=\"if: click, do: slideInLeft animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Slide In Right",
+				"partial": "animation-slide-in-right",
+				"slug": "slide-in-right-animation",
+				"code": "data-anijs=\"if: click, do: slideInRight animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Slide In Up",
+				"partial": "animation-slide-in-up",
+				"slug": "slide-in-up-animation",
+				"code": "data-anijs=\"if: click, do: slideInUp animated, after: removeAnim\""
+				}
+			]
+		},
+		"sliding_exits": {
+			"name": "Sliding Exits",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{
+				"animation_type": "Slide Out Down",
+				"partial": "animation-slide-out-down",
+				"slug": "slide-out-down-animation",
+				"code": "data-anijs=\"if: click, do: slideOutDown animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Slide Out Left",
+				"partial": "animation-slide-out-left",
+				"slug": "slide-out-left-animation",
+				"code": "data-anijs=\"if: click, do: slideOutLeft animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Slide Out Right",
+				"partial": "animation-slide-out-right",
+				"slug": "slide-out-right-animation",
+				"code": "data-anijs=\"if: click, do: slideOutRight animated, after: removeAnim\""
+				},
+				{
+				"animation_type": "Slide Out Up",
+				"partial": "animation-slide-out-up",
+				"slug": "slide-out-up-animation",
+				"code": "data-anijs=\"if: click, do: slideOutUp animated, after: removeAnim\""
+				}
+			]
+		}
+	},
+
+	"settings_header": "",
+	"settings_data": [
+		{
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
+		}
+	]
+}

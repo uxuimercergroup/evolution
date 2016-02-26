@@ -1,0 +1,82 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "Forms", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/forms.html"}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "",
+		"jquery_ui": "",
+		"jquery_ui_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"other": [
+			{"name": "", "url": "", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"error_text": {
+			"name": "Error Text",
+			"partial": "error-text", "slug": "error-text"
+		},
+		"help_text": {
+			"name": "Help Text",
+			"partial": "help-text", "slug": "help-text"
+		},
+		"label": {
+			"name": "Label",
+			"partial": "label", "slug": "label"
+		},
+		"checkboxes": {
+			"name": "Checkboxes",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "input", "type":"checkbox", "slug": "checkbox"},
+				{"partial": "input", "type":"checkbox", "checked":"true", "slug": "checkbox-checked"}
+			]
+		},
+		"radio_buttons": {
+			"name": "Radio Buttons",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "input", "type":"radio", "input-name":"insert_name_here", "slug": "radio"},
+				{"partial": "input", "type":"radio", "input-name":"insert_name_here", "checked":"true", "slug": "radio-checked"}
+			]
+		},
+		"select": {
+			"name": "Select",
+			"partial": "select", "slug": "select"
+		},
+		"textarea": {
+			"name": "Textarea",
+			"partial": "textarea", "placeholder": "Placeholder text", "slug": "textarea"
+		},
+		"text_input": {
+			"name": "Text Input",
+			"partial": "input", "placeholder": "Placeholder text", "slug": "text-input"
+		},
+		"pre_postfix": {
+			"name": "Prefix and Postfix",
+			"partial": "pre-postfix", "slug": "pre-postfix"
+		},
+		"html5_elements": {
+			"name": "HTML5 Elements",
+			"partial": "html5-elements", "slug": "html5-form-elements"
+		}
+	},
+
+	"settings_header": "",
+	"settings_data": [
+		{
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
+		}
+	]
+}

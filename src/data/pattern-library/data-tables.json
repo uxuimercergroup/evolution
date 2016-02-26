@@ -1,0 +1,39 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "Tables", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/tables.html"},
+			{"name": "Pagination", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/pagination.html"}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "true",
+		"jquery_ui": "",
+		"jquery_ui_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"other": [
+			{"name": "DataTables 1.10.7", "url": "http://datatables.net/", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"basic_table": {
+			"name": "Basic Table",
+			"partial": "data-table", "slug": "basic-table"
+		}
+	},
+
+	"settings_header": "Data Table Data Options",
+	"settings_data": [
+		{
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
+		}
+	]
+}

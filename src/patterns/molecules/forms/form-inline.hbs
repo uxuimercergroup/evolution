@@ -1,0 +1,73 @@
+<!-- FORM INLINE - LEFT ALIGNED - BEGINS -->
+<form class="" id="" name="" method="" action="" title="" data-abide>
+	<fieldset>
+		<div class="row">
+			<div class="small-5 columns">
+				<label class="inline" for="input-example2">
+					Input Label{{> icon class="evo-icon-custom-asterisk-small evo-form-required-icon"}}
+				</label>
+			</div>
+			<div class="small-7 columns">				
+				{{> input type="text" placeholder="Placeholder text" required="true"}}
+				{{> error-text}}
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="small-5 columns">
+				<label class="inline" for="select-example2">
+					Select Box{{> icon class="evo-icon-custom-asterisk-small evo-form-required-icon"}}
+				</label>
+			</div>
+			<div class="small-7 columns">
+				{{> select required="true"}}
+				{{> error-text}}
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="small-5 columns">
+				{{> label text="Choose Your Favorite"}}
+			</div>
+			<div class="small-7 columns">
+				{{> input type="radio" input-name="color" input-value="red" id="red"}}
+				{{> label text="Red" for="red"}}
+
+				{{> input type="radio" input-name="color" input-value="blue" id="blue"}}
+				{{> label text="Blue" for="blue"}}
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="small-5 columns">
+				{{> label text="Check These Out"}}
+			</div>
+			<div class="small-7 columns">				
+				{{> input type="checkbox" id="checkbox1" checked="true"}}
+				{{> label text="Checkbox 1" for="checkbox1"}}
+
+				{{> input type="checkbox" id="checkbox2"}}
+				{{> label text="Checkbox 2" for="checkbox2"}}
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="small-5 columns">
+				<label for="textarea-example2">
+					Textarea Label{{> icon class="evo-icon-custom-asterisk-small evo-form-required-icon"}}
+				</label>
+			</div>
+			<div class="small-7 columns">
+				{{> textarea placeholder="Placeholder text" required="true"}}
+				{{> error-text}}
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="small-12 columns">
+				{{> button button-type="button" button-title="Click for Validation" text="Click for Validation"}}
+			</div>
+		</div>
+	</fieldset>
+</form>
+<!-- FORM INLINE - LEFT ALIGNED - ENDS -->

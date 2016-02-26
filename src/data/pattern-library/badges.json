@@ -1,0 +1,96 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "Labels", "url": "http://foundation.zurb.com/docs/components/labels.html"}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "",
+		"jquery_ui": "",
+		"jquery_ui_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"other": [
+			{"name": "", "url": "", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"basic_badge": {
+			"name": "Basic Badge",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "badge", "text": "9", "slug": "basic-badge"},
+				{"partial": "badge", "text": "99", "slug": "basic-badge"},
+				{"partial": "badge", "text": "999", "slug": "basic-badge"},
+				{"partial": "badge", "text": "9999", "slug": "basic-badge"}
+			]
+		},
+		"badge_size_small": {
+			"name": "Badge Size Small",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "badge", "text": "9", "size": "small", "slug": "badge-size-small"},
+				{"partial": "badge", "text": "99", "size": "small", "slug": "badge-size-small"},
+				{"partial": "badge", "text": "999", "size": "small", "slug": "badge-size-small"},
+				{"partial": "badge", "text": "9999", "size": "small", "slug": "badge-size-small"}
+			]
+		},
+		"badge_size_medium": {
+			"name": "Badge Size Medium",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "badge", "text": "9", "size": "medium", "slug": "badge-size-medium"},
+				{"partial": "badge", "text": "99", "size": "medium", "slug": "badge-size-medium"},
+				{"partial": "badge", "text": "999", "size": "medium", "slug": "badge-size-medium"},
+				{"partial": "badge", "text": "9999", "size": "medium", "slug": "badge-size-medium"}
+			]
+		},
+		"badge_size_large": {
+			"name": "Badge Size Large",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "badge", "text": "9", "size": "large", "slug": "badge-size-large"},
+				{"partial": "badge", "text": "99", "size": "large", "slug": "badge-size-large"},
+				{"partial": "badge", "text": "999", "size": "large", "slug": "badge-size-large"},
+				{"partial": "badge", "text": "9999", "size": "large", "slug": "badge-size-large"}
+			]
+		},
+		"badge_size_x_large": {
+			"name": "Badge Size X-Large",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "badge", "text": "9", "size": "x-large", "slug": "badge-size-x-large"},
+				{"partial": "badge", "text": "99", "size": "x-large", "slug": "badge-size-x-large"},
+				{"partial": "badge", "text": "999", "size": "x-large", "slug": "badge-size-x-large"},
+				{"partial": "badge", "text": "9999", "size": "x-large", "slug": "badge-size-x-large"}
+			]
+		}
+	},
+
+	"settings_header": "Badge Data Options",
+	"settings_data": [
+		{
+			"option": "data-evo-background-color",
+			"default_value": "--",
+			"option_value": "<a href=\"/pattern-library/color-palette.html\">color palette</a> (for example: <strong>sapphire-dark</strong>),<br><strong>alert, warning, success, info</strong>",
+			"description": "Add one of the option values on the <code>data-evo-background-color</code> attribute of the badge"
+		},
+		{
+			"option": "data-evo-badge-size",
+			"default_value": "small",
+			"option_value": "<strong>small, medium, large, x-large</strong>",
+			"description": "Add one of the option values on the <code>data-evo-badge-size</code> attribute of the badge"
+		},
+		{
+			"option": "data-evo-font-color",
+			"default_value": "--",
+			"option_value": "<a href=\"/pattern-library/color-palette.html\">color palette</a> (for example: <strong>sapphire-dark</strong>)",
+			"description": "Add one of the option values on the <code>data-evo-font-color</code> attribute of the badge"
+		}
+	]
+}

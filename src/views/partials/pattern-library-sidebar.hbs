@@ -1,0 +1,15 @@
+<div id="jumpToMenu">
+{{#each pattern-library.sidebar}}
+<!-- TOC - SECTION HEADER - BEGINS -->
+	<h6 class="evo-hdr-rule">{{header}}</h6>
+<!-- TOC - SECTION HEADER - ENDS -->
+
+<!-- TOC - SECTION LIST - BEGINS -->
+	<dl>
+		{{#each section}}
+			<dd><a href="{{url}}">{{name}}</a></dd>
+		{{/each}}
+	</dl>
+<!-- TOC - SECTION LIST - ENDS -->
+{{/each}}
+</div>

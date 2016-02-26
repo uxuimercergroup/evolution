@@ -1,0 +1,97 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "Grid", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/grid.html"},
+			{"name": "Block Grid", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/block_grid.html"}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "",
+		"jquery_ui": "",
+		"jquery_ui_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"other": [
+			{"name": "", "url": "", "external_link": "true"}
+		]
+	},
+
+	"tab-spacing": "even-2",
+	"tabs": [
+		{"name": "Examples", "active": "true", "index": "0"},
+		{"name": "Usage", "index": "2"}
+	],
+
+	"basic_nav": "Basic Grid",
+	"offsets_nav": "Grid Offsets",
+	"center_nav": "Centering",
+	"source_nav": "Source Ordering",
+	"block_nav": "Block Grids",
+
+	"data": {
+		"basic": {
+			"name": "Basic Grid",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "grid-basic", "slug": "basic-grid"}
+			]
+		},
+		"layouts": {
+			"name": "Layouts",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "grid-1-col", "slug": "full-width"},
+				{"partial": "grid-2-col-25-75", "slug": "25-75"},
+				{"partial": "grid-2-col-33-66", "slug": "33-66"},
+				{"partial": "grid-2-col-50-50", "slug": "50-50"},
+				{"partial": "grid-2-col-66-33", "slug": "66-33"},
+				{"partial": "grid-2-col-75-25", "slug": "75-25"},
+				{"partial": "grid-3-col-25-50-25", "slug": "25-50-25"},
+				{"partial": "grid-3-col-33-33-33", "slug": "33-33-33"},
+				{"partial": "grid-4-col-25-25-25-25", "slug": "25-25-25-25"}
+			]
+		},
+		"centering": {
+			"name": "Centering",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "grid-centering", "slug": "centering"}
+			]
+		},
+		"source_ordering": {
+			"name": "Source Ordering",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "grid-source-ordering", "slug": "source-ordering"}
+			]
+		},
+		"offsets": {
+			"name": "Grid Offsets",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "grid-offset", "slug": "grid-offset"}
+			]
+		},
+		"block_grid": {
+			"name": "Block Grids",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "block-grid-basic", "slug": "block-grid-basic"}
+			]
+		}
+	},
+
+	"settings_header": "",
+	"settings_data": [
+		{
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
+		}
+	]
+}

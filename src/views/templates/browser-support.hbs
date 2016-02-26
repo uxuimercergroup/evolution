@@ -1,0 +1,71 @@
+---
+title: "Browser Support"
+---
+
+<!-- HERO - BEGINS -->
+	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="medium" data-evo-site-hero-arrow-position="bottom">
+		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
+			<div class="text-center evo-center-block-vertical-element">
+				<h1 class="evo-site-hero--hdr flipInY animated evo-no-margin-bottom" data-evo-site-hero-hdr-size="medium">{{{browser-support.hero.title}}} <span>{{{browser-support.hero.subtitle}}}</span></h1>
+			</div>		
+		</div>
+	</section>
+<!-- HERO - ENDS -->
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="evo-contain-to-grid">
+		<div class="small-12 columns evo-spacer-padding-top-xxx-large evo-spacer-padding-bottom-xxx-large">
+
+{{# markdown }}
+Evolution is a modern framework for modern browsers. As such, Evolution is intended for **B Grade browsers and above**. For F Grade browsers, which are explicitly unsupported and untested, elements will render differently from supported browsers.
+***
+{{/ markdown }}
+
+		<!-- BROWSER GRADING TABLE - BEGINS -->
+			<div class="evo-table-small-mediaquery">
+				<table class="evo-table" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="" role="grid">
+					<thead>
+						<tr>
+							<th scope="column">Browser</th>
+							<th scope="column" data-evo-background-color="emerald-medium">A Grade</th>
+							<th scope="column" data-evo-background-color="emerald-medium">B Grade</th>
+							<th scope="column" data-evo-background-color="garnet-medium">F Grade (not supported)</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each browser-support.data}}
+						<tr>
+							<td><strong>{{{ browserType }}}</strong></td>
+							<td data-evo-background-color="emerald-light">{{{ gradeA }}}</td>
+							<td data-evo-background-color="emerald-light">{{{ gradeB }}}</td>
+							<td data-evo-background-color="garnet-light">{{{ gradeF }}}</td>
+						</tr>
+						{{/each}}
+					</tbody>
+				</table>
+			</div>
+		<!-- BROWSER GRADING TABLE - ENDS -->
+
+		<!-- BROWSER GRADING KEY - BEGINS -->
+			<h6 class="evo-hdr-rule">{{browser-support.browser_key_header}}</h6>
+			<ul class="evo-data-list">
+				{{#each browser-support.browser_level}}
+				<li>{{{ level }}}</li>
+				{{/each}}
+			</ul>
+		<!-- BROWSER GRADING KEY - ENDS -->
+
+		<!-- ANNOTATIONS BOX - BEGINS -->
+			<div class="panel evo-box evo-site-annotations">
+				<div class="evo-box-bdy">
+					<h6>{{ browser-support.ie-compatibility-mode-header }}</h6>
+					<p class="evo-no-margin-bottom">
+						{{{ browser-support.ie-compatibility-mode-content }}}
+					</p>
+				</div>
+			</div>
+		<!-- ANNOTATIONS BOX - ENDS -->
+
+		</div>
+	</section>
+<!-- PAGE CONTENT - ENDS -->

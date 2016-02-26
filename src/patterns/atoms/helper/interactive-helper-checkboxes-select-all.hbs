@@ -1,0 +1,26 @@
+<!-- SELECT ALL CHECKBOXES TABLE HELPER - BEGINS -->
+<div class="evo-table-small-mediaquery">
+	<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-select-all-checkboxes-example" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+		<thead>
+			<tr>
+				<th scope="column" class="evo-table-form-element-cell"><input data-evo-checkboxes-select-all type="checkbox" tabindex="" title="" /></th>
+				<th scope="column">Rendering engine</th>
+				<th scope="column">Browser</th>
+				<th scope="column">Platform(s)</th>
+				<th scope="column">Engine Version</th>
+			</tr>
+		</thead>
+		<tbody>
+		{{#slice global.kitchen_sink_demo_data offset="10" limit="5"}}
+			<tr>
+				<td class="evo-table-form-element-cell"><input data-evo-checkboxes-select-all-item type="checkbox" tabindex="" title="" /></td>
+				<td>{{ renderingEngine }}</td>
+				<td>{{ browser }}</td>
+				<td>{{ platform }}</td>
+				<td>{{ engine }}</td>
+			</tr>
+		{{/slice}}
+		</tbody>
+	</table>
+</div>
+<!-- SELECT ALL CHECKBOXES TABLE HELPER - ENDS -->

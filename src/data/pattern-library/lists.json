@@ -1,0 +1,112 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "Inline Lists", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/inline_lists.html"}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "",
+		"jquery_ui": "",
+		"jquery_ui_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"other": [
+			{"name": "", "url": "", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"default_horizontal_list": {
+			"name": "Default",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "list-horizontal-default", "slug": "list-horizontal-default"}
+			]
+		},
+		"default_horizontal_list_links": {
+			"name": "Default with Links",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "list-horizontal-default-links", "slug": "list-horizontal-default-links"}
+			]
+		},
+		"default_horizontal_list_pipes": {
+			"name": "Default with Pipes",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "list-horizontal-default-pipes", "slug": "list-horizontal-default-pipes"}
+			]
+		},
+		"default_horizontal_list_links_pipes": {
+			"name": "Default with Links and Pipes",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "list-horizontal-default-links-pipes", "slug": "list-horizontal-default-links-pipes"}
+			]
+		},
+		"list_horizontal_definition": {
+			"name": "Definition List",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "list-horizontal-definition", "slug": "list-horizontal-definition"}
+			]
+		},
+		"list_horizontal_definition_links": {
+			"name": "Definition List with Links",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "list-horizontal-definition-links", "slug": "list-horizontal-definition-links"}
+			]
+		},
+		"list_horizontal_definition_links_pipes": {
+			"name": "Definition List with Links and Pipes",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "list-horizontal-definition-pipes", "slug": "list-horizontal-definition-pipes"}
+			]
+		},
+		"data_list_default": {
+			"name": "Default Data List",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "list-data-default", "slug": "list-data-default"}
+			]
+		},
+		"data_list_default_stacked": {
+			"name": "Default Data List Stacked",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "list-data-default-stacked", "slug": "list-data-default-stacked"}
+			]
+		},
+		"data_definition_list": {
+			"name": "Data Definition List",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "list-data-definition", "slug": "list-data-definition"}
+			]
+		},
+		"data_definition_list_stacked": {
+			"name": "Data Definition List Stacked",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "list-data-definition-stacked", "slug": "list-data-definition-stacked"}
+			]
+		}
+
+	},
+
+	"settings_header": "",
+	"settings_data": [
+		{
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
+		}
+	]
+}

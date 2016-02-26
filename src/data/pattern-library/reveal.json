@@ -1,0 +1,46 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "Reveal Modal", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/reveal.html"}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "",
+		"jquery_ui": "",
+		"jquery_ui_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"other": [
+			{"name": "", "url": "", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"reveal": {
+			"name": "Reveal Modal",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "reveal-default", "slug": "reveal-default"},
+				{"partial": "reveal-small", "slug": "reveal-small"},
+				{"partial": "reveal-medium", "slug": "reveal-medium"},
+				{"partial": "reveal-large", "slug": "reveal-large"},
+				{"partial": "reveal-xlarge", "slug": "reveal-xlarge"},
+				{"partial": "reveal-full", "slug": "reveal-full"}
+			]
+		}
+	},
+
+	"settings_header": "",
+	"settings_data": [
+		{
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
+		}
+	]
+}

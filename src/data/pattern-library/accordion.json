@@ -1,0 +1,42 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "Accordions", "url": "http://foundation.zurb.com/docs/components/accordion.html"}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "",
+		"jquery_ui": "",
+		"jquery_ui_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"other": [
+			{"name": "", "url": "", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"accordion": {
+			"name": "Accordion",
+			"partial": "accordion", "slug": "accordion"
+		},
+		"accordion_icon": {
+			"name": "Accordion With Icons",
+			"partial": "accordion-icons", "slug": "accordion-with-icons"
+		}
+	},
+
+	"settings_header": "",
+	"settings_data": [
+		{
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
+		}
+	]
+}

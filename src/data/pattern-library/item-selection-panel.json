@@ -1,0 +1,49 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "Block Grid", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/block_grid.html"}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "Icons", "url": "/pattern-library/icons.html"},
+			{"name": "Photo Icons", "url": "/pattern-library/icons.html"}
+		],
+		"jquery": "",
+		"jquery_ui": "",
+		"jquery_ui_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"other": [
+			{"name": "", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"basic_item_selection_panel": {
+			"name": "Item Selection Panel",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "item-selection-panel", "slug": "basic-item-selection-panel"}
+			]
+		},
+		"item_selection_panel_photo_icons": {
+			"name": "Item Selection Panel Photo Icons",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "item-selection-panel-photo-icons", "slug": "item-selection-panel-photo-icons"}
+			]
+		}
+	},
+
+	"settings_header": "",
+	"settings_data": [
+		{
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
+		}
+	]
+}

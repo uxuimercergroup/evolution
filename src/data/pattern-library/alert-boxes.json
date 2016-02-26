@@ -1,0 +1,54 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "Alert Boxes", "url": "http://foundation.zurb.com/docs/components/alert_boxes.html"}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "",
+		"jquery_ui": "",
+		"jquery_ui_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"other": [
+			{"name": "", "url": "", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"basic_custom": {
+			"name": "Custom Box",
+			"partial": "alert-box", "type": "custom", "slug": "custom-message-box"
+		},
+		"basic_warning": {
+			"name": "Warning Box",
+			"partial": "alert-box", "type": "warning", "slug": "warning-message-box"
+		},
+		"basic_success": {
+			"name": "Success Box",
+			"partial": "alert-box", "type": "success", "slug": "success-message-box"
+		},
+		"basic_alert": {
+			"name": "Alert Box",
+			"partial": "alert-box", "type": "alert", "slug": "alert-message-box"
+		},
+		"basic_info": {
+			"name": "Info Box",
+			"partial": "alert-box", "type": "info", "slug": "info-message-box"
+		}
+	},
+
+	"settings_header": "",
+	"settings_data": [
+		{
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
+		}
+	]
+}

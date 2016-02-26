@@ -1,0 +1,294 @@
+//-------------------------------------------------------------------------------------------
+// Project SASS Variables
+//-------------------------------------------------------------------------------------------
+
+// ==========================================================================================
+// VARIABLES
+// ==========================================================================================
+
+// DEVELOPER TOOLS
+
+	// CODE
+	$evo-site-code-border-radius: $global-radius;
+
+	// ANNOTATIONS
+	$evo-site-annotations-background-color: $highlight-color;
+	$evo-site-annotations-border-width: 0;
+
+
+// SITE GLOBAL
+
+	// LAYOUTS
+
+		// MAIN BODY SECTION
+		$evo-site-main-section-min-height: rem-calc(600);
+
+	// TYPE
+
+		// HEADERS
+		$evo-site-h1-font-size-small: rem-calc(26);
+		$evo-site-h2-font-size-small: rem-calc(22);
+		$evo-site-h3-font-size-small: rem-calc(18);
+		$evo-site-h4-font-size-small: rem-calc(16);
+		$evo-site-h5-font-size-small: rem-calc(14);
+		$evo-site-h6-font-size-small: rem-calc(12);
+
+	// BUTTONS
+
+		// CALL TO ACTION BUTTON
+		$evo-site-cta-button-border-width: 2px;
+		$evo-site-cta-button-border-style: solid;
+		$evo-site-cta-button-border-color: $sapphire-medium;
+		$evo-site-cta-button-background-color: $transparent;
+		$evo-site-cta-button-font-color: $sapphire-medium;
+		$evo-site-cta-button-min-width: rem-calc(200);
+		$evo-site-cta-button-hover-background-color: $sapphire-medium;
+		$evo-site-cta-button-hover-font-color: $white;
+
+	// HEADER
+	$evo-site-header-sub-name-font-family: $evo-font-thin-stack;
+
+		// WHAT'S NEW CALL TO ACTION
+		$evo-site-header-cta-whats-new-color: $white;
+		$evo-site-header-cta-whats-new-font-family: $evo-font-regular-stack;
+		$evo-site-header-cta-whats-new-letter-spacing: rem-calc(2.5);
+		$evo-site-header-cta-whats-new-text-transform: uppercase;
+		$evo-site-header-cta-whats-new-background-color: #004687;
+		$evo-site-header-cta-whats-new-hover-background-color: $sapphire-medium;
+		$evo-site-header-cta-whats-new-icon-color: $white;
+
+	// HERO
+
+		// HERO BANNER
+		$evo-site-hero-background-color: $sapphire-bright;
+		$evo-site-hero-background-image: "../images/hero/evo-site-hero-background.png";
+		$evo-site-hero-background-repeat: no-repeat;
+		$evo-site-hero-background-position: center;
+		$evo-site-hero-background-size: cover;
+		$evo-site-hero-height: rem-calc(100);
+
+		// HERO HEADER
+		$evo-site-hero-hdr-border-width: 2px;
+		$evo-site-hero-hdr-border-style: solid;
+		$evo-site-hero-hdr-border-color: $white;
+		$evo-site-hero-hdr-color: $white;
+		$evo-site-hero-hdr-font-family: $evo-font-thin-stack;
+		$evo-site-hero-hdr-font-size: rem-calc(20);
+		$evo-site-hero-hdr-line-height: ($evo-site-hero-hdr-font-size*1.5);
+		$evo-site-hero-hdr-letter-spacing: rem-calc(4.5);
+		$evo-site-hero-hdr-letter-spacing-medium: rem-calc(6.5);
+		$evo-site-hero-hdr-letter-spacing-large: rem-calc(9.5);
+		$evo-site-hero-hdr-padding: rem-calc(8 10 6 14);
+		$evo-site-hero-hdr-padding-medium: rem-calc(10 9 6 15);
+		$evo-site-hero-hdr-padding-large: rem-calc(13 9 8 18);
+		$evo-site-hero-hdr-margin-top: 0;
+		$evo-site-hero-hdr-margin-bottom: rem-calc(22);
+		$evo-site-hero-hdr-sub-name-font-family: $evo-font-medium-stack;
+
+		// HERO TAGLINE
+		$evo-site-hero-tagline-color: $white;
+		$evo-site-hero-tagline-font-family: $evo-font-thin-stack;
+		$evo-site-hero-tagline-font-size-small: $evo-site-h5-font-size-small;
+		$evo-site-hero-tagline-max-width-small: 88%;
+		$evo-site-hero-tagline-max-width-medium: 84%;
+		$evo-site-hero-tagline-max-width-large: 64%;
+
+	// BANDS
+	$evo-site-band-padding: rem-calc(40 0);
+	$evo-site-band-padding-medium: rem-calc(80 0);
+
+		// MARKETING BAND
+		$evo-site-band-marketing-background-color: $onyx-dark-2;
+		$evo-site-band-marketing-h3-margin-bottom: rem-calc(30);
+		$evo-site-band-marketing-h3-margin-bottom-medium: rem-calc(80);
+		$evo-site-band-marketing-h6-margin-bottom: rem-calc(30);
+		$evo-site-band-marketing-h6-margin-bottom-medium: rem-calc(80);
+		$evo-site-band-marketing-h3-font-size-small: $evo-site-h3-font-size-small;
+		$evo-site-band-marketing-h6-font-size-small: $evo-site-h6-font-size-small;
+		$evo-site-band-marketing-cta-button-margin-bottom: rem-calc(30);
+		$evo-site-band-marketing-block-grid-item-padding-bottom-small: rem-calc(20);
+		$evo-site-band-marketing-block-grid-h4-font-size-small: $evo-site-h4-font-size-small;
+		$evo-site-band-marketing-block-grid-h4-margin-small: 0;
+		$evo-site-band-marketing-block-grid-h5-font-size-small: $evo-site-h5-font-size-small;
+		$evo-site-band-marketing-block-grid-icon-color: $onyx-dark-20;
+		$evo-site-band-marketing-block-grid-h4-color: $sapphire-bright;
+		$evo-site-band-marketing-block-grid-link-text-decoration: none;
+		$evo-site-band-marketing-block-grid-h5-margin-top: rem-calc(10);
+		$evo-site-band-marketing-block-grid-h5-margin-top-medium: rem-calc(20);
+		$evo-site-band-marketing-block-grid-h5-font-family: $evo-font-medium-stack;
+		$evo-site-band-marketing-block-grid-paragraph-color: $onyx-medium;
+
+		// TAB BAND
+		$evo-site-band-tab-box-shadow-horizontal: 0;
+		$evo-site-band-tab-box-shadow-vertical: 0;
+		$evo-site-band-tab-box-shadow-blur: 8px;
+		$evo-site-band-tab-box-shadow-spread: 1px;
+		$evo-site-band-tab-box-shadow-color: $black;
+		$evo-site-band-tab-box-shadow-alpha: .15;
+		$evo-site-band-tab-hdr-background-color: $onyx-dark-2;
+		$evo-site-band-tab-hdr-tab-border-radius: rem-calc(15) rem-calc(15) 0 0;
+		$evo-site-band-tab-hdr-tab-padding: rem-calc(30);
+		$evo-site-band-tab-hdr-tab-padding-small: rem-calc(20);
+		$evo-site-band-tab-hdr-tab-h3-font-size-small: $evo-site-h3-font-size-small;
+		$evo-site-band-tab-hdr-tab-margin-bottom: rem-calc(-10);
+		$evo-site-band-tab-hdr-tab-font-color: $sapphire-bright;
+		$evo-site-band-tab-panel-background-color: $white;
+		$evo-site-band-tab-panel-padding: rem-calc(30 15);
+		$evo-site-band-tab-panel-marketing-content-header-font-color: $sapphire-bright;
+		$evo-site-band-tab-panel-marketing-content-header-margin: rem-calc(0 0 15 0);
+		$evo-site-band-tab-panel-marketing-content-header-margin-medium: rem-calc(0 0 30 0);
+		$evo-site-band-tab-panel-marketing-content-header-h3-font-size: rem-calc(26);
+		$evo-site-band-tab-panel-marketing-content-paragraph-font-color: $onyx-medium;
+		$evo-site-band-tab-panel-marketing-content-paragraph-font-size: rem-calc(18);
+		$evo-site-band-tab-panel-marketing-content-paragraph-font-size-medium: rem-calc(26);
+		$evo-site-band-tab-panel-marketing-content-paragraph-line-height: 1.25;
+		$evo-site-band-tab-panel-marketing-content-paragraph-margin-bottom: rem-calc(15);
+		$evo-site-band-tab-panel-marketing-content-paragraph-margin-bottom-medium: rem-calc(30);
+		$evo-site-band-tab-panel-marketing-content-paragraph-strong-font-color: $black;
+
+	// TILES
+	$evo-site-tile-padding: rem-calc(20 30 30 30);
+	$evo-site-tile-margin: rem-calc(0 15 15 0);
+	$evo-site-tile-min-height: rem-calc(410);
+	$evo-site-tile-background-color: $onyx-medium;
+	$evo-site-tile-hdr-font-family: $evo-font-thin-stack;
+	$evo-site-tile-hdr-font-size: rem-calc(110);
+	$evo-site-tile-hdr-line-height: 1;
+	$evo-site-tile-hdr-font-color: $white;
+	$evo-site-tile-hdr-margin-bottom: rem-calc(148);
+	$evo-site-tile-body-font-color: $white;
+
+	// SWATCH
+	$evo-site-swatch-background-color: $onyx-bright;
+	$evo-site-swatch-border-radius: $global-radius;
+	$evo-site-swatch-border-width: 1px;
+	$evo-site-swatch-border-style: solid;
+	$evo-site-swatch-border-color: $onyx-dark-70;
+	$evo-site-swatch-height: rem-calc(60);
+	$evo-site-swatch-width: rem-calc(110);
+	$evo-site-swatch-margin-bottom: rem-calc(5);
+	$evo-site-swatch-details-font-size: $small-font-size;
+	$evo-site-swatch-details-text-align: center;
+
+
+// PATTERN LIBRARY PAGES
+
+	// PATTERN LIBRARY TEMPLATE
+	$evo-site-pattern-library-keyline-color: $onyx-dark-10;
+	$evo-site-pattern-library-keyline-min-height: rem-calc(1500);
+
+		// INTRO
+		$evo-site-pattern-library-intro-border-bottom-width: 1px;
+		$evo-site-pattern-library-intro-border-bottom-style: solid;
+		$evo-site-pattern-library-intro-border-bottom-color: $onyx-dark-10;
+		$evo-site-pattern-library-intro-padding-bottom: rem-calc(8);
+
+		// CONTENT TABS
+		$evo-site-tabs-pattern-library-tabs-margin-bottom: rem-calc(22);
+		$evo-site-tabs-pattern-library-tab-background-color: $onyx-dark-10;
+		$evo-site-tabs-pattern-library-tab-font-color: $onyx-dark-80;
+		$evo-site-tabs-pattern-library-tab-hover-background-color: $onyx-dark-14;
+		$evo-site-tabs-pattern-library-tab-hover-font-color: $onyx-dark-80;
+		$evo-site-tabs-pattern-library-tab-active-background-color: $onyx-dark-20;
+		$evo-site-tabs-pattern-library-tab-active-font-color: $onyx-dark-80;
+		$evo-site-tabs-pattern-library-tab-active-hover-background-color: $onyx-dark-20;
+		$evo-site-tabs-pattern-library-tab-width-small: 100%;
+		$evo-site-tabs-pattern-library-tab-link-border-top-color-small: $white;
+		$evo-site-tabs-pattern-library-tab-active-link-background-color-small: $onyx-dark-20;
+		$evo-site-tabs-pattern-library-tab-active-link-font-color-small: $onyx-dark-80;
+		$evo-site-tabs-pattern-library-tab-active-link-hover-background-color-small: $onyx-dark-20;
+		$evo-site-tabs-pattern-library-tab-content-section-margin-bottom: rem-calc(30);
+
+		// SIDEBAR
+		$evo-site-pattern-library-sidebar-background-color: $sapphire-bright;
+		$evo-site-pattern-library-sidebar-padding: rem-calc(20);
+		$evo-site-pattern-library-sidebar-hdr-margin: rem-calc(0 0 10 0);
+		$evo-site-pattern-library-sidebar-hdr-font-color: $sapphire-light;
+		$evo-site-pattern-library-sidebar-hdr-border-bottom-color: $sapphire-light;
+		$evo-site-pattern-library-sidebar-hdr-border-bottom-style: solid;
+		$evo-site-pattern-library-sidebar-list-margin-bottom: rem-calc(18);
+		$evo-site-pattern-library-sidebar-list-item-line-height: 1.75;
+		$evo-site-pattern-library-sidebar-link-font-color: $white;
+
+		// SIDENAV
+
+			// SIDENAV MAGELLAN
+			$evo-site-sidenav-magellan-background-color: $white;
+			$evo-site-sidenav-magellan-link-line-height: 1.6;
+			$evo-site-sidenav-magellan-link-color: $sapphire-medium;
+			$evo-site-sidenav-magellan-link-text-decoration: underline;
+			$evo-site-sidenav-magellan-link-background-color: $transparent;
+			$evo-site-sidenav-magellan-link-hover-background-color: $transparent;
+			$evo-site-sidenav-magellan-fixed-width: 19%;
+			$evo-site-sidenav-magellan-fixed-active-icon: "\edc5";
+			$evo-site-sidenav-magellan-fixed-active-icon-color: $sapphire-bright;
+			$evo-site-sidenav-magellan-fixed-active-icon-position-left: -3px;
+			$evo-site-sidenav-magellan-fixed-active-icon-margin-top: rem-calc(2);
+
+			// SIDENAV ACCORDION
+			$evo-site-pattern-library-sidenav-accordian-icon-color: $sapphire-medium;
+			$evo-site-pattern-library-sidenav-accordian-content-link-font-family: $evo-font-regular-stack;
+			$evo-site-pattern-library-sidenav-accordian-content-link-font-size: rem-calc(14);
+			$evo-site-pattern-library-sidenav-accordian-content-link-text-decoration: underline;
+			$evo-site-pattern-library-sidenav-accordian-content-list-item-line-height: 1.3;
+
+		// EXAMPLE BOX
+		$evo-site-example-box-background-color: $white;
+		$evo-site-example-box-margin-bottom: rem-calc(80);
+		$evo-site-example-box-hdr-border-bottom-width: 1px;
+		$evo-site-example-box-hdr-border-bottom-color: $onyx-dark-10;
+		$evo-site-example-box-code-hdr-border-radius: $global-radius $global-radius 0 0;
+		$evo-site-example-box-code-hdr-background-color: $onyx-dark-10;
+		$evo-site-example-box-code-hdr-font-size: rem-calc(12);
+		$evo-site-example-box-code-hdr-padding: rem-calc(4 4 4 8);
+		$evo-site-example-box-code-hdr-icon-color: $onyx-dark-70;
+		$evo-site-example-box-code-hdr-hover-icon-color: $onyx-dark-80;
+
+		// MARKDOWN CONTENT BLOCK
+		$evo-site-markdown-hdr-rule-border-size: 1px;
+		$evo-site-markdown-hdr-rule-border-style: dotted;
+		$evo-site-markdown-hdr-rule-border-color: $onyx-dark-30;
+		$evo-site-markdown-hdr-rule-margin-bottom: rem-calc(10);
+
+// HOME PAGE
+
+	// BENEFITS BAND
+	$evo-site-home-benefits-band-tab-panel-padding: rem-calc(15 0 0 15);
+	$evo-site-home-benefits-band-tile-background-repeat: no-repeat;
+	$evo-site-home-benefits-band-tile-background-position: center;
+	$evo-site-home-benefits-band-tile-background-size: cover;
+	$evo-site-home-benefits-band-benefits1-tile-background-color: $sapphire-medium;
+	$evo-site-home-benefits-band-benefits1-tile-background-image: "../images/evo-site-home-benefits-tile-1.png";
+	$evo-site-home-benefits-band-benefits2-tile-background-color: $turquoise-bright;
+	$evo-site-home-benefits-band-benefits2-tile-background-image: "../images/evo-site-home-benefits-tile-2.png";
+	$evo-site-home-benefits-band-benefits3-tile-background-color: $ruby-bright;
+	$evo-site-home-benefits-band-benefits3-tile-background-image: "../images/evo-site-home-benefits-tile-3.png";
+	$evo-site-home-benefits-band-benefits3-tile-background-size: 353px 326px;
+	$evo-site-home-benefits-band-benefits3-tile-background-position: top right;
+	$evo-site-home-benefits-band-benefits4-tile-background-color: $sapphire-bright;
+	$evo-site-home-benefits-band-benefits4-tile-background-image: "../images/evo-site-home-benefits-tile-4.png";
+	$evo-site-home-benefits-band-benefits5-tile-background-color: $topaz-bright;
+	$evo-site-home-benefits-band-benefits5-tile-background-image: "../images/evo-site-home-benefits-tile-5.png";
+	$evo-site-home-benefits-band-benefits5-tile-background-size: auto;
+	$evo-site-home-benefits-band-benefits5-tile-background-position: top -46px right;
+
+
+// WHAT IS PAGE
+
+	// MISSION TAB BAND
+	$evo-site-what-is-band-tab-panel-background-image: "../images/evo-site-tablet-desktop-vector.png";
+	$evo-site-what-is-band-tab-panel-background-repeat: no-repeat;
+	$evo-site-what-is-band-tab-panel-background-size: auto;
+	$evo-site-what-is-band-tab-panel-background-position-medium: right -310px top 76px;
+	$evo-site-what-is-band-tab-panel-background-position-large: right -200px top 76px;
+	$evo-site-what-is-band-tab-panel-padding: rem-calc(80 15 130 15);
+	$evo-site-what-is-band-tab-panel-marketing-content-padding: rem-calc(0 30);
+	$evo-site-what-is-band-tab-panel-marketing-content-padding-large: rem-calc(40 0 40 40);
+	$evo-site-what-is-band-tab-panel-marketing-content-keyline-border-width: 2px;
+	$evo-site-what-is-band-tab-panel-marketing-content-keyline-border-color: $onyx-dark-10;
+
+
+// ANIMATIONS PAGE
+
+	// SWATCH
+	$evo-site-animation-block-swatch-font-color: $white;

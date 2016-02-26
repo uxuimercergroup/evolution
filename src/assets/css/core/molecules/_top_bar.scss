@@ -1,0 +1,277 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Top Bar Partial
+//-------------------------------------------------------------------------------------------
+
+//
+// @notes
+//
+
+// Top bar is for large and up media queries only, hence no mobile first styles for small or medium media queries
+// On small and medium media queries, top bar is replaced by offcanvas menu and mobile header component
+
+
+//
+// @variables
+//
+$evo-top-bar-icon-font-family: $evo-icon-font-stack !default;
+$evo-top-bar-icon-site-font-family: $evo-icon-site-font-stack !default;
+$evo-top-bar-anchor-decoration: none !default;
+$evo-top-bar-title-area-image-position-top: -2px !default;
+$evo-top-bar-title-area-image-position-left: -7px !default;
+$evo-top-bar-title-area-name-font-family: $font-family-sans-serif !default;
+$evo-top-bar-title-area-name-letter-spacing: rem-calc(3) !default;
+$evo-top-bar-title-area-name-font-color: scale-color($topbar-bg-color, $lightness: 100%) !default;
+$evo-top-bar-title-area-name-link-color: scale-color($topbar-bg-color, $lightness: 100%) !default;
+$evo-top-bar-title-area-sub-name-font-family: $font-family-sans-serif !default;
+$evo-top-bar-section-anchor-icon-margin-top: -1px !default;
+$evo-top-bar-section-anchor-icon-padding-right: rem-calc(18) !default;
+$evo-top-bar-section-anchor-icon-padding-left: rem-calc(18) !default;
+$evo-top-bar-section-anchor-icon-font-size: rem-calc(24) !default;
+$evo-top-bar-section-anchor-icon-color: $topbar-link-color !default;
+$evo-top-bar-section-anchor-hover-icon-color: $topbar-link-color-hover !default;
+$evo-top-bar-section-anchor-active-icon-color: $topbar-link-color-active !default;
+$evo-top-bar-section-dropdown-active-background-color: scale-color($topbar-bg-color, $lightness: 40%) !default;
+$evo-top-bar-section-dropdown-label-padding-bottom: rem-calc(8) !default;
+$evo-top-bar-section-dropdown-border-radius: 0 0 $global-radius $global-radius !default;
+$evo-top-bar-section-dropdown-anchor-active-background-color: $topbar-link-bg-active !default;
+$evo-top-bar-section-dropdown-box-shadow-horizontal: $evo-base-shadow-horizontal !default;
+$evo-top-bar-section-dropdown-box-shadow-vertical: $evo-base-shadow-vertical !default;
+$evo-top-bar-section-dropdown-box-shadow-blur: $evo-base-shadow-blur !default;
+$evo-top-bar-section-dropdown-box-shadow-spread: $evo-base-shadow-spread !default;
+$evo-top-bar-section-dropdown-box-shadow-color: $evo-base-shadow-color !default;
+$evo-top-bar-section-dropdown-icon: '\edc6' !default;
+$evo-top-bar-section-dropdown-icon-position-top: rem-calc(1) !default;
+$evo-top-bar-section-dropdown-icon-margin-right: rem-calc(28) !default;
+$evo-top-bar-section-dropdown-sub-icon: '\edc5' !default;
+$evo-top-bar-section-dropdown-sub-icon-position-top: rem-calc(1) !default;
+$evo-top-bar-section-dropdown-sub-icon-position-right: rem-calc(-1) !default;
+$evo-top-bar-mega-menu-ctn-padding: rem-calc(20) !default;
+$evo-top-bar-mega-menu-ctn-border-top-width: 2px !default;
+$evo-top-bar-mega-menu-ctn-border-top-style: solid !default;
+$evo-top-bar-mega-menu-ctn-border-top-color: $evo-top-bar-section-dropdown-active-background-color !default;
+$evo-top-bar-mega-menu-ctn-background-color: $onyx-dark-6 !default;
+$evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
+
+
+@if $use-top-bar == true{
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// LARGE MEDIA QUERY RANGE AND UP - 1025px +
+	@if $use-large-up-mediaquery == true {
+
+		@media #{$large-up} {
+
+			.evo-top-bar					{
+
+				// TOP BAR CORE
+				a								{
+												text-decoration: $evo-top-bar-anchor-decoration;
+												}
+
+				// TOP BAR TITLE AREA
+				.title-area						{
+					.name							{
+						a								{
+														display: block;
+														line-height: $topbar-height;
+														padding-left: $topbar-link-padding;
+														padding-right: $topbar-link-padding;
+														}
+						img								{
+														position: relative;
+														top: $evo-top-bar-title-area-image-position-top;
+														left: $evo-top-bar-title-area-image-position-left;
+														}
+						h1								{
+														font-family: $evo-top-bar-title-area-name-font-family !important;
+														letter-spacing: $evo-top-bar-title-area-name-letter-spacing;
+														color: $evo-top-bar-title-area-name-font-color;
+							a								{
+															color: $evo-top-bar-title-area-name-link-color;
+															}
+							.evo-top-bar-sub-name			{
+															font-family: $evo-top-bar-title-area-sub-name-font-family;
+															}
+														}
+													}
+												}
+
+				// TOP BAR NAV SECTION
+				.top-bar-section				{
+					ul 								{
+						li								{
+							> a								{
+
+								// TOP BAR NAV SECTION ICONS
+								&[class^=evo-icon-]				{
+																font-family: $evo-top-bar-icon-font-family;
+																}
+								&[class^="evo-icon-site-"]		{
+																font-family: $evo-top-bar-icon-site-font-family;
+																}
+
+								&[class^="evo-icon-"],
+								&[class^="evo-icon-site-"]		{
+																margin-top: $evo-top-bar-section-anchor-icon-margin-top;
+																padding-right: $evo-top-bar-section-anchor-icon-padding-right !important;
+																padding-left: $evo-top-bar-section-anchor-icon-padding-left !important;
+																font-size: $evo-top-bar-section-anchor-icon-font-size;
+																}
+
+								[class^="evo-icon-"],
+								[class^="evo-icon-site-"]		{top: 0;}
+
+								// TOP BAR NAV LINKS WITH ICONS
+								[class^=evo-icon-]				{
+																color: $evo-top-bar-section-anchor-icon-color;
+																}
+								&:hover							{
+									[class^=evo-icon-]				{
+																	color: $evo-top-bar-section-anchor-hover-icon-color;
+																	}
+																}
+															}
+							&:hover:not(.has-form)			{
+								>a								{
+									[class^="evo-icon-"]			{color: $evo-top-bar-section-anchor-hover-icon-color;}
+																}
+															}
+							&.hover							{
+								> a 							{
+									[class^="evo-icon-"]			{color: $evo-top-bar-section-anchor-hover-icon-color;}
+																}
+															}
+							&.active:not(.has-form)			{
+								a:not(.button)					{
+									[class^=evo-icon-]				{
+																	color: $evo-top-bar-section-anchor-active-icon-color;
+																	}					
+																}
+															}
+														}
+													}
+
+					// TOP BAR NAV DROPDOWN MENU CONTAINER
+					.has-dropdown					{
+						
+						// TOP BAR NAV DROPDOWN MENU ACTIVE MENU
+						&.hover,
+						&.not-click:hover				{
+														background-color: $evo-top-bar-section-dropdown-active-background-color;
+														}
+						> a								{
+							
+							// TOP BAR NAV DROPDOWN MENU CONTAINER ICONS
+							&:after							{
+															margin-right: $evo-top-bar-section-dropdown-icon-margin-right;
+															top: $evo-top-bar-section-dropdown-icon-position-top;
+															font-family: $evo-top-bar-icon-font-family;
+															content: $evo-top-bar-section-dropdown-icon;
+															}
+							&[class^=evo-icon-],
+							&[class^="evo-icon-site-"]		{
+								&:after							{
+																content: '';
+																}
+															}
+														}
+						
+						// TOP BAR NAV DROPDOWN MENU
+						.dropdown 						{
+														@include box-shadow($evo-top-bar-section-dropdown-box-shadow-horizontal $evo-top-bar-section-dropdown-box-shadow-vertical $evo-top-bar-section-dropdown-box-shadow-blur $evo-top-bar-section-dropdown-box-shadow-spread $evo-top-bar-section-dropdown-box-shadow-color);
+														@include border-radius($evo-top-bar-section-dropdown-border-radius);
+
+							// TOP BAR NAV DROPDOWN MENU LABELS
+							label 							{
+															padding-bottom: $evo-top-bar-section-dropdown-label-padding-bottom;
+															}
+
+							li								{
+								&:last-child					{
+																@include border-radius($evo-top-bar-section-dropdown-border-radius);
+									> a								{
+																	@include border-radius($evo-top-bar-section-dropdown-border-radius);
+																	}
+																}
+
+								// TOP BAR NAV DROPDOWN MENU ACTIVE LINKS 
+								&.active:not(.has-form)			{
+									a:not(.button)					{
+																	background-color: $evo-top-bar-section-dropdown-anchor-active-background-color;
+																	}
+																}
+															}
+
+							li.has-dropdown					{
+								> a 							{
+									
+									// TOP BAR NAV DROPDOWN SUB MENU ICONS
+									&:after 						{
+																	content: $evo-top-bar-section-dropdown-sub-icon;
+																	top: $evo-top-bar-section-dropdown-sub-icon-position-top;
+																	right: $evo-top-bar-section-dropdown-sub-icon-position-right;
+																	}
+																}
+															}
+														}
+													}
+
+					// TOP BAR - MEGA MENU
+					[data-evo-top-bar-mega-menu]	{
+
+						// TOP BAR - MEGA MENU CONTAINER
+						[data-evo-top-bar-mega-menu-ctn]
+														{
+							> li							{
+															padding: $evo-top-bar-mega-menu-ctn-padding;
+															border-top: $evo-top-bar-mega-menu-ctn-border-top-width $evo-top-bar-mega-menu-ctn-border-top-style $evo-top-bar-mega-menu-ctn-border-top-color;
+															background-color: $evo-top-bar-mega-menu-ctn-background-color;
+								&:last-child					{@include border-radius($evo-top-bar-mega-menu-ctn-border-radius);}
+
+								// TOP BAR - MEGA MENU CONTENT CONTAINER
+								[data-evo-top-bar-mega-menu-content-ctn]
+																{
+									ul								{
+																	display: block;
+																	margin-bottom: $evo-base-margin;
+										li								{
+																		width: auto;
+																		float: none;
+																		background: none;
+											a								{
+																			@include border-radius(0);
+																			background: none;
+																			color: $anchor-font-color;
+												&:hover							{
+																				background: none;
+																				color: $anchor-font-color-hover;
+																				}
+																			}
+																		}
+																	}
+																}
+									a							{
+																padding: 0;
+																line-height: 1.5;
+																background: none;
+																color: $anchor-font-color;
+																text-decoration: $anchor-text-decoration;
+										&:hover						{
+																	background: none;
+																	color: $anchor-font-color-hover;
+																	text-decoration: $anchor-text-decoration-hover;
+																	}
+																}
+															}
+														}
+													}
+
+												}
+											}
+
+		}
+
+	}
+
+}// endif

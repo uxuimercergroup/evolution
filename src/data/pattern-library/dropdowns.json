@@ -1,0 +1,46 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "Dropdowns", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/dropdown.html"}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "",
+		"jquery_ui": "",
+		"jquery_ui_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"other": [
+			{"name": "", "url": "", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"dropdown": {
+			"name": "Basic Dropdown",
+			"partial": "dropdowns", "slug": "dropdowns"
+		},
+		"dropdown_positioning": {
+			"name": "Dropdown Positioning",
+			"partial": "dropdowns-positioning", "slug": "dropdowns-positioning"
+		},
+		"dropdown_hover": {
+			"name": "Dropdown Hover",
+			"partial": "dropdowns-hover", "slug": "dropdowns-hover"
+		}
+	},
+
+	"settings_header": "",
+	"settings_data": [
+		{
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
+		}
+	]
+}

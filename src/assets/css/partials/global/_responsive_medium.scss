@@ -1,0 +1,156 @@
+//-------------------------------------------------------------------------------------------
+// Project Responsive CSS - Medium Media Query - 768px - 1024px
+//-------------------------------------------------------------------------------------------
+
+// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+@media #{$medium-up} {
+
+	/*--- SITE GLOBAL --------------------------------------------------------------------------*/
+
+	// HERO - BEGINS
+
+		// HERO BANNER
+		.evo-site-hero						{
+											height: ($evo-site-hero-height*6);
+			&[data-evo-site-hero-size="x-large"]{height: ($evo-site-hero-height*4);}
+			&[data-evo-site-hero-size="xx-large"]{height: ($evo-site-hero-height*5);}
+			&[data-evo-site-hero-size="3x-large"]{height: ($evo-site-hero-height*6);}
+											}
+
+		// HERO TAGLINE
+		.evo-site-hero--tagline				{
+											max-width: $evo-site-hero-tagline-max-width-medium;
+											}
+
+	// HERO - ENDS
+
+	// BANDS - BEGINS
+	
+		// DEFAULT BAND
+		.evo-site-band						{padding: $evo-site-band-padding-medium;}
+
+		// MARKETING BAND
+		.evo-site-band--marketing			{
+			.evo-site-band--marketing-content	{
+				h3									{margin-bottom: $evo-site-band-marketing-h3-margin-bottom-medium;}
+				h6									{margin-bottom: $evo-site-band-marketing-h6-margin-bottom-medium;}
+				.evo-site-band--marketing-block-grid
+													{
+					h5									{margin-top: $evo-site-band-marketing-block-grid-h5-margin-top-medium;}
+													}
+												}
+											}
+
+		// TAB BAND
+		.evo-site-band--tab					{
+			.evo-site-band--tab-panel			{
+				.evo-site-band--tab-panel-marketing-content
+													{
+					h1, h2, h3, h4, h5, h6				{margin: $evo-site-band-tab-panel-marketing-content-header-margin-medium;}
+					h3									{font-size: $evo-site-band-tab-panel-marketing-content-header-h3-font-size;}
+					p									{
+														font-size: $evo-site-band-tab-panel-marketing-content-paragraph-font-size-medium;
+														margin-bottom: $evo-site-band-tab-panel-marketing-content-paragraph-margin-bottom-medium;
+														}
+													}
+												}
+											}
+
+	// BANDS - ENDS
+
+	
+	/*--- WHAT IS PAGE -------------------------------------------------------------------------*/
+
+	// TAB BAND - BEGINS
+		.evo-site-band--what				{
+			.evo-site-band--tab-panel			{
+												background-image: url($evo-site-what-is-band-tab-panel-background-image);
+												background-repeat: $evo-site-what-is-band-tab-panel-background-repeat;
+												background-size: $evo-site-what-is-band-tab-panel-background-size;
+												padding: $evo-site-what-is-band-tab-panel-padding;
+				.evo-site-band--tab-panel-marketing-content
+													{padding: $evo-site-what-is-band-tab-panel-marketing-content-padding;}
+												}
+											}
+	// TAB BAND - ENDS
+
+
+	/*--- PATTERN LIBRARY PAGES ----------------------------------------------------------------*/
+
+	// HOMEPAGE INTRO - BEINGS
+		.evo-site--pattern-library-intro--homepage
+											{
+			h1									{font-size: rem-calc(58);}
+											}
+	// HOMEPAGE INTRO - ENDS
+
+}
+
+// MEDIUM MEDIA QUERY RANGE - 768px - 1024px
+@media #{$medium-only} {
+
+	/*--- SITE GLOBAL --------------------------------------------------------------------------*/
+
+	// HERO - BEGINS
+
+		// HERO HEADER
+		.evo-site-hero--hdr					{
+			&[data-evo-site-hero-hdr-size="small"]
+												{
+												font-size: $evo-site-hero-hdr-font-size;
+												line-height: $evo-site-hero-hdr-line-height;
+												letter-spacing: $evo-site-hero-hdr-letter-spacing;
+												padding: $evo-site-hero-hdr-padding;
+												}
+			&[data-evo-site-hero-hdr-size="medium"]
+												{
+												font-size: ($evo-site-hero-hdr-font-size*1.5);
+												line-height: ($evo-site-hero-hdr-font-size*1.75);
+												letter-spacing: $evo-site-hero-hdr-letter-spacing;
+												padding: $evo-site-hero-hdr-padding;
+												}
+			&[data-evo-site-hero-hdr-size="large"]
+												{
+												font-size: ($evo-site-hero-hdr-font-size*2);
+												line-height: ($evo-site-hero-hdr-font-size*2.25);
+												letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
+												padding: $evo-site-hero-hdr-padding-medium;
+												}
+			&[data-evo-site-hero-hdr-size="x-large"]
+												{
+												font-size: ($evo-site-hero-hdr-font-size*3);
+												line-height: ($evo-site-hero-hdr-font-size*3.25);
+												letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
+												padding: $evo-site-hero-hdr-padding-medium;
+												}
+											}
+	// HERO - ENDS			
+
+
+	/*--- PATTERN LIBRARY PAGES ----------------------------------------------------------------*/
+	
+	// PATTERN LIBRARY TEMPLATE - BEGINS
+
+		// CONTENT TABS - BEGINS
+			.evo-site-tabs-content--pattern-library-content
+												{
+				.evo-keyline-right					{border: 0;}
+												}
+		// CONTENT TABS - ENDS
+
+	// PATTERN LIBRARY TEMPLATE - BEGINS
+
+
+	/*--- WHAT IS PAGE -------------------------------------------------------------------------*/
+
+	// TAB BAND - BEGINS
+		.evo-site-band--what				{
+			.evo-site-band--tab-panel			{
+												background-position: $evo-site-what-is-band-tab-panel-background-position-medium;
+				.evo-site-band--tab-panel-marketing-content
+													{border-left: 0;}
+												}
+											}
+	// TAB BAND - ENDS
+
+}

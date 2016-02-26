@@ -1,0 +1,42 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "Breadcrumbs", "url": "http://foundation.zurb.com/docs/components/breadcrumbs.html"}
+		],
+		"evolution": "true",
+		"evolution_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"jquery": "",
+		"jquery_ui": "",
+		"jquery_ui_dependencies": [
+			{"name": "", "url": ""}
+		],
+		"other": [
+			{"name": "", "url": "", "external_link": "true"}
+		]
+	},
+
+	"data": {
+		"basic_breadcrumbs": {
+			"name": "Basic Breadcrumbs",
+			"partial": "breadcrumbs", "slug": "basic-breadcrumbs"
+		},
+		"basic_breadcrumbs_navigation": {
+			"name": "Breadcrumb Navigation",
+			"partial": "breadcrumbs-navigation", "slug": "basic-breadcrumbs-navigation"
+		}
+	},
+
+	"settings_header": "",
+	"settings_data": [
+		{
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
+		}
+	]
+}

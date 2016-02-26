@@ -1,0 +1,82 @@
+{
+  "evolution": {
+    "version": "3.0.2",
+    "author": "Douglas Fraize, Matthew Holmes, Sherry Seeton",
+    "date": "January 14, 2016",
+    "url": "https://github.com/uxuimercergroup/evolution"
+  },
+  "project": "Evolution",
+  "version": "3.0.2",
+  "author": "Doug Fraize, Matthew Holmes, Sherry Seeton",
+  "date": "January 22, 2016",
+  "url": "http://evolution.mercer.com",
+  "product_suite": "core",
+  "devDependencies": {
+    "clipboard": "^1.5.5",
+    "grunt": "~0.4.5",
+    "grunt-assemble": "^0.4.0",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.1",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "~0.9.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-newer": "^1.1.1",
+    "grunt-notify": "^0.4.3",
+    "grunt-sftp-deploy": "^0.2.4",
+    "grunt-string-replace": "^1.2.1",
+    "handlebars-helper-lorem": "^0.2.0",
+    "handlebars-helper-repeat": "^0.3.1",
+    "handlebars-helpers": "^0.5.8",
+    "load-grunt-config": "^0.19.1",
+    "time-grunt": "^1.2.2"
+  },
+  "dependencies": {},
+  "jquery_version": "2.1.4",
+  "jquery_ui_version": "1.11.2",
+  "foundation_version": "5.5.2",
+  "organisms": {
+    "conversational_form": {
+      "name": "Conversational Form",
+      "version": "1.0",
+      "date": "January 19, 2016"
+    },
+    "fat_footer": {
+      "name": "Fat Footer",
+      "version": "1.0",
+      "date": "January 19, 2016"
+    },
+    "item_selection_panel": {
+      "name": "Item Selection Panel",
+      "version": "1.0",
+      "date": "January 19, 2016"
+    },
+    "pricing_table": {
+      "name": "Pricing Table",
+      "version": "1.0",
+      "date": "January 19, 2016"
+    },
+    "showcase_panel": {
+      "name": "Showcase Panel",
+      "version": "1.0",
+      "date": "January 19, 2016"
+    },
+    "social_media_badges": {
+      "name": "Social Media Badges",
+      "version": "1.0",
+      "date": "January 19, 2016"
+    },
+    "stepper": {
+      "name": "Stepper",
+      "version": "1.0",
+      "date": "January 19, 2016"
+    },
+    "thin_footer": {
+      "name": "Thin Footer",
+      "version": "1.0",
+      "date": "January 19, 2016"
+    }
+  }
+}
