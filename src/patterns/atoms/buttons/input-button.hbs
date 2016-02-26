@@ -14,5 +14,4 @@ secondary: if the button is going to be a secondary button [TRUE] is the value
 tabindex: the tab index order number
 type: button, submit
 --}}
-
 <input class="button{{#if size}} {{size}}{{/if}}{{#if expand}} expand{{/if}}{{#if shape}} {{shape}}{{else}} radius{{/if}}{{#if secondary}} secondary{{/if}}{{#if disabled}} disabled{{/if}} evo-button{{#if custom-class}} {{custom-class}}{{/if}}"{{#if interactive-data-value}} data-evo-button-interactive="{{interactive-data-value}}"{{/if}}{{#if id}} id="{{id}}"{{/if}} role="button"{{#if button-name}} name="{{button-name}}"{{/if}}{{#if button-value}} value="{{{button-value}}}"{{/if}}{{#if type}} type="{{type}}"{{/if}}{{#if disabled}} disabled{{/if}}{{#if tabindex}} tabindex="{{tabindex}}"{{/if}}{{#if button-title}} title="{{{button-title}}}"{{/if}}{{#if aria-label}} aria-label="{{aria-label}}"{{/if}}>
