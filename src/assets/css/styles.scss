@@ -35,6 +35,7 @@ URL: {{ meta_url }}
 
 	// ANNOTATIONS
 	.evo-site-annotations				{
+										@include border-radius($evo-site-annotations-border-radius);
 										background-color: $evo-site-annotations-background-color;
 										border-width: $evo-site-annotations-border-width;
 										padding: $evo-site-annotations-padding;
