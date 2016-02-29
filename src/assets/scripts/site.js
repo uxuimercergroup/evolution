@@ -18,6 +18,7 @@
 // FUNCTIONS
 //--------------------------------------------------------------------------------------------------------
 
+
 	// SITE GLOBAL
 	//----------------------------------------------------------------------------------------------------
 
@@ -59,6 +60,98 @@
 				jQuery('[data-evo-magellan] dd').removeClass('active');
 				jQuery(this).addClass('active');
 			});
+		};
+
+
+		// WHY EVOLUTION ANIMATION
+		var evoWhyEvolution = function(){
+			/* SHOW SCREENSHOT THAT CORRESPONDS WITH TEXT BLOCK */
+			$(window).scroll( function(){
+				
+				//hide all the screenshots
+				$('.hideme').hide();
+
+			    // Check location of text block   
+			        var bottom_of_object = $('#text1').offset().top + $('#text1').outerHeight();
+			        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+			     // If text block is completely visible in the window, show corresponding image
+			        if( bottom_of_window > bottom_of_object ){
+			            $('#image1').show();
+			            $('#image0').hide();
+			           	$('#image1').addClass('fixed');	       
+			        } else if( bottom_of_window < bottom_of_object ){
+			            $('#image1').hide();
+			            $('#image0').show();
+			           	$('#image1').removeClass('fixed');	
+			        }
+
+			    // Check location of text block   
+			        var bottom_of_object = $('#text2').offset().top + $('#text2').outerHeight();
+			        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+			     // If text block is completely visible in the window, show corresponding image
+			        if( bottom_of_window > bottom_of_object ){
+			            $('#image2').show();
+			           	$('#image2').addClass('fixed');
+			        }   		
+			    
+			    // Check location of text block   
+			        var bottom_of_object = $('#text3').offset().top + $('#text3').outerHeight();
+			        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+			     // If text block is completely visible in the window, show corresponding image
+			        if( bottom_of_window > bottom_of_object ){
+			            $('#image3').show();
+			           	$('#image3').addClass('fixed');	            
+			        }
+
+			     // Check location of text block   
+			        var bottom_of_object = $('#text4').offset().top + $('#text4').outerHeight();
+			        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+			     // If text block is completely visible in the window, show corresponding image
+			        if( bottom_of_window > bottom_of_object ){
+			            $('#image4').show();
+			           	$('#image4').addClass('fixed');	            
+			        }  
+
+			     // Check location of text block   
+			        var bottom_of_object = $('#text5').offset().top + $('#text5').outerHeight();
+			        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+			     // If text block is completely visible in the window, show corresponding image
+			        if( bottom_of_window > bottom_of_object ){
+			            $('#image5').show();
+			           	$('#image5').addClass('fixed');	            
+			        } 
+
+			     // Check location of text block   
+			        var bottom_of_object = $('#text6').offset().top + $('#text6').outerHeight();
+			        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+
+			     // If text block is completely visible in the window, show corresponding image
+			        if( bottom_of_window > bottom_of_object ){
+			            $('#image6').show();
+			           	$('#image6').addClass('fixed');	            
+			        }
+
+			        var lastDestination = $("[data-magellan-destination]:last-child"); // Cache last destination (ld)
+var ldBottom = lastDestination.offset().top + lastDestination.height(); // Calculate offset bottom of ld
+var ldBottomYPosition = (ldBottom-window_top_offset); // Calculate ld bottom position
+
+// If expedition bottom passes ld bottom
+if(ldBottomYPosition <= (expedition.height() - settings.destination_threshold)) {
+  // Position expedition top so bottom lines up with last destination
+  // For different behavior, replace next line with your code
+  expedition.css({position:'fixed', top: ldBottomYPosition - expedition.height(), minWidth: 0, width: expedition.outerWidth() + 'px'});
+} else {
+  // Magellan as .side-nav width fix: http://foundation.zurb.com/forum/posts/13831-fixed-sidebar
+  expedition.css({position:'fixed', top: settings.fixed_top, minWidth: 0, width: expedition.outerWidth() + 'px'});
+}     
+			});
+
 		};
 
 
@@ -109,6 +202,9 @@ $(function() {
 
 			// EVO MAGELLAN
 			evoMagellan();
+
+			// EVO WHY EVOLUTION ANIMATION
+			evoWhyEvolution();
 
 			// COPY TO CLIPBOARD
 			var clipboard = new Clipboard('.copy-to-clipboard');

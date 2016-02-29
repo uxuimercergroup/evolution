@@ -697,6 +697,37 @@ URL: {{ meta_url }}
 										}
 
 
+/*--- WHY EVOLUTION PAGE -------------------------------------------------------------------------*/
+
+// SCROLL ANIMATION
+
+.evo-why-evolution--text-block			{
+										height: rem-calc(500);
+										padding-top: rem-calc(50);
+										}
+
+
+.evo-why-evolution--placeholder-image		{
+										left:auto; 
+										top:auto;
+	img 									{
+											width: rem-calc(800);
+											float: right;
+											}
+
+										}		
+
+.evo-why-evolution--sticky-image		{
+										left:auto; 
+										top:auto;
+	img 									{
+											width: rem-calc(800);
+											margin-top: rem-calc(100);
+											margin-right: rem-calc(30);
+											float: right;
+											}
+										}
+
 /*=== MEDIA QUERIES ========================================================================*/
 @import	"partials/global/responsive_small",
 		"partials/global/responsive_medium",
