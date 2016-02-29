@@ -20,15 +20,111 @@
 		]
 	},
 
-	"data": {
-		"": {
-			"name": "",
-			"multiple_example": "",
+	"utility_helpers_data_header": "Utility Helpers",
+	"interactive_helpers_data_header": "Interactive Helpers",
+	"visibility_helpers_data_header": "Visibility Helpers",
+	"data": [
+		{
+			"name": "Center Horizontal",
+			"partial": "utility-classes-center-horizontal", "slug": "utility-center-horizontal"
+		},
+		{
+			"name": "Center Vertical",
+			"partial": "utility-classes-center-vertical", "slug": "utility-center-vertical"
+		},
+		{
+			"name": "Contain to Grid",
+			"partial": "utility-classes-contain-to-grid", "slug": "utility-contain-to-grid"
+		},
+		{
+			"name": "Float",
+			"partial": "utility-classes-float", "slug": "utility-float"
+		},
+		{
+			"name": "Full Width",
+			"partial": "utility-classes-full-width", "slug": "utility-full-width"
+		},
+		{
+			"name": "Hide an Element",
+			"partial": "utility-classes-hide-element", "slug": "utility-hide-element"
+		},
+		{
+			"name": "Image Align",
+			"partial": "utility-classes-image-align", "slug": "utility-image-align"
+		},
+		{
+			"name": "Input Numeric Mask",
+			"partial": "form-helper-input-numeric-mask", "slug": "utility-input-numeric-mask"
+		},
+		{
+			"name": "Keylines",
+			"partial": "utility-classes-keylines", "slug": "utility-keylines"
+		},
+		{
+			"name": "Radius",
+			"partial": "utility-classes-radius", "slug": "utility-radius"
+		},
+		{
+			"name": "Round",
+			"partial": "utility-classes-round", "slug": "utility-round"
+		},
+		{
+			"name": "Specific Use Colors",
+			"partial": "utility-classes-colors-specific-use", "slug": "utility-specific-use-colors"
+		},
+		{
+			"name": "Spot Colors",
+			"partial": "utility-classes-colors", "slug": "utility-spot-colors"
+		},
+		{
+			"name": "Text Align",
+			"partial": "utility-classes-text-align", "slug": "utility-text-align"
+		},
+		{
+			"name": "Select All Checkboxes",
+			"partial": "interactive-helper-checkboxes-select-all", "slug": "interactive-select-all-checkboxes"
+		},
+		{
+			"name": "Toggle Element",
+			"partial": "interactive-helper-toggle-element", "slug": "interactive-toggle-element"
+		},
+		{
+			"name": "Orientation Detection",
+			"partial": "visibility-classes-orientation-detection", "slug": "visibility-orientation-detection"
+		},
+		{
+			"name": "Touch Detection",
+			"partial": "visibility-classes-touch-detection", "slug": "visibility-touch-detection"
+		},
+		{
+			"name": "Responsive Visibility",
+			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "", "slug": ""}
+				{"partial": "visibility-classes-visible", "slug": "visibility-responsive-visible"},
+				{"partial": "visibility-classes-hidden", "slug": "visibility-responsive-hidden"}
 			]
+		},
+		{
+			"name": "Hide for Screen Readers",
+			"partial": "visibility-classes-screen-readers-hide", "slug": "visibility-screen-readers-hide"
+		},
+		{
+			"name": "Show for Screen Readers",
+			"partial": "visibility-classes-screen-readers-show", "slug": "visibility-screen-readers-show"
+		},
+		{
+			"name": "Hide by Screen Size",
+			"partial": "visibility-classes-screen-size-hide", "slug": "visibility-hide-by-screen-size"
+		},
+		{
+			"name": "Show by Screen Size",
+			"partial": "visibility-classes-screen-size-show", "slug": "visibility-show-by-screen-size"
+		},
+		{
+			"name": "Skip Links",
+			"partial": "visibility-classes-skip-links", "slug": "visibility-skip-links"
 		}
-	},
+	],
 
 	"settings_header": "",
 	"settings_data": [

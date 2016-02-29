@@ -406,6 +406,15 @@ URL: {{ meta_url }}
 											background: $evo-site-sidenav-magellan-background-color;
 											padding: 0;
 			.sub-nav							{
+				dt									{
+													margin: $evo-site-sidenav-magellan-hdr-margin;
+													float: none;
+													font-family: $evo-site-sidenav-magellan-hdr-font-family;
+													color: $evo-site-sidenav-magellan-hdr-font-color;
+													font-size: $evo-site-sidenav-magellan-hdr-font-size;
+													text-transform: none;
+					&:first-child						{margin-top: 0;}
+													}
 				dd									{
 													float: none;
 													margin-left: 0;
@@ -607,6 +616,18 @@ URL: {{ meta_url }}
 										}
 // CORPORATE LOGOS - ENDS
 
+
+/*--- HELPERS PAGE -------------------------------------------------------------------------*/
+.evo-site--helpers-keyline-example		{
+	.evo-keyline-right						{
+											border-color: $onyx-dark-30;
+											min-height: auto;
+											}
+	[data-equalizer-watch]					{
+											height: auto !important;
+											min-height: rem-calc(276);
+											}
+										}
 
 
 /*--- TYPOGRAPHY PAGE ----------------------------------------------------------------------*/

@@ -48,7 +48,7 @@ Evolution includes a handful of helpful utility helpers to add certain behaviors
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</div>
-						<div class="evo-box-bdy">
+						<div class="evo-box-bdy{{#is name 'Keylines'}} evo-site--helpers-keyline-example{{/is}}">
 						<!-- RENDERED HTML - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -94,9 +94,18 @@ Evolution includes a handful of helpful utility helpers to add certain behaviors
 				<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
-							{{#each helpers.data}}
+							<dt>{{helpers.utility_helpers_data_header}}</dt>
+							{{#slice helpers.data limit="14"}}
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
-							{{/each}}
+							{{/slice}}
+							<dt>{{helpers.interactive_helpers_data_header}}</dt>
+							{{#slice helpers.data offset="14" limit="2"}}
+							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+							{{/slice}}
+							<dt>{{helpers.visibility_helpers_data_header}}</dt>
+							{{#slice helpers.data offset="16" limit="8"}}
+							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+							{{/slice}}
 						</dl>
 					</div>
 				<!-- SIDENAV - ENDS -->
