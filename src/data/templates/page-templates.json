@@ -5,23 +5,65 @@
 	},
 
 	"data": {
-		"example_1": {
+		"full_width": {
 			"image": "placeholder_rectangle_wide_thick.png",
-			"header": "Standard Page Layout",
-			"description": "Here is placeholder text, but we would want to have some description text here to example what the user is going to see in the same page.",
-			"url": "50-50-layout"
+			"header": "Full Width Layout",
+			"description": "Full width (100%) page layout",
+			"url": "full-width"
 		},
-		"example_2": {
+		"grid_width": {
 			"image": "placeholder_rectangle_wide_thick.png",
-			"header": "Standard Page Layout",
-			"description": "Here is placeholder text, but we would want to have some description text here to example what the user is going to see in the same page.",
-			"url": "50-50-layout"
+			"header": "Grid Width Layout",
+			"description": "Grid width (980px) page layout",
+			"url": "grid-width"
 		},
-		"example_3": {
+		"25_75": {
 			"image": "placeholder_rectangle_wide_thick.png",
-			"header": "Standard Page Layout",
-			"description": "Here is placeholder text, but we would want to have some description text here to example what the user is going to see in the same page.",
-			"url": "50-50-layout"
+			"header": "25%/75% Layout",
+			"description": "Two column page layout with a left sidebar",
+			"url": "25-75"
+		},
+		"75_25": {
+			"image": "placeholder_rectangle_wide_thick.png",
+			"header": "75%/25% Layout",
+			"description": "Two column page layout with a right sidebar",
+			"url": "75-25"
+		},
+		"33_66": {
+			"image": "placeholder_rectangle_wide_thick.png",
+			"header": "33%/66% Layout",
+			"description": "Two column page layout with a left sidebar",
+			"url": "33-66"
+		},
+		"66_33": {
+			"image": "placeholder_rectangle_wide_thick.png",
+			"header": "66%/33% Layout",
+			"description": "Two column page layout with a right sidebar",
+			"url": "66-33"
+		},
+		"50_50": {
+			"image": "placeholder_rectangle_wide_thick.png",
+			"header": "50%/50% Layout",
+			"description": "Two column page layout",
+			"url": "50-50"
+		},
+		"25_50_25": {
+			"image": "placeholder_rectangle_wide_thick.png",
+			"header": "25%/50%/25% Layout",
+			"description": "Three column page layout with left and right sidebar",
+			"url": "25-50-25"
+		},
+		"33_33_33": {
+			"image": "placeholder_rectangle_wide_thick.png",
+			"header": "33%/33%/33% Layout",
+			"description": "Three column page layout",
+			"url": "33-33-33"
+		},
+		"25_25_25_25": {
+			"image": "placeholder_rectangle_wide_thick.png",
+			"header": "25%/25%/25%/25% Layout",
+			"description": "Four column page layout",
+			"url": "25-25-25-25"
 		}
 	}
 

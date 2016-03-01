@@ -1,6 +1,22 @@
 module.exports = {
 
   // String replace version numbers in files (CSS, JS)
+  page_templates: {
+    files: [{
+      expand: true,
+      cwd: 'dist/page-templates',
+      src: ['**/*.html'],
+      dest: 'dist/page-templates'
+    }],
+    options: {
+      replacements: [
+        {
+          pattern: /..\/assets/ig,
+          replacement: 'https://evolution-dev.mercer.com/assets'
+        }
+      ]
+    }
+  },
   meta: {
     files: [{
       expand: true,

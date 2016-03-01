@@ -17,18 +17,18 @@ title: "Page Templates"
 		<div class="small-12 columns evo-spacer-padding-top-xxx-large evo-spacer-padding-bottom-xxx-large">
 
 {{# markdown }}
-Available Page Templates
+A collection of common page templates for use in any project.
 ***
 {{/ markdown }}
 
-			<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3 xlarge-block-grid-4 xxlarge-block-grid-5 evo-site-page-template-container">
+			<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3 xlarge-block-grid-3 xxlarge-block-grid-4 evo-site-page-template-container">
 			{{#each page-templates.data }}
 				<li>
 					<a href="/page-templates/{{url}}.html" target="_blank"><img src="/assets/images/placeholders/{{image}}" alt="" width="100%" class="evo-margin-bottom"></a>
 					<h5>{{header}}</h5>
 					<p>{{description}}</p>
 					<ul class="inline-list evo-inline-list evo-inline-list-pipes">
-						<li><a href="/page-templates/{{url}}.html" download>Download</a></li>
+						<!-- <li><a href="/page-templates/{{url}}.html" download>Download</a></li> -->
 						<li><a href="/page-templates/{{url}}.html" target="_blank">Demo</a></li>
 					</ul>
 				</li>
