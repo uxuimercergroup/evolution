@@ -90,7 +90,11 @@
 								{{> body }} 
 							</div>
 							<div class="medium-3 medium-pull-9 large-2 large-pull-10 columns evo-site--pattern-library-sidebar" data-equalizer-watch="pattern-library-layout">
+							{{#is basename 'front-end-code-standards'}}
+								{{> code-standards-sidebar }}
+							{{else}}
 								{{> pattern-library-sidebar }}
+							{{/is}}
 							</div>
 						</div>
 					</div>

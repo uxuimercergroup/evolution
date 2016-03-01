@@ -11,7 +11,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="cleartype" content="on" />
-
+		
 		<!-- Mobile touch icons - http://goo.gl/6nVq0 -->
 		<!-- For Chrome for Android: -->
 		<!-- <link rel="icon" sizes="192x192" href="touch-icon-192x192.png"> -->
@@ -38,8 +38,8 @@
 
 		<!-- Add to homescreen for Chrome on Android -->
 		<!--
-			<meta name="mobile-web-app-capable" content="yes">
-			-->
+        <meta name="mobile-web-app-capable" content="yes">
+        -->
 
 		<!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
 		<!--
@@ -50,8 +50,8 @@
 
 		<!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 		<!--
-			<script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
-		  -->
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+    	-->
 
 		<!-- FAVICON -->
 		<link rel="shortcut icon" href="{{ assets }}/images/core/favicon.ico" />
@@ -79,26 +79,19 @@
 			<div class="inner-wrap">
 
 				<!-- HEADER - BEGINS -->
-				{{> header }}
+				{{> page-template-header}}
 				<!-- HEADER - ENDS -->
 
 				<!-- PAGE - BEGINS -->
 				<section class="evo-no-padding" role="main">
-					<div class="row evo-full-width" data-equalizer="pattern-library-layout">
-						<div class="evo-full-width">
-							<div class="medium-9 medium-push-3 large-10 large-push-2 columns" data-equalizer-watch="pattern-library-layout">
-								{{> body }} 
-							</div>
-							<div class="medium-3 medium-pull-9 large-2 large-pull-10 columns evo-site--pattern-library-sidebar" data-equalizer-watch="pattern-library-layout">
-								{{> code-standards-sidebar }}
-							</div>
-						</div>
+					<div class="row evo-full-width">
+						{{> body }}
 					</div>
 				</section>
 				<!-- PAGE - ENDS -->
 
 				<!-- FOOTER - BEGINS -->
-				{{> footer }}
+				{{> page-template-footer}}
 				<!-- FOOTER - ENDS -->
 
 				<!-- OFF-CANVAS CLOSE - BEGINS -->
