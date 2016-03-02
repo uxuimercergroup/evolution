@@ -743,8 +743,12 @@ URL: {{ meta_url }}
 
 // SCROLL ANIMATION
 
+.hideme 								{
+										opacity:0;
+										}												
+
 .evo-why-evolution--text-block			{
-										height: rem-calc(500);
+										height: 500px;
 										padding-top: rem-calc(50);
 										}
 
@@ -754,7 +758,6 @@ URL: {{ meta_url }}
 										top:auto;
 	img 									{
 											width: rem-calc(800);
-											float: right;
 											}
 
 										}		
@@ -764,10 +767,13 @@ URL: {{ meta_url }}
 										top:auto;
 	img 									{
 											width: rem-calc(800);
-											margin-top: rem-calc(100);
-											margin-right: rem-calc(30);
-											float: right;
 											}
+										}
+
+// USED TO POSITION FIXED IMAGE IN SCROLL ANIMATION
+.sticky-image 							{
+										position: fixed;
+										top: rem-calc(100);
 										}
 
 /*=== MEDIA QUERIES ========================================================================*/
