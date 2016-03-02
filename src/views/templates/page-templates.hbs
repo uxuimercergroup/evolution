@@ -21,10 +21,10 @@ A collection of common page templates for use in any project.
 ***
 {{/ markdown }}
 
-			<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3 xlarge-block-grid-3 xxlarge-block-grid-4 evo-site-page-template-container">
+			<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3 xlarge-block-grid-3 xxlarge-block-grid-4 evo-site--page-template-container">
 			{{#each page-templates.data }}
 				<li>
-					<a href="/page-templates/{{url}}.html" target="_blank"><img src="/assets/images/placeholders/{{image}}" alt="" width="100%" class="evo-margin-bottom"></a>
+					<a href="/page-templates/{{url}}.html" target="_blank"><img class="evo-site--page-template-thumbnail" src="/assets/images/content/{{image}}" alt="" width="100%"></a>
 					<h5>{{header}}</h5>
 					<p>{{description}}</p>
 					<ul class="inline-list evo-inline-list evo-inline-list-pipes">

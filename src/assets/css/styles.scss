@@ -668,6 +668,16 @@ URL: {{ meta_url }}
 // TYPOGRAPHY - ENDS
 
 
+/*--- PAGE TEMPLATES -----------------------------------------------------------------------*/
+.evo-site--page-template-container		{
+	.evo-site--page-template-thumbnail		{
+											@include border-radius($evo-site-page-template-thumbnail-border-radius);
+											margin-bottom: $evo-site-page-template-thumbnail-margin-bottom;
+											background-color: $evo-site-page-template-thumbnail-background-color;
+											}
+										}
+
+
 /*--- KITCHEN SINK -------------------------------------------------------------------------*/
 
 // GRID DEMO
