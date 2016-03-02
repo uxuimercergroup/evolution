@@ -173,10 +173,20 @@
 	// PATTERN LIBRARY PAGES
 	//----------------------------------------------------------------------------------------------------
 
-		// EQUALIZE CONTENT COLUMNS ON TOGGLE OF TABS
-		var evoSitePatternLibTabsEqualizer = function(){
+		// TYPE CHARACTERS DATA TABLE REDRAW FUNCTION
+		var evoSiteCharactersDataTableRedraw = function(){
+			jQuery('[data-evo-data-table="evo-data-table-type-characters"]').DataTable().draw();
+		}
+
+		// REFLOW/REDRAW ON TOGGLE OF PATTERN LIBRARY CONTENT TABS
+		var evoSitePatternLibTabsReflow = function(){
 			jQuery('.evo-site-tabs--pattern-library-tabs').on('toggled', function (event, tab) {
+
+				// Reflow equalizer on tab toggling, fixes bug with equalizer in hidden tabs
 			    $(document).foundation('equalizer', 'reflow');
+
+			    // Redraw type characters data table on tab toggling, fixes scrolling table fixed thead injected layout
+			    evoSiteCharactersDataTableRedraw();
 			});
 		}
 
@@ -228,8 +238,11 @@ $(function() {
 		// PATTERN LIBRARY PAGES
 		//------------------------------------------------------------------------------------------------
 
-			// EQUALIZE CONTENT COLUMNS ON TOGGLE OF TABS
-			evoSitePatternLibTabsEqualizer();
+			// REFLOW/REDRAW ON TOGGLE OF PATTERN LIBRARY CONTENT TABS
+			evoSitePatternLibTabsReflow();
+
+			// POSITION FIXED BY SCROLL
+			evoFixedByScroll('evo-magellan--side-nav', 230);
 
 			// SETTINGS TAB DATA TABLE
 			evoDataTable('evo-data-table-pattern-library-setting-options',{
@@ -237,13 +250,19 @@ $(function() {
 				"info": false
 			});
 
+			// ICOMOON ICONS DATA TABLE
 			evoDataTable('evo-data-table-pattern-library-icons',{
 				"paging": false,
 				"info": false
 			});
 
-			// POSITION FIXED BY SCROLL
-			evoFixedByScroll('evo-magellan--side-nav', 230);
+			// TYPE CHARACTERS DATA TABLE
+			evoDataTable('evo-data-table-type-characters',{
+				scrollY: '200px',
+				scrollCollapse: true,
+				"paging": false,
+				"info": false
+			});
 
 
 		// KITCHEN SINK DEMOS

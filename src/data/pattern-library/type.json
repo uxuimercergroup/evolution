@@ -19,36 +19,170 @@
 		]
 	},
 
+	"tab-spacing": "even-3",
+	"tabs": [
+		{"name": "Examples", "active": "true", "index": "0"},
+		{"name": "Definition", "index": "1"},
+		{"name": "Usage", "index": "2"}
+	],
+
 	"data": {
-		"font_sample1": {
+		"basic_paragraph": {
+			"name": "Basic Paragraph",
+			"partial": "type-paragraph",
+			"text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+			"slug": "basic-paragraph"
+		},
+		"paragraph_overflow": {
+			"name": "Paragraph Overflow",
+			"partial": "type-paragraph",
+			"class": "evo-text-overflow",
+			"text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+			"slug": "paragraph-overflow"
+		},
+		"paragraph_hyphen": {
+			"name": "Paragraph Hyphen",
+			"partial": "type-paragraph",
+			"class": "evo-hyphen-demo",
+			"text": "Repre­henderitrepre­henderitrepre­henderitrepre­henderitrepre­henderitrepre­henderitrepre­henderitrepre­henderitrepre­henderitrepre­henderitrepre­henderitrepre­henderit.",
+			"slug": "paragraph-hyphen"
+		},
+		"paragraph_footnote": {
+			"name": "Paragraph Footnote",
+			"partial": "type-paragraph",
+			"class": "evo-footnote",
+			"text": "<small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</small>",
+			"slug": "paragraph-footnote"
+		},
+		"headers": {
+			"name": "Headers",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "type-header", "size": "1", "text": "h1 header", "slug": "h1-header"},
+				{"partial": "type-header", "size": "2", "text": "h2 header", "slug": "h2-header"},
+				{"partial": "type-header", "size": "3", "text": "h3 header", "slug": "h3-header"},
+				{"partial": "type-header", "size": "4", "text": "h4 header", "slug": "h4-header"},
+				{"partial": "type-header", "size": "5", "text": "h5 header", "slug": "h5-header"},
+				{"partial": "type-header", "size": "6", "text": "h6 header", "slug": "h6-header"}
+			]
+		},
+		"sub_headers": {
+			"name": "Subheaders",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "type-header", "class": "subheader", "size": "1", "text": "h1 subheader", "slug": "h1-subheader"},
+				{"partial": "type-header", "class": "subheader", "size": "2", "text": "h2 subheader", "slug": "h2-subheader"},
+				{"partial": "type-header", "class": "subheader", "size": "3", "text": "h3 subheader", "slug": "h3-subheader"},
+				{"partial": "type-header", "class": "subheader", "size": "4", "text": "h4 subheader", "slug": "h4-subheader"},
+				{"partial": "type-header", "class": "subheader", "size": "5", "text": "h5 subheader", "slug": "h5-subheader"},
+				{"partial": "type-header", "class": "subheader", "size": "6", "text": "h6 subheader", "slug": "h6-subheader"}
+			]
+		},
+		"header_with_background_color": {
+			"name": "Header with Background Color",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "type-header", "class": "evo-h1-hdr-background", "size": "1", "text": "h1 header", "slug": "h1-header-with-background-color"},
+				{"partial": "type-header", "class": "evo-h2-hdr-background", "size": "2", "text": "h2 header", "slug": "h2-header-with-background-color"},
+				{"partial": "type-header", "class": "evo-h3-hdr-background", "size": "3", "text": "h3 header", "slug": "h3-header-with-background-color"}
+			]
+		},
+		"header_with_rule": {
+			"name": "Header with Rule",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "type-header", "class": "evo-hdr-rule", "size": "1", "text": "h1 header", "slug": "h1-header-with-rule"},
+				{"partial": "type-header", "class": "evo-hdr-rule", "size": "2", "text": "h2 header", "slug": "h2-header-with-rule"},
+				{"partial": "type-header", "class": "evo-hdr-rule", "size": "3", "text": "h3 header", "slug": "h3-header-with-rule"},
+				{"partial": "type-header", "class": "evo-hdr-rule", "size": "4", "text": "h4 header", "slug": "h4-header-with-rule"},
+				{"partial": "type-header", "class": "evo-hdr-rule", "size": "5", "text": "h5 header", "slug": "h5-header-with-rule"},
+				{"partial": "type-header", "class": "evo-hdr-rule", "size": "6", "text": "h6 header", "slug": "h6-header-with-rule"}
+			]
+		},
+		"header_with_double_rule": {
+			"name": "Header with Double Rule",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "type-header", "class": "evo-hdr-dbl-rule", "size": "1", "text": "h1 header", "slug": "h1-header-with-double-rule"},
+				{"partial": "type-header", "class": "evo-hdr-dbl-rule", "size": "2", "text": "h2 header", "slug": "h2-header-with-double-rule"},
+				{"partial": "type-header", "class": "evo-hdr-dbl-rule", "size": "3", "text": "h3 header", "slug": "h3-header-with-double-rule"}
+			]
+		},
+		"ordered_list": {
+			"name": "Ordered List",
+			"partial": "type-ordered-list",
+			"slug": "ordered-list"
+		},
+		"ordered_list_styles": {
+			"name": "Ordered List Style Types",
+			"partial": "type-ordered-list-styles",
+			"slug": "ordered-list-styles"
+		},
+		"unordered_list": {
+			"name": "Unordered List",
+			"partial": "type-unordered-list",
+			"slug": "unordered-list"
+		},
+		"definition_list": {
+			"name": "Definition List",
+			"partial": "type-definition-list",
+			"slug": "definition-list"
+		},
+		"blockquote": {
+			"name": "Blockquote",
+			"partial": "type-blockquote",
+			"slug": "blockquote"
+		},
+		"horizontal_rule": {
+			"name": "Horizontal Rule",
+			"partial": "type-horizontal-rule",
+			"slug": "horizontal-rule"
+		},
+		"word_break": {
+			"name": "Word Break",
+			"partial": "type-paragraph",
+			"class": "evo-word-break-container-dimensions-demo evo-word-break",
+			"text": "This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword.",
+			"slug": "word-break"
+		},
+		"other_markup": {
+			"name": "Other Markup",
+			"partial": "type-other-markup",
+			"slug": "other-markup"
+		}
+	},
+
+	"font_families_header": "Font Families",
+	"font_families_data": {
+		"font_sample_regular": {
 			"name": "Proxima Nova Regular",
 			"type-sample": "proxima-nova-regular",
 			"sample-letters": "aa",
 			"alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
 			"numbers-symbol": "0123456789!@#$%^&*(-)"
 		},
-		"font_sample2": {
+		"font_sample_semibold": {
 			"name": "Proxima Nova Semibold",
 			"type-sample": "proxima-nova-semibold",
 			"sample-letters": "aa",
 			"alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
 			"numbers-symbol": "0123456789!@#$%^&*(-)"
 		},
-		"font_sample3": {
+		"font_sample_bold": {
 			"name": "Proxima Nova Bold",
 			"type-sample": "proxima-nova-bold",
 			"sample-letters": "aa",
 			"alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
 			"numbers-symbol": "0123456789!@#$%^&*(-)"
 		},
-		"font_sample4": {
+		"font_sample_italic": {
 			"name": "Proxima Nova Italic",
 			"type-sample": "proxima-nova-italic",
 			"sample-letters": "aa",
 			"alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
 			"numbers-symbol": "0123456789!@#$%^&*(-)"
 		},
-		"font_sample5": {
+		"font_sample_thin": {
 			"name": "Proxima Nova Thin",
 			"type-sample": "proxima-nova-thin",
 			"sample-letters": "aa",
@@ -56,6 +190,600 @@
 			"numbers-symbol": "0123456789!@#$%^&*(-)"
 		}
 	},
+
+	"hierarchy_header": "Typographic Hierarchy",
+	"hierarchy_data": {
+		"h1": {
+			"header": "",
+			"example": "<h1>Header 1</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>",
+			"example_data": [
+				{
+				"label": "Usage",
+				"item": "Header"
+				},
+				{
+				"label": "Font",
+				"item": "Proxima Nova Semibold"
+				},
+				{
+				"label": "Text Transform",
+				"item": "Uppercase"
+				},
+				{
+				"label": "Size",
+				"item": "2.375em / 38px"
+				},
+				{
+				"label": "HTML Letter Spacing",
+				"item": "7.5px"
+				},
+				{
+				"label": "Photoshop Letter Spacing",
+				"item": "180px"
+				},
+				{
+				"label": "Text Decoration",
+				"item": "None"
+				}
+			]
+		},
+		"h2": {
+			"header": "",
+			"example": "<h2>Header 2</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>",
+			"example_data": [
+				{
+				"label": "Usage",
+				"item": "Header"
+				},
+				{
+				"label": "Font",
+				"item": "Proxima Nova Regular"
+				},
+				{
+				"label": "Text Transform",
+				"item": "Uppercase"
+				},
+				{
+				"label": "Size",
+				"item": "2em / 32px"
+				},
+				{
+				"label": "HTML Letter Spacing",
+				"item": "6px"
+				},
+				{
+				"label": "Photoshop Letter Spacing",
+				"item": "170px"
+				},
+				{
+				"label": "Text Decoration",
+				"item": "None"
+				}
+			]
+		},
+		"h3": {
+			"header": "",
+			"example": "<h3>Header 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>",
+			"example_data": [
+				{
+				"label": "Usage",
+				"item": "Header"
+				},
+				{
+				"label": "Font",
+				"item": "Proxima Nova Regular"
+				},
+				{
+				"label": "Text Transform",
+				"item": "Uppercase"
+				},
+				{
+				"label": "Size",
+				"item": "1.625em / 26px"
+				},
+				{
+				"label": "HTML Letter Spacing",
+				"item": "4.5px"
+				},
+				{
+				"label": "Photoshop Letter Spacing",
+				"item": "160px"
+				},
+				{
+				"label": "Text Decoration",
+				"item": "None"
+				}
+			]
+		},
+		"h4": {
+			"header": "",
+			"example": "<h4>Header 4</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>",
+			"example_data": [
+				{
+				"label": "Usage",
+				"item": "Sub-header"
+				},
+				{
+				"label": "Font",
+				"item": "Proxima Nova Semibold"
+				},
+				{
+				"label": "Text Transform",
+				"item": "Uppercase"
+				},
+				{
+				"label": "Size",
+				"item": "1.375em / 22px"
+				},
+				{
+				"label": "HTML Letter Spacing",
+				"item": "3.5px"
+				},
+				{
+				"label": "Photoshop Letter Spacing",
+				"item": "180px"
+				},
+				{
+				"label": "Text Decoration",
+				"item": "None"
+				}
+			]
+		},
+		"h5": {
+			"header": "",
+			"example": "<h5>Header 5</h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>",
+			"example_data": [
+				{
+				"label": "Usage",
+				"item": "Sub-header"
+				},
+				{
+				"label": "Font",
+				"item": "Proxima Nova Regular"
+				},
+				{
+				"label": "Text Transform",
+				"item": "Uppercase"
+				},
+				{
+				"label": "Size",
+				"item": "1.125em / 18px"
+				},
+				{
+				"label": "HTML Letter Spacing",
+				"item": "3.5px"
+				},
+				{
+				"label": "Photoshop Letter Spacing",
+				"item": "180px"
+				},
+				{
+				"label": "Text Decoration",
+				"item": "None"
+				}
+			]
+		},
+		"h6": {
+			"header": "",
+			"example": "<h6>Header 6</h6><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>",
+			"example_data": [
+				{
+				"label": "Usage",
+				"item": "Page Title"
+				},
+				{
+				"label": "Font",
+				"item": "Proxima Nova Semibold"
+				},
+				{
+				"label": "Text Transform",
+				"item": "Uppercase"
+				},
+				{
+				"label": "Size",
+				"item": "0.875em / 14px"
+				},
+				{
+				"label": "HTML Letter Spacing",
+				"item": "3.5px"
+				},
+				{
+				"label": "Photoshop Letter Spacing",
+				"item": "180px"
+				},
+				{
+				"label": "Text Decoration",
+				"item": "None"
+				}
+			]
+		},
+		"base_font": {
+			"header": "Base Font",
+			"example": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>",
+			"example_data": [
+				{
+				"label": "Usage",
+				"item": "Body Content"
+				},
+				{
+				"label": "Font",
+				"item": "Proxima Nova Regular"
+				},
+				{
+				"label": "Size",
+				"item": "1em / 16px"
+				},
+				{
+				"label": "Line Height",
+				"item": "1.32em / 21px"
+				},
+				{
+				"label": "Text Decoration",
+				"item": "None"
+				}
+			]
+		},
+		"default_link": {
+			"header": "Default Link",
+			"example": "<a href=\"#/\">Example Link</a><br><br><br>",
+			"example_data": [
+				{
+				"label": "Usage",
+				"item": "Links"
+				},
+				{
+				"label": "Font",
+				"item": "Proxima Nova Regular"
+				},
+				{
+				"label": "Size",
+				"item": "1em / 16px"
+				},
+				{
+				"label": "Line Height",
+				"item": "1.32em / 21px"
+				},
+				{
+				"label": "Text Decoration",
+				"item": "Underline"
+				}
+			]
+		},
+		"labels": {
+			"header": "Labels",
+			"example": "<label>Form Label<input type=\"text\" placeholder=\"Placeholder text\"></label>",
+			"example_data": [
+				{
+				"label": "Usage",
+				"item": "Form Labels"
+				},
+				{
+				"label": "Font",
+				"item": "Proxima Nova Semibold"
+				},
+				{
+				"label": "Size",
+				"item": "0.875em / 14px"
+				},
+				{
+				"label": "Line Height",
+				"item": "1.32em / 21px"
+				},
+				{
+				"label": "Text Decoration",
+				"item": "None"
+				}
+			]
+		},
+		"small_text": {
+			"header": "Small Text",
+			"example": "<p class=\"evo-footnote\"><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</small></p>",
+			"example_data": [
+				{
+				"label": "Usage",
+				"item": "Small Text / Footnotes"
+				},
+				{
+				"label": "Font",
+				"item": "Proxima Nova Regular"
+				},
+				{
+				"label": "Size",
+				"item": "0.750em / 12px"
+				},
+				{
+				"label": "Line Height",
+				"item": "1.063em / 17px"
+				},
+				{
+				"label": "Text Decoration",
+				"item": "None"
+				}
+			]
+		},
+		"blockquote": {
+			"header": "Blockquote",
+			"example": "<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p></blockquote>",
+			"example_data": [
+				{
+				"label": "Usage",
+				"item": "Pull Quote"
+				},
+				{
+				"label": "Font",
+				"item": "Proxima Nova Thin"
+				},
+				{
+				"label": "Size",
+				"item": "1.375em / 22px"
+				},
+				{
+				"label": "Line Height",
+				"item": "1.273em / 28px"
+				},
+				{
+				"label": "Text Decoration",
+				"item": "None"
+				}
+			]
+		}
+	},
+
+	"characters_header": "Characters",
+	"characters_data": [
+	    {
+	      "name": "inverted question mark",
+	      "glyph" : "&iquest;"
+	    },
+	    {
+	      "name": "uppercase A, grave accent",
+	      "glyph" : "&Agrave;"
+	    },
+	    {
+	      "name": "uppercase A, acute accent",
+	      "glyph" : "&Aacute;"
+	    },
+	    {
+	      "name": "uppercase A, circumflex accent",
+	      "glyph" : "&Acirc;"
+	    },
+	    {
+	      "name": "uppercase A, tilde",
+	      "glyph" : "&Atilde;"
+	    },
+	    {
+	      "name": "uppercase A, umlaut",
+	      "glyph" : "&Auml;"
+	    },
+	    {
+	      "name": "uppercase A, ring",
+	      "glyph" : "&Aring;"
+	    },
+	    {
+	      "name": "uppercase AE",
+	      "glyph" : "&AElig;"
+	    },
+	    {
+	      "name": "uppercase C, cedilla",
+	      "glyph" : "&Ccedil;"
+	    },
+	    {
+	      "name": "uppercase E, grave accent",
+	      "glyph" : "&Egrave;"
+	    },
+	    {
+	      "name": "uppercase E, acute accent",
+	      "glyph" : "&Eacute;"
+	    },
+	    {
+	      "name": "uppercase E, circumflex accent",
+	      "glyph" : "&Ecirc;"
+	    },
+	    {
+	      "name": "uppercase E, umlaut",
+	      "glyph" : "&Euml;"
+	    },
+	    {
+	      "name": "uppercase I, grave accent",
+	      "glyph" : "&Igrave;"
+	    },
+	    {
+	      "name": "uppercase I, acute accent",
+	      "glyph" : "&Iacute;"
+	    },
+	    {
+	      "name": "uppercase I, circumflex accent",
+	      "glyph" : "&Icirc;"
+	    },
+	    {
+	      "name": "uppercase I, umlaut",
+	      "glyph" : "&Iuml;"
+	    },
+	    {
+	      "name": "uppercase Eth, Icelandic",
+	      "glyph" : "&ETH;"
+	    },
+	    {
+	      "name": "uppercase N, tilde",
+	      "glyph" : "&Ntilde;"
+	    },
+	    {
+	      "name": "uppercase O, grave accent",
+	      "glyph" : "&Ograve;"
+	    },
+	    {
+	      "name": "uppercase O, acute accent",
+	      "glyph" : "&Oacute;"
+	    },
+	    {
+	      "name": "uppercase O, circumflex accent",
+	      "glyph" : "&Ocirc;"
+	    },
+	    {
+	      "name": "uppercase O, tilde",
+	      "glyph" : "&Otilde;"
+	    },
+	    {
+	      "name": "uppercase O, umlaut",
+	      "glyph" : "&Ouml;"
+	    },
+	    {
+	      "name": "uppercase O, slash",
+	      "glyph" : "&Oslash;"
+	    },
+	    {
+	      "name": "uppercase U, grave accent",
+	      "glyph" : "&Ugrave;"
+	    },
+	    {
+	      "name": "uppercase U, acute accent",
+	      "glyph" : "&Uacute;"
+	    },
+	    {
+	      "name": "uppercase U, circumflex accent",
+	      "glyph" : "&Ucirc;"
+	    },
+	    {
+	      "name": "uppercase U, umlaut",
+	      "glyph" : "&Uuml;"
+	    },
+	    {
+	      "name": "uppercase Y, acute accent",
+	      "glyph" : "&Yacute;"
+	    },
+	    {
+	      "name": "uppercase THORN, Icelandic",
+	      "glyph" : "&THORN;"
+	    },
+	    {
+	      "name": "lowercase sharps, German",
+	      "glyph" : "&szlig;"
+	    },
+	    {
+	      "name": "lowercase a, grave accent",
+	      "glyph" : "&agrave;"
+	    },
+	    {
+	      "name": " lowercase a, acute accent",
+	      "glyph" : "&aacute;"
+	    },
+	    {
+	      "name": " lowercase a, circumflex accent",
+	      "glyph" : "&acirc;"
+	    },
+	    {
+	      "name": "lowercase a, tilde",
+	      "glyph" : "&atilde;"
+	    },
+	    {
+	      "name": "lowercase a, umlaut",
+	      "glyph" : "&auml;"
+	    },
+	    {
+	      "name": "lowercase a, ring",
+	      "glyph" : "&aring;"
+	    },
+	    {
+	      "name": "lowercase ae",
+	      "glyph" : "&aelig;"
+	    },
+	    {
+	      "name": "lowercase c, cedilla",
+	      "glyph" : "&ccedil;"
+	    },
+	    {
+	      "name": "lowercase e, grave accent",
+	      "glyph" : "&egrave;"
+	    },
+	    {
+	      "name": "lowercase e, acute accent",
+	      "glyph" : "&eacute;"
+	    },
+	    {
+	      "name": "lowercase e, circumflex accent",
+	      "glyph" : "&ecirc;"
+	    },
+	    {
+	      "name": "lowercase e, umlaut",
+	      "glyph" : "&euml;"
+	    },
+	    {
+	      "name": "lowercase i, grave accent",
+	      "glyph" : "&igrave;"
+	    },
+	    {
+	      "name": "lowercase i, acute accent",
+	      "glyph" : "&iacute;"
+	    },
+	    {
+	      "name": "lowercase i, circumflex accent",
+	      "glyph" : "&icirc;"
+	    },
+	    {
+	      "name": "lowercase i, umlaut",
+	      "glyph" : "&iuml;"
+	    },
+	    {
+	      "name": "lowercase eth, Icelandic",
+	      "glyph" : "&eth;"
+	    },
+	    {
+	      "name": "lowercase n, tilde",
+	      "glyph" : "&ntilde;"
+	    },
+	    {
+	      "name": "lowercase o, grave accent",
+	      "glyph" : "&ograve;"
+	    },
+	    {
+	      "name": "lowercase o, acute accent",
+	      "glyph" : "&oacute;"
+	    },
+	    {
+	      "name": "lowercase o, circumflex accent",
+	      "glyph" : "&ocirc;"
+	    },
+	    {
+	      "name": "lowercase o, tilde",
+	      "glyph" : "&otilde;"
+	    },
+	    {
+	      "name": "lowercase o, umlaut",
+	      "glyph" : "&ouml;"
+	    },
+	    {
+	      "name": "lowercase o, slash",
+	      "glyph" : "&oslash;"
+	    },
+	    {
+	      "name": "lowercase u, grave accent",
+	      "glyph" : "&ugrave;"
+	    },
+	    {
+	      "name": "lowercase u, acute accent",
+	      "glyph" : "&uacute;"
+	    },
+	    {
+	      "name": "lowercase u, circumflex accent",
+	      "glyph" : "&ucirc;"
+	    },
+	    {
+	      "name": "lowercase u, umlaut",
+	      "glyph" : "&uuml;"
+	    },
+	    {
+	      "name": "lowercase y, acute accent",
+	      "glyph" : "&yacute;"
+	    },
+	    {
+	      "name": "lowercase thorn, Icelandic",
+	      "glyph" : "&thorn;"
+	    },
+	    {
+	      "name": "lowercase y, umlaut",
+	      "glyph" : "&yuml"
+	    }
+	],
 
 	"settings_header": "",
 	"settings_data": [

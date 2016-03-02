@@ -14,10 +14,10 @@ Proxima Nova has been implemented as the default font family for Evolution as a 
 		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
-				{{#each pattern-library.tabs}}
+			<ul class="button-group radius {{type.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+				{{#each type.tabs}}
 				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
-					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
+					<a href="#tabs{{index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{index}}" class="button small evo-button">
 						<span class="text">{{name}}</span>
 					</a>
 				</li>
@@ -43,21 +43,48 @@ Proxima Nova has been implemented as the default font family for Evolution as a 
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
 								{{name}}
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</div>
-						<div class="evo-box-bdy">
+						<div class="evo-box-bdy evo-site-type-demo-ctn">
 						<!-- RENDERED HTML - BEGINS -->
-							<div class="evo-type-sample" data-evo-type-sample="{{type-sample}}">
-								<div class="large-size">{{capitalizeFirst sample-letters}}</div>
-								<div class="medium-size">
-									<span>{{alphabet}}</span><br />
-									{{lowercase alphabet}}<br />
-									{{numbers-symbol}}
-								</div>
-							</div>
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
+									{{> (lookup . 'partial') }}
+								{{/each}}
+							{{else}}
+								{{> (lookup . 'partial') }}
+							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
+						</div>
+						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						<!-- CODE - BEGINS -->
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
+
+							<!-- HTML - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
+								{{/each}}
+							{{else}}
+
+							<!-- HTML - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
+							{{/is}}
+						<!-- CODE - ENDS -->
 						</div>
 					</div>
 					{{/each}}
@@ -84,10 +111,121 @@ Proxima Nova has been implemented as the default font family for Evolution as a 
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 2
+					
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate type.font_families_header}}">
+						<div class="evo-site-markdown-content-block">
+{{# markdown }}
+##### {{type.font_families_header}}
+Mercer digital projects will use the Proxima Nova font family. Proxima Nova is a modern typeface with a geometric appearance that has become one of the most popular web fonts within the past few years.
+{{/ markdown }}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
+				<!-- FONT FAMILIES BOX - BEGINS -->
+					{{#each type.font_families_data }}
+					<div class="panel evo-box evo-site-example-box">
+						<div class="evo-box-hdr">
+						<!-- EXAMPLE HEADER - BEGINS -->
+							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
+								{{name}}
+							</h6>
+							<a name="{{hyphenate name}}"></a>
+						<!-- EXAMPLE HEADER - ENDS -->
+						</div>
+						<div class="evo-box-bdy">
+						<!-- RENDERED HTML - BEGINS -->
+							<div class="evo-site-type-sample" data-evo-site-type-sample="{{type-sample}}">
+								<div class="large-size">{{capitalizeFirst sample-letters}}</div>
+								<div class="medium-size">
+									<span>{{alphabet}}</span><br />
+									{{lowercase alphabet}}<br />
+									{{numbers-symbol}}
+								</div>
+							</div>
+						<!-- RENDERED HTML - ENDS -->
+						</div>
+					</div>
+					{{/each}}
+				<!-- FONT FAMILIES BOX - ENDS -->
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate type.hierarchy_header}}">
+						<div class="evo-site-markdown-content-block">
+{{# markdown }}
+##### {{type.hierarchy_header}}
+{{/ markdown }}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
+				<!-- HIERARCHY ROW - BEGINS -->
+				{{#each type.hierarchy_data }}
+					<div class="row evo-site-type-hierarchy-row">
+						<div class="medium-6 large-7 columns evo-keyline-right">
+							{{#if header}}<h6>{{header}}</h6>{{/if}}
+							{{{example}}}
+						</div>
+						<div class="medium-6 large-5 columns">
+							<ul class="evo-data-list evo-site-type-data-list">
+								{{#each example_data }}
+								<li>
+									<span class="evo-data-list-label">{{label}}:</span>
+									<span class="evo-data-list-item">{{item}}</span>
+								</li>
+								{{/each}}
+							</ul>
+						</div>
+					</div>
+				{{/each}}
+				<!-- HIERARCHY ROW - ENDS -->
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate type.characters_header}}">
+						<div class="evo-site-markdown-content-block">
+{{# markdown }}
+##### {{type.characters_header}}
+This is a demo of Western Latin characters to show off the compatibility of the Evolution Web font (Proxima Nova) with the type of characters used in common Western European languages such as Spanish, Portuguese, French, German, etc.
+{{/ markdown }}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
+				<!-- CHARACTERS DATA TABLE - BEGINS -->
+					<div class="evo-table-small-mediaquery">
+						<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-type-characters" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+							<thead>
+								<tr>
+									<th scope="column">Name</th>
+									<th scope="column">Glyph</th>
+								</tr>
+							</thead>
+							<tbody>
+							{{#each type.characters_data}}
+								<tr>
+									<td>{{{ name }}}</td>
+									<td>{{{ glyph }}}</td>
+								</tr>
+							{{/each}}
+							</tbody>
+						</table>
+					</div>
+				<!-- CHARACTERS DATA TABLE - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 2
+					
+				<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+						<dl class="sub-nav">
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate type.font_families_header}}">{{type.font_families_header}}</a></dd>
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate type.hierarchy_header}}">{{type.hierarchy_header}}</a></dd>
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate type.characters_header}}">{{type.characters_header}}</a></dd>
+						</dl>
+					</div>
+				<!-- SIDENAV - ENDS -->
+
 				</div>
 			</section>
 			

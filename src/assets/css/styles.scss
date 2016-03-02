@@ -28,8 +28,10 @@ URL: {{ meta_url }}
 
 /*=== WEBSITE STYLES =======================================================================*/
 
-/*--- DEVELOPER TOOLS ----------------------------------------------------------------------*/
-	
+/*--- DEVELOPER ----------------------------------------------------------------------------*/
+
+// TOOLS - BEGINS
+
 	// CODE
 	code								{@include border-radius($evo-site-code-border-radius);}
 
@@ -40,6 +42,7 @@ URL: {{ meta_url }}
 										border-width: $evo-site-annotations-border-width;
 										padding: $evo-site-annotations-padding;
 										}
+// TOOLS - ENDS
 
 
 /*--- SITE GLOBAL --------------------------------------------------------------------------*/
@@ -595,7 +598,40 @@ URL: {{ meta_url }}
 // CORPORATE LOGOS - ENDS
 
 
+/*--- GRID PAGE ----------------------------------------------------------------------------*/
+
+// GRID DEMO - BEGINS
+.evo-grid-demo							{
+	.row									{
+											border: 1px solid $onyx-dark-10;
+											margin-bottom: $evo-base-margin;
+											margin-left: 0 !important;
+											margin-right: 0 !important;
+											}
+	.columns								{background-color: $onyx-dark-2;}
+	.columns:nth-child(2n)					{background-color: $onyx-dark-6;}
+
+	[class*="evo-icon-"]					{top: 3px;}
+
+	[class*="small-block-grid-"]			{
+		li										{
+												background-color: $onyx-dark-2;
+												border-top: 1px solid $onyx-dark-10;
+												border-right: 1px solid $onyx-dark-10;
+												border-bottom: 1px solid $onyx-dark-10;
+												padding-top: rem-calc($evo-base-padding);
+												text-align: center;
+			&:nth-child(2n)							{background-color: $onyx-dark-6;}
+			&:first-child							{border-left: 1px solid $onyx-dark-10;}
+												}
+											}
+										}
+// GRID DEMO - ENDS
+
+
 /*--- HELPERS PAGE -------------------------------------------------------------------------*/
+
+// KEYLINE DEMO - BEGINS
 .evo-site--helpers-keyline-example		{
 	.evo-keyline-right						{
 											border-color: $onyx-dark-30;
@@ -606,9 +642,23 @@ URL: {{ meta_url }}
 											min-height: rem-calc(276);
 											}
 										}
+// KEYLINE DEMO - ENDS
+
+// CENTER HORIZONTALLY AND VERTICALLY DEMO - BEGINS
+.evo-center-container-dimensions-demo
+										{
+										height: rem-calc(200);
+										width: 100%;
+	p										{
+											width: rem-calc(200) !important;
+											}
+										}
+// CENTER HORIZONTALLY AND VERTICALLY DEMO - ENDS
 
 
 /*--- ICONS PAGE ---------------------------------------------------------------------------*/
+
+// ICOMOON ICONS TABLE - BEGINS
 .evo-site-icon-table-ctn				{
 										overflow-x: auto;
 										overflow-y: hidden;
@@ -639,22 +689,36 @@ URL: {{ meta_url }}
 												}
 											}
 										}
+// ICOMOON ICONS TABLE - ENDS
+
+
+/*--- PAGE TEMPLATES -----------------------------------------------------------------------*/
+
+// PAGE TEMPLATES THUMBNAILS - BEGINS
+.evo-site--page-template-container		{
+	.evo-site--page-template-thumbnail		{
+											@include border-radius($evo-site-page-template-thumbnail-border-radius);
+											margin-bottom: $evo-site-page-template-thumbnail-margin-bottom;
+											background-color: $evo-site-page-template-thumbnail-background-color;
+											}
+										}
+// PAGE TEMPLATES THUMBNAILS - ENDS
 
 
 /*--- TYPOGRAPHY PAGE ----------------------------------------------------------------------*/
 
-// TYPOGRAPHY - BEGINS
-	.evo-type-sample					{
+// TYPOGRAPHY DEFINITION - BEGINS
+	.evo-site-type-sample				{
 										margin-bottom: rem-calc(15);
-		&[data-evo-type-sample="proxima-nova-regular"]
+		&[data-evo-site-type-sample="proxima-nova-regular"]
 											{font-family: $evo-font-regular-stack;}
-		&[data-evo-type-sample="proxima-nova-semibold"]
+		&[data-evo-site-type-sample="proxima-nova-semibold"]
 											{font-family: $evo-font-medium-stack;}
-		&[data-evo-type-sample="proxima-nova-bold"]
+		&[data-evo-site-type-sample="proxima-nova-bold"]
 											{font-family: $evo-font-bold-stack;}
-		&[data-evo-type-sample="proxima-nova-italic"]
+		&[data-evo-site-type-sample="proxima-nova-italic"]
 											{font-family: $evo-font-italic-stack;}
-		&[data-evo-type-sample="proxima-nova-thin"]
+		&[data-evo-site-type-sample="proxima-nova-thin"]
 											{font-family: $evo-font-thin-stack;}
 		.large-size							{
 											font-size: rem-calc(120);
@@ -671,72 +735,42 @@ URL: {{ meta_url }}
 			span								{letter-spacing: rem-calc(3.5);}
 											}
 										}
-	.evo-type-hierarchy-row				{margin-bottom: rem-calc(30) !important;}
-	.evo-type-data-list					{
+	.evo-site-type-hierarchy-row		{
+										margin-bottom: rem-calc(30) !important;
+		.evo-keyline-right					{
+											border-right: 1px solid $onyx-dark-30 !important;
+											min-height: auto;
+											}
+										}
+	.evo-site-type-data-list			{
 										font-size: rem-calc(14);
 										margin-bottom: 0;
 										}
-// TYPOGRAPHY - ENDS
+// TYPOGRAPHY DEFINITION - ENDS
 
-
-/*--- PAGE TEMPLATES -----------------------------------------------------------------------*/
-.evo-site--page-template-container		{
-	.evo-site--page-template-thumbnail		{
-											@include border-radius($evo-site-page-template-thumbnail-border-radius);
-											margin-bottom: $evo-site-page-template-thumbnail-margin-bottom;
-											background-color: $evo-site-page-template-thumbnail-background-color;
+// TYPE DEMO CONTAINER - BEGINS
+.evo-site-type-demo-ctn					{
+	h1, h2, h3, h4, h5, h6					{line-height: 1.4;}
+	.subheader								{color: $onyx-dark-50;}
+	.evo-hdr-rule							{
+											padding-bottom: 0;
+											border-bottom-style: dotted;
+											border-bottom-color: $onyx-dark-30;
 											}
 										}
+// TYPE DEMO CONTAINER - ENDS
 
-
-/*--- KITCHEN SINK -------------------------------------------------------------------------*/
-
-// GRID DEMO
-.evo-grid-demo							{
-	.row									{
-											border: 1px solid $onyx-dark-10;
-											margin-bottom: $evo-base-margin;
-											margin-left: 0 !important;
-											margin-right: 0 !important;
-											}
-	.columns								{background-color: $onyx-dark-2;}
-	.columns:nth-child(2n)					{background-color: $onyx-dark-6;}
-
-	[class*="evo-icon-"]					{top: 3px;}
-
-	[class*="small-block-grid-"]			{
-		li										{
-												background-color: $onyx-dark-2;
-												border-top: 1px solid $onyx-dark-10;
-												border-right: 1px solid $onyx-dark-10;
-												border-bottom: 1px solid $onyx-dark-10;
-												padding-top: rem-calc($evo-base-padding);
-												text-align: center;
-			&:nth-child(2n)							{background-color: $onyx-dark-6;}
-			&:first-child							{border-left: 1px solid $onyx-dark-10;}
-												}
-											}
-										}
-
-// CENTER HORIZONTALLY AND VERTICALLY DEMO
-.evo-center-container-dimensions-demo
-										{
-										height: rem-calc(200);
-										width: 100%;
-	p										{
-											width: rem-calc(200) !important;
-											}
-										}
-
-// HYPHEN DEMO
+// HYPHEN DEMO - BEGINS
 .evo-hyphen-demo						{@include hyphens(auto);}
+// HYPHEN DEMO - ENDS
 
-// WORD BREAK DEMO
+// WORD BREAK DEMO - BEGINS
 .evo-word-break-container-dimensions-demo
 										{
 										height: rem-calc(50);
 										width: rem-calc(200);
 										}
+// WORD BREAK DEMO - ENDS
 
 
 /*--- WHY EVOLUTION PAGE -------------------------------------------------------------------------*/
