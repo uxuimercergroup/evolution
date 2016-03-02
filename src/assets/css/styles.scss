@@ -43,28 +43,6 @@ URL: {{ meta_url }}
 
 
 /*--- SITE GLOBAL --------------------------------------------------------------------------*/
-.evo-site-basic-icon-table				{
-										background-color: $white;
-										border-collapse: separate;
-	thead									{display: none;}
-	tr										{
-											@include clearfix;
-											background-color: $white !important;
-											float: left;
-											width: 10%;
-		td										{
-												@include border-radius($global-radius);
-												background-color: $white !important;
-												border: 1px solid $onyx-dark-20;
-												cursor: pointer;
-												display: block !important;
-												margin: 3px;
-			[class^="evo-icon"]
-													{left: 4px;}
-												}
-											}
-										}
-
 
 // BUTTONS - BEGINS
 	
@@ -601,7 +579,7 @@ URL: {{ meta_url }}
 
 // CORPORATE LOGOS - BEGINS
 	.evo-site-corp-logo-ctn--img-ctn	{
-										@include border-radius($global-radius);
+										@include border-radius($evo-site-corp-logo-img-ctn-border-radius);
 										border: 1px solid $transparent;
 										margin: rem-calc(20 0);
 										padding: rem-calc(20);
@@ -609,8 +587,8 @@ URL: {{ meta_url }}
 	.evo-site-corp-logo--favicon-img-ctn
 										{
 										margin: rem-calc(30 0);
-										border: 1px solid $onyx-dark-20;
-										background-color: $onyx-dark-2;
+										border: 1px solid $evo-site-corp-logo-favicon-img-ctn-border-color;
+										background-color: $evo-site-corp-logo-favicon-img-ctn-background-color;
 										padding-bottom: rem-calc(1);
 		img									{margin: 0;}
 										}
@@ -626,6 +604,39 @@ URL: {{ meta_url }}
 	[data-equalizer-watch]					{
 											height: auto !important;
 											min-height: rem-calc(276);
+											}
+										}
+
+
+/*--- ICONS PAGE ---------------------------------------------------------------------------*/
+.evo-site-icon-table-ctn				{
+										overflow-x: auto;
+										overflow-y: hidden;
+										-ms-overflow-style: -ms-autohiding-scrollbar;
+										-webkit-overflow-scrolling: touch;
+										margin-bottom: $evo-site-icon-table-ctn-margin-bottom;
+	.dataTables_wrapper						{margin-bottom: 0;}
+										}
+.evo-site-icon-table					{
+										margin-bottom: 0;
+										background-color: $evo-site-icon-table-background-color;
+										border-collapse: separate;
+										min-width: ($small-breakpoint + em-calc(1));
+	thead									{display: none;}
+	tr										{
+											@include clearfix;
+											background-color: $evo-site-icon-table-background-color !important;
+											float: left;
+											width: 10%;
+		td										{
+												@include border-radius($evo-site-icon-table-td-border-radius);
+												background-color: $evo-site-icon-table-td-background-color !important;
+												border: $evo-site-icon-table-td-border-width $evo-site-icon-table-td-border-style $evo-site-icon-table-td-border-color;
+												cursor: pointer;
+												display: block !important;
+												margin: 3px;
+			[class^="evo-icon-"]					{left: 6px;}
+												}
 											}
 										}
 

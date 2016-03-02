@@ -256,6 +256,7 @@
 		$evo-site-markdown-hdr-rule-border-color: $onyx-dark-30;
 		$evo-site-markdown-hdr-rule-margin-bottom: rem-calc(10);
 
+
 // HOME PAGE
 
 	// BENEFITS BAND
@@ -279,6 +280,34 @@
 	$evo-site-home-benefits-band-benefits5-tile-background-position: top -46px right;
 
 
+// ANIMATIONS PAGE
+
+	// SWATCH
+	$evo-site-animation-block-swatch-font-color: $white;
+
+
+// CORPORATE LOGOS
+$evo-site-corp-logo-img-ctn-border-radius: $global-radius;
+$evo-site-corp-logo-favicon-img-ctn-border-color: $onyx-dark-20;
+$evo-site-corp-logo-favicon-img-ctn-background-color: $onyx-dark-2;
+
+
+// ICONS PAGE
+$evo-site-icon-table-ctn-margin-bottom: rem-calc(20);
+$evo-site-icon-table-background-color: $white;
+$evo-site-icon-table-td-border-radius: $global-radius;
+$evo-site-icon-table-td-background-color: $white;
+$evo-site-icon-table-td-border-width: 1px;
+$evo-site-icon-table-td-border-style: solid;
+$evo-site-icon-table-td-border-color: $onyx-dark-20;
+
+
+// PAGE TEMPLATES PAGE
+$evo-site-page-template-thumbnail-border-radius: $global-radius;
+$evo-site-page-template-thumbnail-margin-bottom: rem-calc(14);
+$evo-site-page-template-thumbnail-background-color: $onyx-dark-6;
+
+
 // WHAT IS PAGE
 
 	// MISSION TAB BAND
@@ -292,14 +321,3 @@
 	$evo-site-what-is-band-tab-panel-marketing-content-padding-large: rem-calc(40 0 40 40);
 	$evo-site-what-is-band-tab-panel-marketing-content-keyline-border-width: 2px;
 	$evo-site-what-is-band-tab-panel-marketing-content-keyline-border-color: $onyx-dark-10;
-
-
-// PAGE TEMPLATES PAGE
-$evo-site-page-template-thumbnail-border-radius: $global-radius;
-$evo-site-page-template-thumbnail-margin-bottom: rem-calc(14);
-$evo-site-page-template-thumbnail-background-color: $onyx-dark-6;
-
-// ANIMATIONS PAGE
-
-	// SWATCH
-	$evo-site-animation-block-swatch-font-color: $white;
