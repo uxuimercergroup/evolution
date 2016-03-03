@@ -33,7 +33,11 @@ URL: {{ meta_url }}
 // TOOLS - BEGINS
 
 	// CODE
-	code								{@include border-radius($evo-site-code-border-radius);}
+	code								{
+										@include border-radius($evo-site-code-border-radius);
+										color: $evo-site-code-font-color;
+										background-color: $evo-site-code-bg-color;
+										}
 
 	// ANNOTATIONS
 	.evo-site-annotations				{
@@ -671,7 +675,7 @@ URL: {{ meta_url }}
 										margin-bottom: 0;
 										background-color: $evo-site-icon-table-background-color;
 										border-collapse: separate;
-										min-width: ($small-breakpoint + em-calc(1));
+										min-width: ($small-breakpoint - em-calc(29));
 	thead									{display: none;}
 	tr										{
 											@include clearfix;

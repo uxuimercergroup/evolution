@@ -1,5 +1,6 @@
 ---
 title: "Breadcrumbs"
+definition_content: "src/content/breadcrumbs/definition.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -111,10 +112,24 @@ Breadcrumbs come in handy to show a navigation trail for users clicking through 
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 2
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+							<div class="evo-site-annotations evo-spacer-margin-bottom-x-large">
+								<p>
+									We use a CSS <code>:after</code> element containing a slash character to create the separator between items. Some screen readers will read this character out loud—if this is an issue, you can use a background image or a separate element with <code>aria-hidden="true"</code> to create the separator instead.
+								</p>
+							</div>
+
+							{{{md definition_content}}}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 2
+					&nbsp;
 				</div>
 			</section>
 			
