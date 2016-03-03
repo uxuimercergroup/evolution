@@ -37,13 +37,13 @@ Evolution's form elements depend on Foundation's [Forms](http://foundation.zurb.
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- EXAMPLE BOX - BEGINS -->
-					{{#each form_elements.data }}
+					{{#each form-elements.data }}
 					<div class="panel evo-box evo-site-example-box">
 						<div class="evo-box-hdr">
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
 								{{name}}
-								<a href="#code-anchor{{@index}}" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
@@ -59,7 +59,7 @@ Evolution's form elements depend on Foundation's [Forms](http://foundation.zurb.
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
 						</div>
-						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" id="code-anchor{{@index}}" data-evo-toggle-element-item="code-toggle{{@index}}">
+						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
 						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -94,7 +94,7 @@ Evolution's form elements depend on Foundation's [Forms](http://foundation.zurb.
 				<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
-							{{#each form_elements.data}}
+							{{#each form-elements.data}}
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/each}}
 						</dl>
@@ -138,7 +138,7 @@ Evolution's form elements depend on Foundation's [Forms](http://foundation.zurb.
 						<hr>
 						--}}
 
-						{{#is form_elements.dependency_data.dependency 'true'}}
+						{{#is form-elements.dependency_data.dependency 'true'}}
 						<hr>
 
 					<!-- SIDENAV ACCORDION - BEGINS -->
@@ -150,41 +150,41 @@ Evolution's form elements depend on Foundation's [Forms](http://foundation.zurb.
 								<div id="dependencies-accordion" class="content active" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
 
 									<ul class="no-bullet">
-										{{#is form_elements.dependency_data.foundation 'true'}}
+										{{#is form-elements.dependency_data.foundation 'true'}}
 											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if form_elements.dependency_data.foundation_dependencies}}
+											{{#if form-elements.dependency_data.foundation_dependencies}}
 												<ul>
-												{{#each form_elements.dependency_data.foundation_dependencies}}
+												{{#each form-elements.dependency_data.foundation_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#is form_elements.dependency_data.evolution 'true'}}
+										{{#is form-elements.dependency_data.evolution 'true'}}
 											<li><a href="/">Evolution {{package.evolution.version}}</a>
-											{{#if form_elements.dependency_data.evolution_dependencies}}
+											{{#if form-elements.dependency_data.evolution_dependencies}}
 												<ul>
-												{{#each form_elements.dependency_data.evolution_dependencies}}
+												{{#each form-elements.dependency_data.evolution_dependencies}}
 													<li><a href="{{url}}">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is form_elements.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is form_elements.dependency_data.jquery_ui 'true'}}
+										{{#is form-elements.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is form-elements.dependency_data.jquery_ui 'true'}}
 											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
-											{{#if form_elements.dependency_data.jquery_ui_dependencies}}
+											{{#if form-elements.dependency_data.jquery_ui_dependencies}}
 												<ul>
-												{{#each form_elements.dependency_data.jquery_ui_dependencies}}
+												{{#each form-elements.dependency_data.jquery_ui_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#each form_elements.dependency_data.other}}
+										{{#each form-elements.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}
 									</ul>
