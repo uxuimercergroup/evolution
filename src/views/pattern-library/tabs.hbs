@@ -89,14 +89,6 @@ Tabs are elements that help you organize and navigate multiple content panels in
 					</div>
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
-
-<div class="evo-site-annotations">
-{{# markdown}}
-###### Deep Linking To Tabs or Tab Content
-
-The tabs Foundation component can parse the location hash value and open the corresponding tab content pane. To enable deep linking set `data-options="deep_linking:true"`. If the location hash maps to an element ID within a tab content pane, then the appropriate tab will become active and the browser window will scroll to the specified element. If you do not want to scroll to the specified element then set `data-options="scroll_to_content: false"`.
-{{/ markdown}}
-</div>
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
@@ -134,7 +126,19 @@ The tabs Foundation component can parse the location hash value and open the cor
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 3
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+{{# markdown}}
+##### Deep Linking To Tabs or Tab Content
+
+The tabs Foundation component can parse the location hash value and open the corresponding tab content pane. To enable deep linking set `data-options="deep_linking:true"`. If the location hash maps to an element ID within a tab content pane, then the appropriate tab will become active and the browser window will scroll to the specified element. If you do not want to scroll to the specified element then set `data-options="scroll_to_content: false"`.
+{{/ markdown}}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
