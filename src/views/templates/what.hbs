@@ -2,7 +2,7 @@
 title: "What is Evolution?"
 ---
 <!-- WHAT IS HERO - BEGINS -->
-	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="large" data-evo-site-hero-arrow-position="bottom">
+	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="x-large" data-evo-site-hero-arrow-position="bottom">
 		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
 			<div class="text-center evo-center-block-vertical-element">
 				<h1 class="evo-site-hero--hdr flipInY animated" data-evo-site-hero-hdr-size="large">{{{what.hero.title}}} <span>{{{what.hero.subtitle}}}</span></h1>
@@ -20,8 +20,8 @@ title: "What is Evolution?"
 				{{#each what.users.items}}
 				<li class="text-center">
 					{{> (lookup . 'partial') }}
-					<h5>{{header}}</h5>
-					<p>{{text}}</p>
+					<h5>{{{header}}}</h5>
+					<p>{{{text}}}</p>
 				</li>
 				{{/each}}
 			</ul>

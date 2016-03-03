@@ -289,6 +289,22 @@ URL: {{ meta_url }}
 
 // PATTERN LIBRARY TEMPLATE - BEGINS
 
+	// PATTERN LIBRARY HOMEPAGE - BEGINS
+		.evo-site--pattern-library-homepage-content-ctn
+											{
+											padding: 0;
+			.evo-site-hero--pattern-library		{
+												background-color: $evo-site-pattern-library-homepage-hero-background-color;
+				&[data-evo-site-hero-arrow-position]
+													{
+					&:after,
+					&:before							{color: $evo-site-pattern-library-homepage-hero-background-color;}
+													}
+												}
+			.evo-site-band--marketing			{background-color: $evo-site-pattern-library-homepage-marketing-band-background-color;}
+											}
+	// PATTERN LIBRARY HOMEPAGE - ENDS
+
 	// INTRO - BEGINS
 		.evo-site--pattern-library-intro	{
 											border-bottom-width: $evo-site-pattern-library-intro-border-bottom-width;
@@ -297,26 +313,6 @@ URL: {{ meta_url }}
 											padding-bottom: $evo-site-pattern-library-intro-padding-bottom;
 											}
 	// INTRO - ENDS
-
-	// HOMEPAGE INTRO - BEINGS
-		.evo-site--pattern-library-intro--homepage
-											{
-											border-bottom-width: 0;
-											text-align: center;
-											margin: rem-calc(30) 0;
-			h1									{
-												font-size: rem-calc(38);
-												font-family: $evo-font-thin-family !important;
-												text-transform: capitalize;
-												}
-											}
-
-		.evo-box--pattern-library--homepage-callouts
-											{
-											border-color: $onyx-dark-20;
-											background-color: $onyx-dark-2;
-											}
-	// HOMEPAGE INTRO - ENDS
 
 	// CONTENT TABS - BEGINS
 		.evo-site-tabs--pattern-library-tabs

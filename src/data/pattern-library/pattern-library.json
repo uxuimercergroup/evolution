@@ -1,4 +1,34 @@
 {
+	"hero": {
+		"title": "Pattern",
+		"subtitle": "Library",
+		"tagline": "Standards for product design &amp; development"
+	},
+	"callouts": {
+		"grid_small" : "1",
+		"grid_medium" : "2",
+		"grid_large" : "3",
+		"items":[
+			{
+				"header": "Style with Ease",
+				"text":	"With Evolution you can build custom applications with a look and feel that is consistent with Mercer&rsquo;s core features. Simply download our platform-agnostic framework and get started today.",
+				"partial": "icon",
+				"class": "evo-icon-site-design evo-icon-size-x-large"
+			},
+			{
+				"header": "Ecosystem",
+				"text":	"Evolution reflects the patterns and components that construct the Mercer products. These patterns and components provide a unified language and consistent look and feel when designing within the Mercer ecosystem.",
+				"partial": "icon",
+				"class": "evo-icon-site-earth evo-icon-size-x-large"
+			},
+			{
+				"header": "Design Success",
+				"text":	"With Evolution, you get access to all of Mercer&rsquo;s core visual and interaction design patterns so that you can follow established design principles and build products that have a consistent look and feel.",
+				"partial": "icon",
+				"class": "evo-icon-site-image2 evo-icon-size-x-large"
+			}
+		]
+	},
 	"sidebar": [
 		{
 			"header": "Tools",
@@ -87,58 +117,5 @@
 		{"name": "Definition"},
 		{"name": "Usage"},
 		{"name": "Settings"}
-	],
-
-	"code-standards-sidebar": [
-		{
-			"header": "Introduction",
-			"section": [
-				{"name": "Goals",							"url": ""},
-				{"name": "Getting Started",					"url": ""},
-				{"name": "General Standards",				"url": ""},
-				{"name": "Deliverables",					"url": ""}
-			]
-		},
-		{
-			"header": "HTML",
-			"section": [
-				{"name": "Goals for Markup",				"url": ""},
-				{"name": "Working With Markup",				"url": ""},
-				{"name": "HTML Best Practices",				"url": ""},
-				{"name": "Deliverables",					"url": ""},
-				{"name": "HTML5 Resources",					"url": ""}
-			]
-		},
-		{
-			"header": "CSS",
-			"section": [
-				{"name": "Goals for Effective CSS",			"url": ""},
-				{"name": "Working with CSS",				"url": ""},
-				{"name": "CSS Best Practices",				"url": ""},
-				{"name": "CSS Deliverables",				"url": ""},
-				{"name": "CSS Resources",					"url": ""}
-			]
-		},
-		{
-			"header": "JavaScript",
-			"section": [
-				{"name": "Goals",							"url": ""},
-				{"name": "Getting Started",					"url": ""},
-				{"name": "Best Practices",					"url": ""},
-				{"name": "Deliverables",					"url": ""},
-				{"name": "Next Steps",						"url": ""}
-			]
-		},
-		{
-			"header": "Responsive Design",
-			"section": [
-				{"name": "Goals",							"url": ""},
-				{"name": "Getting Started",					"url": ""},
-				{"name": "Best Practices",					"url": ""},
-				{"name": "Next Steps",						"url": ""}
-			]
-		}
 	]
-
-	
 }
