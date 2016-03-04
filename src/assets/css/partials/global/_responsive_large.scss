@@ -89,6 +89,30 @@
 	// HERO - ENDS
 
 
+	/*--- PATTERN LIBRARY PAGES ----------------------------------------------------------------*/
+	
+	// PATTERN LIBRARY TEMPLATE - BEGINS
+
+		// PATTERN LIBRARY HOMEPAGE - BEGINS
+			.evo-site-band--pattern-library		{
+				.evo-site-band--tab-panel			{
+													background-image: url($evo-site-pattern-library-band-tab-panel-background-image);
+													background-repeat: $evo-site-pattern-library-band-tab-panel-background-repeat;
+													background-size: $evo-site-pattern-library-band-tab-panel-background-size;
+													background-position: $evo-site-pattern-library-band-tab-panel-background-position;
+					.evo-site-band--tab-panel-marketing-content
+														{
+														border-width: $evo-site-pattern-library-band-tab-panel-marketing-content-keyline-border-width;
+														border-color: $evo-site-pattern-library-band-tab-panel-marketing-content-keyline-border-color;
+														padding: $evo-site-pattern-library-band-tab-panel-marketing-content-padding-large;
+														}
+													}
+												}
+		// PATTERN LIBRARY HOMEPAGE - ENDS
+
+	// PATTERN LIBRARY TEMPLATE - ENDS
+
+
 	/*--- WHAT IS PAGE -------------------------------------------------------------------------*/
 
 	// TAB BAND - BEGINS

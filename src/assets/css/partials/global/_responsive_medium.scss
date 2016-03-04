@@ -60,13 +60,20 @@
 
 
 	/*--- PATTERN LIBRARY PAGES ----------------------------------------------------------------*/
+	
+	// PATTERN LIBRARY TEMPLATE - BEGINS
 
-	// HOMEPAGE INTRO - BEINGS
-		.evo-site--pattern-library-intro--homepage
-											{
-			h1									{font-size: rem-calc(58);}
-											}
-	// HOMEPAGE INTRO - ENDS
+		// PATTERN LIBRARY HOMEPAGE - BEGINS
+			.evo-site-band--pattern-library		{
+				.evo-site-band--tab-panel			{
+													padding: $evo-site-pattern-library-band-tab-panel-padding;
+					.evo-site-band--tab-panel-marketing-content
+														{padding: $evo-site-pattern-library-band-tab-panel-marketing-content-padding;}
+													}
+												}
+		// PATTERN LIBRARY HOMEPAGE - ENDS
+
+	// PATTERN LIBRARY TEMPLATE - ENDS
 
 
 	/*--- WHAT IS PAGE -------------------------------------------------------------------------*/
@@ -130,6 +137,15 @@
 	/*--- PATTERN LIBRARY PAGES ----------------------------------------------------------------*/
 	
 	// PATTERN LIBRARY TEMPLATE - BEGINS
+
+		// PATTERN LIBRARY HOMEPAGE - BEGINS
+			.evo-site-band--pattern-library		{
+				.evo-site-band--tab-panel			{
+					.evo-site-band--tab-panel-marketing-content
+														{border-left: 0;}
+													}
+												}
+		// PATTERN LIBRARY HOMEPAGE - ENDS
 
 		// CONTENT TABS - BEGINS
 			.evo-site-tabs-content--pattern-library-content

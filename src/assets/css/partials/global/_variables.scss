@@ -179,7 +179,18 @@
 
 	// PATTERN LIBRARY HOMEPAGE
 	$evo-site-pattern-library-homepage-hero-background-color: $onyx-dark-70;
-	$evo-site-pattern-library-homepage-marketing-band-background-color: $white;
+	$evo-site-pattern-library-homepage-marketing-band-background-color: $onyx-dark-2;
+
+		// TAB BAND
+		$evo-site-pattern-library-band-tab-panel-background-image: "../images/evo-site-tablet-desktop-vector.png";
+		$evo-site-pattern-library-band-tab-panel-background-repeat: no-repeat;
+		$evo-site-pattern-library-band-tab-panel-background-size: auto;
+		$evo-site-pattern-library-band-tab-panel-background-position: right -200px top 76px;
+		$evo-site-pattern-library-band-tab-panel-padding: rem-calc(80 15 130 15);
+		$evo-site-pattern-library-band-tab-panel-marketing-content-padding: rem-calc(0 30);
+		$evo-site-pattern-library-band-tab-panel-marketing-content-padding-large: rem-calc(40 0 40 40);
+		$evo-site-pattern-library-band-tab-panel-marketing-content-keyline-border-width: 2px;
+		$evo-site-pattern-library-band-tab-panel-marketing-content-keyline-border-color: $onyx-dark-10;
 
 	// PATTERN LIBRARY TEMPLATE
 	$evo-site-pattern-library-keyline-color: $onyx-dark-10;
