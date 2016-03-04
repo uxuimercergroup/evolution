@@ -366,7 +366,7 @@ $(function() {
 				// Datepicker with message example
 				evoDatepicker('evo-datepicker-message-example');
 				
-				// Dateoicker masked date input example
+				// Datepicker masked date input example
 				evoDatepicker('evo-datepicker-masked-example');
 
 			// SCROLL PANE

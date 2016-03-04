@@ -73,6 +73,17 @@ The Scroll pane is an added control that allows excess information to be present
 							<!-- HTML - ENDS -->
 
 								{{/each}}
+
+								{{#if partial_js}}
+							<!-- JS - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-{{slug}}"><xmp>{{> (lookup . 'partial_js') }}</xmp></code></pre>
+							<!-- JS - ENDS -->
+								{{/if}}
+
 							{{else}}
 
 							<!-- HTML - BEGINS -->
@@ -82,6 +93,16 @@ The Scroll pane is an added control that allows excess information to be present
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
+
+								{{#if partial_js}}
+							<!-- JS - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-{{slug}}"><xmp>{{> (lookup . 'partial_js') }}</xmp></code></pre>
+							<!-- JS - ENDS -->
+								{{/if}}
 
 							{{/is}}
 						<!-- CODE - ENDS -->

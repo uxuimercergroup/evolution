@@ -8,6 +8,9 @@ title: "Thin Footer"
 
 {{# markdown }}
 ## {{ title }}
+
+<span class="label radius evo-label" data-evo-background-color="success-color">Version: {{ package.organisms.thin_footer.version }}</span>
+
 The Thin Footer is a footer container that appears consistently at the bottom of every page. The thin footer contains Mercer branding, copyright information, and global links such as, Terms of Use, Privacy Policy, Sitemap, and Contact Us.
 {{/ markdown }}
 
@@ -43,7 +46,7 @@ The Thin Footer is a footer container that appears consistently at the bottom of
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
 								{{name}}
-								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+								<a href="#code-anchor{{@index}}" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
@@ -59,7 +62,7 @@ The Thin Footer is a footer container that appears consistently at the bottom of
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
 						</div>
-						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" id="code-anchor{{@index}}" data-evo-toggle-element-item="code-toggle{{@index}}">
 						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}

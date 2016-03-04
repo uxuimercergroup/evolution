@@ -22,23 +22,33 @@
 	"data": {
 		"basic_slider": {
 			"name": "Basic Slider",
-			"partial": "slider", "slug": "basic-slider"
+			"partial": "slider",
+			"partial_js": "slider-js",
+			"slug": "basic-slider"
 		},
 		"slider_interval_ticks": {
 			"name": "Slider Interval Ticks",
-			"partial": "slider-interval-ticks", "slug": "slider-interval-ticks"
+			"partial": "slider-interval-ticks",
+			"partial_js": "slider-interval-ticks-js",
+			"slug": "slider-interval-ticks"
 		},
 		"range_slider": {
 			"name": "Range Slider",
-			"partial": "range-slider", "slug": "range-slider"
+			"partial": "range-slider",
+			"partial_js": "range-slider-js",
+			"slug": "range-slider"
 		},
 		"range_slider_min": {
 			"name": "Range Slider Min",
-			"partial": "range-slider-min", "slug": "range-slider-min"
+			"partial": "range-slider-min",
+			"partial_js": "range-slider-min-js",
+			"slug": "range-slider-min"
 		},
 		"range_slider_max": {
 			"name": "Range Slider Max",
-			"partial": "range-slider-max", "slug": "range-slider-max"
+			"partial": "range-slider-max",
+			"partial_js": "range-slider-max-js",
+			"slug": "range-slider-max"
 		}
 	},
 

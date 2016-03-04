@@ -22,21 +22,22 @@
 	"data": {
 		"image_carousel": {
 			"name": "Image Carousel",
-			"partial": "carousel", "slug": "image-carousel"
+			"partial": "carousel",
+			"partial_js" : "carousel-js",
+			"slug": "image-carousel"
 		},
 		"content_carousel": {
 			"name": "Content Carousel",
-			"partial": "carousel-content", "slug": "content-carousel"
+			"partial": "carousel-content",
+			"partial_js" : "carousel-js",
+			"slug": "content-carousel"
 		}
 	},
 
 	"data-js": {
-		"carousel-js": {
-			"name": "Carousel",
-			"partial": "carousel",
-			"partial_js" : "carousel-js",
-			"slug": "carousel"
-		}
+		"partial": "carousel",
+		"partial_js" : "carousel-js",
+		"slug": "carousel"
 	},
 
 	"settings_header": "",

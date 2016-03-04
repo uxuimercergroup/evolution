@@ -23,19 +23,27 @@
 	"data": {
 		"basic_scrollpane": {
 			"name": "Basic Scroll Pane",
-			"partial": "scroll-pane", "slug": "basic-scrollpane"
+			"partial": "scroll-pane",
+			"partial_js": "scroll-pane-js",
+			"slug": "basic-scroll-pane"
 		},
 		"scroll_pane_horizontal": {
 			"name": "Scroll Pane Horizontal",
-			"partial": "scroll-pane-horizontal", "slug": "scroll-pane-horizontal"
+			"partial": "scroll-pane-horizontal",
+			"partial_js": "scroll-pane-horizontal-js",
+			"slug": "scroll-pane-horizontal"
 		},
 		"scroll_pane_horizontal_vertical": {
 			"name": "Scroll Pane Both",
-			"partial": "scroll-pane-horizontal-vertical", "slug": "scroll-pane-horizontal-vertical"
+			"partial": "scroll-pane-horizontal-vertical",
+			"partial_js": "scroll-pane-horizontal-vertical-js",
+			"slug": "scroll-pane-horizontal-vertical"
 		},
 		"scroll_pane_custom-height": {
 			"name": "Scroll Pane Custom Height",
-			"partial": "scroll-pane-custom-height", "slug": "scroll-pane-custom-height"
+			"partial": "scroll-pane-custom-height",
+			"partial_js": "scroll-pane-custom-height-js",
+			"slug": "scroll-pane-custom-height"
 		}
 	},
 

@@ -73,6 +73,9 @@ The autocomplete automatically suggests items for users when filling out an inpu
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
 
+								{{/each}}
+
+								{{#if partial_js}}
 							<!-- JS - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
@@ -80,8 +83,8 @@ The autocomplete automatically suggests items for users when filling out an inpu
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-{{slug}}"><xmp>{{> (lookup . 'partial_js') }}</xmp></code></pre>
 							<!-- JS - ENDS -->
+								{{/if}}
 
-								{{/each}}
 							{{else}}
 
 							<!-- HTML - BEGINS -->
@@ -92,6 +95,7 @@ The autocomplete automatically suggests items for users when filling out an inpu
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
 
+								{{#if partial_js}}
 							<!-- JS - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
@@ -99,6 +103,7 @@ The autocomplete automatically suggests items for users when filling out an inpu
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-{{slug}}"><xmp>{{> (lookup . 'partial_js') }}</xmp></code></pre>
 							<!-- JS - ENDS -->
+								{{/if}}
 
 							{{/is}}
 						<!-- CODE - ENDS -->

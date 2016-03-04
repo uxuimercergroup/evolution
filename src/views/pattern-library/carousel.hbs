@@ -75,6 +75,17 @@ The Carousel control allows for a revolving display of different types of conten
 							<!-- HTML - ENDS -->
 
 								{{/each}}
+
+								{{#if partial_js}}
+							<!-- JS - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-{{slug}}"><xmp>{{> (lookup . 'partial_js') }}</xmp></code></pre>
+							<!-- JS - ENDS -->
+								{{/if}}
+
 							{{else}}
 
 							<!-- HTML - BEGINS -->
@@ -84,6 +95,16 @@ The Carousel control allows for a revolving display of different types of conten
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
+
+								{{#if partial_js}}
+							<!-- JS - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-{{slug}}"><xmp>{{> (lookup . 'partial_js') }}</xmp></code></pre>
+							<!-- JS - ENDS -->
+								{{/if}}
 
 							{{/is}}
 						<!-- CODE - ENDS -->
@@ -147,10 +168,10 @@ The Carousel control allows for a revolving display of different types of conten
 						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
 							<div class="evo-box-ftr">
 								<div class="evo-site-example-box--code-hdr">
-									{{carousel.data-js.carousel-js.slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-usage-{{carousel.data-js.carousel-js.slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									{{carousel.data-js.slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-usage-{{carousel.data-js.slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
-								<pre><code class="language-js" id="evo-code-copy-js-usage-{{carousel.data-js.carousel-js.slug}}"><xmp>{{> carousel-js }}</xmp></code></pre>
+								<pre><code class="language-js" id="evo-code-copy-js-usage-{{carousel.data-js.slug}}"><xmp>{{> carousel-js }}</xmp></code></pre>
 							</div>
 						</div>
 					<!-- JS CODE - ENDS -->
@@ -159,10 +180,10 @@ The Carousel control allows for a revolving display of different types of conten
 						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
 							<div class="evo-box-ftr evo-no-margin-top">
 								<div class="evo-site-example-box--code-hdr">
-									{{carousel.data-js.carousel-js.slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-usage-{{carousel.data-js.carousel-js.slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									{{carousel.data-js.slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-usage-{{carousel.data-js.slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
-								<pre><code class="language-markup" id="evo-code-copy-html-usage-{{carousel.data-js.carousel-js.slug}}"><xmp>{{> carousel }}</xmp></code></pre>
+								<pre><code class="language-markup" id="evo-code-copy-html-usage-{{carousel.data-js.slug}}"><xmp>{{> carousel }}</xmp></code></pre>
 							</div>
 						</div>
 					<!-- HTML CODE - ENDS -->

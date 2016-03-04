@@ -124,7 +124,9 @@
 			"multiple_example_options": [
 				{"partial": "button", "button-type": "button", "secondary": "true", "text": "Save", "interactive-data-value":"evo-button-interactive-secondary-example", "slug": "interactive-button-secondary"},
 				{"partial": "button", "button-type": "button", "text": "Save", "interactive-data-value":"evo-button-interactive-primary-example", "slug": "interactive-button"}
-			]
+			],
+			"partial_js": "interactive-button-js",
+			"slug": "interactive-button"
 		},
 		"basic_button_group": {
 			"name": "Basic Button Group",

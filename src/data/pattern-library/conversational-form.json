@@ -22,10 +22,9 @@
 	"data": {
 		"conversational-form": {
 			"name": "Basic",
-			"multiple_example": "true",
-			"multiple_example_options": [
-				{"partial": "conversational-form", "slug": "conversational-form"}
-			]
+			"partial": "conversational-form",
+			"partial_js": "conversational-form-js",
+			"slug": "conversational-form"
 		}
 	},
 
