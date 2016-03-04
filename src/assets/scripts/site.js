@@ -173,9 +173,9 @@
 	// PATTERN LIBRARY PAGES
 	//----------------------------------------------------------------------------------------------------
 
-		// TYPE CHARACTERS DATA TABLE REDRAW FUNCTION
-		var evoSiteCharactersDataTableRedraw = function(){
-			jQuery('[data-evo-data-table="evo-data-table-type-characters"]').DataTable().draw();
+		// DATA TABLE REDRAW FUNCTION
+		var evoSiteDataTableRedraw = function(){
+			jQuery('[data-evo-data-table]').DataTable().draw();
 		}
 
 		// REFLOW/REDRAW ON TOGGLE OF PATTERN LIBRARY CONTENT TABS
@@ -186,7 +186,7 @@
 			    $(document).foundation('equalizer', 'reflow');
 
 			    // Redraw type characters data table on tab toggling, fixes scrolling table fixed thead injected layout
-			    evoSiteCharactersDataTableRedraw();
+			    evoSiteDataTableRedraw();
 			});
 		}
 
@@ -246,22 +246,30 @@ $(function() {
 
 			// SETTINGS TAB DATA TABLE
 			evoDataTable('evo-data-table-pattern-library-setting-options',{
-				"paging": false,
-				"info": false
+				paging: false,
+				info: false
 			});
 
 			// ICOMOON ICONS DATA TABLE
 			evoDataTable('evo-data-table-pattern-library-icons',{
-				"paging": false,
-				"info": false
+				paging: false,
+				info: false
 			});
 
 			// TYPE CHARACTERS DATA TABLE
 			evoDataTable('evo-data-table-type-characters',{
 				scrollY: '200px',
 				scrollCollapse: true,
-				"paging": false,
-				"info": false
+				paging: false,
+				info: false
+			});
+
+			// MARGIN PADDING SETTINGS TABLE
+			evoDataTable('evo-data-table-margin-padding-settings',{
+				scrollY: '350px',
+				scrollCollapse: true,
+				paging: false,
+				info: false
 			});
 
 

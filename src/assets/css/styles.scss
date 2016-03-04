@@ -503,7 +503,7 @@ URL: {{ meta_url }}
 			h5									{
 												border-bottom: $evo-site-markdown-hdr-rule-border-size $evo-site-markdown-hdr-rule-border-style $evo-site-markdown-hdr-rule-border-color;
 												margin-bottom: $evo-site-markdown-hdr-rule-margin-bottom;
-												margin-top: 40px;
+												margin-top: $evo-site-markdown-content-margin;
 				&:first-child						{margin-top: 0;}
 												}
 											}
@@ -635,28 +635,36 @@ URL: {{ meta_url }}
 /*--- HELPERS PAGE -------------------------------------------------------------------------*/
 
 // KEYLINE DEMO - BEGINS
-.evo-site--helpers-keyline-example		{
-	.evo-keyline-right						{
-											border-color: $onyx-dark-30;
-											min-height: auto;
+	.evo-site--helpers-keyline-example		{
+		.evo-keyline-right						{
+												border-color: $onyx-dark-30;
+												min-height: auto;
+												}
+		[data-equalizer-watch]					{
+												height: auto !important;
+												min-height: rem-calc(276);
+												}
 											}
-	[data-equalizer-watch]					{
-											height: auto !important;
-											min-height: rem-calc(276);
-											}
-										}
 // KEYLINE DEMO - ENDS
 
 // CENTER HORIZONTALLY AND VERTICALLY DEMO - BEGINS
-.evo-center-container-dimensions-demo
-										{
-										height: rem-calc(200);
-										width: 100%;
-	p										{
-											width: rem-calc(200) !important;
+	.evo-center-container-dimensions-demo
+											{
+											height: rem-calc(200);
+											width: 100%;
+		p										{
+												width: rem-calc(200) !important;
+												}
 											}
-										}
 // CENTER HORIZONTALLY AND VERTICALLY DEMO - ENDS
+
+// MARGIN PADDING SETTINGS TABLE - BEGINS
+	.evo-site-margin-padding-settings-table
+										{
+		.evo-site-margin-padding-settings-table--copy-cursor
+											{cursor: default;}
+										}
+// MARGIN PADDING SETTINGS TABLE - ENDS
 
 
 /*--- ICONS PAGE ---------------------------------------------------------------------------*/
