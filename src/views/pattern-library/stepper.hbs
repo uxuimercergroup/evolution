@@ -10,6 +10,8 @@ title: "Stepper"
 ## {{ title }}
 
 <span class="label radius evo-label" data-evo-background-color="success-color">Version: {{ package.organisms.stepper.version }}</span>
+{{#is stepper.product_suite_bp 'true' }}<span class="label radius evo-label" data-evo-background-color="sapphire-medium">Benefits Portals</span>{{/is}}
+{{#is stepper.product_suite_comm 'true' }}<span class="label radius evo-label" data-evo-background-color="amethyst-bright">Communication Sites</span>{{/is}}
 
 The generic stepper informs the user of the number of steps that exist in a multi-step flow. It is also used to orient the user as to where they are within the specific flow.
 {{/ markdown }}

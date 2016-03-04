@@ -10,6 +10,8 @@ title: "Fat Footer"
 ## {{ title }}
 
 <span class="label radius evo-label" data-evo-background-color="success-color">Version: {{ package.organisms.fat_footer.version }}</span>
+{{#is fat-footer.product_suite_bp 'true' }}<span class="label radius evo-label" data-evo-background-color="sapphire-medium">Benefits Portals</span>{{/is}}
+{{#is fat-footer.product_suite_comm 'true' }}<span class="label radius evo-label" data-evo-background-color="amethyst-bright">Communication Sites</span>{{/is}}
 
 The Fat Footer is a footer container that appears consistently at the bottom of every page. The fat footer contains Mercer branding, copyright information, and global links such as, Terms of Use, Privacy Policy, Sitemap, and Contact Us.
 {{/ markdown }}
