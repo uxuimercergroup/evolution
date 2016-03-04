@@ -1,13 +1,17 @@
-{{#each front-end-code-standards.sidebar}}
-<!-- TOC - SECTION HEADER - BEGINS -->
-	<h6 class="evo-hdr-rule">{{header}}</h6>
-<!-- TOC - SECTION HEADER - ENDS -->
+<!-- SIDEBAR NAV - BACK TO CONTENT - BEGINS -->
+<a href="#top" class="button expand radius evo-button tiny show-for-small-only" role="button">Back To Content</a>
+<!-- SIDEBAR NAV - BACK TO CONTENT - ENDS -->
 
-<!-- TOC - SECTION LIST - BEGINS -->
+{{#each front-end-code-standards.sidebar}}
+<!-- SIDEBAR NAV - SECTION HEADER - BEGINS -->
+	<h6 class="evo-hdr-rule">{{header}}</h6>
+<!-- SIDEBAR NAV - SECTION HEADER - ENDS -->
+
+<!-- SIDEBAR NAV - SECTION LIST - BEGINS -->
 	<dl>
 		{{#each section}}
 			<dd><a href="{{url}}">{{name}}</a></dd>
 		{{/each}}
 	</dl>
-<!-- TOC - SECTION LIST - ENDS -->
+<!-- SIDEBAR NAV - SECTION LIST - ENDS -->
 {{/each}}

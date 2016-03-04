@@ -1,13 +1,17 @@
-{{#each pattern-library.sidebar}}
-<!-- TOC - SECTION HEADER - BEGINS -->
-	<h6 class="evo-hdr-rule">{{header}}</h6>
-<!-- TOC - SECTION HEADER - ENDS -->
+<!-- SIDEBAR NAV - BACK TO CONTENT - BEGINS -->
+<a href="#top" class="button expand radius evo-button tiny show-for-small-only" role="button">Back To Content</a>
+<!-- SIDEBAR NAV - BACK TO CONTENT - ENDS -->
 
-<!-- TOC - SECTION LIST - BEGINS -->
+{{#each pattern-library.sidebar}}
+<!-- SIDBAR NAV - SECTION HEADER - BEGINS -->
+	<h6 class="evo-hdr-rule">{{header}}</h6>
+<!-- SIDBAR NAV - SECTION HEADER - ENDS -->
+
+<!-- SIDBAR NAV - SECTION LIST - BEGINS -->
 	<dl>
 		{{#each section}}
 			<dd><a href="{{url}}">{{name}}</a></dd>
 		{{/each}}
 	</dl>
-<!-- TOC - SECTION LIST - ENDS -->
+<!-- SIDBAR NAV - SECTION LIST - ENDS -->
 {{/each}}
