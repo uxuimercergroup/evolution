@@ -503,6 +503,8 @@ URL: {{ meta_url }}
 			h5									{
 												border-bottom: $evo-site-markdown-hdr-rule-border-size $evo-site-markdown-hdr-rule-border-style $evo-site-markdown-hdr-rule-border-color;
 												margin-bottom: $evo-site-markdown-hdr-rule-margin-bottom;
+												margin-top: 40px;
+				&:first-child						{margin-top: 0;}
 												}
 											}
 	// MARKDOWN CONTENT BLOCK - ENDS
