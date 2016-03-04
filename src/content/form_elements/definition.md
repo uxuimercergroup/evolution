@@ -1,10 +1,7 @@
 ##### General
-
-Forms are built with a combination of standard form elements, as well as the Grid (rows and columns).
-
-Form elements are styled based on their type attribute rather than a class, and can be sized in a couple of ways:
-* You can size inputs using column sizes, like `.large-6`, `.small-6`.
-* You can create row elements inside your form and use columns for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.
+* Forms are built with a combination of standard form elements, as well as the Grid (rows and columns).
+* Form elements are styled based on their type attribute rather than a class.
+* Rows inside a form inherit some special padding to even up input spacing.
 
 ##### Stacked Forms
 
@@ -23,23 +20,38 @@ The Inline Form displays the Field Labels and the associated Form Fields on the 
 
 It is also a good solution in cases when there are numerous fields, and a *smaller amount of screen real estate* is available.
 
-You can put the label inside a different column to the left of the input. Then add a class of `.right` to the label to have it align to the right. Adding a class of `.inline` will have it vertically center against an input. You can use one or both of these classes to accomplish the look you want.
-
 When using an Inline Form, the preference is to use the Right Aligned version, as this creates a tighter association between the Field Label and the Form Field. The Left Aligned form is availble to be used, but the excess white space between the Form Label and the Form Field creates issues with readability
 
 ##### Error Text and Abide Validation
-Abide Validation appears whenever the user makes a mistake on a form element, like failing to fill out a required input field. Abide Validation pinpoints where exactly on the form the error or errors occurred. Put the required attribute on the form element that needs validation and add a `<small>` tag with a class of `.error` along with error help text under that form element. If your form elements are not contained in a label then you need to make sure the label's for attribute matches up with the id of the associated form element. 
+Abide Validation appears whenever the user makes a mistake on a form element, like failing to fill out a required input field. Abide Validation pinpoints where exactly on the form the error or errors occurred. 
 
 ##### Help Text
+* Help text for labels, inputs and messaging enable your app to generate programatically. 
+* Place help text below a field to clarify it's purpose
 
-Error text for labels, inputs and messaging enable your app to generate programatically. You can attach a class of `.evo-form-help-text` either to the individual elements (label, input, small) or to a column/div.
+##### Text Inputs
 
-##### Defining a Fieldset
+These input types create a text field: text, date, datetime, datetime-local, email, month, number, password, search, tel, time, url, and week.
 
-`<fieldset>` is used as a wrapper right inside the form element. Right after you define a fieldset, you can include a legend title by using `<legend>`. 
+##### Number Inputs
 
-##### Pre/Postfix Labels & Actions
+In most desktop browsers, `<input type="number">` elements will have up/down controls inside them, which increment and decrement the number inside the field. These are called *spin buttons*. 
 
-Forms support actions tied to buttons, and prefix/postfix labels, through a versatile approach using special grid properties. Essentially you can use `<div class="row collapse">` to create label/action/input combinations. You use the Foundation columns to define the size of the pre/postfix `<span class="postfix">` or `<span class="prefix">`.
+##### Text Areas
 
-You can also give a button/input pair a radius or a rounded edge by adding the classes `prefix-radius`, `postfix-radius`, `prefix-round` or `postfix-round` to the row that contains the elements. For example, `<div class="row collapse postfix-round">` will add a rounded edge to the left side of the input field, and to the right side of the button, creating a cohesive rounded input. You can even include buttons with these styles, just apply the `.button` as well as the pre/postfix class.
+The `<textarea>` element creates a multi-line text input.
+
+##### Select Menus
+
+Use select menus to combine many choices into one menu.
+
+##### Checkboxes and Radio Buttons
+
+Use groups of checkboxes when the user may select multiple choices from a list, and use radio buttons when the user must select just one choice.
+
+
+
+
+
+
+
