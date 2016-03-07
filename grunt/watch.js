@@ -26,7 +26,7 @@ module.exports = {
     tasks: ['newer:assemble:page_templates', 'notify:assemble']
   },
   content: {
-    files: ['src/content/**/*.md'],
+    files: ['src/content/**/*.md', 'CHANGELOG.md'],
     tasks: ['assemble', 'notify:assemble']
   },
   data: {
