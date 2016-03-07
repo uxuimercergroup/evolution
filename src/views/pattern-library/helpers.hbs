@@ -240,86 +240,111 @@ Evolution includes a handful of helpful utility helpers to add certain behaviors
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 
-					<div class="evo-site-markdown-content-block">
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate helpers.margin_padding_header}}">
+						<div class="evo-site-markdown-content-block">
 {{# markdown}}
-##### {{ helpers.margin_padding_table_header }}
+##### {{helpers.margin_padding_header}}
 {{/ markdown}}
-					</div>
+						</div>
 
-				<!-- MARGIN, PADDING SETTINGS TABLE - BEGINS -->
-					<div class="evo-table-small-mediaquery">
-						<table class="evo-table evo-table-hover evo-site-margin-padding-settings-table" data-evo-data-table="evo-data-table-margin-padding-settings" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
-							<thead>
-								<tr>
-									<th scope="column">Definition</th>
-									<th scope="column">Class</th>
-								</tr>
-							</thead>
-							<tbody>
-							{{#each helpers.margin_padding_settings}}
-								<tr>
-									<td>{{ description }}</td>
-									<td class="evo-site-margin-padding-settings-table--copy-cursor copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{ class }}">{{ class }}</td>
-								</tr>
-							{{/each}}
-							</tbody>
-						</table>
-					</div>
-				<!-- MARGIN, PADDING SETTINGS TABLE - ENDS -->
+					<!-- MARGIN, PADDING SETTINGS TABLE - BEGINS -->
+						<div class="evo-table-small-mediaquery">
+							<table class="evo-table evo-table-hover evo-site-margin-padding-settings-table" data-evo-data-table="evo-data-table-margin-padding-settings" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+								<thead>
+									<tr>
+										<th scope="column">Definition</th>
+										<th scope="column">Class</th>
+									</tr>
+								</thead>
+								<tbody>
+								{{#each helpers.margin_padding_settings}}
+									<tr>
+										<td>{{ description }}</td>
+										<td class="evo-site-margin-padding-settings-table--copy-cursor copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{ class }}">{{ class }}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					<!-- MARGIN, PADDING SETTINGS TABLE - ENDS -->
 
-					<div class="evo-site-markdown-content-block">
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate helpers.text_alignment_header}}">
+						<div class="evo-site-markdown-content-block">
 {{# markdown}}
-##### {{ helpers.text_visibility_header }}
+##### {{helpers.text_alignment_header}}
 {{/ markdown}}
-					</div>
+						</div>
 
-				<!-- TEXT VISIBILITY TABLE - BEGINS -->
-					<div class="evo-table-small-mediaquery">
-						<table class="evo-table evo-table-hover evo-site-margin-padding-settings-table" data-evo-data-table="evo-data-table-margin-padding-settings" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
-							<thead>
-								<tr>
-									<th scope="column">Class Value</th>
-								</tr>
-							</thead>
-							<tbody>
-							{{#each helpers.text_visibility_settings}}
-								<tr>
-									<td class="evo-site-margin-padding-settings-table--copy-cursor copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{ text-class }}">{{ text-class }}</td>
-								</tr>
-							{{/each}}
-							</tbody>
-						</table>
-					</div>
-				<!-- TEXT VISIBILITY TABLE - ENDS -->
+					<!-- TEXT VISIBILITY TABLE - BEGINS -->
+						<div class="evo-table-small-mediaquery">
+							<table class="evo-table evo-table-hover evo-site-margin-padding-settings-table" data-evo-data-table="evo-data-table-margin-padding-settings" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+								<thead>
+									<tr>
+										<th scope="column">Class Value</th>
+									</tr>
+								</thead>
+								<tbody>
+								{{#each helpers.text_alignment_settings}}
+									<tr>
+										<td class="evo-site-margin-padding-settings-table--copy-cursor copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{ text-class }}">{{ text-class }}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					<!-- TEXT VISIBILITY TABLE - ENDS -->
 
-					<div class="evo-site-markdown-content-block">
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate helpers.visibility_header}}">
+						<div class="evo-site-markdown-content-block">
 {{# markdown}}
-##### {{ helpers.visibility_header }}
+##### {{helpers.visibility_header}}
 {{/ markdown}}
-					</div>
+						</div>
 
-				<!-- TEXT VISIBILITY TABLE - BEGINS -->
-					<div class="evo-table-small-mediaquery">
-						<table class="evo-table evo-table-hover evo-site-margin-padding-settings-table" data-evo-data-table="evo-data-table-margin-padding-settings" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
-							<thead>
-								<tr>
-									<th scope="column">Class Value</th>
-								</tr>
-							</thead>
-							<tbody>
-							{{#each helpers.visibility_settings}}
-								<tr>
-									<td class="evo-site-margin-padding-settings-table--copy-cursor copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{ visibility-class }}">{{ visibility-class }}</td>
-								</tr>
-							{{/each}}
-							</tbody>
-						</table>
-					</div>
-				<!-- TEXT VISIBILITY TABLE - ENDS -->
+					<!-- TEXT VISIBILITY TABLE - BEGINS -->
+						<div class="evo-table-small-mediaquery">
+							<table class="evo-table evo-table-hover evo-site-margin-padding-settings-table" data-evo-data-table="evo-data-table-margin-padding-settings" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+								<thead>
+									<tr>
+										<th scope="column">Class Value</th>
+									</tr>
+								</thead>
+								<tbody>
+								{{#each helpers.visibility_settings}}
+									<tr>
+										<td class="evo-site-margin-padding-settings-table--copy-cursor copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{ visibility-class }}">{{ visibility-class }}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					<!-- TEXT VISIBILITY TABLE - ENDS -->
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
 
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					&nbsp;
+					
+				<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+						<dl class="sub-nav">
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate helpers.margin_padding_header}}">{{helpers.margin_padding_header}}</a></dd>
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate helpers.text_alignment_header}}">{{helpers.text_alignment_header}}</a></dd>
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate helpers.visibility_header}}">{{helpers.visibility_header}}</a></dd>
+						</dl>
+					</div>
+				<!-- SIDENAV - ENDS -->
+
 				</div>
 			</section>
 			
