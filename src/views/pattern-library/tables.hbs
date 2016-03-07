@@ -11,7 +11,7 @@ title: "Tables"
 Tables are an element meant to organize data on a page. Evolution tables depend on Foundation's [Tables](http://foundation.zurb.com/sites/docs/v/5.5.3/components/tables.html) as a starting point.
 {{/ markdown }}
 
-		{{> jump-to-nav}}
+		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -37,42 +37,66 @@ Tables are an element meant to organize data on a page. Evolution tables depend 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- EXAMPLE BOX - BEGINS -->
+					{{#each tables.data }}
 					<div class="panel evo-box evo-site-example-box">
 						<div class="evo-box-hdr">
 						<!-- EXAMPLE HEADER - BEGINS -->
-							<h6 class="evo-hdr-rule" data-magellan-destination="Basic-Table">
-								Basic Table
-								<a href="#code-anchor0" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle0" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr0, after: removeAnim;"></a>
+							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
+								{{name}}
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
-							<a name="Basic-Table"></a>
+							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</div>
 						<div class="evo-box-bdy">
 						<!-- RENDERED HTML - BEGINS -->
-							{{> table-static }}
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
+									{{> (lookup . 'partial') }}
+								{{/each}}
+							{{else}}
+								{{> (lookup . 'partial') }}
+							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
 						</div>
-						<div class="evo-box-ftr evo-site-example-box-ftr0 hide" id="code-anchor0" data-evo-toggle-element-item="code-toggle0">
+						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
 						<!-- CODE - BEGINS -->
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
 
 							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
-									basic-table
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-basic-table" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
-								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-basic-table"><xmp>{{> table-static }}</xmp></code></pre>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
 
+								{{/each}}
+							{{else}}
+
+							<!-- HTML - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
+							{{/is}}
 						<!-- CODE - ENDS -->
 						</div>
 					</div>
+					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
-							<dd data-magellan-arrival="Basic-Table"><a href="#Basic-Table">Basic Table</a></dd>
+							{{#each tables.data}}
+							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+							{{/each}}
 						</dl>
 					</div>
 				<!-- SIDENAV - ENDS -->
