@@ -31,14 +31,19 @@
 	},
 	"sidebar": [
 		{
+			"header": "Setup",
+			"section": [
+				{"name": "Installation",		"url": "/pattern-library/installation.html"},
+				{"name": "Boilerplates",		"url": "/boilerplates.html"},
+				{"name": "Compatibility",		"url": "/compatibility.html"}
+			]
+		},
+		{
 			"header": "Tools",
 			"section": [
-				{"name": "Boilerplates",		"url": "/boilerplates.html"},
-				{"name": "Development Tools",	"url": "/dev-tools.html"},
-				{"name": "Media Queries",		"url": "/media-queries.html"},
-				{"name": "Kitchen Sink",		"url": "/pattern-library/kitchen-sink.html"},
 				{"name": "Page Templates",		"url": "/page-templates.html"},
-				{"name": "Tool Box",			"url": "/pattern-library/tool-box.html"}
+				{"name": "Media Queries",		"url": "/media-queries.html"},
+				{"name": "Kitchen Sink",		"url": "/pattern-library/kitchen-sink.html"}
 			]
 		},
 		{

@@ -1,0 +1,56 @@
+---
+title: "Compatibility"
+---
+
+<!-- HERO - BEGINS -->
+	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="medium" data-evo-site-hero-arrow-position="bottom">
+		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
+			<div class="text-center evo-center-block-vertical-element">
+				<h1 class="evo-site-hero--hdr flipInY animated evo-no-margin-bottom" data-evo-site-hero-hdr-size="medium">{{{compatibility.hero.title}}} <span>{{{compatibility.hero.subtitle}}}</span></h1>
+			</div>		
+		</div>
+	</section>
+<!-- HERO - ENDS -->
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="evo-contain-to-grid">
+		<div class="small-12 columns evo-spacer-padding-top-xxx-large evo-spacer-padding-bottom-xxx-large">
+
+{{# markdown }}
+Evolution is tested across many browsers and devices, and works back as far as IE9.
+***
+{{/ markdown }}
+
+		<!-- BROWSER GRADING TABLE - BEGINS -->
+			<div class="evo-table-small-mediaquery">
+				<table class="evo-table" id="" border="0" cellpadding="0" cellspacing="0" title="" summary="" role="grid">
+					<thead>
+						<tr>
+							<th scope="column" width="34%">Browser</th>
+							<th scope="column" width="33%" data-evo-background-color="emerald-medium">Supported</th>
+							<th scope="column" data-evo-background-color="garnet-medium">Not Supported</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each compatibility.data}}
+						<tr>
+							<td><strong>{{{ browser }}}</strong></td>
+							<td data-evo-background-color="emerald-light">{{{ supported }}}</td>
+							<td data-evo-background-color="garnet-light">{{{ not_supported }}}</td>
+						</tr>
+						{{/each}}
+					</tbody>
+				</table>
+			</div>
+		<!-- BROWSER GRADING TABLE - ENDS -->
+
+<div class="evo-site-annotations">
+{{# markdown}}
+###### IE Compatibility Mode
+Evolution **does not** support IE Compatibility mode for any version of IE. IE Compatibility mode will make IE render as IE7 (or worse) which is not supported by Evolution. IE Compatibility mode is also not web standards compliant. Evolution supports IE9 and up, in standards mode. Lastly, through a meta tag, we tell IE to render at the highest version and standards mode available in the version of IE currently being used by the user.
+{{/ markdown}}
+</div>
+
+		</div>
+	</section>
+<!-- PAGE CONTENT - ENDS -->
