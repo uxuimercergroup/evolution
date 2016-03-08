@@ -1,5 +1,6 @@
 ---
 title: "Animations"
+usage_content: "src/content/animations/usage.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -14,10 +15,10 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
-				{{#each pattern-library.tabs}}
+			<ul class="button-group radius {{animations.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+				{{#each animations.tabs}}
 				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
-					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
+					<a href="#tabs{{index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{index}}" class="button small evo-button">
 						<span class="text">{{name}}</span>
 					</a>
 				</li>
@@ -121,7 +122,15 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 3
+					
+					<!-- CONTENT SECTION - BEGINS -->
+						<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+							<div class="evo-site-markdown-content-block">
+								{{{md usage_content}}}
+							</div>
+						</section>
+					<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
@@ -204,7 +213,39 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 4
+					
+					<div class="evo-site-markdown-content-block">
+{{# markdown }}
+##### {{ animations.animation_settings_header }}
+Below is a list of the options that you can pass into the button handlebars partial.
+{{/ markdown }}
+					</div>
+
+					<!-- SETTINGS - BEGINS -->
+						<div class="evo-table-small-mediaquery">
+							<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-pattern-library-setting-options" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+								<thead>
+									<tr>
+										<th scope="column" width="160">Animation Type</th>
+										<th scope="column" width="130">Name</th>
+										<th scope="column">Class</th>
+										<th scope="column" width="385">Description</th>
+									</tr>
+								</thead>
+								<tbody>
+								{{#each animations.animation_settings_data}}
+									<tr>
+										<td>{{{ animation_type }}}</td>
+										<td class="text-center">{{{ name_value }}}</td>
+										<td class="text-center">{{{ class_value }}}</td>
+										<td>{{{ description }}}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					<!-- SETTINGS - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 					Magellan 4
