@@ -34,13 +34,19 @@
 		}
 	},
 
-	"settings_header": "",
-	"settings_data": [
+	"handlebars_settings_header": "Handlebars Partial Options",
+	"handlebars_settings_data": [
 		{
-			"option": "",
-			"default_value": "",
-			"option_value": "",
-			"description": ""
+			"option": "header",
+			"default_value": "--",
+			"option_value": "<strong>h1, h2, h3, h4, h5, h6</strong>",
+			"description": "This will give you a value for the <code>header</code> tag"
+		},
+		{
+			"option": "id",
+			"default_value": "--",
+			"option_value": "<em>id</em>",
+			"description": "This will give you a value for the <code>id</code> attribute"
 		}
 	]
 }
