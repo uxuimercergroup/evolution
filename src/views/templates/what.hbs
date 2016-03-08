@@ -15,7 +15,7 @@ title: "What is Evolution?"
 <!-- WHAT IS USERS BAND - BEGINS -->
 	<section class="evo-full-width evo-site-band evo-site-band--marketing">
 		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
-			<h3 class="text-center">{{what.users.header}}</h3>
+			<h3 class="text-center evo-margin-left evo-margin-right">{{what.users.header}}</h3>
 			<ul class="small-block-grid-{{what.users.grid_small}} medium-block-grid-{{what.users.grid_medium}} large-block-grid-{{what.users.grid_large}} evo-site-band--marketing-block-grid">
 				{{#each what.users.items}}
 				<li class="text-center">
@@ -29,13 +29,13 @@ title: "What is Evolution?"
 	</section>
 <!-- WHAT IS USERS BAND - ENDS -->
 
-<!-- WHAT IS MISSION TAB BAND - BEGINS -->
-	<section class="evo-full-width evo-site-band--tab evo-site-band--what">
+<!-- WHAT IS INSIDE AND OUT TAB BAND - BEGINS -->
+	<section class="evo-full-width evo-site-band--marketing evo-site-band--tab evo-site-band--what">
 		<div class="evo-full-width evo-site-band--tab-hdr">
 			<div class="small-12 columns">
 				<div class="row">
 					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab">
-						<h3 class="text-center">{{what.mission.header}}</h3>
+						<h3 class="text-center">{{what.inside_out.header}}</h3>
 					</div>
 					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab-shim"></div>
 				</div>
@@ -44,28 +44,45 @@ title: "What is Evolution?"
 		<div class="evo-full-width evo-site-band--tab-panel">
 			<div class="medium-12 large-10 large-centered columns">
 				<div class="row">
-					<div class="medium-7 large-7 xlarge-8 xx-large-10 columns evo-keyline-left evo-site-band--tab-panel-marketing-content" data-anijs="if: scroll, on: window, do: slideInLeft animated, before: scrollReveal, after: holdAnimClass">
-{{#markdown}}
-Evolution isn&rsquo;t only a library of patterns for designers, or a front-end framework for developers;<br>
-it&rsquo;s a strategic tool for product development.
-
-Evolution combines the best principles of user experience design, visual design, and front-end development.
-
-### Why?
-
-**Because that&rsquo;s how we get your product to market faster and efficiently.**
-{{/markdown}}
+					<div class="medium-12 text-center columns">
+						<img src="{{assets}}/images/evo-site-what-inside-out.png" alt="{{what.inside_out.header}}" data-anijs="if: scroll, on: window, do: slideInUp animated, before: scrollReveal, after: holdAnimClass">
 					</div>
 				</div>
 			</div>
+			<div class="medium-12 large-11 large-centered columns evo-site-band--marketing-content">
+				<ul class="small-block-grid-1 medium-block-grid-2" data-equalizer>
+					<li class="evo-no-padding-bottom" data-equalizer-watch>
+						<h5 class="text-center evo-spacer-margin-top-medium evo-spacer-margin-bottom-x-large">{{what.inside_out.item_code_header}}</h5>
+						<ul class="small-block-grid-{{what.inside_out.grid_small}} medium-block-grid-{{what.inside_out.grid_medium}} large-block-grid-{{what.inside_out.grid_large}} evo-site-band--marketing-block-grid">
+							{{#each what.inside_out.items_code}}
+							<li class="text-center evo-no-padding-bottom">
+								{{> (lookup . 'partial') }}
+								<p class="evo-spacer-margin-top-small">{{{text}}}</p>
+							</li>
+							{{/each}}
+						</ul>
+					</li>
+					<li class="evo-keyline-left evo-no-padding-bottom" data-equalizer-watch>
+						<h5 class="text-center evo-spacer-margin-top-medium evo-spacer-margin-bottom-x-large">{{what.inside_out.item_design_header}}</h5>
+						<ul class="small-block-grid-{{what.inside_out.grid_small}} medium-block-grid-{{what.inside_out.grid_medium}} large-block-grid-{{what.inside_out.grid_large}} evo-site-band--marketing-block-grid">
+							{{#each what.inside_out.items_design}}
+							<li class="text-center evo-no-padding-bottom">
+								{{> (lookup . 'partial') }}
+								<p class="evo-spacer-margin-top-small">{{{text}}}</p>
+							</li>
+							{{/each}}
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</section>
-<!-- WHAT IS MISSION TAB BAND - ENDS -->
+<!-- WHAT IS INSIDE AND OUT TAB BAND - ENDS -->
 
-<!-- WHAT IS PROCESS BAND - BEGINS -->
-	<section class="evo-full-width evo-site-band evo-site-band--marketing">
+<!-- WHAT IS TESTIMONIALS BAND - BEGINS -->
+	<section class="evo-full-width evo-site-band evo-site-band--marketing evo-site-band--testimonials">
 		<div class="evo-contain-to-grid">
-			<h3 class="text-center">{{what.process.header}}</h3>
+			<h3 class="text-center evo-margin-left evo-margin-right">{{what.testimonials.header}}</h3>
 		</div>
 	</section>
-<!-- WHAT IS PROCESS BAND - ENDS -->
+<!-- WHAT IS TESTIMONIALS BAND - ENDS -->

@@ -80,14 +80,8 @@
 
 	// TAB BAND - BEGINS
 		.evo-site-band--what				{
-			.evo-site-band--tab-panel			{
-												background-image: url($evo-site-what-is-band-tab-panel-background-image);
-												background-repeat: $evo-site-what-is-band-tab-panel-background-repeat;
-												background-size: $evo-site-what-is-band-tab-panel-background-size;
-												padding: $evo-site-what-is-band-tab-panel-padding;
-				.evo-site-band--tab-panel-marketing-content
-													{padding: $evo-site-what-is-band-tab-panel-marketing-content-padding;}
-												}
+			.evo-site-band--tab-panel			{padding: $evo-site-what-is-band-tab-panel-padding;}
+			.evo-keyline-left					{border-color: $evo-site-what-is-band-tab-panel-keyline-border-color;}
 											}
 	// TAB BAND - ENDS
 
@@ -175,9 +169,6 @@
 	// TAB BAND - BEGINS
 		.evo-site-band--what				{
 			.evo-site-band--tab-panel			{
-												background-position: $evo-site-what-is-band-tab-panel-background-position-medium;
-				.evo-site-band--tab-panel-marketing-content
-													{border-left: 0;}
 												}
 											}
 	// TAB BAND - ENDS
