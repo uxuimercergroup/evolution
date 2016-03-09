@@ -41,6 +41,24 @@
 												}
 											}
 
+		// TESTIMONIALS BAND
+		.evo-site-band--testimonials		{
+			blockquote							{
+												padding-left: rem-calc(40);
+												padding-right: rem-calc(40);
+				p									{
+													font-size: rem-calc(26);
+					&:before,
+					&:after								{font-size: rem-calc(26);}
+					&:before							{
+														top: -2px;
+														left: -36px;
+														}
+					&:after								{bottom: -2px;}
+													}
+												}
+											}
+
 		// TAB BAND
 		.evo-site-band--tab					{
 			.evo-site-band--tab-panel			{
@@ -81,7 +99,6 @@
 	// TAB BAND - BEGINS
 		.evo-site-band--what				{
 			.evo-site-band--tab-panel			{padding: $evo-site-what-is-band-tab-panel-padding;}
-			.evo-keyline-left					{border-color: $evo-site-what-is-band-tab-panel-keyline-border-color;}
 											}
 	// TAB BAND - ENDS
 
@@ -168,8 +185,7 @@
 
 	// TAB BAND - BEGINS
 		.evo-site-band--what				{
-			.evo-site-band--tab-panel			{
-												}
+			.evo-keyline-left					{border: 0;}
 											}
 	// TAB BAND - ENDS
 

@@ -15,7 +15,7 @@ title: "What is Evolution?"
 <!-- WHAT IS USERS BAND - BEGINS -->
 	<section class="evo-full-width evo-site-band evo-site-band--marketing">
 		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
-			<h3 class="text-center evo-margin-left evo-margin-right">{{what.users.header}}</h3>
+			<h3 class="text-center evo-margin-left evo-margin-right">{{{what.users.header}}}</h3>
 			<ul class="small-block-grid-{{what.users.grid_small}} medium-block-grid-{{what.users.grid_medium}} large-block-grid-{{what.users.grid_large}} evo-site-band--marketing-block-grid">
 				{{#each what.users.items}}
 				<li class="text-center">
@@ -35,7 +35,7 @@ title: "What is Evolution?"
 			<div class="small-12 columns">
 				<div class="row">
 					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab">
-						<h3 class="text-center">{{what.inside_out.header}}</h3>
+						<h3 class="text-center">{{{what.inside_out.header}}}</h3>
 					</div>
 					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab-shim"></div>
 				</div>
@@ -45,30 +45,30 @@ title: "What is Evolution?"
 			<div class="medium-12 large-10 large-centered columns">
 				<div class="row">
 					<div class="medium-12 text-center columns">
-						<img src="{{assets}}/images/evo-site-what-inside-out.png" alt="{{what.inside_out.header}}" data-anijs="if: scroll, on: window, do: slideInUp animated, before: scrollReveal, after: holdAnimClass">
+						<img src="{{assets}}/images/evo-site-what-inside-out.png" alt="{{{what.inside_out.header}}}" data-anijs="if: scroll, on: window, do: slideInUp animated, before: scrollReveal, after: holdAnimClass">
 					</div>
 				</div>
 			</div>
-			<div class="medium-12 large-11 large-centered columns evo-site-band--marketing-content">
-				<ul class="small-block-grid-1 medium-block-grid-2" data-equalizer>
+			<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
+				<ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-2 evo-site-band--marketing-block-grid" data-equalizer>
 					<li class="evo-no-padding-bottom" data-equalizer-watch>
-						<h5 class="text-center evo-spacer-margin-top-medium evo-spacer-margin-bottom-x-large">{{what.inside_out.item_code_header}}</h5>
-						<ul class="small-block-grid-{{what.inside_out.grid_small}} medium-block-grid-{{what.inside_out.grid_medium}} large-block-grid-{{what.inside_out.grid_large}} evo-site-band--marketing-block-grid">
+						<h5 class="text-center evo-spacer-margin-bottom-x-large">{{{what.inside_out.item_code_header}}}</h5>
+						<ul class="small-block-grid-{{what.inside_out.grid_small}} medium-block-grid-{{what.inside_out.grid_medium}} large-block-grid-{{what.inside_out.grid_large}}">
 							{{#each what.inside_out.items_code}}
-							<li class="text-center evo-no-padding-bottom">
+							<li class="text-center">
 								{{> (lookup . 'partial') }}
-								<p class="evo-spacer-margin-top-small">{{{text}}}</p>
+								<p class="evo-spacer-margin-top-small evo-no-margin-bottom">{{{text}}}</p>
 							</li>
 							{{/each}}
 						</ul>
 					</li>
 					<li class="evo-keyline-left evo-no-padding-bottom" data-equalizer-watch>
-						<h5 class="text-center evo-spacer-margin-top-medium evo-spacer-margin-bottom-x-large">{{what.inside_out.item_design_header}}</h5>
-						<ul class="small-block-grid-{{what.inside_out.grid_small}} medium-block-grid-{{what.inside_out.grid_medium}} large-block-grid-{{what.inside_out.grid_large}} evo-site-band--marketing-block-grid">
+						<h5 class="text-center evo-spacer-margin-bottom-x-large">{{{what.inside_out.item_design_header}}}</h5>
+						<ul class="small-block-grid-{{what.inside_out.grid_small}} medium-block-grid-{{what.inside_out.grid_medium}} large-block-grid-{{what.inside_out.grid_large}}">
 							{{#each what.inside_out.items_design}}
-							<li class="text-center evo-no-padding-bottom">
+							<li class="text-center">
 								{{> (lookup . 'partial') }}
-								<p class="evo-spacer-margin-top-small">{{{text}}}</p>
+								<p class="evo-spacer-margin-top-small evo-no-margin-bottom">{{{text}}}</p>
 							</li>
 							{{/each}}
 						</ul>
@@ -81,8 +81,26 @@ title: "What is Evolution?"
 
 <!-- WHAT IS TESTIMONIALS BAND - BEGINS -->
 	<section class="evo-full-width evo-site-band evo-site-band--marketing evo-site-band--testimonials">
-		<div class="evo-contain-to-grid">
-			<h3 class="text-center evo-margin-left evo-margin-right">{{what.testimonials.header}}</h3>
+		<div class="medium-12 large-9 large-centered columns evo-site-band--marketing-content">
+			<h3 class="text-center evo-margin-left evo-margin-right">{{{what.testimonials.header}}}</h3>
+
+		<!-- TESTIMONIALS CAROUSEL - BEGINS -->
+			<div class="evo-carousel" data-evo-carousel="evo-carousel-what-testimonials">
+				{{#each what.testimonials.items}}
+				<div class="evo-carousel-item">
+					<blockquote>
+						<p>{{{text}}}</p>
+						<cite>
+							{{{name}}}{{#if title}}<br>
+							<span class="title">{{{title}}}</span>
+							{{/if}}
+						</cite>
+					</blockquote>
+				</div>
+				{{/each}}
+			</div>
+		<!-- TESTIMONIALS CAROUSEL - ENDS -->
+
 		</div>
 	</section>
 <!-- WHAT IS TESTIMONIALS BAND - ENDS -->

@@ -197,6 +197,43 @@ URL: {{ meta_url }}
 											}
 										}
 
+
+	// TESTIMONIALS BAND
+	.evo-site-band--testimonials		{
+		blockquote							{
+											font-family: $evo-site-band-testimonials-blockquote-font-family;
+											border: 0;
+											padding-left: rem-calc(30);
+											padding-right: rem-calc(30);
+			p									{
+												color: $evo-site-band-testimonials-blockquote-font-color;
+												font-size: rem-calc(18);
+												line-height: 1.25 !important;
+												position: relative;
+				&:before,
+				&:after								{
+													font-family: $evo-icon-site-font-stack;
+													font-size: rem-calc(18);
+													color: $evo-site-band-testimonials-blockquote-quote-icon-color;
+													position: absolute;
+													}
+				&:before							{
+													content: "\eb1b";
+													left: -28px;
+													top: -3px;
+													}
+				&:after								{
+													content: "\eb1c";
+													margin-left: rem-calc(10);
+													}
+												}
+			cite								{
+												color: $evo-site-band-testimonials-blockquote-cite-font-color;
+				.title								{color: $evo-site-band-testimonials-blockquote-cite-title-font-color;}
+												}
+											}
+										}
+
 	// TAB BAND
 	.evo-site-band--tab					{
 		.evo-site-band--tab-hdr				{

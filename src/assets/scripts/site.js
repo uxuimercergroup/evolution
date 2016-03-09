@@ -54,7 +54,7 @@
 			});
 		}
 
-		// EVO MAGELLAN
+		// SITE MAGELLAN
 		var evoMagellan = function(){
 			jQuery('[data-evo-magellan] dd').click(function() {
 				jQuery('[data-evo-magellan] dd').removeClass('active');
@@ -225,10 +225,17 @@ $(function() {
 			// SCROLL TO LOCATION
 			evoScrollToLocation();
 
-			// EVO MAGELLAN
+			// SITE MAGELLAN
 			evoMagellan();
 
-			// EVO WHY EVOLUTION ANIMATION
+			// WHAT IS TESTIMONIALS CAROUSEL
+			evoCarousel('evo-carousel-what-testimonials', {
+				autoHeight: false,
+				navigation: false,
+				paginationSpeed: 600
+			});
+
+			// WHY EVOLUTION ANIMATION
 			evoWhyEvolution();
 
 			// COPY TO CLIPBOARD

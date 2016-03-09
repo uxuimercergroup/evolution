@@ -111,6 +111,20 @@
 
 	// PATTERN LIBRARY TEMPLATE - ENDS
 
+
+	/*--- WHAT IS PAGE -------------------------------------------------------------------------*/
+
+	// TAB BAND - BEGINS
+		.evo-site-band--what				{
+			.evo-site-band--marketing-block-grid
+												{
+				>li:first-child						{padding-right: rem-calc(30);}
+				>li:last-child						{padding-left: rem-calc(30);}
+												}
+			.evo-keyline-left					{border-color: $evo-site-what-is-band-tab-panel-keyline-border-color;}
+											}
+	// TAB BAND - ENDS
+
 }
 
 // LARGE MEDIA QUERY RANGE - 1025px - 1440px
