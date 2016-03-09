@@ -14,10 +14,10 @@ The Mercer color palette is designed to support a range of visual styles. These 
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
-				{{#each pattern-library.tabs}}
+			<ul class="button-group radius {{color-palette.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+				{{#each color-palette.tabs}}
 				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
-					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
+					<a href="#tabs{{index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{index}}" class="button small evo-button">
 						<span class="text">{{name}}</span>
 					</a>
 				</li>
@@ -222,7 +222,7 @@ The system colors are used for important, high-level information that may requir
 					Content for something 3
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 3
+					&amp;
 				</div>
 			</section>
 			
@@ -237,7 +237,7 @@ The system colors are used for important, high-level information that may requir
 					Content for something 4
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 4
+					&amp;
 				</div>
 			</section>
 			

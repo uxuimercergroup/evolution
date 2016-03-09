@@ -16,10 +16,10 @@ Boxes are the basic building blocks of any web site or component. Evolution boxe
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
-				{{#each pattern-library.tabs}}
+			<ul class="button-group radius {{boxes.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+				{{#each boxes.tabs}}
 				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
-					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
+					<a href="#tabs{{index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{index}}" class="button small evo-button">
 						<span class="text">{{name}}</span>
 					</a>
 				</li>
@@ -137,13 +137,14 @@ Boxes are the basic building blocks of any web site or component. Evolution boxe
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 					
-					<!-- CONTENT SECTION - BEGINS -->
-						<section class="evo-site-tabs-content--pattern-library-tab-content-section">
-							<div class="evo-site-markdown-content-block">
-								{{{md usage_content}}}
-							</div>
-						</section>
-					<!-- CONTENT SECTION - ENDS -->
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+							{{{md usage_content}}}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+					
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
@@ -226,18 +227,16 @@ Boxes are the basic building blocks of any web site or component. Evolution boxe
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-										
-					<!-- CONTENT SECTION - BEGINS -->
-						<section class="evo-site-tabs-content--pattern-library-tab-content-section">
-							<div class="evo-site-markdown-content-block">
 
-								<div class="evo-site-markdown-content-block">
+					<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
 {{# markdown }}
-##### {{ boxes.handlebars_settings_header }}
-Below is a list of the options that you can pass into the boxes handlebars partial.
+##### {{ boxes.settings_header }}
+Below is a list of the data options that can be used with boxes using data attributes.
 {{/ markdown }}
-								</div>
-								
+						</div>
+
 					<!-- SETTINGS - BEGINS -->
 						<div class="evo-table-small-mediaquery">
 							<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-pattern-library-setting-options" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
@@ -250,7 +249,7 @@ Below is a list of the options that you can pass into the boxes handlebars parti
 									</tr>
 								</thead>
 								<tbody>
-								{{#each boxes.handlebars_settings_data}}
+								{{#each boxes.settings_data}}
 									<tr>
 										<td>{{{ option }}}</td>
 										<td class="text-center">{{{ default_value }}}</td>
@@ -261,14 +260,25 @@ Below is a list of the options that you can pass into the boxes handlebars parti
 								</tbody>
 							</table>
 						</div>
-				<!-- SETTINGS - ENDS -->
+					<!-- SETTINGS - ENDS -->
 
-							</div>
-						</section>
-					<!-- CONTENT SECTION - ENDS -->
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					&nbsp
+					<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+						
+						{{!--
+						<dl class="sub-nav">
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
+						</dl>
+						<hr>
+						--}}
+						
+					</div>
+				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
 			

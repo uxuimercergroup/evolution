@@ -19,6 +19,13 @@
 		]
 	},
 
+	"tab-spacing": "even-3",
+	"tabs": [
+		{"name": "Examples", "active": "true", "index": "0"},
+		{"name": "Definition", "index": "1"},
+		{"name": "Usage", "index": "2"}
+	],
+
 	"data": {
 		"basic_box": {
 			"name": "Basic Box",
@@ -34,19 +41,13 @@
 		}
 	},
 
-	"handlebars_settings_header": "Handlebars Partial Options",
-	"handlebars_settings_data": [
+	"settings_header": "",
+	"settings_data": [
 		{
-			"option": "header",
-			"default_value": "--",
-			"option_value": "<strong>h1, h2, h3, h4, h5, h6</strong>",
-			"description": "This will give you a value for the <code>header</code> tag"
-		},
-		{
-			"option": "id",
-			"default_value": "--",
-			"option_value": "<em>id</em>",
-			"description": "This will give you a value for the <code>id</code> attribute"
+			"option": "",
+			"default_value": "",
+			"option_value": "",
+			"description": ""
 		}
 	]
 }
