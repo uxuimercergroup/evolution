@@ -227,10 +227,41 @@ Universal dropdown plugin that will attach dropdowns or popovers to whatever ele
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 4
+								<div class="evo-site-markdown-content-block">
+{{# markdown }}
+##### {{ dropdowns.handlebars_settings_header }}
+Below is a list of the options that you can pass into the dropdowns handlebars partial.
+{{/ markdown }}
+								</div>
+								
+					<!-- SETTINGS - BEGINS -->
+						<div class="evo-table-small-mediaquery">
+							<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-pattern-library-setting-options" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+								<thead>
+									<tr>
+										<th scope="column" width="160">Options</th>
+										<th scope="column" width="90">Defaults</th>
+										<th scope="column">Values</th>
+										<th scope="column" width="325">Description</th>
+									</tr>
+								</thead>
+								<tbody>
+								{{#each dropdowns.handlebars_settings_data}}
+									<tr>
+										<td>{{{ option }}}</td>
+										<td class="text-center">{{{ default_value }}}</td>
+										<td class="text-center">{{{ option_value }}}</td>
+										<td>{{{ description }}}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+				<!-- SETTINGS - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 4
+					&nbsp
 				</div>
 			</section>
 			
