@@ -1,24 +1,76 @@
+##### Overview
+
+Animations in Evolution depend on a JavaScript library called [AniJS](http://anijs.github.io/). Refer to the [AniJS wiki](https://github.com/anijs/anijs/wiki) for the complete API documentation.
+
+The collection of animation types relies on the [Animate.css](https://github.com/daneden/animate.css) CSS animations library.
+
 ##### Getting Started with AniJS CSS Animations
 
-To trigger an animation with an event, an anjijs sentence must be added to the element using the `data-anijs` data-option. The basic anijs sentence structure looks like this:
+To trigger an animation with an event, an AniJS sentence must be added to the element using the `data-anijs` data-option. The basic AniJS sentence structure looks like this:
 
-If *some event(click, scroll, etc)* , On *any element (css selector)* , Do *some behavior(animation, $addClass, $remove, etc)* , To *(any element)*.
+**If** *some event(click, scroll, etc)* , **On** *any element (css selector)* , **Do** *some behavior(animation, $addClass, $remove, etc)* , **To** *(any element)*.
 
 Example:
-`<div data-anijs="if: click, do: $toggleClass red, to: .box">If you click me, </div>`
 
-Every time the user clicks on the element with this sentence written, the red color will be switched in the elements with the "box" class established.
+`<div class="button" data-anijs="if: click, do: $toggleClass red, to: .box">Click me</div>`
 
-##### Using jQuery with AniJS Animations
-* Dynamically add animations using jQuery, ex. `$('#yourElement').addClass('animated bounceOutLeft');` 
-* Detect when an animation ends, ex. `$('#yourElement').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', doSomething);`
-* Execute the event handler at most once, ex. `jQuery.one()`
+Every time the user clicks on the element with this sentence written, the "red" class will be toggled in the elements with the "box" class established.
 
-##### Change Duration and Number of Iterations
-* Include the class `.infinite` for an infinite loop
-* Include `after: removeAnim` to prevent the animation from occuring more than once
-* You can also use style sheets to change the duration of your animations, add a delay or change the number of times that it plays:
+Example using the "On" part of the sentence:
+
+`<div class="button" data-anijs="if: scroll, on: window, do: $toggleClass red, to: .box">Click me</div>`
+
+Example using animation:
+
+`<div class="button" data-anijs="if: click, do: bounce animated, to: .box">Click me</div>`
+
+In this example, every time the user clicks the element, the `bounce` animation will be applied to any elements with class of "box".
 
 <div class="evo-site-annotations">
-<p>yourElement {-vendor-animation-duration: 3s; -vendor-animation-delay: 2s; `-vendor-animation-iteration-count: infinite;` `after: removeAnim`}</p>
+	<p>**Important:** Make sure to always use the `animated` class name along with the animation type class name (for example: bounce animated). Animations require that the `animated` class exists to work properly.</p>
 </div>
+
+##### Detect When Animation Ends
+
+Include the option `animationend` on the `if:` part of the AniJS sentence to detect for the end of animations `on:` another element and then run another animation. Example:
+
+Example:
+
+```
+<header data-anijs="if: click, do: hinge animated">
+ <!-- ... -->
+</header>
+<footer data-anijs="if: animationend, on: header, do: bounceIn animated">
+<!-- ... -->
+</footer>
+```
+
+##### Infinite Loop
+Include the option `infinite` for an infinite animation loop. Example:
+
+`<div class="button" data-anijs="if: click, do: bounce animated infinite, to: .box">Click me</div>`
+
+##### Animation Only Once
+Include `after: removeAnim` to prevent the animation from occuring more than once and to remove the animation classes from the element getting the animation. Example:
+
+`<div class="button" data-anijs="if: click, do: flip animated, after: removeAnim">Click me</div>`
+
+Include `after: $fireOnce` to prevent the animation from occuring more than once and to remove the event that triggers the animation but keep the animation classes on the element getting the animation. Example:
+
+`<div class="button" data-anijs="if: click, do: flip animated, after: $fireOnce">Click me</div>`
+
+##### Change Duration
+You can also use style sheets to change the duration of your animations, add a delay or change the number of times that it plays:
+
+```
+#yourElement {
+	-vendor-animation-duration: 3s;
+	-vendor-animation-delay: 2s;
+	-vendor-animation-iteration-count: infinite;
+}
+```
+
+*Note: be sure to replace "vendor" in the CSS with the applicable vendor prefixes (webkit, moz, ms, etc).*
+
+##### Using jQuery with Animation Classes
+Dynamically add animations using jQuery, ex. `$('#yourElement').addClass('bounceOutLeft animated');`

@@ -10,7 +10,13 @@ usage_content: "src/content/animations/usage.md"
 {{# markdown }}
 ## {{ title }}
 Animations add a level of interactivity to any element. [AniJS](http://anijs.github.io/) and [Animate CSS](https://github.com/daneden/animate.css) provide the basis for the CSS animations used in Evolution.
-{{/ markdown }}
+{{/ markdown}}
+
+<div class="evo-site-annotations evo-spacer-margin-bottom-x-large">
+{{# markdown}}
+**IE9 incompatibility:** Evolution animations require that browsers support CSS3 Animations. IE9 does not support CSS3 animations and degrades gracefully.
+{{/ markdown}}
+</div>
 
 		{{> jump-to-nav}}
 
@@ -217,7 +223,11 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 					<div class="evo-site-markdown-content-block">
 {{# markdown }}
 ##### {{ animations.animation_settings_header }}
-Below is a list of the options that you can pass into the button handlebars partial.
+A list of animation type class options available from the [Animate.css](https://github.com/daneden/animate.css) CSS animations library.
+
+<div class="evo-site-annotations">
+	<p>**Important:** Make sure to always use the `animated` class name along with the animation type class name (for example: bounce animated). Animations require that the `animated` class exists to work properly.</p>
+</div>
 {{/ markdown }}
 					</div>
 
@@ -248,7 +258,7 @@ Below is a list of the options that you can pass into the button handlebars part
 
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 4
+					&nbsp;
 				</div>
 			</section>
 			

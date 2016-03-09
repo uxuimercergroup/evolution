@@ -11,4 +11,4 @@ Evolution has been designed and tested for many browsers and devices. If you wou
 Evolution does not support IE Compatibility mode for any version of IE. IE Compatibility mode will make IE render as IE7 (or worse) which is not supported by Evolution. IE Compatibility mode is also not web standards compliant. Evolution supports IE9 and up, in standards mode. Lastly, through a meta tag, we tell IE to render at the highest version and standards mode available in the version of IE currently being used by the user.
 
 ##### Why don't animations work in IE9?
-Animations require that browsers support CSS3 Animations. IE9 does not support CSS3 animations and gracefully degrades.
+Animations require that browsers support CSS3 Animations. IE9 does not support CSS3 animations and degrades gracefully.
