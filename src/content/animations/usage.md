@@ -19,12 +19,6 @@ Every time the user clicks on the element with this sentence written, the red co
 * Include `after: removeAnim` to prevent the animation from occuring more than once
 * You can also use style sheets to change the duration of your animations, add a delay or change the number of times that it plays:
 
-    #yourElement {
-    -vendor-animation-duration: 3s;
-    -vendor-animation-delay: 2s;
-    -vendor-animation-iteration-count: infinite;
-    }
-
-
-
-
+<div class="evo-site-annotations">
+<p>yourElement {-vendor-animation-duration: 3s; -vendor-animation-delay: 2s; `-vendor-animation-iteration-count: infinite;` `after: removeAnim`}</p>
+</div>
