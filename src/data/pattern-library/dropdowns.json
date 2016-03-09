@@ -34,43 +34,31 @@
 		}
 	},
 
-	"handlebars_settings_header": "Handlebars Partial Options",
-	"handlebars_settings_data": [
+	"settings_header": "Data Options and Class Helpers",
+	"settings_data": [
 		{
 			"option": "aria-autoclose",
 			"default_value": "true",
-			"option_value": "<em>true, false</em>",
+			"option_value": "<strong>true, false</strong>",
 			"description": "To disable (keep dropdowns persisting), set the attribute <code>aria-autoclose</code> to <code>false</code>."
 		},
 		{
 			"option": "aria-label",
 			"default_value": "--",
 			"option_value": "<em>Text</em>",
-			"description": "This will give you a value for the <code>aria label</code> attribute, used for accessibility"
+			"description": "This will give you a value for the <code>aria-label</code> attribute, used for accessibility"
 		},
 		{
 			"option": "aria-hidden",
 			"default_value": "--",
 			"option_value": "<em>Text</em>",
-			"description": "This will give you a value for the <code>aria hidden</code> attribute, used for accessibility"
+			"description": "This will give you a value for the <code>aria-hidden</code> attribute, used for accessibility"
 		},
 		{
 			"option": "aria-expanded",
 			"default_value": "--",
 			"option_value": "<em>Text</em>",
-			"description": "This will give you a value for the <code>aria expanded</code> attribute, used for accessibility"
-		},
-		{
-			"option": "href",
-			"default_value": "--",
-			"option_value": "<em>path/to/file.html</em>",
-			"description": "Pass the value of the <code>href</code> attribute of the list item"
-		},
-		{
-			"option": "id",
-			"default_value": "--",
-			"option_value": "<em>id</em>",
-			"description": "This will give you a value for the <code>id</code> attribute"
+			"description": "This will give you a value for the <code>aria-expanded</code> attribute, used for accessibility"
 		},
 		{
 			"option": "size",
@@ -85,9 +73,9 @@
 			"description": "Specify the align property in <code>data-options</code> on the target element"
 		},
 		{
-			"option": "hover timeout",
+			"option": "hover_timeout",
 			"default_value": "150",
-			"option_value": "<strong>integer</strong>",
+			"option_value": "<em>integer</em>",
 			"description": "Specify custom delay (in milliseconds) using <code>hover_timeout</code> on the target element"
 		}
 	]
