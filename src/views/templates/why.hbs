@@ -1,9 +1,9 @@
 ---
 title: "Why Evolution?"
 ---
-<div id="whyEvo">
+
 <!-- WHY HERO - BEGINS -->
-	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="x-large" data-evo-site-hero-arrow-position="bottom">
+	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="x-large">
 		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
 			<div class="text-center evo-center-block-vertical-element">
 				<h1 class="evo-site-hero--hdr flipInY animated" data-evo-site-hero-hdr-size="large">{{{why.hero.title}}} <span>{{{why.hero.subtitle}}}</span></h1>
@@ -14,200 +14,38 @@ title: "Why Evolution?"
 <!-- WHY HERO - ENDS -->
 
 <!-- MAGELLAN - BEGINS -->
-		<div class="evo-full-width show-for-medium-up">
-			<div class="evo-magellan" data-magellan-expedition="fixed">
-				<dl class="sub-nav">
-					<dd data-magellan-arrival="branding"><a href="#branding">Consistent Branding</a></dd>
-					<dd data-magellan-arrival="business"><a href="#business">Supporting Business</a></dd>
-					<dd data-magellan-arrival="design"><a href="#design">User Focused</a></dd>
-					<dd data-magellan-arrival="develop"><a href="#develop">Efficient Development</a></dd>
-					<dd data-magellan-arrival="boilerplate"><a href="#boilerplate">Build It Faster</a></dd>
-					<dd data-magellan-arrival="market"><a href="#market">On Time - On Budget</a></dd>
-				</dl>
-			</div>
+	<section class="show-for-medium-up evo-full-width evo-site-magellan" data-magellan-expedition="fixed" data-options="fixed_top: 0; destination_threshold: 80; offset_by_height: true;">
+		<div class="medium-12 large-10 large-centered columns">
+			<dl class="sub-nav">
+			{{#each why.data}}
+				<dd data-magellan-arrival="{{slug}}"><a href="#{{slug}}">{{name}}</a></dd>
+			{{/each}}
+			</dl>
 		</div>
+	</section>
 <!--MAGELLAN - ENDS-->
 
-<div class="small-12 columns evo-spacer-padding-top-x-large">
+<!-- PAGE CONTENT - BEGINS -->
+<section class="evo-full-width evo-site-band evo-site-band--why">
+	<div class="medium-12 large-11 large-centered columns">
 
-	<div class="small-12 columns hide-for-medium-up evo-spacer-padding-bottom-x-large">
-	     <img src="{{ assets }}/images/placeholders/screenshot-placeholder1.jpg" alt="" title="" />
+	{{#each why.data}}
+	<!-- CONTENT SECTION - BEGINS -->
+		<div class="row evo-site--why-content-section" data-magellan-destination="{{slug}}"{{#if animation}} data-anijs="if: scroll, on: window, do: {{animation}} animated, before: scrollReveal, after: holdAnimClass"{{/if}}>
+			<div class="medium-6 large-4 columns">
+				<a name="{{slug}}"></a>
+				<h3>{{{bulletpoint_header}}}</h3>
+				{{#each bulletpoints}}
+					<p>{{{text}}}</p>
+				{{/each}}
+			</div>
+			<div class="medium-6 large-8 columns">
+				<img src="/assets/images/evo-site-why-{{add @index 1}}.png" alt="{{name}}">
+			</div>
+		</div>
+	<!-- CONTENT SECTION - ENDS -->
+	{{/each}}
+
 	</div>
-
-<div id="left-column" class="small-12 medium-4 columns">
-
-<a name="branding"></a>
-<div id="text1" class="evo-why-evolution--text-block" data-magellan-destination="branding">
-
-<h3> Consistent branding equals a consistent user experience</h3>
-
-<p><i class="evo-icon-checkmark4 evo-icon-position-right"></i>
-Guaranteed accurate use of the Mercer Brand across all digital applications</p>
-
-
-<p><i class="evo-icon-checkmark4 evo-icon-position-right"></i>
-Consistent and familiar experiences for users across every product line</p>
-
-
-
-</div>
-
-	<div class="small-12 columns hide-for-medium-up evo-spacer-padding-bottom-x-large">
-	     <img src="{{ assets }}/images/placeholders/screenshot-placeholder2.jpg" alt="" title="" />
-	</div>
-
-<a name="business"></a>
-<div id="text2" class="evo-why-evolution--text-block" data-magellan-destination="business">
-{{# markdown }}
-### Supporting business with proven user experience designs
-
-<i class="evo-icon-checkmark4 evo-icon-position-right"></i>
-Page sample library speeds the transition from business requirements to user experience design
-
-<i class="evo-icon-checkmark4 evo-icon-position-right"></i>
-Incorporates the latest technology trends like Mobile-first design, so users can access Mercer apps from any device at any time
-
-{{/ markdown }}
-</div>
-
-	<div class="small-12 columns hide-for-medium-up evo-spacer-padding-bottom-x-large">
-	     <img src="{{ assets }}/images/placeholders/screenshot-placeholder3.jpg" alt="" title="" />
-	</div>
-
-<a name="design"></a> 
-<div id="text3" class="evo-why-evolution--text-block" data-magellan-destination="design">
-{{# markdown }}
-### Design from the user’s point of view
-
-<i class="evo-icon-checkmark4 evo-icon-position-right"></i>
-Design principles built into every component, no matter the user’s screen size
-
-<i class="evo-icon-checkmark4 evo-icon-position-right"></i>
-Style Tile integration generates consistent design throughout every site – automatically
-
-{{/ markdown }}
-</div>
-
-	<div class="small-12 columns hide-for-medium-up evo-spacer-padding-bottom-x-large">
-	     <img src="{{ assets }}/images/placeholders/screenshot-placeholder4.jpg" alt="" title="" />
-	</div>
-
-<a name="develop"></a>
-<div id="text4" class="evo-why-evolution--text-block" data-magellan-destination="develop"> 
-{{# markdown }}
-### Efficient development that works smarter – not harder
-
-<i class="evo-icon-checkmark4 evo-icon-position-right"></i>
-Reusable patterns and components take apps from prototype to production quickly and easily
-
-<i class="evo-icon-checkmark4 evo-icon-position-right"></i>
-Just plug it in - integration with any back-end system
-
-{{/ markdown }}
-</div>
-
-	<div class="small-12 columns hide-for-medium-up evo-spacer-padding-bottom-x-large">
-	     <img src="{{ assets }}/images/placeholders/screenshot-placeholder5.jpg" alt="" title="" />
-	</div>
-
-<a name="boilerplate"></a> 
-<div id="text5" class="evo-why-evolution--text-block" data-magellan-destination="boilerplate">
-{{# markdown }}
-### Get started fast with fully integrated build environment and boilerplate
-
-<i class="evo-icon-checkmark4 evo-icon-position-right"></i>
-Evolution tool box creates a full build environment to start developing in minutes.
-
-<i class="evo-icon-checkmark4 evo-icon-position-right"></i>
-Easy data binding speeds integration 
-
-{{/ markdown }}
-</div>
-
-	<div class="small-12 columns hide-for-medium-up evo-spacer-padding-bottom-x-large">
-	     <img src="{{ assets }}/images/placeholders/screenshot-placeholder6.jpg" alt="" title="" />
-	</div>
-<a name="market"></a> 
-<div id="text6" class="evo-why-evolution--text-block" data-magellan-destination="market">
-	
-{{# markdown }}
-### To Market - On Time and On Budget
-
-<i class="evo-icon-checkmark4 evo-icon-position-right"></i>
-Plug and play components reduce development time and eliminate bugs
-
-<i class="evo-icon-checkmark4 evo-icon-position-right"></i>
-Consistent results mean shorter approval times 
-
-{{/ markdown }}
-</div>
-</div>
-
-<div class="medium-8 columns show-for-medium-up">
-	<div id="image0" class="small-12 columns" >
-	    <div  class="evo-why-evolution--placeholder-image" >
-	      <img  src="{{ assets }}/images/placeholders/screenshot-placeholder1.jpg" alt="" title="" />
-	    </div>
-	</div>
-
-	<div id="image1" class="small-12 columns hideme" >
-	    <div  class="evo-why-evolution--sticky-image" >
-	      <img  src="{{ assets }}/images/placeholders/screenshot-placeholder1.jpg" alt="" title="" />
-	    </div>
-	</div>
-
-	<div id="image2" class="small-12 columns hideme" >
-	    <div  class="evo-why-evolution--sticky-image" >
-	      <img  src="{{ assets }}/images/placeholders/screenshot-placeholder2.jpg" alt="" title="" />
-	    </div>
-	</div>
-
-	<div id="image3" class="small-12 columns hideme" >
-	    <div  class="evo-why-evolution--sticky-image" >
-	      <img  src="{{ assets }}/images/placeholders/screenshot-placeholder3.jpg" alt="" title="" />
-	    </div>
-	</div>
-
-	<div id="image4" class="small-12 columns hideme" >
-	    <div  class="evo-why-evolution--sticky-image" >
-	      <img  src="{{ assets }}/images/placeholders/screenshot-placeholder4.jpg" alt="" title="" />
-	    </div>
-	</div>
-
-	<div id="image5" class="small-12 columns hideme" >
-	    <div  class="evo-why-evolution--sticky-image" >
-	      <img  src="{{ assets }}/images/placeholders/screenshot-placeholder5.jpg" alt="" title="" />
-	    </div>
-	</div>
-
-	<div id="image6" class="small-12 columns hideme ">
-	    <div  class="evo-why-evolution--sticky-image">
-	      <img  src="{{ assets }}/images/placeholders/screenshot-placeholder6.jpg" alt="" title="" />
-	    </div>
-	</div>
-</div>
-
-</div>
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-</div>
+</section>
+<!-- PAGE CONTENT - ENDS -->

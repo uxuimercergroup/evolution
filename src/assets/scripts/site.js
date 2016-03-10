@@ -63,113 +63,6 @@
 		};
 
 
-		// WHY EVOLUTION ANIMATION
-		var evoWhyEvolution = function(){
-			/* SHOW SCREENSHOT THAT CORRESPONDS WITH TEXT BLOCK */
-
-			$(window).scroll( function(){	
-			    
-			    // Check location of text block 
-			    if ($('#text1').length) {
-        					  
-			        var bottom_of_object = $('#text1').offset().top + $('#text1').outerHeight(true);
-			        var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-			     // If text block is completely visible in the window, show corresponding image
-			        if( bottom_of_window > bottom_of_object ){
-			            $('#image1').removeClass('hideme');
-			            $('#image0').addClass('hideme');	
-			           	$('#image1').addClass('sticky-image');	       
-			        } else if( bottom_of_window < bottom_of_object ){
-			            $('#image1').addClass('hideme');
-			            $('#image0').removeClass('hideme');
-			           	$('#image1').removeClass('sticky-image');	
-			        }
-			    }
-
-			    // Check location of text block   
-			    if ($('#text2').length) {
-
-			        var bottom_of_object = $('#text2').offset().top + $('#text2').outerHeight();
-			        var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-			     // If text block is completely visible in the window, show corresponding image
-			        if( bottom_of_window > bottom_of_object ){
-			            $('#image2').removeClass('hideme');
-			           	$('#image2').addClass('sticky-image');
-			        } else if( bottom_of_window < bottom_of_object ){
-			            $('#image2').addClass('hideme');
-			           	$('#image2').removeClass('sticky-image');	
-			        }  
-			       }		
-			    
-			    // Check location of text block
-			    if ($('#text3').length) {
-
-			        var bottom_of_object = $('#text3').offset().top + $('#text3').outerHeight();
-			        var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-			     // If text block is completely visible in the window, show corresponding image
-			        if( bottom_of_window > bottom_of_object ){
-			            $('#image3').removeClass('hideme');
-			           	$('#image3').addClass('sticky-image');	            
-			        } else if( bottom_of_window < bottom_of_object ){
-			            $('#image3').addClass('hideme');
-			           	$('#image3').removeClass('sticky-image');	
-			        }
-			    } 
-
-			     // Check location of text block
-			    if ($('#text4').length) { 
-
-			        var bottom_of_object = $('#text4').offset().top + $('#text4').outerHeight();
-			        var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-			     // If text block is completely visible in the window, show corresponding image
-			        if( bottom_of_window > bottom_of_object ){
-			            $('#image4').removeClass('hideme');
-			           	$('#image4').addClass('sticky-image');	            
-			        } else if( bottom_of_window < bottom_of_object ){
-			            $('#image4').addClass('hideme');
-			           	$('#image4').removeClass('sticky-image');	
-			        }
-			    }  
-
-			     // Check location of text block
-			    if ($('#text5').length) {
-
-			        var bottom_of_object = $('#text5').offset().top + $('#text5').outerHeight();
-			        var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-			     // If text block is completely visible in the window, show corresponding image
-			        if( bottom_of_window > bottom_of_object ){
-			            $('#image5').removeClass('hideme');
-			           	$('#image5').addClass('sticky-image');	            
-			        } else if( bottom_of_window < bottom_of_object ){
-			            $('#image5').addClass('hideme');
-			           	$('#image5').removeClass('sticky-image');	
-			        }
-			    } 
-
-			     // Check location of text block
-			    if ($('#text6').length) { 
-
-			        var bottom_of_object = $('#text6').offset().top + $('#text6').outerHeight();
-			        var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-			     // If text block is completely visible in the window, show corresponding image
-			        if( bottom_of_window > bottom_of_object ){
-			            $('#image6').removeClass('hideme');
-			           	$('#image6').addClass('sticky-image');	            
-			        } else if( bottom_of_window < bottom_of_object ){
-			            $('#image6').addClass('hideme');
-			           	$('#image6').removeClass('sticky-image');	
-			        } 
-			    }
-			});
-		};
-
-
 	// PATTERN LIBRARY PAGES
 	//----------------------------------------------------------------------------------------------------
 
@@ -234,9 +127,6 @@ $(function() {
 				navigation: false,
 				paginationSpeed: 600
 			});
-
-			// WHY EVOLUTION ANIMATION
-			evoWhyEvolution();
 
 			// COPY TO CLIPBOARD
 			var clipboard = new Clipboard('.copy-to-clipboard');

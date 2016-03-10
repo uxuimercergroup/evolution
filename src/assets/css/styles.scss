@@ -167,6 +167,17 @@ URL: {{ meta_url }}
 										}
 // HERO - ENDS
 
+// MAGELLAN - BEGINS
+.evo-site-magellan						{
+										background-color: $onyx-dark-2;
+										border-bottom: 1px solid $onyx-dark-10;
+	&.fixed									{@include box-shadow(0 0 8px 1px rgba($black, .15));}
+	&[data-magellan-expedition-clone]		{
+											visibility: hidden;
+											}
+										}
+// MAGELLAN - ENDS
+
 // BANDS - BEGINS
 	
 	// DEFAULT BAND
@@ -823,40 +834,16 @@ URL: {{ meta_url }}
 
 /*--- WHY EVOLUTION PAGE -------------------------------------------------------------------------*/
 
-// SCROLL ANIMATION
-
-.hideme 								{
-										opacity:0;
-										}												
-
-.evo-why-evolution--text-block			{
-										height: 500px;
-										padding-top: rem-calc(50);
-										}
-
-
-.evo-why-evolution--placeholder-image		{
-										left:auto; 
-										top:auto;
-	img 									{
-											width: rem-calc(800);
-											}
-
-										}		
-
-.evo-why-evolution--sticky-image		{
-										left:auto; 
-										top:auto;
-	img 									{
-											width: rem-calc(800);
+// BAND - BEGINS
+.evo-site-band--why						{
+										background-color: $white;
+										padding: rem-calc(40 0 0 0);
+	.evo-site--why-content-section			{
+											padding-bottom: rem-calc(40);
 											}
 										}
+// BAND - ENDS
 
-// USED TO POSITION FIXED IMAGE IN SCROLL ANIMATION
-.sticky-image 							{
-										position: fixed;
-										top: rem-calc(100);
-										}
 
 /*=== MEDIA QUERIES ========================================================================*/
 @import	"partials/global/responsive_small",
