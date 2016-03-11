@@ -169,11 +169,35 @@ URL: {{ meta_url }}
 
 // MAGELLAN - BEGINS
 .evo-site-magellan						{
+										padding: 0;
 										background-color: $onyx-dark-2;
 										border-bottom: 1px solid $onyx-dark-10;
 	&.fixed									{@include box-shadow(0 0 8px 1px rgba($black, .15));}
-	&[data-magellan-expedition-clone]		{
-											visibility: hidden;
+	&[data-magellan-expedition-clone]		{visibility: hidden;}
+	.sub-nav								{
+											@include clearfix;
+											margin: 0;
+											overflow: visible;
+											padding-top: 0;
+		dd										{
+												margin: 0;
+			a										{
+													@include border-radius(0);
+													display: block;
+													padding-top: rem-calc(10);
+													padding-bottom: rem-calc(6);
+													border-bottom-width: 4px;
+													border-bottom-style: solid;
+													border-bottom-color: $transparent;
+													background: none !important;
+													color: $sapphire-medium;
+													}
+			&.active								{
+				a										{
+														border-bottom-color: $topaz-bright;
+														}
+													}
+												}
 											}
 										}
 // MAGELLAN - ENDS
@@ -457,7 +481,10 @@ URL: {{ meta_url }}
 														padding-top: 0;
 														padding-right: 0;
 														padding-bottom: 0;
-						&:hover								{background-color: $evo-site-sidenav-magellan-link-hover-background-color;}
+						&:hover								{
+															background-color: $evo-site-sidenav-magellan-link-hover-background-color;
+															text-decoration: $evo-site-sidenav-magellan-link-hover-text-decoration;
+															}
 														}
 													}
 												}
@@ -837,9 +864,14 @@ URL: {{ meta_url }}
 // BAND - BEGINS
 .evo-site-band--why						{
 										background-color: $white;
-										padding: rem-calc(40 0 0 0);
+										padding: 0 !important;
 	.evo-site--why-content-section			{
-											padding-bottom: rem-calc(40);
+											padding: rem-calc(40 0);
+											border-bottom: 1px solid $onyx-dark-10;
+		&:last-child							{border-bottom: 0;}
+		h3										{
+												margin-bottom: rem-calc(16);
+												}
 											}
 										}
 // BAND - ENDS

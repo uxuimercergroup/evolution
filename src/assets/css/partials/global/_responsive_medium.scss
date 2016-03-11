@@ -107,9 +107,14 @@
 
 	// BAND - BEGINS
 		.evo-site-band--why					{
-											padding: rem-calc(80 0 0 0);
+											padding: rem-calc(0 0 300 0) !important;
 			.evo-site--why-content-section		{
-												padding-bottom: rem-calc(80);
+												padding: rem-calc(80 0);
+												min-height: rem-calc(380);
+				.evo-keyline-left					{
+													padding: rem-calc(10 0 10 20);
+													border-color: $onyx-dark-20;
+													}
 												}
 											}
 	// BAND - ENDS
