@@ -3,7 +3,7 @@ title: "Why Evolution?"
 ---
 
 <!-- WHY HERO - BEGINS -->
-	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="x-large">
+	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="x-large" data-evo-site-hero-arrow-position="bottom">
 		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
 			<div class="text-center evo-center-block-vertical-element">
 				<h1 class="evo-site-hero--hdr flipInY animated" data-evo-site-hero-hdr-size="large">{{{why.hero.title}}} <span>{{{why.hero.subtitle}}}</span></h1>
@@ -15,12 +15,12 @@ title: "Why Evolution?"
 
 <!-- MAGELLAN - BEGINS -->
 	<section class="show-for-medium-up evo-full-width evo-site-magellan" data-magellan-expedition="fixed" data-options="fixed_top: 0; destination_threshold: 80; offset_by_height: true;">
-		<div class="medium-12 large-10 large-centered columns">
-			<dl class="sub-nav">
+		<div class="medium-12 large-12 large-centered columns evo-no-padding">
+			<ul class="medium-block-grid-6 sub-nav" data-equalizer>
 			{{#each why.data}}
-				<dd data-magellan-arrival="{{slug}}"><a href="#{{slug}}">{{name}}</a></dd>
+				<li data-magellan-arrival="{{slug}}" data-equalizer-watch><a href="#{{slug}}" data-equalizer-watch>{{{name}}}</a></li>
 			{{/each}}
-			</dl>
+			</ul>
 		</div>
 	</section>
 <!--MAGELLAN - ENDS-->
@@ -31,7 +31,7 @@ title: "Why Evolution?"
 
 	{{#each why.data}}
 	<!-- CONTENT SECTION - BEGINS -->
-		<div class="row evo-site--why-content-section" data-magellan-destination="{{slug}}"{{#if animation}} data-anijs="if: scroll, on: window, do: {{animation}} animated, before: scrollReveal, after: holdAnimClass"{{/if}}>
+		<div class="row evo-site--why-content-section{{#if animation}} evo-site-hidden{{/if}}" data-magellan-destination="{{slug}}"{{#if animation}} data-anijs="if: scroll, on: window, do: evo-site-visible {{animation}} animated delay-sm, before: scrollReveal, after: holdAnimClass"{{/if}}>
 			<div class="medium-6 large-4 columns">
 				<a name="{{slug}}"></a>
 				<h3>{{{bulletpoint_header}}}</h3>

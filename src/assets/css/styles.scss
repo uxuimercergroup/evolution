@@ -51,6 +51,14 @@ URL: {{ meta_url }}
 
 /*--- SITE GLOBAL --------------------------------------------------------------------------*/
 
+// HELPERS - BEGINS
+
+	// VISIBILITY
+	.evo-site-hidden					{visibility: hidden;}
+	.evo-site-visible					{visibility: visible;}
+
+// HELPERS - ENDS
+
 // BUTTONS - BEGINS
 	
 	// CALL TO ACTION BUTTON
@@ -170,7 +178,7 @@ URL: {{ meta_url }}
 // MAGELLAN - BEGINS
 .evo-site-magellan						{
 										padding: 0;
-										background-color: $onyx-dark-2;
+										background-color: rgba($onyx-dark-2, .9);
 										border-bottom: 1px solid $onyx-dark-10;
 	&.fixed									{@include box-shadow(0 0 8px 1px rgba($black, .15));}
 	&[data-magellan-expedition-clone]		{visibility: hidden;}
@@ -179,23 +187,25 @@ URL: {{ meta_url }}
 											margin: 0;
 											overflow: visible;
 											padding-top: 0;
-		dd										{
+		li										{
 												margin: 0;
+												padding-bottom: 0;
+												padding-right: 0;
+												padding-left: 0;
 			a										{
 													@include border-radius(0);
 													display: block;
-													padding-top: rem-calc(10);
-													padding-bottom: rem-calc(6);
+													padding: rem-calc(14 10 10 10);
+													background: none !important;
 													border-bottom-width: 4px;
 													border-bottom-style: solid;
 													border-bottom-color: $transparent;
-													background: none !important;
 													color: $sapphire-medium;
+													text-align: center;
+													line-height: 1.25;
 													}
 			&.active								{
-				a										{
-														border-bottom-color: $topaz-bright;
-														}
+				a										{border-bottom-color: $topaz-bright;}
 													}
 												}
 											}
@@ -869,9 +879,7 @@ URL: {{ meta_url }}
 											padding: rem-calc(40 0);
 											border-bottom: 1px solid $onyx-dark-10;
 		&:last-child							{border-bottom: 0;}
-		h3										{
-												margin-bottom: rem-calc(16);
-												}
+		h3										{margin-bottom: rem-calc(16);}
 											}
 										}
 // BAND - ENDS
