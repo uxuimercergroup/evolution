@@ -178,7 +178,7 @@ URL: {{ meta_url }}
 // MAGELLAN - BEGINS
 .evo-site-magellan						{
 										padding: 0;
-										background-color: rgba($onyx-dark-2, .9);
+										background-color: $onyx-dark-2;
 										border-bottom: 1px solid $onyx-dark-10;
 	&.fixed									{@include box-shadow(0 0 8px 1px rgba($black, .15));}
 	&[data-magellan-expedition-clone]		{visibility: hidden;}
