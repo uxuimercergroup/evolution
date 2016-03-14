@@ -222,18 +222,18 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 					
 					<div class="evo-site-markdown-content-block">
 {{# markdown }}
-##### {{ animations.animation_settings_header }}
+##### {{ animations.animation_type_settings_header }}
 A list of animation type class options available from the [Animate.css](https://github.com/daneden/animate.css) CSS animations library.
 
-<div class="evo-site-annotations">
+<div class="evo-margin-bottom evo-site-annotations">
 	<p>**Important:** Make sure to always use the `animated` class name along with the animation type class name (for example: bounce animated). Animations require that the `animated` class exists to work properly.</p>
 </div>
 {{/ markdown }}
 					</div>
 
-					<!-- SETTINGS - BEGINS -->
+					<!-- ANIMATION TYPE SETTINGS - BEGINS -->
 						<div class="evo-table-small-mediaquery">
-							<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-pattern-library-setting-options" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+							<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-pattern-library-setting-options-scrolling" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
 								<thead>
 									<tr>
 										<th scope="column" width="160">Animation Type</th>
@@ -243,7 +243,7 @@ A list of animation type class options available from the [Animate.css](https://
 									</tr>
 								</thead>
 								<tbody>
-								{{#each animations.animation_settings_data}}
+								{{#each animations.animation_type_settings_data}}
 									<tr>
 										<td>{{{ animation_type }}}</td>
 										<td class="text-center">{{{ name_value }}}</td>
@@ -254,7 +254,7 @@ A list of animation type class options available from the [Animate.css](https://
 								</tbody>
 							</table>
 						</div>
-					<!-- SETTINGS - ENDS -->
+					<!-- ANIMATION TYPE SETTINGS - ENDS -->
 
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>

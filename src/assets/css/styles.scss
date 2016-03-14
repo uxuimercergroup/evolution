@@ -178,9 +178,9 @@ URL: {{ meta_url }}
 // MAGELLAN - BEGINS
 .evo-site-magellan						{
 										padding: 0;
-										background-color: $onyx-dark-2;
-										border-bottom: 1px solid $onyx-dark-10;
-	&.fixed									{@include box-shadow(0 0 8px 1px rgba($black, .15));}
+										background-color: $evo-site-magellan-background-color;
+										border-bottom: 1px solid $evo-site-magellan-border-color;
+	&.fixed									{@include box-shadow(0 0 8px 1px rgba($evo-site-magellan-shadow-color, .15));}
 	&[data-magellan-expedition-clone]		{visibility: hidden;}
 	.sub-nav								{
 											@include clearfix;
@@ -200,12 +200,12 @@ URL: {{ meta_url }}
 													border-bottom-width: 4px;
 													border-bottom-style: solid;
 													border-bottom-color: $transparent;
-													color: $sapphire-medium;
+													color: $evo-site-magellan-link-font-color;
 													text-align: center;
 													line-height: 1.25;
 													}
 			&.active								{
-				a										{border-bottom-color: $topaz-bright;}
+				a										{border-bottom-color: $evo-site-magellan-active-border-color;}
 													}
 												}
 											}
@@ -218,6 +218,7 @@ URL: {{ meta_url }}
 	.evo-site-band						{padding: $evo-site-band-padding;}
 
 	// MARKETING BAND
+	.evo-site-band--marketing-ctn		{background-color: $evo-site-band-marketing-background-color;}
 	.evo-site-band--marketing			{
 										background-color: $evo-site-band-marketing-background-color;
 		.evo-site-band--marketing-content	{
@@ -873,12 +874,10 @@ URL: {{ meta_url }}
 
 // BAND - BEGINS
 .evo-site-band--why						{
-										background-color: $white;
-										padding: 0 !important;
+										background-color: $evo-site-why-band-background-color;
+										padding: rem-calc(0 0 80 0) !important;
 	.evo-site--why-content-section			{
-											padding: rem-calc(40 0);
-											border-bottom: 1px solid $onyx-dark-10;
-		&:last-child							{border-bottom: 0;}
+											padding: rem-calc(40 0 0 0);
 		h3										{margin-bottom: rem-calc(16);}
 											}
 										}

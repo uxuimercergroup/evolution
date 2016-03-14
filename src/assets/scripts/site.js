@@ -147,6 +147,14 @@ $(function() {
 				info: false
 			});
 
+			// SETTINGS TAB DATA TABLE - SCROLLING
+			evoDataTable('evo-data-table-pattern-library-setting-options-scrolling',{
+				scrollY: '350px',
+				scrollCollapse: true,
+				paging: false,
+				info: false
+			});
+
 			// ICOMOON ICONS DATA TABLE
 			evoDataTable('evo-data-table-pattern-library-icons',{
 				paging: false,
