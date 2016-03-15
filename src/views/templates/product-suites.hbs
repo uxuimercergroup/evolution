@@ -45,11 +45,11 @@ title: "Product Suites"
 			<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
 
 			<!-- VISUAL IDENTITY CAROUSEL - BEGINS -->
-				<div class="evo-carousel" data-evo-carousel="evo-site-slides-carousel">
+				<div class="evo-carousel evo-site-slides-carousel" data-evo-carousel="evo-site-slides-carousel">
 					{{#each product-suites.visual_identity.items}}
 					<div class="text-center evo-carousel-item">
-						<img class="evo-spacer-margin-bottom-xx-large" src="/assets/images/evo-site-product-suites-{{add @index 1}}.png" alt="{{{product-suites.visual_identity.items.title}}}">
-						<p>{{{text}}}</p>
+						<img class="evo-center-block evo-spacer-margin-bottom-xx-large" src="/assets/images/evo-site-product-suites-{{add @index 1}}.png" width="800" alt="{{{product-suites.visual_identity.items.title}}}">
+						<p class="evo-spacer-margin-bottom-xxx-large evo-site-band--product-suites-visual-identity-marketing-text">{{{text}}}</p>
 					</div>
 					{{/each}}
 				</div>

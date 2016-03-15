@@ -89,6 +89,37 @@
 	// HERO - ENDS
 
 
+	// SLIDES CAROUSEL - BEGINS
+		.evo-site-slides-carousel			{
+			.owl-controls						{
+				.owl-buttons						{
+					.owl-prev,
+					.owl-next							{
+														position: absolute;
+														top: 38%;
+						[class^="evo-icon-"]				{
+															font-size: rem-calc(64);
+							&:before							{font-family: $evo-icon-site-font-stack;}
+															}
+														}
+					.owl-prev 							{
+														left: -12%;
+						[class^="evo-icon-"]				{
+							&:before							{content: "\edc6";}
+															}
+														}
+					.owl-next 							{
+														right: -12%;
+						[class^="evo-icon-"]				{
+							&:before							{content: "\edbe";}
+															}
+														}
+													}
+												}
+											}
+	// SLIDES CAROUSEL - ENDS
+
+
 	/*--- PATTERN LIBRARY PAGES ----------------------------------------------------------------*/
 	
 	// PATTERN LIBRARY TEMPLATE - BEGINS
