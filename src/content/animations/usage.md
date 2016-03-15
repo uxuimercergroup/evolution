@@ -4,6 +4,14 @@ Animations in Evolution depend on a JavaScript library called [AniJS](http://ani
 
 The collection of animation types relies on the [Animate.css](https://github.com/daneden/animate.css) CSS animations library.
 
+
+##### Formal Language Definition
+
+* data-anijs  -> Sentence 1; ... ; Sentence n
+* Sentence    -> Definition, ... , Definition n
+* Definition  -> if | on | do | to | before | after | helper
+
+
 ##### Getting Started with AniJS CSS Animations
 
 To trigger an animation with an event, an AniJS sentence must be added to the element using the `data-anijs` data-option. The basic AniJS sentence structure looks like this:
@@ -29,6 +37,18 @@ In this example, every time the user clicks the element, the `bounce` animation 
 <div class="evo-site-annotations">
 	<p>**Important:** Make sure to always use the `animated` class name along with the animation type class name (for example: bounce animated). Animations require that the `animated` class exists to work properly.</p>
 </div>
+
+
+##### Multiple Animations
+
+A `data-anijs` is composed by one or many sentences, each sentence ends with (;) and is formed by one or many definitions. Example:
+
+```
+<header data-anijs="if: click, do: wobble animated; if: scroll, on: window, do: swing animated">
+<!-- ... -->
+</header>
+```
+
 
 ##### Detect When Animation Ends
 
@@ -59,8 +79,10 @@ Include `after: $fireOnce` to prevent the animation from occuring more than once
 
 `<div class="button" data-anijs="if: click, do: flip animated, after: $fireOnce">Click me</div>`
 
-##### Change Duration
-You can also use style sheets to change the duration of your animations, add a delay or change the number of times that it plays:
+##### Animation Helpers
+AniJS includes animation helper classes to alter the default animation types. These helpers can change animation duration, delay, iteration, etc. Please refer to the animations settings tab for the list of animation helpers that are available.
+
+You can also use style sheets to further customize your animations. You can change the animation duration, add a delay or change the number of times that it plays:
 
 ```
 #yourElement {

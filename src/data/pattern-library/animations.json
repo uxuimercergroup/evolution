@@ -595,480 +595,497 @@
 	},
 
 	"animation_type_settings_header": "Animation Type Options",
+	"animation_type_settings_slug": "animation-type",
+	"animation_type_settings_code": "<div data-anijs=\"if: click, do: bounce animated\"></div>",
 	"animation_type_settings_data": [
 		{
 			"animation_type": "Attention Seekers",
-			"name_value": "Bounce",
-			"class_value": "bounce",
+			"name": "Bounce",
+			"class": "bounce",
 			"description": "Element bounces up and down"
 		},
 		{
 			"animation_type": "Attention Seekers",
-			"name_value": "Flash",
-			"class_value": "flash",
+			"name": "Flash",
+			"class": "flash",
 			"description": "Element alternates between 0 and 100% opacity"
 		},
 			{
 			"animation_type": "Attention Seekers",
-			"name_value": "Pulse",
-			"class_value": "pulse",
+			"name": "Pulse",
+			"class": "pulse",
 			"description": "Element expands and contracts, maintaining dimensions"
 		},
 			{
 			"animation_type": "Attention Seekers",
-			"name_value": "Rubber Band",
-			"class_value": "rubberBand",
+			"name": "Rubber Band",
+			"class": "rubberBand",
 			"description": "Element expands and contracts, maintaining dimensions"
 		},
 			{
 			"animation_type": "Attention Seekers",
-			"name_value": "Shake",
-			"class_value": "shake",
+			"name": "Shake",
+			"class": "shake",
 			"description": "Element shakes left to right"
 		},	
 			{
 			"animation_type": "Attention Seekers",
-			"name_value": "Swing",
-			"class_value": "swing",
+			"name": "Swing",
+			"class": "swing",
 			"description": "Element swings left to right"
 		},	
 			{
 			"animation_type": "Attention Seekers",
-			"name_value": "Tada",
-			"class_value": "tada",
+			"name": "Tada",
+			"class": "tada",
 			"description": "Element contracts, expands and shakes"
 		},
 			{
 			"animation_type": "Attention Seekers",
-			"name_value": "Wobble",
-			"class_value": "wobble",
+			"name": "Wobble",
+			"class": "wobble",
 			"description": "Element wobbles left to right"
 		},
 			{
 			"animation_type": "Bouncing Entrances",
-			"name_value": "Bounce In",
-			"class_value": "bounceIn",
+			"name": "Bounce In",
+			"class": "bounceIn",
 			"description": "Element bounces in from center"
 		},
 			{
 			"animation_type": "Bouncing Entrances",
-			"name_value": "Bounce In Down",
-			"class_value": "bounceInDown",
+			"name": "Bounce In Down",
+			"class": "bounceInDown",
 			"description": "Element bounces in from top"
 		},
 			{
 			"animation_type": "Bouncing Entrances",
-			"name_value": "Bounce In Left",
-			"class_value": "bounceInLeft",
+			"name": "Bounce In Left",
+			"class": "bounceInLeft",
 			"description": "Element bounces in from left"
 		},
 			{
 			"animation_type": "Bouncing Entrances",
-			"name_value": "Bounce In Right",
-			"class_value": "bounceInRight",
+			"name": "Bounce In Right",
+			"class": "bounceInRight",
 			"description": "Element bounces in from right"
 		},
 			{
 			"animation_type": "Bouncing Entrances",
-			"name_value": "Bounce In Up",
-			"class_value": "bounceInUp",
+			"name": "Bounce In Up",
+			"class": "bounceInUp",
 			"description": "Element bounces in from bottom"
 		},
 		{
 			"animation_type": "Bouncing Exits",
-			"name_value": "Bounce Out",
-			"class_value": "bounceOut",
+			"name": "Bounce Out",
+			"class": "bounceOut",
 			"description": "Element bounces and appears to shrink in to center"
 		},
 		{
 			"animation_type": "Bouncing Exits",
-			"name_value": "Bounce Out Down",
-			"class_value": "bounceOutDown",
+			"name": "Bounce Out Down",
+			"class": "bounceOutDown",
 			"description": "Element bounces and drops out of view"
 		},
 		{
 			"animation_type": "Bouncing Exits",
-			"name_value": "Bounce Out Left",
-			"class_value": "bounceOutLeft",
+			"name": "Bounce Out Left",
+			"class": "bounceOutLeft",
 			"description": "Element bounces and slides left out of view"
 		},								
 		{
 			"animation_type": "Bouncing Exits",
-			"name_value": "Bounce Out Right",
-			"class_value": "bounceOutRight",
+			"name": "Bounce Out Right",
+			"class": "bounceOutRight",
 			"description": "Element bounces and slides right out of view"
 		},
 		{
 			"animation_type": "Bouncing Exits",
-			"name_value": "Bounce Out Up",
-			"class_value": "bounceOutUp",
+			"name": "Bounce Out Up",
+			"class": "bounceOutUp",
 			"description": "Element bounces and slides up out of view"
 		},
 		{
 			"animation_type": "Fading Entrances",
-			"name_value": "Fade In",
-			"class_value": "fadeIn",
+			"name": "Fade In",
+			"class": "fadeIn",
 			"description": "Element gains opacity"
 		},
 		{
 			"animation_type": "Fading Entrances",
-			"name_value": "Fade In Down",
-			"class_value": "fadeInDown",
+			"name": "Fade In Down",
+			"class": "fadeInDown",
 			"description": "Element gains opacity, and slides down from top"
 		},
 		{
 			"animation_type": "Fading Entrances",
-			"name_value": "Fade In Down Big",
-			"class_value": "fadeInDown Big",
+			"name": "Fade In Down Big",
+			"class": "fadeInDown Big",
 			"description": "Element gains opacity, and slides down from top"
 		},
 		{
 			"animation_type": "Fading Entrances",
-			"name_value": "Fade In Left",
-			"class_value": "fadeInLeft",
+			"name": "Fade In Left",
+			"class": "fadeInLeft",
 			"description": "Element gains opacity, and slides in from left"
 		},
 			{
 			"animation_type": "Fading Entrances",
-			"name_value": "Fade In Left Big",
-			"class_value": "fadeInLeftBig",
+			"name": "Fade In Left Big",
+			"class": "fadeInLeftBig",
 			"description": "Element gains opacity, and slides in from left"
 		},
 		{
 			"animation_type": "Fading Entrances",
-			"name_value": "Fade In Right",
-			"class_value": "fadeInRight",
+			"name": "Fade In Right",
+			"class": "fadeInRight",
 			"description": "Element gains opacity, and slides in from right"
 		},
 		{
 			"animation_type": "Fading Entrances",
-			"name_value": "Fade In Right Big",
-			"class_value": "fadeInRightBig",
+			"name": "Fade In Right Big",
+			"class": "fadeInRightBig",
 			"description": "Element gains opacity, and slides in from right"
 		},
 		{
 			"animation_type": "Fading Entrances",
-			"name_value": "Fade In Up",
-			"class_value": "fadeInUp",
+			"name": "Fade In Up",
+			"class": "fadeInUp",
 			"description": "Element gains opacity, and slides in from bottom"
 		},
 		{
 			"animation_type": "Fading Entrances",
-			"name_value": "Fade In Up Big",
-			"class_value": "fadeInUpBig",
+			"name": "Fade In Up Big",
+			"class": "fadeInUpBig",
 			"description": "Element gains opacity, and slides in from bottom"
 		},
 		{
 			"animation_type": "Fading Exits",
-			"name_value": "Fade Out",
-			"class_value": "fadeOut",
+			"name": "Fade Out",
+			"class": "fadeOut",
 			"description": "Element loses opacity"
 		},
 		{
 			"animation_type": "Fading Exits",
-			"name_value": "Fade Out Down",
-			"class_value": "fadeOutDown",
+			"name": "Fade Out Down",
+			"class": "fadeOutDown",
 			"description": "Element loses opacity, and slides down"
 		},
 		{
 			"animation_type": "Fading Exits",
-			"name_value": "Fade Out Down Big",
-			"class_value": "fadeOutDown Big",
+			"name": "Fade Out Down Big",
+			"class": "fadeOutDown Big",
 			"description": "Element loses opacity, and slides down"
 		},
 		{
 			"animation_type": "Fading Exits",
-			"name_value": "Fade Out Left",
-			"class_value": "fadeOutLeft",
+			"name": "Fade Out Left",
+			"class": "fadeOutLeft",
 			"description": "Element loses opacity, and slides out to left"
 		},
 			{
 			"animation_type": "Fading Exits",
-			"name_value": "Fade Out Left Big",
-			"class_value": "fadeOutLeftBig",
+			"name": "Fade Out Left Big",
+			"class": "fadeOutLeftBig",
 			"description": "Element loses opacity, and slides out to left"
 		},
 		{
 			"animation_type": "Fading Exits",
-			"name_value": "Fade Out Right",
-			"class_value": "fadeOutRight",
+			"name": "Fade Out Right",
+			"class": "fadeOutRight",
 			"description": "Element loses opacity, and slides out to right"
 		},
 		{
 			"animation_type": "Fading Exits",
-			"name_value": "Fade Out Right Big",
-			"class_value": "fadeOutRightBig",
+			"name": "Fade Out Right Big",
+			"class": "fadeOutRightBig",
 			"description": "Element loses opacity, and slides out to right"
 		},
 		{
 			"animation_type": "Fading Exits",
-			"name_value": "Fade Out Up",
-			"class_value": "fadeOutUp",
+			"name": "Fade Out Up",
+			"class": "fadeOutUp",
 			"description": "Element loses opacity, and slides up from bottom"
 		},
 		{
 			"animation_type": "Fading Exits",
-			"name_value": "Fade Out Up Big",
-			"class_value": "fadeOutUpBig",
+			"name": "Fade Out Up Big",
+			"class": "fadeOutUpBig",
 			"description": "Element loses opacity, and slides up from bottom"
 		},
 		{
 			"animation_type": "Flippers",
-			"name_value": "Flip",
-			"class_value": "flip",
+			"name": "Flip",
+			"class": "flip",
 			"description": "Element expands, and rotates 360 degrees on Y axis"
 		},
 		{
 			"animation_type": "Flippers",
-			"name_value": "Flip In X",
-			"class_value": "flipInX",
+			"name": "Flip In X",
+			"class": "flipInX",
 			"description": "Element flips on X axis"
 		},
 		{
 			"animation_type": "Flippers",
-			"name_value": "Flip In Y",
-			"class_value": "flipInY",
+			"name": "Flip In Y",
+			"class": "flipInY",
 			"description": "Element flips on Y axis"
 		},
 		{
 			"animation_type": "Flippers",
-			"name_value": "Flip Out X",
-			"class_value": "flipOutX",
+			"name": "Flip Out X",
+			"class": "flipOutX",
 			"description": "Element loses opacity and flips on X axis"
 		},
 		{
 			"animation_type": "Flippers",
-			"name_value": "Flip Out Y",
-			"class_value": "flipOutY",
+			"name": "Flip Out Y",
+			"class": "flipOutY",
 			"description": "Element loses opacity and flips on Y axis"
 		},
 		{
 			"animation_type": "Lightspeed",
-			"name_value": "Light Speed In",
-			"class_value": "lightSpeedIn",
+			"name": "Light Speed In",
+			"class": "lightSpeedIn",
 			"description": "Element gains opacity, changes to rhombus and slides in from right"
 		},
 		{
 			"animation_type": "Lightspeed",
-			"name_value": "Light Speed Out",
-			"class_value": "lightSpeedOut",
+			"name": "Light Speed Out",
+			"class": "lightSpeedOut",
 			"description": "Element gains opacity, changes to rhombus and slides out to right"
 		},
 		{
 			"animation_type": "Rotating",
-			"name_value": "Rotate",
-			"class_value": "rotate",
+			"name": "Rotate",
+			"class": "rotate",
 			"description": "Element rotates 360 degrees on center axis"
 		},
 		{
 			"animation_type": "Rotating",
-			"name_value": "Rotate Down Left",
-			"class_value": "rotateDownLeft",
+			"name": "Rotate Down Left",
+			"class": "rotateDownLeft",
 			"description": "Element rotates down from top on left bottom corner axis"
 		},
 		{
 			"animation_type": "Rotating",
-			"name_value": "Rotate Up Left",
-			"class_value": "rotateUpLeft",
+			"name": "Rotate Up Left",
+			"class": "rotateUpLeft",
 			"description": "Element rotates up on left bottom corner axis"
 		},
 		{
 			"animation_type": "Rotating",
-			"name_value": "Rotate Down Right",
-			"class_value": "rotateDownRight",
+			"name": "Rotate Down Right",
+			"class": "rotateDownRight",
 			"description": "Element rotates down from top on right bottom corner axis"
 		},
 		{
 			"animation_type": "Rotating",
-			"name_value": "Rotate Up Right",
-			"class_value": "rotateUpRight",
+			"name": "Rotate Up Right",
+			"class": "rotateUpRight",
 			"description": "Element rotates up from bottom on right bottom corner axis"
 		},
 		{
 			"animation_type": "Rotating Entrances",
-			"name_value": "Rotate In",
-			"class_value": "rotateIn",
+			"name": "Rotate In",
+			"class": "rotateIn",
 			"description": "Element gains opacity and rotates 360 degrees on center axis"
 		},
 		{
 			"animation_type": "Rotating Entrances",
-			"name_value": "Rotate In Down Left",
-			"class_value": "rotateInDownLeft",
+			"name": "Rotate In Down Left",
+			"class": "rotateInDownLeft",
 			"description": "Element gains opacity and rotates down from top on left bottom corner axis"
 		},
 		{
 			"animation_type": "Rotating Entrances",
-			"name_value": "Rotate In Up Left",
-			"class_value": "rotateInUpLeft",
+			"name": "Rotate In Up Left",
+			"class": "rotateInUpLeft",
 			"description": "Element gains opacity and rotates up on left bottom corner axis"
 		},
 		{
 			"animation_type": "Rotating Entrances",
-			"name_value": "Rotate In Down Right",
-			"class_value": "rotateInDownRight",
+			"name": "Rotate In Down Right",
+			"class": "rotateInDownRight",
 			"description": "Element gains opacity and rotates down from top on right bottom corner axis"
 		},
 		{
 			"animation_type": "Rotating Entrances",
-			"name_value": "Rotate In Up Right",
-			"class_value": "rotateInUpRight",
+			"name": "Rotate In Up Right",
+			"class": "rotateInUpRight",
 			"description": "Element loses opacity and rotates up from bottom on right bottom corner axis"
 		},
 		{
 			"animation_type": "Rotating Exits",
-			"name_value": "Rotate Out",
-			"class_value": "rotateOut",
+			"name": "Rotate Out",
+			"class": "rotateOut",
 			"description": "Element loses opacity and rotates 360 degrees on center axis"
 		},
 		{
 			"animation_type": "Rotating Exits",
-			"name_value": "Rotate Out Down Left",
-			"class_value": "rotateOutDownLeft",
+			"name": "Rotate Out Down Left",
+			"class": "rotateOutDownLeft",
 			"description": "Element loses opacity and rotates down from top on left bottom corner axis"
 		},
 		{
 			"animation_type": "Rotating Exits",
-			"name_value": "Rotate Out Up Left",
-			"class_value": "rotateOutUpLeft",
+			"name": "Rotate Out Up Left",
+			"class": "rotateOutUpLeft",
 			"description": "Element loses opacity and rotates up on left bottom corner axis"
 		},
 		{
 			"animation_type": "Rotating Exits",
-			"name_value": "Rotate Out Down Right",
-			"class_value": "rotateOutDownRight",
+			"name": "Rotate Out Down Right",
+			"class": "rotateOutDownRight",
 			"description": "Element loses opacity and rotates down from top on right bottom corner axis"
 		},
 		{
 			"animation_type": "Rotating Exits",
-			"name_value": "Rotate Out Up Right",
-			"class_value": "rotateOutUpRight",
+			"name": "Rotate Out Up Right",
+			"class": "rotateOutUpRight",
 			"description": "Element loses opacity and rotates up from bottom on right bottom corner axis"
 		},
 		{
 			"animation_type": "Specials",
-			"name_value": "Hinge",
-			"class_value": "hinge",
+			"name": "Hinge",
+			"class": "hinge",
 			"description": "Element hangs from left top corner axis and then slides down"
 		},
 		{
 			"animation_type": "Specials",
-			"name_value": "Roll In",
-			"class_value": "rollIn",
+			"name": "Roll In",
+			"class": "rollIn",
 			"description": "Element gains opacity while rotating in from left on bottom left corner axis "
 		},
 		{
 			"animation_type": "Specials",
-			"name_value": "Roll Out",
-			"class_value": "rollOut",
+			"name": "Roll Out",
+			"class": "rollOut",
 			"description": "Element loses opacity while rotating out to right on bottom right corner axis "
 		},
 		{
 			"animation_type": "Zooming Entrances",
-			"name_value": "Zoom In",
-			"class_value": "zoomIn",
+			"name": "Zoom In",
+			"class": "zoomIn",
 			"description": "Element expands from center"
 		},
 		{
 			"animation_type": "Zooming Entrances",
-			"name_value": "Zoom In Down",
-			"class_value": "zoomInDown",
+			"name": "Zoom In Down",
+			"class": "zoomInDown",
 			"description": "Element expands while sliding in from top"
 		},																																
 		{
 			"animation_type": "Zooming Entrances",
-			"name_value": "Zoom In Left",
-			"class_value": "zoomInLeft",
+			"name": "Zoom In Left",
+			"class": "zoomInLeft",
 			"description": "Element expands while sliding in from left"
 		},
 		{
 			"animation_type": "Zooming Entrances",
-			"name_value": "Zoom In Right",
-			"class_value": "zoomInRight",
+			"name": "Zoom In Right",
+			"class": "zoomInRight",
 			"description": "Element expands while sliding in from right"
 		},
 		{
 			"animation_type": "Zooming Entrances",
-			"name_value": "Zoom Up",
-			"class_value": "zoomUp",
+			"name": "Zoom Up",
+			"class": "zoomUp",
 			"description": "Element expands while sliding in from bottom"
 		},
 		{
 			"animation_type": "Zooming Exits",
-			"name_value": "Zoom Out",
-			"class_value": "zoomOut",
+			"name": "Zoom Out",
+			"class": "zoomOut",
 			"description": "Element loses opacity and contracts to center"
 		},
 		{
 			"animation_type": "Zooming Exits",
-			"name_value": "Zoom Out Down",
-			"class_value": "zoomOutDown",
+			"name": "Zoom Out Down",
+			"class": "zoomOutDown",
 			"description": "Element contracts while sliding down"
 		},																																
 		{
 			"animation_type": "Zooming Exits",
-			"name_value": "Zoom Out Left",
-			"class_value": "zoomOutLeft",
+			"name": "Zoom Out Left",
+			"class": "zoomOutLeft",
 			"description": "Element contracts while sliding left"
 		},
 		{
 			"animation_type": "Zooming Exits",
-			"name_value": "Zoom Out Right",
-			"class_value": "zoomOutRight",
+			"name": "Zoom Out Right",
+			"class": "zoomOutRight",
 			"description": "Element contracts while sliding right"
 		},
 		{
 			"animation_type": "Zooming Exits",
-			"name_value": "Zoom Out Up",
-			"class_value": "zoomOutUp",
+			"name": "Zoom Out Up",
+			"class": "zoomOutUp",
 			"description": "Element contracts while sliding up"
 		},	
 		{
 			"animation_type": "Sliding Entrances",
-			"name_value": "Slide In Down",
-			"class_value": "slideInDown",
+			"name": "Slide In Down",
+			"class": "slideInDown",
 			"description": "Element slides down"
 		},																																
 		{
 			"animation_type": "Sliding Entrances",
-			"name_value": "Slide In Left",
-			"class_value": "slideInLeft",
+			"name": "Slide In Left",
+			"class": "slideInLeft",
 			"description": "Element slides left"
 		},
 		{
 			"animation_type": "Sliding Entrances",
-			"name_value": "Slide In Right",
-			"class_value": "slideInRight",
+			"name": "Slide In Right",
+			"class": "slideInRight",
 			"description": "Element slides right"
 		},
 		{
 			"animation_type": "Sliding Entrances",
-			"name_value": "Slide In Up",
-			"class_value": "slideInUp",
+			"name": "Slide In Up",
+			"class": "slideInUp",
 			"description": "Element slides up"
 		},
 		{
 			"animation_type": "Sliding Exits",
-			"name_value": "Slide Out Down",
-			"class_value": "slideOutDown",
+			"name": "Slide Out Down",
+			"class": "slideOutDown",
 			"description": "Element slides down"
 		},																																
 		{
 			"animation_type": "Sliding Exits",
-			"name_value": "Slide Out Left",
-			"class_value": "slideOutLeft",
+			"name": "Slide Out Left",
+			"class": "slideOutLeft",
 			"description": "Element slides left"
 		},
 		{
 			"animation_type": "Sliding Exits",
-			"name_value": "Slide Out Right",
-			"class_value": "slideOutRight",
+			"name": "Slide Out Right",
+			"class": "slideOutRight",
 			"description": "Element slides right"
 		},
 		{
 			"animation_type": "Sliding Exits",
-			"name_value": "Slide Out Up",
-			"class_value": "slideOutUp",
+			"name": "Slide Out Up",
+			"class": "slideOutUp",
 			"description": "Element slides up"
 		}							
+	],
+	"animation_helpers_settings_header": "Animation Helpers",
+	"animation_helpers_settings_slug": "animation-helpers",
+	"animation_helpers_settings_code": "<div data-anijs=\"if: click, do: bounce animated delay-sm\"></div>",
+	"animation_helpers_settings_data": [
+		{
+			"name": "",
+			"class": "",
+			"description": ""
+		},
+		{
+			"name": "",
+			"class": "",
+			"description": ""
+		}
 	]
 }

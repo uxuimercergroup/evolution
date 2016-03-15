@@ -121,11 +121,17 @@ $(function() {
 			// SITE MAGELLAN
 			evoMagellan();
 
-			// WHAT IS TESTIMONIALS CAROUSEL
-			evoCarousel('evo-carousel-what-testimonials', {
+			// SITE TESTIMONIALS CAROUSEL
+			evoCarousel('evo-site-testimonials-carousel', {
 				autoHeight: false,
 				navigation: false,
 				paginationSpeed: 600
+			});
+
+			// SITE SLIDES CAROUSEL
+			evoCarousel('evo-site-slides-carousel', {
+				autoPlay: false,
+				autoHeight: false
 			});
 
 			// COPY TO CLIPBOARD

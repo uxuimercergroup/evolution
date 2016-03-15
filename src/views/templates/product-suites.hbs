@@ -3,24 +3,87 @@ title: "Product Suites"
 ---
 
 <!-- HERO - BEGINS -->
-	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="medium" data-evo-site-hero-arrow-position="bottom">
+	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="large" data-evo-site-hero-arrow-position="bottom">
 		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
 			<div class="text-center evo-center-block-vertical-element">
-				<h1 class="evo-site-hero--hdr flipInY animated evo-no-margin-bottom" data-evo-site-hero-hdr-size="medium">{{{product-suites.hero.title}}} <span>{{{product-suites.hero.subtitle}}}</span></h1>
+				<h1 class="evo-site-hero--hdr flipInY animated evo-no-margin-bottom" data-evo-site-hero-hdr-size="large">{{{product-suites.hero.title}}} <span>{{{product-suites.hero.subtitle}}}</span></h1>
 			</div>		
 		</div>
 	</section>
 <!-- HERO - ENDS -->
 
-<!-- PAGE CONTENT - BEGINS -->
-	<section class="evo-contain-to-grid">
-		<div class="small-12 columns evo-spacer-padding-top-xxx-large evo-spacer-padding-bottom-xxx-large">
-
-{{# markdown }}
-Available product suites
-***
-{{/ markdown }}
-
+<!-- DIGITAL PRINCIPALS BAND - BEGINS -->
+	<section class="evo-full-width evo-site-band evo-site-band--marketing">
+		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
+			<h3 class="text-center evo-margin-left evo-margin-right">{{{product-suites.principles.header}}}</h3>
+			<ul class="small-block-grid-{{what.users.grid_small}} medium-block-grid-{{product-suites.principles.grid_medium}} large-block-grid-{{product-suites.principles.grid_large}} evo-site-band--marketing-block-grid">
+				{{#each product-suites.principles.items}}
+				<li class="text-center">
+					{{> (lookup . 'partial') }}
+					<h5>{{{header}}}</h5>
+					<p>{{{text}}}</p>
+				</li>
+				{{/each}}
+			</ul>
 		</div>
 	</section>
-<!-- PAGE CONTENT - ENDS -->
+<!-- DIGITAL PRINCIPALS BAND - ENDS -->
+
+<!-- PRODUCT SUITES DIGITAL IDENTITY TAB BAND - BEGINS -->
+	<section class="evo-full-width evo-site-band--marketing evo-site-band--tab evo-site-band--product-suites-visual-identity">
+		<div class="evo-full-width evo-site-band--tab-hdr">
+			<div class="small-12 columns">
+				<div class="row">
+					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab">
+						<h3 class="text-center">{{{product-suites.visual_identity.header}}}</h3>
+					</div>
+					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab-shim"></div>
+				</div>
+			</div>
+		</div>
+		<div class="evo-full-width evo-site-band--tab-panel">
+			<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
+
+			<!-- VISUAL IDENTITY CAROUSEL - BEGINS -->
+				<div class="evo-carousel" data-evo-carousel="evo-site-slides-carousel">
+					{{#each product-suites.visual_identity.items}}
+					<div class="text-center evo-carousel-item">
+						<img class="evo-spacer-margin-bottom-xx-large" src="/assets/images/evo-site-product-suites-{{add @index 1}}.png" alt="{{{product-suites.visual_identity.items.title}}}">
+						<p>{{{text}}}</p>
+					</div>
+					{{/each}}
+				</div>
+			<!-- VISUAL IDENTITY CAROUSEL - ENDS -->
+				
+			</div>
+		</div>
+	</section>
+<!-- PRODUCT SUITES DIGITAL IDENTITY TAB BAND - ENDS -->
+
+<!-- STYLE TILES BAND - BEGINS -->
+	<section class="evo-full-width evo-site-band evo-site-band--marketing evo-site-band--product-suites-style-tiles">
+		<div class="medium-10 large-10 medium-centered columns evo-site-band--marketing-content">
+			<h3 class="text-center evo-margin-left evo-margin-right">{{{product-suites.style_tiles.header}}}</h3>
+
+			<div class="row" data-equalizer>
+				<div class="medium-6 medium-push-6 columns evo-spacer-padding-bottom-large" data-equalizer-watch>
+					<div class="evo-center-block-vertical">
+						<div class="small-text-center medium-text-right evo-center-block-vertical-element">
+							<img class="evo-site-hidden" src="{{assets}}/images/evo-site-product-suites-style-tiles.png" alt="{{{product-suites.style_tiles.header}}}" data-anijs="if: scroll, on: window, do: fadeInUpBig animated evo-site-visible, before: scrollReveal, after: holdAnimClass">
+						</div>
+					</div>
+				</div>
+				<div class="medium-6 medium-pull-6 columns" data-equalizer-watch>
+					<div class="evo-center-block-vertical">
+						<div class="evo-center-block-vertical-element">
+							{{#each product-suites.style_tiles.items}}
+							<p class="evo-keyline-left evo-spacer-margin-bottom-xx-large evo-site-pull-out">{{{text}}}</p>
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+<!-- STYLE TILES BAND - ENDS -->

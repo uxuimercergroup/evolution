@@ -7,6 +7,16 @@
 
 	/*--- SITE GLOBAL --------------------------------------------------------------------------*/
 
+	// TYPE - BEGINS
+
+		// PULL OUT
+		.evo-site-pull-out					{
+											padding: rem-calc(10 0 10 20);
+											border-color: $evo-site-pull-out-border-color;
+											}
+
+	// TYPE - ENDS
+
 	// HERO - BEGINS
 
 		// HERO BANNER
@@ -111,10 +121,6 @@
 			.evo-site--why-content-section		{
 												padding: rem-calc(120 0 0 0);
 				.evo-center-block-vertical			{width: 100%;}
-				.evo-keyline-left					{
-													padding: rem-calc(10 0 10 20);
-													border-color: $evo-site-why-band-keyline-border-color;
-													}
 												}
 											}
 	// BAND - ENDS
