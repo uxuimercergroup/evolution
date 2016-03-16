@@ -1078,14 +1078,184 @@
 	"animation_helpers_settings_code": "<div data-anijs=\"if: click, do: bounce animated delay-sm\"></div>",
 	"animation_helpers_settings_data": [
 		{
-			"name": "",
-			"class": "",
-			"description": ""
+			"helper_type": "Iteration",
+			"name": "Infinite Iteration Count",
+			"class": "infinite",
+			"description": "animation-iteration-count: infinite;"
 		},
 		{
-			"name": "",
-			"class": "",
-			"description": ""
+			"helper_type": "Duration",
+			"name": "Duration X-Small",
+			"class": "duration-xs",
+			"description": "animation-duration: 0.25s;"
+		},
+		{
+			"helper_type": "Duration",
+			"name": "Duration Small",
+			"class": "duration-sm",
+			"description": "animation-duration: 0.5s;"
+		},
+		{
+			"helper_type": "Duration",
+			"name": "Duration Medium",
+			"class": "duration-md",
+			"description": "animation-duration: 1s;"
+		},
+		{
+			"helper_type": "Duration",
+			"name": "Duration Large",
+			"class": "duration-lg",
+			"description": "animation-duration: 2s;"
+		},
+		{
+			"helper_type": "Duration",
+			"name": "Duration X-Large",
+			"class": "duration-xl",
+			"description": "animation-duration: 4s;"
+		},
+		{
+			"helper_type": "Timing",
+			"name": "Linear",
+			"class": "timing-linear",
+			"description": "animation-timing-function: linear;"
+		},
+		{
+			"helper_type": "Timing",
+			"name": "Ease In",
+			"class": "timing-ease-in",
+			"description": "animation-timing-function: ease-in;"
+		},
+		{
+			"helper_type": "Timing",
+			"name": "Ease Out",
+			"class": "timing-ease-out",
+			"description": "animation-timing-function: ease-out;"
+		},
+		{
+			"helper_type": "Timing",
+			"name": "Ease In and Out",
+			"class": "timing-ease-in-out",
+			"description": "animation-timing-function: ease-in-out;"
+		},
+		{
+			"helper_type": "Timing",
+			"name": "Cubic Bezier",
+			"class": "timing-cubic-bezier",
+			"description": "animation-timing-function: cubic-bezier;"
+		},
+		{
+			"helper_type": "Delay",
+			"name": "Delay X-Small",
+			"class": "delay-xs",
+			"description": "animation-delay: 0.25s;"
+		},
+		{
+			"helper_type": "Delay",
+			"name": "Delay Small",
+			"class": "delay-sm",
+			"description": "animation-delay: 0.5s;"
+		},
+		{
+			"helper_type": "Delay",
+			"name": "Delay Medium",
+			"class": "delay-md",
+			"description": "animation-delay: 1s;"
+		},
+		{
+			"helper_type": "Delay",
+			"name": "Delay Large",
+			"class": "delay-lg",
+			"description": "animation-delay: 2s;"
+		},
+		{
+			"helper_type": "Delay",
+			"name": "Delay X-Large",
+			"class": "delay-xl",
+			"description": "animation-delay: 4s;"
+		},
+		{
+			"helper_type": "Iteration",
+			"name": "Iteration Infinite",
+			"class": "iteration-infinite",
+			"description": "animation-iteration-count: infinite;"
+		},
+		{
+			"helper_type": "Iteration",
+			"name": "Iteration 1",
+			"class": "iteration-1",
+			"description": "animation-iteration-count: 1;"
+		},
+		{
+			"helper_type": "Iteration",
+			"name": "Iteration 2",
+			"class": "iteration-2",
+			"description": "animation-iteration-count: 2;"
+		},
+		{
+			"helper_type": "Iteration",
+			"name": "Iteration 3",
+			"class": "iteration-3",
+			"description": "animation-iteration-count: 3;"
+		},
+		{
+			"helper_type": "Iteration",
+			"name": "Iteration 4",
+			"class": "iteration-4",
+			"description": "animation-iteration-count: 4;"
+		},
+		{
+			"helper_type": "Iteration",
+			"name": "Iteration 5",
+			"class": "iteration-5",
+			"description": "animation-iteration-count: 5;"
+		},
+		{
+			"helper_type": "Direction",
+			"name": "Direction Normal",
+			"class": "direction-normal",
+			"description": "animation-direction: normal;"
+		},
+		{
+			"helper_type": "Direction",
+			"name": "Direction Reverse",
+			"class": "direction-reverse",
+			"description": "animation-direction: reverse;"
+		},
+		{
+			"helper_type": "Direction",
+			"name": "Direction Alternate",
+			"class": "direction-alternate",
+			"description": "animation-direction: alternate;"
+		},
+		{
+			"helper_type": "Direction",
+			"name": "Direction Alternate Reverse",
+			"class": "direction-alternate-reverse",
+			"description": "animation-direction: alternate-reverse;"
+		},
+		{
+			"helper_type": "Fill Mode",
+			"name": "None",
+			"class": "fill-mode-none",
+			"description": "animation-fill-mode: none;"
+		},
+		{
+			"helper_type": "Fill Mode",
+			"name": "Forwards",
+			"class": "fill-mode-forwards",
+			"description": "animation-fill-mode: forwards;"
+		},
+		{
+			"helper_type": "Fill Mode",
+			"name": "Backwards",
+			"class": "fill-mode-backwards",
+			"description": "animation-fill-mode: backwards;"
+		},
+		{
+			"helper_type": "Fill Mode",
+			"name": "Both",
+			"class": "fill-mode-both",
+			"description": "animation-fill-mode: both;"
 		}
 	]
 }
