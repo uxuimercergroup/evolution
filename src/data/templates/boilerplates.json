@@ -18,9 +18,11 @@
 					{
 					"partial": "button",
 					"href": "/pattern-library/installation.html",
-					"text": "Install via Tool Box"
+					"text": "Install via Tool Box",
+					"custom-class": "evo-spacer-margin-bottom-small"
 					}
-				]
+				],
+				"details_link": "https://github.com/uxuimercergroup/generator-evolution/releases"
 			},
 			{
 				"header": "Sass Boilerplate",
@@ -31,22 +33,26 @@
 					{
 					"partial": "button",
 					"href": "/",
-					"text": "Download for Sass"
+					"text": "Download for Sass",
+					"custom-class": "evo-spacer-margin-bottom-small"
 					}
-				]
+				],
+				"details_link": "/"
 			},
 			{
 				"header": "CSS Boilerplate",
-				"text":	"This boilerplate is built using vanilla HTML, CSS, and JS. Download the ZIP and start developing.",
+				"text":	"Grab this version of the boilerplate if you want everything in vanilla CSS and JS. Download the ZIP and start developing.",
 				"partial": "icon",
 				"class": "evo-icon-site-css3 evo-icon-size-x-large",
 				"button": [
 					{
 					"partial": "button",
 					"href": "/",
-					"text": "Download for CSS"
+					"text": "Download for CSS",
+					"custom-class": "evo-spacer-margin-bottom-small"
 					}
-				]
+				],
+				"details_link": "/"
 			}
 		]
 	}

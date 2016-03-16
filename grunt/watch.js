@@ -30,7 +30,7 @@ module.exports = {
     tasks: ['assemble', 'notify:assemble']
   },
   data: {
-    files: ['src/data/**/*.json'],
+    files: ['src/data/**/*.json', 'package.json'],
     tasks: ['assemble', 'notify:assemble']
   },
   sass: {
