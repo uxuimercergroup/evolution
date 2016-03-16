@@ -2,5 +2,52 @@
 	"hero": {
 		"title": "Evolution",
 		"subtitle": "Boilerplates"
+	},
+	"distributions": {
+		"header": "Pick the Boilerplate for Your Project",
+		"grid_small" : "1",
+		"grid_medium" : "3",
+		"grid_large" : "3",
+		"items":[
+			{
+				"header": "Custom Boilerplate",
+				"text":	"Create a custom boilerplate by installing the Evolution Tool Box. Follow the instructions on the installation page.",
+				"partial": "icon",
+				"class": "evo-icon-site-hammer-wrench evo-icon-size-x-large",
+				"button": [
+					{
+					"partial": "button",
+					"href": "/pattern-library/installation.html",
+					"text": "Install via Tool Box"
+					}
+				]
+			},
+			{
+				"header": "Sass Boilerplate",
+				"text":	"This boilerplate is built using Sass, and you can work with it in the same way. Download the ZIP and start developing.",
+				"partial": "icon",
+				"class": "evo-icon-site-file-css evo-icon-size-x-large",
+				"button": [
+					{
+					"partial": "button",
+					"href": "/",
+					"text": "Download for Sass"
+					}
+				]
+			},
+			{
+				"header": "CSS Boilerplate",
+				"text":	"This boilerplate is built using vanilla HTML, CSS, and JS. Download the ZIP and start developing.",
+				"partial": "icon",
+				"class": "evo-icon-site-css3 evo-icon-size-x-large",
+				"button": [
+					{
+					"partial": "button",
+					"href": "/",
+					"text": "Download for CSS"
+					}
+				]
+			}
+		]
 	}
 }

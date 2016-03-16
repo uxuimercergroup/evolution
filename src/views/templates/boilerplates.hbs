@@ -12,41 +12,22 @@ title: "Boilerplates"
 	</section>
 <!-- HERO - ENDS -->
 
-<!-- PAGE CONTENT - BEGINS -->
-	<section class="evo-contain-to-grid">
-		<div class="small-12 columns evo-spacer-padding-top-xxx-large evo-spacer-padding-bottom-xxx-large">
-
-{{# markdown }}
-Evolution boilerplates are available to download or install for faster site development.
-***
-{{/ markdown }}
-
-		<!-- DOWNLOADS - BEGIN -->
-			<div class="row">
-				<div class="medium-4 columns">
-{{# markdown }}
-##### CSS Boilerplate
-Grab this version of the boilerplate if you want everything in simple, vanilla CSS and JS. Download the ZIP and start developing.
-{{/ markdown }}
-					{{> button href="/" text="Download for CSS"}}
-				</div>
-				<div class="medium-4 columns">
-{{# markdown }}
-##### Sass Boilerplate
-This boilerplate is built using Sass, and you can work with it in the same way. Check out the instructions on the Install documentation page.
-{{/ markdown }}
-					{{> button href="/" text="Download for Sass"}}
-				</div>
-				<div class="medium-4 columns">
-{{# markdown }}
-##### Tool Box Boilerplate
-Create a custom boilerplate by installing the Evolution Tool Box. Check out the instructions on the Install documentation page.
-{{/ markdown }}
-					{{> button href="/pattern-library/installation.html" text="Install via Tool Box"}}
-				</div>
-			</div>
-		<!-- DOWNLOADS - END -->
-
+<!-- DISTRIBUTIONS BAND - BEGINS -->
+	<section class="evo-full-width evo-site-band evo-site-band--marketing">
+		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
+			<h3 class="text-center evo-margin-left evo-margin-right">{{{boilerplates.distributions.header}}}</h3>
+			<ul class="small-block-grid-{{what.users.grid_small}} medium-block-grid-{{boilerplates.distributions.grid_medium}} large-block-grid-{{boilerplates.distributions.grid_large}} evo-site-band--marketing-block-grid">
+				{{#each boilerplates.distributions.items}}
+				<li class="text-center">
+					{{> (lookup . 'partial') }}
+					<h5>{{{header}}}</h5>
+					<p>{{{text}}}</p>
+					{{#each button}}
+						{{> (lookup . 'partial') }}
+					{{/each}}
+				</li>
+				{{/each}}
+			</ul>
 		</div>
 	</section>
-<!-- PAGE CONTENT - ENDS -->
+<!-- DISTRIBUTIONS BAND - ENDS -->
