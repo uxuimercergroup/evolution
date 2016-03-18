@@ -8,10 +8,10 @@ module.exports = {
     options: {
       banner:
         '/*!\n' +
-        '* Mercer Evolution v<%= package.evolution.version %> - Core JS\n' +
-        '* DATE: <%= package.evolution.date %>\n' +
-        '* AUTHOR: <%= package.evolution.author %>\n' +
-        '* URL: <%= package.evolution.url %>\n' +
+        '* Mercer Evolution v<%= package.version %> - Core JS\n' +
+        '* DATE: <%= package.date %>\n' +
+        '* AUTHOR: <%= package.author %>\n' +
+        '* URL: <%= package.homepage %>\n' +
         '*/\n\n'
     },
     files: {

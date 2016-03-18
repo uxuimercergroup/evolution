@@ -28,39 +28,39 @@ module.exports = {
       replacements: [
         {
           pattern: /{{ evo_meta_version }}/g,
-          replacement: '<%= package.evolution.version %>'
-        },
-        {
-          pattern: /{{ evo_meta_author }}/g,
-          replacement: '<%= package.evolution.author %>'
-        },
-        {
-          pattern: /{{ evo_meta_date }}/g,
-          replacement: '<%= package.evolution.date %>'
-        },
-        {
-          pattern: /{{ evo_meta_url }}/g,
-          replacement: '<%= package.evolution.url %>'
-        },
-        {
-          pattern: /{{ meta_project }}/g,
-          replacement: '<%= package.project %>'
-        },
-        {
-          pattern: /{{ meta_version }}/g,
           replacement: '<%= package.version %>'
         },
         {
-          pattern: /{{ meta_author }}/g,
+          pattern: /{{ evo_meta_author }}/g,
           replacement: '<%= package.author %>'
         },
         {
-          pattern: /{{ meta_date }}/g,
+          pattern: /{{ evo_meta_date }}/g,
           replacement: '<%= package.date %>'
         },
         {
+          pattern: /{{ evo_meta_url }}/g,
+          replacement: '<%= package.homepage %>'
+        },
+        {
+          pattern: /{{ meta_project }}/g,
+          replacement: '<%= package.project.name %>'
+        },
+        {
+          pattern: /{{ meta_version }}/g,
+          replacement: '<%= package.project.version %>'
+        },
+        {
+          pattern: /{{ meta_author }}/g,
+          replacement: '<%= package.project.author %>'
+        },
+        {
+          pattern: /{{ meta_date }}/g,
+          replacement: '<%= package.project.date %>'
+        },
+        {
           pattern: /{{ meta_url }}/g,
-          replacement: '<%= package.url %>'
+          replacement: '<%= package.project.homepage %>'
         },
         {
           pattern: /{{ conversational_form_meta_name }}/g,
