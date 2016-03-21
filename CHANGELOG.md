@@ -2,7 +2,7 @@
 ## [Unreleased]
 -->
 
-#### [3.0.2](https://github.com/uxuimercergroup/evolution/tree/3.0.2) - 2016-03-17
+## [3.0.2](https://github.com/uxuimercergroup/evolution/tree/3.0.2) - 2016-03-17
 [Full Changelog](https://github.com/uxuimercergroup/evolution/compare/d3.0.1...d3.0.2)
 
 ##### Added
