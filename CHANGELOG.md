@@ -2,8 +2,7 @@
 ## [Unreleased]
 -->
 
-## [3.0.2](https://github.com/uxuimercergroup/evolution/tree/3.0.2) - 2016-03-17
-[Full Changelog](https://github.com/uxuimercergroup/evolution/compare/d3.0.1...d3.0.2)
+## [3.0.2] - 2016-03-17
 
 ##### Added
 - Animation library using [AniJS](http://anijs.github.io/) javascript library and [Animate.css](https://github.com/daneden/animate.css) styles, these are CSS3 animations and don't work in IE9, which gracefully degrades.
