@@ -1,6 +1,6 @@
 module.exports = {
 
-  // String replace version numbers in files (CSS, JS)
+  // String replace assets url in page templates with absolute path
   page_templates: {
     files: [{
       expand: true,
@@ -12,11 +12,13 @@ module.exports = {
       replacements: [
         {
           pattern: /..\/assets/ig,
-          replacement: 'https://evolution-dev.mercer.com/assets'
+          replacement: 'https://evolution.mercer.com/assets'
         }
       ]
     }
   },
+
+  // String replace version numbers in files (CSS, JS)
   meta: {
     files: [{
       expand: true,
