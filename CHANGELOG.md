@@ -16,10 +16,18 @@
 	- Stepper (CSS)
 	- Thin Footer (CSS)
 - New helper classes for full-width and contain-to-grid layouts
-- Interactive Button option for buttons atom is back (originally in Evolution 2.5)
-- Badges molecule which depends on Foundation's Labels atom
-- Interval tick marks option for Slider Molecule
+- Interactive Button option for Buttons atom is back (originally in Evolution 2.5)
+- New Badges molecule which depends on Foundation's Labels atom
+- Interval tick marks option for Slider molecule
 - Image icon assets available of both photo realistic images and "vector" design images
+- New base shadow Sass variables
+- New shadow Sass variables for Boxes atom, atom uses global Sass variable values
+- Core icomoon icon font includes new icons for organisms
+- Added pre/postfix form labels from Foundation to forms atom
+- Added jquery.autosize.input.js jQuery plugin for Conversational Form organism
+- Added Mega menu option for Top Bar molecule
+- Added masonry.js and imagesloaded.js. Masonry is a JavaScript grid layout library. It works by placing elements in optimal position based on available vertical space, sort of like a mason fitting stones in a wall. Unloaded images can throw off Masonry layouts and cause item elements to overlap. imagesLoaded resolves this issue.
+- Shopping cart icon added to core icomoon icon font
 
 ##### Changed
 - Completely overhauled the UI development environment
@@ -29,5 +37,12 @@
 - Core Items are now consider atoms
 - Core UI items are now consider molecules
 
+<!--
+##### Deprecated
+-->
+
 ##### Removed
 - Worksheet Form organism removed as new design was basically a stacked form molecule, so it was redundant.
+
+##### Fixed
+- Fixed a bug with forms and Fastclick.js as related to label clicks on mobile (https://github.com/ftlabs/fastclick/issues/60)
