@@ -8,52 +8,27 @@
 		"grid_small" : "1",
 		"grid_medium" : "3",
 		"grid_large" : "3",
-		"items":[
-			{
-				"header": "Custom Boilerplate",
-				"text":	"Create a custom boilerplate by installing the Evolution Tool Box. Follow the instructions on the installation page.",
-				"partial": "icon",
-				"class": "evo-icon-site-hammer-wrench evo-icon-size-x-large",
-				"button": [
-					{
-					"partial": "button",
-					"href": "/pattern-library/installation.html",
-					"text": "Install via Tool Box",
-					"custom-class": "evo-spacer-margin-bottom-small"
-					}
-				],
-				"details_link": "https://github.com/uxuimercergroup/generator-evolution/releases"
-			},
-			{
-				"header": "Sass Boilerplate",
-				"text":	"This boilerplate is built using Sass, and you can work with it in the same way. Download the ZIP and start developing.",
-				"partial": "icon",
-				"class": "evo-icon-site-file-css evo-icon-size-x-large",
-				"button": [
-					{
-					"partial": "button",
-					"href": "/",
-					"text": "Download for Sass",
-					"custom-class": "evo-spacer-margin-bottom-small"
-					}
-				],
-				"details_link": "/"
-			},
-			{
-				"header": "CSS Boilerplate",
-				"text":	"Grab this version of the boilerplate if you want everything in vanilla CSS and JS. Download the ZIP and start developing.",
-				"partial": "icon",
-				"class": "evo-icon-site-css3 evo-icon-size-x-large",
-				"button": [
-					{
-					"partial": "button",
-					"href": "/",
-					"text": "Download for CSS",
-					"custom-class": "evo-spacer-margin-bottom-small"
-					}
-				],
-				"details_link": "/"
-			}
-		]
+		"custom": {
+			"icon_class": "evo-icon-site-hammer-wrench",
+			"header": "Custom Boilerplate",
+			"text":	"Create a custom boilerplate by installing the Evolution Tool Box. Follow the instructions on the installation page.",
+			"link": "/pattern-library/installation.html",
+			"link_text": "Install via Tool Box",
+			"details_link": "https://github.com/uxuimercergroup/generator-evolution/releases"
+		},
+		"sass": {
+			"icon_class": "evo-icon-site-file-css",
+			"header": "Sass Boilerplate",
+			"text":	"This boilerplate is built using Sass, and you can work with it in the same way. Download the ZIP and start developing.",
+			"link_text": "Download for Sass",
+			"details_link": "https://github.com/uxuimercergroup/evolution-boilerplate-sass/releases"
+		},
+		"css": {
+			"icon_class": "evo-icon-site-css3",
+			"header": "CSS Boilerplate",
+			"text":	"Grab this version of the boilerplate if you want everything in vanilla CSS and JS. Download the ZIP and start developing.",
+			"link_text": "Download for CSS",
+			"details_link": "https://github.com/uxuimercergroup/evolution-boilerplate-css/releases"
+		}
 	}
 }
