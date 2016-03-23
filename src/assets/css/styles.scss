@@ -51,6 +51,27 @@ URL: {{ meta_url }}
 
 /*--- SITE GLOBAL --------------------------------------------------------------------------*/
 
+// GITHUB GIST CODE FORMATTING - BEGINS
+	.gist								{
+		.gist-file							{
+											@include border-radius(0 !important);
+											background-color: #f5f2f0 !important;
+											border: 0 !important;
+											border-bottom: 0 !important;
+											border: 1px solid #E6E6E6 !important;
+			.gist-data							{
+												background-color: $transparent;
+												border-bottom: 0;
+				table								{
+													background-color: $transparent;
+					tr									{background-color: $transparent;}
+													}
+												}
+			.gist-meta							{display: none;}
+											}
+										}
+// GITHUB GIST CODE FORMATTING - ENDS
+
 // HELPERS - BEGINS
 
 	// VISIBILITY
