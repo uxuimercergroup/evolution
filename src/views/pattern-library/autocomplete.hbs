@@ -170,10 +170,10 @@ The autocomplete automatically suggests items for users when filling out an inpu
 						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
 							<div class="evo-box-ftr">
 								<div class="evo-site-example-box--code-hdr">
-									autocomplete
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-usage-autocomplete" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									{{autocomplete.data.autocompletel.slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-usage-{{autocomplete.data.autocompletel.slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
-								<div id="evo-code-copy-js-usage-autocomplete">{{{gist '6fe5b22f3c035757d754'}}}</div>
+								<div id="evo-code-copy-js-usage-{{autocomplete.data.autocompletel.slug}}">{{{gist '6fe5b22f3c035757d754'}}}</div>
 							</div>
 						</div>
 					<!-- JS CODE - ENDS -->

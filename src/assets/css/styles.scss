@@ -39,19 +39,7 @@ URL: {{ meta_url }}
 										background-color: $evo-site-code-bg-color;
 										}
 
-	// ANNOTATIONS
-	.evo-site-annotations				{
-										@include border-radius($evo-site-annotations-border-radius);
-										background-color: $evo-site-annotations-background-color;
-										border-width: $evo-site-annotations-border-width;
-										padding: $evo-site-annotations-padding;
-										}
-// TOOLS - ENDS
-
-
-/*--- SITE GLOBAL --------------------------------------------------------------------------*/
-
-// GITHUB GIST CODE FORMATTING - BEGINS
+	// GITHUB GIST CODE
 	.gist								{
 		.gist-file							{
 											@include border-radius(0 !important);
@@ -70,7 +58,18 @@ URL: {{ meta_url }}
 			.gist-meta							{display: none;}
 											}
 										}
-// GITHUB GIST CODE FORMATTING - ENDS
+
+	// ANNOTATIONS
+	.evo-site-annotations				{
+										@include border-radius($evo-site-annotations-border-radius);
+										background-color: $evo-site-annotations-background-color;
+										border-width: $evo-site-annotations-border-width;
+										padding: $evo-site-annotations-padding;
+										}
+// TOOLS - ENDS
+
+
+/*--- SITE GLOBAL --------------------------------------------------------------------------*/
 
 // HELPERS - BEGINS
 
