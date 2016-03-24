@@ -1,6 +1,7 @@
 ---
 title: "Badges"
 definition_content: "src/content/badges/definition.md"
+settings_content: "src/content/badges/settings.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -218,41 +219,16 @@ Badges provide small indicators of information at a quick glance.
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-				
+
 				<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
-						<div class="evo-site-markdown-content-block">
-{{# markdown }}
-##### {{ badges.settings_header }}
-Below is a list of the data options that can be used with badges using data attributes.
-{{/ markdown }}
-						</div>
 
-					<!-- SETTINGS - BEGINS -->
-						<div class="evo-table-small-mediaquery">
-							<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-pattern-library-setting-options" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
-								<thead>
-									<tr>
-										<th scope="column" width="160">Options</th>
-										<th scope="column" width="90">Defaults</th>
-										<th scope="column">Values</th>
-										<th scope="column" width="325">Description</th>
-									</tr>
-								</thead>
-								<tbody>
-								{{#each badges.settings_data}}
-									<tr>
-										<td>{{{ option }}}</td>
-										<td class="text-center">{{{ default_value }}}</td>
-										<td class="text-center">{{{ option_value }}}</td>
-										<td>{{{ description }}}</td>
-									</tr>
-								{{/each}}
-								</tbody>
-							</table>
+					<!-- DATA ATTRIBUTE SETTINGS - BEGINS -->
+						<div class="evo-site-markdown-content-block evo-site-markdown-content-block--settings">
+							{{{ md settings_content }}}
 						</div>
-					<!-- SETTINGS - ENDS -->
-
+					<!-- DATA ATTRIBUTE SETTINGS - ENDS -->
+					
 					</section>
 				<!-- CONTENT SECTION - ENDS -->
 

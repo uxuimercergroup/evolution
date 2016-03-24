@@ -120,4 +120,4 @@ Below is a list of the options that you can pass into the button handlebars part
 **type**
 - Default Value: --
 - Option Value: **button, submit**
-- Description: Add one of the option values on the `type` attribute of the butto
+- Description: Add one of the option values on the `type` attribute of the button
