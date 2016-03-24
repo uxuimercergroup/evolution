@@ -2,6 +2,7 @@
 title: "Buttons"
 definition_content: "src/content/buttons/definition.md"
 usage_content: 		"src/content/buttons/usage.md"
+settings_content:	"src/content/buttons/settings.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -248,39 +249,37 @@ Buttons act as the focal point for user interaction as it relates to saving data
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					
-					<div class="evo-site-markdown-content-block">
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
 {{# markdown }}
-##### {{ buttons.handlebars_settings_header }}
-Below is a list of the options that you can pass into the button handlebars partial.
+##### {{ buttons.code_example_header }}
 {{/ markdown }}
-					</div>
+						</div>
+					<!-- HANDLEBARS CODE - BEGINS -->
+						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
+							<div class="evo-box-ftr">
+								<div class="evo-site-example-box--code-hdr">
+									{{buttons.code_example_slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-hbs-button-example-{{buttons.code_example_slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre><code class="language-handlebars" id="evo-code-copy-hbs-button-example-{{buttons.code_example_slug}}"><xmp>{{{buttons.code_example}}}</xmp></code></pre>
+							</div>
+						</div>
+					<!-- HANDLEBARS CODE - ENDS -->
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
 
-				<!-- SETTINGS - BEGINS -->
-					<div class="evo-table-small-mediaquery">
-						<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-pattern-library-setting-options" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
-							<thead>
-								<tr>
-									<th scope="column" width="160">Options</th>
-									<th scope="column" width="90">Defaults</th>
-									<th scope="column">Values</th>
-									<th scope="column" width="325">Description</th>
-								</tr>
-							</thead>
-							<tbody>
-							{{#each buttons.handlebars_settings_data}}
-								<tr>
-									<td>{{{ option }}}</td>
-									<td class="text-center">{{{ default_value }}}</td>
-									<td class="text-center">{{{ option_value }}}</td>
-									<td>{{{ description }}}</td>
-								</tr>
-							{{/each}}
-							</tbody>
-						</table>
-					</div>
-				<!-- SETTINGS - ENDS -->
-
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+					<!-- HANDLEBARS SETTINGS - BEGINS -->
+						<div class="evo-site-markdown-content-block evo-site-markdown-content-block--settings">
+							{{{ md settings_content }}}
+						</div>
+					<!-- HANDLEBARS SETTINGS - ENDS -->
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 					&nbsp;
