@@ -1,4 +1,4 @@
-##### Badges Data Options
+##### Data Options
 
 Below is a list of the data attribute options that you can use with the Badges molecule.
 ***
