@@ -19,23 +19,14 @@
 		]
 	},
 
+	"product_suite_bp": "true",
+	"product_suite_comm": "true",
+
 	"data": {
 		"social_media_badges": {
-			"name": "Social Media Badges",
-			"multiple_example": "true",
-			"multiple_example_options": [
-				{"partial": "social-media-badges", "slug": "social-media-badges"}
-			]
+			"name": "Basic",
+			"partial": "social-media-badges",
+			"slug": "social-media-badges"
 		}
-	},
-
-	"settings_header": "",
-	"settings_data": [
-		{
-			"option": "",
-			"default_value": "",
-			"option_value": "",
-			"description": ""
-		}
-	]
+	}
 }

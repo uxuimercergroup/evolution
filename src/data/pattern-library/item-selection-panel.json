@@ -20,30 +20,21 @@
 		]
 	},
 
+	"product_suite_bp": "true",
+	"product_suite_comm": "false",
+
 	"data": {
 		"basic_item_selection_panel": {
-			"name": "Item Selection Panel",
-			"multiple_example": "true",
-			"multiple_example_options": [
-				{"partial": "item-selection-panel", "slug": "basic-item-selection-panel"}
-			]
+			"name": "Basic",
+			"partial": "item-selection-panel",
+			"partial_js": "item-selection-panel-js",
+			"slug": "basic-item-selection-panel"
 		},
 		"item_selection_panel_photo_icons": {
-			"name": "Item Selection Panel Photo Icons",
-			"multiple_example": "true",
-			"multiple_example_options": [
-				{"partial": "item-selection-panel-photo-icons", "slug": "item-selection-panel-photo-icons"}
-			]
+			"name": "Photo Icons",
+			"partial": "item-selection-panel-photo-icons",
+			"partial_js": "item-selection-panel-js",
+			"slug": "item-selection-panel-photo-icons"
 		}
-	},
-
-	"settings_header": "",
-	"settings_data": [
-		{
-			"option": "",
-			"default_value": "",
-			"option_value": "",
-			"description": ""
-		}
-	]
+	}
 }

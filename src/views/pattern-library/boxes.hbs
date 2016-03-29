@@ -1,6 +1,7 @@
 ---
 title: "Boxes"
 definition_content: "src/content/boxes/definition.md"
+usage_content: "src/content/boxes/usage.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -12,13 +13,13 @@ definition_content: "src/content/boxes/definition.md"
 Boxes are the basic building blocks of any web site or component. Evolution boxes depend on Foundation's [Panels](http://foundation.zurb.com/sites/docs/v/5.5.3/components/panels.html) as a starting point. Each box is made of a box header, body, and footer.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
-				{{#each pattern-library.tabs}}
+			<ul class="button-group radius {{boxes.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+				{{#each boxes.tabs}}
 				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
-					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
+					<a href="#tabs{{index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{index}}" class="button small evo-button">
 						<span class="text">{{name}}</span>
 					</a>
 				</li>
@@ -112,7 +113,15 @@ Boxes are the basic building blocks of any web site or component. Evolution boxe
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					{{{md definition_content}}}
+				
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+							{{{md definition_content}}}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 					&nbsp;
@@ -127,7 +136,15 @@ Boxes are the basic building blocks of any web site or component. Evolution boxe
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 3
+					
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+							{{{md usage_content}}}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+					
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
@@ -162,7 +179,7 @@ Boxes are the basic building blocks of any web site or component. Evolution boxe
 											</li>
 										{{/is}}
 										{{#is boxes.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if boxes.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each boxes.dependency_data.evolution_dependencies}}
@@ -210,10 +227,58 @@ Boxes are the basic building blocks of any web site or component. Evolution boxe
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 4
+
+					<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+{{# markdown }}
+##### {{ boxes.settings_header }}
+Below is a list of the data options that can be used with boxes using data attributes.
+{{/ markdown }}
+						</div>
+
+					<!-- SETTINGS - BEGINS -->
+						<div class="evo-table-small-mediaquery">
+							<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-pattern-library-setting-options" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+								<thead>
+									<tr>
+										<th scope="column" width="160">Options</th>
+										<th scope="column" width="90">Defaults</th>
+										<th scope="column">Values</th>
+										<th scope="column" width="325">Description</th>
+									</tr>
+								</thead>
+								<tbody>
+								{{#each boxes.settings_data}}
+									<tr>
+										<td>{{{ option }}}</td>
+										<td class="text-center">{{{ default_value }}}</td>
+										<td class="text-center">{{{ option_value }}}</td>
+										<td>{{{ description }}}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					<!-- SETTINGS - ENDS -->
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 4
+					<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+						
+						{{!--
+						<dl class="sub-nav">
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
+						</dl>
+						<hr>
+						--}}
+						
+					</div>
+				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
 			

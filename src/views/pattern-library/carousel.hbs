@@ -1,5 +1,7 @@
 ---
 title: "Carousel"
+definition_content: "src/content/carousel/definition.md"
+usage_content: 		"src/content/carousel/usage.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -11,7 +13,7 @@ title: "Carousel"
 The Carousel control allows for a revolving display of different types of content by using a visual slideshow. It gives the user the ability to get an overview of important information at a quick glance by flipping quickly through the different slides.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -73,6 +75,17 @@ The Carousel control allows for a revolving display of different types of conten
 							<!-- HTML - ENDS -->
 
 								{{/each}}
+
+								{{#if partial_js}}
+							<!-- JS - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-{{slug}}"><xmp>{{> (lookup . 'partial_js') }}</xmp></code></pre>
+							<!-- JS - ENDS -->
+								{{/if}}
+
 							{{else}}
 
 							<!-- HTML - BEGINS -->
@@ -82,6 +95,16 @@ The Carousel control allows for a revolving display of different types of conten
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
+
+								{{#if partial_js}}
+							<!-- JS - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-{{slug}}"><xmp>{{> (lookup . 'partial_js') }}</xmp></code></pre>
+							<!-- JS - ENDS -->
+								{{/if}}
 
 							{{/is}}
 						<!-- CODE - ENDS -->
@@ -111,12 +134,18 @@ The Carousel control allows for a revolving display of different types of conten
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-{{# markdown }}
-Content for something 2
-{{/ markdown }}
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+							{{{md definition_content}}}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 2
+					&nbsp;
 				</div>
 			</section>
 			
@@ -128,9 +157,40 @@ Content for something 2
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-{{# markdown }}
-Content for something 3
-{{/ markdown }}
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+							{{{md usage_content}}}
+						</div>
+
+					<!-- JS CODE - BEGINS -->
+						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
+							<div class="evo-box-ftr">
+								<div class="evo-site-example-box--code-hdr">
+									{{carousel.data-js.slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-usage-{{carousel.data-js.slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre><code class="language-js" id="evo-code-copy-js-usage-{{carousel.data-js.slug}}"><xmp>{{> carousel-js }}</xmp></code></pre>
+							</div>
+						</div>
+					<!-- JS CODE - ENDS -->
+
+					<!-- HTML CODE - BEGINS -->
+						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
+							<div class="evo-box-ftr evo-no-margin-top">
+								<div class="evo-site-example-box--code-hdr">
+									{{carousel.data-js.slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-usage-{{carousel.data-js.slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre><code class="language-markup" id="evo-code-copy-html-usage-{{carousel.data-js.slug}}"><xmp>{{> carousel }}</xmp></code></pre>
+							</div>
+						</div>
+					<!-- HTML CODE - ENDS -->
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
@@ -165,7 +225,7 @@ Content for something 3
 											</li>
 										{{/is}}
 										{{#is carousel.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if carousel.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each carousel.dependency_data.evolution_dependencies}}

@@ -7,6 +7,16 @@
 
 	/*--- SITE GLOBAL --------------------------------------------------------------------------*/
 
+	// TYPE - BEGINS
+
+		// PULL OUT
+		.evo-site-pull-out					{
+											padding: rem-calc(10 0 10 20);
+											border-color: $evo-site-pull-out-border-color;
+											}
+
+	// TYPE - ENDS
+
 	// HERO - BEGINS
 
 		// HERO BANNER
@@ -41,6 +51,24 @@
 												}
 											}
 
+		// TESTIMONIALS BAND
+		.evo-site-band--testimonials		{
+			blockquote							{
+												padding-left: rem-calc(40);
+												padding-right: rem-calc(40);
+				p									{
+													font-size: rem-calc(26);
+					&:before,
+					&:after								{font-size: rem-calc(26);}
+					&:before							{
+														top: -2px;
+														left: -36px;
+														}
+					&:after								{bottom: -2px;}
+													}
+												}
+											}
+
 		// TAB BAND
 		.evo-site-band--tab					{
 			.evo-site-band--tab-panel			{
@@ -58,31 +86,61 @@
 
 	// BANDS - ENDS
 
+
+	/*--- PATTERN LIBRARY PAGES ----------------------------------------------------------------*/
 	
+	// PATTERN LIBRARY TEMPLATE - BEGINS
+
+		// PATTERN LIBRARY HOMEPAGE - BEGINS
+			.evo-site-band--pattern-library		{
+				.evo-site-band--tab-panel			{
+													padding: $evo-site-pattern-library-band-tab-panel-padding;
+					.evo-site-band--tab-panel-marketing-content
+														{padding: $evo-site-pattern-library-band-tab-panel-marketing-content-padding;}
+													}
+												}
+		// PATTERN LIBRARY HOMEPAGE - ENDS
+
+	// PATTERN LIBRARY TEMPLATE - ENDS
+
+
+	/*--- PRODUCT SUITES PAGE ------------------------------------------------------------------------*/
+
+	// BAND - BEGINS
+		.evo-site-band--product-suites-visual-identity
+											{
+			img									{width: 60% !important;}
+			.evo-site-band--product-suites-visual-identity-marketing-text
+												{
+												font-size: rem-calc(20);
+												max-width: 52%;
+												margin-left: auto;
+												margin-right: auto;
+												}
+											}
+	// BAND - ENDS
+
+
 	/*--- WHAT IS PAGE -------------------------------------------------------------------------*/
 
 	// TAB BAND - BEGINS
 		.evo-site-band--what				{
-			.evo-site-band--tab-panel			{
-												background-image: url($evo-site-what-is-band-tab-panel-background-image);
-												background-repeat: $evo-site-what-is-band-tab-panel-background-repeat;
-												background-size: $evo-site-what-is-band-tab-panel-background-size;
-												padding: $evo-site-what-is-band-tab-panel-padding;
-				.evo-site-band--tab-panel-marketing-content
-													{padding: $evo-site-what-is-band-tab-panel-marketing-content-padding;}
-												}
+			.evo-site-band--tab-panel			{padding: $evo-site-what-is-band-tab-panel-padding;}
 											}
 	// TAB BAND - ENDS
 
 
-	/*--- PATTERN LIBRARY PAGES ----------------------------------------------------------------*/
+	/*--- WHY EVOLUTION PAGE -------------------------------------------------------------------------*/
 
-	// HOMEPAGE INTRO - BEINGS
-		.evo-site--pattern-library-intro--homepage
-											{
-			h1									{font-size: rem-calc(58);}
+	// BAND - BEGINS
+		.evo-site-band--why					{
+											padding: rem-calc(0 0 280 0) !important;
+			.evo-site--why-content-section		{
+												padding: rem-calc(120 0 0 0);
+				.evo-center-block-vertical			{width: 100%;}
+												}
 											}
-	// HOMEPAGE INTRO - ENDS
+	// BAND - ENDS
 
 }
 
@@ -131,6 +189,15 @@
 	
 	// PATTERN LIBRARY TEMPLATE - BEGINS
 
+		// PATTERN LIBRARY HOMEPAGE - BEGINS
+			.evo-site-band--pattern-library		{
+				.evo-site-band--tab-panel			{
+					.evo-site-band--tab-panel-marketing-content
+														{border-left: 0;}
+													}
+												}
+		// PATTERN LIBRARY HOMEPAGE - ENDS
+
 		// CONTENT TABS - BEGINS
 			.evo-site-tabs-content--pattern-library-content
 												{
@@ -141,16 +208,32 @@
 	// PATTERN LIBRARY TEMPLATE - BEGINS
 
 
+	/*--- HELPERS PAGE -------------------------------------------------------------------------*/
+
+	// KEYLINE DEMO - BEGINS
+	.evo-site--helpers-keyline-example		{
+		.evo-keyline-right						{
+												border-right-width: 1px;
+												border-right-style: solid;
+												border-right-color: $onyx-dark-30;
+												}
+											}
+	// KEYLINE DEMO - ENDS
+
+
 	/*--- WHAT IS PAGE -------------------------------------------------------------------------*/
 
 	// TAB BAND - BEGINS
 		.evo-site-band--what				{
-			.evo-site-band--tab-panel			{
-												background-position: $evo-site-what-is-band-tab-panel-background-position-medium;
-				.evo-site-band--tab-panel-marketing-content
-													{border-left: 0;}
-												}
+			.evo-keyline-left					{border: 0;}
 											}
 	// TAB BAND - ENDS
+
+
+	/*--- WHY EVOLUTION PAGE -------------------------------------------------------------------------*/
+
+	// BAND - BEGINS
+		.evo-site-band--why					{padding: rem-calc(0 0 400 0) !important;}
+	// BAND - ENDS
 
 }

@@ -1,0 +1,47 @@
+---
+title: "Installation"
+installation_content: "src/content/installation.md"
+---
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns evo-spacer-padding-top-medium evo-site--pattern-library-intro">
+
+{{# markdown }}
+## {{ title }}
+{{/ markdown }}
+
+		{{> jump-to-nav}}
+
+		</div>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="row evo-site-tabs-content--pattern-library-content">
+		<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
+
+			<div class="evo-site-markdown-content-block">
+				{{{md installation_content}}}
+			</div>
+
+			<br>
+			<br>
+			<br>
+
+		</div>
+		<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large">
+		
+			<!-- SIDENAV - BEGINS -->
+				<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+					<dl class="sub-nav">
+						<dd><a data-evo-scroll-to-location href="#what-is-the-evolution-tool-box-">{{installation.tool_box_install}}</a></dd>
+						<dd><a data-evo-scroll-to-location href="#sass-install">{{installation.sass_install}}</a></dd>
+						<dd><a data-evo-scroll-to-location href="#css-install">{{installation.css_install}}</a></dd>
+					</dl>
+				</div>
+			<!-- SIDENAV - ENDS -->
+
+		</div>
+	</section>
+<!-- PAGE CONTENT - ENDS -->

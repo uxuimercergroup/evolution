@@ -19,6 +19,13 @@
 		]
 	},
 
+	"tab-spacing": "even-3",
+	"tabs": [
+		{"name": "Examples", "active": "true", "index": "0"},
+		{"name": "Definition", "index": "1"},
+		{"name": "Usage", "index": "2"}
+	],
+
 	"data": {
 		"basic_box": {
 			"name": "Basic Box",
@@ -32,15 +39,5 @@
 			"name": "Basic Box Shadow",
 			"partial": "box-hdr-shadow", "slug": "basic-box-shadow"
 		}
-	},
-
-	"settings_header": "",
-	"settings_data": [
-		{
-			"option": "",
-			"default_value": "",
-			"option_value": "",
-			"description": ""
-		}
-	]
+	}
 }

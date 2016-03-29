@@ -1,67 +1,64 @@
 ---
-title: ""
+title: "Pattern Library"
 ---
 
-<!-- INTRO SECTION - BEGINS -->
-	<section class="row">
-		<div class="small-12 columns evo-spacer-padding-top-medium evo-site--pattern-library-intro evo-site--pattern-library-intro--homepage">
-
-			<h1>Evolution Pattern Library</h1>
-			<h5>Standards for product design &amp; development</h5>
-
-			{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
-
+<!-- PATTERN LIBRARY HERO - BEGINS -->
+	<section class="evo-full-width evo-site-hero evo-site-hero--pattern-library" data-evo-site-hero-size="x-large" data-evo-site-hero-arrow-position="bottom">
+		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
+			<div class="text-center evo-center-block-vertical-element">
+				<h1 class="evo-site-hero--hdr flipInY animated" data-evo-site-hero-hdr-size="large">{{{ pattern-library.hero.title }}} <span>{{{ pattern-library.hero.subtitle }}}</span></h1>
+				<h3 class="evo-center-block evo-site-hero--tagline bounceInUp animated">{{{ pattern-library.hero.tagline }}}</h3>
+			</div>		
 		</div>
 	</section>
-<!-- INTRO SECTION - ENDS -->
+<!-- PATTERN LIBRARY HERO - ENDS -->
 
-<!-- PAGE CONTENT - BEGINS -->
-	<section class="row evo-site-tabs-content--pattern-library-content">
-		<div class="medium-12 columns evo-spacer-padding-top-large">
+<!-- PATTERN LIBRARY JUMP TO NAV - BEGINS -->
+<div class="small-12 columns show-for-small-only evo-spacer-margin-top-xxx-large evo-spacer-margin-bottom-xxx-large">
+	<a href="#jumpToNav" class="button expand radius evo-button tiny evo-no-margin-bottom" role="button">Jump To Navigation</a>
+</div>
+<!-- PATTERN LIBRARY JUMP TO NAV - ENDS -->
 
-			<section class="row" data-equalizer>
-				<div class="medium-4 columns">
-
-					<div class="panel evo-box evo-box--pattern-library--homepage-callouts evo-box--pattern-library--homepage-callouts-box-1" data-equalizer-watch>
-						<div class="evo-box-bdy">
-{{# markdown}}
-##### Style with Ease
-With Evolution you can build custom applications with a look and feel that is consistent with Mercers 
-core features! Simply download our platform-agnostic framework and get started today.
-{{/ markdown}}
-						</div>
-					</div>
-
-				</div>
-				<div class="medium-4 columns">
-
-					<div class="panel evo-box evo-box--pattern-library--homepage-callouts evo-box--pattern-library--homepage-callouts-box-2" data-equalizer-watch>
-						<div class="evo-box-bdy">
-{{# markdown}}
-##### Ecosystem
-Evolution reflects the patterns and components that construct the Mercer products. These patterns and 
-components provide a unified language and consistent look and feel when designing within the Mercer ecosystem.
-{{/ markdown}}
-						</div>
-					</div>
-
-				</div>
-				<div class="medium-4 columns">
-
-					<div class="panel evo-box evo-box--pattern-library--homepage-callouts evo-box--pattern-library--homepage-callouts-box-3" data-equalizer-watch>
-						<div class="evo-box-bdy">
-{{# markdown}}
-##### Design Success
-With Evolution, you get access to all of the Mercers core visual and interaction design patterns 
-so that you can follow established design principles and build products that have a consistent look and feel.
-{{/ markdown}}
-
-						</div>
-					</div>
-
-				</div>
-			</section>
-
+<!-- PATTERN LIBRARY CALLOUTS BAND - BEGINS -->
+	<section class="evo-full-width evo-site-band evo-site-band--marketing">
+		<div class="medium-12 large-11 large-centered columns evo-site-band--marketing-content">
+			<ul class="small-block-grid-{{pattern-library.callouts.grid_small}} medium-block-grid-{{pattern-library.callouts.grid_medium}} large-block-grid-{{pattern-library.callouts.grid_large}} evo-site-band--marketing-block-grid">
+				{{#each pattern-library.callouts.items}}
+				<li class="text-center">
+					{{> (lookup . 'partial') }}
+					<h5>{{{header}}}</h5>
+					<p>{{{text}}}</p>
+				</li>
+				{{/each}}
+			</ul>
 		</div>
 	</section>
-<!-- PAGE CONTENT - ENDS -->
+<!-- PATTERN LIBRARY CALLOUTS BAND - ENDS -->
+
+<!-- PATTERN LIBRARY TAB BAND - BEGINS -->
+	<section class="evo-full-width evo-site-band--tab evo-site-band--pattern-library">
+		<div class="evo-full-width evo-site-band--tab-hdr">
+			<div class="small-12 columns">
+				<div class="row">
+					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab">
+						<h3 class="text-center">Evolution is Here</h3>
+					</div>
+					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab-shim"></div>
+				</div>
+			</div>
+		</div>
+		<div class="evo-full-width evo-site-band--tab-panel">
+			<div class="medium-12 large-10 large-centered columns">
+				<div class="row">
+					<div class="large-6 xlarge-7 xx-large-9 columns evo-keyline-left evo-site-band--tab-panel-marketing-content evo-site-hidden" data-anijs="if: scroll, on: window, do: fadeInUpBig animated evo-site-visible, before: scrollReveal, after: holdAnimClass">
+{{#markdown}}
+Evolution has been rebuilt from the ground up starting with a mobile first approach and an eye towards speed and efficiency.
+
+The Evolution framework makes it easier than ever to develop fast and amazing looking web applications, that are fully responsive and easy to update. If you haven&rsquo;t used Evolution before, maybe it&rsquo;s time to try it out.
+{{/markdown}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- PATTERN LIBRARY TAB BAND - ENDS -->

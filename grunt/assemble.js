@@ -4,7 +4,7 @@ module.exports = {
   options: {
     flatten: false,
     assets: 'dist/assets',
-    partials: ['src/views/partials/**/*.hbs', 'src/patterns/**/*.hbs'],
+    partials: ['src/views/partials/**/*.hbs', 'src/patterns/**/*.hbs', 'src/views/page-templates/partials/**/*.hbs'],
     helpers: ['src/helpers/**/*.js'],
     layoutdir: 'src/views/layouts',
     layout: 'default-layout.hbs',
@@ -45,6 +45,20 @@ module.exports = {
       cwd: 'src/views/pattern-library/',
       src: '**/*.hbs',
       dest: 'dist/pattern-library',
+      ext: '.html'
+      }
+    ]
+  },
+  page_templates: {
+    options: {
+      layout: 'page-templates-layout.hbs'
+    },
+    files: [
+      {
+      expand: true,
+      cwd: 'src/views/page-templates',
+      src: '*.hbs',
+      dest: 'dist/page-templates',
       ext: '.html'
       }
     ]

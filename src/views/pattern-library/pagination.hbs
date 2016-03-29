@@ -11,7 +11,7 @@ title: "Pagination"
 Pagination allows user to scroll through multiple pages of content breaking longer pages into multiple shorter pages. This control is intended to be used in conjunction with a [Data Table](/pattern-library/data-tables.html), a [Static Table](/pattern-library/tables.html), or content pages.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -161,7 +161,7 @@ Pagination allows user to scroll through multiple pages of content breaking long
 											</li>
 										{{/is}}
 										{{#is paginations.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if paginations.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each paginations.dependency_data.evolution_dependencies}}

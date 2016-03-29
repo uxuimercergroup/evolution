@@ -20,19 +20,29 @@
 	},
 
 	"data": {
-		"": {
-			"name": "",
-			"partial": "", "slug": ""
+		"tooltip_default": {
+			"name": "Default Tooltip",
+			"partial": "tooltip-default", "slug": "tooltip-default"
+		},
+		"tooltip_disable": {
+			"name": "Tooltip Disable",
+			"partial": "tooltip-disable", "slug": "tooltip-disable"
+		},
+		"tooltip_input": {
+			"name": "Tooltip Input",
+			"partial": "tooltip-input", "slug": "tooltip-input"
+		},
+		"tooltip_radius": {
+			"name": "Tooltip Radius",
+			"partial": "tooltip-radius", "slug": "tooltip-radius"
+		},
+		"tooltip_round": {
+			"name": "Tooltip Round",
+			"partial": "tooltip-round", "slug": "tooltip-round"
+		},
+		"tooltip_show_by_screensize": {
+			"name": "Show by Screensize",
+			"partial": "tooltip-show-by-screen-size", "slug": "tooltip-show-by-screen-size"
 		}
-	},
-
-	"settings_header": "",
-	"settings_data": [
-		{
-			"option": "",
-			"default_value": "",
-			"option_value": "",
-			"description": ""
-		}
-	]
+	}
 }

@@ -5,7 +5,7 @@ default:
   - 'concat'
   - 'copy:dist'
   - 'assemble'
-  - 'string-replace'
+  - 'string-replace:meta'
   - 'browserSync'
   - 'notify:browserSync'
   - 'watch'

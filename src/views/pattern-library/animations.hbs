@@ -1,5 +1,6 @@
 ---
 title: "Animations"
+usage_content: "src/content/animations/usage.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -9,15 +10,21 @@ title: "Animations"
 {{# markdown }}
 ## {{ title }}
 Animations add a level of interactivity to any element. [AniJS](http://anijs.github.io/) and [Animate CSS](https://github.com/daneden/animate.css) provide the basis for the CSS animations used in Evolution.
-{{/ markdown }}
+{{/ markdown}}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+<div class="evo-site-annotations evo-spacer-margin-bottom-x-large">
+{{# markdown}}
+**IE9 incompatibility:** Evolution animations require that browsers support CSS3 Animations. IE9 does not support CSS3 animations and degrades gracefully.
+{{/ markdown}}
+</div>
+
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
-				{{#each pattern-library.tabs}}
+			<ul class="button-group radius {{animations.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+				{{#each animations.tabs}}
 				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
-					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
+					<a href="#tabs{{index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{index}}" class="button small evo-button">
 						<span class="text">{{name}}</span>
 					</a>
 				</li>
@@ -121,7 +128,15 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 3
+					
+					<!-- CONTENT SECTION - BEGINS -->
+						<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+							<div class="evo-site-markdown-content-block">
+								{{{md usage_content}}}
+							</div>
+						</section>
+					<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
@@ -156,7 +171,7 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 											</li>
 										{{/is}}
 										{{#is animations.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if animations.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each animations.dependency_data.evolution_dependencies}}
@@ -204,10 +219,123 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 4
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate animations.animation_type_settings_header}}">
+						<div class="evo-site-markdown-content-block">
+{{# markdown }}
+##### {{ animations.animation_type_settings_header }}
+A list of animation type class options available from the [Animate.css](https://github.com/daneden/animate.css) CSS animations library.
+
+<div class="evo-margin-bottom evo-site-annotations">
+	<p>**Important:** Make sure to always use the `animated` class name along with the animation type class name (for example: bounce animated). Animations require that the `animated` class exists to work properly.</p>
+</div>
+{{/ markdown }}
+						</div>
+
+					<!-- HTML CODE - BEGINS -->
+						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
+							<div class="evo-box-ftr">
+								<div class="evo-site-example-box--code-hdr">
+									{{animations.animation_type_settings_slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-settings-{{animations.animation_type_settings_slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre><code class="language-markup" id="evo-code-copy-html-settings-{{animations.animation_type_settings_slug}}"><xmp>{{{animations.animation_type_settings_code}}}</xmp></code></pre>
+							</div>
+						</div>
+					<!-- HTML CODE - ENDS -->
+						
+					<!-- ANIMATION TYPE SETTINGS - BEGINS -->
+						<div class="evo-table-small-mediaquery">
+							<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-pattern-library-setting-options-scrolling" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+								<thead>
+									<tr>
+										<th scope="column" width="160">Animation Type</th>
+										<th scope="column" width="130">Name</th>
+										<th scope="column">Class</th>
+										<th scope="column" width="385">Description</th>
+									</tr>
+								</thead>
+								<tbody>
+								{{#each animations.animation_type_settings_data}}
+									<tr>
+										<td>{{{ animation_type }}}</td>
+										<td>{{{ name }}}</td>
+										<td>{{{ class }}}</td>
+										<td>{{{ description }}}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					<!-- ANIMATION TYPE SETTINGS - ENDS -->
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate animations.animation_helpers_settings_header}}">
+						<div class="evo-site-markdown-content-block">
+{{# markdown }}
+##### {{ animations.animation_helpers_settings_header }}
+A list of animation helpers available from the [AniJS](http://anijs.github.io/) library. These helpers can be used to change animation duration, delay, iteration, etc.
+
+Use these helper classes along with the animation type class and the `animated` class in the `data-anijs` call. Example:
+{{/ markdown }}
+						</div>
+
+					<!-- HTML CODE - BEGINS -->
+						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
+							<div class="evo-box-ftr">
+								<div class="evo-site-example-box--code-hdr">
+									{{animations.animation_helpers_settings_slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-settings-{{animations.animation_helpers_settings_slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre><code class="language-markup" id="evo-code-copy-html-settings-{{animations.animation_helpers_settings_slug}}"><xmp>{{{animations.animation_helpers_settings_code}}}</xmp></code></pre>
+							</div>
+						</div>
+					<!-- HTML CODE - ENDS -->
+						
+					<!-- ANIMATION HELPERS SETTINGS - BEGINS -->
+						<div class="evo-table-small-mediaquery">
+							<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-pattern-library-setting-options-scrolling" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+								<thead>
+									<tr>
+										<th scope="column" width="130">Helper Type</th>
+										<th scope="column" width="160">Name</th>
+										<th scope="column">Class</th>
+										<th scope="column" width="260">Description</th>
+									</tr>
+								</thead>
+								<tbody>
+								{{#each animations.animation_helpers_settings_data}}
+									<tr>
+										<td>{{{ helper_type }}}</td>
+										<td>{{{ name }}}</td>
+										<td>{{{ class }}}</td>
+										<td>{{{ description }}}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					<!-- ANIMATION HELPERS SETTINGS - ENDS -->
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 4
+					
+				<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+						<dl class="sub-nav">
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate animations.animation_type_settings_header}}">{{animations.animation_type_settings_header}}</a></dd>
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate animations.animation_helpers_settings_header}}">{{animations.animation_helpers_settings_header}}</a></dd>
+						</dl>
+					</div>
+				<!-- SIDENAV - ENDS -->
+
 				</div>
 			</section>
 			

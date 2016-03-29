@@ -20,19 +20,25 @@
 	},
 
 	"data": {
-		"basic_progres_bar": {
+		"basic_progress_bar": {
 			"name": "Basic Progress Bar",
 			"partial": "progress-bar", "slug": "basic-progress-bar"
+		},
+		"progress_bar_round": {
+			"name": "Progress Bar Round",
+			"partial": "progress-bar-round", "slug": "progress-bar-round"
+		},
+		"progress_bar_radius": {
+			"name": "Progress Bar Radius",
+			"partial": "progress-bar-radius", "slug": "progress-bar-radius"
+		},
+		"progress_bar_meter_color": {
+			"name": "Progress Bar Meter Color",
+			"partial": "progress-bar-meter-color", "slug": "progress-bar-meter-color"
+		},
+		"progres_bar_width": {
+			"name": "Progress Bar Width",
+			"partial": "progress-bar-width", "slug": "progress-bar-width"
 		}
-	},
-
-	"settings_header": "",
-	"settings_data": [
-		{
-			"option": "",
-			"default_value": "",
-			"option_value": "",
-			"description": ""
-		}
-	]
+	}
 }

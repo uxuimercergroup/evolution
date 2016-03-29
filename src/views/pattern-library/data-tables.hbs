@@ -11,7 +11,7 @@ title: "Data Tables"
 Data Tables are an element meant to organize data on a page with added functionality such as sorting, filtering, and pagination. Evolution data tables depend on Foundation's [Tables](http://foundation.zurb.com/sites/docs/v/5.5.3/components/tables.html) as a starting point. The interactive elements of the data table (sorting, filtering, pagination, etc.) depend on [DataTables](http://datatables.net/) jQuery Plugin and Foundation's [Pagination](http://foundation.zurb.com/sites/docs/v/5.5.3/components/pagination.html) component.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -37,66 +37,157 @@ Data Tables are an element meant to organize data on a page with added functiona
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- EXAMPLE BOX - BEGINS -->
-					{{#each data-tables.data }}
 					<div class="panel evo-box evo-site-example-box">
 						<div class="evo-box-hdr">
 						<!-- EXAMPLE HEADER - BEGINS -->
-							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
-								{{name}}
-								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+							<h6 class="evo-hdr-rule" data-magellan-destination="Basic-Data-Table">
+								Basic Data Table
+								<a href="#code-anchor0" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle0" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr0, after: removeAnim;"></a>
 							</h6>
-							<a name="{{hyphenate name}}"></a>
+							<a name="Basic-Data-Table"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</div>
 						<div class="evo-box-bdy">
 						<!-- RENDERED HTML - BEGINS -->
-							{{#is multiple_example 'true'}}
-								{{#each multiple_example_options}}
-									{{> (lookup . 'partial') }}
-								{{/each}}
-							{{else}}
-								{{> (lookup . 'partial') }}
-							{{/is}}
+							{{> data-table }}
 						<!-- RENDERED HTML - ENDS -->
 						</div>
-						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						<div class="evo-box-ftr evo-site-example-box-ftr0 hide" id="code-anchor0" data-evo-toggle-element-item="code-toggle0">
 						<!-- CODE - BEGINS -->
-							{{#is multiple_example 'true'}}
-								{{#each multiple_example_options}}
 
 							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
-									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									basic-data-table
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-basic-data-table" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
-								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-basic-data-table"><xmp>{{> data-table }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
 
-								{{/each}}
-							{{else}}
-
-							<!-- HTML - BEGINS -->
+							<!-- JS - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
-									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									basic-data-table
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-basic-data-table" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
-								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
-							<!-- HTML - ENDS -->
+								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-basic-data-table"><xmp>{{> data-table-js }}</xmp></code></pre>
+							<!-- JS - ENDS -->
 
-							{{/is}}
 						<!-- CODE - ENDS -->
 						</div>
 					</div>
-					{{/each}}
+				<!-- EXAMPLE BOX - ENDS -->
+
+				<!-- EXAMPLE BOX - BEGINS -->
+					<div class="panel evo-box evo-site-example-box">
+						<div class="evo-box-hdr">
+						<!-- EXAMPLE HEADER - BEGINS -->
+							<h6 class="evo-hdr-rule" data-magellan-destination="Subtotal-Row">
+								Subtotal Row
+								<a href="#code-anchor1" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle1" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr1, after: removeAnim;"></a>
+							</h6>
+							<a name="Subtotal-Row"></a>
+						<!-- EXAMPLE HEADER - ENDS -->
+						</div>
+						<div class="evo-box-bdy">
+						<!-- RENDERED HTML - BEGINS -->
+							{{> data-table-subtotal }}
+						<!-- RENDERED HTML - ENDS -->
+						</div>
+						<div class="evo-box-ftr evo-site-example-box-ftr1 hide" id="code-anchor1" data-evo-toggle-element-item="code-toggle1">
+						<!-- CODE - BEGINS -->
+
+							<!-- HTML - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									subtotal-row
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-subtotal-row" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-subtotal-row"><xmp>{{> data-table-subtotal }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
+						<!-- CODE - ENDS -->
+						</div>
+					</div>
+				<!-- EXAMPLE BOX - ENDS -->
+
+				<!-- EXAMPLE BOX - BEGINS -->
+					<div class="panel evo-box evo-site-example-box">
+						<div class="evo-box-hdr">
+						<!-- EXAMPLE HEADER - BEGINS -->
+							<h6 class="evo-hdr-rule" data-magellan-destination="Total-Row">
+								Total Row
+								<a href="#code-anchor2" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle2" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr2, after: removeAnim;"></a>
+							</h6>
+							<a name="Total-Row"></a>
+						<!-- EXAMPLE HEADER - ENDS -->
+						</div>
+						<div class="evo-box-bdy">
+						<!-- RENDERED HTML - BEGINS -->
+							{{> data-table-total }}
+						<!-- RENDERED HTML - ENDS -->
+						</div>
+						<div class="evo-box-ftr evo-site-example-box-ftr2 hide" id="code-anchor2" data-evo-toggle-element-item="code-toggle2">
+						<!-- CODE - BEGINS -->
+
+							<!-- HTML - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									total-row
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-total-row" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-total-row"><xmp>{{> data-table-total }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
+						<!-- CODE - ENDS -->
+						</div>
+					</div>
+				<!-- EXAMPLE BOX - ENDS -->
+
+				<!-- EXAMPLE BOX - BEGINS -->
+					<div class="panel evo-box evo-site-example-box">
+						<div class="evo-box-hdr">
+						<!-- EXAMPLE HEADER - BEGINS -->
+							<h6 class="evo-hdr-rule" data-magellan-destination="Vertical-Scroll">
+								Vertical Scroll
+								<a href="#code-anchor3" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle3" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr3, after: removeAnim;"></a>
+							</h6>
+							<a name="Vertical-Scroll"></a>
+						<!-- EXAMPLE HEADER - ENDS -->
+						</div>
+						<div class="evo-box-bdy">
+						<!-- RENDERED HTML - BEGINS -->
+							{{> data-table-vertical-scroll }}
+						<!-- RENDERED HTML - ENDS -->
+						</div>
+						<div class="evo-box-ftr evo-site-example-box-ftr3 hide" id="code-anchor3" data-evo-toggle-element-item="code-toggle3">
+						<!-- CODE - BEGINS -->
+
+							<!-- HTML - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									vertical-scroll
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-vertical-scroll" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-vertical-scroll"><xmp>{{> data-table-vertical-scroll }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
+							<!-- JS - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									vertical-scroll
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-vertical-scroll" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-vertical-scroll"><xmp>{{> data-table-vertical-scroll-js }}</xmp></code></pre>
+							<!-- JS - ENDS -->
+
+						<!-- CODE - ENDS -->
+						</div>
+					</div>
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
-							{{#each data-tables.data}}
-							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
-							{{/each}}
+							<dd data-magellan-arrival="Basic-Data-Table"><a href="#Basic-Data-Table">Basic Data Table</a></dd>
+							<dd data-magellan-arrival="Subtotal-Row"><a href="#Subtotal-Row">Subtotal Row</a></dd>
+							<dd data-magellan-arrival="Total-Row"><a href="#Total-Row">Total Row</a></dd>
+							<dd data-magellan-arrival="Vertical-Scroll"><a href="#Vertical-Scroll">Vertical Scroll</a></dd>
 						</dl>
 					</div>
 				<!-- SIDENAV - ENDS -->
@@ -161,7 +252,7 @@ Data Tables are an element meant to organize data on a page with added functiona
 											</li>
 										{{/is}}
 										{{#is data-tables.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if data-tables.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each data-tables.dependency_data.evolution_dependencies}}
@@ -209,47 +300,10 @@ Data Tables are an element meant to organize data on a page with added functiona
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-
-				<!-- CONTENT SECTION - BEGINS -->
-					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
-						<div class="evo-site-markdown-content-block">
-{{# markdown }}
-##### {{ data-tables.settings_header }}
-Below is a list of the data options that can be used with data tables using data attributes.
-{{/ markdown }}
-						</div>
-
-					<!-- SETTINGS - BEGINS -->
-						<div class="evo-table-small-mediaquery">
-							<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-pattern-library-setting-options" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
-								<thead>
-									<tr>
-										<th scope="column" width="160">Options</th>
-										<th scope="column" width="90">Defaults</th>
-										<th scope="column">Values</th>
-										<th scope="column" width="325">Description</th>
-									</tr>
-								</thead>
-								<tbody>
-								{{#each data-tables.settings_data}}
-									<tr>
-										<td>{{{ option }}}</td>
-										<td class="text-center">{{{ default_value }}}</td>
-										<td class="text-center">{{{ option_value }}}</td>
-										<td>{{{ description }}}</td>
-									</tr>
-								{{/each}}
-								</tbody>
-							</table>
-						</div>
-					<!-- SETTINGS - ENDS -->
-
-					</section>
-				<!-- CONTENT SECTION - ENDS -->
-
+					Content for something 4
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					&nbsp;
+					Magellan 4
 				</div>
 			</section>
 			

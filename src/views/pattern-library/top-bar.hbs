@@ -1,5 +1,7 @@
 ---
 title: "Top Bar"
+definition_content: "src/content/top-bar/definition.md"
+usage_content: 		"src/content/top-bar/usage.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -8,10 +10,18 @@ title: "Top Bar"
 
 {{# markdown }}
 ## {{ title }}
-The Top Bar gives you a great way to display a complex navigation bar. Evolution top bar depends on Foundation's [Top Bar](http://foundation.zurb.com/sites/docs/v/5.5.3/components/topbar.html) as a starting point.
+The Top Bar gives you a great way to display a complex navigation bar. Evolution top bar depends on 
+Foundation's [Top Bar](http://foundation.zurb.com/sites/docs/v/5.5.3/components/topbar.html) as a starting point.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+<div class="evo-site-annotations evo-spacer-margin-bottom-x-large">
+{{# markdown}}
+**Important:** *Top bar is used for large and up media queries only*, hence no mobile version for small or 
+medium media queries. On small and medium media queries, Top bar is replaced by [Off-canvas](/pattern-library/off-canvas.html) menu and the mobile header component.
+{{/ markdown}}
+</div>
+
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -111,10 +121,18 @@ The Top Bar gives you a great way to display a complex navigation bar. Evolution
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 2
+
+					<!-- CONTENT SECTION - BEGINS -->
+						<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+							<div class="evo-site-markdown-content-block">
+								{{{md definition_content}}}
+							</div>
+						</section>
+					<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 2
+					&nbsp;
 				</div>
 			</section>
 			
@@ -126,7 +144,15 @@ The Top Bar gives you a great way to display a complex navigation bar. Evolution
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 3
+
+					<!-- CONTENT SECTION - BEGINS -->
+						<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+							<div class="evo-site-markdown-content-block">
+								{{{md usage_content}}}
+							</div>
+						</section>
+					<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
@@ -161,7 +187,7 @@ The Top Bar gives you a great way to display a complex navigation bar. Evolution
 											</li>
 										{{/is}}
 										{{#is top-bar.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if top-bar.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each top-bar.dependency_data.evolution_dependencies}}

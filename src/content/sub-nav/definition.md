@@ -1,0 +1,2 @@
+##### General
+Add a `.sub-nav` class to a `dl` element and fill it full of definitions. You can use the definition title as a label at the beginning (useful for building filters on a page). Add a title to the beginning of your list with the dt element. Add an `.active` class to a dd element to give it the active style.

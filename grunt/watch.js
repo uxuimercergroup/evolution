@@ -10,7 +10,7 @@ module.exports = {
     tasks: ['assemble', 'notify:assemble']
   },
   partials: {
-    files: ['src/views/partials/**/*{.hbs,.md}', 'src/patterns/**/*.hbs'],
+    files: ['src/views/partials/**/*{.hbs,.md}', 'src/patterns/**/*.hbs', 'src/views/page-templates/partials/**/*.hbs'],
     tasks: ['assemble', 'notify:assemble']
   },
   templates: {
@@ -21,12 +21,16 @@ module.exports = {
     files: ['src/views/pattern-library/**/*.hbs'],
     tasks: ['newer:assemble:pattern_library', 'notify:assemble']
   },
+  page_templates: {
+    files: ['src/views/page-templates/**/*.hbs'],
+    tasks: ['newer:assemble:page_templates', 'notify:assemble']
+  },
   content: {
-    files: ['src/content/**/*.md'],
+    files: ['src/content/**/*.md', 'CHANGELOG.md'],
     tasks: ['assemble', 'notify:assemble']
   },
   data: {
-    files: ['src/data/**/*.json'],
+    files: ['src/data/**/*.json', 'package.json'],
     tasks: ['assemble', 'notify:assemble']
   },
   sass: {

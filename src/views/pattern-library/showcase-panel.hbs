@@ -8,10 +8,15 @@ title: "Showcase Panel"
 
 {{# markdown }}
 ## {{ title }}
+
+<span class="label radius evo-label" data-evo-background-color="success-color">Version: {{ package.organisms.showcase_panel.version }}</span>
+{{#is showcase-panel.product_suite_bp 'true' }}<span class="label radius evo-label" data-evo-background-color="sapphire-bright">Benefits Portals</span>{{/is}}
+{{#is showcase-panel.product_suite_comm 'true' }}<span class="label radius evo-label" data-evo-background-color="amethyst-bright">Communication Sites</span>{{/is}}
+
 The Showcase Panel is used as a means to highlight the most important information on the page in a way that "showcases" the content. There are four possible states that can be assigned to the Showcase Panel: Base, Positive, Negative, Attention.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -43,7 +48,7 @@ The Showcase Panel is used as a means to highlight the most important informatio
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
 								{{name}}
-								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+								<a href="#code-anchor{{@index}}" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
@@ -59,7 +64,7 @@ The Showcase Panel is used as a means to highlight the most important informatio
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
 						</div>
-						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" id="code-anchor{{@index}}" data-evo-toggle-element-item="code-toggle{{@index}}">
 						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -177,7 +182,7 @@ The Showcase Panel is used as a means to highlight the most important informatio
 											</li>
 										{{/is}}
 										{{#is showcase-panel.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if showcase-panel.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each showcase-panel.dependency_data.evolution_dependencies}}

@@ -11,7 +11,7 @@ title: "Labels"
 Labels are useful inline styles that can be dropped into body copy to call out certain sections or to attach metadata.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -161,7 +161,7 @@ Labels are useful inline styles that can be dropped into body copy to call out c
 											</li>
 										{{/is}}
 										{{#is labels.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if labels.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each labels.dependency_data.evolution_dependencies}}

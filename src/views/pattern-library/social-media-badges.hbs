@@ -8,10 +8,15 @@ title: "Social Media Badges"
 
 {{# markdown }}
 ## {{ title }}
+
+<span class="label radius evo-label" data-evo-background-color="success-color">Version: {{ package.organisms.social_media_badges.version }}</span>
+{{#is social-media-badges.product_suite_bp 'true' }}<span class="label radius evo-label" data-evo-background-color="sapphire-bright">Benefits Portals</span>{{/is}}
+{{#is social-media-badges.product_suite_comm 'true' }}<span class="label radius evo-label" data-evo-background-color="amethyst-bright">Communication Sites</span>{{/is}}
+
 Useful organism to provide social media icons and links.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -161,7 +166,7 @@ Useful organism to provide social media icons and links.
 											</li>
 										{{/is}}
 										{{#is social-media-badges.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if social-media-badges.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each social-media-badges.dependency_data.evolution_dependencies}}

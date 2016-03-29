@@ -18,6 +18,7 @@
 // FUNCTIONS
 //--------------------------------------------------------------------------------------------------------
 
+
 	// SITE GLOBAL
 	//----------------------------------------------------------------------------------------------------
 
@@ -53,7 +54,7 @@
 			});
 		}
 
-		// EVO MAGELLAN
+		// SITE MAGELLAN
 		var evoMagellan = function(){
 			jQuery('[data-evo-magellan] dd').click(function() {
 				jQuery('[data-evo-magellan] dd').removeClass('active');
@@ -65,10 +66,20 @@
 	// PATTERN LIBRARY PAGES
 	//----------------------------------------------------------------------------------------------------
 
-		// EQUALIZE CONTENT COLUMNS ON TOGGLE OF TABS
-		var evoSitePatternLibTabsEqualizer = function(){
+		// DATA TABLE REDRAW FUNCTION
+		var evoSiteDataTableRedraw = function(){
+			jQuery('[data-evo-data-table]').DataTable().draw();
+		}
+
+		// REFLOW/REDRAW ON TOGGLE OF PATTERN LIBRARY CONTENT TABS
+		var evoSitePatternLibTabsReflow = function(){
 			jQuery('.evo-site-tabs--pattern-library-tabs').on('toggled', function (event, tab) {
+
+				// Reflow equalizer on tab toggling, fixes bug with equalizer in hidden tabs
 			    $(document).foundation('equalizer', 'reflow');
+
+			    // Redraw type characters data table on tab toggling, fixes scrolling table fixed thead injected layout
+			    evoSiteDataTableRedraw();
 			});
 		}
 
@@ -107,8 +118,21 @@ $(function() {
 			// SCROLL TO LOCATION
 			evoScrollToLocation();
 
-			// EVO MAGELLAN
+			// SITE MAGELLAN
 			evoMagellan();
+
+			// SITE TESTIMONIALS CAROUSEL
+			evoCarousel('evo-site-testimonials-carousel', {
+				autoHeight: false,
+				navigation: false,
+				paginationSpeed: 600
+			});
+
+			// SITE SLIDES CAROUSEL
+			evoCarousel('evo-site-slides-carousel', {
+				autoPlay: false,
+				autoHeight: false
+			});
 
 			// COPY TO CLIPBOARD
 			var clipboard = new Clipboard('.copy-to-clipboard');
@@ -117,22 +141,47 @@ $(function() {
 		// PATTERN LIBRARY PAGES
 		//------------------------------------------------------------------------------------------------
 
-			// EQUALIZE CONTENT COLUMNS ON TOGGLE OF TABS
-			evoSitePatternLibTabsEqualizer();
-
-			// SETTINGS TAB DATA TABLE
-			evoDataTable('evo-data-table-pattern-library-setting-options',{
-				"paging": false,
-				"info": false
-			});
-
-			evoDataTable('evo-data-table-pattern-library-icons',{
-				"paging": false,
-				"info": false
-			});
+			// REFLOW/REDRAW ON TOGGLE OF PATTERN LIBRARY CONTENT TABS
+			evoSitePatternLibTabsReflow();
 
 			// POSITION FIXED BY SCROLL
 			evoFixedByScroll('evo-magellan--side-nav', 230);
+
+			// SETTINGS TAB DATA TABLE
+			evoDataTable('evo-data-table-pattern-library-setting-options',{
+				paging: false,
+				info: false
+			});
+
+			// SETTINGS TAB DATA TABLE - SCROLLING
+			evoDataTable('evo-data-table-pattern-library-setting-options-scrolling',{
+				scrollY: '350px',
+				scrollCollapse: true,
+				paging: false,
+				info: false
+			});
+
+			// ICOMOON ICONS DATA TABLE
+			evoDataTable('evo-data-table-pattern-library-icons',{
+				paging: false,
+				info: false
+			});
+
+			// TYPE CHARACTERS DATA TABLE
+			evoDataTable('evo-data-table-type-characters',{
+				scrollY: '200px',
+				scrollCollapse: true,
+				paging: false,
+				info: false
+			});
+
+			// MARGIN PADDING SETTINGS TABLE
+			evoDataTable('evo-data-table-margin-padding-settings',{
+				scrollY: '350px',
+				scrollCollapse: true,
+				paging: false,
+				info: false
+			});
 
 
 		// KITCHEN SINK DEMOS
@@ -228,7 +277,7 @@ $(function() {
 				// Datepicker with message example
 				evoDatepicker('evo-datepicker-message-example');
 				
-				// Dateoicker masked date input example
+				// Datepicker masked date input example
 				evoDatepicker('evo-datepicker-masked-example');
 
 			// SCROLL PANE

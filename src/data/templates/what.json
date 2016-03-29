@@ -2,7 +2,7 @@
 	"hero": {
 		"title": "What is",
 		"subtitle": "Evolution?",
-		"tagline": "It&rsquo;s a strategic tool for product design and development"
+		"tagline": "A strategic tool for product design and development"
 	},
 	"users": {
 		"header": "Evolution is Built For",
@@ -12,7 +12,7 @@
 		"items":[
 			{
 				"header": "UX Designers",
-				"text":	"With extensive visual assets, Evolution provides the flexibility to design beautiful products that are consistent with the Mercer brand.",
+				"text":	"Evolution patterns are flexbile, scalable, and responsive. Each pattern can also be used in wireframes to help visualize functionality.",
 				"partial": "icon",
 				"class": "evo-icon-site-design evo-icon-size-x-large"
 			},
@@ -24,16 +24,72 @@
 			},
 			{
 				"header": "UI Developers",
-				"text":	"With extensive visual assets, Evolution provides the flexibility to design beautiful products that are consistent with the Mercer brand.",
+				"text":	"Evolution is built on HTML, CSS, and JavaScript. All patterns include a code snippet that can be copied and pasted directly into any product site.",
 				"partial": "icon",
 				"class": "evo-icon-site-code evo-icon-size-x-large"
 			}
 		]
 	},
-	"mission": {
-		"header": "But Designed For Everyone"
+	"inside_out": {
+		"header": "Beautiful Design + Smart Code",
+		"grid_small" : "1",
+		"grid_medium" : "3",
+		"grid_large" : "3",
+		"item_code_header": "Code",
+		"items_code":[
+			{
+				"text":	"Reusability",
+				"partial": "icon",
+				"class": "evo-icon-site-cog2 evo-icon-size-x-large"
+			},
+			{
+				"text":	"Responsiveness",
+				"partial": "icon",
+				"class": "evo-icon-site-mobile evo-icon-size-x-large"
+			},
+			{
+				"text":	"Interactivity",
+				"partial": "icon",
+				"class": "evo-icon-site-equalizer evo-icon-size-x-large"
+			}
+		],
+		"item_design_header": "Design",
+		"items_design":[
+			{
+				"text":	"Style Guides",
+				"partial": "icon",
+				"class": "evo-icon-site-map5 evo-icon-size-x-large"
+			},
+			{
+				"text":	"Consistency",
+				"partial": "icon",
+				"class": "evo-icon-site-grid5 evo-icon-size-x-large"
+			},
+			{
+				"text":	"Brand Identity",
+				"partial": "icon",
+				"class": "evo-icon-site-ampersand evo-icon-size-x-large"
+			}
+		]
 	},
-	"process": {
-		"header": "Our Process"
+	"testimonials": {
+		"header": "What Our Users Are Saying",
+		"items":[
+			{
+				"text":	"Working with Evolution has been a great experience. I have been able to quickly get pages put together and apply a custom product suite theme. Having things move this quickly has allowed me to hit my deadlines accurately and integrate with the development team more efficiently.",
+				"name": "Doug Fraize",
+				"title": "Senior User Interface Developer, Mercer"
+			},
+			{
+				"text":	"Amet reprehenderit nulla ullamco sint adipisicing nostrud ad exercitation. Reprehenderit incididunt irure excepteur non velit voluptate ad. Amet tempor ullamco laborum mollit elit id reprehenderit ipsum. Sint dolor quis proident voluptate qui commodo mollit excepteur amet. Nisi laboris ad Lorem qui veniam. Do incididunt consectetur ut adipisicing id tempor.",
+				"name": "Jane Doe",
+				"title": "V.P. Operations, Global Digital"
+			},
+			{
+				"text":	"Irure deserunt eu elit cupidatat. Ut deserunt aute anim ipsum. Minim id sunt qui dolor nisi laborum. Dolore Lorem eu qui culpa. Nulla nulla est cupidatat consequat ea. In eiusmod consectetur id commodo reprehenderit sit.",
+				"name": "James Smith",
+				"title": "Developer, Google Inc."
+			}
+		]
 	}
 }

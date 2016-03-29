@@ -1,16 +1,28 @@
 {
-  "evolution": {
-    "version": "3.0.2",
-    "author": "Douglas Fraize, Matthew Holmes, Sherry Seeton",
-    "date": "January 14, 2016",
-    "url": "https://github.com/uxuimercergroup/evolution"
-  },
-  "project": "Evolution",
+  "name": "evolution",
   "version": "3.0.2",
-  "author": "Doug Fraize, Matthew Holmes, Sherry Seeton",
-  "date": "January 22, 2016",
-  "url": "http://evolution.mercer.com",
-  "product_suite": "core",
+  "description": "Global Framework for Digital Design, Development and maintained by the Mercer Digital Center of Excellence",
+  "license": "MIT",
+  "repository": {
+    "type" : "github",
+    "url" : "https://github.com/uxuimercergroup/evolution"
+  },
+  "author": "Douglas Fraize, Matthew Holmes, Sherry Seeton",
+  "date": "March 17, 2016",
+  "homepage": "http://evolution.mercer.com",
+  "bugs": "https://github.com/uxuimercergroup/evolution/issues",
+
+  "project": {
+    "name": "Evolution",
+    "version": "3.0.2",
+    "description": "Global Framework for Digital Design, Development and maintained by the Mercer Digital Center of Excellence",
+    "repository": "github:uxuimercergroup/evolution",
+    "author": "Douglas Fraize, Matthew Holmes, Sherry Seeton",
+    "date": "March 17, 2016",
+    "homepage": "http://evolution.mercer.com",
+    "product_suite": "core"
+  },
+
   "devDependencies": {
     "clipboard": "^1.5.5",
     "grunt": "~0.4.5",
@@ -33,50 +45,53 @@
     "load-grunt-config": "^0.19.1",
     "time-grunt": "^1.2.2"
   },
+
   "dependencies": {},
+
   "jquery_version": "2.1.4",
   "jquery_ui_version": "1.11.2",
   "foundation_version": "5.5.2",
+
   "organisms": {
     "conversational_form": {
       "name": "Conversational Form",
-      "version": "1.0",
-      "date": "January 19, 2016"
+      "version": "1.0.0",
+      "date": "March 17, 2016"
     },
     "fat_footer": {
       "name": "Fat Footer",
-      "version": "1.0",
-      "date": "January 19, 2016"
+      "version": "1.0.0",
+      "date": "March 17, 2016"
     },
     "item_selection_panel": {
       "name": "Item Selection Panel",
-      "version": "1.0",
-      "date": "January 19, 2016"
+      "version": "1.0.0",
+      "date": "March 17, 2016"
     },
     "pricing_table": {
       "name": "Pricing Table",
-      "version": "1.0",
-      "date": "January 19, 2016"
+      "version": "1.0.0",
+      "date": "March 17, 2016"
     },
     "showcase_panel": {
       "name": "Showcase Panel",
-      "version": "1.0",
-      "date": "January 19, 2016"
+      "version": "1.0.0",
+      "date": "March 17, 2016"
     },
     "social_media_badges": {
       "name": "Social Media Badges",
-      "version": "1.0",
-      "date": "January 19, 2016"
+      "version": "1.0.0",
+      "date": "March 17, 2016"
     },
     "stepper": {
       "name": "Stepper",
-      "version": "1.0",
-      "date": "January 19, 2016"
+      "version": "1.0.0",
+      "date": "March 17, 2016"
     },
     "thin_footer": {
       "name": "Thin Footer",
-      "version": "1.0",
-      "date": "January 19, 2016"
+      "version": "1.0.0",
+      "date": "March 17, 2016"
     }
   }
 }

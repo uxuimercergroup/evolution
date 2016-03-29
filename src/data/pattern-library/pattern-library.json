@@ -1,12 +1,49 @@
 {
+	"hero": {
+		"title": "Pattern",
+		"subtitle": "Library",
+		"tagline": "Standards for product design &amp; development"
+	},
+	"callouts": {
+		"grid_small" : "1",
+		"grid_medium" : "2",
+		"grid_large" : "3",
+		"items":[
+			{
+				"header": "Ecosystem",
+				"text":	"Evolution reflects the patterns and components that construct the Mercer products. These patterns and components provide a unified language and consistent look and feel when designing within the Mercer ecosystem.",
+				"partial": "icon",
+				"class": "evo-icon-site-earth evo-icon-size-x-large"
+			},
+			{
+				"header": "Style with Ease",
+				"text":	"With Evolution you can build custom applications with a look and feel that is consistent with Mercer&rsquo;s core features. Simply download our platform-agnostic framework and get started today.",
+				"partial": "icon",
+				"class": "evo-icon-site-design evo-icon-size-x-large"
+			},
+			{
+				"header": "Design Success",
+				"text":	"With Evolution, you get access to all of Mercer&rsquo;s core visual and interaction design patterns so that you can follow established design principles and build products that have a consistent look and feel.",
+				"partial": "icon",
+				"class": "evo-icon-site-image2 evo-icon-size-x-large"
+			}
+		]
+	},
 	"sidebar": [
+		{
+			"header": "Setup",
+			"section": [
+				{"name": "Installation",		"url": "/pattern-library/installation.html"},
+				{"name": "Boilerplates",		"url": "/boilerplates.html"},
+				{"name": "Compatibility",		"url": "/compatibility.html"}
+			]
+		},
 		{
 			"header": "Tools",
 			"section": [
-				{"name": "Boilerplates",		"url": "/boilerplates.html"},
-				{"name": "Development Tools",	"url": "/dev-tools.html"},
-				{"name": "Kitchen Sink",		"url": "/pattern-library/kitchen-sink.html"},
-				{"name": "Tool Box",			"url": "/pattern-library/tool-box.html"}
+				{"name": "Page Templates",		"url": "/page-templates.html"},
+				{"name": "Media Queries",		"url": "/media-queries.html"},
+				{"name": "Kitchen Sink",		"url": "/pattern-library/kitchen-sink.html"}
 			]
 		},
 		{
@@ -26,7 +63,7 @@
 				{"name": "Buttons",				"url": "/pattern-library/buttons.html"},
 				{"name": "Dropdowns",			"url": "/pattern-library/dropdowns.html"},
 				{"name": "Equalizer",			"url": "/pattern-library/equalizer.html"},
-				{"name": "Form Elements",		"url": "/pattern-library/form_elements.html"},
+				{"name": "Form Elements",		"url": "/pattern-library/form-elements.html"},
 				{"name": "Grids",				"url": "/pattern-library/grids.html"},
 				{"name": "Helpers",				"url": "/pattern-library/helpers.html"},
 				{"name": "Lists",				"url": "/pattern-library/lists.html"},
@@ -86,5 +123,4 @@
 		{"name": "Usage"},
 		{"name": "Settings"}
 	]
-	
 }

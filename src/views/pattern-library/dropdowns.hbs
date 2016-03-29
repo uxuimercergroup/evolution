@@ -1,5 +1,8 @@
 ---
 title: "Dropdowns"
+definition_content: "src/content/dropdowns/definition.md"
+usage_content: "src/content/dropdowns/usage.md"
+settings_content: "src/content/dropdowns/settings.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -11,7 +14,7 @@ title: "Dropdowns"
 Universal dropdown plugin that will attach dropdowns or popovers to whatever element you need.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -111,10 +114,18 @@ Universal dropdown plugin that will attach dropdowns or popovers to whatever ele
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 2
+					
+					<!-- CONTENT SECTION - BEGINS -->
+						<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+							<div class="evo-site-markdown-content-block">
+								{{{md definition_content}}}
+							</div>
+						</section>
+					<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 2
+					&nbsp;
 				</div>
 			</section>
 			
@@ -126,7 +137,15 @@ Universal dropdown plugin that will attach dropdowns or popovers to whatever ele
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 3
+					
+					<!-- CONTENT SECTION - BEGINS -->
+						<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+							<div class="evo-site-markdown-content-block">
+								{{{md usage_content}}}
+							</div>
+						</section>
+					<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
@@ -161,7 +180,7 @@ Universal dropdown plugin that will attach dropdowns or popovers to whatever ele
 											</li>
 										{{/is}}
 										{{#is dropdowns.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if dropdowns.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each dropdowns.dependency_data.evolution_dependencies}}
@@ -209,10 +228,22 @@ Universal dropdown plugin that will attach dropdowns or popovers to whatever ele
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 4
+					
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+
+					<!-- SETTINGS CONTENT - BEGINS -->
+						<div class="evo-site-markdown-content-block evo-site-markdown-content-block--settings">
+							{{{ md settings_content }}}
+						</div>
+					<!-- SETTINGS CONTENT - ENDS -->
+					
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 4
+					&nbsp;
 				</div>
 			</section>
 			

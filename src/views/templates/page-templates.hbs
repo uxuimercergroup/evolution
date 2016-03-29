@@ -1,0 +1,40 @@
+---
+title: "Page Templates"
+---
+
+<!-- HERO - BEGINS -->
+	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="large" data-evo-site-hero-arrow-position="bottom">
+		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
+			<div class="text-center evo-center-block-vertical-element">
+				<h1 class="evo-site-hero--hdr flipInY animated evo-no-margin-bottom" data-evo-site-hero-hdr-size="large">{{{page-templates.hero.title}}} <span>{{{page-templates.hero.subtitle}}}</span></h1>
+			</div>		
+		</div>
+	</section>
+<!-- HERO - ENDS -->
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="evo-contain-to-grid">
+		<div class="small-12 columns evo-spacer-padding-top-xxx-large evo-spacer-padding-bottom-xxx-large">
+
+{{# markdown }}
+A collection of common page templates for use in any project.
+***
+{{/ markdown }}
+
+			<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3 xlarge-block-grid-3 xxlarge-block-grid-4 evo-site--page-template-container">
+			{{#each page-templates.data }}
+				<li>
+					<a href="/page-templates/{{url}}.html" target="_blank"><img class="evo-site--page-template-thumbnail" src="/assets/images/content/{{image}}" alt="" width="100%"></a>
+					<h5>{{header}}</h5>
+					<p>{{description}}</p>
+					<ul class="inline-list evo-inline-list evo-inline-list-pipes">
+						<!-- <li><a href="/page-templates/{{url}}.html" download>Download</a></li> -->
+						<li><a href="/page-templates/{{url}}.html" target="_blank">Demo</a></li>
+					</ul>
+				</li>
+			{{/each}}
+			</ul>
+
+		</div>
+	</section>
+<!-- PAGE CONTENT - ENDS -->

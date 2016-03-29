@@ -11,7 +11,7 @@ title: "Reveal Modals"
 The Modal Window provides information to the user that supplements or impacts the current site or application page.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -89,6 +89,7 @@ The Modal Window provides information to the user that supplements or impacts th
 					</div>
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
@@ -126,7 +127,18 @@ The Modal Window provides information to the user that supplements or impacts th
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 3
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+{{# markdown }}
+##### Setup
+To launch a modal just add a `data-reveal-id` data attribute to the object which you want to fire the modal when clicked. The `data-reveal-id` data attribute value needs to match the `id` of your reveal.
+{{/ markdown}}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
@@ -161,7 +173,7 @@ The Modal Window provides information to the user that supplements or impacts th
 											</li>
 										{{/is}}
 										{{#is reveal.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if reveal.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each reveal.dependency_data.evolution_dependencies}}

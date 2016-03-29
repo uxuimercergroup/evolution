@@ -1,5 +1,6 @@
 ---
 title: "Accordion"
+definition_content: "src/content/accordion/definition.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -11,7 +12,7 @@ title: "Accordion"
 The accordion control provides an effective way to display chunks of information in a condensed fashion.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -111,7 +112,15 @@ The accordion control provides an effective way to display chunks of information
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 2
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+							{{{md definition_content}}}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
 					Magellan 2
@@ -161,7 +170,7 @@ The accordion control provides an effective way to display chunks of information
 											</li>
 										{{/is}}
 										{{#is accordion.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if accordion.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each accordion.dependency_data.evolution_dependencies}}

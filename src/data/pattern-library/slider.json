@@ -20,19 +20,35 @@
 	},
 
 	"data": {
-		"": {
-			"name": "",
-			"partial": "", "slug": ""
+		"basic_slider": {
+			"name": "Basic Slider",
+			"partial": "slider",
+			"partial_js": "slider-js",
+			"slug": "basic-slider"
+		},
+		"slider_interval_ticks": {
+			"name": "Slider Interval Ticks",
+			"partial": "slider-interval-ticks",
+			"partial_js": "slider-interval-ticks-js",
+			"slug": "slider-interval-ticks"
+		},
+		"range_slider": {
+			"name": "Range Slider",
+			"partial": "range-slider",
+			"partial_js": "range-slider-js",
+			"slug": "range-slider"
+		},
+		"range_slider_min": {
+			"name": "Range Slider Min",
+			"partial": "range-slider-min",
+			"partial_js": "range-slider-min-js",
+			"slug": "range-slider-min"
+		},
+		"range_slider_max": {
+			"name": "Range Slider Max",
+			"partial": "range-slider-max",
+			"partial_js": "range-slider-max-js",
+			"slug": "range-slider-max"
 		}
-	},
-
-	"settings_header": "",
-	"settings_data": [
-		{
-			"option": "",
-			"default_value": "",
-			"option_value": "",
-			"description": ""
-		}
-	]
+	}
 }

@@ -11,7 +11,7 @@ title: "Helpers"
 Evolution includes a handful of helpful utility helpers to add certain behaviors to your elements.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -48,7 +48,7 @@ Evolution includes a handful of helpful utility helpers to add certain behaviors
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</div>
-						<div class="evo-box-bdy">
+						<div class="evo-box-bdy{{#is name 'Keylines'}} evo-site--helpers-keyline-example{{/is}}">
 						<!-- RENDERED HTML - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -73,6 +73,17 @@ Evolution includes a handful of helpful utility helpers to add certain behaviors
 							<!-- HTML - ENDS -->
 
 								{{/each}}
+
+								{{#if partial_js}}
+							<!-- JS - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-{{slug}}"><xmp>{{> (lookup . 'partial_js') }}</xmp></code></pre>
+							<!-- JS - ENDS -->
+								{{/if}}
+
 							{{else}}
 
 							<!-- HTML - BEGINS -->
@@ -82,6 +93,16 @@ Evolution includes a handful of helpful utility helpers to add certain behaviors
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
+
+								{{#if partial_js}}
+							<!-- JS - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-{{slug}}"><xmp>{{> (lookup . 'partial_js') }}</xmp></code></pre>
+							<!-- JS - ENDS -->
+								{{/if}}
 
 							{{/is}}
 						<!-- CODE - ENDS -->
@@ -94,9 +115,18 @@ Evolution includes a handful of helpful utility helpers to add certain behaviors
 				<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
-							{{#each helpers.data}}
+							<dt>{{helpers.utility_helpers_data_header}}</dt>
+							{{#slice helpers.data limit="14"}}
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
-							{{/each}}
+							{{/slice}}
+							<dt>{{helpers.interactive_helpers_data_header}}</dt>
+							{{#slice helpers.data offset="14" limit="2"}}
+							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+							{{/slice}}
+							<dt>{{helpers.visibility_helpers_data_header}}</dt>
+							{{#slice helpers.data offset="16" limit="8"}}
+							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+							{{/slice}}
 						</dl>
 					</div>
 				<!-- SIDENAV - ENDS -->
@@ -161,7 +191,7 @@ Evolution includes a handful of helpful utility helpers to add certain behaviors
 											</li>
 										{{/is}}
 										{{#is helpers.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if helpers.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each helpers.dependency_data.evolution_dependencies}}
@@ -209,10 +239,112 @@ Evolution includes a handful of helpful utility helpers to add certain behaviors
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 4
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate helpers.margin_padding_header}}">
+						<div class="evo-site-markdown-content-block">
+{{# markdown}}
+##### {{helpers.margin_padding_header}}
+{{/ markdown}}
+						</div>
+
+					<!-- MARGIN, PADDING SETTINGS TABLE - BEGINS -->
+						<div class="evo-table-small-mediaquery">
+							<table class="evo-table evo-table-hover evo-site-margin-padding-settings-table" data-evo-data-table="evo-data-table-margin-padding-settings" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+								<thead>
+									<tr>
+										<th scope="column">Definition</th>
+										<th scope="column">Class</th>
+									</tr>
+								</thead>
+								<tbody>
+								{{#each helpers.margin_padding_settings}}
+									<tr>
+										<td>{{ description }}</td>
+										<td class="evo-site-margin-padding-settings-table--copy-cursor copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{ class }}">{{ class }}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					<!-- MARGIN, PADDING SETTINGS TABLE - ENDS -->
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate helpers.text_alignment_header}}">
+						<div class="evo-site-markdown-content-block">
+{{# markdown}}
+##### {{helpers.text_alignment_header}}
+{{/ markdown}}
+						</div>
+
+					<!-- TEXT VISIBILITY TABLE - BEGINS -->
+						<div class="evo-table-small-mediaquery">
+							<table class="evo-table evo-table-hover evo-site-margin-padding-settings-table" data-evo-data-table="evo-data-table-margin-padding-settings" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+								<thead>
+									<tr>
+										<th scope="column">Class Value</th>
+									</tr>
+								</thead>
+								<tbody>
+								{{#each helpers.text_alignment_settings}}
+									<tr>
+										<td class="evo-site-margin-padding-settings-table--copy-cursor copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{ text-class }}">{{ text-class }}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					<!-- TEXT VISIBILITY TABLE - ENDS -->
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate helpers.visibility_header}}">
+						<div class="evo-site-markdown-content-block">
+{{# markdown}}
+##### {{helpers.visibility_header}}
+{{/ markdown}}
+						</div>
+
+					<!-- TEXT VISIBILITY TABLE - BEGINS -->
+						<div class="evo-table-small-mediaquery">
+							<table class="evo-table evo-table-hover evo-site-margin-padding-settings-table" data-evo-data-table="evo-data-table-margin-padding-settings" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+								<thead>
+									<tr>
+										<th scope="column">Class Value</th>
+									</tr>
+								</thead>
+								<tbody>
+								{{#each helpers.visibility_settings}}
+									<tr>
+										<td class="evo-site-margin-padding-settings-table--copy-cursor copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{ visibility-class }}">{{ visibility-class }}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					<!-- TEXT VISIBILITY TABLE - ENDS -->
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 4
+					
+				<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+						<dl class="sub-nav">
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate helpers.margin_padding_header}}">{{helpers.margin_padding_header}}</a></dd>
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate helpers.text_alignment_header}}">{{helpers.text_alignment_header}}</a></dd>
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate helpers.visibility_header}}">{{helpers.visibility_header}}</a></dd>
+						</dl>
+					</div>
+				<!-- SIDENAV - ENDS -->
+
 				</div>
 			</section>
 			

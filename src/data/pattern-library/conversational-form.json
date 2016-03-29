@@ -19,23 +19,15 @@
 		]
 	},
 
+	"product_suite_bp": "true",
+	"product_suite_comm": "false",
+
 	"data": {
 		"conversational-form": {
 			"name": "Basic",
-			"multiple_example": "true",
-			"multiple_example_options": [
-				{"partial": "conversational-form", "slug": "conversational-form"}
-			]
+			"partial": "conversational-form",
+			"partial_js": "conversational-form-js",
+			"slug": "conversational-form"
 		}
-	},
-
-	"settings_header": "",
-	"settings_data": [
-		{
-			"option": "",
-			"default_value": "",
-			"option_value": "",
-			"description": ""
-		}
-	]
+	}
 }

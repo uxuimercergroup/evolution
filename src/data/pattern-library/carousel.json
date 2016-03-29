@@ -22,21 +22,21 @@
 	"data": {
 		"image_carousel": {
 			"name": "Image Carousel",
-			"partial": "carousel", "slug": "image-carousel"
+			"partial": "carousel",
+			"partial_js" : "carousel-js",
+			"slug": "image-carousel"
 		},
 		"content_carousel": {
 			"name": "Content Carousel",
-			"partial": "carousel-content", "slug": "content-carousel"
+			"partial": "carousel-content",
+			"partial_js" : "carousel-js",
+			"slug": "content-carousel"
 		}
 	},
 
-	"settings_header": "",
-	"settings_data": [
-		{
-			"option": "",
-			"default_value": "",
-			"option_value": "",
-			"description": ""
-		}
-	]
+	"data-js": {
+		"partial": "carousel",
+		"partial_js" : "carousel-js",
+		"slug": "carousel"
+	}
 }

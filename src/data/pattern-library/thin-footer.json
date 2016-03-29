@@ -22,23 +22,14 @@
 		]
 	},
 
+	"product_suite_bp": "true",
+	"product_suite_comm": "false",
+
 	"data": {
 		"thin_footer": {
-			"name": "Thin Footer",
-			"multiple_example": "true",
-			"multiple_example_options": [
-				{"partial": "thin-footer", "slug": "thin-footer"}
-			]
+			"name": "Basic",
+			"partial": "thin-footer",
+			"slug": "thin-footer"
 		}
-	},
-
-	"settings_header": "",
-	"settings_data": [
-		{
-			"option": "",
-			"default_value": "",
-			"option_value": "",
-			"description": ""
-		}
-	]
+	}
 }

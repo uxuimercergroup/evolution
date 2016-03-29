@@ -28,41 +28,56 @@ URL: {{ meta_url }}
 
 /*=== WEBSITE STYLES =======================================================================*/
 
-/*--- DEVELOPER TOOLS ----------------------------------------------------------------------*/
-	
-	// CODE
-	code								{@include border-radius($evo-site-code-border-radius);}
+/*--- DEVELOPER ----------------------------------------------------------------------------*/
 
-	// ANNOTATIONS
-	.evo-site-annotations				{
-										background-color: $evo-site-annotations-background-color;
-										border-width: $evo-site-annotations-border-width;
+// TOOLS - BEGINS
+
+	// CODE
+	code								{
+										@include border-radius($evo-site-code-border-radius);
+										color: $evo-site-code-font-color;
+										background-color: $evo-site-code-bg-color;
 										}
 
-
-/*--- SITE GLOBAL --------------------------------------------------------------------------*/
-.evo-site-basic-icon-table				{
-										background-color: $white;
-										border-collapse: separate;
-	thead									{display: none;}
-	tr										{
-											@include clearfix;
-											background-color: $white !important;
-											float: left;
-											width: 10%;
-		td										{
-												@include border-radius($global-radius);
-												background-color: $white !important;
-												border: 1px solid $onyx-dark-20;
-												cursor: pointer;
-												display: block !important;
-												margin: 3px;
-			[class^="evo-icon"]
-													{left: 4px;}
+	// GITHUB GIST CODE
+	.gist								{
+		.gist-file							{
+											@include border-radius(0 !important);
+											background-color: #f5f2f0 !important;
+											border: 0 !important;
+											border-bottom: 0 !important;
+											border: 1px solid #E6E6E6 !important;
+			.gist-data							{
+												background-color: $transparent;
+												border-bottom: 0;
+				table								{
+													background-color: $transparent;
+					tr									{background-color: $transparent;}
+													}
 												}
+			.gist-meta							{display: none;}
 											}
 										}
 
+	// ANNOTATIONS
+	.evo-site-annotations				{
+										@include border-radius($evo-site-annotations-border-radius);
+										background-color: $evo-site-annotations-background-color;
+										border-width: $evo-site-annotations-border-width;
+										padding: $evo-site-annotations-padding;
+										}
+// TOOLS - ENDS
+
+
+/*--- SITE GLOBAL --------------------------------------------------------------------------*/
+
+// HELPERS - BEGINS
+
+	// VISIBILITY
+	.evo-site-hidden					{visibility: hidden;}
+	.evo-site-visible					{visibility: visible;}
+
+// HELPERS - ENDS
 
 // BUTTONS - BEGINS
 	
@@ -180,12 +195,50 @@ URL: {{ meta_url }}
 										}
 // HERO - ENDS
 
+// MAGELLAN - BEGINS
+.evo-site-magellan						{
+										padding: 0;
+										background-color: $evo-site-magellan-background-color;
+										border-bottom: 1px solid $evo-site-magellan-border-color;
+	&.fixed									{@include box-shadow(0 0 8px 1px rgba($evo-site-magellan-shadow-color, .15));}
+	&[data-magellan-expedition-clone]		{visibility: hidden;}
+	.sub-nav								{
+											@include clearfix;
+											margin: 0;
+											overflow: visible;
+											padding-top: 0;
+		li										{
+												margin: 0;
+												padding-bottom: 0;
+												padding-right: 0;
+												padding-left: 0;
+			a										{
+													@include border-radius(0);
+													display: block;
+													padding: rem-calc(14 10 10 10);
+													background: none !important;
+													border-bottom-width: 4px;
+													border-bottom-style: solid;
+													border-bottom-color: $transparent;
+													color: $evo-site-magellan-link-font-color;
+													text-align: center;
+													line-height: 1.25;
+													}
+			&.active								{
+				a										{border-bottom-color: $evo-site-magellan-active-border-color;}
+													}
+												}
+											}
+										}
+// MAGELLAN - ENDS
+
 // BANDS - BEGINS
 	
 	// DEFAULT BAND
 	.evo-site-band						{padding: $evo-site-band-padding;}
 
 	// MARKETING BAND
+	.evo-site-band--marketing-ctn		{background-color: $evo-site-band-marketing-background-color;}
 	.evo-site-band--marketing			{
 										background-color: $evo-site-band-marketing-background-color;
 		.evo-site-band--marketing-content	{
@@ -206,6 +259,43 @@ URL: {{ meta_url }}
 													font-family: $evo-site-band-marketing-block-grid-h5-font-family !important;
 													}
 				p									{color: $evo-site-band-marketing-block-grid-paragraph-color;}
+												}
+											}
+										}
+
+
+	// TESTIMONIALS BAND
+	.evo-site-band--testimonials		{
+		blockquote							{
+											font-family: $evo-site-band-testimonials-blockquote-font-family;
+											border: 0;
+											padding-left: rem-calc(30);
+											padding-right: rem-calc(30);
+			p									{
+												color: $evo-site-band-testimonials-blockquote-font-color;
+												font-size: rem-calc(18);
+												line-height: 1.25 !important;
+												position: relative;
+				&:before,
+				&:after								{
+													font-family: $evo-icon-site-font-stack;
+													font-size: rem-calc(18);
+													color: $evo-site-band-testimonials-blockquote-quote-icon-color;
+													position: absolute;
+													}
+				&:before							{
+													content: "\eb1b";
+													left: -28px;
+													top: -3px;
+													}
+				&:after								{
+													content: "\eb1c";
+													margin-left: rem-calc(10);
+													}
+												}
+			cite								{
+												color: $evo-site-band-testimonials-blockquote-cite-font-color;
+				.title								{color: $evo-site-band-testimonials-blockquote-cite-title-font-color;}
 												}
 											}
 										}
@@ -302,6 +392,23 @@ URL: {{ meta_url }}
 
 // PATTERN LIBRARY TEMPLATE - BEGINS
 
+	// PATTERN LIBRARY HOMEPAGE - BEGINS
+		.evo-site--pattern-library-homepage-content-ctn
+											{
+											padding: 0;
+			.evo-site-hero--pattern-library		{
+												background-color: $evo-site-pattern-library-homepage-hero-background-color;
+												background-image: none;
+				&[data-evo-site-hero-arrow-position]
+													{
+					&:after,
+					&:before							{color: $evo-site-pattern-library-homepage-hero-background-color;}
+													}
+												}
+			.evo-site-band--marketing			{background-color: $evo-site-pattern-library-homepage-marketing-band-background-color;}
+											}
+	// PATTERN LIBRARY HOMEPAGE - ENDS
+
 	// INTRO - BEGINS
 		.evo-site--pattern-library-intro	{
 											border-bottom-width: $evo-site-pattern-library-intro-border-bottom-width;
@@ -310,26 +417,6 @@ URL: {{ meta_url }}
 											padding-bottom: $evo-site-pattern-library-intro-padding-bottom;
 											}
 	// INTRO - ENDS
-
-	// HOMEPAGE INTRO - BEINGS
-		.evo-site--pattern-library-intro--homepage
-											{
-											border-bottom-width: 0;
-											text-align: center;
-											margin: rem-calc(30) 0;
-			h1									{
-												font-size: rem-calc(38);
-												font-family: $evo-font-thin-family !important;
-												text-transform: capitalize;
-												}
-											}
-
-		.evo-box--pattern-library--homepage-callouts
-											{
-											border-color: $onyx-dark-20;
-											background-color: $onyx-dark-2;
-											}
-	// HOMEPAGE INTRO - ENDS
 
 	// CONTENT TABS - BEGINS
 		.evo-site-tabs--pattern-library-tabs
@@ -404,6 +491,15 @@ URL: {{ meta_url }}
 											background: $evo-site-sidenav-magellan-background-color;
 											padding: 0;
 			.sub-nav							{
+				dt									{
+													margin: $evo-site-sidenav-magellan-hdr-margin;
+													float: none;
+													font-family: $evo-site-sidenav-magellan-hdr-font-family;
+													color: $evo-site-sidenav-magellan-hdr-font-color;
+													font-size: $evo-site-sidenav-magellan-hdr-font-size;
+													text-transform: none;
+					&:first-child						{margin-top: 0;}
+													}
 				dd									{
 													float: none;
 													margin-left: 0;
@@ -416,7 +512,10 @@ URL: {{ meta_url }}
 														padding-top: 0;
 														padding-right: 0;
 														padding-bottom: 0;
-						&:hover								{background-color: $evo-site-sidenav-magellan-link-hover-background-color;}
+						&:hover								{
+															background-color: $evo-site-sidenav-magellan-link-hover-background-color;
+															text-decoration: $evo-site-sidenav-magellan-link-hover-text-decoration;
+															}
 														}
 													}
 												}
@@ -507,9 +606,18 @@ URL: {{ meta_url }}
 
 	// MARKDOWN CONTENT BLOCK - BEINGS
 		.evo-site-markdown-content-block	{
-			h5									{
+			h4, h5								{
 												border-bottom: $evo-site-markdown-hdr-rule-border-size $evo-site-markdown-hdr-rule-border-style $evo-site-markdown-hdr-rule-border-color;
 												margin-bottom: $evo-site-markdown-hdr-rule-margin-bottom;
+												margin-top: $evo-site-markdown-content-margin;
+				&:first-child						{margin-top: 0;}
+												}
+											}
+		.evo-site-markdown-content-block--settings
+											{
+			ul									{
+												list-style: none;
+												margin-left: 0;
 												}
 											}
 	// MARKDOWN CONTENT BLOCK - ENDS
@@ -590,7 +698,7 @@ URL: {{ meta_url }}
 
 // CORPORATE LOGOS - BEGINS
 	.evo-site-corp-logo-ctn--img-ctn	{
-										@include border-radius($global-radius);
+										@include border-radius($evo-site-corp-logo-img-ctn-border-radius);
 										border: 1px solid $transparent;
 										margin: rem-calc(20 0);
 										padding: rem-calc(20);
@@ -598,56 +706,17 @@ URL: {{ meta_url }}
 	.evo-site-corp-logo--favicon-img-ctn
 										{
 										margin: rem-calc(30 0);
-										border: 1px solid $onyx-dark-20;
-										background-color: $onyx-dark-2;
+										border: 1px solid $evo-site-corp-logo-favicon-img-ctn-border-color;
+										background-color: $evo-site-corp-logo-favicon-img-ctn-background-color;
 										padding-bottom: rem-calc(1);
 		img									{margin: 0;}
 										}
 // CORPORATE LOGOS - ENDS
 
 
+/*--- GRID PAGE ----------------------------------------------------------------------------*/
 
-/*--- TYPOGRAPHY PAGE ----------------------------------------------------------------------*/
-
-// TYPOGRAPHY - BEGINS
-	.evo-type-sample					{
-										margin-bottom: rem-calc(15);
-		&[data-evo-type-sample="proxima-nova-regular"]
-											{font-family: $evo-font-regular-stack;}
-		&[data-evo-type-sample="proxima-nova-semibold"]
-											{font-family: $evo-font-medium-stack;}
-		&[data-evo-type-sample="proxima-nova-bold"]
-											{font-family: $evo-font-bold-stack;}
-		&[data-evo-type-sample="proxima-nova-italic"]
-											{font-family: $evo-font-italic-stack;}
-		&[data-evo-type-sample="proxima-nova-thin"]
-											{font-family: $evo-font-thin-stack;}
-		.large-size							{
-											font-size: rem-calc(120);
-											line-height: 1;
-											}
-		.medium-size						{
-											font-size: rem-calc(32);
-											word-wrap: break-word;
-			span								{letter-spacing: rem-calc(6);}
-											}
-		.small-size							{
-											font-size: rem-calc(22);
-											word-wrap: break-word;
-			span								{letter-spacing: rem-calc(3.5);}
-											}
-										}
-	.evo-type-hierarchy-row				{margin-bottom: rem-calc(30) !important;}
-	.evo-type-data-list					{
-										font-size: rem-calc(14);
-										margin-bottom: 0;
-										}
-// TYPOGRAPHY - ENDS
-
-
-/*--- KITCHEN SINK -------------------------------------------------------------------------*/
-
-// GRID DEMO
+// GRID DEMO - BEGINS
 .evo-grid-demo							{
 	.row									{
 											border: 1px solid $onyx-dark-10;
@@ -673,26 +742,173 @@ URL: {{ meta_url }}
 												}
 											}
 										}
+// GRID DEMO - ENDS
 
-// CENTER HORIZONTALLY AND VERTICALLY DEMO
-.evo-center-container-dimensions-demo
+
+/*--- HELPERS PAGE -------------------------------------------------------------------------*/
+
+// KEYLINE DEMO - BEGINS
+	.evo-site--helpers-keyline-example		{
+		.evo-keyline-right						{
+												border-color: $onyx-dark-30;
+												min-height: auto;
+												}
+		[data-equalizer-watch]					{
+												height: auto !important;
+												min-height: rem-calc(276);
+												}
+											}
+// KEYLINE DEMO - ENDS
+
+// CENTER HORIZONTALLY AND VERTICALLY DEMO - BEGINS
+	.evo-center-container-dimensions-demo
+											{
+											height: rem-calc(200);
+											width: 100%;
+		p										{
+												width: rem-calc(200) !important;
+												}
+											}
+// CENTER HORIZONTALLY AND VERTICALLY DEMO - ENDS
+
+// MARGIN PADDING SETTINGS TABLE - BEGINS
+	.evo-site-margin-padding-settings-table
 										{
-										height: rem-calc(200);
-										width: 100%;
-	p										{
-											width: rem-calc(200) !important;
+		.evo-site-margin-padding-settings-table--copy-cursor
+											{cursor: default;}
+										}
+// MARGIN PADDING SETTINGS TABLE - ENDS
+
+
+/*--- ICONS PAGE ---------------------------------------------------------------------------*/
+
+// ICOMOON ICONS TABLE - BEGINS
+.evo-site-icon-table-ctn				{
+										overflow-x: auto;
+										overflow-y: hidden;
+										-ms-overflow-style: -ms-autohiding-scrollbar;
+										-webkit-overflow-scrolling: touch;
+										margin-bottom: $evo-site-icon-table-ctn-margin-bottom;
+	.dataTables_wrapper						{margin-bottom: 0;}
+										}
+.evo-site-icon-table					{
+										margin-bottom: 0;
+										background-color: $evo-site-icon-table-background-color;
+										border-collapse: separate;
+										min-width: ($small-breakpoint - em-calc(29));
+	thead									{display: none;}
+	tr										{
+											@include clearfix;
+											background-color: $evo-site-icon-table-background-color !important;
+											float: left;
+											width: 10%;
+		td										{
+												@include border-radius($evo-site-icon-table-td-border-radius);
+												background-color: $evo-site-icon-table-td-background-color !important;
+												border: $evo-site-icon-table-td-border-width $evo-site-icon-table-td-border-style $evo-site-icon-table-td-border-color;
+												cursor: pointer;
+												display: block !important;
+												margin: 3px;
+			[class^="evo-icon-"]					{left: 6px;}
+												}
 											}
 										}
+// ICOMOON ICONS TABLE - ENDS
 
-// HYPHEN DEMO
+
+/*--- PAGE TEMPLATES -----------------------------------------------------------------------*/
+
+// PAGE TEMPLATES THUMBNAILS - BEGINS
+.evo-site--page-template-container		{
+	.evo-site--page-template-thumbnail		{
+											@include border-radius($evo-site-page-template-thumbnail-border-radius);
+											margin-bottom: $evo-site-page-template-thumbnail-margin-bottom;
+											background-color: $evo-site-page-template-thumbnail-background-color;
+											}
+										}
+// PAGE TEMPLATES THUMBNAILS - ENDS
+
+
+/*--- TYPOGRAPHY PAGE ----------------------------------------------------------------------*/
+
+// TYPOGRAPHY DEFINITION - BEGINS
+	.evo-site-type-sample				{
+										margin-bottom: rem-calc(15);
+		&[data-evo-site-type-sample="proxima-nova-regular"]
+											{font-family: $evo-font-regular-stack;}
+		&[data-evo-site-type-sample="proxima-nova-semibold"]
+											{font-family: $evo-font-medium-stack;}
+		&[data-evo-site-type-sample="proxima-nova-bold"]
+											{font-family: $evo-font-bold-stack;}
+		&[data-evo-site-type-sample="proxima-nova-italic"]
+											{font-family: $evo-font-italic-stack;}
+		&[data-evo-site-type-sample="proxima-nova-thin"]
+											{font-family: $evo-font-thin-stack;}
+		.large-size							{
+											font-size: rem-calc(120);
+											line-height: 1;
+											}
+		.medium-size						{
+											font-size: rem-calc(32);
+											word-wrap: break-word;
+			span								{letter-spacing: rem-calc(6);}
+											}
+		.small-size							{
+											font-size: rem-calc(22);
+											word-wrap: break-word;
+			span								{letter-spacing: rem-calc(3.5);}
+											}
+										}
+	.evo-site-type-hierarchy-row		{
+										margin-bottom: rem-calc(30) !important;
+		.evo-keyline-right					{
+											border-right: 1px solid $onyx-dark-30 !important;
+											min-height: auto;
+											}
+										}
+	.evo-site-type-data-list			{
+										font-size: rem-calc(14);
+										margin-bottom: 0;
+										}
+// TYPOGRAPHY DEFINITION - ENDS
+
+// TYPE DEMO CONTAINER - BEGINS
+.evo-site-type-demo-ctn					{
+	h1, h2, h3, h4, h5, h6					{line-height: 1.4;}
+	.subheader								{color: $onyx-dark-50;}
+	.evo-hdr-rule							{
+											padding-bottom: 0;
+											border-bottom-style: dotted;
+											border-bottom-color: $onyx-dark-30;
+											}
+										}
+// TYPE DEMO CONTAINER - ENDS
+
+// HYPHEN DEMO - BEGINS
 .evo-hyphen-demo						{@include hyphens(auto);}
+// HYPHEN DEMO - ENDS
 
-// WORD BREAK DEMO
+// WORD BREAK DEMO - BEGINS
 .evo-word-break-container-dimensions-demo
 										{
 										height: rem-calc(50);
 										width: rem-calc(200);
 										}
+// WORD BREAK DEMO - ENDS
+
+
+/*--- WHY EVOLUTION PAGE -------------------------------------------------------------------------*/
+
+// BAND - BEGINS
+.evo-site-band--why						{
+										background-color: $evo-site-why-band-background-color;
+										padding: rem-calc(0 0 80 0) !important;
+	.evo-site--why-content-section			{
+											padding: rem-calc(40 0 0 0);
+		h3										{margin-bottom: rem-calc(16);}
+											}
+										}
+// BAND - ENDS
 
 
 /*=== MEDIA QUERIES ========================================================================*/

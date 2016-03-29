@@ -11,7 +11,7 @@ title: "Forms"
 Evolution forms depend on Foundation's [Forms](http://foundation.zurb.com/sites/docs/v/5.5.3/components/forms.html) and [Abide Validation](http://foundation.zurb.com/sites/docs/v/5.5.3/components/abide.html) as a starting point.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -162,7 +162,7 @@ Evolution forms depend on Foundation's [Forms](http://foundation.zurb.com/sites/
 											</li>
 										{{/is}}
 										{{#is forms.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if forms.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each forms.dependency_data.evolution_dependencies}}

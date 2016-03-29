@@ -8,10 +8,17 @@ title: "Off-canvas"
 
 {{# markdown }}
 ## {{ title }}
-Off-canvas menus are positioned outside of the viewport and slide in when activated. Evolution's off-canvas menu depends on Foundation's [Off-canvas](http://foundation.zurb.com/sites/docs/v/5.5.3/components/offcanvas.html) as a starting point.
+Off-canvas menus are positioned outside of the viewport and slide in when activated. Evolution's off-canvas 
+menu depends on Foundation's [Off-canvas](http://foundation.zurb.com/sites/docs/v/5.5.3/components/offcanvas.html) as a starting point.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+<div class="evo-site-annotations evo-spacer-margin-bottom-x-large">
+{{# markdown}}
+**Note:** *Off-canvas is for small and medium media queries only*, hence no desktop styles for large and up media 
+queries. On large and up media queries, Off-canvas menu and mobile header component are replaced by [Top bar](/pattern-library/top-bar.html).
+{{/ markdown}}
+</div>
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -161,7 +168,7 @@ Off-canvas menus are positioned outside of the viewport and slide in when activa
 											</li>
 										{{/is}}
 										{{#is off-canvas.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if off-canvas.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each off-canvas.dependency_data.evolution_dependencies}}

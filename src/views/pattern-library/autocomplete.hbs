@@ -1,5 +1,6 @@
 ---
 title: "Autocomplete"
+definition_content: "src/content/autocomplete/definition.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -11,7 +12,7 @@ title: "Autocomplete"
 The autocomplete automatically suggests items for users when filling out an input form field.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -72,6 +73,9 @@ The autocomplete automatically suggests items for users when filling out an inpu
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
 
+								{{/each}}
+
+								{{#if partial_js}}
 							<!-- JS - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
@@ -79,8 +83,8 @@ The autocomplete automatically suggests items for users when filling out an inpu
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-{{slug}}"><xmp>{{> (lookup . 'partial_js') }}</xmp></code></pre>
 							<!-- JS - ENDS -->
+								{{/if}}
 
-								{{/each}}
 							{{else}}
 
 							<!-- HTML - BEGINS -->
@@ -91,6 +95,7 @@ The autocomplete automatically suggests items for users when filling out an inpu
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
 
+								{{#if partial_js}}
 							<!-- JS - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
@@ -98,6 +103,7 @@ The autocomplete automatically suggests items for users when filling out an inpu
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-js" id="evo-code-copy-js-{{slug}}"><xmp>{{> (lookup . 'partial_js') }}</xmp></code></pre>
 							<!-- JS - ENDS -->
+								{{/if}}
 
 							{{/is}}
 						<!-- CODE - ENDS -->
@@ -131,17 +137,14 @@ The autocomplete automatically suggests items for users when filling out an inpu
 				<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
 						<div class="evo-site-markdown-content-block">
-{{# markdown }}
-##### General
-Autocomplete text is generated from a pre-defined list as the user types content into the form field. This control works well when input speed is important for the user or when data might be entered in different ways.
-{{/ markdown}}
+							{{{md definition_content}}}
 						</div>
 					</section>
 				<!-- CONTENT SECTION - ENDS -->
 
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 2
+					&nbsp;
 				</div>
 			</section>
 			
@@ -258,7 +261,7 @@ Autocomplete text is generated from a pre-defined list as the user types content
 											</li>
 										{{/is}}
 										{{#is autocomplete.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if autocomplete.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each autocomplete.dependency_data.evolution_dependencies}}

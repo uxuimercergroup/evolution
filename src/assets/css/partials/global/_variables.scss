@@ -10,10 +10,14 @@
 
 	// CODE
 	$evo-site-code-border-radius: $global-radius;
+	$evo-site-code-font-color: $ruby-dark;
+	$evo-site-code-bg-color: $onyx-dark-10;
 
 	// ANNOTATIONS
 	$evo-site-annotations-background-color: $highlight-color;
+	$evo-site-annotations-border-radius: $global-radius;
 	$evo-site-annotations-border-width: 0;
+	$evo-site-annotations-padding: rem-calc(16) rem-calc(16) 1px rem-calc(16);
 
 
 // SITE GLOBAL
@@ -32,6 +36,9 @@
 		$evo-site-h4-font-size-small: rem-calc(16);
 		$evo-site-h5-font-size-small: rem-calc(14);
 		$evo-site-h6-font-size-small: rem-calc(12);
+
+		// PULL OUT
+		$evo-site-pull-out-border-color: $onyx-dark-20;
 
 	// BUTTONS
 
@@ -93,6 +100,13 @@
 		$evo-site-hero-tagline-max-width-medium: 84%;
 		$evo-site-hero-tagline-max-width-large: 64%;
 
+	// MAGELLAN
+	$evo-site-magellan-background-color: $white;
+	$evo-site-magellan-border-color: $onyx-dark-10;
+	$evo-site-magellan-shadow-color: $black;
+	$evo-site-magellan-link-font-color: $sapphire-medium;
+	$evo-site-magellan-active-border-color: $topaz-bright;
+
 	// BANDS
 	$evo-site-band-padding: rem-calc(40 0);
 	$evo-site-band-padding-medium: rem-calc(80 0);
@@ -117,6 +131,13 @@
 		$evo-site-band-marketing-block-grid-h5-margin-top-medium: rem-calc(20);
 		$evo-site-band-marketing-block-grid-h5-font-family: $evo-font-medium-stack;
 		$evo-site-band-marketing-block-grid-paragraph-color: $onyx-medium;
+
+		// TESTIMONIALS BAND
+		$evo-site-band-testimonials-blockquote-font-family: $evo-font-regular-stack;
+		$evo-site-band-testimonials-blockquote-font-color: $onyx-medium;
+		$evo-site-band-testimonials-blockquote-quote-icon-color: $onyx-light;
+		$evo-site-band-testimonials-blockquote-cite-font-color: $black;
+		$evo-site-band-testimonials-blockquote-cite-title-font-color: $onyx-bright;
 
 		// TAB BAND
 		$evo-site-band-tab-box-shadow-horizontal: 0;
@@ -173,6 +194,20 @@
 
 // PATTERN LIBRARY PAGES
 
+	// PATTERN LIBRARY HOMEPAGE
+	$evo-site-pattern-library-homepage-hero-background-color: $onyx-dark-70;
+	$evo-site-pattern-library-homepage-marketing-band-background-color: $onyx-dark-2;
+
+		// TAB BAND
+		$evo-site-pattern-library-band-tab-panel-background-image: "../images/evo-site-tablet-desktop-vector.png";
+		$evo-site-pattern-library-band-tab-panel-background-repeat: no-repeat;
+		$evo-site-pattern-library-band-tab-panel-background-size: auto;
+		$evo-site-pattern-library-band-tab-panel-background-position: right -200px top 76px;
+		$evo-site-pattern-library-band-tab-panel-padding: rem-calc(80 15 130 15);
+		$evo-site-pattern-library-band-tab-panel-marketing-content-padding: rem-calc(0 30);
+		$evo-site-pattern-library-band-tab-panel-marketing-content-padding-large: rem-calc(40 0 40 40);;
+		$evo-site-pattern-library-band-tab-panel-marketing-content-keyline-border-color: $onyx-dark-10;
+
 	// PATTERN LIBRARY TEMPLATE
 	$evo-site-pattern-library-keyline-color: $onyx-dark-10;
 	$evo-site-pattern-library-keyline-min-height: rem-calc(1500);
@@ -214,11 +249,16 @@
 
 			// SIDENAV MAGELLAN
 			$evo-site-sidenav-magellan-background-color: $white;
+			$evo-site-sidenav-magellan-hdr-margin: $evo-base-margin 0 rem-calc(5) 0;
+			$evo-site-sidenav-magellan-hdr-font-family: $evo-font-medium-stack;
+			$evo-site-sidenav-magellan-hdr-font-color: $onyx-dark-80;
+			$evo-site-sidenav-magellan-hdr-font-size: rem-calc(16);
 			$evo-site-sidenav-magellan-link-line-height: 1.6;
 			$evo-site-sidenav-magellan-link-color: $sapphire-medium;
 			$evo-site-sidenav-magellan-link-text-decoration: underline;
 			$evo-site-sidenav-magellan-link-background-color: $transparent;
 			$evo-site-sidenav-magellan-link-hover-background-color: $transparent;
+			$evo-site-sidenav-magellan-link-hover-text-decoration: none;
 			$evo-site-sidenav-magellan-fixed-width: 19%;
 			$evo-site-sidenav-magellan-fixed-active-icon: "\edc5";
 			$evo-site-sidenav-magellan-fixed-active-icon-color: $sapphire-bright;
@@ -249,6 +289,8 @@
 		$evo-site-markdown-hdr-rule-border-style: dotted;
 		$evo-site-markdown-hdr-rule-border-color: $onyx-dark-30;
 		$evo-site-markdown-hdr-rule-margin-bottom: rem-calc(10);
+		$evo-site-markdown-content-margin: rem-calc(40);
+
 
 // HOME PAGE
 
@@ -273,22 +315,41 @@
 	$evo-site-home-benefits-band-benefits5-tile-background-position: top -46px right;
 
 
-// WHAT IS PAGE
-
-	// MISSION TAB BAND
-	$evo-site-what-is-band-tab-panel-background-image: "../images/evo-site-tablet-desktop-vector.png";
-	$evo-site-what-is-band-tab-panel-background-repeat: no-repeat;
-	$evo-site-what-is-band-tab-panel-background-size: auto;
-	$evo-site-what-is-band-tab-panel-background-position-medium: right -310px top 76px;
-	$evo-site-what-is-band-tab-panel-background-position-large: right -200px top 76px;
-	$evo-site-what-is-band-tab-panel-padding: rem-calc(80 15 130 15);
-	$evo-site-what-is-band-tab-panel-marketing-content-padding: rem-calc(0 30);
-	$evo-site-what-is-band-tab-panel-marketing-content-padding-large: rem-calc(40 0 40 40);
-	$evo-site-what-is-band-tab-panel-marketing-content-keyline-border-width: 2px;
-	$evo-site-what-is-band-tab-panel-marketing-content-keyline-border-color: $onyx-dark-10;
-
-
 // ANIMATIONS PAGE
 
 	// SWATCH
 	$evo-site-animation-block-swatch-font-color: $white;
+
+
+// CORPORATE LOGOS
+$evo-site-corp-logo-img-ctn-border-radius: $global-radius;
+$evo-site-corp-logo-favicon-img-ctn-border-color: $onyx-dark-20;
+$evo-site-corp-logo-favicon-img-ctn-background-color: $onyx-dark-2;
+
+
+// ICONS PAGE
+$evo-site-icon-table-ctn-margin-bottom: rem-calc(20);
+$evo-site-icon-table-background-color: $white;
+$evo-site-icon-table-td-border-radius: $global-radius;
+$evo-site-icon-table-td-background-color: $white;
+$evo-site-icon-table-td-border-width: 1px;
+$evo-site-icon-table-td-border-style: solid;
+$evo-site-icon-table-td-border-color: $onyx-dark-20;
+
+
+// PAGE TEMPLATES PAGE
+$evo-site-page-template-thumbnail-border-radius: $global-radius;
+$evo-site-page-template-thumbnail-margin-bottom: rem-calc(14);
+$evo-site-page-template-thumbnail-background-color: $onyx-dark-6;
+
+
+// WHAT IS PAGE
+
+	// INSIDE AND OUT BAND
+	$evo-site-what-is-band-tab-panel-padding: rem-calc(25 15 50 15);
+	$evo-site-what-is-band-tab-panel-keyline-border-color: $onyx-dark-10;
+
+// WHY PAGE
+
+	// CONTENT BAND
+	$evo-site-why-band-background-color: $onyx-dark-2;

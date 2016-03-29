@@ -3,24 +3,42 @@ title: "Boilerplates"
 ---
 
 <!-- HERO - BEGINS -->
-	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="medium" data-evo-site-hero-arrow-position="bottom">
+	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="large" data-evo-site-hero-arrow-position="bottom">
 		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
 			<div class="text-center evo-center-block-vertical-element">
-				<h1 class="evo-site-hero--hdr flipInY animated evo-no-margin-bottom" data-evo-site-hero-hdr-size="medium">{{{boilerplates.hero.title}}} <span>{{{boilerplates.hero.subtitle}}}</span></h1>
+				<h1 class="evo-site-hero--hdr flipInY animated evo-no-margin-bottom" data-evo-site-hero-hdr-size="large">{{{boilerplates.hero.title}}} <span>{{{boilerplates.hero.subtitle}}}</span></h1>
 			</div>		
 		</div>
 	</section>
 <!-- HERO - ENDS -->
 
-<!-- PAGE CONTENT - BEGINS -->
-	<section class="evo-contain-to-grid">
-		<div class="small-12 columns evo-spacer-padding-top-xxx-large evo-spacer-padding-bottom-xxx-large">
-
-{{# markdown }}
-Available boilerplates
-***
-{{/ markdown }}
-
+<!-- DISTRIBUTIONS BAND - BEGINS -->
+	<section class="evo-full-width evo-site-band evo-site-band--marketing">
+		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
+			<h3 class="text-center evo-margin-left evo-margin-right">{{{boilerplates.distributions.header}}}</h3>
+			<ul class="small-block-grid-{{what.users.grid_small}} medium-block-grid-{{boilerplates.distributions.grid_medium}} large-block-grid-{{boilerplates.distributions.grid_large}} evo-site-band--marketing-block-grid">
+				<li class="text-center">
+					<i class="{{boilerplates.distributions.custom.icon_class}} evo-icon-size-x-large"></i>
+					<h5>{{{boilerplates.distributions.custom.header}}}</h5>
+					<p>{{{boilerplates.distributions.custom.text}}}</p>
+					<a href="{{boilerplates.distributions.custom.link}}" class="button radius evo-button evo-spacer-margin-bottom-small" role="button">{{{boilerplates.distributions.custom.link_text}}}</a>
+					<p class="evo-footnote"><small><a href="{{boilerplates.distributions.custom.details_link}}" target="_blank">Release Info</a></small></p>
+				</li>
+				<li class="text-center">
+					<i class="{{boilerplates.distributions.sass.icon_class}} evo-icon-size-x-large"></i>
+					<h5>{{{boilerplates.distributions.sass.header}}}</h5>
+					<p>{{{boilerplates.distributions.sass.text}}}</p>
+					<a href="https://github.com/uxuimercergroup/evolution-boilerplate-sass/archive/v{{package.version}}.zip" class="button radius evo-button evo-spacer-margin-bottom-small" role="button">{{{boilerplates.distributions.sass.link_text}}}</a>
+					<p class="evo-footnote"><small><a href="{{boilerplates.distributions.sass.details_link}}" target="_blank">Release Info</a></small></p>
+				</li>
+				<li class="text-center">
+					<i class="{{boilerplates.distributions.css.icon_class}} evo-icon-size-x-large"></i>
+					<h5>{{{boilerplates.distributions.css.header}}}</h5>
+					<p>{{{boilerplates.distributions.css.text}}}</p>
+					<a href="https://github.com/uxuimercergroup/evolution-boilerplate-css/archive/v{{package.version}}.zip" class="button radius evo-button evo-spacer-margin-bottom-small" role="button">{{{boilerplates.distributions.css.link_text}}}</a>
+					<p class="evo-footnote"><small><a href="{{boilerplates.distributions.css.details_link}}" target="_blank">Release Info</a></small></p>
+				</li>
+			</ul>
 		</div>
 	</section>
-<!-- PAGE CONTENT - ENDS -->
+<!-- DISTRIBUTIONS BAND - ENDS -->

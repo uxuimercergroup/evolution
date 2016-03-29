@@ -19,23 +19,14 @@
 		]
 	},
 
+	"product_suite_bp": "true",
+	"product_suite_comm": "false",
+
 	"data": {
 		"basic_stepper": {
-			"name": "Basic Stepper",
-			"multiple_example": "true",
-			"multiple_example_options": [
-				{"partial": "stepper", "slug": "basic-stepper"}
-			]
+			"name": "Basic",
+			"partial": "stepper",
+			"slug": "basic-stepper"
 		}
-	},
-
-	"settings_header": "",
-	"settings_data": [
-		{
-			"option": "",
-			"default_value": "",
-			"option_value": "",
-			"description": ""
-		}
-	]
+	}
 }

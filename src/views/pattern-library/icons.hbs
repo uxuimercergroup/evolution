@@ -11,7 +11,7 @@ title: "Icons"
 Evolution's icons use an icon Web font based primarily on the [IcoMoon](https://icomoon.io/) ultimate set. The icons available in [IcoMoon ultimate set](/pattern-library/icons-ultimate.html) have been narrowed to this core Evolution set. These should cover most icon needs, but if you can't find something to meet your specific needs, you can view the IcoMoon ultimate set to see a complete list of available icons. We continually add new icons to the core set from the IcoMoon ultimate set as they are required.
 {{/ markdown }}
 
-		{{> button href="#jumpToMenu" expand="true" text="Jump To Nav" custom-class="show-for-small-only tiny"}}
+		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
 			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
@@ -39,8 +39,8 @@ Evolution's icons use an icon Web font based primarily on the [IcoMoon](https://
 
 					<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate icons.icon_font_header}}">{{icons.icon_font_header}}</h6>
 					<a name="{{hyphenate icons.icon_font_header}}"></a>
-					<div class="evo-table-small-mediaquery">
-						<table class="evo-table evo-site-basic-icon-table" data-evo-data-table="evo-data-table-pattern-library-icons" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+					<div class="evo-table-small-mediaquery evo-site-icon-table-ctn">
+						<table class="evo-table evo-site-icon-table" data-evo-data-table="evo-data-table-pattern-library-icons" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
 							<thead>
 								<tr>
 									<th scope="column">Default</th>
@@ -151,19 +151,19 @@ Photo image icons should feel human, represent genuine objects, and follow the s
 					<p class="evo-no-margin">Career</p>
 					<div class="clearfix evo-spacer-margin-bottom-large">
 						{{#slice icons.photo_vector_icon_count limit="14"}}
-							<img src="/assets/images/core/icons/photo/career/photo_icon_career_{{this}}.png" width="80" height="80" class="left" alt="" title="" />
+							<img src="/assets/images/core/icons/photo/career/photo_icon_career_{{this}}.png" width="80" height="80" alt="" title="" />
 						{{/slice}}
 					</div>
 					<p class="evo-no-margin">Health</p>
 					<div class="clearfix evo-spacer-margin-bottom-large">
 						{{#slice icons.photo_vector_icon_count limit="18"}}
-							<img src="/assets/images/core/icons/photo/health/photo_icon_health_{{this}}.png" width="80" height="80" class="left" alt="" title="" />
+							<img src="/assets/images/core/icons/photo/health/photo_icon_health_{{this}}.png" width="80" height="80" alt="" title="" />
 						{{/slice}}
 					</div>
 					<p class="evo-no-margin">Wealth</p>
 					<div class="clearfix evo-spacer-margin-bottom-xxx-large">
 						{{#slice icons.photo_vector_icon_count limit="16"}}
-							<img src="/assets/images/core/icons/photo/wealth/photo_icon_wealth_{{this}}.png" width="80" height="80" class="left" alt="" title="" />
+							<img src="/assets/images/core/icons/photo/wealth/photo_icon_wealth_{{this}}.png" width="80" height="80" alt="" title="" />
 						{{/slice}}
 					</div>
 
@@ -178,19 +178,19 @@ Vector image icons gives the system more diverse use in digital and other applic
 					<p class="evo-no-margin">Career</p>
 					<div class="clearfix evo-spacer-margin-bottom-large">
 						{{#slice icons.photo_vector_icon_count limit="25"}}
-							<img src="/assets/images/core/icons/vector/career/vector_icon_career_{{this}}.png" width="80" height="80" class="left" alt="" title="" />
+							<img src="/assets/images/core/icons/vector/career/vector_icon_career_{{this}}.png" width="80" height="80" alt="" title="" />
 						{{/slice}}
 					</div>
 					<p class="evo-no-margin">Health</p>
 					<div class="clearfix evo-spacer-margin-bottom-large">
 						{{#slice icons.photo_vector_icon_count limit="16"}}
-							<img src="/assets/images/core/icons/vector/health/vector_icon_health_{{this}}.png" width="80" height="80" class="left" alt="" title="" />
+							<img src="/assets/images/core/icons/vector/health/vector_icon_health_{{this}}.png" width="80" height="80" alt="" title="" />
 						{{/slice}}
 					</div>
 					<p class="evo-no-margin">Wealth</p>
 					<div class="clearfix evo-spacer-margin-bottom-large">
 						{{#slice icons.photo_vector_icon_count limit="19"}}
-							<img src="/assets/images/core/icons/vector/wealth/vector_icon_wealth_{{this}}.png" width="80" height="80" class="left" alt="" title="" />
+							<img src="/assets/images/core/icons/vector/wealth/vector_icon_wealth_{{this}}.png" width="80" height="80" alt="" title="" />
 						{{/slice}}
 					</div>
 				</div>
@@ -303,7 +303,7 @@ Vector image icons gives the system more diverse use in digital and other applic
 											</li>
 										{{/is}}
 										{{#is icons.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.evolution.version}}</a>
+											<li><a href="/">Evolution {{package.version}}</a>
 											{{#if icons.dependency_data.evolution_dependencies}}
 												<ul>
 												{{#each icons.dependency_data.evolution_dependencies}}
