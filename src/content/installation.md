@@ -30,7 +30,7 @@ The Evolution Tool Box is installed on your system using the [generator-evolutio
 
 1. Install Node.js globally. NOTE: Node Package Manager (http://npmjs.org) will be installed globally when you install Node.js.
 	- Go to: http://nodejs.org
-	- Download the current version of Node.js. *Use the Mature and Dependable version*
+	- Download the current version of Node.js. *Use the LTS (Long Term Support) version*
 	- Install Node.js on your system.
 2. Use Node Package Manager (npm) to install the Evolution Tool Box generator globally. The Yo scaffolding tool will also be installed at this time.
 	- Open the command line interface (cli) or terminal (for Mac users)
