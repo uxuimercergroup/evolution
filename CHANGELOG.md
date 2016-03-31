@@ -2,6 +2,11 @@
 ## [Unreleased]
 -->
 
+## [3.0.3] - 2016-03-31
+
+##### Changed
+- Updated installation instructions for the Evolution Tool Box to clarify the correct version of Node.js to download and how to update to latest version of NPM
+
 ## [3.0.2] - 2016-03-17
 
 ##### Added
