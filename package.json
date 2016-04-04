@@ -22,7 +22,6 @@
     "product_suite": "core"
   },
   "devDependencies": {
-    "clipboard": "^1.5.5",
     "grunt": "~0.4.5",
     "grunt-assemble": "^0.4.0",
     "grunt-browser-sync": "^2.2.0",
@@ -43,7 +42,9 @@
     "load-grunt-config": "^0.19.1",
     "time-grunt": "^1.3.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "clipboard": "^1.5.10"
+  },
   "jquery_version": "2.1.4",
   "jquery_ui_version": "1.11.2",
   "foundation_version": "5.5.2",
