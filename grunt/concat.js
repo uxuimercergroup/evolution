@@ -16,7 +16,7 @@ module.exports = {
     },
     files: {
       'dist/assets/scripts/evolution.js': [
-        'src/assets/scripts/core/foundation/vendor/jquery.js',
+        'node_modules/jquery/dist/jquery.js',
         'src/assets/scripts/core/foundation/vendor/jquery.cookie.js',
         'src/assets/scripts/core/foundation/vendor/placeholder.js',
         'src/assets/scripts/core/foundation/vendor/fastclick.js',

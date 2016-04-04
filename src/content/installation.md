@@ -12,11 +12,12 @@ The Evolution Tool Box will:
 
 The Evolution Tool Box utilizes the following technologies:
 
-- Node.js (npm) Runtime Environment
-- Yo Scaffolding Generator
-- Grunt.js Task Runner
-- Handlebars.js Templating Engine
-- Sass CSS Preprocessor
+- Node.js - Runtime Environment
+- NPM - Package Manager
+- Yo - Scaffolding Generator
+- Grunt - Task Runner
+- Handlebars - Templating Engine
+- Sass - CSS Preprocessor
 
 **NOTE: Please refer to the [Evolution Tool Box wiki](https://github.com/uxuimercergroup/evolution/wiki/Evolution-Tool-Box) for the latest dependency versions that are in use by the Evolution Tool Box development enviroment.**
 
