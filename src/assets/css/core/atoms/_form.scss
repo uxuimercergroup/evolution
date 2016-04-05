@@ -203,31 +203,11 @@ $evo-form-input-error-radio-checkbox-label-font-color: $body-font-color !default
 	input[type="hidden"]							{display: none;}
 
 	// PLACEHOLDERS
-	
-	// Webkit
-	::-webkit-input-placeholder						{
-													color: $evo-form-placholder-font-color;
-													}
+	::placeholder									{color: $evo-form-placholder-font-color;}
 
-	// Firefox 4-18
-	:-moz-placeholder								{
-													color: $evo-form-placholder-font-color;
-													}
 
-	// Firefox 19+
-	::-moz-placeholder								{
-													color: $evo-form-placholder-font-color;
-													}
-
-	// IE10+
-	:-ms-input-placeholder							{
-													color: $evo-form-placholder-font-color !important;
-													}
-	
 	// IE9
-	.placeholder									{
-													color: $evo-form-placholder-font-color !important;
-													}
+	.placeholder									{color: $evo-form-placholder-font-color !important;}
 
 	// ABIDE VALIDATION
 	[data-abide]									{

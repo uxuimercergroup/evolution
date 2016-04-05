@@ -37,6 +37,10 @@ module.exports = {
     files: ['src/assets/css/**/*.scss', 'src/patterns/**/*.scss'],
     tasks: ['sass', 'notify:sass']
   },
+  postcss: {
+    files: ['src/assets/css/**/*.scss', 'src/patterns/**/*.scss'],
+    tasks: ['postcss', 'notify:postcss']
+  },
   scripts: {
     files: ['src/assets/scripts/**/*.js', 'src/patterns/**/*.js'],
     tasks: ['newer:concat:core', 'newer:concat:site', 'notify:concat']

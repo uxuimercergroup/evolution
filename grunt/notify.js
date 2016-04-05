@@ -72,6 +72,14 @@ module.exports = {
       title: 'Sass files preprocessed.',  // optional
       message: 'Sass files preprocessed successfully.' //required
     }
+  },
+
+  // PostCSS notification
+  postcss: {
+    options: {
+      title: 'CSS files autoprefixed.',  // optional
+      message: 'CSS files autoprefixed successfully.' //required
+    }
   }
 
 };

@@ -38,8 +38,6 @@ module.exports = {
         'src/assets/scripts/core/lib/jquery/plugins/datatables.foundation.js',
         'src/assets/scripts/core/lib/jquery/plugins/jquery.autosize.input.js',
         'src/assets/scripts/core/lib/jquery/plugins/jquery.maskedinput.js',
-        'src/assets/scripts/core/lib/jquery/plugins/jquery.mousewheel.js',
-        'src/assets/scripts/core/lib/jquery/plugins/jquery.mCustomScrollbar.js',
         'src/assets/scripts/core/lib/jquery/plugins/owl.carousel.js',
         'src/assets/scripts/core/lib/js/anijs/anijs.js',
         'src/assets/scripts/core/lib/js/anijs/anijs-helper-dom.js',
