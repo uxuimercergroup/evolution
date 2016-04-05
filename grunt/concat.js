@@ -60,7 +60,6 @@ module.exports = {
         'src/assets/scripts/core/molecules/datepicker.js',
         'src/assets/scripts/core/molecules/off_canvas.js',
         'src/assets/scripts/core/molecules/reveal.js',
-        'src/assets/scripts/core/molecules/scroll_pane.js',
         'src/assets/scripts/core/molecules/slider.js',
         'src/assets/scripts/core/molecules/tabs.js',
         'src/assets/scripts/core/molecules/tooltip.js',
