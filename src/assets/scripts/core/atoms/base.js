@@ -30,16 +30,3 @@
 
 	// Disabled Anchor Buttons Init
 	evoButtonDisabled();
-
-
-// FORMS
-//--------------------------------------------------------------------------------------------------------
-
-	// PLACEHOLDER ATTRIBUTE POLYFILL FOR IE9
-	var evoFormPlaceholderPolyFill = function(){
-		jQuery('input, textarea').placeholder();
-	}
-
-	// Placeholder Attribute Polyfill for IE9 Init
-	evoFormPlaceholderPolyFill();
-	
