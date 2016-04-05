@@ -12,10 +12,11 @@ The Evolution Tool Box will:
 
 The Evolution Tool Box utilizes the following technologies:
 
-- Node.js - Runtime Environment
+- Node - Runtime Environment
 - NPM - Package Manager
 - Yo - Scaffolding Generator
 - Grunt - Task Runner
+- Bower - Front-end Package Manager
 - Handlebars - Templating Engine
 - Sass - CSS Preprocessor
 
@@ -36,7 +37,14 @@ The Evolution Tool Box is installed on your system using the [generator-evolutio
 2. Update Node Package Manager (npm) to the latest version:
 	- Open the command line interface (cli) or terminal (for Mac users)
 	- Copy and paste this command into the cli/terminal: `sudo npm install npm -g`
-3. Use Node Package Manager (npm) to install the Evolution Tool Box generator globally. The Yo scaffolding tool will also be installed at this time.
+3. Install Bower front-end package manager:
+	- Open the command line interface (cli) or terminal (for Mac users)
+	- Copy and paste this command into the cli/terminal: `sudo npm install bower -g`
+4. Configure Git configuration to work on corporate proxy:
+	- Open the command line interface (cli) or terminal (for Mac users)
+	- Copy and paste this command into the cli/terminal: `git config --global url."https://".insteadOf git://`
+	- **This is important for Bower to install required front-end dependencies**
+5. Use Node Package Manager (npm) to install the Evolution Tool Box generator globally. The Yo scaffolding tool will also be installed at this time.
 	- Open the command line interface (cli) or terminal (for Mac users)
 	- Copy and paste this command into the cli/terminal: `npm login` 
 		- NOTE: If you have not already been assigned a username and password for the private Evolution npm registry, please contact Douglas Fraize at [douglas.fraize@mercer.com](mailto:douglas.fraize@mercer.com).
