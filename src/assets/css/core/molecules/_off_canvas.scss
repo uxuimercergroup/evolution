@@ -200,34 +200,4 @@ $evo-off-canvas-menu-right-back-icon-margin-left: 0 !default;
 
 									}
 
-// OFF-CANVAS IE9 FIXES
-.ie9								{
-
-	// IE9 does not understand 3d transforms so you have to use 2d transforms,
-	// uses modernizr css capablity classes injected in html tag as hooks for hack
-	&.csstransforms.no-csstransforms3d
-										{
-		.left-off-canvas-menu 				{@include translate(-100%, 0);}
-		.right-off-canvas-menu 				{@include translate(100%, 0);}
-
-		.move-left > .inner-wrap 			{@include translate(-($off-canvas-width),0);}
-		.move-right > .inner-wrap 			{@include translate($off-canvas-width,0);}
-
-		.left-submenu 						{
-											@include translate(-100%,0);
-			&.move-right,
-			&.offcanvas-overlap-right,
-			&.offcanvas-overlap 				{@include translate(0%,0);}
-											}
-
-		.right-submenu 						{
-											@include translate(100%,0);
-			&.move-left,
-			&.offcanvas-overlap-left,
-			&.offcanvas-overlap 				{@include translate(0%,0);}
-											}
-										}
-
-									}
-
 }// endif

@@ -10,7 +10,6 @@ module.exports = {
         'docs/**',
         'fonts/**',
         'images/**',
-        'scripts/core/foundation/vendor/modernizr.js',
         'scripts/lib/prism/prism.js'
       ],
       dest: 'dist/assets'
@@ -26,7 +25,6 @@ module.exports = {
         'docs/**',
         'fonts/**',
         'images/core/favicon.ico',
-        'scripts/core/foundation/vendor/modernizr.js',
         'scripts/lib/prism/prism.js'
       ],
       dest: 'dist/assets'
