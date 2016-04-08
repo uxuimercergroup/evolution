@@ -6,6 +6,14 @@
 // CORE SASS IMPORTS
 // ==========================================================================================
 
+/*
+SASS Org conversation model - need POC
+@import - evo global settings (_evo_global.scss);
+@import - foundation evo settings (copy of _settings.scss from foundation);
+@import - _evo_settings.scss to replace _variable_overrides;
+@import - node_modules/foundation-sites/scss/foundation;
+*/
+
 @import	"global/color_variables";
 
 @import	"foundation/normalize";
