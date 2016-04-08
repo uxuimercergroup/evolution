@@ -5,6 +5,7 @@
 ## [3.0.4] - 2016-04-06
 
 ##### Changed
+- Updated installation instructions for the Evolution Tool Box to explain how to get generator package from NPM.
 - Updated installation instructions for the Evolution Tool Box to clarify steps for the Windows install.
 
 ## [3.0.3] - 2016-03-31
