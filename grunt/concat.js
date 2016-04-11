@@ -15,21 +15,8 @@ module.exports = {
         '*/\n\n'
     },
     files: {
-      'dist/assets/scripts/evolution.js': [
+      'dist/assets/js/evolution.js': [
         'node_modules/jquery/dist/jquery.js',
-        'src/assets/scripts/core/foundation/foundation/foundation.js',
-        'src/assets/scripts/core/foundation/foundation/foundation.alert.js',
-        'src/assets/scripts/core/foundation/foundation/foundation.accordion.js',
-        'src/assets/scripts/core/foundation/foundation/foundation.abide.js',
-        'src/assets/scripts/core/foundation/foundation/foundation.dropdown.js',
-        'src/assets/scripts/core/foundation/foundation/foundation.equalizer.js',
-        'src/assets/scripts/core/foundation/foundation/foundation.magellan.js',
-        'src/assets/scripts/core/foundation/foundation/foundation.offcanvas.js',
-        'src/assets/scripts/core/foundation/foundation/foundation.reveal.js',
-        'src/assets/scripts/core/foundation/foundation/foundation.tab.js',
-        'src/assets/scripts/core/foundation/foundation/foundation.tooltip.js',
-        'src/assets/scripts/core/foundation/foundation/foundation.topbar.js',
-/*
         'node_modules/foundation-sites/js/foundation.core.js',
         'node_modules/foundation-sites/js/foundation.abide.js',
         'node_modules/foundation-sites/js/foundation.accordion.js',
@@ -58,7 +45,6 @@ module.exports = {
         'node_modules/foundation-sites/js/foundation.util.timerAndImageLoader.js',
         'node_modules/foundation-sites/js/foundation.util.touch.js',
         'node_modules/foundation-sites/js/foundation.util.trigger.js',
-*/
         'bower_components/jquery-ui/ui/core.js',
         'bower_components/jquery-ui/ui/widget.js',
         'bower_components/jquery-ui/ui/mouse.js',
@@ -70,38 +56,39 @@ module.exports = {
         'node_modules/jquery-ui-touch-punch/jquery.ui.touch-punch.js',
         'node_modules/datatables.net/js/jquery.dataTables.js',
         'node_modules/datatables.net-zf/js/dataTables.foundation.js',
-        'src/assets/scripts/core/lib/jquery/plugins/jquery.autosize.input.js',
-        'src/assets/scripts/core/lib/jquery/plugins/jquery.maskedinput.js',
-        'src/assets/scripts/core/lib/jquery/plugins/owl.carousel.js',
+        'src/assets/js/core/lib/jquery/plugins/jquery.autosize.input.js',
+        'src/assets/js/core/lib/jquery/plugins/jquery.maskedinput.js',
+        'src/assets/js/core/lib/jquery/plugins/owl.carousel.js',
         'bower_components/AniJS/dist/anijs.js',
         'bower_components/AniJS/dist/helpers/dom/anijs-helper-dom.js',
         'bower_components/AniJS/dist/helpers/scrollreveal/anijs-helper-scrollreveal.js',
         'bower_components/AniJS/dist/event_systems/jquery/anijs-jquery-event-system.js',
-        'src/assets/scripts/core/lib/mobile/ios-orientationchange-fix.js',
-        'src/assets/scripts/core/atoms/abide.js',
-        'src/assets/scripts/core/atoms/base.js',
-        'src/assets/scripts/core/atoms/dropdowns.js',
-        'src/assets/scripts/core/atoms/equalizer.js',
-        'src/assets/scripts/core/atoms/helpers.js',
-        'src/assets/scripts/core/molecules/accordion.js',
-        'src/assets/scripts/core/molecules/autocomplete.js',
-        'src/assets/scripts/core/molecules/carousel.js',
-        'src/assets/scripts/core/molecules/data_table.js',
-        'src/assets/scripts/core/molecules/datepicker.js',
-        'src/assets/scripts/core/molecules/off_canvas.js',
-        'src/assets/scripts/core/molecules/reveal.js',
-        'src/assets/scripts/core/molecules/slider.js',
-        'src/assets/scripts/core/molecules/tabs.js',
-        'src/assets/scripts/core/molecules/tooltip.js',
-        'src/assets/scripts/core/molecules/top_bar.js'
+        'src/assets/js/core/lib/mobile/ios-orientationchange-fix.js',
+        'src/assets/js/core/atoms/abide.js',
+        'src/assets/js/core/atoms/base.js',
+        'src/assets/js/core/atoms/dropdowns.js',
+        'src/assets/js/core/atoms/equalizer.js',
+        'src/assets/js/core/atoms/helpers.js',
+        'src/assets/js/core/molecules/accordion.js',
+        'src/assets/js/core/molecules/autocomplete.js',
+        'src/assets/js/core/molecules/carousel.js',
+        'src/assets/js/core/molecules/data_table.js',
+        'src/assets/js/core/molecules/datepicker.js',
+        'src/assets/js/core/molecules/off_canvas.js',
+        'src/assets/js/core/molecules/reveal.js',
+        'src/assets/js/core/molecules/slider.js',
+        'src/assets/js/core/molecules/tabs.js',
+        'src/assets/js/core/molecules/tooltip.js',
+        'src/assets/js/core/molecules/top_bar.js'
       ]
     }
   },
   site: {
     files: {
-      'dist/assets/scripts/site.js': [
+      'dist/assets/js/app.js': [
         'node_modules/clipboard/dist/clipboard.js',
-        'src/assets/scripts/site.js',
+        'src/assets/js/app/lib/prism/prism.js',
+        'src/assets/js/app.js',
         'src/patterns/organisms/**/*.js'
       ]
     }

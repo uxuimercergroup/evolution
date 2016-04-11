@@ -10,7 +10,7 @@ module.exports = {
         'docs/**',
         'fonts/**',
         'images/**',
-        'scripts/lib/prism/prism.js'
+        'js/app/**/*.js'
       ],
       dest: 'dist/assets'
       }
@@ -25,7 +25,7 @@ module.exports = {
         'docs/**',
         'fonts/**',
         'images/core/favicon.ico',
-        'scripts/lib/prism/prism.js'
+        'js/app/**/*.js'
       ],
       dest: 'dist/assets'
       }

@@ -9,11 +9,9 @@ URL: {{ evo_meta_url }}
 //
 // @core sass imports - IMPORTANT: DO NOT MODIFY!
 //
-@import	"../../../assets/css/core/global/color_variables";
-@import	"../../../assets/css/core/foundation/foundation/settings";
-@import	"../../../assets/css/core/global/variables";
-@import	"../../../assets/css/core/global/functions";
-@import	"../../../assets/css/core/global/mixins";
+@import	"../../../assets/scss/core/global";
+@import	"../../../assets/scss/core/foundation_settings";
+@import	"../../../assets/scss/core/settings";
 
 //
 // @variables - IMPORTANT: DO NOT MODIFY! MODIFY VARIABLE OVERRIDES ONLY.
