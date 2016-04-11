@@ -30,7 +30,7 @@ $use-large-only-mediaquery:					true !default; // 1025px - 1440px
 $use-xlarge-only-mediaquery:				true !default; // 1441px - 1920px
 $use-xxlarge-only-mediaquery:				true !default; // 1921px +
 
-// BASE SETTINGS
+// ATOM SETTINGS
 // ------------------------------------------------------------------------------------------
 $use-boxes:									true !default;
 $use-buttons:								true !default;
@@ -41,3 +41,25 @@ $use-icons:									true !default;
 $use-lists:									true !default;
 $use-tables:								true !default;
 $use-type:									true !default;
+
+// MOLECULE SETTINGS
+// ------------------------------------------------------------------------------------------
+$use-accordion:								true !default;
+$use-alert-boxes:							true !default;
+$use-autocomplete:							true !default;
+$use-badges:								true !default;
+$use-breadcrumbs:							true !default;
+$use-carousel:								true !default;
+$use-data-table:							true !default;
+$use-datepicker:							true !default;
+$use-dropdown-buttons:						true !default;
+$use-labels:								true !default;
+$use-off-canvas:							true !default;
+$use-pagination:							true !default;
+$use-progress-bar:							true !default;
+$use-reveal:								true !default;
+$use-slider:								true !default;
+$use-sub-nav:								true !default;
+$use-tabs:									true !default;
+$use-tooltip:								true !default;
+$use-top-bar:								true !default;
