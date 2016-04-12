@@ -46,14 +46,14 @@ $evo-icon-shield-font-color:				$white !default;
 	// ICON FONT AS LINKS
 	a[class^="evo-icon-"]					{
 											text-decoration: none !important;
-											color: $anchor-font-color;
+											color: $anchor-color;
 											cursor: pointer;
 											}
 
 	// ICON FONT WITH LINKS
 	a										{
 		[class^="evo-icon-"]					{
-												color: $anchor-font-color;
+												color: $anchor-color;
 												}
 		&:visited								{
 			[class^="evo-icon-"]					{
@@ -63,7 +63,7 @@ $evo-icon-shield-font-color:				$white !default;
 		&:hover,
 		&:focus									{
 			[class^="evo-icon-"]					{
-													color: $anchor-font-color-hover;
+													color: $anchor-color-hover;
 													}
 												}
 											}

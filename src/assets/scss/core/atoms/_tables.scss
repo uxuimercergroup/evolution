@@ -5,12 +5,6 @@
 //
 // @variables
 //
-$evo-table-border-size: $table-border-size !default;
-$evo-table-border-style: $table-border-style !default;
-$evo-table-border-color: $table-border-color !default;
-$evo-table-head-border-color: $table-border-color !default;
-$evo-table-head-font-family: $font-family-sans-serif !default;
-$evo-table-row-hover-color: $onyx-dark-10 !default;
 
 
 @if $use-tables == true{
@@ -26,21 +20,16 @@ $evo-table-row-hover-color: $onyx-dark-10 !default;
 
 	// TABLE BASE
 	.evo-table			{
-						min-width: ($small-breakpoint  + em-calc(1));
+						min-width: rem-calc(768);
 		th					{
-							border: $evo-table-border-size $evo-table-border-style $evo-table-head-border-color;
+							border: $table-border;
 							border-left: 0;
-							font-family: $evo-table-head-font-family !important;
 							font-weight: normal;
 							vertical-align: bottom;
-			&:first-child		{border-left: $evo-table-border-size $evo-table-border-style $evo-table-head-border-color;}
+			&:first-child		{border-left: $table-border;}
 							}
-		td					{border: $evo-table-border-size $evo-table-border-style $evo-table-border-color;}
+		td					{border: $table-border;}
 						}
-
-	// TABLE ROW HOVER
-	.evo-table-hover tbody tr:hover > td
-						{background-color: $evo-table-row-hover-color;}
 
 
 	//=== MEDIA QUERIES =========================================================================

@@ -6,20 +6,14 @@
 //--------------------------------------------------------------------------------------------------------
 
 // =======================================================================================================
-// JAVASCRIPT LIBRARIES
-// =======================================================================================================
-
-
-
-// =======================================================================================================
-// SITE FUNCTIONS AND INITIALIZATIONS
+// APPLICATION FUNCTIONS AND INITIALIZATIONS
 // =======================================================================================================
 
 // FUNCTIONS
 //--------------------------------------------------------------------------------------------------------
 
 
-	// SITE GLOBAL
+	// GLOBAL
 	//----------------------------------------------------------------------------------------------------
 
 		// SCROLL TO TOP
@@ -71,12 +65,12 @@
 			jQuery('[data-evo-data-table]').DataTable().draw();
 		}
 
-		// REFLOW/REDRAW ON TOGGLE OF PATTERN LIBRARY CONTENT TABS
-		var evoSitePatternLibTabsReflow = function(){
+		// REINIT ON TOGGLE OF PATTERN LIBRARY CONTENT TABS
+		var evoSitePatternLibTabsReInit = function(){
 			jQuery('.evo-site-tabs--pattern-library-tabs').on('toggled', function (event, tab) {
 
-				// Reflow equalizer on tab toggling, fixes bug with equalizer in hidden tabs
-			    $(document).foundation('equalizer', 'reflow');
+				// ReInit equalizer on tab toggling, fixes bug with equalizer in hidden tabs
+			    Foundation.reInit('equalizer');
 
 			    // Redraw type characters data table on tab toggling, fixes scrolling table fixed thead injected layout
 			    evoSiteDataTableRedraw();
@@ -84,32 +78,21 @@
 		}
 
 
-// DOCUMENT READY
+// INITIALIZE FOUNDATION
 //--------------------------------------------------------------------------------------------------------
 
-$(document).foundation({
+$(document).foundation();
 
-	// FOUNDATION INITIALIZATIONS
-	//----------------------------------------------------------------------------------------------------
-	
-		// FOUNDATION MAGELLAN OPTIONS
-		"magellan-expedition": {
-			active_class: 'active', // specify the class used for active sections
-			threshold: 0, // how many pixels until the magellan bar sticks, 0 = auto
-			destination_threshold: 40, // pixels from the top of destination for it to be considered active
-			throttle_delay: 50, // calculation throttling to increase framerate
-			fixed_top: 18, // top distance in pixels assigend to the fixed element on scroll
-			offset_by_height: false // whether to offset the destination by the expedition height. Usually you want this to be true, unless your expedition is on the side.
-		}
 
-});
+// DOCUMENT READY
+//--------------------------------------------------------------------------------------------------------
 
 $(function() {
 
 	// INITIALIZATIONS
 	//----------------------------------------------------------------------------------------------------
 
-		// SITE GLOBAL
+		// GLOBAL
 		//------------------------------------------------------------------------------------------------
 
 			// SCROLL TO TOP
@@ -141,8 +124,8 @@ $(function() {
 		// PATTERN LIBRARY PAGES
 		//------------------------------------------------------------------------------------------------
 
-			// REFLOW/REDRAW ON TOGGLE OF PATTERN LIBRARY CONTENT TABS
-			evoSitePatternLibTabsReflow();
+			// REINIT ON TOGGLE OF PATTERN LIBRARY CONTENT TABS
+			evoSitePatternLibTabsReInit();
 
 			// POSITION FIXED BY SCROLL
 			evoFixedByScroll('evo-magellan--side-nav', 230);

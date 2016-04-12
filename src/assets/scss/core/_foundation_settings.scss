@@ -46,7 +46,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(980);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #2199e8,
@@ -62,13 +62,13 @@ $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: $evo-font-regular-stack;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 0;
+$global-radius: 3px;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
@@ -128,7 +128,7 @@ $header-color: inherit;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
-$small-font-size: 80%;
+$small-font-size: rem-calc(12);
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
@@ -239,7 +239,7 @@ $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
-$button-color-alt: $black;
+$button-color-alt: $onyx-dark-70;
 $button-radius: $global-radius;
 $button-sizes: (
   tiny: 0.6rem,
@@ -349,7 +349,7 @@ $input-background: $white;
 $input-background-focus: $white;
 $input-background-disabled: $light-gray;
 $input-border: 1px solid $medium-gray;
-$input-border-focus: 1px solid $dark-gray;
+$input-border-focus: 1px solid $onyx-dark-40;
 $input-shadow: inset 0 1px 1px $onyx-dark-6;
 $input-shadow-focus: 0 0 5px $medium-gray;
 $input-cursor-disabled: not-allowed;
@@ -559,7 +559,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
+$topbar-background: $sapphire-dark;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;

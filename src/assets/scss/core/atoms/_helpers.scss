@@ -134,10 +134,10 @@ img										{
 // GRID WIDTH
 
 // CONTAIN TO GRID
-// Apply class to element to contain its width to the grid row max-width ($row-width, a foundation variable) and center it on the page.
+// Apply class to element to contain its width to the grid row max-width ($grid-row-width, a foundation variable) and center it on the page.
 .evo-contain-to-grid					{
 										@include clearfix;
-										max-width: $row-width !important;
+										max-width: $grid-row-width !important;
 										margin: 0 auto;
 										}
 

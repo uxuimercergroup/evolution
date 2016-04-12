@@ -5,6 +5,8 @@ AUTHOR: {{ meta_author }}
 URL: {{ meta_url }}
 --------------------------------------------------------------------------------------------*/
 
+@charset 'utf-8';
+
 // ===========================================================================================
 // CORE IMPORTS
 // ===========================================================================================
@@ -44,7 +46,7 @@ URL: {{ meta_url }}
 											background-color: #f5f2f0 !important;
 											border: 0 !important;
 											border-bottom: 0 !important;
-											border: 1px solid #E6E6E6 !important;
+											border: 1px solid #e6e6e6 !important;
 			.gist-data							{
 												background-color: $transparent;
 												border-bottom: 0;
@@ -733,7 +735,7 @@ URL: {{ meta_url }}
 												border-top: 1px solid $onyx-dark-10;
 												border-right: 1px solid $onyx-dark-10;
 												border-bottom: 1px solid $onyx-dark-10;
-												padding-top: rem-calc($evo-base-padding);
+												padding-top: $evo-base-padding;
 												text-align: center;
 			&:nth-child(2n)							{background-color: $onyx-dark-6;}
 			&:first-child							{border-left: 1px solid $onyx-dark-10;}

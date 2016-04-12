@@ -1,11 +1,11 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution v{{ evo_meta_version }} - Global Helper JS Functions
+// Mercer Evolution v{{ evo_meta_version }} - Helpers JS Functions
 // DATE: {{ evo_meta_date }}
 // AUTHOR: {{ evo_meta_author }}
 // URL: {{ evo_meta_url }}
 //--------------------------------------------------------------------------------------------------------
 
-// FORM
+// FORM HELPERS
 //--------------------------------------------------------------------------------------------------------
 
 	// NUMERIC MASK FOR INPUT - Text input only accepts numbers
@@ -38,7 +38,7 @@
 	evoAutofocus();
 
 
-// INTERACTIVE
+// INTERACTIVE HELPERS
 //--------------------------------------------------------------------------------------------------------
 
 	// SELECT ALL CHECKBOXES TOGGLE

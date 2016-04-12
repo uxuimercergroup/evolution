@@ -72,17 +72,17 @@ $use-top-bar:								true;
 
 // BASE VARIABLES
 
-	// LAYOUT
-	// $evo-base-margin:					rem-calc(14);
-	// $evo-base-padding:					rem-calc(14);
+// LAYOUT
+// $evo-base-margin:						rem-calc(14);
+// $evo-base-padding:						rem-calc(14);
 
-	// SHADOWS
-	// $evo-base-shadow-base-color: 		$black;
-	// $evo-base-shadow-horizontal: 		0;
-	// $evo-base-shadow-vertical: 			rem-calc(3);
-	// $evo-base-shadow-blur: 				rem-calc(5);
-	// $evo-base-shadow-spread: 			0;
-	// $evo-base-shadow-color:				rgba($black, .25);
+// SHADOWS
+// $evo-base-shadow-base-color: 			$black;
+// $evo-base-shadow-horizontal: 			0;
+// $evo-base-shadow-vertical: 				rem-calc(3);
+// $evo-base-shadow-blur: 					rem-calc(5);
+// $evo-base-shadow-spread: 				0;
+// $evo-base-shadow-color:					rgba($black, .25);
 
 // Z-INDEX MASTER LIST
 // Used for a bird's eye view of components dependent on the z-axis
@@ -96,6 +96,7 @@ $use-top-bar:								true;
 // ------------------------------------------------------------------------------------------
 
 // BASE FONTS
+$evo-base-font-family:						$body-font-family;
 // $evo-base-font-stack:					arial, Tahoma, Geneva, sans-serif;
 // $evo-base-font-file-path:				"../fonts";
 
@@ -166,8 +167,8 @@ $use-top-bar:								true;
 // BUTTONS
 // ------------------------------------------------------------------------------------------
 // $evo-button-min-width: 					rem-calc(120);
-// $evo-button-font-color-visited:			$button-font-color;
-// $evo-button-font-color-alt-visited: 		$button-font-color-alt;
+// $evo-button-font-color-visited:			$button-color;
+// $evo-button-font-color-alt-visited: 		$button-color-alt;
 // $evo-button-group-stacked-border-color: 	rgba($white, .5);
 
 
@@ -181,7 +182,7 @@ $use-top-bar:								true;
 // $evo-form-input-hover-border-color: 		$onyx-dark-40;
 $evo-form-input-hover-background-color: 	$white;
 // $evo-form-input-radio-checkbox-margin-bottom: rem-calc(18);
-// $evo-form-input-radio-checkbox-label-font-family: $font-family-sans-serif;
+// $evo-form-input-radio-checkbox-label-font-family: $evo-base-font-family;
 // $evo-form-placholder-font-color: 		$onyx-dark-10;
 // $evo-form-input-error-font-color: 		$alert-color;
 // $evo-form-input-error-border-color: 		$alert-color;
@@ -229,16 +230,14 @@ $evo-form-input-hover-background-color: 	$white;
 
 // TABLES
 // ------------------------------------------------------------------------------------------
-// $evo-table-border-size: 					$table-border-size;
-// $evo-table-border-style: 				$table-border-style;
-// $evo-table-border-color: 				$table-border-color;
-// $evo-table-head-border-color: 			$table-border-color;
-// $evo-table-head-font-family: 			$font-family-sans-serif;
-// $evo-table-row-hover-color: 				$onyx-dark-14;
+
 
 
 // TYPOGRAPHY
 // ------------------------------------------------------------------------------------------
+
+// SMALL TEXT
+$evo-small-font-color: 						$onyx-dark-50;
 
 // TEXT SELECTION
 // $evo-text-selection-text-color: 			$white;
@@ -272,7 +271,7 @@ $evo-form-input-hover-background-color: 	$white;
 // $evo-accordion-icon-font-family: 		$evo-icon-font-stack;
 // $evo-accordion-icon-open-icon: 			'\ed5c';
 // $evo-accordion-icon-close-icon: 			'\ed5d';
-// $evo-accordion-icon-font-color: 			$accordion-navigation-font-color;
+// $evo-accordion-icon-font-color: 			$accordion-item-color;
 
 
 // ALERT BOXES
@@ -303,7 +302,7 @@ $evo-form-input-hover-background-color: 	$white;
 
 // BADGES
 // ------------------------------------------------------------------------------------------
-// $evo-badge-border-radius: 				$global-rounded;
+// $evo-badge-border-radius: 				rem-calc(1000);
 // $evo-badge-shadow-horizontal: 			0;
 // $evo-badge-shadow-vertical: 				rem-calc(1);
 // $evo-badge-shadow-blur: 					rem-calc(2);
@@ -357,7 +356,7 @@ $evo-form-input-hover-background-color: 	$white;
 // BASE
 // $evo-data-table-wrapper-margin-bottom: 	rem-calc(20);
 // $evo-data-table-tool-label-color: 		$onyx-dark-50;
-// $evo-data-table-tool-label-font-family: 	$font-family-sans-serif;
+// $evo-data-table-tool-label-font-family: 	$evo-base-font-family;
 // $evo-data-table-info-font-size: 			rem-calc(14);
 // $evo-data-table-entries-select-width: 	rem-calc(75);
 // $evo-data-table-margin: 					rem-calc(8) 0;
@@ -369,10 +368,10 @@ $evo-form-input-hover-background-color: 	$white;
 // $evo-data-table-sort-icon-asc-icon: 		'\edc4';
 // $evo-data-table-sort-icon-desc-icon: 	'\edc6';
 // $evo-data-table-sort-icons-disabled-color: $onyx-dark-30;
-// $evo-data-table-column-sorted-odd-row: 	scale-color($table-bg, $lightness: -5%);
-// $evo-data-table-column-sorted-odd-row-hover: scale-color($table-bg, $lightness: -10%);
-// $evo-data-table-column-sorted-even-row: 	scale-color($table-even-row-bg, $lightness: -5%);
-// $evo-data-table-column-sorted-even-row-hover: scale-color($table-even-row-bg, $lightness: -10%);
+// $evo-data-table-column-sorted-odd-row: scale-color($table-background, $lightness: 5%);
+// $evo-data-table-column-sorted-odd-row-hover: scale-color($table-background, $lightness: 10%);
+// $evo-data-table-column-sorted-even-row: $table-striped-background;
+// $evo-data-table-column-sorted-even-row-hover: scale-color($table-striped-background, $lightness: 10%);
 
 // ADD-ONS (EVO ONLY)
 // $evo-data-table-total-subtotal-font-family: $evo-font-medium-stack;
@@ -417,7 +416,7 @@ $evo-form-input-hover-background-color: 	$white;
 // $evo-datepicker-disabled-border-size: 	1px;
 // $evo-datepicker-disabled-border-style: 	solid;
 // $evo-datepicker-disabled-border-color: 	$onyx-dark-6;
-// $evo-datepicker-message-font-family: 	$font-family-sans-serif;
+// $evo-datepicker-message-font-family: 	$evo-base-font-family;
 // $evo-datepicker-message-font-size: 		$small-font-size;
 // $evo-datepicker-message-line-height: 	1.2;
 // $evo-datepicker-message-font-color: 		$onyx-dark-70;
@@ -442,15 +441,15 @@ $evo-form-input-hover-background-color: 	$white;
 // OFF-CANVAS
 // ------------------------------------------------------------------------------------------
 // $evo-off-canvas-tab-bar-menu-icon-font-size: rem-calc(24);
-// $evo-off-canvas-tab-bar-menu-icon-color: $tabbar-menu-icon-color;
+// $evo-off-canvas-tab-bar-menu-icon-color: $white;
 // $evo-off-canvas-tab-bar-menu-icon-position-top: 5px;
 // $evo-off-canvas-tab-bar-menu-icon-position-left: 15px;
-// $evo-off-canvas-tab-bar-menu-icon-hover-color: $tabbar-menu-icon-hover;
-// $evo-off-canvas-tab-bar-header-font-family: $font-family-sans-serif;
+// $evo-off-canvas-tab-bar-menu-icon-hover-color: $white;
+// $evo-off-canvas-tab-bar-header-font-family: $evo-base-font-family;
 // $evo-off-canvas-tab-bar-header-letter-spacing: rem-calc(3);
 // $evo-off-canvas-tab-bar-header-anchor-color: $tabbar-header-color;
 // $evo-off-canvas-tab-bar-header-image-margin: rem-calc(-3 0 0 0);
-// $evo-off-canvas-menu-label-font-family: 	$font-family-sans-serif;
+// $evo-off-canvas-menu-label-font-family: 	$evo-base-font-family;
 // $evo-off-canvas-menu-label-letter-spacing: rem-calc(3);
 // $evo-off-canvas-menu-anchor-font-size: 	rem-calc(16);
 // $evo-off-canvas-menu-anchor-line-height: 1.25;
@@ -565,22 +564,22 @@ $evo-form-input-hover-background-color: 	$white;
 // $evo-top-bar-anchor-decoration: 			none;
 // $evo-top-bar-title-area-image-position-top: -2px;
 // $evo-top-bar-title-area-image-position-left: -7px;
-// $evo-top-bar-title-area-name-font-family: $font-family-sans-serif;
+// $evo-top-bar-title-area-name-font-family: $evo-base-font-family;
 // $evo-top-bar-title-area-name-letter-spacing: rem-calc(3);
-// $evo-top-bar-title-area-name-font-color: scale-color($topbar-bg-color, $lightness: 100%);
-// $evo-top-bar-title-area-name-link-color: scale-color($topbar-bg-color, $lightness: 100%);
-// $evo-top-bar-title-area-sub-name-font-family: $font-family-sans-serif;
+// $evo-top-bar-title-area-name-font-color: scale-color($topbar-background, $lightness: 100%);
+// $evo-top-bar-title-area-name-link-color: scale-color($topbar-background, $lightness: 100%);
+// $evo-top-bar-title-area-sub-name-font-family: $evo-base-font-family;
 // $evo-top-bar-section-anchor-icon-margin-top: -1px;
 // $evo-top-bar-section-anchor-icon-padding-right: rem-calc(18);
 // $evo-top-bar-section-anchor-icon-padding-left: rem-calc(18);
 // $evo-top-bar-section-anchor-icon-font-size: rem-calc(24);
-// $evo-top-bar-section-anchor-icon-color: 	$topbar-link-color;
-// $evo-top-bar-section-anchor-hover-icon-color: $topbar-link-color-hover;
-// $evo-top-bar-section-anchor-active-icon-color: $topbar-link-color-active;
+$evo-top-bar-section-anchor-icon-color: 	#78BDDC;
+// $evo-top-bar-section-anchor-hover-icon-color: $white;
+// $evo-top-bar-section-anchor-active-icon-color: $white;
 $evo-top-bar-section-dropdown-active-background-color: $sapphire-medium;
 // $evo-top-bar-section-dropdown-label-padding-bottom: rem-calc(8);
 // $evo-top-bar-section-dropdown-border-radius: 0 0 $global-radius $global-radius;
-// $evo-top-bar-section-dropdown-anchor-active-background-color: $topbar-link-bg-active;
+$evo-top-bar-section-dropdown-anchor-active-background-color: #224F90;
 // $evo-top-bar-section-dropdown-box-shadow-horizontal: $evo-base-shadow-horizontal;
 // $evo-top-bar-section-dropdown-box-shadow-vertical: $evo-base-shadow-vertical;
 // $evo-top-bar-section-dropdown-box-shadow-blur: $evo-base-shadow-blur;

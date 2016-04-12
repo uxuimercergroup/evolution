@@ -42,9 +42,6 @@ module.exports = {
     ]
   },
   patterns: {
-    options: {
-      loadPath: false
-    },
     files: [
       {
       expand: true,

@@ -9,7 +9,7 @@
 // Data table base
 $evo-data-table-wrapper-margin-bottom: rem-calc(20) !default;
 $evo-data-table-tool-label-color: $onyx-dark-50 !default;
-$evo-data-table-tool-label-font-family: $font-family-sans-serif !default;
+$evo-data-table-tool-label-font-family: $evo-base-font-family !default;
 $evo-data-table-info-font-size: rem-calc(14) !default;
 $evo-data-table-entries-select-width: rem-calc(75) !default;
 $evo-data-table-margin: rem-calc(8) 0 !default;
@@ -21,10 +21,10 @@ $evo-data-table-sort-icon-both-icon: '\ee38' !default;
 $evo-data-table-sort-icon-asc-icon: '\edc4' !default;
 $evo-data-table-sort-icon-desc-icon: '\edc6' !default;
 $evo-data-table-sort-icons-disabled-color: $onyx-dark-30 !default;
-$evo-data-table-column-sorted-odd-row: scale-color($table-bg, $lightness: -5%) !default;
-$evo-data-table-column-sorted-odd-row-hover: scale-color($table-bg, $lightness: -10%) !default;
-$evo-data-table-column-sorted-even-row: scale-color($table-even-row-bg, $lightness: -5%) !default;
-$evo-data-table-column-sorted-even-row-hover: scale-color($table-even-row-bg, $lightness: -10%) !default;
+$evo-data-table-column-sorted-odd-row: scale-color($table-background, $lightness: 5%) !default;
+$evo-data-table-column-sorted-odd-row-hover: scale-color($table-background, $lightness: 10%) !default;
+$evo-data-table-column-sorted-even-row: $table-striped-background !default;
+$evo-data-table-column-sorted-even-row-hover: scale-color($table-striped-background, $lightness: 10%) !default;
 
 // Data table add-ons (Evo only)
 $evo-data-table-total-subtotal-font-family: $evo-font-medium-stack !default;
@@ -172,7 +172,7 @@ $evo-data-table-total-font-color: $black !default;
 
 	// DATA TABLE SCROLLING
 	.dataTables_scroll	{
-						min-width: ($small-breakpoint  + em-calc(1));
+						min-width: rem-calc(768);
 		.dataTables_scrollBody
 							{
 							overflow-x: hidden !important;

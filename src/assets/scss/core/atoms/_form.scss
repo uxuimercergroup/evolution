@@ -12,7 +12,7 @@ $evo-form-input-margin-top: rem-calc(3) !default;
 $evo-form-input-hover-border-color: $onyx-dark-40 !default;
 $evo-form-input-hover-background-color: $white !default;
 $evo-form-input-radio-checkbox-margin-bottom: rem-calc(18) !default;
-$evo-form-input-radio-checkbox-label-font-family: $font-family-sans-serif !default;
+$evo-form-input-radio-checkbox-label-font-family: $evo-base-font-family !default;
 $evo-form-placholder-font-color: $onyx-dark-10 !default;
 $evo-form-input-error-font-color: $alert-color !default;
 $evo-form-input-error-border-color: $alert-color !default;
@@ -35,32 +35,11 @@ $evo-form-input-error-radio-checkbox-label-font-color: $body-font-color !default
 
 		// FORM HELP TEXT
 		.evo-form-help									{
-			input[type="text"],
-			input[type="text"][readonly],
-			input[type="password"],
-			input[type="datetime"],
-			input[type="datetime-local"],
-			input[type="date"],
-			input[type="month"],
-			input[type="time"],
-			input[type="week"],
-			input[type="number"],
-			input[type="email"],
-			input[type="url"],
-			input[type="search"],
-			input[type="tel"],
-			input[type="color"],
-			select,
-			textarea,
-			input[type="radio"],
-			input[type="checkbox"]							{margin-bottom: 0;}
 			.evo-form-help-text								{
 															display: block;
-															padding: $input-error-message-padding;
-															margin-top: $input-error-message-top;
 															margin-bottom: $form-spacing;
 															font-size: $small-font-size !important;
-															color: $small-font-color;
+															color: $evo-small-font-color;
 															}
 			&.error											{
 				.evo-form-help-text								{display: none;}
@@ -175,15 +154,8 @@ $evo-form-input-error-radio-checkbox-label-font-color: $body-font-color !default
 														}
 		&:focus											{
 														outline: 0;
-														border-color: $input-focus-border-color !important;
+														border: $input-border-focus !important;
 														}
-													}
-
-	// SELECTS
-	select											{
-													@if $input-include-glowing-effect {
-														@include block-glowing-effect(focus, $glowing-effect-fade-time, $glowing-effect-color);
-													}
 													}
 
 	// RADIO BUTTONS AND CHECKBOXES

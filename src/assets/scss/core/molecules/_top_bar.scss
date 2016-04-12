@@ -18,22 +18,22 @@ $evo-top-bar-icon-site-font-family: $evo-icon-site-font-stack !default;
 $evo-top-bar-anchor-decoration: none !default;
 $evo-top-bar-title-area-image-position-top: -2px !default;
 $evo-top-bar-title-area-image-position-left: -7px !default;
-$evo-top-bar-title-area-name-font-family: $font-family-sans-serif !default;
+$evo-top-bar-title-area-name-font-family: $evo-base-font-family !default;
 $evo-top-bar-title-area-name-letter-spacing: rem-calc(3) !default;
-$evo-top-bar-title-area-name-font-color: scale-color($topbar-bg-color, $lightness: 100%) !default;
-$evo-top-bar-title-area-name-link-color: scale-color($topbar-bg-color, $lightness: 100%) !default;
-$evo-top-bar-title-area-sub-name-font-family: $font-family-sans-serif !default;
+$evo-top-bar-title-area-name-font-color: scale-color($topbar-background, $lightness: 100%) !default;
+$evo-top-bar-title-area-name-link-color: scale-color($topbar-background, $lightness: 100%) !default;
+$evo-top-bar-title-area-sub-name-font-family: $evo-base-font-family !default;
 $evo-top-bar-section-anchor-icon-margin-top: -1px !default;
 $evo-top-bar-section-anchor-icon-padding-right: rem-calc(18) !default;
 $evo-top-bar-section-anchor-icon-padding-left: rem-calc(18) !default;
 $evo-top-bar-section-anchor-icon-font-size: rem-calc(24) !default;
-$evo-top-bar-section-anchor-icon-color: $topbar-link-color !default;
-$evo-top-bar-section-anchor-hover-icon-color: $topbar-link-color-hover !default;
-$evo-top-bar-section-anchor-active-icon-color: $topbar-link-color-active !default;
-$evo-top-bar-section-dropdown-active-background-color: scale-color($topbar-bg-color, $lightness: 40%) !default;
+$evo-top-bar-section-anchor-icon-color: $white !default;
+$evo-top-bar-section-anchor-hover-icon-color: $white !default;
+$evo-top-bar-section-anchor-active-icon-color: $white !default;
+$evo-top-bar-section-dropdown-active-background-color: scale-color($topbar-background, $lightness: 40%) !default;
 $evo-top-bar-section-dropdown-label-padding-bottom: rem-calc(8) !default;
 $evo-top-bar-section-dropdown-border-radius: 0 0 $global-radius $global-radius !default;
-$evo-top-bar-section-dropdown-anchor-active-background-color: $topbar-link-bg-active !default;
+$evo-top-bar-section-dropdown-anchor-active-background-color: $primary-color !default;
 $evo-top-bar-section-dropdown-box-shadow-horizontal: $evo-base-shadow-horizontal !default;
 $evo-top-bar-section-dropdown-box-shadow-vertical: $evo-base-shadow-vertical !default;
 $evo-top-bar-section-dropdown-box-shadow-blur: $evo-base-shadow-blur !default;
@@ -74,9 +74,9 @@ $evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
 					.name							{
 						a								{
 														display: block;
-														line-height: $topbar-height;
-														padding-left: $topbar-link-padding;
-														padding-right: $topbar-link-padding;
+														line-height: rem-calc(55);
+														padding-left: (rem-calc(55) / 2.5);
+														padding-right: (rem-calc(55) / 2.5);
 														}
 						img								{
 														position: relative;
@@ -242,10 +242,10 @@ $evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
 											a								{
 																			@include border-radius(0);
 																			background: none;
-																			color: $anchor-font-color;
+																			color: $anchor-color;
 												&:hover							{
 																				background: none;
-																				color: $anchor-font-color-hover;
+																				color: $anchor-color-hover;
 																				}
 																			}
 																		}
@@ -255,11 +255,11 @@ $evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
 																padding: 0;
 																line-height: 1.5;
 																background: none;
-																color: $anchor-font-color;
+																color: $anchor-color;
 																text-decoration: $anchor-text-decoration;
 										&:hover						{
 																	background: none;
-																	color: $anchor-font-color-hover;
+																	color: $anchor-color-hover;
 																	text-decoration: $anchor-text-decoration-hover;
 																	}
 																}
