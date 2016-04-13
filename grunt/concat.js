@@ -17,6 +17,7 @@ module.exports = {
     files: {
       'dist/assets/js/evolution.js': [
         'node_modules/jquery/dist/jquery.js',
+        'node_modules/what-input/what-input.js',
         'node_modules/foundation-sites/js/foundation.core.js',
         'node_modules/foundation-sites/js/foundation.util.mediaQuery.js',
         'node_modules/foundation-sites/js/foundation.abide.js',
