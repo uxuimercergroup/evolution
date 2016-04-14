@@ -1,5 +1,5 @@
 ##### General
-Tables are an element meant to organize data on a page. Evolution Core tables depend on Foundation's [Tables](http://foundation.zurb.com/sites/docs/v/5.5.3/components/tables.html) as a starting point and extend them out to cover Evolution Design Principles.
+Tables are an element meant to organize data on a page. Evolution Core tables depend on Foundation's [Tables](http://foundation.zurb.com/sites/docs/tables.html) as a starting point and extend them out to cover Evolution Design Principles.
 
 Some general considerations when use tables:
 * Use the Static Data Table when you want to organize data that the user doesn’t need to interact with.

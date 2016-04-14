@@ -87,13 +87,13 @@ img										{
 // Use on elememts which need a keyline on the right
 .evo-keyline-right						{
 										border-right: 1px solid $evo-keyline-right-border-right-color;
-	img										{margin-top: rem-calc(4);}
+	> img									{margin-top: rem-calc(4);}
 										}
 
 // Use on elements which need a keyline on the left
 .evo-keyline-left						{
 										border-left: 1px solid $evo-keyline-left-border-left-color;
-	img										{margin-top: rem-calc(4);}
+	> img									{margin-top: rem-calc(4);}
 										}
 
 
