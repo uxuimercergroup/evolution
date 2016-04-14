@@ -71,6 +71,17 @@ URL: {{ meta_url }}
 
 /*--- SITE GLOBAL --------------------------------------------------------------------------*/
 
+// LAYOUTS - BEGINS
+	
+	// MAIN BODY SECTION
+	[role="main"]						{
+		@include breakpoint(large)			{
+											min-height: $evo-site-main-section-min-height;
+											}
+										}
+
+// LAYOUTS - ENDS
+
 // HELPERS - BEGINS
 
 	// VISIBILITY
@@ -117,10 +128,35 @@ URL: {{ meta_url }}
 
 		// OFF CANVAS
 		.evo-tab-bar-sub-name				{font-family: $evo-site-header-sub-name-font-family;}
+
+		@include breakpoint(large)			{
+			
+			// TOP BAR
+			.evo-top-bar						{
+				.title-area							{
+					.name								{
+						h1									{
+							.evo-top-bar-sub-name				{font-family: $evo-site-header-sub-name-font-family;}
+															}
+														}
+													}
+				.top-bar-section					{
+					ul									{
+						li									{
+							> .evo-site-header--cta-whats-new	{
+								[class^="evo-icon-"]				{left: 0;}
+																}
+															}
+														}
+													}
+												}
+											}
+
 										}
 // HEADER - ENDS
 
 // TYPE - BEGINS
+
 	@media screen and #{breakpoint(small only)}
 										{
 		// HEADERS
@@ -130,6 +166,14 @@ URL: {{ meta_url }}
 		h4									{font-size: $evo-site-h4-font-size-small;}
 		h5									{font-size: $evo-site-h5-font-size-small;}
 		h6									{font-size: $evo-site-h6-font-size-small;}
+										}
+	
+	// PULL OUT
+	.evo-site-pull-out					{
+		@include breakpoint(medium)			{
+											padding: rem-calc(10 0 10 20);
+											border-color: $evo-site-pull-out-border-color;
+											}
 										}
 // TYPE - ENDS
 
@@ -183,6 +227,22 @@ URL: {{ meta_url }}
 												top: -14px;
 												}
 											}
+
+		@include breakpoint(medium)			{
+											height: ($evo-site-hero-height*6);
+			&[data-evo-site-hero-size="x-large"]{height: ($evo-site-hero-height*4);}
+			&[data-evo-site-hero-size="xx-large"]{height: ($evo-site-hero-height*5);}
+			&[data-evo-site-hero-size="3x-large"]{height: ($evo-site-hero-height*6);}
+											}
+
+		@include breakpoint(large)			{
+											height: ($evo-site-hero-height*8);
+			&[data-evo-site-hero-size="4x-large"]{height: ($evo-site-hero-height*7);}
+			&[data-evo-site-hero-size="5x-large"]{height: ($evo-site-hero-height*8);}
+			&[data-evo-site-hero-size="6x-large"]{height: ($evo-site-hero-height*9);}
+			&[data-evo-site-hero-size="7x-large"]{height: ($evo-site-hero-height*10);}
+											}
+
 										}
 
 	// HERO HEADER
@@ -199,15 +259,87 @@ URL: {{ meta_url }}
 										margin-bottom: $evo-site-hero-hdr-margin-bottom;
 										display: inline-block;
 		span								{font-family: $evo-site-hero-hdr-sub-name-font-family;}
+
+		@include breakpoint(medium only)	{
+			&[data-evo-site-hero-hdr-size="small"]
+												{
+												font-size: $evo-site-hero-hdr-font-size;
+												line-height: $evo-site-hero-hdr-line-height;
+												letter-spacing: $evo-site-hero-hdr-letter-spacing;
+												padding: $evo-site-hero-hdr-padding;
+												}
+			&[data-evo-site-hero-hdr-size="medium"]
+												{
+												font-size: ($evo-site-hero-hdr-font-size*1.5);
+												line-height: ($evo-site-hero-hdr-font-size*1.75);
+												letter-spacing: $evo-site-hero-hdr-letter-spacing;
+												padding: $evo-site-hero-hdr-padding;
+												}
+			&[data-evo-site-hero-hdr-size="large"]
+												{
+												font-size: ($evo-site-hero-hdr-font-size*2);
+												line-height: ($evo-site-hero-hdr-font-size*2.25);
+												letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
+												padding: $evo-site-hero-hdr-padding-medium;
+												}
+			&[data-evo-site-hero-hdr-size="x-large"]
+												{
+												font-size: ($evo-site-hero-hdr-font-size*3);
+												line-height: ($evo-site-hero-hdr-font-size*3.25);
+												letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
+												padding: $evo-site-hero-hdr-padding-medium;
+												}								
+											}
+
+		@include breakpoint(large)			{
+			&[data-evo-site-hero-hdr-size="small"]
+												{
+												font-size: $evo-site-hero-hdr-font-size;
+												line-height: $evo-site-hero-hdr-line-height;
+												letter-spacing: $evo-site-hero-hdr-letter-spacing;
+												padding: $evo-site-hero-hdr-padding;
+												}
+			&[data-evo-site-hero-hdr-size="medium"]
+												{
+												font-size: ($evo-site-hero-hdr-font-size*2);
+												line-height: ($evo-site-hero-hdr-font-size*2.25);
+												letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
+												padding: $evo-site-hero-hdr-padding-medium;
+												}
+			&[data-evo-site-hero-hdr-size="large"]
+												{
+												font-size: ($evo-site-hero-hdr-font-size*3);
+												line-height: ($evo-site-hero-hdr-font-size*3.25);
+												letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
+												padding: $evo-site-hero-hdr-padding-medium;
+												}
+			&[data-evo-site-hero-hdr-size="x-large"]
+												{
+												font-size: ($evo-site-hero-hdr-font-size*4);
+												line-height: ($evo-site-hero-hdr-font-size*4.1);
+												letter-spacing: $evo-site-hero-hdr-letter-spacing-large;
+												padding: $evo-site-hero-hdr-padding-large;
+												}
+											}
+
 										}
 
 	// HERO TAGLINE
 	.evo-site-hero--tagline				{
 										color: $evo-site-hero-tagline-color;
 										font-family: $evo-site-hero-tagline-font-family !important;
+
 		@include breakpoint(small only)		{
 											font-size: $evo-site-hero-tagline-font-size-small;
 											max-width: $evo-site-hero-tagline-max-width-small;
+											}
+
+		@include breakpoint(medium)			{
+											max-width: $evo-site-hero-tagline-max-width-medium;
+											}
+
+		@include breakpoint(large)			{
+											max-width: $evo-site-hero-tagline-max-width-large;
 											}
 										}
 // HERO - ENDS
@@ -252,7 +384,14 @@ URL: {{ meta_url }}
 // BANDS - BEGINS
 	
 	// DEFAULT BAND
-	.evo-site-band						{padding: $evo-site-band-padding;}
+	.evo-site-band						{
+										padding: $evo-site-band-padding;
+
+		@include breakpoint(medium)			{
+											padding: $evo-site-band-padding-medium;
+											}
+
+										}
 
 	// MARKETING BAND
 	.evo-site-band--marketing-ctn		{background-color: $evo-site-band-marketing-background-color;}
@@ -293,6 +432,15 @@ URL: {{ meta_url }}
 													}
 												}
 
+			@include breakpoint(medium)			{
+				h3									{margin-bottom: $evo-site-band-marketing-h3-margin-bottom-medium;}
+				h6									{margin-bottom: $evo-site-band-marketing-h6-margin-bottom-medium;}
+				.evo-site-band--marketing-block-grid
+													{
+					h5									{margin-top: $evo-site-band-marketing-block-grid-h5-margin-top-medium;}
+													}
+												}
+
 											}
 										}
 
@@ -330,6 +478,22 @@ URL: {{ meta_url }}
 												color: $evo-site-band-testimonials-blockquote-cite-font-color;
 				.title								{color: $evo-site-band-testimonials-blockquote-cite-title-font-color;}
 												}
+
+			@include breakpoint(medium)			{
+												padding-left: rem-calc(40);
+												padding-right: rem-calc(40);
+				p									{
+													font-size: rem-calc(26);
+					&:before,
+					&:after								{font-size: rem-calc(26);}
+					&:before							{
+														top: -2px;
+														left: -36px;
+														}
+					&:after								{bottom: -2px;}
+													}
+												}
+
 											}
 										}
 
@@ -382,6 +546,16 @@ URL: {{ meta_url }}
 					strong								{color: $evo-site-band-tab-panel-marketing-content-paragraph-strong-font-color;}
 													}
 				*:last-child						{margin-bottom: 0;}
+
+				@include breakpoint(medium)			{
+					h1, h2, h3, h4, h5, h6				{margin: $evo-site-band-tab-panel-marketing-content-header-margin-medium;}
+					h3									{font-size: $evo-site-band-tab-panel-marketing-content-header-h3-font-size;}
+					p									{
+														font-size: $evo-site-band-tab-panel-marketing-content-paragraph-font-size-medium;
+														margin-bottom: $evo-site-band-tab-panel-marketing-content-paragraph-margin-bottom-medium;
+														}
+													}
+
 												}
 											}
 										}
@@ -426,6 +600,40 @@ URL: {{ meta_url }}
 										}
 // SWATCHES - ENDS
 
+// SLIDES CAROUSEL - BEGINS
+	.evo-site-slides-carousel			{
+
+		@include breakpoint(large)			{
+			.owl-controls						{
+				.owl-buttons						{
+					.owl-prev,
+					.owl-next							{
+														position: absolute;
+														top: 38%;
+						[class^="evo-icon-"]				{
+															font-size: rem-calc(64);
+							&:before							{font-family: $evo-icon-site-font-stack;}
+															}
+														}
+					.owl-prev 							{
+														left: -12%;
+						[class^="evo-icon-"]				{
+							&:before							{content: "\edc6";}
+															}
+														}
+					.owl-next 							{
+														right: -12%;
+						[class^="evo-icon-"]				{
+							&:before							{content: "\edbe";}
+															}
+														}
+													}
+												}
+											}
+
+										}
+// SLIDES CAROUSEL - ENDS
+
 
 /*--- PATTERN LIBRARY PAGES ----------------------------------------------------------------*/
 
@@ -445,6 +653,35 @@ URL: {{ meta_url }}
 													}
 												}
 			.evo-site-band--marketing			{background-color: $evo-site-pattern-library-homepage-marketing-band-background-color;}
+											}
+
+		.evo-site-band--pattern-library		{
+			.evo-site-band--tab-panel			{
+
+				@include breakpoint(medium)			{
+													padding: $evo-site-pattern-library-band-tab-panel-padding;
+					.evo-site-band--tab-panel-marketing-content
+														{padding: $evo-site-pattern-library-band-tab-panel-marketing-content-padding;}
+													}
+
+				@include breakpoint(medium only)	{
+					.evo-site-band--tab-panel-marketing-content
+														{border-left: 0;}
+													}
+
+				@include breakpoint(large)			{
+													background-image: url($evo-site-pattern-library-band-tab-panel-background-image);
+													background-repeat: $evo-site-pattern-library-band-tab-panel-background-repeat;
+													background-size: $evo-site-pattern-library-band-tab-panel-background-size;
+													background-position: $evo-site-pattern-library-band-tab-panel-background-position;
+					.evo-site-band--tab-panel-marketing-content
+														{
+														border-color: $evo-site-pattern-library-band-tab-panel-marketing-content-keyline-border-color;
+														padding: $evo-site-pattern-library-band-tab-panel-marketing-content-padding-large;
+														}
+													}
+
+												}
 											}
 	// PATTERN LIBRARY HOMEPAGE - ENDS
 
@@ -505,6 +742,9 @@ URL: {{ meta_url }}
  			.evo-keyline-right					{
  												border-color: $evo-site-pattern-library-keyline-color;
  												min-height: $evo-site-pattern-library-keyline-min-height;
+ 				@include breakpoint(medium only)	{
+ 													border: 0;
+ 													}
  												}
 			.evo-site-tabs-content--pattern-library-tab-panel
 												{padding: 0;}
@@ -806,6 +1046,10 @@ URL: {{ meta_url }}
 		.evo-keyline-right						{
 												border-color: $onyx-dark-30;
 												min-height: auto;
+
+			@include breakpoint(medium)				{
+													}
+
 												}
 		[data-equalizer-watch]					{
 												height: auto !important;
@@ -814,6 +1058,14 @@ URL: {{ meta_url }}
 
 		@include breakpoint(small only)			{
 			[data-equalizer-watch]					{min-height: auto;}					
+												}
+
+		@include breakpoint(medium only)		{
+			.evo-keyline-right						{
+													border-right-width: 1px;
+													border-right-style: solid;
+													border-right-color: $onyx-dark-30;
+													}
 												}
 
 											}
@@ -888,6 +1140,25 @@ URL: {{ meta_url }}
 // PAGE TEMPLATES THUMBNAILS - ENDS
 
 
+/*--- PRODUCT SUITES PAGE ------------------------------------------------------------------*/
+
+// BAND - BEGINS
+.evo-site-band--product-suites-visual-identity
+										{
+	@include breakpoint(medium)				{
+		img										{width: 60% !important;}
+		.evo-site-band--product-suites-visual-identity-marketing-text
+												{
+												font-size: rem-calc(20);
+												max-width: 52%;
+												margin-left: auto;
+												margin-right: auto;
+												}
+											}
+										}
+// BAND - ENDS
+
+
 /*--- TYPOGRAPHY PAGE ----------------------------------------------------------------------*/
 
 // TYPOGRAPHY DEFINITION - BEGINS
@@ -956,6 +1227,31 @@ URL: {{ meta_url }}
 // WORD BREAK DEMO - ENDS
 
 
+/*--- WHAT IS PAGE -------------------------------------------------------------------------------*/
+
+// TAB BAND - BEGINS
+.evo-site-band--what					{
+
+	@include breakpoint(medium)				{
+		.evo-site-band--tab-panel				{padding: $evo-site-what-is-band-tab-panel-padding;}
+											}
+
+	@include breakpoint(medium only)		{
+		.evo-keyline-left						{border: 0;}
+											}
+
+	@include breakpoint(large)				{
+		.evo-site-band--marketing-block-grid	{
+			>li:first-child							{padding-right: rem-calc(30);}
+			>li:last-child							{padding-left: rem-calc(30);}
+												}
+		.evo-keyline-left						{border-color: $evo-site-what-is-band-tab-panel-keyline-border-color;}
+											}
+
+										}
+// TAB BAND - ENDS
+
+
 /*--- WHY EVOLUTION PAGE -------------------------------------------------------------------------*/
 
 // BAND - BEGINS
@@ -966,459 +1262,25 @@ URL: {{ meta_url }}
 											padding: rem-calc(40 0 0 0);
 		h3										{margin-bottom: rem-calc(16);}
 											}
+
+	@include breakpoint(medium)				{
+											padding: rem-calc(0 0 280 0) !important;
+		.evo-site--why-content-section			{
+												padding: rem-calc(120 0 0 0);
+			.evo-center-block-vertical				{width: 100%;}
+												}
+											}
+
+	@include breakpoint(medium only)		{
+											padding: rem-calc(0 0 400 0) !important;
+											}
+
+	@include breakpoint(large)				{
+		.evo-site--why-content-section			{min-height: rem-calc(570);}
+											}
+
 										}
 // BAND - ENDS
-
-
-/*=== MEDIA QUERIES ========================================================================*/
-
-//-------------------------------------------------------------------------------------------
-// Medium Media Query - 768px - 1024px
-//-------------------------------------------------------------------------------------------
-
-// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
-@media #{$medium-up} {
-
-	/*--- SITE GLOBAL --------------------------------------------------------------------------*/
-
-	// TYPE - BEGINS
-
-		// PULL OUT
-		.evo-site-pull-out					{
-											padding: rem-calc(10 0 10 20);
-											border-color: $evo-site-pull-out-border-color;
-											}
-
-	// TYPE - ENDS
-
-	// HERO - BEGINS
-
-		// HERO BANNER
-		.evo-site-hero						{
-											height: ($evo-site-hero-height*6);
-			&[data-evo-site-hero-size="x-large"]{height: ($evo-site-hero-height*4);}
-			&[data-evo-site-hero-size="xx-large"]{height: ($evo-site-hero-height*5);}
-			&[data-evo-site-hero-size="3x-large"]{height: ($evo-site-hero-height*6);}
-											}
-
-		// HERO TAGLINE
-		.evo-site-hero--tagline				{
-											max-width: $evo-site-hero-tagline-max-width-medium;
-											}
-
-	// HERO - ENDS
-
-	// BANDS - BEGINS
-	
-		// DEFAULT BAND
-		.evo-site-band						{padding: $evo-site-band-padding-medium;}
-
-		// MARKETING BAND
-		.evo-site-band--marketing			{
-			.evo-site-band--marketing-content	{
-				h3									{margin-bottom: $evo-site-band-marketing-h3-margin-bottom-medium;}
-				h6									{margin-bottom: $evo-site-band-marketing-h6-margin-bottom-medium;}
-				.evo-site-band--marketing-block-grid
-													{
-					h5									{margin-top: $evo-site-band-marketing-block-grid-h5-margin-top-medium;}
-													}
-												}
-											}
-
-		// TESTIMONIALS BAND
-		.evo-site-band--testimonials		{
-			blockquote							{
-												padding-left: rem-calc(40);
-												padding-right: rem-calc(40);
-				p									{
-													font-size: rem-calc(26);
-					&:before,
-					&:after								{font-size: rem-calc(26);}
-					&:before							{
-														top: -2px;
-														left: -36px;
-														}
-					&:after								{bottom: -2px;}
-													}
-												}
-											}
-
-		// TAB BAND
-		.evo-site-band--tab					{
-			.evo-site-band--tab-panel			{
-				.evo-site-band--tab-panel-marketing-content
-													{
-					h1, h2, h3, h4, h5, h6				{margin: $evo-site-band-tab-panel-marketing-content-header-margin-medium;}
-					h3									{font-size: $evo-site-band-tab-panel-marketing-content-header-h3-font-size;}
-					p									{
-														font-size: $evo-site-band-tab-panel-marketing-content-paragraph-font-size-medium;
-														margin-bottom: $evo-site-band-tab-panel-marketing-content-paragraph-margin-bottom-medium;
-														}
-													}
-												}
-											}
-
-	// BANDS - ENDS
-
-
-	/*--- PATTERN LIBRARY PAGES ----------------------------------------------------------------*/
-	
-	// PATTERN LIBRARY TEMPLATE - BEGINS
-
-		// PATTERN LIBRARY HOMEPAGE - BEGINS
-			.evo-site-band--pattern-library		{
-				.evo-site-band--tab-panel			{
-													padding: $evo-site-pattern-library-band-tab-panel-padding;
-					.evo-site-band--tab-panel-marketing-content
-														{padding: $evo-site-pattern-library-band-tab-panel-marketing-content-padding;}
-													}
-												}
-		// PATTERN LIBRARY HOMEPAGE - ENDS
-
-	// PATTERN LIBRARY TEMPLATE - ENDS
-
-
-	/*--- PRODUCT SUITES PAGE ------------------------------------------------------------------------*/
-
-	// BAND - BEGINS
-		.evo-site-band--product-suites-visual-identity
-											{
-			img									{width: 60% !important;}
-			.evo-site-band--product-suites-visual-identity-marketing-text
-												{
-												font-size: rem-calc(20);
-												max-width: 52%;
-												margin-left: auto;
-												margin-right: auto;
-												}
-											}
-	// BAND - ENDS
-
-
-	/*--- WHAT IS PAGE -------------------------------------------------------------------------*/
-
-	// TAB BAND - BEGINS
-		.evo-site-band--what				{
-			.evo-site-band--tab-panel			{padding: $evo-site-what-is-band-tab-panel-padding;}
-											}
-	// TAB BAND - ENDS
-
-
-	/*--- WHY EVOLUTION PAGE -------------------------------------------------------------------------*/
-
-	// BAND - BEGINS
-		.evo-site-band--why					{
-											padding: rem-calc(0 0 280 0) !important;
-			.evo-site--why-content-section		{
-												padding: rem-calc(120 0 0 0);
-				.evo-center-block-vertical			{width: 100%;}
-												}
-											}
-	// BAND - ENDS
-
-}
-
-// MEDIUM MEDIA QUERY RANGE - 768px - 1024px
-@media #{$medium-only} {
-
-	/*--- SITE GLOBAL --------------------------------------------------------------------------*/
-
-	// HERO - BEGINS
-
-		// HERO HEADER
-		.evo-site-hero--hdr					{
-			&[data-evo-site-hero-hdr-size="small"]
-												{
-												font-size: $evo-site-hero-hdr-font-size;
-												line-height: $evo-site-hero-hdr-line-height;
-												letter-spacing: $evo-site-hero-hdr-letter-spacing;
-												padding: $evo-site-hero-hdr-padding;
-												}
-			&[data-evo-site-hero-hdr-size="medium"]
-												{
-												font-size: ($evo-site-hero-hdr-font-size*1.5);
-												line-height: ($evo-site-hero-hdr-font-size*1.75);
-												letter-spacing: $evo-site-hero-hdr-letter-spacing;
-												padding: $evo-site-hero-hdr-padding;
-												}
-			&[data-evo-site-hero-hdr-size="large"]
-												{
-												font-size: ($evo-site-hero-hdr-font-size*2);
-												line-height: ($evo-site-hero-hdr-font-size*2.25);
-												letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
-												padding: $evo-site-hero-hdr-padding-medium;
-												}
-			&[data-evo-site-hero-hdr-size="x-large"]
-												{
-												font-size: ($evo-site-hero-hdr-font-size*3);
-												line-height: ($evo-site-hero-hdr-font-size*3.25);
-												letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
-												padding: $evo-site-hero-hdr-padding-medium;
-												}
-											}
-	// HERO - ENDS			
-
-
-	/*--- PATTERN LIBRARY PAGES ----------------------------------------------------------------*/
-	
-	// PATTERN LIBRARY TEMPLATE - BEGINS
-
-		// PATTERN LIBRARY HOMEPAGE - BEGINS
-			.evo-site-band--pattern-library		{
-				.evo-site-band--tab-panel			{
-					.evo-site-band--tab-panel-marketing-content
-														{border-left: 0;}
-													}
-												}
-		// PATTERN LIBRARY HOMEPAGE - ENDS
-
-		// CONTENT TABS - BEGINS
-			.evo-site-tabs-content--pattern-library-content
-												{
-				.evo-keyline-right					{border: 0;}
-												}
-		// CONTENT TABS - ENDS
-
-	// PATTERN LIBRARY TEMPLATE - BEGINS
-
-
-	/*--- HELPERS PAGE -------------------------------------------------------------------------*/
-
-	// KEYLINE DEMO - BEGINS
-	.evo-site--helpers-keyline-example		{
-		.evo-keyline-right						{
-												border-right-width: 1px;
-												border-right-style: solid;
-												border-right-color: $onyx-dark-30;
-												}
-											}
-	// KEYLINE DEMO - ENDS
-
-
-	/*--- WHAT IS PAGE -------------------------------------------------------------------------*/
-
-	// TAB BAND - BEGINS
-		.evo-site-band--what				{
-			.evo-keyline-left					{border: 0;}
-											}
-	// TAB BAND - ENDS
-
-
-	/*--- WHY EVOLUTION PAGE -------------------------------------------------------------------------*/
-
-	// BAND - BEGINS
-		.evo-site-band--why					{padding: rem-calc(0 0 400 0) !important;}
-	// BAND - ENDS
-
-}
-
-
-//-------------------------------------------------------------------------------------------
-// Large Media Query - 1025px - 1440px
-//-------------------------------------------------------------------------------------------
-
-// LARGE MEDIA QUERY RANGE AND UP - 1025px +
-@media #{$large-up} {
-
-	/*--- SITE GLOBAL --------------------------------------------------------------------------*/
-
-	// LAYOUTS - BEGINS
-	
-		// MAIN BODY SECTION
-		[role="main"]						{min-height: $evo-site-main-section-min-height;}
-
-	// LAYOUTS - ENDS
-
-	// HEADER - BEGINS
-		.evo-site-header					{
-
-			// TOP BAR
-			.evo-top-bar						{
-				.title-area							{
-					.name								{
-						h1									{
-							.evo-top-bar-sub-name				{font-family: $evo-site-header-sub-name-font-family;}
-															}
-														}
-													}
-				.top-bar-section					{
-					ul									{
-						li									{
-							> .evo-site-header--cta-whats-new	{
-								[class^="evo-icon-"]				{left: 0;}
-																}
-															}
-														}
-													}
-												}
-
-											}
-	// HEADER - ENDS
-
-	// HERO - BEGINS
-
-		// HERO BANNER
-		.evo-site-hero						{
-											height: ($evo-site-hero-height*8);
-			&[data-evo-site-hero-size="4x-large"]{height: ($evo-site-hero-height*7);}
-			&[data-evo-site-hero-size="5x-large"]{height: ($evo-site-hero-height*8);}
-			&[data-evo-site-hero-size="6x-large"]{height: ($evo-site-hero-height*9);}
-			&[data-evo-site-hero-size="7x-large"]{height: ($evo-site-hero-height*10);}
-											}
-
-		// HERO HEADER
-		.evo-site-hero--hdr					{
-			&[data-evo-site-hero-hdr-size="small"]
-												{
-												font-size: $evo-site-hero-hdr-font-size;
-												line-height: $evo-site-hero-hdr-line-height;
-												letter-spacing: $evo-site-hero-hdr-letter-spacing;
-												padding: $evo-site-hero-hdr-padding;
-												}
-			&[data-evo-site-hero-hdr-size="medium"]
-												{
-												font-size: ($evo-site-hero-hdr-font-size*2);
-												line-height: ($evo-site-hero-hdr-font-size*2.25);
-												letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
-												padding: $evo-site-hero-hdr-padding-medium;
-												}
-			&[data-evo-site-hero-hdr-size="large"]
-												{
-												font-size: ($evo-site-hero-hdr-font-size*3);
-												line-height: ($evo-site-hero-hdr-font-size*3.25);
-												letter-spacing: $evo-site-hero-hdr-letter-spacing-medium;
-												padding: $evo-site-hero-hdr-padding-medium;
-												}
-			&[data-evo-site-hero-hdr-size="x-large"]
-												{
-												font-size: ($evo-site-hero-hdr-font-size*4);
-												line-height: ($evo-site-hero-hdr-font-size*4.1);
-												letter-spacing: $evo-site-hero-hdr-letter-spacing-large;
-												padding: $evo-site-hero-hdr-padding-large;
-												}
-											}
-
-		// HERO TAGLINE
-		.evo-site-hero--tagline				{max-width: $evo-site-hero-tagline-max-width-large;}
-
-	// HERO - ENDS
-
-
-	// SLIDES CAROUSEL - BEGINS
-		.evo-site-slides-carousel			{
-			.owl-controls						{
-				.owl-buttons						{
-					.owl-prev,
-					.owl-next							{
-														position: absolute;
-														top: 38%;
-						[class^="evo-icon-"]				{
-															font-size: rem-calc(64);
-							&:before							{font-family: $evo-icon-site-font-stack;}
-															}
-														}
-					.owl-prev 							{
-														left: -12%;
-						[class^="evo-icon-"]				{
-							&:before							{content: "\edc6";}
-															}
-														}
-					.owl-next 							{
-														right: -12%;
-						[class^="evo-icon-"]				{
-							&:before							{content: "\edbe";}
-															}
-														}
-													}
-												}
-											}
-	// SLIDES CAROUSEL - ENDS
-
-
-	/*--- PATTERN LIBRARY PAGES ----------------------------------------------------------------*/
-	
-	// PATTERN LIBRARY TEMPLATE - BEGINS
-
-		// PATTERN LIBRARY HOMEPAGE - BEGINS
-			.evo-site-band--pattern-library		{
-				.evo-site-band--tab-panel			{
-													background-image: url($evo-site-pattern-library-band-tab-panel-background-image);
-													background-repeat: $evo-site-pattern-library-band-tab-panel-background-repeat;
-													background-size: $evo-site-pattern-library-band-tab-panel-background-size;
-													background-position: $evo-site-pattern-library-band-tab-panel-background-position;
-					.evo-site-band--tab-panel-marketing-content
-														{
-														border-color: $evo-site-pattern-library-band-tab-panel-marketing-content-keyline-border-color;
-														padding: $evo-site-pattern-library-band-tab-panel-marketing-content-padding-large;
-														}
-													}
-												}
-		// PATTERN LIBRARY HOMEPAGE - ENDS
-
-	// PATTERN LIBRARY TEMPLATE - ENDS
-
-
-	/*--- WHAT IS PAGE -------------------------------------------------------------------------*/
-
-	// TAB BAND - BEGINS
-		.evo-site-band--what				{
-			.evo-site-band--marketing-block-grid
-												{
-				>li:first-child						{padding-right: rem-calc(30);}
-				>li:last-child						{padding-left: rem-calc(30);}
-												}
-			.evo-keyline-left					{border-color: $evo-site-what-is-band-tab-panel-keyline-border-color;}
-											}
-	// TAB BAND - ENDS
-
-
-	/*--- WHY EVOLUTION PAGE -------------------------------------------------------------------------*/
-
-	// BAND - BEGINS
-		.evo-site-band--why					{
-			.evo-site--why-content-section		{min-height: rem-calc(570);}
-											}
-	// BAND - ENDS
-
-}
-
-// LARGE MEDIA QUERY RANGE - 1025px - 1440px
-@media #{$large-only} {
-
-	
-				
-}
-
-
-//-------------------------------------------------------------------------------------------
-// Project Responsive CSS - X-large Media Query - 1441px - 1920px
-//-------------------------------------------------------------------------------------------
-
-// X-LARGE MEDIA QUERY RANGE AND UP - 1441px +
-@media #{$xlarge-up} {
-
-	
-
-}
-
-// X-LARGE MEDIA QUERY RANGE - 1441px - 1920px
-@media #{$xlarge-only} {
-
-	
-
-}
-
-
-//-------------------------------------------------------------------------------------------
-// Project Responsive CSS - XX-large Media Query - 1921px +
-//-------------------------------------------------------------------------------------------
-
-// XX-LARGE MEDIA QUERY RANGE AND UP - 1921px +
-@media #{$xxlarge-up} {
-
-	
-
-}
 
 
 // ===========================================================================================
