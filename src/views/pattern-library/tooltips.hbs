@@ -16,10 +16,10 @@ Tooltips are a quick way to provide extended information on a term or action on 
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
 				{{#each pattern-library.tabs}}
-				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
-					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
+				<li class="tabs-title evo-tabs-title{{#is active 'true'}} is-active{{/is}}" role="presentation">
+					<a href="#evoPanel{{@index}}" role="tab" tabindex="0" class="button small evo-button">
 						<span class="text">{{name}}</span>
 					</a>
 				</li>
@@ -32,9 +32,9 @@ Tooltips are a quick way to provide extended information on a term or action on 
 <!-- INTRO SECTION - ENDS -->
 
 <!-- TABS - BEGINS -->
-	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content">
+	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content" data-tabs-content="evoLibraryTabs">
 	<!-- TAB PANEL 1 - BEGINS -->
-		<section role="tabpanel" aria-hidden="false" class="content active evo-site-tabs-content--pattern-library-tab-panel" id="tabs0">
+		<section class="tabs-panel evo-tabs-panel is-active evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel0">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
@@ -109,7 +109,7 @@ Tooltips are a quick way to provide extended information on a term or action on 
 	<!-- TAB PANEL 1 - ENDS -->
 
 	<!-- TAB PANEL 2 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs1">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel1">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
@@ -132,7 +132,7 @@ Tooltips are a quick way to provide extended information on a term or action on 
 	<!-- TAB PANEL 2 - BEGINS -->
 
 	<!-- TAB PANEL 3 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
@@ -223,7 +223,7 @@ Tooltips are a quick way to provide extended information on a term or action on 
 	<!-- TAB PANEL 3 - BEGINS -->
 
 	<!-- TAB PANEL 4 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs3">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel3">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>

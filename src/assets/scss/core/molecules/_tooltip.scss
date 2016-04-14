@@ -5,7 +5,8 @@
 //
 // @variables
 //
-
+$evo-tooltip-input-border-bottom-color: $medium-gray !default;
+$evo-tooltip-input-border-bottom-color-hover: $onyx-dark-40 !default;
 
 
 @if $use-tooltip == true{
@@ -15,7 +16,8 @@
 	img.evo-tooltip  	{
 						border-bottom: 0;
 		&:hover,
-    	&:focus				{border-bottom: 0;}
+		&:focus,
+						{border-bottom: 0;}
 						}									
 
 
@@ -23,4 +25,10 @@
 		&:hover				{color: $anchor-color-hover;}
 						}
 
-}//endif
+	input[type="text"].evo-tooltip
+						{
+						border-bottom-style: solid;
+						border-bottom-color: $evo-tooltip-input-border-bottom-color;
+		&:hover				{border-bottom-color: $evo-tooltip-input-border-bottom-color-hover;}
+						}
+}
