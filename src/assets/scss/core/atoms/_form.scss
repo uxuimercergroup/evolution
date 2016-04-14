@@ -201,15 +201,4 @@ $evo-form-input-error-radio-checkbox-label-font-color: $body-font-color !default
 		input:focus 								{font-size: rem-calc(16);}
 	}
 
-	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
-	@if $use-medium-up-mediaquery == true {
-		
-		@media #{$medium-up} {
-
-			
-
-		}
-		
-	}// endif
-
 }//endif

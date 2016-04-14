@@ -345,17 +345,4 @@ $evo-datepicker-input-min-width: rem-calc(110) !default;
 							{top: $evo-datepicker-input-icon-position-top - 1;}
 						}
 
-	//=== MEDIA QUERIES =========================================================================
-
-	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
-	@if $use-medium-up-mediaquery == true {
-		
-		@media #{$medium-up} {
-
-			
-
-		}
-		
-	}// endif
-
 }//endif

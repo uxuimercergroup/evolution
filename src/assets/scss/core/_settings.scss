@@ -11,25 +11,6 @@
 // modified on a project by project basis to customize an Evolution CSS file for your project
 // based on what components you will need from Mercer Evolution.
 
-// GLOBAL OUTPUTS
-// ------------------------------------------------------------------------------------------
-
-// RESPONSIVE SETTINGS
-
-// MEDIA QUERY RANGES AND UP
-$use-small-up-mediaquery:					true; // 0px +
-$use-medium-up-mediaquery:					true; // 768px +
-$use-large-up-mediaquery:					true; // 1025px +
-$use-xlarge-up-mediaquery:					true; // 1441px +
-$use-xxlarge-up-mediaquery:					true; // 1921px +
-
-// MEDIA QUERY RANGES
-$use-small-only-mediaquery:					true; // 0px - 767px
-$use-medium-only-mediaquery:				true; // 768px - 1024px
-$use-large-only-mediaquery:					true; // 1025px - 1440px
-$use-xlarge-only-mediaquery:				true; // 1441px - 1920px
-$use-xxlarge-only-mediaquery:				true; // 1921px +
-
 // ATOM OUTPUTS
 // ------------------------------------------------------------------------------------------
 $use-animations:							true;
@@ -550,8 +531,9 @@ $evo-small-font-color: 						$onyx-dark-50;
 
 // TABS
 // ------------------------------------------------------------------------------------------
-// $evo-tabs-border-radius: 				$global-radius;
-// $evo-tabs-panel-padding: 				$evo-base-padding;
+// $evo-tabs-global-border-radius: 			$global-radius;
+// $evo-tabs-item-font-color: 				$body-font-color;
+// $evo-tabs-item-background-color: 		$onyx-dark-6;
 // $evo-tabs-panel-border-width: 			1px;
 // $evo-tabs-panel-border-style: 			solid;
 // $evo-tabs-panel-border-color: 			$onyx-dark-30;

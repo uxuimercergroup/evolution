@@ -31,18 +31,4 @@ $evo-reveal-full-border-width: 0 !default;
 	// Resets the "bottom:0" call when "reveal-modal-bg" class has been added
 	//.reveal-modal-bg		{bottom: none;}
 
-
-	//=== MEDIA QUERIES =========================================================================
-
-	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
-	@if $use-medium-up-mediaquery == true {
-		
-		@media #{$medium-up} {
-
-			
-
-		}
-		
-	}// endif
-
 }//endif

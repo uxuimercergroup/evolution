@@ -16,6 +16,13 @@
 						overflow-y: hidden;
 						-ms-overflow-style: -ms-autohiding-scrollbar;
 						-webkit-overflow-scrolling: touch;
+
+		@include breakpoint(medium)
+							{
+							overflow: hidden;
+							width: 100%;
+							}
+
 						}
 
 	// TABLE BASE
@@ -29,30 +36,12 @@
 			&:first-child		{border-left: $table-border;}
 							}
 		td					{border: $table-border;}
+
+		@include breakpoint(medium)
+							{
+							min-width: 100%;
+							width: 100%;
+							}
 						}
-
-
-	//=== MEDIA QUERIES =========================================================================
-
-	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
-	@if $use-medium-up-mediaquery == true {
-		
-		@media #{$medium-up} {
-
-			// TABLE HORIZONTAL SCROLL CONTAINER FOR SMALL MEDIA QUERY, TURNED OFF FOR MEDIUM AND UP
-			.evo-table-small-mediaquery
-						{
-						overflow: hidden;
-						width: 100%;
-						}
-
-			.evo-table	{
-						min-width: 100%;
-						width: 100%;
-						}
-
-		}
-		
-	}// endif
 
 }//endif

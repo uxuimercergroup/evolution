@@ -162,17 +162,4 @@ $evo-button-group-stacked-border-color: rgba($white, .5) !default;
 									border-top-color: $evo-button-group-stacked-border-color;
 									}
 
-	//=== MEDIA QUERIES =========================================================================
-
-	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
-	@if $use-medium-up-mediaquery == true {
-		
-		@media #{$medium-up} {
-
-			
-
-		}
-		
-	}// endif
-
 }//endif

@@ -38,17 +38,4 @@ $evo-box-body-text-align: left !default;
 	// CORE BOX SHADOW
 	.evo-box-shadow				{@include box-shadow($evo-base-shadow-horizontal $evo-base-shadow-vertical $evo-base-shadow-blur $evo-base-shadow-spread $evo-base-shadow-color);}
 
-	//=== MEDIA QUERIES =========================================================================
-
-	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
-	@if $use-medium-up-mediaquery == true {
-		
-		@media #{$medium-up} {
-			
-			
-
-		}
-		
-	}// endif
-
 }//endif

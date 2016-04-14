@@ -88,44 +88,32 @@ img										{
 .evo-keyline-right						{
 										border-right: 1px solid $evo-keyline-right-border-right-color;
 	> img									{margin-top: rem-calc(4);}
+
+	@include breakpoint(small only)			{
+											padding-right: 0;
+											padding-left: 0;
+											border-right: 0;
+											border-left: 0;
+											margin-bottom: rem-calc(5);
+		> img									{margin-top: 0;}
+											}
+
 										}
 
 // Use on elements which need a keyline on the left
 .evo-keyline-left						{
 										border-left: 1px solid $evo-keyline-left-border-left-color;
 	> img									{margin-top: rem-calc(4);}
-										}
 
-
-// KEYLINE MEDIA QUERIES
-
-// Portrait iPhone, landscape iPhone, portrait smart phones, Nook/Kindle/Kindle Fire
-@if $use-small-only-mediaquery == true {
-
-	@media #{$small-only} {
-		
-		// KEYLINES
-		.evo-keyline-right
-											{
-											padding-right: 0;
-											padding-left: 0;
-											border-right: 0;
-											border-left: 0;
-											margin-bottom: rem-calc(5);
-			img									{margin-top: 0;}
-											}
-
-		.evo-keyline-left					{
+	@include breakpoint(small only)			{
 											padding-right: 0;
 											padding-left: 0;
 											border-right: 0;
 											border-left: 0;
 											margin-top: rem-calc(5);
-			img									{margin-top: 0;}
+		> img									{margin-top: 0;}
 											}
-	}
-	
-}
+										}
 
 
 // LAYOUT HELPERS

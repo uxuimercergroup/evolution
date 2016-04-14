@@ -142,6 +142,12 @@ $evo-product: core;
 	// FOOTER LINKS - BEGINS
 		.evo-footer-links	{
 			li					{
+
+				@include breakpoint(medium)
+									{
+									padding-bottom: rem-calc(5);
+									}
+
 				a					{
 									color: $evo-fat-footer-link-font-color;
 									display: block;
@@ -177,20 +183,3 @@ $evo-product: core;
 	// FOOTER LOGO - ENDS
 						}
 // FAT FOOTER - ENDS
-
-//=== MEDIA QUERIES =========================================================================
-
-// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
-@media #{$medium-up} {
-
-// FAT FOOTER - BEGINS
-	.evo-fat-footer 	{
-	// FOOTER LINKS - BEGINS
-		.evo-footer-links	{
-			li					{padding-bottom: rem-calc(5);}
-							}
-	// FOOTER LINKS - END
-	}
-// FAT FOOTER - BEGINS
-
-}

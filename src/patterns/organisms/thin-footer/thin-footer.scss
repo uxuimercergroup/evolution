@@ -128,6 +128,11 @@ $evo-thin-footer-social-media-badge-font-color-visited: $evo-thin-footer-social-
 					&:visited			{color: $evo-thin-footer-social-media-badge-font-color-visited;}
 									}
 
+				@include breakpoint(medium)
+									{
+									margin-bottom: rem-calc(0);
+									}
+
 								}
 		// SOCIAL MEDIA BADGE COMPONENT - ENDS
 
@@ -135,6 +140,12 @@ $evo-thin-footer-social-media-badge-font-color-visited: $evo-thin-footer-social-
 			.evo-thin-footer-logo
 								{
 								margin-bottom: $evo-thin-footer-logo-margin-bottom;
+
+				@include breakpoint(medium)
+									{
+									margin-bottom: rem-calc(0);
+									}
+
 								}
 		// CONTENT SECTION LOGO - ENDS
 
@@ -150,6 +161,34 @@ $evo-thin-footer-social-media-badge-font-color-visited: $evo-thin-footer-social-
 									color: $evo-thin-footer-link-font-color;
 									}
 								}
+
+			@include breakpoint(small only)
+								{
+								float: none;
+				li					{
+									border: 0;
+									float: none;
+									line-height: rem-calc(30);
+									margin: 0;
+									padding: 0;
+
+					a					{
+										display: block;
+										width: 100%;
+										}
+									}
+								}
+
+			@include breakpoint(medium)
+								{
+								@include clearfix;
+								float: right;
+				li					{
+									border-right-color: $evo-thin-footer-list-pipe-color;
+					a					{color: $evo-thin-footer-link-font-color;}
+									}
+								}
+
 							}
 	// FOOTER LINKS - ENDS
 
@@ -179,64 +218,3 @@ $evo-thin-footer-social-media-badge-font-color-visited: $evo-thin-footer-social-
 	// FOOTER LOGO - ENDS
 						}
 // THIN FOOTER - ENDS
-
-//=== MEDIA QUERIES =========================================================================
-
-// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
-@media #{$medium-up} {
-
-// THIN FOOTER - BEGINS
-	.evo-thin-footer 	{
-
-	// CONTENT SECTION LOGO - BEGINS
-		.evo-thin-footer-logo
-							{margin-bottom: rem-calc(0);}
-	// CONTENT SECTION LOGO - ENDS
-
-	// SOCIAL MEDIA BADGES - BEGINS
-		.evo-social-media-badges-ctn
-							{margin-bottom: rem-calc(0);}
-	// SOCIAL MEDIA BADGES - ENDS
-
-	// FOOTER LINKS - BEGINS
-		.evo-footer-links	{
-							@include clearfix;
-							float: right;
-			li					{
-								border-right-color: $evo-thin-footer-list-pipe-color;
-				a					{color: $evo-thin-footer-link-font-color;}
-								}
-							}
-	// FOOTER LINKS - ENDS
-						}
-// THIN FOOTER - ENDS
-
-}
-
-@media #{$small-only} {
-
-// THIN FOOTER - BEGINS
-	.evo-thin-footer 	{
-
-	// FOOTER LINKS - BEGINS
-		.evo-footer-links	{
-							float: none;
-			li					{
-								border: 0;
-								float: none;
-								line-height: rem-calc(30);
-								margin: 0;
-								padding: 0;
-
-				a					{
-									display: block;
-									width: 100%;
-									}
-								}
-							}
-	// FOOTER LINKS - ENDS
-
-						}
-// THIN FOOTER - ENDS
-
-}

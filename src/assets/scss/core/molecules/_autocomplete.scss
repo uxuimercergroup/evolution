@@ -56,6 +56,11 @@ $evo-autocomplete-background-color: $onyx-dark-2 !default;
 									@include text-overflow;
 									margin-left: rem-calc(5);
 									display: inline;
+				@include breakpoint(medium)
+										{
+										margin-left: 0;
+										display: block;
+										}
 									}
 								}
 
@@ -68,30 +73,5 @@ $evo-autocomplete-background-color: $onyx-dark-2 !default;
 			.ui-state-active		{@include border-radius(0 0 $global-radius $global-radius);}
 								}
 							}
-
-	//=== MEDIA QUERIES =========================================================================
-
-	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
-	@if $use-medium-up-mediaquery == true {
-		
-		@media #{$medium-up} {
-
-			// AUTOCOMPLETE
-			.ui-menu		{
-							max-height: $evo-autocomplete-max-height-medium-up;
-				.ui-menu-item	{
-					a				{
-						.ui-menu-secondary
-										{
-										margin-left: 0;
-										display: block;
-										}
-									}
-								}
-							}
-
-		}
-		
-	}// endif
 
 }//endif

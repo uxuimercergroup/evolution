@@ -173,6 +173,12 @@ $evo-data-table-total-font-color: $black !default;
 	// DATA TABLE SCROLLING
 	.dataTables_scroll	{
 						min-width: rem-calc(768);
+
+		@include breakpoint(medium)
+							{
+							min-width: 100%;
+							}
+
 		.dataTables_scrollBody
 							{
 							overflow-x: hidden !important;
@@ -249,20 +255,5 @@ $evo-data-table-total-font-color: $black !default;
 								}
 							}
 						}
-
-	//=== MEDIA QUERIES =========================================================================
-
-	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
-	@if $use-medium-up-mediaquery == true {
-		
-		@media #{$medium-up} {
-
-			// DATA TABLE SCROLLING
-			.dataTables_scroll
-						{min-width: 100%;}
-
-		}
-		
-	}// endif
 
 }//endif
