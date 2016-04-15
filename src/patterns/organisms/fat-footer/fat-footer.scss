@@ -142,18 +142,18 @@ $evo-product: core;
 	// FOOTER LINKS - BEGINS
 		.evo-footer-links	{
 			li					{
-
-				@include breakpoint(medium)
-									{
-									padding-bottom: rem-calc(5);
-									}
-
 				a					{
 									color: $evo-fat-footer-link-font-color;
 									display: block;
 									font-size: $evo-fat-footer-link-font-size;
 									line-height: rem-calc(25);
 									}
+
+				@include breakpoint(medium)
+									{
+									padding-bottom: rem-calc(5);
+									}
+									
 								}
 							}
 	// FOOTER LINKS - END
