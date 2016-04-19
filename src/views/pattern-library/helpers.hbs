@@ -111,24 +111,24 @@ Evolution includes a handful of helpful utility helpers to add certain behaviors
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-sticky-container data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
-						<dl class="sub-nav">
+					<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="navTest" data-sticky-on="large" data-sticky>
+						<dl class="menu vertical" data-magellan>
 							<dt>{{helpers.utility_helpers_data_header}}</dt>
 							{{#slice helpers.data limit="14"}}
-							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+							<dd><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/slice}}
 							<dt>{{helpers.interactive_helpers_data_header}}</dt>
 							{{#slice helpers.data offset="14" limit="2"}}
-							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+							<dd><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/slice}}
 							<dt>{{helpers.visibility_helpers_data_header}}</dt>
 							{{#slice helpers.data offset="16" limit="8"}}
-							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+							<dd><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/slice}}
 						</dl>
-					</div>
+					</nav>
 				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>

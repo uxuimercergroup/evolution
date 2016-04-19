@@ -7,5 +7,5 @@ system-color: alert, warning, success, info
 text: your content
 --}}
 <!-- BADGE - BEGINS -->
-<span class="label {{#if system-color}}{{system-color}} {{/if}}evo-badge{{#if custom-class}} {{custom-class}}{{/if}}"{{#if size}} data-evo-badge-size="{{size}}"{{/if}}{{#if font-color}} data-evo-font-color="{{font-color}}"{{/if}}{{#if background-color}} data-evo-background-color="{{background-color}}"{{/if}}>{{#if text}}{{{text}}}{{else}}1{{/if}}</span>
+<span class="badge {{#if system-color}}{{system-color}} {{/if}}evo-badge{{#if custom-class}} {{custom-class}}{{/if}}"{{#if size}} data-evo-badge-size="{{size}}"{{/if}}{{#if font-color}} data-evo-font-color="{{font-color}}"{{/if}}{{#if background-color}} data-evo-background-color="{{background-color}}"{{/if}}>{{#if text}}{{{text}}}{{else}}<i class="{{icon-type}}"></i>{{/if}}</span>
 <!-- BADGE - ENDS -->

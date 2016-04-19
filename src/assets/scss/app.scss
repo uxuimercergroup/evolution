@@ -782,58 +782,25 @@ URL: {{ meta_url }}
 		// SIDENAV MAGELLAN
 		.evo-site--pattern-library-sidenav-magellan
 											{
-											background: $evo-site-sidenav-magellan-background-color;
-											padding: 0;
-			.sub-nav							{
-				dt									{
-													margin: $evo-site-sidenav-magellan-hdr-margin;
-													float: none;
-													font-family: $evo-site-sidenav-magellan-hdr-font-family;
-													color: $evo-site-sidenav-magellan-hdr-font-color;
-													font-size: $evo-site-sidenav-magellan-hdr-font-size;
-													text-transform: none;
-					&:first-child						{margin-top: 0;}
-													}
-				dd									{
-													float: none;
-													margin-left: 0;
-					a									{
-														display: block;
-														line-height: $evo-site-sidenav-magellan-link-line-height;
-														color: $evo-site-sidenav-magellan-link-color;
-														text-decoration: $evo-site-sidenav-magellan-link-text-decoration;
-														background-color: $evo-site-sidenav-magellan-link-background-color;
-														padding-top: 0;
-														padding-right: 0;
-														padding-bottom: 0;
-						&:hover								{
-															background-color: $evo-site-sidenav-magellan-link-hover-background-color;
-															text-decoration: $evo-site-sidenav-magellan-link-hover-text-decoration;
-															}
-														}
-													}
+											margin-top: 1em !important;
+											padding-left: 0;
+			dt									{
+												margin: $evo-site-sidenav-magellan-hdr-margin;
+												float: none;
+												font-family: $evo-site-sidenav-magellan-hdr-font-family;
+												color: $evo-site-sidenav-magellan-hdr-font-color;
+												font-size: $evo-site-sidenav-magellan-hdr-font-size;
+												text-transform: none;
+				&:first-child						{margin-top: 0;}
 												}
-			&.evo-scroll-to-fixed				{top: 20px;}
-			&[data-magellan-expedition-clone]	{display: none;}
-			&.fixed								{
-												left: auto !important;
-												min-width: 0;
-												width: $evo-site-sidenav-magellan-fixed-width !important;
-				.sub-nav							{
-					dd									{
-														float: none;
-														margin-left: 0;
-						&.active							{
-							&:before							{
-																font-family: $evo-icon-font-stack;
-																content: $evo-site-sidenav-magellan-fixed-active-icon;
-																color: $evo-site-sidenav-magellan-fixed-active-icon-color;
-																position: absolute;
-																left: $evo-site-sidenav-magellan-fixed-active-icon-position-left;
-																margin-top: $evo-site-sidenav-magellan-fixed-active-icon-margin-top;
-																}
-															}
-														}
+			dd,
+			li									{
+												line-height: $evo-site-sidenav-magellan-line-height;
+				a									{
+													color: $evo-site-sidenav-magellan-link-color;
+													display: block;
+													padding: rem-calc(9) rem-calc(10);
+					&.active							{background-color: $onyx-dark-6;}
 													}
 												}
 											}

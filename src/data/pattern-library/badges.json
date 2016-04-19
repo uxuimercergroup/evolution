@@ -24,10 +24,20 @@
 			"name": "Basic Badge",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "badge", "text": "9", "slug": "basic-badge"},
-				{"partial": "badge", "text": "99", "slug": "basic-badge"},
-				{"partial": "badge", "text": "999", "slug": "basic-badge"},
-				{"partial": "badge", "text": "9999", "slug": "basic-badge"}
+				{"partial": "badge", "text": "4", "slug": "basic-badge"},
+				{"partial": "badge", "text": "5", "slug": "basic-badge"},
+				{"partial": "badge", "text": "A", "slug": "basic-badge"},
+				{"partial": "badge", "text": "B", "slug": "basic-badge"}
+			]
+		},
+		"basic_badge_icons": {
+			"name": "Basic Badge with Icons",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "badge", "icon-type": "evo-icon-file-text2", "slug": "basic-badge-icons"},
+				{"partial": "badge", "icon-type": "evo-icon-user", "slug": "basic-badge-icons"},
+				{"partial": "badge", "icon-type": "evo-icon-alarm-check", "slug": "basic-badge-icons"},
+				{"partial": "badge", "icon-type": "evo-icon-cog", "slug": "basic-badge-icons"}
 			]
 		},
 		"badge_size_small": {
@@ -58,16 +68,6 @@
 				{"partial": "badge", "text": "99", "size": "large", "slug": "badge-size-large"},
 				{"partial": "badge", "text": "999", "size": "large", "slug": "badge-size-large"},
 				{"partial": "badge", "text": "9999", "size": "large", "slug": "badge-size-large"}
-			]
-		},
-		"badge_size_x_large": {
-			"name": "Badge Size X-Large",
-			"multiple_example": "true",
-			"multiple_example_options": [
-				{"partial": "badge", "text": "9", "size": "x-large", "slug": "badge-size-x-large"},
-				{"partial": "badge", "text": "99", "size": "x-large", "slug": "badge-size-x-large"},
-				{"partial": "badge", "text": "999", "size": "x-large", "slug": "badge-size-x-large"},
-				{"partial": "badge", "text": "9999", "size": "x-large", "slug": "badge-size-x-large"}
 			]
 		}
 	}
