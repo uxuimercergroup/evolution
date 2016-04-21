@@ -14,10 +14,10 @@ Dropdown buttons are elements that, when tapped, reveal additional content. Foun
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
 				{{#each pattern-library.tabs}}
-				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
-					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
+				<li class="tabs-title evo-tabs-title{{#is active 'true'}} is-active{{/is}}" role="presentation">
+					<a href="#evoPanel{{@index}}" role="tab" tabindex="0" class="button small evo-button">
 						<span class="text">{{name}}</span>
 					</a>
 				</li>
@@ -30,9 +30,9 @@ Dropdown buttons are elements that, when tapped, reveal additional content. Foun
 <!-- INTRO SECTION - ENDS -->
 
 <!-- TABS - BEGINS -->
-	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content">
+	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content" data-tabs-content="evoLibraryTabs">
 	<!-- TAB PANEL 1 - BEGINS -->
-		<section role="tabpanel" aria-hidden="false" class="content active evo-site-tabs-content--pattern-library-tab-panel" id="tabs0">
+		<section class="tabs-panel evo-tabs-panel is-active evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel0">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
@@ -107,7 +107,7 @@ Dropdown buttons are elements that, when tapped, reveal additional content. Foun
 	<!-- TAB PANEL 1 - ENDS -->
 
 	<!-- TAB PANEL 2 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs1">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel1">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
@@ -134,7 +134,7 @@ Dropdown buttons are elements that, when tapped, reveal additional content. Foun
 	<!-- TAB PANEL 2 - BEGINS -->
 
 	<!-- TAB PANEL 3 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
@@ -153,49 +153,48 @@ Dropdown buttons are elements that, when tapped, reveal additional content. Foun
 						{{#is dropdown-buttons.dependency_data.dependency 'true'}}
 
 					<!-- SIDENAV ACCORDION - BEGINS -->
-						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
-
+						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion>
 						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
-							<li class="accordion-navigation">
-								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
-								<div id="dependencies-accordion" class="content active" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
+							<li class="accordion-item is-active" data-accordion-item>
+								<a href="#dependencies-accordion" class="accordion-title" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
+								<div class="accordion-content" data-tab-content>
 
 									<ul class="no-bullet">
-										{{#is dropdown-buttons.dependency_data.foundation 'true'}}
+										{{#is reveal.dependency_data.foundation 'true'}}
 											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if dropdown-buttons.dependency_data.foundation_dependencies}}
+											{{#if reveal.dependency_data.foundation_dependencies}}
 												<ul>
-												{{#each dropdown-buttons.dependency_data.foundation_dependencies}}
+												{{#each reveal.dependency_data.foundation_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#is dropdown-buttons.dependency_data.evolution 'true'}}
+										{{#is reveal.dependency_data.evolution 'true'}}
 											<li><a href="/">Evolution {{package.version}}</a>
-											{{#if dropdown-buttons.dependency_data.evolution_dependencies}}
+											{{#if reveal.dependency_data.evolution_dependencies}}
 												<ul>
-												{{#each dropdown-buttons.dependency_data.evolution_dependencies}}
+												{{#each reveal.dependency_data.evolution_dependencies}}
 													<li><a href="{{url}}">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is dropdown-buttons.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is dropdown-buttons.dependency_data.jquery_ui 'true'}}
+										{{#is reveal.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is reveal.dependency_data.jquery_ui 'true'}}
 											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
-											{{#if dropdown-buttons.dependency_data.jquery_ui_dependencies}}
+											{{#if reveal.dependency_data.jquery_ui_dependencies}}
 												<ul>
-												{{#each dropdown-buttons.dependency_data.jquery_ui_dependencies}}
+												{{#each reveal.dependency_data.jquery_ui_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#each dropdown-buttons.dependency_data.other}}
+										{{#each reveal.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}
 									</ul>
@@ -203,7 +202,6 @@ Dropdown buttons are elements that, when tapped, reveal additional content. Foun
 								</div>
 							</li>
 						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
-
 						</ul>
 					<!-- SIDENAV ACCORDION - ENDS -->
 						{{/is}}
@@ -217,7 +215,7 @@ Dropdown buttons are elements that, when tapped, reveal additional content. Foun
 	<!-- TAB PANEL 3 - BEGINS -->
 
 	<!-- TAB PANEL 4 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs3">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel3">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>

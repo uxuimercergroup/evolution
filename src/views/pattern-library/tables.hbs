@@ -16,10 +16,10 @@ Tables are an element meant to organize data on a page. Evolution tables depend 
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{tables.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+			<ul class="button-group radius {{tables.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
 				{{#each tables.tabs}}
-				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
-					<a href="#tabs{{index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{index}}" class="button small evo-button">
+				<li class="tabs-title evo-tabs-title{{#is active 'true'}} is-active{{/is}}" role="presentation">
+					<a href="#evoPanel{{@index}}" role="tab" tabindex="0" class="button small evo-button">
 						<span class="text">{{name}}</span>
 					</a>
 				</li>
@@ -32,21 +32,20 @@ Tables are an element meant to organize data on a page. Evolution tables depend 
 <!-- INTRO SECTION - ENDS -->
 
 <!-- TABS - BEGINS -->
-	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content">
+	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content" data-tabs-content="evoLibraryTabs">
 	<!-- TAB PANEL 1 - BEGINS -->
-		<section role="tabpanel" aria-hidden="false" class="content active evo-site-tabs-content--pattern-library-tab-panel" id="tabs0">
+		<section class="tabs-panel evo-tabs-panel is-active evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel0">
 
 			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="docs-toc" data-equalizer-watch>
 				<!-- EXAMPLE BOX - BEGINS -->
 					<div class="panel evo-box evo-site-example-box">
 						<div class="evo-box-hdr">
 						<!-- EXAMPLE HEADER - BEGINS -->
-							<h6 class="evo-hdr-rule" data-magellan-destination="Basic-Table">
+							<h6 class="evo-hdr-rule" data-magellan-target="Basic-Table" id="Basic-Table">
 								Basic Table
-								<a href="#code-anchor0" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle0" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr0, after: removeAnim;"></a>
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip right evo-tooltip" title="View Source" data-evo-toggle-element="code-toggle0" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr0, after: removeAnim;"></a>
 							</h6>
-							<a name="Basic-Table"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</div>
 						<div class="evo-box-bdy">
@@ -60,7 +59,7 @@ Tables are an element meant to organize data on a page. Evolution tables depend 
 							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									basic-table
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-basic-table" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large"></a>
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-basic-table"><xmp>{{> table-static }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
@@ -70,13 +69,15 @@ Tables are an element meant to organize data on a page. Evolution tables depend 
 					</div>
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-sticky-container data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
-						<dl class="sub-nav">
-							<dd data-magellan-arrival="Basic-Table"><a href="#Basic-Table">Basic Table</a></dd>
-						</dl>
-					</div>
+					<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="docs-toc" data-sticky-on="large" data-sticky>
+						<ul class="menu vertical" data-magellan>
+						{{#each tables.data}}
+							<li><a href="#{{hyphenate name}}">{{name}}</a></li>
+						{{/each}}
+						</ul>
+					</nav>
 				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
@@ -85,7 +86,7 @@ Tables are an element meant to organize data on a page. Evolution tables depend 
 	<!-- TAB PANEL 1 - ENDS -->
 
 	<!-- TAB PANEL 2 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs1">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel1">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
@@ -108,7 +109,7 @@ Tables are an element meant to organize data on a page. Evolution tables depend 
 	<!-- TAB PANEL 2 - BEGINS -->
 
 	<!-- TAB PANEL 3 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
@@ -135,49 +136,48 @@ Tables are an element meant to organize data on a page. Evolution tables depend 
 						{{#is tables.dependency_data.dependency 'true'}}
 
 					<!-- SIDENAV ACCORDION - BEGINS -->
-						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
-
+						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion>
 						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
-							<li class="accordion-navigation">
-								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
-								<div id="dependencies-accordion" class="content active" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
+							<li class="accordion-item is-active" data-accordion-item>
+								<a href="#dependencies-accordion" class="accordion-title" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
+								<div class="accordion-content" data-tab-content>
 
 									<ul class="no-bullet">
-										{{#is tables.dependency_data.foundation 'true'}}
+										{{#is reveal.dependency_data.foundation 'true'}}
 											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if tables.dependency_data.foundation_dependencies}}
+											{{#if reveal.dependency_data.foundation_dependencies}}
 												<ul>
-												{{#each tables.dependency_data.foundation_dependencies}}
+												{{#each reveal.dependency_data.foundation_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#is tables.dependency_data.evolution 'true'}}
+										{{#is reveal.dependency_data.evolution 'true'}}
 											<li><a href="/">Evolution {{package.version}}</a>
-											{{#if tables.dependency_data.evolution_dependencies}}
+											{{#if reveal.dependency_data.evolution_dependencies}}
 												<ul>
-												{{#each tables.dependency_data.evolution_dependencies}}
+												{{#each reveal.dependency_data.evolution_dependencies}}
 													<li><a href="{{url}}">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is tables.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is tables.dependency_data.jquery_ui 'true'}}
+										{{#is reveal.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is reveal.dependency_data.jquery_ui 'true'}}
 											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
-											{{#if tables.dependency_data.jquery_ui_dependencies}}
+											{{#if reveal.dependency_data.jquery_ui_dependencies}}
 												<ul>
-												{{#each tables.dependency_data.jquery_ui_dependencies}}
+												{{#each reveal.dependency_data.jquery_ui_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#each tables.dependency_data.other}}
+										{{#each reveal.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}
 									</ul>
@@ -185,7 +185,6 @@ Tables are an element meant to organize data on a page. Evolution tables depend 
 								</div>
 							</li>
 						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
-
 						</ul>
 					<!-- SIDENAV ACCORDION - ENDS -->
 						{{/is}}
@@ -199,7 +198,7 @@ Tables are an element meant to organize data on a page. Evolution tables depend 
 	<!-- TAB PANEL 3 - BEGINS -->
 
 	<!-- TAB PANEL 4 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs3">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel3">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>

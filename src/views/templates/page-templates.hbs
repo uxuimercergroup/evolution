@@ -21,9 +21,9 @@ A collection of common page templates for use in any project.
 ***
 {{/ markdown }}
 
-			<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3 xlarge-block-grid-3 xxlarge-block-grid-4 evo-site--page-template-container">
+			<div class="row small-up-2 medium-up-3 large-up-3 xlarge-up-3 xxlarge-up-4 evo-site--page-template-container">
 			{{#each page-templates.data }}
-				<li>
+				<div class="columns">
 					<a href="/page-templates/{{url}}.html" target="_blank"><img class="evo-site--page-template-thumbnail" src="/assets/images/content/{{image}}" alt="" width="100%"></a>
 					<h5>{{header}}</h5>
 					<p>{{description}}</p>
@@ -31,9 +31,9 @@ A collection of common page templates for use in any project.
 						<!-- <li><a href="/page-templates/{{url}}.html" download>Download</a></li> -->
 						<li><a href="/page-templates/{{url}}.html" target="_blank">Demo</a></li>
 					</ul>
-				</li>
+				</div>
 			{{/each}}
-			</ul>
+			</div>
 
 		</div>
 	</section>

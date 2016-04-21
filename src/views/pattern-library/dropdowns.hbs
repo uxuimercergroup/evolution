@@ -17,10 +17,10 @@ Universal dropdown plugin that will attach dropdowns or popovers to whatever ele
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
 				{{#each pattern-library.tabs}}
-				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
-					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
+				<li class="tabs-title evo-tabs-title{{#is active 'true'}} is-active{{/is}}" role="presentation">
+					<a href="#evoPanel{{@index}}" role="tab" tabindex="0" class="button small evo-button">
 						<span class="text">{{name}}</span>
 					</a>
 				</li>
@@ -33,22 +33,21 @@ Universal dropdown plugin that will attach dropdowns or popovers to whatever ele
 <!-- INTRO SECTION - ENDS -->
 
 <!-- TABS - BEGINS -->
-	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content">
+	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content" data-tabs-content="evoLibraryTabs">
 	<!-- TAB PANEL 1 - BEGINS -->
-		<section role="tabpanel" aria-hidden="false" class="content active evo-site-tabs-content--pattern-library-tab-panel" id="tabs0">
+		<section class="tabs-panel evo-tabs-panel is-active evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel0">
 
 			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="docs-toc" data-equalizer-watch>
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each dropdowns.data }}
 					<div class="panel evo-box evo-site-example-box">
 						<div class="evo-box-hdr">
 						<!-- EXAMPLE HEADER - BEGINS -->
-							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
+							<h6 class="evo-hdr-rule" data-magellan-target="{{hyphenate name}}" id="{{hyphenate name}}">
 								{{name}}
-								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip right evo-tooltip" title="View Source" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
-							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</div>
 						<div class="evo-box-bdy">
@@ -70,7 +69,7 @@ Universal dropdown plugin that will attach dropdowns or popovers to whatever ele
 							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large"></a>
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
@@ -81,7 +80,7 @@ Universal dropdown plugin that will attach dropdowns or popovers to whatever ele
 							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large"></a>
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
@@ -93,15 +92,15 @@ Universal dropdown plugin that will attach dropdowns or popovers to whatever ele
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-sticky-container data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
-						<dl class="sub-nav">
-							{{#each dropdowns.data}}
-							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
-							{{/each}}
-						</dl>
-					</div>
+					<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="docs-toc" data-sticky-on="large" data-sticky>
+						<ul class="menu vertical" data-magellan>
+						{{#each dropdowns.data}}
+							<li><a href="#{{hyphenate name}}">{{name}}</a></li>
+						{{/each}}
+						</ul>
+					</nav>
 				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
@@ -110,7 +109,7 @@ Universal dropdown plugin that will attach dropdowns or popovers to whatever ele
 	<!-- TAB PANEL 1 - ENDS -->
 
 	<!-- TAB PANEL 2 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs1">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel1">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
@@ -133,7 +132,7 @@ Universal dropdown plugin that will attach dropdowns or popovers to whatever ele
 	<!-- TAB PANEL 2 - BEGINS -->
 
 	<!-- TAB PANEL 3 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
@@ -160,49 +159,48 @@ Universal dropdown plugin that will attach dropdowns or popovers to whatever ele
 						{{#is dropdowns.dependency_data.dependency 'true'}}
 
 					<!-- SIDENAV ACCORDION - BEGINS -->
-						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
-
+						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion>
 						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
-							<li class="accordion-navigation">
-								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
-								<div id="dependencies-accordion" class="content active" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
+							<li class="accordion-item is-active" data-accordion-item>
+								<a href="#dependencies-accordion" class="accordion-title" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
+								<div class="accordion-content" data-tab-content>
 
 									<ul class="no-bullet">
-										{{#is dropdowns.dependency_data.foundation 'true'}}
+										{{#is reveal.dependency_data.foundation 'true'}}
 											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if dropdowns.dependency_data.foundation_dependencies}}
+											{{#if reveal.dependency_data.foundation_dependencies}}
 												<ul>
-												{{#each dropdowns.dependency_data.foundation_dependencies}}
+												{{#each reveal.dependency_data.foundation_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#is dropdowns.dependency_data.evolution 'true'}}
+										{{#is reveal.dependency_data.evolution 'true'}}
 											<li><a href="/">Evolution {{package.version}}</a>
-											{{#if dropdowns.dependency_data.evolution_dependencies}}
+											{{#if reveal.dependency_data.evolution_dependencies}}
 												<ul>
-												{{#each dropdowns.dependency_data.evolution_dependencies}}
+												{{#each reveal.dependency_data.evolution_dependencies}}
 													<li><a href="{{url}}">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is dropdowns.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is dropdowns.dependency_data.jquery_ui 'true'}}
+										{{#is reveal.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is reveal.dependency_data.jquery_ui 'true'}}
 											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
-											{{#if dropdowns.dependency_data.jquery_ui_dependencies}}
+											{{#if reveal.dependency_data.jquery_ui_dependencies}}
 												<ul>
-												{{#each dropdowns.dependency_data.jquery_ui_dependencies}}
+												{{#each reveal.dependency_data.jquery_ui_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#each dropdowns.dependency_data.other}}
+										{{#each reveal.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}
 									</ul>
@@ -210,7 +208,6 @@ Universal dropdown plugin that will attach dropdowns or popovers to whatever ele
 								</div>
 							</li>
 						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
-
 						</ul>
 					<!-- SIDENAV ACCORDION - ENDS -->
 						{{/is}}
@@ -224,7 +221,7 @@ Universal dropdown plugin that will attach dropdowns or popovers to whatever ele
 	<!-- TAB PANEL 3 - BEGINS -->
 
 	<!-- TAB PANEL 4 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs3">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel3">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>

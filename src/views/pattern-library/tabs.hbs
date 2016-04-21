@@ -162,39 +162,48 @@ The tabs Foundation component can parse the location hash value and open the cor
 						{{#is tabs.dependency_data.dependency 'true'}}
 
 					<!-- SIDENAV ACCORDION - BEGINS -->
-						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
-
+						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion>
 						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
-							<li class="accordion-navigation">
-								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
-								<div id="dependencies-accordion" class="content active" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
+							<li class="accordion-item is-active" data-accordion-item>
+								<a href="#dependencies-accordion" class="accordion-title" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
+								<div class="accordion-content" data-tab-content>
 
 									<ul class="no-bullet">
-										{{#is tabs.dependency_data.foundation 'true'}}
+										{{#is reveal.dependency_data.foundation 'true'}}
 											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if tabs.dependency_data.foundation_dependencies}}
+											{{#if reveal.dependency_data.foundation_dependencies}}
 												<ul>
-												{{#each tabs.dependency_data.foundation_dependencies}}
+												{{#each reveal.dependency_data.foundation_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#is tabs.dependency_data.evolution 'true'}}
+										{{#is reveal.dependency_data.evolution 'true'}}
 											<li><a href="/">Evolution {{package.version}}</a>
-											{{#if tabs.dependency_data.evolution_dependencies}}
+											{{#if reveal.dependency_data.evolution_dependencies}}
 												<ul>
-												{{#each tabs.dependency_data.evolution_dependencies}}
+												{{#each reveal.dependency_data.evolution_dependencies}}
 													<li><a href="{{url}}">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is tabs.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is tabs.dependency_data.jquery_ui 'true'}}<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a></li>{{/is}}
-										{{#each tabs.dependency_data.other}}
+										{{#is reveal.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is reveal.dependency_data.jquery_ui 'true'}}
+											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
+											{{#if reveal.dependency_data.jquery_ui_dependencies}}
+												<ul>
+												{{#each reveal.dependency_data.jquery_ui_dependencies}}
+													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+												{{/each}}
+												</ul>
+											{{/if}}
+											</li>
+										{{/is}}
+										{{#each reveal.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}
 									</ul>
@@ -202,7 +211,6 @@ The tabs Foundation component can parse the location hash value and open the cor
 								</div>
 							</li>
 						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
-
 						</ul>
 					<!-- SIDENAV ACCORDION - ENDS -->
 						{{/is}}

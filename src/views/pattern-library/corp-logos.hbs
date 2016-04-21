@@ -32,12 +32,12 @@ The corporate logos below are to be used for branding digital products across al
 <!-- INTRO SECTION - ENDS -->
 
 <!-- TABS - BEGINS -->
-	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content">
+	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content" data-tabs-content="evoLibraryTabs">
 	<!-- TAB PANEL 1 - BEGINS -->
-		<section role="tabpanel" aria-hidden="false" class="content active evo-site-tabs-content--pattern-library-tab-panel" id="tabs0">
+		<section class="tabs-panel evo-tabs-panel is-active evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel0">
 
 			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="docs-toc" data-equalizer-watch>
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each corp-logos.data }}
 					<div class="panel evo-box evo-site-example-box">
@@ -47,9 +47,9 @@ The corporate logos below are to be used for branding digital products across al
 						</div>
 						<div class="evo-box-bdy">
 							{{#is multiple_example 'true'}}
-							<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2 evo-site-corp-logo-ctn">
+							<div class="row small-up-1 medium-up-2 large-up-2 evo-site-corp-logo-ctn">
 								{{#each multiple_example_options}}
-								<li>
+								<div class="columns">
 									<div class="evo-site-corp-logo-ctn--img-ctn" data-evo-background-color="{{display_logo_background_color}}" data-evo-border-color="{{display_logo_border_color}}"><img src="/assets/images/core/corp-logos/{{image_png}}.png" alt="{{display_logo_alt}}" width="{{display_logo_width}}" class="evo-no-margin" /></div>
 									<h6 class="evo-hdr-rule">{{name}}</h6>
 									<p>{{{description}}}</p>
@@ -65,9 +65,9 @@ The corporate logos below are to be used for branding digital products across al
 											<a href="/assets/docs/core/images/corp-logos/{{image_zip}}.zip">Complete Set</a>
 										</li>
 									</ul>
-								</li>
+								</div>
 								{{/each}}
-							</ul>
+							</div>
 							{{/is}}
 						</div>
 					</div>
@@ -101,16 +101,16 @@ The favicon can be installed into a Web site (or page) and will appear next to t
 
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-sticky-container data-equalizer-watch>
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
-						<dl class="sub-nav">
-							{{#each corp-logos.data}}
-							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
-							{{/each}}
-							<dd data-magellan-arrival="favicon"><a href="#favicon">Favicon</a></dd>
-						</dl>
-					</div>
+					<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="docs-toc" data-sticky-on="large" data-sticky>
+						<ul class="menu vertical" data-magellan>
+						{{#each corp-logos.data}}
+							<li><a href="#{{hyphenate name}}">{{name}}</a></li>
+						{{/each}}
+							<li data-magellan-arrival="favicon"><a href="#favicon">Favicon</a></li>
+						</ul>
+					</nav>
 				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
@@ -119,7 +119,7 @@ The favicon can be installed into a Web site (or page) and will appear next to t
 	<!-- TAB PANEL 1 - ENDS -->
 
 	<!-- TAB PANEL 2 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs1">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel1">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
@@ -134,7 +134,7 @@ The favicon can be installed into a Web site (or page) and will appear next to t
 	<!-- TAB PANEL 2 - BEGINS -->
 
 	<!-- TAB PANEL 3 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
@@ -149,7 +149,7 @@ The favicon can be installed into a Web site (or page) and will appear next to t
 	<!-- TAB PANEL 3 - BEGINS -->
 
 	<!-- TAB PANEL 4 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs3">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel3">
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
