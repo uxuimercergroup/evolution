@@ -1,6 +1,7 @@
 ---
 title: "Breadcrumbs"
 definition_content: "src/content/breadcrumbs/definition.md"
+usage_content: "src/content/breadcrumbs/usage.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -112,24 +113,10 @@ Breadcrumbs come in handy to show a navigation trail for users clicking through 
 
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-
-				<!-- CONTENT SECTION - BEGINS -->
-					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
-						<div class="evo-site-markdown-content-block">
-							<div class="evo-site-annotations evo-spacer-margin-bottom-x-large">
-								<p>
-									We use a CSS <code>:after</code> element containing a slash character to create the separator between items. Some screen readers will read this character out loud—if this is an issue, you can use a background image or a separate element with <code>aria-hidden="true"</code> to create the separator instead.
-								</p>
-							</div>
-
-							{{{md definition_content}}}
-						</div>
-					</section>
-				<!-- CONTENT SECTION - ENDS -->
-
+					Content for something 2
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					&nbsp;
+					Magellan 2
 				</div>
 			</section>
 			
@@ -145,11 +132,13 @@ Breadcrumbs come in handy to show a navigation trail for users clicking through 
 					<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
 						<div class="evo-site-markdown-content-block">
-{{# markdown }}
-Add classes of `.breadcrumbs` `.evo-breadcrumbs` to a ul element. List items will automatically be styled, and you can add `.current` or `.unavailable` classes to list items to denote their state.
+							{{{md usage_content}}}
 
-You can also add `.breadcrumbs` `.evo-breadcrumbs` classes to a nav element containing anchor links to get the same result.
+							<div class="evo-site-annotations">
+{{# markdown }}
+We use a CSS `::after` element containing a slash character to create the separator between items. Some screen readers will read this character out loud—if this is an issue, you can use a background image or a separate element with `aria-hidden="true"` to create the separator instead.
 {{/ markdown }}
+							</div>
 						</div>
 					</section>
 				<!-- CONTENT SECTION - ENDS -->
