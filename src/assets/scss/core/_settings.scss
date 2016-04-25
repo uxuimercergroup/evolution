@@ -51,7 +51,9 @@ $use-top-bar:								true;
 // GLOBAL SETTINGS
 // ==========================================================================================
 
-// BASE VARIABLES
+// COLOR PALETTE
+// $evo-primary-color:						$sapphire-medium;
+// $evo-secondary-color:					$onyx-dark-6;
 
 // LAYOUT
 // $evo-base-margin:						0.875rem;
@@ -76,12 +78,10 @@ $use-top-bar:								true;
 // TYPOGRAPHY
 // ------------------------------------------------------------------------------------------
 
-// BASE FONTS
-$evo-base-font-family:						$body-font-family;
-// $evo-base-font-stack:					arial, Tahoma, Geneva, sans-serif;
 // $evo-base-font-file-path:				"../fonts";
+// $evo-base-font-stack:					arial, Tahoma, Geneva, sans-serif;
 
-// WEB FONTS
+// FONT STACKS
 
 	// Thin
 	// $evo-font-thin-family:				proxima_nova_ththin;
@@ -113,7 +113,7 @@ $evo-base-font-family:						$body-font-family;
 	// $evo-font-bold-italic-file-path:		"#{$evo-base-font-file-path}/ProximaNova-BoldIt-webfont";
 	// $evo-font-bold-italic-stack:			"#{$evo-font-bold-italic-family}", $evo-base-font-stack;
 
-// ICON FONTS
+// ICON FONT STACKS
 
 	// Core icon font set
 	// $evo-icon-font-family:					evo_icon_font;
@@ -125,8 +125,14 @@ $evo-base-font-family:						$body-font-family;
 	// $evo-icon-site-font-file-path:			"#{$evo-base-font-file-path}/evo-icon-font-site";
 	// $evo-icon-site-font-stack:				"#{$evo-icon-site-font-family}";
 
+// GLOBAL
+// $evo-base-font-family:					$evo-font-regular-stack;
+
 // LINKS
 // $evo-anchor-font-color-visited: 			$sapphire-medium;
+
+// HEADERS
+// $evo-header-color:						inherit;
 
 
 // ==========================================================================================
@@ -365,7 +371,7 @@ $evo-small-font-color: 						$onyx-dark-50;
 // $evo-datepicker-hdr-nav-icon-next: 		'\edc5';
 // $evo-datepicker-hdr-font-color: 			$onyx-dark-80;
 // $evo-datepicker-hdr-font-family: 		$evo-font-medium-stack;
-// $evo-datepicker-current-day-background-color: $highlight-color;
+// $evo-datepicker-current-day-background-color: $evo-highlight-color;
 // $evo-datepicker-current-day-font-family: $evo-font-medium-stack;
 // $evo-datepicker-current-day-font-color: 	$onyx-dark-70;
 // $evo-datepicker-today-background-color: 	$onyx-dark-70;

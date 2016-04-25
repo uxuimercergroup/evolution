@@ -24,8 +24,31 @@ $evo-spacer-xxxlarge:						($evo-spacer-size*7) !default;
 // COLOR HELPERS
 // ------------------------------------------------------------------------------------------
 
+// SYSTEM SPOT COLORS FOR ELEMENTS (FONT COLORS AND BACKGROUND COLORS)
+@each $color-name, $color in $system-color-palette
+										{
+
+	// CUSTOM SPOT FONT COLOR FOR TEXT AND LINKS
+	[data-evo-font-color="#{$color-name}"]	{
+											color: map-get($color, color) !important;
+											}
+
+	// CUSTOM SPOT BORDER COLOR FOR CONTAINERS AND BOXES
+	[data-evo-border-color="#{$color-name}"]
+											{
+											border-color: map-get($color, color) !important;
+											}
+
+	// CUSTOM SPOT BACKGROUND COLOR FOR CONTAINERS AND BOXES
+	[data-evo-background-color="#{$color-name}"]
+											{
+											background-color: map-get($color, color) !important;
+											}
+
+										}
+
 // CUSTOM SPOT COLORS FOR ELEMENTS (FONT COLORS AND BACKGROUND COLORS)
-@each $color-name, $color in $color-palette 
+@each $color-name, $color in $color-palette
 										{
 
 	// CUSTOM SPOT FONT COLOR FOR TEXT AND LINKS

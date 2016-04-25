@@ -156,17 +156,6 @@ URL: {{ meta_url }}
 // HEADER - ENDS
 
 // TYPE - BEGINS
-
-	@media screen and #{breakpoint(small only)}
-										{
-		// HEADERS
-	  	h1									{font-size: $evo-site-h1-font-size-small;}
-		h2									{font-size: $evo-site-h2-font-size-small;}
-		h3									{font-size: $evo-site-h3-font-size-small;}
-		h4									{font-size: $evo-site-h4-font-size-small;}
-		h5									{font-size: $evo-site-h5-font-size-small;}
-		h6									{font-size: $evo-site-h6-font-size-small;}
-										}
 	
 	// PULL OUT
 	.evo-site-pull-out					{

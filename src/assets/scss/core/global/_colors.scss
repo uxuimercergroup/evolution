@@ -2,33 +2,11 @@
 // Mercer Evolution - Global Color Variables Partial
 //-------------------------------------------------------------------------------------------
 
-// ==========================================================================================
-// CORE PALETTE COLORS
-// ==========================================================================================
-
 // BASE COLORS
 // ------------------------------------------------------------------------------------------
-$black:										#000000 !default;
-$white:										#FFFFFF !default;
+$black:										#0A0A0A !default;
+$white:										#FEFEFE !default;
 $transparent:								transparent !default;
-
-// SPECIFIC USE COLORS
-// ------------------------------------------------------------------------------------------
-
-// MESSAGING COLORS
-$evo-base-alert-color:						#EF4E45 !default;
-$evo-base-success-color:					#72BE44 !default;
-$evo-base-warning-color:					#FCC770 !default;
-$evo-base-info-color:						#A6E2EF !default;
-
-// HIGHLIGHT COLOR
-$evo-base-highlight-color:					#F7F0B2 !default;
-$highlight-color:							$evo-base-highlight-color !default;
-
-
-// ==========================================================================================
-// COLOR PALETTE COLORS
-// ==========================================================================================
 
 // SAPPHIRE COLORS
 // ------------------------------------------------------------------------------------------
@@ -131,13 +109,6 @@ $color-palette: (
 	"black": 				(color: $black),
 	"white": 				(color: $white),
 	"transparent": 			(color: $transparent),
-
-	// SPECIFIC USE COLORS
-	alert-color: 			(color: $evo-base-alert-color),
-	success-color: 			(color: $evo-base-success-color),
-	warning-color: 			(color: $evo-base-warning-color),
-	info-color: 			(color: $evo-base-info-color),
-	highlight-color: 		(color: $evo-base-highlight-color),
 
 	// SAPPHIRE COLORS
 	sapphire-dark: 			(color: $sapphire-dark),

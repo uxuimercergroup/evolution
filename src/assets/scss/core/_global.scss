@@ -14,8 +14,22 @@
 // GLOBAL VARIABLES
 // ==========================================================================================
 
-// BASE
-// ------------------------------------------------------------------------------------------
+// COLOR PALETTE
+$evo-primary-color:							$sapphire-medium !default;
+$evo-secondary-color:						$onyx-dark-6 !default;
+$evo-alert-color:							#EF4E45 !default;
+$evo-success-color:							#72BE44 !default;
+$evo-warning-color:							#FCC770 !default;
+$evo-info-color:							#A6E2EF !default;
+$evo-highlight-color:						#F7F0B2 !default;
+
+$system-color-palette: (
+	alert-color: 							(color: $evo-alert-color),
+	success-color: 							(color: $evo-success-color),
+	warning-color: 							(color: $evo-warning-color),
+	info-color: 							(color: $evo-info-color),
+	highlight-color: 						(color: $evo-highlight-color)
+);
 
 // LAYOUT
 $evo-base-margin:							0.875rem !default;
@@ -40,11 +54,10 @@ $evo-base-zindex-autocomplete:				9001 !default;
 // TYPOGRAPHY
 // ------------------------------------------------------------------------------------------
 
-// BASE FONTS
-$evo-base-font-stack:						arial, Tahoma, Geneva, sans-serif !default;
 $evo-base-font-file-path:					"../fonts" !default;
+$evo-base-font-stack:						arial, Tahoma, Geneva, sans-serif !default;
 
-// WEB FONTS
+// FONT STACKS
 
 	// Thin
 	$evo-font-thin-family:						proxima_nova_ththin !default;
@@ -76,7 +89,7 @@ $evo-base-font-file-path:					"../fonts" !default;
 	$evo-font-bold-italic-file-path:			"#{$evo-base-font-file-path}/ProximaNova-BoldIt-webfont" !default;
 	$evo-font-bold-italic-stack:				"#{$evo-font-bold-italic-family}", $evo-base-font-stack !default;
 
-// ICON FONTS
+// ICON FONT STACKS
 
 	// Core icon font set
 	$evo-icon-font-family:						evo_icon_font !default;
@@ -88,5 +101,11 @@ $evo-base-font-file-path:					"../fonts" !default;
 	$evo-icon-site-font-file-path:				"#{$evo-base-font-file-path}/evo-icon-font-site" !default;
 	$evo-icon-site-font-stack:					"#{$evo-icon-site-font-family}" !default;
 
+// GLOBAL
+$evo-base-font-family:						$evo-font-regular-stack !default;
+
 // LINKS
 $evo-anchor-font-color-visited: 			$sapphire-medium !default;
+
+// HEADERS
+$evo-header-color:							inherit !default;

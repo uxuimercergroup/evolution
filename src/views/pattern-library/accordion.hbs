@@ -157,41 +157,41 @@ The accordion control provides an effective way to display chunks of information
 								<div class="accordion-content" data-tab-content>
 
 									<ul class="no-bullet">
-										{{#is reveal.dependency_data.foundation 'true'}}
+										{{#is accordion.dependency_data.foundation 'true'}}
 											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if reveal.dependency_data.foundation_dependencies}}
+											{{#if accordion.dependency_data.foundation_dependencies}}
 												<ul>
-												{{#each reveal.dependency_data.foundation_dependencies}}
+												{{#each accordion.dependency_data.foundation_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#is reveal.dependency_data.evolution 'true'}}
+										{{#is accordion.dependency_data.evolution 'true'}}
 											<li><a href="/">Evolution {{package.version}}</a>
-											{{#if reveal.dependency_data.evolution_dependencies}}
+											{{#if accordion.dependency_data.evolution_dependencies}}
 												<ul>
-												{{#each reveal.dependency_data.evolution_dependencies}}
+												{{#each accordion.dependency_data.evolution_dependencies}}
 													<li><a href="{{url}}">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is reveal.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is reveal.dependency_data.jquery_ui 'true'}}
+										{{#is accordion.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is accordion.dependency_data.jquery_ui 'true'}}
 											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
-											{{#if reveal.dependency_data.jquery_ui_dependencies}}
+											{{#if accordion.dependency_data.jquery_ui_dependencies}}
 												<ul>
-												{{#each reveal.dependency_data.jquery_ui_dependencies}}
+												{{#each accordion.dependency_data.jquery_ui_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#each reveal.dependency_data.other}}
+										{{#each accordion.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}
 									</ul>
