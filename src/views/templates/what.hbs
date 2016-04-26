@@ -16,15 +16,16 @@ title: "What is Evolution?"
 	<section class="evo-full-width evo-site-band evo-site-band--marketing">
 		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
 			<h3 class="text-center evo-margin-left evo-margin-right">{{{what.users.header}}}</h3>
-			<ul class="small-block-grid-{{what.users.grid_small}} medium-block-grid-{{what.users.grid_medium}} large-block-grid-{{what.users.grid_large}} evo-site-band--marketing-block-grid">
+
+			<div class="row small-up-{{what.users.grid_small}} medium-up-{{what.users.grid_medium}} large-up-{{what.users.grid_large}} evo-site-band--marketing-block-grid">
 				{{#each what.users.items}}
-				<li class="text-center">
+				<div class="columns text-center">
 					{{> (lookup . 'partial') }}
 					<h5>{{{header}}}</h5>
 					<p>{{{text}}}</p>
-				</li>
+				</div>
 				{{/each}}
-			</ul>
+			</div>
 		</div>
 	</section>
 <!-- WHAT IS USERS BAND - ENDS -->
@@ -50,30 +51,32 @@ title: "What is Evolution?"
 				</div>
 			</div>
 			<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
-				<ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-2 evo-site-band--marketing-block-grid" data-equalizer>
-					<li class="evo-no-padding-bottom" data-equalizer-watch>
+
+				<div class="row small-up-1 medium-up-1 large-up-2 evo-site-band--marketing-block-grid" data-equalizer>
+					<div class="columns evo-no-padding-bottom" data-equalizer-watch>
 						<h5 class="text-center evo-spacer-margin-bottom-x-large">{{{what.inside_out.item_code_header}}}</h5>
-						<ul class="small-block-grid-{{what.inside_out.grid_small}} medium-block-grid-{{what.inside_out.grid_medium}} large-block-grid-{{what.inside_out.grid_large}}">
+						<div class="row small-up-{{what.inside_out.grid_small}} medium-up-{{what.inside_out.grid_medium}} large-up-{{what.inside_out.grid_large}}">
 							{{#each what.inside_out.items_code}}
-							<li class="text-center">
+							<div class="columns text-center">
 								{{> (lookup . 'partial') }}
 								<p class="evo-spacer-margin-top-small evo-no-margin-bottom">{{{text}}}</p>
-							</li>
+							</div>
 							{{/each}}
-						</ul>
-					</li>
-					<li class="evo-keyline-left evo-no-padding-bottom" data-equalizer-watch>
+						</div>
+					</div>
+					<div class="columns evo-keyline-left evo-no-padding-bottom" data-equalizer-watch>
 						<h5 class="text-center evo-spacer-margin-bottom-x-large">{{{what.inside_out.item_design_header}}}</h5>
-						<ul class="small-block-grid-{{what.inside_out.grid_small}} medium-block-grid-{{what.inside_out.grid_medium}} large-block-grid-{{what.inside_out.grid_large}}">
+						<div class="row small-up-{{what.inside_out.grid_small}} medium-up-{{what.inside_out.grid_medium}} large-up-{{what.inside_out.grid_large}}">
 							{{#each what.inside_out.items_design}}
-							<li class="text-center">
+							<div class="columns text-center">
 								{{> (lookup . 'partial') }}
 								<p class="evo-spacer-margin-top-small evo-no-margin-bottom">{{{text}}}</p>
-							</li>
+							</div>
 							{{/each}}
-						</ul>
-					</li>
-				</ul>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</section>

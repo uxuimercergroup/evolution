@@ -16,15 +16,16 @@ title: "Product Suites"
 	<section class="evo-full-width evo-site-band evo-site-band--marketing">
 		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
 			<h3 class="text-center evo-margin-left evo-margin-right">{{{product-suites.principles.header}}}</h3>
-			<ul class="small-block-grid-{{what.users.grid_small}} medium-block-grid-{{product-suites.principles.grid_medium}} large-block-grid-{{product-suites.principles.grid_large}} evo-site-band--marketing-block-grid">
+
+			<div class="row small-up-{{what.users.grid_small}} medium-up-{{product-suites.principles.grid_medium}} large-up-{{product-suites.principles.grid_large}} evo-site-band--marketing-block-grid">
 				{{#each product-suites.principles.items}}
-				<li class="text-center">
+				<div class="columns text-center">
 					{{> (lookup . 'partial') }}
 					<h5>{{{header}}}</h5>
 					<p>{{{text}}}</p>
-				</li>
+				</div>
 				{{/each}}
-			</ul>
+			</div>
 		</div>
 	</section>
 <!-- DIGITAL PRINCIPALS BAND - ENDS -->
