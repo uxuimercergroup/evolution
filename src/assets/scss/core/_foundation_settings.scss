@@ -68,7 +68,7 @@ $global-margin: $evo-base-margin;
 $global-padding: $evo-base-padding;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 3px;
+$global-radius: $evo-base-radius;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
@@ -193,13 +193,13 @@ $input-error-font-weight: $global-weight-bold;
 // 7. Accordion
 // ------------
 
-$accordion-background: $white;
+$accordion-background: $transparent;
 $accordion-plusminus: false;
 $accordion-item-color: foreground($accordion-background, $primary-color);
 $accordion-item-background-hover: $transparent;
 $accordion-item-padding: 1.25rem 1rem;
-$accordion-content-background: $white;
-$accordion-content-border: 1px solid $onyx-dark-30;
+$accordion-content-background: $accordion-background;
+$accordion-content-border: 1px solid $medium-gray;
 $accordion-content-color: foreground($accordion-background, $primary-color);
 $accordion-content-padding: 1rem;
 

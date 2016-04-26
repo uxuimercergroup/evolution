@@ -5,45 +5,51 @@
 //
 // @variables
 //
-$evo-accordion-border-size: 1px !default;
-$evo-accordion-border-style: solid !default;
-$evo-accordion-border-color: $onyx-dark-30 !default;
-$evo-accordion-navigation-margin-bottom: rem-calc(10) !default;
-$evo-accordion-navigation-font-family: $evo-font-medium-stack !default;
+$evo-accordion-background-color: $white !default;
+$evo-accordion-title-font-family: $evo-font-medium-stack !default;
+$evo-accordion-title-font-size: inherit !default;
+$evo-accordion-title-font-color: inherit !default;
 $evo-accordion-icon-font-family: $evo-icon-font-stack !default;
 $evo-accordion-icon-open-icon: '\ed5c' !default;
 $evo-accordion-icon-close-icon: '\ed5d' !default;
-$evo-accordion-icon-font-color: $accordion-item-color !default;
+$evo-accordion-icon-font-color: inherit !default;
 
 
 @if $use-accordion == true{
 
 	// ACCORDION
 	.evo-accordion			{
-							border: 0;
+							background-color: $evo-accordion-background-color;
+							border-top: 0;
+							border-bottom: $accordion-content-border;
 		.accordion-item			{
-								@include border-radius($global-radius);
-								border: $evo-accordion-border-size $evo-accordion-border-style $evo-accordion-border-color;
-								margin-bottom: $evo-accordion-navigation-margin-bottom !important;
 			.accordion-title		{
-									border: 0;
-									font-family: $evo-accordion-navigation-font-family;
-									font-size: $global-font-size;
+									border-top: $accordion-content-border;
+									border-bottom: 0;
+									font-family: $evo-accordion-title-font-family;
+									font-size: $evo-accordion-title-font-size;
+									text-decoration: none;
+									color: $evo-accordion-title-font-color;
 									}
 			.accordion-content		{
 									border: 0;
 									padding-top: 0;
 									}
+			&:first-child			{
+				.accordion-title		{@include border-radius($evo-base-radius $evo-base-radius 0 0);}
+									}
 								}
 							}
 
 	// ACCORDION WITH ICONS
-	.evo-accordion-icons	{
+	[data-evo-accordion-icons-left],
+	[data-evo-accordion-icons-right]
+							{
 		.accordion-item			{
 			> a:before 				{
 									font-family: $evo-accordion-icon-font-family;
 									content: $evo-accordion-icon-open-icon;
-									padding-right: rem-calc(10);
+									padding: rem-calc(0 10 0 0);
 									float: left;
 									font-size: rem-calc(16);
 									color: $evo-accordion-icon-font-color;
@@ -53,6 +59,16 @@ $evo-accordion-icon-font-color: $accordion-item-color !default;
 			a[aria-expanded="true"]:before
 									{
 									content: $evo-accordion-icon-close-icon;
+									}
+								}
+							}
+
+	[data-evo-accordion-icons-right]
+							{
+		.accordion-item			{
+			> a:before 				{
+									padding: rem-calc(0 0 0 10);
+									float: right;
 									}
 								}
 							}
