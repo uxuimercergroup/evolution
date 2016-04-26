@@ -22,15 +22,16 @@ title: "Home"
 					{{> (lookup . 'partial') }}
 				{{/each}}
 			</div>
-			<ul class="small-block-grid-{{home.tools.grid_small}} medium-block-grid-{{home.tools.grid_medium}} large-block-grid-{{home.tools.grid_large}} evo-site-band--marketing-block-grid">
+
+			<div class="row small-up-{{home.tools.grid_small}} medium-up-{{home.tools.grid_medium}} large-up-{{home.tools.grid_large}} evo-site-band--marketing-block-grid">
 				{{#each home.tools.items}}
-				<li class="text-center">
+				<div class="column text-center">
 					{{> (lookup . 'partial') }}
 					<h5>{{header}}</h5>
 					<p>{{text}}</p>
-				</li>
+				</div>
 				{{/each}}
-			</ul>
+			</div>
 			<div class="text-center hide-for-small-only"> 
 				{{#each home.tools.cta_button}}
 					{{> (lookup . 'partial') }}
@@ -131,13 +132,14 @@ title: "Home"
 		<div class="medium-12 medium-centered columns evo-contain-to-grid evo-site-band--marketing-content">
 			<h3 class="text-center evo-spacer-margin-bottom-small">{{home.products.header}}</h3>
 			<h6 class="subheader text-center">{{home.products.subheader}}</h6>
-			<ul class="small-block-grid-{{home.products.grid_small}} medium-block-grid-{{home.products.grid_medium}} large-block-grid-{{home.products.grid_large}} evo-site-band--marketing-block-grid">
+
+			<div class="row small-up-{{home.products.grid_small}} medium-up-{{home.products.grid_medium}} large-up-{{home.products.grid_large}} evo-site-band--marketing-block-grid">
 				{{#each home.products.items}}
-				<li class="text-center">
+				<div class="column text-center">
 					<h4><a href="{{url}}">{{header}}</a></h4>
-				</li>
+				</div>
 				{{/each}}
-			</ul>
+			</div>
 		</div>
 	</section>
 <!-- HOME PAGE PRODUCTS BAND - ENDS -->
