@@ -60,10 +60,6 @@ module.exports = {
         'src/assets/js/core/lib/jquery/plugins/jquery.autosize.input.js',
         'src/assets/js/core/lib/jquery/plugins/jquery.maskedinput.js',
         'src/assets/js/core/lib/jquery/plugins/owl.carousel.js',
-        'bower_components/AniJS/dist/anijs.js',
-        'bower_components/AniJS/dist/helpers/dom/anijs-helper-dom.js',
-        'bower_components/AniJS/dist/helpers/scrollreveal/anijs-helper-scrollreveal.js',
-        'bower_components/AniJS/dist/event_systems/jquery/anijs-jquery-event-system.js',
         'src/assets/js/core/lib/mobile/ios-orientationchange-fix.js',
         'src/assets/js/core/atoms/buttons.js',
         'src/assets/js/core/atoms/helpers.js',
@@ -73,6 +69,25 @@ module.exports = {
         'src/assets/js/core/molecules/datepicker.js',
         'src/assets/js/core/molecules/slider.js',
         'src/assets/js/core/molecules/top_bar.js'
+      ]
+    }
+  },
+  animation: {
+    options: {
+      banner:
+        '/*!\n' +
+        '* Mercer Evolution v<%= package.version %> - Animation JS\n' +
+        '* DATE: <%= package.date %>\n' +
+        '* AUTHOR: <%= package.author %>\n' +
+        '* URL: <%= package.homepage %>\n' +
+        '*/\n\n'
+    },
+    files: {
+      'dist/assets/js/evolution-animations.js': [
+        'bower_components/AniJS/dist/anijs.js',
+        'bower_components/AniJS/dist/helpers/dom/anijs-helper-dom.js',
+        'bower_components/AniJS/dist/helpers/scrollreveal/anijs-helper-scrollreveal.js',
+        'bower_components/AniJS/dist/event_systems/jquery/anijs-jquery-event-system.js'
       ]
     }
   },

@@ -43,7 +43,7 @@ module.exports = {
   },
   scripts: {
     files: ['src/assets/js/**/*.js', 'src/patterns/**/*.js'],
-    tasks: ['newer:concat:core', 'newer:concat:site', 'notify:concat']
+    tasks: ['newer:concat:core', 'newer:concat:animation', 'newer:concat:site', 'notify:concat']
   },
   assets_copy: {
     files: [

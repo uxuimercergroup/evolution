@@ -17,6 +17,7 @@ prod:
   - 'sass:patterns'
   - 'postcss:dist'
   - 'concat'
+  - 'babel'
   - 'uglify'
   - 'imagemin'
   - 'copy:prod'

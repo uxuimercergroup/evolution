@@ -11,6 +11,13 @@ module.exports = {
       ]
     }
   },
+  animation: {
+    files: {
+      'dist/assets/js/evolution-animations.min.js': [
+        'dist/assets/js/evolution-animations.js'
+      ]
+    }
+  },
   site: {
     files: {
       'dist/assets/js/app.min.js': [
