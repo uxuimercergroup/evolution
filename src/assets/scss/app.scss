@@ -836,10 +836,6 @@ URL: {{ meta_url }}
 												float: right !important;
 												margin-right: rem-calc(4);
 												}
-			.evo-hdr-rule						{
-												border-bottom-width: $evo-site-example-box-hdr-border-bottom-width;
-												border-bottom-color: $evo-site-example-box-hdr-border-bottom-color;
-												}
 			.evo-site-example-box--code-hdr		{
 												@include border-radius($evo-site-example-box-code-hdr-border-radius);
 												background-color: $evo-site-example-box-code-hdr-background-color;

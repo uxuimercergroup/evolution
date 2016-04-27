@@ -1,7 +1,7 @@
 ---
-title: "Boxes"
-definition_content: "src/content/boxes/definition.md"
-usage_content: "src/content/boxes/usage.md"
+title: "Callout"
+definition_content: "src/content/callout/definition.md"
+usage_content: "src/content/callout/usage.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -10,14 +10,14 @@ usage_content: "src/content/boxes/usage.md"
 
 {{# markdown }}
 ## {{ title }}
-Boxes are the basic building blocks of any web site or component. Evolution boxes depend on Foundation's [Panels](http://foundation.zurb.com/sites/docs/panels.html) as a starting point. Each box is made of a box header, body, and footer.
+Callouts are the basic building blocks of any web site or component. Evolution callouts depend on Foundation's [Callout](http://foundation.zurb.com/sites/docs/callout.html) as a starting point. Each callout is made of a header, body, and footer.
 {{/ markdown }}
 
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{boxes.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
-				{{#each boxes.tabs}}
+			<ul class="button-group radius {{callout.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+				{{#each callout.tabs}}
 				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
 					<a href="#tabs{{index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{index}}" class="button small evo-button">
 						<span class="text">{{name}}</span>
@@ -39,7 +39,7 @@ Boxes are the basic building blocks of any web site or component. Evolution boxe
 			<section class="row" data-equalizer>
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
 				<!-- EXAMPLE BOX - BEGINS -->
-					{{#each boxes.data }}
+					{{#each callout.data }}
 					<div class="panel evo-box evo-site-example-box">
 						<div class="evo-box-hdr">
 						<!-- EXAMPLE HEADER - BEGINS -->
@@ -96,7 +96,7 @@ Boxes are the basic building blocks of any web site or component. Evolution boxe
 				<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
 						<dl class="sub-nav">
-							{{#each boxes.data}}
+							{{#each callout.data}}
 							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
 							{{/each}}
 						</dl>
@@ -156,7 +156,7 @@ Boxes are the basic building blocks of any web site or component. Evolution boxe
 						<hr>
 						--}}
 
-						{{#is boxes.dependency_data.dependency 'true'}}
+						{{#is callout.dependency_data.dependency 'true'}}
 
 					<!-- SIDENAV ACCORDION - BEGINS -->
 						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
@@ -167,41 +167,41 @@ Boxes are the basic building blocks of any web site or component. Evolution boxe
 								<div id="dependencies-accordion" class="content active" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
 
 									<ul class="no-bullet">
-										{{#is boxes.dependency_data.foundation 'true'}}
+										{{#is callout.dependency_data.foundation 'true'}}
 											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if boxes.dependency_data.foundation_dependencies}}
+											{{#if callout.dependency_data.foundation_dependencies}}
 												<ul>
-												{{#each boxes.dependency_data.foundation_dependencies}}
+												{{#each callout.dependency_data.foundation_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#is boxes.dependency_data.evolution 'true'}}
+										{{#is callout.dependency_data.evolution 'true'}}
 											<li><a href="/">Evolution {{package.version}}</a>
-											{{#if boxes.dependency_data.evolution_dependencies}}
+											{{#if callout.dependency_data.evolution_dependencies}}
 												<ul>
-												{{#each boxes.dependency_data.evolution_dependencies}}
+												{{#each callout.dependency_data.evolution_dependencies}}
 													<li><a href="{{url}}">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											</li>
 											{{/if}}
 										{{/is}}
-										{{#is boxes.dependency_data.jquery 'true'}}<li><a href="http://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is boxes.dependency_data.jquery_ui 'true'}}
+										{{#is callout.dependency_data.jquery 'true'}}<li><a href="http://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+										{{#is callout.dependency_data.jquery_ui 'true'}}
 											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
-											{{#if boxes.dependency_data.jquery_ui_dependencies}}
+											{{#if callout.dependency_data.jquery_ui_dependencies}}
 												<ul>
-												{{#each boxes.dependency_data.jquery_ui_dependencies}}
+												{{#each callout.dependency_data.jquery_ui_dependencies}}
 													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 												{{/each}}
 												</ul>
 											{{/if}}
 											</li>
 										{{/is}}
-										{{#each boxes.dependency_data.other}}
+										{{#each callout.dependency_data.other}}
 											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
 										{{/each}}
 									</ul>
@@ -232,8 +232,8 @@ Boxes are the basic building blocks of any web site or component. Evolution boxe
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
 						<div class="evo-site-markdown-content-block">
 {{# markdown }}
-##### {{ boxes.settings_header }}
-Below is a list of the data options that can be used with boxes using data attributes.
+##### {{ callout.settings_header }}
+Below is a list of the data options that can be used with callouts using data attributes.
 {{/ markdown }}
 						</div>
 
@@ -249,7 +249,7 @@ Below is a list of the data options that can be used with boxes using data attri
 									</tr>
 								</thead>
 								<tbody>
-								{{#each boxes.settings_data}}
+								{{#each callout.settings_data}}
 									<tr>
 										<td>{{{ option }}}</td>
 										<td class="text-center">{{{ default_value }}}</td>
