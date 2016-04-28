@@ -6,7 +6,6 @@ An Equalizer group consists of a parent container that contains a series of chil
 
 You can specify media queries for which equalizer should activate on. 
 
-
 ##### Nested Elements
 
 You can also nest "equalized" child elements in other Equalizer child elements. 
