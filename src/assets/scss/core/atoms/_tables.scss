@@ -22,7 +22,6 @@ $evo-table-thead-font-color: $white !default;
 							overflow: hidden;
 							width: 100%;
 							}
-
 						}
 
 	// TABLE BASE
@@ -43,6 +42,19 @@ $evo-table-thead-font-color: $white !default;
 							{
 							min-width: 100%;
 							width: 100%;
+							}
+
+		&.stack				{
+							min-width: auto;
+			@include breakpoint(medium down)
+								{
+				th					{border: 0;}
+				td					{
+									border: 0;
+									padding-top: rem-calc(6);
+									padding-bottom: rem-calc(6);
+									}
+								}
 							}
 						}
 }//endif

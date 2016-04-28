@@ -39,33 +39,64 @@ Tables are an element meant to organize data on a page. Evolution tables depend 
 			<section class="row" data-equalizer="tab-panel">
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col" data-equalizer-watch="tab-panel">
 				<!-- EXAMPLE BOX - BEGINS -->
-					<div class="panel evo-box evo-site-example-box">
-						<div class="evo-box-hdr">
+					<div class="callout evo-callout evo-site-example-box">
+						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-target="Basic-Table" id="Basic-Table">
-								Basic Table
-								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip right evo-tooltip" title="View Source" data-evo-toggle-element="code-toggle0" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr0, after: removeAnim;"></a>
+								Static Table
+								<a href="#code-anchor0" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip right evo-tooltip" title="View Source" data-evo-toggle-element="code-toggle0" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr0, after: removeAnim;"></a>
 							</h6>
 						<!-- EXAMPLE HEADER - ENDS -->
-						</div>
-						<div class="evo-box-bdy">
+						</header>
+						<section>
 						<!-- RENDERED HTML - BEGINS -->
 							{{> table-static }}
 						<!-- RENDERED HTML - ENDS -->
-						</div>
-						<div class="evo-box-ftr evo-site-example-box-ftr0 hide" id="code-anchor0" data-evo-toggle-element-item="code-toggle0">
+						</section>
+						<footer class="evo-site-example-box-ftr0 hide" id="code-anchor0" data-evo-toggle-element-item="code-toggle0">
 						<!-- CODE - BEGINS -->
 
 							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
-									basic-table
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large"></a>
+									table-static
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-table-static" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large"></a>
 								</div>
-								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-basic-table"><xmp>{{> table-static }}</xmp></code></pre>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-table-static"><xmp>{{> table-static }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
 
 						<!-- CODE - ENDS -->
-						</div>
+						</footer>
+					</div>
+				<!-- EXAMPLE BOX - ENDS -->
+
+				<!-- EXAMPLE BOX - BEGINS -->
+					<div class="callout evo-callout evo-site-example-box">
+						<header>
+						<!-- EXAMPLE HEADER - BEGINS -->
+							<h6 class="evo-hdr-rule" data-magellan-target="Basic-Table" id="Basic-Table">
+								Table Stacked on Small Screens
+								<a href="#code-anchor1" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip right evo-tooltip" title="View Source" data-evo-toggle-element="code-toggle1" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr0, after: removeAnim;"></a>
+							</h6>
+						<!-- EXAMPLE HEADER - ENDS -->
+						</header>
+						<section>
+						<!-- RENDERED HTML - BEGINS -->
+							{{> table-static-stacked }}
+						<!-- RENDERED HTML - ENDS -->
+						</section>
+						<footer class="evo-site-example-box-ftr1 hide" id="code-anchor1" data-evo-toggle-element-item="code-toggle1">
+						<!-- CODE - BEGINS -->
+
+							<!-- HTML - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									table-static-stacked
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-table-static-stacked" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-table-static-stacked"><xmp>{{> table-static-stacked }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
+						<!-- CODE - ENDS -->
+						</footer>
 					</div>
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
