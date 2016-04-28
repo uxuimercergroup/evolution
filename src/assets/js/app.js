@@ -67,7 +67,7 @@
 
 		// REINIT ON TOGGLE OF PATTERN LIBRARY CONTENT TABS
 		var evoSitePatternLibTabsReInit = function(){
-			jQuery('.evo-site-tabs--pattern-library-tabs').on('toggled', function (event, tab) {
+			jQuery('.evo-site-tabs--pattern-library-tabs').on('change.zf.tabs', function () {
 
 				// ReInit equalizer on tab toggling, fixes bug with equalizer in hidden tabs
 			    Foundation.reInit('equalizer');

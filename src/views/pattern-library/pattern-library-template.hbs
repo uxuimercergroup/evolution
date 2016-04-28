@@ -40,16 +40,16 @@ Main description would begin here about the component/pattern that you are build
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col" data-equalizer-watch="tab-panel">
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each buttons.data }}
-					<div class="panel evo-box evo-site-example-box">
-						<div class="evo-box-hdr">
+					<div class="callout evo-callout evo-site-example-box">
+						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-target="{{hyphenate name}}" id="{{hyphenate name}}">
 								{{name}}
 								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip right evo-tooltip" title="View Source" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
 						<!-- EXAMPLE HEADER - ENDS -->
-						</div>
-						<div class="evo-box-bdy">
+						</header>
+						<section>
 						<!-- RENDERED HTML - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -59,8 +59,8 @@ Main description would begin here about the component/pattern that you are build
 								{{> (lookup . 'partial') }}
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
-						</div>
-						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						</section>
+						<footer class="evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
 						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -107,20 +107,22 @@ Main description would begin here about the component/pattern that you are build
 
 							{{/is}}
 						<!-- CODE - ENDS -->
-						</div>
+						</footer>
 					</div>
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-sticky-container data-equalizer-watch="tab-panel">
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
-					<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col" data-sticky-on="large" data-sticky>
-						<ul class="menu vertical" data-magellan>
-						{{#each buttons.data}}
-							<li><a href="#{{hyphenate name}}">{{name}}</a></li>
-						{{/each}}
-						</ul>
-					</nav>
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col" data-sticky-on="large" data-sticky>
+							<ul class="menu vertical" data-magellan>
+							{{#each buttons.data}}
+								<li><a href="#{{hyphenate name}}">{{name}}</a></li>
+							{{/each}}
+							</ul>
+						</nav>
+					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
@@ -143,7 +145,7 @@ Main description would begin here about the component/pattern that you are build
 				<!-- CONTENT SECTION - ENDS -->
 
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 					&nbsp;
 				</div>
 			</section>
@@ -167,14 +169,14 @@ Main description would begin here about the component/pattern that you are build
 						</div>
 						
 					<!-- JS CODE - BEGINS -->
-						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
-							<div class="evo-box-ftr">
+						<div class="callout evo-callout evo-site-example-box evo-margin-bottom">
+							<section>
 								<div class="evo-site-example-box--code-hdr">
 									{{autocomplete.data.autocompletel.slug}}
 									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-usage-{{autocomplete.data.autocompletel.slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
 								<pre><code class="language-js" id="evo-code-copy-js-usage-{{autocomplete.data.autocompletel.slug}}"><xmp>{{> autocomplete-js }}</xmp></code></pre>
-							</div>
+							</section>
 						</div>
 					<!-- JS CODE - ENDS -->
 
@@ -191,22 +193,22 @@ Main description would begin here about the component/pattern that you are build
 						</div>
 
 					<!-- HTML CODE - BEGINS -->
-						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
-							<div class="evo-box-hdr">
+						<div class="callout evo-callout evo-site-example-box evo-margin-bottom">
+							<header>
 								<h6 class="evo-hdr-rule">{{autocomplete.data.autocompletel.name}} Example</h6>
-							</div>
-							<div class="evo-box-bdy">
+							</header>
+							<section>
 							<!-- RENDERED HTML - BEGINS -->
 								{{> autocomplete }}
 							<!-- RENDERED HTML - ENDS -->
-							</div>
-							<div class="evo-box-ftr evo-no-margin-top">
+							</section>
+							<footer class="evo-no-margin-top">
 								<div class="evo-site-example-box--code-hdr">
 									{{autocomplete.data.autocompletel.slug}}
 									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-usage-{{autocomplete.data.autocompletel.slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
 								<pre><code class="language-markup" id="evo-code-copy-html-usage-{{autocomplete.data.autocompletel.slug}}"><xmp>{{> autocomplete }}</xmp></code></pre>
-							</div>
+							</footer>
 						</div>
 					<!-- HTML CODE - ENDS -->
 
@@ -228,7 +230,7 @@ Main description would begin here about the component/pattern that you are build
 				<!-- CONTENT SECTION - ENDS -->
 
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
 						{{!--
@@ -321,7 +323,7 @@ Main description would begin here about the component/pattern that you are build
 				<!-- CONTENT SECTION - ENDS -->
 
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 					<!-- SIDENAV - BEGINS -->
 					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
 						

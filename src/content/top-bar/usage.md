@@ -34,10 +34,10 @@ When using the click version of the Top Bar Mega Menu make sure to set the `data
 
 ##### Content Layout Options
 ###### Contain To Grid
-Use `.evo-contain-to-grid` to contain the content inside the Mega Menu to the grid max-width and center it inside the Mega Menu.
+Use `.row` to contain the content inside the Mega Menu to the grid max-width and center it inside the Mega Menu.
 
 ###### Full Width
-Use .evo-full-width to expand the content inside the Mega Menu to 100% of the width of Mega Menu.
+Use `.row .expanded` to expand the content inside the Mega Menu to 100% of the width of Mega Menu.
 
 
 ##### Accessibility

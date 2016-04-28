@@ -1,17 +1,15 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Base Grid Partial
+// Mercer Evolution - Grid Partial
 //-------------------------------------------------------------------------------------------
 
 //
 // @variables
 //
-$evo-grid-device-padding: rem-calc(20) rem-calc(10) 0 rem-calc(10) !default;
+
 
 
 @if $use-grid == true{
 
-	section[role=main]			{
-								padding: $evo-grid-device-padding;
-								}
+	
 
 }//endif

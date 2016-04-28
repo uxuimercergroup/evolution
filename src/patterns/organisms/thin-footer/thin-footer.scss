@@ -104,17 +104,16 @@ $evo-thin-footer-social-media-badge-font-color-visited: $evo-thin-footer-social-
 
 // THIN FOOTER - BEGINS
 	.evo-thin-footer 	{
+						border-top-width: $evo-thin-footer-content-section-border-top-width;
+						border-top-style: $evo-thin-footer-content-section-border-top-style;
+						border-top-color: $evo-thin-footer-content-section-border-top-color;
 
 	// FOOTER CONTENT SECTION - BEGINS
 		.evo-footer-content-section
 							{
 							background-color: $evo-thin-footer-content-section-background-color;
-							border-top-width: $evo-thin-footer-content-section-border-top-width;
-							border-top-style: $evo-thin-footer-content-section-border-top-style;
-							border-top-color: $evo-thin-footer-content-section-border-top-color;
 							padding-top: $evo-thin-footer-content-section-padding-top;
 							min-height: $evo-thin-footer-content-section-min-height;
-							max-width: none;
 
 		// SOCIAL MEDIA BADGE COMPONENT - BEGINS
 			.evo-social-media-badges-ctn 

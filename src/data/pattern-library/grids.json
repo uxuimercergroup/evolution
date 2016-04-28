@@ -19,24 +19,12 @@
 		]
 	},
 
-	"tab-spacing": "even-2",
-	"tabs": [
-		{"name": "Examples", "active": "true", "index": "0"},
-		{"name": "Usage", "index": "2"}
-	],
-
-	"basic_nav": "Basic Grid",
-	"offsets_nav": "Grid Offsets",
-	"center_nav": "Centering",
-	"source_nav": "Source Ordering",
-	"block_nav": "Block Grids",
-
 	"data": {
 		"basic": {
 			"name": "Basic Grid",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "grid-basic", "slug": "basic-grid"}
+				{"partial": "grid-basic", "slug": "grid"}
 			]
 		},
 		"layouts": {
@@ -58,14 +46,14 @@
 			"name": "Centering",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "grid-centering", "slug": "centering"}
+				{"partial": "grid-centering", "slug": "grid-centering"}
 			]
 		},
 		"source_ordering": {
 			"name": "Source Ordering",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "grid-source-ordering", "slug": "source-ordering"}
+				{"partial": "grid-source-ordering", "slug": "grid-source-ordering"}
 			]
 		},
 		"offsets": {
@@ -79,7 +67,7 @@
 			"name": "Block Grids",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "block-grid-basic", "slug": "block-grid-basic"}
+				{"partial": "block-grid-basic", "slug": "block-grid"}
 			]
 		}
 	}

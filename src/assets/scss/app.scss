@@ -489,6 +489,7 @@ URL: {{ meta_url }}
 	// TAB BAND
 	.evo-site-band--tab					{
 		.evo-site-band--tab-hdr				{
+											@include clearfix;
 											background-color: $evo-site-band-tab-hdr-background-color;
 			.evo-site-band--tab-hdr-tab			{
 												@include box-shadow($evo-site-band-tab-box-shadow-horizontal $evo-site-band-tab-box-shadow-vertical $evo-site-band-tab-box-shadow-blur $evo-site-band-tab-box-shadow-spread rgba($evo-site-band-tab-box-shadow-color, $evo-site-band-tab-box-shadow-alpha));
@@ -519,6 +520,7 @@ URL: {{ meta_url }}
 											}
 		.evo-site-band--tab-panel			{
 											@include box-shadow($evo-site-band-tab-box-shadow-horizontal $evo-site-band-tab-box-shadow-vertical $evo-site-band-tab-box-shadow-blur $evo-site-band-tab-box-shadow-spread rgba($evo-site-band-tab-box-shadow-color, $evo-site-band-tab-box-shadow-alpha));
+											@include clearfix;
 											background-color: $evo-site-band-tab-panel-background-color;
 											position: relative;
 											z-index: 2;
@@ -771,7 +773,6 @@ URL: {{ meta_url }}
 		// SIDENAV MAGELLAN
 		.evo-site--pattern-library-sidenav-magellan
 											{
-											margin-top: 1em !important;
 											padding-left: 0;
 			dt									{
 												margin: $evo-site-sidenav-magellan-hdr-margin;
@@ -971,23 +972,8 @@ URL: {{ meta_url }}
 											margin-left: 0 !important;
 											margin-right: 0 !important;
 											}
-	.columns								{background-color: $onyx-dark-2;}
-	.columns:nth-child(2n)					{background-color: $onyx-dark-6;}
-
-	[class*="evo-icon-"]					{top: 3px;}
-
-	[class*="small-block-grid-"]			{
-		li										{
-												background-color: $onyx-dark-2;
-												border-top: 1px solid $onyx-dark-10;
-												border-right: 1px solid $onyx-dark-10;
-												border-bottom: 1px solid $onyx-dark-10;
-												padding-top: $evo-base-padding;
-												text-align: center;
-			&:nth-child(2n)							{background-color: $onyx-dark-6;}
-			&:first-child							{border-left: 1px solid $onyx-dark-10;}
-												}
-											}
+	.columns								{background-color: $onyx-dark-6;}
+	.columns:nth-child(2n)					{background-color: $onyx-dark-14;}
 										}
 // GRID DEMO - ENDS
 
