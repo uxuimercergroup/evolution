@@ -22,15 +22,16 @@ title: "Pattern Library"
 <!-- PATTERN LIBRARY CALLOUTS BAND - BEGINS -->
 	<section class="evo-full-width evo-site-band evo-site-band--marketing">
 		<div class="medium-12 large-11 large-centered columns evo-site-band--marketing-content">
-			<ul class="small-block-grid-{{pattern-library.callouts.grid_small}} medium-block-grid-{{pattern-library.callouts.grid_medium}} large-block-grid-{{pattern-library.callouts.grid_large}} evo-site-band--marketing-block-grid">
+
+			<div class="row small-up-{{pattern-library.callouts.grid_small}} medium-up-{{pattern-library.callouts.grid_medium}} large-up-{{pattern-library.callouts.grid_large}} evo-site-band--marketing-block-grid">
 				{{#each pattern-library.callouts.items}}
-				<li class="text-center">
+				<div class="columns text-center">
 					{{> (lookup . 'partial') }}
 					<h5>{{{header}}}</h5>
 					<p>{{{text}}}</p>
-				</li>
+				</div>
 				{{/each}}
-			</ul>
+			</div>
 		</div>
 	</section>
 <!-- PATTERN LIBRARY CALLOUTS BAND - ENDS -->
