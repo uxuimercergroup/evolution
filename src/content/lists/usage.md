@@ -1,6 +1,6 @@
 ##### General
-* Create an inline list using an unordered list by adding the classes `.inline-list` and `.evo-inline-list` to the `<ul>` tag
-* Create an inline list using a definition list by adding the classes `.inline-list` and `.evo-inline-list` to the `<dl>` tag 
+* Create an inline list using an unordered list by adding the classes `.evo-inline-list` to the `<ul>` tag
+* Create an inline list using a definition list by adding the classes `.evo-inline-list` to the `<dl>` tag 
 
 ##### Add Pipes to Definition Lists
 
