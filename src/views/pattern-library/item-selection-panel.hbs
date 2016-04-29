@@ -43,8 +43,8 @@ This versatile component presents a variety of choices that can be tailored for 
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each item-selection-panel.data }}
-					<div class="panel evo-box evo-site-example-box">
-						<div class="evo-box-hdr">
+					<div class="callout evo-callout evo-site-example-box">
+						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
 								{{name}}
@@ -52,8 +52,8 @@ This versatile component presents a variety of choices that can be tailored for 
 							</h6>
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
-						</div>
-						<div class="evo-box-bdy">
+						</header>
+						<section>
 						<!-- RENDERED HTML - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -63,8 +63,8 @@ This versatile component presents a variety of choices that can be tailored for 
 								{{> (lookup . 'partial') }}
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
-						</div>
-						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" id="code-anchor{{@index}}" data-evo-toggle-element-item="code-toggle{{@index}}">
+						</section>
+						<footer class="evo-site-example-box-ftr{{@index}} hide" id="code-anchor{{@index}}" data-evo-toggle-element-item="code-toggle{{@index}}">
 						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -111,7 +111,7 @@ This versatile component presents a variety of choices that can be tailored for 
 
 							{{/is}}
 						<!-- CODE - ENDS -->
-						</div>
+						</section>
 					</div>
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->

@@ -38,8 +38,8 @@ Evolution forms depend on Foundation's [Forms](http://foundation.zurb.com/sites/
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each forms.data }}
-					<div class="panel evo-box evo-site-example-box">
-						<div class="evo-box-hdr">
+					<div class="callout evo-callout evo-site-example-box">
+						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
 								{{name}}
@@ -47,8 +47,8 @@ Evolution forms depend on Foundation's [Forms](http://foundation.zurb.com/sites/
 							</h6>
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
-						</div>
-						<div class="evo-box-bdy">
+						</header>
+						<section>
 						<!-- RENDERED HTML - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -58,8 +58,8 @@ Evolution forms depend on Foundation's [Forms](http://foundation.zurb.com/sites/
 								{{> (lookup . 'partial') }}
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
-						</div>
-						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" id="code-anchor{{@index}}" data-evo-toggle-element-item="code-toggle{{@index}}">
+						</section>
+						<footer class="evo-site-example-box-ftr{{@index}} hide" id="code-anchor{{@index}}" data-evo-toggle-element-item="code-toggle{{@index}}">
 						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -85,7 +85,7 @@ Evolution forms depend on Foundation's [Forms](http://foundation.zurb.com/sites/
 
 							{{/is}}
 						<!-- CODE - ENDS -->
-						</div>
+						</footer>
 					</div>
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->

@@ -65,8 +65,8 @@ Evolution's icons use an icon Web font based primarily on the [IcoMoon](https://
 
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each icons.data }}
-					<div class="panel evo-box evo-site-example-box">
-						<div class="evo-box-hdr">
+					<div class="callout evo-callout evo-site-example-box">
+						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
 								{{name}}
@@ -74,8 +74,8 @@ Evolution's icons use an icon Web font based primarily on the [IcoMoon](https://
 							</h6>
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
-						</div>
-						<div class="evo-box-bdy">
+						</header>
+						<section>
 						<!-- RENDERED HTML - BEGINS -->
 							{{#is multiple_example 'true'}}
 
@@ -105,8 +105,8 @@ Evolution's icons use an icon Web font based primarily on the [IcoMoon](https://
 								{{> (lookup . 'partial') }}
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
-						</div>
-						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						</section>
+						<footer class="evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
 						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -132,7 +132,7 @@ Evolution's icons use an icon Web font based primarily on the [IcoMoon](https://
 
 							{{/is}}
 						<!-- CODE - ENDS -->
-						</div>
+						</footer>
 					</div>
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->

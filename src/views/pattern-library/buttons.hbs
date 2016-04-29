@@ -41,16 +41,16 @@ Buttons act as the focal point for user interaction as it relates to saving data
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col" data-equalizer-watch="tab-panel">
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each buttons.data }}
-					<div class="panel evo-box evo-site-example-box">
-						<div class="evo-box-hdr">
+					<div class="callout evo-callout evo-site-example-box">
+						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-target="{{hyphenate name}}" id="{{hyphenate name}}">
 								{{name}}
 								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip right evo-tooltip" title="View Source" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
 						<!-- EXAMPLE HEADER - ENDS -->
-						</div>
-						<div class="evo-box-bdy">
+						</header>
+						<section>
 						<!-- RENDERED HTML - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -60,8 +60,8 @@ Buttons act as the focal point for user interaction as it relates to saving data
 								{{> (lookup . 'partial') }}
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
-						</div>
-						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						</section>
+						<footer class="evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
 						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -108,7 +108,7 @@ Buttons act as the focal point for user interaction as it relates to saving data
 
 							{{/is}}
 						<!-- CODE - ENDS -->
-						</div>
+						</footer>
 					</div>
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
@@ -256,14 +256,14 @@ Buttons act as the focal point for user interaction as it relates to saving data
 						</div>
 
 					<!-- HANDLEBARS CODE - BEGINS -->
-						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
-							<div class="evo-box-ftr">
+						<div class="callout evo-callout evo-site-example-box evo-margin-bottom">
+							<section>
 								<div class="evo-site-example-box--code-hdr">
 									{{buttons.code_example_slug}}
 									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-hbs-button-example-{{buttons.code_example_slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
 								<pre><code class="language-handlebars" id="evo-code-copy-hbs-button-example-{{buttons.code_example_slug}}"><xmp>{{{buttons.code_example}}}</xmp></code></pre>
-							</div>
+							</section>
 						</div>
 					<!-- HANDLEBARS CODE - ENDS -->
 

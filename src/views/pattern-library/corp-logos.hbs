@@ -40,12 +40,12 @@ The corporate logos below are to be used for branding digital products across al
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col" data-equalizer-watch="tab-panel">
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each corp-logos.data }}
-					<div class="panel evo-box evo-site-example-box">
-						<div class="evo-box-hdr">
+					<div class="callout evo-callout evo-site-example-box">
+						<header>
 							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">{{name}}</h6>
 							<a name="{{hyphenate name}}"></a>
-						</div>
-						<div class="evo-box-bdy">
+						</header>
+						<section>
 							{{#is multiple_example 'true'}}
 							<div class="row small-up-1 medium-up-2 large-up-2 evo-site-corp-logo-ctn">
 								{{#each multiple_example_options}}
@@ -69,18 +69,18 @@ The corporate logos below are to be used for branding digital products across al
 								{{/each}}
 							</div>
 							{{/is}}
-						</div>
+						</section>
 					</div>
 					{{/each}}
 
-					<div class="panel evo-box evo-site-example-box">
-						<div class="evo-box-hdr">
+					<div class="callout evo-callout evo-site-example-box">
+						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-destination="favicon">Favicon</h6>
 							<a name="favicon"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
-						</div>
-						<div class="evo-box-bdy">
+						</header>
+						<section>
 							<div class="evo-site-corp-logo--favicon-img-ctn">
 								<img src="{{assets}}/images/content/favicon_example.png" alt="Favicon" />
 							</div>
@@ -96,7 +96,7 @@ The favicon can be installed into a Web site (or page) and will appear next to t
 								</li>
 							</ul>
 
-						</div>
+						</section>
 					</div>
 
 				<!-- EXAMPLE BOX - ENDS -->

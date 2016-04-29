@@ -40,8 +40,8 @@ The Carousel control allows for a revolving display of different types of conten
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each carousel.data }}
-					<div class="panel evo-box evo-site-example-box">
-						<div class="evo-box-hdr">
+					<div class="callout evo-callout evo-site-example-box">
+						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
 								{{name}}
@@ -49,8 +49,8 @@ The Carousel control allows for a revolving display of different types of conten
 							</h6>
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
-						</div>
-						<div class="evo-box-bdy">
+						</header>
+						<section>
 						<!-- RENDERED HTML - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -60,8 +60,8 @@ The Carousel control allows for a revolving display of different types of conten
 								{{> (lookup . 'partial') }}
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
-						</div>
-						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						</section>
+						<footer class="evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
 						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -108,7 +108,7 @@ The Carousel control allows for a revolving display of different types of conten
 
 							{{/is}}
 						<!-- CODE - ENDS -->
-						</div>
+						</footer>
 					</div>
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
@@ -165,26 +165,26 @@ The Carousel control allows for a revolving display of different types of conten
 						</div>
 
 					<!-- JS CODE - BEGINS -->
-						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
-							<div class="evo-box-ftr">
+						<div class="callout evo-callout evo-site-example-box evo-margin-bottom">
+							<section>
 								<div class="evo-site-example-box--code-hdr">
 									{{carousel.data-js.slug}}
 									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-js-usage-{{carousel.data-js.slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
 								<pre><code class="language-js" id="evo-code-copy-js-usage-{{carousel.data-js.slug}}"><xmp>{{> carousel-js }}</xmp></code></pre>
-							</div>
+							</section>
 						</div>
 					<!-- JS CODE - ENDS -->
 
 					<!-- HTML CODE - BEGINS -->
-						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
-							<div class="evo-box-ftr evo-no-margin-top">
+						<div class="callout evo-callout evo-site-example-box evo-margin-bottom">
+							<section class="evo-no-margin-top">
 								<div class="evo-site-example-box--code-hdr">
 									{{carousel.data-js.slug}}
 									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-usage-{{carousel.data-js.slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
 								<pre><code class="language-markup" id="evo-code-copy-html-usage-{{carousel.data-js.slug}}"><xmp>{{> carousel }}</xmp></code></pre>
-							</div>
+							</section>
 						</div>
 					<!-- HTML CODE - ENDS -->
 
