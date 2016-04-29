@@ -21,7 +21,7 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{animations.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
+			<ul class="button-group {{animations.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
 				{{#each animations.tabs}}
 				<li class="tabs-title evo-tabs-title{{#is active 'true'}} is-active{{/is}}" role="presentation">
 					<a href="#evoPanel{{@index}}" role="tab" tabindex="0" class="button small evo-button">
@@ -235,7 +235,7 @@ A list of animation type class options available from the [Animate.css](https://
 							<section>
 								<div class="evo-site-example-box--code-hdr">
 									{{animations.animation_type_settings_slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-settings-{{animations.animation_type_settings_slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-settings-{{animations.animation_type_settings_slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
 								<pre><code class="language-markup" id="evo-code-copy-html-settings-{{animations.animation_type_settings_slug}}"><xmp>{{{animations.animation_type_settings_code}}}</xmp></code></pre>
 							</section>
@@ -286,7 +286,7 @@ Use these helper classes along with the animation type class and the `animated` 
 							<section>
 								<div class="evo-site-example-box--code-hdr">
 									{{animations.animation_helpers_settings_slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-settings-{{animations.animation_helpers_settings_slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-settings-{{animations.animation_helpers_settings_slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
 								<pre><code class="language-markup" id="evo-code-copy-html-settings-{{animations.animation_helpers_settings_slug}}"><xmp>{{{animations.animation_helpers_settings_code}}}</xmp></code></pre>
 							</section>

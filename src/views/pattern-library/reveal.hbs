@@ -14,7 +14,7 @@ The Modal Window provides information to the user that supplements or impacts th
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+			<ul class="button-group {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
 				{{#each pattern-library.tabs}}
 				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
 					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
@@ -65,7 +65,7 @@ The Modal Window provides information to the user that supplements or impacts th
 							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
@@ -76,7 +76,7 @@ The Modal Window provides information to the user that supplements or impacts th
 							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->

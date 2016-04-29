@@ -17,7 +17,7 @@ Buttons act as the focal point for user interaction as it relates to saving data
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
+			<ul class="button-group {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
 				{{#each pattern-library.tabs}}
 				<li class="tabs-title evo-tabs-title{{#is active 'true'}} is-active{{/is}}" role="presentation">
 					<a href="#evoPanel{{@index}}" role="tab" tabindex="0" class="button small evo-button">
@@ -260,7 +260,7 @@ Buttons act as the focal point for user interaction as it relates to saving data
 							<section>
 								<div class="evo-site-example-box--code-hdr">
 									{{buttons.code_example_slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-hbs-button-example-{{buttons.code_example_slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-hbs-button-example-{{buttons.code_example_slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
 								<pre><code class="language-handlebars" id="evo-code-copy-hbs-button-example-{{buttons.code_example_slug}}"><xmp>{{{buttons.code_example}}}</xmp></code></pre>
 							</section>

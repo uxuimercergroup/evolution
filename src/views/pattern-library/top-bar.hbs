@@ -24,7 +24,7 @@ medium media queries. On small and medium media queries, Top bar is replaced by 
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
+			<ul class="button-group {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
 				{{#each pattern-library.tabs}}
 				<li class="tabs-title evo-tabs-title{{#is active 'true'}} is-active{{/is}}" role="presentation">
 					<a href="#evoPanel{{@index}}" role="tab" tabindex="0" class="button small evo-button">
@@ -53,7 +53,7 @@ medium media queries. On small and medium media queries, Top bar is replaced by 
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
 								{{name}}
-								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
@@ -77,7 +77,7 @@ medium media queries. On small and medium media queries, Top bar is replaced by 
 							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
@@ -88,7 +88,7 @@ medium media queries. On small and medium media queries, Top bar is replaced by 
 							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
