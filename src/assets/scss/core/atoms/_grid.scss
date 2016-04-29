@@ -10,6 +10,9 @@
 
 @if $use-grid == true{
 
-	
+	// FOUNDATION GRID FIX FOR NESTED ROWS INSIDE EXPANDED ROWS
+	.row.expanded .row 		{
+							@include grid-row-nest($grid-column-gutter);
+							}
 
 }//endif

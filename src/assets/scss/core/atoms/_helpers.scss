@@ -109,33 +109,18 @@ img										{
 
 // Use on elememts which need a keyline on the right
 .evo-keyline-right						{
-										border-right: 1px solid $evo-keyline-right-border-right-color;
-	> img									{margin-top: rem-calc(4);}
+										border-right: 0;
 
-	@include breakpoint(small only)			{
-											padding-right: 0;
-											padding-left: 0;
-											border-right: 0;
-											border-left: 0;
-											margin-bottom: rem-calc(5);
-		> img									{margin-top: 0;}
-											}
+	@include breakpoint(medium)				{border-right: 1px solid $evo-keyline-right-border-right-color;}
 
 										}
 
 // Use on elements which need a keyline on the left
 .evo-keyline-left						{
-										border-left: 1px solid $evo-keyline-left-border-left-color;
-	> img									{margin-top: rem-calc(4);}
+										border-left: 0;
 
-	@include breakpoint(small only)			{
-											padding-right: 0;
-											padding-left: 0;
-											border-right: 0;
-											border-left: 0;
-											margin-top: rem-calc(5);
-		> img									{margin-top: 0;}
-											}
+	@include breakpoint(medium)				{border-left: 1px solid $evo-keyline-left-border-left-color;}
+
 										}
 
 
@@ -143,6 +128,15 @@ img										{
 // ------------------------------------------------------------------------------------------
 
 // GRID WIDTH
+
+// CONTAIN TO GRID
+// Apply class to element to contain its width to the grid row max-width ($grid-row-width, a foundation variable) and center it on the page.
+.evo-contain-to-grid					{
+										@include clearfix;
+										max-width: $grid-row-width !important;
+										margin: 0 auto;
+										}
+
 
 // HORIZONTAL CENTERING FOR BLOCK ELEMENTS
 // Apply class to element that needs to be centered horizontally
