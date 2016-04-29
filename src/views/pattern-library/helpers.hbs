@@ -113,20 +113,11 @@ Evolution includes a handful of helpful utility helpers to add certain behaviors
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-sticky-container data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
 					<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col" data-sticky-on="large" data-sticky>
-						<dl class="menu vertical" data-magellan>
-							<dt>{{helpers.utility_helpers_data_header}}</dt>
-							{{#slice helpers.data limit="14"}}
-							<dd><a href="#{{hyphenate name}}">{{name}}</a></dd>
-							{{/slice}}
-							<dt>{{helpers.interactive_helpers_data_header}}</dt>
-							{{#slice helpers.data offset="14" limit="2"}}
-							<dd><a href="#{{hyphenate name}}">{{name}}</a></dd>
-							{{/slice}}
-							<dt>{{helpers.visibility_helpers_data_header}}</dt>
-							{{#slice helpers.data offset="16" limit="8"}}
-							<dd><a href="#{{hyphenate name}}">{{name}}</a></dd>
-							{{/slice}}
-						</dl>
+						<ul class="menu vertical" data-magellan>
+						{{#each helpers.data}}
+							<li><a href="#{{hyphenate name}}">{{name}}</a></li>
+						{{/each}}
+						</ul>
 					</nav>
 				<!-- SIDENAV - ENDS -->
 				</div>
