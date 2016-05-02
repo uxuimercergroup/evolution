@@ -261,36 +261,6 @@ Evolution includes a handful of helpful utility helpers to add certain behaviors
 				<!-- CONTENT SECTION - ENDS -->
 
 				<!-- CONTENT SECTION - BEGINS -->
-					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate helpers.text_alignment_header}}">
-						<div class="evo-site-markdown-content-block">
-{{# markdown}}
-##### {{helpers.text_alignment_header}}
-{{/ markdown}}
-						</div>
-
-					<!-- TEXT VISIBILITY TABLE - BEGINS -->
-						<div class="evo-table-small-mediaquery">
-							<table class="hover evo-table evo-site-margin-padding-settings-table" data-evo-data-table="evo-data-table-margin-padding-settings" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
-								<thead>
-									<tr>
-										<th scope="column">Class Value</th>
-									</tr>
-								</thead>
-								<tbody>
-								{{#each helpers.text_alignment_settings}}
-									<tr>
-										<td class="evo-site-margin-padding-settings-table--copy-cursor copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{ text-class }}">{{ text-class }}</td>
-									</tr>
-								{{/each}}
-								</tbody>
-							</table>
-						</div>
-					<!-- TEXT VISIBILITY TABLE - ENDS -->
-
-					</section>
-				<!-- CONTENT SECTION - ENDS -->
-
-				<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate helpers.visibility_header}}">
 						<div class="evo-site-markdown-content-block">
 {{# markdown}}
@@ -298,7 +268,7 @@ Evolution includes a handful of helpful utility helpers to add certain behaviors
 {{/ markdown}}
 						</div>
 
-					<!-- TEXT VISIBILITY TABLE - BEGINS -->
+					<!-- VISIBILITY SETTINGS TABLE - BEGINS -->
 						<div class="evo-table-small-mediaquery">
 							<table class="hover evo-table evo-site-margin-padding-settings-table" data-evo-data-table="evo-data-table-margin-padding-settings" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
 								<thead>
@@ -315,7 +285,7 @@ Evolution includes a handful of helpful utility helpers to add certain behaviors
 								</tbody>
 							</table>
 						</div>
-					<!-- TEXT VISIBILITY TABLE - ENDS -->
+					<!-- VISIBILITY SETTINGS TABLE - ENDS -->
 
 					</section>
 				<!-- CONTENT SECTION - ENDS -->
@@ -327,7 +297,6 @@ Evolution includes a handful of helpful utility helpers to add certain behaviors
 					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
 						<dl class="sub-nav">
 							<dd><a data-evo-scroll-to-location href="#{{hyphenate helpers.margin_padding_header}}">{{helpers.margin_padding_header}}</a></dd>
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate helpers.text_alignment_header}}">{{helpers.text_alignment_header}}</a></dd>
 							<dd><a data-evo-scroll-to-location href="#{{hyphenate helpers.visibility_header}}">{{helpers.visibility_header}}</a></dd>
 						</dl>
 					</div>

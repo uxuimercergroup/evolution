@@ -37,7 +37,7 @@ Main description would begin here about the component/pattern that you are build
 		<section class="tabs-panel evo-tabs-panel is-active evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel0">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col0" data-equalizer-watch="tab-panel">
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each buttons.data }}
 					<div class="callout evo-callout evo-site-example-box">
@@ -115,7 +115,7 @@ Main description would begin here about the component/pattern that you are build
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
 					<div data-sticky-container>
-						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col" data-sticky-on="large" data-sticky>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col0" data-sticky-on="large" data-sticky>
 							<ul class="menu vertical" data-magellan>
 							{{#each buttons.data}}
 								<li><a href="#{{hyphenate name}}">{{name}}</a></li>
@@ -134,7 +134,7 @@ Main description would begin here about the component/pattern that you are build
 		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel1">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col1" data-equalizer-watch="tab-panel">
 
 				<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
@@ -146,18 +146,30 @@ Main description would begin here about the component/pattern that you are build
 
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					&nbsp;
+				<!-- SIDENAV - BEGINS -->
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col1" data-sticky-on="large" data-sticky>
+							
+							{{!--
+							<ul class="menu vertical" data-magellan>
+								<li><a href="#{{hyphenate }}">{{}}</a></li>
+							</ul>
+							--}}
+
+						</nav>
+					</div>
+				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
 			
 		</section>
-	<!-- TAB PANEL 2 - BEGINS -->
+	<!-- TAB PANEL 2 - ENDS -->
 
 	<!-- TAB PANEL 3 - BEGINS -->
 		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col2" data-equalizer-watch="tab-panel">
 					
 				<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
@@ -232,83 +244,84 @@ Main description would begin here about the component/pattern that you are build
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
-						{{!--
-						<dl class="sub-nav">
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
-						</dl>
-						<hr>
-						--}}
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col2" data-sticky-on="large" data-sticky>
+							
+							{{!--
+							<ul class="menu vertical" data-magellan>
+								<li><a href="#{{hyphenate }}">{{}}</a></li>
+							</ul>
+							--}}
 
-						{{#is buttons.dependency_data.dependency 'true'}}
+							{{#is buttons.dependency_data.dependency 'true'}}
+						<!-- SIDENAV ACCORDION - BEGINS -->
+							<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion>
+							<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
+								<li class="accordion-item is-active" data-accordion-item>
+									<a href="#dependencies-accordion" class="accordion-title" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
+									<div class="accordion-content" data-tab-content>
 
-					<!-- SIDENAV ACCORDION - BEGINS -->
-						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion>
-						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
-							<li class="accordion-item is-active" data-accordion-item>
-								<a href="#dependencies-accordion" class="accordion-title" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
-								<div class="accordion-content" data-tab-content>
+										<ul class="no-bullet">
+											{{#is buttons.dependency_data.foundation 'true'}}
+												<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
+												{{#if buttons.dependency_data.foundation_dependencies}}
+													<ul>
+													{{#each buttons.dependency_data.foundation_dependencies}}
+														<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+													{{/each}}
+													</ul>
+												{{/if}}
+												</li>
+											{{/is}}
+											{{#is buttons.dependency_data.evolution 'true'}}
+												<li><a href="/">Evolution {{package.version}}</a>
+												{{#if buttons.dependency_data.evolution_dependencies}}
+													<ul>
+													{{#each buttons.dependency_data.evolution_dependencies}}
+														<li><a href="{{url}}">{{name}}</a></li>
+													{{/each}}
+													</ul>
+												</li>
+												{{/if}}
+											{{/is}}
+											{{#is buttons.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
+											{{#is buttons.dependency_data.jquery_ui 'true'}}
+												<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
+												{{#if buttons.dependency_data.jquery_ui_dependencies}}
+													<ul>
+													{{#each buttons.dependency_data.jquery_ui_dependencies}}
+														<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+													{{/each}}
+													</ul>
+												{{/if}}
+												</li>
+											{{/is}}
+											{{#each buttons.dependency_data.other}}
+												<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+											{{/each}}
+										</ul>
 
-									<ul class="no-bullet">
-										{{#is buttons.dependency_data.foundation 'true'}}
-											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if buttons.dependency_data.foundation_dependencies}}
-												<ul>
-												{{#each buttons.dependency_data.foundation_dependencies}}
-													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											{{/if}}
-											</li>
-										{{/is}}
-										{{#is buttons.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.version}}</a>
-											{{#if buttons.dependency_data.evolution_dependencies}}
-												<ul>
-												{{#each buttons.dependency_data.evolution_dependencies}}
-													<li><a href="{{url}}">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											</li>
-											{{/if}}
-										{{/is}}
-										{{#is buttons.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is buttons.dependency_data.jquery_ui 'true'}}
-											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
-											{{#if buttons.dependency_data.jquery_ui_dependencies}}
-												<ul>
-												{{#each buttons.dependency_data.jquery_ui_dependencies}}
-													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											{{/if}}
-											</li>
-										{{/is}}
-										{{#each buttons.dependency_data.other}}
-											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
-										{{/each}}
-									</ul>
+									</div>
+								</li>
+							<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
+							</ul>
+						<!-- SIDENAV ACCORDION - ENDS -->
+							{{/is}}
 
-								</div>
-							</li>
-						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
-						</ul>
-					<!-- SIDENAV ACCORDION - ENDS -->
-						{{/is}}
-					
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
 			
 		</section>
-	<!-- TAB PANEL 3 - BEGINS -->
+	<!-- TAB PANEL 3 - ENDS -->
 
 	<!-- TAB PANEL 4 - BEGINS -->
 		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel3">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col3" data-equalizer-watch="tab-panel">
 
 				<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
@@ -324,22 +337,23 @@ Main description would begin here about the component/pattern that you are build
 
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
-						
-						{{!--
-						<dl class="sub-nav">
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
-						</dl>
-						<hr>
-						--}}
-						
+				<!-- SIDENAV - BEGINS -->
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col3" data-sticky-on="large" data-sticky>
+							
+							{{!--
+							<ul class="menu vertical" data-magellan>
+								<li><a href="#{{hyphenate }}">{{}}</a></li>
+							</ul>
+							--}}
+
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
 			
 		</section>
-	<!-- TAB PANEL 4 - BEGINS -->
+	<!-- TAB PANEL 4 - ENDS -->
 	</div>
 <!-- TABS - ENDS -->

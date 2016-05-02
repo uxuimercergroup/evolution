@@ -37,25 +37,6 @@
 			});
 		}
 
-		// POSITION FIXED BY SCROLL
-		var evoFixedByScroll = function(objectValue, scrollDistance){
-			$(window).scroll(function() {
-				if ($(window).scrollTop() > scrollDistance) {
-					jQuery('[data-evo-fixed-by-scroll=' + objectValue +']').addClass('fixed evo-scroll-to-fixed');
-	  			}else{
-	  				jQuery('[data-evo-fixed-by-scroll=' + objectValue +']').removeClass('fixed evo-scroll-to-fixed');
-	  			}
-			});
-		}
-
-		// SITE MAGELLAN
-		var evoMagellan = function(){
-			jQuery('[data-evo-magellan] dd').click(function() {
-				jQuery('[data-evo-magellan] dd').removeClass('active');
-				jQuery(this).addClass('active');
-			});
-		};
-
 
 	// PATTERN LIBRARY PAGES
 	//----------------------------------------------------------------------------------------------------
@@ -74,6 +55,9 @@
 
 			    // Redraw type characters data table on tab toggling, fixes scrolling table fixed thead injected layout
 			    evoSiteDataTableRedraw();
+
+			    // Recalculate stickys when tab toggling
+			    jQuery('.sticky').foundation('_calc', true);
 			});
 		}
 
@@ -101,9 +85,6 @@ $(function() {
 			// SCROLL TO LOCATION
 			evoScrollToLocation();
 
-			// SITE MAGELLAN
-			evoMagellan();
-
 			// SITE TESTIMONIALS CAROUSEL
 			evoCarousel('evo-site-testimonials-carousel', {
 				autoHeight: false,
@@ -126,9 +107,6 @@ $(function() {
 
 			// REINIT ON TOGGLE OF PATTERN LIBRARY CONTENT TABS
 			evoSitePatternLibTabsReInit();
-
-			// POSITION FIXED BY SCROLL
-			evoFixedByScroll('evo-magellan--side-nav', 230);
 
 			// SETTINGS TAB DATA TABLE
 			evoDataTable('evo-data-table-pattern-library-setting-options',{

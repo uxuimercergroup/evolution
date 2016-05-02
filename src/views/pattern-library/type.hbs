@@ -14,8 +14,8 @@ Proxima Nova has been implemented as the default font family for Evolution as a 
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group {{type.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
-				{{#each type.tabs}}
+			<ul class="button-group {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
+				{{#each pattern-library.tabs}}
 				<li class="tabs-title evo-tabs-title{{#is active 'true'}} is-active{{/is}}" role="presentation">
 					<a href="#evoPanel{{@index}}" role="tab" tabindex="0" class="button small evo-button">
 						<span class="text">{{name}}</span>
@@ -319,10 +319,48 @@ This is a demo of Western Latin characters to show off the compatibility of the 
 
 			<section class="row" data-equalizer="tab-panel">
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Content for something 4
+					
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate type.text_alignment_header}}">
+						<div class="evo-site-markdown-content-block">
+{{# markdown}}
+##### {{type.text_alignment_header}}
+{{/ markdown}}
+						</div>
+
+					<!-- TEXT ALIGNMENT SETTINGS TABLE - BEGINS -->
+						<div class="evo-table-small-mediaquery">
+							<table class="hover evo-table evo-site-margin-padding-settings-table" data-evo-data-table="evo-data-table-margin-padding-settings" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+								<thead>
+									<tr>
+										<th scope="column">Class Value</th>
+									</tr>
+								</thead>
+								<tbody>
+								{{#each type.text_alignment_settings}}
+									<tr>
+										<td class="evo-site-margin-padding-settings-table--copy-cursor copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{ text-class }}">{{ text-class }}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					<!-- TEXT ALIGNMENT SETTINGS TABLE - ENDS -->
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Magellan 4
+					
+				<!-- SIDENAV - BEGINS -->
+					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+						<dl class="sub-nav">
+							<dd><a data-evo-scroll-to-location href="#{{hyphenate type.text_alignment_header}}">{{type.text_alignment_header}}</a></dd>
+						</dl>
+					</div>
+				<!-- SIDENAV - ENDS -->
+
 				</div>
 			</section>
 			

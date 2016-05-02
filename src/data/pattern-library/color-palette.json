@@ -1,11 +1,4 @@
 {
-	
-	"tab-spacing": "even-2",
-	"tabs": [
-		{"name": "Examples", "active": "true", "index": "0"},
-		{"name": "Defintion", "index": "1"}
-	],
-
 	"primary": "Primary Color Palette",
 	"secondary": "Secondary Color Palette",
 	"tertiary": "Tertiary Color Palette",
@@ -144,6 +137,17 @@
 				{"data_value": "info-color", "name": "Info Color", "hex": "#A6E2EF"},
 				{"data_value": "highlight-color", "name": "Highlight Color", "hex": "#F7F0B2"}
 			]
+		}
+	],
+
+	"usage_data": [
+		{
+			"name": "Specific Use Colors",
+			"partial": "specific-use-colors", "slug": "specific-use-colors"
+		},
+		{
+			"name": "Spot Colors",
+			"partial": "spot-colors", "slug": "spot-colors"
 		}
 	]
 }

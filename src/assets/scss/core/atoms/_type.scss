@@ -228,4 +228,18 @@ $evo-anchor-font-color-alt: $onyx-dark-10 !default;
 		.evo-copyright				{text-transform: uppercase;}
 								}
 
+
+	// ==========================================================================================
+	// HELPERS
+	// ==========================================================================================
+
+	// TEXT OVERFLOW
+	.evo-text-overflow						{@include text-overflow;}
+
+	// WHITE SPACE NO WRAP
+	.evo-nowrap								{white-space: nowrap !important;}
+
+	// WORD BREAK
+	.evo-word-break							{word-wrap: break-word;}
+
 }//endif

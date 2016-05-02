@@ -6,8 +6,8 @@ title: "Why Evolution?"
 
 	<!-- WHY HERO - BEGINS -->
 		<section class="row expanded evo-site-hero" data-evo-site-hero-size="x-large" data-evo-site-hero-arrow-position="bottom">
-			<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
-				<div class="text-center evo-center-block-vertical-element">
+			<div class="small-12 columns evo-vertical-middle hide" data-anijs="if: load, on: window, do: $removeClass hide;">
+				<div class="text-center evo-vertical-middle-element">
 					<h1 class="evo-site-hero--hdr flipInY animated" data-evo-site-hero-hdr-size="large">{{{why.hero.title}}} <span>{{{why.hero.subtitle}}}</span></h1>
 					<h3 class="float-center evo-site-hero--tagline bounceInUp animated">{{{ why.hero.tagline }}}</h3>
 				</div>		
@@ -35,8 +35,8 @@ title: "Why Evolution?"
 		<!-- CONTENT SECTION - BEGINS -->
 			<div class="row evo-site--why-content-section evo-site-hidden" data-equalizer="site-band" data-magellan-destination="{{slug}}"{{#is @index '0'}}data-anijs="if: window, on: load, do: evo-site-visible {{animation}} animated delay-sm, after: holdAnimClass"{{else}}data-anijs="if: scroll, on: window, do: evo-site-visible {{animation}} animated delay-sm, before: scrollReveal, after: holdAnimClass"{{/is}}>
 				<div class="medium-6 large-4 columns" data-equalizer-watch="site-band">
-					<div class="evo-center-block-vertical">
-						<div class="evo-center-block-vertical-element">
+					<div class="evo-vertical-middle">
+						<div class="evo-vertical-middle-element">
 							<a name="{{slug}}"></a>
 							<h3>{{{bulletpoint_header}}}</h3>
 							{{#each bulletpoints}}
@@ -46,8 +46,8 @@ title: "Why Evolution?"
 					</div>
 				</div>
 				<div class="medium-6 large-8 columns" data-equalizer-watch="site-band">
-					<div class="evo-center-block-vertical">
-						<div class="small-text-center medium-text-right evo-center-block-vertical-element">
+					<div class="evo-vertical-middle">
+						<div class="small-text-center medium-text-right evo-vertical-middle-element">
 							<img src="/assets/images/evo-site-why-{{add @index 1}}.png" alt="{{name}}">
 						</div>
 					</div>

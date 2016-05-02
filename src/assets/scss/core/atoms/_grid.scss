@@ -10,9 +10,19 @@
 
 @if $use-grid == true{
 
+	// ==========================================================================================
+	// HELPERS
+	// ==========================================================================================
+
+	// CONTAIN TO GRID
+	// Apply class to element to contain its width to the grid row max-width ($grid-row-width, a foundation variable) and center it on the page.
+	.evo-contain-to-grid					{
+											@include clearfix;
+											max-width: $grid-row-width !important;
+											margin: 0 auto;
+											}
+
 	// FOUNDATION GRID FIX FOR NESTED ROWS INSIDE EXPANDED ROWS
-	.row.expanded .row 		{
-							@include grid-row-nest($grid-column-gutter);
-							}
+	.row.expanded .row 						{@include grid-row-nest($grid-column-gutter);}
 
 }//endif

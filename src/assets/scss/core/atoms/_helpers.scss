@@ -21,72 +21,10 @@ $evo-spacer-xxlarge:						($evo-spacer-size*6) !default;
 $evo-spacer-xxxlarge:						($evo-spacer-size*7) !default;
 
 
-// COLOR HELPERS
-// ------------------------------------------------------------------------------------------
-
-// SYSTEM SPOT COLORS FOR ELEMENTS (FONT COLORS AND BACKGROUND COLORS)
-@each $color-name, $color in $system-color-palette
-										{
-
-	// CUSTOM SPOT FONT COLOR FOR TEXT AND LINKS
-	[data-evo-font-color="#{$color-name}"]	{
-											color: map-get($color, color) !important;
-											}
-
-	// CUSTOM SPOT BORDER COLOR FOR CONTAINERS AND BOXES
-	[data-evo-border-color="#{$color-name}"]
-											{
-											border-color: map-get($color, color) !important;
-											}
-
-	// CUSTOM SPOT BACKGROUND COLOR FOR CONTAINERS AND BOXES
-	[data-evo-background-color="#{$color-name}"]
-											{
-											background-color: map-get($color, color) !important;
-											}
-
-										}
-
-// CUSTOM SPOT COLORS FOR ELEMENTS (FONT COLORS AND BACKGROUND COLORS)
-@each $color-name, $color in $color-palette
-										{
-
-	// CUSTOM SPOT FONT COLOR FOR TEXT AND LINKS
-	[data-evo-font-color="#{$color-name}"]	{
-											color: map-get($color, color) !important;
-											}
-
-	// CUSTOM SPOT BORDER COLOR FOR CONTAINERS AND BOXES
-	[data-evo-border-color="#{$color-name}"]
-											{
-											border-color: map-get($color, color) !important;
-											}
-
-	// CUSTOM SPOT BACKGROUND COLOR FOR CONTAINERS AND BOXES
-	[data-evo-background-color="#{$color-name}"]
-											{
-											background-color: map-get($color, color) !important;
-											}
-
-										}
-
-// TYPE HELPERS
-// ------------------------------------------------------------------------------------------
-
-// TEXT OVERFLOW
-.evo-text-overflow						{@include text-overflow;}
-
-// WHITE SPACE NO WRAP
-.evo-nowrap								{white-space: nowrap !important;}
-
-// WORD BREAK
-.evo-word-break							{word-wrap: break-word;}
-
-
 // PAGE ELEMENT HELPERS
 // ------------------------------------------------------------------------------------------
 
-// BASIC IMAGE STYLES
+// IMAGES
 img										{
 										max-width: 100%;
 										height: auto;
@@ -106,16 +44,12 @@ img										{
 										}
 
 // KEYLINES
-
-// Use on elememts which need a keyline on the right
 .evo-keyline-right						{
 										border-right: 0;
 
 	@include breakpoint(medium)				{border-right: 1px solid $evo-keyline-right-border-right-color;}
 
 										}
-
-// Use on elements which need a keyline on the left
 .evo-keyline-left						{
 										border-left: 0;
 
@@ -127,22 +61,11 @@ img										{
 // LAYOUT HELPERS
 // ------------------------------------------------------------------------------------------
 
-// GRID WIDTH
-
-// CONTAIN TO GRID
-// Apply class to element to contain its width to the grid row max-width ($grid-row-width, a foundation variable) and center it on the page.
-.evo-contain-to-grid					{
-										@include clearfix;
-										max-width: $grid-row-width !important;
-										margin: 0 auto;
-										}
-
-// VERTICAL CENTERING FOR BLOCK ELEMENTS
-// Apply class to element that needs to be centered vertically
-.evo-center-block-vertical				{
+// VERTICAL MIDDLE
+.evo-vertical-middle					{
 										display: table;
 										height: 100%;
-	.evo-center-block-vertical-element		{
+	.evo-vertical-middle-element			{
 											display: table-cell;
 											vertical-align: middle;
 											}

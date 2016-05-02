@@ -146,6 +146,31 @@
 
 <hr>
 
+{{!-- COLORS - BEGINS --}}
+	{{> type-header size="4" text="Colors"}}
+	<div class="row">
+		<div class="medium-6 columns">
+
+		{{!-- SPOT COLORS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Spot Colors"}}
+			{{> spot-colors }}
+		{{!-- SPOT COLORS - ENDS --}}
+		
+		</div>
+		<div class="medium-6 columns">
+
+		{{!-- SPECIFIC USE COLORS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Specific Use Colors"}}
+			{{> specific-use-colors }}
+			<br><br>
+		{{!-- SPECIFIC USE COLORS - ENDS --}}
+		
+		</div>
+	</div>
+{{!-- COLORS - ENDS --}}
+
+<hr>
+
 {{!-- DROPDOWNS - BEGINS --}}
 	{{> type-header size="4" text="Dropdowns"}}
 	<div class="row">
@@ -267,6 +292,11 @@
 			{{> input type="text" placeholder="Placeholder text"}}
 		{{!-- TEXT INPUT - ENDS --}}
 
+		{{!-- INPUT NUMERIC MASK - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Input Numeric Mask"}}
+			{{> input-numeric-mask }}
+		{{!-- INPUT NUMERIC MASK - ENDS --}}
+
 		{{!-- PRE/POSTFIX - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Pre/Postfix"}}
 			{{> pre-postfix }}
@@ -276,6 +306,11 @@
 			{{> type-header size="6" class="evo-hdr-rule" text="HTML5 Elements"}}
 			{{> html5-elements }}
 		{{!-- HTML5 FORM ELEMENTS - ENDS --}}
+
+		{{!-- SELECT ALL CHECKBOXES - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Select All Checkboxes Toggle"}}
+			{{> checkboxes-select-all }}
+		{{!-- SELECT ALL CHECKBOXES - ENDS --}}
 		
 		</div>
 	</div>
@@ -365,6 +400,18 @@
 			</div>
 		</div>
 	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<div class="evo-grid-demo">
+				
+			{{!-- CONTAIN TO GRID - BEGINS --}}
+				{{> type-header size="6" class="evo-hdr-rule" text="Contain to Grid"}}
+				{{> contain-to-grid }}
+			{{!-- CONTAIN TO GRID - ENDS --}}
+			
+			</div>
+		</div>
+	</div>
 {{!-- GRIDS - ENDS --}}
 
 <hr>
@@ -374,91 +421,70 @@
 	<div class="row">
 		<div class="medium-6 columns">
 
-		{{!-- FLOAT HELPERS - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Floats"}}
-			{{> utility-classes-float }}
-		{{!-- FLOAT HELPERS - ENDS --}}
+		{{!-- FLOAT - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Float"}}
+			{{> float }}
+		{{!-- FLOAT - ENDS --}}
 
-		{{!-- FLOAT CENTER HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Float Center"}}
-			{{> utility-classes-float-center }}
-		{{!-- FLOAT CENTER HELPER - ENDS --}}
+		{{!-- HORIZONTAL CENTER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Horizontal Center"}}
+			{{> horizontal-center }}
+		{{!-- HORIZONTAL CENTER - ENDS --}}
 
-		{{!-- SPOT COLORS HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Spot Colors"}}
-			{{> utility-classes-colors }}
-		{{!-- SPOT COLORS HELPER - ENDS --}}
+		{{!-- VERTICAL MIDDLE - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Vertical Middle"}}
+			{{> vertical-middle }}
+		{{!-- VERTICAL MIDDLE - ENDS --}}
 
-		{{!-- SPECIFIC USE COLORS HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Specific Use Colors"}}
-			{{> utility-classes-colors-specific-use }}
-			<br><br>
-		{{!-- SPECIFIC USE COLORS HELPER - ENDS --}}
-
-		{{!-- KEYLINES HELPER - BEGINS --}}
+		{{!-- KEYLINES - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Keylines"}}
 			<div class="evo-site--helpers-keyline-example">
-				{{> utility-classes-keylines }}
+				{{> keylines }}
 			</div>
-		{{!-- KEYLINES HELPER - ENDS --}}
+		{{!-- KEYLINES - ENDS --}}
 
-		{{!-- IMAGE ALIGN HELPER - BEGINS --}}
+		{{!-- IMAGE ALIGN - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Image Align"}}
-			{{> utility-classes-image-align }}
-		{{!-- IMAGE ALIGN HELPER - ENDS --}}
+			{{> image-align }}
+		{{!-- IMAGE ALIGN - ENDS --}}
 			
 		</div>
 		<div class="medium-6 columns">
 
-		{{!-- VERTICAL CENTER HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Vertical Center"}}
-			{{> utility-classes-vertical-center }}
-		{{!-- VERTICAL CENTER HELPER - ENDS --}}
-
-		{{!-- INPUT NUMERIC MASK HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Input Numeric Mask"}}
-			{{> form-helper-input-numeric-mask }}
-		{{!-- INPUT NUMERIC MASK HELPER - ENDS --}}
-
-		{{!-- SELECT ALL CHECKBOXES HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Select All Checkboxes Toggle"}}
-			{{> interactive-helper-checkboxes-select-all }}
-		{{!-- SELECT ALL CHECKBOXES HELPER - ENDS --}}
-
-		{{!-- TOGGLE ELEMENT HELPER - BEGINS --}}
+		{{!-- TOGGLE ELEMENT - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Toggle Element"}}
-			{{> interactive-helper-toggle-element }}
-		{{!-- TOGGLE ELEMENT HELPER - ENDS --}}
+			{{> toggle-element }}
+		{{!-- TOGGLE ELEMENT - ENDS --}}
 
-		{{!-- VISIBILITY - SHOW BY SCREEN SIZE HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Visibility - Show by Screen Size"}}
-			{{> visibility-classes-screen-size-show }}
-		{{!-- VISIBILITY - SHOW BY SCREEN SIZE HELPER - ENDS --}}
+		{{!-- SHOW BY SCREEN SIZE - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Show by Screen Size"}}
+			{{> screen-size-show }}
+		{{!-- SHOW BY SCREEN SIZE - ENDS --}}
 
-		{{!-- VISIBILITY - HIDE BY SCREEN SIZE HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Visibility - Hide by Screen Size"}}
-			{{> visibility-classes-screen-size-hide }}
-		{{!-- VISIBILITY - HIDE BY SCREEN SIZE HELPER - ENDS --}}
+		{{!-- HIDE BY SCREEN SIZE - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Hide by Screen Size"}}
+			{{> screen-size-hide }}
+		{{!-- HIDE BY SCREEN SIZE - ENDS --}}
 
-		{{!-- VISIBILITY - ORIENTATION DETECTION HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Visibility - Orientation Detection"}}
-			{{> visibility-classes-orientation-detection }}
-		{{!-- VISIBILITY - ORIENTATION DETECTION HELPER - ENDS --}}
+		{{!-- ORIENTATION DETECTION - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Orientation Detection"}}
+			{{> orientation-detection }}
+		{{!-- ORIENTATION DETECTION - ENDS --}}
 
-		{{!-- VISIBILITY - TOUCH DETECTION HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Visibility - Touch Detection"}}
-			{{> visibility-classes-touch-detection }}
-		{{!-- VISIBILITY - TOUCH DETECTION HELPER - ENDS --}}
+		{{!-- TOUCH DETECTION - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Touch Detection"}}
+			{{> touch-detection }}
+		{{!-- TOUCH DETECTION - ENDS --}}
 
-		{{!-- ACCESSIBILITY - SHOW FOR SCREEN READERS HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Accessibility - Show for Screen Readers Only"}}
-			{{> visibility-classes-screen-readers-show }}
-		{{!-- ACCESSIBILITY - SHOW FOR SCREEN READERS HELPER - ENDS --}}
+		{{!-- SHOW FOR SCREEN READERS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Show for Screen Readers Only"}}
+			{{> screen-readers-show }}
+		{{!-- SHOW FOR SCREEN READERS - ENDS --}}
 
-		{{!-- ACCESSIBILITY - HIDE FOR SCREEN READERS HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Accessibility - Hide for Screen Readers Only"}}
-			{{> visibility-classes-screen-readers-hide }}
-		{{!-- ACCESSIBILITY - HIDE FOR SCREEN READERS HELPER - ENDS --}}
+		{{!-- HIDE FOR SCREEN READERS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Hide for Screen Readers Only"}}
+			{{> screen-readers-hide }}
+		{{!-- HIDE FOR SCREEN READERS - ENDS --}}
 			
 		</div>
 	</div>

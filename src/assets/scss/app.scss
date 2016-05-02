@@ -836,7 +836,10 @@ URL: {{ meta_url }}
 			footer								{margin-top: $evo-base-margin;}
 			.evo-icon-site-embed2				{
 												float: right !important;
-												margin-right: rem-calc(4);
+				&:before							{
+													position: relative;
+													left: -4px;
+													}
 												}
 			.evo-site-example-box--code-hdr		{
 												@include border-radius($evo-site-example-box-code-hdr-border-radius);
@@ -1010,15 +1013,15 @@ URL: {{ meta_url }}
 											}
 // KEYLINE DEMO - ENDS
 
-// CENTER HORIZONTALLY AND VERTICALLY DEMO - BEGINS
-	.evo-center-container-dimensions-demo	{
+// CALLOUT DIMENSIONS DEMO - BEGINS
+	.evo-callout-dimensions-demo			{
 											height: rem-calc(200);
 											width: 100%;
 		p										{
 												width: rem-calc(200) !important;
 												}
 											}
-// CENTER HORIZONTALLY AND VERTICALLY DEMO - ENDS
+// CALLOUT DIMENSIONS DEMO - ENDS
 
 // MARGIN PADDING SETTINGS TABLE - BEGINS
 	.evo-site-margin-padding-settings-table

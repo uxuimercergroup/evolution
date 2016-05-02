@@ -14,8 +14,8 @@ The Mercer color palette is designed to support a range of visual styles. These 
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group {{color-palette.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
-				{{#each color-palette.tabs}}
+			<ul class="button-group {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
+				{{#each pattern-library.tabs}}
 				<li class="tabs-title evo-tabs-title{{#is active 'true'}} is-active{{/is}}" role="presentation">
 					<a href="#evoPanel{{@index}}" role="tab" tabindex="0" class="button small evo-button">
 						<span class="text">{{name}}</span>
@@ -35,7 +35,7 @@ The Mercer color palette is designed to support a range of visual styles. These 
 		<section class="tabs-panel evo-tabs-panel is-active evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel0">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col0" data-equalizer-watch="tab-panel">
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each color-palette.data }}
 					<div class="callout evo-callout evo-site-example-box evo-site-color-block">
@@ -62,15 +62,17 @@ The Mercer color palette is designed to support a range of visual styles. These 
 				<!-- EXAMPLE BOX - ENDS -->
 
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-sticky-container data-equalizer-watch="tab-panel">
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
-					<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col" data-sticky-on="large" data-sticky>
-						<ul class="menu vertical" data-magellan>
-						{{#each color-palette.data}}
-							<li><a href="#{{hyphenate name}}">{{name}}</a></li>
-						{{/each}}
-						</ul>
-					</nav>
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col0" data-sticky-on="large" data-sticky>
+							<ul class="menu vertical" data-magellan>
+							{{#each color-palette.data}}
+								<li><a href="#{{hyphenate name}}">{{name}}</a></li>
+							{{/each}}
+							</ul>
+						</nav>
+					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
@@ -82,7 +84,7 @@ The Mercer color palette is designed to support a range of visual styles. These 
 		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel1">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col1" data-equalizer-watch="tab-panel">
 
 				<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate color-palette.primary}}">
@@ -200,13 +202,15 @@ The system colors are used for important, high-level information that may requir
 
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
-						<dl class="sub-nav">
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate color-palette.primary}}">{{color-palette.primary}}</a></dd>
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate color-palette.secondary}}">{{color-palette.secondary}}</a></dd>
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate color-palette.tertiary}}">{{color-palette.tertiary}}</a></dd>
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate color-palette.system}}">{{color-palette.system}}</a></dd>
-						</dl>
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col1" data-sticky-on="large" data-sticky>
+							<ul class="menu vertical" data-magellan>
+								<li><a href="#{{hyphenate color-palette.primary}}">{{color-palette.primary}}</a></li>
+								<li><a href="#{{hyphenate color-palette.secondary}}">{{color-palette.secondary}}</a></li>
+								<li><a href="#{{hyphenate color-palette.tertiary}}">{{color-palette.tertiary}}</a></li>
+								<li><a href="#{{hyphenate color-palette.system}}">{{color-palette.system}}</a></li>
+							</ul>
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
@@ -214,36 +218,97 @@ The system colors are used for important, high-level information that may requir
 			</section>
 			
 		</section>
-	<!-- TAB PANEL 2 - BEGINS -->
+	<!-- TAB PANEL 2 - ENDS -->
 
 	<!-- TAB PANEL 3 - BEGINS -->
 		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Content for something 3
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col2" data-equalizer-watch="tab-panel">
+				<!-- EXAMPLE BOX - BEGINS -->
+					{{#each color-palette.usage_data }}
+					<div class="callout evo-callout evo-site-example-box">
+						<header>
+						<!-- EXAMPLE HEADER - BEGINS -->
+							<h6 class="evo-hdr-rule" data-magellan-target="{{hyphenate name}}" id="{{hyphenate name}}">
+								{{name}}
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip right evo-tooltip" title="View Source" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+							</h6>
+						<!-- EXAMPLE HEADER - ENDS -->
+						</header>
+						<section class="evo-grid-demo">
+						<!-- RENDERED HTML - BEGINS -->
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
+									{{> (lookup . 'partial') }}
+								{{/each}}
+							{{else}}
+								{{> (lookup . 'partial') }}
+							{{/is}}
+						<!-- RENDERED HTML - ENDS -->
+						</section>
+						<footer class="evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						<!-- CODE - BEGINS -->
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
+
+							<!-- HTML - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
+								{{/each}}
+							{{else}}
+
+							<!-- HTML - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
+							{{/is}}
+						<!-- CODE - ENDS -->
+						</footer>
+					</div>
+					{{/each}}
+				<!-- EXAMPLE BOX - ENDS -->
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					&amp;
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<!-- SIDENAV - BEGINS -->
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col2" data-sticky-on="large" data-sticky>
+							<ul class="menu vertical" data-magellan>
+							{{#each color-palette.usage_data}}
+								<li><a href="#{{hyphenate name}}">{{name}}</a></li>
+							{{/each}}
+							</ul>
+						</nav>
+					</div>
+				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
 			
 		</section>
-	<!-- TAB PANEL 3 - BEGINS -->
+	<!-- TAB PANEL 3 - ENDS -->
 
 	<!-- TAB PANEL 4 - BEGINS -->
 		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel3">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col3" data-equalizer-watch="tab-panel">
 					Content for something 4
 				</div>
 				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					&amp;
+					&nbsp;
 				</div>
 			</section>
 			
 		</section>
-	<!-- TAB PANEL 4 - BEGINS -->
+	<!-- TAB PANEL 4 - ENDS -->
 	</div>
 <!-- TABS - ENDS -->

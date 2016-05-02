@@ -23,82 +23,60 @@
 
 	"data": [
 		{
-			"name": "Contain to Grid",
-			"partial": "utility-classes-contain-to-grid", "slug": "utility-contain-to-grid"
-		},
-		{
 			"name": "Float",
-			"partial": "utility-classes-float", "slug": "utility-float"
+			"partial": "float", "slug": "float"
 		},
 		{
-			"name": "Float Center",
-			"partial": "utility-classes-float-center", "slug": "utility-float-center"
+			"name": "Horizontal Center",
+			"partial": "horizontal-center", "slug": "horizontal-center"
 		},
 		{
-			"name": "Vertical Center",
-			"partial": "utility-classes-vertical-center", "slug": "utility-vertical-center"
+			"name": "Vertical Middle",
+			"partial": "vertical-middle", "slug": "vertical-middle"
 		},
 		{
-			"name": "Hide an Element",
-			"partial": "utility-classes-hide-element", "slug": "utility-hide-element"
+			"name": "Hide Element",
+			"partial": "hide-element", "slug": "hide-element"
 		},
 		{
 			"name": "Image Align",
-			"partial": "utility-classes-image-align", "slug": "utility-image-align"
-		},
-		{
-			"name": "Input Numeric Mask",
-			"partial": "form-helper-input-numeric-mask", "slug": "utility-input-numeric-mask"
+			"partial": "image-align", "slug": "image-align"
 		},
 		{
 			"name": "Keylines",
-			"partial": "utility-classes-keylines", "slug": "utility-keylines"
-		},
-		{
-			"name": "Specific Use Colors",
-			"partial": "utility-classes-colors-specific-use", "slug": "utility-specific-use-colors"
-		},
-		{
-			"name": "Spot Colors",
-			"partial": "utility-classes-colors", "slug": "utility-spot-colors"
-		},
-		{
-			"name": "Select All Checkboxes",
-			"partial": "interactive-helper-checkboxes-select-all",
-			"partial_js": "interactive-helper-checkboxes-select-all-js",
-			"slug": "interactive-select-all-checkboxes"
+			"partial": "keylines", "slug": "keylines"
 		},
 		{
 			"name": "Toggle Element",
-			"partial": "interactive-helper-toggle-element", "slug": "interactive-toggle-element"
+			"partial": "toggle-element", "slug": "toggle-element"
 		},
 		{
 			"name": "Orientation Detection",
-			"partial": "visibility-classes-orientation-detection", "slug": "visibility-orientation-detection"
+			"partial": "orientation-detection", "slug": "orientation-detection"
 		},
 		{
 			"name": "Touch Detection",
-			"partial": "visibility-classes-touch-detection", "slug": "visibility-touch-detection"
+			"partial": "touch-detection", "slug": "touch-detection"
 		},
 		{
 			"name": "Hide for Screen Readers",
-			"partial": "visibility-classes-screen-readers-hide", "slug": "visibility-screen-readers-hide"
+			"partial": "screen-readers-hide", "slug": "screen-readers-hide"
 		},
 		{
 			"name": "Show for Screen Readers",
-			"partial": "visibility-classes-screen-readers-show", "slug": "visibility-screen-readers-show"
+			"partial": "screen-readers-show", "slug": "screen-readers-show"
 		},
 		{
 			"name": "Hide by Screen Size",
-			"partial": "visibility-classes-screen-size-hide", "slug": "visibility-hide-by-screen-size"
+			"partial": "screen-size-hide", "slug": "screen-size-hide"
 		},
 		{
 			"name": "Show by Screen Size",
-			"partial": "visibility-classes-screen-size-show", "slug": "visibility-show-by-screen-size"
+			"partial": "screen-size-show", "slug": "screen-size-show"
 		},
 		{
 			"name": "Skip Links",
-			"partial": "visibility-classes-skip-links", "slug": "visibility-skip-links"
+			"partial": "skip-links", "slug": "skip-links"
 		}
 	],
 
@@ -476,179 +454,40 @@
 		}
 	],
 
-	"text_alignment_header": "Text Alignment Helpers",
-	"text_alignment_settings": [
-		{
-			"text-class": "text-left"
-		},
-		{
-			"text-class": "text-right"
-		},
-		{
-			"text-class": "text-center"
-		},
-		{
-			"text-class": "text-justify"
-		},
-		{
-			"text-class": "small-text-left"
-		},
-		{
-			"text-class": "small-text-right"
-		},
-		{
-			"text-class": "small-text-center"
-		},
-		{
-			"text-class": "small-text-justify"
-		},
-		{
-			"text-class": "small-only-text-left"
-		},
-		{
-			"text-class": "small-only-text-right"
-		},
-		{
-			"text-class": "small-only-text-center"
-		},
-		{
-			"text-class": "small-only-text-justify"
-		},
-		{
-			"text-class": "medium-text-left"
-		},
-		{
-			"text-class": "medium-text-right"
-		},
-		{
-			"text-class": "medium-text-center"
-		},
-		{
-			"text-class": "medium-text-justify"
-		},
-		{
-			"text-class": "medium-only-text-left"
-		},
-		{
-			"text-class": "medium-only-text-right"
-		},
-		{
-			"text-class": "medium-only-text-center"
-		},
-		{
-			"text-class": "medium-only-text-justify"
-		},
-		{
-			"text-class": "large-text-left"
-		},
-		{
-			"text-class": "large-text-right"
-		},
-		{
-			"text-class": "large-text-center"
-		},
-		{
-			"text-class": "large-text-justify"
-		},
-		{
-			"text-class": "large-only-text-left"
-		},
-		{
-			"text-class": "large-only-text-right"
-		},
-		{
-			"text-class": "large-only-text-center"
-		},
-		{
-			"text-class": "large-only-text-justify"
-		},
-		{
-			"text-class": "xlarge-text-left"
-		},
-		{
-			"text-class": "xlarge-text-right"
-		},
-		{
-			"text-class": "xlarge-text-center"
-		},
-		{
-			"text-class": "xlarge-text-justify"
-		},
-		{
-			"text-class": "xlarge-only-text-left"
-		},
-		{
-			"text-class": "xlarge-only-text-right"
-		},
-		{
-			"text-class": "xlarge-only-text-center"
-		},
-		{
-			"text-class": "xlarge-only-text-justify"
-		},
-		{
-			"text-class": "xxlarge-text-left"
-		},
-		{
-			"text-class": "xxlarge-text-right"
-		},
-		{
-			"text-class": "xxlarge-text-center"
-		},
-		{
-			"text-class": "xxlarge-text-justify"
-		}
-	],
-
 	"visibility_header": "Visibility Helpers",
 	"visibility_settings": [
 		{
 			"visibility-class": "show-for-small-only"
 		},
 		{
-			"visibility-class": "show-for-medium-up"
+			"visibility-class": "show-for-medium"
 		},
 		{
 			"visibility-class": "show-for-medium-only"
 		},
 		{
-			"visibility-class": "show-for-large-up"
+			"visibility-class": "show-for-large"
 		},
 		{
 			"visibility-class": "show-for-large-only"
 		},
 		{
-			"visibility-class": "show-for-xlarge-up"
-		},
-		{
-			"visibility-class": "show-for-xlarge-only"
-		},
-		{
-			"visibility-class": "show-for-xxlarge-up"
+			"visibility-class": "hide"
 		},
 		{
 			"visibility-class": "hide-for-small-only"
 		},
 		{
-			"visibility-class": "hide-for-medium-up"
+			"visibility-class": "hide-for-medium"
 		},
 		{
 			"visibility-class": "hide-for-medium-only"
 		},
 		{
-			"visibility-class": "hide-for-large-up"
+			"visibility-class": "hide-for-large"
 		},
 		{
 			"visibility-class": "hide-for-large-only"
-		},
-		{
-			"visibility-class": "hide-for-xlarge-up"
-		},
-		{
-			"visibility-class": "hide-for-xlarge-only"
-		},
-		{
-			"visibility-class": "hide-for-xxlarge-up"
 		},
 		{
 			"visibility-class": "show-for-landscape"
@@ -657,16 +496,13 @@
 			"visibility-class": "show-for-portrait"
 		},
 		{
-			"visibility-class": "show-for-touch"
+			"visibility-class": "show-on-focus"
 		},
 		{
-			"visibility-class": "hide-for-touch"
+			"visibility-class": "show-for-sr"
 		},
 		{
-			"visibility-class": "hidden-for-small-only"
-		},
-		{
-			"visibility-class": "visible-for-small-only"
+			"visibility-class": "invisible"
 		}
 	]
 }
