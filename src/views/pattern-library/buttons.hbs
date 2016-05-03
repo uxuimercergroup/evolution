@@ -46,7 +46,7 @@ Buttons act as the focal point for user interaction as it relates to saving data
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-target="{{hyphenate name}}" id="{{hyphenate name}}">
 								{{name}}
-								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip right evo-tooltip" title="View Source" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip right evo-tooltip" title="View Source" data-toggle="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</header>
@@ -61,7 +61,7 @@ Buttons act as the focal point for user interaction as it relates to saving data
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
 						</section>
-						<footer class="evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						<footer class="evo-site-example-box-ftr{{@index}} hide" id="code-toggle{{@index}}" data-toggler=".hide">
 						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}

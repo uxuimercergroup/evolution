@@ -58,16 +58,4 @@
 
 	// Checkboxes Select All Toggle Init
 	evoCheckboxesSelectAllToggle();
-
-	// TOGGLE ELEMENT
-	var evoToggleElement = function(){
-		jQuery('[data-evo-toggle-element]').click(function(){
-			var toggleElementObject = jQuery(this).attr('data-evo-toggle-element');
-			jQuery('[data-evo-toggle-element-item="' + toggleElementObject + '"]').toggleClass('hide');
-			Foundation.reInit('equalizer');
-		});
-	}
-
-	// Toggle Element Init
-	evoToggleElement();
 	

@@ -50,7 +50,7 @@ queries. On large and up media queries, Off-canvas menu and mobile header compon
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
 								{{name}}
-								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right evo-tooltip" title="View Source" aria-label="" data-toggle="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
@@ -66,7 +66,7 @@ queries. On large and up media queries, Off-canvas menu and mobile header compon
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
 						</section>
-						<footer class="evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						<footer class="evo-site-example-box-ftr{{@index}} hide" id="code-toggle{{@index}}" data-toggler=".hide">
 						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
