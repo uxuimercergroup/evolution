@@ -48,7 +48,7 @@ This versatile component presents a variety of choices that can be tailored for 
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
 								{{name}}
-								<a href="#code-anchor{{@index}}" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right evo-tooltip" title="View Source" aria-label="" data-toggle="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+								<a href="#code-toggle{{@index}}" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right evo-tooltip" title="View Source" aria-label="" data-toggle="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
@@ -64,7 +64,7 @@ This versatile component presents a variety of choices that can be tailored for 
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
 						</section>
-						<footer class="evo-site-example-box-ftr{{@index}} hide" id="code-anchor{{@index}}" data-toggler=".hide">
+						<footer class="evo-site-example-box-ftr{{@index}} hide" id="code-toggle{{@index}}" data-toggler=".hide">
 						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}

@@ -32,6 +32,10 @@
 			"name": "Label",
 			"partial": "label", "slug": "label"
 		},
+		"legend": {
+			"name": "Legend",
+			"partial": "legend", "slug": "legend"
+		},
 		"checkboxes": {
 			"name": "Checkboxes",
 			"multiple_example": "true",
@@ -60,13 +64,9 @@
 			"name": "Text Input",
 			"partial": "input", "placeholder": "Placeholder text", "slug": "text-input"
 		},
-		"input_numeric_mask": {
-			"name": "Input Numeric Mask",
-			"partial": "input-numeric-mask", "slug": "input-numeric-mask"
-		},
-		"pre_postfix": {
-			"name": "Prefix and Postfix",
-			"partial": "pre-postfix", "slug": "pre-postfix"
+		"input_group": {
+			"name": "Input Group",
+			"partial": "input-group", "slug": "input-group"
 		},
 		"html5_elements": {
 			"name": "HTML5 Elements",

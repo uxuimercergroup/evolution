@@ -62,26 +62,6 @@
 			});
 		}
 
-		// TOGGLER OFF REINIT
-		var evoSiteTogglerOffReInit = function(){
-			jQuery('[data-toggler]').on('off.zf.toggler', function(){
-
-				// ReInit equalizer on toggler off, fixes bug with toggled elements not defining height of the page
-				Foundation.reInit('equalizer');
-
-			});
-		}
-
-		// TOGGLER ON REINIT
-		var evoSiteTogglerOnReInit = function(){
-			jQuery('[data-toggler]').on('on.zf.toggler', function(){
-
-				// ReInit equalizer on toggler on, fixes bug with toggled elements not defining height of the page
-				Foundation.reInit('equalizer');
-
-			});
-		}
-
 
 // INITIALIZE FOUNDATION
 //--------------------------------------------------------------------------------------------------------
@@ -128,12 +108,6 @@ $(function() {
 
 			// REINIT ON TOGGLE OF PATTERN LIBRARY CONTENT TABS
 			evoSitePatternLibTabsReInit();
-
-			// TOGGLER OFF REINIT
-			evoSiteTogglerOffReInit();
-
-			// TOGGLER ON REINIT
-			evoSiteTogglerOnReInit();
 
 			// SETTINGS TAB DATA TABLE
 			evoDataTable('evo-data-table-pattern-library-setting-options',{

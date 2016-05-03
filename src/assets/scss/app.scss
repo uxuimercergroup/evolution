@@ -522,8 +522,6 @@ URL: {{ meta_url }}
 											@include box-shadow($evo-site-band-tab-box-shadow-horizontal $evo-site-band-tab-box-shadow-vertical $evo-site-band-tab-box-shadow-blur $evo-site-band-tab-box-shadow-spread rgba($evo-site-band-tab-box-shadow-color, $evo-site-band-tab-box-shadow-alpha));
 											@include clearfix;
 											background-color: $evo-site-band-tab-panel-background-color;
-											position: relative;
-											z-index: 2;
 											padding: $evo-site-band-tab-panel-padding;
 			.evo-site-band--tab-panel-marketing-content
 												{

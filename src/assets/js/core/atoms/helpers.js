@@ -8,23 +8,6 @@
 // FORM HELPERS
 //--------------------------------------------------------------------------------------------------------
 
-	// NUMERIC MASK FOR INPUT - Text input only accepts numbers
-	var evoInputNumericMask = function(){
-		jQuery('[data-evo-input-numeric-mask]').on('keypress', function(ev) {
-			var keyCode = window.event ? ev.keyCode : ev.which;
-			//codes for 0-9
-			if (keyCode < 48 || keyCode > 57) {
-			//codes for backspace, delete, enter
-			if (keyCode != 0 && keyCode != 8 && keyCode != 13 && !ev.ctrlKey) {
-				ev.preventDefault();
-				}
-			}
-		});
-	}
-
-	// Input Numeric Mask Init
-	evoInputNumericMask();
-
 	// FORM ELEMENT AUTOFOCUS
 	var evoAutofocus = function(){
 		if (!("autofocus" in document.createElement("input"))) {
@@ -58,4 +41,30 @@
 
 	// Checkboxes Select All Toggle Init
 	evoCheckboxesSelectAllToggle();
+
+	// TOGGLER OFF REINIT
+	var evoTogglerOffReInit = function(){
+		jQuery('[data-toggler]').on('off.zf.toggler', function(){
+
+			// ReInit equalizer on toggler off, fixes bug with toggled elements not defining height of the page
+			Foundation.reInit('equalizer');
+
+		});
+	}
+
+	// Toggler Off ReInit Init
+	evoTogglerOffReInit();
+
+	// TOGGLER ON REINIT
+	var evoTogglerOnReInit = function(){
+		jQuery('[data-toggler]').on('on.zf.toggler', function(){
+
+			// ReInit equalizer on toggler on, fixes bug with toggled elements not defining height of the page
+			Foundation.reInit('equalizer');
+
+		});
+	}
+
+	// Toggler On ReInit Init
+	evoTogglerOnReInit();
 	
