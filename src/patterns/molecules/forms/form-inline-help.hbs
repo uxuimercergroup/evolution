@@ -1,12 +1,12 @@
 <!-- FORM INLINE - HELP - BEGINS -->
-<form class="" id="" name="" method="" action="" title="" data-abide novalidate>
+<form data-abide novalidate>
 	<fieldset class="row">
 		<div class="small-5 columns">
 			<label class="middle" for="input-example2">
 				Input Label{{> icon class="evo-icon-custom-asterisk-small evo-form-required-icon"}}
 			</label>
 		</div>
-		<div class="small-7 columns evo-form-help">				
+		<div class="small-7 columns">				
 			{{> input type="text" placeholder="Placeholder text" required="true" aria-describedby="input1"}}
 			{{> error-text}}
 			{{> help-text id="input1"}}
@@ -18,7 +18,7 @@
 				Select Box{{> icon class="evo-icon-custom-asterisk-small evo-form-required-icon"}}
 			</label>
 		</div>
-		<div class="small-7 columns evo-form-help">
+		<div class="small-7 columns">
 			{{> select required="true" aria-describedby="input2"}}
 			{{> error-text}}
 			{{> help-text id="input2"}}
@@ -28,7 +28,7 @@
 		<div class="small-5 columns">
 			{{> legend text="Choose Your Favorite"}}
 		</div>
-		<div class="small-7 columns evo-form-help">
+		<div class="small-7 columns">
 			{{> input type="radio" input-name="color" input-value="red" id="red" checked="true"}}
 			{{> label text="Red" for="red"}}
 
@@ -41,7 +41,7 @@
 		<div class="small-5 columns">
 			{{> legend text="Check These Out"}}
 		</div>
-		<div class="small-7 columns evo-form-help">				
+		<div class="small-7 columns">				
 			{{> input type="checkbox" id="checkbox1" checked="true"}}
 			{{> label text="Checkbox 1" for="checkbox1"}}
 
@@ -56,14 +56,15 @@
 				Textarea Label{{> icon class="evo-icon-custom-asterisk-small evo-form-required-icon"}}
 			</label>
 		</div>
-		<div class="small-7 columns evo-form-help">
+		<div class="small-7 columns">
 			{{> textarea placeholder="Placeholder text" required="true" aria-describedby="input3"}}
 			{{> error-text}}
 			{{> help-text id="input3"}}
 		</div>
 	</fieldset>
 	<fieldset class="row">
-		<div class="small-12 columns">
+		<div class="small-12 columns evo-form-buttons">
+			{{> button button-type="button" secondary="true" type="reset" button-title="Reset" value="Reset" text="Reset"}}
 			{{> button button-type="button" button-title="Click for Validation" text="Click for Validation"}}
 		</div>
 	</fieldset>

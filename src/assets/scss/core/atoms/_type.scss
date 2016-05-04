@@ -161,8 +161,7 @@ $evo-anchor-font-color-alt: $onyx-dark-10 !default;
 
 	
 	// BOLD AND OTHER TYPES OF HEADERS
-	b, strong, th, thead,
-	dt, legend					{
+	b, strong, th, thead, dt	{
 								font-family: $evo-font-medium-stack;
 								font-weight: $global-weight-normal !important;
 								}
@@ -175,7 +174,7 @@ $evo-anchor-font-color-alt: $onyx-dark-10 !default;
 
 	// FOOTNOTES
 	.evo-footnote				{
-								line-height: 1.0625;
+								line-height: 1.125;
 								margin-bottom: rem-calc(10);
 								}
 

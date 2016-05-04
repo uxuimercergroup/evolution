@@ -1,11 +1,32 @@
 <!-- FORM STACKED - BEGINS -->
-<form class="" id="" name="" method="" action="" title="" data-abide novalidate>
+<form data-abide novalidate>
+	<div data-abide-error class="alert callout" style="display: none;">
+		<p><i class="evo-icon-notification2 evo-icon-position-left"></i>There are some errors in your form.</p>
+	</div>
 	<div class="row">
 		<fieldset class="small-12 columns">
 			<label>
 				Input Label{{> icon class="evo-icon-custom-asterisk-small evo-form-required-icon"}}
 				{{> input type="text" placeholder="Placeholder text" required="true"}}
 				{{> error-text}}
+			</label>
+		</fieldset>
+	</div>
+	<div class="row">
+		<fieldset class="small-12 columns">
+			<label>
+				Password{{> icon class="evo-icon-custom-asterisk-small evo-form-required-icon"}}
+				{{> input type="password" id="password" placeholder="Password" title="Enter your password" required="true"}}
+				{{> error-text}}
+			</label>
+		</fieldset>
+	</div>
+	<div class="row">
+		<fieldset class="small-12 columns">
+			<label>
+				Re-enter Password{{> icon class="evo-icon-custom-asterisk-small evo-form-required-icon"}}
+				{{> input type="password" data-equalto="password" placeholder="Re-enter Password" title="Re-enter your password" required="true"}}
+				{{> error-text text="Hey, passwords are supposed to match!"}}
 			</label>
 		</fieldset>
 	</div>
@@ -50,7 +71,8 @@
 		</fieldset>
 	</div>
 	<div class="row">
-		<fieldset class="small-12 columns">
+		<fieldset class="small-12 columns evo-form-buttons">
+			{{> button button-type="button" secondary="true" type="reset" button-title="Reset" value="Reset" text="Reset"}}
 			{{> button button-type="button" button-title="Click for Validation" text="Click for Validation"}}
 		</fieldset>
 	</div>

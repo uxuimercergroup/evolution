@@ -20,7 +20,7 @@ URL: {{ evo_meta_url }}
 @import "foundation";
 
 // Export mixin which prints out the Sass for everything in Foundation
-@include foundation-everything;
+@include foundation-everything();
 
 // Evolution atoms partials
 @import	"core/atoms/animations";
