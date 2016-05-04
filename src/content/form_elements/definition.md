@@ -1,7 +1,5 @@
 ##### General
 * Forms are built with a combination of standard form elements, as well as the Grid (rows and columns).
-* Form elements are styled based on their type attribute rather than a class.
-* Rows inside a form inherit some special padding to even up input spacing.
 
 ##### Stacked Forms
 
@@ -18,16 +16,13 @@ The Stacked Form works well when you want the user to read a Label and take an a
 
 The Inline Form displays the Field Labels and the associated Form Fields on the same line with one another. An Inline Form is best used when the system has more control over the specific layout of the page (when end-user configurability is less important).
 
-It is also a good solution in cases when there are numerous fields, and a *smaller amount of screen real estate* is available.
-
-When using an Inline Form, the preference is to use the Right Aligned version, as this creates a tighter association between the Field Label and the Form Field. The Left Aligned form is availble to be used, but the excess white space between the Form Label and the Form Field creates issues with readability
+It is also a good solution in cases when there are numerous fields, and a smaller amount of screen real estate is available.
 
 ##### Error Text and Abide Validation
 Abide Validation appears whenever the user makes a mistake on a form element, like failing to fill out a required input field. Abide Validation pinpoints where exactly on the form the error or errors occurred. 
 
 ##### Help Text
-* Help text for labels, inputs and messaging enable your app to generate programatically. 
-* Place help text below a field to clarify it's purpose
+* Place help text below a field to clarify it's purpose. Whenever you use help text, give the text a unique ID, and add the attribute aria-describedby to the input.
 
 ##### Text Inputs
 
@@ -35,7 +30,7 @@ These input types create a text field: text, date, datetime, datetime-local, ema
 
 ##### Number Inputs
 
-In most desktop browsers, `<input type="number">` elements will have up/down controls inside them, which increment and decrement the number inside the field. These are called *spin buttons*. 
+In most desktop browsers, `<input type="number">` elements will have up/down controls inside them, which increment and decrement the number inside the field. These are called spin buttons. 
 
 ##### Text Areas
 
