@@ -53,6 +53,10 @@
 			"text": "<small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</small>",
 			"slug": "paragraph-footnote"
 		},
+		"lead_paragraph": {
+			"name": "Lead Paragraph",
+			"partial": "type-lead-paragraph", "slug": "paragraph-footnote"
+		},
 		"headers": {
 			"name": "Headers",
 			"multiple_example": "true",
@@ -121,6 +125,11 @@
 			"name": "Unordered List",
 			"partial": "type-unordered-list",
 			"slug": "unordered-list"
+		},
+		"unbulleted_list": {
+			"name": "Un-bulleted List",
+			"partial": "type-unbulleted-list",
+			"slug": "unbulleted-list"
 		},
 		"definition_list": {
 			"name": "Definition List",

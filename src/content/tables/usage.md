@@ -10,8 +10,3 @@ Add the class `.evo-table-small-mediaquery` to the container surrounding the tab
 ##### Accessibility
 
 Add `role="grid"` to the `<table>` tag to enable compatibility with screen readers
-
-
-
-
-
