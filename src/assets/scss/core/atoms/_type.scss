@@ -30,11 +30,6 @@ $evo-hdr-background-color: $onyx-dark-6 !default;
 // FOOTERS
 $evo-footer-font-size: rem-calc(14) !default;
 
-// LINKS
-$evo-anchor-font-size-small: rem-calc(14) !default;
-$evo-anchor-font-color-reverse: $white !default;
-$evo-anchor-font-color-alt: $onyx-dark-10 !default;
-
 
 @if $use-type == true{
 
@@ -200,17 +195,6 @@ $evo-anchor-font-color-alt: $onyx-dark-10 !default;
 									font-family: $evo-font-medium-stack;
 									}
 								}
-
-
-	// LINKS
-	a							{	
-		&:visited					{color: $evo-anchor-font-color-visited;}
-								}
-
-	a.evo-anchor-small			{font-size: $evo-anchor-font-size-small;}
-	a.evo-anchor-reverse		{color: $evo-anchor-font-color-reverse;}
-	a.evo-anchor-alt			{color: $evo-anchor-font-color-alt;}
-
 
 	// OTHER ELEMENTS
 	sup, sub					{font-size: ($small-font-size - rem-calc(2));}

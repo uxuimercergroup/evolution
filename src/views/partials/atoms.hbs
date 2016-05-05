@@ -18,7 +18,7 @@
 	<div class="row">
 		<div class="medium-6 columns">
 
-		{{!-- BASIC BUTTONS - BEGINS --}}
+		{{!-- BASIC - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
 
 			{{> type-paragraph text="<code>a</code> tag"}}
@@ -28,7 +28,19 @@
 			{{> type-paragraph text="<code>button</code> tag"}}
 			{{> button button-type="button" secondary="true" text="Secondary"}}
 			{{> button button-type="button" text="Primary"}}
-		{{!-- BASIC BUTTONS - ENDS --}}
+		{{!-- BASIC - ENDS --}}
+
+		{{!-- HOLLOW - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Hollow"}}
+
+			{{> type-paragraph text="<code>a</code> tag"}}
+			{{> button secondary="true" hollow="true" text="Secondary a"}}
+			{{> button hollow="true" text="Primary a"}}
+			
+			{{> type-paragraph text="<code>button</code> tag"}}
+			{{> button button-type="button" secondary="true" hollow="true" text="Secondary"}}
+			{{> button button-type="button" hollow="true" text="Primary"}}
+		{{!-- HOLLOW - ENDS --}}
 
 		{{!-- DISABLED - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Disabled"}}
@@ -71,27 +83,17 @@
 		</div>
 		<div class="medium-6 columns">
 
-		{{!-- SHAPES - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Shapes"}}
+		{{!-- EXPANDED - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Expanded"}}
 
 			{{> type-paragraph text="<code>a</code> tag"}}
-			{{> button expand="true" secondary="true" text="Secondary expanded a"}}
-			{{> button secondary="true" shape="round" text="Secondary round a"}}
-			{{> button secondary="true" shape="radius" text="Secondary radius a"}}
-
-			{{> button expand="true" text="Expanded a"}}
-			{{> button shape="round" text="Round a"}}
-			{{> button shape="radius" text="Radius a"}}
+			{{> button expanded="true" secondary="true" text="Secondary expanded a"}}
+			{{> button expanded="true" text="Expanded a"}}
 
 			{{> type-paragraph text="<code>button</code> tag"}}
-			{{> button button-type="button" expand="true" secondary="true" text="Secondary expanded a"}}
-			{{> button button-type="button" secondary="true" shape="round" text="Secondary round a"}}
-			{{> button button-type="button" secondary="true" shape="radius" text="Secondary radius a"}}
-
-			{{> button button-type="button" expand="true" text="Expanded a"}}
-			{{> button button-type="button" shape="round" text="Round a"}}
-			{{> button button-type="button" shape="radius" text="Radius a"}}
-		{{!-- SHAPES - ENDS --}}
+			{{> button button-type="button" expanded="true" secondary="true" text="Secondary expanded a"}}
+			{{> button button-type="button" expanded="true" text="Expanded a"}}
+		{{!-- EXPANDED - ENDS --}}
 			
 		{{!-- ICONS - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Icons"}}
@@ -99,46 +101,46 @@
 			{{> type-paragraph text="<code>a</code> tag"}}
 
 			<!-- Button icon on left and right -->
-			{{> button icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right2" secondary="true" text="Secondary a"}}
+			{{> button icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right5" secondary="true" text="Secondary a"}}
 
 			<!-- Button icon on left -->
 			{{> button icon-position="left" icon-position-left-class="evo-icon-plus-circle" text="Primary a"}}
 
 			<!-- Button icon on right -->
-			{{> button icon-position="right" icon-position-right-class="evo-icon-arrow-right2" text="Primary a"}}
+			{{> button icon-position="right" icon-position-right-class="evo-icon-arrow-right5" text="Primary a"}}
 
 			<!-- Expanded button with icon on left and right -->
-			{{> button expand="true" icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right2" text="Primary a"}}
+			{{> button expand="true" icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right5" text="Primary a"}}
 
 			
 			{{> type-paragraph text="<code>button</code> tag"}}
 
 			<!-- Button icon on left and right -->
-			{{> button button-type="button" icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right2" secondary="true" text="Secondary"}}
+			{{> button button-type="button" icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right5" secondary="true" text="Secondary"}}
 
 			<!-- Button icon on left -->
 			{{> button button-type="button" icon-position="left" icon-position-left-class="evo-icon-plus-circle" text="Primary"}}
 
 			<!-- Button icon on right -->
-			{{> button button-type="button" icon-position="right" icon-position-right-class="evo-icon-arrow-right2" text="Primary"}}
+			{{> button button-type="button" icon-position="right" icon-position-right-class="evo-icon-arrow-right5" text="Primary"}}
 
 			<!-- Expanded button with icon on left and right -->
-			{{> button button-type="button" expand="true" icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right2" text="Primary"}}
+			{{> button button-type="button" expand="true" icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right5" text="Primary"}}
 		{{!-- ICONS - ENDS --}}
 
-		{{!-- FORM BUTTONS - BEGINS --}}
+		{{!-- FORM - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Form Buttons"}}
 
 			{{> input-button button-value="Secondary" secondary="true" type="submit"}}
 			{{> input-button button-value="Primary" type="submit"}}
-		{{!-- FORM BUTTONS - ENDS --}}
+		{{!-- FORM - ENDS --}}
 
-		{{!-- INTERACTIVE BUTTONS - BEGINS --}}
+		{{!-- INTERACTIVE - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Interactive Buttons"}}
 
 			{{> button button-type="button" interactive-data-value="evo-button-interactive-secondary-example" secondary="true" text="Save"}}
 			{{> button button-type="button" interactive-data-value="evo-button-interactive-primary-example" text="Save"}}
-		{{!-- INTERACTIVE BUTTONS - ENDS --}}
+		{{!-- INTERACTIVE - ENDS --}}
 
 		</div>
 	</div>
