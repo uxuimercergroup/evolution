@@ -46,8 +46,8 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(980);
-$global-lineheight: 1.5;
+$global-width: $evo-base-grid-width;
+$global-lineheight: $evo-base-line-height;
 $foundation-palette: (
   primary: $evo-primary-color,
   secondary: $evo-secondary-color,
@@ -60,10 +60,10 @@ $medium-gray: $onyx-dark-20;
 $dark-gray: $onyx-dark-50;
 $black: $black;
 $white: $white;
-$body-background: $white;
-$body-font-color: $black;
+$body-background: $evo-base-body-background;
+$body-font-color: $evo-base-font-color;
 $body-font-family: $evo-base-font-family;
-$body-antialiased: true;
+$body-antialiased: $evo-base-font-antialiased;
 $global-margin: $evo-base-margin;
 $global-padding: $evo-base-padding;
 $global-weight-normal: normal;
@@ -338,7 +338,7 @@ $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
 $form-label-color: $black;
-$form-label-font-size: rem-calc($evo-base-font-size);
+$form-label-font-size: $evo-base-font-size;
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
 $select-background: $white;
@@ -347,7 +347,7 @@ $select-radius: $global-radius;
 $input-color: $black;
 $input-placeholder-color: $medium-gray;
 $input-font-family: inherit;
-$input-font-size: rem-calc($evo-base-font-size);
+$input-font-size: $evo-base-font-size;
 $input-background: $white;
 $input-background-focus: $white;
 $input-background-disabled: $light-gray;

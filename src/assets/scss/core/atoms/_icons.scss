@@ -12,14 +12,7 @@
 //
 // @variables
 //
-$evo-icon-font-color:						$onyx-dark-70 !default;
-$evo-icon-font-color-white:					$white !default;
-$evo-icon-font-color-black:					$black !default;
-$evo-icon-shield-size:						rem-calc(32) !default;
-$evo-icon-shield-background-color:			$onyx-dark-80 !default;
-$evo-icon-shield-shadow-color:				$onyx-dark-80 !default;
-$evo-icon-shield-border-color:				$onyx-dark-6 !default;
-$evo-icon-shield-font-color:				$white !default;
+$evo-icon-font-color:						$evo-base-font-color !default;
 
 
 @if $use-icons == true {
@@ -94,77 +87,6 @@ $evo-icon-shield-font-color:				$white !default;
 	.evo-icon-position-bottom				{
 											display: block;
 											margin: 0 auto;
-											}
-
-	// ICON FONT COLOR HELPERS
-	[class^="evo-icon-"].evo-icon-color-white,
-	a[class^="evo-icon-"].evo-icon-color-white
-											{color: $evo-icon-font-color-white !important;}
-
-	[class^="evo-icon-"].evo-icon-color-black,
-	a[class^="evo-icon-"].evo-icon-color-black
-											{color: $evo-icon-font-color-black !important;}
-
-	// HIDE ICON LABEL TEXT BUT KEEP ACCESSIBLE
-	.evo-icon-hide-text						{
-											font: 0/0 a;
-											color: transparent !important;
-											text-shadow: none;
-											background-color: transparent !important;
-											border: 0;
-											}
-
-	// ICON SHIELDS
-	.evo-icon-shield						{
-											@include box-shadow(0 0 2px 0 $evo-icon-shield-shadow-color);
-											@include border-radius(100%);
-											background-color: $evo-icon-shield-background-color;
-											width: $evo-icon-shield-size;
-											height: $evo-icon-shield-size;
-											padding: 6px 0;
-											display: block;
-											float: left;
-											border: 2px solid $evo-icon-shield-border-color;
-		[class^="evo-icon-"]					{
-												color: $evo-icon-shield-font-color !important;
-												font-size: 1rem;
-			&.evo-icon-shield-vert-adjust-down		{top: 1px;}
-			&.evo-icon-shield-vert-adjust-up		{bottom: 1px;}
-			&.evo-icon-shield-vert-adjust-left		{left: -1px;}
-			&.evo-icon-shield-vert-adjust-right		{right: -1px;}
-												}
-											}
-	
-	// ICON SHIELDS SIZE HELPERS
-	.evo-icon-shield-size-small				{
-											width: $evo-icon-shield-size;
-											height: $evo-icon-shield-size;
-											padding: 6px 0;
-		[class^="evo-icon-"]					{font-size: 1rem;}
-											}
-	.evo-icon-shield-size-small-medium		{
-											width: ($evo-icon-shield-size * 1.4);
-											height: ($evo-icon-shield-size * 1.43);
-											padding: 8px 0;
-		[class^="evo-icon-"]					{font-size: (1rem*1.5);}
-											}
-	.evo-icon-shield-size-medium			{
-											width: ($evo-icon-shield-size * 2);
-											height: ($evo-icon-shield-size * 2);
-											padding: 14px 0;
-		[class^="evo-icon-"]					{font-size: ((1rem*2) - rem-calc(2));}
-											}
-	.evo-icon-shield-size-large				{
-											width: ($evo-icon-shield-size * 3);
-											height: ($evo-icon-shield-size * 3);
-											padding: 21px 0;
-		[class^="evo-icon-"]					{font-size: ((1rem*3) - rem-calc(2));}
-											}
-	.evo-icon-shield-size-x-large			{
-											width: ($evo-icon-shield-size * 4);
-											height: ($evo-icon-shield-size * 4);
-											padding: 27px 0;
-		[class^="evo-icon-"]					{font-size: ((1rem*4) - rem-calc(2));}
 											}
 
 	

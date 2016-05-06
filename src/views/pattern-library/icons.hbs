@@ -52,9 +52,9 @@ Evolution's icons use an icon Web font based primarily on the [IcoMoon](https://
 								<tr>
 									<td class="text-center copy-to-clipboard" title="evo-icon-{{{ properties.name }}}" data-clipboard-snippet data-clipboard-text="evo-icon-{{{ properties.name }}}">
 										<i class="evo-icon-{{{ properties.name }}} evo-icon-size-medium"></i>
-										<span class="evo-icon-hide-text">evo-icon-{{{ properties.name }}}</span>
-										<span class="evo-icon-hide-text">{{{ properties.name }}}</span>
-										<span class="evo-icon-hide-text">{{ join icon.tags ", "}}</span>
+										<span class="hide">evo-icon-{{{ properties.name }}}</span>
+										<span class="hide">{{{ properties.name }}}</span>
+										<span class="hide">{{ join icon.tags ", "}}</span>
 									</td>
 								</tr>
 								{{/each}}
@@ -79,10 +79,10 @@ Evolution's icons use an icon Web font based primarily on the [IcoMoon](https://
 						<!-- RENDERED HTML - BEGINS -->
 							{{#is multiple_example 'true'}}
 
-								<ul class="medium-block-grid-3 large-block-grid-5">
+								<div class="row medium-up-3 large-up-5">
 								{{#each multiple_example_options}}
 
-									<li>
+									<div class="columns">
 									{{#if multiple_example_options_header}}
 										<p class="evo-spacer-margin-bottom-small">{{multiple_example_options_header}}</p>
 									{{/if}}
@@ -96,10 +96,10 @@ Evolution's icons use an icon Web font based primarily on the [IcoMoon](https://
 									{{else}}
 										{{> (lookup . 'partial') }}
 									{{/is}}
-									</li>
+									</div>
 
 								{{/each}}
-								</ul>
+								</div>
 
 							{{else}}
 								{{> (lookup . 'partial') }}
@@ -237,13 +237,13 @@ Vector image icons gives the system more diverse use in digital and other applic
 								<tr>
 									<td class="text-center copy-to-clipboard" title="evo-icon-{{{ properties.name }}}" data-clipboard-snippet data-clipboard-text="evo-icon-{{{ properties.name }}}">
 										<i class="evo-icon-{{{ properties.name }}} evo-icon-size-medium"></i>
-										<span class="evo-icon-hide-text">evo-icon-{{{ properties.name }}}</span>
-										<span class="evo-icon-hide-text">{{{ properties.name }}}</span>
+										<span class="hide">evo-icon-{{{ properties.name }}}</span>
+										<span class="hide">{{{ properties.name }}}</span>
 									</td>
 									<td>{{{ properties.name }}}</td>
 									<td class="text-center icon-table-cell-reverse-background">
 										<i class="evo-icon-{{{ properties.name }}} evo-icon-color-white"></i>
-										<span class="evo-icon-hide-text">{{{ properties.name }}}</span>
+										<span class="hide">{{{ properties.name }}}</span>
 									</td>
 									<td>evo-icon-{{{ properties.name }}}</td>
 									<td>{{ join icon.tags ", "}}</td>

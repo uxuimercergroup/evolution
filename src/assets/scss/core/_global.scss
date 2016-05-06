@@ -8,6 +8,7 @@
 
 @import	"global/colors";
 @import	"global/mixins";
+@import	"global/util";
 
 
 // ==========================================================================================
@@ -30,6 +31,12 @@ $system-color-palette: (
 	info-color: 							(color: $evo-info-color),
 	highlight-color: 						(color: $evo-highlight-color)
 );
+
+// GRID
+$evo-base-grid-width:						rem-calc(980) !default;
+
+// BODY
+$evo-base-body-background:					$white !default;
 
 // LAYOUT
 $evo-base-margin:							1rem !default;
@@ -103,8 +110,11 @@ $evo-base-font-stack:						arial, Tahoma, Geneva, sans-serif !default;
 	$evo-icon-site-font-stack:					"#{$evo-icon-site-font-family}" !default;
 
 // GLOBAL
-$evo-base-font-size:						16 !default;
+$evo-base-font-color:						$black !default;
+$evo-base-font-size:						rem-calc(16) !default;
+$evo-base-line-height:						1.5 !default;
 $evo-base-font-family:						$evo-font-regular-stack !default;
+$evo-base-font-antialiased:					true !default;
 
 // HEADERS
 $evo-header-color:							inherit !default;

@@ -34,7 +34,6 @@ $use-breadcrumbs:							true;
 $use-carousel:								true;
 $use-data-table:							true;
 $use-datepicker:							true;
-$use-dropdown-buttons:						true;
 $use-labels:								true;
 $use-off-canvas:							true;
 $use-pagination:							true;
@@ -56,6 +55,8 @@ $use-top-bar:								true;
 // $evo-button-min-width: 					rem-calc(120);
 // $evo-button-tiny-text-transform: 		uppercase;
 // $evo-button-hollow-secondary-color: 		$onyx-dark-40;
+// $evo-button-icon-font-family: 			$evo-icon-font-stack;
+// $evo-button-dropdown-icon: 				'\edc6';
 
 
 // CALLOUT
@@ -89,14 +90,7 @@ $use-top-bar:								true;
 
 // ICONS
 // ------------------------------------------------------------------------------------------
-// $evo-icon-font-color:					$onyx-dark-70;
-// $evo-icon-font-color-white:				$white;
-// $evo-icon-font-color-black:				$black;
-// $evo-icon-shield-size:					rem-calc(32);
-// $evo-icon-shield-background-color:		$onyx-dark-80;
-// $evo-icon-shield-shadow-color:			$onyx-dark-80;
-// $evo-icon-shield-border-color:			$onyx-dark-6;
-// $evo-icon-shield-font-color:				$white;
+// $evo-icon-font-color:					$evo-base-font-color;
 
 
 // LISTS
@@ -289,13 +283,6 @@ $evo-small-font-color: 						$onyx-dark-50;
 // $evo-datepicker-input-icon-color: 		$onyx-dark-50;
 // $evo-datepicker-input-icon-hover-background-color: $transparent;
 // $evo-datepicker-input-min-width: 		rem-calc(110);
-
-
-// DROPDOWN BUTTONS
-// ------------------------------------------------------------------------------------------
-// $evo-dropdown-button-icon-font-family: 	$evo-icon-font-stack;
-// $evo-dropdown-button-icon-size: 			rem-calc(16);
-// $evo-dropdown-button-icon: 				'\edc6';
 
 
 // OFF-CANVAS

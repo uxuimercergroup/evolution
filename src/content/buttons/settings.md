@@ -45,10 +45,22 @@ Below is a list of the options that you can pass into the button handlebars part
 - Description: This will allow you to add additional class names to the `class` attribute
 ***
 
+**data-toggle**
+- Default Value: --
+- Option Value: *data-value*
+- Description: The data value needs to match the `id` of the dropdown pane
+***
+
 **disabled**
 - Default Value: --
 - Option Value: **true**
 - Description: If disabled is set to **true** then `disabled` attribute is added to button
+***
+
+**dropdown**
+- Default Value: --
+- Option Value: **true**
+- Description: If dropdown is set to **true** then a class of `dropdown` is added to the class attribute of the button
 ***
 
 **expanded**

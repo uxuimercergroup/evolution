@@ -24,7 +24,7 @@ $evo-form-label-font-family: $evo-font-medium-stack !default;
 	label,
 	legend											{
 													font-family: $evo-form-label-font-family;
-													font-size: rem-calc($evo-base-font-size);
+													font-size: $evo-base-font-size;
 		[class^="evo-icon-"]							{top: rem-calc(2);}
 													}
 	legend											{margin-bottom: 0;}
@@ -57,7 +57,7 @@ $evo-form-label-font-family: $evo-font-medium-stack !default;
 	// RADIO BUTTONS AND CHECKBOXES
 	input[type="radio"] + label,
 	input[type="checkbox"] + label					{
-													font-size: rem-calc($evo-base-font-size);
+													font-size: $evo-base-font-size;
 													font-family: $evo-base-font-family;
 													}
 
@@ -76,7 +76,7 @@ $evo-form-label-font-family: $evo-font-medium-stack !default;
 	@media screen and (-webkit-min-device-pixel-ratio:0) { 
 		select:focus,
 		textarea:focus,
-		input:focus 								{font-size: rem-calc($evo-base-font-size);}
+		input:focus 								{font-size: $evo-base-font-size;}
 	}
 
 }//endif

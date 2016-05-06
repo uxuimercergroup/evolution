@@ -132,6 +132,14 @@
 				{"partial": "input-button", "type": "submit", "button-type": "input", "button-value": "Primary", "slug": "form-button"}
 			]
 		},
+		"dropdown_button": {
+			"name": "Dropdown Buttons",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button", "button-type": "button", "secondary": "true", "dropdown": "true", "text": "Secondary", "slug": "dropdown-button-secondary"},
+				{"partial": "button", "button-type": "button", "dropdown": "true", "text": "Primary", "slug": "dropdown-button"}
+			]
+		},
 		"min_width_button": {
 			"name": "Min-width Buttons",
 			"multiple_example": "true",
