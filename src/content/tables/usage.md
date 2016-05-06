@@ -1,7 +1,7 @@
 ##### General
 
-* Add a class of `.evo-table` to the `<table>` tag to ensure styles are compatible with Mercer branding
-* Column width may be defined by adding `width=""` to the `<th>` tag
+- Add a class of `.evo-table` to the `<table>` tag to ensure styles are compatible with Mercer branding
+- Column width may be defined by adding `width=""` to the `<th>` tag
 
 ##### Horizontal Scroll on Small Screens
 

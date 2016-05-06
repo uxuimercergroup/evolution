@@ -1,11 +1,11 @@
 ##### Dropdown Sizes
 
 The size of the dropdown can be changed by adding the following classes:
-* `tiny`: Make the dropdown have a max-width of 200px 
-* `small`: Make the dropdown have a max-width of 300px 
-* `medium`: Make the dropdown have a max-width of 500px 
-* `large`: Make the dropdown have a max-width of 800px 
-* `mega`: Make the dropdown go full 100% width 
+- `tiny`: Make the dropdown have a max-width of 200px 
+- `small`: Make the dropdown have a max-width of 300px 
+- `medium`: Make the dropdown have a max-width of 500px 
+- `large`: Make the dropdown have a max-width of 800px 
+- `mega`: Make the dropdown go full 100% width 
 
 ##### Dropdown Positioning
 
@@ -22,6 +22,6 @@ To make a dropdown accessible by hover, add `data-options="is_hover:true; hover_
 The autoclose option is enabled by default and allows the dropdown to close automatically when a link is clicked within the dropdown. To disable (keep dropdowns persisting), set the attribute `aria-autoclose` to `false`.
 
 ##### Accessibility
-* Include `aria-hidden="true"` on the `<ul>` tag to indicate that the list is hidden in a dropdown
-* Include `aria-expanded="false"` on the wrapper tag to indicate that the dropdown is collapsed
-* Include `aria-controls="dropdownID"` confirms that which button controls the input.
+- Include `aria-hidden="true"` on the `<ul>` tag to indicate that the list is hidden in a dropdown
+- Include `aria-expanded="false"` on the wrapper tag to indicate that the dropdown is collapsed
+- Include `aria-controls="dropdownID"` confirms that which button controls the input.

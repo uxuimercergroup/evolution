@@ -1,14 +1,14 @@
 ##### General
-* Forms are built with a combination of standard form elements, as well as the Grid (rows and columns).
+- Forms are built with a combination of standard form elements, as well as the Grid (rows and columns).
 
 ##### Stacked Forms
 
 Stacked Forms are best used when a high level of end-user configurability is necessary. In cases like this, we have less control over the specific placement of all fields, so the flexibility of spacing is important.
 
 The Stacked Form is flexible because it allows you to configure optional elements:
-* Hiding/displaying Fields
-* Changing the values of Field Labels
-* Localization/translation of Field Labels
+- Hiding/displaying Fields
+- Changing the values of Field Labels
+- Localization/translation of Field Labels
 
 The Stacked Form works well when you want the user to read a Label and take an action directly underneath. However, for aesthetic purposes, it might be a good idea to use one of the other types of Forms if its contents are on the long side.
 
@@ -22,7 +22,7 @@ It is also a good solution in cases when there are numerous fields, and a smalle
 Abide Validation appears whenever the user makes a mistake on a form element, like failing to fill out a required input field. Abide Validation pinpoints where exactly on the form the error or errors occurred. 
 
 ##### Help Text
-* Place help text below a field to clarify it's purpose. Whenever you use help text, give the text a unique ID, and add the attribute aria-describedby to the input.
+- Place help text below a field to clarify it's purpose. Whenever you use help text, give the text a unique ID, and add the attribute aria-describedby to the input.
 
 ##### Text Inputs
 

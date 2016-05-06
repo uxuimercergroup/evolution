@@ -135,11 +135,18 @@
 			{{> input-button button-value="Primary" type="submit"}}
 		{{!-- FORM - ENDS --}}
 
+		{{!-- MIN WIDTH - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Min-width"}}
+
+			{{> button button-type="button" secondary="true" text="Secondary" min-width="true"}}
+			{{> button button-type="button" text="Primary" min-width="true"}}
+		{{!-- MIN WIDTH - ENDS --}}
+
 		{{!-- INTERACTIVE - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Interactive Buttons"}}
 
-			{{> button button-type="button" interactive-data-value="evo-button-interactive-secondary-example" secondary="true" text="Save"}}
-			{{> button button-type="button" interactive-data-value="evo-button-interactive-primary-example" text="Save"}}
+			{{> button button-type="button" interactive-data-value="evo-button-interactive-secondary-example" secondary="true" text="Save" min-width="true"}}
+			{{> button button-type="button" interactive-data-value="evo-button-interactive-primary-example" text="Save" min-width="true"}}
 		{{!-- INTERACTIVE - ENDS --}}
 
 		</div>

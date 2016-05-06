@@ -6,6 +6,8 @@
 // @variables
 //
 $evo-button-min-width: rem-calc(120) !default;
+$evo-button-tiny-text-transform: uppercase !default;
+$evo-button-hollow-secondary-color: $onyx-dark-40 !default;
 
 
 @if $use-buttons == true{
@@ -13,8 +15,19 @@ $evo-button-min-width: rem-calc(120) !default;
 	// BUTTON
 	.evo-button 					{
 
+		// TINY
+		&.tiny							{text-transform: $evo-button-tiny-text-transform;}
+
+		// HOLLOW
+		&.hollow						{
+			&.secondary						{
+											border-color: $evo-button-hollow-secondary-color;
+											color: $evo-button-hollow-secondary-color;
+											}
+										}
+
 		// EXPANDED
-		&.expanded						{display: inline-block;}						
+		&.expanded						{display: inline-block;}					
 
 		// BUTTON MIN WIDTH
 		&[data-evo-button-min-width]	{min-width: $evo-button-min-width;}
@@ -24,6 +37,7 @@ $evo-button-min-width: rem-calc(120) !default;
 			[class^="evo-icon-"]			{
 											line-height: inherit;
 											color: inherit;
+											top: -1px;
 											}
 			.evo-icon-position-left			{
 											float: left;
@@ -35,12 +49,15 @@ $evo-button-min-width: rem-calc(120) !default;
 											}
 			.evo-button-text				{
 											position: relative;
-											top: 1px;
+											top: -1px;
 											}
 
 			// BUTTON ICON - TINY
 			&.tiny							{
-				[class^="evo-icon-"]			{font-size: rem-calc(12);}
+				[class^="evo-icon-"]			{
+												top: 1px;
+												font-size: rem-calc(12);
+												}
 				.evo-icon-position-left			{margin-right: rem-calc(6);}
 				.evo-icon-position-right		{margin-left: rem-calc(6);}
 				.evo-button-text				{top: 2px}
@@ -48,10 +65,13 @@ $evo-button-min-width: rem-calc(120) !default;
 
 			// BUTTON ICON - SMALL
 			&.small							{
-				[class^="evo-icon-"]			{font-size: rem-calc(14);}
+				[class^="evo-icon-"]			{
+												top: 0;
+												font-size: rem-calc(14);
+												}
 				.evo-icon-position-left			{margin-right: rem-calc(7);}
 				.evo-icon-position-right		{margin-left: rem-calc(7);}
-				.evo-button-text				{top: 2px}
+				.evo-button-text				{top: 1px}
 											}
 
 			// BUTTON ICON - LARGE
@@ -62,6 +82,28 @@ $evo-button-min-width: rem-calc(120) !default;
 												}
 				.evo-icon-position-left			{margin-right: rem-calc(9);}
 				.evo-icon-position-right		{margin-left: rem-calc(9);}
+				.evo-button-text				{top: 0}
+											}
+
+			// BUTTON ICON - X-LARGE
+			&.xlarge						{
+				[class^="evo-icon-"]			{
+												top: 1px;
+												font-size: rem-calc(20);
+												}
+				.evo-icon-position-left			{margin-right: rem-calc(10);}
+				.evo-icon-position-right		{margin-left: rem-calc(10);}
+				.evo-button-text				{top: 0}
+											}
+
+			// BUTTON ICON - XX-LARGE
+			&.xxlarge						{
+				[class^="evo-icon-"]			{
+												top: 2px;
+												font-size: rem-calc(22);
+												}
+				.evo-icon-position-left			{margin-right: rem-calc(11);}
+				.evo-icon-position-right		{margin-left: rem-calc(11);}
 				.evo-button-text				{top: 0}
 											}
 										}
@@ -82,6 +124,14 @@ $evo-button-min-width: rem-calc(120) !default;
 				&.large							{
 												padding-left: rem-calc(18);
 												padding-right: rem-calc(36);
+												}
+				&.xlarge						{
+												padding-left: rem-calc(20);
+												padding-right: rem-calc(40);
+												}
+				&.xxlarge						{
+												padding-left: rem-calc(22);
+												padding-right: rem-calc(44);
 												}
 											}
 										}
@@ -104,11 +154,50 @@ $evo-button-min-width: rem-calc(120) !default;
 												padding-left: rem-calc(36);
 												padding-right: rem-calc(18);
 												}
+				&.xlarge						{
+												padding-left: rem-calc(40);
+												padding-right: rem-calc(20);
+												}
+				&.xxlarge						{
+												padding-left: rem-calc(44);
+												padding-right: rem-calc(22);
+												}
 											}
 										}
 									}
 
 	// LINK BUTTON
 	a.evo-button 					{text-decoration: none;}
+
+	// BUTTON GROUP
+	.evo-button-group				{
+		.evo-button						{
+										border-radius: 0;
+			&:first-child					{border-radius: $evo-base-radius 0 0 $evo-base-radius;}
+			&:last-child					{border-radius: 0 $evo-base-radius $evo-base-radius 0;}
+										}
+									}
+
+	// BUTTON GROUP - STACKED
+	.evo-button-group				{
+		&.stacked,
+		&.stacked-for-small,
+		&.stacked-for-medium			{
+			.evo-button						{
+				&:first-child					{border-radius: $evo-base-radius $evo-base-radius 0 0;}
+				&:last-child					{border-radius: 0 0 $evo-base-radius $evo-base-radius;}
+											}
+										}
+									}
+
+	// BUTTON GROUP EVEN FOUNDATION FIX
+	// Remove this fix when Foundation release next patch: https://github.com/zurb/foundation-sites/pull/8616
+	.button-group.expanded			{
+		.button							{
+										margin-right: 0 !important;
+			&:not(:last-child)				{border-right: 1px solid $white;}
+			&.hollow:not(:last-child)		{border-right: 0;}
+										}
+									}
 
 }//endif

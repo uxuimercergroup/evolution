@@ -7,9 +7,9 @@ The collection of animation types relies on the [Animate.css](https://github.com
 
 ##### Formal Language Definition
 
-* data-anijs  -> Sentence 1; ... ; Sentence n
-* Sentence    -> Definition, ... , Definition n
-* Definition  -> if | on | do | to | before | after | helper
+- data-anijs  -> Sentence 1; ... ; Sentence n
+- Sentence    -> Definition, ... , Definition n
+- Definition  -> if | on | do | to | before | after | helper
 
 
 ##### Getting Started with AniJS CSS Animations

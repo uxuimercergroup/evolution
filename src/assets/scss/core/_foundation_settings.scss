@@ -243,10 +243,12 @@ $button-color: $white;
 $button-color-alt: $onyx-dark-70;
 $button-radius: $global-radius;
 $button-sizes: (
-  tiny: 0.6rem,
-  small: 0.75rem,
-  default: 0.9rem,
+  tiny:  0.688rem,
+  small: 0.813rem,
+  default: 1rem,
   large: 1.25rem,
+  xlarge: 1.5rem,
+  xxlarge: 1.75rem,
 );
 $button-opacity-disabled: 0.25;
 
@@ -256,7 +258,7 @@ $button-opacity-disabled: 0.25;
 $buttongroup-margin: 1rem;
 $buttongroup-spacing: 1px;
 $buttongroup-child-selector: '.button';
-$buttongroup-expand-max: 6;
+$buttongroup-expand-max: 8;
 
 // 13. Callout
 // -----------

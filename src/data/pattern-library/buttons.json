@@ -74,7 +74,7 @@
 			"multiple_example_options": [
 				{"partial": "button", "button-type": "button", "size": "tiny", "text": "Tiny", "slug": "size-button-tiny"},
 				{"partial": "button", "button-type": "button", "size": "small", "text": "Small", "slug": "size-button-small"},
-				{"partial": "button", "button-type": "button", "text": "basic", "slug": "size-button-basic"},
+				{"partial": "button", "button-type": "button", "text": "Basic", "slug": "size-button-basic"},
 				{"partial": "button", "button-type": "button", "size": "large", "text": "Large", "slug": "size-button-large"}
 			]
 		},
@@ -84,7 +84,7 @@
 			"multiple_example_options": [
 				{"partial": "button", "size": "tiny", "text": "Tiny", "slug": "size-button-a-tiny"},
 				{"partial": "button", "size": "small", "text": "Small", "slug": "size-button-a-small"},
-				{"partial": "button", "text": "basic", "slug": "size-button-a-basic"},
+				{"partial": "button", "text": "Basic", "slug": "size-button-a-basic"},
 				{"partial": "button", "size": "large", "text": "Large", "slug": "size-button-a-large"}
 			]
 		},
@@ -106,10 +106,10 @@
 			"name": "Button Icons",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "button", "size": "tiny", "button-type": "button", "secondary": "true", "icon-position": "both", "text": "Secondary", "slug": "icon-button-tiny"},
-				{"partial": "button", "size": "small", "button-type": "button", "icon-position": "both", "text": "Primary", "slug": "icon-button-small"},
+				{"partial": "button", "button-type": "button", "size": "tiny", "secondary": "true", "icon-position": "both", "text": "Secondary", "slug": "icon-button-tiny"},
+				{"partial": "button", "button-type": "button", "size": "small", "icon-position": "both", "text": "Primary", "slug": "icon-button-small"},
 				{"partial": "button", "button-type": "button", "icon-position": "both", "text": "Primary", "slug": "icon-button-basic"},
-				{"partial": "button", "size": "large", "button-type": "button", "icon-position": "both", "text": "Primary", "slug": "icon-button-large"},
+				{"partial": "button", "button-type": "button", "size": "large", "icon-position": "both", "text": "Primary", "slug": "icon-button-large"},
 				{"partial": "button", "button-type": "button", "expanded": "true", "icon-position": "both", "text": "Primary", "slug": "icon-button-expanded"}
 			]
 		},
@@ -132,12 +132,20 @@
 				{"partial": "input-button", "type": "submit", "button-type": "input", "button-value": "Primary", "slug": "form-button"}
 			]
 		},
+		"min_width_button": {
+			"name": "Min-width Buttons",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "button", "button-type": "button", "secondary": "true", "text": "Secondary", "min-width": "true", "slug": "min-width-button-secondary"},
+				{"partial": "button", "button-type": "button", "text": "Primary", "min-width": "true", "slug": "min-width-button"}
+			]
+		},
 		"interactive_button": {
 			"name": "Interactive Buttons",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "button", "button-type": "button", "secondary": "true", "text": "Save", "interactive-data-value":"evo-button-interactive-secondary-example", "slug": "interactive-button-secondary"},
-				{"partial": "button", "button-type": "button", "text": "Save", "interactive-data-value":"evo-button-interactive-primary-example", "slug": "interactive-button"}
+				{"partial": "button", "button-type": "button", "secondary": "true", "text": "Save", "min-width": "true", "interactive-data-value":"evo-button-interactive-secondary-example", "slug": "interactive-button-secondary"},
+				{"partial": "button", "button-type": "button", "text": "Save", "min-width": "true", "interactive-data-value":"evo-button-interactive-primary-example", "slug": "interactive-button"}
 			],
 			"partial_js": "interactive-button-js",
 			"slug": "interactive-button"
