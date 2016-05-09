@@ -6,38 +6,32 @@
 // @variables
 //
 $evo-alert-box-bgcolor: $onyx-dark-10 !default;
+$evo-alert-box-border: 0 !default;
 $evo-alert-box-font-color: $onyx-dark-80 !default;
 $evo-alert-warning-icon-color: $topaz-dark !default;
 $evo-alert-success-icon-color: $emerald-dark !default;
 $evo-alert-alert-icon-color: $garnet-dark !default;
-$evo-alert-info-icon-color: $sapphire-dark !default;
 
 
 @if $use-alert-boxes == true{
 	
 	.evo-alert-box				{
 								background-color: $evo-alert-box-bgcolor;
+								border: $evo-alert-box-border;
 		[class*="evo-icon-"]		{color: $evo-alert-box-font-color;}
 		[class*="evo-icon-position-"]
-									{top: rem-calc(2.5);}
-								}
-
-	.warning					{
-		[class*="evo-icon-"]		{color: $evo-alert-warning-icon-color;}
-								}
-
-	.success					{
-								color: $white !important;
-		[class*="evo-icon-"]		{color: $evo-alert-success-icon-color;}
-								}
-
-	.alert						{
-								color: $white !important;
-		[class*="evo-icon-"]		{color: $evo-alert-alert-icon-color;}
-								}
-
-	.info						{
-		[class*="evo-icon-"]		{color: $evo-alert-info-icon-color;}
+									{top: 1px;}
+		&.alert						{
+									color: $white;
+			[class*="evo-icon-"]		{color: $evo-alert-alert-icon-color;}
+									}
+		&.success					{
+									color: $white;
+			[class*="evo-icon-"]		{color: $evo-alert-success-icon-color;}
+									}
+		&.warning					{
+			[class*="evo-icon-"]		{color: $evo-alert-warning-icon-color;}
+									}
 								}
 
 }//endif

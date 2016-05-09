@@ -22,23 +22,19 @@
 	"data": {
 		"basic_custom": {
 			"name": "Custom Box",
-			"partial": "alert-box", "type": "custom", "slug": "custom-message-box"
-		},
-		"basic_warning": {
-			"name": "Warning Box",
-			"partial": "alert-box", "type": "warning", "slug": "warning-message-box"
-		},
-		"basic_success": {
-			"name": "Success Box",
-			"partial": "alert-box", "type": "success", "slug": "success-message-box"
+			"partial": "alert-box", "type": "custom", "slug": "custom-box"
 		},
 		"basic_alert": {
 			"name": "Alert Box",
-			"partial": "alert-box", "type": "alert", "slug": "alert-message-box"
+			"partial": "alert-box", "type": "alert", "slug": "alert-box"
 		},
-		"basic_info": {
-			"name": "Info Box",
-			"partial": "alert-box", "type": "info", "slug": "info-message-box"
+		"basic_success": {
+			"name": "Success Box",
+			"partial": "alert-box", "type": "success", "slug": "success-box"
+		},
+		"basic_warning": {
+			"name": "Warning Box",
+			"partial": "alert-box", "type": "warning", "slug": "warning-box"
 		}
 	}
 }
