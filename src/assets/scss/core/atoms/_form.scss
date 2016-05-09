@@ -64,6 +64,13 @@ $evo-form-label-font-family: $evo-font-medium-stack !default;
 	// HIDDEN INPUTS
 	input[type="hidden"]							{display: none;}
 
+	// INPUT GROUPS
+	.input-group									{
+		.input-group-button								{
+			.evo-button										{font-size: .9em;}
+														}
+													}
+
 	// ABIDE VALIDATION
 	[data-abide]									{
 		.form-error										{font-family: $evo-font-medium-stack;}

@@ -129,7 +129,7 @@ $header-color: $evo-header-color;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
-$small-font-size: rem-calc(13);
+$small-font-size: $evo-base-small-font-size;
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.32;
 $paragraph-margin-bottom: 1rem;
@@ -159,7 +159,7 @@ $defnlist-term-margin-bottom: 0.3rem;
 $blockquote-color: $dark-gray;
 $blockquote-padding: rem-calc(9 20 0 19);
 $blockquote-border: 1px solid $medium-gray;
-$cite-font-size: rem-calc(13);
+$cite-font-size: $evo-base-small-font-size;
 $cite-color: $dark-gray;
 $keystroke-font: $font-family-monospace;
 $keystroke-color: $black;
@@ -215,9 +215,9 @@ $accordionmenu-arrow-color: $primary-color;
 
 $badge-background: $primary-color;
 $badge-color: foreground($badge-background);
-$badge-padding: 0.3em;
-$badge-minwidth: 2.1em;
-$badge-font-size: 0.6rem;
+$badge-padding: 0.27em;
+$badge-minwidth: 2.0em;
+$badge-font-size: $evo-base-small-font-size;
 
 // 10. Breadcrumbs
 // ---------------

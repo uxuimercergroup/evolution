@@ -57,14 +57,22 @@
 	<div class="row">
 		<div class="medium-6 columns">
 			
-		{{!-- BASIC BADGES - BEGINS --}}
+		{{!-- BASIC BADGE - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
 			{{> badge text="9" }}
 			{{> badge text="99" }}
 			{{> badge text="999" }}
 			{{> badge text="9999" }}
 			<br><br>
-		{{!-- BASIC BADGES - ENDS --}}
+		{{!-- BASIC BADGE - ENDS --}}
+
+		{{!-- BADGE WITH ICONS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Badge With Icon"}}
+			{{> badge size="small" icon-class="evo-icon-file-text2" }}
+			{{> badge size="small" icon-class="evo-icon-user" }}
+			{{> badge size="small" icon-class="evo-icon-alarm-check" }}
+			<br><br>
+		{{!-- BADGE WITH ICONS - ENDS --}}
 
 		{{!-- BADGE SIZES - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Badge Sizes"}}
@@ -82,11 +90,6 @@
 			{{> badge size="large" text="99" }}
 			{{> badge size="large" text="999" }}
 			{{> badge size="large" text="9999" }}
-			<br><br>
-			{{> badge size="x-large" text="9" }}
-			{{> badge size="x-large" text="99" }}
-			{{> badge size="x-large" text="999" }}
-			{{> badge size="x-large" text="9999" }}
 		{{!-- BADGE SIZES - ENDS --}}
 
 		</div>
@@ -96,17 +99,16 @@
 			{{> type-header size="6" class="evo-hdr-rule" text="Badge Colors"}}
 			{{> badge font-color="amethyst-light" text="9" }}
 			{{> badge background-color="amethyst-bright" text="99" }}
-			<br>
+			<br><br>
+			{{> badge system-color="primary" text="9" }}
+			{{> badge system-color="secondary" text="9" }}
 			{{> badge system-color="alert" text="9" }}
-			{{> badge system-color="warning" text="99" }}
-			{{> badge system-color="success" text="999" }}
-			{{> badge system-color="info" text="9999" }}
-			<br>
-			<br>
+			{{> badge system-color="warning" text="9" }}
+			{{> badge system-color="success" text="9" }}
+			<br><br>
 			{{> badge size="small" system-color="alert" text="9" }}
 			{{> badge size="medium" system-color="alert" text="9" }}
 			{{> badge size="large" system-color="alert" text="9" }}
-			{{> badge size="x-large" system-color="alert" text="9" }}
 		{{!-- BADGE COLORS - ENDS --}}
 
 		</div>
@@ -320,7 +322,7 @@
 {{!-- LABELS - BEGINS --}}
 	{{> type-header size="4" text="Labels"}}
 	<div class="row">
-		<div class="medium-4 columns">
+		<div class="medium-6 columns">
 
 			{{!-- BASIC LABEL - BEGINS --}}
 				{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
@@ -328,14 +330,7 @@
 			{{!-- BASIC LABEL - ENDS --}}
 
 		</div>
-		<div class="medium-4 columns">
-
-			{{!-- LABELS - SHAPES - BEGINS --}}
-				{{> type-header size="6" class="evo-hdr-rule" text="Shapes"}}
-			{{!-- LABELS - SHAPES - ENDS --}}
-
-		</div>
-		<div class="medium-4 columns">
+		<div class="medium-6 columns">
 
 			{{!-- LABELS - COLORS - BEGINS --}}
 				{{> type-header size="6" class="evo-hdr-rule" text="Colors"}}
@@ -414,17 +409,13 @@
 				{{> progress-bar }}
 			{{!-- BASIC PROGRESS BAR - ENDS --}}
 
-			{{!-- PROGRESS BAR - SHAPES - BEGINS --}}
-				{{> type-header size="6" class="evo-hdr-rule" text="Shapes"}}
-			{{!-- PROGRESS BAR - SHAPES - ENDS --}}
-
-		</div>
-		<div class="medium-6 columns">
-
 			{{!-- PROGRESS BAR - WIDTH - BEGINS --}}
 				{{> type-header size="6" class="evo-hdr-rule" text="Width"}}
 				{{> progress-bar-width }}
 			{{!-- PROGRESS BAR - WIDTH - ENDS --}}
+
+		</div>
+		<div class="medium-6 columns">
 
 			{{!-- PROGRESS BAR - METER COLOR - BEGINS --}}
 				{{> type-header size="6" class="evo-hdr-rule" text="Meter Color"}}

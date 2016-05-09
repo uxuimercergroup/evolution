@@ -34,10 +34,9 @@
 			"name": "Basic Badge with Icons",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "badge", "icon-type": "evo-icon-file-text2", "slug": "basic-badge-icons"},
-				{"partial": "badge", "icon-type": "evo-icon-user", "slug": "basic-badge-icons"},
-				{"partial": "badge", "icon-type": "evo-icon-alarm-check", "slug": "basic-badge-icons"},
-				{"partial": "badge", "icon-type": "evo-icon-cog", "slug": "basic-badge-icons"}
+				{"partial": "badge", "icon-class": "evo-icon-file-text2", "slug": "basic-badge-icons"},
+				{"partial": "badge", "icon-class": "evo-icon-user", "slug": "basic-badge-icons"},
+				{"partial": "badge", "icon-class": "evo-icon-alarm-check", "slug": "basic-badge-icons"}
 			]
 		},
 		"badge_size_small": {
