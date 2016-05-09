@@ -5,18 +5,12 @@
 //
 // @variables
 //
-$evo-autocomplete-border-size: 1px !default;
-$evo-autocomplete-border-style: solid !default;
-$evo-autocomplete-border-color:	$onyx-dark-30 !default;
+$evo-autocomplete-background-color: $white !default;
 $evo-autocomplete-max-height: rem-calc(107) !default;
-$evo-autocomplete-max-height-medium-up: rem-calc(176) !default;
-$evo-autocomplete-item-font-color: $onyx-dark-80 !default;
+$evo-autocomplete-item-font-color: $body-font-color !default;
 $evo-autocomplete-item-line-height: 1.5 !default;
-$evo-autocomplete-item-border-bottom-size: 1px !default;
-$evo-autocomplete-item-border-bottom-style: solid !default;
-$evo-autocomplete-item-border-bottom-color: $transparent !default;
-$evo-autocomplete-item-hover-background-color: $onyx-dark-10 !default;
-$evo-autocomplete-background-color: $onyx-dark-2 !default;
+$evo-autocomplete-item-border: 1px solid $transparent !default;
+$evo-autocomplete-item-hover-background-color: $onyx-dark-6 !default;
 
 
 @if $use-autocomplete == true{
@@ -26,10 +20,10 @@ $evo-autocomplete-background-color: $onyx-dark-2 !default;
 
 	// AUTOCOMPLETE
 	.ui-menu				{
-							@include border-radius(0 0 $global-radius $global-radius);
+							@include border-radius(0 0 $evo-base-radius $evo-base-radius);
 							@include box-shadow($evo-base-shadow-horizontal $evo-base-shadow-vertical $evo-base-shadow-blur $evo-base-shadow-spread $evo-base-shadow-color);
 							background-color: $evo-autocomplete-background-color;
-							border: $evo-autocomplete-border-size $evo-autocomplete-border-style $evo-autocomplete-border-color;
+							border: $dropdown-border;
 							border-top: 0;
 							display: block;
 							position: absolute;
@@ -50,7 +44,7 @@ $evo-autocomplete-background-color: $onyx-dark-2 !default;
 								width: 100%;
 								color: $evo-autocomplete-item-font-color;
 								line-height: $evo-autocomplete-item-line-height;
-								border-bottom: $evo-autocomplete-item-border-bottom-size $evo-autocomplete-item-border-bottom-style $evo-autocomplete-item-border-bottom-color;
+								border-bottom: $evo-autocomplete-item-border;
 								cursor: pointer;
 			.ui-menu-secondary		{
 									@include text-overflow;
@@ -70,7 +64,7 @@ $evo-autocomplete-background-color: $onyx-dark-2 !default;
 								{
 								border-bottom: 0;
 			.ui-state-hover,
-			.ui-state-active		{@include border-radius(0 0 $global-radius $global-radius);}
+			.ui-state-active		{@include border-radius(0 0 $evo-base-radius $evo-base-radius);}
 								}
 							}
 
