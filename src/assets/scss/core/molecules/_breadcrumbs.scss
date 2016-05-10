@@ -12,23 +12,7 @@
 
 	// BREADCRUMBS
 	.evo-breadcrumbs					{
-
-		// LINKS
-		a:hover 							{text-decoration: $anchor-text-decoration-hover;}
 		
-		// SEPERATORS
-		a:before 							{
-											text-decoration: $anchor-text-decoration;
-											display: inline-block;
-											}
-		a:before,
-		a:hover:before 						{text-decoration: $anchor-text-decoration-hover;}
-
-
-		.unavailable a,
-		.current a,
-		.unavailable,
-		.current							{text-decoration: none;}
 										}
 
 }//endif
