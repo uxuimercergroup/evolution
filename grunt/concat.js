@@ -58,7 +58,7 @@ module.exports = {
         'node_modules/datatables.net/js/jquery.dataTables.js',
         'node_modules/datatables.net-zf/js/dataTables.foundation.js',
         'src/assets/js/core/lib/jquery/plugins/jquery.autosize.input.js',
-        'src/assets/js/core/lib/jquery/plugins/jquery.maskedinput.js',
+        'bower_components/jquery.maskedinput/dist/jquery.maskedinput.js',
         'src/assets/js/core/lib/jquery/plugins/owl.carousel.js',
         'src/assets/js/core/lib/mobile/ios-orientationchange-fix.js',
         'src/assets/js/core/atoms/buttons.js',

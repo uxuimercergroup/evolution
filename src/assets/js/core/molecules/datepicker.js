@@ -26,26 +26,7 @@ var evoDatepickerDefaults = {
 		if (datepickerMaskedInput) {
 			jQuery(this).datepicker("option", "dateFormat", "mm/dd/yy").mask("99/99/9999",{placeholder:"_"}); // If masked input option class then mask input for specified format of mm/dd/yyyy in datepicker call
 		};
-		
-		// If datepicker calendar has message option enabled, append to calendar. Gets label from "data-evo-datepicker-message" attribute on datepicker input in HTML
-		var datepickerMessageLabel = jQuery(this).attr("data-evo-datepicker-message");
-		var appendDatepickerMessage = function () {
-			jQuery("<div class='evo-datepicker-message'><label>" + datepickerMessageLabel + "</label></div>").appendTo(".ui-datepicker");
-		};
-		if (datepickerMessageLabel) {
-			setTimeout(appendDatepickerMessage, 10); // If a datepicker message is available, show the datepicker message after generating datepicker
-		};
-	},
-	onChangeMonthYear: function () {
-		
-		// If datepicker calendar has message option enabled, append to calendar. Gets label from "data-evo-datepicker-message" attribute on datepicker input in HTML
-		var datepickerMessageLabel = jQuery(this).attr("data-evo-datepicker-message");
-		var appendDatepickerMessage = function () {
-			jQuery("<div class='evo-datepicker-message'><label>" + datepickerMessageLabel + "</label></div>").appendTo(".ui-datepicker");
-		};
-		if (datepickerMessageLabel) {
-			setTimeout(appendDatepickerMessage, 10); // If a datepicker message is available, Show the datepicker message after generating datepicker on month/year change
-		};
+
 	}
 };
 

@@ -11,6 +11,20 @@ default:
   - 'notify:browserSync'
   - 'watch'
 
+test:
+  - 'clean'
+  - 'sass:dist'
+  - 'sass:patterns'
+  - 'postcss:dist'
+  - 'concat'
+  - 'babel'
+  - 'copy:dist'
+  - 'assemble'
+  - 'string-replace:meta'
+  - 'browserSync'
+  - 'notify:test'
+  - 'watch'
+
 prod:
   - 'clean'
   - 'sass:prod'

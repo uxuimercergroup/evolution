@@ -6,14 +6,12 @@
 // @variables
 //
 $evo-datepicker-icon-font-family: $evo-icon-font-stack !default;
-$evo-datepicker-border-radius: $global-radius !default;
+$evo-datepicker-border-radius: $evo-base-radius !default;
 $evo-datepicker-max-width: rem-calc(268) !default;
 $evo-datepicker-margin-top: rem-calc(5) !default;
 $evo-datepicker-padding: rem-calc(5 4) !default;
 $evo-datepicker-background-color: $white !default;
-$evo-datepicker-border-size: 1px !default;
-$evo-datepicker-border-style: solid !default;
-$evo-datepicker-border-color: $onyx-dark-6 !default;
+$evo-datepicker-border: 1px solid $onyx-dark-6 !default;
 $evo-datepicker-th-font-color: $onyx-dark-80 !default;
 $evo-datepicker-th-padding: rem-calc(7 3) !default;
 $evo-datepicker-link-color: $onyx-dark-70 !default;
@@ -33,18 +31,11 @@ $evo-datepicker-today-font-family: $evo-font-medium-stack !default;
 $evo-datepicker-today-font-color: $onyx-dark-14 !default;
 $evo-datepicker-hover-background-color: $onyx-dark-6 !default;
 $evo-datepicker-hover-font-color: $onyx-dark-80 !default;
-$evo-datepicker-disabled-font-color: $onyx-dark-30 !default;
-$evo-datepicker-disabled-background-color: $white !default;
-$evo-datepicker-disabled-border-size: 1px !default;
-$evo-datepicker-disabled-border-style: solid !default;
-$evo-datepicker-disabled-border-color: $onyx-dark-6 !default;
-$evo-datepicker-message-font-family: $evo-base-font-family !default;
-$evo-datepicker-message-font-size: $small-font-size !default;
-$evo-datepicker-message-line-height: 1.2 !default;
-$evo-datepicker-message-font-color: $onyx-dark-70 !default;
-$evo-datepicker-message-background-color: $evo-highlight-color !default;
+$evo-datepicker-unselectable-font-color: $onyx-dark-30 !default;
+$evo-datepicker-unselectable-background-color: $white !default;
+$evo-datepicker-unselectable-border: 1px solid $onyx-dark-6 !default;
 $evo-datepicker-multi-max-width: rem-calc(536) !default;
-$evo-datepicker-input-icon-position-top: 12px !default;
+$evo-datepicker-input-icon-position-top: 10px !default;
 $evo-datepicker-input-icon-margin-left: rem-calc(-24) !default;
 $evo-datepicker-input-icon-size: rem-calc(16) !default;
 $evo-datepicker-input-icon: '\ea62' !default;
@@ -65,7 +56,7 @@ $evo-datepicker-input-min-width: rem-calc(110) !default;
 						margin-top: $evo-datepicker-margin-top;
 						padding: $evo-datepicker-padding;
 						background-color: $evo-datepicker-background-color;
-						border: $evo-datepicker-border-size $evo-datepicker-border-style $evo-datepicker-border-color;
+						border: $evo-datepicker-border;
 						display: none;
 
 		// DATEPICKER GLOBAL TABLE STYLES
@@ -75,7 +66,7 @@ $evo-datepicker-input-min-width: rem-calc(110) !default;
 							margin: 0;
 			th					{
 								background-color: $evo-datepicker-background-color;
-								border: $evo-datepicker-border-size $evo-datepicker-border-style $evo-datepicker-border-color;
+								border: $evo-datepicker-border;
 								color: $evo-datepicker-th-font-color;
 								padding: $evo-datepicker-th-padding;
 								text-align: center;
@@ -83,7 +74,7 @@ $evo-datepicker-input-min-width: rem-calc(110) !default;
 								}
 			td					{
 								background-color: $evo-datepicker-background-color;
-								border: $evo-datepicker-border-size $evo-datepicker-border-style $evo-datepicker-border-color;
+								border: $evo-datepicker-border;
 								padding: 0;
 								text-align: center;
 				a					{
@@ -200,35 +191,16 @@ $evo-datepicker-input-min-width: rem-calc(110) !default;
 			.ui-datepicker-unselectable
 								{
 								padding: $evo-datepicker-link-padding;
-								color: $evo-datepicker-disabled-font-color;
-								background-color: $evo-datepicker-disabled-background-color;
-								border: $evo-datepicker-disabled-border-size $evo-datepicker-disabled-border-style $evo-datepicker-disabled-border-color;
+								color: $evo-datepicker-unselectable-font-color;
+								background-color: $evo-datepicker-unselectable-background-color;
+								border: $evo-datepicker-unselectable-border;
 								}
 			
 			// UNSELECTABLE DAYS WHEN THEN FALL IN OTHER MONTH IN SAME CALENDAR
 			.ui-datepicker-other-month.ui-datepicker-unselectable
 								{
-								background-color: $evo-datepicker-disabled-background-color;
-								border: $evo-datepicker-disabled-border-size $evo-datepicker-disabled-border-style $evo-datepicker-disabled-border-color;
-								}
-							}
-
-		// DATEPICKER MESSAGE AREA
-		.evo-datepicker-message
-							{
-							clear: left;
-							margin-bottom: rem-calc(-2);
-			label				{
-								display: inline-block;
-								position: relative;
-								top: -2px;
-								font-family: $evo-datepicker-message-font-family;
-								font-size: $evo-datepicker-message-font-size;
-								line-height: $evo-datepicker-message-line-height;
-								color: $evo-datepicker-message-font-color;
-								background-color: $evo-datepicker-message-background-color;
-								margin: rem-calc(7 0 0 0);
-								padding: rem-calc(6);
+								background-color: $evo-datepicker-unselectable-background-color;
+								border: $evo-datepicker-unselectable-border;
 								}
 							}
 
@@ -326,23 +298,6 @@ $evo-datepicker-input-min-width: rem-calc(110) !default;
 						width: 100%;
 						min-width: $evo-datepicker-input-min-width;
 						float: left !important;
-						}
-
-	// DATEPICKER FIREFOX (3.5+) FIXES
-	body:not(:-moz-handler-blocked)
-						{
-
-		// DATEPICKER ICON
-		.ui-datepicker-trigger
-							{top: $evo-datepicker-input-icon-position-top - 2;}
-						}
-
-	// DATEPICKER IE9 FIXES
-	.ie9				{
-
-		// DATEPICKER ICON
-		.ui-datepicker-trigger
-							{top: $evo-datepicker-input-icon-position-top - 1;}
 						}
 
 }//endif

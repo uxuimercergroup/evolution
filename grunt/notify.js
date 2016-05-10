@@ -14,6 +14,14 @@ module.exports = {
     }
   },
 
+  // Test dev environment notification
+  test: {
+    options: {
+      title: 'Build complete. Test environment ready.',  // optional
+      message: 'Test environment ready for testing.' //required
+    }
+  },
+
   // Production files generation notification
   prod: {
     options: {
