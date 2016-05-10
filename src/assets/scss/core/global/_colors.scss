@@ -19,14 +19,14 @@ $sapphire-light:							#A6E2EF !default;
 // ------------------------------------------------------------------------------------------
 $onyx-dark:									#000000 !default;
 $onyx-medium:								#404040 !default;
-$onyx-bright:								#808080 !default;
+$onyx-bright:								#808080 !default; // Gray
 $onyx-light:								#BFBFBF !default;
 
 $onyx-dark-90:								scale-color($onyx-dark, $lightness: 10%) !default; // #1A1A1A
 $onyx-dark-80:								scale-color($onyx-dark, $lightness: 20%) !default; // #333333
 $onyx-dark-70:								scale-color($onyx-dark, $lightness: 30%) !default; // #4D4D4D
 $onyx-dark-60:								scale-color($onyx-dark, $lightness: 40%) !default; // #666666
-$onyx-dark-50:								scale-color($onyx-dark, $lightness: 50%) !default; // #808080
+$onyx-dark-50:								scale-color($onyx-dark, $lightness: 50%) !default; // #808080 or Gray
 $onyx-dark-40:								scale-color($onyx-dark, $lightness: 60%) !default; // #999999
 $onyx-dark-30:								scale-color($onyx-dark, $lightness: 70%) !default; // #B3B3B3
 $onyx-dark-20:								scale-color($onyx-dark, $lightness: 80%) !default; // #CCCCCC

@@ -107,12 +107,6 @@ $use-top-bar:								true;
 // $evo-data-list-dt-margin-bottom:			$evo-base-margin;
 
 
-// TABLES
-// ------------------------------------------------------------------------------------------
-// $evo-table-thead-background: $dark-gray;
-// $evo-table-thead-font-color: $white;
-
-
 // TYPOGRAPHY
 // ------------------------------------------------------------------------------------------
 
@@ -200,14 +194,12 @@ $evo-small-font-color: 						$onyx-dark-50;
 
 // DATA TABLE
 // ------------------------------------------------------------------------------------------
-
-// BASE
-// $evo-data-table-wrapper-margin-bottom: 	rem-calc(20);
+// $evo-data-table-wrapper-margin-bottom: 	$evo-base-margin;
 // $evo-data-table-tool-label-color: 		$onyx-dark-50;
 // $evo-data-table-tool-label-font-family: 	$evo-base-font-family;
 // $evo-data-table-info-font-size: 			rem-calc(14);
 // $evo-data-table-entries-select-width: 	rem-calc(75);
-// $evo-data-table-margin: 					rem-calc(8) 0;
+// $evo-data-table-margin: 					rem-calc(8 0);
 // $evo-data-table-sort-icons: 				true;
 // $evo-data-table-sort-icon-font-family: 	$evo-icon-font-stack;
 // $evo-data-table-sort-icon-color: 		$white;
@@ -216,17 +208,15 @@ $evo-small-font-color: 						$onyx-dark-50;
 // $evo-data-table-sort-icon-asc-icon: 		'\edc4';
 // $evo-data-table-sort-icon-desc-icon: 	'\edc6';
 // $evo-data-table-sort-icons-disabled-color: $onyx-dark-30;
-// $evo-data-table-column-sorted-odd-row: scale-color($table-background, $lightness: 5%);
-// $evo-data-table-column-sorted-odd-row-hover: scale-color($table-background, $lightness: 10%);
-// $evo-data-table-column-sorted-even-row: $table-striped-background;
-// $evo-data-table-column-sorted-even-row-hover: scale-color($table-striped-background, $lightness: 10%);
+// $evo-data-table-column-sorted-odd-row: scale-color($table-background, $lightness: -5%);
+// $evo-data-table-column-sorted-odd-row-hover: scale-color($table-background, $lightness: -10%);
+// $evo-data-table-column-sorted-even-row: scale-color($table-background, $lightness: -15%);
+// $evo-data-table-column-sorted-even-row-hover: scale-color($table-background, $lightness: -20%);
 
-// ADD-ONS (EVO ONLY)
+// Data table add-ons (Evo only)
 // $evo-data-table-total-subtotal-font-family: $evo-font-medium-stack;
-// $evo-data-table-subtotal-bg-color: 		$onyx-dark-2;
-// $evo-data-table-subtotal-font-color: 	$onyx-dark-80;
-// $evo-data-table-total-bg-color: 			$onyx-dark-10;
-// $evo-data-table-total-font-color: 		$black;
+// $evo-data-table-subtotal-font-color: 	$white;
+// $evo-data-table-total-font-color: 		$white;
 
 
 // DATEPICKER

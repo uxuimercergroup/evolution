@@ -61,7 +61,6 @@ $evo-base-zindex-autocomplete:				9001 !default;
 
 // TYPOGRAPHY
 // ------------------------------------------------------------------------------------------
-
 $evo-base-font-file-path:					"../fonts" !default;
 $evo-base-font-stack:						arial, Tahoma, Geneva, sans-serif !default;
 
@@ -118,4 +117,9 @@ $evo-base-font-family:						$evo-font-regular-stack !default;
 $evo-base-font-antialiased:					true !default;
 
 // HEADERS
-$evo-header-color:							inherit !default;
+$evo-base-header-color:						inherit !default;
+
+
+// TABLE
+// ------------------------------------------------------------------------------------------
+$evo-base-table-color:						$onyx-dark-2 !default;

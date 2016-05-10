@@ -5,8 +5,7 @@
 //
 // @variables
 //
-$evo-table-thead-background: $dark-gray !default;
-$evo-table-thead-font-color: $white !default;
+
 
 @if $use-tables == true{
 	// TABLE HORIZONTAL SCROLL CONTAINER FOR SMALL MEDIA QUERY
@@ -27,10 +26,9 @@ $evo-table-thead-font-color: $white !default;
 	// TABLE BASE
 	.evo-table			{
 						min-width: rem-calc(768);
-		thead				{
-							background-color: $evo-table-thead-background;
-							color: $evo-table-thead-font-color;
-			tr:hover			{background-color: $evo-table-thead-background;}
+		thead,
+		tfoot				{
+			tr:hover			{background-color: inherit !important;}
 							}
 		th					{
 							border: $table-border;

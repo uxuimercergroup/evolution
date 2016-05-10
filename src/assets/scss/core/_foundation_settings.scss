@@ -125,7 +125,7 @@ $header-sizes: (
     'h6': 14,
   ),
 );
-$header-color: $evo-header-color;
+$header-color: $evo-base-header-color;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
@@ -495,7 +495,7 @@ $switch-paddle-transition: all 0.25s ease-out;
 // 31. Table
 // ---------
 
-$table-background: $onyx-dark-2;
+$table-background: $evo-base-table-color;
 $table-color-scale: 5%;
 $table-border: 1px solid smart-scale($table-background, $table-color-scale);
 $table-padding: rem-calc(12 10);
@@ -504,9 +504,9 @@ $table-row-hover: darken($table-background, $table-hover-scale);
 $table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
 $table-striped-background: smart-scale($table-background, $table-color-scale);
 $table-stripe: even;
-$table-head-background: smart-scale($table-background, $table-color-scale / 2);
+$table-head-background: smart-scale($table-background, $table-color-scale * 9.75);
 $table-foot-background: smart-scale($table-background, $table-color-scale);
-$table-head-font-color: $body-font-color;
+$table-head-font-color: $white;
 $show-header-for-stacked: true;
 
 // 32. Tabs
