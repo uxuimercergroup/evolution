@@ -8,9 +8,9 @@
 $evo-alert-box-bgcolor: $onyx-dark-10 !default;
 $evo-alert-box-border: 0 !default;
 $evo-alert-box-font-color: $onyx-dark-80 !default;
-$evo-alert-warning-icon-color: $topaz-dark !default;
-$evo-alert-success-icon-color: $emerald-dark !default;
 $evo-alert-alert-icon-color: $garnet-dark !default;
+$evo-alert-success-icon-color: $emerald-dark !default;
+$evo-alert-warning-icon-color: $topaz-dark !default;
 
 
 @if $use-alert-boxes == true{
@@ -18,15 +18,15 @@ $evo-alert-alert-icon-color: $garnet-dark !default;
 	.evo-alert-box				{
 								background-color: $evo-alert-box-bgcolor;
 								border: $evo-alert-box-border;
-		[class*="evo-icon-"]		{color: $evo-alert-box-font-color;}
+		[class^="evo-icon-"]		{color: $evo-alert-box-font-color;}
 		[class*="evo-icon-position-"]
 									{top: 1px;}
+		&.alert,
+		&.success					{color: $white;}
 		&.alert						{
-									color: $white;
 			[class*="evo-icon-"]		{color: $evo-alert-alert-icon-color;}
 									}
 		&.success					{
-									color: $white;
 			[class*="evo-icon-"]		{color: $evo-alert-success-icon-color;}
 									}
 		&.warning					{

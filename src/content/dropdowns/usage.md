@@ -1,13 +1,15 @@
 ##### Dropdown Sizes
 
+The dropdown has a default width of 300px. 
+
 The size of the dropdown can be changed by adding the following classes:
 - `tiny`: Make the dropdown have a max-width of 100px 
-- `small`: Make the dropdown have a max-width of 200px  
+- `small`: Make the dropdown have a max-width of 200px
 - `large`: Make the dropdown have a max-width of 400px 
 
 ##### Dropdown Positioning
 
-By default, a dropdown anchors below the button that opened it. Add the class .top, .right, or .bottom to the dropdown to change this.
+By default, a dropdown anchors below the button that opened it. Add the class `.top`, `.right`, or `.bottom` to the dropdown to change this.
 
 ##### Dropdown Hover
 
@@ -16,5 +18,3 @@ To make a dropdown accessible by hover, add `data-hover="true"` `data-hover-pane
 ##### Autoclose
 
 The autoclose option is enabled by default and allows the dropdown to close automatically when a link is clicked within the dropdown. To disable (keep dropdowns persisting), set the attribute `data-close-on-click` to `false`.
-
-##### Accessibility

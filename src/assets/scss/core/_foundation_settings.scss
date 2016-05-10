@@ -295,11 +295,11 @@ $drilldown-background: $white;
 // 16. Dropdown
 // ------------
 
-$dropdown-padding: 1rem;
+$dropdown-padding: $evo-base-padding;
 $dropdown-border: 1px solid $medium-gray;
-$dropdown-font-size: 1rem;
+$dropdown-font-size: $evo-base-font-size;
 $dropdown-width: 300px;
-$dropdown-radius: $global-radius;
+$dropdown-radius: $evo-base-radius;
 $dropdown-sizes: (
   tiny: 100px,
   small: 200px,
@@ -365,9 +365,9 @@ $input-radius: $global-radius;
 
 $label-background: $primary-color;
 $label-color: foreground($label-background);
-$label-font-size: 0.8rem;
-$label-padding: 0.33333rem 0.5rem;
-$label-radius: $global-radius;
+$label-font-size: $evo-base-small-font-size;
+$label-padding: 0.5rem 0.5rem 0.45rem 0.5rem;
+$label-radius: $evo-base-radius;
 
 // 21. Media Object
 // ----------------
