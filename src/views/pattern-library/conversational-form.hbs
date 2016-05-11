@@ -19,12 +19,10 @@ Conversational forms are used as a non-traditional way of collecting data from a
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
+			<ul class="tabs evo-tabs evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
 				{{#each pattern-library.tabs}}
-				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
-					<a href="#tabs{{@index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{@index}}" class="button small evo-button">
-						<span class="text">{{name}}</span>
-					</a>
+				<li class="tabs-title evo-tabs-title{{#is active 'true'}} is-active{{/is}}" role="presentation">
+					<a href="#evoPanel{{@index}}" role="tab" tabindex="0">{{name}}</a>
 				</li>
 				{{/each}}
 			</ul>

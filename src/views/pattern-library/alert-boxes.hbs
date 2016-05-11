@@ -15,12 +15,10 @@ Alerts are handy elements you can drop into a form or inline on a page to commun
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group {{pattern-library.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
+			<ul class="tabs evo-tabs evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
 				{{#each pattern-library.tabs}}
 				<li class="tabs-title evo-tabs-title{{#is active 'true'}} is-active{{/is}}" role="presentation">
-					<a href="#evoPanel{{@index}}" role="tab" tabindex="0" class="button small evo-button">
-						<span class="text">{{name}}</span>
-					</a>
+					<a href="#evoPanel{{@index}}" role="tab" tabindex="0">{{name}}</a>
 				</li>
 				{{/each}}
 			</ul>

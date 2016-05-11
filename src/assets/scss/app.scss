@@ -688,23 +688,28 @@ URL: {{ meta_url }}
 											{
 											margin-bottom: $evo-site-tabs-pattern-library-tabs-margin-bottom;
 			li									{
+												margin: 0;
+												min-width: 25%;
 				a									{
+													@include border-radius(0);
 													background-color: $evo-site-tabs-pattern-library-tab-background-color;
+													border: 0;
 													color: $evo-site-tabs-pattern-library-tab-font-color;
-													margin-bottom: 0;
+													min-width: 25%;
+													text-align: center;
 					&:hover								{
 														background-color: $evo-site-tabs-pattern-library-tab-hover-background-color;
 														color: $evo-site-tabs-pattern-library-tab-hover-font-color;
 														}
+					&:focus								{top: 0;}
 													}
 												}
-			.active								{
+			.is-active							{
 				a									{
 													background-color: $evo-site-tabs-pattern-library-tab-active-background-color;
 													color: $evo-site-tabs-pattern-library-tab-active-font-color;
-					&:hover								{
-														background-color: $evo-site-tabs-pattern-library-tab-active-hover-background-color;
-														}
+													top: 0;
+					&:hover								{background-color: $evo-site-tabs-pattern-library-tab-active-hover-background-color;}
 													}
 												}
 
@@ -713,7 +718,7 @@ URL: {{ meta_url }}
 													width: $evo-site-tabs-pattern-library-tab-width-small !important;
 					a									{border-top-color: $evo-site-tabs-pattern-library-tab-link-border-top-color-small !important;}
 													}
-				.active								{
+				.is-active							{
 					a									{
 														background-color: $evo-site-tabs-pattern-library-tab-active-link-background-color-small;
 														color: $evo-site-tabs-pattern-library-tab-active-link-font-color-small;
