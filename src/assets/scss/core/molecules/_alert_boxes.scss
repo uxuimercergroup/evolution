@@ -21,8 +21,6 @@ $evo-alert-warning-icon-color: $topaz-dark !default;
 		[class^="evo-icon-"]		{color: $evo-alert-box-font-color;}
 		[class*="evo-icon-position-"]
 									{top: 1px;}
-		&.alert,
-		&.success					{color: $white;}
 		&.alert						{
 			[class*="evo-icon-"]		{color: $evo-alert-alert-icon-color;}
 									}
