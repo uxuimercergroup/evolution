@@ -28,6 +28,20 @@ Add the `.expanded` class to the `.button-group .evo-button-group` container to 
 
 A button group can be made vertical with the `.stacked` class. You can also use `.stacked-for-small` to only stack a button group on small screens, or `.stacked-for-medium` to only stack on small and medium screens.
 
+##### Close Button
+
+A close button is a `<button>` element with the class `.close-button`. This icon is wrapped in a `<span>` with the attribute `aria-hidden="true"`, so screen readers don't read the close icon.
+
+The button is also labeled with `aria-label` to clarify what the button's purpose is.
+
+###### Making Closeable
+
+The close button on its own doesn't close elements, but you can use it with Toggler, Reveal, Off-canvas, and other plugins that have open and close behaviors.
+
+Any element can be used as a close trigger, not just close button. Adding the attribute `data-close` to any element within the callout will turn it into a close trigger.
+
+An Alert Box pairs the Callout with the close button component and data-closable attribute to create a dismissible alert box.
+
 ##### Accessibility
 
 Make sure that the text of the button is descriptive. If for some reason, your button contains no readable text (for example, just a symbol or icon), add screen reader-only text to the button to clarify it's purpose. The symbol or icon should be wrapped in an element with the attribute `aria-hidden="true"`, to prevent screen readers from trying to pronounce the symbol.

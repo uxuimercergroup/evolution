@@ -21,10 +21,17 @@
 
 	"data": {
 		"reveal": {
-			"name": "Reveal Modal",
+			"name": "Basic",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "reveal-default", "slug": "reveal-default"},
+				{"partial": "reveal", "slug": "reveal"}
+			]
+		},
+		"reveal_sizes": {
+			"name": "Sizes",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "reveal-tiny", "slug": "reveal-tiny"},
 				{"partial": "reveal-small", "slug": "reveal-small"},
 				{"partial": "reveal-large", "slug": "reveal-large"},
 				{"partial": "reveal-full", "slug": "reveal-full"}

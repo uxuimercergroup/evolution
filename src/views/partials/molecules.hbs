@@ -372,18 +372,18 @@
 	<div class="row">
 		<div class="medium-6 columns">
 
-			{{!-- BASIC PAGINATION - BEGINS --}}
-				{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
-				{{> pagination }}
-			{{!-- BASIC PAGINATION - ENDS --}}
+		{{!-- BASIC PAGINATION - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
+			{{> pagination }}
+		{{!-- BASIC PAGINATION - ENDS --}}
 
 		</div>
 		<div class="medium-6 columns">
 
-			{{!-- PAGINATION CENTERED - BEGINS --}}
-				{{> type-header size="6" class="evo-hdr-rule" text="Centered"}}
-				{{> pagination-centered }}
-			{{!-- PAGINATION CENTERED - ENDS --}}
+		{{!-- PAGINATION CENTERED - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Centered"}}
+			{{> pagination-centered }}
+		{{!-- PAGINATION CENTERED - ENDS --}}
 
 		</div>
 	</div>
@@ -396,23 +396,23 @@
 	<div class="row">
 		<div class="medium-6 columns">
 
-			{{!-- BASIC PROGRESS BAR - BEGINS --}}
-				{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
-				{{> progress-bar }}
-			{{!-- BASIC PROGRESS BAR - ENDS --}}
+		{{!-- BASIC PROGRESS BAR - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
+			{{> progress-bar }}
+		{{!-- BASIC PROGRESS BAR - ENDS --}}
 
-			{{!-- PROGRESS BAR - METER COLOR - BEGINS --}}
-				{{> type-header size="6" class="evo-hdr-rule" text="Meter Color"}}
-				{{> progress-bar-meter-color }}
-			{{!-- PROGRESS BAR - METER COLOR - ENDS --}}
+		{{!-- PROGRESS BAR - METER COLOR - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Meter Color"}}
+			{{> progress-bar-meter-color }}
+		{{!-- PROGRESS BAR - METER COLOR - ENDS --}}
 
 		</div>
 		<div class="medium-6 columns">
 
-			{{!-- PROGRESS BAR - WITH TEXT - BEGINS --}}
-				{{> type-header size="6" class="evo-hdr-rule" text="With Text"}}
-				{{> progress-bar-text }}
-			{{!-- PROGRESS BAR - WITH TEXT - ENDS --}}
+		{{!-- PROGRESS BAR - WITH TEXT - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="With Text"}}
+			{{> progress-bar-text }}
+		{{!-- PROGRESS BAR - WITH TEXT - ENDS --}}
 
 		</div>
 	</div>
@@ -423,14 +423,23 @@
 {{!-- REVEAL MODAL - BEGINS --}}
 	{{> type-header size="4" text="Reveal Modal"}}
 	<div class="row">
-		<div class="small-12 columns">
+		<div class="medium-5 columns">
 
-		{{!-- REVEAL MODALS - BEGINS --}}
-			{{> reveal-default }}
+		{{!-- BASIC REVEAL - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
+			{{> reveal }}
+		{{!-- BASIC REVEAL - ENDS --}}
+
+		</div>
+		<div class="medium-7 columns">
+
+		{{!-- REVEAL SIZES - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Sizes"}}
+			{{> reveal-tiny }}
 			{{> reveal-small }}
 			{{> reveal-large }}
 			{{> reveal-full }}
-		{{!-- REVEAL MODALS - ENDS --}}
+		{{!-- REVEAL SIZES - ENDS --}}
 
 		</div>
 	</div>

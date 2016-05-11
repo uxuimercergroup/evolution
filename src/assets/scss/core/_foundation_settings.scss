@@ -295,11 +295,11 @@ $drilldown-background: $white;
 // 16. Dropdown
 // ------------
 
-$dropdown-padding: $evo-base-padding;
+$dropdown-padding: $global-padding;
 $dropdown-border: 1px solid $medium-gray;
 $dropdown-font-size: $evo-base-font-size;
 $dropdown-width: 300px;
-$dropdown-radius: $evo-base-radius;
+$dropdown-radius: $global-radius;
 $dropdown-sizes: (
   tiny: 100px,
   small: 200px,
@@ -367,7 +367,7 @@ $label-background: $primary-color;
 $label-color: foreground($label-background);
 $label-font-size: $evo-base-small-font-size;
 $label-padding: 0.5rem 0.5rem 0.45rem 0.5rem;
-$label-radius: $evo-base-radius;
+$label-radius: $global-radius;
 
 // 21. Media Object
 // ----------------
@@ -390,7 +390,7 @@ $menu-icon-spacing: 0.25rem;
 // ---------
 
 $meter-height: 1rem;
-$meter-radius: $evo-base-radius;
+$meter-radius: $global-radius;
 $meter-background: $medium-gray;
 $meter-fill-good: $success-color;
 $meter-fill-medium: $warning-color;
@@ -428,11 +428,11 @@ $orbit-control-zindex: 10;
 // --------------
 
 $pagination-font-size: rem-calc(14);
-$pagination-margin-bottom: $evo-base-margin;
+$pagination-margin-bottom: $global-margin;
 $pagination-item-color: $black;
 $pagination-item-padding: rem-calc(3 10);
 $pagination-item-spacing: rem-calc(1);
-$pagination-radius: $evo-base-radius;
+$pagination-radius: $global-radius;
 $pagination-item-background-hover: $light-gray;
 $pagination-item-background-current: $primary-color;
 $pagination-item-color-current: foreground($pagination-item-background-current);
@@ -446,14 +446,14 @@ $pagination-arrows: true;
 
 $progress-height: 1rem;
 $progress-background: $medium-gray;
-$progress-margin-bottom: $evo-base-margin;
+$progress-margin-bottom: $global-margin;
 $progress-meter-background: $primary-color;
-$progress-radius: $evo-base-radius;
+$progress-radius: $global-radius;
 
 // 28. Reveal
 // ----------
 
-$reveal-background: $white;
+$reveal-background: $evo-base-reveal-background;
 $reveal-width: 600px;
 $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
@@ -517,12 +517,12 @@ $tab-background: $transparent;
 $tab-background-active: $white;
 $tab-item-font-size: rem-calc(16);
 $tab-item-background-hover: $onyx-dark-14;
-$tab-item-padding: rem-calc(8) $evo-base-padding;
+$tab-item-padding: rem-calc(8) $global-padding;
 $tab-expand-max: 6;
 $tab-content-background: $white;
 $tab-content-border: $light-gray;
 $tab-content-color: foreground($tab-background, $primary-color);
-$tab-content-padding: $evo-base-padding $evo-base-padding 0 $evo-base-padding;
+$tab-content-padding: $global-padding $global-padding 0 $global-padding;
 
 // 33. Thumbnail
 // -------------

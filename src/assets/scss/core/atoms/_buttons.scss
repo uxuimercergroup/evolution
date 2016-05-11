@@ -10,6 +10,7 @@ $evo-button-tiny-text-transform: uppercase !default;
 $evo-button-hollow-secondary-color: $onyx-dark-40 !default;
 $evo-button-icon-font-family: $evo-icon-font-stack !default;
 $evo-button-dropdown-icon: '\edc6' !default;
+$evo-button-close-icon-color: $evo-base-font-color !default;
 
 
 @if $use-buttons == true{
@@ -214,6 +215,14 @@ $evo-button-dropdown-icon: '\edc6' !default;
 										margin-right: 0 !important;
 			&:not(:last-child)				{border-right: 1px solid $white;}
 			&.hollow:not(:last-child)		{border-right: 0;}
+										}
+									}
+
+	// CLOSE BUTTON
+	.close-button					{
+		[class^="evo-icon-"]			{color: $evo-button-close-icon-color;}
+		&:hover							{
+			[class^="evo-icon-"]			{color: scale-color($evo-button-close-icon-color, $lightness: 30%);}
 										}
 									}
 

@@ -1,5 +1,7 @@
 ---
 title: "Reveal Modals"
+usage_content: "src/content/reveal/usage.md"
+settings_content: "src/content/reveal/settings.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -8,7 +10,7 @@ title: "Reveal Modals"
 
 {{# markdown }}
 ## {{ title }}
-The Modal Window provides information to the user that supplements or impacts the current site or application page.
+Modal dialogs, or pop-up windows, are handy for prototyping and production.
 {{/ markdown }}
 
 		{{> jump-to-nav}}
@@ -128,10 +130,7 @@ The Modal Window provides information to the user that supplements or impacts th
 				<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
 						<div class="evo-site-markdown-content-block">
-{{# markdown }}
-##### Setup
-To launch a modal just add a `data-reveal-id` data attribute to the object which you want to fire the modal when clicked. The `data-reveal-id` data attribute value needs to match the `id` of your reveal.
-{{/ markdown}}
+							{{{md usage_content}}}
 						</div>
 					</section>
 				<!-- CONTENT SECTION - ENDS -->
@@ -216,10 +215,22 @@ To launch a modal just add a `data-reveal-id` data attribute to the object which
 
 			<section class="row" data-equalizer="tab-panel">
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Content for something 4
+					
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+
+					<!-- SETTINGS CONTENT - BEGINS -->
+						<div class="evo-site-markdown-content-block evo-site-markdown-content-block--settings">
+							{{{ md settings_content }}}
+						</div>
+					<!-- SETTINGS CONTENT - ENDS -->
+					
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Magellan 4
+					&nbsp;
 				</div>
 			</section>
 			

@@ -5,30 +5,11 @@
 //
 // @variables
 //
-$evo-reveal-close-icon-color: $onyx-dark-90 !default;
 
-// STYLES FOR FULL HEIGHT/WIDTH MODAL
-$evo-reveal-full-border-radius: 0 !default;
-$evo-reveal-full-border-width: 0 !default;
 
 
 @if $use-reveal == true{
 
-	// Used to remove the border radius and border when set to take up the full screen of the page
-	.full					{
-							@include border-radius($evo-reveal-full-border-radius);
-							border-width: $evo-reveal-full-border-width;
-							}
-
-	// This sets the close icon color, if you change the icon color in the variable it will automatically change the hover color
-	.close-reveal-modal		{
-		[class*="evo-icon-"]	{color: $evo-reveal-close-icon-color;}
-		&:hover					{
-			[class*="evo-icon-"]	{color: scale-color($evo-reveal-close-icon-color, $lightness: 30%);}
-								}
-							}
-
-	// Resets the "bottom:0" call when "reveal-modal-bg" class has been added
-	//.reveal-modal-bg		{bottom: none;}
+	
 
 }//endif
