@@ -717,6 +717,8 @@ URL: {{ meta_url }}
 
 			@include breakpoint(small only)		{
 				li									{
+													border-left: 0;
+													border-bottom: 1px solid $white;
 													width: $evo-site-tabs-pattern-library-tab-width-small !important;
 					a									{border-top-color: $evo-site-tabs-pattern-library-tab-link-border-top-color-small !important;}
 													}
