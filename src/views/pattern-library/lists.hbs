@@ -35,7 +35,7 @@ Lists are a flexible component for displaying not only simple lists of elements,
 		<section class="tabs-panel evo-tabs-panel is-active evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel0">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col0" data-equalizer-watch="tab-panel">
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each lists.data }}
 					<div class="callout evo-callout evo-site-example-box">
@@ -89,15 +89,17 @@ Lists are a flexible component for displaying not only simple lists of elements,
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
-				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-sticky-container data-equalizer-watch="tab-panel">
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
-					<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col" data-sticky-on="large" data-sticky>
-						<ul class="menu vertical" data-magellan>
-						{{#each lists.data}}
-							<li><a href="#{{hyphenate name}}">{{name}}</a></li>
-						{{/each}}
-						</ul>
-					</nav>
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col0" data-sticky-on="large" data-sticky>
+							<ul class="menu vertical" data-magellan>
+							{{#each lists.data}}
+								<li><a href="#{{hyphenate name}}">{{name}}</a></li>
+							{{/each}}
+							</ul>
+						</nav>
+					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>

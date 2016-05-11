@@ -33,12 +33,12 @@ Data Tables are an element meant to organize data on a page with added functiona
 		<section class="tabs-panel evo-tabs-panel is-active evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel0">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col0" data-equalizer-watch="tab-panel">
 				<!-- EXAMPLE BOX - BEGINS -->
 					<div class="callout evo-callout evo-site-example-box">
 						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
-							<h6 class="evo-hdr-rule" data-magellan-destination="Basic-Data-Table">
+							<h6 class="evo-hdr-rule" data-magellan-target="Basic-Data-Table" id="Basic-Data-Table">
 								Basic Data Table
 								<a href="#code-toggle0" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right evo-tooltip" title="View Source" aria-label="" data-toggle="code-toggle0" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr0, after: removeAnim;"></a>
 							</h6>
@@ -78,11 +78,10 @@ Data Tables are an element meant to organize data on a page with added functiona
 					<div class="callout evo-callout evo-site-example-box">
 						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
-							<h6 class="evo-hdr-rule" data-magellan-destination="Subtotal-Row">
+							<h6 class="evo-hdr-rule" data-magellan-target="Subtotal-Row" id="Subtotal-Row">
 								Subtotal Row
 								<a href="#code-toggle1" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right evo-tooltip" title="View Source" aria-label="" data-toggle="code-toggle1" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr1, after: removeAnim;"></a>
 							</h6>
-							<a name="Subtotal-Row"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</header>
 						<section>
@@ -110,11 +109,10 @@ Data Tables are an element meant to organize data on a page with added functiona
 					<div class="callout evo-callout evo-site-example-box">
 						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
-							<h6 class="evo-hdr-rule" data-magellan-destination="Total-Row">
+							<h6 class="evo-hdr-rule" data-magellan-target="Total-Row" id="Total-Row">
 								Total Row
 								<a href="#code-toggle2" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right evo-tooltip" title="View Source" aria-label="" data-toggle="code-toggle2" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr2, after: removeAnim;"></a>
 							</h6>
-							<a name="Total-Row"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</header>
 						<section>
@@ -142,11 +140,10 @@ Data Tables are an element meant to organize data on a page with added functiona
 					<div class="callout evo-callout evo-site-example-box">
 						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
-							<h6 class="evo-hdr-rule" data-magellan-destination="Vertical-Scroll">
+							<h6 class="evo-hdr-rule" data-magellan-target="Vertical-Scroll" id="Vertical-Scroll">
 								Vertical Scroll
 								<a href="#code-toggle3" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right evo-tooltip" title="View Source" aria-label="" data-toggle="code-toggle3" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr3, after: removeAnim;"></a>
 							</h6>
-							<a name="Vertical-Scroll"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</header>
 						<section>
@@ -180,16 +177,19 @@ Data Tables are an element meant to organize data on a page with added functiona
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
-						<dl class="sub-nav">
-							<dd data-magellan-arrival="Basic-Data-Table"><a href="#Basic-Data-Table">Basic Data Table</a></dd>
-							<dd data-magellan-arrival="Subtotal-Row"><a href="#Subtotal-Row">Subtotal Row</a></dd>
-							<dd data-magellan-arrival="Total-Row"><a href="#Total-Row">Total Row</a></dd>
-							<dd data-magellan-arrival="Vertical-Scroll"><a href="#Vertical-Scroll">Vertical Scroll</a></dd>
-						</dl>
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col0" data-sticky-on="large" data-sticky>
+							<ul class="menu vertical" data-magellan>
+								<li><a href="#Basic-Data-Table">Basic Data Table</a></li>
+								<li><a href="#Subtotal-Row">Subtotal Row</a></li>
+								<li><a href="#Total-Row">Total Row</a></li>
+								<li><a href="#Vertical-Scroll">Vertical Scroll</a></li>
+							</ul>
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
+
 			</section>
 
 		</section>

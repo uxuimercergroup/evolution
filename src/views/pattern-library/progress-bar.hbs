@@ -34,17 +34,16 @@ Show your progress. A simple way to add progress bars to your layouts. You only 
 		<section class="tabs-panel evo-tabs-panel is-active evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel0">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col0" data-equalizer-watch="tab-panel">
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each progress-bar.data }}
 					<div class="callout evo-callout evo-site-example-box">
 						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
-							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
+							<h6 class="evo-hdr-rule" data-magellan-target="{{hyphenate name}}" id="{{hyphenate name}}">
 								{{name}}
-								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right evo-tooltip" title="View Source" aria-label="" data-toggle="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip right evo-tooltip" title="View Source" data-toggle="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
-							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</header>
 						<section>
@@ -91,12 +90,14 @@ Show your progress. A simple way to add progress bars to your layouts. You only 
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
-						<dl class="sub-nav">
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col0" data-sticky-on="large" data-sticky>
+							<ul class="menu vertical" data-magellan>
 							{{#each progress-bar.data}}
-							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+								<li><a href="#{{hyphenate name}}">{{name}}</a></li>
 							{{/each}}
-						</dl>
+							</ul>
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>

@@ -73,8 +73,7 @@ The corporate logos below are to be used for branding digital products across al
 					<div class="callout evo-callout evo-site-example-box">
 						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
-							<h6 class="evo-hdr-rule" data-magellan-destination="favicon">Favicon</h6>
-							<a name="favicon"></a>
+							<h6 class="evo-hdr-rule" data-magellan-target="favicon" id="favicon">Favicon</h6>
 						<!-- EXAMPLE HEADER - ENDS -->
 						</header>
 						<section>
@@ -103,10 +102,10 @@ The favicon can be installed into a Web site (or page) and will appear next to t
 					<div data-sticky-container>
 						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col0" data-sticky-on="large" data-sticky>
 							<ul class="menu vertical" data-magellan>
-							{{#each corp-logo.data}}
+							{{#each corp-logos.data}}
 								<li><a href="#{{hyphenate name}}">{{name}}</a></li>
 							{{/each}}
-								<li data-magellan-arrival="favicon"><a href="#favicon">Favicon</a></li>
+								<li><a href="#favicon">Favicon</a></li>
 							</ul>
 						</nav>
 					</div>
