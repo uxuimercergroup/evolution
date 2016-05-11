@@ -690,6 +690,8 @@ URL: {{ meta_url }}
 			li									{
 												margin: 0;
 												min-width: 25%;
+												border-left: 1px solid $white;
+				&:first-child						{border-left: 0;}
 				a									{
 													@include border-radius(0);
 													background-color: $evo-site-tabs-pattern-library-tab-background-color;
