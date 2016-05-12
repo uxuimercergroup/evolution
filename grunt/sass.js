@@ -5,7 +5,7 @@ module.exports = {
     check: false, // Just check the Sass syntax, does not evaluate and write the output.
     compass: false, // Make Compass imports available and load project configuration (config.rb located close to the Gruntfile.js).
     debugInfo: false, // Emit extra information in the generated CSS that can be used by the FireSass Firebug plugin.
-    loadPath: ['node_modules/foundation-sites/scss'], // Array for adding Sass import paths.
+    loadPath: ['node_modules/foundation-sites/scss', 'node_modules/motion-ui/src'], // Array for adding Sass import paths.
     lineNumbers: false, // Emit comments in the generated CSS indicating the corresponding source line.
     noCache: false, // Don't cache to sassc files.
     precision: 5, // How many digits of precision to use when outputting decimal numbers.

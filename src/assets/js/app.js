@@ -86,19 +86,6 @@ $(function() {
 			// SCROLL TO LOCATION
 			evoScrollToLocation();
 
-			// SITE TESTIMONIALS CAROUSEL
-			evoCarousel('evo-site-testimonials-carousel', {
-				autoHeight: false,
-				navigation: false,
-				paginationSpeed: 600
-			});
-
-			// SITE SLIDES CAROUSEL
-			evoCarousel('evo-site-slides-carousel', {
-				autoPlay: false,
-				autoHeight: false
-			});
-
 			// COPY TO CLIPBOARD
 			var clipboard = new Clipboard('.copy-to-clipboard');
 
@@ -195,11 +182,6 @@ $(function() {
 				// Interactive button examples
 				evoButtonInteractive('evo-button-interactive-secondary-example');
 				evoButtonInteractive('evo-button-interactive-primary-example');
-
-			// CAROUSEL
-
-				// Carousel example
-				evoCarousel('evo-carousel-example');
 
 			// DATA TABLE
 

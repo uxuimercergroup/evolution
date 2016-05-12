@@ -1,21 +1,21 @@
 {
 	"dependency_data" : {
 		"dependency": "true",
-		"foundation": "",
+		"foundation": "true",
 		"foundation_dependencies": [
-			{"name": "", "url": ""}
+			{"name": "Orbit", "url": "http://foundation.zurb.com/sites/docs/orbit.html"}
 		],
 		"evolution": "true",
 		"evolution_dependencies": [
 			{"name": "", "url": ""}
 		],
-		"jquery": "true",
+		"jquery": "",
 		"jquery_ui": "",
 		"jquery_ui_dependencies": [
 			{"name": "", "url": ""}
 		],
 		"other": [
-			{"name": "jQuery OwlCarousel 1.3.3", "url": "http://owlgraphic.com/owlcarousel/", "external_link": "true"}
+			{"name": "Motion UI 1.2.2", "url": "http://zurb.com/playground/motion-ui", "external_link": "true"}
 		]
 	},
 
@@ -23,20 +23,12 @@
 		"image_carousel": {
 			"name": "Image Carousel",
 			"partial": "carousel",
-			"partial_js" : "carousel-js",
 			"slug": "image-carousel"
 		},
 		"content_carousel": {
 			"name": "Content Carousel",
 			"partial": "carousel-content",
-			"partial_js" : "carousel-js",
 			"slug": "content-carousel"
 		}
-	},
-
-	"data-js": {
-		"partial": "carousel",
-		"partial_js" : "carousel-js",
-		"slug": "carousel"
 	}
 }
