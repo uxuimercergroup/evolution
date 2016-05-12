@@ -22,7 +22,7 @@ $evo-slider-width: 100% !default;
 
 // SLIDER HANDLE
 $evo-slider-handle-border-radius: rem-calc(30) !default;
-$evo-slider-handle-background-color: $onyx-dark-50 !default;
+$evo-slider-handle-background-color: $evo-primary-color !default;
 $evo-slider-handle-border-size: rem-calc(3) !default;
 $evo-slider-handle-border-style: solid !default;
 $evo-slider-handle-border-color: $white !default;
@@ -69,6 +69,7 @@ $evo-slider-tick-marker-max-position-right: 10px !default;
 												padding: 0;
 												position: relative;
 												font-size: 100%;
+												background-color: $transparent;
 												}
 											}
 										}
