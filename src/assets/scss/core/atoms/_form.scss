@@ -52,6 +52,13 @@ $evo-form-label-font-family: $evo-font-medium-stack !default;
 														outline: 0;
 														border: $input-border-focus;
 														}
+
+		// FORM ELEMENTS WITH TOOLTIPS
+		&.evo-tooltip									{
+														border-bottom: $input-border;
+			&:hover											{border-bottom: $input-border;}
+			&:focus											{border-bottom: $input-border-focus;}
+														}
 													}
 
 	// RADIO BUTTONS AND CHECKBOXES
