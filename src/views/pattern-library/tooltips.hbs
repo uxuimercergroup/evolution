@@ -2,6 +2,7 @@
 title: "Tooltips"
 definition_content: "src/content/tooltip/definition.md"
 usage_content: 		"src/content/tooltip/usage.md"
+settings_content: 	"src/content/tooltip/settings.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -10,7 +11,7 @@ usage_content: 		"src/content/tooltip/usage.md"
 
 {{# markdown }}
 ## {{ title }}
-Tooltips are a quick way to provide extended information on a term or action on a page. The information displayed with the Tooltip should not be crucial, required functionality, or content needed to interact with the interface. It is simply a bit of additional information that would be considered helpful to the user, but not essential.
+Tooltips are a quick way to provide extended information on a term or action on a page. Evolution Tooltips depend on Foundation's [Tooltips](http://foundation.zurb.com/sites/docs/tooltip.html) as a starting point.
 {{/ markdown }}
 
 		{{> jump-to-nav}}
@@ -224,10 +225,22 @@ Tooltips are a quick way to provide extended information on a term or action on 
 
 			<section class="row" data-equalizer="tab-panel">
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Content for something 4
+					
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+
+					<!-- SETTINGS CONTENT - BEGINS -->
+						<div class="evo-site-markdown-content-block evo-site-markdown-content-block--settings">
+							{{{ md settings_content }}}
+						</div>
+					<!-- SETTINGS CONTENT - ENDS -->
+					
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Magellan 4
+					&nbsp;
 				</div>
 			</section>
 			

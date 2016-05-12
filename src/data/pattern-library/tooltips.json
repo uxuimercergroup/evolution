@@ -20,20 +20,20 @@
 	},
 
 	"data": {
-		"tooltip_default": {
-			"name": "Default Tooltip",
-			"partial": "tooltip-default", "slug": "tooltip-default"
+		"tooltip": {
+			"name": "Basic",
+			"partial": "tooltip", "slug": "tooltip-basic"
 		},
-		"tooltip_disable": {
-			"name": "Tooltip Disable",
-			"partial": "tooltip-disable", "slug": "tooltip-disable"
+		"tooltip_position": {
+			"name": "Position",
+			"partial": "tooltip-position", "slug": "tooltip-position"
 		},
 		"tooltip_input": {
-			"name": "Tooltip Input",
+			"name": "Input",
 			"partial": "tooltip-input", "slug": "tooltip-input"
 		},
 		"tooltip_show_by_screensize": {
-			"name": "Show by Screensize",
+			"name": "Show By Screen Size",
 			"partial": "tooltip-show-by-screen-size", "slug": "tooltip-show-by-screen-size"
 		}
 	}
