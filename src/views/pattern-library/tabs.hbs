@@ -1,6 +1,7 @@
 ---
 title: "Tabs"
 definition_content: "src/content/tabs/definition.md"
+usage_content: "src/content/tabs/usage.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -9,7 +10,7 @@ definition_content: "src/content/tabs/definition.md"
 
 {{# markdown }}
 ## {{ title }}
-Tabs are elements that help you organize and navigate multiple content panels in a single page.
+Tabs are elements that help you organize and navigate multiple documents in a single container. They can be used for switching between items in the container. Evolution Tabs depends on Foundation's [Tabs](http://foundation.zurb.com/sites/docs/tabs.html) as a starting point.
 {{/ markdown }}
 
 		{{> jump-to-nav}}
@@ -138,11 +139,7 @@ Tabs are elements that help you organize and navigate multiple content panels in
 				<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
 						<div class="evo-site-markdown-content-block">
-{{# markdown}}
-##### Deep Linking To Tabs or Tab Content
-
-The tabs Foundation component can parse the location hash value and open the corresponding tab content pane. To enable deep linking set `data-options="deep_linking:true"`. If the location hash maps to an element ID within a tab content pane, then the appropriate tab will become active and the browser window will scroll to the specified element. If you do not want to scroll to the specified element then set `data-options="scroll_to_content: false"`.
-{{/ markdown}}
+							{{{md usage_content}}}
 						</div>
 					</section>
 				<!-- CONTENT SECTION - ENDS -->
