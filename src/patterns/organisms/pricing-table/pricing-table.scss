@@ -89,14 +89,13 @@ $evo-product: core;
 
 // PRICING TABLE - BEGINS
 	.evo-pricing-table			{
-		[class*="small-block-grid-"]
+		[class*="small-up-"]
 									{
 									background-color: $evo-pricing-table-bg-color;
 									font-size: $evo-pricing-table-base-font;
 									padding: $evo-pricing-table-padding;
 									margin: 0;
 									margin-bottom: $evo-pricing-table-margin-bottom;
-			li							{padding-bottom: 0;}
 			.evo-pricing-table-item-amt,
 			.evo-pricing-table-break-down-amt,
 			.evo-pricing-table-total-amt
@@ -122,7 +121,6 @@ $evo-product: core;
 									padding-bottom: 0;
 									margin-top: 0;
 									margin-bottom: 0;
-			li							{padding-bottom: 0;}
 			.evo-pricing-table-item-label
 										{
 										color: $evo-pricing-table-item-label-font-color;
