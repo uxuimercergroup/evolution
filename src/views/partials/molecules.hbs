@@ -162,13 +162,18 @@
 	<div class="row">
 		<div class="small-12 columns">
 
-		{{!-- IMAGE CAROUSEL - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Image Carousel"}}
+		{{!-- IMAGES CAROUSEL - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Images"}}
 			{{> carousel }}
-		{{!-- IMAGE CAROUSEL - ENDS --}}
+		{{!-- IMAGES CAROUSEL - ENDS --}}
+
+		{{!-- IMAGES WITH CAPTIONS CAROUSEL - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Images With Captions"}}
+			{{> carousel-caption }}
+		{{!-- IMAGES WITH CAPTIONS CAROUSEL - ENDS --}}
 
 		{{!-- CONTENT CAROUSEL - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Content Carousel"}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Content"}}
 			{{> carousel-content }}
 		{{!-- CONTENT CAROUSEL - ENDS --}}
 
@@ -312,6 +317,8 @@
 				{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
 				{{> labels }}
 			{{!-- LABELS - ENDS --}}
+
+			<br><br>
 
 			{{!-- LABELS - COLORS - BEGINS --}}
 				{{> type-header size="6" class="evo-hdr-rule" text="Colors"}}

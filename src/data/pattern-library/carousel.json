@@ -21,12 +21,17 @@
 
 	"data": {
 		"image_carousel": {
-			"name": "Image Carousel",
+			"name": "Images",
 			"partial": "carousel",
 			"slug": "image-carousel"
 		},
+		"image_caption_carousel": {
+			"name": "Images With Captions",
+			"partial": "carousel-caption",
+			"slug": "caption-carousel"
+		},
 		"content_carousel": {
-			"name": "Content Carousel",
+			"name": "Content",
 			"partial": "carousel-content",
 			"slug": "content-carousel"
 		}
