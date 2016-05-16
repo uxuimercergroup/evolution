@@ -48,16 +48,38 @@ title: "Product Suites"
 			<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
 
 			<!-- VISUAL IDENTITY CAROUSEL - BEGINS -->
-				<div class="evo-carousel evo-site-slides-carousel" data-evo-carousel="evo-site-slides-carousel">
-					{{#each product-suites.visual_identity.items}}
-					<div class="text-center evo-carousel-item">
-						<img class="float-center evo-spacer-margin-bottom-xx-large" src="/assets/images/evo-site-product-suites-{{add @index 1}}.png" width="800" alt="{{{product-suites.visual_identity.items.title}}}">
-						<p class="evo-spacer-margin-bottom-xxx-large evo-site-band--product-suites-visual-identity-marketing-text">{{{text}}}</p>
-					</div>
-					{{/each}}
+				<div class="orbit evo-orbit" role="region" aria-label="Carousel" data-orbit>
+					<ul class="orbit-container">
+						<button class="orbit-previous" aria-label="Previous Slide" tabindex="0">
+							<span class="show-for-sr">Previous Slide</span>
+							<span aria-hidden="true"><i class="evo-icon-arrow-left2" title="Previous"></i></span>
+						</button>
+						<button class="orbit-next" aria-label="Next Slide" tabindex="0">
+							<span class="show-for-sr">Next Slide</span>
+							<span aria-hidden="true"><i class="evo-icon-arrow-right2" title="Next"></i></span>
+						</button>
+						{{#each product-suites.visual_identity.items}}
+						<div class="text-center orbit-slide">
+							<img class="float-center evo-spacer-margin-bottom-xx-large" src="/assets/images/evo-site-product-suites-{{add @index 1}}.png" width="800" alt="{{{product-suites.visual_identity.items.title}}}">
+							<p class="evo-spacer-margin-bottom-xxx-large evo-site-band--product-suites-visual-identity-marketing-text">{{{text}}}</p>
+						</div>
+						{{/each}}
+					</ul>
+					<nav class="orbit-bullets">
+						<button class="is-active" data-slide="0" aria-label="First Slide" tabindex="0">
+							<span class="show-for-sr">First slide details.</span>
+							<span class="show-for-sr">Current Slide</span>
+						</button>
+						<button data-slide="1" aria-label="Second Slide" tabindex="0">
+							<span class="show-for-sr">Second slide details.</span>
+						</button>
+						<button data-slide="2" aria-label="Third Slide" tabindex="0">
+							<span class="show-for-sr">Third slide details.</span>
+						</button>
+					</nav>
 				</div>
 			<!-- VISUAL IDENTITY CAROUSEL - ENDS -->
-				
+
 			</div>
 		</div>
 	</section>

@@ -92,8 +92,53 @@ title: "What is Evolution?"
 	<section class="row expanded evo-site-band evo-site-band--marketing evo-site-band--testimonials">
 		<div class="medium-12 large-9 large-centered columns evo-site-band--marketing-content">
 			<h3 class="text-center evo-margin-left evo-margin-right">{{{what.testimonials.header}}}</h3>
+			<!-- CAROUSEL (ORBIT) - BEGINS -->
+				<div class="orbit evo-orbit evo-orbit--what-users-saying" role="region" aria-label="Carousel" data-orbit>
+					<ul class="orbit-container">
+						<button class="orbit-previous" aria-label="Previous Slide" tabindex="0">
+							<span class="show-for-sr">Previous Slide</span>
+							<span aria-hidden="true"><i class="evo-icon-arrow-left2" title="Previous"></i></span>
+						</button>
+						<button class="orbit-next" aria-label="Next Slide" tabindex="0">
+							<span class="show-for-sr">Next Slide</span>
+							<span aria-hidden="true"><i class="evo-icon-arrow-right2" title="Next"></i></span>
+						</button>
+<!--
+						<li class="is-active orbit-slide"></li>
+						<li class="orbit-slide"></li>
+						<li class="orbit-slide"></li>
+-->
 
-		<!-- TESTIMONIALS CAROUSEL - BEGINS -->
+						{{#each what.testimonials.items}}
+						<li class="orbit-slide">
+							<blockquote>
+								<p>{{{text}}}</p>
+								<cite>
+									{{{name}}}{{#if title}}<br>
+									<span class="title">{{{title}}}</span>
+									{{/if}}
+								</cite>
+							</blockquote>
+						</li>
+						{{/each}}
+
+					</ul>
+					<nav class="orbit-bullets">
+						<button class="is-active" data-slide="0" aria-label="First Slide" tabindex="0">
+							<span class="show-for-sr">First slide details.</span>
+							<span class="show-for-sr">Current Slide</span>
+						</button>
+						<button data-slide="1" aria-label="Second Slide" tabindex="0">
+							<span class="show-for-sr">Second slide details.</span>
+						</button>
+						<button data-slide="2" aria-label="Third Slide" tabindex="0">
+							<span class="show-for-sr">Third slide details.</span>
+						</button>
+					</nav>
+				</div>
+			<!-- CAROUSEL (ORBIT) - ENDS -->
+
+		<!-- TESTIMONIALS CAROUSEL - BEGINS 
 			<div class="evo-carousel" data-evo-carousel="evo-site-testimonials-carousel">
 				{{#each what.testimonials.items}}
 				<div class="evo-carousel-item">
@@ -108,7 +153,7 @@ title: "What is Evolution?"
 				</div>
 				{{/each}}
 			</div>
-		<!-- TESTIMONIALS CAROUSEL - ENDS -->
+TESTIMONIALS CAROUSEL - ENDS -->
 
 		</div>
 	</section>
