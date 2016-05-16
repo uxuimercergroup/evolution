@@ -13,15 +13,22 @@
 //
 // @variables
 //
-$evo-off-canvas-tab-bar-menu-icon-font-size: rem-calc(24) !default;
-$evo-off-canvas-tab-bar-menu-icon-color: $white !default;
-$evo-off-canvas-tab-bar-menu-icon-position-top: 5px !default;
-$evo-off-canvas-tab-bar-menu-icon-position-left: 15px !default;
-$evo-off-canvas-tab-bar-menu-icon-hover-color: $white !default;
-$evo-off-canvas-tab-bar-header-font-family: $evo-base-font-family !default;
-$evo-off-canvas-tab-bar-header-letter-spacing: rem-calc(3) !default;
-$evo-off-canvas-tab-bar-header-anchor-color: $white !default;
-$evo-off-canvas-tab-bar-header-image-margin: rem-calc(-3 0 0 0) !default;
+$evo-off-canvas-title-bar-background-color: $sapphire-dark !default;
+$evo-off-canvas-title-bar-color: $white !default;
+$evo-off-canvas-title-bar-height: rem-calc(55) !default;
+$evo-off-canvas-title-bar-title-text-align: center;
+$evo-off-canvas-title-bar-title-padding: rem-calc(0 10) !default;
+$evo-off-canvas-title-bar-title-font-size: rem-calc(18) !default;
+$evo-off-canvas-title-bar-title-font-family: $evo-font-medium-stack !default;
+$evo-off-canvas-title-bar-title-letter-spacing: rem-calc(3) !default;
+$evo-off-canvas-title-bar-title-color: $white !default;
+$evo-off-canvas-title-bar-title-text-transform: uppercase !default;
+$evo-off-canvas-title-bar-title-image-margin: rem-calc(-3 0 0 0) !default;
+$evo-off-canvas-title-bar-icon-font-size: rem-calc(24) !default;
+$evo-off-canvas-title-bar-icon-color: $white !default;
+$evo-off-canvas-title-bar-icon-position-top: 0 !default;
+$evo-off-canvas-title-bar-icon-position-left: 0 !default;
+$evo-off-canvas-title-bar-icon-hover-color: $white !default;
 $evo-off-canvas-menu-label-font-family: $evo-base-font-family !default;
 $evo-off-canvas-menu-label-letter-spacing: rem-calc(3) !default;
 $evo-off-canvas-menu-anchor-font-size: rem-calc(16) !default;
@@ -57,38 +64,79 @@ $evo-off-canvas-menu-right-back-icon-margin-left: 0 !default;
 	// OFF-CANVAS
 	.evo-off-canvas					{
 
-		// TAB BAR
-		.tab-bar						{
-			.menu-icon						{
-				[class*="evo-icon-"]			{
-												font-size: $evo-off-canvas-tab-bar-menu-icon-font-size;
-												color: $evo-off-canvas-tab-bar-menu-icon-color;
-												top: $evo-off-canvas-tab-bar-menu-icon-position-top;
-												left: $evo-off-canvas-tab-bar-menu-icon-position-left;
-												}
-				&:hover							{
-					[class*="evo-icon-"]			{color: $evo-off-canvas-tab-bar-menu-icon-hover-color;}
-												}
+		// TITLE BAR
+		.title-bar						{
+										position: relative;
+										background: $evo-off-canvas-title-bar-background-color;
+										color: $evo-off-canvas-title-bar-color;
+										height: $evo-off-canvas-title-bar-height;
+										line-height: $evo-off-canvas-title-bar-height;
+
+			// TITLE BAR LEFT AND RIGHT ICON CONTAINERS
+			.title-bar-left,
+			.title-bar-right				{
+											float: none;
+											text-align: inherit;
+											height: $evo-off-canvas-title-bar-height;
+											width: $evo-off-canvas-title-bar-height;
+											position: absolute;
+											top: 0;
 											}
-			.tab-bar-section				{
-				h1								{
-												font-family: $evo-off-canvas-tab-bar-header-font-family !important;
-												letter-spacing: $evo-off-canvas-tab-bar-header-letter-spacing;
-												}
+			.title-bar-left					{left: 0;}
+			.title-bar-right				{right: 0;}
+			
+			// TITLE BAR TITLE
+			.title-bar-title				{
+											display: block;
+											position: absolute;
+											top: 0;
+											left: $evo-off-canvas-title-bar-height;
+											right: $evo-off-canvas-title-bar-height;
+											text-align: $evo-off-canvas-title-bar-title-text-align;
+											height: $evo-off-canvas-title-bar-height;
+											padding: $evo-off-canvas-title-bar-title-padding;
+											font-size: $evo-off-canvas-title-bar-title-font-size;
+											font-family: $evo-off-canvas-title-bar-title-font-family;
+											font-weight: normal;
+											letter-spacing: $evo-off-canvas-title-bar-title-letter-spacing;
+											color: $evo-off-canvas-title-bar-title-color;
+											text-transform: $evo-off-canvas-title-bar-title-text-transform;
 				a								{
 												display: block;
-												color: $evo-off-canvas-tab-bar-header-anchor-color;
 												text-decoration: none;
+												color: $evo-off-canvas-title-bar-title-color;
 												}
-				img								{margin: $evo-off-canvas-tab-bar-header-image-margin;}
+				img								{margin: $evo-off-canvas-title-bar-title-image-margin;}
+											}
+
+			// TITLE BAR ICONS
+			.menu-icon						{
+											color: $evo-off-canvas-title-bar-icon-color;
+											display: block;
+											height: $evo-off-canvas-title-bar-height;
+											width: $evo-off-canvas-title-bar-height;
+											margin: 0;
+											vertical-align: top;
+											border-radius: 0;
+				&:after							{content: none;}
+				[class^="evo-icon-"]			{
+												font-size: $evo-off-canvas-title-bar-icon-font-size;
+												color: $evo-off-canvas-title-bar-icon-color;
+												top: $evo-off-canvas-title-bar-icon-position-top;
+												left: $evo-off-canvas-title-bar-icon-position-left;
+												}
+				&:hover							{
+					[class^="evo-icon-"]			{color: $evo-off-canvas-title-bar-icon-hover-color;}
+												}
 											}
 										}
 
-		// OFF-CANVAS MENUS
-		.left-off-canvas-menu,
-		.right-off-canvas-menu			{
-
-			ul.off-canvas-list				{
+		// OFF-CANVAS MENU
+		.off-canvas						{
+										min-height: 100%; // Fixes bug with off-canvas menu background color not spanning entire height of container
+			
+			// DRILLDOWN MENU
+			.is-drilldown					{
 				li								{
 					label							{
 													@include box-sizing(border-box);
@@ -105,7 +153,7 @@ $evo-off-canvas-menu-right-back-icon-margin-left: 0 !default;
 													text-decoration: none;
 													}
 												}
-				li.has-submenu					{
+				.is-drilldown-submenu-parent	{
 					> a:before,
 					> a:after						{
 													font-family: $evo-off-canvas-menu-anchor-icon-font-family;
@@ -116,12 +164,8 @@ $evo-off-canvas-menu-right-back-icon-margin-left: 0 !default;
 												}
 											}
 
-										}
-		
-		// OFF-CANVAS SUB MENUS
-		.left-submenu,
-		.right-submenu					{
-			.back							{
+			// DRILLDOWN MENU BACK BUTTON
+			.js-drilldown-back				{
 				> a								{
 												padding-top: $evo-off-canvas-menu-back-padding-top;
 												padding-bottom: $evo-off-canvas-menu-back-padding-bottom;
@@ -136,68 +180,62 @@ $evo-off-canvas-menu-right-back-icon-margin-left: 0 !default;
 													}
 												}
 											}
-										}
-		
-		// LEFT OFF-CANVAS MENU
-		.left-off-canvas-menu			{
-			ul.off-canvas-list				{
-				li								{
-					a								{
-													padding-right: $evo-off-canvas-menu-left-anchor-padding-right;
+
+			// LEFT OFF-CANVAS MENU
+			&.position-left					{
+				.is-drilldown					{
+					li								{
+						a								{
+														padding-right: $evo-off-canvas-menu-left-anchor-padding-right;
+														}
 													}
-												}
-				li.has-submenu					{
-					> a								{
-													padding-right: $evo-off-canvas-menu-left-has-submenu-anchor-padding-right;
-						&:after							{
-														content: $evo-off-canvas-menu-left-has-submenu-icon;
-														float: right;
-														top: $evo-off-canvas-menu-left-has-submenu-icon-position-top;
-														margin-left: $evo-off-canvas-menu-left-has-submenu-icon-margin-left;
+					.is-drilldown-submenu-parent	{
+						> a								{
+														padding-right: $evo-off-canvas-menu-left-has-submenu-anchor-padding-right;
+							&:after							{
+															content: $evo-off-canvas-menu-left-has-submenu-icon;
+															float: right;
+															top: $evo-off-canvas-menu-left-has-submenu-icon-position-top;
+															margin-left: $evo-off-canvas-menu-left-has-submenu-icon-margin-left;
+															}
 														}
 													}
 												}
-											}
-										}
-
-		// LEFT OFF-CANVAS SUB MENU
-		.left-submenu					{
-			.back							{
-				> a								{
-												padding-left: $evo-off-canvas-menu-left-back-anchor-padding-left;
-					&:before						{
-													content: $evo-off-canvas-menu-left-back-icon;
-													margin-right: $evo-off-canvas-menu-left-back-icon-margin-right;
-													}
-												}
-											}
-										}
-
-		// RIGHT OFF-CANVAS MENU
-		.right-off-canvas-menu			{
-			ul.off-canvas-list				{
-				li.has-submenu					{
+				.js-drilldown-back				{
 					> a								{
-													line-height: $evo-off-canvas-menu-right-has-submenu-anchor-line-height;
+													padding-left: $evo-off-canvas-menu-left-back-anchor-padding-left;
 						&:before						{
-														content: $evo-off-canvas-menu-right-has-submenu-icon;
-														margin-right: $evo-off-canvas-menu-right-has-submenu-icon-margin-right;
+														content: $evo-off-canvas-menu-left-back-icon;
+														margin-right: $evo-off-canvas-menu-left-back-icon-margin-right;
 														}
+													}
+												}
+											}
+				
+			// RIGHT OFF-CANVAS MENU
+			&.position-right				{
+				.is-drilldown					{
+					.is-drilldown-submenu-parent	{
+						> a								{
+														line-height: $evo-off-canvas-menu-right-has-submenu-anchor-line-height;
+							&:before						{
+															content: $evo-off-canvas-menu-right-has-submenu-icon;
+															margin-right: $evo-off-canvas-menu-right-has-submenu-icon-margin-right;
+															}
+														}
+													}
+												}
+				.js-drilldown-back				{
+					> a:after						{
+													content: $evo-off-canvas-menu-right-back-icon;
+													margin-left: $evo-off-canvas-menu-right-back-icon-margin-left;
 													}
 												}
 											}
 										}
 
-		// RIGHT OFF-CANVAS SUB MENU
-		.right-submenu					{
-			.back							{
-				> a:after						{
-												content: $evo-off-canvas-menu-right-back-icon;
-												margin-left: $evo-off-canvas-menu-right-back-icon-margin-left;
-												}
-											}
-										}
-
+		// OFF-CANVAS EXIT - CONTENT OVERLAY
+		.js-off-canvas-exit				{@include box-shadow(-1px 0 1px $evo-base-shadow-color, 1px 0 1px $evo-base-shadow-color);}
 									}
 
 }// endif

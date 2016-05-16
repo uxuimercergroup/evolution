@@ -399,15 +399,15 @@ $meter-fill-bad: $alert-color;
 // 24. Off-canvas
 // --------------
 
-$offcanvas-size: 250px;
-$offcanvas-background: $light-gray;
+$offcanvas-size: 265px;
+$offcanvas-background: $onyx-dark-6;
 $offcanvas-zindex: -1;
 $offcanvas-transition-length: 0.5s;
 $offcanvas-transition-timing: ease;
 $offcanvas-fixed-reveal: true;
-$offcanvas-exit-background: rgba($white, 0.25);
+$offcanvas-exit-background: rgba($white, 0.4);
 $maincontent-class: 'off-canvas-content';
-$maincontent-shadow: 0 0 10px rgba($black, 0.5);
+$maincontent-shadow: none;
 
 // 25. Orbit
 // ---------

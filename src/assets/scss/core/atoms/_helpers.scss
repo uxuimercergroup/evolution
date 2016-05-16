@@ -192,11 +192,15 @@ img										{
 // RESPONSIVE HELPERS
 // ------------------------------------------------------------------------------------------
 
-// BREAKPOINTS
-// small media query = phones
-// medium media query = tablets
-// large media query = desktop
-
+// PREVENT FOUC (FLASH OF UNSTYLED CONTENT) FOR FOUNDATION'S RESPONSIVE NAVIGATION
+.no-js 									{
+	@include breakpoint(small only) 		{
+		.top-bar 								{display: none;}
+											}
+	@include breakpoint(medium) 			{
+		.title-bar 								{display: none;}
+											}
+										}
 
 // IE10 Metro responsive
 // Required for Windows 8 Metro split-screen snapping with IE10

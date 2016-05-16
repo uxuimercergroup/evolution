@@ -1,5 +1,8 @@
 ---
 title: "Off-canvas"
+definition_content: "src/content/off-canvas/definition.md"
+usage_content: "src/content/off-canvas/usage.md"
+settings_content: "src/content/off-canvas/settings.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -9,7 +12,7 @@ title: "Off-canvas"
 {{# markdown }}
 ## {{ title }}
 Off-canvas menus are positioned outside of the viewport and slide in when activated. Evolution's off-canvas 
-menu depends on Foundation's [Off-canvas](http://foundation.zurb.com/sites/docs/offcanvas.html) as a starting point.
+menu depends on Foundation's [Off-canvas](http://foundation.zurb.com/sites/docs/off-canvas.html) as a starting point.
 {{/ markdown }}
 
 <div class="evo-site-annotations evo-spacer-margin-bottom-x-large">
@@ -113,14 +116,22 @@ queries. On large and up media queries, Off-canvas menu and mobile header compon
 	<!-- TAB PANEL 1 - ENDS -->
 
 	<!-- TAB PANEL 2 - BEGINS -->
-		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel1">
 
 			<section class="row" data-equalizer="tab-panel">
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Content for something 2
+				
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+							{{{md definition_content}}}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Magellan 2
+					&nbsp;
 				</div>
 			</section>
 			
@@ -132,7 +143,15 @@ queries. On large and up media queries, Off-canvas menu and mobile header compon
 
 			<section class="row" data-equalizer="tab-panel">
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Content for something 3
+					
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+							{{{md usage_content}}}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
@@ -213,10 +232,22 @@ queries. On large and up media queries, Off-canvas menu and mobile header compon
 
 			<section class="row" data-equalizer="tab-panel">
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Content for something 4
+			
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+
+					<!-- SETTINGS CONTENT - BEGINS -->
+						<div class="evo-site-markdown-content-block evo-site-markdown-content-block--settings">
+							{{{ md settings_content }}}
+						</div>
+					<!-- SETTINGS CONTENT - ENDS -->
+					
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Magellan 4
+					&nbsp;
 				</div>
 			</section>
 			
