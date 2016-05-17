@@ -2,6 +2,7 @@
 title: "Top Bar"
 definition_content: "src/content/top-bar/definition.md"
 usage_content: 		"src/content/top-bar/usage.md"
+settings_content: 	"src/content/top-bar/settings.md"
 ---
 
 <!-- INTRO SECTION - BEGINS -->
@@ -232,10 +233,22 @@ medium media queries. On small and medium media queries, Top bar is replaced by 
 
 			<section class="row" data-equalizer="tab-panel">
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Content for something 4
+				
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+
+					<!-- SETTINGS CONTENT - BEGINS -->
+						<div class="evo-site-markdown-content-block evo-site-markdown-content-block--settings">
+							{{{ md settings_content }}}
+						</div>
+					<!-- SETTINGS CONTENT - ENDS -->
+					
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Magellan 4
+					&nbsp;
 				</div>
 			</section>
 			
