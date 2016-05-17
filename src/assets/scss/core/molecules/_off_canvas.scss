@@ -13,10 +13,10 @@
 //
 // @variables
 //
-$evo-off-canvas-title-bar-background-color: $sapphire-dark !default;
+$evo-off-canvas-title-bar-background-color: $evo-primary-color !default;
 $evo-off-canvas-title-bar-color: $white !default;
 $evo-off-canvas-title-bar-height: rem-calc(55) !default;
-$evo-off-canvas-title-bar-title-text-align: center;
+$evo-off-canvas-title-bar-title-text-align: center !default;
 $evo-off-canvas-title-bar-title-padding: rem-calc(0 10) !default;
 $evo-off-canvas-title-bar-title-font-size: rem-calc(18) !default;
 $evo-off-canvas-title-bar-title-font-family: $evo-font-medium-stack !default;
@@ -29,34 +29,49 @@ $evo-off-canvas-title-bar-icon-color: $white !default;
 $evo-off-canvas-title-bar-icon-position-top: 0 !default;
 $evo-off-canvas-title-bar-icon-position-left: 0 !default;
 $evo-off-canvas-title-bar-icon-hover-color: $white !default;
-$evo-off-canvas-menu-label-font-family: $evo-base-font-family !default;
-$evo-off-canvas-menu-label-letter-spacing: rem-calc(3) !default;
-$evo-off-canvas-menu-anchor-font-size: rem-calc(16) !default;
-$evo-off-canvas-menu-anchor-line-height: 1.25 !default;
-$evo-off-canvas-menu-anchor-letter-spacing: normal !default;
-$evo-off-canvas-menu-anchor-text-transform: none !default;
-$evo-off-canvas-menu-anchor-icon-font-family: $evo-icon-font-stack !default;
-$evo-off-canvas-menu-anchor-icon-font-size: rem-calc(16) !default;
-$evo-off-canvas-menu-anchor-icon-position-top: 2px !default;
-$evo-off-canvas-menu-back-padding-top: rem-calc(14) !default;
-$evo-off-canvas-menu-back-padding-bottom: rem-calc(18) !default;
-$evo-off-canvas-menu-back-letter-spacing: rem-calc(3) !default;
-$evo-off-canvas-menu-back-text-transform: uppercase !default;
-$evo-off-canvas-menu-back-icon-font-family: $evo-icon-font-stack !default;
-$evo-off-canvas-menu-back-icon-position-top: 2px !default;
-$evo-off-canvas-menu-left-anchor-padding-right: rem-calc(40) !default;
-$evo-off-canvas-menu-left-has-submenu-anchor-padding-right: rem-calc(14) !default;
-$evo-off-canvas-menu-left-has-submenu-icon: '\edc5' !default;
-$evo-off-canvas-menu-left-has-submenu-icon-position-top: 0 !default;
-$evo-off-canvas-menu-left-has-submenu-icon-margin-left: rem-calc(5) !default;
-$evo-off-canvas-menu-left-back-anchor-padding-left: rem-calc(19) !default;
-$evo-off-canvas-menu-left-back-icon: '\edc7' !default;
-$evo-off-canvas-menu-left-back-icon-margin-right: 0 !default;
-$evo-off-canvas-menu-right-has-submenu-anchor-line-height: 1.25 !default;
-$evo-off-canvas-menu-right-has-submenu-icon: '\edc7' !default;
-$evo-off-canvas-menu-right-has-submenu-icon-margin-right: rem-calc(5) !default;
-$evo-off-canvas-menu-right-back-icon: '\edc5' !default;
-$evo-off-canvas-menu-right-back-icon-margin-left: 0 !default;
+$evo-off-canvas-label-background-color: $onyx-dark-50 !default;
+$evo-off-canvas-label-color: $white !default;
+$evo-off-canvas-label-font-size: $evo-base-small-font-size !default;
+$evo-off-canvas-label-line-height: 1 !default;
+$evo-off-canvas-label-font-family: $evo-base-font-family !default;
+$evo-off-canvas-label-letter-spacing: rem-calc(3) !default;
+$evo-off-canvas-label-text-transform: uppercase !default;
+$evo-off-canvas-label-padding: rem-calc(22 24) !default;
+$evo-off-canvas-item-anchor-color: $evo-primary-color !default;
+$evo-off-canvas-item-anchor-font-size: $evo-base-font-size !default;
+$evo-off-canvas-item-anchor-line-height: 1.25 !default;
+$evo-off-canvas-item-anchor-letter-spacing: normal !default;
+$evo-off-canvas-item-anchor-text-transform: none !default;
+$evo-off-canvas-item-anchor-padding: rem-calc(17 24) !default;
+$evo-off-canvas-item-anchor-border: 1px solid $onyx-dark-14 !default;
+$evo-off-canvas-item-anchor-icon-font-family: $evo-icon-font-stack !default;
+$evo-off-canvas-item-anchor-icon-font-size: $evo-base-font-size !default;
+$evo-off-canvas-item-anchor-icon-position-top: 0 !default;
+$evo-off-canvas-back-background-color: $onyx-dark-70 !default;
+$evo-off-canvas-back-color: $evo-off-canvas-label-color !default;
+$evo-off-canvas-back-font-size: $evo-off-canvas-label-font-size !default;
+$evo-off-canvas-back-line-height: $evo-off-canvas-label-line-height !default;
+$evo-off-canvas-back-letter-spacing: $evo-off-canvas-label-letter-spacing !default;
+$evo-off-canvas-back-text-transform: $evo-off-canvas-label-text-transform !default;
+$evo-off-canvas-back-padding: $evo-off-canvas-label-padding !default;
+$evo-off-canvas-back-icon-font-family: $evo-icon-font-stack !default;
+$evo-off-canvas-back-icon-position-top: -1px !default;
+$evo-off-canvas-left-item-anchor-padding-right: rem-calc(40) !default;
+$evo-off-canvas-left-item-submenu-parent-anchor-padding-right: rem-calc(14) !default;
+$evo-off-canvas-left-item-submenu-parent-icon: '\edc5' !default;
+$evo-off-canvas-left-item-submenu-parent-icon-margin-left: rem-calc(5) !default;
+$evo-off-canvas-left-back-icon: '\edc7' !default;
+$evo-off-canvas-left-back-icon-margin-right: 0 !default;
+$evo-off-canvas-left-back-icon-position-left: -5px !default;
+$evo-off-canvas-left-back-icon-width: rem-calc(16) !default;
+$evo-off-canvas-right-item-submenu-parent-anchor-padding: rem-calc(16 24) !default;
+$evo-off-canvas-right-item-submenu-parent-icon: '\edc7' !default;
+$evo-off-canvas-right-item-submenu-parent-icon-position-top: 1px !default;
+$evo-off-canvas-right-item-submenu-parent-icon-position-left: -5px !default;
+$evo-off-canvas-right-item-submenu-parent-icon-margin-right: 0 !default;
+$evo-off-canvas-right-back-icon: '\edc5' !default;
+$evo-off-canvas-right-back-icon-margin-left: rem-calc(2) !default;
+$evo-off-canvas-right-back-icon-width: $evo-off-canvas-left-back-icon-width !default;
 
 
 @if $use-off-canvas == true{
@@ -137,76 +152,111 @@ $evo-off-canvas-menu-right-back-icon-margin-left: 0 !default;
 			
 			// DRILLDOWN MENU
 			.is-drilldown					{
-				li								{
-					label							{
-													@include box-sizing(border-box);
-													font-family: $evo-off-canvas-menu-label-font-family;
-													letter-spacing: $evo-off-canvas-menu-label-letter-spacing;
-													}
-					a								{
-													@include box-sizing(border-box);
-													display: block;
-													font-size: $evo-off-canvas-menu-anchor-font-size;
-													line-height: $evo-off-canvas-menu-anchor-line-height;
-													letter-spacing: $evo-off-canvas-menu-anchor-letter-spacing;
-													text-transform: $evo-off-canvas-menu-anchor-text-transform;
-													text-decoration: none;
-													}
-												}
-				.is-drilldown-submenu-parent	{
-					> a:before,
-					> a:after						{
-													font-family: $evo-off-canvas-menu-anchor-icon-font-family;
-													font-size: $evo-off-canvas-menu-anchor-icon-font-size;
-													position: relative;
-													top: $evo-off-canvas-menu-anchor-icon-position-top;
-													}
-												}
-											}
 
-			// DRILLDOWN MENU BACK BUTTON
-			.js-drilldown-back				{
-				> a								{
-												padding-top: $evo-off-canvas-menu-back-padding-top;
-												padding-bottom: $evo-off-canvas-menu-back-padding-bottom;
-												letter-spacing: $evo-off-canvas-menu-back-letter-spacing !important;
-												text-transform: $evo-off-canvas-menu-back-text-transform !important;
-					&:before,
-					&:after							{
-													font-family: $evo-off-canvas-menu-back-icon-font-family;
-													font-size: $evo-off-canvas-menu-anchor-icon-font-size;
-													position: relative;
-													top: $evo-off-canvas-menu-back-icon-position-top;
+				// DRILLDOWN ITEMS
+				li								{
+
+					// DRILLDOWN LABELS
+					label							{
+													background-color: $evo-off-canvas-label-background-color;
+													color: $evo-off-canvas-label-color;
+													font-size: $evo-off-canvas-label-font-size;
+													height: $evo-off-canvas-title-bar-height;
+													line-height: $evo-off-canvas-label-line-height;
+													font-family: $evo-off-canvas-label-font-family;
+													letter-spacing: $evo-off-canvas-label-letter-spacing;
+													text-transform: $evo-off-canvas-label-text-transform;
+													padding: $evo-off-canvas-label-padding;
+													}
+
+					// DRILLDOWN LINKS
+					a								{
+													display: block;
+													color: $evo-off-canvas-item-anchor-color;
+													font-size: $evo-off-canvas-item-anchor-font-size;
+													line-height: $evo-off-canvas-item-anchor-line-height;
+													letter-spacing: $evo-off-canvas-item-anchor-letter-spacing;
+													text-transform: $evo-off-canvas-item-anchor-text-transform;
+													text-decoration: none;
+													padding: $evo-off-canvas-item-anchor-padding;
+													border-bottom: $evo-off-canvas-item-anchor-border;
+													}
+
+					// DRILLDOWN MENU BACK BUTTON
+					&.js-drilldown-back				{
+						> a								{
+														background-color: $evo-off-canvas-back-background-color;
+														color: $evo-off-canvas-back-color;
+														font-size: $evo-off-canvas-back-font-size;
+														height: $evo-off-canvas-title-bar-height;
+														line-height: $evo-off-canvas-back-line-height;
+														letter-spacing: $evo-off-canvas-back-letter-spacing;
+														text-transform: $evo-off-canvas-back-text-transform;
+														padding: $evo-off-canvas-back-padding;
+														border-bottom: 0; 
+							&:before,
+							&:after							{
+															font-family: $evo-off-canvas-back-icon-font-family;
+															font-size: $evo-off-canvas-item-anchor-icon-font-size;
+															position: relative;
+															top: $evo-off-canvas-back-icon-position-top;
+															border: 0;
+															margin-top: 0;
+															width: auto;
+															height: auto;
+															}
+														}
 													}
 												}
+
+				// DRILLDOWN ITEMS SUBMENU PARENT
+				.is-drilldown-submenu-parent	{
+					> a								{
+						&:before,
+						&:after							{
+														font-family: $evo-off-canvas-item-anchor-icon-font-family;
+														font-size: $evo-off-canvas-item-anchor-icon-font-size;
+														position: relative;
+														top: $evo-off-canvas-item-anchor-icon-position-top;
+														right: 0;
+														border: 0;
+														margin-top: 0;
+														width: auto;
+														height: auto;
+														}
+													}
+												}
+				
+				// DRILLDOWN ITEMS SUBMENU
+				.is-drilldown-submenu			{background-color: $offcanvas-background;}
 											}
 
 			// LEFT OFF-CANVAS MENU
 			&.position-left					{
 				.is-drilldown					{
 					li								{
-						a								{
-														padding-right: $evo-off-canvas-menu-left-anchor-padding-right;
-														}
+						a								{padding-right: $evo-off-canvas-left-item-anchor-padding-right;}
+						&.js-drilldown-back				{
+							> a								{
+								&:before						{
+																content: $evo-off-canvas-left-back-icon;
+																margin-right: $evo-off-canvas-left-back-icon-margin-right;
+																left: $evo-off-canvas-left-back-icon-position-left;
+																width: $evo-off-canvas-left-back-icon-width;
+																}
+								&:after							{display: none;}
+															}
+														}													
 													}
 					.is-drilldown-submenu-parent	{
 						> a								{
-														padding-right: $evo-off-canvas-menu-left-has-submenu-anchor-padding-right;
+														padding-right: $evo-off-canvas-left-item-submenu-parent-anchor-padding-right;
+							&:before						{display: none;}
 							&:after							{
-															content: $evo-off-canvas-menu-left-has-submenu-icon;
 															float: right;
-															top: $evo-off-canvas-menu-left-has-submenu-icon-position-top;
-															margin-left: $evo-off-canvas-menu-left-has-submenu-icon-margin-left;
+															content: $evo-off-canvas-left-item-submenu-parent-icon;
+															margin-left: $evo-off-canvas-left-item-submenu-parent-icon-margin-left;
 															}
-														}
-													}
-												}
-				.js-drilldown-back				{
-					> a								{
-													padding-left: $evo-off-canvas-menu-left-back-anchor-padding-left;
-						&:before						{
-														content: $evo-off-canvas-menu-left-back-icon;
-														margin-right: $evo-off-canvas-menu-left-back-icon-margin-right;
 														}
 													}
 												}
@@ -215,20 +265,31 @@ $evo-off-canvas-menu-right-back-icon-margin-left: 0 !default;
 			// RIGHT OFF-CANVAS MENU
 			&.position-right				{
 				.is-drilldown					{
-					.is-drilldown-submenu-parent	{
-						> a								{
-														line-height: $evo-off-canvas-menu-right-has-submenu-anchor-line-height;
-							&:before						{
-															content: $evo-off-canvas-menu-right-has-submenu-icon;
-															margin-right: $evo-off-canvas-menu-right-has-submenu-icon-margin-right;
+					li								{
+						&.js-drilldown-back				{
+							> a								{
+								&:before						{display: none;}
+								&::after						{
+																content: $evo-off-canvas-right-back-icon;
+																margin-left: $evo-off-canvas-right-back-icon-margin-left;
+																width: $evo-off-canvas-right-back-icon-width;
+																display: inline-block;
+																vertical-align: middle;
+																}
 															}
 														}
 													}
-												}
-				.js-drilldown-back				{
-					> a:after						{
-													content: $evo-off-canvas-menu-right-back-icon;
-													margin-left: $evo-off-canvas-menu-right-back-icon-margin-left;
+					.is-drilldown-submenu-parent	{
+						> a								{
+														padding: $evo-off-canvas-right-item-submenu-parent-anchor-padding;
+							&:before						{
+															content: $evo-off-canvas-right-item-submenu-parent-icon;
+															top: $evo-off-canvas-right-item-submenu-parent-icon-position-top;
+															left: $evo-off-canvas-right-item-submenu-parent-icon-position-left;
+															margin-right: $evo-off-canvas-right-item-submenu-parent-icon-margin-right;
+															}
+							&:after							{display: none;}
+														}
 													}
 												}
 											}
