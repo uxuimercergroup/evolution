@@ -1,22 +1,22 @@
 {
 	"dependency_data" : {
+		"_comment": "For dependencies use this below line example in the dependecies section, replace single quotes to double quotes",
+		"_comment": "{'name': '', 'url': ''}",
+
 		"dependency": "true",
 		"foundation": "true",
 		"foundation_dependencies": [
 			{"name": "Button", "url": "http://foundation.zurb.com/sites/docs/button.html"}
 		],
+
 		"evolution": "true",
-		"evolution_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"evolution_dependencies": [],
+
 		"jquery": "true",
-		"jquery_ui": "",
-		"jquery_ui_dependencies": [
-			{"name": "", "url": ""}
-		],
-		"other": [
-			{"name": "", "url": "", "external_link": "true"}
-		]
+
+		"jquery_ui": "false",
+		"jquery_ui_dependencies": [],
+		"other": []
 	},
 
 	"data": {

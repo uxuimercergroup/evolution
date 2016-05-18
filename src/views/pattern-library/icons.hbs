@@ -215,45 +215,10 @@ Vector image icons gives the system more diverse use in digital and other applic
 
 			<section class="row" data-equalizer="tab-panel">
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Content for something 2
-<!--
-					<div class="evo-table-small-mediaquery">
-						<table class="evo-table test-table" id="evo-data-table-pattern-library-icons" data-evo-data-table="evo-data-table-pattern-library-icons" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
-							<thead>
-								<tr>
-									<th scope="column">Default</th>
-									<th scope="column">Name</th>
-									<th scope="column">Reverse</th>
-									<th scope="column">Class</th>
-									<th scope="column">Keywords</th>
-								</tr>
-							</thead>
-							<tbody>
-
-								{{#each icons.icon}}
-								<tr>
-									<td class="text-center copy-to-clipboard" title="evo-icon-{{{ properties.name }}}" data-clipboard-snippet data-clipboard-text="evo-icon-{{{ properties.name }}}">
-										<i class="evo-icon-{{{ properties.name }}} evo-icon-size-medium"></i>
-										<span class="hide">evo-icon-{{{ properties.name }}}</span>
-										<span class="hide">{{{ properties.name }}}</span>
-									</td>
-									<td>{{{ properties.name }}}</td>
-									<td class="text-center icon-table-cell-reverse-background">
-										<i class="evo-icon-{{{ properties.name }}} evo-icon-color-white"></i>
-										<span class="hide">{{{ properties.name }}}</span>
-									</td>
-									<td>evo-icon-{{{ properties.name }}}</td>
-									<td>{{ join icon.tags ", "}}</td>
-								</tr>
-								{{/each}}
-
-							</tbody>
-						</table>
-					</div>
--->
+					&nbsp;
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Magellan 2
+					&nbsp;
 				</div>
 			</section>
 			
@@ -265,7 +230,7 @@ Vector image icons gives the system more diverse use in digital and other applic
 
 			<section class="row" data-equalizer="tab-panel">
 				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Content for something 3
+					&nbsp;
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
@@ -277,61 +242,53 @@ Vector image icons gives the system more diverse use in digital and other applic
 						<hr>
 						--}}
 
-						{{#is icons.dependency_data.dependency 'true'}}
-
-					<!-- SIDENAV ACCORDION - BEGINS -->
-						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion>
-						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
-							<li class="accordion-item is-active" data-accordion-item>
-								<a href="#dependencies-accordion" class="accordion-title" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
-								<div class="accordion-content" data-tab-content>
-
-									<ul class="no-bullet">
-										{{#is icons.dependency_data.foundation 'true'}}
-											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if icons.dependency_data.foundation_dependencies}}
-												<ul>
-												{{#each icons.dependency_data.foundation_dependencies}}
-													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											{{/if}}
-											</li>
-										{{/is}}
-										{{#is icons.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.version}}</a>
-											{{#if icons.dependency_data.evolution_dependencies}}
-												<ul>
-												{{#each icons.dependency_data.evolution_dependencies}}
-													<li><a href="{{url}}">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											</li>
-											{{/if}}
-										{{/is}}
-										{{#is icons.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is icons.dependency_data.jquery_ui 'true'}}
-											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
-											{{#if icons.dependency_data.jquery_ui_dependencies}}
-												<ul>
-												{{#each icons.dependency_data.jquery_ui_dependencies}}
-													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											{{/if}}
-											</li>
-										{{/is}}
-										{{#each icons.dependency_data.other}}
-											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+							{{#is icons.dependency_data.dependency 'true'}}
+						<!-- DEPENDECY SIDENAV - BEGINS -->
+							<h6>{{pattern-library.sidenav.dependencies_header}}</h6>
+							<ul class="no-bullet evo-site--pattern-library-dependency-sidenav">
+								{{#is icons.dependency_data.foundation 'true'}}
+									<li>
+										<a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
+									{{#if icons.dependency_data.foundation_dependencies}}
+										<ul class="no-bullet">
+										{{#each icons.dependency_data.foundation_dependencies}}
+											<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 										{{/each}}
-									</ul>
-
-								</div>
-							</li>
-						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
-						</ul>
-					<!-- SIDENAV ACCORDION - ENDS -->
-						{{/is}}
+										</ul>
+									{{/if}}
+									</li>
+								{{/is}}
+								{{#is icons.dependency_data.evolution 'true'}}
+									<li><a href="/">Evolution {{package.version}}</a>
+									{{#if icons.dependency_data.evolution_dependencies}}
+										<ul class="no-bullet">
+										{{#each icons.dependency_data.evolution_dependencies}}
+											<li><a href="{{url}}">{{name}}</a></li>
+										{{/each}}
+										</ul>
+									{{/if}}
+									</li>
+								{{/is}}
+								{{#is icons.dependency_data.jquery 'true'}}
+									<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>
+								{{/is}}
+								{{#is icons.dependency_data.jquery_ui 'true'}}
+									<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
+									{{#if icons.dependency_data.jquery_ui_dependencies}}
+										<ul class="no-bullet">
+										{{#each icons.dependency_data.jquery_ui_dependencies}}
+											<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+										{{/each}}
+										</ul>
+									{{/if}}
+									</li>
+								{{/is}}
+								{{#each icons.dependency_data.other}}
+									<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+								{{/each}}
+							</ul>
+						<!-- DEPENDECY SIDENAV - ENDS -->
+							{{/is}}
 
 					</div>
 				<!-- SIDENAV - ENDS -->

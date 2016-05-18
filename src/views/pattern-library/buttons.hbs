@@ -177,61 +177,53 @@ Buttons act as the focal point for user interaction as it relates to saving data
 						<hr>
 						--}}
 
-						{{#is buttons.dependency_data.dependency 'true'}}
-
-					<!-- SIDENAV ACCORDION - BEGINS -->
-						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion>
-						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
-							<li class="accordion-item is-active" data-accordion-item>
-								<a href="#dependencies-accordion" class="accordion-title" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
-								<div class="accordion-content" data-tab-content>
-
-									<ul class="no-bullet">
-										{{#is buttons.dependency_data.foundation 'true'}}
-											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if buttons.dependency_data.foundation_dependencies}}
-												<ul>
-												{{#each buttons.dependency_data.foundation_dependencies}}
-													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											{{/if}}
-											</li>
-										{{/is}}
-										{{#is buttons.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.version}}</a>
-											{{#if buttons.dependency_data.evolution_dependencies}}
-												<ul>
-												{{#each buttons.dependency_data.evolution_dependencies}}
-													<li><a href="{{url}}">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											</li>
-											{{/if}}
-										{{/is}}
-										{{#is buttons.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is buttons.dependency_data.jquery_ui 'true'}}
-											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
-											{{#if buttons.dependency_data.jquery_ui_dependencies}}
-												<ul>
-												{{#each buttons.dependency_data.jquery_ui_dependencies}}
-													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											{{/if}}
-											</li>
-										{{/is}}
-										{{#each buttons.dependency_data.other}}
-											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+							{{#is buttons.dependency_data.dependency 'true'}}
+						<!-- DEPENDECY SIDENAV - BEGINS -->
+							<h6>{{pattern-library.sidenav.dependencies_header}}</h6>
+							<ul class="no-bullet evo-site--pattern-library-dependency-sidenav">
+								{{#is buttons.dependency_data.foundation 'true'}}
+									<li>
+										<a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
+									{{#if buttons.dependency_data.foundation_dependencies}}
+										<ul class="no-bullet">
+										{{#each buttons.dependency_data.foundation_dependencies}}
+											<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 										{{/each}}
-									</ul>
-
-								</div>
-							</li>
-						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
-						</ul>
-					<!-- SIDENAV ACCORDION - ENDS -->
-						{{/is}}
+										</ul>
+									{{/if}}
+									</li>
+								{{/is}}
+								{{#is buttons.dependency_data.evolution 'true'}}
+									<li><a href="/">Evolution {{package.version}}</a>
+									{{#if buttons.dependency_data.evolution_dependencies}}
+										<ul class="no-bullet">
+										{{#each buttons.dependency_data.evolution_dependencies}}
+											<li><a href="{{url}}">{{name}}</a></li>
+										{{/each}}
+										</ul>
+									{{/if}}
+									</li>
+								{{/is}}
+								{{#is buttons.dependency_data.jquery 'true'}}
+									<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>
+								{{/is}}
+								{{#is buttons.dependency_data.jquery_ui 'true'}}
+									<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
+									{{#if buttons.dependency_data.jquery_ui_dependencies}}
+										<ul class="no-bullet">
+										{{#each buttons.dependency_data.jquery_ui_dependencies}}
+											<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+										{{/each}}
+										</ul>
+									{{/if}}
+									</li>
+								{{/is}}
+								{{#each buttons.dependency_data.other}}
+									<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+								{{/each}}
+							</ul>
+						<!-- DEPENDECY SIDENAV - ENDS -->
+							{{/is}}
 					
 					</div>
 				<!-- SIDENAV - ENDS -->

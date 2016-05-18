@@ -803,6 +803,18 @@ URL: {{ meta_url }}
 											}
 
 		// SIDENAV ACCORDION
+		.evo-site--pattern-library-dependency-sidenav
+											{
+			li									{
+				a									{padding-left: 0;}
+												}
+			ul									{
+												margin-left: rem-calc($evo-base-margin);
+				a									{padding-top: 0;}
+												}
+											}
+
+/*
 		.evo-site--pattern-library-sidenav-accordian
 											{
 			.accordion-navigation				{
@@ -832,6 +844,7 @@ URL: {{ meta_url }}
 													}
 												}
 											}
+*/
 	// SIDENAV - ENDS
 
 	// EXAMPLE BOX - BEGINS
