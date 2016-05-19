@@ -9,26 +9,28 @@
 	<body id="top">
 
 		<!-- OFF-CANVAS WRAPPER - BEGINS -->
-		<div class="off-canvas-wrap evo-off-canvas" data-offcanvas>
-			<div class="inner-wrap">
+		<div class="off-canvas-wrapper evo-off-canvas">
+			<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
 				<!-- HEADER - BEGINS -->
 				{{> header }}
 				<!-- HEADER - ENDS -->
 
-				<!-- PAGE - BEGINS -->
-				<section role="main">
-					{{> body }}
-				</section>
-				<!-- PAGE - ENDS -->
+				<!-- PAGE CONTENT - BEGINS -->
+				<div class="off-canvas-content" data-off-canvas-content>
 
-				<!-- FOOTER - BEGINS -->
-				{{> footer }}
-				<!-- FOOTER - ENDS -->
+					<!-- PAGE - BEGINS -->
+					<section role="main">
+						{{> body }}
+					</section>
+					<!-- PAGE - ENDS -->
 
-				<!-- OFF-CANVAS CLOSE - BEGINS -->
-				<a class="exit-off-canvas"></a>
-				<!-- OFF-CANVAS CLOSE - ENDS -->
+					<!-- FOOTER - BEGINS -->
+					{{> footer }}
+					<!-- FOOTER - ENDS -->
+
+				</div>
+				<!-- PAGE CONTENT - ENDS -->
 
 			</div>
 		</div>

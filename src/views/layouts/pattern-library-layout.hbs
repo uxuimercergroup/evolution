@@ -9,37 +9,39 @@
 	<body id="top">
 
 		<!-- OFF-CANVAS WRAPPER - BEGINS -->
-		<div class="off-canvas-wrap evo-off-canvas" data-offcanvas>
-			<div class="inner-wrap">
+		<div class="off-canvas-wrapper evo-off-canvas">
+			<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
 				<!-- HEADER - BEGINS -->
 				{{> header }}
 				<!-- HEADER - ENDS -->
 
-				<!-- PAGE - BEGINS -->
-				<section role="main">
-					<div class="row expanded" data-equalizer="pattern-library-layout" data-equalize-on="medium">
-						<div class="medium-9 medium-push-3 large-10 large-push-2 columns{{#is basename 'index'}} evo-site--pattern-library-homepage-content-ctn{{/is}}" data-equalizer-watch="pattern-library-layout">
-							{{> body }} 
-						</div>
-						<div class="medium-3 medium-pull-9 large-2 large-pull-10 columns evo-site--pattern-library-sidebar" id="jumpToNav" data-equalizer-watch="pattern-library-layout">
-						{{#is basename 'front-end-code-standards'}}
-							{{> front-end-code-standards-sidebar }}
-						{{else}}
-							{{> pattern-library-sidebar }}
-						{{/is}}
-						</div>
-					</div>
-				</section>
-				<!-- PAGE - ENDS -->
+				<!-- PAGE CONTENT - BEGINS -->
+				<div class="off-canvas-content" data-off-canvas-content>
 
-				<!-- FOOTER - BEGINS -->
-				{{> footer }}
-				<!-- FOOTER - ENDS -->
+					<!-- PAGE - BEGINS -->
+					<section role="main">
+						<div class="row expanded" data-equalizer="pattern-library-layout" data-equalize-on="medium">
+							<div class="medium-9 medium-push-3 large-10 large-push-2 columns{{#is basename 'index'}} evo-site--pattern-library-homepage-content-ctn{{/is}}" data-equalizer-watch="pattern-library-layout">
+								{{> body }} 
+							</div>
+							<div class="medium-3 medium-pull-9 large-2 large-pull-10 columns evo-site--pattern-library-sidebar" id="jumpToNav" data-equalizer-watch="pattern-library-layout">
+							{{#is basename 'front-end-code-standards'}}
+								{{> front-end-code-standards-sidebar }}
+							{{else}}
+								{{> pattern-library-sidebar }}
+							{{/is}}
+							</div>
+						</div>
+					</section>
+					<!-- PAGE - ENDS -->
 
-				<!-- OFF-CANVAS CLOSE - BEGINS -->
-				<a class="exit-off-canvas"></a>
-				<!-- OFF-CANVAS CLOSE - ENDS -->
+					<!-- FOOTER - BEGINS -->
+					{{> footer }}
+					<!-- FOOTER - ENDS -->
+
+				</div>
+				<!-- PAGE CONTENT - ENDS -->
 
 			</div>
 		</div>

@@ -78,6 +78,7 @@ $evo-off-canvas-right-back-icon-width: $evo-off-canvas-left-back-icon-width !def
 
 	// OFF-CANVAS
 	.evo-off-canvas					{
+									overflow-y: hidden; // Fixes a bug with off-canvas and AniJS scroll reveal
 
 		// TITLE BAR
 		.title-bar						{
@@ -152,6 +153,7 @@ $evo-off-canvas-right-back-icon-width: $evo-off-canvas-left-back-icon-width !def
 			
 			// DRILLDOWN MENU
 			.is-drilldown					{
+											overflow: visible; // Fixes bug with off-canvas menu hiding part of drilldown menu
 
 				// DRILLDOWN ITEMS
 				li								{
