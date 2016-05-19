@@ -134,7 +134,7 @@ Callouts are the basic building blocks of any web site or component. Evolution c
 		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col3" data-equalizer-watch="tab-panel">
 					
 				<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
@@ -147,13 +147,14 @@ Callouts are the basic building blocks of any web site or component. Evolution c
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
-						{{!--
-						<dl class="sub-nav">
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
-						</dl>
-						<hr>
-						--}}
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col3" data-sticky-on="large" data-sticky>
+							
+							{{!--
+							<ul class="menu vertical" data-magellan>
+								<li><a href="#{{hyphenate }}">{{}}</a></li>
+							</ul>
+							--}}
 
 							{{#is callout.dependency_data.dependency 'true'}}
 						<!-- DEPENDECY SIDENAV - BEGINS -->
@@ -202,7 +203,7 @@ Callouts are the basic building blocks of any web site or component. Evolution c
 							</ul>
 						<!-- DEPENDECY SIDENAV - ENDS -->
 							{{/is}}
-
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>

@@ -126,7 +126,7 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col3" data-equalizer-watch="tab-panel">
 					
 					<!-- CONTENT SECTION - BEGINS -->
 						<section class="evo-site-tabs-content--pattern-library-tab-content-section">
@@ -139,7 +139,8 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col3" data-sticky-on="large" data-sticky>
 						{{!--
 						<dl class="sub-nav">
 							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
@@ -194,7 +195,7 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 							</ul>
 						<!-- DEPENDECY SIDENAV - ENDS -->
 							{{/is}}
-
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
@@ -317,7 +318,7 @@ Use these helper classes along with the animation type class and the `animated` 
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 					
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+					<div class="evo-site--pattern-library-sidenav-magellan">
 						<dl class="sub-nav">
 							<dd><a data-evo-scroll-to-location href="#{{hyphenate animations.animation_type_settings_header}}">{{animations.animation_type_settings_header}}</a></dd>
 							<dd><a data-evo-scroll-to-location href="#{{hyphenate animations.animation_helpers_settings_header}}">{{animations.animation_helpers_settings_header}}</a></dd>

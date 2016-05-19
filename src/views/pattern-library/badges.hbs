@@ -134,17 +134,17 @@ Badges provide small indicators of information at a quick glance.
 		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col3" data-equalizer-watch="tab-panel">
 					&nbsp;
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col3" data-sticky-on="large" data-sticky>
 						{{!--
-						<dl class="sub-nav">
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
-						</dl>
-						<hr>
+						<ul class="menu vertical" data-magellan>
+							<li><a href="#{{hyphenate }}">{{}}</a></li>
+						</ul>
 						--}}
 
 							{{#is badges.dependency_data.dependency 'true'}}
@@ -194,7 +194,7 @@ Badges provide small indicators of information at a quick glance.
 							</ul>
 						<!-- DEPENDECY SIDENAV - ENDS -->
 							{{/is}}
-
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
