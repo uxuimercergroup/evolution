@@ -15,7 +15,7 @@
 //
 $evo-top-bar-height: $evo-base-navbar-height !default;
 $evo-top-bar-background: $evo-primary-color !default;
-$evo-top-bar-submenu-background: $evo-top-bar-background !default;
+$evo-top-bar-submenu-background: scale-color($evo-top-bar-background, $lightness: -15%) !default;
 $evo-top-bar-anchor-decoration: none !default;
 $evo-top-bar-icon-font-family: $evo-icon-font-stack !default;
 $evo-top-bar-title-padding: 0 $evo-base-padding !default;
@@ -36,12 +36,14 @@ $evo-top-bar-dropdown-box-shadow-spread: $evo-base-shadow-spread !default;
 $evo-top-bar-dropdown-box-shadow-color: $evo-base-shadow-color !default;
 $evo-top-bar-dropdown-min-width: auto !default;
 $evo-top-bar-dropdown-white-space: nowrap !default;
-$evo-top-bar-dropdown-label-background: scale-color($evo-top-bar-background, $lightness: -15%) !default;
+$evo-top-bar-dropdown-item-border: 1px solid scale-color($evo-top-bar-background, $lightness: -35%) !default;
+$evo-top-bar-dropdown-item-hover-background: scale-color($evo-top-bar-background, $lightness: -25%) !default;
+$evo-top-bar-dropdown-label-background: scale-color($evo-top-bar-background, $lightness: -35%) !default;
 $evo-top-bar-dropdown-label-white-space: nowrap !default;
 $evo-top-bar-dropdown-label-color: $white !default;
 $evo-top-bar-dropdown-label-font-size: rem-calc(12) !default;
 $evo-top-bar-dropdown-label-line-height: 1 !default;
-$evo-top-bar-dropdown-label-padding: 0.65rem $evo-base-padding ($evo-base-padding/2) $evo-base-padding;
+$evo-top-bar-dropdown-label-padding: 0.65rem $evo-base-padding ($evo-base-padding/2) $evo-base-padding !default;
 $evo-top-bar-dropdown-label-text-transform: uppercase !default;
 $evo-top-bar-dropdown-anchor-color: scale-color($evo-top-bar-background, $lightness: 75%) !default;
 $evo-top-bar-dropdown-anchor-padding: $evo-base-padding !default;
@@ -50,27 +52,18 @@ $evo-top-bar-dropdown-anchor-icon-font-size: rem-calc(24) !default;
 $evo-top-bar-dropdown-anchor-with-icon-position-top: -2px !default;
 $evo-top-bar-dropdown-anchor-active-color: $white !default;
 $evo-top-bar-dropdown-anchor-active-background: scale-color($evo-top-bar-background, $lightness: 10%) !default;
-$evo-top-bar-dropdown-submenu-parent-padding-right: rem-calc(24) !default;
+$evo-top-bar-dropdown-submenu-parent-padding-right: rem-calc(40) !default;
 $evo-top-bar-dropdown-submenu-parent-icon: '\edc6' !default;
 $evo-top-bar-dropdown-submenu-parent-icon-position-top: 0 !default;
-$evo-top-bar-dropdown-submenu-parent-icon-position-right: 19px !default;
+$evo-top-bar-dropdown-submenu-parent-icon-position-right: 30px !default;
 $evo-top-bar-dropdown-submenu-parent-submenu-anchor-padding-right: rem-calc(40) !default;
 $evo-top-bar-dropdown-submenu-parent-submenu-icon-position-top: 1px !default;
 $evo-top-bar-dropdown-submenu-parent-submenu-icon-position-right: 28px !default;
 $evo-top-bar-dropdown-submenu-parent-submenu-opens-right-icon: '\edc5' !default;
 $evo-top-bar-dropdown-submenu-parent-submenu-opens-left-icon: '\edc7' !default;
-
-
-
-$evo-top-bar-dropdown-anchor-active-background-color: $primary-color !default;
-
-
-$evo-top-bar-mega-menu-ctn-padding: rem-calc(20) !default;
-$evo-top-bar-mega-menu-ctn-border-top-width: 2px !default;
-$evo-top-bar-mega-menu-ctn-border-top-style: solid !default;
-$evo-top-bar-mega-menu-ctn-border-top-color: $evo-primary-color !default;
-$evo-top-bar-mega-menu-ctn-background-color: $onyx-dark-6 !default;
-$evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
+$evo-top-bar-mega-menu-padding: $evo-base-padding !default;
+$evo-top-bar-mega-menu-background-color: $onyx-dark-6 !default;
+$evo-top-bar-mega-menu-max-width: 100% !default;
 
 
 @if $use-top-bar == true{
@@ -82,8 +75,8 @@ $evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
 
 			// TOP BAR GLOBAL
 			&,
-			ul								{background-color: $evo-top-bar-background;}
-			ul ul 							{background-color: $evo-top-bar-submenu-background;}
+			ul								{background: $evo-top-bar-background;}
+			ul ul 							{background: $evo-top-bar-submenu-background;}
 			a								{text-decoration: $evo-top-bar-anchor-decoration;}
 
 			// TOP BAR TITLE
@@ -126,7 +119,8 @@ $evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
 														padding-left: $evo-top-bar-dropdown-anchor-padding;
 
 							// DROPDOWN MENU ITEM ANCHOR HOVER
-							&:hover							{color: $evo-top-bar-dropdown-anchor-hover-color;}
+							&:hover,
+							&:focus							{color: $evo-top-bar-dropdown-anchor-hover-color;}
 							
 							// DROPDOWN MENU ITEM ANCHOR AS ICONS
 							&[class^="evo-icon-"]			{
@@ -154,6 +148,13 @@ $evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
 
 						// DROPDOWN MENU ITEM WITH SUBMENU
 						&.is-dropdown-submenu-parent	{
+
+							// DROPDOWN MENU ITEM IS ACTIVE AND SUBMENU IS OPEN
+							&.is-active						{
+															background-color: $evo-top-bar-submenu-background;
+								> a								{color: $evo-top-bar-dropdown-anchor-hover-color;}
+															}
+
 							> a								{
 															padding-right: $evo-top-bar-dropdown-submenu-parent-padding-right;
 								
@@ -183,8 +184,23 @@ $evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
 													@include box-shadow($evo-top-bar-dropdown-box-shadow-horizontal $evo-top-bar-dropdown-box-shadow-vertical $evo-top-bar-dropdown-box-shadow-blur $evo-top-bar-dropdown-box-shadow-spread $evo-top-bar-dropdown-box-shadow-color);
 													min-width: $evo-top-bar-dropdown-min-width;
 													white-space: $evo-top-bar-dropdown-white-space;
-							li:last-child				{
-								> a							{@include border-radius($evo-top-bar-dropdown-border-radius);}
+							li							{
+														border-bottom: $evo-top-bar-dropdown-item-border;
+								&:first-child				{border-top: 1px solid $transparent;}
+								&:last-child				{
+															border-bottom: 0;
+									> a							{@include border-radius($evo-top-bar-dropdown-border-radius);}
+															}
+								&.active					{
+									> a							{
+										&:hover,
+										&:focus						{background-color: $evo-top-bar-dropdown-anchor-active-background;}
+																}
+															}
+								> a							{
+									&:hover,
+									&:focus						{background-color: $evo-top-bar-dropdown-item-hover-background;}
+															}
 														}
 
 							// LABEL
@@ -230,87 +246,68 @@ $evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
 															}
 														}
 													}
-												}
 
+					// DROPDOWN MEGA MENU
+					li[data-evo-mega-menu]			{
+						
+						// MEGA MENU ITEM
+						> a								{
+														padding-right: $evo-top-bar-dropdown-submenu-parent-padding-right;
+														position: relative;
 
+							// MEGA MENU ITEM IS ACTIVE
+							&.hover							{
+															background-color: $evo-top-bar-submenu-background;
+															color: $evo-top-bar-dropdown-anchor-hover-color;
+															}
 
+							// ARROW ICON
+							&:after							{
+															font-family: $evo-top-bar-icon-font-family;
+															content: $evo-top-bar-dropdown-submenu-parent-icon;
+															position: absolute;
+															top: $evo-top-bar-dropdown-submenu-parent-icon-position-top;
+															right: $evo-top-bar-dropdown-submenu-parent-icon-position-right;
+															border: 0;
+															margin-top: 0;
+															width: 0;
+															height: 0;
+															}
 
-				// TOP BAR NAV DROPDOWN MENU CONTAINER
-				.has-dropdown					{
-										
-					// TOP BAR NAV DROPDOWN MENU
-					.dropdown 						{
-													
-						li								{
-
-
-							// TOP BAR NAV DROPDOWN MENU ACTIVE LINKS 
-							&.active:not(.has-form)			{
-								a:not(.button)					{
-																background-color: $evo-top-bar-dropdown-anchor-active-background-color;
-																}
+							// MEGA MENU ITEM  WITH ICON AS ITEM TEXT
+							&[class^="evo-icon-"]			{
+															padding-right: $evo-top-bar-dropdown-anchor-padding;
+								&:after							{display: none;}
 															}
 														}
 
-						li.has-dropdown					{
-							> a 							{
-								
-								
-															}
-														}
-													}
-												}
+						// MEGA MENU DROPDOWN PANE
+						.dropdown-pane.is-open			{
+														@include border-radius($evo-top-bar-dropdown-border-radius);
+														@include box-shadow($evo-top-bar-dropdown-box-shadow-horizontal $evo-top-bar-dropdown-box-shadow-vertical $evo-top-bar-dropdown-box-shadow-blur $evo-top-bar-dropdown-box-shadow-spread $evo-top-bar-dropdown-box-shadow-color);
+														display: block;
+														padding: $evo-top-bar-mega-menu-padding;
+														margin-top: rem-calc(-1);
+														border: 0;
+														background-color: $evo-top-bar-mega-menu-background-color;
+														max-width: $evo-top-bar-mega-menu-max-width !important;
+														width: 100% !important;
+														left: 0 !important;
 
-				// TOP BAR - MEGA MENU
-				[data-evo-top-bar-mega-menu]	{
-
-					// TOP BAR - MEGA MENU CONTAINER
-					[data-evo-top-bar-mega-menu-ctn]
-													{
-						> li							{
-														padding: $evo-top-bar-mega-menu-ctn-padding;
-														border-top: $evo-top-bar-mega-menu-ctn-border-top-width $evo-top-bar-mega-menu-ctn-border-top-style $evo-top-bar-mega-menu-ctn-border-top-color;
-														background-color: $evo-top-bar-mega-menu-ctn-background-color;
-							&:last-child					{@include border-radius($evo-top-bar-mega-menu-ctn-border-radius);}
-
-							// TOP BAR - MEGA MENU CONTENT CONTAINER
-							[data-evo-top-bar-mega-menu-content-ctn]
-															{
-								ul								{
-																display: block;
-																margin-bottom: $evo-base-margin;
-									li								{
-																	width: auto;
-																	float: none;
-																	background: none;
-										a								{
-																		@include border-radius(0);
-																		background: none;
-																		color: $anchor-color;
-											&:hover							{
-																			background: none;
-																			color: $anchor-color-hover;
-																			}
-																		}
+							// MEGA MENU DROPDOWN PANE CONTENT
+							ul								{
+															background: none;
+								li								{
+									a								{
+																	text-decoration: $evo-base-anchor-text-decoration;
+										&:hover,
+										&:focus							{text-decoration: $evo-base-anchor-text-decoration-hover;}
 																	}
 																}
 															}
-								a							{
-															padding: 0;
-															line-height: 1.5;
-															background: none;
-															color: $anchor-color;
-															text-decoration: $anchor-text-decoration;
-									&:hover						{
-																background: none;
-																color: $anchor-color-hover;
-																text-decoration: $anchor-text-decoration-hover;
-																}
-															}
 														}
 													}
 												}
-
 											}
 										}
 

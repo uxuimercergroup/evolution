@@ -16,10 +16,10 @@
 			<ul class="dropdown menu" data-dropdown-menu>
 
 				<!-- TOP BAR - MEGA MENU - BEGINS -->
-				<li>
-					<a href="#/" class="dropdown" data-toggle="mega-menu">Mega Menu</a>
+				<li data-evo-mega-menu>
+					<a class="dropdown" data-toggle="mega-menu">Mega Menu</a>
 					<div class="dropdown-pane" id="mega-menu" data-dropdown data-options="closeOnClick:true; hover: true; hoverPane: true;">
-						<div class="row" data-evo-top-bar-mega-menu-content-ctn>
+						<div class="row">
 							<div class="large-3 columns">
 								<h6 class="evo-hdr-rule">H6 Header</h6>
 								<ul class="no-bullet">
@@ -62,13 +62,13 @@
 				<!-- TOP BAR - MEGA MENU - ENDS -->
 
 				<li>
-					<a href="#/">Item 1</a>
+					<a href="javascript:;">Item 1</a>
 					<ul class="dropdown menu" data-dropdown-menu>
 						<li>
 							<a href="#/">Sub-item 1</a>
 						</li>
 						<li>
-							<a href="#/">Sub-item 2</a>
+							<a href="javascript:;">Sub-item 2</a>
 							<ul class="dropdown menu" data-dropdown-menu>
 								<li>
 									<a href="#/">Sub-sub-item 1</a>
@@ -92,9 +92,6 @@
 						</li>
 					</ul>
 				</li>
-				<li>
-					<a href="#/"><i class="evo-icon-user evo-icon-position-left"></i>Item 2</a>
-				</li>
 			</ul>
 		</div>
 		<!-- TOP BAR LEFT SECTION - ENDS -->
@@ -102,37 +99,19 @@
 		<!-- TOP BAR RIGHT SECTION - BEGINS -->
 		<div class="top-bar-right">
 			<ul class="dropdown menu" data-dropdown-menu>
-				<li>
-					<a href="#/">Item 3</a>
-				</li>
 				<li class="active">
-					<a href="#/">Item 4</a>
+					<a href="#/">Item 2</a>
 				</li>
 				<li>
-					<a class="evo-icon-user"></a>
+					<a href="javascript:;" class="evo-icon-user" aria-label="Open Menu">
+						<span class="show-for-sr">Open Menu</span>
+					</a>
 					<ul class="dropdown menu" data-dropdown-menu>
-						<li>
-							<label>Menu Label</label>
-						</li>
 						<li>
 							<a href="#/">Sub-item 1</a>
 						</li>
 						<li>
 							<a href="#/">Sub-item 2</a>
-							<ul class="dropdown menu" data-dropdown-menu>
-								<li>
-									<a href="#/">Sub-sub-item 1</a>
-								</li>
-								<li>
-									<a href="#/">Sub-sub-item 2</a>
-								</li>
-								<li>
-									<a href="#/">Sub-sub-item 3</a>
-								</li>
-								<li>
-									<a href="#/">Sub-sub-item 4</a>
-								</li>
-							</ul>
 						</li>
 						<li class="active">
 							<a href="#/">Sub-item 3</a>

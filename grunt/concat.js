@@ -66,8 +66,7 @@ module.exports = {
         'src/assets/js/core/molecules/autocomplete.js',
         'src/assets/js/core/molecules/data_table.js',
         'src/assets/js/core/molecules/datepicker.js',
-        'src/assets/js/core/molecules/slider.js',
-        'src/assets/js/core/molecules/top_bar.js'
+        'src/assets/js/core/molecules/slider.js'
       ]
     }
   },
