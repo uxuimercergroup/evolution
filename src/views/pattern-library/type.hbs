@@ -109,7 +109,7 @@ Proxima Nova has been implemented as the default font family for Evolution as a 
 		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel1">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col2" data-equalizer-watch="tab-panel">
 					
 				<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate type.font_families_header}}">
@@ -214,14 +214,40 @@ This is a demo of Western Latin characters to show off the compatibility of the 
 
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
-						<dl class="sub-nav">
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate type.font_families_header}}">{{type.font_families_header}}</a></dd>
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate type.hierarchy_header}}">{{type.hierarchy_header}}</a></dd>
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate type.characters_header}}">{{type.characters_header}}</a></dd>
-						</dl>
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col2" data-sticky-on="large" data-sticky>
+							<ul class="menu vertical" data-magellan>
+								<li><a href="#{{hyphenate type.font_families_header}}">{{type.font_families_header}}</a></li>
+								<li><a href="#{{hyphenate type.hierarchy_header}}">{{type.hierarchy_header}}</a></li>
+								<li><a href="#{{hyphenate type.characters_header}}">{{type.characters_header}}</a></li>
+							</ul>
+						</nav>
+					</div>
+				<!-- SIDENAV - ENDS -->
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 2 - BEGINS -->
+
+	<!-- TAB PANEL 3 - BEGINS -->
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
+
+			<section class="row" data-equalizer="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col3" data-equalizer-watch="tab-panel">
+					&nbsp;
+				</div>
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<!-- SIDENAV - BEGINS -->
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col3" data-sticky-on="large" data-sticky>
+							
+							{{!--
+							<ul class="menu vertical" data-magellan>
+								<li><a href="#{{hyphenate }}">{{}}</a></li>
+							</ul>
+							--}}
 
 							{{#is type.dependency_data.dependency 'true'}}
 						<!-- DEPENDECY SIDENAV - BEGINS -->
@@ -270,32 +296,8 @@ This is a demo of Western Latin characters to show off the compatibility of the 
 							</ul>
 						<!-- DEPENDECY SIDENAV - ENDS -->
 							{{/is}}
-						
-					</div>
-				<!-- SIDENAV - ENDS -->
 
-				</div>
-			</section>
-			
-		</section>
-	<!-- TAB PANEL 2 - BEGINS -->
-
-	<!-- TAB PANEL 3 - BEGINS -->
-		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
-
-			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					Content for something 3
-				</div>
-				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
-						{{!--
-						<dl class="sub-nav">
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
-						</dl>
-						<hr>
-						--}}
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
