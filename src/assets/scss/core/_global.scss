@@ -125,6 +125,8 @@ $evo-base-font-antialiased:					true !default;
 $evo-base-header-color:						inherit !default;
 
 // LINKS
+$evo-base-anchor-color: 					$evo-primary-color;
+$evo-base-anchor-color-hover: 				scale-color($evo-base-anchor-color, $lightness: -14%);
 $evo-base-anchor-text-decoration:			none;
 $evo-base-anchor-text-decoration-hover:		underline;
 

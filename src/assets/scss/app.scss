@@ -106,55 +106,6 @@ URL: {{ meta_url }}
 										}
 // BUTTONS - ENDS
 
-// HEADER - BEGINS
-	.evo-site-header					{
-
-		// WHAT'S NEW CALL TO ACTION
-		.evo-site-header--cta-whats-new		{
-											color: $evo-site-header-cta-whats-new-color;
-											font-family: $evo-site-header-cta-whats-new-font-family;
-											letter-spacing: $evo-site-header-cta-whats-new-letter-spacing !important;
-											text-transform: $evo-site-header-cta-whats-new-text-transform !important;
-											background-color: $evo-site-header-cta-whats-new-background-color !important;
-			&:hover								{background-color: $evo-site-header-cta-whats-new-hover-background-color !important;}
-			[class^="evo-icon-"]				{
-												color: $evo-site-header-cta-whats-new-icon-color !important;
-												top: 2px !important;
-												left: 85px;
-												}
-			.evo-site-header--cta-whats-new-name
-												{display: inline-block;}
-											}
-
-		// OFF CANVAS
-		.evo-tab-bar-sub-name				{font-family: $evo-site-header-sub-name-font-family;}
-
-		@include breakpoint(large)			{
-			
-			// TOP BAR
-			.evo-top-bar						{
-				.title-area							{
-					.name								{
-						h1									{
-							.evo-top-bar-sub-name				{font-family: $evo-site-header-sub-name-font-family;}
-															}
-														}
-													}
-				.top-bar-section					{
-					ul									{
-						li									{
-							> .evo-site-header--cta-whats-new	{
-								[class^="evo-icon-"]				{left: 0;}
-																}
-															}
-														}
-													}
-												}
-											}
-
-										}
-// HEADER - ENDS
-
 // TYPE - BEGINS
 	
 	// PULL OUT

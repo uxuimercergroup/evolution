@@ -29,8 +29,9 @@ $evo-fat-footer-content-section-min-height: rem-calc(200) !default;
 $evo-fat-footer-logo-margin-bottom: rem-calc(25) !default;
 $evo-fat-footer-content-header-font-color: $onyx-dark !default;
 $evo-fat-footer-content-header-font: rem-calc(12) !default;
-$evo-fat-footer-link-font-color: $sapphire-medium !default;
-$evo-fat-footer-link-font-size: rem-calc(14) !default;
+$evo-fat-footer-anchor-color: $evo-base-anchor-color !default;
+$evo-fat-footer-anchor-hover-color: $evo-base-anchor-color-hover !default;
+$evo-fat-footer-anchor-font-size: rem-calc(14) !default;
 $evo-fat-footer-brand-bar-background-color: $onyx-dark-10 !default;
 $evo-fat-footer-brand-bar-min-height: rem-calc(50) !default;
 $evo-fat-footer-brand-bar-font-color: $onyx-bright !default;
@@ -58,7 +59,8 @@ $evo-product: core;
 	$evo-fat-footer-content-section-background-color: $sapphire-medium;
 	$evo-fat-footer-content-section-border-top-color: $sapphire-dark;
 	$evo-fat-footer-content-header-font-color: $sapphire-light;
-	$evo-fat-footer-link-font-color: $white;
+	$evo-fat-footer-anchor-color: $white;
+	$evo-fat-footer-anchor-hover-color: $white;
 	$evo-fat-footer-brand-bar-background-color: $sapphire-dark;
 	$evo-fat-footer-brand-bar-font-color: $white;
 	$evo-fat-footer-social-media-badge-font-color: $white;
@@ -80,8 +82,9 @@ $evo-product: core;
 // $evo-fat-footer-logo-margin-bottom: rem-calc(25);
 // $evo-fat-footer-content-header-font-color: $onyx-dark;
 // $evo-fat-footer-content-header-font: rem-calc(12);
-// $evo-fat-footer-link-font-color: $sapphire-medium;
-// $evo-fat-footer-link-font-size: rem-calc(14);
+// $evo-fat-footer-anchor-color: $evo-base-anchor-color;
+// $evo-fat-footer-anchor-hover-color: $evo-base-anchor-color-hover;
+// $evo-fat-footer-anchor-font-size: rem-calc(14);
 // $evo-fat-footer-brand-bar-background-color: $onyx-dark-10;
 // $evo-fat-footer-brand-bar-min-height: rem-calc(50);
 // $evo-fat-footer-brand-bar-font-color: $onyx-bright;
@@ -154,10 +157,11 @@ $evo-product: core;
 							text-align: center;
 			li					{
 				a					{
-									color: $evo-fat-footer-link-font-color;
+									color: $evo-fat-footer-anchor-color;
 									display: block;
-									font-size: $evo-fat-footer-link-font-size;
+									font-size: $evo-fat-footer-anchor-font-size;
 									line-height: rem-calc(25);
+					&:hover				{color: $evo-fat-footer-anchor-hover-color;}
 									}
 								}
 

@@ -41,9 +41,8 @@ $evo-conversational-form-input-min-width: rem-calc(55) !default;
 $evo-conversational-form-input-max-width: rem-calc(300) !default;
 $evo-conversational-form-input-padding: rem-calc(0 6) !default;
 $evo-conversational-form-select-min-width: rem-calc(170) !default;
-$evo-conversational-form-select-padding: rem-calc(0 0 0 6) !default;
-$evo-conversational-form-select-shadow: $input-shadow !default;
-$evo-conversational-form-select-hover-background-color: $white !default;
+$evo-conversational-form-select-padding: rem-calc(0 6) !default;
+$evo-conversational-form-select-focus-background-color: $white !default;
 
 //
 // @Product suite organism theme variables - IMPORTANT: DO NOT MODIFY!
@@ -60,7 +59,7 @@ $evo-product: core;
 	$evo-conversational-form-elements-border-bottom-color: $onyx-bright;
 	$evo-conversational-form-elements-font-color: $onyx-bright;
 	$evo-conversational-form-elements-hover-border-bottom-color: $onyx-dark-40;
-	$evo-conversational-form-select-hover-background-color: $evo-form-input-hover-background-color;
+	$evo-conversational-form-select-focus-background-color: $white;
 
 // Benefits Portals
 } @else if $evo-product == bp {
@@ -70,7 +69,7 @@ $evo-product: core;
 	$evo-conversational-form-elements-border-bottom-color: $sapphire-bright;
 	$evo-conversational-form-elements-font-color: $sapphire-bright;
 	$evo-conversational-form-elements-hover-border-bottom-color: $topaz-bright;
-	$evo-conversational-form-select-hover-background-color: $evo-form-input-hover-background-color;
+	$evo-conversational-form-select-focus-background-color: $white ;
 
 }
 
@@ -99,8 +98,7 @@ $evo-product: core;
 // $evo-conversational-form-input-padding: rem-calc(0 6);
 // $evo-conversational-form-select-min-width: rem-calc(170);
 // $evo-conversational-form-select-padding: rem-calc(0 0 0 6);
-// $evo-conversational-form-select-shadow: $input-box-shadow;
-// $evo-conversational-form-select-hover-background-color: $white;
+// $evo-conversational-form-select-focus-background-color: $white;
 
 
 // CONVERSATIONAL FORM - BEGINS
@@ -115,8 +113,7 @@ $evo-product: core;
 											}
 		input,
 		select								{
-											border-radius: $evo-conversational-form-elements-border-radius !important;
-											-webkit-border-radius: $evo-conversational-form-elements-border-radius !important;
+											border-radius: $evo-conversational-form-elements-border-radius;
 											background-color: $evo-conversational-form-elements-background-color;
 											border: $evo-conversational-form-elements-border;
 											border-bottom: $evo-conversational-form-elements-border-bottom-width $evo-conversational-form-elements-border-bottom-style $evo-conversational-form-elements-border-bottom-color;
@@ -137,18 +134,18 @@ $evo-product: core;
 											min-width: $evo-conversational-form-input-min-width;
 											max-width: $evo-conversational-form-input-max-width;
 											padding: $evo-conversational-form-input-padding;
+			&:focus								{
+												border: 0;
+												border-bottom: $evo-conversational-form-elements-border-bottom-width $evo-conversational-form-elements-border-bottom-style $evo-conversational-form-elements-border-bottom-color;
+												}
 											}
 		select								{
 											min-width: $evo-conversational-form-select-min-width;
 											padding: $evo-conversational-form-select-padding;
-			&:hover,
 			&:focus								{
-												@include box-shadow($evo-conversational-form-select-shadow);
-												background-color: $evo-conversational-form-select-hover-background-color;
-												}
-			&:focus								{
-												@include box-shadow(0 0 5px 0 $evo-conversational-form-elements-hover-border-bottom-color);
+												@include box-shadow(0 0 5px 0 $onyx-dark-20);
 												border-bottom-color: $evo-conversational-form-elements-hover-border-bottom-color;
+												background-color: $evo-conversational-form-select-focus-background-color;
 												}
 											}
 										}
