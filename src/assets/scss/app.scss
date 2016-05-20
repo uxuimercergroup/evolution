@@ -748,7 +748,11 @@ URL: {{ meta_url }}
 													color: $evo-site-sidenav-magellan-link-color;
 													display: block;
 													padding: rem-calc(6);
-					&.active							{background-color: $onyx-dark-20;}
+					&.active							{
+														background-color: $onyx-dark-20;
+														color: $onyx-dark-80;
+						&:hover								{text-decoration: none;}
+														}
 													}
 												}
 											}
