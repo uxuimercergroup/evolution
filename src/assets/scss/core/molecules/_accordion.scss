@@ -12,7 +12,7 @@ $evo-accordion-title-font-color: inherit !default;
 $evo-accordion-icon-font-family: $evo-icon-font-stack !default;
 $evo-accordion-icon-open-icon: '\ed5c' !default;
 $evo-accordion-icon-close-icon: '\ed5d' !default;
-$evo-accordion-icon-font-color: inherit !default;
+$evo-accordion-icon-font-color: $evo-primary-color !default;
 
 
 @if $use-accordion == true{

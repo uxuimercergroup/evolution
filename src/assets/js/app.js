@@ -56,8 +56,11 @@
 				// Redraw type characters data table on tab toggling, fixes scrolling table fixed thead injected layout
 				evoSiteDataTableRedraw();
 
-				// Recalculate stickys when tab toggling
-				jQuery('.sticky').foundation('_calc', true);
+				// Recalculate stickys when tab toggling on large media query only
+				var checkMediaQueryLarge = Foundation.MediaQuery.atLeast('large');
+				if (checkMediaQueryLarge) {
+					jQuery('.sticky').foundation('_calc', true);
+				};
 
 			});
 		}

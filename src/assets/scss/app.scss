@@ -200,6 +200,8 @@ URL: {{ meta_url }}
 										display: inline-block;
 		span								{font-family: $evo-site-hero-hdr-sub-name-font-family;}
 
+		@include breakpoint(small only)		{font-family: $evo-site-hero-hdr-sub-name-font-family !important;}
+
 		@include breakpoint(medium only)	{
 			&[data-evo-site-hero-hdr-size="small"]
 												{
@@ -745,13 +747,12 @@ URL: {{ meta_url }}
 			li									{
 												line-height: $evo-site-sidenav-magellan-line-height;
 				a									{
-													color: $evo-site-sidenav-magellan-link-color;
 													display: block;
 													padding: rem-calc(6);
 					&.active							{
 														background-color: $onyx-dark-20;
 														color: $onyx-dark-80;
-						&:hover								{text-decoration: none;}
+														text-decoration: none !important;
 														}
 													}
 												}

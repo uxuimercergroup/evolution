@@ -20,7 +20,7 @@ URL: {{ evo_meta_url }}
 //
 
 // Organism default variables
-$evo-social-media-badge-font-color: $onyx-medium !default;
+$evo-social-media-badge-font-color: $evo-primary-color !default;
 $evo-social-media-badge-font-color-hover: $evo-social-media-badge-font-color !default;
 $evo-social-media-badge-font-color-focus: $evo-social-media-badge-font-color !default;
 $evo-social-media-badge-font-color-visited: $evo-social-media-badge-font-color !default;
@@ -35,7 +35,7 @@ $evo-product: core;
 // Communications
 @if $evo-product == comm {
 
-	$evo-social-media-badge-font-color: $onyx-medium;
+	$evo-social-media-badge-font-color: $evo-primary-color;
 	$evo-social-media-badge-font-color-hover: $evo-social-media-badge-font-color;
 	$evo-social-media-badge-font-color-focus: $evo-social-media-badge-font-color;
 	$evo-social-media-badge-font-color-visited: $evo-social-media-badge-font-color;
@@ -43,7 +43,7 @@ $evo-product: core;
 // Benefits Portals
 } @else if $evo-product == bp {
 
-	$evo-social-media-badge-font-color: $sapphire-medium;
+	$evo-social-media-badge-font-color: $evo-primary-color;
 	$evo-social-media-badge-font-color-hover: $evo-social-media-badge-font-color;
 	$evo-social-media-badge-font-color-focus: $evo-social-media-badge-font-color;
 	$evo-social-media-badge-font-color-visited: $evo-social-media-badge-font-color;

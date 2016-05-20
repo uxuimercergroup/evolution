@@ -31,10 +31,10 @@ $evo-conversational-form-elements-background-color: $onyx-dark-6 !default;
 $evo-conversational-form-elements-border: 0 !default;
 $evo-conversational-form-elements-border-bottom-width: 2px !default;
 $evo-conversational-form-elements-border-bottom-style: solid !default;
-$evo-conversational-form-elements-border-bottom-color: $onyx-bright !default;
-$evo-conversational-form-elements-font-color: $onyx-bright !default;
+$evo-conversational-form-elements-border-bottom-color: $evo-primary-color !default;
+$evo-conversational-form-elements-font-color: $evo-primary-color !default;
 $evo-conversational-form-elements-margin-bottom: 0 !default;
-$evo-conversational-form-elements-hover-border-bottom-color: $onyx-dark-40 !default;
+$evo-conversational-form-elements-hover-border-bottom-color: scale-color($evo-primary-color, $lightness: 10%) !default;
 $evo-conversational-form-input-transition-time: 0.25s !default;
 $evo-conversational-form-input-width: rem-calc(80) !default;
 $evo-conversational-form-input-min-width: rem-calc(55) !default;
@@ -56,9 +56,9 @@ $evo-product: core;
 
 	$evo-conversational-form-label-color: $onyx-bright;
 	$evo-conversational-form-elements-background-color: $onyx-dark-6;
-	$evo-conversational-form-elements-border-bottom-color: $onyx-bright;
-	$evo-conversational-form-elements-font-color: $onyx-bright;
-	$evo-conversational-form-elements-hover-border-bottom-color: $onyx-dark-40;
+	$evo-conversational-form-elements-border-bottom-color: $evo-primary-color;
+	$evo-conversational-form-elements-font-color: $evo-primary-color;
+	$evo-conversational-form-elements-hover-border-bottom-color: scale-color($evo-primary-color, $lightness: 10%);
 	$evo-conversational-form-select-focus-background-color: $white;
 
 // Benefits Portals
@@ -66,10 +66,10 @@ $evo-product: core;
 
 	$evo-conversational-form-label-color: $onyx-bright;
 	$evo-conversational-form-elements-background-color: $onyx-dark-6;
-	$evo-conversational-form-elements-border-bottom-color: $sapphire-bright;
-	$evo-conversational-form-elements-font-color: $sapphire-bright;
-	$evo-conversational-form-elements-hover-border-bottom-color: $topaz-bright;
-	$evo-conversational-form-select-focus-background-color: $white ;
+	$evo-conversational-form-elements-border-bottom-color: $evo-primary-color;
+	$evo-conversational-form-elements-font-color: $evo-primary-color;
+	$evo-conversational-form-elements-hover-border-bottom-color: scale-color($evo-primary-color, $lightness: 10%);
+	$evo-conversational-form-select-focus-background-color: $white;
 
 }
 
@@ -87,10 +87,10 @@ $evo-product: core;
 // $evo-conversational-form-elements-border: 0;
 // $evo-conversational-form-elements-border-bottom-width: 2px;
 // $evo-conversational-form-elements-border-bottom-style: solid;
-// $evo-conversational-form-elements-border-bottom-color: $onyx-bright;
-// $evo-conversational-form-elements-font-color: $onyx-bright;
+// $evo-conversational-form-elements-border-bottom-color: $evo-primary-color;
+// $evo-conversational-form-elements-font-color: $evo-primary-color;
 // $evo-conversational-form-elements-margin-bottom: 0;
-// $evo-conversational-form-elements-hover-border-bottom-color: $onyx-dark-40;
+// $evo-conversational-form-elements-hover-border-bottom-color: scale-color($evo-primary-color, $lightness: 10%);
 // $evo-conversational-form-input-transition-time: 0.25s;
 // $evo-conversational-form-input-width: rem-calc(80);
 // $evo-conversational-form-input-min-width: rem-calc(50);

@@ -30,7 +30,7 @@ $evo-stepper-item-complete-background-color: $onyx-dark-10 !default;
 $evo-stepper-item-active-margin: rem-calc(0 10 0 0) !default;
 $evo-stepper-item-active-width: rem-calc(20) !default;
 $evo-stepper-item-active-height: rem-calc(20) !default;
-$evo-stepper-item-active-background-color: $onyx-dark-40 !default;
+$evo-stepper-item-active-background-color: $evo-primary-color !default;
 
 //
 // @Product organism theme variables - IMPORTANT: DO NOT MODIFY!
@@ -44,14 +44,14 @@ $evo-product: core;
 
 	$evo-stepper-item-background-color: $onyx-dark-20;
 	$evo-stepper-item-complete-background-color: $onyx-dark-10;
-	$evo-stepper-item-active-background-color: $onyx-dark-40;
+	$evo-stepper-item-active-background-color: $evo-primary-color;
 
 // Benefits Portals
 } @else if $evo-product == bp {
 
 	$evo-stepper-item-background-color: $onyx-dark-20;
 	$evo-stepper-item-complete-background-color: $onyx-dark-10;
-	$evo-stepper-item-active-background-color: $onyx-dark-40;
+	$evo-stepper-item-active-background-color: $evo-primary-color;
 
 }
 
@@ -68,7 +68,7 @@ $evo-product: core;
 // $evo-stepper-item-active-margin: rem-calc(0 10 0 0);
 // $evo-stepper-item-active-width: rem-calc(20);
 // $evo-stepper-item-active-height: rem-calc(20);
-// $evo-stepper-item-active-background-color: $onyx-dark-40;
+// $evo-stepper-item-active-background-color: $evo-primary-color;
 
 
 // STEPPER - BEGINS

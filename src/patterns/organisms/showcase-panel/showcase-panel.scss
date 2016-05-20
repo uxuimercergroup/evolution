@@ -61,6 +61,7 @@ $evo-showcase-panel-item-small-sub-label-position-left: -5px !default;
 $evo-showcase-panel-item-small-sub-label-letter-spacing: 0 !default;
 $evo-showcase-panel-item-small-sub-label-font-family: $evo-font-bold-stack !default;
 $evo-showcase-panel-item-small-sub-label-text-transform: lowercase !default;
+$evo-showcase-panel-color-reverse-background-color: $evo-primary-color !default;
 $evo-showcase-panel-color-reverse-font-color: $white !default;
 $evo-showcase-panel-fixed-position-top: 44px !default;
 $evo-showcase-panel-fixed-position-left: 0 !default;
@@ -79,6 +80,7 @@ $evo-product: core;
 
 	$evo-showcase-panel-background-color: $white;
 	$evo-showcase-panel-item-font-color: $onyx-dark-50;
+	$evo-showcase-panel-color-reverse-background-color: $evo-primary-color;
 	$evo-showcase-panel-color-reverse-font-color: $white;
 
 // Benefits Portals
@@ -86,6 +88,7 @@ $evo-product: core;
 
 	$evo-showcase-panel-background-color: $white;
 	$evo-showcase-panel-item-font-color: $onyx-dark-50;
+	$evo-showcase-panel-color-reverse-background-color: $evo-primary-color;
 	$evo-showcase-panel-color-reverse-font-color: $white;
 
 }
@@ -134,6 +137,7 @@ $evo-product: core;
 // $evo-showcase-panel-item-small-sub-label-letter-spacing: 0;
 // $evo-showcase-panel-item-small-sub-label-font-family: $evo-font-bold-stack;
 // $evo-showcase-panel-item-small-sub-label-text-transform: lowercase;
+// $evo-showcase-panel-color-reverse-background-color: $evo-primary-color;
 // $evo-showcase-panel-color-reverse-font-color: $white;
 // $evo-showcase-panel-fixed-position-top: 44px;
 // $evo-showcase-panel-fixed-position-left: 0;
@@ -235,6 +239,7 @@ $evo-product: core;
 	// SHOWCASE PANEL - COLOR REVERSE - BEGINS
 		&[data-evo-showcase-panel-color-reverse]
 											{
+											background-color: $evo-showcase-panel-color-reverse-background-color;
 			.evo-showcase-panel-item 			{
 												color: $evo-showcase-panel-color-reverse-font-color;
 				a									{color: $evo-showcase-panel-color-reverse-font-color;}

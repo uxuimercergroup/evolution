@@ -41,11 +41,11 @@ $evo-item-selection-panel-item-selected-icon-shadow-vertical: rem-calc(2) !defau
 $evo-item-selection-panel-item-selected-icon-shadow-blur: rem-calc(6) !default;
 $evo-item-selection-panel-item-selected-icon-shadow-spread: 0 !default;
 $evo-item-selection-panel-item-selected-icon-shadow-color: $evo-base-shadow-color !default;
-$evo-item-selection-panel-item-selected-icon-border-color: $onyx-medium !default;
+$evo-item-selection-panel-item-selected-icon-border-color: $evo-primary-color !default;
 $evo-item-selection-panel-item-selected-icon-font-color: $white !default;
-$evo-item-selection-panel-item-selected-icon-background-color: $onyx-medium !default;
+$evo-item-selection-panel-item-selected-icon-background-color: $evo-primary-color !default;
 $evo-item-selection-panel-item-selected-label-font-family: $evo-font-medium-stack !default;
-$evo-item-selection-panel-item-selected-label-font-color: $onyx-medium !default;
+$evo-item-selection-panel-item-selected-label-font-color: $evo-primary-color !default;
 $evo-item-selection-panel-photo-item-icon-padding: rem-calc(6) !default;
 $evo-item-selection-panel-photo-item-icon-width: rem-calc(80) !default;
 $evo-item-selection-panel-photo-item-icon-height: rem-calc(80) !default;
@@ -62,23 +62,23 @@ $evo-product: core;
 @if $evo-product == comm {
 
 	$evo-item-selection-panel-item-icon-border-color: $onyx-light;
-	$evo-item-selection-panel-item-icon-font-color: $onyx-medium;
+	$evo-item-selection-panel-item-icon-font-color: $evo-primary-color;
 	$evo-item-selection-panel-item-label-font-color: $onyx-bright;
-	$evo-item-selection-panel-item-selected-icon-border-color: $onyx-medium;
+	$evo-item-selection-panel-item-selected-icon-border-color: $evo-primary-color;
 	$evo-item-selection-panel-item-selected-icon-font-color: $white;
-	$evo-item-selection-panel-item-selected-icon-background-color: $onyx-medium;
-	$evo-item-selection-panel-item-selected-label-font-color: $onyx-medium;
+	$evo-item-selection-panel-item-selected-icon-background-color: $evo-primary-color;
+	$evo-item-selection-panel-item-selected-label-font-color: $evo-primary-color;
 
 // Benefits Portals
 } @else if $evo-product == bp {
 
 	$evo-item-selection-panel-item-icon-border-color: $onyx-light;
-	$evo-item-selection-panel-item-icon-font-color: $sapphire-bright;
+	$evo-item-selection-panel-item-icon-font-color: $evo-primary-color;
 	$evo-item-selection-panel-item-label-font-color: $onyx-bright;
-	$evo-item-selection-panel-item-selected-icon-border-color: $sapphire-bright;
+	$evo-item-selection-panel-item-selected-icon-border-color: $evo-primary-color;
 	$evo-item-selection-panel-item-selected-icon-font-color: $white;
-	$evo-item-selection-panel-item-selected-icon-background-color: $sapphire-bright;
-	$evo-item-selection-panel-item-selected-label-font-color: $sapphire-bright;
+	$evo-item-selection-panel-item-selected-icon-background-color: $evo-primary-color;
+	$evo-item-selection-panel-item-selected-label-font-color: $evo-primary-color;
 
 }
 
@@ -106,11 +106,11 @@ $evo-product: core;
 // $evo-item-selection-panel-item-selected-icon-shadow-blur: rem-calc(6);
 // $evo-item-selection-panel-item-selected-icon-shadow-spread: 0;
 // $evo-item-selection-panel-item-selected-icon-shadow-color: $evo-base-shadow-color;
-// $evo-item-selection-panel-item-selected-icon-border-color: $onyx-medium;
+// $evo-item-selection-panel-item-selected-icon-border-color: $evo-primary-color;
 // $evo-item-selection-panel-item-selected-icon-font-color: $white;
-// $evo-item-selection-panel-item-selected-icon-background-color: $onyx-medium;
+// $evo-item-selection-panel-item-selected-icon-background-color: $evo-primary-color;
 // $evo-item-selection-panel-item-selected-label-font-family: $evo-font-medium-stack;
-// $evo-item-selection-panel-item-selected-label-font-color: $onyx-medium;
+// $evo-item-selection-panel-item-selected-label-font-color: $evo-primary-color;
 // $evo-item-selection-panel-photo-item-icon-padding: rem-calc(6);
 // $evo-item-selection-panel-photo-item-icon-width: rem-calc(80);
 // $evo-item-selection-panel-photo-item-icon-height: rem-calc(80);

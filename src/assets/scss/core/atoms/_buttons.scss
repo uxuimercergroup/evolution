@@ -10,7 +10,8 @@ $evo-button-tiny-text-transform: uppercase !default;
 $evo-button-hollow-secondary-color: $onyx-dark-40 !default;
 $evo-button-icon-font-family: $evo-icon-font-stack !default;
 $evo-button-dropdown-icon: '\edc6' !default;
-$evo-button-close-icon-color: $evo-base-font-color !default;
+$evo-button-close-icon-color: $evo-primary-color !default;
+$evo-button-close-icon-hover-color: scale-color($evo-button-close-icon-color, $lightness: 10%) !default;
 
 
 @if $use-buttons == true{
@@ -222,7 +223,7 @@ $evo-button-close-icon-color: $evo-base-font-color !default;
 	.close-button					{
 		[class^="evo-icon-"]			{color: $evo-button-close-icon-color;}
 		&:hover							{
-			[class^="evo-icon-"]			{color: scale-color($evo-button-close-icon-color, $lightness: 30%);}
+			[class^="evo-icon-"]			{color: $evo-button-close-icon-hover-color;}
 										}
 									}
 

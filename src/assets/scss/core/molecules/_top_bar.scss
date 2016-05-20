@@ -15,7 +15,7 @@
 //
 $evo-top-bar-height: $evo-base-navbar-height !default;
 $evo-top-bar-background: $evo-primary-color !default;
-$evo-top-bar-submenu-background: scale-color($evo-top-bar-background, $lightness: -15%) !default;
+$evo-top-bar-submenu-background: $evo-tertiary-color !default;
 $evo-top-bar-anchor-decoration: none !default;
 $evo-top-bar-icon-font-family: $evo-icon-font-stack !default;
 $evo-top-bar-title-padding: 0 $evo-base-padding !default;
@@ -36,22 +36,23 @@ $evo-top-bar-dropdown-box-shadow-spread: $evo-base-shadow-spread !default;
 $evo-top-bar-dropdown-box-shadow-color: $evo-base-shadow-color !default;
 $evo-top-bar-dropdown-min-width: auto !default;
 $evo-top-bar-dropdown-white-space: nowrap !default;
-$evo-top-bar-dropdown-item-border: 1px solid scale-color($evo-top-bar-background, $lightness: -35%) !default;
-$evo-top-bar-dropdown-item-hover-background: scale-color($evo-top-bar-background, $lightness: -25%) !default;
-$evo-top-bar-dropdown-label-background: scale-color($evo-top-bar-background, $lightness: -35%) !default;
+$evo-top-bar-dropdown-item-border: 0 !default;
+$evo-top-bar-dropdown-item-active-background: scale-color($evo-top-bar-submenu-background, $saturation: -5%, $lightness: -15%) !default;
+$evo-top-bar-dropdown-item-hover-background: scale-color($evo-top-bar-submenu-background, $saturation: -30%, $lightness: 15%) !default;
+$evo-top-bar-dropdown-label-background: scale-color($evo-top-bar-submenu-background, $saturation: -10%, $lightness: 10%) !default;
 $evo-top-bar-dropdown-label-white-space: nowrap !default;
 $evo-top-bar-dropdown-label-color: $white !default;
 $evo-top-bar-dropdown-label-font-size: rem-calc(12) !default;
 $evo-top-bar-dropdown-label-line-height: 1 !default;
 $evo-top-bar-dropdown-label-padding: 0.65rem $evo-base-padding ($evo-base-padding/2) $evo-base-padding !default;
 $evo-top-bar-dropdown-label-text-transform: uppercase !default;
-$evo-top-bar-dropdown-anchor-color: scale-color($evo-top-bar-background, $lightness: 75%) !default;
+$evo-top-bar-dropdown-anchor-color: scale-color($evo-top-bar-submenu-background, $saturation: -30%, $lightness: 60%) !default;
 $evo-top-bar-dropdown-anchor-padding: $evo-base-padding !default;
 $evo-top-bar-dropdown-anchor-hover-color: $white !default;
 $evo-top-bar-dropdown-anchor-icon-font-size: rem-calc(24) !default;
 $evo-top-bar-dropdown-anchor-with-icon-position-top: -2px !default;
 $evo-top-bar-dropdown-anchor-active-color: $white !default;
-$evo-top-bar-dropdown-anchor-active-background: scale-color($evo-top-bar-background, $lightness: 10%) !default;
+$evo-top-bar-dropdown-anchor-active-background: scale-color($evo-top-bar-background, $saturation: -40%, $lightness: 20%) !default;
 $evo-top-bar-dropdown-submenu-parent-padding-right: rem-calc(40) !default;
 $evo-top-bar-dropdown-submenu-parent-icon: '\edc6' !default;
 $evo-top-bar-dropdown-submenu-parent-icon-position-top: 0 !default;
@@ -186,15 +187,15 @@ $evo-top-bar-mega-menu-max-width: 100% !default;
 													white-space: $evo-top-bar-dropdown-white-space;
 							li							{
 														border-bottom: $evo-top-bar-dropdown-item-border;
-								&:first-child				{border-top: 1px solid $transparent;}
 								&:last-child				{
 															border-bottom: 0;
 									> a							{@include border-radius($evo-top-bar-dropdown-border-radius);}
 															}
 								&.active					{
 									> a							{
+																background-color: $evo-top-bar-dropdown-item-active-background;
 										&:hover,
-										&:focus						{background-color: $evo-top-bar-dropdown-anchor-active-background;}
+										&:focus						{background-color: $evo-top-bar-dropdown-item-active-background;}
 																}
 															}
 								> a							{
@@ -216,6 +217,9 @@ $evo-top-bar-mega-menu-max-width: 100% !default;
 
 							// CHILD SUBMENU
 							.is-dropdown-submenu-parent	{
+								li							{
+									&:first-child				{border-top: 1px solid $transparent;}
+															}
 								> a							{
 															padding-right: $evo-top-bar-dropdown-submenu-parent-submenu-anchor-padding-right;
 									

@@ -21,6 +21,12 @@ $evo-alert-warning-icon-color: $topaz-dark !default;
 		[class^="evo-icon-"]		{color: $evo-alert-box-font-color;}
 		[class*="evo-icon-position-"]
 									{top: 1px;}
+		.close-button				{
+			&:hover						{
+				[class^="evo-icon-"]		{color: scale-color($evo-alert-box-font-color, $lightness: 10%);}
+										}
+									}
+
 		&.alert						{
 			[class*="evo-icon-"]		{color: $evo-alert-alert-icon-color;}
 			.close-button				{

@@ -70,7 +70,7 @@
 
 		// HERO TAGLINE
 		$evo-site-hero-tagline-color: $white;
-		$evo-site-hero-tagline-font-family: $evo-font-thin-stack;
+		$evo-site-hero-tagline-font-family: $evo-base-font-family;
 		$evo-site-hero-tagline-font-size-small: rem-calc(14);
 		$evo-site-hero-tagline-max-width-small: 88%;
 		$evo-site-hero-tagline-max-width-medium: 84%;
@@ -230,8 +230,6 @@
 			$evo-site-sidenav-magellan-hdr-font-color: $onyx-dark-80;
 			$evo-site-sidenav-magellan-hdr-font-size: rem-calc(16);
 			$evo-site-sidenav-magellan-line-height: 1;
-			$evo-site-sidenav-magellan-link-color: $sapphire-medium;
-
 
 			// SIDENAV ACCORDION
 			$evo-site-pattern-library-sidenav-accordian-icon-color: $sapphire-medium;

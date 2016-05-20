@@ -29,7 +29,7 @@ $evo-off-canvas-title-bar-icon-color: $white !default;
 $evo-off-canvas-title-bar-icon-position-top: 0 !default;
 $evo-off-canvas-title-bar-icon-position-left: 0 !default;
 $evo-off-canvas-title-bar-icon-hover-color: $white !default;
-$evo-off-canvas-label-background-color: $onyx-dark-50 !default;
+$evo-off-canvas-label-background-color: $evo-quaternary-color !default;
 $evo-off-canvas-label-color: $white !default;
 $evo-off-canvas-label-font-size: $evo-base-small-font-size !default;
 $evo-off-canvas-label-line-height: 1 !default;
@@ -37,7 +37,7 @@ $evo-off-canvas-label-font-family: $evo-base-font-family !default;
 $evo-off-canvas-label-letter-spacing: rem-calc(3) !default;
 $evo-off-canvas-label-text-transform: uppercase !default;
 $evo-off-canvas-label-padding: rem-calc(22 24) !default;
-$evo-off-canvas-item-anchor-color: $evo-primary-color !default;
+$evo-off-canvas-item-anchor-color: $evo-tertiary-color !default;
 $evo-off-canvas-item-anchor-font-size: $evo-base-font-size !default;
 $evo-off-canvas-item-anchor-line-height: 1.25 !default;
 $evo-off-canvas-item-anchor-letter-spacing: normal !default;
@@ -47,7 +47,7 @@ $evo-off-canvas-item-anchor-border: 1px solid $onyx-dark-14 !default;
 $evo-off-canvas-item-anchor-icon-font-family: $evo-icon-font-stack !default;
 $evo-off-canvas-item-anchor-icon-font-size: $evo-base-font-size !default;
 $evo-off-canvas-item-anchor-icon-position-top: 0 !default;
-$evo-off-canvas-back-background-color: $onyx-dark-70 !default;
+$evo-off-canvas-back-background-color: $evo-tertiary-color !default;
 $evo-off-canvas-back-color: $evo-off-canvas-label-color !default;
 $evo-off-canvas-back-font-size: $evo-off-canvas-label-font-size !default;
 $evo-off-canvas-back-line-height: $evo-off-canvas-label-line-height !default;
@@ -298,7 +298,10 @@ $evo-off-canvas-right-back-icon-width: $evo-off-canvas-left-back-icon-width !def
 										}
 
 		// OFF-CANVAS EXIT - CONTENT OVERLAY
-		.js-off-canvas-exit				{@include box-shadow(-1px 0 1px $evo-base-shadow-color, 1px 0 1px $evo-base-shadow-color);}
+		.js-off-canvas-exit				{
+										@include box-shadow(-1px 0 1px $evo-base-shadow-color, 1px 0 1px $evo-base-shadow-color);
+										z-index: 9999;
+										}
 									}
 
 }// endif
