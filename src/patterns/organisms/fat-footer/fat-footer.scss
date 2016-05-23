@@ -56,12 +56,12 @@ $evo-product: core;
 // Benefits Portals
 } @else if $evo-product == bp {
 
-	$evo-fat-footer-content-section-background-color: $sapphire-medium;
-	$evo-fat-footer-content-section-border-top-color: $sapphire-dark;
-	$evo-fat-footer-content-header-font-color: $sapphire-light;
+	$evo-fat-footer-content-section-background-color: $evo-tertiary-color;
+	$evo-fat-footer-content-section-border-top-color: $evo-primary-color;
+	$evo-fat-footer-content-header-font-color: $evo-quinary-color;
 	$evo-fat-footer-anchor-color: $white;
 	$evo-fat-footer-anchor-hover-color: $white;
-	$evo-fat-footer-brand-bar-background-color: $sapphire-dark;
+	$evo-fat-footer-brand-bar-background-color: $evo-primary-color;
 	$evo-fat-footer-brand-bar-font-color: $white;
 	$evo-fat-footer-social-media-badge-font-color: $white;
 	$evo-fat-footer-social-media-badge-font-color-hover: $evo-fat-footer-social-media-badge-font-color;

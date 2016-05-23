@@ -27,7 +27,7 @@ $evo-conversational-form-label-line-height: 2 !default;
 $evo-conversational-form-label-font-family: $evo-font-regular-family !default;
 $evo-conversational-form-label-color: $onyx-bright !default;
 $evo-conversational-form-elements-border-radius: 0 !default;
-$evo-conversational-form-elements-background-color: $onyx-dark-6 !default;
+$evo-conversational-form-elements-background-color: $evo-secondary-color !default;
 $evo-conversational-form-elements-border: 0 !default;
 $evo-conversational-form-elements-border-bottom-width: 2px !default;
 $evo-conversational-form-elements-border-bottom-style: solid !default;
@@ -55,7 +55,7 @@ $evo-product: core;
 @if $evo-product == comm {
 
 	$evo-conversational-form-label-color: $onyx-bright;
-	$evo-conversational-form-elements-background-color: $onyx-dark-6;
+	$evo-conversational-form-elements-background-color: $evo-secondary-color;
 	$evo-conversational-form-elements-border-bottom-color: $evo-primary-color;
 	$evo-conversational-form-elements-font-color: $evo-primary-color;
 	$evo-conversational-form-elements-hover-border-bottom-color: scale-color($evo-primary-color, $lightness: 10%);
@@ -65,7 +65,7 @@ $evo-product: core;
 } @else if $evo-product == bp {
 
 	$evo-conversational-form-label-color: $onyx-bright;
-	$evo-conversational-form-elements-background-color: $onyx-dark-6;
+	$evo-conversational-form-elements-background-color: $evo-secondary-color;
 	$evo-conversational-form-elements-border-bottom-color: $evo-primary-color;
 	$evo-conversational-form-elements-font-color: $evo-primary-color;
 	$evo-conversational-form-elements-hover-border-bottom-color: scale-color($evo-primary-color, $lightness: 10%);
@@ -83,7 +83,7 @@ $evo-product: core;
 // $evo-conversational-form-label-font-family: $evo-font-regular-family;
 // $evo-conversational-form-label-color: $onyx-bright;
 // $evo-conversational-form-elements-border-radius: 0;
-// $evo-conversational-form-elements-background-color: $onyx-dark-6;
+// $evo-conversational-form-elements-background-color: $evo-secondary-color;
 // $evo-conversational-form-elements-border: 0;
 // $evo-conversational-form-elements-border-bottom-width: 2px;
 // $evo-conversational-form-elements-border-bottom-style: solid;
