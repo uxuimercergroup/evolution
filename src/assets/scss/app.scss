@@ -335,7 +335,8 @@ URL: {{ meta_url }}
 			h6									{margin-bottom: $evo-site-band-marketing-h6-margin-bottom;}
 			.evo-site-band--marketing-block-grid
 												{
-												margin-bottom: $evo-base-margin;
+				> .column,
+				> .columns							{padding-bottom: $evo-base-padding;}
 				[class^="evo-icon-"]				{color: $evo-site-band-marketing-block-grid-icon-color;}
 				h4									{
 													color: $evo-site-band-marketing-block-grid-h4-color;
@@ -1025,21 +1026,33 @@ URL: {{ meta_url }}
 										}
 // PAGE TEMPLATES THUMBNAILS - ENDS
 
-.evo-orbit--product-suites				{
-	.orbit-previous,
-	.orbit-next								{
-		[class^="evo-icon-"]					{font-size: 2rem;}
-											}
-										}
-
 
 /*--- PRODUCT SUITES PAGE ------------------------------------------------------------------*/
 
 // BAND - BEGINS
 .evo-site-band--product-suites-visual-identity
 										{
+	img										{width: 60%;}
+
+	.evo-site-band--tab-panel				{
+											padding-left: 0;
+											padding-right: 0;
+											}
+
+	// PRODUCT SUITES BAND ORBIT
+	.evo-orbit--product-suites				{
+		.orbit-previous,
+		.orbit-next								{
+			[class^="evo-icon-"]					{font-size: 2rem;}
+												}
+		.orbit-bullets							{margin-top: ($evo-base-margin*2);}
+											}
+
+	@include breakpoint(medium down)		{
+		img										{width: 60%;}
+											}
+
 	@include breakpoint(medium)				{
-		img										{width: 60% !important;}
 		.evo-site-band--product-suites-visual-identity-marketing-text
 												{
 												font-size: rem-calc(20);
@@ -1047,6 +1060,10 @@ URL: {{ meta_url }}
 												margin-left: auto;
 												margin-right: auto;
 												}
+											}
+
+	@include breakpoint(large)				{
+		img										{width: 40%;}
 											}
 										}
 // BAND - ENDS
@@ -1124,6 +1141,11 @@ URL: {{ meta_url }}
 
 // TAB BAND - BEGINS
 .evo-site-band--what					{
+	.evo-site-band--marketing-block-grid	{
+		> .columns								{
+			.columns								{padding-bottom: $evo-base-padding;}
+												}
+											}
 
 	@include breakpoint(medium)				{
 		.evo-site-band--tab-panel				{padding: $evo-site-what-is-band-tab-panel-padding;}
@@ -1150,6 +1172,7 @@ URL: {{ meta_url }}
 												padding-right: 30px;
 												}
 											}
+	.orbit-bullets							{margin-top: ($evo-base-margin*2);}
 										}
 // TAB BAND - ENDS
 

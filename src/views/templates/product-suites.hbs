@@ -45,7 +45,7 @@ title: "Product Suites"
 			</div>
 		</div>
 		<div class="evo-site-band--tab-panel">
-			<div class="medium-12 large-12 large-centered columns evo-site-band--marketing-content">
+			<div class="medium-12 large-centered columns evo-site-band--marketing-content">
 
 			<!-- VISUAL IDENTITY CAROUSEL - BEGINS -->
 				<div class="orbit evo-orbit evo-orbit--product-suites" role="region" aria-label="Carousel" data-orbit>
@@ -66,16 +66,12 @@ title: "Product Suites"
 						{{/each}}
 					</ul>
 					<nav class="orbit-bullets">
-						<button class="is-active" data-slide="0" aria-label="First Slide" tabindex="0">
-							<span class="show-for-sr">First slide details.</span>
-							<span class="show-for-sr">Current Slide</span>
+						{{#each product-suites.visual_identity.items}}
+						<button {{#is active 'true'}}class="is-active"{{/is}} data-slide="{{@index}}" aria-label="Slide {{add @index 1}}" tabindex="0">
+							<span class="show-for-sr">Slide {{add @index 1}}</span>
+							{{#is active 'true'}}<span class="show-for-sr">Current Slide</span>{{/is}}
 						</button>
-						<button data-slide="1" aria-label="Second Slide" tabindex="0">
-							<span class="show-for-sr">Second slide details.</span>
-						</button>
-						<button data-slide="2" aria-label="Third Slide" tabindex="0">
-							<span class="show-for-sr">Third slide details.</span>
-						</button>
+						{{/each}}
 					</nav>
 				</div>
 			<!-- VISUAL IDENTITY CAROUSEL - ENDS -->
