@@ -4,31 +4,36 @@ title: "Why Evolution?"
 
 <div class="evo-site-band--marketing-ctn">
 
-	<!-- WHY HERO - BEGINS -->
-		<section class="row expanded evo-site-hero" data-evo-site-hero-size="x-large" data-evo-site-hero-arrow-position="bottom">
-			<div class="small-12 columns evo-vertical-middle hide" data-anijs="if: load, on: window, do: $removeClass hide;">
-				<div class="text-center evo-vertical-middle-element">
-					<h1 class="evo-site-hero--hdr flipInY animated" data-evo-site-hero-hdr-size="large">{{{why.hero.title}}} <span>{{{why.hero.subtitle}}}</span></h1>
-					<h3 class="float-center evo-site-hero--tagline bounceInUp animated">{{{ why.hero.tagline }}}</h3>
-				</div>		
-			</div>
-		</section>
-	<!-- WHY HERO - ENDS -->
+<!-- WHY HERO - BEGINS -->
+	<section class="row expanded evo-site-hero" data-evo-site-hero-size="x-large" data-evo-site-hero-arrow-position="bottom">
+		<div class="small-12 columns evo-vertical-middle hide" data-anijs="if: load, on: window, do: $removeClass hide;">
+			<div class="text-center evo-vertical-middle-element">
+				<h1 class="evo-site-hero--hdr flipInY animated" data-evo-site-hero-hdr-size="large">{{{why.hero.title}}} <span>{{{why.hero.subtitle}}}</span></h1>
+				<h3 class="float-center evo-site-hero--tagline bounceInUp animated">{{{ why.hero.tagline }}}</h3>
+			</div>		
+		</div>
+	</section>
+<!-- WHY HERO - ENDS -->
 
-	<!-- MAGELLAN - BEGINS -->
-		<section class="row expanded show-for-medium-up evo-site-magellan" data-magellan-expedition="fixed" data-options="fixed_top: 0; destination_threshold: 120; offset_by_height: true;">
-			<div class="medium-12 large-12 large-centered columns evo-no-padding">
-				<ul class="medium-block-grid-6 sub-nav" data-equalizer="site-magellan">
+<!-- MAGELLAN - BEGINS -->
+	<div data-sticky-container class="show-for-medium">
+		<div class="sticky" id="navbar" data-anchor="hero" data-margin-top="0" data-sticky>
+			<nav class="evo-site--why-sticky-navbar" data-bar-offset="85" data-threshold="120" data-magellan>
+				<ul class="horizontal menu expanded">
 				{{#each why.data}}
-					<li data-magellan-arrival="{{slug}}" data-equalizer-watch="site-magellan"><a href="#{{slug}}" data-equalizer-watch="site-magellan">{{{name}}}</a></li>
+					<li><a href="#{{slug}}">{{{name}}}</a></li>
 				{{/each}}
 				</ul>
-			</div>
-		</section>
-	<!--MAGELLAN - ENDS-->
+			</nav>
+		</div>
+	</div>
+<!-- MAGELLAN - ENDS -->
 
-	<!-- PAGE CONTENT - BEGINS -->
-	<section class="row expanded evo-site-band evo-site-band--why">
+</div>
+
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="row expanded evo-site-band evo-site-band--why" id="hero">
 		<div class="medium-11 large-11 medium-centered columns">
 
 		{{#each why.data}}
@@ -37,8 +42,7 @@ title: "Why Evolution?"
 				<div class="medium-6 large-4 columns" data-equalizer-watch="site-band">
 					<div class="evo-vertical-middle">
 						<div class="evo-vertical-middle-element">
-							<a name="{{slug}}"></a>
-							<h3>{{{bulletpoint_header}}}</h3>
+							<h3 data-magellan-target="{{slug}}" id="{{slug}}">{{{bulletpoint_header}}}</h3>
 							{{#each bulletpoints}}
 								<p class="evo-keyline-left evo-spacer-margin-bottom-large evo-site-pull-out">{{{text}}}</p>
 							{{/each}}
@@ -58,6 +62,6 @@ title: "Why Evolution?"
 
 		</div>
 	</section>
-	<!-- PAGE CONTENT - ENDS -->
+<!-- PAGE CONTENT - ENDS -->
 
 </div>

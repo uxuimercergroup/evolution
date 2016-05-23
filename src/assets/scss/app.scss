@@ -277,43 +277,6 @@ URL: {{ meta_url }}
 										}
 // HERO - ENDS
 
-// MAGELLAN - BEGINS
-.evo-site-magellan						{
-										padding: 0;
-										background-color: $evo-site-magellan-background-color;
-										border-bottom: 1px solid $evo-site-magellan-border-color;
-	&.fixed									{@include box-shadow(0 0 8px 1px rgba($evo-site-magellan-shadow-color, .15));}
-	&[data-magellan-expedition-clone]		{visibility: hidden;}
-	.sub-nav								{
-											@include clearfix;
-											margin: 0;
-											overflow: visible;
-											padding-top: 0;
-		li										{
-												margin: 0;
-												padding-bottom: 0;
-												padding-right: 0;
-												padding-left: 0;
-			a										{
-													@include border-radius(0);
-													display: block;
-													padding: rem-calc(14 10 10 10);
-													background: none !important;
-													border-bottom-width: 4px;
-													border-bottom-style: solid;
-													border-bottom-color: $transparent;
-													color: $evo-site-magellan-link-font-color;
-													text-align: center;
-													line-height: 1.25;
-													}
-			&.active								{
-				a										{border-bottom-color: $evo-site-magellan-active-border-color;}
-													}
-												}
-											}
-										}
-// MAGELLAN - ENDS
-
 // BANDS - BEGINS
 	
 	// DEFAULT BAND
@@ -1169,6 +1132,22 @@ URL: {{ meta_url }}
 
 /*--- WHY EVOLUTION PAGE -------------------------------------------------------------------------*/
 
+// NAVBAR - BEGINS
+	.evo-site--why-sticky-navbar
+										{
+		.menu								{
+											background-color: $white;
+											border-bottom: 1px solid $onyx-dark-10;
+											text-align: center;
+			> li								{
+				> a									{
+					&.active							{border-bottom: 2px solid $evo-site-magellan-active-border-color;}
+													}
+												}
+											}
+										}
+// NAVBAR - ENDS
+
 // BAND - BEGINS
 .evo-site-band--why						{
 										background-color: $evo-site-why-band-background-color;
@@ -1186,9 +1165,7 @@ URL: {{ meta_url }}
 												}
 											}
 
-	@include breakpoint(medium only)		{
-											padding: rem-calc(0 0 400 0) !important;
-											}
+	@include breakpoint(medium only)		{padding: rem-calc(0 0 400 0) !important;}
 
 	@include breakpoint(large)				{
 		.evo-site--why-content-section			{min-height: rem-calc(570);}
