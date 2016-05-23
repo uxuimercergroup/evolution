@@ -102,7 +102,10 @@ $(function() {
 			// SETTINGS TAB DATA TABLE
 			evoDataTable('evo-data-table-pattern-library-setting-options',{
 				paging: false,
-				info: false
+				info: false,
+				"initComplete": function(settings, json) {
+					Foundation.reInit('equalizer'); // ReInit equalizer after DataTable has been initialized
+				}
 			});
 
 			// SETTINGS TAB DATA TABLE - SCROLLING
@@ -110,13 +113,19 @@ $(function() {
 				scrollY: '350px',
 				scrollCollapse: true,
 				paging: false,
-				info: false
+				info: false,
+				"initComplete": function(settings, json) {
+					Foundation.reInit('equalizer'); // ReInit equalizer after DataTable has been initialized
+				}
 			});
 
 			// ICOMOON ICONS DATA TABLE
 			evoDataTable('evo-data-table-pattern-library-icons',{
 				paging: false,
-				info: false
+				info: false,
+				"initComplete": function(settings, json) {
+					Foundation.reInit('equalizer'); // ReInit equalizer after DataTable has been initialized
+				}
 			});
 
 			// TYPE CHARACTERS DATA TABLE
@@ -124,15 +133,21 @@ $(function() {
 				scrollY: '200px',
 				scrollCollapse: true,
 				paging: false,
-				info: false
+				info: false,
+				"initComplete": function(settings, json) {
+					Foundation.reInit('equalizer'); // ReInit equalizer after DataTable has been initialized
+				}
 			});
 
-			// MARGIN PADDING SETTINGS TABLE
+			// MARGIN/PADDING SETTINGS TABLE
 			evoDataTable('evo-data-table-margin-padding-settings',{
 				scrollY: '350px',
 				scrollCollapse: true,
 				paging: false,
-				info: false
+				info: false,
+				"initComplete": function(settings, json) {
+					Foundation.reInit('equalizer'); // ReInit equalizer after DataTable has been initialized
+				}
 			});
 
 
@@ -189,13 +204,20 @@ $(function() {
 			// DATA TABLE
 
 				// Data Table example
-				evoDataTable('evo-data-table-example');
+				evoDataTable('evo-data-table-example',{
+					"initComplete": function(settings, json) {
+						Foundation.reInit('equalizer'); // ReInit equalizer after DataTable has been initialized
+					}
+				});
 
 				// Data Table Vertical Scroll example
 				evoDataTable('evo-data-table-vertical-scroll-example',{
 					scrollY: '200px',
 					scrollCollapse: true,
-					paging: false
+					paging: false,
+					"initComplete": function(settings, json) {
+						Foundation.reInit('equalizer'); // ReInit equalizer after DataTable has been initialized
+					}
 				});
 
 				// Data Table Select All Checkboxes example
@@ -210,7 +232,10 @@ $(function() {
 						{orderable: true},
 						{orderable: true},
 						{orderable: true}
-					]
+					],
+					"initComplete": function(settings, json) {
+						Foundation.reInit('equalizer'); // ReInit equalizer after DataTable has been initialized
+					}
 				});
 
 			// DATEPICKER
