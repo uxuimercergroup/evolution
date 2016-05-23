@@ -93,17 +93,8 @@ URL: {{ meta_url }}
 // BUTTONS - BEGINS
 	
 	// CALL TO ACTION BUTTON
-	.evo-site-cta-button				{
-										border: $evo-site-cta-button-border-width $evo-site-cta-button-border-style $evo-site-cta-button-border-color;
-										background-color: $evo-site-cta-button-background-color;
-										color: $evo-site-cta-button-font-color;
-										min-width: $evo-site-cta-button-min-width;
-		&:visited							{color: $evo-site-cta-button-font-color;}
-		&:hover								{
-											background-color: $evo-site-cta-button-hover-background-color;
-											color: $evo-site-cta-button-hover-font-color;
-											}
-										}
+	.evo-site-cta-button				{min-width: $evo-site-cta-button-min-width !important;}
+
 // BUTTONS - ENDS
 
 // TYPE - BEGINS
@@ -344,6 +335,7 @@ URL: {{ meta_url }}
 			h6									{margin-bottom: $evo-site-band-marketing-h6-margin-bottom;}
 			.evo-site-band--marketing-block-grid
 												{
+												margin-bottom: $evo-base-margin;
 				[class^="evo-icon-"]				{color: $evo-site-band-marketing-block-grid-icon-color;}
 				h4									{
 													color: $evo-site-band-marketing-block-grid-h4-color;
