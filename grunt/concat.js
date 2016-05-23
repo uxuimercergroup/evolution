@@ -64,7 +64,7 @@ module.exports = {
         'src/assets/js/core/atoms/buttons.js',
         'src/assets/js/core/atoms/helpers.js',
         'src/assets/js/core/molecules/autocomplete.js',
-        'src/assets/js/core/molecules/data_table.js',
+        'src/assets/js/core/molecules/data-table.js',
         'src/assets/js/core/molecules/datepicker.js',
         'src/assets/js/core/molecules/slider.js'
       ]
