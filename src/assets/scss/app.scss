@@ -530,6 +530,7 @@ URL: {{ meta_url }}
 										margin: 0 0 $evo-site-swatch-margin-bottom 0;
 										}
 	.evo-site-swatch-details			{
+										margin-bottom: $evo-base-margin;
 										font-size: $evo-site-swatch-details-font-size;
 										text-align: $evo-site-swatch-details-text-align;
 										}
@@ -723,35 +724,24 @@ URL: {{ meta_url }}
 
 	// SIDENAV - BEGINS
 
-		// SIDENAV MAGELLAN
+		// MAGELLAN
 		.evo-site--pattern-library-sidenav-magellan
 											{
 											padding-left: 0;
-			dt									{
-												margin: $evo-site-sidenav-magellan-hdr-margin;
-												float: none;
-												font-family: $evo-site-sidenav-magellan-hdr-font-family;
-												color: $evo-site-sidenav-magellan-hdr-font-color;
-												font-size: $evo-site-sidenav-magellan-hdr-font-size;
-												text-transform: none;
-				&:first-child						{margin-top: 0;}
-												}
-			dd,
 			li									{
-												line-height: $evo-site-sidenav-magellan-line-height;
 				a									{
 													display: block;
-													padding: rem-calc(6);
+													padding: $evo-site-sidenav-magellan-padding;
 					&.active							{
-														background-color: $onyx-dark-20;
-														color: $onyx-dark-80;
+														background-color: $evo-site-sidenav-magellan-active-background;
+														color: $evo-site-sidenav-magellan-active-color;
 														text-decoration: none !important;
 														}
 													}
 												}
 											}
 
-		// SIDENAV ACCORDION
+		// DEPENDENCY LIST
 		.evo-site--pattern-library-dependency-sidenav
 											{
 			li									{

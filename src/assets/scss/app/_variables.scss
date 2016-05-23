@@ -217,19 +217,9 @@
 		// SIDENAV
 
 			// SIDENAV MAGELLAN
-
-			$evo-site-sidenav-magellan-hdr-margin: $evo-base-margin 0 rem-calc(5) 0;
-			$evo-site-sidenav-magellan-hdr-font-family: $evo-font-medium-stack;
-			$evo-site-sidenav-magellan-hdr-font-color: $onyx-dark-80;
-			$evo-site-sidenav-magellan-hdr-font-size: rem-calc(16);
-			$evo-site-sidenav-magellan-line-height: 1;
-
-			// SIDENAV ACCORDION
-			$evo-site-pattern-library-sidenav-accordian-icon-color: $sapphire-medium;
-			$evo-site-pattern-library-sidenav-accordian-content-link-font-family: $evo-font-regular-stack;
-			$evo-site-pattern-library-sidenav-accordian-content-link-font-size: rem-calc(14);
-			$evo-site-pattern-library-sidenav-accordian-content-link-text-decoration: underline;
-			$evo-site-pattern-library-sidenav-accordian-content-list-item-line-height: 1.3;
+			$evo-site-sidenav-magellan-padding: rem-calc(6);
+			$evo-site-sidenav-magellan-active-background: $onyx-dark-20;
+			$evo-site-sidenav-magellan-active-color: $onyx-dark-80;
 
 		// EXAMPLE BOX
 		$evo-site-example-box-background-color: $white;

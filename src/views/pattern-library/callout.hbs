@@ -31,6 +31,7 @@ Callouts are the basic building blocks of any web site or component. Evolution c
 
 <!-- TABS - BEGINS -->
 	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content" data-tabs-content="evoLibraryTabs">
+
 	<!-- TAB PANEL 1 - BEGINS -->
 		<section class="tabs-panel evo-tabs-panel is-active evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel0">
 
@@ -108,10 +109,10 @@ Callouts are the basic building blocks of any web site or component. Evolution c
 	<!-- TAB PANEL 1 - ENDS -->
 
 	<!-- TAB PANEL 2 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs1">
+		<section role="tabpanel" aria-hidden="true" class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel1">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col1" data-equalizer-watch="tab-panel">
 				
 				<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
@@ -131,10 +132,10 @@ Callouts are the basic building blocks of any web site or component. Evolution c
 	<!-- TAB PANEL 2 - ENDS -->
 
 	<!-- TAB PANEL 3 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
+		<section role="tabpanel" aria-hidden="true" class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col3" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col2" data-equalizer-watch="tab-panel">
 					
 				<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
@@ -148,7 +149,7 @@ Callouts are the basic building blocks of any web site or component. Evolution c
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
 					<div data-sticky-container>
-						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col3" data-sticky-on="large" data-sticky>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col2" data-sticky-on="large" data-sticky>
 							
 							{{!--
 							<ul class="menu vertical" data-magellan>
@@ -213,10 +214,10 @@ Callouts are the basic building blocks of any web site or component. Evolution c
 	<!-- TAB PANEL 3 - ENDS -->
 
 	<!-- TAB PANEL 4 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs3">
+		<section role="tabpanel" aria-hidden="true" class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel3">
 
 			<section class="row" data-equalizer="tab-panel">
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col3" data-equalizer-watch="tab-panel">
 
 					<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
@@ -257,18 +258,21 @@ Below is a list of the data options that can be used with callouts using data at
 
 				</div>
 				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
-					<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
-						
-						{{!--
-						<dl class="sub-nav">
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
-						</dl>
-						<hr>
-						--}}
-						
+					
+				<!-- SIDENAV - BEGINS -->
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col3" data-sticky-on="large" data-sticky>
+							
+							{{!--
+							<ul class="menu vertical" data-magellan>
+								<li><a href="#{{hyphenate }}">{{}}</a></li>
+							</ul>
+							--}}
+
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
+
 				</div>
 			</section>
 			
