@@ -69,9 +69,6 @@
 		$evo-site-hero-tagline-max-width-medium: 84%;
 		$evo-site-hero-tagline-max-width-large: 64%;
 
-	// MAGELLAN
-	$evo-site-magellan-active-border-color: $topaz-bright;
-
 	// BANDS
 	$evo-site-band-padding: rem-calc(40 0);
 	$evo-site-band-padding-medium: rem-calc(80 0);
@@ -293,6 +290,14 @@ $evo-site-page-template-thumbnail-background-color: $onyx-dark-6;
 	$evo-site-what-is-band-tab-panel-keyline-border-color: $onyx-dark-10;
 
 // WHY PAGE
+
+	// NAVBAR
+	$evo-site-why-navbar-background: $white;
+	$evo-site-why-navbar-border: 1px solid $onyx-dark-10;
+	$evo-site-why-navbar-item-padding: rem-calc(14 10 10 10);
+	$evo-site-why-navbar-item-font-size: rem-calc(14);
+	$evo-site-why-navbar-active-item-border-size: rem-calc(2);
+	$evo-site-why-navbar-active-item-border-color: $topaz-bright;
 
 	// CONTENT BAND
 	$evo-site-why-band-background-color: $onyx-dark-2;

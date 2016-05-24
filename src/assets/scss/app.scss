@@ -1136,12 +1136,18 @@ URL: {{ meta_url }}
 	.evo-site--why-sticky-navbar
 										{
 		.menu								{
-											background-color: $white;
-											border-bottom: 1px solid $onyx-dark-10;
+											background-color: $evo-site-why-navbar-background;
+											border-bottom: $evo-site-why-navbar-border;
 											text-align: center;
 			> li								{
 				> a									{
-					&.active							{border-bottom: 2px solid $evo-site-magellan-active-border-color;}
+													padding: $evo-site-why-navbar-item-padding;
+													border-bottom: $evo-site-why-navbar-active-item-border-size solid $transparent;
+													font-size: $evo-site-why-navbar-item-font-size;
+					&.active							{
+														text-decoration: none;
+														border-bottom: $evo-site-why-navbar-active-item-border-size solid $evo-site-why-navbar-active-item-border-color;
+														}
 													}
 												}
 											}
@@ -1165,7 +1171,7 @@ URL: {{ meta_url }}
 												}
 											}
 
-	@include breakpoint(medium only)		{padding: rem-calc(0 0 400 0) !important;}
+	@include breakpoint(medium only)		{padding: rem-calc(0 0 500 0) !important;}
 
 	@include breakpoint(large)				{
 		.evo-site--why-content-section			{min-height: rem-calc(570);}
