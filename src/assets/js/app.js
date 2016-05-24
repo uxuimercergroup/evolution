@@ -65,6 +65,40 @@
 			});
 		}
 
+		// REINIT ON ABIDE FORM VALIDATION
+		var evoSiteAbideReInit = function(){
+			jQuery('form[data-abide]').on('forminvalid.zf.abide', function(ev,frm){
+
+				// ReInit equalizer on invalid abide form validation
+				Foundation.reInit('equalizer');
+
+			})
+			.on('formvalid.zf.abide', function(ev,frm){
+
+				// ReInit equalizer on valid abide form validation
+				Foundation.reInit('equalizer');
+
+			})
+			.on('formreset.zf.abide', function(ev,frm){
+
+				// ReInit equalizer on form reset
+				Foundation.reInit('equalizer');
+
+			})
+			.on('invalid.zf.abide', function(ev,elem){
+
+				// ReInit equalizer on invalid abide input validation
+				Foundation.reInit('equalizer');
+
+			})
+			.on('valid.zf.abide', function(ev,elem){
+
+				// ReInit equalizer on valid abide input validation
+				Foundation.reInit('equalizer');
+
+			})
+		}
+
 
 // INITIALIZE FOUNDATION
 //--------------------------------------------------------------------------------------------------------
@@ -98,6 +132,9 @@ $(function() {
 
 			// REINIT ON TOGGLE OF PATTERN LIBRARY CONTENT TABS
 			evoSitePatternLibTabsReInit();
+
+			// REINIT ON ABIDE FORM VALIDATION
+			evoSiteAbideReInit();
 
 			// SETTINGS TAB DATA TABLE
 			evoDataTable('evo-data-table-pattern-library-setting-options',{
