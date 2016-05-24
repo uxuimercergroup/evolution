@@ -8,6 +8,7 @@ title: "Home"
 			<div class="text-center evo-vertical-middle-element">
 				<h1 class="evo-site-hero--hdr flipInY animated" data-evo-site-hero-hdr-size="x-large">{{{ global.company }}} <span>{{{ global.title }}}</span></h1>
 				<h3 class="float-center evo-site-hero--tagline bounceInUp animated">{{{ global.meta_description }}}</h3>
+				<p class="show-for-medium evo-site-hero--footnote bounceInUp animated"><small>{{ home.hero_footnote }}</small></p>
 			</div>		
 		</div>
 	</section>
@@ -138,7 +139,7 @@ title: "Home"
 			<div class="row small-up-{{home.products.grid_small}} medium-up-{{home.products.grid_medium}} large-up-{{home.products.grid_large}} evo-site-band--marketing-block-grid">
 				{{#each home.products.items}}
 				<div class="column text-center">
-					<h4><a href="{{url}}">{{header}}</a></h4>
+					<h4>{{header}}</h4>
 				</div>
 				{{/each}}
 			</div>

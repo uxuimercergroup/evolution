@@ -275,6 +275,16 @@ URL: {{ meta_url }}
 											max-width: $evo-site-hero-tagline-max-width-large;
 											}
 										}
+
+	// HERO FOOTNOTE
+	.evo-site-hero--footnote			{
+										margin: $evo-site-hero-foonote-margin;
+		small								{
+											color: $evo-site-hero-foonote-color;
+											text-transform: $evo-site-hero-foonote-text-transform;
+											letter-spacing: $evo-site-hero-foonote-letter-spacing;
+											}
+										}
 // HERO - ENDS
 
 // BANDS - BEGINS
