@@ -150,6 +150,7 @@ $evo-off-canvas-right-back-icon-width: $evo-off-canvas-left-back-icon-width !def
 		// OFF-CANVAS MENU
 		.off-canvas						{
 										min-height: 100%; // Fixes bug with off-canvas menu background color not spanning entire height of container
+										overflow: hidden;
 			
 			// DRILLDOWN MENU
 			.is-drilldown					{
