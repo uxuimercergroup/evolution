@@ -22,12 +22,6 @@ URL: {{ evo_meta_url }}
 // Export mixin which prints out the Sass for everything in Foundation
 @include foundation-everything();
 
-// Import Foundation Motion UI from package manager
-@import "motion-ui";
-
-// Export mixin which prints out the Sass for Foundation Motion UI transitions
-@include motion-ui-transitions;
-
 // Evolution atoms partials
 @import	"core/atoms/buttons";
 @import	"core/atoms/callout";

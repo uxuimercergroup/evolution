@@ -2,6 +2,28 @@
 ## [Unreleased]
 -->
 
+## [4.0.0] - 2016-05-27
+
+##### Added
+- x
+
+##### Changed
+- x
+
+##### Removed
+- x
+
+##### Deprecated
+- x
+
+##### Fixed
+- x
+
+## [3.0.5] - 2016-04-08
+
+##### Changed
+- Update version number to publish package to NPM.
+
 ## [3.0.4] - 2016-04-06
 
 ##### Changed

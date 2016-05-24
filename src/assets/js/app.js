@@ -99,6 +99,16 @@
 			})
 		}
 
+		// REINIT ON ORBIT SLIDE CHANGE
+		var evoSiteOrbitReInit = function(){
+			jQuery('[data-orbit]').on('slidechange.zf.orbit', function(){
+
+				// ReInit equalizer on invalid abide form validation
+				Foundation.reInit('equalizer');
+
+			});
+		}
+
 
 // INITIALIZE FOUNDATION
 //--------------------------------------------------------------------------------------------------------
@@ -135,6 +145,9 @@ $(function() {
 
 			// REINIT ON ABIDE FORM VALIDATION
 			evoSiteAbideReInit();
+
+			// REINIT ON ORBIT SLIDE CHANGE
+			evoSiteOrbitReInit();
 
 			// SETTINGS TAB DATA TABLE
 			evoDataTable('evo-data-table-pattern-library-setting-options',{

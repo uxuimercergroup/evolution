@@ -46,7 +46,6 @@ module.exports = {
         'node_modules/foundation-sites/js/foundation.util.timerAndImageLoader.js',
         'node_modules/foundation-sites/js/foundation.util.touch.js',
         'node_modules/foundation-sites/js/foundation.util.triggers.js',
-        'node_modules/motion-ui/dist/motion-ui.js',
         'bower_components/jquery-ui/ui/core.js',
         'bower_components/jquery-ui/ui/widget.js',
         'bower_components/jquery-ui/ui/mouse.js',
@@ -82,6 +81,7 @@ module.exports = {
     },
     files: {
       'dist/assets/js/evolution-animations.js': [
+        'node_modules/motion-ui/dist/motion-ui.js',
         'bower_components/AniJS/dist/anijs.js',
         'bower_components/AniJS/dist/helpers/dom/anijs-helper-dom.js',
         'bower_components/AniJS/dist/helpers/scrollreveal/anijs-helper-scrollreveal.js',
