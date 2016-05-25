@@ -897,10 +897,7 @@ URL: {{ meta_url }}
 												border-color: $onyx-dark-30;
 												min-height: auto;
 												}
-		[data-equalizer-watch]					{
-												height: auto !important;
-												min-height: rem-calc(276);
-												}
+		[data-equalizer-watch]					{min-height: rem-calc(276);}
 
 		@include breakpoint(small only)			{
 			[data-equalizer-watch]					{min-height: auto;}					
