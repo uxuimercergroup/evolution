@@ -896,10 +896,6 @@ URL: {{ meta_url }}
 		.evo-keyline-right						{
 												border-color: $onyx-dark-30;
 												min-height: auto;
-
-			@include breakpoint(medium)				{
-													}
-
 												}
 		[data-equalizer-watch]					{
 												height: auto !important;
