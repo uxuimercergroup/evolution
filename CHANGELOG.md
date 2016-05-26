@@ -50,7 +50,7 @@
 ## [3.0.5] - 2016-04-08
 
 ##### Changed
-- Update version number to publish package to NPM.
+- Updated version number to publish Evolution Tool Box generator package to NPM.
 
 ## [3.0.4] - 2016-04-06
 
