@@ -59,9 +59,8 @@
 			"header": "Atoms",
 			"section": [
 				{"name": "Animations",			"url": "/pattern-library/animations.html"},
-				{"name": "Boxes",				"url": "/pattern-library/boxes.html"},
 				{"name": "Buttons",				"url": "/pattern-library/buttons.html"},
-				{"name": "Dropdowns",			"url": "/pattern-library/dropdowns.html"},
+				{"name": "Callout",				"url": "/pattern-library/callout.html"},
 				{"name": "Equalizer",			"url": "/pattern-library/equalizer.html"},
 				{"name": "Form Elements",		"url": "/pattern-library/form-elements.html"},
 				{"name": "Grids",				"url": "/pattern-library/grids.html"},
@@ -81,16 +80,14 @@
 				{"name": "Carousel",			"url": "/pattern-library/carousel.html"},
 				{"name": "Data Table",			"url": "/pattern-library/data-tables.html"},
 				{"name": "Datepicker",			"url": "/pattern-library/datepicker.html"},
-				{"name": "Dropdown Buttons",	"url": "/pattern-library/dropdown-buttons.html"},
+				{"name": "Dropdowns",			"url": "/pattern-library/dropdowns.html"},
 				{"name": "Forms",				"url": "/pattern-library/forms.html"},
 				{"name": "Labels",				"url": "/pattern-library/labels.html"},
 				{"name": "Off-canvas",			"url": "/pattern-library/off-canvas.html"},
 				{"name": "Pagination",			"url": "/pattern-library/pagination.html"},
 				{"name": "Progress Bar",		"url": "/pattern-library/progress-bar.html"},
 				{"name": "Reveal Modal",		"url": "/pattern-library/reveal.html"},
-				{"name": "Scroll Pane",			"url": "/pattern-library/scroll-pane.html"},
 				{"name": "Slider",				"url": "/pattern-library/slider.html"},
-				{"name": "Sub Nav",				"url": "/pattern-library/sub-nav.html"},
 				{"name": "Tabs",				"url": "/pattern-library/tabs.html"},
 				{"name": "Tooltips",			"url": "/pattern-library/tooltips.html"},
 				{"name": "Top Bar",				"url": "/pattern-library/top-bar.html"}
@@ -113,10 +110,9 @@
 
 	"sidenav" : {
 		"dependencies_header": "Dependencies",
-		"foundation_url": "http://foundation.zurb.com/sites/docs/v/5.5.3/"
+		"foundation_url": "http://foundation.zurb.com/sites/docs/"
 	},
 
-	"tab-spacing": "even-4",
 	"tabs": [
 		{"name": "Examples", "active": "true"},
 		{"name": "Definition"},

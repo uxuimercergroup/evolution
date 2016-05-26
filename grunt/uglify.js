@@ -6,15 +6,22 @@ module.exports = {
   },
   core: {
     files: {
-      'dist/assets/scripts/evolution.min.js': [
-        'dist/assets/scripts/evolution.js'
+      'dist/assets/js/evolution.js': [
+        'dist/assets/js/evolution.js'
+      ]
+    }
+  },
+  animation: {
+    files: {
+      'dist/assets/js/evolution-animations.js': [
+        'dist/assets/js/evolution-animations.js'
       ]
     }
   },
   site: {
     files: {
-      'dist/assets/scripts/site.min.js': [
-        'dist/assets/scripts/site.js'
+      'dist/assets/js/app.js': [
+        'dist/assets/js/app.js'
       ]
     }
   }

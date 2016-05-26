@@ -1,6 +1,6 @@
 # [Mercer Evolution](https://evolution.mercer.com)
 
-> Global framework for digital design, development and maintained by the Mercer Digital Center of Excellence
+> Global framework for digital design and development - Maintained by the Mercer Digital Center of Excellence
 
 ## What is Evolution?
 

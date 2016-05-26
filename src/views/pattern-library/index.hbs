@@ -3,51 +3,54 @@ title: "Pattern Library"
 ---
 
 <!-- PATTERN LIBRARY HERO - BEGINS -->
-	<section class="evo-full-width evo-site-hero evo-site-hero--pattern-library" data-evo-site-hero-size="x-large" data-evo-site-hero-arrow-position="bottom">
-		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
-			<div class="text-center evo-center-block-vertical-element">
+	<section class="row expanded evo-site-hero evo-site-hero--pattern-library" data-evo-site-hero-size="x-large" data-evo-site-hero-arrow-position="bottom">
+		<div class="small-12 columns evo-vertical-middle hide" data-anijs="if: load, on: window, do: $removeClass hide;">
+			<div class="text-center evo-vertical-middle-element">
 				<h1 class="evo-site-hero--hdr flipInY animated" data-evo-site-hero-hdr-size="large">{{{ pattern-library.hero.title }}} <span>{{{ pattern-library.hero.subtitle }}}</span></h1>
-				<h3 class="evo-center-block evo-site-hero--tagline bounceInUp animated">{{{ pattern-library.hero.tagline }}}</h3>
+				<h3 class="float-center evo-site-hero--tagline bounceInUp animated">{{{ pattern-library.hero.tagline }}}</h3>
 			</div>		
 		</div>
 	</section>
 <!-- PATTERN LIBRARY HERO - ENDS -->
 
 <!-- PATTERN LIBRARY JUMP TO NAV - BEGINS -->
-<div class="small-12 columns show-for-small-only evo-spacer-margin-top-xxx-large evo-spacer-margin-bottom-xxx-large">
-	<a href="#jumpToNav" class="button expand radius evo-button tiny evo-no-margin-bottom" role="button">Jump To Navigation</a>
-</div>
+	<div class="small-12 columns show-for-small-only evo-spacer-margin-top-xxx-large evo-spacer-margin-bottom-xxx-large">
+		<a href="#jumpToNav" class="button expanded evo-button tiny evo-no-margin-bottom" role="button">Jump To Navigation</a>
+	</div>
 <!-- PATTERN LIBRARY JUMP TO NAV - ENDS -->
 
 <!-- PATTERN LIBRARY CALLOUTS BAND - BEGINS -->
-	<section class="evo-full-width evo-site-band evo-site-band--marketing">
-		<div class="medium-12 large-11 large-centered columns evo-site-band--marketing-content">
-			<ul class="small-block-grid-{{pattern-library.callouts.grid_small}} medium-block-grid-{{pattern-library.callouts.grid_medium}} large-block-grid-{{pattern-library.callouts.grid_large}} evo-site-band--marketing-block-grid">
+	<section class="row expanded evo-site-band evo-site-band--marketing">
+		<div class="small-12 large-centered columns evo-site-band--marketing-content">
+
+			<div class="row small-up-{{pattern-library.callouts.grid_small}} medium-up-{{pattern-library.callouts.grid_medium}} large-up-{{pattern-library.callouts.grid_large}} evo-site-band--marketing-block-grid">
 				{{#each pattern-library.callouts.items}}
-				<li class="text-center">
+				<div class="columns text-center">
 					{{> (lookup . 'partial') }}
 					<h5>{{{header}}}</h5>
 					<p>{{{text}}}</p>
-				</li>
+				</div>
 				{{/each}}
-			</ul>
+			</div>
 		</div>
 	</section>
 <!-- PATTERN LIBRARY CALLOUTS BAND - ENDS -->
 
 <!-- PATTERN LIBRARY TAB BAND - BEGINS -->
-	<section class="evo-full-width evo-site-band--tab evo-site-band--pattern-library">
-		<div class="evo-full-width evo-site-band--tab-hdr">
+	<section class="row expanded evo-site-band--tab evo-site-band--pattern-library">
+		<div class="evo-site-band--tab-hdr">
 			<div class="small-12 columns">
 				<div class="row">
 					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab">
 						<h3 class="text-center">Evolution is Here</h3>
 					</div>
+				</div>
+				<div class="row">
 					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab-shim"></div>
 				</div>
 			</div>
 		</div>
-		<div class="evo-full-width evo-site-band--tab-panel">
+		<div class="evo-site-band--tab-panel">
 			<div class="medium-12 large-10 large-centered columns">
 				<div class="row">
 					<div class="large-6 xlarge-7 xx-large-9 columns evo-keyline-left evo-site-band--tab-panel-marketing-content evo-site-hidden" data-anijs="if: scroll, on: window, do: fadeInUpBig animated evo-site-visible, before: scrollReveal, after: holdAnimClass">

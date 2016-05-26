@@ -1,0 +1,35 @@
+{
+	"dependency_data" : {
+		"dependency": "true",
+		"foundation": "true",
+		"foundation_dependencies": [
+			{"name": "Callout", "url": "http://foundation.zurb.com/sites/docs/callout.html"}
+		],
+
+		"evolution": "true",
+		"evolution_dependencies": [],
+
+		"jquery": "",
+
+		"jquery_ui": "",
+		"jquery_ui_dependencies": [],
+
+		"other": [
+			{"name": "", "url": "", "external_link": "true"}
+		]
+	},
+
+	"tab-spacing": "even-3",
+	"tabs": [
+		{"name": "Examples", "active": "true", "index": "0"},
+		{"name": "Definition", "index": "1"},
+		{"name": "Usage", "index": "2"}
+	],
+
+	"data": {
+		"callout": {
+			"name": "Callout",
+			"partial": "callout", "slug": "callout"
+		}
+	}
+}

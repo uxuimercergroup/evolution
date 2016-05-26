@@ -1,6 +1,3 @@
 ##### General
-OWL Carousel is a touch enabled jQuery plugin that lets you create responsive carousel sliders.
 
-If you are looking to customize beyond the Evolution defaults for carousel you can visit: [Customizing Carousel](http://owlgraphic.com/owlcarousel/#customizing)
-
-* **NOTE:** In order for the images to auto fit to carousel sliders, images must be set to 100% width. By default images in Evolution will be 100% width.
+The Carousel allows for a revolving display of different types of content by using a visual slideshow. It gives the user the ability to get an overview of important information at a quick glance by flipping quickly through the different slides.

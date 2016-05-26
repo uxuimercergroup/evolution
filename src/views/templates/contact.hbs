@@ -3,9 +3,9 @@ title: "Contact Us"
 ---
 
 <!-- HERO - BEGINS -->
-	<section class="evo-full-width evo-site-hero" data-evo-site-hero-size="medium" data-evo-site-hero-arrow-position="bottom">
-		<div class="small-12 columns evo-center-block-vertical hide" data-anijs="if: load, on: window, do: $removeClass hide;">
-			<div class="text-center evo-center-block-vertical-element">
+	<section class="row expanded evo-site-hero" data-evo-site-hero-size="medium" data-evo-site-hero-arrow-position="bottom">
+		<div class="small-12 columns evo-vertical-middle hide" data-anijs="if: load, on: window, do: $removeClass hide;">
+			<div class="text-center evo-vertical-middle-element">
 				<h1 class="evo-site-hero--hdr flipInY animated evo-no-margin-bottom" data-evo-site-hero-hdr-size="medium">{{{contact.hero.title}}} <span>{{{contact.hero.subtitle}}}</span></h1>
 			</div>		
 		</div>
@@ -13,7 +13,7 @@ title: "Contact Us"
 <!-- HERO - ENDS -->
 
 <!-- PAGE CONTENT - BEGINS -->
-	<section class="evo-contain-to-grid">
+	<section class="row">
 		<div class="small-12 columns evo-spacer-padding-top-xxx-large evo-spacer-padding-bottom-xxx-large">
 
 {{# markdown }}
@@ -24,18 +24,18 @@ Contact one of our talented professionals for help with your next project.
 			{{#each global.staff.group}}
 			<div class="evo-site-vcard-group">
 				<h5 class="evo-spacer-margin-bottom-large">{{group_name}}</h5>
-				<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+				<div class="row small-up-1 medium-up-2 large-up-3">
 					{{#each members}}
-					<li class="evo-site-vcard">
-						<img class="left evo-margin-right" src="/assets/images/vcard/{{short_name}}.jpg" alt="{{name}}" width="50" height="50">
+					<div class="column evo-site-vcard">
+						<img class="float-left evo-margin-right" src="/assets/images/vcard/{{short_name}}.jpg" alt="{{name}}" width="50" height="50">
 						<p>
 							<strong class="evo-site-vcard--name">{{name}}</strong><br>
 							<span class="evo-site-vcard--title">{{title}}</span><br>
 							<a class="evo-site-vcard--email" href="mailto:{{email}}?subject={{email_subject}}">{{email}}</a>
 						</p>
-					</li>
+					</div>
 					{{/each}}
-				</ul>
+				</div>
 			</div>
 			{{/each}}
 

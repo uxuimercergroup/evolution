@@ -34,20 +34,23 @@ module.exports = {
     tasks: ['assemble', 'notify:assemble']
   },
   sass: {
-    files: ['src/assets/css/**/*.scss', 'src/patterns/**/*.scss'],
+    files: ['src/assets/scss/**/*.scss', 'src/patterns/**/*.scss'],
     tasks: ['sass', 'notify:sass']
   },
+  postcss: {
+    files: ['src/assets/scss/**/*.scss', 'src/patterns/**/*.scss'],
+    tasks: ['postcss', 'notify:postcss']
+  },
   scripts: {
-    files: ['src/assets/scripts/**/*.js', 'src/patterns/**/*.js'],
-    tasks: ['newer:concat:core', 'newer:concat:site', 'notify:concat']
+    files: ['src/assets/js/**/*.js', 'src/patterns/**/*.js'],
+    tasks: ['newer:concat:core', 'newer:concat:animation', 'newer:concat:site', 'notify:concat']
   },
   assets_copy: {
     files: [
       'src/assets/docs/**',
       'src/assets/fonts/**',
       'src/assets/images/**',
-      'src/assets/scripts/core/foundation/vendor/modernizr.js',
-      'src/assets/scripts/lib/prism/prism.js'
+      'src/assets/js/app/**/*.js'
     ],
     tasks: ['newer:copy:dist', 'notify:copy']
   },

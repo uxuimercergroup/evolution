@@ -1,4 +1,4 @@
-<div class="evo-contain-to-grid evo-spacer-margin-top-large">
+<div class="row evo-spacer-margin-top-large">
 	<div class="medium-3 columns">
 		<div class="evo-spacer-margin-bottom-x-large">
 			{{> image src="placeholders/placeholder_rectangle_wide.png" width="100%" height="150" class="evo-margin-bottom"}}
@@ -20,48 +20,24 @@
 		</div>
 
 	<!-- BLOCK GRID - BASIC DEMO - BEGIN -->
-		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
-			<li>
+		<div class="row small-up-1 medium-up-2 large-up-2">
+			<div class="columns">
 				<div class="evo-margin-bottom">
 					{{> image src="placeholders/placeholder_rectangle_wide.png" width="100%" height="150" class="evo-margin-bottom"}}
 					General text for you to read and figure out if you want to read more.
 				</div>
 				{{> button text="Click me"}}
-			</li>
-			<li>
+			</div>
+			<div class="columns">
 				<div class="evo-margin-bottom">
 					{{> image src="placeholders/placeholder_rectangle_wide.png" width="100%" height="150" class="evo-margin-bottom"}}
 					General text for you to read and figure out if you want to read more.
 				</div>
 				{{> button text="Click me"}}
-			</li>
-		</ul>
+			</div>
+		</div>
 	<!-- BLOCK GRID - BASIC DEMO - END -->
 
-	<!-- TABS - BEGINS -->
-		<ul class="tabs evo-tabs" data-tab role="tablist">
-			<li class="tab-title active" role="presentation">
-				<a href="#tab1" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs1"><span class="text">Tab 1</span></a>
-			</li>
-			<li class="tab-title" role="presentation">
-				<a href="#tab2" role="tab" tabindex="0" aria-selected="false" aria-controls="tabs2"><span class="text">Tab 2</span></a>
-			</li>
-			<li class="tab-title" role="presentation">
-				<a href="#tab3" role="tab" tabindex="0" aria-selected="false" aria-controls="tabs3"><span class="text">Tab 3</span></a>
-			</li>
-		</ul>
-		<div class="tabs-content evo-tabs-content">
-			<section role="tabpanel" aria-hidden="false" class="content active" id="tab1">
-				<p>{{ lorem count=4}}</p>
-			</section>
-			<section role="tabpanel" aria-hidden="true" class="content" id="tab2">
-				<p>{{ lorem count=4}}</p>
-			</section>
-			<section role="tabpanel" aria-hidden="true" class="content" id="tab3">
-				<p>{{ lorem count=4}}</p>
-			</section>
-		</div>
-	<!-- TABS - ENDS -->
 	</div>
 	<div class="medium-3 columns">
 		<div class="evo-spacer-margin-bottom-x-large">

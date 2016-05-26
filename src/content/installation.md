@@ -12,11 +12,13 @@ The Evolution Tool Box will:
 
 The Evolution Tool Box utilizes the following technologies:
 
-- Node.js (NPM) Runtime Environment
-- Yo Scaffolding Generator
-- Grunt.js Task Runner
-- Handlebars.js Templating Engine
-- Sass CSS Preprocessor
+- Node - Runtime Environment
+- NPM - Package Manager
+- Yo - Scaffolding Generator
+- Grunt - Task Runner
+- Bower - Front-end Package Manager
+- Handlebars - Templating Engine
+- Sass - CSS Preprocessor
 
 **NOTE: Please refer to the [Evolution Tool Box wiki](https://github.com/uxuimercergroup/evolution/wiki/Evolution-Tool-Box) for the latest dependency versions that are in use by the Evolution Tool Box development enviroment.**
 
@@ -55,7 +57,14 @@ The Evolution Tool Box is installed on your system using the [generator-evolutio
 2. Update Node Package Manager (NPM) to the latest version:
 	- Open the command line interface (cli)
 	- Copy and paste this command into the cli: `npm install npm -g`, you may need to run `sudo npm install npm -g` if the regular command does not work.
-3. Use Node Package Manager (NPM) to install the Evolution Tool Box generator globally. The Yo scaffolding tool will also be installed at this time.
+3. Install Bower front-end package manager:
+	- Open the command line interface (cli)
+	- Copy and paste this command into the cli/terminal: `npm install bower -g`, you may need to run `sudo npm install bower -g` if the regular command does not work.
+4. Configure Git configuration to work on corporate proxy:
+	- Open the command line interface (cli)
+	- Copy and paste this command into the cli/terminal: `git config --global url."https://".insteadOf git://`
+	- **This is important for Bower to install required front-end dependencies**
+5. Use Node Package Manager (NPM) to install the Evolution Tool Box generator globally. The Yo scaffolding tool will also be installed at this time.
 	- You will need a NPM account and access privileges to the private Evolution Tool Box generator NPM package.
 		1. [Sign up for a NPM account](https://www.npmjs.com/signup)
 		2. Contact Douglas Fraize at [douglas.fraize@mercer.com](mailto:douglas.fraize@mercer.com) and request to be added to the *@mercer* NPM organization as a developer and get access to download the private NPM packages.
@@ -65,10 +74,10 @@ The Evolution Tool Box is installed on your system using the [generator-evolutio
 		- NOTE: If you have not signed up for a NPM account, please [sign up for a NPM account](https://www.npmjs.com/signup). 
 		- NOTE: Contact Douglas Fraize at [douglas.fraize@mercer.com](mailto:douglas.fraize@mercer.com) and request to be added to the *@mercer* NPM organization as a developer and get access to download the private NPM packages.
 	- Copy and paste this command into the cli: `npm install -g yo @mercer/generator-evolution`, you may need to run `sudo npm install -g yo @mercer/generator-evolution` if the regular command does not work.
-4. Use Node Package Manager (NPM) to install grunt-cli tool:
+6. Use Node Package Manager (NPM) to install grunt-cli tool:
 	- Open the command line interface (cli)
 	- Copy and paste this command into the cli: `npm install grunt-cli -g`, you may need to run `sudo npm install grunt-cli -g` if the regular command does not work.
-5. If you are on a Windows system you need to install Ruby to use the Sass CSS preprocessor. If you are on a Mac you can skip this step as Ruby is installed by default on Mac OS. Follow these instructions to install Ruby for Windows:
+7. If you are on a Windows system you need to install Ruby to use the Sass CSS preprocessor. If you are on a Mac you can skip this step as Ruby is installed by default on Mac OS. Follow these instructions to install Ruby for Windows:
 	- Download the Ruby Installer from http://rubyinstaller.org/.
 		- Make sure to get version *2.2.4 (x64)*
 	- If you are unable to download the Ruby Installer because it's blocked by corporate security protocols then please download the Ruby installer from the Mercer UXUI FTP server at this location:
@@ -76,7 +85,7 @@ The Evolution Tool Box is installed on your system using the [generator-evolutio
 		- *If you need access to the Mercer UXUI FTP server please contact Douglas Fraize at [douglas.fraize@mercer.com](mailto:douglas.fraize@mercer.com).*
 	- Run the Ruby Installer application
 		- **IMPORTANT: When running the Ruby Installer make sure to check all install options (Install Tcl/Tk support, Add Ruby executables to your PATH, Associate .rb and .rbw files with this Ruby installation) before confirming the installation.**
-6. Install Sass CSS Preprocessor
+8. Install Sass CSS Preprocessor
 	- Open the command line interface (cli)
 	- Copy and paste this command into the cli: `gem install sass`, you may need to run `sudo gem install sass` if the regular command does not work. (this install may take a little time on a Windows system, be patient.)
 
@@ -94,8 +103,8 @@ Now that the Evolution Tool Box generator is installed on your system, you can i
 	- *Where will this project be hosted? (URL)*
 	- *Please select a product suite:*
 		- Core (Get a default boilerplate utilizing the Evolution framework to build your project.)
-		- Benefits Portals (Get a boilerplate utilizing the Evolution framework customized for Benefits Portals.)
-	- *What is the primary color of your project?* (Only asked if *Core* product suite is selected - default is $onyx-dark-70 - accepts Sass variable from color palette or hex-color formatted like so: #000000)
+		<!-- - Benefits Portals (Get a boilerplate utilizing the Evolution framework customized for Benefits Portals.) -->
+	- *What is the primary color of your project?* (Only asked if *Core* product suite is selected - default is $sapphire-dark - accepts Sass variable from color palette or hex-color formatted like so: #000000)
 4. The Evolution Tool Box generator will now install all required files and dependencies into your current working directory.
 5. Please ignore any warnings when `yo @mercer/evolution` is run.
 
@@ -129,6 +138,13 @@ Now that the Evolution Tool Box has been installed in your current working direc
 ##### Other Tools
 
 The Evolution Tool Box includes several other tasks to streamline the web development process.
+
+###### Test (Testing development environment)
+Generate development UI for testing in browsers that don't support ES2015 javascript syntax (translated to older ES5 syntax using Babel)
+
+1. Using the cli, make sure that you are still in your current working directory.
+2. Copy and paste this command into the cli: `grunt test`
+3. When all tasks are complete, a window will open in your default browser displaying the index.html page. Any changes made to the templates or assets will trigger the automatic browser refresh. To close the server, press Ctrl-c. If on Windows, press `y` to terminate the batch job.
 
 ###### Production
 Generate production UI code for hand-off

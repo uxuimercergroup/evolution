@@ -1,12 +1,18 @@
-<!-- Expand Evenly - Up to even-8 -->
-<ul class="button-group radius even-3">
+<!-- Expand Evenly -->
+<div class="expanded button-group secondary evo-button-group">
 {{#repeat count=3}}
-	<li>{{> button secondary="true" text="Secondary a"}}</li>
+	{{> button text="Secondary a"}}
 {{/repeat}}
-</ul>
+</div>
 
-<ul class="button-group radius even-4">
+<div class="expanded button-group evo-button-group">
 {{#repeat count=4}}
-	<li>{{> button button-type="button" text="Primary"}}</li>
+	{{> button button-type="button" text="Primary"}}
 {{/repeat}}
-</ul>
+</div>
+
+<div class="expanded button-group evo-button-group">
+{{#repeat count=4}}
+	{{> button button-type="button" hollow="true" text="Primary"}}
+{{/repeat}}
+</div>

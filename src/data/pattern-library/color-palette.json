@@ -1,11 +1,4 @@
 {
-	
-	"tab-spacing": "even-2",
-	"tabs": [
-		{"name": "Examples", "active": "true", "index": "0"},
-		{"name": "Defintion", "index": "1"}
-	],
-
 	"primary": "Primary Color Palette",
 	"secondary": "Secondary Color Palette",
 	"tertiary": "Tertiary Color Palette",
@@ -13,14 +6,14 @@
 
 	"data": [
 		{
-			"header": "Base",
+			"name": "Base",
 			"colors": [
-				{"data_value": "black", "name": "Black", "hex": "#000000"},
-				{"data_value": "white", "name": "White", "hex": "#FFFFFF"}
+				{"data_value": "black", "name": "Black", "hex": "#0A0A0A"},
+				{"data_value": "white", "name": "White", "hex": "#FEFEFE"}
 			]
 		},
 		{
-			"header": "Sapphire",
+			"name": "Sapphire",
 			"colors": [
 				{"data_value": "sapphire-dark", "name": "Sapphire Dark", "hex": "#002C77"},
 				{"data_value": "sapphire-medium", "name": "Sapphire Medium", "hex": "#006D9E"},
@@ -29,7 +22,7 @@
 			]
 		},
 		{
-			"header": "Onyx",
+			"name": "Onyx",
 			"colors": [
 				{"data_value": "onyx-dark", "name": "Onyx Dark", "hex": "#000000"},
 				{"data_value": "onyx-medium", "name": "Onyx Medium", "hex": "#404040"},
@@ -38,7 +31,7 @@
 			]
 		},
 		{
-			"header": "Onyx Extended",
+			"name": "Onyx Extended",
 			"colors": [
 				{"data_value": "onyx-dark-90", "name": "Onyx Dark 90", "hex": "#1A1A1A"},
 				{"data_value": "onyx-dark-80", "name": "Onyx Dark 80", "hex": "#333333"},
@@ -55,7 +48,7 @@
 			]
 		},
 		{
-			"header": "Amethyst",
+			"name": "Amethyst",
 			"colors": [
 				{"data_value": "amethyst-dark", "name": "Amethyst Dark", "hex": "#570054"},
 				{"data_value": "amethyst-medium", "name": "Amethyst Medium", "hex": "#932077"},
@@ -64,7 +57,7 @@
 			]
 		},
 		{
-			"header": "Ruby",
+			"name": "Ruby",
 			"colors": [
 				{"data_value": "ruby-dark", "name": "Ruby Dark", "hex": "#690031"},
 				{"data_value": "ruby-medium", "name": "Ruby Medium", "hex": "#A9194F"},
@@ -73,7 +66,7 @@
 			]
 		},
 		{
-			"header": "Topaz",
+			"name": "Topaz",
 			"colors": [
 				{"data_value": "topaz-dark", "name": "Topaz Dark", "hex": "#905501"},
 				{"data_value": "topaz-medium", "name": "Topaz Medium", "hex": "#C98414"},
@@ -82,7 +75,7 @@
 			]
 		},
 		{
-			"header": "Turquoise",
+			"name": "Turquoise",
 			"colors": [
 				{"data_value": "turquoise-dark", "name": "Turquoise Dark", "hex": "#004C50"},
 				{"data_value": "turquoise-medium", "name": "Turquoise Medium", "hex": "#008075"},
@@ -91,7 +84,7 @@
 			]
 		},
 		{
-			"header": "Iolite",
+			"name": "Iolite",
 			"colors": [
 				{"data_value": "iolite-dark", "name": "Iolite Dark", "hex": "#43286D"},
 				{"data_value": "iolite-medium", "name": "Iolite Medium", "hex": "#595998"},
@@ -100,7 +93,7 @@
 			]
 		},
 		{
-			"header": "Garnet",
+			"name": "Garnet",
 			"colors": [
 				{"data_value": "garnet-dark", "name": "Garnet Dark", "hex": "#820009"},
 				{"data_value": "garnet-medium", "name": "Garnet Medium", "hex": "#BB2C2B"},
@@ -109,7 +102,7 @@
 			]
 		},
 		{
-			"header": "Citrine",
+			"name": "Citrine",
 			"colors": [
 				{"data_value": "citrine-dark", "name": "Citrine Dark", "hex": "#8D380A"},
 				{"data_value": "citrine-medium", "name": "Citrine Medium", "hex": "#C55F24"},
@@ -118,7 +111,7 @@
 			]
 		},
 		{
-			"header": "Peridot",
+			"name": "Peridot",
 			"colors": [
 				{"data_value": "peridot-dark", "name": "Peridot Dark", "hex": "#516021"},
 				{"data_value": "peridot-medium", "name": "Peridot Medium", "hex": "#838E30"},
@@ -127,7 +120,7 @@
 			]
 		},
 		{
-			"header": "Emerald",
+			"name": "Emerald",
 			"colors": [
 				{"data_value": "emerald-dark", "name": "Emerald Dark", "hex": "#00582D"},
 				{"data_value": "emerald-medium", "name": "Emerald Medium", "hex": "#128C3F"},
@@ -136,7 +129,7 @@
 			]
 		},
 		{
-			"header": "System Colors",
+			"name": "System Colors",
 			"colors": [
 				{"data_value": "success-color", "name": "Success Color", "hex": "#72BE44"},
 				{"data_value": "warning-color", "name": "Warning Color", "hex": "#FCC770"},
@@ -144,6 +137,17 @@
 				{"data_value": "info-color", "name": "Info Color", "hex": "#A6E2EF"},
 				{"data_value": "highlight-color", "name": "Highlight Color", "hex": "#F7F0B2"}
 			]
+		}
+	],
+
+	"usage_data": [
+		{
+			"name": "Specific Use Colors",
+			"partial": "specific-use-colors", "slug": "specific-use-colors"
+		},
+		{
+			"name": "Spot Colors",
+			"partial": "spot-colors", "slug": "spot-colors"
 		}
 	]
 }

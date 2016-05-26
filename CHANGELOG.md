@@ -2,6 +2,51 @@
 ## [Unreleased]
 -->
 
+## [4.0.0] - 2016-05-26
+
+##### Added
+- Lead paragraph atom added to type
+- Added alert box to form abide validation demo
+- Added 5 levels of global theme color variables to global sass: 
+	- `$evo-primary-color`
+	- `$evo-secondary-color`
+	- `$evo-tertiary-color`
+	- `$evo-quaternary-color`
+	- `$evo-quinary-color`
+- Close button from Foundation 6.2.1 added to button options
+- CSS Autoprefixer added to Evolution Tool Box as a NPM dev dependency, removed duplicate browser prefixes from Sass
+- Babel added to Evolution Tool Box as a NPM dev dependency to translate ES2015 JS in Foundation 6.2.1 into ES5
+- Foundation's Motion UI animation library added and is a NPM dev dependency in Evoluton Tool Box
+
+##### Changed
+- **Zurb Foundation updated from 5.5.2 to 6.2.1 ([Oberon](https://github.com/zurb/foundation-sites/releases/tag/v6.2.1))**, Foundation is now a NPM dependency in Evoluton Tool Box
+- jQuery updated to version 2.2.2
+- jQuery UI updated to version 1.11.4
+- Toggle element helper atom now uses Foundation's toggler instead of custom solution
+- Boxes replaced with Foundation's callout
+- Alert boxes now use Foundation's callout
+- All organisms updated to use new HTML/CSS/JS from Foundation 6.2.1 where dependent on it
+- DataTables is now a NPM dev dependency in Evoluton Tool Box
+- jQuery UI Touch Punch is now a NPM dev dependency in Evoluton Tool Box
+- AniJS is now a Bower dependency in Evoluton Tool Box
+- jQuery UI is now a Bower dependency in Evoluton Tool Box
+- jQuery Masked Input is now a Bower dependency in Evoluton Tool Box
+
+##### Removed
+- Removed icon shields from icon options
+- Layout helpers classes removed (`.evo-full-width`) in favor of solution in Foundation 6.2.1 (`.expanded`)
+- OwlCarousel removed in favor of usng Foundation orbit for carousel molecule
+- Post and prefix removed from form elements and replaced by input group solution in Foundation 6.2.1
+- Input numeric mask JS removed in favor of using HTML5 solutions and Foundation abide validation
+- Removed right-aligned inline form as it was redundant, just add text align helper classes to form
+- Removed `radius` and `round` helper classes after upgrading to Foundation 6.2.1, no longer available
+- Removed dropdown buttons molecule after upgrading to Foundation 6.2.1, no longer available, use combination of buttons and dropdowns to duplicate functionality
+- Removed Sub Nav molecule after upgrading to Foundation 6.2.1, no longer available
+- Removed Scroll Pane molecule in favor of just using CSS, `overflow: scroll`
+- Removed jquery.cookie.js since no longer used in Foundation 6.2.1
+- Removed placeholder.js polyfill for IE9 since no longer used in Foundation 6.2.1 and was buggy
+- Removed fastclick.js since no longer used in Foundation 6.2.1
+
 ## [3.0.5] - 2016-04-08
 
 ##### Changed

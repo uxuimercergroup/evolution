@@ -3,17 +3,17 @@
 		"dependency": "true",
 		"foundation": "true",
 		"foundation_dependencies": [
-			{"name": "Labels", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/labels.html"}
+			{"name": "Label", "url": "http://foundation.zurb.com/sites/docs/label.html"}
 		],
+
 		"evolution": "true",
-		"evolution_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"evolution_dependencies": [],
+
 		"jquery": "",
+
 		"jquery_ui": "",
-		"jquery_ui_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"jquery_ui_dependencies": [],
+
 		"other": [
 			{"name": "", "url": "", "external_link": "true"}
 		]
@@ -24,17 +24,13 @@
 			"name": "Basic Label",
 			"partial": "labels", "slug": "basic-label"
 		},
-		"label_round": {
-			"name": "Label Round",
-			"partial": "labels-round", "slug": "label-round"
-		},
-		"label_radius": {
-			"name": "Label Radius",
-			"partial": "labels-radius", "slug": "label-radius"
-		},
 		"label_colors": {
 			"name": "Label Colors",
 			"partial": "labels-colors", "slug": "label-colors"
+		},
+		"label_icons": {
+			"name": "Label Icons",
+			"partial": "labels-icons", "slug": "label-icons"
 		}
 	}
 }

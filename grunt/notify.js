@@ -14,6 +14,14 @@ module.exports = {
     }
   },
 
+  // Test dev environment notification
+  test: {
+    options: {
+      title: 'Build complete. Test environment ready.',  // optional
+      message: 'Test environment ready for testing.' //required
+    }
+  },
+
   // Production files generation notification
   prod: {
     options: {
@@ -71,6 +79,14 @@ module.exports = {
     options: {
       title: 'Sass files preprocessed.',  // optional
       message: 'Sass files preprocessed successfully.' //required
+    }
+  },
+
+  // PostCSS notification
+  postcss: {
+    options: {
+      title: 'CSS files autoprefixed.',  // optional
+      message: 'CSS files autoprefixed successfully.' //required
     }
   }
 

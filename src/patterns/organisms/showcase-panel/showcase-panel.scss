@@ -6,14 +6,14 @@ AUTHOR: {{ evo_meta_author }}
 URL: {{ evo_meta_url }}
 --------------------------------------------------------------------------------------------*/
 
+@charset 'utf-8';
+
 //
 // @core sass imports - IMPORTANT: DO NOT MODIFY!
 //
-@import	"../../../assets/css/core/global/color_variables";
-@import	"../../../assets/css/core/foundation/foundation/settings";
-@import	"../../../assets/css/core/global/variables";
-@import	"../../../assets/css/core/global/functions";
-@import	"../../../assets/css/core/global/mixins";
+@import	"../../../assets/scss/core/global";
+@import	"../../../assets/scss/core/foundation-settings";
+@import	"../../../assets/scss/core/settings";
 
 //
 // @variables - IMPORTANT: DO NOT MODIFY! MODIFY VARIABLE OVERRIDES ONLY.
@@ -33,7 +33,7 @@ $evo-showcase-panel-item-font-color: $onyx-dark-50 !default;
 $evo-showcase-panel-item-icon-position-top: 4px !default;
 $evo-showcase-panel-item-label-font-family: $evo-font-bold-stack !default;
 $evo-showcase-panel-item-label-line-height: 1 !default;
-$evo-showcase-panel-item-label-sup-font-family: $evo-font-regular-stack !default;
+$evo-showcase-panel-item-label-sup-font-family: $evo-base-font-family !default;
 $evo-showcase-panel-item-sub-label-font-family: $evo-font-medium-stack !default;
 $evo-showcase-panel-item-sub-label-font-size: rem-calc(16) !default;
 $evo-showcase-panel-item-sub-label-text-transform: uppercase !default;
@@ -61,6 +61,7 @@ $evo-showcase-panel-item-small-sub-label-position-left: -5px !default;
 $evo-showcase-panel-item-small-sub-label-letter-spacing: 0 !default;
 $evo-showcase-panel-item-small-sub-label-font-family: $evo-font-bold-stack !default;
 $evo-showcase-panel-item-small-sub-label-text-transform: lowercase !default;
+$evo-showcase-panel-color-reverse-background-color: $evo-primary-color !default;
 $evo-showcase-panel-color-reverse-font-color: $white !default;
 $evo-showcase-panel-fixed-position-top: 44px !default;
 $evo-showcase-panel-fixed-position-left: 0 !default;
@@ -79,6 +80,7 @@ $evo-product: core;
 
 	$evo-showcase-panel-background-color: $white;
 	$evo-showcase-panel-item-font-color: $onyx-dark-50;
+	$evo-showcase-panel-color-reverse-background-color: $evo-primary-color;
 	$evo-showcase-panel-color-reverse-font-color: $white;
 
 // Benefits Portals
@@ -86,6 +88,7 @@ $evo-product: core;
 
 	$evo-showcase-panel-background-color: $white;
 	$evo-showcase-panel-item-font-color: $onyx-dark-50;
+	$evo-showcase-panel-color-reverse-background-color: $evo-primary-color;
 	$evo-showcase-panel-color-reverse-font-color: $white;
 
 }
@@ -106,7 +109,7 @@ $evo-product: core;
 // $evo-showcase-panel-item-icon-position-top: 4px;
 // $evo-showcase-panel-item-label-font-family: $evo-font-bold-stack;
 // $evo-showcase-panel-item-label-line-height: 1;
-// $evo-showcase-panel-item-label-sup-font-family: $evo-font-regular-stack;
+// $evo-showcase-panel-item-label-sup-font-family: $evo-base-font-family;
 // $evo-showcase-panel-item-sub-label-font-family: $evo-font-medium-stack;
 // $evo-showcase-panel-item-sub-label-font-size: rem-calc(16);
 // $evo-showcase-panel-item-sub-label-text-transform: uppercase;
@@ -134,6 +137,7 @@ $evo-product: core;
 // $evo-showcase-panel-item-small-sub-label-letter-spacing: 0;
 // $evo-showcase-panel-item-small-sub-label-font-family: $evo-font-bold-stack;
 // $evo-showcase-panel-item-small-sub-label-text-transform: lowercase;
+// $evo-showcase-panel-color-reverse-background-color: $evo-primary-color;
 // $evo-showcase-panel-color-reverse-font-color: $white;
 // $evo-showcase-panel-fixed-position-top: 44px;
 // $evo-showcase-panel-fixed-position-left: 0;
@@ -235,6 +239,7 @@ $evo-product: core;
 	// SHOWCASE PANEL - COLOR REVERSE - BEGINS
 		&[data-evo-showcase-panel-color-reverse]
 											{
+											background-color: $evo-showcase-panel-color-reverse-background-color;
 			.evo-showcase-panel-item 			{
 												color: $evo-showcase-panel-color-reverse-font-color;
 				a									{color: $evo-showcase-panel-color-reverse-font-color;}
@@ -255,12 +260,3 @@ $evo-product: core;
 
 										}
 // SHOWCASE PANEL - ENDS
-
-//=== MEDIA QUERIES =========================================================================
-
-// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
-@media #{$medium-up} {
-
-	
-
-}

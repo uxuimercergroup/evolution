@@ -3,17 +3,16 @@
 		"dependency": "true",
 		"foundation": "true",
 		"foundation_dependencies": [
-			{"name": "Labels", "url": "http://foundation.zurb.com/docs/components/labels.html"}
+			{"name": "Badge", "url": "http://foundation.zurb.com/sites/docs/badge.html"}
 		],
 		"evolution": "true",
-		"evolution_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"evolution_dependencies": [],
+
 		"jquery": "",
+
 		"jquery_ui": "",
-		"jquery_ui_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"jquery_ui_dependencies": [],
+
 		"other": [
 			{"name": "", "url": "", "external_link": "true"}
 		]
@@ -24,10 +23,19 @@
 			"name": "Basic Badge",
 			"multiple_example": "true",
 			"multiple_example_options": [
-				{"partial": "badge", "text": "9", "slug": "basic-badge"},
-				{"partial": "badge", "text": "99", "slug": "basic-badge"},
-				{"partial": "badge", "text": "999", "slug": "basic-badge"},
-				{"partial": "badge", "text": "9999", "slug": "basic-badge"}
+				{"partial": "badge", "text": "4", "slug": "basic-badge"},
+				{"partial": "badge", "text": "5", "slug": "basic-badge"},
+				{"partial": "badge", "text": "A", "slug": "basic-badge"},
+				{"partial": "badge", "text": "B", "slug": "basic-badge"}
+			]
+		},
+		"basic_badge_icons": {
+			"name": "Basic Badge with Icons",
+			"multiple_example": "true",
+			"multiple_example_options": [
+				{"partial": "badge", "icon-class": "evo-icon-file-text2", "slug": "basic-badge-icons"},
+				{"partial": "badge", "icon-class": "evo-icon-user", "slug": "basic-badge-icons"},
+				{"partial": "badge", "icon-class": "evo-icon-alarm-check", "slug": "basic-badge-icons"}
 			]
 		},
 		"badge_size_small": {
@@ -58,16 +66,6 @@
 				{"partial": "badge", "text": "99", "size": "large", "slug": "badge-size-large"},
 				{"partial": "badge", "text": "999", "size": "large", "slug": "badge-size-large"},
 				{"partial": "badge", "text": "9999", "size": "large", "slug": "badge-size-large"}
-			]
-		},
-		"badge_size_x_large": {
-			"name": "Badge Size X-Large",
-			"multiple_example": "true",
-			"multiple_example_options": [
-				{"partial": "badge", "text": "9", "size": "x-large", "slug": "badge-size-x-large"},
-				{"partial": "badge", "text": "99", "size": "x-large", "slug": "badge-size-x-large"},
-				{"partial": "badge", "text": "999", "size": "x-large", "slug": "badge-size-x-large"},
-				{"partial": "badge", "text": "9999", "size": "x-large", "slug": "badge-size-x-large"}
 			]
 		}
 	}

@@ -3,23 +3,23 @@
 		"dependency": "true",
 		"foundation": "true",
 		"foundation_dependencies": [
-			{"name": "Block Grid", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/block_grid.html"}
+			{"name": "Grid", "url": "http://foundation.zurb.com/sites/docs/grid.html"}
 		],
+
 		"evolution": "true",
-		"evolution_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"evolution_dependencies": [],
+
 		"jquery": "",
+
 		"jquery_ui": "",
-		"jquery_ui_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"jquery_ui_dependencies": [],
+
 		"other": [
 			{"name": "", "external_link": "true"}
 		]
 	},
 
-	"product_suite_bp": "true",
+	"product_suite_bp": "false",
 	"product_suite_comm": "false",
 
 	"data": {
@@ -44,7 +44,7 @@
 			"slug": "top-bottom-label"
 		},
 		"top_bottom_label_subtotal": {
-			"name": "Top Bottom Label Subtotal",
+			"name": "Subtotal",
 			"partial": "pricing-table-top-bottom-label-sub-total",
 			"slug": "top-bottom-label-subtotal"
 		}

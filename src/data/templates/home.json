@@ -1,4 +1,5 @@
 {
+	"hero_footnote": "Maintained by the Mercer Digital Center of Excellence",
 	"tools": {
 		"header": "Access to Tools All in One Place",
 		"grid_small" : "1",
@@ -29,10 +30,10 @@
 			"partial": "button",
 			"custom-class": "evo-site-cta-button",
 			"href": "/what.html",
-			"expand": "true",
+			"expanded": "true",
+			"hollow": "true",
 			"icon-position": "right",
 			"icon-position-right-class": "evo-icon-arrow-right2",
-			"shape": "round",
 			"text": "Learn more"
 			}
 		],
@@ -40,10 +41,11 @@
 			{
 			"partial": "button",
 			"custom-class": "evo-site-cta-button evo-no-margin-bottom",
+			"hollow": "true",
 			"href": "/what.html",
 			"icon-position": "right",
 			"icon-position-right-class": "evo-icon-arrow-right2",
-			"shape": "round",
+			"min-width": "true",
 			"text": "Learn more"
 			}
 		]
