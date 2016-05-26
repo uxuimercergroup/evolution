@@ -18,37 +18,55 @@ This page includes every single Evolution element so that we can make sure thing
 <!-- INTRO SECTION - ENDS -->
 
 <!-- PAGE CONTENT - BEGINS -->
-	<section class="row evo-site-tabs-content--pattern-library-content">
-		<div class="medium-12 large-10 columns evo-keyline-right evo-spacer-padding-top-large">
+	<section class="row evo-site-tabs-content--pattern-library-content" data-equalizer="tab-panel">
+		<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col0" data-equalizer-watch="tab-panel">
 
-			<a name="{{kitchen-sink.data.atoms.arrival_name}}"></a>
-			<h3 class="evo-hdr-rule evo-spacer-margin-bottom-x-large" data-magellan-destination="{{kitchen-sink.data.atoms.arrival_name}}">{{kitchen-sink.data.atoms.name}}</h3>
+			<h3 class="evo-hdr-rule evo-spacer-margin-bottom-x-large" data-magellan-target="{{kitchen-sink.data.atoms.arrival_name}}" id="{{kitchen-sink.data.atoms.arrival_name}}">{{kitchen-sink.data.atoms.name}}</h3>
 			{{> atoms}}
 
 			<hr>
-			<a name="{{kitchen-sink.data.molecules.arrival_name}}"></a>
-			<h3 class="evo-hdr-rule evo-spacer-margin-bottom-x-large" data-magellan-destination="{{kitchen-sink.data.molecules.arrival_name}}">{{kitchen-sink.data.molecules.name}}</h3>
+			<h3 class="evo-hdr-rule evo-spacer-margin-bottom-x-large" data-magellan-target="{{kitchen-sink.data.molecules.arrival_name}}" id="{{kitchen-sink.data.molecules.arrival_name}}">{{kitchen-sink.data.molecules.name}}</h3>
 			{{> molecules}}
 
 			<hr>
-			<a name="{{kitchen-sink.data.organisms.arrival_name}}"></a>
-			<h3 class="evo-hdr-rule evo-spacer-margin-bottom-x-large" data-magellan-destination="{{kitchen-sink.data.organisms.arrival_name}}">{{kitchen-sink.data.organisms.name}}</h3>
+			<h3 class="evo-hdr-rule evo-spacer-margin-bottom-x-large" data-magellan-target="{{kitchen-sink.data.organisms.arrival_name}}" id="{{kitchen-sink.data.organisms.arrival_name}}">{{kitchen-sink.data.organisms.name}}</h3>
 			{{> organisms}}
 
 			<br>
 			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
 
 		</div>
-		<div class="large-2 columns show-for-large-up evo-spacer-padding-top-large">
+		<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 		<!-- SIDENAV - BEGINS -->
-			<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
-				<dl class="sub-nav">
-					<dd data-magellan-arrival="{{kitchen-sink.data.atoms.arrival_name}}"><a href="#{{kitchen-sink.data.atoms.url}}">{{kitchen-sink.data.atoms.name}}</a></dd>
-					<dd data-magellan-arrival="{{kitchen-sink.data.molecules.arrival_name}}"><a href="#{{kitchen-sink.data.molecules.url}}">{{kitchen-sink.data.molecules.name}}</a></dd>
-					<dd data-magellan-arrival="{{kitchen-sink.data.organisms.arrival_name}}"><a href="#{{kitchen-sink.data.organisms.url}}">{{kitchen-sink.data.organisms.name}}</a></dd>
-				</dl>
+			<div data-sticky-container>
+				<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col0" data-sticky-on="large" data-sticky>
+					<ul class="menu vertical" data-magellan>
+						<li><a href="#{{kitchen-sink.data.atoms.url}}">{{kitchen-sink.data.atoms.name}}</a></li>
+						<li><a href="#{{kitchen-sink.data.molecules.url}}">{{kitchen-sink.data.molecules.name}}</a></li>
+						<li><a href="#{{kitchen-sink.data.organisms.url}}">{{kitchen-sink.data.organisms.name}}</a></li>
+					</ul>
+				</nav>
 			</div>
 		<!-- SIDENAV - ENDS -->
 		</div>
+
 	</section>
 <!-- PAGE CONTENT - ENDS -->

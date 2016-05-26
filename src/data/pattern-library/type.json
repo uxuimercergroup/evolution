@@ -3,17 +3,17 @@
 		"dependency": "true",
 		"foundation": "true",
 		"foundation_dependencies": [
-			{"name": "Typography", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/typography.html"}
+			{"name": "Base Typography", "url": "http://foundation.zurb.com/sites/docs/typography-base.html"}
 		],
+
 		"evolution": "true",
-		"evolution_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"evolution_dependencies": [],
+
 		"jquery": "",
+
 		"jquery_ui": "",
-		"jquery_ui_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"jquery_ui_dependencies": [],
+
 		"other": [
 			{"name": "", "url": "", "external_link": "true"}
 		]
@@ -53,6 +53,10 @@
 			"text": "<small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</small>",
 			"slug": "paragraph-footnote"
 		},
+		"lead_paragraph": {
+			"name": "Lead Paragraph",
+			"partial": "type-lead-paragraph", "slug": "paragraph-footnote"
+		},
 		"headers": {
 			"name": "Headers",
 			"multiple_example": "true",
@@ -78,7 +82,7 @@
 			]
 		},
 		"header_with_background_color": {
-			"name": "Header with Background Color",
+			"name": "Header Background Color",
 			"multiple_example": "true",
 			"multiple_example_options": [
 				{"partial": "type-header", "class": "evo-h1-hdr-background", "size": "1", "text": "h1 header", "slug": "h1-header-with-background-color"},
@@ -122,6 +126,11 @@
 			"partial": "type-unordered-list",
 			"slug": "unordered-list"
 		},
+		"unbulleted_list": {
+			"name": "Un-bulleted List",
+			"partial": "type-unbulleted-list",
+			"slug": "unbulleted-list"
+		},
 		"definition_list": {
 			"name": "Definition List",
 			"partial": "type-definition-list",
@@ -148,6 +157,10 @@
 			"name": "Other Markup",
 			"partial": "type-other-markup",
 			"slug": "other-markup"
+		},
+		"text_align": {
+			"name": "Text Align",
+			"partial": "type-text-align", "slug": "type-text-align"
 		}
 	},
 
@@ -488,11 +501,11 @@
 				},
 				{
 				"label": "Size",
-				"item": "0.750em / 12px"
+				"item": "0.8125em / 13px"
 				},
 				{
 				"label": "Line Height",
-				"item": "1.063em / 17px"
+				"item": "1.125em / 18px"
 				},
 				{
 				"label": "Text Decoration",
@@ -782,5 +795,69 @@
 	      "name": "lowercase y, umlaut",
 	      "glyph" : "&yuml"
 	    }
+	],
+
+	"text_alignment_header": "Text Alignment Helpers",
+	"text_alignment_settings": [
+		{
+			"text-class": "text-left"
+		},
+		{
+			"text-class": "text-right"
+		},
+		{
+			"text-class": "text-center"
+		},
+		{
+			"text-class": "text-justify"
+		},
+		{
+			"text-class": "medium-text-left"
+		},
+		{
+			"text-class": "medium-text-right"
+		},
+		{
+			"text-class": "medium-text-center"
+		},
+		{
+			"text-class": "medium-text-justify"
+		},
+		{
+			"text-class": "large-text-left"
+		},
+		{
+			"text-class": "large-text-right"
+		},
+		{
+			"text-class": "large-text-center"
+		},
+		{
+			"text-class": "large-text-justify"
+		},
+		{
+			"text-class": "xlarge-text-left"
+		},
+		{
+			"text-class": "xlarge-text-right"
+		},
+		{
+			"text-class": "xlarge-text-center"
+		},
+		{
+			"text-class": "xlarge-text-justify"
+		},
+		{
+			"text-class": "xxlarge-text-left"
+		},
+		{
+			"text-class": "xxlarge-text-right"
+		},
+		{
+			"text-class": "xxlarge-text-center"
+		},
+		{
+			"text-class": "xxlarge-text-justify"
+		}
 	]
 }

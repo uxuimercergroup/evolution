@@ -21,12 +21,10 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{animations.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
-				{{#each animations.tabs}}
-				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
-					<a href="#tabs{{index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{index}}" class="button small evo-button">
-						<span class="text">{{name}}</span>
-					</a>
+			<ul class="tabs evo-tabs evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
+				{{#each pattern-library.tabs}}
+				<li class="tabs-title evo-tabs-title{{#is active 'true'}} is-active{{/is}}" role="presentation">
+					<a href="#evoPanel{{@index}}" role="tab" tabindex="0">{{name}}</a>
 				</li>
 				{{/each}}
 			</ul>
@@ -37,41 +35,40 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 <!-- INTRO SECTION - ENDS -->
 
 <!-- TABS - BEGINS -->
-	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content">
+	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content" data-tabs-content="evoLibraryTabs">
 	<!-- TAB PANEL 1 - BEGINS -->
-		<section role="tabpanel" aria-hidden="false" class="content active evo-site-tabs-content--pattern-library-tab-panel" id="tabs0">
+		<section class="tabs-panel evo-tabs-panel is-active evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel0">
 
-			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+			<section class="row" data-equalizer="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col0" data-equalizer-watch="tab-panel">
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each animations.data }}
-					<div class="panel evo-box evo-site-example-box">
-						<div class="evo-box-hdr">
+					<div class="callout evo-callout evo-site-example-box">
+						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
-							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
+							<h6 class="evo-hdr-rule" data-magellan-target="{{hyphenate name}}" id="{{hyphenate name}}">
 								{{name}}
-								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip evo-tooltip" title="View Source" data-toggle="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
-							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
-						</div>
-						<div class="evo-box-bdy evo-spacer-margin-top-xx-large">
+						</header>
+						<section class="evo-box-bdy evo-spacer-margin-top-xx-large">
 						<!-- RENDERED HTML - BEGINS -->
 							{{#is multiple_example 'true'}}
-								<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4 xlarge-block-grid-5 xxlarge-block-grid-6">
+								<div class="row small-up-2 medium-up-3 large-up-4 xlarge-up-5 xxlarge-up-6">
 								{{#each multiple_example_options}}
-									<li>
+									<div class="column">
 										{{> (lookup . 'partial') }}
 										<div class="evo-site-swatch-details">
 											<span>{{animation_type}}</span>
 										</div>
-									</li>
+									</div>
 								{{/each}}
-								</ul>
+								</div>
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
-						</div>
-						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						</section>
+						<footer class="evo-site-example-box-ftr{{@index}} hide" id="code-toggle{{@index}}" data-toggler=".hide">
 						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -79,7 +76,7 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large"></a>
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{{code}}}</xmp></code></pre>
 							<!-- HTML - ENDS -->
@@ -87,19 +84,21 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 								{{/each}}
 							{{/is}}
 						<!-- CODE - ENDS -->
-						</div>
+						</footer>
 					</div>
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
-						<dl class="sub-nav">
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col0" data-sticky-on="large" data-sticky>
+							<ul class="menu vertical" data-magellan>
 							{{#each animations.data}}
-							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+								<li><a href="#{{hyphenate name}}">{{name}}</a></li>
 							{{/each}}
-						</dl>
+							</ul>
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
@@ -109,25 +108,25 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 	<!-- TAB PANEL 1 - ENDS -->
 
 	<!-- TAB PANEL 2 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs1">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel1">
 
-			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 2
+			<section class="row" data-equalizer="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col1" data-equalizer-watch="tab-panel">
+					&nbsp;
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 2
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+					&nbsp;
 				</div>
 			</section>
 			
 		</section>
-	<!-- TAB PANEL 2 - BEGINS -->
+	<!-- TAB PANEL 2 - ENDS -->
 
 	<!-- TAB PANEL 3 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
 
-			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+			<section class="row" data-equalizer="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col2" data-equalizer-watch="tab-panel">
 					
 					<!-- CONTENT SECTION - BEGINS -->
 						<section class="evo-site-tabs-content--pattern-library-tab-content-section">
@@ -138,9 +137,10 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 					<!-- CONTENT SECTION - ENDS -->
 
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col2" data-sticky-on="large" data-sticky>
 						{{!--
 						<dl class="sub-nav">
 							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
@@ -148,77 +148,67 @@ Animations add a level of interactivity to any element. [AniJS](http://anijs.git
 						<hr>
 						--}}
 
-						{{#is animations.dependency_data.dependency 'true'}}
-
-					<!-- SIDENAV ACCORDION - BEGINS -->
-						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
-
-						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
-							<li class="accordion-navigation">
-								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
-								<div id="dependencies-accordion" class="content active" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
-
-									<ul class="no-bullet">
-										{{#is animations.dependency_data.foundation 'true'}}
-											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if animations.dependency_data.foundation_dependencies}}
-												<ul>
-												{{#each animations.dependency_data.foundation_dependencies}}
-													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											{{/if}}
-											</li>
-										{{/is}}
-										{{#is animations.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.version}}</a>
-											{{#if animations.dependency_data.evolution_dependencies}}
-												<ul>
-												{{#each animations.dependency_data.evolution_dependencies}}
-													<li><a href="{{url}}">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											</li>
-											{{/if}}
-										{{/is}}
-										{{#is animations.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is animations.dependency_data.jquery_ui 'true'}}
-											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
-											{{#if animations.dependency_data.jquery_ui_dependencies}}
-												<ul>
-												{{#each animations.dependency_data.jquery_ui_dependencies}}
-													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											{{/if}}
-											</li>
-										{{/is}}
-										{{#each animations.dependency_data.other}}
-											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+							{{#is animations.dependency_data.dependency 'true'}}
+						<!-- DEPENDECY SIDENAV - BEGINS -->
+							<h6>{{pattern-library.sidenav.dependencies_header}}</h6>
+							<ul class="no-bullet evo-site--pattern-library-dependency-sidenav">
+								{{#is animations.dependency_data.foundation 'true'}}
+									<li>
+										<a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
+									{{#if animations.dependency_data.foundation_dependencies}}
+										<ul class="no-bullet">
+										{{#each animations.dependency_data.foundation_dependencies}}
+											<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 										{{/each}}
-									</ul>
-
-								</div>
-							</li>
-						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
-
-						</ul>
-					<!-- SIDENAV ACCORDION - ENDS -->
-						{{/is}}
-
+										</ul>
+									{{/if}}
+									</li>
+								{{/is}}
+								{{#is animations.dependency_data.evolution 'true'}}
+									<li><a href="/">Evolution {{package.version}}</a>
+									{{#if animations.dependency_data.evolution_dependencies}}
+										<ul class="no-bullet">
+										{{#each animations.dependency_data.evolution_dependencies}}
+											<li><a href="{{url}}">{{name}}</a></li>
+										{{/each}}
+										</ul>
+									{{/if}}
+									</li>
+								{{/is}}
+								{{#is animations.dependency_data.jquery 'true'}}
+									<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>
+								{{/is}}
+								{{#is animations.dependency_data.jquery_ui 'true'}}
+									<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
+									{{#if animations.dependency_data.jquery_ui_dependencies}}
+										<ul class="no-bullet">
+										{{#each animations.dependency_data.jquery_ui_dependencies}}
+											<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+										{{/each}}
+										</ul>
+									{{/if}}
+									</li>
+								{{/is}}
+								{{#each animations.dependency_data.other}}
+									<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+								{{/each}}
+							</ul>
+						<!-- DEPENDECY SIDENAV - ENDS -->
+							{{/is}}
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
 			
 		</section>
-	<!-- TAB PANEL 3 - BEGINS -->
+	<!-- TAB PANEL 3 - ENDS -->
 
 	<!-- TAB PANEL 4 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs3">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel3">
 
-			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+			<section class="row" data-equalizer="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col3" data-equalizer-watch="tab-panel">
 
 				<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate animations.animation_type_settings_header}}">
@@ -234,20 +224,20 @@ A list of animation type class options available from the [Animate.css](https://
 						</div>
 
 					<!-- HTML CODE - BEGINS -->
-						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
-							<div class="evo-box-ftr">
+						<div class="callout evo-callout evo-site-example-box evo-margin-bottom">
+							<section>
 								<div class="evo-site-example-box--code-hdr">
 									{{animations.animation_type_settings_slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-settings-{{animations.animation_type_settings_slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-settings-{{animations.animation_type_settings_slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
 								<pre><code class="language-markup" id="evo-code-copy-html-settings-{{animations.animation_type_settings_slug}}"><xmp>{{{animations.animation_type_settings_code}}}</xmp></code></pre>
-							</div>
+							</section>
 						</div>
 					<!-- HTML CODE - ENDS -->
 						
 					<!-- ANIMATION TYPE SETTINGS - BEGINS -->
 						<div class="evo-table-small-mediaquery">
-							<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-pattern-library-setting-options-scrolling" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+							<table class="hover evo-table" data-evo-data-table="evo-data-table-pattern-library-setting-options-scrolling" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
 								<thead>
 									<tr>
 										<th scope="column" width="160">Animation Type</th>
@@ -285,20 +275,20 @@ Use these helper classes along with the animation type class and the `animated` 
 						</div>
 
 					<!-- HTML CODE - BEGINS -->
-						<div class="panel evo-box evo-site-example-box evo-margin-bottom">
-							<div class="evo-box-ftr">
+						<div class="callout evo-callout evo-site-example-box evo-margin-bottom">
+							<section>
 								<div class="evo-site-example-box--code-hdr">
 									{{animations.animation_helpers_settings_slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-settings-{{animations.animation_helpers_settings_slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-settings-{{animations.animation_helpers_settings_slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
 								</div>
 								<pre><code class="language-markup" id="evo-code-copy-html-settings-{{animations.animation_helpers_settings_slug}}"><xmp>{{{animations.animation_helpers_settings_code}}}</xmp></code></pre>
-							</div>
+							</section>
 						</div>
 					<!-- HTML CODE - ENDS -->
 						
 					<!-- ANIMATION HELPERS SETTINGS - BEGINS -->
 						<div class="evo-table-small-mediaquery">
-							<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-pattern-library-setting-options-scrolling" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+							<table class="hover evo-table" data-evo-data-table="evo-data-table-pattern-library-setting-options-scrolling" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
 								<thead>
 									<tr>
 										<th scope="column" width="130">Helper Type</th>
@@ -325,14 +315,16 @@ Use these helper classes along with the animation type class and the `animated` 
 				<!-- CONTENT SECTION - ENDS -->
 
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
-						<dl class="sub-nav">
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate animations.animation_type_settings_header}}">{{animations.animation_type_settings_header}}</a></dd>
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate animations.animation_helpers_settings_header}}">{{animations.animation_helpers_settings_header}}</a></dd>
-						</dl>
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col3" data-sticky-on="large" data-sticky>
+							<ul class="menu vertical" data-magellan>
+								<li><a href="#{{hyphenate animations.animation_type_settings_header}}">{{animations.animation_type_settings_header}}</a></li>
+								<li><a href="#{{hyphenate animations.animation_helpers_settings_header}}">{{animations.animation_helpers_settings_header}}</a></li>
+							</ul>
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
 
@@ -340,6 +332,6 @@ Use these helper classes along with the animation type class and the `animated` 
 			</section>
 			
 		</section>
-	<!-- TAB PANEL 4 - BEGINS -->
+	<!-- TAB PANEL 4 - ENDS -->
 	</div>
 <!-- TABS - ENDS -->

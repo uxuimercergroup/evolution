@@ -14,12 +14,10 @@ Proxima Nova has been implemented as the default font family for Evolution as a 
 		{{> jump-to-nav}}
 
 		<!-- TABS - BEGINS -->
-			<ul class="button-group radius {{type.tab-spacing}} stack-for-small evo-site-tabs--pattern-library-tabs" data-tab role="tablist">
-				{{#each type.tabs}}
-				<li class="tab-title{{#is active 'true'}} active{{/is}}" role="presentation">
-					<a href="#tabs{{index}}" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs{{index}}" class="button small evo-button">
-						<span class="text">{{name}}</span>
-					</a>
+			<ul class="tabs evo-tabs evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
+				{{#each pattern-library.tabs}}
+				<li class="tabs-title evo-tabs-title{{#is active 'true'}} is-active{{/is}}" role="presentation">
+					<a href="#evoPanel{{@index}}" role="tab" tabindex="0">{{name}}</a>
 				</li>
 				{{/each}}
 			</ul>
@@ -30,25 +28,24 @@ Proxima Nova has been implemented as the default font family for Evolution as a 
 <!-- INTRO SECTION - ENDS -->
 
 <!-- TABS - BEGINS -->
-	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content">
+	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content" data-tabs-content="evoLibraryTabs">
 	<!-- TAB PANEL 1 - BEGINS -->
-		<section role="tabpanel" aria-hidden="false" class="content active evo-site-tabs-content--pattern-library-tab-panel" id="tabs0">
+		<section class="tabs-panel evo-tabs-panel is-active evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel0">
 
-			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+			<section class="row" data-equalizer="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col0" data-equalizer-watch="tab-panel">
 				<!-- EXAMPLE BOX - BEGINS -->
 					{{#each type.data }}
-					<div class="panel evo-box evo-site-example-box">
-						<div class="evo-box-hdr">
+					<div class="callout evo-callout evo-site-example-box">
+						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
-							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
+							<h6 class="evo-hdr-rule" data-magellan-target="{{hyphenate name}}" id="{{hyphenate name}}">
 								{{name}}
-								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip tip-right radius evo-tooltip" title="View Source" aria-label="" data-evo-toggle-element="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-options="show_on:large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip right evo-tooltip" title="View Source" data-toggle="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
 							</h6>
-							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
-						</div>
-						<div class="evo-box-bdy evo-site-type-demo-ctn">
+						</header>
+						<section class="evo-site-type-demo-ctn">
 						<!-- RENDERED HTML - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -58,8 +55,8 @@ Proxima Nova has been implemented as the default font family for Evolution as a 
 								{{> (lookup . 'partial') }}
 							{{/is}}
 						<!-- RENDERED HTML - ENDS -->
-						</div>
-						<div class="evo-box-ftr evo-site-example-box-ftr{{@index}} hide" data-evo-toggle-element-item="code-toggle{{@index}}">
+						</section>
+						<footer class="evo-site-example-box-ftr{{@index}} hide" id="code-toggle{{@index}}" data-toggler=".hide">
 						<!-- CODE - BEGINS -->
 							{{#is multiple_example 'true'}}
 								{{#each multiple_example_options}}
@@ -67,7 +64,7 @@ Proxima Nova has been implemented as the default font family for Evolution as a 
 							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large"></a>
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
@@ -78,26 +75,28 @@ Proxima Nova has been implemented as the default font family for Evolution as a 
 							<!-- HTML - BEGINS -->
 								<div class="evo-site-example-box--code-hdr">
 									{{slug}}
-									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right radius evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large"></a>
 								</div>
 								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
 							<!-- HTML - ENDS -->
 
 							{{/is}}
 						<!-- CODE - ENDS -->
-						</div>
+						</footer>
 					</div>
 					{{/each}}
 				<!-- EXAMPLE BOX - ENDS -->
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-magellan-expedition="fixed">
-						<dl class="sub-nav">
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col0" data-sticky-on="large" data-sticky>
+							<ul class="menu vertical" data-magellan>
 							{{#each type.data}}
-							<dd data-magellan-arrival="{{hyphenate name}}"><a href="#{{hyphenate name}}">{{name}}</a></dd>
+								<li><a href="#{{hyphenate name}}">{{name}}</a></li>
 							{{/each}}
-						</dl>
+							</ul>
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
@@ -107,10 +106,10 @@ Proxima Nova has been implemented as the default font family for Evolution as a 
 	<!-- TAB PANEL 1 - ENDS -->
 
 	<!-- TAB PANEL 2 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs1">
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel1">
 
-			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
+			<section class="row" data-equalizer="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col1" data-equalizer-watch="tab-panel">
 					
 				<!-- CONTENT SECTION - BEGINS -->
 					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate type.font_families_header}}">
@@ -125,16 +124,16 @@ Mercer digital projects will use the Proxima Nova font family. Proxima Nova is a
 
 				<!-- FONT FAMILIES BOX - BEGINS -->
 					{{#each type.font_families_data }}
-					<div class="panel evo-box evo-site-example-box">
-						<div class="evo-box-hdr">
+					<div class="callout evo-callout evo-site-example-box">
+						<header>
 						<!-- EXAMPLE HEADER - BEGINS -->
 							<h6 class="evo-hdr-rule" data-magellan-destination="{{hyphenate name}}">
 								{{name}}
 							</h6>
 							<a name="{{hyphenate name}}"></a>
 						<!-- EXAMPLE HEADER - ENDS -->
-						</div>
-						<div class="evo-box-bdy">
+						</header>
+						<section>
 						<!-- RENDERED HTML - BEGINS -->
 							<div class="evo-site-type-sample" data-evo-site-type-sample="{{type-sample}}">
 								<div class="large-size">{{capitalizeFirst sample-letters}}</div>
@@ -145,7 +144,7 @@ Mercer digital projects will use the Proxima Nova font family. Proxima Nova is a
 								</div>
 							</div>
 						<!-- RENDERED HTML - ENDS -->
-						</div>
+						</section>
 					</div>
 					{{/each}}
 				<!-- FONT FAMILIES BOX - ENDS -->
@@ -194,7 +193,7 @@ This is a demo of Western Latin characters to show off the compatibility of the 
 
 				<!-- CHARACTERS DATA TABLE - BEGINS -->
 					<div class="evo-table-small-mediaquery">
-						<table class="evo-table evo-table-hover" data-evo-data-table="evo-data-table-type-characters" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+						<table class="hover evo-table" data-evo-data-table="evo-data-table-type-characters" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
 							<thead>
 								<tr>
 									<th scope="column">Name</th>
@@ -214,120 +213,150 @@ This is a demo of Western Latin characters to show off the compatibility of the 
 				<!-- CHARACTERS DATA TABLE - ENDS -->
 
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
-						<dl class="sub-nav">
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate type.font_families_header}}">{{type.font_families_header}}</a></dd>
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate type.hierarchy_header}}">{{type.hierarchy_header}}</a></dd>
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate type.characters_header}}">{{type.characters_header}}</a></dd>
-						</dl>
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col1" data-sticky-on="large" data-sticky>
+							<ul class="menu vertical" data-magellan>
+								<li><a href="#{{hyphenate type.font_families_header}}">{{type.font_families_header}}</a></li>
+								<li><a href="#{{hyphenate type.hierarchy_header}}">{{type.hierarchy_header}}</a></li>
+								<li><a href="#{{hyphenate type.characters_header}}">{{type.characters_header}}</a></li>
+							</ul>
+						</nav>
+					</div>
+				<!-- SIDENAV - ENDS -->
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 2 - ENDS -->
 
-						{{#is type.dependency_data.dependency 'true'}}
+	<!-- TAB PANEL 3 - BEGINS -->
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
 
-					<!-- SIDENAV ACCORDION - BEGINS -->
-						<ul class="accordion evo-accordion evo-accordion-icons evo-site--pattern-library-sidenav-accordian" data-accordion data-options="multi_expand:true" role="tablist">
+			<section class="row" data-equalizer="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col2" data-equalizer-watch="tab-panel">
+					&nbsp;
+				</div>
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<!-- SIDENAV - BEGINS -->
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col2" data-sticky-on="large" data-sticky>
+							
+							{{!--
+							<ul class="menu vertical" data-magellan>
+								<li><a href="#{{hyphenate }}">{{}}</a></li>
+							</ul>
+							--}}
 
-						<!-- DEPENDENCIES ACCORDION PANEL - BEGINS -->
-							<li class="accordion-navigation">
-								<a id="dependencies-accordion-heading" href="#dependencies-accordion" role="tab" aria-controls="dependencies-accordion" data-anijs="if: click, do: fadeIn animated, to: #dependencies-accordion, after: removeAnim;">{{pattern-library.sidenav.dependencies_header}}</a>
-								<div id="dependencies-accordion" class="content active" role="tabpanel" aria-labelledby="dependencies-accordion-heading">
-
-									<ul class="no-bullet">
-										{{#is type.dependency_data.foundation 'true'}}
-											<li><a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
-											{{#if type.dependency_data.foundation_dependencies}}
-												<ul>
-												{{#each type.dependency_data.foundation_dependencies}}
-													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											{{/if}}
-											</li>
-										{{/is}}
-										{{#is type.dependency_data.evolution 'true'}}
-											<li><a href="/">Evolution {{package.version}}</a>
-											{{#if type.dependency_data.evolution_dependencies}}
-												<ul>
-												{{#each type.dependency_data.evolution_dependencies}}
-													<li><a href="{{url}}">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											</li>
-											{{/if}}
-										{{/is}}
-										{{#is type.dependency_data.jquery 'true'}}<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>{{/is}}
-										{{#is type.dependency_data.jquery_ui 'true'}}
-											<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
-											{{#if type.dependency_data.jquery_ui_dependencies}}
-												<ul>
-												{{#each type.dependency_data.jquery_ui_dependencies}}
-													<li><a href="{{url}}" target="_blank">{{name}}</a></li>
-												{{/each}}
-												</ul>
-											{{/if}}
-											</li>
-										{{/is}}
-										{{#each type.dependency_data.other}}
-											<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+							{{#is type.dependency_data.dependency 'true'}}
+						<!-- DEPENDECY SIDENAV - BEGINS -->
+							<h6>{{pattern-library.sidenav.dependencies_header}}</h6>
+							<ul class="no-bullet evo-site--pattern-library-dependency-sidenav">
+								{{#is type.dependency_data.foundation 'true'}}
+									<li>
+										<a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
+									{{#if type.dependency_data.foundation_dependencies}}
+										<ul class="no-bullet">
+										{{#each type.dependency_data.foundation_dependencies}}
+											<li><a href="{{url}}" target="_blank">{{name}}</a></li>
 										{{/each}}
-									</ul>
+										</ul>
+									{{/if}}
+									</li>
+								{{/is}}
+								{{#is type.dependency_data.evolution 'true'}}
+									<li><a href="/">Evolution {{package.version}}</a>
+									{{#if type.dependency_data.evolution_dependencies}}
+										<ul class="no-bullet">
+										{{#each type.dependency_data.evolution_dependencies}}
+											<li><a href="{{url}}">{{name}}</a></li>
+										{{/each}}
+										</ul>
+									{{/if}}
+									</li>
+								{{/is}}
+								{{#is type.dependency_data.jquery 'true'}}
+									<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>
+								{{/is}}
+								{{#is type.dependency_data.jquery_ui 'true'}}
+									<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
+									{{#if type.dependency_data.jquery_ui_dependencies}}
+										<ul class="no-bullet">
+										{{#each type.dependency_data.jquery_ui_dependencies}}
+											<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+										{{/each}}
+										</ul>
+									{{/if}}
+									</li>
+								{{/is}}
+								{{#each type.dependency_data.other}}
+									<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+								{{/each}}
+							</ul>
+						<!-- DEPENDECY SIDENAV - ENDS -->
+							{{/is}}
 
-								</div>
-							</li>
-						<!-- DEPENDENCIES ACCORDION PANEL - ENDS -->
-
-						</ul>
-					<!-- SIDENAV ACCORDION - ENDS -->
-						{{/is}}
-						
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
-
 				</div>
 			</section>
 			
 		</section>
-	<!-- TAB PANEL 2 - BEGINS -->
+	<!-- TAB PANEL 3 - ENDS -->
 
-	<!-- TAB PANEL 3 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs2">
+	<!-- TAB PANEL 4 - BEGINS -->
+		<section class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel3">
 
-			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 3
+			<section class="row" data-equalizer="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col3" data-equalizer-watch="tab-panel">
+					
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section" id="{{hyphenate type.text_alignment_header}}">
+						<div class="evo-site-markdown-content-block">
+{{# markdown}}
+##### {{type.text_alignment_header}}
+{{/ markdown}}
+						</div>
+
+					<!-- TEXT ALIGNMENT SETTINGS TABLE - BEGINS -->
+						<div class="evo-table-small-mediaquery">
+							<table class="hover evo-table evo-site-margin-padding-settings-table" data-evo-data-table="evo-data-table-margin-padding-settings" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+								<thead>
+									<tr>
+										<th scope="column">Class Value</th>
+									</tr>
+								</thead>
+								<tbody>
+								{{#each type.text_alignment_settings}}
+									<tr>
+										<td class="evo-site-margin-padding-settings-table--copy-cursor copy-to-clipboard" data-clipboard-snippet data-clipboard-text="{{ text-class }}">{{ text-class }}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					<!-- TEXT ALIGNMENT SETTINGS TABLE - ENDS -->
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
 				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 				<!-- SIDENAV - BEGINS -->
-					<div class="evo-site--pattern-library-sidenav-magellan" data-evo-fixed-by-scroll="evo-magellan--side-nav" data-evo-magellan>
-						{{!--
-						<dl class="sub-nav">
-							<dd><a data-evo-scroll-to-location href="#{{hyphenate }}">{{}}</a></dd>
-						</dl>
-						<hr>
-						--}}
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col3" data-sticky-on="large" data-sticky>
+							<ul class="menu vertical" data-magellan>
+								<li><a href="#{{hyphenate type.text_alignment_header}}">{{type.text_alignment_header}}</a></li>
+							</ul>
+						</nav>
 					</div>
 				<!-- SIDENAV - ENDS -->
 				</div>
 			</section>
 			
 		</section>
-	<!-- TAB PANEL 3 - BEGINS -->
-
-	<!-- TAB PANEL 4 - BEGINS -->
-		<section role="tabpanel" aria-hidden="true" class="content evo-site-tabs-content--pattern-library-tab-panel" id="tabs3">
-
-			<section class="row" data-equalizer>
-				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" data-equalizer-watch>
-					Content for something 4
-				</div>
-				<div class="large-3 columns show-for-large-up evo-spacer-padding-top-large" data-equalizer-watch>
-					Magellan 4
-				</div>
-			</section>
-			
-		</section>
-	<!-- TAB PANEL 4 - BEGINS -->
+	<!-- TAB PANEL 4 - ENDS -->
 	</div>
 <!-- TABS - ENDS -->

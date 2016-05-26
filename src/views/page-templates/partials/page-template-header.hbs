@@ -1,106 +1,33 @@
 <header class="evo-header evo-site-header" role="banner">
-	
-	<!-- TOP BAR CONTAINER - DEFAULT - BEGINS -->
-	<div class="show-for-large-up">
 
-	<!-- TOP BAR - BEGINS -->
-		<nav class="top-bar evo-top-bar" data-topbar role="navigation">
-			
-		<!-- TOP BAR TITLE AREA - BEGINS -->
-			<ul class="title-area">
-				<li class="name">
-					<h1><a href="/"><span class="evo-top-bar-sub-name">{{ global.company }}</span> {{ global.title }}</a></h1>
-					<!-- <a href="#/">{{> image src="core/corp-logos/mercer/mercer_logo_rgb_reverse.png" alt="Mercer - Make Tomorrow, Today" width="160"}}</a> -->
-				</li>
-			</ul>
-		<!-- TOP BAR TITLE AREA - ENDS -->
-
-		<!-- TOP BAR NAV SECTION - BEGINS --> 
-			<section class="top-bar-section">
-
-				<!-- TOP BAR RIGHT NAV SECTION - BEGINS -->
-				<ul class="right">
-				{{#each page-templates-navigation.nav}}
-					<li class="has-dropdown">
-						<a>{{section}}</a>
-						<ul class="dropdown">
-						{{#each sub_section}}
-							{{#if label}}
-							<li>
-								<label>{{label}}</label>
-							</li>
-							{{/if}}
-							{{#each nav_items}}
-							<li>
-								<a href="{{url}}">{{name}}</a>
-							</li>
-							{{/each}}
-						{{/each}}
-						</ul>
-					<li>
-				{{/each}}
-				</ul>
-				<!-- TOP BAR RIGHT NAV SECTION - ENDS -->
-
-				<!-- TOP BAR LEFT NAV SECTION - BEGINS -->
-				<ul class="left">
-					
-				</ul>
-				<!-- TOP BAR LEFT NAV SECTION - ENDS -->
-
-			</section>
-		<!-- TOP BAR NAV SECTION - ENDS -->
-
-		</nav>
-	<!-- TOP BAR - ENDS -->
-
-	</div>
-	<!-- TOP BAR CONTAINER - DEFAULT - ENDS -->
-
-	<!-- OFF-CANVAS - TAB BAR - BEGINS -->
-	<nav class="tab-bar hide-for-large-up" aria-hidden="true">
-		<section class="left-small">
-			<a class="left-off-canvas-toggle menu-icon">
+<!-- OFF-CANVAS - TITLE BAR - BEGINS -->
+	<nav class="title-bar" data-responsive-toggle="evo-site-top-bar" data-hide-for="large" role="navigation">
+		<div class="title-bar-left">
+			<button class="menu-icon" type="button" data-open="evo-off-canvas-left-menu">
 				<i class="evo-icon-menu7 evo-icon-size-medium" title="Menu"></i>
-			</a>
-		</section>
-
-		<section class="middle tab-bar-section">
-			<h1 class="title">
-				<a class="show-for-small-only" href="/">{{ global.title }}</a>
-				<a class="show-for-medium-only" href="/"><span class="evo-tab-bar-sub-name">{{ global.company }}</span> {{ global.title }}</a>
-			</h1>
-			<!-- <a class="title" href="#/">{{> image src="core/corp-logos/mercer/mercer_logo_rgb_reverse.png" alt="Mercer - Make Tomorrow, Today" width="160"}}</a> -->
-		</section>
+			</button>
+		</div>
+		<div class="title-bar-title">
+			<a class="show-for-small-only" href="/">{{ global.title }}</a>
+			<a class="show-for-medium-only" href="/">{{ global.company }} {{ global.title }}</a>
+		</div>
+		<div class="title-bar-right">
+		</div>
 	</nav>
-	<!-- OFF-CANVAS - TAB BAR - ENDS -->
+<!-- OFF-CANVAS - TITLE BAR - ENDS -->
 
-	<!-- OFF-CANVAS - LEFT MENU - BEGINS -->
-	<aside class="left-off-canvas-menu">
-		<ul class="off-canvas-list">
-		{{#if navigation.nav_label}}
+<!-- OFF-CANVAS - LEFT MENU - BEGINS -->
+	<div class="off-canvas position-left" id="evo-off-canvas-left-menu" data-off-canvas>
+		<ul class="vertical menu" data-drilldown>
+			{{#if page-templates-navigation.nav_label}}
 			<li>
 				<label>{{navigation.nav_label}}</label>
 			</li>
-		{{/if}}
-
-		{{#if navigation.whats_new}}
+			{{/if}}
+			{{#each page-templates-navigation.nav}}
 			<li>
-				<a class="evo-site-header--cta-whats-new" href="{{navigation.whats_new.url}}">{{{navigation.whats_new.name}}}
-				{{#each navigation.whats_new.icon}}
-					{{> (lookup . 'partial') }}
-				{{/each}}
-				</a>
-			</li>
-		{{/if}}
-
-		{{#each navigation.nav}}
-			<li class="has-submenu">
 				<a href="">{{section}}</a>
-				<ul class="left-submenu">
-					<li class="back">
-						<a href="">Back</a>
-					</li>
+				<ul class="vertical menu">
 				{{#each sub_section}}
 					{{#if label}}
 					<li>
@@ -114,10 +41,59 @@
 					{{/each}}
 				{{/each}}
 				</ul>
-			<li>
-		{{/each}}
+			</li>
+			{{/each}}
 		</ul>
-	</aside>
-	<!-- OFF-CANVAS - LEFT MENU - ENDS -->
+	</div>
+<!-- OFF-CANVAS - LEFT MENU - ENDS -->
+
+<!-- TOP BAR - BEGINS -->
+	<nav class="top-bar evo-top-bar" id="evo-site-top-bar" role="navigation">
+		
+	<!-- TOP BAR TITLE - BEGINS -->
+		<div class="top-bar-title">
+			<a href="/"><span>{{ global.company }}</span> {{ global.title }}</a>
+		</div>
+	<!-- TOP BAR TITLE - ENDS -->
+
+	<!-- TOP BAR CONTENT - BEGINS -->
+		<div class="evo-top-bar-content">
+
+		<!-- TOP BAR LEFT SECTION - BEGINS -->
+			<div class="top-bar-left">
+			</div>
+		<!-- TOP BAR LEFT SECTION - ENDS -->
+
+		<!-- TOP BAR RIGHT SECTION - BEGINS -->
+			<div class="top-bar-right">
+				<ul class="dropdown menu" data-dropdown-menu>
+					{{#each page-templates-navigation.nav}}
+					<li>
+						<a href="javascript:;">{{section}}</a>
+						<ul class="dropdown menu" data-dropdown-menu>
+						{{#each sub_section}}
+							{{#if label}}
+							<li>
+								<label>{{label}}</label>
+							</li>
+							{{/if}}
+							{{#each nav_items}}
+							<li>
+								<a href="{{url}}">{{name}}</a>
+							</li>
+							{{/each}}
+						{{/each}}
+						</ul>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+		<!-- TOP BAR RIGHT SECTION - ENDS -->
+
+		</div>
+	<!-- TOP BAR CONTENT - ENDS -->
+
+	</nav>
+<!-- TOP BAR - ENDS -->
 
 </header>

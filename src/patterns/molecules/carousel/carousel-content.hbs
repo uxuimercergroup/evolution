@@ -1,19 +1,37 @@
-<!-- CAROUSEL - BEGINS -->
-<div class="evo-carousel" data-evo-carousel="evo-carousel-example">
-{{#repeat count=5 start=1}}
-	<div class="evo-carousel-item">
-
-		<!-- BOX - BEGINS -->
-		<div class="panel evo-box evo-no-margin-bottom">
-			<div class="evo-box-bdy">
-				<h1 class="evo-no-margin-top">Carousel Item {{@index}}</h1>
-				{{> type-header size="3" class="subheader evo-spacer-margin-bottom-x-larg" text="Subheader"}}
-				{{> button button-type="button" custom-class="evo-no-margin-bottom" text="Primary"}}
-			</div>
-		</div>
-		<!-- BOX - ENDS -->
-
-	</div>
-{{/repeat}}
+<!-- CAROUSEL (ORBIT) - CONTENT - BEGINS -->
+<div class="orbit evo-orbit" role="region" aria-label="Carousel" data-orbit>
+	<ul class="orbit-container">
+		<li class="is-active orbit-slide">
+			<p class="lead"><strong>Carousel Item 1.</strong> {{lorem count=8}}</p>
+		</li>
+		<li class="orbit-slide">
+			<p class="lead"><strong>Carousel Item 2.</strong> {{lorem count=8}}</p>
+		</li>
+		<li class="orbit-slide">
+			<p class="lead"><strong>Carousel Item 3.</strong> {{lorem count=8}}</p>
+		</li>
+	</ul>
+	<nav class="orbit-bullets">
+		<button class="is-active" data-slide="0" aria-label="First Slide" tabindex="0">
+			<span class="show-for-sr">First slide details.</span>
+			<span class="show-for-sr">Current Slide</span>
+		</button>
+		<button data-slide="1" aria-label="Second Slide" tabindex="0">
+			<span class="show-for-sr">Second slide details.</span>
+		</button>
+		<button data-slide="2" aria-label="Third Slide" tabindex="0">
+			<span class="show-for-sr">Third slide details.</span>
+		</button>
+	</nav>
+	<nav class="evo-orbit-nav">
+		<button class="orbit-previous" aria-label="Previous Slide" tabindex="0">
+			<span class="show-for-sr">Previous Slide</span>
+			<span aria-hidden="true"><i class="evo-icon-arrow-left2" title="Previous"></i></span>
+		</button>
+		<button class="orbit-next" aria-label="Next Slide" tabindex="0">
+			<span class="show-for-sr">Next Slide</span>
+			<span aria-hidden="true"><i class="evo-icon-arrow-right2" title="Next"></i></span>
+		</button>
+	</nav>
 </div>
-<!-- CAROUSEL - ENDS -->
+<!-- CAROUSEL (ORBIT) - CONTENT - ENDS -->

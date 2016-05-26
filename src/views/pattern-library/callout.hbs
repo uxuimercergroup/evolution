@@ -1,0 +1,282 @@
+---
+title: "Callout"
+definition_content: "src/content/callout/definition.md"
+usage_content: "src/content/callout/usage.md"
+---
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns evo-spacer-padding-top-medium evo-site--pattern-library-intro">
+
+{{# markdown }}
+## {{ title }}
+Callouts are the basic building blocks of any web site or component. Evolution callouts depend on Foundation's [Callout](http://foundation.zurb.com/sites/docs/callout.html) as a starting point. Each callout is made of a header, body, and footer.
+{{/ markdown }}
+
+		{{> jump-to-nav}}
+
+		<!-- TABS - BEGINS -->
+			<ul class="tabs evo-tabs evo-site-tabs--pattern-library-tabs" data-tabs id="evoLibraryTabs">
+				{{#each pattern-library.tabs}}
+				<li class="tabs-title evo-tabs-title{{#is active 'true'}} is-active{{/is}}" role="presentation">
+					<a href="#evoPanel{{@index}}" role="tab" tabindex="0">{{name}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		<!-- TABS - ENDS -->
+
+		</div>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<!-- TABS - BEGINS -->
+	<div class="tabs-content evo-tabs-content evo-site-tabs-content--pattern-library-content" data-tabs-content="evoLibraryTabs">
+
+	<!-- TAB PANEL 1 - BEGINS -->
+		<section class="tabs-panel evo-tabs-panel is-active evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel0">
+
+			<section class="row" data-equalizer="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col0" data-equalizer-watch="tab-panel">
+				<!-- EXAMPLE BOX - BEGINS -->
+					{{#each callout.data }}
+					<div class="callout evo-callout evo-site-example-box">
+						<header>
+						<!-- EXAMPLE HEADER - BEGINS -->
+							<h6 class="evo-hdr-rule" data-magellan-target="{{hyphenate name}}" id="{{hyphenate name}}">
+								{{name}}
+								<a href="javascript:;" class="evo-icon-site-embed2 evo-icon-position-right evo-spacer-margin-left-small has-tip right evo-tooltip" title="View Source" data-toggle="code-toggle{{@index}}" data-tooltip aria-haspopup="true" data-disable-hover="false" data-show-on="large" data-anijs="if: click, do: fadeIn animated, to: .evo-site-example-box-ftr{{@index}}, after: removeAnim;"></a>
+							</h6>
+						<!-- EXAMPLE HEADER - ENDS -->
+						</header>
+						<section>
+						<!-- RENDERED HTML - BEGINS -->
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
+									{{> (lookup . 'partial') }}
+								{{/each}}
+							{{else}}
+								{{> (lookup . 'partial') }}
+							{{/is}}
+						<!-- RENDERED HTML - ENDS -->
+						</section>
+						<footer class="evo-site-example-box-ftr{{@index}} hide" id="code-toggle{{@index}}" data-toggler=".hide">
+						<!-- CODE - BEGINS -->
+							{{#is multiple_example 'true'}}
+								{{#each multiple_example_options}}
+
+							<!-- HTML - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
+								{{/each}}
+							{{else}}
+
+							<!-- HTML - BEGINS -->
+								<div class="evo-site-example-box--code-hdr">
+									{{slug}}
+									<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-{{slug}}" class="evo-icon-site-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+								</div>
+								<pre class="evo-margin-bottom"><code class="language-markup" id="evo-code-copy-html-{{slug}}"><xmp>{{> (lookup . 'partial') }}</xmp></code></pre>
+							<!-- HTML - ENDS -->
+
+							{{/is}}
+						<!-- CODE - ENDS -->
+						</footer>
+					</div>
+					{{/each}}
+				<!-- EXAMPLE BOX - ENDS -->
+				</div>
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<!-- SIDENAV - BEGINS -->
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col0" data-sticky-on="large" data-sticky>
+							<ul class="menu vertical" data-magellan>
+							{{#each callout.data}}
+								<li><a href="#{{hyphenate name}}">{{name}}</a></li>
+							{{/each}}
+							</ul>
+						</nav>
+					</div>
+				<!-- SIDENAV - ENDS -->
+				</div>
+			</section>
+
+		</section>
+	<!-- TAB PANEL 1 - ENDS -->
+
+	<!-- TAB PANEL 2 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel1">
+
+			<section class="row" data-equalizer="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col1" data-equalizer-watch="tab-panel">
+				
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+							{{{md definition_content}}}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
+				</div>
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+					&nbsp;
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 2 - ENDS -->
+
+	<!-- TAB PANEL 3 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel2">
+
+			<section class="row" data-equalizer="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col2" data-equalizer-watch="tab-panel">
+					
+				<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+							{{{md usage_content}}}
+						</div>
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+					
+				</div>
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+				<!-- SIDENAV - BEGINS -->
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col2" data-sticky-on="large" data-sticky>
+							
+							{{!--
+							<ul class="menu vertical" data-magellan>
+								<li><a href="#{{hyphenate }}">{{}}</a></li>
+							</ul>
+							--}}
+
+							{{#is callout.dependency_data.dependency 'true'}}
+						<!-- DEPENDECY SIDENAV - BEGINS -->
+							<h6>{{pattern-library.sidenav.dependencies_header}}</h6>
+							<ul class="no-bullet evo-site--pattern-library-dependency-sidenav">
+								{{#is callout.dependency_data.foundation 'true'}}
+									<li>
+										<a href="{{pattern-library.sidenav.foundation_url}}" target="_blank">Foundation {{package.foundation_version}}</a>
+									{{#if callout.dependency_data.foundation_dependencies}}
+										<ul class="no-bullet">
+										{{#each callout.dependency_data.foundation_dependencies}}
+											<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+										{{/each}}
+										</ul>
+									{{/if}}
+									</li>
+								{{/is}}
+								{{#is callout.dependency_data.evolution 'true'}}
+									<li><a href="/">Evolution {{package.version}}</a>
+									{{#if callout.dependency_data.evolution_dependencies}}
+										<ul class="no-bullet">
+										{{#each callout.dependency_data.evolution_dependencies}}
+											<li><a href="{{url}}">{{name}}</a></li>
+										{{/each}}
+										</ul>
+									{{/if}}
+									</li>
+								{{/is}}
+								{{#is callout.dependency_data.jquery 'true'}}
+									<li><a href="https://jquery.com/" target="_blank">jQuery {{package.jquery_version}}</a></li>
+								{{/is}}
+								{{#is callout.dependency_data.jquery_ui 'true'}}
+									<li><a href="https://jqueryui.com/" target="_blank">jQuery UI {{package.jquery_ui_version}}</a>
+									{{#if callout.dependency_data.jquery_ui_dependencies}}
+										<ul class="no-bullet">
+										{{#each callout.dependency_data.jquery_ui_dependencies}}
+											<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+										{{/each}}
+										</ul>
+									{{/if}}
+									</li>
+								{{/is}}
+								{{#each callout.dependency_data.other}}
+									<li><a href="{{url}}" {{#is external_link 'true'}}target="_blank"{{/is}}>{{name}}</a></li>
+								{{/each}}
+							</ul>
+						<!-- DEPENDECY SIDENAV - ENDS -->
+							{{/is}}
+						</nav>
+					</div>
+				<!-- SIDENAV - ENDS -->
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 3 - ENDS -->
+
+	<!-- TAB PANEL 4 - BEGINS -->
+		<section role="tabpanel" aria-hidden="true" class="tabs-panel evo-tabs-panel evo-site-tabs-content--pattern-library-tab-panel" id="evoPanel3">
+
+			<section class="row" data-equalizer="tab-panel">
+				<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col3" data-equalizer-watch="tab-panel">
+
+					<!-- CONTENT SECTION - BEGINS -->
+					<section class="evo-site-tabs-content--pattern-library-tab-content-section">
+						<div class="evo-site-markdown-content-block">
+{{# markdown }}
+##### {{ callout.settings_header }}
+Below is a list of the data options that can be used with callouts using data attributes.
+{{/ markdown }}
+						</div>
+
+					<!-- SETTINGS - BEGINS -->
+						<div class="evo-table-small-mediaquery">
+							<table class="hover evo-table" data-evo-data-table="evo-data-table-pattern-library-setting-options" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+								<thead>
+									<tr>
+										<th scope="column" width="160">Options</th>
+										<th scope="column" width="90">Defaults</th>
+										<th scope="column">Values</th>
+										<th scope="column" width="325">Description</th>
+									</tr>
+								</thead>
+								<tbody>
+								{{#each callout.settings_data}}
+									<tr>
+										<td>{{{ option }}}</td>
+										<td class="text-center">{{{ default_value }}}</td>
+										<td class="text-center">{{{ option_value }}}</td>
+										<td>{{{ description }}}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					<!-- SETTINGS - ENDS -->
+
+					</section>
+				<!-- CONTENT SECTION - ENDS -->
+
+				</div>
+				<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
+					
+				<!-- SIDENAV - BEGINS -->
+					<div data-sticky-container>
+						<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col3" data-sticky-on="large" data-sticky>
+							
+							{{!--
+							<ul class="menu vertical" data-magellan>
+								<li><a href="#{{hyphenate }}">{{}}</a></li>
+							</ul>
+							--}}
+
+						</nav>
+					</div>
+				<!-- SIDENAV - ENDS -->
+
+				</div>
+			</section>
+			
+		</section>
+	<!-- TAB PANEL 4 - ENDS -->
+	</div>
+<!-- TABS - ENDS -->

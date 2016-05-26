@@ -3,18 +3,18 @@
 		"dependency": "true",
 		"foundation": "true",
 		"foundation_dependencies": [
-			{"name": "Forms", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/forms.html"},
-			{"name": "Abide Validation", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/abide.html"}
+			{"name": "Forms", "url": "http://foundation.zurb.com/sites/docs/forms.html"},
+			{"name": "Abide Validation", "url": "http://foundation.zurb.com/sites/docs/abide.html"}
 		],
+
 		"evolution": "true",
-		"evolution_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"evolution_dependencies": [],
+
 		"jquery": "",
+
 		"jquery_ui": "",
-		"jquery_ui_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"jquery_ui_dependencies": [],
+
 		"other": [
 			{"name": "", "url": "", "external_link": "true"}
 		]
@@ -33,10 +33,6 @@
 			"name": "Inline Form",
 			"partial": "form-inline", "slug": "inline-form"
 		},
-		"form_inline_right": {
-			"name": "Inline Form Right",
-			"partial": "form-inline-right", "slug": "inline-form-right"
-		},
 		"form_inline_help": {
 			"name": "Inline Form Help",
 			"partial": "form-inline-help", "slug": "inline-form-help"
@@ -44,10 +40,6 @@
 		"form_compact": {
 			"name": "Compact",
 			"partial": "form-compact", "slug": "compact-form"
-		},
-		"form_compact_help": {
-			"name": "Compact Help",
-			"partial": "form-compact-help", "slug": "compact-form-help"
 		},
 		"form_abide_validation": {
 			"name": "Abide Validation",

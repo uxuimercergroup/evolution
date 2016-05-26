@@ -1,27 +1,25 @@
 <!-- FORM COMPACT - BEGINS -->
-<form class="" id="" name="" method="" action="" title="" data-abide>
-	<fieldset>
-		<div class="row">
-			<div class="small-12 columns">
-				<label>
-					{{> input type="email" placeholder="Email Address" title="Enter your email address" required="true"}}
-				</label>
+<form data-abide novalidate>
+	<div class="row">
+		<fieldset class="small-12 columns">
+			<label>
+				{{> input type="email" placeholder="Email Address" title="Enter your email address" required="true"}}
 				{{> error-text}}
-			</div>
-		</div>
-		<div class="row">
-			<div class="small-12 columns">
-				<label>
-					{{> input type="password" placeholder="Password" title="Enter your password" required="true"}}
-				</label>
+			</label>
+		</fieldset>
+	</div>
+	<div class="row">
+		<fieldset class="small-12 columns">
+			<label>
+				{{> input type="password" placeholder="Password" title="Enter your password" required="true"}}
 				{{> error-text}}
-			</div>
-		</div>
-		<div class="row">
-			<div class="small-12 columns">
-				{{> button button-type="button" button-title="Click for Validation" text="Click for Validation"}}
-			</div>
-		</div>
-	</fieldset>
+			</label>
+		</fieldset>
+	</div>
+	<div class="row">
+		<fieldset class="small-12 columns evo-form-buttons">
+			{{> button button-type="button" button-title="Click for Validation" text="Click for Validation"}}
+		</fieldset>
+	</div>
 </form>
 <!-- FORM COMPACT - ENDS -->

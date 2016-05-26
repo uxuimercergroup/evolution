@@ -9,6 +9,12 @@ Below is a list of the options that you can pass into the button handlebars part
 - Description: This will give you a value for the `aria label` attribute, used for accessibility
 ***
 
+**aria-disabled**
+- Default Value: --
+- Option Value: --
+- Description: This will give you the `aria-disabled` attribute, used for accessibility
+***
+
 **button-name**
 - Default Value: --
 - Option Value: *Text*
@@ -39,16 +45,34 @@ Below is a list of the options that you can pass into the button handlebars part
 - Description: This will allow you to add additional class names to the `class` attribute
 ***
 
+**data-toggle**
+- Default Value: --
+- Option Value: *data-value*
+- Description: The data value needs to match the `id` of the dropdown pane
+***
+
 **disabled**
 - Default Value: --
 - Option Value: **true**
 - Description: If disabled is set to **true** then `disabled` attribute is added to button
 ***
 
-**expand**
+**dropdown**
 - Default Value: --
 - Option Value: **true**
-- Description: If expand is set to **true** then a class of `expand` is added to the class attribute of the button
+- Description: If dropdown is set to **true** then a class of `dropdown` is added to the class attribute of the button
+***
+
+**expanded**
+- Default Value: --
+- Option Value: **true**
+- Description: If expanded is set to **true** then a class of `expanded` is added to the class attribute of the button
+***
+
+**hollow**
+- Default Value: --
+- Option Value: **true**
+- Description: If hollow is set to **true** then a class of `hollow` is added to the class attribute of the button
 ***
 
 **href**
@@ -87,21 +111,21 @@ Below is a list of the options that you can pass into the button handlebars part
 - Description: Data value for interactive button - must match value used in JS init of interactive button
 ***
 
-**shape**
-- Default Value: radius
-- Option Value: **radius, round**
-- Description: Add one of the option values on the `class` attribute of the button
+**min-width**
+- Default Value: --
+- Option Value: **true**
+- Description: Data value for min-width button
 ***
 
 **secondary**
 - Default Value: --
 - Option Value: **true**
-- Description: If expand is set to **true** then a class of `secondary` is added to the class attribute of the button
+- Description: If secondary is set to **true** then a class of `secondary` is added to the class attribute of the button
 ***
 
 **size**
-- Default Value: medium
-- Option Value: **tiny, small, medium, large**
+- Default Value: --
+- Option Value: **tiny, small, large, xlarge, xxlarge**
 - Description: Add one of the option values on the `class` attribute of the button
 ***
 
@@ -119,5 +143,5 @@ Below is a list of the options that you can pass into the button handlebars part
 
 **type**
 - Default Value: --
-- Option Value: **button, submit**
+- Option Value: **button, submit, reset**
 - Description: Add one of the option values on the `type` attribute of the button

@@ -3,34 +3,26 @@
 		"dependency": "true",
 		"foundation": "true",
 		"foundation_dependencies": [
-			{"name": "Off-canvas", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/offcanvas.html"}
+			{"name": "Off-canvas", "url": "http://foundation.zurb.com/sites/docs/off-canvas.html"}
 		],
+
 		"evolution": "true",
-		"evolution_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"evolution_dependencies": [],
+
 		"jquery": "",
+
 		"jquery_ui": "",
-		"jquery_ui_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"jquery_ui_dependencies": [],
+
 		"other": [
 			{"name": "", "url": "", "external_link": "true"}
 		]
 	},
 
 	"data": {
-		"off_canvas_left": {
-			"name": "Off-canvas Left",
-			"partial": "off-canvas-left", "slug": "off-canvas-left"
-		},
-		"off_canvas_right": {
-			"name": "Off-canvas Right",
-			"partial": "off-canvas-right", "slug": "off-canvas-right"
-		},
-		"off_canvas_both": {
-			"name": "Off-canvas Both",
-			"partial": "off-canvas-both", "slug": "off-canvas-both"
+		"off_canvas": {
+			"name": "Off-canvas",
+			"partial": "off-canvas", "slug": "off-canvas"
 		}
 	}
 }

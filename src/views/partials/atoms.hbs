@@ -1,35 +1,15 @@
-{{!-- BOX - BEGINS --}}
-	{{> type-header size="4" text="Box"}}
+{{!-- CALLOUT - BEGINS --}}
+	{{> type-header size="4" text="Callout"}}
 	<div class="row">
-		<div class="medium-4 columns">
+		<div class="small-12 columns">
 
-		{{!-- BASIC BOX - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
-
-			{{> box }}
-		{{!-- BASIC BOX - ENDS --}}
-
-		</div>
-		<div class="medium-4 columns">
-
-		{{!-- BOX WITH HEADER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="With Header"}}
-
-			{{> box-hdr }}
-		{{!-- BOX WITH HEADER - ENDS --}}
-
-		</div>
-		<div class="medium-4 columns">
-
-		{{!-- BOX WITH SHADOW - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="With Shadow"}}
-
-			{{> box-hdr-shadow }}
-		{{!-- BOX WITH SHADOW - ENDS --}}
+		{{!-- CALLOUT - BEGINS --}}
+			{{> callout }}
+		{{!-- CALLOUT - ENDS --}}
 
 		</div>
 	</div>
-{{!-- BOX - ENDS --}}
+{{!-- CALLOUT - ENDS --}}
 
 <hr>
 
@@ -38,7 +18,7 @@
 	<div class="row">
 		<div class="medium-6 columns">
 
-		{{!-- BASIC BUTTONS - BEGINS --}}
+		{{!-- BASIC - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
 
 			{{> type-paragraph text="<code>a</code> tag"}}
@@ -48,7 +28,19 @@
 			{{> type-paragraph text="<code>button</code> tag"}}
 			{{> button button-type="button" secondary="true" text="Secondary"}}
 			{{> button button-type="button" text="Primary"}}
-		{{!-- BASIC BUTTONS - ENDS --}}
+		{{!-- BASIC - ENDS --}}
+
+		{{!-- HOLLOW - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Hollow"}}
+
+			{{> type-paragraph text="<code>a</code> tag"}}
+			{{> button secondary="true" hollow="true" text="Secondary a"}}
+			{{> button hollow="true" text="Primary a"}}
+			
+			{{> type-paragraph text="<code>button</code> tag"}}
+			{{> button button-type="button" secondary="true" hollow="true" text="Secondary"}}
+			{{> button button-type="button" hollow="true" text="Primary"}}
+		{{!-- HOLLOW - ENDS --}}
 
 		{{!-- DISABLED - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Disabled"}}
@@ -91,27 +83,17 @@
 		</div>
 		<div class="medium-6 columns">
 
-		{{!-- SHAPES - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Shapes"}}
+		{{!-- EXPANDED - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Expanded"}}
 
 			{{> type-paragraph text="<code>a</code> tag"}}
-			{{> button expand="true" secondary="true" text="Secondary expanded a"}}
-			{{> button secondary="true" shape="round" text="Secondary round a"}}
-			{{> button secondary="true" shape="radius" text="Secondary radius a"}}
-
-			{{> button expand="true" text="Expanded a"}}
-			{{> button shape="round" text="Round a"}}
-			{{> button shape="radius" text="Radius a"}}
+			{{> button expanded="true" secondary="true" text="Secondary expanded a"}}
+			{{> button expanded="true" text="Expanded a"}}
 
 			{{> type-paragraph text="<code>button</code> tag"}}
-			{{> button button-type="button" expand="true" secondary="true" text="Secondary expanded a"}}
-			{{> button button-type="button" secondary="true" shape="round" text="Secondary round a"}}
-			{{> button button-type="button" secondary="true" shape="radius" text="Secondary radius a"}}
-
-			{{> button button-type="button" expand="true" text="Expanded a"}}
-			{{> button button-type="button" shape="round" text="Round a"}}
-			{{> button button-type="button" shape="radius" text="Radius a"}}
-		{{!-- SHAPES - ENDS --}}
+			{{> button button-type="button" expanded="true" secondary="true" text="Secondary expanded a"}}
+			{{> button button-type="button" expanded="true" text="Expanded a"}}
+		{{!-- EXPANDED - ENDS --}}
 			
 		{{!-- ICONS - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Icons"}}
@@ -119,46 +101,53 @@
 			{{> type-paragraph text="<code>a</code> tag"}}
 
 			<!-- Button icon on left and right -->
-			{{> button icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right2" secondary="true" text="Secondary a"}}
+			{{> button icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right5" secondary="true" text="Secondary a"}}
 
 			<!-- Button icon on left -->
 			{{> button icon-position="left" icon-position-left-class="evo-icon-plus-circle" text="Primary a"}}
 
 			<!-- Button icon on right -->
-			{{> button icon-position="right" icon-position-right-class="evo-icon-arrow-right2" text="Primary a"}}
+			{{> button icon-position="right" icon-position-right-class="evo-icon-arrow-right5" text="Primary a"}}
 
 			<!-- Expanded button with icon on left and right -->
-			{{> button expand="true" icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right2" text="Primary a"}}
+			{{> button expand="true" icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right5" text="Primary a"}}
 
 			
 			{{> type-paragraph text="<code>button</code> tag"}}
 
 			<!-- Button icon on left and right -->
-			{{> button button-type="button" icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right2" secondary="true" text="Secondary"}}
+			{{> button button-type="button" icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right5" secondary="true" text="Secondary"}}
 
 			<!-- Button icon on left -->
 			{{> button button-type="button" icon-position="left" icon-position-left-class="evo-icon-plus-circle" text="Primary"}}
 
 			<!-- Button icon on right -->
-			{{> button button-type="button" icon-position="right" icon-position-right-class="evo-icon-arrow-right2" text="Primary"}}
+			{{> button button-type="button" icon-position="right" icon-position-right-class="evo-icon-arrow-right5" text="Primary"}}
 
 			<!-- Expanded button with icon on left and right -->
-			{{> button button-type="button" expand="true" icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right2" text="Primary"}}
+			{{> button button-type="button" expand="true" icon-position="both" icon-position-left-class="evo-icon-plus-circle" icon-position-right-class="evo-icon-arrow-right5" text="Primary"}}
 		{{!-- ICONS - ENDS --}}
 
-		{{!-- FORM BUTTONS - BEGINS --}}
+		{{!-- FORM - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Form Buttons"}}
 
 			{{> input-button button-value="Secondary" secondary="true" type="submit"}}
 			{{> input-button button-value="Primary" type="submit"}}
-		{{!-- FORM BUTTONS - ENDS --}}
+		{{!-- FORM - ENDS --}}
 
-		{{!-- INTERACTIVE BUTTONS - BEGINS --}}
+		{{!-- MIN WIDTH - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Min-width"}}
+
+			{{> button button-type="button" secondary="true" text="Secondary" min-width="true"}}
+			{{> button button-type="button" text="Primary" min-width="true"}}
+		{{!-- MIN WIDTH - ENDS --}}
+
+		{{!-- INTERACTIVE - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Interactive Buttons"}}
 
-			{{> button button-type="button" interactive-data-value="evo-button-interactive-secondary-example" secondary="true" text="Save"}}
-			{{> button button-type="button" interactive-data-value="evo-button-interactive-primary-example" text="Save"}}
-		{{!-- INTERACTIVE BUTTONS - ENDS --}}
+			{{> button button-type="button" interactive-data-value="evo-button-interactive-secondary-example" secondary="true" text="Save" min-width="true"}}
+			{{> button button-type="button" interactive-data-value="evo-button-interactive-primary-example" text="Save" min-width="true"}}
+		{{!-- INTERACTIVE - ENDS --}}
 
 		</div>
 	</div>
@@ -166,34 +155,29 @@
 
 <hr>
 
-{{!-- DROPDOWNS - BEGINS --}}
-	{{> type-header size="4" text="Dropdowns"}}
+{{!-- COLORS - BEGINS --}}
+	{{> type-header size="4" text="Colors"}}
 	<div class="row">
 		<div class="medium-6 columns">
 
-		{{!-- BASIC - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Basic"}}
-			{{> dropdowns }}
-		{{!-- BASIC - ENDS --}}
-
-			<br><br>
-
-		{{!-- POSITIONING - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Positioning"}}
-			{{> dropdowns-positioning }}
-		{{!-- POSITIONING - ENDS --}}
+		{{!-- SPOT COLORS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Spot Colors"}}
+			{{> spot-colors }}
+		{{!-- SPOT COLORS - ENDS --}}
 		
 		</div>
 		<div class="medium-6 columns">
 
-		{{!-- HOVER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Hover"}}
-			{{> dropdowns-hover }}
-		{{!-- HOVER - ENDS --}}
+		{{!-- SPECIFIC USE COLORS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Specific Use Colors"}}
+			{{> specific-use-colors }}
+			<br><br>
+		{{!-- SPECIFIC USE COLORS - ENDS --}}
 		
 		</div>
 	</div>
-{{!-- DROPDOWNS - ENDS --}}
+{{!-- COLORS - ENDS --}}
+
 
 <hr>
 
@@ -233,21 +217,14 @@
 
 <hr>
 
-{{!-- FORMS - BEGINS --}}
+{{!-- FORM ELEMENTS - BEGINS --}}
 	{{> type-header size="4" text="Forms"}}
 	<div class="row">
 		<div class="small-12 columns">
 
-		{{!-- ERROR TEXT - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Error Text"}}
-			{{> error-text }}
-		{{!-- ERROR TEXT - ENDS --}}
-
 		{{!-- HELP TEXT - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Help Text"}}
 			{{> help-text }}
-			<br>
-			<br>
 		{{!-- HELP TEXT - ENDS --}}
 
 		{{!-- LABEL - BEGINS --}}
@@ -287,19 +264,29 @@
 			{{> input type="text" placeholder="Placeholder text"}}
 		{{!-- TEXT INPUT - ENDS --}}
 
-		{{!-- PRE/POSTFIX - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Pre/Postfix"}}
-			{{> pre-postfix }}
-		{{!-- PRE/POSTFIX - ENDS --}}
+		{{!-- INPUT GROUP - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Input Group"}}
+			{{> input-group }}
+		{{!-- INPUT GROUP - ENDS --}}
 
 		{{!-- HTML5 FORM ELEMENTS - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="HTML5 Elements"}}
 			{{> html5-elements }}
 		{{!-- HTML5 FORM ELEMENTS - ENDS --}}
+
+		{{!-- SELECT ALL CHECKBOXES - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Select All Checkboxes Toggle"}}
+			{{> checkboxes-select-all }}
+		{{!-- SELECT ALL CHECKBOXES - ENDS --}}
+
+		{{!-- FILE UPLOAD BUTTON - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="File Upload Button"}}
+			{{> file-upload-button }}
+		{{!-- FILE UPLOAD BUTTON - ENDS --}}
 		
 		</div>
 	</div>
-{{!-- FORMS - ENDS --}}
+{{!-- FORM ELEMENTS - ENDS --}}
 
 <hr>
 
@@ -385,6 +372,18 @@
 			</div>
 		</div>
 	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<div class="evo-grid-demo">
+				
+			{{!-- CONTAIN TO GRID - BEGINS --}}
+				{{> type-header size="6" class="evo-hdr-rule" text="Contain to Grid"}}
+				{{> contain-to-grid }}
+			{{!-- CONTAIN TO GRID - ENDS --}}
+			
+			</div>
+		</div>
+	</div>
 {{!-- GRIDS - ENDS --}}
 
 <hr>
@@ -394,112 +393,70 @@
 	<div class="row">
 		<div class="medium-6 columns">
 
-		{{!-- FLOAT HELPERS - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Floats"}}
-			{{> utility-classes-float }}
-		{{!-- FLOAT HELPERS - ENDS --}}
+		{{!-- FLOAT - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Float"}}
+			{{> float }}
+		{{!-- FLOAT - ENDS --}}
 
-		{{!-- RADIUS HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Radius"}}
-			{{> utility-classes-radius }}
-		{{!-- RADIUS HELPER - ENDS --}}
+		{{!-- HORIZONTAL CENTER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Horizontal Center"}}
+			{{> horizontal-center }}
+		{{!-- HORIZONTAL CENTER - ENDS --}}
 
-		{{!-- ROUND HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Round"}}
-			{{> utility-classes-round }}
-		{{!-- ROUND HELPER - ENDS --}}
+		{{!-- VERTICAL MIDDLE - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Vertical Middle"}}
+			{{> vertical-middle }}
+		{{!-- VERTICAL MIDDLE - ENDS --}}
 
-		{{!-- SPOT COLORS HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Spot Colors"}}
-			{{> utility-classes-colors }}
-		{{!-- SPOT COLORS HELPER - ENDS --}}
-
-		{{!-- SPECIFIC USE COLORS HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Specific Use Colors"}}
-			{{> utility-classes-colors-specific-use }}
-			<br><br>
-		{{!-- SPECIFIC USE COLORS HELPER - ENDS --}}
-
-		{{!-- KEYLINES HELPER - BEGINS --}}
+		{{!-- KEYLINES - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Keylines"}}
 			<div class="evo-site--helpers-keyline-example">
-				{{> utility-classes-keylines }}
+				{{> keylines }}
 			</div>
-		{{!-- KEYLINES HELPER - ENDS --}}
-
-		{{!-- TEXT ALIGN HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Text Align"}}
-			{{> utility-classes-text-align }}
-		{{!-- TEXT ALIGN HELPER - ENDS --}}
-
-		{{!-- IMAGE ALIGN HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Image Align"}}
-			{{> utility-classes-image-align }}
-		{{!-- IMAGE ALIGN HELPER - ENDS --}}
+		{{!-- KEYLINES - ENDS --}}
 			
 		</div>
 		<div class="medium-6 columns">
 
-		{{!-- CENTER HORIZONTAL HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Center Horizontal"}}
-			{{> utility-classes-center-horizontal }}
-		{{!-- CENTER HORIZONTAL HELPER - ENDS --}}
+		{{!-- IMAGE ALIGN - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Image Align"}}
+			{{> image-align }}
+		{{!-- IMAGE ALIGN - ENDS --}}
 
-		{{!-- CENTER VERTICAL HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Center Vertical"}}
-			{{> utility-classes-center-vertical }}
-		{{!-- CENTER VERTICAL HELPER - ENDS --}}
-
-		{{!-- INPUT NUMERIC MASK HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Input Numeric Mask"}}
-			{{> form-helper-input-numeric-mask }}
-		{{!-- INPUT NUMERIC MASK HELPER - ENDS --}}
-
-		{{!-- SELECT ALL CHECKBOXES HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Select All Checkboxes Toggle"}}
-			{{> interactive-helper-checkboxes-select-all }}
-		{{!-- SELECT ALL CHECKBOXES HELPER - ENDS --}}
-
-		{{!-- TOGGLE ELEMENT HELPER - BEGINS --}}
+		{{!-- TOGGLE ELEMENT - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Toggle Element"}}
-			{{> interactive-helper-toggle-element }}
-		{{!-- TOGGLE ELEMENT HELPER - ENDS --}}
+			{{> toggle-element }}
+		{{!-- TOGGLE ELEMENT - ENDS --}}
 
-		{{!-- VISIBILITY - SHOW BY SCREEN SIZE HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Visibility - Show by Screen Size"}}
-			{{> visibility-classes-screen-size-show }}
-		{{!-- VISIBILITY - SHOW BY SCREEN SIZE HELPER - ENDS --}}
+		{{!-- SHOW BY SCREEN SIZE - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Show by Screen Size"}}
+			{{> screen-size-show }}
+		{{!-- SHOW BY SCREEN SIZE - ENDS --}}
 
-		{{!-- VISIBILITY - HIDE BY SCREEN SIZE HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Visibility - Hide by Screen Size"}}
-			{{> visibility-classes-screen-size-hide }}
-		{{!-- VISIBILITY - HIDE BY SCREEN SIZE HELPER - ENDS --}}
+		{{!-- HIDE BY SCREEN SIZE - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Hide by Screen Size"}}
+			{{> screen-size-hide }}
+		{{!-- HIDE BY SCREEN SIZE - ENDS --}}
 
-		{{!-- VISIBILITY - ORIENTATION DETECTION HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Visibility - Orientation Detection"}}
-			{{> visibility-classes-orientation-detection }}
-		{{!-- VISIBILITY - ORIENTATION DETECTION HELPER - ENDS --}}
+		{{!-- ORIENTATION DETECTION - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Orientation Detection"}}
+			{{> orientation-detection }}
+		{{!-- ORIENTATION DETECTION - ENDS --}}
 
-		{{!-- VISIBILITY - TOUCH DETECTION HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Visibility - Touch Detection"}}
-			{{> visibility-classes-touch-detection }}
-		{{!-- VISIBILITY - TOUCH DETECTION HELPER - ENDS --}}
+		{{!-- TOUCH DETECTION - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Touch Detection"}}
+			{{> touch-detection }}
+		{{!-- TOUCH DETECTION - ENDS --}}
 
-		{{!-- ACCESSIBILITY - SHOW FOR SCREEN READERS HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Accessibility - Show for Screen Readers Only"}}
-			{{> visibility-classes-screen-readers-show }}
-		{{!-- ACCESSIBILITY - SHOW FOR SCREEN READERS HELPER - ENDS --}}
+		{{!-- SHOW FOR SCREEN READERS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Show for Screen Readers Only"}}
+			{{> screen-readers-show }}
+		{{!-- SHOW FOR SCREEN READERS - ENDS --}}
 
-		{{!-- ACCESSIBILITY - HIDE FOR SCREEN READERS HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Accessibility - Hide for Screen Readers Only"}}
-			{{> visibility-classes-screen-readers-hide }}
-		{{!-- ACCESSIBILITY - HIDE FOR SCREEN READERS HELPER - ENDS --}}
-
-		{{!-- ACCESSIBILITY - RESPONSIVE VISIBILITY HELPER - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Accessibility - Responsive Visibility"}}
-			{{> visibility-classes-hidden }}
-			{{> visibility-classes-visible }}
-		{{!-- ACCESSIBILITY - RESPONSIVE VISIBILITY HELPER - ENDS --}}
+		{{!-- HIDE FOR SCREEN READERS - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Hide for Screen Readers Only"}}
+			{{> screen-readers-hide }}
+		{{!-- HIDE FOR SCREEN READERS - ENDS --}}
 			
 		</div>
 	</div>
@@ -554,6 +511,9 @@
 			<br><br>
 		{{!-- ICON POSITION - RIGHT - ENDS --}}
 
+		</div>
+		<div class="medium-6 columns">
+
 		{{!-- ICON SIZE - SMALL - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Icon Size - Small"}}
 			{{> icon class="evo-icon-alarm-check evo-icon-size-small" }}
@@ -578,9 +538,6 @@
 			<br><br>
 		{{!-- ICON SIZE - X-LARGE - ENDS --}}
 
-		</div>
-		<div class="medium-6 columns">
-
 		{{!-- ICON AS LINK - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Icon as link"}}
 			{{> icon class="evo-icon-alarm-check" href="#/" tagname="a"}}
@@ -592,56 +549,6 @@
 			{{> icon-with-link class="evo-icon-alarm-check evo-icon-position-left" text="Icon with link"}}
 			<br><br>
 		{{!-- ICON WITH LINK - ENDS --}}
-
-		{{!-- ICON SHIELD - SMALL - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Icon Shield - Small"}}
-			<div class="row">
-				<div class="small-12 columns">
-					{{> icon-with-link a-class="evo-icon-shield evo-icon-shield-size-small evo-icon-position-left" class="evo-icon-alarm-check"}}
-				</div>
-			</div>
-			<br>
-		{{!-- ICON SHIELD - SMALL - ENDS --}}
-
-		{{!-- ICON SHIELD - SMALL MEDIUM - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Icon Shield - Small Medium"}}
-			<div class="row">
-				<div class="small-12 columns">
-					{{> icon-with-link a-class="evo-icon-shield evo-icon-shield-size-small-medium" class="evo-icon-alarm-check"}}
-				</div>
-			</div>
-			<br>
-		{{!-- ICON SHIELD - SMALL MEDIUM - ENDS --}}
-
-		{{!-- ICON SHIELD - MEDIUM - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Icon Shield - Medium"}}
-			<div class="row">
-				<div class="small-12 columns">
-					{{> icon-with-link a-class="evo-icon-shield evo-icon-shield-size-medium" class="evo-icon-alarm-check"}}
-				</div>
-			</div>
-			<br>
-		{{!-- ICON SHIELD - MEDIUM - ENDS --}}
-
-		{{!-- ICON SHIELD - LARGE - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Icon Shield - Large"}}
-			<div class="row">
-				<div class="small-12 columns">
-					{{> icon-with-link a-class="evo-icon-shield evo-icon-shield-size-large" class="evo-icon-alarm-check"}}
-				</div>
-			</div>
-			<br>
-		{{!-- ICON SHIELD - LARGE - ENDS --}}
-
-		{{!-- ICON SHIELD - X-LARGE - BEGINS --}}
-			{{> type-header size="6" class="evo-hdr-rule" text="Icon Shield - X-Large"}}
-			<div class="row">
-				<div class="small-12 columns">
-					{{> icon-with-link a-class="evo-icon-shield evo-icon-shield-size-x-large" class="evo-icon-alarm-check"}}
-				</div>
-			</div>
-			<br>
-		{{!-- ICON SHIELD - X-LARGE - ENDS --}}
 
 		</div>
 	</div>
@@ -814,6 +721,11 @@
 			{{> type-paragraph class="evo-footnote" text="<small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</small>"}}
 		{{!-- PARAGRAPHS - ENDS --}}
 
+		{{!-- LEAD PARAGRAPH - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Lead Paragraph"}}
+			{{> type-lead-paragraph }}
+		{{!-- LEAD PARAGRAPH - ENDS --}}
+
 		{{!-- HEADERS - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Headers"}}
 			{{> type-header size="1" text="h1 header"}}
@@ -902,6 +814,11 @@
 			{{> type-unordered-list }}
 		{{!-- UNORDERED LISTS - ENDS --}}
 
+		{{!-- UNBULLETED LIST - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Un-bulleted List"}}
+			{{> type-unbulleted-list }}
+		{{!-- UNBULLETED LIST - ENDS --}}
+
 		{{!-- DEFINITION LISTS - BEGINS --}}
 			{{> type-header size="6" class="evo-hdr-rule" text="Definition List"}}
 			{{> type-definition-list }}
@@ -927,6 +844,11 @@
 			{{> type-header size="6" class="evo-hdr-rule" text="Other Markup Code"}}
 			{{> type-other-markup }}
 		{{!-- OTHER MARKUP CODE - ENDS --}}
+
+		{{!-- TEXT ALIGN HELPER - BEGINS --}}
+			{{> type-header size="6" class="evo-hdr-rule" text="Text Align"}}
+			{{> type-text-align }}
+		{{!-- TEXT ALIGN HELPER - ENDS --}}
 
 		</div>
 	</div>

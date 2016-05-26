@@ -3,17 +3,17 @@
 		"dependency": "true",
 		"foundation": "true",
 		"foundation_dependencies": [
-			{"name": "Forms", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/forms.html"}
+			{"name": "Forms", "url": "http://foundation.zurb.com/sites/docs/forms.html"}
 		],
+
 		"evolution": "true",
-		"evolution_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"evolution_dependencies": [],
+
 		"jquery": "",
+
 		"jquery_ui": "",
-		"jquery_ui_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"jquery_ui_dependencies": [],
+
 		"other": [
 			{"name": "", "url": "", "external_link": "true"}
 		]
@@ -31,6 +31,10 @@
 		"label": {
 			"name": "Label",
 			"partial": "label", "slug": "label"
+		},
+		"legend": {
+			"name": "Legend",
+			"partial": "legend", "slug": "legend"
 		},
 		"checkboxes": {
 			"name": "Checkboxes",
@@ -58,15 +62,23 @@
 		},
 		"text_input": {
 			"name": "Text Input",
-			"partial": "input", "placeholder": "Placeholder text", "slug": "text-input"
+			"partial": "input", "type":"text", "placeholder": "Placeholder text", "slug": "text-input"
 		},
-		"pre_postfix": {
-			"name": "Prefix and Postfix",
-			"partial": "pre-postfix", "slug": "pre-postfix"
+		"input_group": {
+			"name": "Input Group",
+			"partial": "input-group", "slug": "input-group"
 		},
 		"html5_elements": {
 			"name": "HTML5 Elements",
 			"partial": "html5-elements", "slug": "html5-form-elements"
+		},
+		"checkboxes_select_all": {
+			"name": "Select All Checkboxes",
+			"partial": "checkboxes-select-all", "slug": "select-all-checkboxes"
+		},
+		"file_upload_button": {
+			"name": "File Upload Button",
+			"partial": "file-upload-button", "slug": "file-upload-button"
 		}
 	}
 }

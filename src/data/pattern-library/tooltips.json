@@ -3,45 +3,37 @@
 		"dependency": "true",
 		"foundation": "true",
 		"foundation_dependencies": [
-			{"name": "Tooltips", "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/components/tooltips.html"}
+			{"name": "Tooltips", "url": "http://foundation.zurb.com/sites/docs/tooltip.html"}
 		],
+
 		"evolution": "true",
-		"evolution_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"evolution_dependencies": [],
+
 		"jquery": "",
+
 		"jquery_ui": "",
-		"jquery_ui_dependencies": [
-			{"name": "", "url": ""}
-		],
+		"jquery_ui_dependencies": [],
+
 		"other": [
 			{"name": "", "url": "", "external_link": "true"}
 		]
 	},
 
 	"data": {
-		"tooltip_default": {
-			"name": "Default Tooltip",
-			"partial": "tooltip-default", "slug": "tooltip-default"
+		"tooltip": {
+			"name": "Basic",
+			"partial": "tooltip", "slug": "tooltip-basic"
 		},
-		"tooltip_disable": {
-			"name": "Tooltip Disable",
-			"partial": "tooltip-disable", "slug": "tooltip-disable"
+		"tooltip_position": {
+			"name": "Position",
+			"partial": "tooltip-position", "slug": "tooltip-position"
 		},
 		"tooltip_input": {
-			"name": "Tooltip Input",
+			"name": "Input",
 			"partial": "tooltip-input", "slug": "tooltip-input"
 		},
-		"tooltip_radius": {
-			"name": "Tooltip Radius",
-			"partial": "tooltip-radius", "slug": "tooltip-radius"
-		},
-		"tooltip_round": {
-			"name": "Tooltip Round",
-			"partial": "tooltip-round", "slug": "tooltip-round"
-		},
 		"tooltip_show_by_screensize": {
-			"name": "Show by Screensize",
+			"name": "Show By Screen Size",
 			"partial": "tooltip-show-by-screen-size", "slug": "tooltip-show-by-screen-size"
 		}
 	}

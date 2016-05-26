@@ -6,21 +6,21 @@ AUTHOR: {{ evo_meta_author }}
 URL: {{ evo_meta_url }}
 --------------------------------------------------------------------------------------------*/
 
+@charset 'utf-8';
+
 //
 // @core sass imports - IMPORTANT: DO NOT MODIFY!
 //
-@import	"../../../assets/css/core/global/color_variables";
-@import	"../../../assets/css/core/foundation/foundation/settings";
-@import	"../../../assets/css/core/global/variables";
-@import	"../../../assets/css/core/global/functions";
-@import	"../../../assets/css/core/global/mixins";
+@import	"../../../assets/scss/core/global";
+@import	"../../../assets/scss/core/foundation-settings";
+@import	"../../../assets/scss/core/settings";
 
 //
 // @variables - IMPORTANT: DO NOT MODIFY! MODIFY VARIABLE OVERRIDES ONLY.
 //
 
 // Organism default variables
-$evo-pricing-table-bg-color: $onyx-dark-6 !default;
+$evo-pricing-table-bg-color: $evo-secondary-color !default;
 $evo-pricing-table-base-font: rem-calc(17) !default;
 $evo-pricing-table-padding: rem-calc(10) !default;
 $evo-pricing-table-margin-bottom: rem-calc(2) !default;
@@ -34,7 +34,7 @@ $evo-pricing-table-time-value-label-color: $onyx-dark-40 !default;
 $evo-pricing-table-time-value-label-text-align: right !default;
 $evo-pricing-table-time-value-label-top-position: -3px !default;
 $evo-pricing-table-break-down-row-bg-color: $onyx-light !default;
-$evo-pricing-table-total-row-bg-color: $onyx-medium !default;
+$evo-pricing-table-total-row-bg-color: $evo-primary-color !default;
 $evo-pricing-table-total-row-font-color: $white !default;
 
 //
@@ -47,21 +47,21 @@ $evo-product: core;
 // Communications
 @if $evo-product == comm {
 
-	$evo-pricing-table-bg-color: $onyx-dark-6;
+	$evo-pricing-table-bg-color: $evo-secondary-color;
 	$evo-pricing-table-item-label-font-color: $onyx-dark-40;
 	$evo-pricing-table-time-value-label-color: $onyx-dark-40;
 	$evo-pricing-table-break-down-row-bg-color: $onyx-light;
-	$evo-pricing-table-total-row-bg-color: $onyx-medium;
+	$evo-pricing-table-total-row-bg-color: $evo-primary-color;
 	$evo-pricing-table-total-row-font-color: $white;
 
 // Benefits Portals
 } @else if $evo-product == bp {
 
-	$evo-pricing-table-bg-color: $onyx-dark-6;
+	$evo-pricing-table-bg-color: $evo-secondary-color;
 	$evo-pricing-table-item-label-font-color: $onyx-dark-40;
 	$evo-pricing-table-time-value-label-color: $onyx-dark-40;
 	$evo-pricing-table-break-down-row-bg-color: $onyx-light;
-	$evo-pricing-table-total-row-bg-color: $onyx-medium;
+	$evo-pricing-table-total-row-bg-color: $evo-primary-color;
 	$evo-pricing-table-total-row-font-color: $white;
 
 }
@@ -69,7 +69,7 @@ $evo-product: core;
 //
 // @variable overrides
 //
-// $evo-pricing-table-bg-color: $onyx-dark-6;
+// $evo-pricing-table-bg-color: $evo-secondary-color;
 // $evo-pricing-table-base-font: rem-calc(17);
 // $evo-pricing-table-padding: rem-calc(10);
 // $evo-pricing-table-margin-bottom: rem-calc(2);
@@ -83,20 +83,19 @@ $evo-product: core;
 // $evo-pricing-table-time-value-label-text-align: right;
 // $evo-pricing-table-time-value-label-top-position: -3px;
 // $evo-pricing-table-break-down-row-bg-color: $onyx-light;
-// $evo-pricing-table-total-row-bg-color: $onyx-medium;
+// $evo-pricing-table-total-row-bg-color: $evo-primary-color;
 // $evo-pricing-table-total-row-font-color: $white;
 
 
 // PRICING TABLE - BEGINS
 	.evo-pricing-table			{
-		[class*="small-block-grid-"]
+		[class*="small-up-"]
 									{
 									background-color: $evo-pricing-table-bg-color;
 									font-size: $evo-pricing-table-base-font;
 									padding: $evo-pricing-table-padding;
 									margin: 0;
 									margin-bottom: $evo-pricing-table-margin-bottom;
-			li							{padding-bottom: 0;}
 			.evo-pricing-table-item-amt,
 			.evo-pricing-table-break-down-amt,
 			.evo-pricing-table-total-amt
@@ -122,7 +121,6 @@ $evo-product: core;
 									padding-bottom: 0;
 									margin-top: 0;
 									margin-bottom: 0;
-			li							{padding-bottom: 0;}
 			.evo-pricing-table-item-label
 										{
 										color: $evo-pricing-table-item-label-font-color;
@@ -160,12 +158,3 @@ $evo-product: core;
 
 								}
 // PRICING TABLE - ENDS
-
-//=== MEDIA QUERIES =========================================================================
-
-// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
-@media #{$medium-up} {
-
-	
-
-}
