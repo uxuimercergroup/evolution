@@ -70,14 +70,17 @@
 		$evo-site-hero-tagline-max-width-large: 100%;
 
 		// HERO FOOTNOTE
-		$evo-site-hero-foonote-margin: rem-calc(10 0 0 0);
-		$evo-site-hero-foonote-color: $evo-quinary-color;
-		$evo-site-hero-foonote-text-transform: uppercase;
-		$evo-site-hero-foonote-letter-spacing: 3px;
+		$evo-site-hero-footnote-margin: rem-calc(10 0 0 0);
+		$evo-site-hero-footnote-color: $evo-quinary-color;
+		$evo-site-hero-footnote-text-transform: uppercase;
+		$evo-site-hero-footnote-letter-spacing: 3px;
 
 	// BANDS
 	$evo-site-band-padding: rem-calc(40 0);
 	$evo-site-band-padding-medium: rem-calc(80 0);
+
+		// DARK BAND
+		$evo-site-band-dark-font-color: $white;
 
 		// MARKETING BAND
 		$evo-site-band-marketing-background-color: $onyx-dark-2;
@@ -99,6 +102,9 @@
 		$evo-site-band-marketing-block-grid-h5-margin-top-medium: rem-calc(20);
 		$evo-site-band-marketing-block-grid-h5-font-family: $evo-font-medium-stack;
 		$evo-site-band-marketing-block-grid-paragraph-color: $onyx-medium;
+
+		// LEARN BAND
+		$evo-site-band-learn-background-color: $sapphire-medium;
 
 		// TESTIMONIALS BAND
 		$evo-site-band-testimonials-blockquote-font-family: $evo-font-regular-stack;

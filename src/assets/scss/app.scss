@@ -278,11 +278,11 @@ URL: {{ meta_url }}
 
 	// HERO FOOTNOTE
 	.evo-site-hero--footnote			{
-										margin: $evo-site-hero-foonote-margin;
+										margin: $evo-site-hero-footnote-margin;
 		small								{
-											color: $evo-site-hero-foonote-color;
-											text-transform: $evo-site-hero-foonote-text-transform;
-											letter-spacing: $evo-site-hero-foonote-letter-spacing;
+											color: $evo-site-hero-footnote-color;
+											text-transform: $evo-site-hero-footnote-text-transform;
+											letter-spacing: $evo-site-hero-footnote-letter-spacing;
 											}
 										}
 // HERO - ENDS
@@ -297,6 +297,12 @@ URL: {{ meta_url }}
 											padding: $evo-site-band-padding-medium;
 											}
 
+										}
+
+	// DEFAULT BAND - DARK
+	.evo-site-band--dark				{
+										color: $evo-site-band-dark-font-color;
+		a									{color: $evo-site-band-dark-font-color}
 										}
 
 	// MARKETING BAND
@@ -351,6 +357,9 @@ URL: {{ meta_url }}
 
 											}
 										}
+
+	// LEARN BAND
+	[data-evo-site-band-theme="learn"]	{background-color: $evo-site-band-learn-background-color !important;}
 
 
 	// TESTIMONIALS BAND
