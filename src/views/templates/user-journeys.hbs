@@ -1,0 +1,68 @@
+---
+title: "User Journeys"
+---
+<!-- USER JOURNEYS HERO - BEGINS -->
+	<section class="row expanded evo-site-hero" data-evo-site-hero-size="x-large" data-evo-site-hero-arrow-position="bottom">
+		<div class="small-12 columns evo-vertical-middle hide" data-anijs="if: load, on: window, do: $removeClass hide;">
+			<div class="text-center evo-vertical-middle-element">
+				<h1 class="evo-site-hero--hdr flipInY animated" data-evo-site-hero-hdr-size="large">{{{user-journeys.hero.title}}} <span>{{{user-journeys.hero.subtitle}}}</span></h1>
+				<h3 class="float-center evo-site-hero--tagline bounceInUp animated">{{{ user-journeys.hero.tagline }}}</h3>
+			</div>		
+		</div>
+	</section>
+<!-- USER JOURNEYS HERO - ENDS -->
+
+<!-- CONTENT BAND - BEGINS -->
+	<section class="row expanded evo-site-band evo-site-band--marketing">
+		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
+			<h3 class="text-center evo-margin-left evo-margin-right">{{{user-journeys.content_band1.header}}}</h3>
+
+			<div class="row small-up-{{user-journeys.content_band1.grid_small}} medium-up-{{user-journeys.content_band1.grid_medium}} large-up-{{user-journeys.content_band1.grid_large}} evo-site-band--marketing-block-grid">
+				{{#each user-journeys.content_band1.items}}
+				<div class="columns text-center">
+					{{> (lookup . 'partial') }}
+					<h5>{{{header}}}</h5>
+					<p>{{{text}}}</p>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+	</section>
+<!-- CONTENT BAND - ENDS -->
+
+<!-- TAB BAND - BEGINS -->
+	<section class="row expanded evo-site-band--marketing evo-site-band--tab evo-site-band--what">
+		<div class="evo-site-band--tab-hdr">
+			<div class="small-12 columns">
+				<div class="row">
+					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab">
+						<h3 class="text-center">{{{user-journeys.tab_band1.header}}}</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab-shim"></div>
+				</div>
+			</div>
+		</div>
+		<div class="evo-site-band--tab-panel">
+			<div class="row">
+				<div class="medium-12 large-10 large-centered columns">
+					<div class="row">
+						<div class="medium-12 text-center columns">
+							<img class="evo-site-hidden" src="{{assets}}/images/evo-site-what-inside-out.png" alt="{{{user-journeys.tab_band1.header}}}" data-anijs="if: scroll, on: window, do: fadeInUpBig animated evo-site-visible, before: scrollReveal, after: holdAnimClass">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- TAB BAND - ENDS -->
+
+<!-- CONTENT BAND - BEGINS -->
+	<section class="row expanded evo-site-band evo-site-band--marketing evo-site-band--testimonials">
+		<div class="medium-12 large-9 large-centered columns evo-site-band--marketing-content">
+			<h3 class="text-center evo-margin-left evo-margin-right">{{{user-journeys.content_band2.header}}}</h3>
+
+		</div>
+	</section>
+<!-- CONTENT BAND - ENDS -->
