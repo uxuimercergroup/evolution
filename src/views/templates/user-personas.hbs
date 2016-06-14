@@ -22,7 +22,7 @@ title: "User Personas"
 			</div>
 			<div class="row">
 				<div class="small-12 medium-10 large-8 medium-centered columns">
-					<h5 class="text-center evo-margin-left evo-margin-right evo-margin-bottom">{{{user-personas.info_graphic_band.header}}}</h5>
+					<h5 class="text-center evo-margin-left evo-margin-right evo-spacer-margin-bottom-xxx-large">{{{user-personas.info_graphic_band.header}}}</h5>
 					<p>{{{user-personas.info_graphic_band.text}}}</p>
 				</div>
 			</div>
@@ -39,14 +39,16 @@ title: "User Personas"
 					<div class="row medium-up-2">
 						<div class="columns">
 							<ul>
-								<li class="evo-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit nisi.</li>
-								<li class="evo-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit nisi.</li>
+								{{#slice user-personas.key_objectives_band.items offset="0" limit="2"}}
+									<li class="evo-margin-bottom">{{text}}</li>
+								{{/slice}}
 							</ul>
 						</div>
 						<div class="columns">
 							<ul>
-								<li class="evo-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit nisi.</li>
-								<li class="evo-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit nisi.</li>
+								{{#slice user-personas.key_objectives_band.items offset="2" limit="2"}}
+									<li class="evo-margin-bottom">{{text}}</li>
+								{{/slice}}
 							</ul>
 						</div>
 					</div>
@@ -73,22 +75,22 @@ title: "User Personas"
 		<div class="evo-site-band--tab-panel">
 			<div class="row">
 				<div class="medium-12 large-10 large-centered columns">
-					<div class="row">
-						<div class="medium-12 text-center columns">
-							x
+					
+				{{#each user-personas.persona_db_tab_band.items}}
+					<div class="row evo-site-band--library-info">
+						<div class="medium-7 columns">
+							<h5>{{{header}}}</h5>
+							<p>{{{description}}}</p>
+							<a href="{{link-url}}" class="button hollow evo-button" role="button"><span class="evo-button-text">{{link-name}}</span><i class="evo-icon-arrow-right2 evo-icon-position-right"></i></a>
+						</div>
+						<div class="medium-4 medium-offset-1 columns">
+							<img src="{{document-image}}" width="800">
 						</div>
 					</div>
+				{{/each}}
+
 				</div>
 			</div>
 		</div>
 	</section>
 <!-- TAB BAND - ENDS -->
-
-<!-- CONTENT BAND - BEGINS -->
-	<section class="row expanded evo-site-band evo-site-band--marketing">
-		<div class="medium-12 large-9 large-centered columns evo-site-band--marketing-content">
-			<h3 class="text-center evo-margin-left evo-margin-right">{{{user-personas.content_band2.header}}}</h3>
-
-		</div>
-	</section>
-<!-- CONTENT BAND - ENDS -->
