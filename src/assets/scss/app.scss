@@ -567,6 +567,17 @@ URL: {{ meta_url }}
 										}
 // SLIDES CAROUSEL - ENDS
 
+// CALLOUT CARDS - BEGINS
+	.evo-site-callout-card				{
+		@include breakpoint(medium)			{
+											margin-bottom: ($evo-base-margin*3);
+			header								{
+				p									{min-height: rem-calc(42);}
+												}
+											}
+										}
+// CALLOUT CARDS - ENDS
+
 
 /*--- PATTERN LIBRARY PAGES ----------------------------------------------------------------*/
 

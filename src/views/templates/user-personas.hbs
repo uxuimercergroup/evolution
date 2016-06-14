@@ -12,7 +12,7 @@ title: "User Personas"
 	</section>
 <!-- USER PERSONAS HERO - ENDS -->
 
-<!-- CONTENT BAND - BEGINS -->
+<!-- INFO GRAPHIC CONTENT BAND - BEGINS -->
 	<section class="row expanded evo-site-band evo-site-band--marketing">
 		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
 			<div class="row">
@@ -21,21 +21,21 @@ title: "User Personas"
 				</div>
 			</div>
 			<div class="row">
-				<div class="small-12 medium-10 large-8 medium-centered columns">
+				<div class="small-12 medium-10 medium-centered columns">
 					<h5 class="text-center evo-margin-left evo-margin-right evo-spacer-margin-bottom-xxx-large">{{{user-personas.info_graphic_band.header}}}</h5>
 					<p>{{{user-personas.info_graphic_band.text}}}</p>
 				</div>
 			</div>
 		</div>
 	</section>
-<!-- CONTENT BAND - ENDS -->
+<!-- INFO GRAPHIC CONTENT BAND - ENDS -->
 
-<!-- CONTENT BAND - BEGINS -->
+<!-- KEY OBJECTIVES CONTENT BAND - BEGINS -->
 	<section class="row expanded evo-site-band evo-site-band--dark evo-site-band--marketing" data-evo-site-band-theme="learn">
 		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
 			<h5 class="text-center evo-margin-left evo-margin-right evo-spacer-margin-bottom-xxx-large">{{{user-personas.key_objectives_band.header}}}</h5>
 			<div class="row">
-				<div class="medium-12 large-8 medium-centered columns">
+				<div class="small-10 small-centered columns">
 					<div class="row medium-up-2">
 						<div class="columns">
 							<ul>
@@ -56,9 +56,9 @@ title: "User Personas"
 			</div>
 		</div>
 	</section>
-<!-- CONTENT BAND - ENDS -->
+<!-- KEY OBJECTIVES CONTENT BAND - ENDS -->
 
-<!-- TAB BAND - BEGINS -->
+<!-- PERSONAS DATABASE TAB BAND - BEGINS -->
 	<section class="row expanded evo-site-band--marketing evo-site-band--tab">
 		<div class="evo-site-band--tab-hdr" data-evo-site-band-theme="learn">
 			<div class="small-12 columns">
@@ -78,19 +78,50 @@ title: "User Personas"
 					
 				{{#each user-personas.persona_db_tab_band.items}}
 					<div class="row evo-site-band--library-info">
-						<div class="medium-7 columns">
+						<div class="medium-5 medium-push-7 columns">
+							<img src="{{image_src}}" width="800">
+						</div>
+						<div class="medium-7 medium-pull-5 columns">
 							<h5>{{{header}}}</h5>
 							<p>{{{description}}}</p>
-							<a href="{{link-url}}" class="button hollow evo-button" role="button"><span class="evo-button-text">{{link-name}}</span><i class="evo-icon-arrow-right2 evo-icon-position-right"></i></a>
-						</div>
-						<div class="medium-4 medium-offset-1 columns">
-							<img src="{{document-image}}" width="800">
+							<a href="{{url}}" class="button hollow evo-button" data-evo-button-icons="right" role="button"><span class="evo-button-text">{{link_text}}</span><i class="evo-icon-arrow-right2 evo-icon-position-right"></i></a>
 						</div>
 					</div>
 				{{/each}}
+
+					<div class="row evo-site-band--library-info">
+						<div class="small-12 columns">
+							<div class="row">
+								<div class="small-12 columns">
+									<h5>{{{user-personas.persona_db_tab_band.persona_lib.header}}}</h5>
+									<p class="evo-spacer-margin-bottom-xxx-large">{{{user-personas.persona_db_tab_band.persona_lib.text}}}</p>
+								</div>
+							</div>
+							<div class="row medium-up-{{user-personas.persona_db_tab_band.persona_lib.grid_medium}}" data-equalizer="evo-site-callout-cards" data-equalize-on="medium">
+								
+								{{#each user-personas.persona_db_tab_band.persona_lib.items}}
+								<div class="columns">
+									<div class="callout evo-callout evo-site-callout-card" data-equalizer-watch="evo-site-callout-cards">
+										<header>	
+											<a href="{{url}}"><img class="evo-margin-bottom" src="{{image_src}}" width="800"></a>
+											<p><a href="{{url}}">{{{title}}}</a></p>
+										</header>
+										<section>
+											<p>{{{description}}}</p>
+										</section>
+										<footer>
+											<a href="{{url}}" class="button hollow evo-button evo-margin-bottom" data-evo-button-icons="right" role="button"><span class="evo-button-text">{{link_text}}</span><i class="evo-icon-arrow-right2 evo-icon-position-right"></i></a>
+										</footer>
+									</div>
+								</div>
+								{{/each}}
+
+							</div>
+						</div>
+					</div>
 
 				</div>
 			</div>
 		</div>
 	</section>
-<!-- TAB BAND - ENDS -->
+<!-- PERSONAS DATABASE TAB BAND - ENDS -->
