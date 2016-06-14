@@ -30,9 +30,35 @@ title: "User Journeys"
 	</section>
 <!-- CONTENT BAND - ENDS -->
 
+<!-- CONTENT BAND - BEGINS -->
+	<section class="row expanded evo-site-band evo-site-band--dark evo-site-band--marketing" data-evo-site-band-theme="learn">
+		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
+			<h5 class="text-center evo-margin-left evo-margin-right evo-spacer-margin-bottom-xxx-large">{{{user-personas.key_objectives_band.header}}}</h5>
+			<div class="row">
+				<div class="medium-12 large-8 medium-centered columns">
+					<div class="row medium-up-2">
+						<div class="columns">
+							<ul>
+								<li class="evo-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit nisi.</li>
+								<li class="evo-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit nisi.</li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul>
+								<li class="evo-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit nisi.</li>
+								<li class="evo-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit nisi.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- CONTENT BAND - ENDS -->
+
 <!-- TAB BAND - BEGINS -->
 	<section class="row expanded evo-site-band--marketing evo-site-band--tab">
-		<div class="evo-site-band--tab-hdr">
+		<div class="evo-site-band--tab-hdr" data-evo-site-band-theme="learn">
 			<div class="small-12 columns">
 				<div class="row">
 					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab">
@@ -47,11 +73,20 @@ title: "User Journeys"
 		<div class="evo-site-band--tab-panel">
 			<div class="row">
 				<div class="medium-12 large-10 large-centered columns">
-					<div class="row">
-						<div class="medium-12 text-center columns">
-							<img class="evo-site-hidden" src="{{assets}}/images/evo-site-what-inside-out.png" alt="{{{user-journey.tab_band1.header}}}" data-anijs="if: scroll, on: window, do: fadeInUpBig animated evo-site-visible, before: scrollReveal, after: holdAnimClass">
+
+				{{#each user-journey.tab_band1_template.items}}
+					<div class="row evo-site-band--library-info">
+						<div class="medium-7 columns">
+							<h5>{{{header}}}</h5>
+							<p>{{{description}}}</p>
+							<a href="{{link-url}}" class="button hollow evo-button" role="button"><span class="evo-button-text">{{link-name}}</span><i class="evo-icon-arrow-right2 evo-icon-position-right"></i></a>
+						</div>
+						<div class="medium-4 medium-offset-1 columns">
+							<img src="{{document-image}}" width="800">
 						</div>
 					</div>
+				{{/each}}
+
 				</div>
 			</div>
 		</div>

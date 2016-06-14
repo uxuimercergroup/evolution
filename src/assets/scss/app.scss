@@ -361,6 +361,15 @@ URL: {{ meta_url }}
 	// LEARN BAND
 	[data-evo-site-band-theme="learn"]	{background-color: $evo-site-band-learn-background-color !important;}
 
+	// LIBRARY INFROMATION
+	.evo-site-band--library-info		{
+										border-bottom: $evo-site-band--library-info-border-bottom;
+										margin-bottom: $evo-site-band--library-info-spacing;
+										padding-bottom: $evo-site-band--library-info-spacing;
+		&:first-child						{margin-top: $evo-site-band--library-info-spacing;}
+		&:last-child						{border-bottom: 0;}
+		[class^="evo-icon-"]				{top: 1px;}
+										}
 
 	// TESTIMONIALS BAND
 	.evo-site-band--testimonials		{
