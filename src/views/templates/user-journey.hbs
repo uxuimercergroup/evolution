@@ -15,16 +15,16 @@ title: "User Journeys"
 <!-- CONTENT BAND - BEGINS -->
 	<section class="row expanded evo-site-band evo-site-band--marketing">
 		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
-			<h3 class="text-center evo-margin-left evo-margin-right">{{{user-journey.content_band1.header}}}</h3>
-
-			<div class="row small-up-{{user-journey.content_band1.grid_small}} medium-up-{{user-journey.content_band1.grid_medium}} large-up-{{user-journey.content_band1.grid_large}} evo-site-band--marketing-block-grid">
-				{{#each user-journey.content_band1.items}}
-				<div class="columns text-center">
-					{{> (lookup . 'partial') }}
-					<h5>{{{header}}}</h5>
-					<p>{{{text}}}</p>
+			<div class="row">
+				<div class="medium-12 columns text-center">
+					<img class="show-for-medium evo-site-hidden" src="{{assets}}/images/evo-site-what-inside-out.png" alt="{{{user-journey.info_graphic_band.header}}}" data-anijs="if: scroll, on: window, do: fadeInUpBig animated evo-site-visible, before: scrollReveal, after: holdAnimClass">
 				</div>
-				{{/each}}
+			</div>
+			<div class="row">
+				<div class="small-12 medium-10 large-8 medium-centered columns">
+					<h5 class="text-center evo-margin-left evo-margin-right evo-spacer-margin-bottom-xxx-large">{{{user-journey.info_graphic_band.header}}}</h5>
+					<p>{{{user-journey.info_graphic_band.text}}}</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -35,7 +35,7 @@ title: "User Journeys"
 		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
 			<h5 class="text-center evo-margin-left evo-margin-right evo-spacer-margin-bottom-xxx-large">{{{user-personas.key_objectives_band.header}}}</h5>
 			<div class="row">
-				<div class="medium-12 large-8 medium-centered columns">
+				<div class="small-10 small-centered columns">
 					<div class="row medium-up-2">
 						<div class="columns">
 							<ul>
@@ -62,7 +62,7 @@ title: "User Journeys"
 			<div class="small-12 columns">
 				<div class="row">
 					<div class="small-10 medium-9 large-7 small-centered columns evo-site-band--tab-hdr-tab">
-						<h3 class="text-center">{{{user-journey.tab_band1.header}}}</h3>
+						<h3 class="text-center">{{{user-journey.journey_library_tab_band.header}}}</h3>
 					</div>
 				</div>
 				<div class="row">
@@ -74,15 +74,15 @@ title: "User Journeys"
 			<div class="row">
 				<div class="medium-12 large-10 large-centered columns">
 
-				{{#each user-journey.tab_band1_template.items}}
-					<div class="row evo-site-band--library-info">
-						<div class="medium-7 columns">
+				{{#each user-journey.journey_library_tab_band.items}}
+					<div class="row evo-site-band--journey-library">
+						<div class="medium-5 medium-push-7 columns">
+							<img src="{{document-image}}" width="600">
+						</div>
+						<div class="medium-7 medium-pull-5 columns">
 							<h5>{{{header}}}</h5>
 							<p>{{{description}}}</p>
-							<a href="{{link-url}}" class="button hollow evo-button" role="button"><span class="evo-button-text">{{link-name}}</span><i class="evo-icon-arrow-right2 evo-icon-position-right"></i></a>
-						</div>
-						<div class="medium-4 medium-offset-1 columns">
-							<img src="{{document-image}}" width="800">
+							<a href="{{link-url}}" class="button hollow evo-button" data-evo-button-icons="right" role="button"><span class="evo-button-text">{{link-name}}</span><i class="evo-icon-arrow-right2 evo-icon-position-right"></i></a>
 						</div>
 					</div>
 				{{/each}}
@@ -92,12 +92,3 @@ title: "User Journeys"
 		</div>
 	</section>
 <!-- TAB BAND - ENDS -->
-
-<!-- CONTENT BAND - BEGINS -->
-	<section class="row expanded evo-site-band evo-site-band--marketing">
-		<div class="medium-12 large-9 large-centered columns evo-site-band--marketing-content">
-			<h3 class="text-center evo-margin-left evo-margin-right">{{{user-journey.content_band2.header}}}</h3>
-
-		</div>
-	</section>
-<!-- CONTENT BAND - ENDS -->

@@ -362,13 +362,19 @@ URL: {{ meta_url }}
 	[data-evo-site-band-theme="learn"]	{background-color: $evo-site-band-learn-background-color !important;}
 
 	// LIBRARY INFROMATION
-	.evo-site-band--library-info		{
-										border-bottom: $evo-site-band--library-info-border-bottom;
-										margin-bottom: $evo-site-band--library-info-spacing;
-										padding-bottom: $evo-site-band--library-info-spacing;
-		&:first-child						{margin-top: $evo-site-band--library-info-spacing;}
+	.evo-site-band--journey-library		{
+										border-bottom: $evo-site-band-library-info-border-bottom;
+										margin-bottom: $evo-site-band-library-info-spacing;
+										padding-bottom: $evo-site-band-library-info-spacing;
 		&:last-child						{border-bottom: 0;}
-		[class^="evo-icon-"]				{top: 1px;}
+
+		@include breakpoint(medium)			{
+			&:first-child						{margin-top: $evo-site-band-library-info-spacing;}
+											}
+		@include breakpoint(small only)		{
+			.evo-button							{margin-bottom: 0;}
+			img									{margin-bottom: $evo-base-margin;}
+											}
 										}
 
 	// TESTIMONIALS BAND
