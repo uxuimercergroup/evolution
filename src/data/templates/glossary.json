@@ -2,5 +2,200 @@
 	"hero": {
 		"title": "Evolution",
 		"subtitle": "Glossary"
-	}
+	},
+
+	"glossary_terms_data": [
+		{
+			"title": "Atoms",
+			"description": "<p>In chemistry, atoms are the basic building blocks of matter. They have distinct properties and can't be broken down further without losing their meaning.</p><p>Translated to interfaces, atoms are basic tags, such as form labels, inputs or buttons. They also include more abstract elements like color palettes, fonts, and animations.</p>"
+		},
+		{
+			"title": "Grunt",
+			"description": "Grunt is a tool for automating command line tasks <a href='http://gruntjs.com/'>Gruntjs.com</a>"
+		},
+		{
+			"title": "Molecules",
+			"description": "<p>In chemistry, molecules are groups of atoms bonded together, which take on new properties as a result.</p><p>In interfaces, molecules are groups of elements that function together as a unit. For example, a form label, search input, and button atom can combine them together to form a search form molecule.</p><p>Building up from atoms to molecules encourages a “do one thing and do it well” mentality, and encourages creating reusable interface patterns.</p>"
+		},
+		{
+			"title": "Namespace",
+			"description": "<p>A name given to an element for the explicit purpose of containing the application of properties.</p><p>In Evolution, components are given the class name evo to help distinguish them from parts of elements in code, and to provide a namespace for definitions which can limit the scope of CSS rules.</p>"
+		},
+		{
+			"title": "NPM",
+			"description": "NPM is a package manager used for downloading Node JS packages."
+		},
+		{
+			"title": "Node",
+			"description": "Node is a event driven programming language frequently used to run command line tools for front end development. <a href='https://nodejs.org/en/'>nodejs.org</a>"
+		},
+		{
+			"title": "Organisms",
+			"description": "<p>Organisms are groups of molecules (and possibly atoms) joined together to form distinct section of an interface.</p><p>Organisms can consist of similar and/or disparate molecule types. For example, a masthead organism might consist of a logo, navigation, and search form, while a “product grid” organism might consist of the same product info molecule repeated over and over.</p><p>Building up from molecules to organisms encourages creating standalone, portable, reusable components.</p>"
+		},
+		{
+			"title": "Semantic Versioning",
+			"description": "Software versioning is the process of assigning either unique version names or unique version numbers to unique states of software development. Within a given version number category (major, minor, patch), these numbers are generally assigned in increasing order and correspond to new developments."
+		},
+		{
+			"title": "Style Tile",
+			"description": "<p>Style Tiles are a design deliverable consisting of fonts, colors and interface elements that communicate the essence of a visual brand for the web.</p><p>They help form a common visual language between the designers and the stakeholders and provide a catalyst for discussions around the preferences and goals of the client.</p>"
+		},
+		{
+			"title": "Evolution",
+			"description": "Global framework for digital design and development at Mercer."
+		},
+		{
+			"title": "Evolution Tool Box",
+			"description": "A collection of development technologies assembled in one spot so you can begin using the Evolution framework and Evolution web components in minutes."
+		},
+		{
+			"title": "generator-evolution",
+			"description": "Yeoman generator for the Evolution Tool Box development environment. Used to create starter boilerplate for Evolution."
+		},
+		{
+			"title": "Yeoman",
+			"description": "Yeoman is a workflow toolset that comprises of three types of tools for improving your productivity and satisfaction when building a web app: the scaffolding tool (yo), the build tool (Gulp, Grunt etc) and the package manager (like npm and Bower)."
+		},
+		{
+			"title": "Bower",
+			"description": ""
+		},
+		{
+			"title": "Handlebars",
+			"description": ""
+		},
+		{
+			"title": "Sass",
+			"description": ""
+		},
+		{
+			"title": "Ruby",
+			"description": ""
+		},
+		{
+			"title": "Javascript",
+			"description": ""
+		},
+		{
+			"title": "HTML",
+			"description": ""
+		},
+		{
+			"title": "Github",
+			"description": ""
+		},
+		{
+			"title": "Repository",
+			"description": ""
+		},
+		{
+			"title": "CLI",
+			"description": ""
+		},
+		{
+			"title": "Terminal",
+			"description": ""
+		},
+		{
+			"title": "Cmder",
+			"description": ""
+		},
+		{
+			"title": "Front-end Development",
+			"description": ""
+		},
+		{
+			"title": "Babel",
+			"description": ""
+		},
+		{
+			"title": "SFTP",
+			"description": ""
+		},
+		{
+			"title": "Boilerplate",
+			"description": ""
+		},
+		{
+			"title": "Patterns",
+			"description": ""
+		},
+		{
+			"title": "UI",
+			"description": ""
+		},
+		{
+			"title": "Responsive",
+			"description": ""
+		},
+		{
+			"title": "UX",
+			"description": ""
+		},
+		{
+			"title": "Prototype",
+			"description": ""
+		},
+		{
+			"title": "Wireframes",
+			"description": "A website wireframe, also known as a page schematic or screen blueprint, is a visual guide that represents the skeletal framework of a website. Wireframes are created for the purpose of arranging elements to best accomplish a particular purpose."
+		},
+		{
+			"title": "Visual Design",
+			"description": "Visual design focuses on the aesthetics of a site and its related materials by strategically implementing images, colors, fonts, and other elements.  A successful visual design does not take away from the content on the page or function.  Instead, it enhances it by engaging users and helping to build trust and interest in the brand."
+		},
+		{
+			"title": "Compositions",
+			"description": ""
+		},
+		{
+			"title": "Snippet",
+			"description": ""
+		},
+		{
+			"title": "Mobile-first",
+			"description": ""
+		},
+		{
+			"title": "Page Templates",
+			"description": ""
+		},
+		{
+			"title": "Product Suite",
+			"description": ""
+		},
+		{
+			"title": "Media Query",
+			"description": ""
+		},
+		{
+			"title": "Kitchen Sink",
+			"description": ""
+		},
+		{
+			"title": "IcoMoon",
+			"description": ""
+		},
+		{
+			"title": "Foundation",
+			"description": ""
+		},
+		{
+			"title": "jQuery",
+			"description": ""
+		},
+		{
+			"title": "jQuery UI",
+			"description": ""
+		},
+		{
+			"title": "AniJS",
+			"description": ""
+		},
+		{
+			"title": "Change Log",
+			"description": ""
+		}
+	]
 }

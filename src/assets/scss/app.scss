@@ -1217,6 +1217,53 @@ URL: {{ meta_url }}
 										}
 // BAND - ENDS
 
+/*--- GLOSSARY PAGE ----------------------------------------------------------------------------*/
+
+// GLOSSARY - BEGINS
+	.evo-site--glossary-container		{
+										border-right: 1px solid $onyx-dark-20;
+		thead								{display: none;}
+
+		&.dataTable							{
+			tbody								{
+				tr.odd								{
+					> [class*="sorting_"]				{background-color: $onyx-dark-6;}
+					&:hover								{
+						> [class*="sorting_"]				{background-color: $onyx-dark-6;}
+														}
+													}
+				tr.even								{
+					> [class*="sorting_"]				{background-color: $onyx-dark-6;}
+					&:hover								{
+						> [class*="sorting_"]				{background-color: $onyx-dark-6;}
+														}
+													}
+												}
+											}
+		tbody								{
+											background-color: $white;
+			tr:nth-child(even)					{background-color: $transparent;}
+											}
+
+		tbody, td							{border: 0;}
+		tr									{
+											border-bottom: 1px solid $onyx-dark-20;
+			&:first-child						{border-top: 1px solid $onyx-dark-20;}
+											}
+		.definition-title					{
+											border-left: 3px solid $onyx-dark-20;
+											padding-left: $evo-base-padding;
+											width: rem-calc(150);
+			h6									{margin-bottom: 0;}
+											}
+		.definition							{
+			p									{
+				&:last-child						{margin-bottom: 0;}
+												}
+											}
+										}
+// GLOSSARY - ENDS
+
 
 // ===========================================================================================
 // PATTERN IMPORTS
