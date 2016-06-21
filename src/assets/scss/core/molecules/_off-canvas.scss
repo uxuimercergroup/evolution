@@ -13,6 +13,12 @@
 //
 // @variables
 //
+$evo-off-canvas-title-bar-box-shadow: false !default;
+$evo-off-canvas-title-bar-box-shadow-horizontal: $evo-base-shadow-horizontal !default;
+$evo-off-canvas-title-bar-box-shadow-vertical: $evo-base-shadow-vertical !default;
+$evo-off-canvas-title-bar-box-shadow-blur: $evo-base-shadow-blur !default;
+$evo-off-canvas-title-bar-box-shadow-spread: $evo-base-shadow-spread !default;
+$evo-off-canvas-title-bar-box-shadow-color: $evo-base-shadow-color !default;
 $evo-off-canvas-title-bar-background-color: $evo-primary-color !default;
 $evo-off-canvas-title-bar-color: $white !default;
 $evo-off-canvas-title-bar-height: $evo-base-navbar-height !default;
@@ -31,6 +37,7 @@ $evo-off-canvas-title-bar-icon-position-left: 0 !default;
 $evo-off-canvas-title-bar-icon-hover-color: $white !default;
 $evo-off-canvas-label-background-color: $evo-quaternary-color !default;
 $evo-off-canvas-label-color: $white !default;
+$evo-off-canvas-label-font-family: $evo-base-font-family !default;
 $evo-off-canvas-label-font-size: $evo-base-small-font-size !default;
 $evo-off-canvas-label-line-height: 1 !default;
 $evo-off-canvas-label-font-family: $evo-base-font-family !default;
@@ -38,6 +45,7 @@ $evo-off-canvas-label-letter-spacing: rem-calc(3) !default;
 $evo-off-canvas-label-text-transform: uppercase !default;
 $evo-off-canvas-label-padding: rem-calc(22 24) !default;
 $evo-off-canvas-item-anchor-color: $evo-tertiary-color !default;
+$evo-off-canvas-item-anchor-font-family: $evo-base-font-family !default;
 $evo-off-canvas-item-anchor-font-size: $evo-base-font-size !default;
 $evo-off-canvas-item-anchor-line-height: 1.25 !default;
 $evo-off-canvas-item-anchor-letter-spacing: normal !default;
@@ -49,6 +57,7 @@ $evo-off-canvas-item-anchor-icon-font-size: $evo-base-font-size !default;
 $evo-off-canvas-item-anchor-icon-position-top: 0 !default;
 $evo-off-canvas-back-background-color: $evo-tertiary-color !default;
 $evo-off-canvas-back-color: $evo-off-canvas-label-color !default;
+$evo-off-canvas-back-font-family: $evo-base-font-family !default;
 $evo-off-canvas-back-font-size: $evo-off-canvas-label-font-size !default;
 $evo-off-canvas-back-line-height: $evo-off-canvas-label-line-height !default;
 $evo-off-canvas-back-letter-spacing: $evo-off-canvas-label-letter-spacing !default;
@@ -82,6 +91,9 @@ $evo-off-canvas-right-back-icon-width: $evo-off-canvas-left-back-icon-width !def
 
 		// TITLE BAR
 		.title-bar						{
+										@if $evo-off-canvas-title-bar-box-shadow == true {
+											@include box-shadow($evo-off-canvas-title-bar-box-shadow-horizontal $evo-off-canvas-title-bar-box-shadow-vertical $evo-off-canvas-title-bar-box-shadow-blur $evo-off-canvas-title-bar-box-shadow-spread $evo-off-canvas-title-bar-box-shadow-color);
+										}
 										position: relative;
 										background: $evo-off-canvas-title-bar-background-color;
 										color: $evo-off-canvas-title-bar-color;
@@ -163,6 +175,7 @@ $evo-off-canvas-right-back-icon-width: $evo-off-canvas-left-back-icon-width !def
 					label							{
 													background-color: $evo-off-canvas-label-background-color;
 													color: $evo-off-canvas-label-color;
+													font-family: $evo-off-canvas-label-font-family;
 													font-size: $evo-off-canvas-label-font-size;
 													height: $evo-off-canvas-title-bar-height;
 													line-height: $evo-off-canvas-label-line-height;
@@ -176,6 +189,7 @@ $evo-off-canvas-right-back-icon-width: $evo-off-canvas-left-back-icon-width !def
 					a								{
 													display: block;
 													color: $evo-off-canvas-item-anchor-color;
+													font-family: $evo-off-canvas-item-anchor-font-family;
 													font-size: $evo-off-canvas-item-anchor-font-size;
 													line-height: $evo-off-canvas-item-anchor-line-height;
 													letter-spacing: $evo-off-canvas-item-anchor-letter-spacing;
@@ -190,6 +204,7 @@ $evo-off-canvas-right-back-icon-width: $evo-off-canvas-left-back-icon-width !def
 						> a								{
 														background-color: $evo-off-canvas-back-background-color;
 														color: $evo-off-canvas-back-color;
+														font-family: $evo-off-canvas-back-font-family;
 														font-size: $evo-off-canvas-back-font-size;
 														height: $evo-off-canvas-title-bar-height;
 														line-height: $evo-off-canvas-back-line-height;
