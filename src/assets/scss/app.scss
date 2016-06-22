@@ -391,7 +391,7 @@ URL: {{ meta_url }}
 												position: relative;
 				&:before,
 				&:after								{
-													font-family: $evo-icon-site-font-stack;
+													font-family: $evo-icon-app-font-stack;
 													font-size: rem-calc(18);
 													color: $evo-site-band-testimonials-blockquote-quote-icon-color;
 													position: absolute;
@@ -545,7 +545,7 @@ URL: {{ meta_url }}
 														top: 38%;
 						[class^="evo-icon-"]				{
 															font-size: rem-calc(64);
-							&:before							{font-family: $evo-icon-site-font-stack;}
+							&:before							{font-family: $evo-icon-app-font-stack;}
 															}
 														}
 					.owl-prev 							{
@@ -768,7 +768,7 @@ URL: {{ meta_url }}
 											padding: 0;
 											margin-bottom: $evo-site-example-box-margin-bottom;
 			> footer							{margin-top: $evo-base-margin;}
-			.evo-icon-site-embed2				{
+			.evo-icon-app-embed2				{
 												float: right !important;
 				&:before							{
 													position: relative;
