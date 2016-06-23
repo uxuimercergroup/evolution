@@ -5,8 +5,8 @@ title: "User Journeys"
 	<section class="row expanded evo-site-hero" data-evo-site-hero-size="x-large" data-evo-site-hero-arrow-position="bottom">
 		<div class="small-12 columns evo-vertical-middle hide" data-anijs="if: load, on: window, do: $removeClass hide;">
 			<div class="text-center evo-vertical-middle-element">
-				<h1 class="evo-site-hero--hdr flipInY animated" data-evo-site-hero-hdr-size="medium">{{{user-journey.hero.title}}} <span>{{{user-journey.hero.subtitle}}}</span></h1>
-				<h3 class="float-center evo-site-hero--tagline bounceInUp animated">{{{ user-journey.hero.tagline }}}</h3>
+				<h1 class="evo-site-hero--hdr flipInY animated" data-evo-site-hero-hdr-size="medium">{{{user-journeys.hero.title}}} <span>{{{user-journeys.hero.subtitle}}}</span></h1>
+				<h3 class="float-center evo-site-hero--tagline bounceInUp animated">{{{ user-journeys.hero.tagline }}}</h3>
 			</div>		
 		</div>
 	</section>
@@ -17,13 +17,13 @@ title: "User Journeys"
 		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
 			<div class="row">
 				<div class="medium-12 columns text-center">
-					<h5 class="text-center evo-margin-left evo-margin-right evo-spacer-margin-bottom-xxx-large">{{{user-journey.info_graphic_band.header}}}</h5>
-					<img class="show-for-medium evo-site-hidden" src="{{assets}}/images/evo-site-what-inside-out.png" alt="{{{user-journey.info_graphic_band.header}}}" data-anijs="if: scroll, on: window, do: fadeInUpBig animated evo-site-visible, before: scrollReveal, after: holdAnimClass">
+					<h5 class="text-center evo-margin-left evo-margin-right evo-spacer-margin-bottom-xxx-large">{{{user-journeys.info_graphic_band.header}}}</h5>
+					<img class="show-for-medium evo-site-hidden" src="{{assets}}/images/evo-site-what-inside-out.png" alt="{{{user-journeys.info_graphic_band.header}}}" data-anijs="if: scroll, on: window, do: fadeInUpBig animated evo-site-visible, before: scrollReveal, after: holdAnimClass">
 				</div>
 			</div>
 			<div class="row">
 				<div class="small-12 medium-10 large-8 medium-centered columns">
-					<p>{{{user-journey.info_graphic_band.text}}}</p>
+					<p>{{{user-journeys.info_graphic_band.text}}}</p>
 				</div>
 			</div>
 		</div>
@@ -62,7 +62,7 @@ title: "User Journeys"
 			<div class="small-12 columns">
 				<div class="row">
 					<div class="small-10 medium-7 large-6 small-centered columns evo-site-band--tab-hdr-tab">
-						<h3 class="text-center">{{{user-journey.journey_library_tab_band.header}}}</h3>
+						<h3 class="text-center">{{{user-journeys.journey_library_tab_band.header}}}</h3>
 					</div>
 				</div>
 				<div class="row">
@@ -74,7 +74,7 @@ title: "User Journeys"
 			<div class="row">
 				<div class="medium-12 large-10 large-centered columns">
 
-				{{#each user-journey.journey_library_tab_band.items}}
+				{{#each user-journeys.journey_library_tab_band.items}}
 					<div class="row evo-site-band--media-object">
 						<div class="medium-5 medium-push-7 columns text-right">
 							<img src="{{image_src}}" width="300">
