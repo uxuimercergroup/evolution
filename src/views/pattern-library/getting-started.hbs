@@ -1,0 +1,132 @@
+---
+title: "Getting Started"
+---
+
+<!-- INTRO SECTION - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns evo-spacer-padding-top-medium evo-site--pattern-library-intro">
+
+{{# markdown }}
+## {{ title }}
+Evolution has a few easy ways to quickly get started, each one appealing to a different use case. Read through to see what suits your particular needs.
+{{/ markdown }}
+
+		{{> jump-to-nav}}
+
+		</div>
+	</section>
+<!-- INTRO SECTION - ENDS -->
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="row evo-site-tabs-content--pattern-library-content">
+		<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
+
+		<!-- DOWNLOAD/INSTALL - BEGINS -->
+			<div class="row small-up-{{getting-started.distributions.grid_small}} medium-up-{{getting-started.distributions.grid_medium}} large-up-{{getting-started.distributions.grid_large}} evo-site-band--marketing-block-grid">
+				<div class="columns text-center">
+					<i class="{{getting-started.distributions.custom.icon_class}} evo-icon-size-x-large"></i>
+					<h5>{{{getting-started.distributions.custom.header}}}</h5>
+					<p>{{{getting-started.distributions.custom.text}}}</p>
+					<a href="{{getting-started.distributions.custom.link}}" class="button evo-button evo-spacer-margin-bottom-small" role="button">{{{getting-started.distributions.custom.link_text}}}</a>
+					<p class="evo-footnote"><small><a href="{{getting-started.distributions.custom.details_link}}" target="_blank">Release Info</a></small></p>
+				</div>
+				<div class="columns text-center">
+					<i class="{{getting-started.distributions.sass.icon_class}} evo-icon-size-x-large"></i>
+					<h5>{{{getting-started.distributions.sass.header}}}</h5>
+					<p>{{{getting-started.distributions.sass.text}}}</p>
+					<a href="https://github.com/uxuimercergroup/evolution-boilerplate-sass/archive/v{{package.version}}.zip" class="button evo-button evo-spacer-margin-bottom-small" role="button">{{{getting-started.distributions.sass.link_text}}}</a>
+					<p class="evo-footnote"><small><a href="{{getting-started.distributions.sass.details_link}}" target="_blank">Release Info</a></small></p>
+				</div>
+				<div class="columns text-center">
+					<i class="{{getting-started.distributions.css.icon_class}} evo-icon-size-x-large"></i>
+					<h5>{{{getting-started.distributions.css.header}}}</h5>
+					<p>{{{getting-started.distributions.css.text}}}</p>
+					<a href="https://github.com/uxuimercergroup/evolution-boilerplate-css/archive/v{{package.version}}.zip" class="button evo-button evo-spacer-margin-bottom-small" role="button">{{{getting-started.distributions.css.link_text}}}</a>
+					<p class="evo-footnote"><small><a href="{{getting-started.distributions.css.details_link}}" target="_blank">Release Info</a></small></p>
+				</div>
+			</div>
+		<!-- DOWNLOAD/INSTALL - ENDS -->
+
+			<hr>
+
+		<!-- BASIC TEMPLATE - BEGINS -->
+			<div class="row">
+				<div class="columns small-12">
+{{# markdown }}
+### Basic Template
+Start with this basic HTML template, or modify these examples. We hope you'll customize our templates and examples, adapting them to suit your needs.
+{{/ markdown }}
+
+				<!-- HTML CODE - BEGINS -->
+					<div class="callout evo-callout evo-site-example-box evo-margin-bottom">
+						<footer class="evo-no-margin-top">
+							<div class="evo-site-example-box--code-hdr">
+								default-layout
+								<a href="javascript:;" title="Copy Code" data-clipboard-target="#evo-code-copy-html-usage-default-layout" class="evo-icon-app-copy copy-to-clipboard has-tip tip-right evo-tooltip" data-tooltip aria-haspopup="true" data-options="show_on:large"></a>
+							</div>
+							<pre><code class="language-markup" id="evo-code-copy-html-usage-default-layout"><xmp>{{> default-layout-sample }}</xmp></code></pre>
+						</footer>
+					</div>
+				<!-- HTML CODE - ENDS -->
+
+				</div>
+			</div>
+		<!-- BASIC TEMPLATE - ENDS -->
+
+			<hr>
+
+		<!-- WHAT COMES IN EVOLUTION - ENDS -->
+			<div class="row">
+				<div class="columns small-12">
+					<h3>{{getting-started.in_evo.header}}</h3>
+
+					<div class="row small-up-{{getting-started.in_evo.grid_small}} medium-up-{{getting-started.in_evo.grid_medium}} large-up-{{getting-started.in_evo.grid_large}} evo-site-band--marketing-block-grid">
+					{{#each getting-started.in_evo.data}}
+						<div class="columns text-center">
+							<i class="{{icon_class}} evo-icon-size-x-large"></i>
+							<h5>{{{header}}}</h5>
+							<p>{{{text}}}</p>
+							<a href="{{link}}" class="button hollow evo-button evo-spacer-margin-bottom-small" role="button">{{{link_text}}}</a>
+						</div>
+					{{/each}}
+					</div>
+
+				</div>
+			</div>
+		<!-- WHAT COMES IN EVOLUTION - ENDS -->
+
+			<hr>
+
+		<!-- ADDITIONAL SUPPORT CONTENT - BEGINS -->
+			{{#each getting-started.additional.data}}
+			<div class="row">
+				<div class="columns small-12">
+					<h3>{{header}}</h3>
+					{{{text}}}
+				</div>
+			</div>
+
+			<hr>
+
+			{{/each}}
+		<!-- ADDITIONAL SUPPORT CONTENT - ENDS -->
+
+			<br>
+			<br>
+			<br>
+
+		</div>
+		<div class="large-3 columns show-for-large evo-spacer-padding-top-large">&nbsp;</div>
+	</section>
+<!-- PAGE CONTENT - ENDS -->
+
+
+
+
+<!-- DISTRIBUTIONS BAND - BEGINS
+	<section class="row expanded evo-site-band evo-site-band--marketing">
+		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
+
+		</div>
+	</section>
+DISTRIBUTIONS BAND - ENDS -->
