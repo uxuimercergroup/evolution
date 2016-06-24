@@ -19,10 +19,10 @@ Evolution has a few easy ways to quickly get started, each one appealing to a di
 
 <!-- PAGE CONTENT - BEGINS -->
 	<section class="row evo-site-tabs-content--pattern-library-content">
-		<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
+		<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large" id="tabs-content-col0">
 
 		<!-- DOWNLOAD - BEGINS -->
-			<h3>{{getting-started.download.header}}</h3>
+			<h3 data-magellan-target="download" id="download">{{getting-started.download.header}}</h3>
 			<div class="row small-up-{{getting-started.download.grid_small}} medium-up-{{getting-started.download.grid_medium}} large-up-{{getting-started.download.grid_large}} evo-site-band--marketing-block-grid">
 				<div class="columns text-center">
 					<i class="{{getting-started.download.custom.icon_class}} evo-icon-size-x-large"></i>
@@ -53,8 +53,8 @@ Evolution has a few easy ways to quickly get started, each one appealing to a di
 		<!-- BASIC TEMPLATE - BEGINS -->
 			<div class="row">
 				<div class="small-12 columns">
+					<h3 data-magellan-target="basic-template" id="basic-template">Basic Template</h3>
 {{# markdown }}
-### Basic Template
 Start with this basic HTML template, or modify these examples. We hope you'll customize our templates and examples, adapting them to suit your needs.
 {{/ markdown }}
 
@@ -79,7 +79,7 @@ Start with this basic HTML template, or modify these examples. We hope you'll cu
 		<!-- WHATS INCLUDED EVOLUTION - ENDS -->
 			<div class="row">
 				<div class="small-12 columns">
-					<h3>{{getting-started.whats_included.header}}</h3>
+					<h3 data-magellan-target="whats-included" id="whats-included">{{getting-started.whats_included.header}}</h3>
 
 					<div class="row small-up-{{getting-started.whats_included.grid_small}} medium-up-{{getting-started.whats_included.grid_medium}} large-up-{{getting-started.whats_included.grid_large}} evo-site-band--marketing-block-grid">
 					{{#each getting-started.whats_included.data}}
@@ -98,22 +98,189 @@ Start with this basic HTML template, or modify these examples. We hope you'll cu
 
 			<hr>
 
-		<!-- ADDITIONAL SUPPORT - BEGINS -->
-			{{#each getting-started.additional_support.data}}
+		<!-- DIRECTORY STRUCTURE - BEGINS -->
 			<div class="row">
 				<div class="small-12 columns">
-					<h3>{{header}}</h3>
-					<p>{{{text}}}</p>
-					{{#if link}}
-						<a href="{{link}}" class="button hollow evo-button evo-spacer-margin-bottom-small" role="button">{{{link_text}}}</a>
-					{{/if}}
+					<h3 data-magellan-target="directory-structure" id="directory-structure">Directory Structures</h3>
+
+					<div class="row">
+						<div class="medium-7 columns">
+{{#markdown}}
+###### Tool Box Structure
+The Evolution Tool Box install includes HTML, Sass, JavaScript and more.
+
+The `scss/`, `js/`, `images/`, and `fonts/` directories contain the source code for our CSS, JS, images, and web fonts (respectively). The `dist/` folder contains all the precompiled files produced from the `src/` directory. Beyond that, any other included files provide support for packages, license information, and development.
+{{/markdown}}
+
+						</div>
+						<div class="medium-5 columns">
+						<!-- HTML CODE - BEGINS -->
+							<div class="callout evo-callout evo-site-example-box evo-margin-bottom">
+								<footer class="evo-no-margin-top">
+									<div class="evo-site-example-box--code-hdr">
+										tool-box-structure
+									</div>
+									<pre><code class="language-markup" id="evo-code-copy-html-toolbox-directory-structure"><xmp>
+										evolution/
+										├── dist/
+										│	├── assets/
+										│	│	├── css
+										│	│	├── fonts
+										│	│	├── images
+										│	│	└── js
+										│	└── index.html
+										└── src/
+											├── assets/
+											│	├── fonts
+											│	├── images
+											│	├── js
+											│	└── scss
+											└── views/
+												└── templates/
+													└── index.hbs
+									</xmp></code></pre>
+								</footer>
+							</div>
+						<!-- HTML CODE - ENDS -->
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="medium-7 columns">
+{{#markdown}}
+###### Sass Structure
+Once downloaded, unzip the compressed folder to see the structure of the Sass version of Evolution.
+
+The Sass version of Evolution is setup so that you can develop with the HTML and Sass files. This allows the developer to use the Sass variables to easily theme their project with a predefined style tile.
+{{/markdown}}
+						</div>
+						<div class="medium-5 columns">
+						<!-- HTML CODE - BEGINS -->
+							<div class="callout evo-callout evo-site-example-box evo-margin-bottom">
+								<footer class="evo-no-margin-top">
+									<div class="evo-site-example-box--code-hdr">
+										sass-structure
+									</div>
+									<pre><code class="language-markup" id="evo-code-copy-html-sass-directory-structure"><xmp>
+										evolution/
+										├── assets/
+										│	├── css
+										│	├── fonts
+										│	├── images
+										│	└── js
+										├── index.html
+										├── page-templates/
+										├── patterns/
+										└── src/
+											└── assets/
+												├── fonts
+												├── images
+												├── js
+												└── scss
+									</xmp></code></pre>
+								</footer>
+							</div>
+						<!-- HTML CODE - ENDS -->
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="medium-7 columns">
+{{#markdown}}
+###### CSS Structure
+Once downloaded, unzip the compressed folder to see the structure of the compiled CSS version of Evolution.
+
+This is the most basic form of Evolution: precompiled files for quick drop-in usage in nearly any project. We provide compiled HTML, CSS and JavaScript.
+{{/markdown}}
+						</div>
+						<div class="medium-5 columns">
+						<!-- HTML CODE - BEGINS -->
+							<div class="callout evo-callout evo-site-example-box evo-margin-bottom">
+								<footer class="evo-no-margin-top">
+									<div class="evo-site-example-box--code-hdr">
+										css-structure
+									</div>
+									<pre><code class="language-markup" id="evo-code-copy-html-css-directory-structure"><xmp>
+										evolution/
+										├── assets/
+										│	├── css/
+										│	│	├── app.css
+										│	│	├── evolution-animations.css
+										│	│	├── evolution.css
+										│	│	└── ie.css
+										│	├── fonts/
+										│	├── images/
+										│	└── js/
+										│		├── app.js
+										│		├── evolution-animations.js
+										│		└── evolution.js
+										├── index.html
+										├── page-templates/
+										└── patterns/
+									</xmp></code></pre>
+								</footer>
+							</div>
+						<!-- HTML CODE - ENDS -->
+						</div>
+					</div>
+
 				</div>
 			</div>
+		<!-- DIRECTORY STRUCTURE - ENDS -->
 
 			<hr>
 
-			{{/each}}
-		<!-- ADDITIONAL SUPPORT - ENDS -->
+		<!-- PAGE TEMPLATES - BEGINS -->
+			<div class="row">
+				<div class="small-12 columns">
+					<h3 data-magellan-target="page-templates" id="page-templates">Page Templates</h3>
+{{#markdown}}
+Build on the basic template with Evolution's many components. We encourage you to customize and adapt Evolution to suit your project's needs. Explore our collection of predefined page templates.
+
+<a href="/page-templates.html" class="button hollow evo-button evo-spacer-margin-bottom-small" role="button">Learn More</a>
+{{/markdown}}
+
+
+					
+				</div>
+			</div>
+		<!-- PAGE TEMPLATES - ENDS -->
+
+			<hr>
+
+		<!-- DEPENDENCIES - BEGINS -->
+			<div class="row">
+				<div class="small-12 columns">
+					<h3 data-magellan-target="dependencies" id="dependencies">Dependencies</h3>
+{{#markdown}}
+Below is the list of basic dependencies needed to run the Evolution framework:
+
+- HTML5
+- CSS3
+- Javascript
+ - jQuery - {{package.jquery_version}} <small>(dependency of Foundation NPM install)</small>
+ - jQuery UI - {{package.jquery_ui_version}} <small>(Evolution is bundled with the following parts of jQuery UI)</small>
+   - core.js
+   - widget.js
+   - mouse.js
+   - position.js
+   - autocomplete.js
+   - datepicker.js
+   - menu.js
+   - slider.js
+ - jQuery Plugins
+ - JS Plugins
+- Frameworks
+ - Zurb Foundation - {{package.foundation_version}}
+
+**Sass:** If you are on a Windows system you need to install Ruby to use the Sass CSS preprocessor. If you are on a Mac you can skip this step as [Ruby](http://rubyinstaller.org/) is installed by default on Mac OS.
+
+**Node:** If you are using the Toolbox version of Evolution the Node dependencies are managed per project in a special file package.json to make installing a project's depencies easy.
+{{/markdown}}
+
+				</div>
+			</div>
+		<!-- DEPENDENCIES - ENDS -->
 
 			<br>
 			<br>
@@ -121,7 +288,20 @@ Start with this basic HTML template, or modify these examples. We hope you'll cu
 
 		</div>
 		<div class="large-3 columns show-for-large evo-spacer-padding-top-large">
-			&nbsp;
+		<!-- SIDENAV - BEGINS -->
+			<div data-sticky-container>
+				<nav class="columns sticky evo-site--pattern-library-sidenav-magellan" data-anchor="tabs-content-col0" data-sticky-on="large" data-sticky>
+					<ul class="menu vertical" data-magellan>
+						<li><a href="#download">Download</a></li>
+						<li><a href="#basic-template">Basic Template</a></li>
+						<li><a href="#whats-included">What's Included</a></li>
+						<li><a href="#directory-structure">Directory Structure</a></li>
+						<li><a href="#page-templates">Page Templates</a></li>
+						<li><a href="#dependencies">Dependencies</a></li>
+					</ul>
+				</nav>
+			</div>
+		<!-- SIDENAV - ENDS -->
 		</div>
 	</section>
 <!-- PAGE CONTENT - ENDS -->
