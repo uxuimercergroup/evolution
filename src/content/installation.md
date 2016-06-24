@@ -184,17 +184,17 @@ Evolution can be used in a custom development enviroment that uses a Sass CSS pr
 
 ##### Prerequisites
 
-Developers need to supply their own method for preprocessing the Sass files that come bundled in the Evolution Sass boilerplate.
+Developers need to supply their own method for preprocessing the Sass files that come bundled in the Evolution Sass version. Ruby is required to be installed in order to install Sass.
 
-##### Download Sass Boilerplate
+##### Download Sass
 
-Developers can [download the Evolution Sass boilerplate](https://evolution.mercer.com/boilerplates.html) from the [boilerplates](https://evolution.mercer.com/boilerplates.html) page of the Evolution site.
+Developers can [download the Evolution Sass version](https://evolution.mercer.com/pattern-library/getting-started.html) from the [Getting Started](https://evolution.mercer.com/pattern-library/getting-started.html) page of the Evolution site.
 
 ***
 ### CSS Install
 
 Evolution can be used in a very simple development environment made up of vanilla CSS, JS, and HTML. This option is for developers who do not want Sass preprocessing or the Evolution Tool Box development environment.
 
-##### Download CSS Boilerplate
+##### Download CSS
 
-Developers can [download the Evolution CSS boilerplate](https://evolution.mercer.com/boilerplates.html) from the [boilerplates](https://evolution.mercer.com/boilerplates.html) page of the Evolution site.
+Developers can [download the Evolution CSS version](https://evolution.mercer.com/pattern-library/getting-started.html) from the [Getting Started](https://evolution.mercer.com/pattern-library/getting-started.html) page of the Evolution site.

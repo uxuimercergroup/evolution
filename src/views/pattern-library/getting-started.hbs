@@ -21,37 +21,38 @@ Evolution has a few easy ways to quickly get started, each one appealing to a di
 	<section class="row evo-site-tabs-content--pattern-library-content">
 		<div class="medium-12 large-9 columns evo-keyline-right evo-spacer-padding-top-large">
 
-		<!-- DOWNLOAD/INSTALL - BEGINS -->
-			<div class="row small-up-{{getting-started.distributions.grid_small}} medium-up-{{getting-started.distributions.grid_medium}} large-up-{{getting-started.distributions.grid_large}} evo-site-band--marketing-block-grid">
+		<!-- DOWNLOAD - BEGINS -->
+			<h3>{{getting-started.download.header}}</h3>
+			<div class="row small-up-{{getting-started.download.grid_small}} medium-up-{{getting-started.download.grid_medium}} large-up-{{getting-started.download.grid_large}} evo-site-band--marketing-block-grid">
 				<div class="columns text-center">
-					<i class="{{getting-started.distributions.custom.icon_class}} evo-icon-size-x-large"></i>
-					<h5>{{{getting-started.distributions.custom.header}}}</h5>
-					<p>{{{getting-started.distributions.custom.text}}}</p>
-					<a href="{{getting-started.distributions.custom.link}}" class="button evo-button evo-spacer-margin-bottom-small" role="button">{{{getting-started.distributions.custom.link_text}}}</a>
-					<p class="evo-footnote"><small><a href="{{getting-started.distributions.custom.details_link}}" target="_blank">Release Info</a></small></p>
+					<i class="{{getting-started.download.custom.icon_class}} evo-icon-size-x-large"></i>
+					<h5>{{{getting-started.download.custom.header}}}</h5>
+					<p>{{{getting-started.download.custom.text}}}</p>
+					<a href="{{getting-started.download.custom.link}}" class="button evo-button evo-spacer-margin-bottom-small" role="button">{{{getting-started.download.custom.link_text}}}</a>
+					<p class="evo-footnote"><small><a href="{{getting-started.download.custom.details_link}}" target="_blank">Release Info</a></small></p>
 				</div>
 				<div class="columns text-center">
-					<i class="{{getting-started.distributions.sass.icon_class}} evo-icon-size-x-large"></i>
-					<h5>{{{getting-started.distributions.sass.header}}}</h5>
-					<p>{{{getting-started.distributions.sass.text}}}</p>
-					<a href="https://github.com/uxuimercergroup/evolution-boilerplate-sass/archive/v{{package.version}}.zip" class="button evo-button evo-spacer-margin-bottom-small" role="button">{{{getting-started.distributions.sass.link_text}}}</a>
-					<p class="evo-footnote"><small><a href="{{getting-started.distributions.sass.details_link}}" target="_blank">Release Info</a></small></p>
+					<i class="{{getting-started.download.sass.icon_class}} evo-icon-size-x-large"></i>
+					<h5>{{{getting-started.download.sass.header}}}</h5>
+					<p>{{{getting-started.download.sass.text}}}</p>
+					<a href="https://github.com/uxuimercergroup/evolution-boilerplate-sass/archive/v{{package.version}}.zip" class="button evo-button evo-spacer-margin-bottom-small" role="button">{{{getting-started.download.sass.link_text}}}</a>
+					<p class="evo-footnote"><small><a href="{{getting-started.download.sass.details_link}}" target="_blank">Release Info</a></small></p>
 				</div>
 				<div class="columns text-center">
-					<i class="{{getting-started.distributions.css.icon_class}} evo-icon-size-x-large"></i>
-					<h5>{{{getting-started.distributions.css.header}}}</h5>
-					<p>{{{getting-started.distributions.css.text}}}</p>
-					<a href="https://github.com/uxuimercergroup/evolution-boilerplate-css/archive/v{{package.version}}.zip" class="button evo-button evo-spacer-margin-bottom-small" role="button">{{{getting-started.distributions.css.link_text}}}</a>
-					<p class="evo-footnote"><small><a href="{{getting-started.distributions.css.details_link}}" target="_blank">Release Info</a></small></p>
+					<i class="{{getting-started.download.css.icon_class}} evo-icon-size-x-large"></i>
+					<h5>{{{getting-started.download.css.header}}}</h5>
+					<p>{{{getting-started.download.css.text}}}</p>
+					<a href="https://github.com/uxuimercergroup/evolution-boilerplate-css/archive/v{{package.version}}.zip" class="button evo-button evo-spacer-margin-bottom-small" role="button">{{{getting-started.download.css.link_text}}}</a>
+					<p class="evo-footnote"><small><a href="{{getting-started.download.css.details_link}}" target="_blank">Release Info</a></small></p>
 				</div>
 			</div>
-		<!-- DOWNLOAD/INSTALL - ENDS -->
+		<!-- DOWNLOAD - ENDS -->
 
 			<hr>
 
 		<!-- BASIC TEMPLATE - BEGINS -->
 			<div class="row">
-				<div class="columns small-12">
+				<div class="small-12 columns">
 {{# markdown }}
 ### Basic Template
 Start with this basic HTML template, or modify these examples. We hope you'll customize our templates and examples, adapting them to suit your needs.
@@ -75,13 +76,13 @@ Start with this basic HTML template, or modify these examples. We hope you'll cu
 
 			<hr>
 
-		<!-- WHAT COMES IN EVOLUTION - ENDS -->
+		<!-- WHATS INCLUDED EVOLUTION - ENDS -->
 			<div class="row">
-				<div class="columns small-12">
-					<h3>{{getting-started.in_evo.header}}</h3>
+				<div class="small-12 columns">
+					<h3>{{getting-started.whats_included.header}}</h3>
 
-					<div class="row small-up-{{getting-started.in_evo.grid_small}} medium-up-{{getting-started.in_evo.grid_medium}} large-up-{{getting-started.in_evo.grid_large}} evo-site-band--marketing-block-grid">
-					{{#each getting-started.in_evo.data}}
+					<div class="row small-up-{{getting-started.whats_included.grid_small}} medium-up-{{getting-started.whats_included.grid_medium}} large-up-{{getting-started.whats_included.grid_large}} evo-site-band--marketing-block-grid">
+					{{#each getting-started.whats_included.data}}
 						<div class="columns text-center">
 							<i class="{{icon_class}} evo-icon-size-x-large"></i>
 							<h5>{{{header}}}</h5>
@@ -93,14 +94,14 @@ Start with this basic HTML template, or modify these examples. We hope you'll cu
 
 				</div>
 			</div>
-		<!-- WHAT COMES IN EVOLUTION - ENDS -->
+		<!-- WHATS INCLUDED EVOLUTION - ENDS -->
 
 			<hr>
 
-		<!-- ADDITIONAL SUPPORT CONTENT - BEGINS -->
-			{{#each getting-started.additional.data}}
+		<!-- ADDITIONAL SUPPORT - BEGINS -->
+			{{#each getting-started.additional_support.data}}
 			<div class="row">
-				<div class="columns small-12">
+				<div class="small-12 columns">
 					<h3>{{header}}</h3>
 					{{{text}}}
 				</div>
@@ -109,24 +110,15 @@ Start with this basic HTML template, or modify these examples. We hope you'll cu
 			<hr>
 
 			{{/each}}
-		<!-- ADDITIONAL SUPPORT CONTENT - ENDS -->
+		<!-- ADDITIONAL SUPPORT - ENDS -->
 
 			<br>
 			<br>
 			<br>
 
 		</div>
-		<div class="large-3 columns show-for-large evo-spacer-padding-top-large">&nbsp;</div>
+		<div class="large-3 columns show-for-large evo-spacer-padding-top-large">
+			&nbsp;
+		</div>
 	</section>
 <!-- PAGE CONTENT - ENDS -->
-
-
-
-
-<!-- DISTRIBUTIONS BAND - BEGINS
-	<section class="row expanded evo-site-band evo-site-band--marketing">
-		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
-
-		</div>
-	</section>
-DISTRIBUTIONS BAND - ENDS -->
