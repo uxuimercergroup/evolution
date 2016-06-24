@@ -103,7 +103,10 @@ Start with this basic HTML template, or modify these examples. We hope you'll cu
 			<div class="row">
 				<div class="small-12 columns">
 					<h3>{{header}}</h3>
-					{{{text}}}
+					<p>{{{text}}}</p>
+					{{#if link}}
+						<a href="{{link}}" class="button hollow evo-button evo-spacer-margin-bottom-small" role="button">{{{link_text}}}</a>
+					{{/if}}
 				</div>
 			</div>
 
