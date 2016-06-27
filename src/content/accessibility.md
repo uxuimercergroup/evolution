@@ -32,6 +32,7 @@ If your site has video, provide captions so that users who are deaf or hard-of-h
 - [Section 508 government requirements](http://www.section508.gov/)
 - [WebAIM certification and training](http://webaim.org/)
 - [Web Accessibility Checklist](http://a11yproject.com/checklist.html)
+- [HHS Web Standards and Usability Guidelines](http://guidelines.usability.gov/)
 
 ###### Color
 - [Check My Colours](http://www.checkmycolours.com/): if you have an existing website, you can just enter a URL and receive feedback of what needs to be improved.
@@ -46,3 +47,4 @@ If your site has video, provide captions so that users who are deaf or hard-of-h
 - [ChromeVox screen reader plugin for Chrome](http://www.chromevox.com)
 - [JAWS screen reader for Windows](http://www.freedomscientific.com/Products/Blindness/Jaws)
 - [NVDA screen reader for Windows - Free](http://www.nvaccess.org/download/)
+- [Accessibility Developer Tools by Google](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en)
