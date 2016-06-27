@@ -79,7 +79,6 @@ URL: {{ meta_url }}
 											min-height: $evo-site-main-section-min-height;
 											}
 										}
-
 // LAYOUTS - ENDS
 
 // HELPERS - BEGINS
@@ -903,25 +902,25 @@ URL: {{ meta_url }}
 /*--- GRID PAGE ----------------------------------------------------------------------------*/
 
 // GRID DEMO - BEGINS
-.evo-grid-demo							{
-	.row									{
-											border: 1px solid $onyx-dark-10;
-											margin-bottom: $evo-base-margin;
-											margin-left: 0 !important;
-											margin-right: 0 !important;
+	.evo-grid-demo							{
+		.row									{
+												border: 1px solid $onyx-dark-10;
+												margin-bottom: $evo-base-margin;
+												margin-left: 0 !important;
+												margin-right: 0 !important;
+												}
+		.columns								{background-color: $onyx-dark-6;}
+		.columns:nth-child(2n)					{background-color: $onyx-dark-14;}
 											}
-	.columns								{background-color: $onyx-dark-6;}
-	.columns:nth-child(2n)					{background-color: $onyx-dark-14;}
-										}
 // GRID DEMO - ENDS
 
 // BLOCK GRID DEMO - BEGINS
-.evo-block-grid-demo					{
-	.row									{
-											margin-left: 0 !important;
-											margin-right: 0 !important;
+	.evo-block-grid-demo					{
+		.row									{
+												margin-left: 0 !important;
+												margin-right: 0 !important;
+												}
 											}
-										}
 // BLOCK GRID DEMO - ENDS
 
 
@@ -972,91 +971,91 @@ URL: {{ meta_url }}
 /*--- ICONS PAGE ---------------------------------------------------------------------------*/
 
 // ICOMOON ICONS TABLE - BEGINS
-.evo-site-icon-table-ctn				{
-										overflow-x: auto;
-										overflow-y: hidden;
-										-ms-overflow-style: -ms-autohiding-scrollbar;
-										-webkit-overflow-scrolling: touch;
-										margin-bottom: $evo-site-icon-table-ctn-margin-bottom;
-	.dataTables_wrapper						{margin-bottom: 0;}
-										}
-.evo-site-icon-table					{
-										margin-bottom: 0;
-										background-color: $evo-site-icon-table-background-color;
-										border-collapse: separate;
-										min-width: rem-calc(738);
-	thead									{display: none;}
-	tr										{
-											@include clearfix;
-											background-color: $evo-site-icon-table-background-color !important;
-											float: left;
-											width: 10%;
-		td										{
-												@include border-radius($evo-site-icon-table-td-border-radius);
-												background-color: $evo-site-icon-table-td-background-color !important;
-												border: $evo-site-icon-table-td-border-width $evo-site-icon-table-td-border-style $evo-site-icon-table-td-border-color;
-												cursor: pointer;
-												display: block !important;
-												margin: 3px;
-			[class^="evo-icon-"]					{left: 6px;}
+	.evo-site-icon-table-ctn				{
+											overflow-x: auto;
+											overflow-y: hidden;
+											-ms-overflow-style: -ms-autohiding-scrollbar;
+											-webkit-overflow-scrolling: touch;
+											margin-bottom: $evo-site-icon-table-ctn-margin-bottom;
+		.dataTables_wrapper						{margin-bottom: 0;}
+											}
+	.evo-site-icon-table					{
+											margin-bottom: 0;
+											background-color: $evo-site-icon-table-background-color;
+											border-collapse: separate;
+											min-width: rem-calc(738);
+		thead									{display: none;}
+		tr										{
+												@include clearfix;
+												background-color: $evo-site-icon-table-background-color !important;
+												float: left;
+												width: 10%;
+			td										{
+													@include border-radius($evo-site-icon-table-td-border-radius);
+													background-color: $evo-site-icon-table-td-background-color !important;
+													border: $evo-site-icon-table-td-border-width $evo-site-icon-table-td-border-style $evo-site-icon-table-td-border-color;
+													cursor: pointer;
+													display: block !important;
+													margin: 3px;
+				[class^="evo-icon-"]					{left: 6px;}
+													}
 												}
 											}
-										}
 // ICOMOON ICONS TABLE - ENDS
 
 
 /*--- PAGE TEMPLATES -----------------------------------------------------------------------*/
 
 // PAGE TEMPLATES THUMBNAILS - BEGINS
-.evo-site--page-template-container		{
-	.evo-site--page-template-thumbnail		{
-											@include border-radius($evo-site-page-template-thumbnail-border-radius);
-											margin-bottom: $evo-site-page-template-thumbnail-margin-bottom;
-											background-color: $evo-site-page-template-thumbnail-background-color;
+	.evo-site--page-template-container		{
+		.evo-site--page-template-thumbnail		{
+												@include border-radius($evo-site-page-template-thumbnail-border-radius);
+												margin-bottom: $evo-site-page-template-thumbnail-margin-bottom;
+												background-color: $evo-site-page-template-thumbnail-background-color;
+												}
 											}
-										}
 // PAGE TEMPLATES THUMBNAILS - ENDS
 
 
 /*--- PRODUCT SUITES PAGE ------------------------------------------------------------------*/
 
 // BAND - BEGINS
-.evo-site-band--product-suites-visual-identity
-										{
-	img										{width: 60%;}
-
-	.evo-site-band--tab-panel				{
-											padding-left: 0;
-											padding-right: 0;
-											}
-
-	// PRODUCT SUITES BAND ORBIT
-	.evo-orbit--product-suites				{
-		.orbit-previous,
-		.orbit-next								{
-			[class^="evo-icon-"]					{font-size: 2rem;}
-												}
-		.orbit-bullets							{margin-top: ($evo-base-margin*2);}
-											}
-
-	@include breakpoint(medium down)		{
+	.evo-site-band--product-suites-visual-identity
+											{
 		img										{width: 60%;}
-											}
 
-	@include breakpoint(medium)				{
-		.evo-site-band--product-suites-visual-identity-marketing-text
-												{
-												font-size: rem-calc(20);
-												max-width: 52%;
-												margin-left: auto;
-												margin-right: auto;
+		.evo-site-band--tab-panel				{
+												padding-left: 0;
+												padding-right: 0;
+												}
+
+		// PRODUCT SUITES BAND ORBIT
+		.evo-orbit--product-suites				{
+			.orbit-previous,
+			.orbit-next								{
+				[class^="evo-icon-"]					{font-size: 2rem;}
+													}
+			.orbit-bullets							{margin-top: ($evo-base-margin*2);}
+												}
+
+		@include breakpoint(medium down)		{
+			img										{width: 60%;}
+												}
+
+		@include breakpoint(medium)				{
+			.evo-site-band--product-suites-visual-identity-marketing-text
+													{
+													font-size: rem-calc(20);
+													max-width: 52%;
+													margin-left: auto;
+													margin-right: auto;
+													}
+												}
+
+		@include breakpoint(large)				{
+			img										{width: 40%;}
 												}
 											}
-
-	@include breakpoint(large)				{
-		img										{width: 40%;}
-											}
-										}
 // BAND - ENDS
 
 
@@ -1104,15 +1103,15 @@ URL: {{ meta_url }}
 // TYPOGRAPHY DEFINITION - ENDS
 
 // TYPE DEMO CONTAINER - BEGINS
-.evo-site-type-demo-ctn					{
-	h1, h2, h3, h4, h5, h6					{line-height: 1.4;}
-	.subheader								{color: $onyx-dark-50;}
-	.evo-hdr-rule							{
-											padding-bottom: 0;
-											border-bottom-style: dotted;
-											border-bottom-color: $onyx-dark-30;
+	.evo-site-type-demo-ctn					{
+		h1, h2, h3, h4, h5, h6					{line-height: 1.4;}
+		.subheader								{color: $onyx-dark-50;}
+		.evo-hdr-rule							{
+												padding-bottom: 0;
+												border-bottom-style: dotted;
+												border-bottom-color: $onyx-dark-30;
+												}
 											}
-										}
 // TYPE DEMO CONTAINER - ENDS
 
 // HYPHEN DEMO - BEGINS
@@ -1265,6 +1264,11 @@ URL: {{ meta_url }}
 										}
 // GLOSSARY - ENDS
 
+/*--- GETTING STARTED PAGE ---------------------------------------------------------------------*/
+
+.evo-site--getting-started				{
+										background-color: $white;
+										}
 
 // ===========================================================================================
 // PATTERN IMPORTS
