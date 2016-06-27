@@ -15,11 +15,13 @@ title: "User Personas"
 <!-- INFO GRAPHIC CONTENT BAND - BEGINS -->
 	<section class="row expanded evo-site-band evo-site-band--marketing">
 		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
+			<!--
 			<div class="row">
 				<div class="medium-12 columns text-center">
 					<img class="show-for-medium evo-site-hidden" src="{{assets}}/images/evo-site-what-inside-out.png" alt="{{{user-personas.info_graphic_band.header}}}" data-anijs="if: scroll, on: window, do: fadeInUpBig animated evo-site-visible, before: scrollReveal, after: holdAnimClass">
 				</div>
 			</div>
+			-->
 			<div class="row">
 				<div class="small-12 medium-10 medium-centered columns">
 					<h5 class="text-center evo-margin-left evo-margin-right evo-spacer-margin-bottom-xxx-large">{{{user-personas.info_graphic_band.header}}}</h5>
@@ -78,13 +80,13 @@ title: "User Personas"
 					
 				{{#each user-personas.persona_db_tab_band.items}}
 					<div class="row evo-site-band--media-object">
-						<div class="medium-5 medium-push-7 columns text-right">
-							<img src="{{image_src}}" width="300">
+						<div class="medium-5 medium-push-7 columns text-center medium-text-right">
+							<a href="{{url}}" target="_blank"><img src="{{image_src}}" width="300"></a>
 						</div>
 						<div class="medium-7 medium-pull-5 columns">
 							<h5>{{{header}}}</h5>
 							<p>{{{description}}}</p>
-							<a href="{{url}}" class="button hollow evo-button" data-evo-button-icons="right" role="button"><span class="evo-button-text">{{link_text}}</span><i class="evo-icon-arrow-right2 evo-icon-position-right"></i></a>
+							<a href="{{url}}" class="button hollow evo-button" data-evo-button-icons="right" role="button" target="_blank"><span class="evo-button-text">{{link_text}}</span><i class="evo-icon-arrow-right2 evo-icon-position-right"></i></a>
 						</div>
 					</div>
 				{{/each}}
@@ -97,20 +99,20 @@ title: "User Personas"
 									<p class="evo-spacer-margin-bottom-xxx-large">{{{user-personas.persona_db_tab_band.persona_lib.text}}}</p>
 								</div>
 							</div>
-							<div class="row medium-up-{{user-personas.persona_db_tab_band.persona_lib.grid_medium}}" data-equalizer="evo-site-callout-cards" data-equalize-on="medium">
+							<div class="row medium-up-{{user-personas.persona_db_tab_band.persona_lib.grid_medium}} large-up-{{user-personas.persona_db_tab_band.persona_lib.grid_large}}" data-equalizer="evo-site-callout-cards" data-equalize-on="medium">
 								
 								{{#each user-personas.persona_db_tab_band.persona_lib.items}}
 								<div class="columns">
 									<div class="callout evo-callout evo-site-callout-card" data-equalizer-watch="evo-site-callout-cards">
 										<header>	
-											<a href="{{url}}"><img class="evo-margin-bottom" src="{{image_src}}" width="800"></a>
-											<p><a href="{{url}}">{{{title}}}</a></p>
+											<a href="{{url}}" target="_blank"><img class="evo-margin-bottom" src="{{image_src}}" width="800"></a>
+											<p><a href="{{url}}" target="_blank">{{{title}}}</a></p>
 										</header>
 										<section>
 											<p>{{{description}}}</p>
 										</section>
 										<footer>
-											<a href="{{url}}" class="button hollow evo-button evo-margin-bottom" data-evo-button-icons="right" role="button"><span class="evo-button-text">{{link_text}}</span><i class="evo-icon-arrow-right2 evo-icon-position-right"></i></a>
+											<a href="{{url}}" class="button hollow evo-button evo-margin-bottom" data-evo-button-icons="right" role="button" target="_blank"><span class="evo-button-text">{{link_text}}</span><i class="evo-icon-arrow-right2 evo-icon-position-right"></i></a>
 										</footer>
 									</div>
 								</div>
