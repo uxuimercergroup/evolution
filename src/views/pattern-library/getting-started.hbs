@@ -286,6 +286,59 @@ Below is the list of basic dependencies needed to run the Evolution framework:
 			</div>
 		<!-- DEPENDENCIES - ENDS -->
 
+			<hr>
+
+		<!-- DEPENDENCIES - BEGINS -->
+			<div class="row">
+				<div class="small-12 columns">
+					<h3 class="evo-spacer-margin-bottom-medium" data-magellan-target="versioning" id="versioning">Versioning</h3>
+{{# markdown}}
+Semantic versioning is a standard that a lot of projects use to communicate what kinds of changes are in their release. It's important to communicate what kinds of changes are in a release because sometimes those changes will break the code that depends on the package.
+{{/ markdown}}
+
+<h5>How Does It Works?</h5>
+
+<!-- BLOCK GRID - BEGIN -->
+<div class="row small-up-1 medium-up-3 large-up-3" data-equalizer>
+	<div class="columns">
+	<!-- CALLOUT - BEGINS -->
+		<div class="callout evo-callout" data-evo-background-color="onyx-dark-10" data-equalizer-watch>
+			<section>
+				<strong>Bug fixes/minor changes</strong><br>
+				Patch release, increment the last number, <u>e.g. 1.0.1</u>
+			</section>
+		</div>
+	<!-- CALLOUT - ENDS -->		
+	</div>
+	<div class="columns">
+	<!-- CALLOUT - BEGINS -->
+		<div class="callout evo-callout" data-evo-background-color="onyx-dark-10" data-equalizer-watch>
+			<section>
+				<strong>New features</strong><br>
+				that don't break existing features, Minor release, increment the middle number, <u>e.g. 1.1.0</u>
+			</section>
+		</div>
+	<!-- CALLOUT - ENDS -->
+	</div>
+	<div class="columns">
+	<!-- CALLOUT - BEGINS -->
+		<div class="callout evo-callout" data-evo-background-color="onyx-dark-10" data-equalizer-watch>
+			<section>
+				<strong>Backwards compatibility</strong><br>
+				which break backwards compatibility, Major release, increment the first number, <u>e.g. 2.0.0</u>
+			</section>
+		</div>
+	<!-- CALLOUT - ENDS -->
+	</div>
+</div>
+<!-- BLOCK GRID - END -->
+
+
+
+				</div>
+			</div>
+		<!-- DEPENDENCIES - ENDS -->
+
 		</div>
 		<div class="large-3 columns show-for-large evo-spacer-padding-top-large" data-equalizer-watch="tab-panel">
 
@@ -299,6 +352,7 @@ Below is the list of basic dependencies needed to run the Evolution framework:
 						<li><a href="#directory-structure">Directory Structures</a></li>
 						<li><a href="#page-templates">Page Templates</a></li>
 						<li><a href="#dependencies">Dependencies</a></li>
+						<li><a href="#versioning">Versioning</a></li>
 					</ul>
 				</nav>
 			</div>
