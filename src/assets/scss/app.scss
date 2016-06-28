@@ -812,6 +812,36 @@ URL: {{ meta_url }}
 
 /*--- HOME PAGE ----------------------------------------------------------------------------*/
 
+// HERO - BEGINS
+
+	// HERO BANNER
+	.evo-site-hero--home				{
+										background-color: $evo-site-home-hero-background-color;
+										background-image: url($evo-site-home-hero-background-image);
+										background-repeat: $evo-site-home-hero-background-repeat;
+										background-position: $evo-site-home-hero-background-position;
+										background-size: $evo-site-home-hero-background-size;
+										}
+// HERO - ENDS
+
+// MARKETING BAND - BEGINS
+.evo-site-band--home-marketing			{
+	.evo-site-band--marketing-content		{
+		.evo-site-band--marketing-block-grid	{
+			h5										{
+													max-width: 82%;
+													margin-left: auto;
+													margin-right: auto;
+													}
+			.evo-icon-app-evo-profile-head			{color: $sapphire-medium;}
+			.evo-icon-app-evo-group-strategy		{color: #689e38;}
+			.evo-icon-app-evo-user-journey			{color: $citrine-bright;}
+			.evo-icon-app-evo-dev-build				{color: $garnet-bright;}
+												}
+											}
+										}
+// MARKETING BAND - ENDS
+
 // BENEFITS TAB BAND - BEGINS
 	.evo-site-band--home-benefits		{
 		.evo-site-band--tab-panel			{
@@ -832,8 +862,6 @@ URL: {{ meta_url }}
 			.evo-site-tile--home-benefits-3		{
 												background-color: $evo-site-home-benefits-band-benefits3-tile-background-color;
 												background-image: url($evo-site-home-benefits-band-benefits3-tile-background-image);
-												background-size: $evo-site-home-benefits-band-benefits3-tile-background-size;
-												background-position: $evo-site-home-benefits-band-benefits3-tile-background-position;
 												}
 			.evo-site-tile--home-benefits-4		{
 												background-color: $evo-site-home-benefits-band-benefits4-tile-background-color;
@@ -842,8 +870,6 @@ URL: {{ meta_url }}
 			.evo-site-tile--home-benefits-5		{
 												background-color: $evo-site-home-benefits-band-benefits5-tile-background-color;
 												background-image: url($evo-site-home-benefits-band-benefits5-tile-background-image);
-												background-size: $evo-site-home-benefits-band-benefits5-tile-background-size;
-												background-position: $evo-site-home-benefits-band-benefits5-tile-background-position;
 												}
 											}
 										}

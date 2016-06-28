@@ -250,6 +250,13 @@
 
 // HOME PAGE
 
+	// HERO BANNER
+	$evo-site-home-hero-background-color: $onyx-medium;
+	$evo-site-home-hero-background-image: "../images/hero/evo-site-home-hero-background.jpg";
+	$evo-site-home-hero-background-repeat: no-repeat;
+	$evo-site-home-hero-background-position: center;
+	$evo-site-home-hero-background-size: cover;
+
 	// BENEFITS BAND
 	$evo-site-home-benefits-band-tab-panel-padding: rem-calc(15 0 0 15);
 	$evo-site-home-benefits-band-tile-background-repeat: no-repeat;
@@ -257,18 +264,14 @@
 	$evo-site-home-benefits-band-tile-background-size: cover;
 	$evo-site-home-benefits-band-benefits1-tile-background-color: $evo-tertiary-color;
 	$evo-site-home-benefits-band-benefits1-tile-background-image: "../images/evo-site-home-benefits-tile-1.png";
-	$evo-site-home-benefits-band-benefits2-tile-background-color: $turquoise-bright;
+	$evo-site-home-benefits-band-benefits2-tile-background-color: $evo-quaternary-color;
 	$evo-site-home-benefits-band-benefits2-tile-background-image: "../images/evo-site-home-benefits-tile-2.png";
-	$evo-site-home-benefits-band-benefits3-tile-background-color: $ruby-bright;
+	$evo-site-home-benefits-band-benefits3-tile-background-color: $topaz-bright;
 	$evo-site-home-benefits-band-benefits3-tile-background-image: "../images/evo-site-home-benefits-tile-3.png";
-	$evo-site-home-benefits-band-benefits3-tile-background-size: 353px 326px;
-	$evo-site-home-benefits-band-benefits3-tile-background-position: top right;
 	$evo-site-home-benefits-band-benefits4-tile-background-color: $evo-quaternary-color;
 	$evo-site-home-benefits-band-benefits4-tile-background-image: "../images/evo-site-home-benefits-tile-4.png";
-	$evo-site-home-benefits-band-benefits5-tile-background-color: $topaz-bright;
+	$evo-site-home-benefits-band-benefits5-tile-background-color: $turquoise-bright;
 	$evo-site-home-benefits-band-benefits5-tile-background-image: "../images/evo-site-home-benefits-tile-5.png";
-	$evo-site-home-benefits-band-benefits5-tile-background-size: auto;
-	$evo-site-home-benefits-band-benefits5-tile-background-position: top -46px right;
 
 
 // ANIMATIONS PAGE
