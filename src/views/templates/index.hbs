@@ -8,7 +8,7 @@ title: "Home"
 			<div class="text-center evo-vertical-middle-element">
 				<h1 class="evo-site-hero--hdr" data-evo-site-hero-hdr-size="x-large">{{{ global.company }}} <span>{{{ global.title }}}</span></h1>
 				<h3 class="float-center evo-site-hero--tagline">{{{ global.meta_description }}}</h3>
-				<!-- <p class="show-for-medium evo-site-hero--footnote"><small>{{ home.hero_footnote }}</small></p> -->
+				<p class="show-for-medium evo-site-hero--footnote"><small>{{ home.hero_footnote }}</small></p>
 			</div>		
 		</div>
 	</section>
@@ -28,8 +28,8 @@ title: "Home"
 				{{#each home.tools.items}}
 				<div class="columns text-center">
 					{{> (lookup . 'partial') }}
-					<h5>{{header}}</h5>
-					<p>{{text}}</p>
+					<h5>{{{header}}}</h5>
+					<p>{{{text}}}</p>
 				</div>
 				{{/each}}
 			</div>
