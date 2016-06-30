@@ -26,7 +26,7 @@ title: "User Journeys"
 			<div class="row">
 				<div class="small-12 medium-10 medium-centered columns">
 					<h5 class="text-center evo-margin-left evo-margin-right evo-spacer-margin-bottom-xxx-large">{{{user-journeys.info_graphic_band.header}}}</h5>
-					<p>{{{user-journeys.info_graphic_band.text}}}</p>
+					{{{user-journeys.info_graphic_band.text}}}
 				</div>
 			</div>
 		</div>
@@ -36,23 +36,26 @@ title: "User Journeys"
 <!-- KEY OBJECTIVES CONTENT BAND - BEGINS -->
 	<section class="row expanded evo-site-band evo-site-band--dark evo-site-band--marketing" data-evo-site-band-theme="learn">
 		<div class="medium-12 large-10 large-centered columns evo-site-band--marketing-content">
-			<h5 class="text-center evo-margin-left evo-margin-right evo-spacer-margin-bottom-xxx-large">{{{user-personas.key_objectives_band.header}}}</h5>
+			<h5 class="text-center evo-margin-left evo-margin-right evo-spacer-margin-bottom-xxx-large">{{{user-jouneys.key_objectives_band.header}}}</h5>
 			<div class="row">
 				<div class="small-10 small-centered columns">
-					<div class="row medium-up-2">
+					<div class="row medium-up-2 evo-spacer-margin-bottom-x-large">
 						<div class="columns">
 							<ul>
-								<li class="evo-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit nisi.</li>
-								<li class="evo-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit nisi.</li>
+								{{#slice user-journeys.key_objectives_band.items offset="0" limit="2"}}
+									<li class="evo-margin-bottom">{{{text}}}</li>
+								{{/slice}}
 							</ul>
 						</div>
 						<div class="columns">
 							<ul>
-								<li class="evo-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit nisi.</li>
-								<li class="evo-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit nisi.</li>
+								{{#slice user-journeys.key_objectives_band.items offset="2" limit="2"}}
+									<li class="evo-margin-bottom">{{{text}}}</li>
+								{{/slice}}
 							</ul>
 						</div>
 					</div>
+					<p class="text-center">Source: <a href="http://theuxreview.co.uk/user-journeys-beginners-guide/" target="_blank">http://theuxreview.co.uk/user-journeys-beginners-guide/</a></p>
 				</div>
 			</div>
 		</div>
