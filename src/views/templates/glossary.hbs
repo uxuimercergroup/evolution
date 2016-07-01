@@ -1,0 +1,51 @@
+---
+title: "Glossary"
+glossary_content: "src/content/glossary.md"
+---
+
+<!-- HERO - BEGINS -->
+	<section class="row expanded evo-site-hero" data-evo-site-hero-size="medium" data-evo-site-hero-arrow-position="bottom">
+		<div class="small-12 columns evo-vertical-middle hide" data-anijs="if: load, on: window, do: $removeClass hide;">
+			<div class="text-center evo-vertical-middle-element">
+				<h1 class="evo-site-hero--hdr evo-no-margin-bottom" data-evo-site-hero-hdr-size="medium">{{{glossary.hero.title}}} <span>{{{glossary.hero.subtitle}}}</span></h1>
+			</div>		
+		</div>
+	</section>
+<!-- HERO - ENDS -->
+
+<!-- PAGE CONTENT - BEGINS -->
+	<section class="row">
+		<div class="small-12 columns evo-spacer-padding-top-xxx-large evo-spacer-padding-bottom-xxx-large">
+
+			<div class="evo-site-markdown-content-block">
+				{{{md glossary_content}}}
+
+			<!-- DATA TABLE - BEGINS -->
+				<div class="evo-table-small-mediaquery">
+					<table class="evo-table evo-site--glossary-container" data-evo-data-table="evo-data-table-glossary-terms" width="100%" cellpadding="0" cellspacing="0" border="0" title="" summary="" role="grid">
+						<thead>
+							<tr>
+								<th scope="column">Glossary Title</th>
+								<th scope="column">Glossary Definition</th>
+							</tr>
+						</thead>
+						<tbody>
+						{{#each glossary.glossary_terms_data}}
+							<tr>
+								<td class="definition-title">
+									<h6>{{{title}}}</h6>
+								</td>
+								<td class="definition">
+									{{{description}}}
+								</td>
+							</tr>
+						{{/each}}
+						</tbody>
+					</table>
+				</div>
+			<!-- DATA TABLE - ENDS -->
+			</div>
+
+		</div>
+	</section>
+<!-- PAGE CONTENT - ENDS -->

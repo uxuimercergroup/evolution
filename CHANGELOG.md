@@ -2,6 +2,29 @@
 ## [Unreleased]
 -->
 
+## [4.1.0] - 2016-07-01
+
+##### Added
+- Added Getting Started page for UI developers to replace Boilerplates page
+- Added User Journeys content and page
+- Added User Personas content and page
+- Added Glossary content and page
+- Added Accessibility content and page
+
+##### Changed
+- jQuery updated to version 2.2.4 (a NPM dependency of Foundation for Sites 6.2.1)
+- Off-canvas Sass variables enhancements
+	- Drop Shadow for Off-canvas title bar
+	- Use different font-family for Off-canvas links and/or labels/back links
+- Top Bar Sass variables enhancements
+	- Drop Shadow for Top Bar
+	- Use different font-family for Top Bar links and menu links
+	- Active top bar link can have border at bottom
+	- Ability to change height of menu items, so they are not the same height as top bar itself
+- Application level icon font files were renamed to correspond to "app" versus "site" naming:
+	- assets/fonts/evo-icon-font-site renamed to assets/fonts/evo-icon-font-app
+	- Sass variables and icon class names updated
+
 ## [4.0.0] - 2016-05-26
 
 ##### Added

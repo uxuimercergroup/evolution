@@ -1,0 +1,185 @@
+{
+	"hero": {
+		"title": "Evolution",
+		"subtitle": "Glossary"
+	},
+
+	"glossary_terms_data": [
+		{
+			"title": "Atoms",
+			"description": "<p>In chemistry, atoms are the basic building blocks of matter. They have distinct properties and can't be broken down further without losing their meaning.</p><p>Translated to interfaces, atoms are basic tags, such as form labels, inputs or buttons. They also include more abstract elements like color palettes, fonts, and animations.</p>"
+		},
+		{
+			"title": "Grunt",
+			"description": "Grunt is a tool for automating command line tasks <a href='http://gruntjs.com/'>Gruntjs.com</a>"
+		},
+		{
+			"title": "Molecules",
+			"description": "<p>In chemistry, molecules are groups of atoms bonded together, which take on new properties as a result.</p><p>In interfaces, molecules are groups of elements that function together as a unit. For example, a form label, search input, and button atom can combine them together to form a search form molecule.</p><p>Building up from atoms to molecules encourages a “do one thing and do it well” mentality, and encourages creating reusable interface patterns.</p>"
+		},
+		{
+			"title": "Namespace",
+			"description": "<p>A name given to an element for the explicit purpose of containing the application of properties.</p><p>In Evolution, components are given the class name evo to help distinguish them from parts of elements in code, and to provide a namespace for definitions which can limit the scope of CSS rules.</p>"
+		},
+		{
+			"title": "NPM",
+			"description": "NPM is a package manager used for downloading Node JS packages."
+		},
+		{
+			"title": "Node",
+			"description": "Node is a event driven programming language frequently used to run command line tools for front end development. <a href='https://nodejs.org/en/'>nodejs.org</a>"
+		},
+		{
+			"title": "Organisms",
+			"description": "<p>Organisms are groups of molecules (and possibly atoms) joined together to form distinct section of an interface.</p><p>Organisms can consist of similar and/or disparate molecule types. For example, a masthead organism might consist of a logo, navigation, and search form, while a “product grid” organism might consist of the same product info molecule repeated over and over.</p><p>Building up from molecules to organisms encourages creating standalone, portable, reusable components.</p>"
+		},
+		{
+			"title": "Semantic Versioning",
+			"description": "Software versioning is the process of assigning either unique version names or unique version numbers to unique states of software development. Within a given version number category (major, minor, patch), these numbers are generally assigned in increasing order and correspond to new developments."
+		},
+		{
+			"title": "Style Tile",
+			"description": "<p>Style Tiles are a design deliverable consisting of fonts, colors and interface elements that communicate the essence of a visual brand for the web.</p><p>They help form a common visual language between the designers and the stakeholders and provide a catalyst for discussions around the preferences and goals of the client.</p>"
+		},
+		{
+			"title": "Evolution Tool Box",
+			"description": "A collection of development technologies assembled in one spot so you can begin using the Evolution framework and Evolution web components in minutes."
+		},
+		{
+			"title": "generator-evolution",
+			"description": "Yeoman generator for the Evolution Tool Box development environment. Used to create starter boilerplate for Evolution."
+		},
+		{
+			"title": "Yeoman",
+			"description": "Yeoman is a workflow toolset that comprises of three types of tools for improving your productivity and satisfaction when building a web app: the scaffolding tool (yo), the build tool (Gulp, Grunt etc) and the package manager (like npm and Bower)."
+		},
+		{
+			"title": "Bower",
+			"description": "Bower is a package management system for client-side programming on the World Wide Web. It depends on Node.js and npm. It works with git and GitHub repositories."
+		},
+		{
+			"title": "Handlebars",
+			"description": "Handlebars is a semantic web template system. Handlebars.js is a superset of Mustache, and can render Mustache templates in addition to Handlebars templates. While Mustache is a logicless templating language, Handlebars adds extensibility and minimal logic, such as #if, #unless, #with, and #each helpers."
+		},
+		{
+			"title": "Sass",
+			"description": "Sass is an extension of CSS that adds power and elegance to the basic language. It allows you to use variables, nested rules, mixins, inline imports, and more, all with a fully CSS-compatible syntax."
+		},
+		{
+			"title": "Ruby",
+			"description": "Ruby is an open source programming language with a focus on simplicity and productivity. Its creator blended parts of his favorite languages (Perl, Smalltalk, Eiffel, Ada, and Lisp) to form a new language that balanced functional programming with imperative programming."
+		},
+		{
+			"title": "Javascript",
+			"description": "JavaScript is a high-level, dynamic, untyped, and interpreted programming language. It has been standardized in the ECMAScript language specification. Alongside HTML and CSS, it is one of the three core technologies of World Wide Web content production; the majority of websites employ it and it is supported by all modern Web browsers without plug-ins."
+		},
+		{
+			"title": "HTML",
+			"description": "HyperText Markup Language, commonly abbreviated as HTML, is the standard markup language used to create web pages. Along with CSS, and JavaScript, HTML is a cornerstone technology used to create web pages, as well as to create user interfaces for mobile and web applications."
+		},
+		{
+			"title": "Github",
+			"description": "GitHub is a web-based Git repository hosting service. It offers all of the distributed revision control and source code management functionality of Git as well as adding its own features. Unlike Git, which is strictly a command-line tool, GitHub provides a Web-based graphical interface and desktop as well as mobile integration. It also provides access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project."
+		},
+		{
+			"title": "Repository",
+			"description": "A repository is a central file storage location. It is used by version control systems to store multiple versions of files. While a repository can be configured on a local machine for a single user, it is often stored on a server, which can be accessed by multiple users."
+		},
+		{
+			"title": "CLI",
+			"description": "A command-line interface (CLI) that is a means of interacting with a computer program where the user issues commands to the program in the form of successive lines of text."
+		},
+		{
+			"title": "Terminal",
+			"description": "Terminal provides a command line interface to control the UNIX based operating system which is the default CLI for macOS"
+		},
+		{
+			"title": "Cmder",
+			"description": "A command-line interface (CLI) tool for Windows."
+		},
+		{
+			"title": "Front-end Development",
+			"description": "Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or web application so that a user can see and interact with them directly."
+		},
+		{
+			"title": "Babel",
+			"description": "Babel is an ECMAScript 6 (also called ES2015) to ECMAScript 5 compiler. It allows you to use ES6 features in your projects and then compiles ES5 for you to use in production."
+		},
+		{
+			"title": "SFTP",
+			"description": "Secure File Transfer Protocol (SFTP) is a secure version of File Transfer Protocol (FTP), which facilitates data access and data transfer over a Secure Shell (SSH) data stream."
+		},
+		{
+			"title": "Boilerplate",
+			"description": "Boilerplates provide a base set of code which developers won't need to change - as these tags will always be used on every site."
+		},
+		{
+			"title": "Patterns",
+			"description": "Patterns are recurring solutions that solve common design problems."
+		},
+		{
+			"title": "UI",
+			"description": "User Interface Design is the design of websites, computers, appliances, machines, mobile communication devices, and software applications with the focus on the user’s experience and interaction. The goal of user interface design is to make the user’s interaction as simple and efficient as possible, in terms of accomplishing user goals—what is often called user-centered design."
+		},
+		{
+			"title": "Responsive",
+			"description": "Responsive design is an approach to web page creation that makes use of flexible layouts, flexible images and CSS media queries. The goal of responsive design is to build web pages that detect the visitor’s screen size and orientation and change the layout accordingly."
+		},
+		{
+			"title": "UX",
+			"description": "User experience encompasses all aspects of the end-user's interaction with the company, its services, and its products."
+		},
+		{
+			"title": "Prototype",
+			"description": "A website prototype can be any mock-up or demo of what a website will look like when it goes live. It can be anything from a paper sketch, to a clickable HTML prototype. However, typically when people talk about a prototype they are referring to an interactive prototype of some kind which allows users to navigate from page to page."
+		},
+		{
+			"title": "Wireframes",
+			"description": "A website wireframe, also known as a page schematic or screen blueprint, is a visual guide that represents the skeletal framework of a website. Wireframes are created for the purpose of arranging elements to best accomplish a particular purpose."
+		},
+		{
+			"title": "Visual Design",
+			"description": "Visual design focuses on the aesthetics of a site and its related materials by strategically implementing images, colors, fonts, and other elements.  A successful visual design does not take away from the content on the page or function.  Instead, it enhances it by engaging users and helping to build trust and interest in the brand."
+		},
+		{
+			"title": "Snippet",
+			"description": "Snippet is a programming term for a small region of re-usable source code"
+		},
+		{
+			"title": "Mobile First",
+			"description": "Put simply, mobile first is an approach to responsive design: design for smaller screens first, then add more features and content for bigger and bigger screens."
+		},
+		{
+			"title": "Media Queries",
+			"description": "A CSS3 module allowing content rendering to adapt to conditions such as screen resolution (e.g. smartphone screen vs. computer screen). Media queries are a cornerstone technology of Responsive web design."
+		},
+		{
+			"title": "Kitchen Sink",
+			"description": "A page containing all of the Evolution atoms, molecules, and organisms as a demo of the all components working together at the same time."
+		},
+		{
+			"title": "IcoMoon",
+			"description": "IcoMoon provides a package of vector icons, along with a free HTML5 app for making custom icon fonts or SVG sprites. <a href='https://icomoon.io/'>icomoon.io</a>"
+		},
+		{
+			"title": "Foundation",
+			"description": "A responsive front-end framework which is the underpinnings of Evolution. Foundation provides a responsive grid, HTML and CSS UI components, templates, and code snippets, including typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions. <a href='http://foundation.zurb.com/'>Foundation</a> is maintained by ZURB."
+		},
+		{
+			"title": "jQuery",
+			"description": "jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML."
+		},
+		{
+			"title": "jQuery UI",
+			"description": "jQuery UI is a collection of GUI widgets, animated visual effects, and themes implemented with jQuery (a JavaScript library), Cascading Style Sheets, and HTML."
+		},
+		{
+			"title": "AniJS",
+			"description": "A UI interaction library for web designers in plain English. A declarative handling library for CSS animations."
+		},
+		{
+			"title": "Change Log",
+			"description": "A log or record of all or all notable changes made to a project. The project is often a website or software project, and the changelog usually includes records of changes such as bug fixes, new features, etc."
+		}
+	]
+}

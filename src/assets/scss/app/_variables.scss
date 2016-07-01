@@ -70,14 +70,17 @@
 		$evo-site-hero-tagline-max-width-large: 100%;
 
 		// HERO FOOTNOTE
-		$evo-site-hero-foonote-margin: rem-calc(10 0 0 0);
-		$evo-site-hero-foonote-color: $evo-quinary-color;
-		$evo-site-hero-foonote-text-transform: uppercase;
-		$evo-site-hero-foonote-letter-spacing: 3px;
+		$evo-site-hero-footnote-margin: rem-calc(10 0 0 0);
+		$evo-site-hero-footnote-color: $white;
+		$evo-site-hero-footnote-text-transform: uppercase;
+		$evo-site-hero-footnote-letter-spacing: 3px;
 
 	// BANDS
 	$evo-site-band-padding: rem-calc(40 0);
 	$evo-site-band-padding-medium: rem-calc(80 0);
+
+		// DARK BAND
+		$evo-site-band-dark-font-color: $white;
 
 		// MARKETING BAND
 		$evo-site-band-marketing-background-color: $onyx-dark-2;
@@ -99,6 +102,13 @@
 		$evo-site-band-marketing-block-grid-h5-margin-top-medium: rem-calc(20);
 		$evo-site-band-marketing-block-grid-h5-font-family: $evo-font-medium-stack;
 		$evo-site-band-marketing-block-grid-paragraph-color: $onyx-medium;
+
+		// INFORMATION BAND
+		$evo-site-band-library-info-border-bottom: 1px solid $onyx-dark-20;
+		$evo-site-band-library-info-spacing: rem-calc(50);
+
+		// LEARN BAND
+		$evo-site-band-learn-background-color: $sapphire-medium;
 
 		// TESTIMONIALS BAND
 		$evo-site-band-testimonials-blockquote-font-family: $evo-font-regular-stack;
@@ -240,6 +250,13 @@
 
 // HOME PAGE
 
+	// HERO BANNER
+	$evo-site-home-hero-background-color: $onyx-medium;
+	$evo-site-home-hero-background-image: "../images/hero/evo-site-home-hero-background.jpg";
+	$evo-site-home-hero-background-repeat: no-repeat;
+	$evo-site-home-hero-background-position: center;
+	$evo-site-home-hero-background-size: cover;
+
 	// BENEFITS BAND
 	$evo-site-home-benefits-band-tab-panel-padding: rem-calc(15 0 0 15);
 	$evo-site-home-benefits-band-tile-background-repeat: no-repeat;
@@ -247,18 +264,14 @@
 	$evo-site-home-benefits-band-tile-background-size: cover;
 	$evo-site-home-benefits-band-benefits1-tile-background-color: $evo-tertiary-color;
 	$evo-site-home-benefits-band-benefits1-tile-background-image: "../images/evo-site-home-benefits-tile-1.png";
-	$evo-site-home-benefits-band-benefits2-tile-background-color: $turquoise-bright;
+	$evo-site-home-benefits-band-benefits2-tile-background-color: $evo-quaternary-color;
 	$evo-site-home-benefits-band-benefits2-tile-background-image: "../images/evo-site-home-benefits-tile-2.png";
-	$evo-site-home-benefits-band-benefits3-tile-background-color: $ruby-bright;
+	$evo-site-home-benefits-band-benefits3-tile-background-color: $topaz-bright;
 	$evo-site-home-benefits-band-benefits3-tile-background-image: "../images/evo-site-home-benefits-tile-3.png";
-	$evo-site-home-benefits-band-benefits3-tile-background-size: 353px 326px;
-	$evo-site-home-benefits-band-benefits3-tile-background-position: top right;
-	$evo-site-home-benefits-band-benefits4-tile-background-color: $evo-quaternary-color;
+	$evo-site-home-benefits-band-benefits4-tile-background-color: #eb3169;
 	$evo-site-home-benefits-band-benefits4-tile-background-image: "../images/evo-site-home-benefits-tile-4.png";
-	$evo-site-home-benefits-band-benefits5-tile-background-color: $topaz-bright;
+	$evo-site-home-benefits-band-benefits5-tile-background-color: $turquoise-bright;
 	$evo-site-home-benefits-band-benefits5-tile-background-image: "../images/evo-site-home-benefits-tile-5.png";
-	$evo-site-home-benefits-band-benefits5-tile-background-size: auto;
-	$evo-site-home-benefits-band-benefits5-tile-background-position: top -46px right;
 
 
 // ANIMATIONS PAGE

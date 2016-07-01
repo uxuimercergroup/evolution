@@ -200,6 +200,12 @@ $(function() {
 				}
 			});
 
+			// GLOSSARY TERMS
+			evoDataTable('evo-data-table-glossary-terms',{
+				paging: false,
+				info: false
+			});
+
 
 		// KITCHEN SINK DEMOS
 		//------------------------------------------------------------------------------------------------

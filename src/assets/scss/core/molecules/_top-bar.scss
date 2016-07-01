@@ -13,6 +13,12 @@
 //
 // @variables
 //
+$evo-top-bar-box-shadow: false !default;
+$evo-top-bar-box-shadow-horizontal: $evo-base-shadow-horizontal !default;
+$evo-top-bar-box-shadow-vertical: $evo-base-shadow-vertical !default;
+$evo-top-bar-box-shadow-blur: $evo-base-shadow-blur !default;
+$evo-top-bar-box-shadow-spread: $evo-base-shadow-spread !default;
+$evo-top-bar-box-shadow-color: $evo-base-shadow-color !default;
 $evo-top-bar-height: $evo-base-navbar-height !default;
 $evo-top-bar-background: $evo-primary-color !default;
 $evo-top-bar-submenu-background: $evo-tertiary-color !default;
@@ -27,6 +33,7 @@ $evo-top-bar-title-text-transform: uppercase !default;
 $evo-top-bar-title-sub-font-family: $evo-base-font-family !default;
 $evo-top-bar-title-image-position-top: -1px !default;
 $evo-top-bar-title-image-position-left: 0 !default;
+$evo-top-bar-dropdown-font-family: $evo-base-font-family !default;
 $evo-top-bar-dropdown-border: 0 !default;
 $evo-top-bar-dropdown-border-radius: 0 !default;
 $evo-top-bar-dropdown-box-shadow-horizontal: $evo-base-shadow-horizontal !default;
@@ -36,12 +43,15 @@ $evo-top-bar-dropdown-box-shadow-spread: $evo-base-shadow-spread !default;
 $evo-top-bar-dropdown-box-shadow-color: $evo-base-shadow-color !default;
 $evo-top-bar-dropdown-min-width: auto !default;
 $evo-top-bar-dropdown-white-space: nowrap !default;
+$evo-top-bar-dropdown-item-font-family: $evo-base-font-family !default;
 $evo-top-bar-dropdown-item-border: 0 !default;
+$evo-top-bar-dropdown-item-line-height: $evo-top-bar-height !default;
 $evo-top-bar-dropdown-item-active-background: scale-color($evo-top-bar-submenu-background, $saturation: -5%, $lightness: -15%) !default;
 $evo-top-bar-dropdown-item-hover-background: scale-color($evo-top-bar-submenu-background, $saturation: -30%, $lightness: 15%) !default;
 $evo-top-bar-dropdown-label-background: scale-color($evo-top-bar-submenu-background, $saturation: -10%, $lightness: 10%) !default;
 $evo-top-bar-dropdown-label-white-space: nowrap !default;
 $evo-top-bar-dropdown-label-color: $white !default;
+$evo-top-bar-dropdown-label-font-family: $evo-font-medium-stack !default;
 $evo-top-bar-dropdown-label-font-size: rem-calc(12) !default;
 $evo-top-bar-dropdown-label-line-height: 1 !default;
 $evo-top-bar-dropdown-label-padding: 0.65rem $evo-base-padding ($evo-base-padding/2) $evo-base-padding !default;
@@ -51,6 +61,9 @@ $evo-top-bar-dropdown-anchor-padding: $evo-base-padding !default;
 $evo-top-bar-dropdown-anchor-hover-color: $white !default;
 $evo-top-bar-dropdown-anchor-icon-font-size: rem-calc(24) !default;
 $evo-top-bar-dropdown-anchor-with-icon-position-top: -2px !default;
+$evo-top-bar-dropdown-anchor-active-border: false !default;
+$evo-top-bar-dropdown-anchor-active-border-width: rem-calc(3) !default;
+$evo-top-bar-dropdown-anchor-active-border-color: $evo-quinary-color !default;
 $evo-top-bar-dropdown-anchor-active-color: $white !default;
 $evo-top-bar-dropdown-anchor-active-background: scale-color($evo-top-bar-background, $saturation: -40%, $lightness: 20%) !default;
 $evo-top-bar-dropdown-submenu-parent-padding-right: rem-calc(40) !default;
@@ -72,6 +85,10 @@ $evo-top-bar-mega-menu-max-width: 100% !default;
 	@media #{$large-up} {
 
 		.evo-top-bar					{
+										@if $evo-top-bar-box-shadow == true {
+											@include box-shadow($evo-top-bar-box-shadow-horizontal $evo-top-bar-box-shadow-vertical $evo-top-bar-box-shadow-blur $evo-top-bar-box-shadow-spread $evo-top-bar-box-shadow-color);
+											position: relative;
+										}
 										height: $evo-top-bar-height;
 
 			// TOP BAR GLOBAL
@@ -109,11 +126,18 @@ $evo-top-bar-mega-menu-max-width: 100% !default;
 					
 					// DROPDOWN MENU ITEM
 					> li							{
+													font-family: $evo-top-bar-dropdown-font-family;
 						
 						// DROPDOWN MENU ITEM ANCHOR
 						> a								{
+														@if $evo-top-bar-dropdown-anchor-active-border == true {
+															border-top: $evo-top-bar-dropdown-anchor-active-border-width solid $transparent;
+															border-bottom: $evo-top-bar-dropdown-anchor-active-border-width solid $transparent;
+															line-height: ($evo-top-bar-height - ($evo-top-bar-dropdown-anchor-active-border-width*2));
+														} @else {
+															line-height: $evo-top-bar-height;
+														}
 														color: $evo-top-bar-dropdown-anchor-color;
-														line-height: $evo-top-bar-height;
 														padding-top: 0;
 														padding-right: $evo-top-bar-dropdown-anchor-padding;
 														padding-bottom: 0;
@@ -141,6 +165,10 @@ $evo-top-bar-mega-menu-max-width: 100% !default;
 							
 							// DROPDOWN MENU ITEM ACTIVE ANCHOR
 							> a								{
+															@if $evo-top-bar-dropdown-anchor-active-border == true {
+																border-top: $evo-top-bar-dropdown-anchor-active-border-width solid $transparent;
+																border-bottom: $evo-top-bar-dropdown-anchor-active-border-width solid $evo-top-bar-dropdown-anchor-active-border-color;
+															}
 															color: $evo-top-bar-dropdown-anchor-active-color;
 															background-color: $evo-top-bar-dropdown-anchor-active-background;
 								[class^="evo-icon-"]			{color: inherit;}
@@ -186,19 +214,43 @@ $evo-top-bar-mega-menu-max-width: 100% !default;
 													min-width: $evo-top-bar-dropdown-min-width;
 													white-space: $evo-top-bar-dropdown-white-space;
 							li							{
+														font-family: $evo-top-bar-dropdown-item-font-family;
 														border-bottom: $evo-top-bar-dropdown-item-border;
 								&:last-child				{
 															border-bottom: 0;
-									> a							{@include border-radius($evo-top-bar-dropdown-border-radius);}
+									> a							{
+																@include border-radius($evo-top-bar-dropdown-border-radius);
+																@if $evo-top-bar-dropdown-anchor-active-border == true {
+																	line-height: $evo-top-bar-dropdown-item-line-height;
+																	border-top: 0;
+																	border-bottom: 0;
+																} @else {
+																	line-height: $evo-top-bar-dropdown-item-line-height;
+																}
+																}
 															}
 								&.active					{
 									> a							{
+																@if $evo-top-bar-dropdown-anchor-active-border == true {
+																	line-height: $evo-top-bar-dropdown-item-line-height;
+																	border-top: 0;
+																	border-bottom: 0;
+																} @else {
+																	line-height: $evo-top-bar-dropdown-item-line-height;
+																}
 																background-color: $evo-top-bar-dropdown-item-active-background;
 										&:hover,
 										&:focus						{background-color: $evo-top-bar-dropdown-item-active-background;}
 																}
 															}
 								> a							{
+															@if $evo-top-bar-dropdown-anchor-active-border == true {
+																line-height: $evo-top-bar-dropdown-item-line-height;
+																border-top: 0;
+																border-bottom: 0;
+															} @else {
+																line-height: $evo-top-bar-dropdown-item-line-height;
+															}
 									&:hover,
 									&:focus						{background-color: $evo-top-bar-dropdown-item-hover-background;}
 															}
@@ -209,6 +261,7 @@ $evo-top-bar-mega-menu-max-width: 100% !default;
 														background: $evo-top-bar-dropdown-label-background;
     													white-space: $evo-top-bar-dropdown-label-white-space;
     													color: $evo-top-bar-dropdown-label-color;
+    													font-family: $evo-top-bar-dropdown-label-font-family;
 														font-size: $evo-top-bar-dropdown-label-font-size;
 														line-height: $evo-top-bar-dropdown-label-line-height;
 														padding: $evo-top-bar-dropdown-label-padding;
@@ -302,6 +355,7 @@ $evo-top-bar-mega-menu-max-width: 100% !default;
 							ul								{
 															background: none;
 								li								{
+																font-family: $evo-base-font-family;
 									a								{
 																	text-decoration: $evo-base-anchor-text-decoration;
 										&:hover,
